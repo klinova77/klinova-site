@@ -1,0 +1,204 @@
+---
+// src/components/blog/PunaisesImageGallery.astro
+import { Image } from 'astro:assets';
+
+interface ImageData {
+  src: ImageMetadata;
+  alt: string;
+  caption?: string;
+  type?: 'before' | 'after' | 'technique' | 'equipment' | 'inspection';
+}
+
+interface Props {
+  images: ImageData[];
+  title?: string;
+  layout?: 'grid' | 'masonry' | 'carousel';
+  showTechnique?: boolean; // Afficher le type de technique
+}
+
+const { 
+  images, 
+  title = "Galerie d'intervention",
+  layout = 'grid',
+  showTechnique = true 
+} = Astro.props;
+
+const typeLabels = {
+  before: 'Avant traitement',
+  after: 'Après traitement', 
+  technique: 'Technique utilisée',
+  equipment: 'Équipement professionnel',
+  inspection: 'Inspection'
+};
+
+const typeColors = {
+  before: 'border-red-200 bg-red-50',
+  after: 'border-success-200 bg-success-50',
+  technique: 'border-sp-action-500 bg-sp-light',
+  equipment: 'border-neutral-300 bg-neutral-50',
+  inspection: 'border-premium-200 bg-premium-100'
+};
+---
+
+<div class="my-8" itemscope itemtype="https://schema.org/ImageGallery">
+  {title && (
+    <h3 class="text-xl font-semibold text-primary-600 mb-6 text-center">
+      {title}
+    </h3>
+  )}
+  
+  <div class={`grid gap-4 ${
+    layout === 'grid' ? 'md:grid-cols-2 lg:grid-cols-3' :
+    layout === 'masonry' ? 'masonry-grid' :
+    'carousel-container'
+  }`}>
+    {images.map((imageData, index) => (
+      <figure 
+        class={`relative group cursor-pointer rounded-xl overflow-hidden border-2 transition-all duration-300 hover:shadow-soft-lg ${
+          imageData.type ? typeColors[imageData.type] : 'border-neutral-200'
+        }`}
+        itemscope 
+        itemtype="https://schema.org/ImageObject"
+      >
+        <!-- Badge type d'image -->
+        {showTechnique && imageData.type && (
+          <div class="absolute top-3 left-3 z-10 px-2 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur text-primary-600 shadow-soft">
+            {typeLabels[imageData.type]}
+          </div>
+        )}
+        
+        <Image
+          src={imageData.src}
+          alt={imageData.alt}
+          widths={[320, 480, 640]}
+          sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 30vw"
+          format={["avif", "webp"]}
+          quality={85}
+          loading="lazy"
+          decoding="async"
+          class="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+          itemprop="contentUrl"
+        />
+        
+        <!-- Overlay avec caption -->
+        {imageData.caption && (
+          <figcaption 
+            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            itemprop="caption"
+          >
+            {imageData.caption}
+          </figcaption>
+        )}
+        
+        <!-- Données structurées -->
+        <meta itemprop="description" content={imageData.alt} />
+        <meta itemprop="name" content={imageData.caption || imageData.alt} />
+      </figure>
+    ))}
+  </div>
+  
+  <!-- Lightbox simple avec navigation clavier -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+    <div class="relative max-w-4xl max-h-full">
+      <img id="lightbox-img" class="max-w-full max-h-full object-contain" alt="" />
+      <button 
+        id="close-lightbox"
+        class="absolute top-4 right-4 text-white hover:text-neutral-300 text-3xl"
+        aria-label="Fermer la galerie"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const figures = document.querySelectorAll('figure[itemtype="https://schema.org/ImageObject"]');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('close-lightbox');
+    
+    let currentIndex = 0;
+    const images = Array.from(figures).map(fig => ({
+      src: fig.querySelector('img')?.src,
+      alt: fig.querySelector('img')?.alt
+    }));
+    
+    // Ouvrir lightbox
+    figures.forEach((figure, index) => {
+      figure.addEventListener('click', () => {
+        currentIndex = index;
+        showLightbox();
+      });
+    });
+    
+    // Fermer lightbox
+    closeBtn?.addEventListener('click', hideLightbox);
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) hideLightbox();
+    });
+    
+    // Navigation clavier
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox?.classList.contains('hidden')) {
+        switch(e.key) {
+          case 'Escape':
+            hideLightbox();
+            break;
+          case 'ArrowLeft':
+            navigateImage(-1);
+            break;
+          case 'ArrowRight':
+            navigateImage(1);
+            break;
+        }
+      }
+    });
+    
+    function showLightbox() {
+      if (lightboxImg && images[currentIndex]) {
+        lightboxImg.src = images[currentIndex].src;
+        lightboxImg.alt = images[currentIndex].alt;
+        lightbox?.classList.remove('hidden');
+        lightbox?.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    function hideLightbox() {
+      lightbox?.classList.add('hidden');
+      lightbox?.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    
+    function navigateImage(direction: number) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      showLightbox();
+    }
+  });
+</script>
+
+<style>
+  .masonry-grid {
+    columns: 1;
+    column-gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .masonry-grid {
+      columns: 2;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      columns: 3;
+    }
+  }
+  
+  .masonry-grid figure {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+</style>

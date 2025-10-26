@@ -1,0 +1,2579 @@
+---
+
+import Layout from '../layouts/LayoutWithCTA.astro';
+
+import { LINKS, PHONE_DISPLAY, linkAttrs } from '~/lib/links';
+import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
+
+import FooterForm2StepV2 from '~/components/FooterForm2StepV2.astro';
+
+const phoneE164 = '+33630221228';
+const phoneDisplay = '06 30 22 12 28';
+const telHref = `tel:${phoneE164.replace(/[^\d+]/g, '')}`;
+import heroImg from '~/assets/images/machines-klinova.jpg';
+
+import ThumbImage from '~/components/UI/images/ThumbImage.astro';
+import heroImg from '~/assets/images/machines-klinova.jpg';
+import { Image } from 'astro:assets';
+
+import icPoignee from '~/assets/images/poignee-main.webp';
+import icFeuille from '~/assets/images/feuille-eco.webp';
+import icBouclier from '~/assets/images/bouclier-excellence.webp';
+import icLoupe from '~/assets/images/loupe-client.webp';
+import desinfectionEquipment from '~/assets/images/desinfection-equipment.avif';
+
+
+import { Accordion, AccordionItem } from 'free-astro-components';
+
+const faq = [
+  {
+    title: "Combien de temps faut-il pour que ma moquette sèche ?",
+    content: "En général 2 à 6 heures selon la méthode utilisée, la ventilation et la température ambiante. Nous pouvons installer des ventilateurs professionnels (air movers) pour accélérer le séchage si nécessaire. Pour les urgences ou contraintes d'exploitation, nous privilégions les méthodes à séchage rapide."
+  },
+  {
+    title: "Intervenez-vous en cas de dégât des eaux ou d'urgence ?",
+    content: "Oui, nous intervenons rapidement pour les sinistres : aspiration de l'eau, désinfection et séchage assisté. Nous pouvons également travailler en lien avec votre assurance et fournir les justificatifs nécessaires. L'organisation peut se faire entièrement par téléphone pour plus de simplicité."
+  },
+  {
+    title: "À quelle fréquence faire nettoyer sa moquette ?",
+    content: "Cela dépend de l'usage :\n• Bureaux et copropriétés : tous les 6 à 12 mois\n• Habitat privé : annuel ou bi-annuel\n• Zones à fort passage : 3 à 6 mois\n• Après sinistre ou taches importantes : dès que possible\n\nUn entretien régulier prolonge significativement la durée de vie de votre moquette."
+  },
+  {
+    title: "Vos produits sont-ils sans danger pour les enfants et animaux ?",
+    content: "Absolument. Nous utilisons des produits professionnels biodégradables, sans solvants agressifs et conformes aux normes européennes. Aucune odeur chimique persistante après intervention. Les surfaces sont sans danger dès le séchage terminé. Fiches de sécurité disponibles sur demande."
+  },
+  {
+    title: "Quelle est la différence entre vos méthodes de nettoyage ?",
+    content: "Nous adaptons la méthode selon votre moquette :\n• Nettoyage à sec : fibres délicates, remise en service immédiate\n• Injection-extraction : encrassement important, désinfection profonde\n• Monobrosse + mousse : compromis efficacité/séchage rapide\n\nLe choix se fait après diagnostic gratuit selon le type de fibre, l'état et vos contraintes."
+  },
+  {
+    title: "Pouvez-vous enlever toutes les taches ?",
+    content: "La plupart des taches courantes (café, vin, nourriture, boue) peuvent être éliminées avec nos techniques spécialisées. Les taches anciennes ou certaines substances (encre permanente, décoloration) peuvent laisser des traces. Nous réalisons toujours un test préalable et vous informons honnêtement des résultats attendus."
+  },
+  {
+    title: "Le bruit pendant l'intervention est-il gênant ?",
+    content: "Nos équipements professionnels restent en dessous de 65 dB (niveau conversation normale). Nous pouvons adapter nos horaires (tôt le matin, soirée ou week-end) pour minimiser la gêne, particulièrement en environnement de bureau ou résidentiel."
+  },
+  {
+    title: "Comment se déroule votre diagnostic gratuit ?",
+    content: "Diagnostic sous 24h : nous examinons le type de moquette, évaluons l'encrassement, identifions les taches spécifiques et testons si nécessaire. Ensuite, nous vous proposons la méthode adaptée avec un devis détaillé précisant surface, tarif et délais d'intervention."
+  },
+  {
+    title: "Faut-il déplacer les meubles avant votre passage ?",
+    content: "Nous nous adaptons à vos contraintes. Nous pouvons déplacer les meubles légers ou travailler autour du mobilier lourd. Pour un nettoyage complet, il est préférable de libérer la zone, mais ce n'est pas obligatoire. Nous en discutons lors du diagnostic."
+  },
+  {
+    title: "Proposez-vous des contrats d'entretien régulier ?",
+    content: "Oui, nous établissons des contrats trimestriels, semestriels ou annuels avec des tarifs préférentiels. Ideal pour les bureaux, hôtels, copropriétés. Chaque passage est tracé avec un rapport d'intervention détaillé. Planification flexible selon vos besoins."
+  }
+];
+
+// JSON-LD pour le SEO
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: { '@type': 'Answer', text: item.content },
+  })),
+};
+---
+
+<Layout
+  title="Punaises de lit Paris et Île-de-France | Intervention 24h - Stop Punaises"
+  description="Expert punaises de lit à Paris. Intervention sous 24h, certifié Certibiocide. Devis gratuit. Garantie 6 mois."
+  >
+
+
+ 
+
+
+
+  <!-- Section FAQ -->
+  <section data-hide-cta class="py-16 md:py-20 bg-[#FCFCFC]">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+            Questions fréquentes sur le nettoyage de moquettes
+          </h2>
+          <p class="text-xl text-[#475569] leading-relaxed">
+            Les réponses aux questions les plus fréquentes sur nos services.
+          </p>
+        </div>
+        
+        <Accordion 
+          variant="splitted" 
+          style="--ac-accordion-background-color: #DFF1E8 --ac-accordion-border-color: #E5E7EB; --ac-accordion-border-width: 0px; --ac-accordion-rounded: 1rem; --ac-accordion-spacing: 1rem;"
+        >
+          {faq.map((item, index) => (
+            <AccordionItem 
+              title={item.title}
+              name="faq-moquettes"
+            >
+              <p class="whitespace-pre-line text-[#475569] leading-relaxed">
+                {item.content}
+              </p>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Section avance immédiate -->
+<section class="bg-[#DFF1E8] py-8">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <h3 class="text-[#1E2939] font-semibold">Payez seulement 50% aujourd'hui</h3>
+        <p class="text-[#475569]">Profitez de l'avance immédiate pour tous nos services</p>
+      </div>
+      <a href="/avance-immediate" class="text-[#3F8D65] hover:underline">En savoir plus →</a>
+    </div>
+  </div>
+</section>
+<section data-hero class="relative isolate flex items-end min-h-[90vh] overflow-hidden">
+  <!-- Image LCP optimisée -->
+  <Image
+    src={heroImg}
+    alt="Parc d’équipements de nettoyage professionnels Klinova"
+    formats={['avif','webp','jpeg']}
+    widths={[768,1024,1440,1920]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 h-full w-full object-cover object-center"
+    style="filter: brightness(1.1) saturate(0.85);"
+  />
+
+  <!-- Overlay contraste + respiration légère -->
+  <div class="hero-overlay absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent"></div>
+
+  <!-- Contenu -->
+  <div class="relative z-10 container-responsive pb-20 md:pb-32">
+    <div class="max-w-2xl text-white">
+      <!-- Badge -->
+      <div class="mb-6 anim-in anim-delay-0">
+        <span class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-white/10 border-white/30">
+          <span class="h-2 w-2 rounded-full bg-green-400 pulse-dot"></span>
+          Équipements professionnels
+        </span>
+      </div>
+
+      <!-- Titre -->
+      <h1 class="anim-in anim-delay-1 text-4xl md:text-5xl font-bold leading-tight mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+        Puissance industrielle,<br />
+        <span class="bg-[linear-gradient(45deg,var(--color-action-500),#4ade80)] bg-clip-text text-transparent">
+          exigence artisanale
+        </span>
+      </h1>
+
+      <!-- Sous-titre -->
+      <p class="anim-in anim-delay-2 text-lg md:text-xl mb-8 text-white/90">
+        Des équipements professionnels de pointe au service de la propreté et de la durabilité.
+      </p>
+
+      <!-- CTAs -->
+      <div class="anim-in anim-delay-3 flex flex-wrap items-center gap-4">
+        <a
+          href="#expertises"
+          class="group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-white shadow-sm transition hover:shadow-lg"
+          style="background: linear-gradient(135deg, var(--color-action-500) 0%, var(--color-action-600) 100%)"
+          data-action="cta" data-source="hero" data-intent="discover-services"
+        >
+          Découvrir nos services
+          <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18" />
+          </svg>
+        </a>
+
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl border-2 px-6 py-3 font-semibold transition hover:bg-white/20"
+          style="border-color: rgba(255,255,255,0.7); color: #fff"
+          data-action="cta" data-source="hero" data-intent="contact"
+        >
+          Contactez-nous
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Fade-in + slide-up (progressivité) */
+  @keyframes fade-slide-up {
+    from { opacity: 0; transform: translateY(24px) }
+    to   { opacity: 1; transform: translateY(0) }
+  }
+  .anim-in { animation: fade-slide-up .8s ease-out both; }
+  .anim-delay-0 { animation-delay: .05s }
+  .anim-delay-1 { animation-delay: .20s }
+  .anim-delay-2 { animation-delay: .35s }
+  .anim-delay-3 { animation-delay: .50s }
+
+  /* Point pulsant du badge */
+  @keyframes pulse-glow {
+    0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74,222,128,.7) }
+    50%     { transform: scale(1.1); box-shadow: 0 0 0 8px transparent }
+  }
+  .pulse-dot { animation: pulse-glow 2s ease-in-out infinite }
+
+  /* Overlay “respire” très subtil (peut être retiré si tu veux 100% statique) */
+  @keyframes breathe {
+    0% { opacity: 1 }
+    100% { opacity: .92 }
+  }
+  .hero-overlay { animation: breathe 10s ease-in-out infinite alternate }
+
+  /* Respecte prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .anim-in, .pulse-dot, .hero-overlay { animation: none !important }
+  }
+</style>
+
+  
+
+
+<section class="section-padding bg-white">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          Comment on travaille
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Un process simple, rigoureux, traçable
+        </h2>
+
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Diagnostic clair, intervention protocolisée, contrôle systématique — pour des résultats visibles et durables.
+        </p>
+      </div>
+
+      <!-- Étapes -->
+      <ol class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <!-- Étape 1 -->
+        <li class="reveal rounded-2xl border border-[#E5E7EB] bg-[#FCFCFC] p-6 md:p-8">
+          <div class="flex items-start gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8F2ED] text-[#3F8D65] font-semibold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Diagnostic & devis clair</h3>
+              <p class="text-sm text-[#475569] mb-4">
+                Évaluation rapide du besoin, choix des méthodes et des produits adaptés, devis transparent et daté.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Visite ou photos/vidéo</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Recommandations techniques</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Planning d’intervention</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 2 -->
+        <li class="reveal rounded-2xl border border-[#E5E7EB] bg-[#FCFCFC] p-6 md:p-8">
+          <div class="flex items-start gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#DBEAFE] text-[#1E2939] font-semibold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Intervention protocolisée</h3>
+              <p class="text-sm text-[#475569] mb-4">
+                Méthodes documentées, matériel pro et EPI adaptés. Respect des surfaces et de l’environnement.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Équipements de dernière génération</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Produits certifiés et dosages maîtrisés</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Respect des consignes de site</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 3 -->
+        <li class="reveal rounded-2xl border border-[#E5E7EB] bg-[#FCFCFC] p-6 md:p-8">
+          <div class="flex items-start gap-4">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#C0E2D0] text-[#1E2939] font-semibold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Contrôle & traçabilité</h3>
+              <p class="text-sm text-[#475569] mb-4">
+                Vérifications finales, preuves d’intervention et conseils d’entretien ou de prévention.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Check-list signée + photos</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Compte-rendu & recommandations</li>
+                <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Planification d’un suivi si besoin</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <!-- CTA (secondaire, pour ne pas doubler le vert du hero) -->
+      <div class="text-center mt-12 reveal">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]"
+          data-action="cta" data-source="process" data-intent="contact"
+        >
+          Demander un devis
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Révélation douce (cohérente avec les autres sections) */
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+
+---
+// Section 4 : Comment nous travaillons - Processus en 3 étapes
+---
+
+<section class="section-padding" style="background: #FCFCFC;">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6" 
+             style="background: #E8F2ED; border-color: #CFE3D8; color: #3F8D65;">
+          <span class="block h-2 w-2 rounded-full" style="background: #3F8D65;" aria-hidden="true"></span>
+          Notre méthode
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6" style="color: #1E2939;">
+          Comment nous travaillons
+        </h2>
+        
+        <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #475569;">
+          Chaque intervention Klinova suit un protocole rigoureux en 3 étapes, 
+          conçu pour garantir des résultats durables et une traçabilité complète.
+        </p>
+      </div>
+
+      <!-- Processus en 3 étapes -->
+      <div class="space-y-12 lg:space-y-16">
+        
+        <!-- Étape 1 : Diagnostic -->
+        <article class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="lg:order-1">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-lg" 
+                     style="background: #3F8D65;">
+                  01
+                </div>
+                <h3 class="text-2xl font-semibold" style="color: #1E2939;">
+                  Diagnostic & planification
+                </h3>
+              </div>
+              
+              <p class="text-lg mb-6" style="color: #475569;">
+                Avant toute intervention, nous évaluons précisément vos besoins : type de surfaces, 
+                niveau de salissure, contraintes d'accès et exigences spécifiques.
+              </p>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(63, 141, 101, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #3F8D65;"></div>
+                  </div>
+                  <span style="color: #475569;">Analyse technique des surfaces et matériaux</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(63, 141, 101, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #3F8D65;"></div>
+                  </div>
+                  <span style="color: #475569;">Sélection des équipements et produits adaptés</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(63, 141, 101, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #3F8D65;"></div>
+                  </div>
+                  <span style="color: #475569;">Planification des délais et protocoles de sécurité</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="lg:order-2">
+              <div class="rounded-2xl p-8 lg:p-12" style="background: #DFF1E8;">
+                <div class="aspect-square rounded-xl flex items-center justify-center" 
+                     style="background: rgba(255, 255, 255, 0.7);">
+                  <svg class="w-16 h-16" style="color: #3F8D65;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 2 : Intervention -->
+        <article class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="lg:order-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-lg" 
+                     style="background: #387B58;">
+                  02
+                </div>
+                <h3 class="text-2xl font-semibold" style="color: #1E2939;">
+                  Intervention technique
+                </h3>
+              </div>
+              
+              <p class="text-lg mb-6" style="color: #475569;">
+                Nos techniciens appliquent les protocoles définis avec un matériel professionnel 
+                de dernière génération, en respectant les normes de sécurité et d'environnement.
+              </p>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(56, 123, 88, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #387B58;"></div>
+                  </div>
+                  <span style="color: #475569;">Préparation et protection des zones sensibles</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(56, 123, 88, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #387B58;"></div>
+                  </div>
+                  <span style="color: #475569;">Application des techniques spécialisées par surface</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(56, 123, 88, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #387B58;"></div>
+                  </div>
+                  <span style="color: #475569;">Contrôle qualité en temps réel et ajustements</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="lg:order-1">
+              <div class="rounded-2xl p-8 lg:p-12" style="background: #DBEAFE;">
+                <div class="aspect-square rounded-xl flex items-center justify-center" 
+                     style="background: rgba(255, 255, 255, 0.7);">
+                  <svg class="w-16 h-16" style="color: #387B58;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 3 : Contrôle -->
+        <article class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="lg:order-1">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-lg" 
+                     style="background: #2D5A3D;">
+                  03
+                </div>
+                <h3 class="text-2xl font-semibold" style="color: #1E2939;">
+                  Contrôle & suivi
+                </h3>
+              </div>
+              
+              <p class="text-lg mb-6" style="color: #475569;">
+                Chaque intervention se conclut par un contrôle qualité rigoureux et la remise 
+                d'un rapport détaillé avec recommandations d'entretien.
+              </p>
+              
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(45, 90, 61, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #2D5A3D;"></div>
+                  </div>
+                  <span style="color: #475569;">Vérification complète des résultats obtenus</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(45, 90, 61, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #2D5A3D;"></div>
+                  </div>
+                  <span style="color: #475569;">Rapport d'intervention avec photos et recommandations</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" 
+                       style="background: rgba(45, 90, 61, 0.2);">
+                    <div class="w-2 h-2 rounded-full" style="background: #2D5A3D;"></div>
+                  </div>
+                  <span style="color: #475569;">Suivi post-intervention et garantie des résultats</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="lg:order-2">
+              <div class="rounded-2xl p-8 lg:p-12" style="background: #C0E2D0;">
+                <div class="aspect-square rounded-xl flex items-center justify-center" 
+                     style="background: rgba(255, 255, 255, 0.7);">
+                  <svg class="w-16 h-16" style="color: #2D5A3D;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA vers devis -->
+      <div class="text-center mt-16 pt-12 reveal" style="border-top: 1px solid #E5E7EB;">
+        <div class="max-w-2xl mx-auto">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1E2939;">
+            Prêt à découvrir notre approche ?
+          </h3>
+          <p class="text-base mb-8" style="color: #475569;">
+            Chaque projet est unique. Nous adaptons notre méthode à vos besoins spécifiques 
+            pour vous garantir des résultats à la hauteur de vos exigences.
+          </p>
+          <a href="/contact" 
+             class="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+             style="background: linear-gradient(135deg, #3F8D65 0%, #387B58 100%);"
+             data-action="cta" data-source="process" data-intent="contact">
+            Demander un devis personnalisé
+            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Animation d'entrée au scroll */
+  @keyframes k-reveal { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  
+  .reveal { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  
+  .reveal.in { 
+    animation: k-reveal 0.6s ease-out both; 
+  }
+  
+  @media (prefers-reduced-motion: reduce) { 
+    .reveal, .reveal.in { 
+      animation: none; 
+      opacity: 1; 
+      transform: none; 
+    } 
+  }
+</style>
+
+<script is:inline>
+  // Animation au scroll avec IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !elements.length) {
+      elements.forEach(el => el.classList.add('in'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+/// section 4 gpt 
+
+<section class="section-padding bg-[#FCFCFC]">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          Notre méthode
+        </div>
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">Comment nous travaillons</h2>
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Un protocole rigoureux en 3 étapes pour des résultats durables et une traçabilité complète.
+        </p>
+      </div>
+
+      <!-- Étapes -->
+      <ol class="space-y-12 lg:space-y-16">
+
+        <!-- Étape 1 -->
+        <li class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <!-- Texte -->
+            <div>
+              <div class="flex items-center gap-4 mb-5">
+                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#3F8D65] text-white font-bold text-lg md:text-xl">01</span>
+                <h3 class="text-2xl font-semibold text-[#1E2939]">Diagnostic & planification</h3>
+              </div>
+              <p class="text-[#475569] mb-4">
+                Évaluation précise : surfaces, contraintes d’accès, objectifs. Recommandations techniques et calendrier.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Analyse des matériaux et des risques</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Choix des équipements & produits</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Devis clair & plan d’intervention</li>
+              </ul>
+            </div>
+
+            <!-- Média (carré, centré) -->
+            <div class="rounded-2xl bg-[#DFF1E8] p-5 md:p-12">
+              <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+                <!-- remplace src par ta photo réelle -->
+                <img src="/images/process/diagnostic.jpg" alt="Diagnostic et planification" class="h-full w-full object-cover object-center" />
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 2 -->
+        <li class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <!-- Média à gauche en desktop -->
+            <div class="rounded-2xl bg-[#DBEAFE] p-5 md:p-12 lg:order-1">
+              <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+                <img src="/images/process/intervention.jpg" alt="Intervention technique" class="h-full w-full object-cover object-center" />
+              </div>
+            </div>
+
+            <!-- Texte -->
+            <div class="lg:order-2">
+              <div class="flex items-center gap-4 mb-5">
+                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#387B58] text-white font-bold text-lg md:text-xl">02</span>
+                <h3 class="text-2xl font-semibold text-[#1E2939]">Intervention protocolisée</h3>
+              </div>
+              <p class="text-[#475569] mb-4">
+                Méthodes documentées, EPI adaptés, respect des surfaces et de l’environnement.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Équipements de dernière génération</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Dosages maîtrisés & consignes de site</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Contrôle qualité continu</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 3 -->
+        <li class="reveal">
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <!-- Texte -->
+            <div>
+              <div class="flex items-center gap-4 mb-5">
+                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#2D5A3D] text-white font-bold text-lg md:text-xl">03</span>
+                <h3 class="text-2xl font-semibold text-[#1E2939]">Contrôle & traçabilité</h3>
+              </div>
+              <p class="text-[#475569] mb-4">
+                Vérifications finales, preuves d’intervention, conseils d’entretien et plan de suivi si nécessaire.
+              </p>
+              <ul class="space-y-2 text-sm text-[#475569]">
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Check-list signée + photos</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Compte-rendu & recommandations</li>
+                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Planification d’un suivi</li>
+              </ul>
+            </div>
+
+            <!-- Média -->
+            <div class="rounded-2xl bg-[#C0E2D0] p-5 md:p-12">
+              <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+                <img src="/images/process/controle.jpg" alt="Contrôle et traçabilité" class="h-full w-full object-cover object-center" />
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+
+      <!-- CTA (secondaire) -->
+      <div class="text-center mt-14 pt-10 border-t border-[#E5E7EB] reveal">
+        <p class="text-base md:text-lg mb-6 text-[#475569]">
+          Un besoin précis ? On vous répond rapidement avec une méthode adaptée.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]"
+          data-action="cta" data-source="process" data-intent="contact"
+        >
+          Demander un devis
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12, rootMargin: "0px 0px -8%" });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+
+
+
+// Section 5 : Mission & Valeurs Klinova - Fond coloré pour rythme visuel (claude)
+
+
+<section class="section-padding" style="background: linear-gradient(135deg, #1E2939 0%, #2D3748 100%);">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6" 
+             style="background: rgba(63, 141, 101, 0.15); border-color: rgba(63, 141, 101, 0.3); color: #4ade80;">
+          <span class="block h-2 w-2 rounded-full" style="background: #4ade80;" aria-hidden="true"></span>
+          Notre mission
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-white">
+          Accompagner l'Île-de-France vers des environnements plus sains
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg md:text-xl mb-8 text-white/90">
+            Notre mission est d'accompagner particuliers et professionnels d'Île-de-France 
+            vers des environnements plus sains et durables, grâce à des solutions de nettoyage 
+            techniques et responsables.
+          </p>
+          
+          <p class="text-base text-white/80">
+            Nous intervenons dans tous les écosystèmes clés : espaces de travail, lieux de vie, 
+            copropriétés et environnements spécialisés, avec la conviction qu'en étant plus proches 
+            de nos clients, nous serons plus forts ensemble.
+          </p>
+        </div>
+      </div>
+
+      <!-- Valeurs en grille -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16">
+        
+        <!-- Excellence technique -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal hover:transform hover:-translate-y-1 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <Image 
+              src={icPoignee} 
+              alt="Excellence technique" 
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Excellence technique
+          </h3>
+          
+          <p class="text-sm leading-relaxed" style="color: #475569;">
+            Protocoles industriels, formation continue de nos équipes et investissement 
+            constant dans les technologies les plus avancées.
+          </p>
+        </article>
+
+        <!-- Responsabilité -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal hover:transform hover:-translate-y-1 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <Image 
+              src={icFeuille} 
+              alt="Responsabilité environnementale" 
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Responsabilité
+          </h3>
+          
+          <p class="text-sm leading-relaxed" style="color: #475569;">
+            Produits éco-responsables, gestion optimisée des ressources et respect 
+            de l'environnement dans chaque intervention.
+          </p>
+        </article>
+
+        <!-- Transparence -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal hover:transform hover:-translate-y-1 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <Image 
+              src={icBouclier} 
+              alt="Transparence et fiabilité" 
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Transparence
+          </h3>
+          
+          <p class="text-sm leading-relaxed" style="color: #475569;">
+            Traçabilité complète de nos interventions, reporting détaillé 
+            et communication claire à chaque étape.
+          </p>
+        </article>
+
+        <!-- Proximité -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal hover:transform hover:-translate-y-1 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-6">
+            <Image 
+              src={icLoupe} 
+              alt="Proximité et focus client" 
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Proximité
+          </h3>
+          
+          <p class="text-sm leading-relaxed" style="color: #475569;">
+            Réactivité en Île-de-France, connaissance fine du terrain 
+            et adaptation à vos contraintes spécifiques.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Section engagement -->
+      <div class="reveal">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12">
+          <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-6 text-white">
+              Notre engagement quotidien
+            </h3>
+            
+            <p class="text-lg mb-10 text-white/90">
+              Depuis notre création, Klinova s'est développée autour de ces valeurs fortes. 
+              Cette vision commune unit notre équipe et guide chacune de nos interventions 
+              en Île-de-France.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">IDF</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Couverture complète
+                </div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">100%</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Protocoles documentés
+                </div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">Éco+</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Approche responsable
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Animation d'entrée au scroll */
+  @keyframes k-reveal { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  
+  .reveal { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  
+  .reveal.in { 
+    animation: k-reveal 0.6s ease-out both; 
+  }
+  
+  @media (prefers-reduced-motion: reduce) { 
+    .reveal, .reveal.in { 
+      animation: none; 
+      opacity: 1; 
+      transform: none; 
+    }
+    
+    article:hover {
+      transform: none !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Animation au scroll avec IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !elements.length) {
+      elements.forEach(el => el.classList.add('in'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+
+
+<section class="section-padding" style="background: linear-gradient(135deg, #1E2939 0%, #2D3748 100%);">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6" 
+             style="background: rgba(63, 141, 101, 0.15); border-color: rgba(63, 141, 101, 0.3); color: #4ade80;">
+          <span class="block h-2 w-2 rounded-full" style="background: #4ade80;" aria-hidden="true"></span>
+          Notre mission
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-white">
+          Accompagner l'Île-de-France vers des environnements plus sains
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg md:text-xl mb-8 text-white/90">
+            Notre mission est d'accompagner particuliers et professionnels d'Île-de-France 
+            vers des environnements plus sains et durables, grâce à des solutions de nettoyage 
+            techniques et responsables.
+          </p>
+          
+          <p class="text-base text-white/80">
+            Nous intervenons dans tous les écosystèmes clés : espaces de travail, lieux de vie, 
+            copropriétés et environnements spécialisés, avec la conviction qu'en étant plus proches 
+            de nos clients, nous serons plus forts ensemble.
+          </p>
+        </div>
+      </div>
+
+      <!-- Valeurs en grille -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16">
+        
+        <!-- Excellence technique -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal h-full flex flex-col shadow-sm ring-1 ring-black/5 transition duration-300 hover:shadow-md hover:scale-[1.01]">
+          <div class="h-14 w-14 mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden">
+            <Image 
+              src={icBouclier} 
+              alt="Excellence" 
+              width={36}
+              height={36}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Excellence technique
+          </h3>
+          
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Protocoles industriels, formation continue de nos équipes et investissement 
+            constant dans les technologies les plus avancées.
+          </p>
+        </article>
+
+        <!-- Responsabilité -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal h-full flex flex-col shadow-sm ring-1 ring-black/5 transition duration-300 hover:shadow-md hover:scale-[1.01]">
+          <div class="h-14 w-14 mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden">
+            <Image 
+              src={icFeuille} 
+              alt="Responsabilité" 
+              width={36}
+              height={36}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Responsabilité
+          </h3>
+          
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Produits éco-responsables, gestion optimisée des ressources et respect 
+            de l'environnement dans chaque intervention.
+          </p>
+        </article>
+
+        <!-- Transparence -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal h-full flex flex-col shadow-sm ring-1 ring-black/5 transition duration-300 hover:shadow-md hover:scale-[1.01]">
+          <div class="h-14 w-14 mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden">
+            <Image 
+              src={icPoignee} 
+              alt="Transparence" 
+              width={36}
+              height={36}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Transparence
+          </h3>
+          
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Traçabilité complète de nos interventions, reporting détaillé 
+            et communication claire à chaque étape.
+          </p>
+        </article>
+
+        <!-- Proximité -->
+        <article class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal h-full flex flex-col shadow-sm ring-1 ring-black/5 transition duration-300 hover:shadow-md hover:scale-[1.01]">
+          <div class="h-14 w-14 mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden">
+            <Image 
+              src={icLoupe} 
+              alt="Proximité" 
+              width={56} height={56}
+              loading="lazy" decoding="async"
+              class="w-18 h-18"
+            />
+          </div>
+          
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+            Proximité
+          </h3>
+          
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Réactivité en Île-de-France, connaissance fine du terrain 
+            et adaptation à vos contraintes spécifiques.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Section engagement -->
+      <div class="reveal">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12">
+          <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-6 text-white">
+              Notre engagement quotidien
+            </h3>
+            
+            <p class="text-lg mb-10 text-white/90">
+              Depuis notre création, Klinova s'est développée autour de ces valeurs fortes. 
+              Cette vision commune unit notre équipe et guide chacune de nos interventions 
+              en Île-de-France.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">IDF</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Couverture complète
+                </div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">100%</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Protocoles documentés
+                </div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">Éco+</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">
+                  Approche responsable
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Animation d'entrée au scroll */
+  @keyframes k-reveal { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  
+  .reveal { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  
+  .reveal.in { 
+    animation: k-reveal 0.6s ease-out both; 
+  }
+  
+  @media (prefers-reduced-motion: reduce) { 
+    .reveal, .reveal.in { 
+      animation: none; 
+      opacity: 1; 
+      transform: none; 
+    }
+    
+    article:hover {
+      transform: none !important;
+      scale: none !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Animation au scroll avec IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !elements.length) {
+      elements.forEach(el => el.classList.add('in'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+// section 5 claude amélioré par gpt
+
+
+
+<section class="section-padding" style="background: linear-gradient(135deg, #1E2939 0%, #2D3748 100%);">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-16 reveal">
+        <div
+          class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6"
+          style="background: rgba(63, 141, 101, 0.15); border-color: rgba(63, 141, 101, 0.3); color: #4ade80;"
+        >
+          <span class="block h-2 w-2 rounded-full" style="background: #4ade80;" aria-hidden="true"></span>
+          Notre mission
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-white">
+          Accompagner l'Île-de-France vers des environnements plus sains
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg md:text-xl mb-8 text-white/90">
+            Notre mission est d'accompagner particuliers et professionnels d'Île-de-France 
+            vers des environnements plus sains et durables, grâce à des solutions de nettoyage 
+            techniques et responsables.
+          </p>
+          
+          <p class="text-base text-white/80">
+            Nous intervenons dans tous les écosystèmes clés : espaces de travail, lieux de vie, 
+            copropriétés et environnements spécialisés, avec la conviction qu'en étant plus proches 
+            de nos clients, nous serons plus forts ensemble.
+          </p>
+        </div>
+      </div>
+
+      <!-- Valeurs en grille (icônes + grandes, cartes hauteur égale) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-16">
+        
+        <!-- Excellence -->
+        <article
+          class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal
+                 h-full flex flex-col shadow-sm ring-1 ring-black/5
+                 transition duration-300 hover:shadow-md hover:scale-[1.02]"
+        >
+          <div
+            class="mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden
+                   h-16 w-16 md:h-16 md:w-16"
+          >
+            <Image
+              src={icBouclier}
+              alt="Excellence"
+              width={56} height={56}
+              loading="lazy" decoding="async"
+              class="w-18 h-18"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">Excellence technique</h3>
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Protocoles industriels, formation continue de nos équipes et investissement 
+            constant dans les technologies les plus avancées.
+          </p>
+        </article>
+
+        <!-- Responsabilité -->
+        <article
+          class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal
+                 h-full flex flex-col shadow-sm ring-1 ring-black/5
+                 transition duration-300 hover:shadow-md hover:scale-[1.02]"
+        >
+          <div
+            class="mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden
+                   h-16 w-16 md:h-16 md:w-16"
+          >
+            <Image
+              src={icFeuille}
+              alt="Responsabilité"
+              width={56} height={59}
+              loading="lazy" decoding="async"
+              class="w-18 h-18"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">Responsabilité</h3>
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Produits éco-responsables, gestion optimisée des ressources et respect 
+            de l'environnement dans chaque intervention.
+          </p>
+        </article>
+
+        <!-- Transparence (Fiabilité) -->
+        <article
+          class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal
+                 h-full flex flex-col shadow-sm ring-1 ring-black/5
+                 transition duration-300 hover:shadow-md hover:scale-[1.02]"
+        >
+          <div
+            class="mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden
+                   h-16 w-16 md:h-16 md:w-16"
+          >
+            <Image
+              src={icPoignee}
+              alt="Transparence"
+              width={56} height={56}
+              loading="lazy" decoding="async"
+              class="w-18 h-18"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">Transparence</h3>
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Traçabilité complète de nos interventions, reporting détaillé 
+            et communication claire à chaque étape.
+          </p>
+        </article>
+
+        <!-- Proximité -->
+        <article
+          class="bg-white rounded-2xl p-6 lg:p-8 text-center reveal
+                 h-full flex flex-col shadow-sm ring-1 ring-black/5
+                 transition duration-300 hover:shadow-md hover:scale-[1.02]"
+        >
+          <div
+            class="mx-auto mb-5 rounded-xl bg-[#F2F6FA] flex items-center justify-center overflow-hidden
+                   h-16 w-16 md:h-16 md:w-16"
+          >
+            <Image
+              src={icLoupe}
+              alt="Proximité"
+              width={56} height={56}
+              loading="lazy" decoding="async"
+              class="w-18 h-18"
+            />
+          </div>
+          <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">Proximité</h3>
+          <p class="text-sm leading-relaxed flex-grow" style="color: #475569;">
+            Réactivité en Île-de-France, connaissance fine du terrain 
+            et adaptation à vos contraintes spécifiques.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Section engagement -->
+      <div class="reveal">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12">
+          <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-6 text-white">Notre engagement quotidien</h3>
+            <p class="text-lg mb-10 text-white/90">
+              Depuis notre création, Klinova s'est développée autour de ces valeurs fortes. 
+              Cette vision commune unit notre équipe et guide chacune de nos interventions 
+              en Île-de-France.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">IDF</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">Couverture complète</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">100%</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">Protocoles documentés</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div class="text-3xl font-bold mb-2" style="color: #4ade80;">Éco+</div>
+                <div class="text-sm font-medium uppercase tracking-wide text-white/80">Approche responsable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Animation d'entrée au scroll */
+  @keyframes k-reveal { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to   { opacity: 1; transform: translateY(0); } 
+  }
+  .reveal { opacity: 0; transform: translateY(20px); }
+  .reveal.in { animation: k-reveal 0.6s ease-out both; }
+
+  @media (prefers-reduced-motion: reduce) { 
+    .reveal, .reveal.in { animation: none; opacity: 1; transform: none; }
+    /* neutraliser le hover sans propriété invalide */
+    article:hover { transform: none !important; }
+  }
+</style>
+
+<script is:inline>
+  // Animation au scroll avec IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !elements.length) {
+      elements.forEach(el => el.classList.add('in'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+//// claude
+
+---
+// Section Nos Capacités - Piliers non-limitants
+---
+
+<section class="section-padding" style="background: #FCFCFC;">
+  <div class="container-responsive">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- En-tête de section -->
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6" 
+             style="background: #E8F2ED; border-color: #CFE3D8; color: #3F8D65;">
+          <span class="block h-2 w-2 rounded-full" style="background: #3F8D65;" aria-hidden="true"></span>
+          Nos Capacités
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6" style="color: #1E2939;">
+          Des solutions adaptées à chaque environnement
+        </h2>
+        
+        <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #475569;">
+          Nos équipes maîtrisent l'ensemble des techniques de nettoyage et de désinfection, 
+          avec des protocoles spécialisés pour chaque type d'intervention.
+        </p>
+      </div>
+
+      <!-- Grille des capacités -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        
+        <!-- Pilier 1 : Propreté technique -->
+        <article class="group reveal">
+          <a href="/proprete-technique" 
+             class="block h-full p-6 lg:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+             style="background: #DFF1E8; border: 1px solid transparent;"
+             data-action="pillar" data-source="home" data-intent="proprete-technique">
+            
+            <!-- Icône -->
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                 style="background: #3F8D65;">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            
+            <!-- Contenu -->
+            <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+              Propreté technique & sols
+            </h3>
+            
+            <p class="text-sm mb-4" style="color: #475569;">
+              Nettoyage professionnel de tous types de revêtements : moquettes, dalles, 
+              parkings, surfaces industrielles.
+            </p>
+            
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Moquettes
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Parkings
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Sols durs
+              </span>
+            </div>
+            
+            <!-- Flèche -->
+            <div class="flex items-center gap-2 text-sm font-medium transition-colors group-hover:gap-3" 
+                 style="color: #3F8D65;">
+              En savoir plus
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M3 12h18"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+
+        <!-- Pilier 2 : Hygiène des lieux de vie -->
+        <article class="group reveal">
+          <a href="/hygiene-lieux-de-vie" 
+             class="block h-full p-6 lg:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+             style="background: #DBEAFE; border: 1px solid transparent;"
+             data-action="pillar" data-source="home" data-intent="hygiene-lieux-vie">
+            
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                 style="background: #3F8D65;">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z M3 7l9 6 9-6"/>
+              </svg>
+            </div>
+            
+            <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+              Hygiène des lieux de vie
+            </h3>
+            
+            <p class="text-sm mb-4" style="color: #475569;">
+              Entretien des espaces résidentiels et collectifs : copropriétés, 
+              parties communes, extérieurs.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Copropriétés
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Balcons
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Terrasses
+              </span>
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm font-medium transition-colors group-hover:gap-3" 
+                 style="color: #3F8D65;">
+              En savoir plus
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M3 12h18"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+
+        <!-- Pilier 3 : Désinfection & nuisibles -->
+        <article class="group reveal">
+          <a href="/desinfection-nuisibles" 
+             class="block h-full p-6 lg:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+             style="background: #C0E2D0; border: 1px solid transparent;"
+             data-action="pillar" data-source="home" data-intent="desinfection-nuisibles">
+            
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                 style="background: #3F8D65;">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            
+            <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+              Désinfection & nuisibles
+            </h3>
+            
+            <p class="text-sm mb-4" style="color: #475569;">
+              Protocoles spécialisés de désinfection et traitement des nuisibles 
+              avec traçabilité complète.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Punaises de lit
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Désinfection
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Biocides
+              </span>
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm font-medium transition-colors group-hover:gap-3" 
+                 style="color: #3F8D65;">
+              En savoir plus
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M3 12h18"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+
+        <!-- Pilier 4 : Interventions spécialisées -->
+        <article class="group reveal">
+          <a href="/interventions-specialisees" 
+             class="block h-full p-6 lg:p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+             style="background: #F5E6F0; border: 1px solid transparent;"
+             data-action="pillar" data-source="home" data-intent="interventions-specialisees">
+            
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                 style="background: #3F8D65;">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            
+            <h3 class="text-xl font-semibold mb-3" style="color: #1E2939;">
+              Interventions spécialisées
+            </h3>
+            
+            <p class="text-sm mb-4" style="color: #475569;">
+              Remise en état après travaux, sinistres, et prestations 
+              haute exigence avec protocoles renforcés.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Après travaux
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Sinistres
+              </span>
+              <span class="px-2 py-1 text-xs font-medium rounded-full" 
+                    style="background: rgba(63, 141, 101, 0.1); color: #3F8D65;">
+                Haute exigence
+              </span>
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm font-medium transition-colors group-hover:gap-3" 
+                 style="color: #3F8D65;">
+              En savoir plus
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M3 12h18"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+      <!-- CTA vers page services globale -->
+      <div class="text-center mt-12 pt-8 reveal" style="border-top: 1px solid #E5E7EB;">
+        <p class="text-base mb-6" style="color: #475569;">
+          Besoin d'une solution sur-mesure ?
+        </p>
+        <a href="/services" 
+           class="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+           style="background: linear-gradient(135deg, #3F8D65 0%, #387B58 100%);"
+           data-action="cta" data-source="capacites" data-intent="voir-tous-services">
+          Voir tous nos services
+          <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  /* Animation d'entrée au scroll */
+  @keyframes k-reveal { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  
+  .reveal { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  
+  .reveal.in { 
+    animation: k-reveal 0.6s ease-out both; 
+  }
+
+  /* Hover effects sur les cartes */
+  article:hover {
+    border-color: rgba(63, 141, 101, 0.2) !important;
+  }
+  
+  @media (prefers-reduced-motion: reduce) { 
+    .reveal, .reveal.in { 
+      animation: none; 
+      opacity: 1; 
+      transform: none; 
+    } 
+  }
+</style>
+
+<script is:inline>
+  // Animation au scroll avec IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !elements.length) {
+      elements.forEach(el => el.classList.add('in'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+<section class="section-padding bg-[#F9FAFB]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto text-center mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                  bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+        <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+        Désinfection & assainissement avancés
+      </div>
+
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-[#1E2939]">
+        Au-delà du nettoyage, une protection durable des environnements
+      </h2>
+
+      <p class="text-lg md:text-xl text-[#475569] max-w-3xl mx-auto">
+        Nos prestations de désinfection et d’assainissement vont bien au-delà du nettoyage standard. 
+        Klinova applique des protocoles issus de l’hygiène hospitalière pour éliminer les germes, 
+        bactéries et agents pathogènes tout en prévenant leur réapparition.
+      </p>
+    </div>
+
+    <!-- Grille 3 cartes -->
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+      
+      <article class="rounded-2xl bg-white p-6 text-center shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Nettoyages réguliers & proactifs</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Maintenez un niveau d’hygiène constant dans vos espaces communs, bureaux ou copropriétés
+          grâce à des interventions planifiées et mesurables.
+        </p>
+      </article>
+
+      <article class="rounded-2xl bg-white p-6 text-center shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Désinfection approfondie</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Utilisation de produits biocides certifiés et conformes au règlement européen,
+          pour un environnement sain et sécurisé.
+        </p>
+      </article>
+
+      <article class="rounded-2xl bg-white p-6 text-center shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Revêtements antimicrobiens</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Application de protections antimicrobiennes actives permettant de prévenir durablement
+          la prolifération de micro-organismes sur les surfaces sensibles.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+// gpt section désinfection
+<section class="section-padding bg-[#F9FAFB]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto text-center mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                  bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+        <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+        Hygiène renforcée & désinfection professionnelle
+      </div>
+
+      <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-[#1E2939]">
+        Quand l’exigence d’hygiène dépasse le simple nettoyage
+      </h2>
+
+      <p class="text-lg md:text-xl text-[#475569] max-w-3xl mx-auto">
+        Klinova intervient dans les environnements nécessitant des protocoles sanitaires spécifiques :
+        fientes d’oiseaux, contamination biologique ou nettoyage post-sinistre.
+        Nos méthodes allient efficacité biocide et respect de l’environnement.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+      
+      <article class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Produits certifiés EN</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Utilisation de désinfectants conformes aux normes européennes (bactéricide, fongicide, virucide) 
+          pour garantir une sécurité maximale.
+        </p>
+      </article>
+
+      <article class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Protocoles traçables</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Chaque intervention suit une procédure documentée avec identification des zones traitées 
+          et fiches de sécurité produit.
+        </p>
+      </article>
+
+      <article class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition text-center">
+        <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Approche responsable</h3>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Nos techniciens appliquent les protocoles biocides uniquement lorsque cela est nécessaire, 
+          en privilégiant les solutions écologiques et durables.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+// section désinfection class="rounded-2xl
+
+
+<section class="section-padding bg-[#F8FAFC]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E1F5FE] border-[#B3E5FC] text-[#0277BD]">
+          <span class="block h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+          Expertise technique
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Hygiène renforcée & désinfection professionnelle
+        </h2>
+
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Pour les interventions nécessitant des protocoles sanitaires renforcés, nous déployons 
+          des solutions de désinfection certifiées et des procédures de décontamination adaptées.
+        </p>
+      </div>
+
+      <!-- Contenu principal -->
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        
+        <!-- Colonne gauche : expertise -->
+        <div class="space-y-8 reveal">
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Produits certifiés & traçabilité</h3>
+            <p class="text-[#475569] mb-4">
+              Nous utilisons exclusivement des produits biocides homologués respectant les normes européennes EN, 
+              avec une traçabilité complète des interventions et des substances employées.
+            </p>
+            <ul class="space-y-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Virucides EN 14476 (coronavirus, influenza)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Bactéricides EN 13697 (surfaces contaminées)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Fongicides EN 1276 (moisissures, levures)
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Interventions spécialisées</h3>
+            <p class="text-[#475569] mb-4">
+              Nos équipes Certibiocide interviennent sur les zones présentant des risques sanitaires : 
+              déjections animales, espaces post-sinistre, locaux techniques contaminés.
+            </p>
+            <ul class="space-y-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Décontamination de balcons (fientes de pigeons)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Traitement des moisissures et champignons
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#0277BD]" aria-hidden="true"></span>
+                Remise en état sanitaire post-travaux
+              </li>
+            </ul>
+          </section>
+
+          <!-- Certification -->
+          <div class="pt-4 border-t border-[#E1F5FE]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-[#0277BD]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#0277BD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-[#0277BD]">Personnel certifié Certibiocide</p>
+            </div>
+            <p class="text-xs text-[#475569] pl-13">
+              Nos techniciens détiennent les certifications réglementaires pour l'utilisation 
+              et la manipulation des produits biocides en milieu professionnel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne droite : visuel + indicateurs -->
+        <div class="space-y-8 reveal">
+          <!-- Image d'équipement -->
+          <div class="rounded-2xl bg-[#E1F5FE] p-6 md:p-8">
+            <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80">
+              <div class="h-full w-full flex items-center justify-center text-[#0277BD]">
+                <!-- Placeholder - remplacez par votre image d'équipement -->
+                <div class="text-center">
+                  <svg class="w-16 h-16 mx-auto mb-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                  </svg>
+                  <p class="text-sm font-medium">Équipements de désinfection</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Points forts en grid -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E1F5FE]">
+              <div class="text-2xl font-bold mb-1 text-[#0277BD]">100%</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">
+                Produits homologués
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E1F5FE]">
+              <div class="text-2xl font-bold mb-1 text-[#0277BD]">EN</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">
+                Normes européennes
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E1F5FE]">
+              <div class="text-2xl font-bold mb-1 text-[#0277BD]">24h</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">
+                Délai d'intervention
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E1F5FE]">
+              <div class="text-2xl font-bold mb-1 text-[#0277BD]">IDF</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">
+                Zone couverte
+              </div>
+            </div>
+          </div>
+
+          <!-- Note sécurité -->
+          <div class="bg-[#FFF3E0] border border-[#FFE0B2] rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-[#F57C00] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+              <p class="text-sm text-[#E65100]">
+                <strong class="font-medium">Sécurité :</strong> Respect strict des dosages, 
+                temps de contact et consignes de ventilation selon les fiches de données de sécurité.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA discret -->
+      <div class="text-center mt-12 pt-8 border-t border-[#E1F5FE] reveal">
+        <p class="text-base mb-6 text-[#475569]">
+          Une zone nécessite une intervention sanitaire spécialisée ?
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#B3E5FC] text-[#0277BD] hover:bg-[#E1F5FE]"
+          data-action="cta" data-source="hygiene-renforcee" data-intent="contact-specialise"
+        >
+          Nous consulter
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+// séction désinfection corrigé par gpt
+
+
+
+<section class="section-padding bg-[#F8FAFC]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          Expertise technique
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Hygiène renforcée & désinfection professionnelle
+        </h2>
+
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Pour les situations nécessitant des protocoles sanitaires spécifiques (fientes d’oiseaux, contamination biologique, post-sinistre),
+          nous déployons des procédures documentées et des produits certifiés.
+        </p>
+      </div>
+
+      <!-- Grille -->
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        
+        <!-- Colonne gauche -->
+        <div class="space-y-8 reveal">
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Produits certifiés & traçabilité</h3>
+            <p class="text-[#475569] mb-4">
+              Biocides homologués, fiches de données de sécurité, consignation des zones traitées et des temps de contact.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Virucide&nbsp;EN&nbsp;14476
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéricide&nbsp;EN&nbsp;1276
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéri/Fongicide&nbsp;EN&nbsp;13697 (surfaces)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                (Option) Fongicide&nbsp;EN&nbsp;1650
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Interventions spécialisées</h3>
+            <p class="text-[#475569] mb-4">
+              Équipes formées (Certibiocide) pour traiter des zones sensibles en sécurité et restituer des espaces sains.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Balcons (fientes de pigeons)</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Moisissures / champignons</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Post-sinistre / post-travaux</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Locaux techniques ciblés</li>
+            </ul>
+          </section>
+
+          <!-- Certification -->
+          <div class="pt-4 border-t border-[#E8F2ED]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-[#3F8D65]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-[#3F8D65]">Personnel certifié Certibiocide</p>
+            </div>
+            <p class="text-xs text-[#475569] pl-12">
+              Application conforme aux fiches de données de sécurité et aux consignes d’aération/ventilation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne droite : visuel + indicateurs -->
+        <div class="space-y-8 reveal">
+          <!-- Image réelle -->
+          <div class="rounded-2xl bg-[#E8F2ED] p-6 md:p-8">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm bg-white/80">
+              <Image
+                src={desinfectionEquipment}
+                alt="Équipement de désinfection professionnel utilisé par Klinova"
+                formats={['avif','webp','jpeg']}
+                widths={[768,1024,1440]}
+                sizes="(min-width: 1024px) 560px, 100vw"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <!-- Indicateurs -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">100%</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Produits homologués</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">EN</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Normes européennes</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">24h</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Délai d’intervention</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">IDF</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Zone couverte</div>
+            </div>
+          </div>
+
+          <!-- Note sécurité -->
+          <div class="bg-[#FFF3E0] border border-[#FFE0B2] rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-[#E65100] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+              <p class="text-sm text-[#7C3A00]">
+                <strong class="font-medium">Sécurité :</strong> respect strict des dosages, temps de contact et consignes de ventilation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA discret -->
+      <div class="text-center mt-12 pt-8 border-t border-[#E8F2ED] reveal">
+        <p class="text-base mb-6 text-[#475569]">Une zone nécessite une intervention sanitaire spécialisée ?</p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]"
+          data-action="cta" data-source="hygiene-renforcee" data-intent="contact-specialise"
+        >
+          Nous consulter
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+
+
+/// claude corrigé par gpt
+
+
+
+
+<section class="section-padding bg-[#F8FAFC]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          Expertise technique
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Hygiène renforcée & désinfection professionnelle
+        </h2>
+
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Pour les situations nécessitant des protocoles sanitaires spécifiques (fientes d’oiseaux, contamination biologique, post-sinistre),
+          nous déployons des procédures documentées et des produits certifiés.
+        </p>
+      </div>
+
+      <!-- Grille -->
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        
+        <!-- Colonne gauche -->
+        <div class="space-y-8 reveal">
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Produits certifiés & traçabilité</h3>
+            <p class="text-[#475569] mb-4">
+              Biocides homologués, fiches de données de sécurité, consignation des zones traitées et des temps de contact.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Virucide&nbsp;EN&nbsp;14476
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéricide&nbsp;EN&nbsp;1276
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéri/Fongicide&nbsp;EN&nbsp;13697 (surfaces)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                (Option) Fongicide&nbsp;EN&nbsp;1650
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Interventions spécialisées</h3>
+            <p class="text-[#475569] mb-4">
+              Équipes formées (Certibiocide) pour traiter des zones sensibles en sécurité et restituer des espaces sains.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-[#475569]">
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Balcons (fientes de pigeons)</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Moisissures / champignons</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Post-sinistre / post-travaux</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]"></span> Locaux techniques ciblés</li>
+            </ul>
+          </section>
+
+          <!-- Certification -->
+          <div class="pt-4 border-t border-[#E8F2ED]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-[#3F8D65]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-[#3F8D65]">Personnel certifié Certibiocide</p>
+            </div>
+            <p class="text-xs text-[#475569] pl-12">
+              Application conforme aux fiches de données de sécurité et aux consignes d’aération/ventilation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne droite : visuel + indicateurs -->
+        <div class="space-y-8 reveal">
+          <!-- Image réelle -->
+          <div class="rounded-2xl bg-[#E8F2ED] p-6 md:p-8">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm bg-white/80">
+              <div class="aspect-[4/3] rounded-xl overflow-hidden">
+  <Image
+    src={desinfectionEquipment}
+    alt="Équipement de désinfection professionnel utilisé par Klinova"
+    formats={['avif','webp','jpeg']}
+    widths={[768,1024,1440]}
+    sizes="(min-width: 1024px) 560px, 100vw"
+    loading="lazy"
+    decoding="async"
+    class="h-full w-full object-cover object-center"
+  />
+</div>
+          </div>
+
+          <!-- Indicateurs -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">100%</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Produits homologués</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">EN</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Normes européennes</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">24h</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Délai d’intervention</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">IDF</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Zone couverte</div>
+            </div>
+          </div>
+
+          <!-- Note sécurité -->
+          <div class="bg-[#FFF3E0] border border-[#FFE0B2] rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-[#E65100] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+              <p class="text-sm text-[#7C3A00]">
+                <strong class="font-medium">Sécurité :</strong> respect strict des dosages, temps de contact et consignes de ventilation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA discret -->
+      <div class="text-center mt-12 pt-8 border-t border-[#E8F2ED] reveal">
+        <p class="text-base mb-6 text-[#475569]">Une zone nécessite une intervention sanitaire spécialisée ?</p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]"
+          data-action="cta" data-source="hygiene-renforcee" data-intent="contact-specialise"
+        >
+          Nous consulter
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+//3 eme version corrigé par gpt
+
+<section class="section-padding bg-[#F8FAFC]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                    bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          Expertise technique
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Hygiène renforcée & désinfection professionnelle
+        </h2>
+
+        <p class="text-lg md:text-xl mx-auto max-w-3xl text-[#475569]">
+          Pour les situations nécessitant des protocoles sanitaires spécifiques (fientes d’oiseaux, contamination biologique, post-sinistre),
+          nous déployons des procédures documentées et des produits certifiés.
+        </p>
+      </div>
+
+      <!-- Grille -->
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <!-- Colonne gauche -->
+        <div class="space-y-8 reveal">
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Produits certifiés & traçabilité</h3>
+            <p class="text-[#475569] mb-4">
+              Biocides homologués, fiches de données de sécurité, consignation des zones traitées et des temps de contact.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-sm text-[#475569]">
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Virucide&nbsp;EN&nbsp;14476
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéricide&nbsp;EN&nbsp;1276
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                Bactéricide / fongicide&nbsp;EN&nbsp;13697 (surfaces)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+                (Option) Fongicide&nbsp;EN&nbsp;1650
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Interventions spécialisées</h3>
+            <p class="text-[#475569] mb-4">
+              Équipes formées (Certibiocide) pour traiter des zones sensibles en sécurité et restituer des espaces sains.
+            </p>
+
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-sm text-[#475569]">
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span> Balcons (fientes de pigeons)</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span> Moisissures / champignons</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span> Post-sinistre / post-travaux</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span> Locaux techniques ciblés</li>
+            </ul>
+          </section>
+
+          <!-- Certification -->
+          <div class="pt-4 border-t border-[#E8F2ED]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg bg-[#3F8D65]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-[#3F8D65]">Personnel certifié Certibiocide</p>
+            </div>
+            <p class="text-xs text-[#475569] pl-12">
+              Application conforme aux fiches de données de sécurité et aux consignes d’aération/ventilation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Colonne droite : visuel + indicateurs -->
+        <div class="space-y-8 reveal">
+          <!-- Image réelle -->
+          <div class="rounded-2xl bg-[#E8F2ED] p-6 md:p-8">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-sm bg-white/80">
+              <Image
+                src={desinfectionEquipment}
+                alt="Équipement de désinfection professionnel utilisé par Klinova"
+                formats={['avif','webp','jpeg']}
+                widths={[640, 1024]}
+                sizes="(min-width: 1024px) 560px, 100vw"
+                quality={88}
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <!-- Indicateurs -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">100%</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Produits homologués</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">EN</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Normes européennes</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">24h</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Délai d’intervention</div>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-[#E8F2ED]">
+              <div class="text-2xl font-bold mb-1 text-[#1E2939]">IDF</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-[#475569]">Zone couverte</div>
+            </div>
+          </div>
+
+          <!-- Note sécurité -->
+          <div class="bg-[#FFF3E0] border border-[#FFE0B2] rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-[#E65100] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+              </svg>
+              <p class="text-sm text-[#7C3A00]">
+                <strong class="font-medium">Sécurité :</strong> respect strict des dosages, temps de contact et consignes de ventilation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA discret -->
+      <div class="text-center mt-12 pt-8 border-t border-[#E8F2ED] reveal">
+        <p class="text-base mb-6 text-[#475569]">Une zone nécessite une intervention sanitaire spécialisée ?</p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
+                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3F8D65] focus-visible:ring-offset-2"
+          data-action="cta" data-source="hygiene-renforcee" data-intent="contact-specialise"
+        >
+          Nous consulter
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:inline>
+  @keyframes k-reveal { from { opacity:0; transform: translateY(16px) } to { opacity:1; transform:none } }
+  .reveal { opacity:0; transform: translateY(16px) }
+  .reveal.in { animation: k-reveal .6s ease-out both }
+  @media (prefers-reduced-motion: reduce) { .reveal, .reveal.in { animation:none; opacity:1; transform:none } }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  });
+</script>
+
+
+
+</Layout>

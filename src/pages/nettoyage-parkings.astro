@@ -1,0 +1,1472 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image } from 'astro:assets';
+import Button from '~/components/UI/Button.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+
+
+import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
+
+import autolaveuseParkingImage from '../assets/images/nettoyage-parking-autolaveuse.jpg';
+
+
+
+
+import { Accordion, AccordionItem } from 'free-astro-components';
+const faq = [
+  {
+    title: "Quelle est la différence entre autolaveuse et monobrosse ?",
+    content: "L'autolaveuse convient aux grandes surfaces (>200m²) : elle nettoie, aspire et sèche en un passage. La monobrosse est utilisée pour les petites zones ou les traces tenaces (gomme, freinage) avec un travail plus précis mais manuel."
+  },
+  {
+    title: "Combien de temps faut-il pour nettoyer un parking ?",
+    content: "Comptez 3 à 6 heures pour 1000m² selon l'encrassement et les contraintes d'accès. Le séchage avec nos turbines XPOWER réduit l'attente à 2-4h avant réouverture complète."
+  },
+  {
+    title: "Utilisez-vous des produits chimiques agressifs ?",
+    content: "Nos dégraissants sont alcalins professionnels (pH contrôlé) spécialement conçus pour les sols béton. Ils éliminent les hydrocarbures sans endommager les surfaces et sont évacués selon les normes environnementales."
+  },
+  {
+    title: "Comment gérez-vous l'évacuation des eaux usées ?",
+    content: "Nous aspirons immédiatement les eaux de lavage avec nos autolaveuses. Aucun écoulement direct dans les caniveaux : tout est récupéré et évacué vers les réseaux adaptés ou cuves de rétention."
+  },
+  {
+    title: "Quel est le coût d'un nettoyage de parking ?",
+    content: "Les tarifs varient entre 1,0 et 2,0€/m² selon la surface, l'état d'encrassement et la fréquence. La dégressivité s'applique rapidement dès 1000m². Pour les petites surfaces, un forfait minimum s'applique (déplacement et mise en sécurité)."
+  },
+  {
+    title: "Proposez-vous des contrats d'entretien régulier ?",
+    content: "Oui, nous recommandons 1 à 4 passages par an selon le trafic et la ventilation du parking. Les contrats annuels incluent des rappels automatiques et une tarification préférentielle."
+  },
+  {
+    title: "Le diagnostic est-il payant ?",
+    content: "Non, l'état des lieux et l'estimation sont gratuits. Nous envoyons le devis détaillé sous 24h avec un plan d'intervention adapté à votre parking."
+  },
+  {
+    title: "Comment sécurisez-vous le chantier ?",
+    content: "Balisage complet, panneaux de signalisation, ruban barrière et EPI pour toute l'équipe. Nous coupons les alimentations électriques si nécessaire et maintenons une ventilation continue pendant l'intervention."
+  },
+  {
+    title: "Travaillez-vous avec les assurances après sinistre ?",
+    content: "Oui, nous coordonnons avec les gestionnaires, experts et assureurs. Chaque intervention est documentée (photos, produits utilisés, durée) pour faciliter les démarches administratives."
+  },
+  {
+    title: "Intervenez-vous en urgence ?",
+    content: "Pour les post-sinistres (incendie, dégât des eaux), nous priorisons selon disponibilité avec diagnostic sous 24h. Les interventions de maintenance classique sont planifiées selon vos contraintes horaires."
+  },
+  {
+    title: "Nettoyez-vous tous types de parkings ?",
+    content: "Parkings souterrains, rampes d'accès, zones de stationnement couvertes. Nous adaptons notre protocole aux sols béton, résine ou époxy et aux contraintes d'accès (monte-charge, seuils bas)."
+  },
+  {
+    title: "Intervenez-vous dans toute l'Île-de-France ?",
+    content: "Oui, nous couvrons Paris et la région parisienne. Les frais de déplacement sont inclus dans nos devis, sauf zones très excentrées qui font l'objet d'un supplément transparent."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.title,
+    acceptedAnswer: { "@type": "Answer", text: item.content },
+  })),
+};
+
+
+
+const popupContext = {
+  title: 'Devis nettoyage de moquettes',
+  subtitle: 'Obtenez un devis personnalisé sous 24h',
+  serviceKey: 'moquette',
+  serviceLabel: 'Nettoyage de moquette',
+  trackingSource: 'popup-moquette',
+  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  creditImpotEnabled: true, 
+};
+---
+
+
+
+
+
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de parkings – Klinova',
+    description: 'Prestations pro de nettoyage de parkings en Île-de-France.',
+  }}
+>
+
+
+
+<section
+  class="relative bg-gradient-to-br from-[#F8FAFC] to-[#DBEAFE] pt-24 pb-16"
+  data-hide-cta
+>
+  <div class="container-responsive">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Contenu textuel -->
+      <div class="space-y-6">
+        
+        <!-- Badge zone d'intervention -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-sm text-[#1E2939] rounded-full text-sm font-medium shadow-md border border-white/40 animate-fade-in-up">
+          <svg class="w-4 h-4 mr-2 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          Paris et Île-de-France
+        </div>
+
+        <!-- Titre principal H1 avec animation -->
+       <h1 class="text-4xl lg:text-5xl font-bold text-[#1E2939] leading-tight animate-fade-in-up animation-delay-100">
+  Nettoyage professionnel 
+  <span class="text-[#1E40AF] inline-block transform hover:scale-105 transition-transform duration-300">de parkings</span> 
+  à Paris
+</h1>
+
+
+        <!-- Sous-titre bénéfices -->
+        <p class="text-xl text-[#475569] leading-relaxed animate-fade-in-up animation-delay-200">
+          Dégraissage, dépoussiérage et désinfection de vos parkings. 
+          Intervention rapide avec équipements industriels pour une propreté durable.
+        </p>
+
+        <!-- Points de réassurance avec animations décalées -->
+        <div class="flex flex-wrap gap-6 text-[#475569] animate-fade-in-up animation-delay-300">
+          <div class="flex items-center transform hover:scale-105 transition-all duration-200">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Intervention sur-mesure
+          </div>
+          <div class="flex items-center transform hover:scale-105 transition-all duration-200 animation-delay-100">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Équipements industriels
+          </div>
+          <div class="flex items-center transform hover:scale-105 transition-all duration-200 animation-delay-200">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Devis gratuit
+          </div>
+        </div>
+
+        <!-- CTA principal avec animations -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up animation-delay-400">
+          <Button
+            href="tel:0676738661"
+            label="06 76 73 86 61"
+            variant="primary"
+            size="lg"
+            ariaLabel="Appeler Klinova au 06 76 73 86 61"
+            tracking={{ action: 'cta_phone_hero_parking', source: 'hero_parking' }}
+          >
+            <svg class="w-5 h-5 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            06 76 73 86 61
+          </Button>
+
+          <Button
+            href="#"
+            label="Demander un devis"
+            variant="secondary"
+            size="lg"
+            tracking={{ action: 'cta_form_hero_parking', source: 'hero_parking' }}
+            data={{ openPopup: 'devis-parking' }}
+          />
+        </div>
+
+        <!-- Mention légale discrete -->
+        <p class="text-sm text-[#6B7280] mt-6 animate-fade-in-up animation-delay-500">
+          Intervention planifiée • Syndics, copropriétés et entreprises • Urgences sinistres acceptées
+        </p>
+      </div>
+
+      <!-- Zone image avec animations premium -->
+        <!-- Zone image avec animations premium -->
+      <div class="relative lg:order-2">
+        <!-- Container principal avec effets -->
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl group hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02]">
+          
+          <!-- Image optimisée avec overlay subtil -->
+          <div class="relative aspect-[4/3] overflow-hidden bg-[#F1F5F9]">
+            <Image
+              src={heroParking}
+              alt="Parking souterrain nettoyé et sec, marquages au sol nets et surface dégraissée"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              widths={[640, 768, 1024, 1280, 1536]}
+              sizes="(min-width:1024px) 50vw, 100vw"
+              quality={88}
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            
+            <!-- Overlay gradient subtil pour améliorer la lisibilité des badges -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          
+          <!-- Badge "Parking parisien nettoyé" animé -->
+          <div class="absolute top-4 left-4 transform transition-all duration-300 hover:scale-105">
+            <div class="bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/20">
+              <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-[#3F8D65] rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-[#1E2939]">Parking parisien nettoyé</span>
+              </div>
+            </div>
+          </div>
+
+       
+          
+          <!-- Effet de brillance au survol -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700">
+            <div class="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+  .animation-delay-100 { animation-delay: 0.1s; opacity: 0; }
+  .animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .animation-delay-300 { animation-delay: 0.3s; opacity: 0; }
+  .animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+  .animation-delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up, .animate-pulse { animation: none; }
+    .transform:hover { transform: none; }
+  }
+  .shadow-3xl { box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25); }
+</style>
+
+
+
+
+
+<!-- Section 2 : Pourquoi faire appel à des professionnels ? -->
+<section class="bg-[#FCFCFC] py-16 md:py-24">
+  <div class="container-responsive">
+    <!-- En-tête -->
+    <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+      <div
+        class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+               bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]"
+      >
+        <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+        Points critiques
+      </div>
+
+      <h2
+        class="text-3xl md:text-4xl font-semibold text-[#1E2939] mb-4 leading-snug animate-fade-in-up"
+      >
+        Pourquoi faire appel à des professionnels&nbsp;?
+      </h2>
+
+      <p
+        class="text-lg md:text-xl text-[#475569] leading-relaxed animate-fade-in-up animation-delay-100"
+      >
+        Les parkings souterrains sont des environnements complexes&nbsp;: pollution, graisses, poussières et circulation rendent leur entretien nécessaires. Nos équipes interviennent avec des protocoles précis pour garantir sécurité, hygiène et durabilité.
+      </p>
+    </div>
+
+    <!-- Liste des problématiques -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto animate-fade-in-up animation-delay-200">
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Taches d’huile et hydrocarbures tenaces
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Traitement dégraissant spécifique, rinçage maîtrisé et aspiration des résidus polluants pour prévenir les infiltrations.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Accumulation de poussières et salissures
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Dépoussiérage complet des sols, murs et rampes avec aspirateurs industriels et autolaveuses à haute filtration.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Monte-charge et ascenseurs véhicules
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Nettoyage manuel approfondi des zones mécaniques et cabines d’ascenseur, avec produits non corrosifs et rinçage minimal.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Conformité hygiène et copropriétés
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Prestations conformes aux normes sanitaires et environnementales&nbsp;: produits biodégradables et procédures sécurisées.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Sécurité piétonne et sols glissants
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Application de dégraissants antidérapants et contrôle du taux d’humidité pour limiter les risques de chute.
+        </p>
+      </div>
+
+      <!-- Item -->
+      <div class="p-6 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Interventions post-sinistre
+        </h3>
+        <p class="text-[#475569] text-base leading-relaxed">
+          Décontamination après incendie (suie, fumées) ou dégât des eaux&nbsp;: pompage, assèchement, désinfection.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Call-to-action de transition -->
+    <div class="text-center mt-12">
+            <div class="inline-flex items-center px-6 py-3 bg-[#F8FAFC] border border-[#E5E7EB] rounded-lg">
+        <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-[#1E2939] font-medium">
+          Notre protocole technique répond à chacun de ces enjeux
+        </span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+{false && (
+<!-- Section 2 : Pourquoi faire appel à des professionnels AVEC PHOTO A AJOUTER ? -->
+<section class="bg-[#FCFCFC] py-16 md:py-24">
+  <div class="container-responsive">
+    <!-- En-tête -->
+    <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+        <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+        Points critiques
+      </div>
+
+      <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] mb-4 leading-snug animate-fade-in-up">
+        Pourquoi faire appel à des professionnels&nbsp;?
+      </h2>
+
+      <p class="text-lg md:text-xl text-[#475569] leading-relaxed animate-fade-in-up [animation-delay:120ms] opacity-0">
+        Les parkings souterrains cumulent graisses, poussières et contraintes de sécurité. Des protocoles adaptés garantissent hygiène, durabilité et circulation sereine.
+      </p>
+    </div>
+
+    <!-- Cartes avec vignettes -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- 1. Taches d'huile / hydrocarbures -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgHuile} alt="Taches d'huile et hydrocarbures sur sol de parking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Taches d’huile et hydrocarbures tenaces</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Dégraissage spécifique, rinçage maîtrisé et aspiration des résidus pour éviter les infiltrations.</p>
+      </article>
+
+      <!-- 2. Poussières et salissures -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgPoussiere} alt="Accumulation de poussières et salissures dans un parking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Accumulation de poussières et salissures</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Aspirateurs industriels & autolaveuses à haute filtration pour sols, rampes et surfaces.</p>
+      </article>
+
+      <!-- 3. Monte-charge / ascenseurs véhicules -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgMontech} alt="Monte-charge et ascenseurs véhicules - zones critiques" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Monte-charge/ascenseurs véhicules</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Nettoyage manuel des zones mécaniques et cabines, produits non corrosifs, rinçage minimal.</p>
+      </article>
+
+      <!-- 4. Conformité hygiène (public/copro) -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgConformite} alt="Conformité hygiène des parkings publics et copropriétés" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Conformité hygiène (parkings publics/copropriétés)</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Procédures sécurisées et produits biodégradables pour un environnement conforme et pérenne.</p>
+      </article>
+
+      <!-- 5. Sécurité piétonne -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgGlissant} alt="Sols glissants et sécurité piétonne en parking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Sécurité piétonne (sols glissants)</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Traitements antidérapants, contrôle d’humidité et signalisation pour limiter les risques de chute.</p>
+      </article>
+
+      <!-- 6. Post-sinistre -->
+      <article class="group p-5 rounded-2xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <div class="relative aspect-square overflow-hidden rounded-xl mb-4 bg-[#F1F5F9]">
+          <Image src={imgSinistre} alt="Interventions post-sinistre : suie, fumées, dégâts des eaux" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width={640} height={640} quality={82} decoding="async" />
+          <div class="absolute inset-0 bg-black/10 mix-blend-multiply"></div>
+        </div>
+        <h3 class="font-semibold text-[#1E2939] mb-2 text-lg">Interventions post-sinistre</h3>
+        <p class="text-[#475569] text-base leading-relaxed">Décontamination (suie, fumées) et dégâts des eaux&nbsp;: pompage, assèchement, désinfection.</p>
+      </article>
+    </div>
+  </div>
+</section>
+)}
+
+
+
+
+<!-- Section 3 : Notre protocole de nettoyage à lautolaveuse -->
+
+<section class="bg-[#DBEAFE] py-16 md:py-24" data-section="protocole-autolaveuse">
+  <div class="container-responsive">
+    
+    <!-- En-tête -->
+    <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-white/80 border-white/60 text-[#1E40AF]">
+        <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
+        Protocole d'intervention
+      </div>
+      <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] leading-snug animate-fade-in-up">
+        Notre protocole de nettoyage à l'autolaveuse
+      </h2>
+      <p class="text-lg text-[#475569] mt-4 animate-fade-in-up animation-delay-100">
+        Dégraissage ciblé, nettoyage mécanique homogène et dépoussiérage complet. 
+        Méthode adaptée à la configuration du parking et au niveau d'encrassement.
+      </p>
+    </div>
+
+    <!-- Image autolaveuse en action -->
+    <div class="max-w-4xl mx-auto mb-12 md:mb-16 animate-fade-in-up animation-delay-200">
+      <div class="relative overflow-hidden rounded-2xl shadow-xl">
+        <Image
+          src={autolaveuseParkingImage}
+          alt="Autolaveuse industrielle en action dans un parking souterrain avec opérateur professionnel"
+          class="w-full h-auto object-cover"
+          widths={[640, 768, 1024, 1280, 1536]}
+          sizes="(min-width:1024px) 80vw, 100vw"
+          quality={90}
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
+      </div>
+    </div>
+
+    <!-- 4 volets du protocole (pattern non-carte, blocs élargis) -->
+    <div class="max-w-5xl mx-auto space-y-6 animate-fade-in-up animation-delay-300">
+      
+      <!-- 1. Préparation & dégraissage ciblé -->
+      <div class="group relative rounded-2xl bg-white border border-white/60 p-6 md:p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl bg-[#E8F2ED] grid place-content-center text-[#3F8D65]" aria-hidden="true">
+            <!-- icône huile -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 0 1 .4 1 1v2.1c1.2.2 2.3.8 3.2 1.7 1.1 1.1 1.8 2.7 1.8 4.3 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-1.6.7-3.2 1.8-4.3.9-.9 2-1.5 3.2-1.7V3c0-.6.4-1 1-1zM7 19h10c.6 0 1 .4 1 1s-.4 1-1 1H7c-.6 0-1-.4-1-1s.4-1 1-1z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Préparation &amp; dégraissage ciblé</h3>
+            <ul class="text-[#475569] space-y-1.5 list-disc ms-5">
+              <li>Repérage des zones grasses et traces d'hydrocarbures</li>
+              <li>Application dégraissant alcalin concentré, temps de pose maîtrisé</li>
+              <li>Brossage mécanique puis rinçage contrôlé (anti-film glissant)</li>
+            </ul>
+            <div class="mt-4 p-3 bg-[#F0F9FF] rounded-lg border-l-4 border-[#3F8D65]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                Objectif : Sol non glissant, suppression des traces et odeurs d'huile
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Nettoyage à l'autolaveuse & récupération -->
+      <div class="group relative rounded-2xl bg-white border border-white/60 p-6 md:p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl bg-[#E8F2ED] grid place-content-center text-[#3F8D65]" aria-hidden="true">
+            <!-- icône autolaveuse -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 15a4 4 0 014-4h8a4 4 0 110 8H8a4 4 0 01-4-4zm4-6h8a6 6 0 010 12H8A6 6 0 018 9zm2-5h4a1 1 0 110 2h-4a1 1 0 010-2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Nettoyage complet à l'autolaveuse &amp; récupération</h3>
+            <ul class="text-[#475569] space-y-1.5 list-disc ms-5">
+              <li>Passage machine sur voies, rampes et zones de stationnement</li>
+              <li>Aspiration continue des eaux sales, volumes d'eau maîtrisés</li>
+              <li>Finitions manuelles : angles, pieds de murs, seuils/monte-charge</li>
+            </ul>
+            <div class="mt-4 p-3 bg-[#F0F9FF] rounded-lg border-l-4 border-[#3F8D65]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                Objectif : Propreté visible et homogène, sans résidus ni traces
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Finitions, ventilation & maintenance -->
+      <div class="group relative rounded-2xl bg-white border border-white/60 p-6 md:p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl bg-[#E8F2ED] grid place-content-center text-[#3F8D65]" aria-hidden="true">
+            <!-- icône ventilation -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h10a3 3 0 000-6 1 1 0 100 2 1 1 0 110 2H4a1 1 0 000 2zm0 8h14a3 3 0 010 6 1 1 0 010-2 1 1 0 100-2H4a1 1 0 010-2zM3 12a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Finitions, ventilation &amp; maintenance</h3>
+            <ul class="text-[#475569] space-y-1.5 list-disc ms-5">
+              <li>Dépoussiérage structures : murs, gaines, tuyauteries, signalétique</li>
+              <li>Séchage accéléré : turbines XPOWER / extraction renforcée</li>
+              <li>Contrôle caniveaux/siphons et écoulements – report photo &amp; conseils</li>
+            </ul>
+            <div class="mt-4 p-3 bg-[#F0F9FF] rounded-lg border-l-4 border-[#3F8D65]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                Objectif : Séchage rapide, parking praticable dans la journée, traçabilité du service
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Nettoyage à la monobrosse (traces localisées) -->
+      <div class="group relative rounded-2xl bg-white border border-white/60 p-6 md:p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl bg-[#E8F2ED] grid place-content-center text-[#3F8D65]" aria-hidden="true">
+            <!-- icône monobrosse -->
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.1 0 2 .9 2 2v2h3c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h3V4c0-1.1.9-2 2-2zm0 2v2h0V4zm-3 6v8h6v-8H9z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Nettoyage à la monobrosse (traces localisées)</h3>
+            <ul class="text-[#475569] space-y-1.5 list-disc ms-5">
+              <li>Traitement des marques noires incrustées (gomme, freinage, caoutchouc)</li>
+              <li>Intervention précise sur petites surfaces et zones d'accès difficile</li>
+              <li>Pad adapté au type de sol (béton, résine, epoxy) pour éviter les rayures</li>
+            </ul>
+            <div class="mt-4 p-3 bg-[#F0F9FF] rounded-lg border-l-4 border-[#3F8D65]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                Objectif : Élimination ciblée des traces tenaces avec rinçage/aspiration pour éviter les halos
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Encadré post-sinistre (style cohérent avec les autres blocs) -->
+    <aside class="max-w-5xl mx-auto mt-10 md:mt-12">
+      <div class="group relative rounded-2xl bg-white border border-white/60 p-6 md:p-7 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 w-11 h-11 rounded-xl bg-[#E8F2ED] grid place-content-center text-[#3F8D65]" aria-hidden="true">
+            <!-- icône bouclier/alert -->
+            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2l6 3v5c0 5-3.5 7.5-6 8-2.5-.5-6-3-6-8V5l6-3zm0 5a1 1 0 00-1 1v3a1 1 0 002 0V8a1 1 0 00-1-1zm1 7a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Interventions post-sinistre (décontamination)</h3>
+            <p class="text-[#475569] mb-4 leading-relaxed">
+              Suite à incendie, dégât des eaux ou refoulement : retrait des résidus (suie, boues, hydrocarbures),
+              assèchement, traitement des odeurs et ventilation continue jusqu'à stabilisation des taux d'humidité.
+            </p>
+            <div class="mt-4 p-3 bg-[#F0F9FF] rounded-lg border-l-4 border-[#3F8D65]">
+              <p class="text-sm text-[#1E2939] font-medium flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5 9.293 10.793a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                </svg>
+                Mobilisation d'urgence coordonnée avec assureurs et experts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Bandeau fréquence & garanties -->
+    <div class="max-w-5xl mx-auto mt-8 grid md:grid-cols-3 gap-4 text-sm text-[#475569]">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#3F8D65]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        1 à 4 passages/an selon trafic &amp; ventilation
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#3F8D65]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Maîtrise des eaux usées &amp; traçabilité
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[#3F8D65]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        Report photo &amp; recommandations d'entretien
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+---
+// Section 4 : Process en 3 étapes (diagnostic → intervention → contrôle)
+// Timeline verticale avec mise en sécurité détaillée
+---
+
+<!-- Section 4 : Process en 3 étapes (diagnostic → intervention → contrôle) -->
+<section class="bg-[#FCFCFC] py-16 md:py-24" data-section="process-3-etapes">
+  <div class="container-responsive">
+    
+    <!-- En-tête -->
+    <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-[#DBEAFE] border-[#CFE3D8] text-[#1E40AF]">
+        <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
+        Méthode & suivi
+      </div>
+      <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] leading-snug">
+        Une méthode structurée du diagnostic au contrôle qualité
+      </h2>
+      <p class="text-lg text-[#475569] mt-4">
+        Chaque mission suit un protocole clair : état des lieux, intervention encadrée et vérification documentée. 
+        Objectif : un résultat conforme, durable et traçable pour les gestionnaires.
+      </p>
+    </div>
+
+    <!-- Timeline / 3 étapes -->
+    <div class="relative max-w-5xl mx-auto">
+      <!-- Ligne verticale -->
+      <div class="absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-[#1E40AF] via-[#1E40AF] to-transparent hidden md:block"></div>
+      
+      <ol class="space-y-12 md:space-y-16">
+        
+        <!-- Étape 1 -->
+        <li class="relative flex flex-col md:flex-row md:items-start gap-6">
+          <!-- Numéro -->
+          <div class="flex-shrink-0 w-12 h-12 bg-[#1E40AF] text-white rounded-full flex items-center justify-center font-bold text-lg md:ml-0 ml-0">
+            1
+          </div>
+          <!-- Contenu -->
+          <div class="flex-1 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#E5E7EB]">
+            <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">Diagnostic initial</h3>
+            <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
+              <li>Repérage des zones critiques : taches d'huiles, rampes, caniveaux, accès</li>
+              <li>Vérification des points d'eau / évacuations et contraintes horaires</li>
+              <li>Choix de la méthode (autolaveuse en standard, monobrosse si localisé)</li>
+              <li>Envoi d'un devis détaillé et d'un plan d'intervention</li>
+            </ul>
+            <div class="p-4 rounded-lg bg-[#F0F9FF] border-l-4 border-[#1E40AF]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                <strong>Ce que vous recevez :</strong> synthèse diagnostic + estimation chiffrée sous 24&nbsp;h
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 2 -->
+        <li class="relative flex flex-col md:flex-row md:items-start gap-6">
+          <!-- Numéro -->
+          <div class="flex-shrink-0 w-12 h-12 bg-[#1E40AF] text-white rounded-full flex items-center justify-center font-bold text-lg">
+            2
+          </div>
+          <!-- Contenu -->
+          <div class="flex-1 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#E5E7EB]">
+            <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">Intervention encadrée sur site</h3>
+            
+            <!-- Mise en sécurité explicitée -->
+            <div class="rounded-xl border border-[#CFE3D8] bg-[#F8FAFC] p-5 mb-6">
+              <h4 class="font-semibold text-[#1E2939] text-base mb-3 flex items-center">
+                <svg class="w-5 h-5 text-[#1E40AF] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                Mise en sécurité du site
+              </h4>
+              <div class="grid sm:grid-cols-2 gap-3 text-sm text-[#475569]">
+                <ul class="list-disc ml-5 space-y-1">
+                  <li>Panneaux de signalisation et ruban barrière</li>
+                  <li>Balisage des zones d'intervention et circulations</li>
+                </ul>
+                <ul class="list-disc ml-5 space-y-1">
+                  <li>EPI complets équipe (gants, lunettes, chaussures)</li>
+                  <li>Ventilation / extraction continue si nécessaire</li>
+                </ul>
+              </div>
+            </div>
+
+            <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
+              <li>Application du protocole validé (dégraissage ciblé, autolaveuse, finitions)</li>
+              <li>Supervision par un technicien responsable, échanges en temps réel si ajustement</li>
+            </ul>
+            <div class="p-4 rounded-lg bg-[#F0F9FF] border-l-4 border-[#1E40AF]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                <strong>Ce que vous recevez :</strong> confirmation d'exécution + photos prises pendant l'intervention si besoin
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Étape 3 -->
+        <li class="relative flex flex-col md:flex-row md:items-start gap-6">
+          <!-- Numéro -->
+          <div class="flex-shrink-0 w-12 h-12 bg-[#1E40AF] text-white rounded-full flex items-center justify-center font-bold text-lg">
+            3
+          </div>
+          <!-- Contenu -->
+          <div class="flex-1 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#E5E7EB]">
+            <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">Contrôle qualité & suivi</h3>
+            <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
+              <li>Inspection finale conjointe (visuelle, adhérence, écoulements)</li>
+              <li><strong>Report photo</strong> avant/après envoyé sous 24&nbsp;h</li>
+              <li><strong>Recommandations d'entretien</strong> (périodicité 1–4 passages/an selon trafic)</li>
+              <li>Option : mise en place d'un contrat annuel et rappels automatiques</li>
+            </ul>
+            <div class="p-4 rounded-lg bg-[#F0F9FF] border-l-4 border-[#1E40AF]">
+              <p class="text-sm text-[#1E2939] font-medium">
+                <strong>Ce que vous recevez :</strong> rapport final + préconisations de fréquence
+              </p>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Encadré Traçabilité -->
+    <aside class="max-w-5xl mx-auto mt-12 md:mt-16 rounded-2xl bg-white border border-[#E5E7EB] p-6 md:p-8 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-[#DBEAFE] flex items-center justify-center text-[#1E40AF]">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg md:text-xl font-semibold text-[#1E2939] mb-3">Traçabilité & transparence</h3>
+          <p class="text-[#475569] leading-relaxed">
+            Chaque intervention est archivée dans notre registre numérique (date, produits, opérateurs, durée). 
+            Ce suivi facilite les échanges avec syndics, auditeurs et assureurs, et simplifie la gestion de vos contrats d'entretien.
+          </p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Section 5 : Interventions post-sinistre -->
+
+<section class="bg-[#DBEAFE] py-16 md:py-24" data-section="post-sinistre">
+  <div class="container-responsive">
+
+<div class="max-w-6xl mx-auto mb-12 md:mb-16">
+  <div class="max-w-3xl"> <!-- largeur maîtrisée -->
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                bg-gradient-to-r from-[#1E40AF] to-[#1E3A8A] border-white/40 text-white">
+      <span class="block h-2 w-2 rounded-full bg-white animate-pulse" aria-hidden="true"></span>
+      Intervention d'urgence
+    </div>
+
+    <!-- Titre -->
+    <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] leading-snug mb-6">
+      Incendie, dégât des eaux, refoulement : remettre votre parking en état
+    </h2>
+
+    <!-- Introduction -->
+    <div class="text-lg text-[#475569] leading-relaxed space-y-4">
+      <p>
+        Un sinistre transforme un parking en véritable zone technique : les suies acides se déposent jusque dans les conduits et les gaines, 
+        l'humidité s'infiltre dans les bétons, les câbles et les murs, et les odeurs de fumée ou d'égout s'imprègnent durablement 
+        dans l'air et les matériaux.
+      </p>
+      <p>
+        Sans intervention adaptée, ces résidus continuent d'agir pendant des semaines : ils accélèrent la corrosion, 
+        favorisent la prolifération microbienne et rendent les lieux insalubres.
+      </p>
+      <p class="font-medium text-[#1E2939]">
+        Nos équipes appliquent des protocoles spécifiques pour remettre les parkings en état après sinistre, 
+        avec un double objectif : restaurer la salubrité et sécuriser l'exploitation du site dans les meilleurs délais.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Deux colonnes : Incendie / Dégât des eaux -->
+<div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
+  <!-- (tes deux <article> restent identiques) -->
+
+      
+      <!-- Après incendie -->
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white/90 backdrop-blur-sm p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icône : passe au bleu pour cohérence -->
+          <div class="w-12 h-12 bg-gradient-to-br from-[#1E40AF] to-[#1E3A8A] rounded-xl flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M11 0c3 0 5 2 5 5 0 3.7-2.5 7.1-5 8-.5 0-1 0-1 0s-.5 0-1 0c-2.5-.9-5-4.3-5-8 0-3 2-5 5-5zm0 2c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939]">Après incendie</h3>
+        </div>
+        
+        <p class="text-[#475569] mb-6">
+          Un feu, même limité, laisse des suies acides et des odeurs volatiles capables d'endommager 
+          les structures métalliques et les installations électriques.
+        </p>
+        
+        <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
+          <li>Dépoussiérage et essuyage technique des murs, rampes, tuyauteries, signalétiques</li>
+          <li>Élimination des micro-poussières et dépôts gras sur plafonds et conduits</li>
+          <li>Nettoyage ou remplacement des filtres de ventilation et diffuseurs d'air</li>
+          <li>Neutralisation olfactive : traitement des surfaces poreuses et ventilation renforcée</li>
+          <li>Contrôle final visuel et olfactif avant restitution des lieux</li>
+        </ul>
+        
+        <!-- Encadré : passe au bleu -->
+        <div class="inline-flex items-center rounded-lg bg-[#EEF2FF] border border-[#C7D2FE] px-4 py-2 text-sm font-medium text-[#1E40AF]">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Éliminer suies &amp; odeurs, prévenir la corrosion
+        </div>
+      </article>
+
+      <!-- Après dégât des eaux -->
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white/90 backdrop-blur-sm p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#1E40AF] to-[#1E3A8A] rounded-xl flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12,2A1,1 0 0,1 13,3V9.17C13.5,9.06 14,9 14.5,9C17,9 19,11 19,13.5C19,16 17,18 14.5,18C12,18 10,16 10,13.5C10,12.23 10.5,11.09 11.34,10.28L11,10V3A1,1 0 0,1 12,2Z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939]">Après dégât des eaux</h3>
+        </div>
+        
+        <p class="text-[#475569] mb-6">
+          Une inondation ou un refoulement d'égout peut contaminer les sols, les murs et les caniveaux. 
+          L'eau stagnante laisse rapidement place à des boues, des dépôts organiques et des moisissures invisibles.
+        </p>
+        
+        <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
+          <li>Pompage et refoulement vers égout ou cuve de rétention</li>
+          <li>Rinçage haute pression contrôlé des zones souillées</li>
+          <li>Désinfection biocide et neutralisation des odeurs</li>
+          <li>Ventilation et déshumidification accélérée (turbines / extracteurs)</li>
+          <li>Contrôle hygrométrique jusqu'à stabilisation de l'humidité</li>
+        </ul>
+        
+        <div class="inline-flex items-center rounded-lg bg-[#F0F9FF] border border-[#BAE6FD] px-4 py-2 text-sm font-medium text-[#0369A1]">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Environnement sain, sec et non glissant
+        </div>
+      </article>
+    </div>
+
+    <!-- Sécurité & coordination -->
+    <div class="max-w-6xl mx-auto mb-12">
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white/90 backdrop-blur-sm p-6 md:p-8 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-gradient-to-br from-[#1E40AF] to-[#1E3A8A] rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-[#1E2939] mb-3">Sécurité & coordination</h3>
+            <p class="text-[#475569] leading-relaxed">
+              Chaque intervention post-sinistre commence par une évaluation des risques : coupure des alimentations électriques si nécessaire, 
+              balisage complet des zones, EPI complets pour les opérateurs et ventilation continue pendant toute la durée du chantier. 
+              Nous assurons également la coordination avec les gestionnaires, assureurs et experts pour garantir 
+              la traçabilité et la conformité de chaque opération.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="text-lg text-[#475569] mb-6">
+        Besoin d'une intervention rapide après sinistre ?
+      </p>
+      <Button
+        href="/contact#formulaire"
+        label="Diagnostic sous 24&nbsp;h et protocole d'action adapté"
+        variant="primary"
+        size="lg"
+        tracking={{ action: 'cta_post_sinistre', source: 'section_post_sinistre', intent: 'lead' }}
+        data={{ section: 'post-sinistre' }}
+        ariaLabel="Demander un diagnostic post-sinistre sous 24 heures"
+      />
+      <p class="text-sm text-[#475569] mt-3">
+        Intervention d'urgence 7&nbsp;j/7 &middot; Coordination avec assureurs et experts
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Section Tarifs indicatifs (courte) -->
+<section class="bg-white py-16 md:py-20" data-section="tarifs">
+  <div class="container-responsive">
+    <!-- En-tête -->
+    <div class="max-w-3xl mb-10">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
+                  bg-[#DBEAFE] border-[#BFDBFE] text-[#1E40AF]">
+        <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
+        Tarifs indicatifs
+      </div>
+      <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] leading-snug">
+        Combien coûte l’entretien d’un parking&nbsp;?
+      </h2>
+      <p class="text-lg text-[#475569] mt-3">
+        Les prix varient selon la surface, l’état des sols, l’accès à l’eau/évacuations et la fréquence.
+        Comptez généralement <strong>entre 1,0 et 2,0&nbsp;€/m²</strong>, avec une <strong>dégressivité rapide</strong> dès 1 000&nbsp;m².
+      </p>
+    </div>
+
+    <!-- Bandes de surface -->
+    <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+      <!-- < 1 000 m² -->
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+        <h3 class="text-base font-semibold text-[#1E2939] mb-1">Jusqu’à 1 000&nbsp;m²</h3>
+        <p class="text-sm text-[#475569] mb-4">Intervention ponctuelle, préparation &amp; finitions incluses.</p>
+        <div class="inline-flex items-center rounded-md bg-[#EEF2FF] border border-[#C7D2FE] px-3 py-1 text-sm font-medium text-[#1E40AF]">
+          Indicatif&nbsp;: 1,4–2,5&nbsp;€/m²
+        </div>
+      </article>
+
+      <!-- 1 000 – 5 000 m² -->
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+        <h3 class="text-base font-semibold text-[#1E2939] mb-1">1 000–5 000&nbsp;m²</h3>
+        <p class="text-sm text-[#475569] mb-4">Meilleur ratio machine/temps, dégressivité appliquée.</p>
+        <div class="inline-flex items-center rounded-md bg-[#F0F9FF] border border-[#BAE6FD] px-3 py-1 text-sm font-medium text-[#0369A1]">
+          Indicatif&nbsp;: 1,0–1,4&nbsp;€/m²
+        </div>
+      </article>
+
+      <!-- > 5 000 m² -->
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
+        <h3 class="text-base font-semibold text-[#1E2939] mb-1">&gt;&nbsp;5 000&nbsp;m²</h3>
+        <p class="text-sm text-[#475569] mb-4">Optimisation planning &amp; équipements&nbsp;/ plusieurs passages.</p>
+        <div class="inline-flex items-center rounded-md bg-[#DBEAFE] border border-[#BFDBFE] px-3 py-1 text-sm font-medium text-[#1E40AF]">
+          Sur devis optimisé
+        </div>
+      </article>
+    </div>
+
+    <!-- Facteurs & particuliers -->
+    <div class="grid md:grid-cols-2 gap-6 mt-8">
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6">
+        <h4 class="text-sm font-semibold text-[#1E2939] mb-3">Ce qui fait varier le prix</h4>
+        <ul class="list-disc ms-5 text-sm text-[#475569] space-y-1.5">
+          <li>État des sols (traces d’hydrocarbures, poussières accumulées)</li>
+          <li>Accès à l’eau / évacuations, dénivelés et rampes</li>
+          <li>Temps de mise en sécurité (balisage, panneaux, ventilation)</li>
+          <li>Fréquence d’entretien (ponctuel vs contrat récurrent)</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6">
+        <h4 class="text-sm font-semibold text-[#1E2939] mb-2">Petites surfaces &nbsp;•&nbsp; particuliers</h4>
+        <p class="text-sm text-[#475569]">
+          Pour les surfaces réduites ou les <em>traces noires localisées</em>, nous intervenons à la 
+          <strong>monobrosse</strong> (zones ciblées, faible volume d’eau). Un <strong>minimum d’intervention</strong> s’applique
+          (déplacement et mise en sécurité).
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-8">
+      <Button
+        href="/contact#formulaire"
+        label="Obtenir une estimation précise"
+        variant="primary"
+        size="lg"
+        tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
+        data={{ section: 'tarifs' }}
+        ariaLabel="Obtenir une estimation précise pour le nettoyage de parking"
+      />
+      <p class="text-sm text-[#475569] mt-3">Devis détaillé sous 24&nbsp;h &middot; Dégressif selon surface et fréquence</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Section FAQ -->
+<section class="py-16 md:py-24 bg-white" data-section="faq">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="text-center mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-[#DBEAFE] border-[#BFDBFE] text-[#1E40AF]">
+          <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
+          Questions fréquentes
+        </div>
+        <h2 class="text-3xl md:text-4xl font-semibold text-[#1E2939] mb-6">
+          Tout savoir sur nos interventions parking
+        </h2>
+        <p class="text-lg text-[#475569] leading-relaxed">
+          Les réponses aux questions les plus courantes sur nos méthodes, tarifs et protocoles de sécurité.
+        </p>
+      </div>
+
+      <!-- Accordéon FAQ -->
+      <Accordion
+        variant="splitted"
+        style="--ac-accordion-background-color:#F0F9FF; --ac-accordion-border-color:#BFDBFE; --ac-accordion-border-width:1px; --ac-accordion-rounded:1rem; --ac-accordion-spacing:1rem;"
+      >
+        {faq.map((item) => (
+          <AccordionItem title={item.title} name="faq-parking">
+            <p class="whitespace-pre-line text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
+
+      <!-- CTA après FAQ -->
+      <div class="text-center mt-12 md:mt-16">
+        <p class="text-lg text-[#475569] mb-6">
+          Une question spécifique sur votre parking ?
+        </p>
+        <a
+          href="/contact#formulaire"
+          class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+        >
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          Poser une question personnalisée
+        </a>
+        <p class="text-sm text-[#475569] mt-3">
+          Réponse sous 24h - Diagnostic gratuit sur site
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schema JSON-LD pour le SEO -->
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+
+<style is:inline>
+  /* Style Klinova pour les cartes FAQ - bleu cohérent */
+  section[data-section="faq"] :where(details) {
+    background-color: #F0F9FF !important;
+    border: 1px solid #BFDBFE !important;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(30, 64, 175, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  section[data-section="faq"] :where(details[open]) {
+    box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.2);
+    transform: translateY(-1px);
+  }
+
+  section[data-section="faq"] :where(details + details) {
+    margin-top: 1rem;
+  }
+
+  section[data-section="faq"] :where(summary) {
+    background: transparent !important;
+    font-weight: 600;
+    color: #1E2939;
+    padding: 1.25rem;
+    cursor: pointer;
+  }
+
+  section[data-section="faq"] :where(summary:hover) {
+    color: #1E40AF;
+  }
+
+  /* Corrige les fonds internes du composant */
+  section[data-section="faq"] :where(details > div, details > p) {
+    background-color: transparent !important;
+  }
+
+  /* Style pour le contenu ouvert */
+  section[data-section="faq"] :where(details[open] summary) {
+    border-bottom: 1px solid #BFDBFE;
+    margin-bottom: 1rem;
+  }
+
+  /* Animation d'ouverture */
+  section[data-section="faq"] :where(details[open] > :not(summary)) {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- Section CTA finale -->
+<section class="bg-[#DBEAFE] py-16 md:py-24" data-section="cta-final">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <!-- Message principal -->
+      <div class="mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2939] leading-tight mb-6">
+          Besoin d'un expert pour l'entretien de vos parkings ?
+        </h2>
+        <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
+          Diagnostic gratuit, intervention professionnelle et traçabilité complète. 
+          Nous garantissons la propreté, la sécurité et la conformité de vos installations.
+        </p>
+      </div>
+
+      <!-- Formulaire inline spécialisé parking -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+        <div class="mb-6 text-center">
+          <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
+            Programmer votre diagnostic gratuit
+          </h3>
+          <p class="text-[#475569]">
+            Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h
+          </p>
+        </div>
+
+        <form action="/api/contact" method="POST" class="space-y-6" id="parking-form">
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+          
+          <!-- Source tracking -->
+          <input type="hidden" name="source" value="page-parking">
+          
+          <!-- Ligne 1 : Nom/Prénom -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Prénom
+              </label>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre prénom"
+              >
+            </div>
+            <div>
+              <label for="nom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Nom <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre nom"
+              >
+            </div>
+          </div>
+
+          <!-- Ligne 2 : Email/Téléphone -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="votre@email.fr"
+              >
+            </div>
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Téléphone <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                required
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="06 12 34 56 78"
+              >
+            </div>
+          </div>
+
+          <!-- Ligne 3 : Code postal/Surface -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="code_postal" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Code postal
+              </label>
+              <input
+                type="text"
+                id="code_postal"
+                name="code_postal"
+                pattern="[0-9]{5}"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="75017"
+              >
+            </div>
+            <div>
+              <label for="surface" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Surface approximative
+              </label>
+              <select
+                id="surface"
+                name="surface"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="< 100 m²">Moins de 100 m²</option>
+                <option value="100-500 m²">100 à 500 m²</option>
+                <option value="500-1000 m²">500 à 1000 m²</option>
+                <option value="1000-5000 m²">1000 à 5000 m²</option>
+                <option value="> 5000 m²">Plus de 5000 m²</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-[#1E2939] mb-2">
+              Décrivez votre besoin
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+              placeholder="Type de parking (souterrain/couvert), état général, fréquence souhaitée, contraintes particulières..."
+            ></textarea>
+          </div>
+
+          <!-- RGPD -->
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="rgpd"
+              name="rgpd"
+              value="accepte"
+              required
+              class="mt-1 w-5 h-5 text-[#3F8D65] border-2 border-[#D1D5DB] rounded focus:ring-[#3F8D65] focus:ring-2 transition-colors"
+            >
+            <label for="rgpd" class="text-sm text-[#475569] leading-relaxed">
+              J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
+              <a href="/politique-de-confidentialite" class="text-[#1E40AF] hover:underline font-medium" target="_blank">
+                Voir notre politique de confidentialité
+              </a>
+            </label>
+          </div>
+
+          <!-- Bouton de soumission -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] disabled:bg-[#9CA3AF] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:transform-none"
+              id="submit-btn"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span id="btn-text">Envoyer ma demande</span>
+            </button>
+          </div>
+
+          <!-- Message de confirmation/erreur -->
+          <div id="form-message" class="hidden text-center p-4 rounded-lg"></div>
+        </form>
+        
+        <!-- Promesses clés sous le formulaire -->
+        <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+            <p class="text-xs text-[#475569]">Devis détaillé et planning</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Diagnostic gratuit</h4>
+            <p class="text-xs text-[#475569]">État des lieux sur site</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Suivi complet</h4>
+            <p class="text-xs text-[#475569]">Report photo et traçabilité</p>
+          </div>
+        </div>
+      </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('parking-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = document.getElementById('btn-text') as HTMLSpanElement;
+    const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // État de chargement
+        submitBtn.disabled = true;
+        btnText.textContent = 'Envoi en cours...';
+        messageDiv.className = 'hidden';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            // Succès
+            messageDiv.className = 'text-center p-4 rounded-lg bg-[#DCFCE7] border border-[#16A34A] text-[#15803D]';
+            messageDiv.textContent = 'Merci ! Votre demande a été envoyée. Nous vous recontactons sous 24h.';
+            form.reset();
+          } else {
+            // Erreur serveur
+            const errorText = await response.text();
+            messageDiv.className = 'text-center p-4 rounded-lg bg-[#FEE2E2] border border-[#DC2626] text-[#DC2626]';
+            messageDiv.textContent = errorText || 'Une erreur est survenue. Veuillez réessayer.';
+          }
+        } catch (error) {
+          // Erreur réseau
+          messageDiv.className = 'text-center p-4 rounded-lg bg-[#FEE2E2] border border-[#DC2626] text-[#DC2626]';
+          messageDiv.textContent = 'Erreur de connexion. Veuillez vérifier votre connexion internet.';
+        } finally {
+          // Restaurer le bouton
+          submitBtn.disabled = false;
+          btnText.textContent = 'Envoyer ma demande';
+          messageDiv.classList.remove('hidden');
+        }
+      });
+    }
+  });
+</script>
+
+      <!-- Informations de contact -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+          <div class="space-y-2">
+            <a href="tel:0676738661" class="flex items-center justify-center text-[#475569] hover:text-[#1E40AF] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              06 76 73 86 61
+            </a>
+            <a href="mailto:contact@klinova.fr" class="flex items-center justify-center text-[#475569] hover:text-[#1E40AF] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              contact@klinova.fr
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Zone d'intervention</h3>
+          <div class="flex items-center justify-center text-[#475569]">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Paris et Île-de-France</span>
+          </div>
+          <p class="text-sm text-[#475569] mt-2">
+            Intervention rapide sur toute la région parisienne
+          </p>
+        </div>
+      </div>
+
+      <!-- Mentions finales -->
+      <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+        <p class="text-sm text-[#6B7280]">
+          KLINOVA - SASU au capital de 1000€ - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</LayoutWithCTA>

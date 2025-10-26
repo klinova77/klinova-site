@@ -1,0 +1,39 @@
+---
+// src/components/HeroCTAGroup.astro
+import CtaDevis from './CtaDevis.astro';
+import CtaPhone from './CtaPhone.astro';
+
+export interface Props {
+  phoneE164?: string;
+  display?: string;
+  className?: string;
+  source?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const {
+  phoneE164 = '+33630221228',
+  display = '06 30 22 12 28',
+  className = '',
+  source = 'header',
+  size = 'md',
+} = Astro.props;
+---
+
+<div class={`flex flex-col sm:flex-row gap-3 sm:gap-4 ${className}`}>
+  <!-- CTA PRINCIPAL = PHONE (btn-primary) -->
+  <CtaPhone
+    size={size}
+    variant="primary"
+    phoneE164={phoneE164}
+    display={display}
+    trackingData={{ source, action: 'call' }}
+    showDisplayNext={false}
+  />
+  <!-- CTA SECONDAIRE = DEVIS (btn-secondary) -->
+  <CtaDevis
+    size={size}
+    variant="tertiary"
+    trackingData={{ source, action: 'lead' }}
+  />
+</div>

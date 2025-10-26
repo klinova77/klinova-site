@@ -1,0 +1,409 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import Button from '~/components/UI/Button.astro';
+import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
+
+const title = 'Devis gratuit en 24h – Stop-Punaises Paris & IDF';
+const description = 'Obtenez votre devis gratuit sous 24h. Expert punaises de lit agréé. Intervention rapide en Île-de-France.';
+const canonical = '/contact';
+
+// UID pour isoler l’autofill & éviter conflits si plusieurs formulaires
+const uid = 'cf' + Math.random().toString(36).slice(2, 8);
+const formId = `contact-form-${uid}`;
+---
+
+<Layout
+  pathname="/contact"
+  pageType="contact"
+  title={title}
+  description={description}
+  canonical={canonical}
+>
+  <main class="container-responsive section-padding">
+    <!-- HERO + FORMULAIRE (above the fold) -->
+    <section class="max-w-2xl mx-auto">
+      <!-- Titre centré -->
+      <header class="text-center mb-8">
+        <h1 class="hero-title text-primary-600">Devis gratuit sous 24h</h1>
+        <p class="hero-subtitle mt-3 text-neutral-600">
+          Intervention rapide • Expert agréé Certibiocide • Paris & Île-de-France
+        </p>
+      </header>
+
+      <!-- FORMULAIRE COURT (optimisé conversion) -->
+      <form
+        method="POST"
+        action="/api/contact"
+        class="bg-white p-6 sm:p-8 rounded-2xl shadow-soft space-y-5"
+        data-enhance
+        id={formId}
+        data-source="contact-page"
+        data-intent="form-submit"
+        novalidate
+      >
+        <!-- Honeypot -->
+        <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+
+        <!-- Zone d'alerte / statut -->
+        <p data-form-status aria-live="polite" class="hidden rounded-xl border px-3 py-2 text-sm"></p>
+
+        <!-- Email (obligatoire) -->
+        <div class="flex flex-col gap-1">
+          <label for={`email-${uid}`} class="text-sm font-medium text-neutral-800">
+            Votre email <span class="text-red-600">*</span>
+          </label>
+          <div class="relative">
+            <input
+              id={`email-${uid}`}
+              name="email"
+              type="email"
+              required
+              autocomplete={`section-${uid} email`}
+              placeholder="exemple@email.com"
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none focus:ring-2 focus:ring-action-500 focus:border-action-500 pr-10"
+            />
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success-600 hidden" data-check="email" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <small class="text-xs text-red-600 hidden" data-error-for="email"></small>
+        </div>
+
+        <!-- Téléphone (obligatoire pour rappel) -->
+        <div class="flex flex-col gap-1">
+          <label for={`phone-${uid}`} class="text-sm font-medium text-neutral-800">
+            Votre téléphone <span class="text-red-600">*</span>
+          </label>
+          <div class="relative">
+            <input
+              id={`phone-${uid}`}
+              name="phone"
+              type="tel"
+              required
+              inputmode="tel"
+              autocomplete={`section-${uid} tel`}
+              placeholder="06 12 34 56 78 ou +33 6 12 34 56 78"
+              class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none focus:ring-2 focus:ring-action-500 focus:border-action-500 pr-10"
+            />
+            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-success-600 hidden" data-check="phone" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="text-xs text-neutral-500">Nous vous rappelons rapidement pour finaliser le devis.</p>
+          <small class="text-xs text-red-600 hidden" data-error-for="phone"></small>
+        </div>
+
+        <!-- Message court -->
+        <div class="flex flex-col gap-1">
+          <label for={`message-${uid}`} class="text-sm font-medium text-neutral-800">
+            Décrivez votre situation <span class="text-red-600">*</span>
+          </label>
+          <textarea
+            id={`message-${uid}`}
+            name="message"
+            rows="4"
+            required
+            autocomplete={`section-${uid} off`}
+            placeholder="Ex : Appartement 2 pièces à Paris 17e. Piqûres depuis 2 semaines. Besoin d'un diagnostic."
+            class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-base outline-none focus:ring-2 focus:ring-action-500 focus:border-action-500"
+          ></textarea>
+          <small class="text-xs text-red-600 hidden" data-error-for="message"></small>
+        </div>
+
+        <!-- Détails optionnels (accordéon replié) -->
+        <details class="border-t border-neutral-200 pt-4">
+          <summary class="text-sm font-medium text-primary-600 cursor-pointer hover:text-primary-700 select-none">
+            + Ajouter des détails (optionnel)
+          </summary>
+          
+          <div class="mt-4 space-y-4">
+            <!-- Adresse -->
+            <div class="flex flex-col gap-1">
+              <label for={`adresse-${uid}`} class="text-sm font-medium text-neutral-800">Adresse</label>
+              <input
+                id={`adresse-${uid}`}
+                name="adresse"
+                autocomplete={`section-${uid} street-address`}
+                placeholder="Ex : 6 rue d'Armaillé, 75017 Paris"
+                class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-action-500"
+              />
+            </div>
+
+            <!-- Type de logement -->
+            <div class="flex flex-col gap-1">
+              <label for={`logement-${uid}`} class="text-sm font-medium text-neutral-800">Type de logement</label>
+              <select
+                id={`logement-${uid}`}
+                name="logement"
+                class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-action-500"
+              >
+                <option value="">— Sélectionner —</option>
+                <option>Appartement</option>
+                <option>Maison</option>
+                <option>Local professionnel</option>
+                <option>Hôtel / Hébergement</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <!-- Code postal -->
+            <div class="flex flex-col gap-1">
+              <label for={`cp-${uid}`} class="text-sm font-medium text-neutral-800">Code postal</label>
+              <input
+                id={`cp-${uid}`}
+                name="cp"
+                inputmode="numeric"
+                pattern="\d{5}"
+                autocomplete={`section-${uid} postal-code`}
+                placeholder="75017"
+                class="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-action-500"
+              />
+              <small class="text-xs text-red-600 hidden" data-error-for="cp"></small>
+            </div>
+
+            <!-- Niveau d'infestation -->
+            <fieldset class="flex flex-col gap-2">
+              <legend class="text-sm font-medium text-neutral-800">Niveau d'infestation (estimation)</legend>
+              <div class="grid grid-cols-3 gap-2">
+                <label class="flex items-center gap-2 rounded-xl border border-neutral-200 px-3 py-2 cursor-pointer hover:border-action-500">
+                  <input type="radio" name="niveau" value="Débutant" />
+                  <span class="text-sm">Débutant</span>
+                </label>
+                <label class="flex items-center gap-2 rounded-xl border border-neutral-200 px-3 py-2 cursor-pointer hover:border-action-500">
+                  <input type="radio" name="niveau" value="Modéré" />
+                  <span class="text-sm">Modéré</span>
+                </label>
+                <label class="flex items-center gap-2 rounded-xl border border-neutral-200 px-3 py-2 cursor-pointer hover:border-action-500">
+                  <input type="radio" name="niveau" value="Sévère" />
+                  <span class="text-sm">Sévère</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </details>
+
+        <!-- Consentement RGPD -->
+        <label class="flex items-start gap-2">
+          <input id={`consent-${uid}`} name="consent" type="checkbox" required class="mt-1" />
+          <span class="text-sm text-neutral-700">
+            J'accepte que mes données soient traitées pour répondre à ma demande.
+            <a href="/politique-de-confidentialite" class="underline text-primary-600">Voir notre politique</a>.
+          </span>
+        </label>
+
+        <!-- CTA PRINCIPAL -->
+        <button
+          type="submit"
+          id={`submit-${uid}`}
+          class="btn-primary w-full text-lg py-4 bg-action-500 hover:bg-action-600 relative"
+          data-action="lead"
+          data-source="contact-page"
+          data-intent="form-submit"
+          aria-busy="false"
+        >
+          Obtenir mon devis gratuit
+        </button>
+
+        <p class="text-xs text-center text-neutral-500">
+          Réponse sous 24h • Sans engagement
+        </p>
+      </form>
+
+      <!-- SUCCÈS -->
+      <div id={`contact-success-${uid}`} class="hidden text-center py-10 bg-white rounded-2xl border border-neutral-200 mt-6">
+        <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-primary-600 mb-2">Merci !</h3>
+        <p class="text-neutral-700 max-w-md mx-auto">Votre demande a bien été envoyée. Un technicien vous rappelle sous 24h (souvent plus vite).</p>
+      </div>
+    </section>
+
+    <!-- SECTION ALTERNATIVE : Téléphone -->
+    <section class="max-w-xl mx-auto mt-12 text-center">
+      <div class="bg-neutral-50 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-primary-600 mb-3">
+          Vous préférez en parler directement ?
+        </h2>
+        <p class="text-sm text-neutral-600 mb-5">
+          Un conseiller vous écoute et établit votre devis par téléphone.
+        </p>
+        
+        <!-- Bouton téléphone (secondaire) -->
+        <Button
+          href={`tel:${PHONE_E164}`}
+          label={PHONE_DISPLAY}
+          variant="secondary"
+          size="md"
+          tracking={{
+            source: 'contact-page',
+            action: 'call',
+            intent: 'phone-alternative',
+          }}
+          class="inline-flex items-center gap-2 text-lg mb-4 btn-secondary"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <span class="whitespace-nowrap">{PHONE_DISPLAY}</span>
+        </Button>
+
+        <!-- WhatsApp (lien discret) -->
+        <p class="text-sm text-neutral-600">
+          Ou envoyez-nous un message sur
+          <a
+            href={`https://wa.me/${PHONE_E164.replace('+','')}`}
+            target="_blank"
+            rel="noopener"
+            class="font-medium hover:underline"
+            style="color: #25D366;"
+            data-action="lead"
+            data-source="contact-page"
+            data-intent="whatsapp"
+          >
+            WhatsApp
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- COORDONNÉES (en bas, discret) -->
+    <aside class="max-w-2xl mx-auto mt-12 text-center text-sm text-neutral-600">
+      <p>
+        <strong class="text-primary-600">Stop-Punaises</strong> – Expert agréé Certibiocide & CertiPunaises<br>
+        6 rue d'Armaillé, 75017 Paris • Zone d'intervention : Île-de-France<br>
+        <a href="mailto:contact@stop-punaises.fr" class="underline hover:text-primary-600">contact@stop-punaises.fr</a>
+      </p>
+    </aside>
+  </main>
+
+  <!-- JS inline : validation premium +33, formatage, AJAX, fallback -->
+  <script is:inline>
+(() => {
+  // Récupère le formulaire SANS dépendre de ${uid}
+  const form = document.querySelector('form[id^="contact-form-"][action="/api/contact"]');
+  if (!form) { console.error('[Contact] Form introuvable'); return; }
+
+  const statusEl = form.querySelector('[data-form-status]');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Champs (fallbacks si l’ID dynamique n’est pas dispo)
+  const email   = form.querySelector('input[name="email"]');
+  const phone   = form.querySelector('input[name="phone"], input[name="telephone"]');
+  const message = form.querySelector('textarea[name="message"]');
+  const cp      = form.querySelector('input[name="cp"], input[name="code_postal"]');
+
+  // Helpers UI
+  const showStatus = (msg, ok = true) => {
+    if (!statusEl) return;
+    statusEl.textContent = msg || '';
+    statusEl.classList.toggle('hidden', !msg);
+    statusEl.classList.toggle('border-success-200', ok);
+    statusEl.classList.toggle('text-success-700', ok);
+    statusEl.classList.toggle('bg-success-50', ok);
+    statusEl.classList.toggle('border-red-200', !ok);
+    statusEl.classList.toggle('text-red-700', !ok);
+    statusEl.classList.toggle('bg-red-50', !ok);
+  };
+  const setError = (name, msg) => {
+    const el = form.querySelector(`[data-error-for="${name}"]`);
+    if (el) { el.textContent = msg || ''; el.classList.toggle('hidden', !msg); }
+  };
+  const spin = (on, label = 'Envoi…') => {
+    if (!submitBtn) return;
+    if (on) {
+      submitBtn.dataset._oldText = submitBtn.textContent || '';
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy','true');
+      submitBtn.textContent = label;
+    } else {
+      submitBtn.disabled = false;
+      submitBtn.setAttribute('aria-busy','false');
+      if (submitBtn.dataset._oldText) submitBtn.textContent = submitBtn.dataset._oldText;
+    }
+  };
+
+  // Validation FR
+  const normalizePhone = (s='') => { let v = s.replace(/[^\d+]/g,''); if (v.startsWith('00')) v = '+'+v.slice(2); return v; };
+  const validPhoneFR   = (s) => { const v = normalizePhone(s); return /^0[1-9]\d{8}$/.test(v) || /^\+33[1-9]\d{8}$/.test(v); };
+  const validEmail     = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+  const validMessage   = (s) => typeof s === 'string' && s.trim().length >= 10;
+  const validCP        = (s) => !s || /^\d{5}$/.test(s);
+
+  // Soumission contrôlée
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();                    // ← empêche d’aller sur /api/contact
+    showStatus('', true);
+    ['email','phone','message','cp'].forEach(n => setError(n,''));
+
+    const okEmail   = validEmail(email?.value || '');
+    const okPhone   = validPhoneFR(phone?.value || '');
+    const okMessage = validMessage(message?.value || '');
+    const okCP      = validCP(cp?.value || '');
+
+    if (!okEmail)   setError('email','Email invalide.');
+    if (!okPhone)   setError('phone','Numéro invalide (FR : 0X… ou +33 X…).');
+    if (!okMessage) setError('message','Merci de décrire brièvement votre situation (≥ 10 caractères).');
+    if (!okCP)      setError('cp','Code postal invalide (5 chiffres).');
+
+    if (!(okEmail && okPhone && okMessage && okCP)) {
+      showStatus('Veuillez corriger les champs indiqués en rouge.', false);
+      return;                               // ← AUCUN POST si erreurs
+    }
+
+    spin(true, 'Envoi…');
+
+    try {
+      const fd = new FormData(form);
+      fd.append('form_context', 'contact_page');
+
+      // Important : pas d’Accept: application/json → on laisse l’API décider d’un 303 si besoin
+      const res = await fetch(form.action, { method: 'POST', body: fd });
+
+      // Si le serveur refuse (ex: 400), on reste ici et on affiche l’erreur
+      if (!res.ok) {
+        const msg = (await res.text().catch(()=>'')) || 'Erreur lors de l’envoi. Merci de vérifier vos informations.';
+        spin(false);
+        showStatus(msg, false);
+        return;                             // ← NE PAS faire form.submit()
+      }
+
+      spin(false);
+
+      // Message de succès : on remplace le contenu du form et on le garde en place (pas de scroll)
+      form.setAttribute('aria-hidden', 'true');
+      form.style.pointerEvents = 'none';
+      form.innerHTML = `
+        <div class="text-center py-10 animate-fade-in">
+    <div class="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
+      <svg class="w-8 h-8 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-primary-600 mb-2">Merci !</h3>
+    <p class="text-neutral-700 max-w-md mx-auto">
+      Nous vous recontactons sous <strong>4&nbsp;h</strong> pour votre devis personnalisé.<br>
+      En attendant, découvrez notre protocole de préparation<br>
+      pour maximiser l’efficacité du traitement.
+    </p>
+    <p class="mt-6 text-sm text-neutral-500">Redirection automatique…</p>
+  </div>
+      `;
+
+      try { form.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch {}
+
+      // Redirection douce après 2 s
+      setTimeout(() => {
+        window.location.assign('/protocole-punaises-de-lit');  // relatif = OK local & prod
+      }, 4000);
+    } catch (err) {
+      // Erreur réseau uniquement → on N’ENVOIE PAS le form natif, on affiche l’erreur
+      console.error('[Contact] fetch error:', err);
+      spin(false);
+      showStatus("Une erreur réseau est survenue, merci de réessayer ou de nous appeler.", false);
+    }
+  }, { passive: false });
+
+  if (email && !email.value) email.focus();
+})();
+</script>
+
+</Layout>

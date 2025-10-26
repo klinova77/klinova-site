@@ -1,0 +1,228 @@
+---
+// FloatingBottomCTA.astro (version optimisée & compatible)
+import Button from '~/components/UI/Button.astro';
+import { cn } from '/src/lib/cn.ts';
+
+export interface Props {
+  phoneE164?: string;
+  display?: string;
+  className?: string;
+  enabled?: boolean;
+  showAfter?: 'immediate' | 'scroll';
+  targetSelector?: string;
+  mobileOnly?: boolean;
+}
+
+const {
+  phoneE164 = '+33630221228',
+  display = '06 30 22 12 28',
+  className,
+  enabled = true,
+  showAfter = 'scroll',
+  targetSelector = '[data-hero]',
+  mobileOnly = true,
+} = Astro.props;
+---
+
+{enabled && (
+  <div
+    id="sticky-cta"
+    role="region"
+    aria-label="Actions rapides : appel ou devis"
+    data-showafter={showAfter}
+    data-target={targetSelector}
+    class={cn(
+      'fixed bottom-0 inset-x-0 z-50 bg-white border-t border-neutral-200 shadow-2xl',
+      'pb-[max(env(safe-area-inset-bottom),12px)]',
+      mobileOnly ? 'lg:hidden' : '',
+      className
+    )}
+    style="display:none"
+  >
+    <div class="container-responsive py-3 flex items-center gap-3">
+      <!-- 📞 Appel (CTA principal) -->
+      <Button
+        href={`tel:${phoneE164}`}
+        ariaLabel={`Appeler le ${display}`}
+        variant="primary"
+        size="md"
+        class="flex-[1.3] min-h-[52px] py-3.5 rounded-xl phone-pulse font-bold text-base active:scale-95 flex items-center justify-center gap-2"
+        tracking={{ source: 'mobile_bar_bottom', action: 'call_direct', intent: 'urgent_contact' }}
+      >
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span class="font-bold text-white">{display}</span>
+      </Button>
+
+      <!-- 🧾 Devis (ouvre popup ; fallback contact) -->
+      <Button
+        href="/contact#formulaire"
+        ariaLabel="Demander un devis gratuit"
+        variant="secondary"
+        size="md"
+        class="flex-1 min-h-[52px] py-3.5 rounded-xl text-sm font-semibold active:scale-95 text-center"
+        tracking={{ source: 'mobile_bar_bottom', action: 'form_request', intent: 'get_quote' }}
+        data={{ 'open-popup': 'cta', variant: 'mobile-cta' }}
+      >
+        <svg class="w-4 h-4 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Devis gratuit
+      </Button>
+    </div>
+
+    <!-- Indicateur confiance -->
+    <div class="text-center pb-1">
+      <div class="inline-flex items-center gap-2 text-xs text-neutral-500">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span>Disponible 7j/7 • Intervention rapide</span>
+      </div>
+    </div>
+  </div>
+)}
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  const bar = document.getElementById('sticky-cta');
+  if (!bar) return;                     // ✅ vérifier d'abord
+
+  bar.style.willChange = 'transform, opacity'; // ✅ ensuite le hint GPU
+
+
+  if (!bar) return;
+
+  // Mobile only: ne rien faire sur desktop si lg:hidden
+  if (bar.classList.contains('lg:hidden') && window.matchMedia('(min-width: 1024px)').matches) return;
+
+  const showAfter = bar.dataset.showafter || 'scroll';
+  const targetSel = bar.dataset.target || '[data-hero]';
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  const isMenuOpen = () => !!(mobileMenu && mobileMenu.dataset.state === 'open');
+  const showBar = () => { if (!isMenuOpen()) { bar.style.display = ''; requestAnimationFrame(() => { bar.style.transform = 'translateY(0)'; bar.style.opacity = '1'; }); } };
+ const hideBar = () => {
+  requestAnimationFrame(() => { // PATCH: évite micro-janks
+    bar.style.transform = 'translateY(100%)';
+    bar.style.opacity = '0';
+    setTimeout(() => {
+      if (bar.style.transform === 'translateY(100%)') bar.style.display = 'none';
+    }, 320);
+  });
+};
+
+  // Transitions slide-up
+bar.style.transition = 'transform 320ms cubic-bezier(.22,.61,.36,1), opacity 280ms ease-out'; // PATCH
+
+  bar.style.transform = 'translateY(100%)';
+  bar.style.opacity = '0';
+
+  // Mémoire état hero pour IO
+  let io;
+  let lastHeroInView = null; // true: hero visible / false: hero hors-vue
+
+  const shouldShowByPageState = () => {
+    if (showAfter === 'immediate') return true;
+    const target = document.querySelector(targetSel);
+    if (!('IntersectionObserver' in window) || !target) return window.scrollY > 120;
+    return null; // géré par IO
+  };
+
+const setupIO = () => {
+  const targets = Array.from(document.querySelectorAll(targetSel)); // ex: [data-hide-cta]
+  if (!('IntersectionObserver' in window) || targets.length === 0) return () => {};
+
+  // État de visibilité de chaque cible
+  const visibility = new Map(targets.map(t => [t, false]));
+
+  io = new IntersectionObserver((entries) => {
+    let anyVisible = false;
+
+    for (const entry of entries) {
+      visibility.set(entry.target, !!entry.isIntersecting);
+    }
+    for (const v of visibility.values()) {
+      if (v) { anyVisible = true; break; }
+    }
+
+    lastHeroInView = anyVisible; // on réutilise ta variable d’état
+    if (isMenuOpen()) { hideBar(); return; }
+    anyVisible ? hideBar() : showBar();
+  }, {
+    threshold: 0.05,
+    rootMargin: '-72px 0px 0px 0px' // marge top pour tenir compte du header sticky
+  });
+
+  targets.forEach(t => io.observe(t));
+  return () => io && io.disconnect();
+};
+
+
+  const recompute = () => {
+    if (isMenuOpen()) { hideBar(); return; }
+    const state = shouldShowByPageState();
+    if (state === null) { // mode IO
+      if (lastHeroInView === false) showBar();
+      else hideBar();
+      return;
+    }
+    state ? showBar() : hideBar();
+  };
+
+  const setupScrollFallback = () => {
+    const target = document.querySelector(targetSel);
+    if ('IntersectionObserver' in window && target) return () => {};
+    const onScroll = () => recompute();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  };
+
+  const onMenuOpen = () => hideBar();
+  const onMenuClose = () => setTimeout(recompute, 360);
+
+  window.addEventListener('sp:menu_open', onMenuOpen);
+  window.addEventListener('sp:menu_close', onMenuClose);
+
+  const onResize = () => recompute();
+  window.addEventListener('resize', onResize);
+
+  // Init
+  hideBar();
+  const teardownScroll = setupScrollFallback();
+  const teardownIO = setupIO();
+  setTimeout(recompute, 100);
+
+  // Cleanup (Astro navigation)
+  window.addEventListener('astro:after-swap', () => {
+    window.removeEventListener('resize', onResize);
+    window.removeEventListener('sp:menu_open', onMenuOpen);
+    window.removeEventListener('sp:menu_close', onMenuClose);
+    teardownScroll && teardownScroll();
+    teardownIO && teardownIO();
+  });
+
+  // Petit tracking optionnel
+  bar.addEventListener('click', (e) => {
+    const button = e.target.closest('a[href^="tel:"], button, a[data-open-popup]');
+    if (button && window.gtag) {
+      const action = button.href?.startsWith?.('tel:') ? 'phone_call' : 'form_request';
+      window.gtag('event', action, { event_category: 'mobile_cta', event_label: 'floating_bottom_bar' });
+    }
+  });
+});
+</script>
+
+<style is:global>
+/* Masquer la barre quand le menu mobile est ouvert */
+html[data-menu-open="true"] #sticky-cta { display: none !important; }
+
+/* Pulse plus doux */
+.phone-pulse { animation: phonePulse 3s infinite ease-in-out; }
+@keyframes phonePulse {
+  0%, 100% { transform: scale(1); }
+  33% { transform: scale(1.03); box-shadow: 0 0 0 6px rgba(14,165,233,0.15); }
+  66% { transform: scale(1.01); box-shadow: 0 0 0 3px rgba(14,165,233,0.08); }
+}
+</style>

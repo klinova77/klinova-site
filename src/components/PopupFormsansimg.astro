@@ -1,0 +1,1816 @@
+---
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+---
+
+<!-- POPUP OVERLAY -->
+<div class="popup-overlay" id="popupOverlay">
+  <div
+    class="popup-form"
+    id="popupForm"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="popupTitleH2"
+    tabindex="-1"
+  >
+    <!-- Header Premium -->
+<!-- Header Premium -->
+<div class="popup-header relative overflow-hidden">
+  <!-- Motif décoratif -->
+  <div class="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" />
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#grid)" />
+    </svg>
+  </div>
+
+  <!-- Contenu du header -->
+  <div class="relative z-10">
+    <div class="header-accent"></div>
+
+    <div id="popupTitle">
+      <h2 id="popupTitleH2">Devis express anti-punaises</h2>
+      <p>Réponse sous 4h • Intervention possible aujourd'hui</p>
+
+      <div class="trust-badges">
+        <div class="trust-item">
+          <div class="trust-icon-wrapper">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span>Certibiocide &amp; CertiPunaises</span>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-wrapper">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span>Réponse &lt; 4h ouvrées</span>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-wrapper">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          </div>
+          <span>Données protégées RGPD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bouton fermer -->
+  <button class="popup-close" id="closePopup" aria-label="Fermer">
+    <span class="close-icon"></span>
+  </button>
+</div>
+
+
+    <!-- Body -->
+    <div class="popup-body">
+      <!-- Progress bar premium -->
+      <div class="progress-container">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progressText">Étape 1/3</span>
+        </div>
+      </div>
+
+      <!-- Urgence badge premium -->
+      <div class="urgence-badge premium" id="urgenceBadge" style="display: none;">
+        <div class="badge-pulse"></div>
+        <span>Intervention d'urgence - Réponse immédiate</span>
+      </div>
+
+      
+
+      <!-- Message global -->
+      <div
+        id="formMessage"
+        class="form-message premium"
+        style="display: none;"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <!-- Formulaire premium -->
+      <form id="contactForm" action="/api/contact" method="POST" novalidate aria-describedby="formMessage">
+        <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+
+<input type="hidden" id="popup-service-key" name="service_key">
+<input type="hidden" id="popup-service-label" name="service_label">
+<input type="hidden" id="popup-subject" name="subject">
+<input type="hidden" name="page_path" value={Astro.url.pathname}>
+
+
+        <!-- Prénom -->
+        <div class="form-group premium">
+          <div class="floating-label-group">
+            <input
+              type="text"
+              id="popup-prenom"
+              name="prenom"
+              class="form-input premium"
+              placeholder=" "
+              required
+              autocomplete="given-name"
+              enterkeyhint="next"
+            >
+            <label class="floating-label required" for="popup-prenom">Prénom</label>
+            <div class="field-border"></div>
+            <div class="validation-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="validation-icon error">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </div>
+          </div>
+          <div class="form-error premium" id="error-prenom"></div>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="form-group premium">
+          <div class="floating-label-group">
+            <input
+              type="tel"
+              id="popup-telephone"
+              name="telephone"
+              class="form-input premium"
+              placeholder=" "
+              autocomplete="tel"
+              inputmode="tel"
+              required
+              enterkeyhint="next"
+            >
+            <label class="floating-label required" for="popup-telephone">Téléphone</label>
+            <div class="field-border"></div>
+            <div class="input-hint">Format : 06... ou +33...</div>
+            <div class="validation-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="validation-icon error">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </div>
+            <input type="hidden" id="popup-telephone-e164" name="telephone_e164">
+          </div>
+          <div class="form-error premium" id="error-telephone"></div>
+        </div>
+
+        <!-- Code postal -->
+        <div class="form-group premium">
+          <div class="floating-label-group">
+            <input
+              type="text"
+              id="popup-code-postal"
+              name="code_postal"
+              class="form-input premium"
+              placeholder=" "
+              inputmode="numeric"
+              pattern="[0-9]{5}"
+              required
+              maxlength="5"
+              enterkeyhint="done"
+            >
+            <label class="floating-label required" for="popup-code-postal">Code postal</label>
+            <div class="field-border"></div>
+            <div class="input-hint">5 chiffres (ex. 75011). Île-de-France uniquement.</div>
+            <div class="validation-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="validation-icon error">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </div>
+          </div>
+          <div class="form-error premium" id="error-code-postal"></div>
+        </div>
+
+
+       <!-- ✅ Question Crédit d'impôt -->
+<div class="form-group premium" id="credit-impot-question" style="display:none;">
+  <label class="switch-label" for="credit-impot-oui">
+    Particuliers: souhaitez-vous bénéficier du crédit d’impôt et ne payer que 50 % du prix ?
+  </label>
+
+  <div class="credit-impot-radios" role="radiogroup" aria-label="Crédit d'impôt">
+    <label class="radio-pill" for="credit-impot-oui">
+      <input type="radio" id="credit-impot-oui" name="credit_impot" value="oui">
+      <span>Oui</span>
+    </label>
+
+    <label class="radio-pill" for="credit-impot-non">
+      <input type="radio" id="credit-impot-non" name="credit_impot" value="non" checked>
+      <span>Non</span>
+    </label>
+  </div>
+</div>
+
+
+        <!-- RGPD -->
+        <div class="checkbox-group premium">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="popup-rgpd" name="rgpd" class="checkbox-input" required>
+            <label for="popup-rgpd" class="checkbox-label">
+              <div class="checkbox-box">
+                <svg class="checkbox-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="checkbox-text">
+                J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
+                <a href="/politique-de-confidentialite" target="_blank" rel="noopener" class="link-primary">En savoir plus</a>
+              </span>
+            </label>
+          </div>
+          <div class="form-error premium" id="error-rgpd"></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions premium">
+          <button type="submit" class="btn-primary premium" id="submitBtn">
+            <span class="btn-content">
+              <span class="loading-spinner"></span>
+              <span id="submitText">Envoyer ma demande</span>
+            </span>
+            <div class="btn-ripple"></div>
+          </button>
+
+          <a href={`tel:${PHONE_E164}`} class="btn-call premium" id="callBtn">
+            <div class="call-content">
+              <div class="call-icon-wrapper">
+                <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div class="call-text">
+                <span class="call-label">Ou appelez maintenant</span>
+                <span class="call-number">{PHONE_DISPLAY}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Footer reassurance -->
+        <div class="footer-reassurance premium">
+          <div class="reassurance-items">
+            <div class="reassurance-item">
+              <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Sans engagement</span>
+            </div>
+            <div class="reassurance-item">
+              <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <span>Prix transparents</span>
+            </div>
+            <div class="reassurance-item">
+              <svg class="reassurance-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              <span>Intervention discrète</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Variables Premium */
+.popup-form {
+  /* ✅ variables locales, syntaxe correcte */
+  --premium-border-radius: 16px;
+  --premium-shadow: 0 20px 60px rgba(26, 62, 114, 0.15);
+  --premium-gradient: linear-gradient(
+    135deg,
+    var(--color-action-500, #0ea5e9) 0%,
+    var(--color-action-600, #0284c7) 100%
+  );
+  --premium-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-backdrop: blur(20px);
+
+  /* (facultatif) alias locaux -> charte globale */
+  --sp-primary-600: var(--color-primary-600);
+  --sp-neutral-600: var(--color-neutral-600);
+  --sp-line:        var(--color-sp-line);
+  --sp-pill:        var(--color-sp-pill);
+  --sp-light:       var(--color-sp-light);
+  --sp-muted:       var(--sp-muted);
+}
+
+  html.no-scroll, body.no-scroll { overflow: hidden; }
+
+.popup-overlay[hidden] { display: none !important; }
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 62, 114, 0.4);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  z-index: 9998; /* overlay au-dessus du site */
+  opacity: 0;
+  visibility: hidden;
+   transform: scale(0.96) translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+  display: flex;              /* on garde la mise en page */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+  .popup-form {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    box-shadow: var(--premium-shadow);
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+     transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.95);
+    opacity: 0;
+  }
+  .popup-overlay.active .popup-form { transform: scale(1); opacity: 1; }
+
+.popup-header {
+  background: linear-gradient(135deg, #1a3e72 0%, #243b53 100%);
+  color: white;
+  padding: 32px 40px 28px;
+  border-radius: 24px 24px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* motif blanc semi-transparent comme le hero */
+.popup-header svg path {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+/* halo doux */
+.popup-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 70%);
+  z-index: 0;
+}
+
+/* contenu au-dessus du motif */
+.popup-header .header-accent,
+.popup-header .relative {
+  position: relative;
+  z-index: 2;
+}
+
+
+  .header-accent {
+     position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 50%, #fff 100%);
+  animation: shimmer 2s ease-in-out infinite;
+  z-index: 1; /* 🔽 passe en dessous */
+  }
+
+  @keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+  .popup-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .popup-header p {
+    color: rgba(255,255,255,0.95);
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .trust-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    font-size: 13px;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.95);
+    font-weight: 500;
+  }
+  .trust-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+  }
+  .trust-icon { width: 14px; height: 14px; stroke-width: 2.5; }
+
+  .popup-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--premium-transition);
+    color: white;
+    z-index: 10;
+  }
+  .popup-close:hover {
+    background: rgba(255,255,255,0.25);
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  .close-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+  }
+  .close-icon::before,
+  .close-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 1px;
+  }
+  .close-icon::before { transform: translate(-50%, -50%) rotate(45deg); }
+  .close-icon::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+  .popup-body {
+    padding: 40px;
+    padding-bottom: 120px;
+  }
+  @media (max-width: 640px) {
+    .popup-body { padding: 24px; padding-bottom: 140px; }
+    .popup-header { padding: 24px 24px 20px; }
+    .trust-badges { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  .progress-container { margin-bottom: 32px; }
+  .progress-bar {
+    height: 6px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--premium-gradient);
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 3px;
+  }
+  .progress-text {
+    text-align: center;
+    font-size: 12px;
+    color: var(--sp-muted);
+    font-weight: 500;
+  }
+
+  .urgence-badge.premium {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .badge-pulse {
+    position: absolute;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.2); } }
+
+  .urgence-switch.premium {
+    margin-bottom: 32px;
+    padding: 20px;
+    background: var(--sp-light);
+    border: 1px solid var(--sp-line);
+    border-radius: var(--premium-border-radius);
+    backdrop-filter: blur(10px);
+  }
+  .switch-label {
+    display: block;
+    font-weight: 600;
+    color: var(--sp-primary-600);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .toggle-switch { display: flex; align-items: center; gap: 16px; }
+  .toggle-input { display: none; }
+  .toggle-label {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    background: #e2e8f0;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: var(--premium-transition);
+  }
+  .toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    transition: var(--premium-transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .toggle-input:checked + .toggle-label { background: var(--color-action-500); }
+  .toggle-input:checked + .toggle-label .toggle-slider { transform: translateX(28px); }
+  .toggle-text {
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sp-neutral-600);
+  }
+
+  .form-group.premium { margin-bottom: 32px; position: relative; }
+  .floating-label-group { position: relative; }
+
+  .form-input.premium {
+    width: 100%;
+    padding: 20px 16px 8px;
+    border: 2px solid var(--sp-line);
+    border-radius: var(--premium-border-radius);
+    font-size: 16px;
+    background: white;
+    transition: var(--premium-transition);
+    font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif);
+    color: var(--sp-neutral-600);
+    min-height: 56px;
+    box-shadow: 0 2px 8px rgba(26, 62, 114, 0.06);
+  }
+  .form-input.premium:focus {
+    outline: none;
+    background: white;
+    border-color: var(--color-action-500);
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15), 0 2px 8px rgba(26, 62, 114, 0.08);
+    transform: translateY(-1px);
+  }
+  .form-input.premium.success { 
+    background: white;
+    border-color: #10b981;
+  }
+  .form-input.premium.error { 
+    background: white;
+    border-color: #ef4444;
+    animation: shake 0.5s ease-in-out;
+  }
+  @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+
+  .floating-label {
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    font-size: 16px;
+    color: var(--sp-muted);
+    transition: var(--premium-transition);
+    pointer-events: none;
+    background: transparent;
+    padding: 0 4px;
+    font-weight: 500;
+  }
+  .floating-label.required::after { content: ' *'; color: #ef4444; }
+  .form-input.premium:focus + .floating-label,
+  .form-input.premium:not(:placeholder-shown) + .floating-label {
+    transform: translateY(-24px) scale(0.85);
+    color: var(--color-action-500);
+    font-weight: 600;
+  }
+  .form-input.premium.success + .floating-label { color: #10b981; }
+  .form-input.premium.error + .floating-label { color: #ef4444; }
+
+  .field-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--premium-gradient);
+    transform: scaleX(0);
+    transition: var(--premium-transition);
+  }
+  .form-input.premium:focus ~ .field-border { transform: scaleX(1); }
+
+  .validation-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    transition: var(--premium-transition);
+  }
+  .validation-icon svg { width: 100%; height: 100%; stroke-width: 2.5; }
+  .form-input.premium.success ~ .validation-icon.success { opacity: 1; color: #10b981; }
+  .form-input.premium.error ~ .validation-icon.error { opacity: 1; color: #ef4444; }
+
+  .input-hint {
+    position: absolute;
+    right: 16px;
+    bottom: 8px;
+    font-size: 11px;
+    color: var(--sp-muted);
+    opacity: 0;
+    transition: var(--premium-transition);
+    pointer-events: none;
+  }
+  .form-input.premium:focus ~ .input-hint { opacity: 1; }
+
+  .form-error.premium {
+    font-size: 13px;
+    color: #ef4444;
+    margin-top: 8px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: var(--premium-transition);
+  }
+  .form-error.premium:not(:empty) { opacity: 1; transform: translateY(0); }
+  .form-error.premium::before { content: '⚠'; font-size: 14px; }
+
+  .checkbox-group.premium { margin: 32px 0; }
+  .checkbox-wrapper { display: flex; align-items: flex-start; gap: 16px; }
+  .checkbox-input { display: none; }
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--sp-neutral-600);
+  }
+  .checkbox-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--sp-line);
+    border-radius: 6px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--premium-transition);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .checkbox-check {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3;
+    color: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: var(--premium-transition);
+  }
+  .checkbox-input:checked + .checkbox-label .checkbox-box {
+    background: var(--color-action-500);
+    border-color: var(--color-action-500);
+  }
+  .checkbox-input:checked + .checkbox-label .checkbox-check { opacity: 1; transform: scale(1); }
+  .link-primary { color: var(--color-action-500); text-decoration: none; font-weight: 500; }
+  .link-primary:hover { text-decoration: underline; }
+
+  .form-actions.premium { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+
+  .btn-primary.premium {
+    width: 100%;
+    background: var(--premium-gradient);
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: var(--premium-border-radius);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--premium-transition);
+    position: relative;
+    overflow: hidden;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      z-index: 1;
+  white-space: nowrap;
+  }
+  .btn-primary.premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 30px 80px rgba(26, 62, 114, 0.25);
+  }
+  .btn-content { display: flex; align-items: center; gap: 8px; }
+  .loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+  }
+  .btn-primary.premium.loading .loading-spinner { display: block; }
+  .btn-primary.premium.loading #submitText { opacity: 0.7; }
+  @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+  .btn-ripple {
+    position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-soft 420ms ease-out;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+@keyframes ripple-soft {
+  to { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+}
+
+  .btn-call.premium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: white;
+    border: 2px solid var(--sp-primary-600);
+    border-radius: var(--premium-border-radius);
+    text-decoration: none;
+    transition: var(--premium-transition);
+    min-height: 56px;
+  }
+  .btn-call.premium:hover {
+    background: var(--sp-pill);
+    border-color: var(--color-action-500);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 62, 114, 0.15);
+  }
+
+  .call-content { display: flex; align-items: center; gap: 12px; }
+  .call-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .call-icon { width: 18px; height: 18px; color: var(--color-action-500); stroke-width: 2.5; }
+  .call-text { display: flex; flex-direction: column; text-align: left; }
+  .call-label { font-size: 13px; color: var(--sp-muted); font-weight: 500; }
+  .call-number { font-size: 16px; color: var(--sp-primary-600); font-weight: 600; }
+
+  .footer-reassurance.premium { margin-top: 32px; }
+  .reassurance-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .reassurance-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--sp-muted);
+    font-weight: 500;
+  }
+  .reassurance-icon { width: 14px; height: 14px; stroke-width: 2.5; color: var(--color-action-500); }
+
+  .form-message.premium {
+    padding: 20px 24px;
+    border-radius: var(--premium-border-radius);
+    margin-bottom: 24px;
+    font-weight: 500;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-size: 15px;
+  }
+  .form-message.premium.success {
+    background: rgba(236, 253, 245, 0.9);
+    color: #047857;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.1);
+  }
+  .form-message.premium.error {
+    background: rgba(254, 242, 242, 0.9);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.1);
+  }
+
+  @media (max-width: 640px) {
+    .reassurance-items { flex-direction: column; gap: 12px; }
+    .form-actions.premium .btn-call.premium .call-content { flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+
+  /* ========== COMPACT GLOBAL (mobile-first) ========== */
+
+/* Header popup plus serré */
+.popup-header {
+  padding: 18px 22px 14px;            /* était ~32/40/28 */
+}
+.popup-header h2 {
+  font-size: 22px;                    /* était 28px */
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.popup-header p {
+  font-size: 14px;                    /* était 16px */
+  margin-bottom: 10px;
+}
+
+/* Badges de confiance plus denses */
+.trust-badges {
+  gap: 8px;                           /* était 16px */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+.trust-item { gap: 8px; }
+.trust-icon-wrapper { width: 20px; height: 20px; }
+.trust-icon { width: 12px; height: 12px; }
+
+/* Trait lumineux ok, mais pas trop intrusif */
+.header-accent { height: 2px; }
+
+/* Corps du popup plus compact */
+.popup-body {
+  padding: 20px 22px 80px;            /* bas gardé pour les actions */
+}
+
+/* Barre de progression plus fine & moins d’espace autour */
+.progress-container { margin-bottom: 16px; }
+.progress-bar { height: 4px; }        /* était 6px */
+.progress-text { font-size: 12px; }
+
+/* Groupes de champs plus proches */
+.form-group.premium { margin-bottom: 0px; } /* était 32px */
+
+/* Champs plus compacts (hauteur & label flottant) */
+.form-input.premium {
+  min-height: 48px;                   /* était 56px */
+  padding: 14px 14px 6px;             /* haut/bas plus serré */
+  font-size: 15px;
+}
+.floating-label {
+  top: 14px;                          /* était 20px */
+  font-size: 14px;
+}
+.form-input.premium:focus + .floating-label,
+.form-input.premium:not(:placeholder-shown) + .floating-label {
+  transform: translateY(-20px) scale(0.9); /* ajusté pour la nouvelle hauteur */
+}
+
+/* Switch urgence plus petit */
+.urgence-switch.premium { margin-bottom: 20px; padding: 14px; }
+.switch-label { margin-bottom: 10px; font-size: 15px; }
+.toggle-label { width: 52px; height: 28px; }
+.toggle-slider { width: 24px; height: 24px; }
+
+/* Checkboxes & RGPD plus compacts */
+.checkbox-group.premium { margin: 20px 0; }
+.checkbox-label { gap: 10px; font-size: 13px; }
+.checkbox-box { width: 18px; height: 18px; }
+
+
+.btn-call.premium {
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+/* Reassurance compacte */
+.footer-reassurance.premium { margin-top: 16px; }
+.reassurance-items { gap: 12px; }
+.reassurance-item { font-size: 11.5px; }
+.reassurance-icon { width: 12px; height: 12px; }
+
+/* Ligne de séparation plus légère si tu en as une */
+hr, .border-sp-line { border-color: color-mix(in srgb, var(--sp-line) 70%, transparent); }
+
+/* ========== LÉGER COMPACT DESKTOP (>= 640px) ========== */
+@media (min-width: 640px) {
+  .popup-header { padding: 22px 28px 16px; }
+  .popup-header h2 { font-size: 24px; }
+  .popup-header p { font-size: 15px; margin-bottom: 12px; }
+
+  .popup-body { padding: 24px 28px 96px; }
+  .form-group.premium { margin-bottom: 18px; }
+
+  .form-input.premium { min-height: 50px; padding: 14px 16px 6px; }
+  .floating-label { top: 15px; font-size: 14px; }
+
+  .btn-primary.premium,
+  .btn-call.premium { min-height: 50px; }
+}
+
+
+/* === Apparition fluide du contenu du popup === */
+
+/* Formulaire et contenu internes cachés avant animation */
+.popup-form {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Quand le popup devient actif */
+.popup-overlay.active .popup-form {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation subtile du bouton submit */
+#popupForm .btn-primary.premium {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.35s ease 0.15s,
+    transform 0.35s ease 0.15s; /* délai léger pour arriver après le reste */
+}
+
+.popup-overlay.active #popupForm .btn-primary.premium {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+/* === 🧩 PRESET PREMIUM COMPACT v2 – ESPACEMENT PLUS AÉRÉ === */
+
+/* ────────────── HEADER ────────────── */
+.popup-header {
+  padding: 22px 26px 18px;
+}
+.popup-header h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.popup-header p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.trust-badges {
+  margin-top: 12px;
+  gap: 12px;
+}
+.trust-item span {
+  font-size: 13px;
+}
+
+/* ────────────── BODY FORMULAIRE ────────────── */
+.popup-body {
+  padding: 26px 26px 96px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+
+
+/* Groupes de champs */
+#popupForm .form-group.premium {
+  margin: 0 !important;
+}
+
+/* Étiquettes flottantes ajustées */
+.floating-label {
+  top: 14px;
+  font-size: 14px;
+}
+
+/* Champs légèrement ajustés */
+.form-input.premium {
+  min-height: 50px;
+  padding: 15px 14px 7px;
+}
+
+/* ────────────── ERREURS & CHECKBOX ────────────── */
+#popupForm .form-error.premium {
+  margin-top: 6px;
+  min-height: 0;
+}
+#popupForm .form-error.premium:empty {
+  display: none;
+}
+#popupForm .checkbox-group.premium {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* ────────────── CTA ZONE ────────────── */
+#popupForm .form-actions.premium {
+  margin-top: 26px;
+  margin-bottom: 18px;
+  gap: 14px;
+}
+
+/* Boutons compacts mais lisibles */
+.btn-primary.premium,
+.btn-call.premium {
+  min-height: 52px;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+/* ────────────── MOBILE FIXES ────────────── */
+@media (max-width: 640px) {
+  .popup-header {
+    padding: 20px 22px 14px;
+  }
+  .popup-header h2 {
+    font-size: 20px;
+  }
+  .popup-header p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .popup-body {
+    padding: 22px 22px 100px;
+  }
+
+  #popupForm {
+    row-gap: 18px; /* légèrement plus espacés */
+  }
+
+  #popupForm .btn-primary.premium {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  #popupForm {
+    padding-bottom: env(safe-area-inset-bottom, 22px);
+  }
+}
+
+/* ────────────── ANIMATIONS FLUIDES ────────────── */
+.popup-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+}
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.4s ease;
+}
+.popup-form {
+  opacity: 0;
+  transform: scale(0.96) translateY(14px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.popup-overlay.active .popup-form {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+#popupForm .btn-primary.premium {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease 0.12s, transform 0.35s ease 0.12s;
+}
+.popup-overlay.active #popupForm .btn-primary.premium {
+  opacity: 1;
+  transform: translateY(0);
+}
+.popup-overlay[hidden] {
+  display: none !important;
+}
+
+
+
+/* un peu de marge basse supplémentaire quand le clavier est ouvert */
+.popup-body {
+  padding-bottom: calc(120px + var(--kb, 0px));
+}
+
+/* ===== ESPACEMENT ENTRE LES CHAMPS DU FORMULAIRE ===== */
+
+/* 🔹 Espace entre chaque bloc de champ */
+#popupForm .form-group.premium {
+  margin-bottom: 12px !important; /* ajuste ici la valeur pour espacer les champs */
+}
+
+/* 🔹 Supprime la marge sur le dernier champ avant le bloc suivant (checkbox / CTA) */
+#popupForm .form-group.premium:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* 🔹 Espace avant la case RGPD */
+#popupForm .checkbox-group.premium {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* 🔹 Espace avant les boutons CTA */
+#popupForm .form-actions.premium {
+  margin-top: 22px !important;
+  gap: 14px !important;
+}
+
+/* 🔒 Taille verrouillée pour les icônes du header du popup */
+.popup-header .trust-badges .trust-item .trust-icon-wrapper{
+  inline-size:22px !important;
+  block-size:22px !important;
+  min-inline-size:22px !important;
+  min-block-size:22px !important;
+  flex:0 0 22px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+}
+
+.popup-header .trust-badges .trust-item .trust-icon{
+  inline-size:14px !important;
+  block-size:14px !important;
+  flex:0 0 14px !important;
+}
+
+/* Si un global fait svg{width:100%} on neutralise localement */
+.popup-header .trust-badges .trust-item .trust-icon,
+.popup-header .trust-badges .trust-item .trust-icon *{
+  max-width:none !important;
+  max-height:none !important;
+}
+
+
+
+
+/* Radios “pill” pour la question crédit d'impôt */
+.credit-impot-radios {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.radio-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 2px solid var(--sp-line);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  background: #fff;
+  transition: var(--premium-transition);
+}
+
+.radio-pill input[type="radio"] {
+  /* radios visibles et cohérentes */
+  inline-size: 16px;
+  block-size: 16px;
+  accent-color: var(--color-action-500); /* supporté par les navigateurs modernes */
+}
+
+.radio-pill:hover {
+  border-color: var(--color-action-500);
+  background: var(--sp-pill);
+}
+
+.radio-pill input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: var(--sp-primary-600);
+}
+
+
+</style>
+
+<script is:inline>
+/* =========================================================
+   POPUP FORM – SCRIPT COMPLET, SÛR ET AUTO-CONTAINED
+   ========================================================= */
+(function () {
+  /* ---------- Contexte page ---------- */
+  function readPageContext() {
+    const b = document.body?.dataset || {};
+    const w = (window.POPUP_CONTEXT) || {};
+    return {
+      serviceKey:   b.serviceKey   || w.serviceKey   || 'general',
+      serviceLabel: b.serviceLabel || w.serviceLabel || 'Service Klinova',
+      trackingSource: b.trackingSource || w.trackingSource || 'popup-general',
+      presetSubject: b.presetSubject || w.presetSubject || null,
+      uiSubtitle: b.popupSubtitle || w.popupSubtitle || null,
+      uiSubmit:   b.popupSubmit   || w.popupSubmit   || null,
+      creditImpotEnabled: b.creditImpot === '1',
+    };
+  }
+
+  /* ---------- Config visuelle ---------- */
+  const popupConfig = {
+    header:   { title:"Devis express anti-punaises",    subtitle:"Réponse sous 4h • Intervention possible aujourd'hui", showUrgence:false, submitText:"Envoyer ma demande",        source:"popup_header" },
+    floating: { title:"Intervention d'urgence",         subtitle:"Réponse immédiate • Intervention possible dans la journée", showUrgence:true,  submitText:"Demander une intervention", source:"popup_floating" },
+    cta:      { title:"Devis express anti-punaises",    subtitle:"Réponse sous 4h • Intervention possible aujourd'hui", showUrgence:false, submitText:"Envoyer ma demande",        source:"popup_cta" }
+  };
+
+  /* ---------- DOM refs ---------- */
+  const popupOverlay = document.getElementById("popupOverlay");
+  const popupForm    = document.getElementById("popupForm");
+  const popupTitle   = document.getElementById("popupTitle");
+  const urgenceBadge = document.getElementById("urgenceBadge");
+
+  const contactForm  = document.getElementById("contactForm");
+  const submitBtn    = document.getElementById("submitBtn");
+  const submitText   = document.getElementById("submitText");
+  const formMessage  = document.getElementById("formMessage");
+  const closeBtn     = document.getElementById("closePopup");
+  const progressFill = document.getElementById("progressFill");
+  const progressText = document.getElementById("progressText");
+
+  const telephoneInput  = document.getElementById("popup-telephone");
+  const telephoneE164   = document.getElementById("popup-telephone-e164");
+  const codePostalInput = document.getElementById("popup-code-postal");
+  const prenomInput     = document.getElementById("popup-prenom");
+
+  if (!popupOverlay || !popupForm) {
+    console.warn("[popup] DOM incomplet : overlay/form manquant.");
+  }
+
+  /* ---------- Scroll lock exposé en global ---------- */
+  let scrollY = 0, lockCount = 0, lastActive = null;
+  window.lockScroll = function lockScroll() {
+    if (!lockCount) {
+      scrollY = window.scrollY;
+      document.documentElement.classList.add("no-scroll");
+      document.body.classList.add("no-scroll");
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+    }
+    lockCount++;
+  };
+  window.unlockScroll = function unlockScroll() {
+    lockCount = Math.max(0, lockCount - 1);
+    if (lockCount > 0) return;
+    document.documentElement.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    const old = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    requestAnimationFrame(() => {
+      window.scrollTo(0, scrollY);
+      document.documentElement.style.scrollBehavior = old;
+    });
+  };
+
+  /* ---------- Utils champs ---------- */
+  function normalizePhoneFR(raw) {
+    if (!raw) return null;
+    let v = String(raw).trim().replace(/[^\d+]/g, '');
+    if (v.startsWith('00')) v = '+' + v.slice(2);
+    if (v.startsWith('+33')) {
+      v = v.slice(3).replace(/^0+/, '');
+      return (/^\d{9}$/.test(v)) ? '+33' + v : null;
+    }
+    if (v.startsWith('33')) {
+      v = v.slice(2).replace(/^0+/, '');
+      return (/^\d{9}$/.test(v)) ? '+33' + v : null;
+    }
+    const d = v.replace(/\D/g, '');
+    if (/^0\d{9}$/.test(d)) return '+33' + d.slice(1);
+    if (/^\d{9}$/.test(d))  return '+33' + d;
+    return null;
+  }
+  function showFieldError(fieldId, msg) {
+    const e = document.getElementById(`error-${fieldId}`);
+    const f = document.getElementById(`popup-${fieldId}`);
+    if (e) e.textContent = msg || '';
+    if (f) { f.classList.add('error'); f.classList.remove('success'); }
+    updateProgress();
+  }
+  function clearFieldError(fieldId) {
+    const e = document.getElementById(`error-${fieldId}`);
+    const f = document.getElementById(`popup-${fieldId}`);
+    if (e) e.textContent = '';
+    if (f) f.classList.remove('error');
+  }
+  function showFieldSuccess(fieldId) {
+    const f = document.getElementById(`popup-${fieldId}`);
+    if (f) { f.classList.add('success'); f.classList.remove('error'); }
+    updateProgress();
+  }
+  function clearAllErrors() {
+    ['prenom','telephone','code-postal','rgpd'].forEach(clearFieldError);
+  }
+
+  function setLoadingState(loading) {
+    if (submitBtn) {
+      submitBtn.disabled = loading;
+      submitBtn.classList.toggle("loading", loading);
+    }
+  }
+  function resetSubmitButton() {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("loading");
+    }
+  }
+  function showMessage(text, type) {
+    if (!formMessage) return;
+    formMessage.textContent = text || '';
+    formMessage.className = `form-message premium ${type || 'success'}`;
+    formMessage.style.display = "block";
+  }
+  function hideMessage() { if (formMessage) formMessage.style.display = "none"; }
+
+  function updateProgress() {
+    const required = ['popup-prenom','popup-telephone','popup-code-postal'];
+    const rgpd = document.getElementById('popup-rgpd');
+    let completed = 0;
+    required.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.value.trim() && !el.classList.contains('error')) completed++;
+    });
+    const rg = rgpd && rgpd.checked ? 1 : 0;
+    const total = Math.min(100, ((completed/required.length)*85) + (rg*15));
+    if (progressFill) progressFill.style.width = `${total}%`;
+    const bar = document.querySelector('.progress-bar');
+    if (bar) bar.setAttribute('aria-valuenow', String(Math.round(total)));
+    if (progressText) {
+      progressText.textContent =
+        total < 30 ? "Étape 1/3 - Informations de base"
+      : total < 80 ? "Étape 2/3 - Presque terminé"
+                   : "Étape 3/3 - Prêt à envoyer !";
+    }
+  }
+  function createRipple(ev) {
+    try {
+      const btn = this || (ev && ev.currentTarget);
+      if (!btn || btn.disabled || btn.classList.contains('loading')) return;
+      const rect = btn.getBoundingClientRect();
+      const base = Math.min(rect.width, rect.height) || 56;
+      const size = Math.max(48, Math.min(120, Math.round(base*0.9)));
+      const cx = rect.left + rect.width/2, cy = rect.top + rect.height/2;
+      const clientX = (ev && typeof ev.clientX==='number') ? ev.clientX : cx;
+      const clientY = (ev && typeof ev.clientY==='number') ? ev.clientY : cy;
+      const x = clientX - rect.left, y = clientY - rect.top;
+      const old = btn.querySelector('.btn-ripple'); if (old) old.remove();
+      const ripple = document.createElement('div'); ripple.className='btn-ripple';
+      ripple.style.width=size+'px'; ripple.style.height=size+'px';
+      ripple.style.left=x+'px'; ripple.style.top=y+'px';
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', ()=>ripple.remove(), {once:true});
+    } catch(err){ console.error('ripple error:', err); }
+  }
+
+  /* ---------- Public API open/close ---------- */
+  let __popupSuppressed = false;
+  window.openPopupForm = window.openPopupForm || function(type="header", opts={}) {
+    try {
+      const isForced = !!opts.force;
+      if (__popupSuppressed && !isForced) return false;
+      if (!popupOverlay || !popupForm)  return false;
+
+      const cfg = popupConfig[type] || popupConfig.header;
+      const pc  = readPageContext();
+
+      // Titre / sous-titre
+      const bodyData   = document.body?.dataset || {};
+      const ctxTitle   = bodyData.popupTitle?.trim()    || null;
+      const ctxSubtitle= bodyData.popupSubtitle?.trim() || null;
+      const title      = ctxTitle    || 'Contactez-nous';
+      const subtitle   = ctxSubtitle || 'Nous vous répondrons sous 4h ouvrées.';
+
+      if (popupTitle) {
+        const h2 = popupTitle.querySelector("h2");
+        const p  = popupTitle.querySelector("p");
+        if (h2) h2.textContent = title;
+        if (p)  { p.textContent = subtitle || ''; p.style.display = subtitle ? "" : "none"; }
+      }
+      if (urgenceBadge) urgenceBadge.style.display = cfg.showUrgence ? '' : 'none';
+
+      // dataset & inputs cachés
+      if (contactForm?.dataset) {
+        contactForm.dataset.source      = cfg.source || pc.trackingSource || 'popup';
+        contactForm.dataset.service     = pc.serviceKey;
+        contactForm.dataset.serviceLabel= pc.serviceLabel;
+      }
+      const ki = document.getElementById('popup-service-key');
+      const li = document.getElementById('popup-service-label');
+      const sj = document.getElementById('popup-subject');
+      if (ki) ki.value = pc.serviceKey;
+      if (li) li.value = pc.serviceLabel;
+      if (sj) sj.value = pc.presetSubject || `Devis ${pc.serviceLabel}`;
+
+      // Affichage + lock après activation
+      popupOverlay.classList.remove('active');
+      if (popupOverlay.hasAttribute('hidden')) popupOverlay.removeAttribute('hidden');
+      void popupOverlay.offsetWidth;
+      requestAnimationFrame(() => {
+        popupOverlay.classList.add('active');
+
+        // lock uniquement si l'overlay est actif
+        if (popupOverlay.classList.contains('active')) window.lockScroll();
+
+        // garde-fou : si l'activation échoue (CSS/transition), on déverrouille
+        setTimeout(() => {
+          if (!popupOverlay.classList.contains('active')) window.unlockScroll();
+        }, 450);
+      });
+
+      lastActive = document.activeElement;
+      setTimeout(() => {
+        const first = document.querySelector('#popupForm input, #popupForm button, #popupForm a');
+        if (first && typeof first.focus==='function') {
+          try { first.focus({preventScroll:true}); } catch { first.focus(); }
+        }
+      }, 200);
+
+      updateProgress();
+      if (typeof gtag!=="undefined") {
+        gtag("event","popup_open",{event_category:"engagement", event_label:type, forced:isForced});
+      }
+      return true;
+    } catch (e) {
+      console.error('[openPopupForm]', e);
+      try { window.unlockScroll(); } catch {}
+      return false;
+    }
+  };
+
+  window.closePopupForm = window.closePopupForm || function(){
+    if (!popupOverlay) return;
+    popupOverlay.classList.remove('active');
+    window.unlockScroll();
+
+    const onEnd = (e)=>{
+      if (e.target !== popupOverlay) return;
+      popupOverlay.setAttribute('hidden','');
+      popupOverlay.removeEventListener('transitionend', onEnd);
+
+      contactForm?.reset();
+      clearAllErrors(); hideMessage(); resetSubmitButton();
+      if (progressFill) progressFill.style.width = '0%';
+      const bar = document.querySelector('.progress-bar'); if (bar) bar.setAttribute('aria-valuenow','0');
+      if (progressText) progressText.textContent='Étape 1/3';
+
+      if (lastActive && typeof lastActive.focus==="function") {
+        try { lastActive.focus({preventScroll:true}); } catch { lastActive.focus(); }
+      }
+    };
+    popupOverlay.addEventListener('transitionend', onEnd, {once:true});
+  };
+
+  /* ---------- Écoutes UI ---------- */
+  if (closeBtn)      closeBtn.addEventListener("click", ()=>window.closePopupForm());
+  if (popupOverlay)  popupOverlay.addEventListener("click", (e)=>{ if (e.target===popupOverlay) window.closePopupForm(); });
+  document.addEventListener("keydown", (e)=>{ if (e.key==="Escape" && popupOverlay?.classList.contains("active")) window.closePopupForm(); });
+  if (submitBtn)     submitBtn.addEventListener('click', createRipple);
+
+  // Validation live
+  if (telephoneInput) {
+    telephoneInput.addEventListener("input", (e)=>{
+      const normalized = normalizePhoneFR(e.target.value);
+      if (telephoneE164) telephoneE164.value = normalized || '';
+      if (e.target.value.trim()) {
+        if (normalized) { clearFieldError('telephone'); showFieldSuccess('telephone'); }
+        else            { showFieldError('telephone','Format invalide. Ex: 0612345678 ou +33 6 12 34 56 78'); }
+      }
+    });
+  }
+  if (codePostalInput) {
+    codePostalInput.addEventListener("input", (e)=>{
+      let v = e.target.value.replace(/\D/g,"");
+      if (v.length>5) v = v.slice(0,5);
+      e.target.value = v;
+      if (v.length===5) { clearFieldError('code-postal'); showFieldSuccess('code-postal'); }
+      else if (v.length>0) { showFieldError('code-postal','Code postal doit contenir 5 chiffres'); }
+    });
+  }
+  if (prenomInput) {
+    prenomInput.addEventListener('input', (e)=>{ if (e.target.value.trim()) { clearFieldError('prenom'); showFieldSuccess('prenom'); } });
+  }
+
+  // Submit
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      setLoadingState(true); hideMessage(); clearAllErrors();
+      let hasErrors = false;
+
+      const prenom = (document.getElementById('popup-prenom')?.value || '').trim();
+      if (!prenom) { showFieldError('prenom','Le prénom est obligatoire'); hasErrors = true; }
+
+      const telNorm = normalizePhoneFR(telephoneInput?.value || '');
+      if (!telNorm) { showFieldError('telephone','Numéro invalide. Ex: 0612345678 ou +33 6 12 34 56 78'); hasErrors = true; }
+      else if (telephoneE164) { telephoneE164.value = telNorm; }
+
+      const cp = codePostalInput?.value || '';
+      if (!/^\d{5}$/.test(cp)) { showFieldError('code-postal','Code postal invalide (5 chiffres requis)'); hasErrors = true; }
+
+      const rgpdOk = document.getElementById('popup-rgpd')?.checked;
+      if (!rgpdOk) { showFieldError('rgpd',"Vous devez accepter l'utilisation de vos données"); hasErrors = true; }
+
+      if (hasErrors) { setLoadingState(false); return; }
+
+      try {
+        const fd = new FormData(contactForm);
+        const source = contactForm?.dataset?.source || "popup";
+        const res = await fetch("/api/contact", { method:"POST", body: fd });
+
+        if (res.ok) {
+          showMessage("Votre demande a été envoyée ! Nous vous recontactons rapidement.", "success");
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event:'lead_generated', formId:'popupLeadForm', source: source, formType:'devis', conversion_value:500 });
+          if (progressFill) progressFill.style.width = '100%';
+          const bar = document.querySelector('.progress-bar'); if (bar) bar.setAttribute('aria-valuenow','100');
+          if (progressText) progressText.textContent='Demande envoyée avec succès !';
+          if (typeof gtag!=="undefined") { gtag("event","form_submit",{event_category:"conversion",event_label:source,value:290}); }
+          setTimeout(()=>window.closePopupForm(), 3000);
+        } else {
+          const err = await res.text();
+          showMessage(err || "Erreur lors de l'envoi. Veuillez réessayer.", "error");
+        }
+      } catch (err) {
+        console.error("Erreur formulaire:", err);
+        showMessage("Erreur réseau. Veuillez réessayer ou nous appeler.", "error");
+      } finally {
+        setLoadingState(false);
+      }
+    });
+  }
+
+  // Analytics click-to-call
+  document.addEventListener('click', (e)=>{
+    const callBtn = e.target.closest?.('.btn-call.premium');
+    if (callBtn) {
+      const src = contactForm?.dataset?.source || 'popup';
+      if (typeof gtag!=="undefined") gtag("event","click_call_alt",{event_category:"engagement",event_label:src});
+    }
+  });
+
+  /* ---------- Catcher global des boutons d’ouverture (anti-freeze) ---------- */
+  (function setupSafeTriggerCatcher(){
+    function onPopupTrigger(e) {
+      const host = e.target.closest?.('[data-open-popup], [data-openpopup], [data-popup-open]');
+      if (!host) return;
+
+      const type =
+        host.getAttribute('data-open-popup') ||
+        host.getAttribute('data-openpopup') ||
+        host.getAttribute('data-popup-open') ||
+        'header';
+
+      // ⚠️ Ne bloque pas la navigation si openPopupForm n'est pas prêt
+      if (typeof window.openPopupForm !== 'function') return;
+
+      // Ici seulement on empêche la nav
+      e.preventDefault();
+      e.stopPropagation();
+      const ok = window.openPopupForm(type, { force:true });
+
+      // Si jamais l'ouverture échoue, on s'assure de déverrouiller
+      if (!ok) { try { window.unlockScroll(); } catch {} }
+    }
+    document.addEventListener('click', onPopupTrigger, { capture:true });
+  })();
+
+  /* ---------- Auto-triggers (facultatif, sûrs) ---------- */
+  (function setupAutoTriggers(){
+    if (!window.openPopupForm || !window.closePopupForm) return;
+
+    const UA = navigator.userAgent || '';
+    const isIOS = /\b(iPhone|iPad|iPod)\b/i.test(UA);
+    const isSafari = /Safari/i.test(UA) && !/Chrome|CriOS|FxiOS|EdgiOS/i.test(UA);
+    const PRUDENT_MOBILE = (isIOS && isSafari) || window.innerWidth < 380;
+
+    const cfg = window.POPUP_TRIG || {
+      minTimeMs: PRUDENT_MOBILE ? 120000 : 100000,
+      minScrollPct: PRUDENT_MOBILE ? 70 : 65,
+      sessionCap: 1,
+      dayCap: 1,
+      snoozeDaysOnClose: 7,
+      snoozeDaysOnSubmit: 30,
+      minDelayFirstOpenMs: 20000,
+    };
+
+    const LS = (window.LS) || {
+      get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+      set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+    };
+
+    const dayKey   = () => new Date().toISOString().slice(0,10);
+    const daysFrom = (ts) => (Date.now() - ts) / 86400000;
+    const getCountToday = (key) => (LS.get(key)?.byDay?.[dayKey()] || 0);
+    const incToday = (key) => {
+      const o = LS.get(key) || { byDay:{} };
+      const d = dayKey();
+      o.byDay[d] = (o.byDay[d] || 0) + 1;
+      LS.set(key, o);
+    };
+
+    const getScrollPct = () => {
+      const doc = document.documentElement;
+      const st = doc.scrollTop || document.body.scrollTop;
+      const sh = doc.scrollHeight || document.body.scrollHeight;
+      const ch = doc.clientHeight;
+      return sh <= ch ? 100 : Math.round((st / (sh - ch)) * 100);
+    };
+
+    function eligible() {
+      if (__popupSuppressed) return false;
+      if (PRUDENT_MOBILE) return false;
+      if (!popupOverlay || !popupForm) return false;
+      if (popupOverlay.classList.contains('active')) return false;
+      if (location.pathname.startsWith('/contact')) return false;
+      if (location.hash === '#devis') return false;
+
+      const closedAt = LS.get('sp_popup_closedAt');
+      if (closedAt && daysFrom(closedAt) < cfg.snoozeDaysOnClose) return false;
+
+      const submittedAt = LS.get('sp_popup_submittedAt');
+      if (submittedAt && daysFrom(submittedAt) < cfg.snoozeDaysOnSubmit) return false;
+
+      if (sessionStorage.getItem('sp_popup_session_shown')) return false;
+      if (getCountToday('sp_popup_daily') >= cfg.dayCap) return false;
+
+      const consentBlocking = document.querySelector('[data-consent-blocking="true"]');
+      if (consentBlocking) return false;
+
+      if (performance.now() < cfg.minDelayFirstOpenMs) return false;
+
+      return true;
+    }
+
+    function markShown(reason) {
+      sessionStorage.setItem('sp_popup_session_shown', '1');
+      incToday('sp_popup_daily');
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'popup_trigger', { reason, prudent_mobile: PRUDENT_MOBILE, once_per_session: true });
+      }
+    }
+
+    let timeId=null, scrollBound=false, exitBound=false, scrollHandler=null, exitHandler=null;
+
+    function setupExit() {
+      if (PRUDENT_MOBILE || exitBound || !window.matchMedia('(pointer:fine)').matches) return;
+      exitHandler = (e) => {
+        if (e.clientY <= 0 && !e.relatedTarget && eligible()) {
+          window.openPopupForm('floating'); markShown('exit'); teardownExit();
+        }
+      };
+      document.addEventListener('mouseout', exitHandler, { passive:true });
+      exitBound = true;
+    }
+    function teardownExit() {
+      if (exitBound && exitHandler) {
+        document.removeEventListener('mouseout', exitHandler);
+        exitBound = false; exitHandler = null;
+      }
+    }
+
+    function setupScroll() {
+      if (PRUDENT_MOBILE || scrollBound) return;
+      scrollHandler = () => {
+        if (getScrollPct() >= cfg.minScrollPct && eligible()) {
+          window.openPopupForm('floating'); markShown('scroll'); teardownScroll();
+        }
+      };
+      window.addEventListener('scroll', scrollHandler, { passive:true });
+      scrollBound = true;
+    }
+    function teardownScroll() {
+      if (scrollBound && scrollHandler) {
+        window.removeEventListener('scroll', scrollHandler);
+        scrollBound = false; scrollHandler = null;
+      }
+    }
+
+    function setupTime() {
+      if (PRUDENT_MOBILE || timeId) return;
+      timeId = window.setTimeout(() => {
+        timeId = null;
+        const engaged = getScrollPct() >= 25 && !document.hidden;
+        if (engaged && eligible()) { window.openPopupForm('floating'); markShown('time'); }
+      }, cfg.minTimeMs);
+    }
+    function teardownTime() { if (timeId) { clearTimeout(timeId); timeId=null; } }
+
+    // VisualViewport padding (clavier mobile)
+    if (window.visualViewport) {
+      const onVV = () => {
+        const kb = Math.max(0, window.innerHeight - visualViewport.height);
+        document.documentElement.style.setProperty('--kb', kb + 'px');
+      };
+      visualViewport.addEventListener('resize', onVV);
+      visualViewport.addEventListener('scroll', onVV);
+      onVV();
+    }
+
+    // Hook fermeture/succès : snooze auto
+    const _close = window.closePopupForm;
+    window.closePopupForm = function() {
+      try { localStorage.setItem('sp_popup_closedAt', JSON.stringify(Date.now())); } catch {}
+      __popupSuppressed = true;
+      teardownTime(); teardownScroll(); teardownExit();
+      sessionStorage.setItem('sp_popup_session_shown', '1');
+      return _close.apply(this, arguments);
+    };
+    const _showMessage = window.showMessage || function(){};
+    window.showMessage = function(text, type) {
+      if (type === 'success') {
+        try { localStorage.setItem('sp_popup_submittedAt', JSON.stringify(Date.now())); } catch {}
+        __popupSuppressed = true;
+        teardownTime(); teardownScroll(); teardownExit();
+        sessionStorage.setItem('sp_popup_session_shown', '1');
+      }
+      return _showMessage.apply(this, arguments);
+    };
+
+    window.addEventListener('load', ()=>{ setupExit(); setupScroll(); setupTime(); });
+  })();
+
+  /* ---------- Init simple ---------- */
+  document.addEventListener('DOMContentLoaded', updateProgress);
+})();
+</script>
+

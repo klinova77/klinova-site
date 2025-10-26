@@ -1,0 +1,68 @@
+---
+// src/components/UI/CtaDevis.astro
+export interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  trackingData?: Record<string, string>;
+  href?: string;
+  label?: string;
+  className?: string;
+}
+
+const {
+  size = 'md',
+  variant = 'secondary',
+  trackingData = { source: 'unknown', action: 'lead' },
+  href = '/contact',
+  label = 'Devis gratuit',
+  className = ''
+} = Astro.props;
+
+const map = {
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  tertiary: 'btn-tertiary'
+} as const;
+
+const variantClass = map[variant] ?? 'btn-secondary';
+
+const sizeClass =
+  size === 'lg' ? 'sm:py-4 sm:px-8 text-base' :
+  size === 'sm' ? 'py-2.5 px-5 text-sm' :
+  '';
+---
+
+<a
+  href={href}
+  class={`${variantClass} ${sizeClass} ${className}`.trim()}
+  data-action={trackingData.action}
+  data-source={trackingData.source}
+  data-intent={variant === 'primary' ? 'primary-quote' : variant === 'tertiary' ? 'tertiary-quote' : 'secondary-quote'}
+  data-open-popup="cta"
+>
+  {label}
+</a>
+
+<script is:inline>
+  // Ouvre la popup si elle est présente
+  document.addEventListener('DOMContentLoaded', () => {
+    const link = document.currentScript?.previousElementSibling;
+    if (!link) return;
+
+    link.addEventListener('click', (ev) => {
+      const overlay = document.getElementById('popupOverlay');
+      const popup   = document.getElementById('popupForm');
+      if (!overlay || !popup) return; // fallback : laisse agir le href
+
+      ev.preventDefault();
+
+      overlay.style.display = 'flex';
+      overlay.setAttribute('aria-hidden', 'false');
+      popup.focus();
+
+      // Empêche le scroll arrière-plan
+      document.documentElement.classList.add('no-scroll');
+      document.body.classList.add('no-scroll');
+    });
+  });
+</script>

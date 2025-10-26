@@ -1,0 +1,59 @@
+---
+// src/components/cards/CapabilityCard.astro
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'div'> {
+  href?: string;
+  title: string;
+  description?: string;
+  tags?: string[];
+  bgClass?: string;         // ex: "bg-[#DFF1E8]" | "bg-[#DBEAFE]" | "bg-[#C0E2D0]" | "bg-[#F5E6F0]"
+  tracking?: Record<string, string>;
+}
+
+const {
+  href,
+  title,
+  description,
+  tags = [],
+  bgClass = 'bg-[#DFF1E8]',
+  tracking = {},
+  ...rest
+} = Astro.props;
+
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag
+  class={`group block h-full rounded-2xl border border-transparent ${bgClass} p-6 lg:p-8 transition
+          hover:shadow-lg hover:-translate-y-1 focus:outline-none
+          focus-visible:ring-2 focus-visible:ring-[#3F8D65] focus-visible:ring-offset-2`}
+  {...(href ? { href } : {})}
+  {...Object.fromEntries(Object.entries(tracking).map(([k,v]) => [`data-${k}`, v]))}
+  {...rest}
+>
+  <!-- Icône supprimée -->
+
+  <h3 class="text-xl font-semibold mb-4 text-[#1E2939]">{title}</h3>
+
+  {description && (
+    <p class="text-sm mb-4 text-[#475569]">
+      {description}
+    </p>
+  )}
+
+  {tags.length > 0 && (
+    <div class="flex flex-wrap gap-2 mb-6">
+      {tags.slice(0,3).map((t) => (
+        <span class="px-2 py-1 text-xs font-medium rounded-full" style="background: rgba(63,141,101,0.10); color:#3F8D65">{t}</span>
+      ))}
+    </div>
+  )}
+
+  <span class="inline-flex items-center gap-2 text-sm font-medium text-[#3F8D65]">
+    En savoir plus
+    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+      <path d="M17 8l4 4-4 4M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+</Tag>

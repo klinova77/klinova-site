@@ -1,0 +1,73 @@
+---
+import BaseLayout from './Layout.astro';
+import FloatingBottomCTA from '~/components/UI/FloatingBottomCTA.astro';
+
+/** Contexte du popup */
+interface PopupCtx {
+  serviceKey?: string;
+  serviceLabel?: string;
+  trackingSource?: string;
+  presetSubject?: string | null;
+
+  // ⚠️ utilise "title" / "subtitle" (pas popupTitle/popupSubtitle)
+  title?: string | null;
+  subtitle?: string | null;
+
+  creditImpotEnabled?: boolean;
+}
+
+/** Props du layout */
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+
+  popupContext?: PopupCtx;                  // ✅ on la déclare ici
+  seo?: { title?: string; description?: string; lang?: string };
+
+  stickyEnabled?: boolean;
+  stickyShowAfter?: 'immediate' | 'scroll';
+  stickyTargetSelector?: string;
+  stickyMobileOnly?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+
+  popupContext,   // <- récupéré
+  seo,            // <- récupéré
+
+  stickyEnabled = true,
+  stickyShowAfter = 'scroll',
+  stickyTargetSelector = '[data-hero]',
+  stickyMobileOnly = true,
+} = Astro.props as Props;
+
+const path = Astro.url.pathname;
+const isContact = path.includes('contact');
+---
+
+<!-- ✅ on forwarde popupContext & seo vers BaseLayout -->
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  popupContext={popupContext}
+  seo={seo}
+>
+  <slot />
+
+{stickyEnabled && !isContact && (
+  <FloatingBottomCTA
+    enabled={true}
+    showAfter="scroll"
+    targetSelector="[data-hide-cta]"
+    mobileOnly={true}
+  />
+)}
+
+
+  <!-- ❌ NE PAS rendre un second PopupForm ici -->
+</BaseLayout>

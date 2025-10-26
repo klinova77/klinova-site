@@ -1,0 +1,25 @@
+---
+// src/layouts/Frame.astro
+import DocumentShell, { type Props as DocumentShellProps } from './DocumentShell.astro';
+import SiteFrameKlinova from './SiteFrameKlinova.astro';
+
+type PopupCtx = {
+  serviceKey?: string;
+  serviceLabel?: string;
+  trackingSource?: string;
+  presetSubject?: string | null;
+};
+
+type Props = DocumentShellProps & {
+  popupContext?: PopupCtx;
+  seo?: { title?: string; description?: string; lang?: string };
+};
+
+const { popupContext, seo, ...docShellProps } = Astro.props as Props;
+---
+
+<DocumentShell {...docShellProps} brand="klinova">
+  <SiteFrameKlinova popupContext={popupContext} seo={seo}>
+    <slot />
+  </SiteFrameKlinova>
+</DocumentShell>

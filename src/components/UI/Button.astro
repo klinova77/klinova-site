@@ -1,0 +1,105 @@
+---
+import { linkAttrs, withUtm } from '~/lib/links';
+
+export interface Props {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  class?: string;
+  fullWidth?: boolean;
+  ariaLabel?: string;
+  tracking?: {
+    action?: string;
+    source?: string;
+    intent?: string;
+    campaign?: string;
+    content?: string;
+    term?: string;
+  };
+  withTrackingParams?: boolean;
+  data?: Record<string, string | number>;
+  style?: string;
+}
+
+const {
+  href,
+  label,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  class: classProp = '',
+  fullWidth = false,
+  ariaLabel,
+  tracking = {},
+  withTrackingParams = true,
+  data = {},
+  style: userStyle,
+} = Astro.props as Props;
+
+// Validation douce
+if (!href || !href.trim()) {
+  console.warn('[Button] href manquant ou vide');
+}
+
+// UTM intelligents (pas sur tel/mail/ancre)
+const isHash = href?.startsWith('#');
+const isTel = href?.startsWith('tel:');
+const isMail = href?.startsWith('mailto:');
+const canApplyUtm = !isHash && !isTel && !isMail;
+
+const trackedHref = (withTrackingParams && canApplyUtm)
+  ? withUtm(href, {
+      source: tracking.source,
+      medium: 'website',
+      campaign: tracking.campaign,
+      content: tracking.intent || tracking.action,
+      term: tracking.term,
+    })
+  : href;
+
+// Attributs de lien sécurisés
+const { target, rel } = linkAttrs(trackedHref);
+
+// Variants / tailles
+const variantClass =
+  variant === 'secondary' ? 'btn-secondary' :
+  variant === 'tertiary'  ? 'btn-tertiary'  :
+  'btn-primary';
+
+const sizeClass =
+  size === 'lg' ? 'text-lg py-4 px-8' :
+  size === 'sm' ? 'text-sm py-2 px-4' : '';
+
+const widthClass = fullWidth ? 'w-full' : '';
+
+// Data -> data-*
+const dataAttrs = Object.fromEntries(
+  Object.entries(data).map(([k, v]) => [`data-${k}`, String(v)])
+);
+
+// Merge classes (sans .btn de base si tu ne l’utilises pas)
+const mergedClass = ['btn-touch', variantClass, sizeClass, widthClass, className, classProp]
+  .filter(Boolean)
+  .join(' ')
+  .trim();
+
+// Style inline (optionnel)
+const mergedStyle = userStyle || undefined;
+---
+
+<a
+  href={trackedHref}
+  target={target}
+  rel={rel}
+  aria-label={ariaLabel || label}
+  class={mergedClass}
+  style={mergedStyle}
+  data-action={tracking.action}
+  data-source={tracking.source}
+  data-intent={tracking.intent}
+  {...dataAttrs}
+>
+  <slot>{label}</slot>
+</a>

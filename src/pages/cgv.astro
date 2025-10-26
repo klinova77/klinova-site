@@ -1,0 +1,286 @@
+---
+import Layout from '~/layouts/Layout.astro';
+
+import Button from '~/components/UI/Button.astro';
+import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
+
+
+
+
+const phoneHref   = LINKS.phone; // tel:+33630221228
+const phoneLabel  = PHONE_DISPLAY; // "06 30 22 12 28"
+const contactHref = withUtm(LINKS.contactPage, { source: 'cgv', content: 'header-cta' });
+const phoneDisplay = '06 30 22 12 28';
+const phoneE164 = '+33630221228';
+
+
+// Astro ne supporte pas le spread sur éléments HTML -> on prépare les attrs
+const phoneA = linkAttrs(phoneHref);
+const contactA = linkAttrs(contactHref);
+
+
+---
+
+
+
+<Layout
+  title="Conditions générales de vente - Klinova"
+  description="Conditions générales de vente de Klinova - Modalités d'exécution, responsabilité et règlement des prestations de nettoyage professionnel."
+>
+
+<section class="section-padding bg-white">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- En-tête -->
+      <div class="mb-12">
+        <h1 class="text-3xl md:text-4xl font-semibold mb-4 text-[#1E2939]">
+          Conditions générales de vente
+        </h1>
+        <p class="text-lg text-[#475569]">
+          Modalités contractuelles applicables aux prestations de nettoyage professionnel Klinova.
+        </p>
+      </div>
+
+      <!-- Contenu -->
+      <div class="prose prose-lg max-w-none space-y-8">
+        
+        <!-- Entrée en vigueur -->
+        <section>
+          <div class="bg-white border border-[#E5E7EB] rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4 text-[#1E2939]">Entrée en vigueur</h2>
+            <p class="text-[#475569] mb-4">
+              Les présentes clauses et conditions générales de vente prennent effet à compter du 23/02/2025 et sont indissociables de toute offre ou contrat signé entre les parties.
+            </p>
+            <p class="text-[#475569] mb-4">
+              Toute commande ou validation par écrit (y compris par courrier électronique ou signature électronique) vaut acceptation pleine et entière des présentes conditions générales.
+            </p>
+            <p class="text-[#475569]">
+              Elles prévalent sur tout autre document du client, sauf dérogation expresse et écrite signée par la Direction Générale de Klinova.
+            </p>
+          </div>
+        </section>
+
+        <!-- Article 1 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 1 – Définition de la prestation</h2>
+          <div class="space-y-4">
+            <p class="text-[#475569]">
+              La prestation est décrite dans le devis ou contrat. Klinova s'engage à mettre en œuvre les moyens matériels et humains nécessaires à la bonne exécution des travaux, conformément aux normes professionnelles et aux règles de l'art, dans le respect des conditions du site et de la description des prestations contenues dans le devis.
+            </p>
+            <p class="text-[#475569]">
+              Les prestations seront effectuées conformément aux normes et usages de la profession, selon les critères de qualité et les tolérances d'usage, en tenant compte des conditions d'exploitation du site, de ses spécificités et de son environnement.
+            </p>
+            <p class="text-[#475569]">
+              Toute prestation additionnelle fera l'objet d'un avenant, d'un devis ou d'une proposition distincte.
+            </p>
+            <p class="text-[#475569]">
+              La société Klinova conserve la propriété des biens vendus, jusqu'à leur complet paiement (Réserve de propriété).
+            </p>
+          </div>
+        </section>
+
+        <!-- Article 2 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 2 – Modalités d'exécution</h2>
+          <div class="space-y-4">
+            <p class="text-[#475569]">
+              Les prix incluent la main-d'œuvre, matériel et consommables nécessaires. Le client doit fournir gratuitement l'eau, l'électricité, et les installations conformes aux normes de sécurité. En cas de manquement du client à ces obligations, Klinova pourra suspendre ses prestations sans diminution du prix.
+            </p>
+            <p class="text-[#475569]">
+              En cas d'absence d'exécution des travaux résultant d'un fait ou d'une situation non imputée à la société Klinova, les conséquences pécuniaires de mesures prises en accord avec le Client pour éventuellement tenter d'assurer, malgré la situation ainsi créée, tout ou partie du travail, restent à la charge de ce dernier.
+            </p>
+            <p class="text-[#475569]">
+              Le client doit assurer la conformité réglementaire des locaux et informer Klinova de tout plan de prévention, de la présence de matières dangereuses (notamment amiantée), ainsi que des consignes de sécurité.
+            </p>
+            <p class="text-[#475569]">
+              Les réclamations doivent être adressées dans les 24 heures suivant l'incident, exclusivement aux personnes désignées dans le contrat.
+            </p>
+          </div>
+        </section>
+
+        <!-- Article 3 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 3 – Limitation de responsabilité</h2>
+          
+          <div class="space-y-6">
+            <!-- Clauses fin de chantier -->
+            <div>
+              <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Clauses spécifiques aux prestations de nettoyage de fin de chantier</h3>
+              <div class="space-y-4">
+                <p class="text-[#475569]">
+                  Klinova ne saurait être tenue responsable des dommages, dégradations ou malfaçons causés par des entreprises intervenues antérieurement sur le chantier. Le client reconnait expressément que les éventuelles détériorations préexistantes ne relèvent pas de la responsabilité de Klinova.
+                </p>
+                <p class="text-[#475569]">
+                  Si, durant l'exécution des prestations de nettoyage, des interventions supplémentaires s'avèrent nécessaires en raison de l'action du client ou de tiers mandatés par lui (ex. : passage de professionnels intervenant sur des surfaces déjà nettoyées, demande de modifications en cours de chantier, etc.), ces interventions feront l'objet d'une facturation complémentaire. Cette facturation pourra être établie sur la base d'un devis supplémentaire ou selon le tarif en vigueur.
+                </p>
+                <p class="text-[#475569]">
+                  En raison des risques liés à l'élimination de résidus de chantier (plâtre, peinture, texture, adhésifs, mortier, béton, gravats, etc.), Klinova ne pourra être tenue responsable des rayures, éclats ou autres dommages pouvant survenir lors du nettoyage de ces résidus sur toute surface (notamment les surfaces vitrées). Il est reconnu et accepté par toutes les parties que l'utilisation de lames ou grattoirs est une technique standard pour éliminer ces résidus, bien que ces outils puissent entraîner des rayures si les surfaces sont fragiles ou si le type de résidu l'impose. Klinova s'engage à utiliser des méthodes appropriées et à éviter toute négligence ou dommage volontaire.
+                </p>
+              </div>
+            </div>
+
+            <!-- Clauses parkings -->
+            <div>
+              <h3 class="text-xl font-semibold mb-3 text-[#1E2939]">Clauses spécifiques au nettoyage de parkings</h3>
+              
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">État initial des sols</h4>
+              <p class="text-[#475569] mb-4">
+                Klinova ne saurait être tenue responsable des défauts d'aspect (traces persistantes, taches incrustées, fissures, décollements de peinture au sol, etc.) résultant de l'état antérieur du parking, de son revêtement ou d'un manque d'entretien régulier. Le nettoyage vise un assainissement et une amélioration de l'état visuel, sans garantie d'effacement complet de tous les défauts.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Déchets et encombrants non signalés</h4>
+              <p class="text-[#475569] mb-4">
+                En cas de présence importante de déchets, encombrants, gravats ou huiles non signalés lors de l'établissement du devis, la société se réserve le droit de facturer un supplément ou de reporter l'intervention. Aucun remboursement ne pourra être exigé en cas d'impossibilité d'exécuter les prestations pour ces raisons.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Évacuation des eaux usées</h4>
+              <p class="text-[#475569] mb-4">
+                Sauf mention contraire, les eaux issues du nettoyage sont évacuées via les réseaux d'eaux usées du site. Klinova ne saurait être tenue responsable en cas de dysfonctionnement ou d'engorgement du réseau d'évacuation non conforme ou non entretenu.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Signalisation / sécurité</h4>
+              <p class="text-[#475569] mb-4">
+                Le client s'engage à signaler toute zone dangereuse, irrégularité de sol ou obstacle susceptible d'affecter la sécurité de l'intervention. Klinova décline toute responsabilité en cas de dommage lié à un défaut d'information préalable.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Sécurité et signalisation lors des interventions</h4>
+              <div class="space-y-4">
+                <p class="text-[#475569]">
+                  Pour chaque intervention de nettoyage de parking, de jour comme de nuit, Klinova met en place un balisage de sécurité et une signalisation temporaire adaptés, destinés à prévenir les risques pour les usagers.
+                </p>
+                <p class="text-[#475569]">
+                  La zone d'intervention est matérialisée à l'aide de dispositifs visibles (panneaux, cônes, rubans de signalisation ou tout autre moyen approprié), installés avant le début des travaux et maintenus jusqu'à la disparition des risques (sol glissant, matériel au sol, humidité résiduelle, etc.).
+                </p>
+                <p class="text-[#475569]">
+                  En cas d'intervention en horaires décalés (nuit, tôt le matin, week-end), des mesures renforcées sont mises en œuvre : port d'équipements haute visibilité, éclairage suffisant, limitation d'accès si nécessaire.
+                </p>
+                <p class="text-[#475569]">
+                  Le client (syndicat des copropriétaires ou représentant désigné) s'engage à faciliter ces mesures de sécurisation, notamment en informant les usagers concernés (affichage dans les parties communes, messages aux résidents), en libérant les zones à nettoyer, et en restreignant temporairement l'accès ou le stationnement dans les emplacements concernés lorsque cela est nécessaire à la sécurité ou au bon déroulement de l'intervention.
+                </p>
+              </div>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Assurance et responsabilité</h4>
+              <p class="text-[#475569] mb-4">
+                Klinova est assurée en responsabilité civile professionnelle. Sa responsabilité ne saurait être engagée pour les dommages causés par des tiers, ou en cas d'accident survenant malgré les mesures de sécurité mises en place.
+              </p>
+            </div>
+
+            <!-- Responsabilité générale -->
+            <div>
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Objets de valeur</h4>
+              <p class="text-[#475569] mb-4">
+                Le client s'engage à signaler expressément la présence d'objets de valeur ou fragiles dans les locaux. À défaut, Klinova ne pourra être tenue responsable en cas de dommage ou perte de ces objets.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Clés et passes</h4>
+              <p class="text-[#475569] mb-4">
+                En cas de vol ou de perte de clefs ou passes confiés à la société klinova, sa responsabilité sera strictement limitée au coût de remplacement de ces objets à l'exclusion de toute autre conséquence ou indemnité.
+              </p>
+
+              <h4 class="text-lg font-semibold mb-2 text-[#1E2939]">Responsabilité civile</h4>
+              <div class="space-y-4">
+                <p class="text-[#475569]">
+                  Klinova est assurée auprès d'une compagnie solvable pour les dommages causés par son personnel, dans la limite des garanties d'assurance. Tout dommage doit être signalé dans un délai de 24 heures, sans quoi toute réclamation est exclue.
+                </p>
+                <p class="text-[#475569]">
+                  Klinova ne pourra être tenue responsable des dommages liés à l'usure normale, à la vétusté, ou à une mauvaise utilisation des locaux par le client ou un tiers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Article 4 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 4 – Contrat à exécution successive</h2>
+          <div class="space-y-4">
+            <p class="text-[#475569]">
+              Sauf exception, le contrat entre en vigueur à la date précisée dans ledit contrat. Sauf durée particulière stipulée dans l'offre jointe :
+            </p>
+            
+            <p class="text-[#475569]">
+              <strong>a)</strong> Les prestations à caractère répétitif font l'objet d'une facturation mensuelle. A chaque date anniversaire du contrat, ce dernier est reconduit par tacite reconduction. Le contrat est résiliable au gré de l'une ou l'autre des parties, avec préavis minimum de trois mois à par lettre recommandée avec accusé de réception, le cachet de la poste faisant foi. Le non-respect de ce préavis ou de ses formes fait se poursuivre les obligations souscrites par chacune des parties. Le préavis est toujours dû jusqu'à la date anniversaire du contrat.
+            </p>
+
+            <p class="text-[#475569]">
+              <strong>b)</strong> En cas de non-exécution de la prestation du fait d'événements extérieurs à la société Klinova tels que coupure électrique ou eau, grève du personnel, intempéries, grève ou difficultés majeures des transports le montant de la prestation reste dû. En cas de non-exécution du fait de la société Klinova pour cas de force majeure au sens de la jurisprudence, le contrat pourra être suspendu sans qu'aucune des parties ne puisse demander le versement d'indemnités compensatrices. Ceci étant, en cas de survenance d'un tel événement, les parties peuvent se rapprocher pour éventuellement tenter de faire en sorte que soit assuré, malgré la situation ainsi créée, tout ou partie du travail commandé, mais dans ce cas le coût supplémentaire de ces travaux est à la charge exclusive du client.
+            </p>
+
+            <p class="text-[#475569]">
+              <strong>c)</strong> Le non-respect d'une obligation du client prévue au contrat, donne la faculté à la société Klinova, y compris le retard ou le défaut de paiement, de plein droit et sans préavis, de suspendre l'exécution de tout ou partie des contrats en cours, et ce jusqu'à ce qu'il soit remédié au manquement, après l'envoi d'une simple lettre recommandée avec AR. Dans ce cas le client reste redevable du montant des prestations non réalisées du fait de son manquement, sans préjudice de dommages et intérêts qui pourraient résulter de ce manquement. La société Klinova dispose également dans ce cas de la faculté de résilier, ou le cas échéant, réduire tout ou partie des contrats en cours, par simple lettre recommandée avec avis de réception valant mise en demeure, et restée sans effet après expiration de huit jours francs. Dans tous les cas de résiliation, toutes les sommes déjà versées par le client seront conservées par la société Klinova en réparation du préjudice subi, le client devra verser le montant correspondant aux prestations qui auraient été effectuées jusqu'au terme du contrat.
+            </p>
+
+            <p class="text-[#475569]">
+              <strong>d)</strong> En cas de cession totale ou partielle de l'entreprise du client ou de déménagement, le contrat se poursuivra dans les mêmes conditions selon des modalités à déterminer d'un commun accord.
+            </p>
+
+            <p class="text-[#475569]">
+              <strong>e)</strong> Les prix sont révisables une fois par an à la date anniversaire, en fonction des variations de la formule de révision prévue dans la proposition tarifaire. En outre, la révision des prix, telle que prévue ci-dessus, prendra en compte l'entrée en application d'une loi, d'un décret ou d'un accord de branche dont les dispositions contiendraient une augmentation des salaires et/ou des charges sociales en vigueur lors de la signature du contrat.
+            </p>
+          </div>
+        </section>
+
+        <!-- Article 5 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 5 – Règlement des prestations</h2>
+          <div class="space-y-4">
+            <p class="text-[#475569]">
+              Un acompte peut être exigé à la commande, notamment pour les prestations ponctuelles ou engageant des frais anticipés. En l'absence de règlement de l'acompte, la prestation pourra être suspendue.
+            </p>
+            <p class="text-[#475569]">
+              Les prestations sont payables sous 30 jours à réception de facture. Tout retard entraîne des pénalités au taux légal majoré, sans rappel préalable. Le non-paiement peut entraîner suspension ou résiliation du contrat, sans exonération des sommes dues.
+            </p>
+            <p class="text-[#475569]">
+              Une indemnité forfaitaire de 40 € pour frais de recouvrement sera due (article L441-10 du Code de commerce), en plus des pénalités de retard. Lorsque les frais réellement engagés pour le recouvrement seront supérieurs à ce montant, une indemnisation complémentaire pourra être exigée, sur présentation des justificatifs.
+            </p>
+          </div>
+        </section>
+
+        <!-- Article 6 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 6 – Dispositions particulières pour syndics, copropriétés et collectivités</h2>
+          <p class="text-[#475569]">
+            En cas de contrat conclu avec un syndicat de copropriétaires, un syndic ou une collectivité, certaines modalités (délais de paiement, validation préalable, clause de médiation) peuvent faire l'objet d'un avenant ou d'une dérogation écrite, convenue entre les parties.
+          </p>
+        </section>
+
+        <!-- Article 7 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 7 – Contestations</h2>
+          <p class="text-[#475569]">
+            Toute contestation relative aux prestations doit être portée à la connaissance de Klinova dans les 72 heures par tout moyen à compter de la livraison. Passé ce délai, la prestation sera considérée comme acceptée.
+          </p>
+        </section>
+
+        <!-- Article 8 -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-[#1E2939]">Article 8 – Attribution de juridiction</h2>
+          <p class="text-[#475569]">
+            Tout litige sera soumis au droit français et relève des tribunaux de commerce de Paris.
+          </p>
+        </section>
+
+        <!-- Contact -->
+        <section class="pt-8 border-t border-[#E2E8F0]">
+          <div class="bg-white border border-[#E5E7EB] rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4 text-[#1E2939]">Contact</h2>
+            <p class="text-[#475569] mb-3">
+              <strong>KLINOVA</strong><br>
+              6 rue d'Armaillé<br>
+              75017 Paris<br>
+              SIREN : 943 439 810
+            </p>
+            <p class="text-[#475569]">
+              <strong>Email :</strong> <a href="mailto:contact@klinova.fr" class="text-[#3F8D65] hover:underline">contact@klinova.fr</a><br>
+              <strong>Téléphone :</strong> <a href="tel:+33676738661" class="text-[#3F8D65] hover:underline">06 76 73 86 61</a>
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</Layout>

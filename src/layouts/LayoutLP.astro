@@ -1,0 +1,23 @@
+---
+// Layout LP = DocumentShell (html/head/body) + FrameLP (Header/Footer/Popup/slot)
+import DocumentShell, { type Props as SeoProps } from './DocumentShell.astro';
+import FrameLP from './FrameLP.astro';
+
+type PopupCtx = {
+  serviceKey?: string; serviceLabel?: string; trackingSource?: string;
+  presetSubject?: string | null;
+  popupTitle?: string | null; popupSubtitle?: string | null;
+  title?: string | null; subtitle?: string | null;
+  creditImpotEnabled?: boolean;
+};
+
+const { seo, popupContext = {}, ...rest } =
+  Astro.props as { seo: SeoProps; popupContext?: PopupCtx };
+---
+
+<!-- ✅ Passe la bonne marque -->
+<DocumentShell {...seo} brand="klinova">
+  <FrameLP popupContext={popupContext} {...rest}>
+    <slot />
+  </FrameLP>
+</DocumentShell>
