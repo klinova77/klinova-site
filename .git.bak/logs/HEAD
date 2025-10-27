@@ -1,0 +1,53 @@
+0000000000000000000000000000000000000000 57b70b03fdc89dad25d188fe6cb5e6b73abd6466 jllabhorizon-ui <jllab.horizon@gmail.com> 1759427391 +0200	commit (initial): first commit
+57b70b03fdc89dad25d188fe6cb5e6b73abd6466 0000000000000000000000000000000000000000 jllabhorizon-ui <jllab.horizon@gmail.com> 1759427392 +0200	Branch: renamed refs/heads/main to refs/heads/main
+57b70b03fdc89dad25d188fe6cb5e6b73abd6466 57b70b03fdc89dad25d188fe6cb5e6b73abd6466 jllabhorizon-ui <jllab.horizon@gmail.com> 1759427392 +0200	Branch: renamed refs/heads/main to refs/heads/main
+57b70b03fdc89dad25d188fe6cb5e6b73abd6466 4f8b85b42ace4a1db3fa4e79b379d9fadd49d868 jllabhorizon-ui <jllab.horizon@gmail.com> 1759430944 +0200	commit: feat(fonts): self-host Inter variable (woff2) via Fontsource
+4f8b85b42ace4a1db3fa4e79b379d9fadd49d868 0f6983c10fd829c927ad5e5ef8b31688ec6fb489 jllabhorizon-ui <jllab.horizon@gmail.com> 1759432635 +0200	commit: first commit
+0f6983c10fd829c927ad5e5ef8b31688ec6fb489 0000000000000000000000000000000000000000 jllabhorizon-ui <jllab.horizon@gmail.com> 1759432681 +0200	Branch: renamed refs/heads/main to refs/heads/main
+0f6983c10fd829c927ad5e5ef8b31688ec6fb489 0f6983c10fd829c927ad5e5ef8b31688ec6fb489 jllabhorizon-ui <jllab.horizon@gmail.com> 1759432681 +0200	Branch: renamed refs/heads/main to refs/heads/main
+0f6983c10fd829c927ad5e5ef8b31688ec6fb489 fa22a7423e37c9ae563e1603cd5cb940b62b415f jllabhorizon-ui <jllab.horizon@gmail.com> 1759433752 +0200	commit: fix: remove amber theme from final build
+fa22a7423e37c9ae563e1603cd5cb940b62b415f 2735dd10f31ca288b0e4d3e2831bc1e022891d2a jllabhorizon-ui <jllab.horizon@gmail.com> 1759434368 +0200	commit: fix: remove data-theme-action and update layout
+2735dd10f31ca288b0e4d3e2831bc1e022891d2a 21a4d095e5f08c79cc0c4cb5784fc906debf5e53 jllabhorizon-ui <jllab.horizon@gmail.com> 1759437213 +0200	commit: chore: stop tracking .vercel/ and dist/
+21a4d095e5f08c79cc0c4cb5784fc906debf5e53 04f5b9d1893d409baa7e0ded206feb67011c253c jllabhorizon-ui <jllab.horizon@gmail.com> 1759438111 +0200	commit: fix: use case-correct layout import (~/layouts/layout.astro)
+04f5b9d1893d409baa7e0ded206feb67011c253c 17f1a698757171447438391d1f88da4845f4ae7b jllabhorizon-ui <jllab.horizon@gmail.com> 1759438876 +0200	commit: fix: correct case in LayoutWithCTA import
+17f1a698757171447438391d1f88da4845f4ae7b d00891f7464c854be0cffd61a5c832cc8904ac16 jllabhorizon-ui <jllab.horizon@gmail.com> 1759439076 +0200	commit: fix: correct case in LayoutWithCTA import
+d00891f7464c854be0cffd61a5c832cc8904ac16 70f348d21b2fef0d6866e4703ef0b10aa3c6edc6 jllabhorizon-ui <jllab.horizon@gmail.com> 1759440042 +0200	commit: fix: unify layout import casing and use alias
+70f348d21b2fef0d6866e4703ef0b10aa3c6edc6 4e2538728adbf66a8b8a2705d5c3639c5eb1d76c jllabhorizon-ui <jllab.horizon@gmail.com> 1759441869 +0200	commit: fix(fonts): remove direct woff2 import; rely on Fontsource CSS
+4e2538728adbf66a8b8a2705d5c3639c5eb1d76c b76216832c01a5932a0245f21d730bc0910e4ccf jllabhorizon-ui <jllab.horizon@gmail.com> 1759442942 +0200	commit: fix(fonts): remove direct woff2 import; rely on Fontsource CSS
+b76216832c01a5932a0245f21d730bc0910e4ccf 68d19e8197eac9fa9cf8dbf1eae4229cc272792f jllabhorizon-ui <jllab.horizon@gmail.com> 1759633904 +0200	commit: Backup avant refonte architecture Layout/DocumentShell
+68d19e8197eac9fa9cf8dbf1eae4229cc272792f 68d19e8197eac9fa9cf8dbf1eae4229cc272792f jllabhorizon-ui <jllab.horizon@gmail.com> 1759633965 +0200	checkout: moving from main to backup-5oct-2025
+68d19e8197eac9fa9cf8dbf1eae4229cc272792f 71543cb28b6204a904ade27a114fd64fa78d8860 jllabhorizon-ui <jllab.horizon@gmail.com> 1759788873 +0200	commit: Initial commit - projet Stop Punaises
+71543cb28b6204a904ade27a114fd64fa78d8860 c571f0a889e54ce54fcd4f8dfa1ca890ed137e3c jllabhorizon-ui <jllab.horizon@gmail.com> 1759885301 +0200	commit: initial commit
+c571f0a889e54ce54fcd4f8dfa1ca890ed137e3c 15b9a47ebbe5ecb5e2c491fb0901f128d9658528 jllabhorizon-ui <jllab.horizon@gmail.com> 1759885863 +0200	commit: Fix Layout.astro case for Vercel
+15b9a47ebbe5ecb5e2c491fb0901f128d9658528 142c3b0258ffc273bb46b44ae09fce6bae130492 jllabhorizon-ui <jllab.horizon@gmail.com> 1759886255 +0200	commit: Fix Layout import case for Vercel build
+142c3b0258ffc273bb46b44ae09fce6bae130492 e2217b7f4f4a3da846668cc8d6a224299a01912d jllabhorizon-ui <jllab.horizon@gmail.com> 1759886671 +0200	commit: fix Layout case for all pages
+e2217b7f4f4a3da846668cc8d6a224299a01912d 7752c782ccad52aa7eb9f796b66ff22d2a469762 jllabhorizon-ui <jllab.horizon@gmail.com> 1759887102 +0200	commit: fix Layout case for all pages
+7752c782ccad52aa7eb9f796b66ff22d2a469762 6e294c416c6aaff537387824585b831db2bc5006 jllabhorizon-ui <jllab.horizon@gmail.com> 1759887210 +0200	commit: fix Layout case for all pages
+6e294c416c6aaff537387824585b831db2bc5006 d644fc587e4c2a668bb1ede8261d526df83c56b0 jllabhorizon-ui <jllab.horizon@gmail.com> 1759887330 +0200	commit: fix Layout case for all pages
+d644fc587e4c2a668bb1ede8261d526df83c56b0 d7bbed6a232bd7e2e7e3f21ee7cb5bb99fd8b263 jllabhorizon-ui <jllab.horizon@gmail.com> 1759887578 +0200	commit: fix Layout case for all pages
+d7bbed6a232bd7e2e7e3f21ee7cb5bb99fd8b263 d22917998e4fc13373b4644bd91d3e6c0064459c jllabhorizon-ui <jllab.horizon@gmail.com> 1759887649 +0200	commit: fix Layout case for all pages
+d22917998e4fc13373b4644bd91d3e6c0064459c 1d2ca166f615c6281d5da57a3f26d9ba751ba562 jllabhorizon-ui <jllab.horizon@gmail.com> 1759930549 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+1d2ca166f615c6281d5da57a3f26d9ba751ba562 9743fa054167ddcbba03024571018258cd6b1f20 jllabhorizon-ui <jllab.horizon@gmail.com> 1759930843 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+9743fa054167ddcbba03024571018258cd6b1f20 1f6a6efd51a0c665726dc5bd0df475f386cdb9e4 jllabhorizon-ui <jllab.horizon@gmail.com> 1759932256 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+1f6a6efd51a0c665726dc5bd0df475f386cdb9e4 577f1bfe6226bdedbe7bf997ecf1035b91ce523d jllabhorizon-ui <jllab.horizon@gmail.com> 1759933290 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+577f1bfe6226bdedbe7bf997ecf1035b91ce523d 721fc20fd357a9ec4c684c9bf6c87e89af77825f jllabhorizon-ui <jllab.horizon@gmail.com> 1759933760 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+721fc20fd357a9ec4c684c9bf6c87e89af77825f 6267fd696ba1442061e8822ff20409165e14ce5a jllabhorizon-ui <jllab.horizon@gmail.com> 1759933860 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+6267fd696ba1442061e8822ff20409165e14ce5a 747064bc51cfdaf386b2d268d8d61e1ebfeef424 jllabhorizon-ui <jllab.horizon@gmail.com> 1759933927 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+747064bc51cfdaf386b2d268d8d61e1ebfeef424 116b470e8e2c88f5ae03134dd02b588ca3037558 jllabhorizon-ui <jllab.horizon@gmail.com> 1759934249 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+116b470e8e2c88f5ae03134dd02b588ca3037558 7ae4cf2b74336d45f714aebb48612a57c2ec6911 jllabhorizon-ui <jllab.horizon@gmail.com> 1759934881 +0200	commit: Ajout du formulaire contact avec envoi via Resend
+7ae4cf2b74336d45f714aebb48612a57c2ec6911 d605d431297544149db231bbe03b1774ac97d333 jllabhorizon-ui <jllab.horizon@gmail.com> 1760195880 +0200	commit: retour aux formulaires HTML et JS
+d605d431297544149db231bbe03b1774ac97d333 d605d431297544149db231bbe03b1774ac97d333 jllabhorizon-ui <jllab.horizon@gmail.com> 1760195896 +0200	checkout: moving from backup-5oct-2025 to vercel-test-email
+d605d431297544149db231bbe03b1774ac97d333 d605d431297544149db231bbe03b1774ac97d333 jllabhorizon-ui <jllab.horizon@gmail.com> 1760295977 +0200	checkout: moving from vercel-test-email to release/launch-2025-10-12
+d605d431297544149db231bbe03b1774ac97d333 2986d27e9c7f941195135efaed18e22f2e031136 jllabhorizon-ui <jllab.horizon@gmail.com> 1760296062 +0200	commit: Release: mise en ligne Stop-Punaises
+2986d27e9c7f941195135efaed18e22f2e031136 ec1e31a52fd995b603905645ca33c0fea96a06f1 jllabhorizon-ui <jllab.horizon@gmail.com> 1760387368 +0200	commit: prod: ready for deploy
+ec1e31a52fd995b603905645ca33c0fea96a06f1 827fe5fbb11e2ddab2b67310ce34021a46bf899e jllabhorizon-ui <jllab.horizon@gmail.com> 1760389627 +0200	commit: fix: clean .gitignore
+827fe5fbb11e2ddab2b67310ce34021a46bf899e 27cd72af81d58a4dedf20aff7701e8319ba297cb jllabhorizon-ui <jllab.horizon@gmail.com> 1760392327 +0200	commit: fix(footer form): scoped selectors + AJAX submit
+27cd72af81d58a4dedf20aff7701e8319ba297cb 6c512faf1bf848f400838e5186e26d2e5afdf3b9 jllabhorizon-ui <jllab.horizon@gmail.com> 1760393729 +0200	commit: fix(footer form): scoped selectors + AJAX submit
+6c512faf1bf848f400838e5186e26d2e5afdf3b9 1690706ece30488db61e5555fb887a917fcbe11b jllabhorizon-ui <jllab.horizon@gmail.com> 1760394378 +0200	commit: fix(api): email truly optional (validate only if provided)
+1690706ece30488db61e5555fb887a917fcbe11b d0813eb96361dedc8681b3daa70a60156c86bc61 jllabhorizon-ui <jllab.horizon@gmail.com> 1760394848 +0200	commit: fix(api): email truly optional (validate only if provided)
+d0813eb96361dedc8681b3daa70a60156c86bc61 206f8c8db418bddce833151cc9cde81e70337c6c jllabhorizon-ui <jllab.horizon@gmail.com> 1760541604 +0200	commit: final commit before launch
+206f8c8db418bddce833151cc9cde81e70337c6c 68d19e8197eac9fa9cf8dbf1eae4229cc272792f jllabhorizon-ui <jllab.horizon@gmail.com> 1760541973 +0200	checkout: moving from release/launch-2025-10-12 to main
+68d19e8197eac9fa9cf8dbf1eae4229cc272792f 04529f335d3a1ceffb8bb079407e2e60f51d62d1 jllabhorizon-ui <jllab.horizon@gmail.com> 1760542254 +0200	commit: chore: finalize case-change (Layout.astro)
+04529f335d3a1ceffb8bb079407e2e60f51d62d1 13b8d1e442c98135610cb06ac6acfe0aacc3cf03 jllabhorizon-ui <jllab.horizon@gmail.com> 1760542273 +0200	commit: chore: temp rename for case-change (layoutLP)
+13b8d1e442c98135610cb06ac6acfe0aacc3cf03 22e4a1814c90c3a81beadf83284ae9c924f5489d jllabhorizon-ui <jllab.horizon@gmail.com> 1760542298 +0200	commit: chore: finalize case-change (LayoutLP.astro)
+22e4a1814c90c3a81beadf83284ae9c924f5489d 22e4a1814c90c3a81beadf83284ae9c924f5489d jllabhorizon-ui <jllab.horizon@gmail.com> 1760542306 +0200	checkout: moving from main to main

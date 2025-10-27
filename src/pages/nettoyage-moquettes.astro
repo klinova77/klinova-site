@@ -9,6 +9,11 @@ import { LINKS } from '~/lib/links';
 import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
 import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
 
+const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 68 });
+const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 70 });
+const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 });
+const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 });
+
 
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
 import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
@@ -18,6 +23,8 @@ import dallesMoquette from '~/assets/images/dalles-moquette.jpg';
 import avantApresBureau from '~/assets/images/nettoyage-moquette-bureau-avant-apres.jpg';
 import avantApresDomicile from '~/assets/images/nettoyage-moquette-a-domicile.jpg';
 import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
+
+
 
 const popupContext = {
   title: 'Devis nettoyage de moquettes',
@@ -120,31 +127,46 @@ const faqSchema = {
   data-hero data-hide-cta
   class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
 >
-  <!-- Background image + overlay -->
-  <div class="absolute inset-0">
-    <picture>
-      <!-- Mobile: portrait avant/après -->
-      <source media="(max-width: 767px)" srcset={heroMoquettesMobile.src} />
-      <!-- Desktop/Tablet: paysage avant/après -->
-      <Image
-        src={heroMoquettes}
-        alt="Avant et après nettoyage professionnel de moquette"
-        class="w-full h-full object-cover brightness-[1.1]"
-        quality={88}
-        widths={[640, 768, 1024, 1280, 1536]}
-        sizes="100vw"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+ <!-- Background image -->
+<div class="absolute inset-0 z-0">
+  <picture>
+    <!-- Mobile -->
+    <source type="image/avif" media="(max-width: 767px)" srcset={mobileAvif.srcset} sizes="100vw" />
+    <source type="image/webp" media="(max-width: 767px)" srcset={mobileWebp.srcset} sizes="100vw" />
+    <!-- Desktop/Tablet -->
+    <source type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
+    <source type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
+    <!-- Fallback -->
+    <img
+      src={deskAvif.src}
+      alt="Avant et après nettoyage professionnel de moquette"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      width={deskAvif.attributes.width}
+      height={deskAvif.attributes.height}
+      class="w-full h-full object-cover"
+    />
+  </picture>
+</div>
 
-    <!-- 🔆 Calque d’éclaircissement mobile-only -->
-    <div class="absolute inset-0 md:hidden pointer-events-none mix-blend-screen bg-white/30"></div>
+<!-- 🔆 Calque d’éclaircissement mobile-only -->
+<div
+  class="absolute inset-0 md:hidden pointer-events-none mix-blend-screen bg-white/30 z-[1]"
+  aria-hidden="true"
+></div>
 
-    <!-- Overlay sombre léger conservé sur desktop -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-transparent md:from-black/30"></div>
-  </div>
+<!-- 🌓 Overlay sombre desktop -->
+<div
+  class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-black/10 to-transparent hidden md:block z-[1]"
+  aria-hidden="true"
+></div>
+
+<!-- Ton contenu hero doit être au-dessus -->
+<div class="relative z-10">
+  <!-- heading, CTA, etc. -->
+</div>
+
 
   <!-- Contenu -->
   <div class="container mx-auto px-6 lg:px-12 relative z-10 py-16 md:py-24">
