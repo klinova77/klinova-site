@@ -10,10 +10,6 @@ import { LINKS } from '~/lib/links';
 import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
 import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
 
-const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 });
-const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 });
-const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 });
-const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 });
 
 
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
@@ -110,24 +106,24 @@ const faqSchema = {
 
 
 
-// rendus
-const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640], quality: 60 })
-const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640], quality: 60 })
+const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 })
+const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 })
 const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 })
 const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 })
 
-// choisissez ce que vous préchargez (ici, la version mobile AVIF)
+// Préload (facultatif mais recommandé)
 const preloadSrcset = mobileAvif.srcset
 const preloadSizes  = '100vw'
-const mobileType    = 'image/avif'
+const preloadType   = 'image/avif'
 ---
 
 <head>
   <link
     rel="preload"
     as="image"
-    imagesrcset={mobileAvif.srcset}   
-    type={mobileType}
+    imagesrcset={preloadSrcset}
+    imagesizes={preloadSizes}
+    type={preloadType}
     fetchpriority="high"
   />
 </head>
@@ -154,30 +150,12 @@ const mobileType    = 'image/avif'
 <div class="absolute inset-0 z-0">
   <picture>
   <!-- Desktop / Tablet -->
-  <source
-    media="(min-width: 768px)"
-    type="image/avif"
-    srcset={deskAvif.srcset}
-    sizes="100vw" />
-  <source
-    media="(min-width: 768px)"
-    type="image/webp"
-    srcset={deskWebp.srcset}
-    sizes="100vw" />
-
+  <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset}  sizes="100vw" />
+  <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset}  sizes="100vw" />
   <!-- Mobile -->
-  <source
-    media="(max-width: 767px)"
-    type="image/avif"
-    srcset={mobileAvif.srcset}
-    sizes="100vw" />
-  <source
-    media="(max-width: 767px)"
-    type="image/webp"
-    srcset={mobileWebp.srcset}
-    sizes="100vw" />
-
-  <!-- Fallback (met la mobile ici) -->
+  <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+  <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+  <!-- Fallback -->
   <img
     src={mobileWebp.src}
     alt="Avant et après nettoyage professionnel de moquette"
@@ -190,24 +168,14 @@ const mobileType    = 'image/avif'
   />
 </picture>
 
+<!-- Overlay unique -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]" aria-hidden="true"></div>
+
 </div>
 
-<!-- Overlay sombre unique, tous devices (plus doux, pas de blend coûteux) -->
-<div
-  class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
-  aria-hidden="true"
-></div>
 
-<!-- 🌓 Overlay sombre desktop -->
-<div
-  class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-black/10 to-transparent hidden md:block z-[1]"
-  aria-hidden="true"
-></div>
 
-<!-- Ton contenu hero doit être au-dessus -->
-<div class="relative z-10">
-  <!-- heading, CTA, etc. -->
-</div>
+
 
 
   <!-- Contenu -->
