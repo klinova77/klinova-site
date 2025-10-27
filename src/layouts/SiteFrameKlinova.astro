@@ -34,9 +34,7 @@ const defaults: Required<PopupCtx> = {
 const ctx = { ...defaults, ...(popupContext || {}) };
 ---
 
-<!-- PAS de <html><head><body> ici ! DocumentShell s'en charge -->
-
-<!-- Preload font dans le head via DocumentShell -->
+<!-- Injecte le preload font DANS le head du layout parent -->
 <Fragment slot="head">
   <link
     rel="preload"
@@ -47,7 +45,7 @@ const ctx = { ...defaults, ...(popupContext || {}) };
   />
 </Fragment>
 
-<!-- Body attributes via script -->
+<!-- Pose les data-* sur <body> existant -->
 <script is:inline define:vars={{ ctx, popupContext }}>
   document.body.setAttribute('data-service-key', ctx.serviceKey);
   document.body.setAttribute('data-service-label', ctx.serviceLabel);
@@ -66,9 +64,10 @@ const ctx = { ...defaults, ...(popupContext || {}) };
 
 <Footer />
 
+<!-- Popup unique, global -->
 <PopupForm />
 
-<!-- Analytics -->
+<!-- Analytics événementiels -->
 <script is:inline>
   (function () {
     window.dataLayer = window.dataLayer || [];
@@ -103,14 +102,10 @@ const ctx = { ...defaults, ...(popupContext || {}) };
       window.history.scrollRestoration = 'manual';
     }
     if (!sessionStorage.getItem('_scroll_reset_done')) {
-      window.addEventListener(
-        'load',
-        () => {
-          window.scrollTo(0, 0);
-          sessionStorage.setItem('_scroll_reset_done', '1');
-        },
-        { once: true }
-      );
+      window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+        sessionStorage.setItem('_scroll_reset_done', '1');
+      }, { once: true });
     }
   })();
 </script>
