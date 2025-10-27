@@ -10,8 +10,8 @@ import { LINKS } from '~/lib/links';
 import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
 import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
 
-const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 68 });
-const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 70 });
+const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 });
+const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 });
 const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 });
 const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 });
 
@@ -111,6 +111,17 @@ const faqSchema = {
 
 ---
 
+<head>
+  <link
+    rel="preload"
+    as="image"
+    imagesrcset={mobileAvif.srcset}   
+    type={mobileType}
+    fetchpriority="high"
+  />
+</head>
+
+
 <LayoutWithCTA
   popupContext={popupContext}
   seo={{
@@ -170,9 +181,9 @@ const faqSchema = {
 
 </div>
 
-<!-- 🔆 Calque d’éclaircissement mobile-only -->
+<!-- Overlay sombre unique, tous devices (plus doux, pas de blend coûteux) -->
 <div
-  class="absolute inset-0 md:hidden pointer-events-none mix-blend-screen bg-white/30 z-[1]"
+  class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
   aria-hidden="true"
 ></div>
 
