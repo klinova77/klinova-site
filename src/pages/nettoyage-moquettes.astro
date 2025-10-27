@@ -106,6 +106,7 @@ const faqSchema = {
 
 
 
+---
 const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 })
 const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 })
 const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 })
@@ -113,22 +114,22 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
 ---
 
 <head>
-  <!-- Preload desktop -->
-  <link
-    rel="preload"
-    as="image"
-    media="(min-width: 768px)"
-    imagesrcset={deskAvif.srcset}
-    imagesizes="100vw"
-    type="image/avif"
-    fetchpriority="high"
-  />
-  <!-- Preload mobile -->
+  <!-- Preload mobile AVIF (priorité) -->
   <link
     rel="preload"
     as="image"
     media="(max-width: 767px)"
     imagesrcset={mobileAvif.srcset}
+    imagesizes="100vw"
+    type="image/avif"
+    fetchpriority="high"
+  />
+  <!-- Preload desktop AVIF -->
+  <link
+    rel="preload"
+    as="image"
+    media="(min-width: 768px)"
+    imagesrcset={deskAvif.srcset}
     imagesizes="100vw"
     type="image/avif"
     fetchpriority="high"
@@ -150,19 +151,41 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
   <!-- Background -->
   <div class="absolute inset-0 z-0">
     <picture>
-      <!-- Desktop / Tablet -->
-      <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
-      <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
-      <!-- Mobile -->
-      <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
-      <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
-      <!-- Fallback = desktop -->
+      <!-- Mobile AVIF -->
+      <source 
+        media="(max-width: 767px)" 
+        type="image/avif" 
+        srcset={mobileAvif.srcset} 
+        sizes="100vw" 
+      />
+      <!-- Mobile WebP -->
+      <source 
+        media="(max-width: 767px)" 
+        type="image/webp" 
+        srcset={mobileWebp.srcset} 
+        sizes="100vw" 
+      />
+      <!-- Desktop AVIF -->
+      <source 
+        media="(min-width: 768px)" 
+        type="image/avif" 
+        srcset={deskAvif.srcset} 
+        sizes="100vw" 
+      />
+      <!-- Desktop WebP -->
+      <source 
+        media="(min-width: 768px)" 
+        type="image/webp" 
+        srcset={deskWebp.srcset} 
+        sizes="100vw" 
+      />
+      <!-- Fallback = mobile pour éviter de charger desktop par défaut -->
       <img
-        src={deskWebp.src}
+        src={mobileWebp.src}
         alt="Avant et après nettoyage professionnel de moquette"
         decoding="async"
-        width={deskWebp.attributes.width}
-        height={deskWebp.attributes.height}
+        width={mobileWebp.attributes.width}
+        height={mobileWebp.attributes.height}
         class="w-full h-full object-cover"
       />
     </picture>
@@ -280,7 +303,6 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
     }
   </style>
 </section>
-
 
 
 
