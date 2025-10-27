@@ -9,20 +9,15 @@ interface PopupCtx {
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-}
-
-// Type
-interface PopupCtx {
-  serviceKey?: string;
-  serviceLabel?: string;
-  trackingSource?: string;
-  presetSubject?: string | null;
   popupTitle?: string | null;
   popupSubtitle?: string | null;
-  creditImpotEnabled?: boolean; // ✅ NEW
+  creditImpotEnabled?: boolean;
 }
 
-
+interface Props {
+  popupContext?: PopupCtx;
+  seo?: { title?: string; description?: string; lang?: string };
+}
 
 const { popupContext, seo } = Astro.props as Props;
 
@@ -30,102 +25,92 @@ const defaults: Required<PopupCtx> = {
   serviceKey: "general",
   serviceLabel: "Service Klinova",
   trackingSource: "popup-general",
-  presetSubject: null
+  presetSubject: null,
+  popupTitle: null,
+  popupSubtitle: null,
+  creditImpotEnabled: false
 };
 
 const ctx = { ...defaults, ...(popupContext || {}) };
-const lang = seo?.lang || "fr";
 ---
 
-<html lang={lang}>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- PAS de <html><head><body> ici ! DocumentShell s'en charge -->
 
-    {seo?.title && <title>{seo.title}</title>}
-    {seo?.description && <meta name="description" content={seo.description} />}
+<!-- Preload font dans le head via DocumentShell -->
+<Fragment slot="head">
+  <link
+    rel="preload"
+    href="/fonts/CaviarDreams-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+</Fragment>
 
-    <!-- Preloads / assets globaux -->
-    <link
-      rel="preload"
-      href="/fonts/CaviarDreams-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+<!-- Body attributes via script -->
+<script is:inline define:vars={{ ctx, popupContext }}>
+  document.body.setAttribute('data-service-key', ctx.serviceKey);
+  document.body.setAttribute('data-service-label', ctx.serviceLabel);
+  document.body.setAttribute('data-tracking-source', ctx.trackingSource);
+  document.body.setAttribute('data-preset-subject', ctx.presetSubject || '');
+  document.body.setAttribute('data-popup-title', popupContext?.popupTitle || '');
+  document.body.setAttribute('data-popup-subtitle', popupContext?.popupSubtitle || '');
+  document.body.setAttribute('data-credit-impot', popupContext?.creditImpotEnabled ? '1' : '0');
+</script>
 
-    <!-- Slot head (si une page veut injecter quelque chose) -->
-    <slot name="head" />
-  </head>
+<Header />
 
-  <!-- ✅ Le contexte service vit ici -->
- <body
-  data-service-key={ctx.serviceKey}
-  data-service-label={ctx.serviceLabel}
-  data-tracking-source={ctx.trackingSource}
-  data-preset-subject={ctx.presetSubject ?? ''}
-  data-popup-title={popupContext?.popupTitle ?? ''}
-  data-popup-subtitle={popupContext?.popupSubtitle ?? ''}
-  data-credit-impot={popupContext?.creditImpotEnabled ? '1' : '0'}  
+<main class="min-h-[60vh]">
+  <slot />
+</main>
 
->
-    <Header />
+<Footer />
 
-    <main class="min-h-[60vh]">
-      <slot />
-    </main>
+<PopupForm />
 
-    <Footer />
+<!-- Analytics -->
+<script is:inline>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
 
-    <!-- ✅ Popup unique, global -->
-    <PopupForm />
-
-    <!-- Analytics événementiels (facultatif) -->
-    <script is:inline>
-      (function () {
-        window.dataLayer = window.dataLayer || [];
-
-        window.addEventListener('sp:popup_open', (e) => {
-          const type = (e && e.detail && e.detail.type) || 'unknown';
-          window.dataLayer.push({
-            event: 'popup_open',
-            popup_type: type,
-            page_type: 'site',
-            service_key: document.body?.dataset?.serviceKey,
-            service_label: document.body?.dataset?.serviceLabel
-          });
-          if (typeof window.gtag === 'function') {
-            window.gtag('event', 'popup_open', {
-              event_category: 'engagement',
-              event_label: type
-            });
-          }
+    window.addEventListener('sp:popup_open', (e) => {
+      const type = (e && e.detail && e.detail.type) || 'unknown';
+      window.dataLayer.push({
+        event: 'popup_open',
+        popup_type: type,
+        page_type: 'site',
+        service_key: document.body?.dataset?.serviceKey,
+        service_label: document.body?.dataset?.serviceLabel
+      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'popup_open', {
+          event_category: 'engagement',
+          event_label: type
         });
+      }
+    });
 
-        window.addEventListener('sp:popup_close', () => {
-          window.dataLayer.push({
-            event: 'popup_close',
-            page_type: 'site',
-            service_key: document.body?.dataset?.serviceKey,
-            service_label: document.body?.dataset?.serviceLabel
-          });
-        });
+    window.addEventListener('sp:popup_close', () => {
+      window.dataLayer.push({
+        event: 'popup_close',
+        page_type: 'site',
+        service_key: document.body?.dataset?.serviceKey,
+        service_label: document.body?.dataset?.serviceLabel
+      });
+    });
 
-        // Désactiver la restauration auto du scroll (une fois)
-        if ('scrollRestoration' in window.history) {
-          window.history.scrollRestoration = 'manual';
-        }
-        if (!sessionStorage.getItem('_scroll_reset_done')) {
-          window.addEventListener(
-            'load',
-            () => {
-              window.scrollTo(0, 0);
-              sessionStorage.setItem('_scroll_reset_done', '1');
-            },
-            { once: true }
-          );
-        }
-      })();
-    </script>
-  </body>
-</html>
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    if (!sessionStorage.getItem('_scroll_reset_done')) {
+      window.addEventListener(
+        'load',
+        () => {
+          window.scrollTo(0, 0);
+          sessionStorage.setItem('_scroll_reset_done', '1');
+        },
+        { once: true }
+      );
+    }
+  })();
+</script>
