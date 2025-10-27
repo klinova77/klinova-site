@@ -149,27 +149,28 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
   class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
 >
   <div class="absolute inset-0 z-0">
-    <picture>
-      <!-- Desktop EN PREMIER -->
-      <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
-      <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
-      <source media="(min-width: 768px)" type="image/jpeg" srcset={deskJpg.srcset} sizes="100vw" />
+  <picture>
+  <!-- Desktop avec condition explicite -->
+  <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
+  <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
+  <source media="(min-width: 768px)" type="image/jpeg" srcset={deskJpg.srcset} sizes="100vw" />
 
-      <!-- Mobile ENSUITE (= fallback pour < 768px) -->
-      <source type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
-      <source type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
-      <source type="image/jpeg" srcset={mobileJpg.srcset} sizes="100vw" />
+  <!-- Mobile avec condition explicite -->
+  <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+  <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+  <source media="(max-width: 767px)" type="image/jpeg" srcset={mobileJpg.srcset} sizes="100vw" />
 
-      <!-- Fallback absolu = mobile JPEG (si aucune source ne marche) -->
-      <img
-        src={mobileJpg.src}
-        alt="Avant et après nettoyage professionnel de moquette"
-        decoding="async"
-        width={mobileJpg.attributes.width}
-        height={mobileJpg.attributes.height}
-        class="w-full h-full object-cover"
-      />
-    </picture>
+  <!-- Fallback (desktop par défaut pour les vieux navigateurs) -->
+  <img
+    src={deskJpg.src}
+    alt="Avant et après nettoyage professionnel de moquette"
+    decoding="async"
+    width={deskJpg.attributes.width}
+    height={deskJpg.attributes.height}
+    class="w-full h-full object-cover"
+  />
+</picture>
+
 
     <div
       class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
