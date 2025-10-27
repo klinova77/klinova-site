@@ -109,6 +109,17 @@ const faqSchema = {
 };
 
 
+
+// rendus
+const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640], quality: 60 })
+const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640], quality: 60 })
+const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 })
+const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 })
+
+// choisissez ce que vous préchargez (ici, la version mobile AVIF)
+const preloadSrcset = mobileAvif.srcset
+const preloadSizes  = '100vw'
+const mobileType    = 'image/avif'
 ---
 
 <head>
