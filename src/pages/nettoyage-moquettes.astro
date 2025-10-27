@@ -105,6 +105,7 @@ const faqSchema = {
 };
 
 
+
 const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 });
 const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 });
 const mobileJpg   = await getImage({ src: heroMoquettesMobile, format: 'jpeg', widths: [360,480,640,750], quality: 76 });
@@ -115,7 +116,6 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
 ---
 
 <head>
-  <!-- Preload mobile AVIF (prioritaire sur mobile) -->
   <link
     rel="preload"
     as="image"
@@ -125,7 +125,6 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
     type="image/avif"
     fetchpriority="high"
   />
-  <!-- Preload desktop AVIF -->
   <link
     rel="preload"
     as="image"
@@ -149,31 +148,29 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
   data-hero
   class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
 >
-  <!-- Background -->
   <div class="absolute inset-0 z-0">
     <picture>
-      <!-- Mobile d'abord -->
-      <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
-      <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
-      <source media="(max-width: 767px)" type="image/jpeg" srcset={mobileJpg.srcset} sizes="100vw" />
-
-      <!-- Desktop ensuite -->
+      <!-- Desktop EN PREMIER -->
       <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
       <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
       <source media="(min-width: 768px)" type="image/jpeg" srcset={deskJpg.srcset} sizes="100vw" />
 
-      <!-- Fallback ABSOLU = JPEG DESKTOP -->
+      <!-- Mobile ENSUITE (= fallback pour < 768px) -->
+      <source type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+      <source type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+      <source type="image/jpeg" srcset={mobileJpg.srcset} sizes="100vw" />
+
+      <!-- Fallback absolu = mobile JPEG (si aucune source ne marche) -->
       <img
-        src={deskJpg.src}
+        src={mobileJpg.src}
         alt="Avant et après nettoyage professionnel de moquette"
         decoding="async"
-        width={deskJpg.attributes.width}
-        height={deskJpg.attributes.height}
+        width={mobileJpg.attributes.width}
+        height={mobileJpg.attributes.height}
         class="w-full h-full object-cover"
       />
     </picture>
 
-    <!-- Overlay -->
     <div
       class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
       aria-hidden="true"
@@ -240,14 +237,12 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
     </div>
   </div>
 
-  <!-- Script -->
   <script is:inline>
     document.querySelectorAll('[data-hero] .animate-fade-in-up').forEach((el) => {
       el.addEventListener('animationend', () => { el.style.willChange = 'auto'; }, { once: true });
     });
   </script>
 
-  <!-- Animations -->
   <style>
     @keyframes fade-in-up {
       from { opacity: 0; transform: translateY(14px); }
