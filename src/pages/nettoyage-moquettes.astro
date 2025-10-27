@@ -111,19 +111,28 @@ const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', w
 const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 })
 const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 })
 
-// Préload (facultatif mais recommandé)
-const preloadSrcset = mobileAvif.srcset
-const preloadSizes  = '100vw'
-const preloadType   = 'image/avif'
+
 ---
 
 <head>
+  <!-- Preload desktop -->
   <link
     rel="preload"
     as="image"
-    imagesrcset={preloadSrcset}
-    imagesizes={preloadSizes}
-    type={preloadType}
+    media="(min-width: 768px)"
+    imagesrcset={deskAvif.srcset}
+    imagesizes="100vw"
+    type="image/avif"
+    fetchpriority="high"
+  />
+  <!-- Preload mobile -->
+  <link
+    rel="preload"
+    as="image"
+    media="(max-width: 767px)"
+    imagesrcset={mobileAvif.srcset}
+    imagesizes="100vw"
+    type="image/avif"
     fetchpriority="high"
   />
 </head>
@@ -142,36 +151,28 @@ const preloadType   = 'image/avif'
 
 
 
-<section
-  data-hero data-hide-cta
-  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
->
- <!-- Background image -->
-<div class="absolute inset-0 z-0">
-  <picture>
-  <!-- Desktop / Tablet -->
-  <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset}  sizes="100vw" />
-  <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset}  sizes="100vw" />
-  <!-- Mobile -->
-  <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
-  <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
-  <!-- Fallback -->
-  <img
-    src={mobileWebp.src}
-    alt="Avant et après nettoyage professionnel de moquette"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-    width={mobileWebp.attributes.width}
-    height={mobileWebp.attributes.height}
-    class="w-full h-full object-cover"
-  />
-</picture>
+<section class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <picture>
+      <!-- Desktop / Tablet -->
+      <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
+      <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
+      <!-- Mobile -->
+      <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+      <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+      <!-- Fallback = desktop (pour éviter le fetch mobile en desktop) -->
+      <img
+        src={deskWebp.src}
+        alt="Avant et après nettoyage professionnel de moquette"
+        decoding="async"
+        width={deskWebp.attributes.width}
+        height={deskWebp.attributes.height}
+        class="w-full h-full object-cover"
+      />
+    </picture>
 
-<!-- Overlay unique -->
-<div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]" aria-hidden="true"></div>
-
-</div>
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]" aria-hidden="true"></div>
+  </div>
 
 
 
