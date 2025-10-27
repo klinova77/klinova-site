@@ -10,8 +10,6 @@ import { LINKS } from '~/lib/links';
 import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
 import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
 
-
-
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
 import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
 import moquetteVelours from '~/assets/images/nettoyage-moquettes-velours.jpg';
@@ -20,8 +18,6 @@ import dallesMoquette from '~/assets/images/dalles-moquette.jpg';
 import avantApresBureau from '~/assets/images/nettoyage-moquette-bureau-avant-apres.jpg';
 import avantApresDomicile from '~/assets/images/nettoyage-moquette-a-domicile.jpg';
 import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
-
-
 
 const popupContext = {
   title: 'Devis nettoyage de moquettes',
@@ -33,105 +29,48 @@ const popupContext = {
   creditImpotEnabled: true, 
 };
 
-
 const SUBTITLE = 'Redonnez vie à vos revêtements textiles. Équipements haute performance, produits adaptés à chaque fibre.';
 const BADGE = 'Équipements professionnels industriels';
 
-
-import { Accordion, AccordionItem } from 'free-astro-components';
-
-const faq = [
-  {
-    title: "Combien de temps faut-il pour que ma moquette sèche ?",
-    content:
-      "En général 2 à 6 heures selon la méthode utilisée, la ventilation et la température ambiante. Nous pouvons installer des ventilateurs professionnels (air movers) pour accélérer le séchage si nécessaire. Pour les urgences ou contraintes d'exploitation, nous privilégions les méthodes à séchage rapide.",
-  },
-  {
-    title: "Intervenez-vous en cas de dégât des eaux ou d'urgence ?",
-    content:
-      "Oui, nous intervenons rapidement pour les sinistres : aspiration de l'eau, désinfection et séchage assisté. Nous pouvons également travailler en lien avec votre assurance et fournir les justificatifs nécessaires. L'organisation peut se faire entièrement par téléphone pour plus de simplicité.",
-  },
-  {
-    title: "À quelle fréquence faire nettoyer sa moquette ?",
-    content:
-      "Cela dépend de l'usage :\n• Bureaux et copropriétés : tous les 6 à 12 mois\n• Habitat privé : annuel ou bi-annuel\n• Zones à fort passage : 3 à 6 mois\n• Après sinistre ou taches importantes : dès que possible\n\nUn entretien régulier prolonge significativement la durée de vie de votre moquette.",
-  },
-  {
-    title: "Vos produits sont-ils sans danger pour les enfants et animaux ?",
-    content:
-      "Absolument. Nous utilisons des produits professionnels biodégradables, sans solvants agressifs et conformes aux normes européennes. Aucune odeur chimique persistante après intervention. Les surfaces sont sans danger dès le séchage terminé. Fiches de sécurité disponibles sur demande.",
-  },
-  {
-    title: "Quelle est la différence entre vos méthodes de nettoyage ?",
-    content:
-      "Nous adaptons la méthode selon votre moquette :\n• Nettoyage à sec : fibres délicates, remise en service immédiate\n• Injection-extraction : encrassement important, désinfection profonde\n• Monobrosse + mousse : compromis efficacité/séchage rapide\n\nLe choix se fait après diagnostic gratuit selon le type de fibre, l'état et vos contraintes.",
-  },
-  {
-    title: "Pouvez-vous enlever toutes les taches ?",
-    content:
-      "La plupart des taches courantes (café, vin, nourriture, boue) peuvent être éliminées avec nos techniques spécialisées. Les taches anciennes ou certaines substances (encre permanente, décoloration) peuvent laisser des traces. Nous réalisons toujours un test préalable et vous informons honnêtement des résultats attendus.",
-  },
-  {
-    title: "Le bruit pendant l'intervention est-il gênant ?",
-    content:
-      "Nos équipements professionnels restent en dessous de 65 dB (niveau conversation normale). Nous pouvons adapter nos horaires (tôt le matin, soirée ou week-end) pour minimiser la gêne, particulièrement en environnement de bureau ou résidentiel.",
-  },
-  {
-    title: "Comment se déroule votre diagnostic gratuit ?",
-    content:
-      "Diagnostic sous 24h : nous examinons le type de moquette, évaluons l'encrassement, identifions les taches spécifiques et testons si nécessaire. Ensuite, nous vous proposons la méthode adaptée avec un devis détaillé précisant surface, tarif et délais d'intervention.",
-  },
-  {
-    title: "Faut-il déplacer les meubles avant votre passage ?",
-    content:
-      "Nous nous adaptons à vos contraintes. Nous pouvons déplacer les meubles légers ou travailler autour du mobilier lourd. Pour un nettoyage complet, il est préférable de libérer la zone, mais ce n'est pas obligatoire. Nous en discutons lors du diagnostic.",
-  },
-  {
-    title: "Proposez-vous des contrats d'entretien régulier ?",
-    content:
-      "Oui, nous établissons des contrats trimestriels, semestriels ou annuels avec des tarifs préférentiels. Idéal pour les bureaux, hôtels, copropriétés. Chaque passage est tracé avec un rapport d'intervention détaillé. Planification flexible selon vos besoins.",
-  },
-];
-
-// JSON-LD SEO
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
-    "@type": "Question",
-    name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content },
-  })),
-};
-
-
-
-
-
-// Simplifions au maximum pour identifier le problème
+// Test simple pour diagnostic
 const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', width: 400, quality: 70 });
 const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', width: 1200, quality: 70 });
 ---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de moquettes – Klinova',
+    description: 'Prestations pro de nettoyage de moquettes en Île-de-France : protocoles industriels, séchage rapide, devis en 24h.',
+  }}
+>
+
+<!-- TEST DIAGNOSTIC IMAGES -->
 <section class="relative min-h-[50vh] bg-gray-200 flex items-center">
   <div class="absolute inset-0">
-    <!-- Test avec du CSS inline pour bypass tout conflit -->
+    <!-- Image mobile (doit être visible SEULEMENT sur mobile) -->
     <img 
       src={mobileImg.src}
-      alt="Mobile"
+      alt="Mobile - Portrait"
       style="width: 100%; height: 100%; object-fit: cover; display: block;"
       class="mobile-only"
     />
+    <!-- Image desktop (doit être visible SEULEMENT sur desktop) -->
     <img 
       src={desktopImg.src}
-      alt="Desktop" 
+      alt="Desktop - Paysage" 
       style="width: 100%; height: 100%; object-fit: cover; display: none;"
       class="desktop-only"
     />
   </div>
   
-  <div class="relative z-10 p-4 bg-black/50 text-white">
-    <p>Mobile: {mobileImg.src}</p>
-    <p>Desktop: {desktopImg.src}</p>
+  <!-- Debug info -->
+  <div class="relative z-10 p-4 bg-black/50 text-white max-w-md">
+    <p><strong>Viewport:</strong> <span id="viewport-info">...</span></p>
+    <p><strong>Mobile URL:</strong> {mobileImg.src}</p>
+    <p><strong>Desktop URL:</strong> {desktopImg.src}</p>
+    <p><strong>Mobile visible:</strong> <span class="md:hidden">OUI</span><span class="hidden md:inline">NON</span></p>
+    <p><strong>Desktop visible:</strong> <span class="md:inline hidden">OUI</span><span class="md:hidden">NON</span></p>
   </div>
 </section>
 
@@ -145,5 +84,18 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', width: 1
     .desktop-only { display: none !important; }
   }
 </style>
+
+<!-- Script pour afficher la largeur en temps réel -->
+<script is:inline>
+  function updateViewport() {
+    const info = document.getElementById('viewport-info');
+    if (info) {
+      info.textContent = window.innerWidth + 'px';
+    }
+  }
+  
+  updateViewport();
+  window.addEventListener('resize', updateViewport);
+</script>
 
 </LayoutWithCTA>
