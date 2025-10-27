@@ -112,31 +112,38 @@ const faqSchema = {
 const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', width: 400, quality: 70 });
 const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', width: 1200, quality: 70 });
 ---
-
 <section class="relative min-h-[50vh] bg-gray-200 flex items-center">
-  <!-- TEST: affichage conditionnel avec CSS -->
   <div class="absolute inset-0">
-    <!-- Image mobile (cachée sur desktop) -->
+    <!-- Test avec du CSS inline pour bypass tout conflit -->
     <img 
       src={mobileImg.src}
       alt="Mobile"
-      class="w-full h-full object-cover md:hidden"
+      style="width: 100%; height: 100%; object-fit: cover; display: block;"
+      class="mobile-only"
     />
-    <!-- Image desktop (cachée sur mobile) -->
     <img 
       src={desktopImg.src}
       alt="Desktop" 
-      class="w-full h-full object-cover hidden md:block"
+      style="width: 100%; height: 100%; object-fit: cover; display: none;"
+      class="desktop-only"
     />
   </div>
   
-  <!-- Debug info -->
   <div class="relative z-10 p-4 bg-black/50 text-white">
     <p>Mobile: {mobileImg.src}</p>
     <p>Desktop: {desktopImg.src}</p>
-    <p>Screen: <span class="md:hidden">MOBILE</span><span class="hidden md:inline">DESKTOP</span></p>
   </div>
 </section>
 
+<style>
+  @media (min-width: 768px) {
+    .mobile-only { display: none !important; }
+    .desktop-only { display: block !important; }
+  }
+  @media (max-width: 767px) {
+    .mobile-only { display: block !important; }
+    .desktop-only { display: none !important; }
+  }
+</style>
 
 </LayoutWithCTA>
