@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <!-- Fond noir total -->
+  <rect width="40" height="40" rx="8" fill="#000000" />
+
+  <!-- Texte SP blanc -->
+  <text 
+    x="50%" 
+    y="52%" 
+    text-anchor="middle" 
+    dominant-baseline="middle" 
+    fill="white" 
+    font-family="Inter, sans-serif" 
+    font-size="16" 
+    font-weight="700"
+  >
+    SP
+  </text>
+</svg>
