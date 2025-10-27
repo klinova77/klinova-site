@@ -106,15 +106,14 @@ const faqSchema = {
 
 
 
----
-const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 })
-const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 })
-const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [640,768,1024,1280], quality: 68 })
-const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [640,768,1024,1280], quality: 70 })
+const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 });
+const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 });
+const deskAvif    = await getImage({ src: heroMoquettes,       format: 'avif', widths: [768,1024,1280,1536], quality: 68 });
+const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', widths: [768,1024,1280,1536], quality: 70 });
 ---
 
 <head>
-  <!-- Preload mobile AVIF (priorité) -->
+  <!-- Preload mobile AVIF (prioritaire sur mobile) -->
   <link
     rel="preload"
     as="image"
@@ -151,35 +150,13 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
   <!-- Background -->
   <div class="absolute inset-0 z-0">
     <picture>
-      <!-- Mobile AVIF -->
-      <source 
-        media="(max-width: 767px)" 
-        type="image/avif" 
-        srcset={mobileAvif.srcset} 
-        sizes="100vw" 
-      />
-      <!-- Mobile WebP -->
-      <source 
-        media="(max-width: 767px)" 
-        type="image/webp" 
-        srcset={mobileWebp.srcset} 
-        sizes="100vw" 
-      />
-      <!-- Desktop AVIF -->
-      <source 
-        media="(min-width: 768px)" 
-        type="image/avif" 
-        srcset={deskAvif.srcset} 
-        sizes="100vw" 
-      />
-      <!-- Desktop WebP -->
-      <source 
-        media="(min-width: 768px)" 
-        type="image/webp" 
-        srcset={deskWebp.srcset} 
-        sizes="100vw" 
-      />
-      <!-- Fallback = mobile pour éviter de charger desktop par défaut -->
+      <!-- Mobile d'abord -->
+      <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+      <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+      <!-- Desktop ensuite -->
+      <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
+      <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
+      <!-- Fallback = MOBILE (évite de charger une image desktop par défaut sur mobile) -->
       <img
         src={mobileWebp.src}
         alt="Avant et après nettoyage professionnel de moquette"
@@ -200,7 +177,6 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
   <!-- Content -->
   <div class="container mx-auto px-6 lg:px-12 relative z-10 py-16 md:py-24">
     <div class="max-w-2xl">
-      <!-- H1 -->
       <h1
         class="text-4xl md:text-5xl xl:text-5xl font-bold mb-6 leading-tight
                text-[#1E2939] md:text-white
@@ -211,7 +187,6 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
         Nettoyage <span class="text-[#4ADEEF] inline-block transform hover:scale-105 transition-transform duration-300">de moquettes</span> en Île-de-France
       </h1>
 
-      <!-- H2 -->
       <p
         class="text-xl md:text-2xl mb-2 leading-relaxed font-bold
                text-[#1E2939] md:text-white
@@ -222,7 +197,6 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
         {SUBTITLE}
       </p>
 
-      <!-- Mention avance immédiate -->
       <p
         class="text-sm md:text-base text-orange-200 mb-8 font-medium
                opacity-100 motion-safe:animate-fade-in-up
@@ -230,23 +204,13 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
                [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
       >
         <span class="inline-flex items-center group">
-          <svg
-            class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            ></path>
+          <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
           </svg>
           Particuliers : payez seulement 50% aujourd'hui avec l'avance immédiate
         </span>
       </p>
 
-      <!-- CTA -->
       <div
         class="flex flex-col sm:flex-row gap-4 items-start sm:items-center
                opacity-100 motion-safe:animate-fade-in-up
@@ -273,9 +237,7 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
   <!-- Script -->
   <script is:inline>
     document.querySelectorAll('[data-hero] .animate-fade-in-up').forEach((el) => {
-      el.addEventListener('animationend', () => {
-        el.style.willChange = 'auto';
-      }, { once: true });
+      el.addEventListener('animationend', () => { el.style.willChange = 'auto'; }, { once: true });
     });
   </script>
 
@@ -303,6 +265,8 @@ const deskWebp    = await getImage({ src: heroMoquettes,       format: 'webp', w
     }
   </style>
 </section>
+
+
 
 
 
