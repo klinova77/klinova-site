@@ -5,8 +5,6 @@ import SeoBase, { type Props as SeoProps } from '~/components/SEO/SeoBase.astro'
 import { SITE_THEME } from '~/config/theme';
 
 export type Props = SeoProps;
-
-
 const seoProps = Astro.props as SeoProps & { brand?: 'sp' | 'klinova' };
 const brand = seoProps.brand ?? 'sp';
 ---
@@ -18,36 +16,35 @@ const brand = seoProps.brand ?? 'sp';
   data-bg-style={SITE_THEME.bgStyle}
   data-brand={brand}
 >
-
   <head>
-    <meta charset="UTF-8" />
+    <!-- ✅ Viewport FIRST, before any script/component -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TWMFLQ5X');</script>
-<!-- End Google Tag Manager -->
+    <!-- (optionnel mais safe sur vieux Android) -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon / SEO -->
     <SeoBase {...seoProps} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-
+    <!-- GTM ensuite -->
+    <script>
+      {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TWMFLQ5X');`}
+    </script>
   </head>
 
   <body class="font-sans bg-neutral-50 text-primary-900">
-
-
-
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- GTM noscript -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
     <slot />
-
-
   </body>
 </html>
