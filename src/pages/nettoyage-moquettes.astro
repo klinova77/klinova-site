@@ -1,6 +1,7 @@
 ---
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
-import { Image, getImage } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';npx astro build --verbose
+
 import Button from '~/components/UI/Button.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
@@ -130,24 +131,43 @@ const faqSchema = {
  <!-- Background image -->
 <div class="absolute inset-0 z-0">
   <picture>
-    <!-- Mobile -->
-    <source type="image/avif" media="(max-width: 767px)" srcset={mobileAvif.srcset} sizes="100vw" />
-    <source type="image/webp" media="(max-width: 767px)" srcset={mobileWebp.srcset} sizes="100vw" />
-    <!-- Desktop/Tablet -->
-    <source type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
-    <source type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
-    <!-- Fallback -->
-    <img
-      src={deskAvif.src}
-      alt="Avant et après nettoyage professionnel de moquette"
-      loading="eager"
-      fetchpriority="high"
-      decoding="async"
-      width={deskAvif.attributes.width}
-      height={deskAvif.attributes.height}
-      class="w-full h-full object-cover"
-    />
-  </picture>
+  <!-- Desktop / Tablet -->
+  <source
+    media="(min-width: 768px)"
+    type="image/avif"
+    srcset={deskAvif.srcset}
+    sizes="100vw" />
+  <source
+    media="(min-width: 768px)"
+    type="image/webp"
+    srcset={deskWebp.srcset}
+    sizes="100vw" />
+
+  <!-- Mobile -->
+  <source
+    media="(max-width: 767px)"
+    type="image/avif"
+    srcset={mobileAvif.srcset}
+    sizes="100vw" />
+  <source
+    media="(max-width: 767px)"
+    type="image/webp"
+    srcset={mobileWebp.srcset}
+    sizes="100vw" />
+
+  <!-- Fallback (met la mobile ici) -->
+  <img
+    src={mobileWebp.src}
+    alt="Avant et après nettoyage professionnel de moquette"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    width={mobileWebp.attributes.width}
+    height={mobileWebp.attributes.height}
+    class="w-full h-full object-cover"
+  />
+</picture>
+
 </div>
 
 <!-- 🔆 Calque d’éclaircissement mobile-only -->
