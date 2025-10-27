@@ -105,7 +105,6 @@ const faqSchema = {
 };
 
 
-
 const mobileAvif  = await getImage({ src: heroMoquettesMobile, format: 'avif', widths: [360,480,640,750], quality: 60 });
 const mobileWebp  = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 60 });
 const mobileJpg   = await getImage({ src: heroMoquettesMobile, format: 'jpeg', widths: [360,480,640,750], quality: 76 });
@@ -116,7 +115,7 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
 ---
 
 <head>
-  <!-- Preload mobile AVIF -->
+  <!-- Preload mobile AVIF (prioritaire sur mobile) -->
   <link
     rel="preload"
     as="image"
@@ -138,32 +137,35 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
   />
 </head>
 
-<section class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden" data-hero>
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de moquettes – Klinova',
+    description: 'Prestations pro de nettoyage de moquettes en Île-de-France : protocoles industriels, séchage rapide, devis en 24h.',
+  }}
+>
+
+<section
+  data-hero
+  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
+>
+  <!-- Background -->
   <div class="absolute inset-0 z-0">
+    <picture>
+      <!-- Mobile d'abord -->
+      <source media="(max-width: 767px)" type="image/avif" srcset={mobileAvif.srcset} sizes="100vw" />
+      <source media="(max-width: 767px)" type="image/webp" srcset={mobileWebp.srcset} sizes="100vw" />
+      <source media="(max-width: 767px)" type="image/jpeg" srcset={mobileJpg.srcset} sizes="100vw" />
 
-    <!-- Mobile ONLY -->
-    <picture class="block md:hidden w-full h-full">
-      <source type="image/avif"  srcset={mobileAvif.srcset} sizes="100vw" />
-      <source type="image/webp"  srcset={mobileWebp.srcset} sizes="100vw" />
-      <source type="image/jpeg" srcset={mobileJpg.srcset}  sizes="100vw" />
-      <img
-        src={mobileJpg.src}
-        alt="Avant et après nettoyage professionnel de moquette (mobile)"
-        decoding="async"
-        width={mobileJpg.attributes.width}
-        height={mobileJpg.attributes.height}
-        class="w-full h-full object-cover"
-      />
-    </picture>
+      <!-- Desktop ensuite -->
+      <source media="(min-width: 768px)" type="image/avif" srcset={deskAvif.srcset} sizes="100vw" />
+      <source media="(min-width: 768px)" type="image/webp" srcset={deskWebp.srcset} sizes="100vw" />
+      <source media="(min-width: 768px)" type="image/jpeg" srcset={deskJpg.srcset} sizes="100vw" />
 
-    <!-- Desktop/Tablet ONLY -->
-    <picture class="hidden md:block w-full h-full">
-      <source type="image/avif"  srcset={deskAvif.srcset} sizes="100vw" />
-      <source type="image/webp"  srcset={deskWebp.srcset} sizes="100vw" />
-      <source type="image/jpeg" srcset={deskJpg.srcset}  sizes="100vw" />
+      <!-- Fallback ABSOLU = JPEG DESKTOP -->
       <img
         src={deskJpg.src}
-        alt="Avant et après nettoyage professionnel de moquette (desktop)"
+        alt="Avant et après nettoyage professionnel de moquette"
         decoding="async"
         width={deskJpg.attributes.width}
         height={deskJpg.attributes.height}
@@ -172,12 +174,11 @@ const deskJpg     = await getImage({ src: heroMoquettes,       format: 'jpeg', w
     </picture>
 
     <!-- Overlay -->
-    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]" aria-hidden="true"></div>
+    <div
+      class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
+      aria-hidden="true"
+    ></div>
   </div>
-
-  
-</section>
-
 
   <!-- Content -->
   <div class="container mx-auto px-6 lg:px-12 relative z-10 py-16 md:py-24">
