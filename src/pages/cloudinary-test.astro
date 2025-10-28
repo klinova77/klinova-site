@@ -1,0 +1,149 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+const MAX_BYTES = 10 * 1024 * 1024; // 10 MB
+const ACCEPT = 'image/*,application/pdf';
+---
+
+<LayoutWithCTA title="Test Upload Cloudinary" description="Formulaire minimal de test (upload signé + email)">
+  <section class="container mx-auto px-4 py-12">
+    <h1 class="text-2xl font-semibold mb-6">Test Upload Cloudinary</h1>
+
+    <form id="uploadForm" class="space-y-4 max-w-md" novalidate>
+      <div>
+        <label class="block text-sm font-medium mb-1" for="name">Votre nom (optionnel)</label>
+        <input id="name" name="name" type="text" class="w-full border rounded-lg px-3 py-2" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1" for="email">Votre email (optionnel)</label>
+        <input id="email" name="email" type="email" class="w-full border rounded-lg px-3 py-2" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1" for="file">Fichier (image ou PDF, max 10 Mo)</label>
+        <input id="file" name="file" type="file" accept={ACCEPT} class="w-full" required />
+        <p id="fileName" class="text-sm text-gray-600 mt-1"></p>
+      </div>
+
+      <button id="submitBtn" type="submit" class="inline-flex items-center justify-center rounded-lg px-4 py-2 border text-sm font-medium">
+        Envoyer
+      </button>
+
+      <p id="status" class="text-sm mt-2"></p>
+      <div id="result" class="mt-4 text-sm"></div>
+    </form>
+  </section>
+
+  <script type="module" is:inline>
+    const form = document.getElementById('uploadForm');
+    const fileInput = document.getElementById('file');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusEl = document.getElementById('status');
+    const resultEl = document.getElementById('result');
+    const fileNameEl = document.getElementById('fileName');
+    const MAX_BYTES = ${MAX_BYTES};
+
+    fileInput.addEventListener('change', () => {
+      const f = fileInput.files?.[0];
+      fileNameEl.textContent = f ? `${f.name} (${(f.size/1024/1024).toFixed(1)} Mo)` : '';
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      resultEl.innerHTML = '';
+      statusEl.textContent = '';
+
+      const f = fileInput.files?.[0];
+      if (!f) {
+        statusEl.textContent = 'Choisissez un fichier.';
+        statusEl.style.color = 'crimson';
+        return;
+      }
+      if (f.size > MAX_BYTES) {
+        statusEl.textContent = 'Fichier trop volumineux (max 10 Mo).';
+        statusEl.style.color = 'crimson';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Téléversement...';
+      statusEl.style.color = '';
+      statusEl.textContent = 'Demande de signature…';
+
+      try {
+        // 1) signature
+        const sigRes = await fetch('/api/cloudinary-signature', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ folder: undefined })
+        });
+        const { ok, signature, timestamp, apiKey, cloudName, folder, uploadPreset } = await sigRes.json();
+        if (!ok) throw new Error('Signature indisponible');
+
+        // 2) upload direct vers Cloudinary
+        statusEl.textContent = 'Upload vers Cloudinary…';
+        const fd = new FormData();
+        fd.append('file', f);
+        fd.append('api_key', apiKey);
+        fd.append('timestamp', String(timestamp));
+        fd.append('signature', signature);
+        fd.append('folder', folder);
+        fd.append('upload_preset', uploadPreset);
+
+        const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`;
+        const upRes = await fetch(uploadUrl, { method: 'POST', body: fd });
+        if (!upRes.ok) throw new Error('Échec upload Cloudinary');
+        const cloudinary = await upRes.json();
+
+        // 3) Notification email (Resend)
+        statusEl.textContent = 'Envoi de la notification…';
+        const payload = {
+          form: {
+            name: (document.getElementById('name') as HTMLInputElement).value || null,
+            email: (document.getElementById('email') as HTMLInputElement).value || null,
+          },
+          file: {
+            name: f.name,
+            size: f.size,
+            type: f.type,
+          },
+          cloudinary: {
+            secure_url: cloudinary.secure_url,
+            public_id: cloudinary.public_id,
+            folder: folder,
+          }
+        };
+
+        const notify = await fetch('/api/notify-upload', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const notifyJson = await notify.json();
+
+        if (!notify.ok || !notifyJson.ok) {
+          statusEl.textContent = 'Upload OK, mais échec de la notification email.';
+          statusEl.style.color = 'orange';
+        } else {
+          statusEl.textContent = 'Succès ! Fichier téléversé et notification envoyée.';
+          statusEl.style.color = 'green';
+        }
+
+        // Affiche le résultat minimal (nom + lien)
+        resultEl.innerHTML = `
+          <div>
+            <div><strong>Fichier :</strong> ${f.name}</div>
+            <div><strong>Lien :</strong> <a href="${cloudinary.secure_url}" target="_blank" rel="noopener">${cloudinary.secure_url}</a></div>
+            <div><strong>Public ID :</strong> ${cloudinary.public_id}</div>
+          </div>
+        `;
+      } catch (err) {
+        statusEl.textContent = (err as Error).message || 'Erreur inconnue.';
+        statusEl.style.color = 'crimson';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer';
+      }
+    });
+  </script>
+</LayoutWithCTA>
