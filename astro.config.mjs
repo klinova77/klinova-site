@@ -1,7 +1,7 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/server'; // ✅ runtime Node (API routes, crypto)
+import vercel from '@astrojs/vercel/serverless'; // ✅ runtime Node (API routes, crypto)
 import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
 
@@ -16,7 +16,7 @@ export default defineConfig({
 
   // ✅ adapter Vercel en runtime Node (pas edge)
   adapter: vercel({
-    runtime: 'nodejs',
+    
     // includeFiles: [], // optionnel
   }),
 

@@ -3,12 +3,17 @@
 import DocumentShell, { type Props as DocumentShellProps } from './DocumentShell.astro';
 import SiteFrameKlinova from './SiteFrameKlinova.astro';
 
-type PopupCtx = {
+// Type
+interface PopupCtx {
   serviceKey?: string;
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-};
+  popupTitle?: string | null;
+  popupSubtitle?: string | null;
+  creditImpotEnabled?: boolean; // ✅ NEW
+}
+
 
 type Props = DocumentShellProps & {
   popupContext?: PopupCtx;

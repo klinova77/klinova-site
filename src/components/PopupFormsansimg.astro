@@ -1260,557 +1260,748 @@ hr, .border-sp-line { border-color: color-mix(in srgb, var(--sp-line) 70%, trans
 </style>
 
 <script is:inline>
-/* =========================================================
-   POPUP FORM – SCRIPT COMPLET, SÛR ET AUTO-CONTAINED
-   ========================================================= */
-(function () {
-  /* ---------- Contexte page ---------- */
+
   function readPageContext() {
-    const b = document.body?.dataset || {};
-    const w = (window.POPUP_CONTEXT) || {};
-    return {
-      serviceKey:   b.serviceKey   || w.serviceKey   || 'general',
-      serviceLabel: b.serviceLabel || w.serviceLabel || 'Service Klinova',
-      trackingSource: b.trackingSource || w.trackingSource || 'popup-general',
-      presetSubject: b.presetSubject || w.presetSubject || null,
+  const b = document.body?.dataset || {};
+  const w = (window.POPUP_CONTEXT) || {};
+  return {
+    serviceKey:   b.serviceKey   || w.serviceKey   || 'general',
+    serviceLabel: b.serviceLabel || w.serviceLabel || 'Service Klinova',
+    trackingSource: b.trackingSource || w.trackingSource || 'popup-general',
+    presetSubject: b.presetSubject || w.presetSubject || null,
+
       uiSubtitle: b.popupSubtitle || w.popupSubtitle || null,
-      uiSubmit:   b.popupSubmit   || w.popupSubmit   || null,
-      creditImpotEnabled: b.creditImpot === '1',
-    };
-  }
-
-  /* ---------- Config visuelle ---------- */
-  const popupConfig = {
-    header:   { title:"Devis express anti-punaises",    subtitle:"Réponse sous 4h • Intervention possible aujourd'hui", showUrgence:false, submitText:"Envoyer ma demande",        source:"popup_header" },
-    floating: { title:"Intervention d'urgence",         subtitle:"Réponse immédiate • Intervention possible dans la journée", showUrgence:true,  submitText:"Demander une intervention", source:"popup_floating" },
-    cta:      { title:"Devis express anti-punaises",    subtitle:"Réponse sous 4h • Intervention possible aujourd'hui", showUrgence:false, submitText:"Envoyer ma demande",        source:"popup_cta" }
+    uiSubmit:   b.popupSubmit   || w.popupSubmit   || null,
+    creditImpotEnabled: b.creditImpot === '1',
   };
+}
 
-  /* ---------- DOM refs ---------- */
-  const popupOverlay = document.getElementById("popupOverlay");
-  const popupForm    = document.getElementById("popupForm");
-  const popupTitle   = document.getElementById("popupTitle");
-  const urgenceBadge = document.getElementById("urgenceBadge");
+/* =========================
+   POPUP FORM – FULL SCRIPT
+   (params inchangés, fix auto re-open,
+   clics manuels réactivés via force:true)
+   ========================= */
 
-  const contactForm  = document.getElementById("contactForm");
-  const submitBtn    = document.getElementById("submitBtn");
-  const submitText   = document.getElementById("submitText");
-  const formMessage  = document.getElementById("formMessage");
-  const closeBtn     = document.getElementById("closePopup");
-  const progressFill = document.getElementById("progressFill");
-  const progressText = document.getElementById("progressText");
-
-  const telephoneInput  = document.getElementById("popup-telephone");
-  const telephoneE164   = document.getElementById("popup-telephone-e164");
-  const codePostalInput = document.getElementById("popup-code-postal");
-  const prenomInput     = document.getElementById("popup-prenom");
-
-  if (!popupOverlay || !popupForm) {
-    console.warn("[popup] DOM incomplet : overlay/form manquant.");
+/* ---------- Config intacte ---------- */
+const popupConfig = {
+  header: {
+    title: "Devis express anti-punaises",
+    subtitle: "Réponse sous 4h • Intervention possible aujourd'hui",
+    showUrgence: false,
+    submitText: "Envoyer ma demande",
+    source: "popup_header"
+  },
+  floating: {
+    title: "Intervention d'urgence",
+    subtitle: "Réponse immédiate • Intervention possible dans la journée",
+    showUrgence: true,
+    submitText: "Demander une intervention",
+    source: "popup_floating"
+  },
+  cta: {
+    title: "Devis express anti-punaises",
+    subtitle: "Réponse sous 4h • Intervention possible aujourd'hui",
+    showUrgence: false,
+    submitText: "Envoyer ma demande",
+    source: "popup_cta"
   }
+};
 
-  /* ---------- Scroll lock exposé en global ---------- */
-  let scrollY = 0, lockCount = 0, lastActive = null;
-  window.lockScroll = function lockScroll() {
-    if (!lockCount) {
-      scrollY = window.scrollY;
-      document.documentElement.classList.add("no-scroll");
-      document.body.classList.add("no-scroll");
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.left = "0";
-      document.body.style.right = "0";
-      document.body.style.width = "100%";
-    }
-    lockCount++;
-  };
-  window.unlockScroll = function unlockScroll() {
-    lockCount = Math.max(0, lockCount - 1);
-    if (lockCount > 0) return;
-    document.documentElement.classList.remove("no-scroll");
-    document.body.classList.remove("no-scroll");
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    const old = document.documentElement.style.scrollBehavior;
-    document.documentElement.style.scrollBehavior = 'auto';
-    requestAnimationFrame(() => {
-      window.scrollTo(0, scrollY);
-      document.documentElement.style.scrollBehavior = old;
-    });
-  };
+/* ---------- DOM refs ---------- */
+const popupOverlay = document.getElementById("popupOverlay");
+const popupForm = document.getElementById("popupForm");
+const popupTitle = document.getElementById("popupTitle");
+const urgenceBadge = document.getElementById("urgenceBadge");
+const urgentToggle = document.getElementById("urgentToggle");
+const contactForm = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+const submitText = document.getElementById("submitText");
+const formMessage = document.getElementById("formMessage");
+const closeBtn = document.getElementById("closePopup");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
 
-  /* ---------- Utils champs ---------- */
-  function normalizePhoneFR(raw) {
-    if (!raw) return null;
-    let v = String(raw).trim().replace(/[^\d+]/g, '');
-    if (v.startsWith('00')) v = '+' + v.slice(2);
-    if (v.startsWith('+33')) {
-      v = v.slice(3).replace(/^0+/, '');
-      return (/^\d{9}$/.test(v)) ? '+33' + v : null;
-    }
-    if (v.startsWith('33')) {
-      v = v.slice(2).replace(/^0+/, '');
-      return (/^\d{9}$/.test(v)) ? '+33' + v : null;
-    }
-    const d = v.replace(/\D/g, '');
-    if (/^0\d{9}$/.test(d)) return '+33' + d.slice(1);
-    if (/^\d{9}$/.test(d))  return '+33' + d;
-    return null;
+const telephoneInput = document.getElementById("popup-telephone");
+const telephoneE164 = document.getElementById("popup-telephone-e164");
+const codePostalInput = document.getElementById("popup-code-postal");
+const prenomInput = document.getElementById("popup-prenom");
+
+/* ---------- Scroll lock ---------- */
+let scrollY = 0;
+let lockCount = 0;
+let lastActive = null;
+
+function lockScroll() {
+  if (lockCount === 0) {
+    scrollY = window.scrollY;
+    document.documentElement.classList.add("no-scroll");
+    document.body.classList.add("no-scroll");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
   }
-  function showFieldError(fieldId, msg) {
-    const e = document.getElementById(`error-${fieldId}`);
-    const f = document.getElementById(`popup-${fieldId}`);
-    if (e) e.textContent = msg || '';
-    if (f) { f.classList.add('error'); f.classList.remove('success'); }
-    updateProgress();
+  lockCount++;
+}
+
+function unlockScroll() {
+  lockCount = Math.max(0, lockCount - 1);
+  if (lockCount > 0) return;
+
+  document.documentElement.classList.remove("no-scroll");
+  document.body.classList.remove("no-scroll");
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.width = "";
+
+  const oldBehavior = document.documentElement.style.scrollBehavior;
+  document.documentElement.style.scrollBehavior = 'auto';
+  requestAnimationFrame(() => {
+    window.scrollTo(0, scrollY);
+    document.documentElement.style.scrollBehavior = oldBehavior;
+  });
+}
+
+/* ---------- Utils ---------- */
+function normalizePhoneFR(raw) {
+  if (!raw) return null;
+  let v = String(raw).trim().replace(/[^\d+]/g, '');
+  if (v.startsWith('00')) v = '+' + v.slice(2);
+
+  if (v.startsWith('+33')) {
+    v = v.slice(3).replace(/^0+/, '');
+    return (/^\d{9}$/.test(v)) ? '+33' + v : null;
   }
-  function clearFieldError(fieldId) {
-    const e = document.getElementById(`error-${fieldId}`);
-    const f = document.getElementById(`popup-${fieldId}`);
-    if (e) e.textContent = '';
-    if (f) f.classList.remove('error');
+  if (v.startsWith('33')) {
+    v = v.slice(2).replace(/^0+/, '');
+    return (/^\d{9}$/.test(v)) ? '+33' + v : null;
   }
-  function showFieldSuccess(fieldId) {
-    const f = document.getElementById(`popup-${fieldId}`);
-    if (f) { f.classList.add('success'); f.classList.remove('error'); }
-    updateProgress();
+  const onlyDigits = v.replace(/\D/g, '');
+  if (/^0\d{9}$/.test(onlyDigits)) return '+33' + onlyDigits.slice(1);
+  if (/^\d{9}$/.test(onlyDigits)) return '+33' + onlyDigits;
+  return null;
+}
+
+function showFieldError(fieldId, message) {
+  const errorEl = document.getElementById(`error-${fieldId}`);
+  const fieldEl = document.getElementById(`popup-${fieldId}`);
+  if (errorEl) errorEl.textContent = message;
+  if (fieldEl) {
+    fieldEl.classList.add('error');
+    fieldEl.classList.remove('success');
   }
-  function clearAllErrors() {
-    ['prenom','telephone','code-postal','rgpd'].forEach(clearFieldError);
+  updateProgress();
+}
+function clearFieldError(fieldId) {
+  const errorEl = document.getElementById(`error-${fieldId}`);
+  const fieldEl = document.getElementById(`popup-${fieldId}`);
+  if (errorEl) errorEl.textContent = '';
+  if (fieldEl) fieldEl.classList.remove('error');
+}
+function showFieldSuccess(fieldId) {
+  const fieldEl = document.getElementById(`popup-${fieldId}`);
+  if (fieldEl) {
+    fieldEl.classList.add('success');
+    fieldEl.classList.remove('error');
   }
+  updateProgress();
+}
+function clearAllErrors() {
+  ['prenom', 'telephone', 'code-postal', 'rgpd'].forEach(clearFieldError);
+}
 
-  function setLoadingState(loading) {
-    if (submitBtn) {
-      submitBtn.disabled = loading;
-      submitBtn.classList.toggle("loading", loading);
-    }
-  }
-  function resetSubmitButton() {
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.classList.remove("loading");
-    }
-  }
-  function showMessage(text, type) {
-    if (!formMessage) return;
-    formMessage.textContent = text || '';
-    formMessage.className = `form-message premium ${type || 'success'}`;
-    formMessage.style.display = "block";
-  }
-  function hideMessage() { if (formMessage) formMessage.style.display = "none"; }
+/* ---------- Progress ---------- */
+function updateProgress() {
+  const requiredFields = ['popup-prenom', 'popup-telephone', 'popup-code-postal'];
+  const rgpdField = document.getElementById('popup-rgpd');
 
-  function updateProgress() {
-    const required = ['popup-prenom','popup-telephone','popup-code-postal'];
-    const rgpd = document.getElementById('popup-rgpd');
-    let completed = 0;
-    required.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && el.value.trim() && !el.classList.contains('error')) completed++;
-    });
-    const rg = rgpd && rgpd.checked ? 1 : 0;
-    const total = Math.min(100, ((completed/required.length)*85) + (rg*15));
-    if (progressFill) progressFill.style.width = `${total}%`;
-    const bar = document.querySelector('.progress-bar');
-    if (bar) bar.setAttribute('aria-valuenow', String(Math.round(total)));
-    if (progressText) {
-      progressText.textContent =
-        total < 30 ? "Étape 1/3 - Informations de base"
-      : total < 80 ? "Étape 2/3 - Presque terminé"
-                   : "Étape 3/3 - Prêt à envoyer !";
-    }
-  }
-  function createRipple(ev) {
-    try {
-      const btn = this || (ev && ev.currentTarget);
-      if (!btn || btn.disabled || btn.classList.contains('loading')) return;
-      const rect = btn.getBoundingClientRect();
-      const base = Math.min(rect.width, rect.height) || 56;
-      const size = Math.max(48, Math.min(120, Math.round(base*0.9)));
-      const cx = rect.left + rect.width/2, cy = rect.top + rect.height/2;
-      const clientX = (ev && typeof ev.clientX==='number') ? ev.clientX : cx;
-      const clientY = (ev && typeof ev.clientY==='number') ? ev.clientY : cy;
-      const x = clientX - rect.left, y = clientY - rect.top;
-      const old = btn.querySelector('.btn-ripple'); if (old) old.remove();
-      const ripple = document.createElement('div'); ripple.className='btn-ripple';
-      ripple.style.width=size+'px'; ripple.style.height=size+'px';
-      ripple.style.left=x+'px'; ripple.style.top=y+'px';
-      btn.appendChild(ripple);
-      ripple.addEventListener('animationend', ()=>ripple.remove(), {once:true});
-    } catch(err){ console.error('ripple error:', err); }
-  }
-
-  /* ---------- Public API open/close ---------- */
-  let __popupSuppressed = false;
-  window.openPopupForm = window.openPopupForm || function(type="header", opts={}) {
-    try {
-      const isForced = !!opts.force;
-      if (__popupSuppressed && !isForced) return false;
-      if (!popupOverlay || !popupForm)  return false;
-
-      const cfg = popupConfig[type] || popupConfig.header;
-      const pc  = readPageContext();
-
-      // Titre / sous-titre
-      const bodyData   = document.body?.dataset || {};
-      const ctxTitle   = bodyData.popupTitle?.trim()    || null;
-      const ctxSubtitle= bodyData.popupSubtitle?.trim() || null;
-      const title      = ctxTitle    || 'Contactez-nous';
-      const subtitle   = ctxSubtitle || 'Nous vous répondrons sous 4h ouvrées.';
-
-      if (popupTitle) {
-        const h2 = popupTitle.querySelector("h2");
-        const p  = popupTitle.querySelector("p");
-        if (h2) h2.textContent = title;
-        if (p)  { p.textContent = subtitle || ''; p.style.display = subtitle ? "" : "none"; }
-      }
-      if (urgenceBadge) urgenceBadge.style.display = cfg.showUrgence ? '' : 'none';
-
-      // dataset & inputs cachés
-      if (contactForm?.dataset) {
-        contactForm.dataset.source      = cfg.source || pc.trackingSource || 'popup';
-        contactForm.dataset.service     = pc.serviceKey;
-        contactForm.dataset.serviceLabel= pc.serviceLabel;
-      }
-      const ki = document.getElementById('popup-service-key');
-      const li = document.getElementById('popup-service-label');
-      const sj = document.getElementById('popup-subject');
-      if (ki) ki.value = pc.serviceKey;
-      if (li) li.value = pc.serviceLabel;
-      if (sj) sj.value = pc.presetSubject || `Devis ${pc.serviceLabel}`;
-
-      // Affichage + lock après activation
-      popupOverlay.classList.remove('active');
-      if (popupOverlay.hasAttribute('hidden')) popupOverlay.removeAttribute('hidden');
-      void popupOverlay.offsetWidth;
-      requestAnimationFrame(() => {
-        popupOverlay.classList.add('active');
-
-        // lock uniquement si l'overlay est actif
-        if (popupOverlay.classList.contains('active')) window.lockScroll();
-
-        // garde-fou : si l'activation échoue (CSS/transition), on déverrouille
-        setTimeout(() => {
-          if (!popupOverlay.classList.contains('active')) window.unlockScroll();
-        }, 450);
-      });
-
-      lastActive = document.activeElement;
-      setTimeout(() => {
-        const first = document.querySelector('#popupForm input, #popupForm button, #popupForm a');
-        if (first && typeof first.focus==='function') {
-          try { first.focus({preventScroll:true}); } catch { first.focus(); }
-        }
-      }, 200);
-
-      updateProgress();
-      if (typeof gtag!=="undefined") {
-        gtag("event","popup_open",{event_category:"engagement", event_label:type, forced:isForced});
-      }
-      return true;
-    } catch (e) {
-      console.error('[openPopupForm]', e);
-      try { window.unlockScroll(); } catch {}
-      return false;
-    }
-  };
-
-  window.closePopupForm = window.closePopupForm || function(){
-    if (!popupOverlay) return;
-    popupOverlay.classList.remove('active');
-    window.unlockScroll();
-
-    const onEnd = (e)=>{
-      if (e.target !== popupOverlay) return;
-      popupOverlay.setAttribute('hidden','');
-      popupOverlay.removeEventListener('transitionend', onEnd);
-
-      contactForm?.reset();
-      clearAllErrors(); hideMessage(); resetSubmitButton();
-      if (progressFill) progressFill.style.width = '0%';
-      const bar = document.querySelector('.progress-bar'); if (bar) bar.setAttribute('aria-valuenow','0');
-      if (progressText) progressText.textContent='Étape 1/3';
-
-      if (lastActive && typeof lastActive.focus==="function") {
-        try { lastActive.focus({preventScroll:true}); } catch { lastActive.focus(); }
-      }
-    };
-    popupOverlay.addEventListener('transitionend', onEnd, {once:true});
-  };
-
-  /* ---------- Écoutes UI ---------- */
-  if (closeBtn)      closeBtn.addEventListener("click", ()=>window.closePopupForm());
-  if (popupOverlay)  popupOverlay.addEventListener("click", (e)=>{ if (e.target===popupOverlay) window.closePopupForm(); });
-  document.addEventListener("keydown", (e)=>{ if (e.key==="Escape" && popupOverlay?.classList.contains("active")) window.closePopupForm(); });
-  if (submitBtn)     submitBtn.addEventListener('click', createRipple);
-
-  // Validation live
-  if (telephoneInput) {
-    telephoneInput.addEventListener("input", (e)=>{
-      const normalized = normalizePhoneFR(e.target.value);
-      if (telephoneE164) telephoneE164.value = normalized || '';
-      if (e.target.value.trim()) {
-        if (normalized) { clearFieldError('telephone'); showFieldSuccess('telephone'); }
-        else            { showFieldError('telephone','Format invalide. Ex: 0612345678 ou +33 6 12 34 56 78'); }
-      }
-    });
-  }
-  if (codePostalInput) {
-    codePostalInput.addEventListener("input", (e)=>{
-      let v = e.target.value.replace(/\D/g,"");
-      if (v.length>5) v = v.slice(0,5);
-      e.target.value = v;
-      if (v.length===5) { clearFieldError('code-postal'); showFieldSuccess('code-postal'); }
-      else if (v.length>0) { showFieldError('code-postal','Code postal doit contenir 5 chiffres'); }
-    });
-  }
-  if (prenomInput) {
-    prenomInput.addEventListener('input', (e)=>{ if (e.target.value.trim()) { clearFieldError('prenom'); showFieldSuccess('prenom'); } });
-  }
-
-  // Submit
-  if (contactForm) {
-    contactForm.addEventListener("submit", async (e)=>{
-      e.preventDefault();
-      setLoadingState(true); hideMessage(); clearAllErrors();
-      let hasErrors = false;
-
-      const prenom = (document.getElementById('popup-prenom')?.value || '').trim();
-      if (!prenom) { showFieldError('prenom','Le prénom est obligatoire'); hasErrors = true; }
-
-      const telNorm = normalizePhoneFR(telephoneInput?.value || '');
-      if (!telNorm) { showFieldError('telephone','Numéro invalide. Ex: 0612345678 ou +33 6 12 34 56 78'); hasErrors = true; }
-      else if (telephoneE164) { telephoneE164.value = telNorm; }
-
-      const cp = codePostalInput?.value || '';
-      if (!/^\d{5}$/.test(cp)) { showFieldError('code-postal','Code postal invalide (5 chiffres requis)'); hasErrors = true; }
-
-      const rgpdOk = document.getElementById('popup-rgpd')?.checked;
-      if (!rgpdOk) { showFieldError('rgpd',"Vous devez accepter l'utilisation de vos données"); hasErrors = true; }
-
-      if (hasErrors) { setLoadingState(false); return; }
-
-      try {
-        const fd = new FormData(contactForm);
-        const source = contactForm?.dataset?.source || "popup";
-        const res = await fetch("/api/contact", { method:"POST", body: fd });
-
-        if (res.ok) {
-          showMessage("Votre demande a été envoyée ! Nous vous recontactons rapidement.", "success");
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({ event:'lead_generated', formId:'popupLeadForm', source: source, formType:'devis', conversion_value:500 });
-          if (progressFill) progressFill.style.width = '100%';
-          const bar = document.querySelector('.progress-bar'); if (bar) bar.setAttribute('aria-valuenow','100');
-          if (progressText) progressText.textContent='Demande envoyée avec succès !';
-          if (typeof gtag!=="undefined") { gtag("event","form_submit",{event_category:"conversion",event_label:source,value:290}); }
-          setTimeout(()=>window.closePopupForm(), 3000);
-        } else {
-          const err = await res.text();
-          showMessage(err || "Erreur lors de l'envoi. Veuillez réessayer.", "error");
-        }
-      } catch (err) {
-        console.error("Erreur formulaire:", err);
-        showMessage("Erreur réseau. Veuillez réessayer ou nous appeler.", "error");
-      } finally {
-        setLoadingState(false);
-      }
-    });
-  }
-
-  // Analytics click-to-call
-  document.addEventListener('click', (e)=>{
-    const callBtn = e.target.closest?.('.btn-call.premium');
-    if (callBtn) {
-      const src = contactForm?.dataset?.source || 'popup';
-      if (typeof gtag!=="undefined") gtag("event","click_call_alt",{event_category:"engagement",event_label:src});
-    }
+  let completed = 0;
+  requiredFields.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.value.trim() && !el.classList.contains('error')) completed++;
   });
 
-  /* ---------- Catcher global des boutons d’ouverture (anti-freeze) ---------- */
-  (function setupSafeTriggerCatcher(){
-    function onPopupTrigger(e) {
-      const host = e.target.closest?.('[data-open-popup], [data-openpopup], [data-popup-open]');
-      if (!host) return;
+  const rgpdCompleted = rgpdField && rgpdField.checked ? 1 : 0;
+  const total = Math.min(100, ((completed / requiredFields.length) * 85) + (rgpdCompleted * 15));
 
-      const type =
-        host.getAttribute('data-open-popup') ||
-        host.getAttribute('data-openpopup') ||
-        host.getAttribute('data-popup-open') ||
-        'header';
+  if (progressFill) progressFill.style.width = `${total}%`;
+  const bar = document.querySelector('.progress-bar');
+  if (bar) bar.setAttribute('aria-valuenow', String(Math.round(total)));
 
-      // ⚠️ Ne bloque pas la navigation si openPopupForm n'est pas prêt
-      if (typeof window.openPopupForm !== 'function') return;
+  if (progressText) {
+    progressText.textContent =
+      total < 30 ? "Étape 1/3 - Informations de base" :
+      total < 80 ? "Étape 2/3 - Presque terminé" :
+                   "Étape 3/3 - Prêt à envoyer !";
+  }
+}
 
-      // Ici seulement on empêche la nav
-      e.preventDefault();
-      e.stopPropagation();
-      const ok = window.openPopupForm(type, { force:true });
+/* ---------- Ripple ---------- */
+function createRipple(ev) {
+  try {
+    const btn = this || (ev && ev.currentTarget);
+    if (!btn || btn.disabled || btn.classList.contains('loading')) return;
 
-      // Si jamais l'ouverture échoue, on s'assure de déverrouiller
-      if (!ok) { try { window.unlockScroll(); } catch {} }
+    const rect = btn.getBoundingClientRect();
+    const base = Math.min(rect.width, rect.height) || 56;
+    const size = Math.max(48, Math.min(120, Math.round(base * 0.9)));
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const clientX = (ev && typeof ev.clientX === 'number') ? ev.clientX : cx;
+    const clientY = (ev && typeof ev.clientY === 'number') ? ev.clientY : cy;
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    const old = btn.querySelector('.btn-ripple');
+    if (old) old.remove();
+
+    const ripple = document.createElement('div');
+    ripple.className = 'btn-ripple';
+    ripple.style.width = size + 'px';
+    ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    btn.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+  } catch (err) { console.error('ripple error:', err); }
+}
+
+/* ---------- Messages & submit state ---------- */
+function setLoadingState(loading) {
+  if (submitBtn) {
+    submitBtn.disabled = loading;
+    submitBtn.classList.toggle("loading", loading);
+  }
+}
+function resetSubmitButton() {
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("loading");
+  }
+}
+function showMessage(text, type) {
+  if (formMessage) {
+    formMessage.textContent = text;
+    formMessage.className = `form-message premium ${type}`;
+    formMessage.style.display = "block";
+  }
+}
+function hideMessage() { if (formMessage) formMessage.style.display = "none"; }
+
+/* ===================================================
+   API PUBLIQUE : open / close
+   + garde-fou anti-réouverture auto (suppression session)
+   =================================================== */
+let __popupSuppressed = false; // bloque réouverture auto pendant la session
+let __auto = { timeId: null, scrollHandler: null, exitHandler: null, scrollBound: false, exitBound: false };
+
+
+
+const TRUST_BADGES = {
+  klinova: [
+    "Techniciens certifiés & assurés",
+    "Réponse < 4h ouvrées",
+    "Données protégées RGPD"
+  ],
+  // fallback si besoin
+  default: [
+    "Techniciens certifiés & assurés",
+    "Réponse < 4h ouvrées",
+    "Données protégées RGPD"
+  ]
+};
+
+function renderTrustBadges(list) {
+  const tb = document.querySelector('.trust-badges');
+  if (!tb) return;
+  const icon1 = `
+    <div class="trust-icon-wrapper">
+     <svg class="trust-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>`;
+  const icon2 = `
+    <div class="trust-icon-wrapper">
+     <svg class="trust-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>`;
+  const icon3 = `
+    <div class="trust-icon-wrapper">
+      <svg class="trust-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+    </div>`;
+
+  const icons = [icon1, icon2, icon3];
+  tb.innerHTML = list.map((txt, i) => `
+    <div class="trust-item">
+      ${icons[i] || icon1}
+      <span>${txt}</span>
+    </div>
+  `).join('');
+}
+
+
+
+
+/* ⚠️ NOTE : on accepte un opts.force pour bypass la suppression sur clic */
+window.openPopupForm = window.openPopupForm || function (type = "header", opts = {}) {
+  const isForced = !!opts.force;
+  if (__popupSuppressed && !isForced) return; // auto bloqué, clic autorisé si force:true
+
+  const config = popupConfig[type] || popupConfig.header;
+
+  
+  // 🔄 Contexte dynamique depuis la page
+  const pc = readPageContext();
+
+  // 🟢 1. Mise à jour du titre et sous-titre
+   // --- Lecture du contexte (depuis <body>)
+  // --- Lecture du contexte (depuis <body>)
+const bodyData = document.body?.dataset || {};
+const ctxTitle = bodyData.popupTitle?.trim() || null;
+const ctxSubtitle = bodyData.popupSubtitle?.trim() || null;
+
+
+const creditBlock = document.getElementById('credit-impot-question');
+if (creditBlock) {
+  creditBlock.style.display = pc.creditImpotEnabled ? '' : 'none';
+}
+
+// --- Construction dynamique des textes
+// Fallbacks neutres (si une page ne fournit rien)
+const fallbackTitle = 'Contactez-nous';
+const fallbackSubtitle = 'Nous vous répondrons sous 4h ouvrées.';
+
+const title = ctxTitle || fallbackTitle;
+const subtitle = ctxSubtitle || fallbackSubtitle;
+
+// --- Injection dans le DOM
+popupTitle.querySelector("h2").textContent = title;
+popupTitle.querySelector("p").textContent = subtitle;
+
+// Masquer la ligne si pas de sous-titre
+if (!subtitle) popupTitle.querySelector("p").style.display = "none";
+else popupTitle.querySelector("p").style.display = "";
+
+
+  // 🟢 2. Trust badges adaptés à Klinova
+  const brand = document.body?.dataset?.brand || 'klinova';
+  renderTrustBadges(TRUST_BADGES[brand] || TRUST_BADGES.default);
+
+  // 🟢 3. Source et service (pour tracking et envoi)
+  if (contactForm?.dataset) {
+    contactForm.dataset.source = config.source || pc.trackingSource || 'popup';
+    contactForm.dataset.service = pc.serviceKey;
+    contactForm.dataset.serviceLabel = pc.serviceLabel;
+  }
+
+  // 🟢 4. Hidden inputs
+  const ki = document.getElementById('popup-service-key');
+  const li = document.getElementById('popup-service-label');
+  const sj = document.getElementById('popup-subject');
+  if (ki) ki.value = pc.serviceKey;
+  if (li) li.value = pc.serviceLabel;
+  if (sj) sj.value = pc.presetSubject || `Devis ${pc.serviceLabel}`;
+
+
+
+
+
+  popupOverlay.classList.remove('active');
+  if (popupOverlay.hasAttribute('hidden')) popupOverlay.removeAttribute('hidden');
+  void popupOverlay.offsetWidth;
+  requestAnimationFrame(() => popupOverlay.classList.add('active'));
+
+  lockScroll();
+  lastActive = document.activeElement;
+  setTimeout(() => {
+    const first = document.querySelector('#popupForm input, #popupForm button, #popupForm a');
+    if (first && typeof first.focus === 'function') {
+      try { first.focus({ preventScroll: true }); } catch { first.focus(); }
     }
-    document.addEventListener('click', onPopupTrigger, { capture:true });
-  })();
+  }, 200);
+  updateProgress();
 
-  /* ---------- Auto-triggers (facultatif, sûrs) ---------- */
-  (function setupAutoTriggers(){
-    if (!window.openPopupForm || !window.closePopupForm) return;
+  if (typeof gtag !== "undefined") {
+    gtag("event", "popup_open", { event_category: "engagement", event_label: type, forced: isForced });
+  }
+};
 
-    const UA = navigator.userAgent || '';
-    const isIOS = /\b(iPhone|iPad|iPod)\b/i.test(UA);
-    const isSafari = /Safari/i.test(UA) && !/Chrome|CriOS|FxiOS|EdgiOS/i.test(UA);
-    const PRUDENT_MOBILE = (isIOS && isSafari) || window.innerWidth < 380;
+window.closePopupForm = window.closePopupForm || function () {
 
-    const cfg = window.POPUP_TRIG || {
-      minTimeMs: PRUDENT_MOBILE ? 120000 : 100000,
-      minScrollPct: PRUDENT_MOBILE ? 70 : 65,
-      sessionCap: 1,
-      dayCap: 1,
-      snoozeDaysOnClose: 7,
-      snoozeDaysOnSubmit: 30,
-      minDelayFirstOpenMs: 20000,
-    };
 
-    const LS = (window.LS) || {
-      get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
-      set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-    };
+  popupOverlay.classList.remove('active');
+  unlockScroll();
 
-    const dayKey   = () => new Date().toISOString().slice(0,10);
-    const daysFrom = (ts) => (Date.now() - ts) / 86400000;
-    const getCountToday = (key) => (LS.get(key)?.byDay?.[dayKey()] || 0);
-    const incToday = (key) => {
-      const o = LS.get(key) || { byDay:{} };
-      const d = dayKey();
-      o.byDay[d] = (o.byDay[d] || 0) + 1;
-      LS.set(key, o);
-    };
+  const onEnd = (e) => {
+    if (e.target !== popupOverlay) return;
+    popupOverlay.setAttribute('hidden', '');
+    popupOverlay.removeEventListener('transitionend', onEnd);
 
-    const getScrollPct = () => {
-      const doc = document.documentElement;
-      const st = doc.scrollTop || document.body.scrollTop;
-      const sh = doc.scrollHeight || document.body.scrollHeight;
-      const ch = doc.clientHeight;
-      return sh <= ch ? 100 : Math.round((st / (sh - ch)) * 100);
-    };
+    // reset
+    contactForm?.reset();
+    clearAllErrors();
+    hideMessage();
+    resetSubmitButton();
+    if (progressFill) progressFill.style.width = '0%';
+    const bar = document.querySelector('.progress-bar');
+    if (bar) bar.setAttribute('aria-valuenow', '0');
+    if (progressText) progressText.textContent = 'Étape 1/3';
 
-    function eligible() {
-      if (__popupSuppressed) return false;
-      if (PRUDENT_MOBILE) return false;
-      if (!popupOverlay || !popupForm) return false;
-      if (popupOverlay.classList.contains('active')) return false;
-      if (location.pathname.startsWith('/contact')) return false;
-      if (location.hash === '#devis') return false;
-
-      const closedAt = LS.get('sp_popup_closedAt');
-      if (closedAt && daysFrom(closedAt) < cfg.snoozeDaysOnClose) return false;
-
-      const submittedAt = LS.get('sp_popup_submittedAt');
-      if (submittedAt && daysFrom(submittedAt) < cfg.snoozeDaysOnSubmit) return false;
-
-      if (sessionStorage.getItem('sp_popup_session_shown')) return false;
-      if (getCountToday('sp_popup_daily') >= cfg.dayCap) return false;
-
-      const consentBlocking = document.querySelector('[data-consent-blocking="true"]');
-      if (consentBlocking) return false;
-
-      if (performance.now() < cfg.minDelayFirstOpenMs) return false;
-
-      return true;
+    if (lastActive && typeof lastActive.focus === "function") {
+      try { lastActive.focus({ preventScroll: true }); } catch { lastActive.focus(); }
     }
+  };
+  popupOverlay.addEventListener('transitionend', onEnd, { once: true });
+};
 
-    function markShown(reason) {
-      sessionStorage.setItem('sp_popup_session_shown', '1');
-      incToday('sp_popup_daily');
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'popup_trigger', { reason, prudent_mobile: PRUDENT_MOBILE, once_per_session: true });
+/* ---------- Écoutes UI de base ---------- */
+if (closeBtn) closeBtn.addEventListener("click", () => window.closePopupForm());
+if (popupOverlay) {
+  popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) window.closePopupForm();
+  });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && popupOverlay?.classList.contains("active")) {
+    window.closePopupForm();
+  }
+});
+if (submitBtn) submitBtn.addEventListener('click', createRipple);
+
+/* ---------- Validation temps réel ---------- */
+if (telephoneInput) {
+  telephoneInput.addEventListener("input", (e) => {
+    const normalized = normalizePhoneFR(e.target.value);
+    if (telephoneE164) telephoneE164.value = normalized || '';
+    if (e.target.value.trim()) {
+      if (normalized) {
+        clearFieldError('telephone');
+        showFieldSuccess('telephone');
+      } else {
+        showFieldError('telephone', 'Format invalide. Ex: 0612345678 ou +33 6 12 34 56 78');
       }
     }
+  });
+}
+if (codePostalInput) {
+  codePostalInput.addEventListener("input", (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value.length > 5) value = value.slice(0, 5);
+    e.target.value = value;
+    if (value.length === 5) {
+      clearFieldError('code-postal');
+      showFieldSuccess('code-postal');
+    } else if (value.length > 0) {
+      showFieldError('code-postal', 'Code postal doit contenir 5 chiffres');
+    }
+  });
+}
+if (prenomInput) {
+  prenomInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      clearFieldError('prenom');
+      showFieldSuccess('prenom');
+    }
+  });
+}
 
-    let timeId=null, scrollBound=false, exitBound=false, scrollHandler=null, exitHandler=null;
+/* ---------- Submit ---------- */
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    setLoadingState(true);
+    hideMessage();
+    clearAllErrors();
 
-    function setupExit() {
-      if (PRUDENT_MOBILE || exitBound || !window.matchMedia('(pointer:fine)').matches) return;
-      exitHandler = (e) => {
-        if (e.clientY <= 0 && !e.relatedTarget && eligible()) {
-          window.openPopupForm('floating'); markShown('exit'); teardownExit();
+    let hasErrors = false;
+
+    const prenom = (document.getElementById('popup-prenom')?.value || '').trim();
+    if (!prenom) { showFieldError('prenom', 'Le prénom est obligatoire'); hasErrors = true; }
+
+    const telRaw = telephoneInput?.value || '';
+    const telNorm = normalizePhoneFR(telRaw);
+    if (!telNorm) {
+      showFieldError('telephone', 'Numéro invalide. Ex: 0612345678 ou +33 6 12 34 56 78');
+      hasErrors = true;
+    } else if (telephoneE164) {
+      telephoneE164.value = telNorm;
+    }
+
+    const codePostal = codePostalInput?.value || '';
+    if (!/^\d{5}$/.test(codePostal)) {
+      showFieldError('code-postal', 'Code postal invalide (5 chiffres requis)');
+      hasErrors = true;
+    }
+
+    const rgpd = document.getElementById('popup-rgpd')?.checked;
+    if (!rgpd) {
+      showFieldError('rgpd', 'Vous devez accepter l\'utilisation de vos données');
+      hasErrors = true;
+    }
+
+    if (hasErrors) { setLoadingState(false); return; }
+
+    try {
+      const formData = new FormData(contactForm);
+      const source = contactForm?.dataset?.source || "popup";
+      const response = await fetch("/api/contact", { method: "POST", body: formData });
+
+      if (response.ok) {
+        showMessage("Votre demande a été envoyée ! Nous vous recontactons rapidement.", "success");
+        
+          window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'lead_generated',
+    formId: 'popupLeadForm', 
+    source: source || 'popup',
+    formType: 'devis',
+    conversion_value: 500
+  });
+        
+        if (progressFill) progressFill.style.width = '100%';
+        const bar = document.querySelector('.progress-bar');
+        if (bar) bar.setAttribute('aria-valuenow', '100');
+        if (progressText) progressText.textContent = 'Demande envoyée avec succès !';
+
+        if (typeof gtag !== "undefined") {
+          gtag("event", "form_submit", { event_category: "conversion", event_label: source, value: 290 });
         }
-      };
-      document.addEventListener('mouseout', exitHandler, { passive:true });
-      exitBound = true;
-    }
-    function teardownExit() {
-      if (exitBound && exitHandler) {
-        document.removeEventListener('mouseout', exitHandler);
-        exitBound = false; exitHandler = null;
+
+        setTimeout(() => window.closePopupForm(), 3000);
+      } else {
+        const err = await response.text();
+        showMessage(err, "error");
       }
+    } catch (err) {
+      console.error("Erreur formulaire:", err);
+      showMessage("Erreur réseau. Veuillez réessayer ou nous appeler.", "error");
+    } finally {
+      setLoadingState(false);
     }
+  });
+}
 
-    function setupScroll() {
-      if (PRUDENT_MOBILE || scrollBound) return;
-      scrollHandler = () => {
-        if (getScrollPct() >= cfg.minScrollPct && eligible()) {
-          window.openPopupForm('floating'); markShown('scroll'); teardownScroll();
-        }
-      };
-      window.addEventListener('scroll', scrollHandler, { passive:true });
-      scrollBound = true;
+/* ---------- Analytics click-to-call ---------- */
+document.addEventListener('click', (e) => {
+  const callBtn = e.target.closest('.btn-call.premium');
+  if (callBtn) {
+    const src = contactForm?.dataset?.source || 'popup';
+    if (typeof gtag !== "undefined") {
+      gtag("event", "click_call_alt", { event_category: "engagement", event_label: src });
     }
-    function teardownScroll() {
-      if (scrollBound && scrollHandler) {
-        window.removeEventListener('scroll', scrollHandler);
-        scrollBound = false; scrollHandler = null;
+  }
+});
+
+/* ---------- Ouverture via data attributes (clic MANUEL -> force:true) ---------- */
+document.addEventListener('click', (e) => {
+  const trigger =
+    e.target.closest('[data-open-popup], [data-openpopup], [data-popup-open]');
+  if (!trigger) return;
+
+  e.preventDefault();
+  e.stopPropagation();
+
+  const type =
+    trigger.getAttribute('data-open-popup') ||
+    trigger.getAttribute('data-openpopup') ||
+    trigger.getAttribute('data-popup-open') ||
+    'header';
+
+  window.openPopupForm(type, { force: true });
+});
+
+/* ---------- Init progressive ---------- */
+document.addEventListener('DOMContentLoaded', updateProgress);
+
+/* ===================================================
+   MODULE TRIGGERS AUTO (mêmes paramètres qu’avant)
+   + désarmement sur fermeture & suppression session
+   =================================================== */
+(() => {
+  if (!window.openPopupForm || !window.closePopupForm) return;
+
+  const UA = navigator.userAgent || '';
+  const isIOS = /\b(iPhone|iPad|iPod)\b/i.test(UA);
+  const isSafari = /Safari/i.test(UA) && !/Chrome|CriOS|FxiOS|EdgiOS/i.test(UA);
+  const PRUDENT_MOBILE = (isIOS && isSafari) || window.innerWidth < 380;
+
+  const cfg = window.POPUP_TRIG || {
+    minTimeMs: PRUDENT_MOBILE ? 120000 : 100000,
+    minScrollPct: PRUDENT_MOBILE ? 70 : 65,
+    sessionCap: 1,
+    dayCap: 1,
+    snoozeDaysOnClose: 7,
+    snoozeDaysOnSubmit: 30,
+    minDelayFirstOpenMs: 20000,
+  };
+
+  const LS = (window.LS) || {
+    get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+    set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+
+  const dayKey = () => new Date().toISOString().slice(0,10);
+  const daysFrom = (ts) => (Date.now() - ts) / 86400000;
+  const getCountToday = (key) => (LS.get(key)?.byDay?.[dayKey()] || 0);
+  const incToday = (key) => {
+    const o = LS.get(key) || { byDay:{} };
+    const d = dayKey();
+    o.byDay[d]=(o.byDay[d]||0)+1;
+    LS.set(key,o);
+  };
+
+  const getScrollPct = () => {
+    const doc = document.documentElement;
+    const st = doc.scrollTop || document.body.scrollTop;
+    const sh = doc.scrollHeight || document.body.scrollHeight;
+    const ch = doc.clientHeight;
+    return sh <= ch ? 100 : Math.round((st / (sh - ch)) * 100);
+  };
+
+  function eligible() {
+    if (__popupSuppressed) return false;
+    if (PRUDENT_MOBILE) return false;
+    if (!popupOverlay || !popupForm) return false;
+    if (popupOverlay.classList.contains('active')) return false;
+    if (location.pathname.startsWith('/contact')) return false;
+    if (location.hash === '#devis') return false;
+
+    const closedAt = LS.get('sp_popup_closedAt');
+    if (closedAt && daysFrom(closedAt) < cfg.snoozeDaysOnClose) return false;
+
+    const submittedAt = LS.get('sp_popup_submittedAt');
+    if (submittedAt && daysFrom(submittedAt) < cfg.snoozeDaysOnSubmit) return false;
+
+    if (sessionStorage.getItem('sp_popup_session_shown')) return false;
+    if (getCountToday('sp_popup_daily') >= cfg.dayCap) return false;
+
+    const consentBlocking = document.querySelector('[data-consent-blocking="true"]');
+    if (consentBlocking) return false;
+
+    if (performance.now() < cfg.minDelayFirstOpenMs) return false;
+
+    return true;
+  }
+
+  function markShown(reason) {
+    sessionStorage.setItem('sp_popup_session_shown', '1');
+    incToday('sp_popup_daily');
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'popup_trigger', { reason, prudent_mobile: PRUDENT_MOBILE, once_per_session: true });
+    }
+  }
+
+  /* ---- Exit intent ---- */
+  function setupExit() {
+    if (PRUDENT_MOBILE) return;
+    if (!window.matchMedia('(pointer:fine)').matches) return;
+    if (__auto.exitBound) return;
+
+    __auto.exitHandler = (e) => {
+      if (e.clientY <= 0 && !e.relatedTarget && eligible()) {
+        window.openPopupForm('floating');
+        markShown('exit');
+        teardownExit(); // désarme juste après
       }
+    };
+    document.addEventListener('mouseout', __auto.exitHandler, { passive:true });
+    __auto.exitBound = true;
+  }
+  function teardownExit() {
+    if (__auto.exitBound && __auto.exitHandler) {
+      document.removeEventListener('mouseout', __auto.exitHandler);
+      __auto.exitBound = false;
+      __auto.exitHandler = null;
     }
+  }
 
-    function setupTime() {
-      if (PRUDENT_MOBILE || timeId) return;
-      timeId = window.setTimeout(() => {
-        timeId = null;
-        const engaged = getScrollPct() >= 25 && !document.hidden;
-        if (engaged && eligible()) { window.openPopupForm('floating'); markShown('time'); }
-      }, cfg.minTimeMs);
+  /* ---- Scroll ---- */
+  function setupScroll() {
+    if (PRUDENT_MOBILE) return;
+    if (__auto.scrollBound) return;
+
+    __auto.scrollHandler = () => {
+      if (getScrollPct() >= cfg.minScrollPct && eligible()) {
+        window.openPopupForm('floating');
+        markShown('scroll');
+        teardownScroll(); // désarme après déclenchement
+      }
+    };
+    window.addEventListener('scroll', __auto.scrollHandler, { passive:true });
+    __auto.scrollBound = true;
+  }
+  function teardownScroll() {
+    if (__auto.scrollBound && __auto.scrollHandler) {
+      window.removeEventListener('scroll', __auto.scrollHandler);
+      __auto.scrollBound = false;
+      __auto.scrollHandler = null;
     }
-    function teardownTime() { if (timeId) { clearTimeout(timeId); timeId=null; } }
+  }
 
-    // VisualViewport padding (clavier mobile)
-    if (window.visualViewport) {
-      const onVV = () => {
-        const kb = Math.max(0, window.innerHeight - visualViewport.height);
-        document.documentElement.style.setProperty('--kb', kb + 'px');
-      };
-      visualViewport.addEventListener('resize', onVV);
-      visualViewport.addEventListener('scroll', onVV);
-      onVV();
+  /* ---- Timer ---- */
+  function setupTime() {
+    if (PRUDENT_MOBILE) return;
+    if (__auto.timeId) return;
+
+    __auto.timeId = window.setTimeout(() => {
+      __auto.timeId = null;
+      const engaged = getScrollPct() >= 25 && !document.hidden;
+      if (engaged && eligible()) {
+        window.openPopupForm('floating');
+        markShown('time');
+      }
+    }, cfg.minTimeMs);
+  }
+  function teardownTime() {
+    if (__auto.timeId) {
+      clearTimeout(__auto.timeId);
+      __auto.timeId = null;
     }
+  }
 
-    // Hook fermeture/succès : snooze auto
-    const _close = window.closePopupForm;
-    window.closePopupForm = function() {
-      try { localStorage.setItem('sp_popup_closedAt', JSON.stringify(Date.now())); } catch {}
+  /* ---- VisualViewport padding (inchangé) ---- */
+  if (window.visualViewport) {
+    const onVV = () => {
+      const kb = Math.max(0, window.innerHeight - visualViewport.height);
+      document.documentElement.style.setProperty('--kb', kb + 'px');
+    };
+    visualViewport.addEventListener('resize', onVV);
+    visualViewport.addEventListener('scroll', onVV);
+    onVV();
+  }
+
+  /* ---- Hook fermeture / succès : sauvegarde + suppression session ---- */
+  const _close = window.closePopupForm;
+  window.closePopupForm = function() {
+    try { localStorage.setItem('sp_popup_closedAt', JSON.stringify(Date.now())); } catch {}
+    __popupSuppressed = true;        // 🔒 bloque les auto-triggers pour la session
+    teardownTime(); teardownScroll(); teardownExit(); // 🧯 coupe les triggers en cours
+    sessionStorage.setItem('sp_popup_session_shown', '1');
+    return _close.apply(this, arguments);
+  };
+
+  const _showMessage = window.showMessage || function(){};
+  window.showMessage = function(text, type) {
+    if (type === 'success') {
+      try { localStorage.setItem('sp_popup_submittedAt', JSON.stringify(Date.now())); } catch {}
       __popupSuppressed = true;
       teardownTime(); teardownScroll(); teardownExit();
       sessionStorage.setItem('sp_popup_session_shown', '1');
-      return _close.apply(this, arguments);
-    };
-    const _showMessage = window.showMessage || function(){};
-    window.showMessage = function(text, type) {
-      if (type === 'success') {
-        try { localStorage.setItem('sp_popup_submittedAt', JSON.stringify(Date.now())); } catch {}
-        __popupSuppressed = true;
-        teardownTime(); teardownScroll(); teardownExit();
-        sessionStorage.setItem('sp_popup_session_shown', '1');
-      }
-      return _showMessage.apply(this, arguments);
-    };
+    }
+    return _showMessage.apply(this, arguments);
+  };
 
-    window.addEventListener('load', ()=>{ setupExit(); setupScroll(); setupTime(); });
-  })();
-
-  /* ---------- Init simple ---------- */
-  document.addEventListener('DOMContentLoaded', updateProgress);
+  /* ---- Init ---- */
+  window.addEventListener('load', () => {
+    setupExit();
+    setupScroll();
+    setupTime();
+  });
 })();
 </script>
-
