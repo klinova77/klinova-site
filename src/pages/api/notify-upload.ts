@@ -2,9 +2,13 @@ export const prerender = false;
 export const config = { runtime: 'node' };
 
 import type { APIRoute } from 'astro';
-import { Resend } from 'resend';
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+export const POST: APIRoute = async ({ request }) => {
+  const { Resend } = await import('resend'); // 👈 import dynamique côté serveur
+  const resend = new Resend(import.meta.env.RESEND_API_KEY);
+  // ... le reste inchangé
+};
+
 
 const MAIL_TO = import.meta.env.MAIL_TO || 'klinova.contact@gmail.com';
 const BRAND_NAME = import.meta.env.BRAND_NAME || 'Klinova';
