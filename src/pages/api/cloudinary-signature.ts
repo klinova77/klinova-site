@@ -1,54 +1,113 @@
+// src/pages/api/cloudinary-signature.ts
 export const prerender = false;
 export const config = { runtime: 'node' };
 
 import type { APIRoute } from 'astro';
-import crypto from 'node:crypto';
+import { createHash } from 'crypto';
 
-const {
-  CLOUDINARY_API_SECRET,
-  CLOUDINARY_FOLDER_ROOT,
-  CLOUDINARY_UPLOAD_PRESET,
-  CLOUDINARY_API_KEY,
-  CLOUDINARY_CLOUD_NAME,
-} = import.meta.env;
+// Configuration Cloudinary (à ajouter dans vos variables d'environnement Vercel)
+const CLOUDINARY_CLOUD_NAME = import.meta.env.CLOUDINARY_CLOUD_NAME;
+const CLOUDINARY_API_KEY = import.meta.env.CLOUDINARY_API_KEY;
+const CLOUDINARY_API_SECRET = import.meta.env.CLOUDINARY_API_SECRET;
+const CLOUDINARY_UPLOAD_PRESET = import.meta.env.CLOUDINARY_UPLOAD_PRESET || 'ml_default';
+const CLOUDINARY_FOLDER = import.meta.env.CLOUDINARY_FOLDER || 'klinova/demandes';
 
-function generateSignature(params: Record<string, string | number>) {
-  const entries = Object.entries(params)
-    .filter(([k, v]) => v !== undefined && v !== '' && k !== 'file' && k !== 'tags')
-    .sort(([a], [b]) => a.localeCompare(b));
-  const toSign = entries.map(([k, v]) => `${k}=${v}`).join('&');
-  return crypto.createHash('sha1').update(`${toSign}${CLOUDINARY_API_SECRET}`).digest('hex');
+// Fonction pour générer la signature Cloudinary
+function generateSignature(params: Record<string, any>, apiSecret: string): string {
+  // Trier les paramètres par clé
+  const sortedParams = Object.keys(params)
+    .sort()
+    .map(key => `${key}=${params[key]}`)
+    .join('&');
+  
+  // Créer la signature avec le secret
+  return createHash('sha1')
+    .update(sortedParams + apiSecret)
+    .digest('hex');
 }
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const body = await request.json().catch(() => ({}));
-    const timestamp = Math.floor(Date.now() / 1000);
+    // Vérifier que les variables d'environnement sont définies
+    if (!CLOUDINARY_CLOUD_NAME || !CLOUDINARY_API_KEY || !CLOUDINARY_API_SECRET) {
+      console.error('Variables Cloudinary manquantes:', {
+        cloudName: !!CLOUDINARY_CLOUD_NAME,
+        apiKey: !!CLOUDINARY_API_KEY,
+        apiSecret: !!CLOUDINARY_API_SECRET
+      });
+      
+      return new Response(
+        JSON.stringify({ 
+          ok: false, 
+          error: 'Configuration Cloudinary manquante' 
+        }),
+        { 
+          status: 500,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
 
-    const params: Record<string, string | number> = {
-      timestamp,
-      folder: body.folder ?? (CLOUDINARY_FOLDER_ROOT || 'uploads'),
-      upload_preset: CLOUDINARY_UPLOAD_PRESET!,
-      // public_id: body.public_id,
-      // context: body.context,
-      // eager: 'f_webp,q_auto:good',
+    // Générer un timestamp
+    const timestamp = Math.round(Date.now() / 1000);
+    
+    // Paramètres pour la signature
+    const params = {
+      timestamp: timestamp,
+      folder: CLOUDINARY_FOLDER,
+      upload_preset: CLOUDINARY_UPLOAD_PRESET
     };
 
-    const signature = generateSignature(params);
+    // Générer la signature
+    const signature = generateSignature(params, CLOUDINARY_API_SECRET);
 
+    // Retourner la réponse avec toutes les infos nécessaires pour l'upload
     return new Response(
       JSON.stringify({
         ok: true,
         signature,
         timestamp,
-        apiKey: CLOUDINARY_API_KEY,
         cloudName: CLOUDINARY_CLOUD_NAME,
-        folder: params.folder,
-        uploadPreset: params.upload_preset,
+        apiKey: CLOUDINARY_API_KEY,
+        folder: CLOUDINARY_FOLDER,
+        uploadPreset: CLOUDINARY_UPLOAD_PRESET
       }),
-      { headers: { 'content-type': 'application/json' } }
+      {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      }
     );
-  } catch {
-    return new Response(JSON.stringify({ ok: false }), { status: 400 });
+
+  } catch (error: any) {
+    console.error('[Cloudinary] Erreur génération signature:', error);
+    
+    return new Response(
+      JSON.stringify({ 
+        ok: false, 
+        error: 'Erreur interne du serveur' 
+      }),
+      { 
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
   }
+};
+
+// GET pour healthcheck
+export const GET: APIRoute = async () => {
+  const configured = !!(CLOUDINARY_CLOUD_NAME && CLOUDINARY_API_KEY && CLOUDINARY_API_SECRET);
+  
+  return new Response(
+    JSON.stringify({ 
+      ok: true, 
+      endpoint: 'cloudinary-signature',
+      configured,
+      cloudName: CLOUDINARY_CLOUD_NAME || 'non-configuré'
+    }),
+    { 
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    }
+  );
 };

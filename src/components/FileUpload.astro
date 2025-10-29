@@ -1,0 +1,316 @@
+---
+// src/components/FileUpload.astro
+interface Props {
+  maxFiles?: number;
+  maxSizeMB?: number;
+  accept?: string;
+  label?: string;
+  containerClass?: string;
+  disabled?: boolean;
+}
+
+const {
+  maxFiles = 5,
+  maxSizeMB = 8,
+  accept = "image/*,application/pdf",
+  label = "Photos / PDF (optionnel)",
+  containerClass = "",
+  disabled = false
+} = Astro.props;
+
+const maxBytes = maxSizeMB * 1024 * 1024;
+---
+
+<div class={`space-y-3 ${containerClass}`}>
+  <label for="file-upload" class="block text-sm font-medium text-[#1E2939]">
+    {label}
+    <span class="text-[#475569] text-xs ml-1">
+      (max {maxFiles} fichiers, {maxSizeMB} Mo chacun)
+    </span>
+  </label>
+  
+  <!-- Input file -->
+  <div class="relative">
+    <input
+      id="file-upload"
+      name="photos_local"
+      type="file"
+      multiple
+      accept={accept}
+      disabled={disabled}
+      class="block w-full text-sm text-[#475569] file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-[#3F8D65] file:text-white hover:file:bg-[#387B58] file:cursor-pointer cursor-pointer border border-[#E5E7EB] rounded-lg p-2 focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+    />
+  </div>
+
+  <!-- Zone de progression -->
+  <div id="upload-progress" class="hidden space-y-2">
+    <div class="text-sm font-medium text-[#1E2939]">Upload en cours...</div>
+    <div class="w-full bg-gray-200 rounded-full h-2">
+      <div id="progress-bar" class="bg-[#3F8D65] h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <!-- Liste des fichiers -->
+  <div id="file-list" class="space-y-2"></div>
+
+  <!-- Container pour les URLs Cloudinary (hidden inputs) -->
+  <div id="cloudinary-urls" class="hidden"></div>
+</div>
+
+<style>
+  /* Style amélioré pour le file input */
+  input[type="file"]::file-selector-button {
+    @apply mr-4 py-2 px-4 rounded-lg border-0 text-sm font-medium bg-[#3F8D65] text-white cursor-pointer;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    @apply bg-[#387B58];
+  }
+</style>
+
+<script type="module" define:vars={{ maxFiles, maxBytes }}>
+(function() {
+  const fileInput = document.getElementById('file-upload');
+  const progressContainer = document.getElementById('upload-progress');
+  const progressBar = document.getElementById('progress-bar');
+  const fileList = document.getElementById('file-list');
+  const cloudinaryUrls = document.getElementById('cloudinary-urls');
+  
+  if (!fileInput || !progressContainer || !progressBar || !fileList || !cloudinaryUrls) {
+    console.error('Éléments FileUpload manquants');
+    return;
+  }
+
+  let uploadedFiles = [];
+
+  // Fonction pour valider les fichiers
+  function validateFiles(files) {
+    const errors = [];
+    
+    if (files.length > maxFiles) {
+      errors.push(`Maximum ${maxFiles} fichiers autorisés`);
+    }
+    
+    for (const file of files) {
+      if (file.size > maxBytes) {
+        errors.push(`${file.name}: fichier trop volumineux (max ${Math.round(maxBytes / 1024 / 1024)}Mo)`);
+      }
+    }
+    
+    return errors;
+  }
+
+  // Fonction pour afficher un fichier dans la liste
+  function displayFile(file, status = 'waiting') {
+    const fileItem = document.createElement('div');
+    fileItem.className = 'flex items-center justify-between p-3 bg-[#FCFCFC] border border-[#E5E7EB] rounded-lg';
+    fileItem.dataset.fileName = file.name;
+    
+    const statusColors = {
+      waiting: 'text-[#475569]',
+      uploading: 'text-blue-600',
+      success: 'text-green-600',
+      error: 'text-red-600'
+    };
+    
+    const statusIcons = {
+      waiting: '⏳',
+      uploading: '⬆️',
+      success: '✅',
+      error: '❌'
+    };
+    
+    fileItem.innerHTML = `
+      <div class="flex items-center space-x-3">
+        <span class="text-lg">${statusIcons[status]}</span>
+        <div>
+          <div class="text-sm font-medium text-[#1E2939]">${file.name}</div>
+          <div class="text-xs text-[#475569]">${(file.size / 1024 / 1024).toFixed(1)} Mo</div>
+        </div>
+      </div>
+      <div class="text-sm ${statusColors[status]}">
+        ${status === 'waiting' ? 'En attente' : 
+          status === 'uploading' ? 'Upload...' :
+          status === 'success' ? 'Terminé' : 'Erreur'}
+      </div>
+    `;
+    
+    fileList.appendChild(fileItem);
+    return fileItem;
+  }
+
+  // Fonction pour mettre à jour le statut d'un fichier
+  function updateFileStatus(fileName, status, message = '') {
+    const fileItem = fileList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!fileItem) return;
+    
+    const statusElement = fileItem.querySelector('.text-sm:last-child');
+    const icon = fileItem.querySelector('.text-lg');
+    
+    const statusColors = {
+      waiting: 'text-[#475569]',
+      uploading: 'text-blue-600',
+      success: 'text-green-600',
+      error: 'text-red-600'
+    };
+    
+    const statusIcons = {
+      waiting: '⏳',
+      uploading: '⬆️',
+      success: '✅',
+      error: '❌'
+    };
+    
+    if (statusElement) {
+      statusElement.className = `text-sm ${statusColors[status]}`;
+      statusElement.textContent = message || {
+        waiting: 'En attente',
+        uploading: 'Upload...',
+        success: 'Terminé',
+        error: 'Erreur'
+      }[status];
+    }
+    
+    if (icon) {
+      icon.textContent = statusIcons[status];
+    }
+  }
+
+  // Fonction pour obtenir la signature Cloudinary
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  // Fonction pour uploader un fichier vers Cloudinary
+  async function uploadToCloudinary(file, signature) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('api_key', signature.apiKey);
+    formData.append('timestamp', String(signature.timestamp));
+    formData.append('signature', signature.signature);
+    formData.append('folder', signature.folder);
+    formData.append('upload_preset', signature.uploadPreset);
+    
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+    
+    const response = await fetch(uploadUrl, {
+      method: 'POST',
+      body: formData
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Upload échoué: ${response.status}`);
+    }
+    
+    return response.json();
+  }
+
+  // Fonction pour ajouter une URL Cloudinary au formulaire
+  function addCloudinaryUrl(url) {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'photos[]';
+    input.value = url;
+    cloudinaryUrls.appendChild(input);
+  }
+
+  // Fonction principale d'upload
+  async function handleUpload(files) {
+    const errors = validateFiles(files);
+    
+    if (errors.length > 0) {
+      alert('Erreurs:\n' + errors.join('\n'));
+      return false;
+    }
+
+    // Afficher les fichiers
+    for (const file of files) {
+      displayFile(file, 'waiting');
+    }
+
+    try {
+      // Obtenir la signature
+      const signature = await getCloudinarySignature();
+      
+      // Afficher la barre de progression
+      progressContainer.classList.remove('hidden');
+      
+      let uploadedCount = 0;
+      const totalFiles = files.length;
+      
+      // Uploader chaque fichier
+      for (const file of files) {
+        try {
+          updateFileStatus(file.name, 'uploading');
+          
+          const result = await uploadToCloudinary(file, signature);
+          
+          // Ajouter l'URL au formulaire
+          addCloudinaryUrl(result.secure_url);
+          uploadedFiles.push(result);
+          
+          updateFileStatus(file.name, 'success');
+          uploadedCount++;
+          
+          // Mettre à jour la progress bar
+          const progress = (uploadedCount / totalFiles) * 100;
+          progressBar.style.width = `${progress}%`;
+          
+        } catch (error) {
+          console.error(`Erreur upload ${file.name}:`, error);
+          updateFileStatus(file.name, 'error', error.message);
+        }
+      }
+      
+      // Masquer la barre après un délai
+      setTimeout(() => {
+        progressContainer.classList.add('hidden');
+        progressBar.style.width = '0%';
+      }, 2000);
+      
+      return uploadedCount > 0;
+      
+    } catch (error) {
+      console.error('Erreur upload:', error);
+      alert('Erreur lors de l\'upload: ' + error.message);
+      
+      // Masquer la barre de progression
+      progressContainer.classList.add('hidden');
+      progressBar.style.width = '0%';
+      
+      return false;
+    }
+  }
+
+  // Event listener sur le changement de fichier
+  fileInput.addEventListener('change', async (event) => {
+    const files = Array.from(event.target.files || []);
+    
+    if (files.length === 0) return;
+    
+    // Réinitialiser la liste
+    fileList.innerHTML = '';
+    cloudinaryUrls.innerHTML = '';
+    uploadedFiles = [];
+    
+    await handleUpload(files);
+  });
+
+  // Exposer les données pour le formulaire parent
+  window.fileUploadData = {
+    getUploadedFiles: () => uploadedFiles,
+    hasFiles: () => uploadedFiles.length > 0
+  };
+})();
+</script>
