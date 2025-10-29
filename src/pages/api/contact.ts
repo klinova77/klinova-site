@@ -18,17 +18,33 @@ const RESEND_FROM         = import.meta.env.RESEND_FROM         || `${BRAND_NAME
 
 // ─────────── Utils ───────────
 const wantsJSON = (h: Headers) => (h.get('accept') || '').toLowerCase().includes('application/json');
-const isEmail = (s = '') => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.trim());
+
+// Regex sécurisées
+const isEmail = (s = '') => {
+  const emailRegex = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
+  return emailRegex.test(s.trim());
+};
 
 function normalizePhoneFR(raw?: string | null): string | null {
   if (!raw) return null;
   let v = String(raw).trim().replace(/[^\d+]/g, '');
   if (v.startsWith('00')) v = '+' + v.slice(2);
-  if (v.startsWith('+33')) { v = v.slice(3).replace(/^0+/, ''); return /^\d{9}$/.test(v) ? '+33' + v : null; }
-  if (v.startsWith('33'))  { v = v.slice(2).replace(/^0+/, ''); return /^\d{9}$/.test(v) ? '+33' + v : null; }
+  if (v.startsWith('+33')) { 
+    v = v.slice(3).replace(/^0+/, ''); 
+    const nineDigitsRegex = new RegExp('^\\d{9}$');
+    return nineDigitsRegex.test(v) ? '+33' + v : null; 
+  }
+  if (v.startsWith('33'))  { 
+    v = v.slice(2).replace(/^0+/, ''); 
+    const nineDigitsRegex = new RegExp('^\\d{9}$');
+    return nineDigitsRegex.test(v) ? '+33' + v : null; 
+  }
   const digits = v.replace(/\D/g, '');
-  if (/^0\d{9}$/.test(digits)) return '+33' + digits.slice(1);
-  if (/^\d{9}$/.test(digits)) return '+33' + digits;
+  const tenDigitsRegex = new RegExp('^0\\d{9}$');
+  const nineDigitsRegex = new RegExp('^\\d{9}$');
+  
+  if (tenDigitsRegex.test(digits)) return '+33' + digits.slice(1);
+  if (nineDigitsRegex.test(digits)) return '+33' + digits;
   return null;
 }
 
@@ -97,12 +113,17 @@ export const POST: APIRoute = async ({ request, redirect }) => {
         ? new Response(JSON.stringify({ ok: false, error: msg }), { status: 400, headers: { 'content-type': 'application/json' } })
         : new Response(msg, { status: 400 });
     }
-    if (code_postal && !/^\d{5}$/.test(code_postal)) {
-      const msg = 'Code postal invalide (5 chiffres requis)';
-      return wantsJSON(request.headers)
-        ? new Response(JSON.stringify({ ok: false, error: msg }), { status: 400, headers: { 'content-type': 'application/json' } })
-        : new Response(msg, { status: 400 });
+    
+    if (code_postal && code_postal.length > 0) {
+      const cpRegex = new RegExp('^\\d{5}$');
+      if (!cpRegex.test(code_postal)) {
+        const msg = 'Code postal invalide (5 chiffres requis)';
+        return wantsJSON(request.headers)
+          ? new Response(JSON.stringify({ ok: false, error: msg }), { status: 400, headers: { 'content-type': 'application/json' } })
+          : new Response(msg, { status: 400 });
+      }
     }
+    
     if (email && !isEmail(email)) {
       const msg = 'Email invalide';
       return wantsJSON(request.headers)
