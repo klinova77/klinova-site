@@ -1012,10 +1012,21 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
             <p class="text-[#475569] mb-6">Décrivez votre projet, nous vous recontactons rapidement</p>
 
             <form 
+              action="/api/contact"
+              method="POST"
               class="space-y-4"
+              id="homepage-devis-form"
               data-form="homepage-final"
               data-source="homepage-cta-final"
             >
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
+
+              <!-- Champs cachés pour tracking -->
+              <input type="hidden" name="service" value="Demande de devis - Page d'accueil">
+              <input type="hidden" name="source" value="homepage-cta-final">
+              <input type="hidden" name="rgpd" value="accepte">
+
               <!-- Nom -->
               <div>
                 <label for="nom" class="block text-sm font-medium mb-2 text-[#1E2939]">
@@ -1075,13 +1086,10 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
                 ></textarea>
               </div>
 
-              <!-- Champs cachés pour tracking -->
-              <input type="hidden" name="service" value="Demande générale">
-              <input type="hidden" name="source" value="homepage-cta-final">
-
               <!-- Submit -->
               <button
                 type="submit"
+                id="submit-homepage-btn"
                 class="w-full bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:translate-y-[-1px] flex items-center justify-center gap-2"
                 data-conversion-action="form-submit-homepage"
               >
@@ -1147,41 +1155,91 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
     }, { threshold: 0.1 });
     els.forEach(el => io.observe(el));
 
-    // Gestion du formulaire
-    const form = document.querySelector('[data-form="homepage-final"]');
-    if (form) {
-      form.addEventListener('submit', function(e) {
+    // Gestion du formulaire avec API contact
+    const form = document.getElementById('homepage-devis-form');
+    const submitBtn = document.getElementById('submit-homepage-btn');
+    
+    if (form && submitBtn) {
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Tracking Google Analytics
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'homepage_final_cta',
-            form_type: 'devis_general'
-          });
-        }
-
-        // Ici, ajoutez votre logique d'envoi du formulaire
-        // (intégration avec votre backend, service email, etc.)
+        // Désactiver le bouton et changer le texte
+        const originalHTML = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span>Envoi en cours...</span>
+          <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        `;
         
-        // Exemple de feedback utilisateur
-        const button = form.querySelector('button[type="submit"]');
-        const originalText = button.innerHTML;
-        button.innerHTML = '<span>Envoi en cours...</span>';
-        button.disabled = true;
+        try {
+          // Tracking Google Analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', {
+              form_location: 'homepage_final_cta',
+              form_type: 'devis_general'
+            });
+          }
 
-        // Simulation envoi (remplacez par votre vraie logique)
-        setTimeout(() => {
-          button.innerHTML = '<span>Message envoyé ✓</span>';
+          // Tracking dataLayer
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              event: 'lead_generated',
+              form_type: 'homepage_devis',
+              service: 'Demande de devis - Page d\'accueil',
+              source: 'homepage-cta-final'
+            });
+          }
+
+          // Envoyer le formulaire vers l'API
+          const formData = new FormData(form);
+          
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            // Succès
+            submitBtn.innerHTML = `
+              <span>Message envoyé ✓</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            `;
+            
+            // Reset après 3 secondes
+            setTimeout(() => {
+              submitBtn.innerHTML = originalHTML;
+              submitBtn.disabled = false;
+              form.reset();
+            }, 3000);
+            
+          } else {
+            throw new Error('Erreur lors de l\'envoi');
+          }
+          
+        } catch (error) {
+          console.error('Erreur formulaire homepage:', error);
+          
+          // Afficher l'erreur
+          submitBtn.innerHTML = `
+            <span>Erreur - Réessayer</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.728-.833-2.5 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+          `;
+          
+          // Reset après 3 secondes
           setTimeout(() => {
-            button.innerHTML = originalText;
-            button.disabled = false;
-            form.reset();
-          }, 2000);
-        }, 1000);
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+          }, 3000);
+        }
       });
     }
   });
 </script>
-
 </Layout>
