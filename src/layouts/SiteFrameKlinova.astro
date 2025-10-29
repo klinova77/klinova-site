@@ -1,0 +1,111 @@
+---
+// src/layouts/SiteFrameKlinova.astro
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PopupForm from "../components/PopupForm.astro";
+
+interface PopupCtx {
+  serviceKey?: string;
+  serviceLabel?: string;
+  trackingSource?: string;
+  presetSubject?: string | null;
+  popupTitle?: string | null;
+  popupSubtitle?: string | null;
+  creditImpotEnabled?: boolean;
+}
+
+interface Props {
+  popupContext?: PopupCtx;
+  seo?: { title?: string; description?: string; lang?: string };
+}
+
+const { popupContext, seo } = Astro.props as Props;
+
+const defaults: Required<PopupCtx> = {
+  serviceKey: "general",
+  serviceLabel: "Service Klinova",
+  trackingSource: "popup-general",
+  presetSubject: null,
+  popupTitle: null,
+  popupSubtitle: null,
+  creditImpotEnabled: false
+};
+
+const ctx = { ...defaults, ...(popupContext || {}) };
+---
+
+<!-- Injecte le preload font DANS le head du layout parent -->
+<Fragment slot="head">
+  <link
+    rel="preload"
+    href="/fonts/CaviarDreams-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+</Fragment>
+
+<!-- Pose les data-* sur <body> existant -->
+<script is:inline define:vars={{ ctx, popupContext }}>
+  document.body.setAttribute('data-service-key', ctx.serviceKey);
+  document.body.setAttribute('data-service-label', ctx.serviceLabel);
+  document.body.setAttribute('data-tracking-source', ctx.trackingSource);
+  document.body.setAttribute('data-preset-subject', ctx.presetSubject || '');
+  document.body.setAttribute('data-popup-title', popupContext?.popupTitle || '');
+  document.body.setAttribute('data-popup-subtitle', popupContext?.popupSubtitle || '');
+  document.body.setAttribute('data-credit-impot', popupContext?.creditImpotEnabled ? '1' : '0');
+</script>
+
+<Header />
+
+<main class="min-h-[60vh]">
+  <slot />
+</main>
+
+<Footer />
+
+<!-- Popup unique, global -->
+<PopupForm />
+
+<!-- Analytics événementiels -->
+<script is:inline>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+
+    window.addEventListener('sp:popup_open', (e) => {
+      const type = (e && e.detail && e.detail.type) || 'unknown';
+      window.dataLayer.push({
+        event: 'popup_open',
+        popup_type: type,
+        page_type: 'site',
+        service_key: document.body?.dataset?.serviceKey,
+        service_label: document.body?.dataset?.serviceLabel
+      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'popup_open', {
+          event_category: 'engagement',
+          event_label: type
+        });
+      }
+    });
+
+    window.addEventListener('sp:popup_close', () => {
+      window.dataLayer.push({
+        event: 'popup_close',
+        page_type: 'site',
+        service_key: document.body?.dataset?.serviceKey,
+        service_label: document.body?.dataset?.serviceLabel
+      });
+    });
+
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    if (!sessionStorage.getItem('_scroll_reset_done')) {
+      window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+        sessionStorage.setItem('_scroll_reset_done', '1');
+      }, { once: true });
+    }
+  })();
+</script>

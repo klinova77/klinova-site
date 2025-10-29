@@ -1,0 +1,441 @@
+---
+// src/pages/test-cloudinary.astro
+export const prerender = false;
+
+import LayoutWithCTA from '../layouts/LayoutWithCTA.astro';
+
+const seo = {
+  title: "Test Cloudinary - Klinova",
+  description: "Page de test pour l'upload de fichiers avec Cloudinary"
+};
+---
+
+<LayoutWithCTA title={seo.title} description={seo.description} noindex={true}>
+  <main class="container-responsive py-12 space-y-12">
+    
+    <!-- Header de test -->
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-[#1E2939] mb-4">Test Cloudinary - Klinova</h1>
+      <p class="text-[#475569] text-lg">Testez l'upload de photos avec intégration Cloudinary</p>
+    </div>
+
+    <!-- Test du formulaire avec upload intégré -->
+    <section>
+      <div class="bg-white rounded-xl shadow-sm border border-[#E5E7EB] p-8">
+        <h2 class="text-2xl font-semibold text-[#1E2939] mb-6">Test formulaire avec upload</h2>
+        
+        <form action="/api/contact" method="POST" class="space-y-6" id="test-form">
+          <!-- Honeypot -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
+          
+          <!-- Champs cachés -->
+          <input type="hidden" name="source" value="test-cloudinary" />
+          <input type="hidden" name="service" value="Test upload Cloudinary" />
+          <input type="hidden" name="rgpd" value="accepte" />
+
+          <!-- Champs de base -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-[#1E2939] mb-2">Prénom</label>
+              <input
+                id="prenom"
+                name="prenom"
+                type="text"
+                value="Test"
+                class="w-full px-4 py-3 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent"
+                placeholder="Votre prénom"
+              />
+            </div>
+            <div>
+              <label for="nom" class="block text-sm font-medium text-[#1E2939] mb-2">Nom</label>
+              <input
+                id="nom"
+                name="nom"
+                type="text"
+                value="Cloudinary"
+                class="w-full px-4 py-3 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent"
+                placeholder="Votre nom"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-sm font-medium text-[#1E2939] mb-2">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value="test@klinova.fr"
+                class="w-full px-4 py-3 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent"
+                placeholder="test@example.com"
+              />
+            </div>
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Téléphone <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="telephone"
+                name="telephone"
+                type="tel"
+                required
+                value="06 76 73 86 61"
+                class="w-full px-4 py-3 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent"
+                placeholder="06 12 34 56 78"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-[#1E2939] mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent resize-none"
+              placeholder="Décrivez votre demande..."
+            >Test d'upload Cloudinary depuis le formulaire de test.</textarea>
+          </div>
+
+          <!-- Zone upload de fichiers -->
+          <div class="border-t border-[#E5E7EB] pt-6">
+            <div class="space-y-3">
+              <label for="file-upload" class="block text-sm font-medium text-[#1E2939]">
+                Photos / PDF (optionnel)
+                <span class="text-[#475569] text-xs ml-1">(max 5 fichiers, 8 Mo chacun)</span>
+              </label>
+              
+              <div class="relative">
+                <input
+                  id="file-upload"
+                  name="photos_local"
+                  type="file"
+                  multiple
+                  accept="image/*,application/pdf"
+                  class="block w-full text-sm text-[#475569] file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-[#3F8D65] file:text-white hover:file:bg-[#387B58] file:cursor-pointer cursor-pointer border border-[#E5E7EB] rounded-lg p-2 focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent"
+                />
+              </div>
+
+              <!-- Zone de progression -->
+              <div id="upload-progress" class="hidden space-y-2">
+                <div class="text-sm font-medium text-[#1E2939]">Upload en cours...</div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div id="progress-bar" class="bg-[#3F8D65] h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <!-- Liste des fichiers -->
+              <div id="file-list" class="space-y-2"></div>
+
+              <!-- Container pour les URLs Cloudinary -->
+              <div id="cloudinary-urls" class="hidden"></div>
+            </div>
+          </div>
+
+          <!-- Bouton submit -->
+          <div class="pt-6">
+            <button
+              type="submit"
+              id="submit-btn"
+              class="w-full md:w-auto px-8 py-3 bg-[#3F8D65] hover:bg-[#387B58] text-white font-medium rounded-lg transition-colors focus:ring-2 focus:ring-[#3F8D65] focus:ring-offset-2"
+            >
+              Envoyer le test
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Test API -->
+    <section>
+      <div class="bg-white rounded-xl shadow-sm border border-[#E5E7EB] p-8">
+        <h2 class="text-2xl font-semibold text-[#1E2939] mb-6">Test API</h2>
+        
+        <div class="space-y-4">
+          <p class="text-[#475569]">Vérifiez la configuration des API :</p>
+          
+          <div class="flex flex-wrap gap-4">
+            <button
+              id="test-cloudinary-api"
+              class="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Tester API Cloudinary
+            </button>
+            
+            <button
+              id="test-contact-api"
+              class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Tester API Contact
+            </button>
+          </div>
+          
+          <div id="api-results" class="mt-4 p-4 bg-gray-50 rounded-lg hidden">
+            <pre id="api-output" class="text-sm overflow-auto"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</LayoutWithCTA>
+
+<script type="module">
+(function() {
+  // Variables pour l'upload
+  const fileInput = document.getElementById('file-upload');
+  const progressContainer = document.getElementById('upload-progress');
+  const progressBar = document.getElementById('progress-bar');
+  const fileList = document.getElementById('file-list');
+  const cloudinaryUrls = document.getElementById('cloudinary-urls');
+  const form = document.getElementById('test-form');
+  const submitBtn = document.getElementById('submit-btn');
+  
+  const maxFiles = 5;
+  const maxBytes = 8 * 1024 * 1024; // 8 Mo
+  let uploadedFiles = [];
+
+  // Fonctions utilitaires
+  function displayFile(file, status = 'waiting') {
+    const fileItem = document.createElement('div');
+    fileItem.className = 'flex items-center justify-between p-3 bg-[#FCFCFC] border border-[#E5E7EB] rounded-lg';
+    fileItem.dataset.fileName = file.name;
+    
+    const statusIcons = {
+      waiting: '⏳',
+      uploading: '⬆️',
+      success: '✅',
+      error: '❌'
+    };
+    
+    const statusColors = {
+      waiting: 'text-[#475569]',
+      uploading: 'text-blue-600',
+      success: 'text-green-600',
+      error: 'text-red-600'
+    };
+    
+    fileItem.innerHTML = `
+      <div class="flex items-center space-x-3">
+        <span class="text-lg">${statusIcons[status]}</span>
+        <div>
+          <div class="text-sm font-medium text-[#1E2939]">${file.name}</div>
+          <div class="text-xs text-[#475569]">${(file.size / 1024 / 1024).toFixed(1)} Mo</div>
+        </div>
+      </div>
+      <div class="text-sm ${statusColors[status]}">
+        ${status === 'waiting' ? 'En attente' : 
+          status === 'uploading' ? 'Upload...' :
+          status === 'success' ? 'Terminé' : 'Erreur'}
+      </div>
+    `;
+    
+    fileList.appendChild(fileItem);
+    return fileItem;
+  }
+
+  function updateFileStatus(fileName, status) {
+    const fileItem = fileList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!fileItem) return;
+    
+    const statusElement = fileItem.querySelector('.text-sm:last-child');
+    const icon = fileItem.querySelector('.text-lg');
+    
+    const statusColors = {
+      waiting: 'text-[#475569]',
+      uploading: 'text-blue-600',
+      success: 'text-green-600',
+      error: 'text-red-600'
+    };
+    
+    const statusIcons = {
+      waiting: '⏳',
+      uploading: '⬆️',
+      success: '✅',
+      error: '❌'
+    };
+    
+    if (statusElement) {
+      statusElement.className = `text-sm ${statusColors[status]}`;
+      statusElement.textContent = {
+        waiting: 'En attente',
+        uploading: 'Upload...',
+        success: 'Terminé',
+        error: 'Erreur'
+      }[status];
+    }
+    
+    if (icon) {
+      icon.textContent = statusIcons[status];
+    }
+  }
+
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file, signature) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('api_key', signature.apiKey);
+    formData.append('timestamp', String(signature.timestamp));
+    formData.append('signature', signature.signature);
+    formData.append('folder', signature.folder);
+    formData.append('upload_preset', signature.uploadPreset);
+    
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+    
+    const response = await fetch(uploadUrl, {
+      method: 'POST',
+      body: formData
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Upload échoué: ${response.status}`);
+    }
+    
+    return response.json();
+  }
+
+  function addCloudinaryUrl(url) {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'photos[]';
+    input.value = url;
+    cloudinaryUrls.appendChild(input);
+  }
+
+  async function handleUpload(files) {
+    // Validation
+    if (files.length > maxFiles) {
+      alert(`Maximum ${maxFiles} fichiers autorisés`);
+      return false;
+    }
+    
+    for (const file of files) {
+      if (file.size > maxBytes) {
+        alert(`${file.name}: fichier trop volumineux (max 8Mo)`);
+        return false;
+      }
+    }
+
+    // Afficher les fichiers
+    for (const file of files) {
+      displayFile(file, 'waiting');
+    }
+
+    try {
+      const signature = await getCloudinarySignature();
+      progressContainer.classList.remove('hidden');
+      
+      let uploadedCount = 0;
+      const totalFiles = files.length;
+      
+      for (const file of files) {
+        try {
+          updateFileStatus(file.name, 'uploading');
+          const result = await uploadToCloudinary(file, signature);
+          addCloudinaryUrl(result.secure_url);
+          uploadedFiles.push(result);
+          updateFileStatus(file.name, 'success');
+          uploadedCount++;
+          
+          const progress = (uploadedCount / totalFiles) * 100;
+          progressBar.style.width = `${progress}%`;
+        } catch (error) {
+          console.error(`Erreur upload ${file.name}:`, error);
+          updateFileStatus(file.name, 'error');
+        }
+      }
+      
+      setTimeout(() => {
+        progressContainer.classList.add('hidden');
+        progressBar.style.width = '0%';
+      }, 2000);
+      
+      return uploadedCount > 0;
+    } catch (error) {
+      console.error('Erreur upload:', error);
+      alert('Erreur lors de l\'upload: ' + error.message);
+      progressContainer.classList.add('hidden');
+      return false;
+    }
+  }
+
+  // Event listeners
+  if (fileInput) {
+    fileInput.addEventListener('change', async (event) => {
+      const files = Array.from(event.target.files || []);
+      if (files.length === 0) return;
+      
+      fileList.innerHTML = '';
+      cloudinaryUrls.innerHTML = '';
+      uploadedFiles = [];
+      
+      await handleUpload(files);
+    });
+  }
+
+  // Submit form avec gestion upload
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+      }
+      
+      // Si pas d'upload en cours, laisser le formulaire se soumettre normalement
+      // Le système d'upload ajoute automatiquement les photos[] au FormData
+    });
+  }
+
+  // Test API
+  const testCloudinaryBtn = document.getElementById('test-cloudinary-api');
+  const testContactBtn = document.getElementById('test-contact-api');
+  const resultsDiv = document.getElementById('api-results');
+  const outputPre = document.getElementById('api-output');
+
+  function showResult(data) {
+    if (resultsDiv && outputPre) {
+      outputPre.textContent = JSON.stringify(data, null, 2);
+      resultsDiv.classList.remove('hidden');
+    }
+  }
+
+  testCloudinaryBtn?.addEventListener('click', async () => {
+    try {
+      const response = await fetch('/api/cloudinary-signature', {
+        method: 'GET'
+      });
+      const data = await response.json();
+      showResult(data);
+    } catch (error) {
+      showResult({ error: error.message });
+    }
+  });
+
+  testContactBtn?.addEventListener('click', async () => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'GET'
+      });
+      const data = await response.json();
+      showResult(data);
+    } catch (error) {
+      showResult({ error: error.message });
+    }
+  });
+})();
+</script>

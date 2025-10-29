@@ -1,0 +1,19 @@
+---
+// src/components/cards/StatCard.astro
+interface Props {
+  value: string;
+  label: string;
+  bgClass?: string;
+}
+const { value, label, bgClass = 'bg-[#DFF1E8]' } = Astro.props;
+---
+
+<li
+  class={`h-[180px] md:h-[200px] ${bgClass} rounded-2xl p-5 md:p-6 transition hover:-translate-y-0.5
+          flex flex-col items-center justify-center text-center select-none`}
+>
+  <div class="text-2xl md:text-3xl font-bold mb-1 text-[#1E2939]">{value}</div>
+  <div class="text-xs md:text-sm font-medium uppercase tracking-wide text-[#475569]">
+    {label}
+  </div>
+</li>

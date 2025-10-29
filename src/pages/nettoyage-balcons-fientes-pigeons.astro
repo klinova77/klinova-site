@@ -1,0 +1,1353 @@
+---
+import LayoutLP from '~/layouts/LayoutLP.astro';
+const PHONE_E164 = '+33676738661';
+const PHONE_DISPLAY = '06 76 73 86 61';
+const telHref = `tel:${PHONE_E164.replace(/[^\d+]/g, '')}`;
+
+import Button from '~/components/UI/Button.astro';
+
+
+
+import { Image } from 'astro:assets';
+
+
+const seo = {
+  title: 'Traitement punaises de lit – Paris',
+  description: 'Page LP de test/staging.',
+  canonical: '/traitement-punaises-de-lit-paris',
+  noindex: true,
+};
+
+const popupContext = {
+  title: 'Devis nettoyage de moquettes',
+  subtitle: 'Obtenez un devis personnalisé sous 24h',
+  serviceKey: 'moquette',
+  serviceLabel: 'Nettoyage de moquette',
+  trackingSource: 'popup-moquette',
+  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  creditImpotEnabled: true,
+};
+
+
+import thumbBalcon from '~/assets/images/video-balcon-fientes.webp'; // ← ton image uploadée
+const videoId = 'GvYRj2hhRMo';
+const title = 'Transformation balcon infesté de fientes — Nettoyage professionnel Klinova';
+---
+
+<LayoutLP
+  popupContext={popupContext}
+  seo={seo}                 
+>
+
+
+<!-- HERO – Nettoyage de balcons infestés par les fientes -->
+<section
+  id="hero-balcons-fientes"
+  data-hero
+  aria-labelledby="hero-title"
+  class="relative py-16 lg:py-24 bg-gradient-to-br from-[#DFF1E8] to-[#EAF6F0] overflow-hidden"
+>
+  <div class="container-responsive relative z-10 text-center">
+    <h1
+      id="hero-title"
+      class="hero-title text-3xl md:text-4xl lg:text-5xl font-bold text-[#1E2939] leading-tight mb-6 opacity-0"
+    >
+      Nettoyage de balcons infestés par les fientes de pigeons
+    </h1>
+
+    <p
+      class="hero-subtitle text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto opacity-0"
+    >
+      Intervention rapide en Île-de-France — nettoyage, désinfection et remise en état complète de votre balcon.
+    </p>
+
+    <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 opacity-0">
+      <Button
+        href="#cta-final-balcon"
+        label="Demander un devis gratuit"
+        variant="primary"
+        size="lg"
+        tracking={{ action: 'cta-hero-devis', source: 'lp-balcons' }}
+        withTrackingParams={false}
+        ariaLabel="Aller au formulaire de devis"
+        class="justify-center"
+        data={{ section: 'hero', service: 'balcons-fientes' }}
+      />
+
+      <Button
+        href={`tel:${PHONE_E164}`}
+        label={`📞 ${PHONE_DISPLAY}`}
+        variant="secondary"
+        size="lg"
+        tracking={{ action: 'cta-hero-phone', source: 'lp-balcons' }}
+        withTrackingParams={false}
+        ariaLabel={`Appeler Klinova au ${PHONE_DISPLAY}`}
+        class="justify-center"
+        data={{ section: 'hero', service: 'balcons-fientes' }}
+      />
+    </div>
+
+    <p class="hero-reassurance text-sm text-[#475569] opacity-0">
+      Équipe certifiée • Intervention sans éclaboussures • Devis en 24&nbsp;h
+    </p>
+  </div>
+
+  <div
+    class="floating-shape absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-10"
+    aria-hidden="true"
+  ></div>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(3deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(3deg);
+      }
+    }
+
+    /* Assignation progressive */
+    .hero-title {
+      animation: fadeInUp 0.8s ease-out 0.1s forwards;
+    }
+
+    .hero-subtitle {
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
+
+    .hero-cta {
+      animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    }
+
+    .hero-reassurance {
+      animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    }
+
+    .floating-shape {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .floating-shape:nth-child(2) {
+      animation-delay: -2s;
+      animation-duration: 10s;
+    }
+
+    /* Accessibilité : désactive les anims si motion réduite */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-title,
+      .hero-subtitle,
+      .hero-cta,
+      .hero-reassurance {
+        animation: none;
+        opacity: 1 !important;
+      }
+      .floating-shape {
+        animation: none;
+      }
+    }
+  </style>
+</section>
+
+
+<section class="py-12 lg:py-16 bg-white" aria-labelledby="video-title">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+
+     <h2 id="video-title" class="text-2xl lg:text-3xl font-bold text-[#1E2939] mb-4">
+  Notre métier : rendre votre balcon propre et sain, et vous débarrasser des pigeons.
+</h2>
+      <p class="text-lg text-[#475569] mb-8">
+        Balcon souillé par les fientes → remise en état impeccable en quelques heures
+      </p>
+
+      <!-- ⚡ Lite embed avec image locale optimisée -->
+      <figure class="lite-yt mb-6" data-video={videoId}>
+        <div class="poster relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <Image
+            src={thumbBalcon}
+            alt="Avant / Après nettoyage de balcon infesté de fientes de pigeons"
+            widths={[480, 768, 1080, 1440]}
+            formats={['avif', 'webp']}
+            quality={88}
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+          <button
+            class="lite-yt-button"
+            type="button"
+            aria-label="Lire la vidéo : {title}"
+            data-action="play-video"
+          >
+            <span class="sr-only">Lire la vidéo</span>
+          </button>
+        </div>
+        <figcaption class="sr-only">{title}</figcaption>
+      </figure>
+
+      <!-- Infos sous la vidéo -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-[#475569]">
+        <div class="flex items-center">
+          <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Intervention réelle en IDF</span>
+        </div>
+        <div class="flex items-center">
+          <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          <span>Durée : 1&nbsp;min&nbsp;57</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8">
+        <Button
+          href="#cta-final-balcon"
+          label="Demander la même intervention"
+          variant="primary"
+          size="lg"
+          tracking={{ action: 'cta-video-devis', source: 'lp-balcons' }}
+          withTrackingParams={false}
+          ariaLabel="Aller au formulaire de devis"
+          class="justify-center"
+        />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .poster { position: relative; }
+    .lite-yt-button {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(0,0,0,.25);
+      cursor: pointer;
+      border: none;
+    }
+    .lite-yt-button::after {
+      content: "";
+      width: 72px;
+      height: 72px;
+      border-radius: 9999px;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    }
+    .lite-yt-button::before {
+      content: "";
+      position: absolute;
+      border-left: 18px solid #3F8D65;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      transform: translateX(4px);
+    }
+    .lite-yt-button:hover { background: rgba(0,0,0,.35); }
+    .lite-yt-button:focus-visible { outline: 2px solid #3F8D65; outline-offset: 4px; }
+  </style>
+
+  <script is:inline>
+    // remplace l’image par l’iframe YouTube nocookie au clic
+    document.currentScript.parentElement
+      .querySelector('.lite-yt-button')
+      .addEventListener('click', function () {
+        const wrapper = this.closest('.lite-yt');
+        const id = wrapper?.dataset.video;
+        if (!id) return;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        iframe.allow =
+          'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.className = 'absolute inset-0 w-full h-full rounded-2xl';
+        wrapper.replaceChildren(iframe);
+      });
+  </script>
+</section>
+
+
+<style>
+  /* ✅ Le wrapper garde la taille et sert d'ancre pour l'iframe absolu */
+  .lite-yt {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;           /* 2xl */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    background: #F3F4F6;
+    isolation: isolate;
+  }
+
+  /* Le poster (image) reste en place avant le clic */
+  .poster { position: relative; width: 100%; height: 100%; }
+
+  /* Bouton play accessible */
+  .lite-yt-button {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.25);
+    cursor: pointer;
+    border: none;
+  }
+  .lite-yt-button::after {
+    content: "";
+    width: 72px; height: 72px; border-radius: 9999px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  }
+  .lite-yt-button::before {
+    content: "";
+    position: absolute;
+    border-left: 18px solid #3F8D65;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    transform: translateX(4px);
+  }
+  .lite-yt-button:hover { background: rgba(0,0,0,.35); }
+  .lite-yt-button:focus-visible { outline: 2px solid #3F8D65; outline-offset: 4px; }
+</style>
+
+<script is:inline>
+  // Bind idempotent : 1 seul listener par bloc, 1 seul iframe
+  document.querySelectorAll('.lite-yt').forEach((root) => {
+    if (root.dataset.bound === '1') return;
+    root.dataset.bound = '1';
+
+    const btn = root.querySelector('.lite-yt-button');
+    btn?.addEventListener('click', () => {
+      if (root.dataset.loaded === '1') return;
+      root.dataset.loaded = '1';
+
+      const id = root.dataset.video;
+      if (!id) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'absolute inset-0 w-full h-full'; // ✅ s’ancre à .lite-yt
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+      iframe.loading = 'lazy';
+      iframe.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+
+      // remplace le poster (mais conserve le wrapper .lite-yt avec son aspect-ratio)
+      root.replaceChildren(iframe);
+    });
+  });
+</script>
+
+
+
+<section class="section-padding bg-[#F8FDF9]" aria-labelledby="dangers-title">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center mb-10">
+      <h2 id="dangers-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Les dangers des fientes de pigeons
+      </h2>
+      <p class="mt-3 text-[#475569] text-lg max-w-3xl mx-auto">
+        Derrière leur aspect salissant, les fientes de pigeons cachent des risques réels pour votre santé, votre balcon et même vos voisins.
+      </p>
+    </div>
+
+    <!-- 3 cartes -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Carte 1 : Santé et hygiène -->
+      <article class="bg-white rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all duration-200">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#E8F2ED] mb-4" aria-hidden="true">
+          <!-- lucide heart-plus (stroke) -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6 text-[#3F8D65]"
+          >
+            <path d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"/>
+            <path d="M15 15h6"/>
+            <path d="M18 12v6"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Risques pour la santé</h3>
+        <p class="text-[#475569] leading-relaxed mb-3">
+          Les fientes contiennent des bactéries et des champignons qui peuvent provoquer des allergies, des irritations respiratoires ou des maladies respiratoires graves comme la psittacose.
+        </p>
+        <p class="text-[#475569] leading-relaxed">
+          Lorsqu'elles sèchent, la poussière se disperse facilement dans l'air et peut être inhalée facilement. Les personnes fragiles (enfants, personnes âgées, asthmatiques) sont particulièrement à risque d'infections.
+        </p>
+      </article>
+
+      <!-- Carte 2 : Dommages et nuisances -->
+      <article class="bg-white rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all duration-200">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#E8F2ED] mb-4" aria-hidden="true">
+          <!-- ton path fourni, encapsulé dans un SVG, colorisé via currentColor -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 90 90"
+            class="w-6 h-6 text-[#3F8D65]"
+            fill="currentColor"
+          >
+            <path d="M 64.672 90 c -1.349 -4.218 -2.479 -8.273 -3.911 -12.102 c -1.422 -3.827 -3.092 -7.382 -5.073 -10.638 c -3.883 -6.55 -9.394 -11.819 -15.179 -18.282 c -2.749 -3.076 -5.609 -6.36 -8.268 -10.045 c -2.627 -3.69 -5.005 -7.829 -6.496 -12.277 c -1.516 -4.433 -2.283 -9.037 -2.299 -13.533 C 23.459 8.62 24.068 4.224 25.328 0 c 1.358 4.218 2.49 8.272 3.926 12.1 c 1.425 3.825 3.094 7.378 5.073 10.634 c 1.974 3.264 4.275 6.233 6.867 9.172 c 2.561 2.958 5.446 5.875 8.297 9.118 c 2.74 3.084 5.605 6.364 8.257 10.053 c 2.631 3.686 4.994 7.833 6.492 12.276 c 1.514 4.432 2.28 9.035 2.299 13.529 C 66.53 81.381 65.924 85.776 64.672 90 z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Dommages et nuisances olfactives</h3>
+        <p class="text-[#475569] leading-relaxed mb-3">
+          Les fientes sont très acides et attaquent les matériaux. À la longue, elles abîment le béton, la peinture, les joints et les garde-corps métalliques. Plus on attend, plus les traces s'incrustent profondément.
+        </p>
+        <p class="text-[#475569] leading-relaxed">
+          L'odeur d'ammoniac s'installe durablement et se propage jusque dans l'appartement. Sans matériel professionnel, il est impossible de l'éliminer complètement, rendant le balcon inutilisable.
+        </p>
+      </article>
+
+      <!-- Carte 3 : Problèmes de voisinage -->
+      <article class="bg-white rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all duration-200">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#E8F2ED] mb-4" aria-hidden="true">
+          <!-- icône “immeuble” fournie, normalisée -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 122.88 113.05"
+            class="w-6 h-6 text-[#3F8D65]"
+            fill="currentColor"
+          >
+            <path d="M0,100.07h14.72V1.57c0-0.86,0.71-1.57,1.57-1.57h49.86c0.86,0,1.57,0.71,1.57,1.57V38.5h44.12 c0.86,0,1.57,0.71,1.57,1.57v59.99h9.47v12.99H0V100.07L0,100.07z M27.32,14.82h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36 c0,0.31-0.26,0.57-0.57,0.57h-10.2c-0.31,0-0.57-0.26-0.57-0.57V15.39C26.75,15.08,27.01,14.82,27.32,14.82L27.32,14.82z M44.6,76.3h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57H44.6c-0.31,0-0.57-0.26-0.57-0.57V76.87 C44.03,76.55,44.29,76.3,44.6,76.3L44.6,76.3z M27.32,76.3h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57 h-10.2c-0.31,0-0.57-0.26-0.57-0.57V76.87C26.75,76.55,27.01,76.3,27.32,76.3L27.32,76.3z M44.6,55.8h10.2 c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57H44.6c-0.31,0-0.57-0.26-0.57-0.57V56.38 C44.03,56.06,44.29,55.8,44.6,55.8L44.6,55.8z M27.32,55.8h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57 h-10.2c-0.31,0-0.57-0.26-0.57-0.57V56.38C26.75,56.06,27.01,55.8,27.32,55.8L27.32,55.8z M44.6,35.31h10.2 c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57H44.6c-0.31,0-0.57-0.26-0.57-0.57V35.88 C44.03,35.57,44.29,35.31,44.6,35.31L44.6,35.31z M27.32,35.31h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57 h-10.2c-0.31,0-0.57-0.26-0.57-0.57V35.88C26.75,35.57,27.01,35.31,27.32,35.31L27.32,35.31z M44.6,14.82h10.2 c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57H44.6c-0.31,0-0.57-0.26-0.57-0.57V15.39 C44.03,15.08,44.29,14.82,44.6,14.82L44.6,14.82z M23.17,7.32h35.92c0.62,0,1.13,0.61,1.13,1.35v85.87c0,0.74-0.51,1.35-1.13,1.35 H23.17c-0.62,0-1.13-0.61-1.13-1.35V8.67C22.04,7.93,22.55,7.32,23.17,7.32L23.17,7.32z M72.61,53.43h10.2 c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57h-10.2c-0.31,0-0.57-0.26-0.57-0.57V54 C72.04,53.69,72.3,53.43,72.61,53.43L72.61,53.43z M89.89,76.3h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57 h-10.2c-0.31,0-0.57-0.26-0.57-0.57V76.87C89.32,76.55,89.58,76.3,89.89,76.3L89.89,76.3z M72.61,76.3h10.2 c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57h-10.2c-0.31,0-0.57-0.26-0.57-0.57V76.87 C72.04,76.55,72.3,76.3,72.61,76.3L72.61,76.3z M89.89,53.43h10.2c0.31,0,0.57,0.26,0.57,0.57v12.36c0,0.31-0.26,0.57-0.57,0.57 h-10.2c-0.31,0-0.57-0.26-0.57-0.57V54C89.32,53.69,89.58,53.43,89.89,53.43z M68.86,45.82h35.92 c0.62,0,1.13,0.61,1.13,1.35v47.37c0,0.74-0.51,1.35-1.13,1.35H68.86c-0.62,0-1.13-0.61-1.13-1.35V47.17 C67.73,46.43,68.24,45.82,68.86,45.82L68.86,45.82z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">Problèmes de voisinage</h3>
+        <p class="text-[#475569] leading-relaxed mb-3">
+          Les fientes attirent d'autres pigeons, dégagent de fortes odeurs et peuvent tacher les façades ou les balcons voisins. Cette situation empire rapidement et devient visible de tous.
+        </p>
+        <p class="text-[#475569] leading-relaxed">
+          En copropriété, le balcon doit être entretenu : en cas de négligence, le syndic peut demander une intervention. Cela crée souvent des tensions avec les voisins du dessous.
+        </p>
+      </article>
+    </div>
+
+    <!-- Encadré de réassurance avec spray Klinova -->
+<div class="text-center mt-12">
+  <div class="bg-[#E8F2ED] border border-[#C0E2D0] rounded-2xl py-8 px-6 max-w-3xl mx-auto shadow-sm">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+      <!-- Icône spray -->
+      <div class="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-full bg-[#3F8D65]/10">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-8 h-8 text-[#3F8D65]"
+          aria-hidden="true"
+        >
+          <path d="M 7.5587444,23.59205 C 7.3938489,23.55139 7.1551943,23.454176 7.0284008,23.376018 6.9016082,23.297861 6.7068897,23.087884 6.5956942,22.909403 6.4060266,22.604965 6.3941711,22.430913 6.4040458,20.095749 c 0.00823,-1.944028 0.044884,-2.606136 0.1674098,-3.023364 0.086287,-0.293823 0.2505401,-0.691623 0.3650075,-0.884001 0.1144684,-0.192378 0.9180117,-1.071956 1.7856523,-1.954618 1.0364565,-1.054401 1.6465916,-1.75708 1.7788856,-2.048701 0.184282,-0.40622 0.201543,-0.654011 0.203551,-2.9220621 l 0.0022,-2.4782031 0.267975,-0.248351 C 11.215551,6.3132331 11.227154,6.2725814 11.08935,6.1347764 10.951544,5.9969714 10.903908,6.0315075 10.618663,6.4760226 10.444113,6.7480355 10.066476,7.1915738 9.7794691,7.4616652 9.4924635,7.7317544 8.8304115,8.1808394 8.3082427,8.4596316 7.7860739,8.7384236 7.188492,9.0214951 6.9802831,9.0886785 6.6561407,9.1932711 6.5647017,9.1865742 6.3441986,9.0420951 6.1280586,8.9004749 6.0953933,8.8196303 6.1409314,8.5390146 6.1707728,8.3551248 6.6256539,7.3137953 7.1517792,6.224949 7.6779035,5.1361016 8.1083695,4.1944231 8.1083695,4.1323294 c 0,-0.062095 -0.1011863,-0.143555 -0.2248574,-0.1810246 C 7.7598406,3.9138353 7.0331705,3.8486224 6.2686904,3.8063776 4.9101457,3.7313147 4.8732565,3.7232198 4.6366926,3.4481942 4.405284,3.1791663 4.3961071,3.1149219 4.4276707,1.984981 4.4576546,0.91148071 4.4815673,0.78231051 4.6885645,0.57579242 l 0.2278795,-0.22735915 4.9688231,0.005782 c 3.3515719,0.00382 5.1801429,0.0440156 5.6180779,0.12333761 0.357092,0.064676 0.930201,0.25590993 1.273579,0.42495443 0.420174,0.20685149 0.779539,0.48714089 1.099007,0.85717849 0.261076,0.3024035 0.732096,0.9099301 1.04671,1.3500581 0.314612,0.440128 0.600916,0.9542441 0.63623,1.1424797 0.03531,0.1882356 0.03557,0.4563662 6.04e-4,0.5958459 -0.035,0.1394787 -0.198824,0.3358029 -0.364037,0.4362747 -0.184786,0.1123745 -0.602315,0.2078562 -1.084941,0.2481052 -0.431504,0.035983 -1.045989,0.1553772 -1.365522,0.265313 -0.319534,0.1099346 -0.691664,0.2724124 -0.826959,0.3610599 l -0.245993,0.1611778 0.2096,0.1622413 c 0.11528,0.089229 0.235371,0.2746705 0.266869,0.4120842 0.0315,0.1374127 0.09899,0.9019272 0.149984,1.6989219 0.06661,1.041035 0.17633,1.7727035 0.389657,2.5983515 0.163318,0.632099 0.591023,2.273559 0.950457,3.647687 l 0.653516,2.498414 0.02288,2.675389 c 0.02167,2.535139 0.01244,2.689313 -0.176149,2.94191 -0.109461,0.146611 -0.323167,0.359288 -0.474903,0.472615 -0.268865,0.200806 -0.397102,0.206459 -5.040624,0.222207 -2.620607,0.0089 -4.8996546,-0.01711 -5.0645501,-0.05777 z" />
+        </svg>
+      </div>
+
+      <!-- Texte -->
+      <p class="text-[#1E2939] text-base sm:text-lg leading-relaxed max-w-2xl">
+        <strong>Nous intervenons quelle que soit l’ampleur du problème.</strong><br />
+        Plus la situation est avancée, plus notre expertise fait la différence.  
+        Un vrai nettoyage professionnel élimine les fientes, désinfecte les surfaces et rend votre balcon sain et à nouveau utilisable.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+<section id="protocole-express" class="section-padding bg-white" aria-labelledby="protocole-title">
+  <div class="container-responsive">
+    <!-- En-tête -->
+    <div class="text-center mb-10">
+      <h2 id="protocole-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Notre protocole professionnel en 3 étapes
+      </h2>
+      <p class="mt-3 text-[#475569] text-lg max-w-3xl mx-auto">
+        Intervention rapide, nettoyage complet et désinfection certifiée — sans odeurs, sans éclaboussures.
+      </p>
+    </div>
+
+    <!-- Étapes -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Étape 1 : Protection & sécurité -->
+      <article class="bg-[#F8FAFC] rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all">
+        <div class="flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-[#E8F2ED]">
+          <!-- SVG badge/escutcheon (couleurs internes) -->
+          <div class="w-7 h-7">
+            <?xml version="1.0" encoding="utf-8"?><svg viewBox="0 0 111.81 122.88" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" aria-hidden="true">
+              <style type="text/css">
+                <![CDATA[
+                  .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#51B53C;}
+                  .st1{fill:#FFFFFF;}
+                  .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+                ]]>
+              </style>
+              <g>
+                <path class="st0" d="M55.71,0c20.85,13.21,39.68,19.47,55.85,17.99c2.82,57.1-18.26,90.82-55.63,104.89 C19.84,109.71-1.5,77.44,0.08,17.12C19.06,18.12,37.67,14.01,55.71,0L55.71,0L55.71,0z"/>
+                <path class="st2" d="M55.73,7.05c18.45,11.7,35.13,17.23,49.43,15.92c2.5,50.54-16.17,80.39-49.24,92.85 C23.98,104.16,5.09,75.6,6.49,22.21C23.29,23.09,39.77,19.46,55.73,7.05L55.73,7.05L55.73,7.05z"/>
+                <path class="st0" d="M56.24,19.54c14.22,9.01,27.06,13.27,38.08,12.27c1.92,38.94-12.45,61.93-37.94,71.53 c-0.16-0.06-0.32-0.12-0.48-0.18c-0.16,0.06-0.32,0.12-0.48,0.18c-25.48-9.6-39.86-32.59-37.94-71.53 c11.02,1.01,23.87-3.26,38.08-12.27l0,0l0.33,0.25L56.24,19.54L56.24,19.54L56.24,19.54z"/>
+                <path class="st1" d="M35.44,58.28l7.47-0.1l0.56,0.14c1.51,0.87,2.93,1.86,4.26,2.99c0.96,0.81,1.87,1.69,2.74,2.65 c2.68-4.31,5.54-8.28,8.56-11.92c3.31-3.99,5.38-6.18,9.06-9.49l0.73-0.28h8.16l-1.65,1.82c-5.05,5.61-8.21,9.99-12.35,15.97 c-4.15,6-7.85,12.18-11.15,18.54l-1.03,1.98l-0.94-2.02c-1.74-3.73-3.82-7.15-6.3-10.21c-2.48-3.06-5.37-5.78-8.74-8.09 L35.44,58.28Z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Protection & sécurité</h3>
+        <p class="text-[#475569] leading-relaxed">
+          EPI complets, zone balisée, mobilier protégé. Le chantier est sécurisé avant toute opération.
+        </p>
+      </article>
+
+      <!-- Étape 2 : Nettoyage mécanique ou vapeur -->
+      <!-- Étape 2 : Nettoyage mécanique ou vapeur -->
+<article class="bg-[#F8FAFC] rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all">
+  <div class="flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-[#E8F2ED]">
+    <!-- SVG "jet / nettoyage" plus dense -->
+    <svg viewBox="0 0 122.88 86.5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 text-[#3F8D65]" aria-hidden="true">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59,30.87c-2.14-4.55-2.15-8.59,0.2-12.08c2.53-3.26,7.11-5.49,13.86-6.63 
+      C27.26,12.06,28.52,2.07,40.08,0.24C52.98-1.8,52.26,9.97,66.14,7.6c4.86-0.51,11.95,4.81,14,12.94c2.02,8-1.28,10.01-2.96,16.86 
+      c-1.25,5.09-1.16,10.19-0.44,15.26c0.37,4.45-1.59,7.56-6.24,9.11c-1.53,0.66-3.07,1.29-4.6,1.88c0.05-1.69,0.03-3.3-0.03-4.79 
+      l-0.01,0c-0.01-0.23-0.03-0.47-0.07-0.7V47.61c0-2.7-1.11-5.16-2.89-6.94c-1.78-1.78-4.24-2.89-6.94-2.89H55.7 
+      c-1.14,0-2.23,0.21-3.25,0.58l-0.08-0.08c-1.78-1.78-4.24-2.89-6.94-2.89h-0.27c-1.09,0-2.13,0.18-3.1,0.52 
+      c-0.17-0.19-0.35-0.37-0.54-0.54c-1.85-1.73-4.36-2.71-7.03-2.71c-0.57,0-1.12,0.05-1.66,0.15c-0.42-0.69-0.91-1.32-1.48-1.88 
+      c-1.62-1.62-3.8-2.68-6.21-2.86c-0.31-0.05-0.63-0.08-0.96-0.08c-2.35,0-4.52,0.88-6.2,2.32c-0.19,0.15-0.37,0.31-0.55,0.48 
+      c-1.73,1.73-2.8,4.12-2.8,6.75v3.94c-2.79-1.81-5.51-2.8-8.11-2.67C4.83,35.98,2.97,33.64,1.59,30.87L1.59,30.87z M85.23,59.02 
+      c-1.36,0.02-2.48-1.07-2.49-2.44c-0.02-1.36,1.07-2.48,2.44-2.5c2.52-0.04,5.65,0.07,8.97,0.73c3.41,0.68,7.04,1.94,10.52,4.22 
+      c1.14,0.75,1.45,2.28,0.71,3.41c-0.75,1.14-2.28,1.45-3.41,0.71c-2.85-1.87-5.89-2.92-8.76-3.49 C90.23,59.08,87.46,58.99,85.23,59.02z 
+      M84.34,39.44c-1.35-0.23-2.25-1.52-2.01-2.86c0.23-1.35,1.52-2.25,2.86-2.01 c6.67,1.18,11.61,2.7,15.97,4.99
+      c4.36,2.28,8.03,5.27,12.18,9.4c0.97,0.96,0.97,2.52,0.01,3.49c-0.96,0.97-2.52,0.97-3.49,0.01 
+      c-3.82-3.79-7.14-6.51-10.98-8.53C95.02,41.91,90.52,40.54,84.34,39.44z M87.73,20.23c-1.35-0.22-2.26-1.49-2.04-2.83 
+      c0.22-1.35,1.49-2.26,2.83-2.04 c6.7,1.09,12.87,3.48,18.44,6.93c5.82,3.6,10.97,8.35,15.39,13.98c0.84,1.07,0.66,2.63-0.42,3.47
+      c-1.07,0.84-2.63,0.66-3.47-0.42c-4.08-5.2-8.8-9.56-14.09-12.84C99.35,23.37,93.78,21.22,87.73,20.23z 
+      M24.13,33.96h0.27c2.14,0,3.91,1.77,3.91,3.91v14.87h2.54V42.22c0-1.99,1.64-3.63,3.63-3.63c2.28,0,4.18,1.53,4.18,3.91v10.5
+      l0.12-0.05h2.74v-7.99c0-1.99,1.64-3.63,3.63-3.63h0.27c2.14,0,3.91,1.77,3.91,3.91v7.31h0.02l2.71-0.02v-5.17
+      c0-1.99,1.64-3.63,3.63-3.63h0.27c2.14,0,3.91,1.77,3.91,3.91v10.95c0,0.12,0,0.27-0.02,0.4l0.12,0.1
+      c0.25,7.04-0.25,17.14-6.05,22.19c-5.75,4.68-11.49,5.9-17.46,4.95c-8.14-1.29-12.39-5.7-16.25-12.71L4.94,49.28
+      c-0.8-1.87-0.7-3.13,0.1-3.96c3.43-2.24,9.06,2.51,15.28,9.23l0.22-0.05V37.54c0-1.99,1.64-3.63,3.63-3.63L24.13,33.96z"/>
+    </svg>
+  </div>
+  <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage mécanique ou vapeur</h3>
+  <p class="text-[#475569] leading-relaxed">
+    Méthode adaptée au matériau (béton, carrelage, pierre). Pression maîtrisée, décapage précis, sans projection.
+  </p>
+</article>
+
+
+      <!-- Étape 3 : Désinfection & finition -->
+      <article class="bg-[#F8FAFC] rounded-2xl border border-[#E5E7EB] p-6 text-left shadow-sm hover:shadow-md transition-all">
+        <div class="flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-[#E8F2ED]">
+          <!-- Ton spray exact -->
+          <svg viewBox="0 0 93 122.88" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 text-[#3F8D65]" aria-hidden="true">
+            <path d="M14.6,43.74h15.78c4.87,0,6.1,3.36,6.1,7.71c0,2.02-0.29,4.29-0.58,6.49c-0.47,3.64-0.91,7.06,0.09,8.3 c1.67,2.08,4.08,4.49,6.66,7.07c6.39,6.4,13.77,13.79,14.32,20.41c0.33,4.05,0.4,9.27-0.33,14.09c-0.56,3.72-1.61,7.23-3.38,9.85 c-0.91,1.34-1.97,2.54-3.33,3.46c-1.37,0.92-3.02,1.55-5.09,1.74c-0.03,0-0.07,0-0.1,0v0H18.08c-0.05,0-0.1,0-0.14-0.01 c-2.84-0.16-5.4-0.81-7.55-2.13c-2.21-1.36-3.95-3.41-5.1-6.34c-0.03-0.08-0.05-0.16-0.06-0.24c-2.42-11.87-3.41-23.7-2.25-35.36 c1.16-11.71,4.48-23.25,10.68-34.47C13.84,43.95,14.22,43.75,14.6,43.74L14.6,43.74L14.6,43.74z M4.75,84.84 c18.15,4.31,27.95-9.61,44.29-1.6c-2.41-2.85-5.26-5.71-7.92-8.38c-2.62-2.62-5.07-5.08-6.82-7.24c-1.59-1.97-1.09-5.84-0.56-9.95 c0.27-2.1,0.55-4.27,0.55-6.21c0-3.1-0.79-5.51-3.91-5.51H15.25C9.41,56.72,6.26,67.78,5.15,79C4.95,80.94,4.82,82.89,4.75,84.84 L4.75,84.84z M46.12,6.97L46,20.87c0,0.5-0.34,0.92-0.8,1.04l0,0c-3.35,0.95-6.3,2.23-8.56,4.22c-2.2,1.94-3.78,4.6-4.49,8.36v4.75 c0,0.61-0.49,1.1-1.1,1.1H15.12c-0.95,0.09-1.71-0.13-2.3-0.72c-0.54-0.55-0.83-1.39-0.84-2.57c0-0.04,0-0.08,0-0.11 c0.36-3.9-0.44-6.81-2.28-9.08c-1.89-2.32-4.93-4.05-8.98-5.52c-0.57-0.21-0.86-0.83-0.66-1.4l0-0.01h0c2.19-5.8,5.57-9.5,9.8-11.8 c4.18-2.27,9.16-3.13,14.62-3.28c3.41-0.09,6.84-0.16,10.28-0.17c3.44-0.01,6.87,0.03,10.29,0.16C45.67,5.85,46.14,6.36,46.12,6.97 L46.12,6.97L46.12,6.97z M43.82,20.04l0.1-12.05c-3.06-0.1-6.11-0.13-9.15-0.12c-3.4,0.01-6.81,0.08-10.23,0.17 c-5.14,0.14-9.79,0.94-13.63,3.02c-3.54,1.92-6.41,4.96-8.39,9.63c3.9,1.52,6.88,3.35,8.88,5.8c2.21,2.71,3.17,6.11,2.77,10.6 c0.01,0.55,0.09,0.88,0.22,1.02c0.07,0.07,0.25,0.09,0.52,0.07c0.06-0.01,0.12-0.02,0.18-0.02h14.87v-3.73h0 c0-0.06,0.01-0.13,0.02-0.19c0.8-4.36,2.63-7.45,5.21-9.73C37.56,22.41,40.5,21.04,43.82,20.04L43.82,20.04z M48.36,6.65 l0.09,13.36h6.53c0.92,0.03,1.39-0.74,1.17-2.73V8.9c-0.02-0.73-0.32-1.21-0.88-1.46L48.36,6.65L48.36,6.65z M70.11,10.99 c1.89,0,3.42,1.29,3.42,2.89c0,1.6-1.53,2.89-3.42,2.89c-1.89,0-3.42-1.29-3.42-2.89C66.69,12.28,68.22,10.99,70.11,10.99 L70.11,10.99z M89.58,10.7c1.89,0,3.42,1.29,3.42,2.89c0,1.6-1.53,2.89-3.42,2.89c-1.89,0-3.42-1.29-3.42-2.89 C86.16,11.99,87.69,10.7,89.58,10.7L89.58,10.7z M89.2,21.59c1.89,0,3.42,1.29,3.42,2.89c0,1.6-1.53,2.89-3.42,2.89 s-3.42-1.29-3.42-2.89C85.78,22.88,87.31,21.59,89.2,21.59L89.2,21.59z M79.75,16.48c1.89,0,3.42,1.29,3.42,2.89 c0,1.6-1.53,2.89-3.42,2.89c-1.89,0-3.42-1.29-3.42-2.89C76.33,17.78,77.86,16.48,79.75,16.48L79.75,16.48z M89.58,0 C91.47,0,93,1.29,93,2.89c0,1.6-1.53,2.89-3.42,2.89c-1.89,0-3.42-1.29-3.42-2.89C86.16,1.29,87.69,0,89.58,0L89.58,0z M79.85,5.49 c1.89,0,3.42,1.29,3.42,2.89c0,1.6-1.53,2.89-3.42,2.89c-1.89,0-3.42-1.29-3.42-2.89C76.42,6.79,77.96,5.49,79.85,5.49L79.85,5.49z M36.89,35.65c1.16-4.65,3.94-7.71,8.62-8.9c1.05,7.48,3.33,13.49,6.51,18.38c1.94,2.74-1.21,5.57-3.48,2.68l-7.36-12.04 L36.89,35.65Z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">Désinfection & finition</h3>
+        <p class="text-[#475569] leading-relaxed">
+          Produit virucide homologué EN 14476, séchage rapide et neutralisation des odeurs. Balcon prêt à l’usage en fin d’intervention.
+        </p>
+      </article>
+    </div>
+
+    <!-- Encadré final -->
+    <div class="text-center mt-10">
+      <div class="bg-[#E8F2ED] border border-[#C0E2D0] rounded-2xl py-8 px-6 max-w-3xl mx-auto shadow-sm">
+        <p class="text-[#475569] leading-relaxed">
+          <strong class="text-[#1E2939]">Un seul passage suffit :</strong> notre protocole élimine fientes, bactéries et odeurs, sans abîmer vos surfaces.
+          Intervention rapide, balcon propre et sain le jour même.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Témoignage -->
+<section class="py-12 lg:py-16 bg-[#F8FDF9]">
+  <div class="container-responsive">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="text-center mb-8">
+        <h2 class="text-2xl lg:text-3xl font-bold text-[#1E2939] mb-4">
+          Ils nous font confiance
+        </h2>
+      </div>
+
+      <!-- Témoignage -->
+      <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm">
+        <div class="flex items-start">
+          <div class="flex-1">
+            <div class="flex items-center mb-2">
+              <div class="flex text-yellow-400 mr-3">
+                <!-- 5 étoiles -->
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <!-- Répéter 4 fois -->
+              </div>
+              <span class="text-sm text-[#475569] font-medium">Avis client</span>
+            </div>
+            <h4 class="font-semibold text-[#1E2939] mb-1">Françoise DAVENNE</h4>
+            <p class="text-sm text-[#475569] mb-4">Septembre 2025</p>
+            <blockquote class="text-[#475569] italic">
+              "KLINOVA Nettoyage est à l'écoute de nos besoins. Prestations de qualité et travail soigné. Je conseillerais KLINOVA Nettoyage dans mon entourage."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section Formulaire Final -->
+
+
+
+
+<section
+  id="cta-final-balcon"
+  class="section-padding bg-[#DFF1E8]"
+  aria-labelledby="cta-title"
+>
+  <div class="container-responsive">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Demandez votre devis gratuit de nettoyage de balcon
+      </h2>
+      <p class="mt-3 text-[#475569]">
+        Intervention sous 48&nbsp;h en Île-de-France, protocole professionnel, satisfaction garantie.
+      </p>
+    </div>
+
+    <!-- Messages d'état -->
+    <div id="form-messages" class="mx-auto max-w-2xl mt-6"></div>
+
+    <!-- Form amélioré -->
+    <form
+      id="devis-balcons-form"
+      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
+      method="post"
+      action="/api/contact"
+      novalidate
+    >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      
+      <!-- Champs cachés pour tracking -->
+      <input type="hidden" name="source" value="lp-balcons">
+      <input type="hidden" name="service" value="Nettoyage balcon - Demande devis">
+      <input type="hidden" name="rgpd" value="accepte">
+
+      <!-- Prénom + Nom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="prenom" class="sr-only">Prénom</label>
+          <input
+            id="prenom" name="prenom" type="text" required
+            placeholder="Prénom"
+            autocomplete="given-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="nom" class="sr-only">Nom</label>
+          <input
+            id="nom" name="nom" type="text"
+            placeholder="Nom (optionnel)"
+            autocomplete="family-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Email + Téléphone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email" name="email" type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="telephone" class="sr-only">Téléphone</label>
+          <input
+            id="telephone" name="telephone" type="tel" inputmode="tel" required
+            placeholder="Téléphone"
+            autocomplete="tel"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Ville -->
+      <div>
+        <label for="ville" class="sr-only">Ville</label>
+        <input
+          id="ville" name="ville" type="text" required
+          placeholder="Ville (ex. Paris 12e)"
+          autocomplete="address-level2"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200"
+        />
+        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+      </div>
+
+      <!-- Message libre -->
+      <div>
+        <label for="message" class="sr-only">Décrivez votre balcon et vos besoins</label>
+        <textarea
+          id="message" name="message"
+          placeholder="Décrivez votre balcon : surface, type de fientes, urgence... (optionnel)"
+          rows="3"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Photos avec Cloudinary -->
+      <div>
+        <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+          Photos du balcon (optionnel)
+        </label>
+        
+        <!-- Input caché -->
+        <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+        
+        <!-- Zone de drop -->
+        <div id="photos-drop-zone" 
+             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
+                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
+          <div class="flex flex-col items-center space-y-2">
+            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+          </div>
+        </div>
+        
+        <!-- Statut des photos -->
+        <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+        
+        <!-- Liste des photos -->
+        <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+        
+        <!-- Container pour les URLs Cloudinary -->
+        <div id="photos-hidden"></div>
+      </div>
+
+      <!-- RGPD -->
+      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
+        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
+          En savoir plus
+        </a>
+      </div>
+
+      <!-- CTA form -->
+      <div class="mt-2 flex flex-col sm:flex-row gap-3 sm:items-center">
+        <button
+          type="submit"
+          id="submit-btn"
+          class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl px-5 py-3 text-base font-semibold
+                 bg-[#3F8D65] text-white shadow-sm hover:opacity-95 focus-visible:outline-none
+                 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65]
+                 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+          data-action="cta-submit-devis"
+          data-source="lp-balcons"
+        >
+          <span class="loading-spinner hidden mr-2">
+            <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </span>
+          <span id="submit-text">Recevoir mon devis sous 24&nbsp;h</span>
+        </button>
+
+        <a
+          href={`tel:${PHONE_E164}`}
+          class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl px-5 py-3 text-base font-semibold
+                 border border-[#CFE3D8] text-[#1E2939] bg-white hover:bg-[#F8FAFC]
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#CFE3D8]
+                 transition-all duration-200"
+          aria-label={`Appeler Klinova au ${PHONE_DISPLAY}`}
+          data-action="cta-form-phone"
+          data-source="lp-balcons"
+        >
+          📞&nbsp;{PHONE_DISPLAY}
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+/* Styles pour les photos */
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1E2939;
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: #3F8D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.form-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #D1FAE5;
+}
+
+.form-message.error {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.form-error:not(:empty) {
+  display: block !important;
+}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById('devis-balcons-form');
+  const messagesContainer = document.getElementById('form-messages');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitText = document.getElementById('submit-text');
+  const loadingSpinner = document.querySelector('.loading-spinner');
+  
+  // Upload de photos
+  const photosInput = document.getElementById('photos-input');
+  const dropZone = document.getElementById('photos-drop-zone');
+  const photosList = document.getElementById('photos-list');
+  const photosStatus = document.getElementById('photos-status');
+  const photosHidden = document.getElementById('photos-hidden');
+  
+  let uploadingCount = 0;
+  let uploadedFiles = [];
+  const maxFiles = 4;
+  const maxMB = 8;
+
+  // Fonctions utilitaires
+  function showMessage(text, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.textContent = text;
+    messagesContainer.innerHTML = '';
+    messagesContainer.appendChild(messageDiv);
+    
+    if (type === 'success') {
+      setTimeout(() => {
+        messageDiv.style.opacity = '0';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 5000);
+    }
+  }
+
+  function setLoading(loading) {
+    submitBtn.disabled = loading || uploadingCount > 0;
+    loadingSpinner.classList.toggle('hidden', !loading);
+    submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis sous 24 h';
+  }
+
+  function bytesToMB(bytes) {
+    return (bytes / 1024 / 1024).toFixed(1);
+  }
+
+  function updatePhotosStatus() {
+    const total = uploadedFiles.length;
+    const success = uploadedFiles.filter(f => f.status === 'success').length;
+    const uploading = uploadingCount;
+    
+    if (total === 0) {
+      photosStatus.textContent = 'Aucune photo';
+      photosList.classList.add('hidden');
+    } else {
+      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+      photosList.classList.remove('hidden');
+    }
+    
+    submitBtn.disabled = uploadingCount > 0;
+  }
+
+  function addPhotoToList(file) {
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'photo-item';
+    photoDiv.dataset.fileName = file.name;
+    
+    photoDiv.innerHTML = `
+      <span class="photo-name">${file.name}</span>
+      <span class="photo-size">${bytesToMB(file.size)} MB</span>
+      <span class="photo-status uploading">Upload...</span>
+      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+      <div class="photo-progress">
+        <div class="photo-progress-fill"></div>
+      </div>
+    `;
+    
+    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+      removePhoto(file.name);
+    });
+    
+    photosList.appendChild(photoDiv);
+  }
+
+  function updatePhotoStatus(fileName, status, progress = 0) {
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!photoDiv) return;
+    
+    const statusEl = photoDiv.querySelector('.photo-status');
+    const progressFill = photoDiv.querySelector('.photo-progress-fill');
+    
+    statusEl.className = `photo-status ${status}`;
+    
+    switch (status) {
+      case 'uploading':
+        statusEl.textContent = `${progress}%`;
+        progressFill.style.width = `${progress}%`;
+        break;
+      case 'success':
+        statusEl.textContent = 'Importée ✓';
+        progressFill.style.width = '100%';
+        break;
+      case 'error':
+        statusEl.textContent = 'Erreur ⚠';
+        progressFill.style.width = '0%';
+        break;
+    }
+  }
+
+  function removePhoto(fileName) {
+    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+    if (fileIndex !== -1) {
+      const file = uploadedFiles[fileIndex];
+      if (file.cloudinaryUrl) {
+        // Supprimer l'input caché
+        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+        if (hiddenInput) hiddenInput.remove();
+      }
+      uploadedFiles.splice(fileIndex, 1);
+    }
+    
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (photoDiv) photoDiv.remove();
+    
+    updatePhotosStatus();
+  }
+
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file) {
+    const fileObj = {
+      name: file.name,
+      size: file.size,
+      status: 'uploading',
+      progress: 0,
+      cloudinaryUrl: null
+    };
+    
+    uploadedFiles.push(fileObj);
+    addPhotoToList(file);
+    uploadingCount++;
+    updatePhotosStatus();
+    
+    try {
+      const signature = await getCloudinarySignature();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', signature.apiKey);
+      formData.append('timestamp', String(signature.timestamp));
+      formData.append('signature', signature.signature);
+      formData.append('folder', signature.folder);
+      if (signature.uploadPreset) {
+        formData.append('upload_preset', signature.uploadPreset);
+      }
+
+      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+      
+      const xhr = new XMLHttpRequest();
+      
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const progress = Math.round((e.loaded / e.total) * 100);
+          fileObj.progress = progress;
+          updatePhotoStatus(file.name, 'uploading', progress);
+        }
+      };
+      
+      xhr.onload = () => {
+        uploadingCount--;
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+            fileObj.status = 'success';
+            fileObj.cloudinaryUrl = result.secure_url;
+            updatePhotoStatus(file.name, 'success');
+            
+            // Ajouter l'URL au formulaire
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'photos[]';
+            hiddenInput.value = result.secure_url;
+            photosHidden.appendChild(hiddenInput);
+          } else {
+            throw new Error('Upload failed');
+          }
+        } catch (err) {
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          console.error('Upload error:', err);
+        }
+        updatePhotosStatus();
+      };
+      
+      xhr.onerror = () => {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Upload network error');
+      };
+      
+      xhr.open('POST', uploadUrl);
+      xhr.send(formData);
+      
+    } catch (error) {
+      uploadingCount--;
+      fileObj.status = 'error';
+      updatePhotoStatus(file.name, 'error');
+      updatePhotosStatus();
+      console.error('Cloudinary error:', error);
+    }
+  }
+
+  function validateFiles(files) {
+    const validFiles = [];
+    
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        showMessage(`${file.name} n'est pas une image valide`, 'error');
+        continue;
+      }
+      
+      if (file.size > maxMB * 1024 * 1024) {
+        showMessage(`${file.name} dépasse la limite de ${maxMB} MB`, 'error');
+        continue;
+      }
+      
+      if (uploadedFiles.length + validFiles.length >= maxFiles) {
+        showMessage(`Maximum ${maxFiles} photos autorisées`, 'error');
+        break;
+      }
+      
+      validFiles.push(file);
+    }
+    
+    return validFiles;
+  }
+
+  function handleFiles(files) {
+    const validFiles = validateFiles(Array.from(files));
+    validFiles.forEach(file => uploadToCloudinary(file));
+  }
+
+  // Event listeners pour les photos
+  if (photosInput && dropZone) {
+    photosInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = ''; // Reset pour permettre de re-sélectionner
+      }
+    });
+
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFiles(files);
+      }
+    });
+  }
+
+  // Validation basique des champs
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorDiv = field.parentNode.querySelector('.form-error');
+    
+    if (field.required && !value) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    field.classList.remove('border-red-500');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.classList.add('hidden');
+    }
+    return true;
+  }
+
+  // Soumission du formulaire
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        showMessage('Veuillez attendre la fin de l\'upload des photos', 'error');
+        return;
+      }
+      
+      // Validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      // Validation email si rempli
+      const emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) {
+          isValid = false;
+        }
+      }
+      
+      if (!isValid) {
+        showMessage('Veuillez corriger les erreurs ci-dessus', 'error');
+        return;
+      }
+      
+      setLoading(true);
+      messagesContainer.innerHTML = '';
+      
+      try {
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'landing_balcons',
+            form_type: 'devis_balcons'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'devis_balcons',
+            service: 'Nettoyage balcon',
+            source: 'lp-balcons'
+          });
+        }
+
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch {}
+
+        if (response.ok) {
+          // Remplacer complètement le contenu du formulaire par le message de succès
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = `
+            <div class="text-center py-10">
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+              <p class="text-[#475569] max-w-md mx-auto">
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>
+                Un expert Klinova analysera votre demande<br>
+                et vous proposera un planning d'intervention.
+              </p>
+            </div>
+          `;
+
+          // Scroll vers le formulaire transformé
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch {}
+        } else {
+          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          showMessage(err, 'error');
+        }
+      } catch (error) {
+        showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
+        console.error('Submit error:', error);
+      } finally {
+        setLoading(false);
+      }
+    });
+  }
+})();
+</script>
+</LayoutLP>

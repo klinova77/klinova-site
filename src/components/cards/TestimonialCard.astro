@@ -1,0 +1,17 @@
+---
+// src/components/cards/TestimonialCard.astro
+interface Props {
+  quote: string;
+  author: string;
+  role?: string;
+}
+
+const { quote, author, role } = Astro.props;
+---
+
+<figure class="rounded-2xl border border-[#E5E7EB] bg-white p-6 md:p-8">
+  <blockquote class="text-[#1E2939] italic mb-4">“{quote}”</blockquote>
+  <figcaption class="text-sm text-[#475569]">
+    <span class="font-semibold text-[#1E2939]">{author}</span>{role && ` — ${role}`}
+  </figcaption>
+</figure>

@@ -1,0 +1,112 @@
+---
+// src/layouts/FrameLP.astro
+// (Rendu "dans le body" par DocumentShell)
+
+import HeaderLP from '../components/HeaderLP.astro';
+import FooterLP from '../components/FooterLP.astro';
+import FloatingBottomCTA from '../components/UI/FloatingBottomCTA.astro';
+import PopupForm from '../components/PopupForm.astro';
+
+type PopupCtx = {
+  serviceKey?: string;
+  serviceLabel?: string;
+  trackingSource?: string;
+  presetSubject?: string | null;
+  popupTitle?: string | null;   // alias accepté
+  popupSubtitle?: string | null;// alias accepté
+  title?: string | null;        // normalisé -> popupTitle
+  subtitle?: string | null;     // normalisé -> popupSubtitle
+  creditImpotEnabled?: boolean;
+};
+
+const { popupContext = {} } = Astro.props as { popupContext?: PopupCtx };
+
+// Normalisation (avec valeurs par défaut sûres)
+const ctx: Required<Omit<PopupCtx, 'title' | 'subtitle'>> & {
+  popupTitle: string | null;
+  popupSubtitle: string | null;
+} = {
+  serviceKey: popupContext.serviceKey ?? 'general',
+  serviceLabel: popupContext.serviceLabel ?? 'Service Klinova',
+  trackingSource: popupContext.trackingSource ?? 'popup-general',
+  presetSubject: popupContext.presetSubject ?? null,
+  popupTitle: (popupContext.popupTitle ?? popupContext.title ?? null) ?? null,
+  popupSubtitle: (popupContext.popupSubtitle ?? popupContext.subtitle ?? null) ?? null,
+  creditImpotEnabled: !!popupContext.creditImpotEnabled,
+};
+---
+
+<!-- Wrapper interne (pas de <body> ici) -->
+<div
+  id="lp-root"
+  data-service-key={ctx.serviceKey}
+  data-service-label={ctx.serviceLabel}
+  data-tracking-source={ctx.trackingSource}
+  data-preset-subject={ctx.presetSubject ?? ''}
+  data-popup-title={ctx.popupTitle ?? ''}
+  data-popup-subtitle={ctx.popupSubtitle ?? ''}
+  data-credit-impot={ctx.creditImpotEnabled ? '1' : '0'}
+>
+  <HeaderLP />
+
+  <main class="min-h-[60vh]">
+    <slot />
+  </main>
+
+  <FooterLP />
+
+  <!-- CTA flottant -->
+  <FloatingBottomCTA
+    enabled={true}
+    showAfter="scroll"
+    targetSelector="[data-hide-cta]"
+    mobileOnly={true}
+  />
+
+  <!-- Popup (lecture via props +/ou body.dataset selon ton composant) -->
+  <PopupForm context={ctx} />
+</div>
+
+<!-- Miroir des data-* sur <body> si des scripts y accèdent -->
+<script is:inline>
+  (function () {
+    try {
+      const root = document.getElementById('lp-root');
+      if (!root) return;
+      const d = root.dataset, b = document.body;
+      b.dataset.serviceKey = d.serviceKey || '';
+      b.dataset.serviceLabel = d.serviceLabel || '';
+      b.dataset.trackingSource = d.trackingSource || '';
+      b.dataset.presetSubject = d.presetSubject || '';
+      b.dataset.popupTitle = d.popupTitle || '';
+      b.dataset.popupSubtitle = d.popupSubtitle || '';
+      b.dataset.creditImpot = d.creditImpot || '0';
+    } catch {}
+  })();
+</script>
+
+<!-- Événements analytics + confort -->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+
+  window.addEventListener('sp:popup_open', (e) => {
+    const type = e.detail?.type || 'unknown';
+    window.dataLayer.push({ event: 'popup_open', popup_type: type, page_type: 'landing_page' });
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'popup_open', { event_category: 'engagement', event_label: type });
+    }
+  });
+
+  window.addEventListener('sp:popup_close', () => {
+    window.dataLayer.push({ event: 'popup_close', page_type: 'landing_page' });
+  });
+
+  // Confort scroll
+  if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual';
+  if (!sessionStorage.getItem('_scroll_reset_done')) {
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+      sessionStorage.setItem('_scroll_reset_done', '1');
+    }, { once: true });
+  }
+</script>

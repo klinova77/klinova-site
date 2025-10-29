@@ -1,0 +1,2409 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image, getImage } from 'astro:assets';
+
+import Button from '~/components/UI/Button.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+
+// Import image optimisée
+import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
+import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
+
+
+
+import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
+import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
+import moquetteVelours from '~/assets/images/nettoyage-moquettes-velours.jpg';
+import dallesMoquette from '~/assets/images/dalles-moquette.jpg';
+
+import avantApresBureau from '~/assets/images/nettoyage-moquette-bureau-avant-apres.jpg';
+import avantApresDomicile from '~/assets/images/nettoyage-moquette-a-domicile.jpg';
+import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
+
+
+
+const popupContext = {
+  title: 'Devis nettoyage de moquettes',
+  subtitle: 'Obtenez un devis personnalisé sous 24h',
+  serviceKey: 'moquette',
+  serviceLabel: 'Nettoyage de moquette',
+  trackingSource: 'popup-moquette',
+  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  creditImpotEnabled: true, 
+};
+
+
+const SUBTITLE = 'Redonnez vie à vos revêtements textiles. Équipements haute performance, produits adaptés à chaque fibre.';
+const BADGE = 'Équipements professionnels industriels';
+
+
+import { Accordion, AccordionItem } from 'free-astro-components';
+
+const faq = [
+  {
+    title: "Combien de temps faut-il pour que ma moquette sèche ?",
+    content:
+      "En général 2 à 6 heures selon la méthode utilisée, la ventilation et la température ambiante. Nous pouvons installer des ventilateurs professionnels (air movers) pour accélérer le séchage si nécessaire. Pour les urgences ou contraintes d'exploitation, nous privilégions les méthodes à séchage rapide.",
+  },
+  {
+    title: "Intervenez-vous en cas de dégât des eaux ou d'urgence ?",
+    content:
+      "Oui, nous intervenons rapidement pour les sinistres : aspiration de l'eau, désinfection et séchage assisté. Nous pouvons également travailler en lien avec votre assurance et fournir les justificatifs nécessaires. L'organisation peut se faire entièrement par téléphone pour plus de simplicité.",
+  },
+  {
+    title: "À quelle fréquence faire nettoyer sa moquette ?",
+    content:
+      "Cela dépend de l'usage :\n• Bureaux et copropriétés : tous les 6 à 12 mois\n• Habitat privé : annuel ou bi-annuel\n• Zones à fort passage : 3 à 6 mois\n• Après sinistre ou taches importantes : dès que possible\n\nUn entretien régulier prolonge significativement la durée de vie de votre moquette.",
+  },
+  {
+    title: "Vos produits sont-ils sans danger pour les enfants et animaux ?",
+    content:
+      "Absolument. Nous utilisons des produits professionnels biodégradables, sans solvants agressifs et conformes aux normes européennes. Aucune odeur chimique persistante après intervention. Les surfaces sont sans danger dès le séchage terminé. Fiches de sécurité disponibles sur demande.",
+  },
+  {
+    title: "Quelle est la différence entre vos méthodes de nettoyage ?",
+    content:
+      "Nous adaptons la méthode selon votre moquette :\n• Nettoyage à sec : fibres délicates, remise en service immédiate\n• Injection-extraction : encrassement important, désinfection profonde\n• Monobrosse + mousse : compromis efficacité/séchage rapide\n\nLe choix se fait après diagnostic gratuit selon le type de fibre, l'état et vos contraintes.",
+  },
+  {
+    title: "Pouvez-vous enlever toutes les taches ?",
+    content:
+      "La plupart des taches courantes (café, vin, nourriture, boue) peuvent être éliminées avec nos techniques spécialisées. Les taches anciennes ou certaines substances (encre permanente, décoloration) peuvent laisser des traces. Nous réalisons toujours un test préalable et vous informons honnêtement des résultats attendus.",
+  },
+  {
+    title: "Le bruit pendant l'intervention est-il gênant ?",
+    content:
+      "Nos équipements professionnels restent en dessous de 65 dB (niveau conversation normale). Nous pouvons adapter nos horaires (tôt le matin, soirée ou week-end) pour minimiser la gêne, particulièrement en environnement de bureau ou résidentiel.",
+  },
+  {
+    title: "Comment se déroule votre diagnostic gratuit ?",
+    content:
+      "Diagnostic sous 24h : nous examinons le type de moquette, évaluons l'encrassement, identifions les taches spécifiques et testons si nécessaire. Ensuite, nous vous proposons la méthode adaptée avec un devis détaillé précisant surface, tarif et délais d'intervention.",
+  },
+  {
+    title: "Faut-il déplacer les meubles avant votre passage ?",
+    content:
+      "Nous nous adaptons à vos contraintes. Nous pouvons déplacer les meubles légers ou travailler autour du mobilier lourd. Pour un nettoyage complet, il est préférable de libérer la zone, mais ce n'est pas obligatoire. Nous en discutons lors du diagnostic.",
+  },
+  {
+    title: "Proposez-vous des contrats d'entretien régulier ?",
+    content:
+      "Oui, nous établissons des contrats trimestriels, semestriels ou annuels avec des tarifs préférentiels. Idéal pour les bureaux, hôtels, copropriétés. Chaque passage est tracé avec un rapport d'intervention détaillé. Planification flexible selon vos besoins.",
+  },
+];
+
+// JSON-LD SEO
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.title,
+    acceptedAnswer: { "@type": "Answer", text: item.content },
+  })),
+};
+
+
+
+const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 70 });
+const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: [768,1024,1280,1536], quality: 70 });
+
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de moquettes – Klinova',
+    description: 'Prestations pro de nettoyage de moquettes en Île-de-France : protocoles industriels, séchage rapide, devis en 24h.',
+  }}
+>
+
+
+<section
+  data-hero
+  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
+>
+  <div class="absolute inset-0 z-0">
+    <!-- Image mobile (cachée sur desktop) -->
+    <img 
+      src={mobileImg.src}
+      srcset={mobileImg.srcset}
+      alt="Avant et après nettoyage professionnel de moquette"
+      decoding="async"
+      class="w-full h-full object-cover md:hidden"
+    />
+    <!-- Image desktop (cachée sur mobile) -->
+    <img 
+      src={desktopImg.src}
+      srcset={desktopImg.srcset}
+      alt="Avant et après nettoyage professionnel de moquette"
+      decoding="async"
+      class="w-full h-full object-cover hidden md:block"
+    />
+
+    <!-- Overlay -->
+    <div
+      class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/25 via-black/10 to-transparent z-[1]"
+      aria-hidden="true"
+    ></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-6 lg:px-12 relative z-10 py-16 md:py-24">
+    <div class="max-w-2xl">
+      <h1
+        class="text-4xl md:text-5xl xl:text-5xl font-bold mb-6 leading-tight
+               text-[#1E2939] md:text-white
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:220ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        Nettoyage <span class="text-[#4ADEEF] inline-block transform hover:scale-105 transition-transform duration-300">de moquettes</span> en Île-de-France
+      </h1>
+
+      <p
+        class="text-xl md:text-2xl mb-2 leading-relaxed font-bold
+               text-[#1E2939] md:text-white
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:340ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        {SUBTITLE}
+      </p>
+
+      <p
+        class="text-sm md:text-base text-orange-200 mb-8 font-medium
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:480ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <span class="inline-flex items-center group">
+          <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Particuliers : payez seulement 50% aujourd'hui avec l'avance immédiate
+        </span>
+      </p>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 items-start sm:items-center
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:600ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <div class="flex flex-col gap-2">
+          <Button
+            href={LINKS.contactPage}
+            variant="primary"
+            size="lg"
+            class="shadow-lg shadow-[#3F8D65]/25 hover:shadow-xl hover:shadow-[#3F8D65]/30 hover:scale-[1.02] active:translate-y-[1px] active:shadow-md hover:brightness-105 active:brightness-100 transition-all duration-300"
+            ariaLabel="Demander un devis moquettes"
+            tracking={{ action: 'lead', source: 'hero-moquettes', intent: 'cta-primary' }}
+            data={{ 'open-popup': 'devis-moquettes' }}
+          >
+            Devis gratuit 24h
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    document.querySelectorAll('[data-hero] .animate-fade-in-up').forEach((el) => {
+      el.addEventListener('animationend', () => { el.style.willChange = 'auto'; }, { once: true });
+    });
+  </script>
+
+  <style>
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    [data-hero] .animate-fade-in-up { animation: fade-in-up .6s both; }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(63,141,101,0.35); }
+      50%      { box-shadow: 0 0 0 8px rgba(63,141,101,0); }
+    }
+    [data-hero] .hero-badge { animation: fade-in-up .6s both, pulse-glow 3s ease-in-out infinite 1.2s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-hero] .animate-fade-in-up,
+      [data-hero] .hero-badge {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</section>
+
+
+
+
+
+
+
+<section
+  id="savoir-faire"
+  class="bg-white py-12 md:py-20 border-t border-[#E5E7EB]"
+>
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <!-- Badge + Titre -->
+      <div class="text-center mb-8 md:mb-12">
+        <div
+          class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#3F8D65]/10 text-[#3F8D65] text-sm font-semibold tracking-wide"
+        >
+          Notre expérience terrain
+        </div>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-5 leading-tight"
+        >
+          Des années d’évolution vers un nettoyage plus sain et plus efficace
+        </h2>
+      </div>
+
+      <!-- Storytelling expérience -->
+      <div class="max-w-3xl mx-auto mb-10 text-[#475569] text-base md:text-lg leading-relaxed">
+        <p class="mb-6">
+          Le nettoyage de moquettes et tapis a considérablement évolué ces dernières années.
+          Les anciennes méthodes laissaient des résidus collants qui attiraient la saleté, et les
+          temps de séchage interminables rendaient les espaces inutilisables pendant des jours.
+        </p>
+
+        <p class="mb-6">
+          Aujourd’hui, nous sommes entrés dans une nouvelle ère du nettoyage professionnel en Île-de-France.
+          Nous utilisons des <strong>équipements de dernière génération</strong> qui combinent puissance et précision
+          pour <strong>limiter l’humidité résiduelle</strong> : extraction à haute performance, séchage accéléré
+          en 2 à 4 heures selon la méthode, et surtout, une <strong>attention particulière portée aux produits</strong> que nous utilisons.
+        </p>
+
+        <p class="mb-6">
+          Car l’équipement n’est qu’une partie de l’équation. Les solutions de nettoyage ont elles aussi évolué.
+          Nous privilégions désormais des <strong>formules éco-responsables, biodégradables et sans solvants agressifs</strong>,
+          meilleures pour l’environnement et plus sûres pour vos proches, vos équipes et vos animaux.
+          Efficaces sur les taches et les odeurs, elles garantissent un <strong>environnement plus sain</strong>
+          sans odeurs chimiques ni irritations.
+        </p>
+
+        <div class="bg-[#3F8D65]/5 border-l-4 border-[#3F8D65] p-6 rounded-r-lg mb-6">
+          <p class="text-[#1E2939]">
+            Pour nos clients, c’est aujourd’hui le <strong>meilleur moment pour entretenir leurs textiles</strong>.
+            Grâce à nos <strong>procédés modernes</strong> et à nos <strong>solutions écologiques</strong>, nous éliminons efficacement
+            la saleté, les taches et les odeurs tenaces tout en <strong>préservant la longévité des fibres</strong>.
+          </p>
+        </div>
+
+        <p>
+          Chez Klinova, nous combinons <strong>expérience</strong>, <strong>expertise technique</strong>
+          et <strong>technologie de pointe</strong> pour offrir un service de nettoyage de moquettes
+          à la fois performant, durable et respectueux de l’environnement.
+        </p>
+      </div>
+
+      <!-- Listes services -->
+      <div class="border-t border-[#E5E7EB] pt-10 mb-10">
+        <h3 class="text-xl font-semibold text-[#1E2939] text-center mb-8">
+          Nos interventions
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Particuliers</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Moquettes résidentielles</li>
+              <li>Maisons et appartements</li>
+              <li>Remise en état locative</li>
+              <li>Traitement anti-odeurs (animaux, tabac)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Professionnels</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Bureaux et open spaces</li>
+              <li>Hôtels et résidences</li>
+              <li>Commerces et showrooms</li>
+              <li>Copropriétés (parties communes)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Interventions spécialisées</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Post-sinistre / dégâts des eaux</li>
+              <li>Désinfection ciblée</li>
+              <li>Après déménagement</li>
+              <li>Traitement anti-acariens</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone d’intervention + CTA -->
+      <div class="text-center pt-8 border-t border-[#E5E7EB]">
+        <p class="text-[#475569] text-sm md:text-base mb-2">
+          <span class="font-semibold text-[#1E2939]">Intervention en Île-de-France</span><br />
+          Paris • Hauts-de-Seine • Seine-Saint-Denis • Val-de-Marne • Val-d’Oise •
+          Seine-et-Marne • Yvelines • Essonne
+        </p>
+
+        <!-- CTA principal -->
+        <a
+          href="/contact#formulaire"
+          class="inline-flex items-center mt-6 px-6 py-3 bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/30"
+        >
+          Demander un devis gratuit
+          <svg
+            class="w-5 h-5 ml-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Problématiques Clients -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- En-tête de section -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+        Pourquoi faire nettoyer vos moquettes par un professionnel ?
+      </h2>
+      
+      <!-- Introduction restructurée en plusieurs paragraphes -->
+      <div class="max-w-4xl mx-auto space-y-4">
+        <p class="text-xl text-[#475569] leading-relaxed">
+          Les moquettes accumulent invisiblement poussières, allergènes et taches. Un entretien professionnel préserve leur beauté et prolonge leur durée de vie.
+        </p>
+        <p class="text-lg text-[#475569] leading-relaxed">
+          Chaque environnement présente ses défis spécifiques : une moquette de bureau subit un passage intensif mais régulier, tandis qu'une moquette résidentielle accumule taches accidentelles et poils d'animaux. Les halls d'immeubles nécessitent des interventions discrètes et rapides.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grille des problématiques -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      <!-- Problématique 1 : Taches tenaces -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-lg transition-all duration-300 group">
+        <div class="mb-6">
+          <!-- Indicateur visuel amélioré -->
+          <div class="w-2 h-10 bg-gradient-to-b from-red-400 to-red-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Taches tenaces et odeurs
+        </h3>
+        <p class="text-[#475569] leading-relaxed">
+          Café, vin, nourriture... Les taches s'incrustent en profondeur et dégagent des odeurs persistantes que l'aspirateur ne peut éliminer.
+        </p>
+      </div>
+
+      <!-- Problématique 2 : Usure prématurée -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-lg transition-all duration-300 group">
+        <div class="mb-6">
+          <div class="w-2 h-10 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Usure prématurée des fibres
+        </h3>
+        <p class="text-[#475569] leading-relaxed">
+          Les salissures agissent comme un abrasif. Sans nettoyage adapté, les fibres se dégradent et la moquette vieillit plus rapidement.
+        </p>
+      </div>
+
+      <!-- Problématique 3 : Allergènes -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-lg transition-all duration-300 group">
+        <div class="mb-6">
+          <div class="w-2 h-10 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Allergènes et acariens
+        </h3>
+        <p class="text-[#475569] leading-relaxed">
+          Poussières, pollens et acariens s'accumulent dans les fibres, créant un environnement propice aux allergies et inconforts respiratoires.
+        </p>
+      </div>
+
+      <!-- Problématique 4 : Perte d'éclat -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-lg transition-all duration-300 group">
+        <div class="mb-6"> 
+          <div class="w-2 h-10 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Perte d'éclat et d'aspect
+        </h3>
+        <p class="text-[#475569] leading-relaxed">
+          La moquette terne et grisâtre nuit à l'esthétique de vos espaces. Elle perd ses couleurs originales et son aspect professionnel.
+        </p>
+      </div>
+    </div>
+
+    <!-- Call-to-action de transition amélioré -->
+    <div class="text-center mt-12 lg:mt-16">
+      <div class="bg-[#DFF1E8] rounded-2xl p-8 max-w-3xl mx-auto">
+        <p class="text-lg text-[#1E2939] font-medium mb-6">
+          Un nettoyage professionnel régulier résout ces problématiques et préserve votre investissement.
+        </p>
+        <a href="#methode" class="inline-flex items-center text-[#3F8D65] hover:text-[#387B58] font-semibold text-lg transition-colors duration-200 group">
+          Découvrir notre méthode
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APRÈS LA SECTION PROBLÉMATIQUES -->
+
+<!-- Section Solution Klinova (réponse directe aux problèmes) -->
+<section class="py-16 md:py-20 bg-[#DFF1E8]">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Titre de transition -->
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6 leading-tight">
+        La solution Klinova pour des textiles impeccables et un air plus sain.
+      </h2>
+      
+      <!-- Message principal de réassurance -->
+      <div class="bg-white rounded-2xl p-8 mb-12 shadow-lg">
+        <p class="text-xl text-[#1E2939] leading-relaxed mb-6">
+          Nous maîtrisons toutes les techniques de nettoyage professionnel pour redonner à vos moquettes leur éclat d'origine, 
+          éliminer durablement taches et odeurs, et prolonger leur durée de vie.
+        </p>
+        <p class="text-lg text-[#475569] leading-relaxed">
+          Chaque intervention est adaptée au type de fibre, au niveau d'encrassement et à vos contraintes d'exploitation. 
+          Résultat garanti sans compromis pour la sécurité ou l'environnement.
+        </p>
+      </div>
+
+      <!-- Bénéfices clés (réponse aux 4 problématiques) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold text-[#1E2939] mb-2">Taches éliminées</h3>
+          <p class="text-sm text-[#475569]">Détachage ciblé, traitement en profondeur.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold text-[#1E2939] mb-2">Fibres préservées</h3>
+          <p class="text-sm text-[#475569]">Méthodes adaptées, durée de vie prolongée.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold text-[#1E2939] mb-2">Air assaini</h3>
+          <p class="text-sm text-[#475569]">Réduction allergènes et acariens.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-semibold text-[#1E2939] mb-2">Éclat retrouvé</h3>
+          <p class="text-sm text-[#475569]">Couleurs ravivées, rendu homogène.</p>
+        </div>
+      </div>
+      <!-- CTA de transition -->
+      <div class="bg-[#3F8D65]/10 rounded-2xl p-6">
+        <p class="text-lg text-[#1E2939] font-medium mb-4">
+          Découvrez comment nous procédons pour obtenir ces résultats
+        </p>
+        <a href="#processus" class="inline-flex items-center text-[#3F8D65] hover:text-[#387B58] font-semibold transition-colors duration-200 group">
+          Notre processus en 4 étapes
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Processus unifié (processus en 4 étapes simplifié) -->
+<section id="processus" class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- Titre -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
+        Notre protocole de nettoyage de moquettes
+      </h2>
+      <p class="text-xl text-[#475569] max-w-3xl mx-auto leading-relaxed">
+        Une approche méthodique et personnalisée pour garantir des résultats optimaux sur tous types de moquettes.
+      </p>
+    </div>
+
+    <!-- Process steps - version plus détaillée -->
+    <div class="grid lg:grid-cols-4 gap-8 mb-16">
+      <!-- Étape 1 -->
+      <div class="text-center group">
+        <div class="w-20 h-20 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-white font-bold">1</span>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Diagnostic & analyse
+        </h3>
+        <p class="text-[#475569] leading-relaxed mb-4">
+          Identification du type de fibre (naturelle/synthétique), évaluation de l'encrassement et test discret pour choisir la méthode optimale.
+        </p>
+        <div class="text-sm text-[#3F8D65] font-medium">
+          • Test fibre • État des lieux • Adaptation méthode
+        </div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="text-center group">
+        <div class="w-20 h-20 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-white font-bold">2</span>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Préparation & détachage
+        </h3>
+        <p class="text-[#475569] leading-relaxed mb-4">
+          Aspiration approfondie puis traitement spécifique des taches (café, vin, graisse) avec produits ciblés et éco-responsables.
+        </p>
+        <div class="text-sm text-[#3F8D65] font-medium">
+          • Aspiration • Détachage ciblé • Produits adaptés
+        </div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="text-center group">
+        <div class="w-20 h-20 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-white font-bold">3</span>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Nettoyage professionnel
+        </h3>
+        <p class="text-[#475569] leading-relaxed mb-4">
+          Application de la méthode sélectionnée : nettoyage à sec, injection-extraction ou monobrosse selon vos contraintes.
+        </p>
+        <div class="text-sm text-[#3F8D65] font-medium">
+          • Méthode adaptée • Nettoyage en profondeur • Extraction optimisée
+        </div>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="text-center group">
+        <div class="w-20 h-20 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-3xl text-white font-bold">4</span>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+          Finition & conseils
+        </h3>
+        <p class="text-[#475569] leading-relaxed mb-4">
+          Séchage accéléré si nécessaire, contrôle qualité et recommandations d'entretien pour préserver le résultat dans le temps.
+        </p>
+        <div class="text-sm text-[#3F8D65] font-medium">
+          • Séchage optimisé • Contrôle qualité • Conseils personnalisés
+        </div>
+      </div>
+    </div>
+
+    <!-- Transition vers les méthodes -->
+    <div class="text-center">
+      <p class="text-lg text-[#475569] mb-6">
+        Nous maîtrisons 3 méthodes principales que nous adaptons selon vos besoins spécifiques
+      </p>
+      <a href="#methodes" class="inline-flex items-center text-[#3F8D65] hover:text-[#387B58] font-semibold transition-colors duration-200 group">
+        Découvrir nos méthodes de nettoyage
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PUIS LA SECTION MÉTHODES (version allégée de votre section actuelle) -->
+<section id="methodes" class="py-16 md:py-20 bg-[#FCFCFC]">
+  <!-- Votre contenu méthodes existant, mais avec le titre simplifié -->
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
+        Nos 3 méthodes de nettoyage de moquette pour un résultat impeccable et durable.
+      </h2>
+      <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
+        Chaque méthode répond à des besoins spécifiques selon le type de moquette, le niveau d'encrassement et vos contraintes d'exploitation.
+      </p>
+    </div>
+    
+   <!-- Grille des méthodes -->
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Méthode 1 : Nettoyage à sec -->
+      <div class="bg-white border border-[#E5E7EB] rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="mb-6">
+          <div class="inline-flex items-center bg-[#C0E2D0] text-[#1E2939] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Fibres naturelles
+          </div>
+          <h3 class="text-xl font-bold text-[#1E2939] mb-2">
+            Nettoyage à sec
+          </h3>
+          <p class="text-[#475569] mb-4">
+            Recommandé pour les moquettes naturelles (sisal, jute, chanvre) ou fragiles. Sans apport d'eau, il ne nécessite aucun temps de séchage.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Quand l'utiliser ?</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Fibres sensibles à l'eau (sisal, jute, chanvre)</li>
+            <li>• Locaux ouverts au public avec remise en service immédiate</li>
+            <li>• Entretien rapide en bureaux, chambres d'hôtel</li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Avantages</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Préserve la structure et la durée de vie des fibres</li>
+            <li>• Limite les risques de déformation</li>
+            <li>• Solution propre et discrète (sans humidité)</li>
+          </ul>
+        </div>
+
+        <div class="border-t border-[#E5E7EB] pt-4">
+          <span class="font-semibold text-[#3F8D65]">Remise en service : immédiate</span>
+        </div>
+      </div>
+
+      <!-- Méthode 2 : Injection-extraction -->
+      <div class="bg-white border border-[#E5E7EB] rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="mb-6">
+          <div class="inline-flex items-center bg-[#DBEAFE] text-[#1E2939] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Désincrustation en profondeur
+          </div>
+          <h3 class="text-xl font-bold text-[#1E2939] mb-2">
+            Injection-extraction
+          </h3>
+          <p class="text-[#475569] mb-4">
+            Idéal pour les moquettes synthétiques très sales. Permet un nettoyage en profondeur et élimine les taches incrustées.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Quand l'utiliser ?</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Taches anciennes (café, vin, graisse, encre)</li>
+            <li>• Zones à fort passage : bureaux, couloirs d'hôtels</li>
+            <li>• Après sinistre (dégât des eaux, odeurs persistantes)</li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Avantages</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Nettoyage en profondeur (fibres + sous-couche)</li>
+            <li>• Très efficace sur les salissures lourdes</li>
+            <li>• Compatible avec un traitement anti-odeurs</li>
+          </ul>
+        </div>
+
+        <div class="border-t border-[#E5E7EB] pt-4">
+          <span class="font-semibold text-[#3F8D65]">Remise en service : 4 à 24h*</span>
+          <p class="text-xs text-[#475569] mt-1">*selon ventilation et épaisseur</p>
+        </div>
+      </div>
+
+      <!-- Méthode 3 : Monobrosse + mousse sèche -->
+      <div class="bg-white border border-[#E5E7EB] rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="mb-6">
+          <div class="inline-flex items-center bg-[#DFF1E8] text-[#1E2939] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Séchage rapide
+          </div>
+          <h3 class="text-xl font-bold text-[#1E2939] mb-2">
+            Monobrosse + mousse sèche
+          </h3>
+          <p class="text-[#475569] mb-4">
+            Excellent compromis entre qualité visuelle et temps de séchage réduit. Adapté aux zones à fort trafic.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Quand l'utiliser ?</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Entretien intermédiaire régulier</li>
+            <li>• Grandes surfaces avec rendu homogène attendu</li>
+            <li>• Contrainte de remise en service rapide</li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="font-semibold text-[#1E2939] mb-3">Avantages</h4>
+          <ul class="text-sm text-[#475569] space-y-2">
+            <li>• Beaucoup moins d'humidité qu'une injection-extraction</li>
+            <li>• Ravive les couleurs et l'aspect des fibres</li>
+            <li>• Procédé silencieux et discret</li>
+          </ul>
+        </div>
+
+        <div class="border-t border-[#E5E7EB] pt-4">
+          <span class="font-semibold text-[#3F8D65]">Remise en service : généralement rapide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Section 4 : Types de moquettes traités -->
+
+
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- En-tête de section -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+        Tous types de moquettes : expertise et nettoyage adaptés à chaque fibre
+      </h2>
+      <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
+        Chaque type de moquette a ses spécificités techniques et ses exigences d'entretien. 
+        Nos méthodes sont adaptées à la fibre, au tissage et à l'usage de votre revêtement.
+      </p>
+    </div>
+
+    <!-- Grille des types de moquettes -->
+    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+      
+      <!-- Moquette aiguilletée -->
+      <div class="bg-[#DBEAFE] rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Image moquette aiguilletée -->
+          <div class="flex-shrink-0 w-full lg:w-48">
+            <Image
+              src={moquetteAiguilletee}
+              alt="Moquette aiguilletée dans un open space"
+              class="w-full h-32 lg:h-36 object-cover rounded-xl"
+              widths={[480, 768, 1024]}
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              loading="lazy"
+              quality={88}
+            />
+          </div>
+          
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-[#1E2939] mb-3">
+              Moquette aiguilletée
+            </h3>
+            
+            <p class="text-[#475569] mb-4 leading-relaxed">
+              Robuste et résistante au passage intensif. Idéale pour bureaux, halls d'accueil, 
+              couloirs d'immeubles et espaces commerciaux.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Usages typiques</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Bureaux et open-spaces</li>
+                  <li>• Halls d'immeubles</li>
+                  <li>• Centres commerciaux</li>
+                  <li>• Salles de conférence</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Notre approche</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Injection-extraction adaptée</li>
+                  <li>• Séchage accéléré</li>
+                  <li>• Intervention hors heures</li>
+                  <li>• Entretien préventif</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white/60 rounded-lg p-3">
+              <span class="text-sm font-medium text-blue-700">
+                ⚡ Remise en service : 4 à 8h selon ventilation
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moquette bouclée -->
+      <div class="bg-[#DFF1E8] rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Image moquette bouclée -->
+          <div class="flex-shrink-0 w-full lg:w-48">
+            <Image
+              src={moquetteBouclee}
+              alt="Moquette bouclée en salon résidentiel"
+              class="w-full h-32 lg:h-36 object-cover rounded-xl"
+              widths={[480, 768, 1024]}
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              loading="lazy"
+              quality={88}
+            />
+          </div>
+          
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-[#1E2939] mb-3">
+              Moquette bouclée
+            </h3>
+            
+            <p class="text-[#475569] mb-4 leading-relaxed">
+              Confortable et esthétique, parfaite pour les espaces résidentiels. 
+              Sa texture bouclée demande une attention particulière lors du nettoyage.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Usages typiques</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Chambres et salons</li>
+                  <li>• Appartements haut de gamme</li>
+                  <li>• Hôtels et gîtes</li>
+                  <li>• Bureaux de direction</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Notre approche</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Respect des boucles</li>
+                  <li>• Brossage délicat</li>
+                  <li>• Produits doux</li>
+                  <li>• Séchage contrôlé</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white/60 rounded-lg p-3">
+              <span class="text-sm font-medium text-[#3F8D65]">
+                ✨ Spécialité : préservation de la texture bouclée
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moquette velours -->
+      <div class="bg-[#C0E2D0] rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Image moquette velours -->
+          <div class="flex-shrink-0 w-full lg:w-48">
+            <Image
+              src={moquetteVelours}
+              alt="Moquette velours en suite d’hôtel"
+              class="w-full h-32 lg:h-36 object-cover rounded-xl"
+              widths={[480, 768, 1024]}
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              loading="lazy"
+              quality={88}
+            />
+          </div>
+          
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-[#1E2939] mb-3">
+              Moquette velours
+            </h3>
+            
+            <p class="text-[#475569] mb-4 leading-relaxed">
+              Haut de gamme et luxueuse, elle offre un toucher soyeux et un aspect raffiné. 
+              Nécessite un savoir-faire spécialisé pour préserver sa beauté.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Usages typiques</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Suites de luxe</li>
+                  <li>• Cabinets d'avocats</li>
+                  <li>• Salons VIP</li>
+                  <li>• Demeures prestigieuses</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Notre approche</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Techniques premium</li>
+                  <li>• Produits haute qualité</li>
+                  <li>• Test préalable obligatoire</li>
+                  <li>• Finition impeccable</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white/60 rounded-lg p-3">
+              <span class="text-sm font-medium text-purple-700">
+                🎯 Expertise : préservation de l'aspect soyeux
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dalles de moquette -->
+      <div class="bg-[#DBEAFE] rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Image dalles de moquette -->
+          <div class="flex-shrink-0 w-full lg:w-48">
+            <Image
+              src={dallesMoquette}
+              alt="Dalles de moquette en plateau de bureaux"
+              class="w-full h-32 lg:h-36 object-cover rounded-xl"
+              widths={[480, 768, 1024]}
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              loading="lazy"
+              quality={88}
+            />
+          </div>
+          
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-[#1E2939] mb-3">
+              Dalles de moquette
+            </h3>
+            
+            <p class="text-[#475569] mb-4 leading-relaxed">
+              Solution modulaire et pratique, facile à remplacer ponctuellement. 
+              Très répandue dans les bureaux modernes et espaces de coworking.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Usages typiques</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Bureaux modernes</li>
+                  <li>• Espaces de coworking</li>
+                  <li>• Centres d'appels</li>
+                  <li>• Zones techniques</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2">Notre approche</h4>
+                <ul class="text-sm text-[#475569] space-y-1">
+                  <li>• Nettoyage dalle par dalle</li>
+                  <li>• Attention aux joints</li>
+                  <li>• Remplacement si nécessaire</li>
+                  <li>• Homogénéité du rendu</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="bg-white/60 rounded-lg p-3">
+              <span class="text-sm font-medium text-orange-700">
+                🔧 Avantage : intervention ciblée possible
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galerie avant/après -->
+    <div class="mb-16">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold text-[#1E2939] mb-4">
+          Nos résultats en images
+        </h3>
+        <p class="text-[#475569] leading-relaxed max-w-2xl mx-auto">
+          Découvrez la transformation que nous apportons à chaque type de moquette
+        </p>
+      </div>
+
+      <!-- Grille avant/après -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Avant/après 1 -->
+        <div class="bg-white rounded-xl border border-[#E5E7EB] p-4 hover:shadow-lg transition-shadow duration-300">
+          <Image
+            src={avantApresBureau}
+            alt="Avant/après nettoyage d’une moquette de bureau"
+            class="w-full h-40 object-cover rounded-lg mb-3"
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="lazy"
+            quality={88}
+          />
+          <h4 class="font-semibold text-[#1E2939] text-sm mb-1">Bureau - Moquette aiguilletée</h4>
+          <p class="text-xs text-[#475569]">Zone de passage retrouve son éclat original</p>
+        </div>
+
+        <!-- Avant/après 2 -->
+        <div class="bg-white rounded-xl border border-[#E5E7EB] p-4 hover:shadow-lg transition-shadow duration-300">
+          <Image
+            src={avantApresDomicile}
+            alt="Avant/après nettoyage d’une moquette à domicile"
+            class="w-full h-40 object-cover rounded-lg mb-3"
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="lazy"
+            quality={88}
+          />
+          <h4 class="font-semibold text-[#1E2939] text-sm mb-1">Salon - Moquette bouclée</h4>
+          <p class="text-xs text-[#475569]">Taches éliminées, texture préservée</p>
+        </div>
+
+        <!-- Avant/après 3 -->
+        <div class="bg-white rounded-xl border border-[#E5E7EB] p-4 hover:shadow-lg transition-shadow duration-300">
+          <Image
+            src={restaurationHotel}
+            alt="Avant/après restauration d’une moquette d’hôtel"
+            class="w-full h-40 object-cover rounded-lg mb-3"
+            widths={[640, 1024]}
+            sizes="100vw"
+            loading="lazy"
+            quality={88}
+          />
+          <h4 class="font-semibold text-[#1E2939] text-sm mb-1">Suite - Moquette velours</h4>
+          <p class="text-xs text-[#475569]">Aspect soyeux retrouvé, qualité préservée</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section garanties Klinova -->
+    <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-8">
+      <div class="text-center mb-8">
+        <h3 class="text-xl font-bold text-[#1E2939] mb-4">
+          Nos engagements qualité
+        </h3>
+        <p class="text-[#475569] leading-relaxed max-w-3xl mx-auto">
+          Au-delà de notre expertise technique, nous nous engageons sur des garanties concrètes 
+          pour votre tranquillité d'esprit.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold">✓</span>
+          </div>
+          <h4 class="font-semibold text-[#1E2939] mb-2">Expertise certifiée</h4>
+          <p class="text-sm text-[#475569]">
+            Techniciens formés aux spécificités de chaque type de moquette et fibre.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold">🕐</span>
+          </div>
+          <h4 class="font-semibold text-[#1E2939] mb-2">Délai d'intervention</h4>
+          <p class="text-sm text-[#475569]">
+            Diagnostic gratuit sous 24h, intervention programmée selon vos contraintes.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold">🌿</span>
+          </div>
+          <h4 class="font-semibold text-[#1E2939] mb-2">Produits certifiés</h4>
+          <p class="text-sm text-[#475569]">
+            Formules éco-responsables, sans risque pour la santé ou l'environnement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA de transition amélioré -->
+    <div class="text-center mt-12">
+      <div class="bg-[#DFF1E8] rounded-2xl p-8 max-w-3xl mx-auto">
+        <p class="text-lg text-[#1E2939] font-medium mb-6">
+          Votre moquette mérite un entretien professionnel adapté à ses spécificités
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/contact" class="inline-flex items-center bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 shadow-lg shadow-[#3F8D65]/25">
+            Diagnostic gratuit sous 24h
+          </a>
+          <a href="tel:+33676738661" class="text-[#475569] text-sm hover:underline">
+            06 76 73 86 61
+          </a>
+          <span class="text-[#475569] text-sm">
+            • Paris et Île-de-France
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Section 5 : Équipements & produits — orientés résultats -->
+<section class="py-16 md:py-20 bg-[#FCFCFC]">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+        Des équipements adaptés pour des résultats durables
+      </h2>
+      <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
+        Nous adaptons nos méthodes et produits à chaque situation pour vous garantir 
+        un résultat optimal sans abîmer vos moquettes ni perturber votre activité.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Bloc 1 : Intervention adaptée -->
+      <div class="bg-white rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-lg transition-shadow">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-white text-xl">🎯</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#1E2939] mb-3 text-center">Intervention sur-mesure</h3>
+        <p class="text-[#475569] mb-4 leading-relaxed text-center">
+          Chaque moquette est différente. Nous adaptons la pression, la température et les produits selon sa composition.
+        </p>
+        <ul class="text-sm text-[#475569] space-y-2">
+          <li>• Test préalable sur zone discrète</li>
+          <li>• Réglages précis selon le type de fibre</li>
+          <li>• Pas de risque de décoloration ou déformation</li>
+        </ul>
+      </div>
+
+      <!-- Bloc 2 : Produits sécurisés -->
+      <div class="bg-white rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-lg transition-shadow">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-white text-xl">🌿</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#1E2939] mb-3 text-center">Produits respectueux</h3>
+        <p class="text-[#475569] mb-4 leading-relaxed text-center">
+          Formules professionnelles sans danger pour votre famille, vos collaborateurs ou vos animaux.
+        </p>
+        <ul class="text-sm text-[#475569] space-y-2">
+          <li>• Aucune odeur chimique persistante</li>
+          <li>• Sécurisés pour enfants et animaux domestiques</li>
+          <li>• Biodégradables et respectueux de l'environnement</li>
+        </ul>
+      </div>
+
+      <!-- Bloc 3 : Séchage rapide -->
+      <div class="bg-white rounded-2xl p-8 border border-[#E5E7EB] hover:shadow-lg transition-shadow">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-white text-xl">⚡</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#1E2939] mb-3 text-center">Remise en service rapide</h3>
+        <p class="text-[#475569] mb-4 leading-relaxed text-center">
+          Grâce à nos techniques et équipements de séchage, vos espaces sont utilisables rapidement.
+        </p>
+        <ul class="text-sm text-[#475569] space-y-2">
+          <li>• Séchage accéléré : 2 à 6 heures selon les conditions</li>
+          <li>• Ventilation professionnelle si nécessaire</li>
+          <li>• Intervention possible en soirée ou week-end</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section résultats concrets -->
+    <div class="mt-16">
+      <div class="bg-white rounded-2xl p-8 border border-[#E5E7EB]">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-[#1E2939] mb-4">
+            Ce que vous gagnez concrètement
+          </h3>
+          <p class="text-[#475569] leading-relaxed max-w-3xl mx-auto">
+            Au-delà du résultat esthétique, nos interventions vous apportent des bénéfices durables.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center p-4">
+            <div class="text-3xl font-bold text-[#3F8D65] mb-2">2-6h</div>
+            <p class="text-sm text-[#475569]">Temps de séchage<br>vs 12-24h en méthode classique</p>
+          </div>
+          
+          <div class="text-center p-4">
+            <div class="text-3xl font-bold text-[#3F8D65] mb-2">0</div>
+            <p class="text-sm text-[#475569]">Odeur chimique<br>après intervention</p>
+          </div>
+          
+          <div class="text-center p-4">
+            <div class="text-3xl font-bold text-[#3F8D65] mb-2">+50%</div>
+            <p class="text-sm text-[#475569]">Durée de vie prolongée<br>avec entretien régulier</p>
+          </div>
+          
+          <div class="text-center p-4">
+            <div class="text-3xl font-bold text-[#3F8D65] mb-2">24h</div>
+            <p class="text-sm text-[#475569]">Délai de diagnostic<br>et devis gratuit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bandeau engagement -->
+    <div class="mt-12 bg-[#DFF1E8] rounded-2xl p-8 text-center">
+      <h3 class="text-lg font-bold text-[#1E2939] mb-3">
+        Notre engagement qualité
+      </h3>
+      <p class="text-[#475569] leading-relaxed max-w-2xl mx-auto">
+        Nous nous engageons sur un résultat visible et durable. Si vous n'êtes pas satisfait 
+        du rendu, nous analysons la situation et trouvons une solution adaptée.
+      </p>
+    </div>
+
+    <!-- CTA de transition -->
+    <div class="text-center mt-12">
+      <p class="text-lg text-[#475569] mb-6">
+        Nos équipements nous permettent d'intervenir efficacement dans toute l'Île-de-France
+      </p>
+      <a href="#zones-intervention" class="inline-flex items-center text-[#3F8D65] hover:text-[#387B58] font-semibold transition-colors duration-200 group">
+        Découvrir nos zones d'intervention
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section 7 : Tarification transparente -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- En-tête de section -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+        Tarification transparente et sans surprise
+      </h2>
+      <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
+        Nos tarifs sont calculés selon la surface, le type de moquette et l'état d'encrassement. 
+        Devis gratuit détaillé sous 24h pour une parfaite transparence.
+      </p>
+    </div>
+
+    <!-- Grille tarifaire -->
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="bg-[#FCFCFC] rounded-2xl p-8 border border-[#E5E7EB]">
+        <h3 class="text-xl font-bold text-[#1E2939] mb-6 text-center">
+          Grille tarifaire indicative
+        </h3>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <!-- Petites surfaces -->
+          <div class="bg-white rounded-xl p-6 border border-[#E5E7EB] text-center hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-[#DBEAFE] rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🏠</span>
+            </div>
+            <h4 class="text-lg font-bold text-[#1E2939] mb-2">Petites surfaces</h4>
+            <p class="text-sm text-[#475569] mb-3">≤ 20 m²</p>
+            <div class="text-2xl font-bold text-[#3F8D65] mb-2">20€ TTC</div>
+            <p class="text-sm text-[#475569]">par m²</p>
+            <div class="mt-4 text-xs text-[#475569] italic">
+              Chambres, bureaux, salons
+            </div>
+          </div>
+
+          <!-- Moyennes surfaces -->
+          <div class="bg-white rounded-xl p-6 border border-[#E5E7EB] text-center hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-[#DFF1E8] rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🏢</span>
+            </div>
+            <h4 class="text-lg font-bold text-[#1E2939] mb-2">Moyennes surfaces</h4>
+            <p class="text-sm text-[#475569] mb-3">21 à 50 m²</p>
+            <div class="text-2xl font-bold text-[#3F8D65] mb-2">15€ TTC</div>
+            <p class="text-sm text-[#475569]">par m²</p>
+            <div class="mt-4 text-xs text-[#475569] italic">
+              Open-spaces, grandes pièces
+            </div>
+          </div>
+
+          <!-- Grandes surfaces -->
+          <div class="bg-white rounded-xl p-6 border border-[#E5E7EB] text-center hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-[#C0E2D0] rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🏭</span>
+            </div>
+            <h4 class="text-lg font-bold text-[#1E2939] mb-2">Grandes surfaces</h4>
+            <p class="text-sm text-[#475569] mb-3">> 50 m²</p>
+            <div class="text-xl font-bold text-[#3F8D65] mb-2">Sur devis</div>
+            <p class="text-sm text-[#475569]">tarifs dégressifs</p>
+            <div class="mt-4 text-xs text-[#475569] italic">
+              Hôtels, bureaux, commerces
+            </div>
+          </div>
+        </div>
+
+        <!-- Facteurs influençant le prix -->
+        <div class="bg-yellow-50 rounded-xl p-6 border border-yellow-200">
+          <h4 class="font-bold text-yellow-800 mb-3 flex items-center gap-2">
+            <span>ℹ️</span>
+            Facteurs influençant le tarif final
+          </h4>
+          <div class="grid md:grid-cols-2 gap-4 text-sm text-yellow-700">
+            <div>
+              <ul class="space-y-1">
+                <li>• Type de moquette (naturelle, synthétique, velours)</li>
+                <li>• Degré d'encrassement et ancienneté des taches</li>
+                <li>• Présence de taches spécifiques (vin, café, chewing-gum)</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="space-y-1">
+                <li>• Configuration (escaliers, recoins difficiles d'accès)</li>
+                <li>• Mobilier à déplacer</li>
+                <li>• Contraintes horaires (soirée, week-end)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Témoignage client -->
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="bg-[#DFF1E8] rounded-2xl p-8 border-l-4 border-[#3F8D65]">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg">"</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-bold text-[#1E2939] mb-3">Retour client récent</h3>
+            <blockquote class="text-[#1E2939] leading-relaxed mb-4">
+              "Suite à un dégât des eaux, le professionnel est intervenu en urgence dans les heures après l'avoir contacté. 
+              Moquette entièrement séchée, nettoyée et remise à neuf. Preuve de professionnalisme et d'extrême confiance, 
+              car tout a été géré à distance par téléphone. Un grand merci !"
+            </blockquote>
+            <cite class="text-[#475569] font-medium">
+              — Villa Coralillo
+            </cite>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section avantages tarification -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="text-center">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-bold">📋</span>
+        </div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Devis détaillé gratuit</h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Diagnostic complet et estimation précise sous 24h. 
+          Pas de surprise, pas de coût caché.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-bold">💰</span>
+        </div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Crédit d'impôt 50%</h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Particuliers : bénéficiez du crédit d'impôt service à la personne. 
+          Avance immédiate possible selon conditions.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-12 h-12 bg-[#3F8D65] rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-bold">🚨</span>
+        </div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Urgences acceptées</h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Intervention rapide en cas de sinistre. 
+          Devis et organisation possibles par téléphone.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="text-center">
+      <div class="bg-[#FCFCFC] rounded-2xl p-8 border border-[#E5E7EB] max-w-3xl mx-auto">
+        <h3 class="text-xl font-bold text-[#1E2939] mb-4">
+          Obtenez votre devis personnalisé
+        </h3>
+        <p class="text-[#475569] mb-6 leading-relaxed">
+          Chaque situation est unique. Contactez-nous pour un diagnostic gratuit 
+          et un devis adapté à vos besoins spécifiques.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/contact" class="inline-flex items-center bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 shadow-lg shadow-[#3F8D65]/25">
+            Demander un devis gratuit
+          </a>
+          <div class="text-center sm:text-left">
+            <div class="text-[#1E2939] font-semibold">06 76 73 86 61</div>
+            <div class="text-[#475569] text-sm">Diagnostic sous 24h • Paris et Île-de-France</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-16 md:py-20 bg-[#FCFCFC]">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+          Questions fréquentes sur le nettoyage de moquettes
+        </h2>
+        <p class="text-xl text-[#475569] leading-relaxed">
+          Tout ce que vous devez savoir avant d’entretenir votre moquette avec Klinova.
+        </p>
+      </div>
+
+      <Accordion
+        variant="splitted"
+        style="--ac-accordion-background-color:#DFF1E8; --ac-accordion-border-color:#C0E2D0; --ac-accordion-border-width:1px; --ac-accordion-rounded:1rem; --ac-accordion-spacing:1rem;"
+      >
+        {faq.map((item) => (
+          <AccordionItem title={item.title} name="faq-moquettes">
+            <p class="whitespace-pre-line text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
+<style is:inline>
+  /* 🌿 Klinova FAQ — cartes bleu clair sur fond neutre */
+  section :where(details) {
+    background-color: #DBEAFE !important; /* ✅ un seul # */
+    border: 1px solid #C0E2D0 !important;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(63, 141, 101, 0.08);
+    transition: box-shadow 0.2s ease;
+  }
+
+  section :where(details[open]) {
+    box-shadow: 0 0 0 2px rgba(63, 141, 101, 0.25);
+  }
+
+  section :where(details + details) {
+    margin-top: 1rem;
+  }
+
+  section :where(summary) {
+    background: transparent !important;
+    font-weight: 600;
+    color: #1E2939;
+  }
+
+  section :where(details > div, details > p) {
+    background-color: transparent !important;
+  }
+</style>
+
+
+
+
+
+
+<section class="bg-[#DFF1E8] py-16 md:py-24" data-section="cta-final-moquettes">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <!-- Message principal -->
+      <div class="mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2939] leading-tight mb-6">
+          Redonnez vie à vos moquettes
+        </h2>
+        <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
+          Nettoyage professionnel pour particuliers, hôtels, bureaux et copropriétés. 
+          Techniques adaptées selon le type de moquette et niveau d'encrassement.
+        </p>
+      </div>
+
+      <!-- Formulaire spécialisé moquettes -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+        <div class="mb-6 text-center">
+          <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
+            Demandez votre devis personnalisé
+          </h3>
+          <p class="text-[#475569]">
+            Particuliers, professionnels : obtenez une évaluation adaptée à vos besoins
+          </p>
+        </div>
+
+        <form action="/api/contact" method="POST" class="space-y-6" id="moquettes-form" novalidate>
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+          
+          <!-- Champs cachés pour tracking et API -->
+          <input type="hidden" name="source" value="page-moquettes">
+          <input type="hidden" name="service" value="Nettoyage moquettes - Devis personnalisé">
+          <input type="hidden" name="rgpd" value="accepte">
+          
+          <!-- Ligne 1 : Prénom/Nom -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Prénom <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                autocomplete="given-name"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre prénom"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="nom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Nom
+              </label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                autocomplete="family-name"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre nom (optionnel)"
+              >
+            </div>
+          </div>
+
+          <!-- Ligne 2 : Email/Téléphone -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="votre@email.fr"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Téléphone <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="06 12 34 56 78"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+          </div>
+
+          <!-- Ligne 3 : Code postal/Type de client -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="code_postal" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Code postal <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="text"
+                id="code_postal"
+                name="code_postal"
+                pattern="[0-9]{5}"
+                required
+                maxlength="5"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="75017"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="type_client" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Vous êtes
+              </label>
+              <select
+                id="type_client"
+                name="type_client"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Particulier">Particulier</option>
+                <option value="Syndic de copropriété">Syndic de copropriété</option>
+                <option value="Hôtel/Hébergement">Hôtel / Hébergement</option>
+                <option value="Bureau/Entreprise">Bureau / Entreprise</option>
+                <option value="Établissement de santé">Établissement de santé</option>
+                <option value="Commerce/Restaurant">Commerce / Restaurant</option>
+                <option value="Autre professionnel">Autre professionnel</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Ligne 4 : Surface/Type de moquette -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="surface_approximative" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Surface approximative
+              </label>
+              <select
+                id="surface_approximative"
+                name="surface_approximative"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="< 20 m²">Moins de 20 m²</option>
+                <option value="20-50 m²">20 à 50 m²</option>
+                <option value="50-100 m²">50 à 100 m²</option>
+                <option value="100-200 m²">100 à 200 m²</option>
+                <option value="200-500 m²">200 à 500 m²</option>
+                <option value="> 500 m²">Plus de 500 m²</option>
+              </select>
+            </div>
+            <div>
+              <label for="type_moquette" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Type de moquette
+              </label>
+              <select
+                id="type_moquette"
+                name="type_moquette"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Synthétique">Synthétique (polyamide, polypropylène)</option>
+                <option value="Naturelle">Naturelle (laine, coton, jute)</option>
+                <option value="Mixte">Mixte (synthétique + naturelle)</option>
+                <option value="Je ne sais pas">Je ne sais pas</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Ligne 5 : État/Fréquence -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="etat_moquette" class="block text-sm font-medium text-[#1E2939] mb-2">
+                État actuel
+              </label>
+              <select
+                id="etat_moquette"
+                name="etat_moquette"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Légèrement sale">Légèrement sale</option>
+                <option value="Moyennement encrassée">Moyennement encrassée</option>
+                <option value="Très encrassée">Très encrassée</option>
+                <option value="Taches spécifiques">Taches spécifiques à traiter</option>
+                <option value="Odeurs persistantes">Odeurs persistantes</option>
+                <option value="Neuve (entretien préventif)">Neuve (entretien préventif)</option>
+              </select>
+            </div>
+            <div>
+              <label for="frequence_souhaitee" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Fréquence souhaitée
+              </label>
+              <select
+                id="frequence_souhaitee"
+                name="frequence_souhaitee"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Intervention unique">Intervention unique</option>
+                <option value="Mensuelle">Mensuelle</option>
+                <option value="Trimestrielle">Trimestrielle</option>
+                <option value="Semestrielle">Semestrielle</option>
+                <option value="Annuelle">Annuelle</option>
+                <option value="À définir">À définir ensemble</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Photos avec Cloudinary -->
+          <div>
+            <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+              Photos des moquettes (optionnel - aide pour l'évaluation)
+            </label>
+            
+            <!-- Input caché -->
+            <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+            
+            <!-- Zone de drop -->
+            <div id="photos-drop-zone" 
+                 class="border-2 border-dashed border-[#E5E7EB] rounded-lg p-6 text-center cursor-pointer
+                        hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200 bg-[#F9FAFB]">
+              <div class="flex flex-col items-center space-y-2">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+                <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 5 photos • 8 MB chacune</p>
+              </div>
+            </div>
+            
+            <!-- Statut des photos -->
+            <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+            
+            <!-- Liste des photos -->
+            <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+            
+            <!-- Container pour les URLs Cloudinary -->
+            <div id="photos-hidden"></div>
+          </div>
+
+          <!-- Message détaillé -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-[#1E2939] mb-2">
+              Détails de votre demande
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+              placeholder="Décrivez vos besoins : type de taches, zones prioritaires, contraintes d'accès, délais souhaités, budget indicatif..."
+            ></textarea>
+          </div>
+
+          <!-- RGPD simplifié -->
+          <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3 border border-[#E5E7EB]">
+            En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+            <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline font-medium" target="_blank">
+              Voir notre politique de confidentialité
+            </a>
+          </div>
+
+          <!-- Bouton de soumission -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] disabled:bg-[#9CA3AF] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:transform-none"
+              id="submit-btn"
+            >
+              <span class="loading-spinner hidden mr-2">
+                <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+              <svg class="w-5 h-5 mr-2 email-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span id="btn-text">Obtenir mon devis personnalisé</span>
+            </button>
+          </div>
+        </form>
+        
+        <!-- Promesses clés sous le formulaire -->
+        <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+            <p class="text-xs text-[#475569]">Devis détaillé par type de moquette</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Techniques adaptées</h4>
+            <p class="text-xs text-[#475569]">Selon le type de fibre</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Particuliers & pros</h4>
+            <p class="text-xs text-[#475569]">Tarifs dégressifs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informations de contact -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+          <div class="space-y-2">
+            <a href={`tel:${PHONE_E164}`} class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              {PHONE_DISPLAY}
+            </a>
+            <a href="mailto:contact@klinova.fr" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              contact@klinova.fr
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Zone d'intervention</h3>
+          <div class="flex items-center justify-center text-[#475569]">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Paris et Île-de-France</span>
+          </div>
+          <p class="text-sm text-[#475569] mt-2">
+            Intervention rapide pour professionnels et particuliers
+          </p>
+        </div>
+      </div>
+
+      <!-- Mentions finales -->
+      <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+        <p class="text-sm text-[#6B7280]">
+          KLINOVA - SASU au capital de 1000€ - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Styles pour les photos */
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1E2939;
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: #3F8D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.form-error:not(:empty) {
+  display: block !important;
+}
+
+/* Animation fade-in pour le message de succès */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Animation du bouton */
+.email-icon {
+  transition: transform 0.2s ease;
+}
+
+#submit-btn:hover .email-icon {
+  transform: translateX(2px);
+}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById('moquettes-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const loadingSpinner = document.querySelector('.loading-spinner');
+  const emailIcon = document.querySelector('.email-icon');
+  
+  // Upload de photos
+  const photosInput = document.getElementById('photos-input');
+  const dropZone = document.getElementById('photos-drop-zone');
+  const photosList = document.getElementById('photos-list');
+  const photosStatus = document.getElementById('photos-status');
+  const photosHidden = document.getElementById('photos-hidden');
+  
+  let uploadingCount = 0;
+  let uploadedFiles = [];
+  const maxFiles = 5;
+  const maxMB = 8;
+
+  // Fonctions utilitaires
+  function setLoading(loading) {
+    submitBtn.disabled = loading || uploadingCount > 0;
+    loadingSpinner.classList.toggle('hidden', !loading);
+    emailIcon.classList.toggle('hidden', loading);
+    btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon devis personnalisé';
+  }
+
+  function bytesToMB(bytes) {
+    return (bytes / 1024 / 1024).toFixed(1);
+  }
+
+  function updatePhotosStatus() {
+    const total = uploadedFiles.length;
+    const success = uploadedFiles.filter(f => f.status === 'success').length;
+    const uploading = uploadingCount;
+    
+    if (total === 0) {
+      photosStatus.textContent = 'Aucune photo';
+      photosList.classList.add('hidden');
+    } else {
+      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+      photosList.classList.remove('hidden');
+    }
+    
+    submitBtn.disabled = uploadingCount > 0;
+  }
+
+  function addPhotoToList(file) {
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'photo-item';
+    photoDiv.dataset.fileName = file.name;
+    
+    photoDiv.innerHTML = `
+      <span class="photo-name">${file.name}</span>
+      <span class="photo-size">${bytesToMB(file.size)} MB</span>
+      <span class="photo-status uploading">Upload...</span>
+      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+      <div class="photo-progress">
+        <div class="photo-progress-fill"></div>
+      </div>
+    `;
+    
+    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+      removePhoto(file.name);
+    });
+    
+    photosList.appendChild(photoDiv);
+  }
+
+  function updatePhotoStatus(fileName, status, progress = 0) {
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!photoDiv) return;
+    
+    const statusEl = photoDiv.querySelector('.photo-status');
+    const progressFill = photoDiv.querySelector('.photo-progress-fill');
+    
+    statusEl.className = `photo-status ${status}`;
+    
+    switch (status) {
+      case 'uploading':
+        statusEl.textContent = `${progress}%`;
+        progressFill.style.width = `${progress}%`;
+        break;
+      case 'success':
+        statusEl.textContent = 'Importée ✓';
+        progressFill.style.width = '100%';
+        break;
+      case 'error':
+        statusEl.textContent = 'Erreur ⚠';
+        progressFill.style.width = '0%';
+        break;
+    }
+  }
+
+  function removePhoto(fileName) {
+    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+    if (fileIndex !== -1) {
+      const file = uploadedFiles[fileIndex];
+      if (file.cloudinaryUrl) {
+        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+        if (hiddenInput) hiddenInput.remove();
+      }
+      uploadedFiles.splice(fileIndex, 1);
+    }
+    
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (photoDiv) photoDiv.remove();
+    
+    updatePhotosStatus();
+  }
+
+  // API Cloudinary avec votre système existant
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file) {
+    const fileObj = {
+      name: file.name,
+      size: file.size,
+      status: 'uploading',
+      progress: 0,
+      cloudinaryUrl: null
+    };
+    
+    uploadedFiles.push(fileObj);
+    addPhotoToList(file);
+    uploadingCount++;
+    updatePhotosStatus();
+    
+    try {
+      const signature = await getCloudinarySignature();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', signature.apiKey);
+      formData.append('timestamp', String(signature.timestamp));
+      formData.append('signature', signature.signature);
+      formData.append('folder', signature.folder);
+      if (signature.uploadPreset) {
+        formData.append('upload_preset', signature.uploadPreset);
+      }
+
+      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+      
+      const xhr = new XMLHttpRequest();
+      
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const progress = Math.round((e.loaded / e.total) * 100);
+          fileObj.progress = progress;
+          updatePhotoStatus(file.name, 'uploading', progress);
+        }
+      };
+      
+      xhr.onload = () => {
+        uploadingCount--;
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+            fileObj.status = 'success';
+            fileObj.cloudinaryUrl = result.secure_url;
+            updatePhotoStatus(file.name, 'success');
+            
+            // Ajouter l'URL au formulaire
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'photos[]';
+            hiddenInput.value = result.secure_url;
+            photosHidden.appendChild(hiddenInput);
+          } else {
+            throw new Error('Upload failed');
+          }
+        } catch (err) {
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          console.error('Upload error:', err);
+        }
+        updatePhotosStatus();
+      };
+      
+      xhr.onerror = () => {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Upload network error');
+      };
+      
+      xhr.open('POST', uploadUrl);
+      xhr.send(formData);
+      
+    } catch (error) {
+      uploadingCount--;
+      fileObj.status = 'error';
+      updatePhotoStatus(file.name, 'error');
+      updatePhotosStatus();
+      console.error('Cloudinary error:', error);
+    }
+  }
+
+  function validateFiles(files) {
+    const validFiles = [];
+    
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        alert(`${file.name} n'est pas une image valide`);
+        continue;
+      }
+      
+      if (file.size > maxMB * 1024 * 1024) {
+        alert(`${file.name} dépasse la limite de ${maxMB} MB`);
+        continue;
+      }
+      
+      if (uploadedFiles.length + validFiles.length >= maxFiles) {
+        alert(`Maximum ${maxFiles} photos autorisées`);
+        break;
+      }
+      
+      validFiles.push(file);
+    }
+    
+    return validFiles;
+  }
+
+  function handleFiles(files) {
+    const validFiles = validateFiles(Array.from(files));
+    validFiles.forEach(file => uploadToCloudinary(file));
+  }
+
+  // Event listeners pour les photos
+  if (photosInput && dropZone) {
+    photosInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
+      }
+    });
+
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFiles(files);
+      }
+    });
+  }
+
+  // Validation basique des champs
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorDiv = field.parentNode.querySelector('.form-error');
+    
+    if (field.required && !value) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    field.classList.remove('border-red-500');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.classList.add('hidden');
+    }
+    return true;
+  }
+
+  // Soumission du formulaire
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        alert('Veuillez attendre la fin de l\'upload des photos');
+        return;
+      }
+      
+      // Validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      // Validation email si rempli
+      const emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) {
+          isValid = false;
+        }
+      }
+      
+      if (!isValid) {
+        alert('Veuillez corriger les erreurs ci-dessus');
+        return;
+      }
+      
+      setLoading(true);
+      
+      try {
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'page_moquettes',
+            form_type: 'devis_moquettes'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'devis_moquettes',
+            service: 'Nettoyage moquettes - Devis personnalisé',
+            source: 'page-moquettes'
+          });
+        }
+
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch {}
+
+        if (response.ok) {
+          // Remplacer complètement le contenu du formulaire par le message de succès
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = `
+            <div class="text-center py-10 animate-fade-in">
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+              <p class="text-[#475569] max-w-md mx-auto">
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté au type de moquette.<br>
+                Un expert Klinova évaluera la technique de nettoyage<br>
+                la plus appropriée à vos fibres.
+              </p>
+            </div>
+          `;
+
+          // Scroll vers le formulaire transformé
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch {}
+        } else {
+          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          alert(err);
+        }
+      } catch (error) {
+        alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+        console.error('Submit error:', error);
+      } finally {
+        setLoading(false);
+      }
+    });
+  }
+})();
+</script>
+
+
+</LayoutWithCTA>

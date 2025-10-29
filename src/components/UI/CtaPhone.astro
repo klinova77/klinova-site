@@ -1,0 +1,63 @@
+---
+// src/components/UI/CtaPhone.astro
+import { PHONE_E164 as DEFAULT_E164, PHONE_DISPLAY as DEFAULT_DISPLAY } from '~/lib/links';
+import { linkAttrs } from '~/lib/links';
+
+export interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  phoneE164?: string;           // ex: +33630221228 (devient optionnel)
+  display?: string;             // ex: 06 30 22 12 28 (devient optionnel)
+  label?: string;               // ex: "Appeler maintenant"
+  sublabel?: string;            // ex: "Appel gratuit • Devis immédiat"
+  trackingData?: Record<string, string>;
+  showDisplayNext?: boolean;    // si true, affiche "display" à côté du label
+  className?: string;
+}
+
+const {
+  size = 'md',
+  variant = 'primary',
+  phoneE164 = DEFAULT_E164,      // ← défaut global
+  display = DEFAULT_DISPLAY,     // ← défaut global
+  label = 'Appeler',
+  sublabel,
+  trackingData = { source: 'unknown', action: 'call' },
+  showDisplayNext = false,
+  className = ''
+} = Astro.props;
+
+// Normalise: garde + et chiffres uniquement
+const normalized = (phoneE164 ?? '').toString().replace(/[^\d+]/g, '');
+const telHref = `tel:${normalized}`;
+
+// Attributs sécurisés (pas de spread sur <a>)
+const { target, rel } = linkAttrs(telHref);
+
+const variantClass = variant === 'secondary'
+  ? 'btn-secondary'
+  : variant === 'tertiary'
+  ? 'btn-tertiary'
+  : 'btn-primary';
+
+const sizeClass =
+  size === 'lg' ? 'sm:py-4 sm:px-8 text-base' :
+  size === 'sm' ? 'py-2.5 px-5 text-sm' :
+  '';
+---
+
+<a
+  href={telHref}
+  target={target}
+  rel={rel}
+  class={`${variantClass} inline-flex items-center gap-2 ${sizeClass} ${className}`.trim()}
+  aria-label={`${label} ${display}`}
+  data-action={trackingData.action}
+  data-source={trackingData.source}
+  data-intent={variant === 'primary' ? 'primary-phone' : variant === 'tertiary' ? 'tertiary-phone' : 'secondary-phone'}
+>
+  <span>{label}</span>
+  {showDisplayNext && <span class="opacity-80">{display}</span>}
+</a>
+
+{ sublabel && <p class="text-sm opacity-80 mt-1">{sublabel}</p> }

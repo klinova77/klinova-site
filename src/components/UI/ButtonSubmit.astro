@@ -1,0 +1,117 @@
+---
+// src/components/ui/ButtonSubmit.astro - Version améliorée
+import { cn } from '~/lib/cn';
+import { toDataAttrs } from '~/lib/dataAttrs';
+
+export interface Props {
+  label: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  class?: string;
+  fullWidth?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+
+  // Tracking standardisé
+  formId?: string;
+  formName?: string;
+  formType?: 'devis' | 'contact' | 'callback' | 'newsletter';
+  value?: number;
+  source?: string;
+  campaign?: string;
+  medium?: string;
+  content?: string;
+
+  data?: Record<string, string | number>;
+  tracking?: {
+    action?: string;
+    source?: string;
+    intent?: string;
+  };
+}
+
+const {
+  label,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  class: classProp = '',
+  fullWidth = false,
+  disabled = false,
+  loading = false,
+
+  formId,
+  formName,
+  formType = 'devis',
+  value = 290,
+  source = '',
+  campaign = '',
+  medium = '',
+  content = '',
+
+  data = {},
+  tracking = {},
+} = Astro.props;
+
+// Classes selon la charte graphique (utilise les classes CSS globales)
+const baseClass = variant === 'secondary' ? 'btn-secondary' : 'btn-primary';
+
+// Override de taille si nécessaire (garde les styles de base)
+const sizeOverride = 
+  size === 'sm' ? 'px-4 py-2 text-sm' :
+  size === 'lg' ? 'px-8 py-4 text-lg font-bold' : '';
+
+const stateClass = disabled || loading ? 'opacity-50 cursor-not-allowed hover:transform-none' : '';
+const widthClass = fullWidth ? 'w-full' : '';
+
+const finalClass = cn(
+  baseClass,
+  sizeOverride,
+  widthClass, 
+  stateClass,
+  className,
+  classProp
+);
+
+// Data attributes standardisés pour le tracking global
+const dataAttrs = toDataAttrs({
+  ...tracking,
+  ...data,
+  'form-id': formId,
+  'form-name': formName,
+  'form-type': formType,
+  'value': value,
+  'tracking-source': source,
+  'tracking-campaign': campaign,
+  'tracking-medium': medium,
+  'tracking-content': content,
+});
+---
+
+<button
+  type="submit"
+  class={finalClass}
+  disabled={disabled || loading}
+  {...dataAttrs}
+>
+  {loading && (
+    <svg class="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      />
+    </svg>
+  )}
+  
+  <slot>{loading ? 'Envoi en cours...' : label}</slot>
+  
+  {/* Icône d'envoi pour les boutons submit */}
+  {!loading && (
+    <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+    </svg>
+  )}
+</button>

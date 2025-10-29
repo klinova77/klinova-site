@@ -1,0 +1,80 @@
+---
+import { Image, type ImageMetadata } from 'astro:assets';
+
+interface Props {
+  src: ImageMetadata;   // import depuis src/assets/...
+  alt: string;
+  ratio?: '1/1' | '4/3' | '16/9' | '3/2';
+  eager?: boolean;
+  class?: string;       // classes du wrapper (non utilisé en fill)
+  imgClass?: string;    // classes de l’image (utilisé dans tous les cas)
+  sizes?: string;
+  maxWidth?: number;
+  fill?: boolean;       // si true: rend l’image sans wrapper (plein conteneur)
+}
+
+const {
+  src, alt,
+  ratio = '1/1',
+  eager = false,
+  class: wrapperClass = '',
+  imgClass = '',
+  sizes: customSizes,
+  maxWidth = 640,
+  fill = false,
+} = Astro.props;
+
+// largeurs (plus hautes pour bannières/hero)
+const baseWidths = [640, 960, 1280, 1600, 1920, 2560];
+const widths = baseWidths.filter((w) => w <= Math.max(1920, maxWidth));
+const sizes = customSizes || '100vw';
+
+// ratio → aspect-ratio (pour le mode non-fill)
+const ratioStyle = {
+  '1/1': '1 / 1',
+  '4/3': '4 / 3',
+  '16/9': '16 / 9',
+  '3/2': '3 / 2',
+}[ratio] || '1 / 1';
+
+// classes calculées
+const clsFill = ['h-full w-full object-cover object-center', imgClass].filter(Boolean).join(' ');
+const clsInner = ['h-full w-full object-cover object-center transition-transform duration-300', imgClass].filter(Boolean).join(' ');
+const clsWrapper = [
+  'group relative overflow-hidden rounded-xl border border-neutral-200 shadow-soft hover:shadow-soft-lg transition-shadow',
+  wrapperClass,
+].filter(Boolean).join(' ');
+const wrapperStyle = `aspect-ratio:${ratioStyle};`;
+---
+
+{fill ? (
+  // MODE FILL : image directe (pas de wrapper, le parent gère le positionnement)
+  <Image
+    src={src}
+    alt={alt}
+    widths={widths}
+    sizes={sizes}
+    format="webp"
+    quality={85}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    class={clsFill}   />
+) : (
+  // MODE COVER classique : wrapper + ratio
+  <div class={clsWrapper} style={wrapperStyle}>
+    <div class="absolute inset-0">
+      <Image
+        src={src}
+        alt={alt}
+        widths={widths}
+        sizes={sizes}
+        format="webp"
+        quality={85}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        class={clsInner}
+      />
+    </div>
+    <div class="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+  </div>
+)}

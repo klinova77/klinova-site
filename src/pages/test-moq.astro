@@ -1,0 +1,101 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image, getImage } from 'astro:assets';
+
+import Button from '~/components/UI/Button.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+
+// Import image optimisée
+import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
+import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
+
+import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
+import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
+import moquetteVelours from '~/assets/images/nettoyage-moquettes-velours.jpg';
+import dallesMoquette from '~/assets/images/dalles-moquette.jpg';
+
+import avantApresBureau from '~/assets/images/nettoyage-moquette-bureau-avant-apres.jpg';
+import avantApresDomicile from '~/assets/images/nettoyage-moquette-a-domicile.jpg';
+import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
+
+const popupContext = {
+  title: 'Devis nettoyage de moquettes',
+  subtitle: 'Obtenez un devis personnalisé sous 24h',
+  serviceKey: 'moquette',
+  serviceLabel: 'Nettoyage de moquette',
+  trackingSource: 'popup-moquette',
+  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  creditImpotEnabled: true, 
+};
+
+const SUBTITLE = 'Redonnez vie à vos revêtements textiles. Équipements haute performance, produits adaptés à chaque fibre.';
+const BADGE = 'Équipements professionnels industriels';
+
+// Test simple pour diagnostic
+const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', width: 400, quality: 70 });
+const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', width: 1200, quality: 70 });
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de moquettes – Klinova',
+    description: 'Prestations pro de nettoyage de moquettes en Île-de-France : protocoles industriels, séchage rapide, devis en 24h.',
+  }}
+>
+
+<!-- TEST DIAGNOSTIC IMAGES -->
+<section class="relative min-h-[50vh] bg-gray-200 flex items-center">
+  <div class="absolute inset-0">
+    <!-- Image mobile (doit être visible SEULEMENT sur mobile) -->
+    <img 
+      src={mobileImg.src}
+      alt="Mobile - Portrait"
+      style="width: 100%; height: 100%; object-fit: cover; display: block;"
+      class="mobile-only"
+    />
+    <!-- Image desktop (doit être visible SEULEMENT sur desktop) -->
+    <img 
+      src={desktopImg.src}
+      alt="Desktop - Paysage" 
+      style="width: 100%; height: 100%; object-fit: cover; display: none;"
+      class="desktop-only"
+    />
+  </div>
+  
+  <!-- Debug info -->
+  <div class="relative z-10 p-4 bg-black/50 text-white max-w-md">
+    <p><strong>Viewport:</strong> <span id="viewport-info">...</span></p>
+    <p><strong>Mobile URL:</strong> {mobileImg.src}</p>
+    <p><strong>Desktop URL:</strong> {desktopImg.src}</p>
+    <p><strong>Mobile visible:</strong> <span class="md:hidden">OUI</span><span class="hidden md:inline">NON</span></p>
+    <p><strong>Desktop visible:</strong> <span class="md:inline hidden">OUI</span><span class="md:hidden">NON</span></p>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    .mobile-only { display: none !important; }
+    .desktop-only { display: block !important; }
+  }
+  @media (max-width: 767px) {
+    .mobile-only { display: block !important; }
+    .desktop-only { display: none !important; }
+  }
+</style>
+
+<!-- Script pour afficher la largeur en temps réel -->
+<script is:inline>
+  function updateViewport() {
+    const info = document.getElementById('viewport-info');
+    if (info) {
+      info.textContent = window.innerWidth + 'px';
+    }
+  }
+  
+  updateViewport();
+  window.addEventListener('resize', updateViewport);
+</script>
+
+</LayoutWithCTA>

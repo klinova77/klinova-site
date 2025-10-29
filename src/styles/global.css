@@ -1,0 +1,564 @@
+/* src/styles/global.css */
+/* =========================================
+   IMPORTS
+   ========================================= */
+@import "tailwindcss";
+@import "@fontsource-variable/inter/index.css";
+
+
+/* Caviar Dreams (Bold) – local */
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/fonts/CaviarDreams-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utilité locale : header en Caviar, fallback = var(--font-sans) */
+.font-caviar {
+  font-family: "Caviar Dreams", var(--font-sans);
+}
+
+/* =========================================
+   THEME TOKENS (Tailwind v4 @theme)
+   ========================================= */
+
+
+   @theme {
+  /* Bleu institutionnel */
+  --color-primary-50:  #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #b8ccdd;
+  --color-primary-500: #334e68;
+  --color-primary-600: #243b53;
+  --color-primary-700: #1e3248;
+  --color-primary-900: #102a43;
+
+  /* Succès */
+  --color-success-50:  #f0fdf4;
+  --color-success-200: #bbf7d0;
+  --color-success-500: #059669;
+  --color-success-600: #047857;
+  --color-success-700: #047857;
+
+  /* Ambre/premium */
+  --color-premium-100: #fef3c7;
+  --color-premium-200: #fde68a;
+  --color-premium-500: #d97706;
+  --color-premium-600: #b45309;
+
+  /* Neutres (PURS par défaut) */
+  --color-neutral-50:  #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Spécifique charte (Stop-Punaises legacy) */
+  --color-sp-light: #f7fbff;
+  --color-sp-line:  #e9f1fb;
+  --color-sp-pill:  #eef5ff;
+  --color-whatsapp: #25D366;
+
+  /* Police */
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Ombres */
+  --shadow-soft:    0 4px 20px rgba(51, 78, 104, 0.08);
+  --shadow-soft-lg: 0 8px 40px rgba(51, 78, 104, 0.12);
+}
+
+/* =========================================
+   VARIANTES D'ACTION (CTA)
+   ========================================= */
+:root {
+  --color-action-500: #0ea5e9;
+  --color-action-600: #0284c7;
+
+  /* Variables “opt-in glow” (ne changent rien tant qu’on n’utilise pas .hero-glow) */
+  --hero-glow-start: rgba(37, 99, 235, 0.05);
+  --hero-glow-mid:   rgba(37, 99, 235, 0.10);
+  --badge-action-bg: rgba(14, 165, 233, 0.10);
+}
+
+html[data-theme-action="blue"] {
+  --color-action-500: #0ea5e9;
+  --color-action-600: #0284c7;
+}
+
+html[data-theme-action="amber"] {
+  --color-action-500: #f59e0b;
+  --color-action-600: #d97706;
+}
+
+html[data-theme-action="green"] {
+  --color-action-500: #059669;
+  --color-action-600: #047857;
+}
+
+html[data-theme-action="blue-deep"] {
+  --color-action-500: #1D4ED8;
+  --color-action-600: #1E40AF;
+}
+
+/* =========================================
+   ALIAS charte → variables sp-*
+   ========================================= */
+:root {
+  --sp-primary-50:  var(--color-primary-50);
+  --sp-primary-100: var(--color-primary-100);
+  --sp-primary-600: var(--color-primary-600);
+  --sp-primary-700: var(--color-primary-700);
+  --sp-primary-800: var(--color-primary-900);
+  --sp-neutral-600: var(--color-neutral-600);
+  --sp-muted: #5a6a82;
+
+  --sp-light: var(--color-sp-light);
+  --sp-line:  var(--color-sp-line);
+  --sp-pill:  var(--color-sp-pill);
+  --sp-whatsapp: #25D366;
+}
+
+/* =========================================
+   BASE
+   ========================================= */
+@layer base {
+  html {
+    color: var(--color-neutral-800);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    scrollbar-gutter: stable both-edges;
+  }
+
+  body {
+    background: var(--color-neutral-50); /* PUR par défaut */
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: contain;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+
+  img { height: auto; max-width: 100%; }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 2px solid var(--color-action-500);
+    outline-offset: 2px;
+  }
+
+  * { -webkit-tap-highlight-color: transparent; }
+}
+
+/* =========================================
+   COMPONENTS
+   ========================================= */
+@layer components {
+  .container-responsive { @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8; }
+
+  .section-padding    { @apply py-8 md:py-12 lg:py-16; }
+  .section-padding-sm { @apply py-6 md:py-8 lg:py-10; }
+  .section-padding-top{ @apply pt-8 md:pt-12 lg:pt-16; }
+
+  .hero-title   { @apply text-3xl font-sans font-extrabold tracking-tight leading-tight sm:text-4xl lg:text-5xl lg:leading-tight; }
+  .hero-subtitle{ @apply text-base leading-relaxed sm:text-lg lg:text-xl; }
+
+  .section-title    { @apply text-2xl font-sans font-semibold text-primary-600 mb-4 sm:text-3xl lg:text-4xl; }
+  .section-subtitle { @apply text-base text-neutral-600 sm:text-lg; }
+
+/* -------------------------------------------------------------
+   BOUTONS — Styles unifiés (Klinova / Stop-Punaises)
+-------------------------------------------------------------- */
+
+/* === Bouton principal === */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg transition-all duration-300;
+  padding: 0.75rem 1.5rem; /* équiv. px-6 py-3 */
+  background-color: var(--color-action-500);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+  touch-action: manipulation;
+}
+.btn-primary:hover {
+  background-color: var(--color-action-600);
+  box-shadow: var(--shadow-soft-lg);
+  transform: translateY(-2px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-soft);
+}
+
+/* === Bouton secondaire === */
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg border transition-all duration-300;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: var(--color-primary-600);
+  border-color: var(--color-neutral-200);
+  box-shadow: var(--shadow-soft);
+  touch-action: manipulation;
+}
+.btn-secondary:hover {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft-lg);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-soft);
+}
+
+/* === Bouton WhatsApp === */
+.btn-whatsapp {
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg transition-all duration-300;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-whatsapp);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+  touch-action: manipulation;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft-lg);
+}
+.btn-whatsapp:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-soft);
+}
+
+/* === Bouton tertiaire === */
+.btn-tertiary {
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-colors duration-200;
+  padding: 0.5rem 1rem;
+  color: var(--sp-primary-600);
+  border: 2px solid var(--sp-primary-600);
+  background-color: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.btn-tertiary:hover {
+  color: var(--sp-primary-700);
+  background-color: var(--sp-primary-50);
+  border-color: var(--sp-primary-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+.btn-tertiary:active {
+  transform: translateY(0);
+  color: var(--sp-primary-800);
+  background-color: var(--sp-primary-100);
+  border-color: var(--sp-primary-800);
+}
+
+/* === États de focus (accessibilité + finition premium) === */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-tertiary:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--sp-primary-600) 60%, transparent);
+  outline-offset: 3px;
+  transition: outline-color 0.25s ease, outline-offset 0.25s ease;
+  animation: focusGlow 0.4s ease-out;
+}
+
+/* Halo animé du focus (fade-in/out fluide) */
+@keyframes focusGlow {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--sp-primary-500) 30%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--sp-primary-500) 0%, transparent);
+  }
+}
+
+/* Désactivation du mouvement pour accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .btn-tertiary:focus-visible {
+    animation: none;
+  }
+}
+
+
+  /* Cartes & stats */
+  .service-card { @apply bg-white rounded-2xl p-4 shadow-soft hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 h-full sm:p-6 lg:p-8; }
+  .service-icon { @apply w-12 h-12 rounded-xl flex items-center justify-center shadow-soft sm:w-14 sm:h-14; }
+  .stats-grid   { @apply grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6; }
+  .stat-card    { @apply text-center p-3 bg-white rounded-xl shadow-soft sm:p-4; }
+  .stat-number  { @apply text-xl font-bold mb-1 sm:text-2xl; }
+  .stat-label   { @apply text-xs text-neutral-500 uppercase tracking-wide; }
+  .services-grid{ @apply grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-10; }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-2 rounded-full text-sm font-medium sm:px-4;
+    background: var(--color-sp-pill);
+    color: var(--color-neutral-800);
+    border: 1px solid var(--color-sp-line);
+  }
+
+  .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+  .animate-slide-up{ animation: slideUp 0.6s ease-out; }
+}
+
+/* =========================================
+   UTILITIES — PURS + OPT-IN TEINTES
+   ========================================= */
+@layer utilities {
+  .content-vis-auto { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+
+  /* --- FONDS PURS (déterministes) --- */
+  .bg-white        { background-color: #ffffff; } /* pur (hardcodé) */
+  .bg-white-brand  { background-color: var(--color-white); } /* brandable */
+  .bg-neutral-50   { background-color: var(--color-neutral-50) !important; }
+  .bg-neutral-100  { background-color: var(--color-neutral-100) !important; }
+  .bg-neutral-200  { background-color: var(--color-neutral-200) !important; }
+
+  /* --- FONDS TEINTÉS (OPT-IN) --- */
+  .bg-neutral-50--tint-soft {
+    background-color: color-mix(in srgb, var(--color-action-500) 2%, var(--color-neutral-50)) !important;
+  }
+  .bg-neutral-50--tint-vibrant {
+    background-color: color-mix(in srgb, var(--color-action-500) 8%, var(--color-neutral-50)) !important;
+  }
+
+  /* --- HERO GLOW (OPT-IN) --- */
+  .hero-glow {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff 0%, var(--color-neutral-50) 100%);
+  }
+  .hero-glow::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    background: radial-gradient(
+      ellipse at top,
+      var(--hero-glow-start) 0%,
+      var(--hero-glow-mid) 50%,
+      transparent 100%
+    );
+  }
+
+  /* --- Badges action (OPT-IN) --- */
+  .badge-action {
+    background: var(--badge-action-bg);
+    border: 2px solid var(--color-action-500);
+    color: var(--color-action-600);
+  }
+
+  /* --- Legacy helpers --- */
+  .bg-sp-light       { background-color: var(--color-sp-light); }
+  .bg-sp-pill        { background-color: var(--color-sp-pill); }
+  .border-sp-line    { border-color: var(--color-sp-line); }
+  .bg-sp-action-500  { background-color: var(--color-action-500); }
+  .bg-sp-action-600  { background-color: var(--color-action-600); }
+  .text-sp-action-500{ color: var(--color-action-500); }
+  .text-sp-action-600{ color: var(--color-action-600); }
+  .border-sp-action-500{ border-color: var(--color-action-500); }
+  .border-sp-action-600{ border-color: var(--color-action-600); }
+
+  .bg-sp-primary-600 { background-color: var(--color-primary-600); }
+  .text-sp-primary-600{ color: var(--color-primary-600); }
+  .border-sp-primary-600{ border-color: var(--color-primary-600); }
+
+  .text-sp-neutral-600{ color: var(--color-neutral-600); }
+  .text-sp-muted      { color: var(--sp-muted); }
+
+  .bg-action-500 { background-color: var(--color-action-500); }
+  .bg-action-600 { background-color: var(--color-action-600); }
+  .text-action-600 { color: var(--color-action-600); }
+  .hover\:bg-action-600:hover { background-color: var(--color-action-600); }
+
+  .bg-primary-50  { background-color: var(--color-primary-50); }
+  .bg-primary-100 { background-color: var(--color-primary-100); }
+  .bg-primary-500 { background-color: var(--color-primary-500); }
+  .bg-primary-600 { background-color: var(--color-primary-600); }
+  .text-primary-100 { color: var(--color-primary-100); }
+  .text-primary-200 { color: var(--color-primary-200); }
+  .text-primary-600 { color: var(--color-primary-600); }
+  .text-primary-700 { color: var(--color-primary-700); }
+  .border-primary-200 { border-color: var(--color-primary-200); }
+  .border-primary-300 { border-color: var(--color-primary-300); }
+  .hover\:bg-primary-600:hover { background-color: var(--color-primary-600); }
+
+  .bg-success-50  { background-color: var(--color-success-50); }
+  .border-success-200 { border-color: var(--color-success-200); }
+  .bg-success-500 { background-color: var(--color-success-500); }
+  .bg-success-600 { background-color: var(--color-success-600); }
+  .text-success-600 { color: var(--color-success-600); }
+  .text-success-700 { color: var(--color-success-700); }
+  .hover\:bg-success-600:hover { background-color: var(--color-success-600); }
+
+  .bg-premium-100  { background-color: var(--color-premium-100); }
+  .bg-premium-500  { background-color: var(--color-premium-500); }
+  .bg-premium-600  { background-color: var(--color-premium-600); }
+  .border-premium-200 { border-color: var(--color-premium-200); }
+  .border-premium-500 { border-color: var(--color-premium-500); }
+
+  .shadow-soft      { box-shadow: var(--shadow-soft); }
+  .shadow-soft-lg   { box-shadow: var(--shadow-soft-lg); }
+  .hover\:shadow-soft-lg:hover { box-shadow: var(--shadow-soft-lg); }
+  .will-change-transform { will-change: transform; }
+  .backface-hidden  { backface-visibility: hidden; }
+
+  /* Gradients CTA */
+  .from-sp-action-500 { --tw-gradient-from: var(--color-action-500); --tw-gradient-to: transparent; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-sp-action-600   { --tw-gradient-to: var(--color-action-600); }
+
+  .bg-cta-gradient {
+    background: linear-gradient(135deg, var(--color-action-500) 0%, var(--color-action-600) 100%);
+  }
+
+  /* Helpers texte */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--sp-primary-600) 0%, var(--color-action-500) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+  .gradient-text-soft {
+    background: linear-gradient(120deg, var(--sp-primary-600) 0%, var(--color-primary-500) 50%, var(--color-action-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .shadow-text        { text-shadow: 0 2px 8px rgba(26, 62, 114, 0.15); }
+  .shadow-text-strong { text-shadow: 0 4px 12px rgba(26, 62, 114, 0.25); }
+
+  .text-action-primary { color: var(--color-action-600); }
+  .text-neutral-adaptive { color: var(--sp-neutral-600); }
+
+  .flex-\[1\.2\] { flex: 1.2 1 0%; }
+
+  /* Animations utils */
+  @keyframes fade-in { from { opacity:0; transform: translateY(-6px);} to { opacity:1; transform: translateY(0);} }
+  .animate-fade-in { animation: fade-in 0.35s ease-out; }
+}
+
+/* =========================================
+   KEYFRAMES (global)
+   ========================================= */
+@keyframes fadeIn { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+@keyframes slideUp{ from { opacity:0; transform: translateY(30px);} to { opacity:1; transform: translateY(0);} }
+@keyframes phonePulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.02); box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1); }
+}
+
+/* A11Y & scroll */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+html:target, html.no-scroll { scroll-behavior: auto !important; }
+:target { scroll-margin-top: 6rem; }
+
+/* =========================================
+   KLINOVA THEME OVERRIDE (final)
+   ========================================= */
+
+/* 1) Police nav Klinova (Bold uniquement pour la nav) */
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("/fonts/CaviarDreams-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2) Variables de thème (portées par <html data-brand="klinova">) */
+:root[data-brand="klinova"] {
+  /* Couleurs de base brandables */
+  --color-white: #FFFFFF;
+
+  /* Actions (CTA) */
+  --color-action-500: #3F8D65;
+  --color-action-600: #387B58;
+
+  /* Titres / primaires */
+  --color-primary-500: #1E2939;
+  --color-primary-600: #1E2939;
+  --color-primary-700: #1E2939;
+  --color-primary-900: #1E2939;
+
+  /* Textes (paragraphes) */
+  --color-neutral-600: #475569;
+
+  /* Fonds & neutres (PURS) */
+  --color-neutral-50:  #FCFCFC;
+  --color-neutral-100: #FCFCFC;
+
+  /* Spécifiques SP legacy */
+  --color-sp-light: #FCFCFC;
+  --color-sp-line:  #E5E7EB;
+  --color-sp-pill:  #F4F6F8;
+
+  /* Aliases legacy */
+  --sp-action-500:   var(--color-action-500);
+  --sp-action-600:   var(--color-action-600);
+  --sp-primary-600:  var(--color-primary-600);
+  --sp-neutral-600:  var(--color-neutral-600);
+  --sp-light:        var(--color-neutral-50);
+  --sp-line:         var(--color-sp-line);
+
+  /* Contextes (si besoin) */
+  --kl-bg-blue:       #DBEAFE;
+  --kl-bg-green:      #DFF1E8;
+  --kl-bg-green-pale: #C0E2D0;
+}
+
+/* 3) Nav Klinova — sélecteur précis */
+[data-brand="klinova"] nav[aria-label="Navigation principale"] {
+  font-family: "Caviar Dreams", var(--font-sans, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* 4) Fond de page Klinova pur (optionnel) */
+html[data-brand="klinova"] { background: var(--color-neutral-50) !important; }
+
+
+/* === Klinova Design System === */
+[data-brand="klinova"] {
+  /* Fond neutre du site */
+  background: var(--color-neutral-50, #FCFCFC);
+}
+
+/* Typographie du header (déjà validée) */
+[data-brand="klinova"] nav[aria-label="Navigation principale"] {
+  font-family: "Caviar Dreams", var(--font-sans, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Headings spécifiques Klinova */
+@layer base {
+  [data-brand="klinova"] h1 {
+    @apply text-[#1E2939] font-bold;
+  }
+  [data-brand="klinova"] h2 {
+    @apply text-[#1E2939] font-normal;
+  }
+}
+
+
+/* fin de la configuration klinova */
+

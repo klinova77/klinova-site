@@ -1,0 +1,2235 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image } from 'astro:assets';
+import Button from '~/components/UI/Button.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+
+
+
+import heroBalconImage from '../assets/images/balcon-moderne-propre-nettoyage-klinova.webp';
+import picsAntiPigeons from '~/assets/images/pics-anti-pigeons-inox-balcon.webp';
+import filetAntiPigeons from '~/assets/images/filet-anti-pigeons-pour-balcon.jpg';
+import gelRepulsif from '~/assets/images/gel-repulsif-anti-pigeon-coupelles.jpg';
+
+
+import { Accordion, AccordionItem } from 'free-astro-components';
+
+const faq = [
+  {
+    title: "Intervenez-vous sur tous types de balcons ?",
+    content:
+      "Oui, nous adaptons nos techniques à tous les matériaux : carrelage, béton, pierre naturelle, bois composite ou résine. Chaque intervention commence par un test discret sur une zone non visible afin d’ajuster la pression, le produit et la température.",
+  },
+  {
+    title: "Quels produits utilisez-vous pour le nettoyage et la désinfection ?",
+    content:
+      "Nous utilisons des détergents alcalins biodégradables et des désinfectants virucides homologués EN 14476, choisis selon le type de salissure et le matériau du balcon. Aucun produit agressif n’est employé : les surfaces sont rincées et neutralisées pour garantir sécurité et absence d’odeur.",
+  },
+  {
+    title: "Les fientes de pigeons sont-elles dangereuses pour la santé ?",
+    content:
+      "Oui, elles peuvent présenter un risque sanitaire si elles sont manipulées sans protection (bactéries, champignons, virus). Nos techniciens sont équipés d’EPI complets et appliquent un virucide EN 14476 avant le nettoyage mécanique pour supprimer le risque.",
+  },
+  {
+    title: "Proposez-vous aussi la pose de protections anti-pigeons ?",
+    content:
+      "Oui. Nous installons des pics inox, filets discrets ou gels répulsifs selon la configuration et les contraintes esthétiques. Chaque installation est garantie 2 ans et peut être réalisée à la suite du nettoyage.",
+  },
+  {
+    title: "Intervenez-vous aussi le week-end ?",
+    content:
+      "Oui, nous intervenons 7 jours sur 7, y compris le week-end, pour les urgences ou les créneaux planifiés. Les horaires sont adaptés à vos disponibilités et aux contraintes d’accès (copropriété, voisinage).",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.title,
+    acceptedAnswer: { "@type": "Answer", text: item.content },
+  })),
+};
+
+
+
+const popupContext = {
+  title: 'Devis nettoyage de moquettes',
+  subtitle: 'Obtenez un devis personnalisé sous 24h',
+  serviceKey: 'moquette',
+  serviceLabel: 'Nettoyage de moquette',
+  trackingSource: 'popup-moquette',
+  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  creditImpotEnabled: true, 
+};
+---
+
+
+
+
+
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  seo={{
+    title: 'Nettoyage de balcons – Klinova',
+    description: 'Prestations professionel de nettoyage de balcons  en Île-de-France.',
+  }}
+>
+
+
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(3deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(3deg);
+    }
+  }
+
+  .hero-badge {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .hero-title {
+    animation: fadeInUp 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .hero-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .hero-list {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .hero-reassurance {
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  .hero-image {
+    animation: fadeInRight 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  /* Hover microinteractions */
+  .service-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .service-item:hover {
+    transform: translateX(8px);
+  }
+
+  .service-item:hover .service-icon {
+    transform: scale(1.1);
+    color: #387B58;
+  }
+
+  .service-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reassurance-item {
+    transition: all 0.3s ease;
+  }
+
+  .reassurance-item:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Animation des formes décoratives */
+  .floating-shape {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .floating-shape:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 10s;
+  }
+
+  /* Accessibilité : désactiver animations si demandé */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-list,
+    .hero-cta,
+    .hero-reassurance,
+    .hero-image {
+      animation: none;
+      opacity: 1;
+    }
+
+    .floating-shape {
+      animation: none;
+    }
+
+    .service-item:hover,
+    .reassurance-item:hover {
+      transform: none;
+    }
+
+    .service-item:hover .service-icon {
+      transform: none;
+      color: #387B58;
+    }
+  }
+</style>
+
+<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+  <div class="container-responsive">
+    <!-- Grille responsive : texte à gauche, image à droite -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Contenu textuel -->
+      <div class="order-1 lg:order-1">
+        <!-- Badge optionnel -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#3F8D65] border border-[#3F8D65]/20 mb-6 hero-badge">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Intervention rapide à Paris et Île-de-France
+        </div>
+
+        <!-- Titre principal H1 -->
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1E2939] leading-tight mb-6 hero-title">
+          Nettoyage professionnel de 
+          <span class="text-[#3F8D65]">balcons</span>
+        </h1>
+
+        <!-- Sous-titre descriptif -->
+        <p class="text-xl lg:text-2xl text-[#475569] leading-relaxed mb-8 hero-subtitle">
+          Élimination des salissures, fientes, mousses et pollution urbaine avec protocoles de désinfection adaptés
+        </p>
+
+        <!-- Liste des services -->
+        <ul class="space-y-3 mb-10 hero-list">
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Nettoyage et désinfection des fientes de pigeons</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Solutions anti-pigeons durables (pics, filets, gel)</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Entretien copropriétés et particuliers</span>
+          </li>
+        </ul>
+
+        <!-- CTA principal -->
+        <div class="flex flex-col sm:flex-row gap-4 hero-cta">
+         
+<Button
+  href="/#formulaire"
+  label="Demander un devis gratuit"
+  variant="primary"
+  size="lg"
+  tracking={{ action: 'cta_click', source: 'hero_balcons', intent: 'devis' }}
+  withTrackingParams={false}
+  class="hero-cta"
+>
+Demander un devis gratuit
+  <!-- petite icône flèche -->
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+  </svg>
+</Button>
+
+<!-- CTA secondaire (appel) -->
+<Button
+  href="tel:+33676738661"
+  label="06 76 73 86 61"
+  variant="secondary"
+  size="lg"
+  tracking={{ action: 'cta_click', source: 'hero_balcons', intent: 'call' }}
+  withTrackingParams={false}
+/>
+
+        </div>
+
+        <!-- Informations de réassurance -->
+        <div class="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#3F8D65]/20 hero-reassurance">
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Devis gratuit sous 24h
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Équipe certifiée
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Intervention rapide
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="order-2 lg:order-2 hero-image">
+        <div class="relative">
+          <!-- Décoration de fond animée -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#3F8D65]/10 to-transparent rounded-2xl floating-shape" aria-hidden="true"></div>
+          
+          <!-- Container image -->
+          <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+            <Image 
+              src={heroBalconImage}
+              alt="Balcon moderne avec carrelage propre après nettoyage professionnel Klinova, vue sur verdure"
+              formats={['avif', 'webp', 'jpeg']}
+              widths={[480, 720, 960, 1200]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={88}
+              loading="eager"
+              class="w-full aspect-[4/3] lg:aspect-[5/4] object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forme décorative unique -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-[#3F8D65]/5 rounded-full blur-3xl floating-shape" aria-hidden="true"></div>
+</section>
+
+<!-- Section — Types d’interventions (icônes vertes) -->
+<section id="types-interventions" class="bg-[#F8FDF9] py-16 lg:py-24" data-source="types_interventions">
+  <div class="container-responsive">
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+        Nos interventions de nettoyage de balcons
+      </h2>
+      <p class="text-lg lg:text-xl text-[#475569] max-w-3xl mx-auto">
+        Quelle que soit la nature des salissures, nous adaptons nos techniques pour un résultat impeccable
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <!-- Carte 1 : Fientes de pigeons -->
+      <article
+        class="card bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        data-service="fientes"
+      >
+        <div class="mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-[#EAF6F0]">
+            <!-- Icon Bird (vert) -->
+            <svg aria-hidden="true" class="w-9 h-9 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2s-2 1-4 1-4-1-6 3-4 6-8 7c0 0 2 2 6 2 5 0 9-3 10-6 1-3 2-7 2-7Z"/>
+              <path d="M14 7s-1.5 2-5 3"/>
+            </svg>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939] mb-2">
+            Balcons souillés par les fientes de pigeons
+          </h3>
+        </div>
+        <p class="text-[#475569] leading-relaxed mb-4">
+  Élimination complète des fientes et désinfection virucide (EN&nbsp;14476). Neutralisation des odeurs. Préparation à la pose de dispositifs anti-pigeons.
+</p>
+
+<!-- Lien spécialisé -->
+<div class="mb-4">
+  <a 
+    href="/nettoyage-balcon-fientes-pigeons"
+    class="inline-flex items-center text-sm text-[#3F8D65] hover:text-[#387B58] underline underline-offset-4 hover:no-underline transition-colors duration-200"
+    data-action="specialization_link" 
+    data-service="fientes"
+  >
+    <svg aria-hidden="true" class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+    </svg>
+    Solutions spécialisées fientes de pigeons
+  </a>
+</div>
+
+        
+      </article>
+
+      <!-- Carte 2 : Pollution urbaine -->
+      <article
+        class="card bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        data-service="pollution"
+      >
+        <div class="mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-[#EAF6F0]">
+            <!-- Icon Wind (vert) -->
+            <svg aria-hidden="true" class="w-9 h-9 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.6 4.8A2.4 2.4 0 1 1 12 8H2"/>
+              <path d="M17.3 9.3A2.7 2.7 0 1 1 20 13H2"/>
+              <path d="M12.6 15.6A2.4 2.4 0 1 1 15 19H2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939] mb-2">
+            Balcons encrassés par la pollution urbaine
+          </h3>
+        </div>
+        <p class="text-[#475569] leading-relaxed">
+          Dépoussiérage en profondeur, dégraissage et rinçage maîtrisé (basse pression selon matériau). Adapté aux balcons sur rue ou cour intérieure.
+        </p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Redonne l’éclat d’origine aux matériaux
+          </li>
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Techniques adaptées à chaque surface
+          </li>
+        </ul>
+      </article>
+
+      <!-- Carte 3 : Après travaux -->
+      <article
+        class="card bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        data-service="post-travaux"
+      >
+        <div class="mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-[#EAF6F0]">
+            <!-- Icon Hammer (vert) -->
+            <svg aria-hidden="true" class="w-9 h-9 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m14 13-5 5"/>
+              <path d="M15 12 20 7l-3-3-5 5"/>
+              <path d="m12 9-1-1-6 6v3h3l6-6"/>
+            </svg>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939] mb-2">
+            Remise en état après travaux ou sinistre
+          </h3>
+        </div>
+        <p class="text-[#475569] leading-relaxed">
+          Évacuation légère des résidus, retrait des traces de plâtre/peinture, dégraissage et remise en état complète du balcon.
+        </p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Intervention rapide post-chantier
+          </li>
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Évacuation sécurisée des déchets
+          </li>
+        </ul>
+      </article>
+
+      <!-- Carte 4 : Copropriétés & tertiaire -->
+      <article
+        class="card bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        data-service="copro-tertiaire"
+      >
+        <div class="mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-[#EAF6F0]">
+            <!-- Icon Building-2 (vert) -->
+            <svg aria-hidden="true" class="w-9 h-9 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="18" rx="1"/>
+              <path d="M10 7h4a1 1 0 0 1 1 1v13"/>
+              <path d="M14 7V3h6v18h-6"/>
+              <path d="M7 7h.01M7 11h.01M7 15h.01M17 11h.01M17 15h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939] mb-2">
+            Copropriétés & immeubles tertiaires
+          </h3>
+        </div>
+        <p class="text-[#475569] leading-relaxed">
+          Interventions multi-niveaux sécurisées : balisage, protocole syndic, traçabilité. Possibilité de contrat annuel d’entretien.
+        </p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Devis syndic détaillé par intervention
+          </li>
+          <li class="flex items-center text-sm text-[#475569]">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+            Planning personnalisé et récurrent
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- CTA de section -->
+    <div class="text-center mt-12 lg:mt-16">
+      <p class="text-[#475569] mb-6">
+        Une situation spécifique ? Parlons-en pour trouver la solution adaptée.
+      </p>
+      <Button
+        href="/contact#formulaire"
+        label="Contactez nous"
+        variant="tertiary"
+        size="lg"
+        class="focus-visible:ring-2 focus-visible:ring-[#3F8D65] focus-visible:ring-offset-2"
+        tracking={{ action: 'cta_click', source: 'types_interventions', intent: 'devis' }}
+        withTrackingParams={false}
+        data-source="types_interventions"
+
+        
+      >
+      Contactez nous
+        <svg aria-hidden="true" class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animations de cartes — scope à la section */
+  @media (prefers-reduced-motion: no-preference) {
+    #types-interventions .card {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUpCard .6s ease-out forwards;
+    }
+    #types-interventions .card:nth-child(1) { animation-delay: .1s; }
+    #types-interventions .card:nth-child(2) { animation-delay: .2s; }
+    #types-interventions .card:nth-child(3) { animation-delay: .3s; }
+    #types-interventions .card:nth-child(4) { animation-delay: .4s; }
+    @keyframes fadeInUpCard { to { opacity: 1; transform: translateY(0); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #types-interventions .card { opacity: 1; transform: none; animation: none; }
+  }
+</style>
+
+
+
+
+
+<section id="protocole-technique" class="bg-[#FFFFFF] py-16 lg:py-24" data-source="methodes_securite">
+  <div class="container-responsive">
+    <!-- En-tête de section -->
+    <div class="text-center mb-12 lg:mb-16">
+     <h2 id="protocole-technique" class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+  Nos méthodes de nettoyage
+</h2>
+      <p class="text-lg lg:text-xl text-[#475569] max-w-3xl mx-auto">
+        Protocole rigoureux, adapté aux matériaux et respectueux du voisinage
+      </p>
+    </div>
+
+    <!-- Timeline wrapper -->
+    <div class="relative max-w-5xl mx-auto">
+      <!-- Ligne de timeline - visible sur tous écrans -->
+      <div class="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-[#E5E7EB] lg:transform lg:-translate-x-0.5" aria-hidden="true"></div>
+
+      <!-- Étapes timeline -->
+      <div class="space-y-12 lg:space-y-16">
+        
+        <!-- Étape 1 : Protection & sécurité -->
+        <div class="relative timeline-step" data-step="1_protection">
+          <!-- Point timeline -->
+          <div class="absolute left-6 lg:left-1/2 w-4 h-4 bg-[#3F8D65] rounded-full border-4 border-white shadow-lg lg:transform lg:-translate-x-2" aria-hidden="true"></div>
+          
+          <!-- Contenu alternant gauche/droite -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+            <!-- Carte étape (gauche sur desktop) -->
+            <div class="ml-16 lg:ml-0">
+              <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                <!-- Header avec icône et badge -->
+                <div class="flex items-start mb-4">
+                  <div class="flex items-center justify-center w-14 h-14 bg-[#EAF6F0] rounded-xl mr-4 flex-shrink-0">
+                    <!-- Icon Shield -->
+                    <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-3 8-10V5l-8-3-8 3v7c0 7 8 10 8 10z"/>
+                      <path d="M8 10a4 4 0 0 1 8 0"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#C0E2D0] text-[#1E2939] mb-2">
+                      <span class="sr-only">Étape </span>1
+                    </span>
+                    <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">
+                      Protection EPI & zone balisée
+                    </h3>
+                  </div>
+                </div>
+                
+                <!-- Contenu détaillé -->
+                <ul class="space-y-3 text-[#475569]">
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>EPI complets : combinaisons, gants, masques</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Balisage et protection du mobilier/plantes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Vérification des accès et évacuations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Espace pour alternance -->
+            <div class="hidden lg:block"></div>
+          </div>
+        </div>
+
+        <!-- Étape 2 : Nettoyage adapté -->
+        <div class="relative timeline-step" data-step="2_nettoyage">
+          <!-- Point timeline -->
+          <div class="absolute left-6 lg:left-1/2 w-4 h-4 bg-[#3F8D65] rounded-full border-4 border-white shadow-lg lg:transform lg:-translate-x-2" aria-hidden="true"></div>
+          
+          <!-- Contenu alternant droite sur desktop -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+            <!-- Espace pour alternance -->
+            <div class="hidden lg:block"></div>
+            <!-- Carte étape (droite sur desktop) -->
+            <div class="ml-16 lg:ml-0">
+              <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                <!-- Header avec icône et badge -->
+                <div class="flex items-start mb-4">
+                  <div class="flex items-center justify-center w-14 h-14 bg-[#EAF6F0] rounded-xl mr-4 flex-shrink-0">
+                    <!-- Icon Sparkles -->
+                    <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 3l1.8 3.9L18 9l-4.2 2.1L12 15l-1.8-3.9L6 9l4.2-2.1L12 3z"/>
+                      <path d="M19 16c0 1.657-1.79 3-4 3 0-2 1.343-4 3-4 0 0 1 1 1 1z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#C0E2D0] text-[#1E2939] mb-2">
+                      <span class="sr-only">Étape </span>2
+                    </span>
+                    <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">
+                      Nettoyage mécanique ou vapeur
+                    </h3>
+                  </div>
+                </div>
+                
+                <!-- Contenu détaillé -->
+                <p class="text-[#475569] mb-4">
+                  Méthode ajustée selon le matériau (carrelage, béton, bois, pierre). Décapage contrôlé ou vapeur pour décoller les salissures sans altérer les surfaces.
+                </p>
+                <ul class="space-y-2 text-[#475569]">
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Test préalable sur zone non visible</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Pression adaptée selon les matériaux</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 3 : Désinfection virucide -->
+        <div class="relative timeline-step" data-step="3_desinfection">
+          <!-- Point timeline -->
+          <div class="absolute left-6 lg:left-1/2 w-4 h-4 bg-[#3F8D65] rounded-full border-4 border-white shadow-lg lg:transform lg:-translate-x-2" aria-hidden="true"></div>
+          
+          <!-- Contenu alternant gauche sur desktop -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+            <!-- Carte étape (gauche sur desktop) -->
+            <div class="ml-16 lg:ml-0">
+              <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                <!-- Header avec icône et badge -->
+                <div class="flex items-start mb-4">
+                  <div class="flex items-center justify-center w-14 h-14 bg-[#EAF6F0] rounded-xl mr-4 flex-shrink-0">
+                    <!-- Icon Flask -->
+                    <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 2v4l-5 9a4 4 0 0 0 3.5 6h7a4 4 0 0 0 3.5-6l-5-9V2"/>
+                      <path d="M7 16h10"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#C0E2D0] text-[#1E2939] mb-2">
+                      <span class="sr-only">Étape </span>3
+                    </span>
+                    <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">
+                      Désinfection virucide (EN 14476)
+                    </h3>
+                  </div>
+                </div>
+                
+                <!-- Contenu détaillé -->
+                <p class="text-[#475569] mb-4">
+                  Traitement spécifique des fientes avec un produit virucide homologué (EN 14476) pour éliminer virus, bactéries et champignons.
+                </p>
+                <ul class="space-y-2 text-[#475569]">
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Application uniforme et temps de contact respecté</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Rinçage final et évacuation des résidus</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Espace pour alternance -->
+            <div class="hidden lg:block"></div>
+          </div>
+        </div>
+
+        <!-- Étape 4 : Séchage & finition -->
+        <div class="relative timeline-step" data-step="4_sechage">
+          <!-- Point timeline -->
+          <div class="absolute left-6 lg:left-1/2 w-4 h-4 bg-[#3F8D65] rounded-full border-4 border-white shadow-lg lg:transform lg:-translate-x-2" aria-hidden="true"></div>
+          
+          <!-- Contenu alternant droite sur desktop -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+            <!-- Espace pour alternance -->
+            <div class="hidden lg:block"></div>
+            <!-- Carte étape (droite sur desktop) -->
+            <div class="ml-16 lg:ml-0">
+              <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                <!-- Header avec icône et badge -->
+                <div class="flex items-start mb-4">
+                  <div class="flex items-center justify-center w-14 h-14 bg-[#EAF6F0] rounded-xl mr-4 flex-shrink-0">
+                    <!-- Icon Wind -->
+                    <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9.6 4.8A2.4 2.4 0 1 1 12 8H2"/>
+                      <path d="M17.3 9.3A2.7 2.7 0 1 1 20 13H2"/>
+                      <path d="M12.6 15.6A2.4 2.4 0 1 1 15 19H2"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#C0E2D0] text-[#1E2939] mb-2">
+                      <span class="sr-only">Étape </span>4
+                    </span>
+                    <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">
+                      Séchage rapide & neutralisation des odeurs
+                    </h3>
+                  </div>
+                </div>
+                
+                <!-- Contenu détaillé -->
+                <p class="text-[#475569] mb-4">
+                  Aération renforcée et neutralisant naturel des odeurs. Livraison d'un balcon propre, sec et immédiatement réutilisable.
+                </p>
+                <ul class="space-y-2 text-[#475569]">
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Contrôle qualité final et validation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Balcon immédiatement réutilisable</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bloc réassurance final -->
+    <div class="mt-16 lg:mt-20 max-w-4xl mx-auto">
+      <div class="bg-white rounded-2xl p-8 lg:p-12 border border-[#E5E7EB] text-center shadow-sm">
+        <div class="flex justify-center mb-6">
+          <div class="flex items-center justify-center w-16 h-16 bg-[#EAF6F0] rounded-2xl">
+            <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl lg:text-3xl font-bold text-[#1E2939] mb-4">
+          Intervention propre et respectueuse
+        </h3>
+        <p class="text-lg text-[#475569] mb-6 max-w-2xl mx-auto">
+          Respect du voisinage, protection des biens, aucune éclaboussure. Votre balcon retrouve sa propreté sans aucun désagrément.
+        </p>
+        
+        <!-- Badges certification unifiés -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="inline-flex items-center px-4 py-2 bg-[#EAF6F0] rounded-full text-sm font-medium text-[#1E2939]">
+            <svg aria-hidden="true" class="w-4 h-4 mr-2 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.51.643.763 1.254 1.182 1.745a3.066 3.066 0 010 3.976c-.419.491-.672 1.102-.723 1.745A3.066 3.066 0 0115.21 18a3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0A3.066 3.066 0 007.744 18 3.066 3.066 0 014.932 15.188c-.051-.643-.304-1.254-.723-1.745a3.066 3.066 0 010-3.976c.419-.491.672-1.102.723-1.745A3.066 3.066 0 017.744 4.178a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723z" clip-rule="evenodd"></path>
+            </svg>
+            Norme EN 14476
+          </span>
+          <span class="inline-flex items-center px-4 py-2 bg-[#EAF6F0] rounded-full text-sm font-medium text-[#1E2939]">
+            <svg aria-hidden="true" class="w-4 h-4 mr-2 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.51.643.763 1.254 1.182 1.745a3.066 3.066 0 010 3.976c-.419.491-.672 1.102-.723 1.745A3.066 3.066 0 0115.21 18a3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0A3.066 3.066 0 007.744 18 3.066 3.066 0 014.932 15.188c-.051-.643-.304-1.254-.723-1.745a3.066 3.066 0 010-3.976c.419-.491.672-1.102.723-1.745A3.066 3.066 0 017.744 4.178a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723z" clip-rule="evenodd"></path>
+            </svg>
+            Équipe certifiée
+          </span>
+          <span class="inline-flex items-center px-4 py-2 bg-[#EAF6F0] rounded-full text-sm font-medium text-[#1E2939]">
+            <svg aria-hidden="true" class="w-4 h-4 mr-2 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.51.643.763 1.254 1.182 1.745a3.066 3.066 0 010 3.976c-.419.491-.672 1.102-.723 1.745A3.066 3.066 0 0115.21 18a3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0A3.066 3.066 0 007.744 18 3.066 3.066 0 014.932 15.188c-.051-.643-.304-1.254-.723-1.745a3.066 3.066 0 010-3.976c.419-.491.672-1.102.723-1.745A3.066 3.066 0 017.744 4.178a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723z" clip-rule="evenodd"></path>
+            </svg>
+            Assurance responsabilité
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Animations timeline au scroll — ciblage robuste */
+  @media (prefers-reduced-motion: no-preference) {
+    #methodes-securite .timeline-step {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUpTimeline 0.8s ease-out forwards;
+    }
+    #methodes-securite .timeline-step:nth-child(1) { animation-delay: 0.1s; }
+    #methodes-securite .timeline-step:nth-child(2) { animation-delay: 0.2s; }
+    #methodes-securite .timeline-step:nth-child(3) { animation-delay: 0.3s; }
+    #methodes-securite .timeline-step:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeInUpTimeline {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #methodes-securite .timeline-step {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+<!-- Section Solutions anti-pigeons - Version service optimisée -->
+
+
+
+
+<section id="anti-pigeons" class="bg-[#DFF1E8] py-16 lg:py-24">
+  <div class="container-responsive">
+    <!-- En-tête -->
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+        Solutions anti-pigeons adaptées à votre balcon
+      </h2>
+      <p class="text-lg lg:text-xl text-[#475569] max-w-3xl mx-auto">
+        Pics, filets ou gel répulsif : nous recommandons la meilleure solution selon votre configuration et vos contraintes esthétiques.
+      </p>
+    </div>
+
+    <!-- Grille 2x2 : 3 options + 1 carte diagnostic -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+      
+      <!-- Carte: Pics -->
+      <article class="group bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-service="pics">
+        <figure class="aspect-[4/3] bg-gray-50 overflow-hidden">
+          <Image
+            src={picsAntiPigeons}
+            alt="Pics anti-pigeons en inox posés sur un rebord de balcon"
+            widths={[480, 720, 960]}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            formats={['avif','webp','jpeg']}
+            quality={86}
+            decoding="async"
+            placeholder="blur"
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <figcaption class="sr-only">Protection linéaire pour rebords étroits et appuis de fenêtre.</figcaption>
+        </figure>
+
+        <div class="p-6 lg:p-8">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <!-- Icon stylisée -->
+              <svg aria-hidden="true" class="w-6 h-6 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7l5 5 4-8 4 8 5-5v10H3z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Pics anti-pigeons inox</h3>
+              <p class="text-sm text-[#475569] mt-1">Rebords étroits, appuis de fenêtre, climatiseurs</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-[#475569]">
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Discrets et durables (inox qualité marine)
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Fixation adaptée au support (colle/chevillage)
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Efficacité immédiate, entretien minimal
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Carte: Filets -->
+      <article class="group bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-service="filets">
+        <figure class="aspect-[4/3] bg-gray-50 overflow-hidden">
+          <Image
+            src={filetAntiPigeons}
+            alt="Filet anti-pigeons discret tendu sur une ouverture de balcon"
+            widths={[480, 720, 960]}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            formats={['avif','webp','jpeg']}
+            quality={86}
+            decoding="async"
+            placeholder="blur"
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <figcaption class="sr-only">Protection intégrale pour grandes ouvertures et coursives.</figcaption>
+        </figure>
+
+        <div class="p-6 lg:p-8">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <svg aria-hidden="true" class="w-6 h-6 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Filets de protection</h3>
+              <p class="text-sm text-[#475569] mt-1">Grandes ouvertures, coursives, puits de lumière</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-[#475569]">
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Protection intégrale, empêche tout accès
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Fixations inox et tension réglée
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Maille et teinte au choix (discrétion)
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Carte: Gel -->
+      <article class="group bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-service="gel">
+        <figure class="aspect-[4/3] bg-gray-50 overflow-hidden">
+          <Image
+            src={gelRepulsif}
+            alt="Coupelles de gel répulsif anti-pigeons posées sur un rebord"
+            widths={[480, 720, 960]}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            formats={['avif','webp','jpeg']}
+            quality={86}
+            decoding="async"
+            placeholder="blur"
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <figcaption class="sr-only">Usage ponctuel ou en complément, idéal pour zones complexes.</figcaption>
+        </figure>
+
+        <div class="p-6 lg:p-8">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <svg aria-hidden="true" class="w-6 h-6 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 11-11.32 0L12 2.69z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Gel répulsif professionnel</h3>
+              <p class="text-sm text-[#475569] mt-1">Usage ponctuel ou complément d’autres solutions</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-[#475569]">
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Application rapide, renouvellement possible
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Idéal pour tests et zones complexes
+            </li>
+            <li class="flex items-start">
+              <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg>
+              Discret, ne tache pas les supports
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Carte: Diagnostic & garantie -->
+      <article class="bg-[#F8FDF9] rounded-2xl border border-[#C0E2D0] p-6 lg:p-8" data-service="diagnostic">
+        <div class="flex items-start mb-6">
+          <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-[#EAF6F0] mr-4 flex-shrink-0">
+            <svg aria-hidden="true" class="w-8 h-8 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5h6M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z"/>
+              <path d="M9 14l2 2 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Diagnostic expert et installation garantie</h3>
+            <p class="text-sm text-[#475569] mt-1">Évaluation sur place pour la solution optimale</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 mb-6">
+          <div class="flex items-start p-3 bg-white rounded-lg border border-[#E5E7EB]">
+            <div class="flex items-center justify-center w-8 h-8 bg-[#3F8D65] text-white text-sm font-bold rounded-full mr-3 flex-shrink-0">1</div>
+            <div>
+              <p class="font-medium text-[#1E2939] text-sm">Diagnostic sur place</p>
+              <p class="text-xs text-[#475569]">Mesures, accès, contraintes esthétiques/règlementaires</p>
+            </div>
+          </div>
+          <div class="flex items-start p-3 bg-white rounded-lg border border-[#E5E7EB]">
+            <div class="flex items-center justify-center w-8 h-8 bg-[#3F8D65] text-white text-sm font-bold rounded-full mr-3 flex-shrink-0">2</div>
+            <div>
+              <p class="font-medium text-[#1E2939] text-sm">Recommandation personnalisée</p>
+              <p class="text-xs text-[#475569]">Solution principale + alternative selon budget</p>
+            </div>
+          </div>
+          <div class="flex items-start p-3 bg-white rounded-lg border border-[#E5E7EB]">
+            <div class="flex items-center justify-center w-8 h-8 bg-[#3F8D65] text-white text-sm font-bold rounded-full mr-3 flex-shrink-0">3</div>
+            <div>
+              <p class="font-medium text-[#1E2939] text-sm">Installation & suivi</p>
+              <p class="text-xs text-[#475569]">Pose propre, photos de fin de chantier, conseils</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center text-sm">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2l2.39 4.84 5.34.78-3.86 3.76.91 5.31L10 14.77 4.22 16.69l.91-5.31L1.27 7.62l5.34-.78L10 2z" clip-rule="evenodd"/></svg>
+            <span class="text-[#1E2939] font-medium">Garantie installation 2 ans</span>
+          </div>
+          <div class="flex items-center text-sm">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span class="text-[#1E2939] font-medium">Matériaux pros (inox / résines UV)</span>
+          </div>
+          <div class="flex items-center text-sm">
+            <svg aria-hidden="true" class="w-4 h-4 text-[#3F8D65] mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span class="text-[#1E2939] font-medium">Installation réversible si besoin</span>
+          </div>
+        </div>
+
+        <Button
+          href="/contact#formulaire"
+          label="Diagnostic gratuit sous 48h"
+          variant="tertiary"
+          size="lg"
+          withTrackingParams={false}
+          tracking={{ action: 'cta_click', source: 'anti_pigeons', intent: 'diagnostic' }}
+          data-cta="diagnostic_gratuit"
+          class="w-full"
+        >
+        Diagnostic gratuit
+          <svg aria-hidden="true" class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </Button>
+      </article>
+    </div>
+
+    <!-- Témoignage client -->
+<!-- Témoignage client -->
+<div class="max-w-4xl mx-auto mb-12">
+  <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm">
+    <div class="flex items-start">
+      <div class="flex-1">
+        <div class="flex items-center mb-2">
+          <div class="flex text-yellow-400 mr-3">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <span class="text-sm text-[#475569] font-medium">Google</span>
+        </div>
+        <h4 class="font-semibold text-[#1E2939] mb-1">Françoise DAVENNE</h4>
+        <p class="text-sm text-[#475569] mb-4">Septembre 2025</p>
+        <blockquote class="text-[#475569] italic">
+          "KLINOVA Nettoyage est à l'écoute de nos besoins. Prestations de qualité et travail soigné. Je conseillerais KLINOVA Nettoyage dans mon entourage."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ton bloc de redirection existant vient ICI -->
+
+   <!-- Au lieu de la FAQ -->
+<div class="max-w-4xl mx-auto">
+  <div class="bg-gradient-to-r from-[#F8FDF9] to-[#EAF6F0] rounded-2xl border border-[#C0E2D0] p-8 text-center">
+    <h3 class="text-2xl font-bold text-[#1E2939] mb-4">
+      Balcon souillé par les fientes de pigeons ?
+    </h3>
+    <p class="text-[#475569] mb-6">
+      Découvrez notre méthode spécialisée de nettoyage en profondeur et nos solutions anti-récidive garanties.
+    </p>
+    <a href="/nettoyage-fientes-pigeons" class="inline-flex items-center px-8 py-4 bg-[#3F8D65] text-white font-semibold rounded-xl hover:bg-[#387B58] transition-all duration-200 shadow-lg hover:shadow-xl">
+      Voir notre méthode spécialisée
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+</div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    #anti-pigeons article {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUpAntiPigeons .6s ease-out forwards;
+    }
+    #anti-pigeons article:nth-child(1) { animation-delay: .1s; }
+    #anti-pigeons article:nth-child(2) { animation-delay: .2s; }
+    #anti-pigeons article:nth-child(3) { animation-delay: .3s; }
+    #anti-pigeons article:nth-child(4) { animation-delay: .4s; }
+    @keyframes fadeUpAntiPigeons { to { opacity: 1; transform: translateY(0); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #anti-pigeons article { opacity: 1; transform: none; animation: none; }
+  }
+</style>
+
+
+
+
+
+
+<!-- Section 5 – Comment nous procédons (améliorée) -->
+<section id="processus-balcon" class="bg-white py-16 lg:py-24">
+  <div class="container-responsive relative">
+
+    <!-- En-tête -->
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+        Comment nous procédons
+      </h2>
+      <p class="text-lg lg:text-xl text-[#475569] max-w-3xl mx-auto">
+        Un processus clair et professionnel, de l’évaluation initiale au contrôle qualité final.
+      </p>
+    </div>
+
+    <!-- Wrapper timeline + cards -->
+    <div class="relative max-w-5xl mx-auto">
+
+      <!-- Ligne de progression (desktop seulement) -->
+      <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[88px] w-[82%] h-0.5 bg-[#C0E2D0]" aria-hidden="true"></div>
+
+      <!-- 3 colonnes -->
+      <div class="relative grid grid-cols-1 gap-8 lg:grid-cols-3">
+
+        <!-- Point de connexion (desktop) -->
+        <div class="hidden lg:block absolute left-[16.66%] top-[80px] -translate-x-1/2 w-4 h-4 rounded-full bg-[#3F8D65] border-4 border-white shadow" aria-hidden="true"></div>
+        <div class="hidden lg:block absolute left-1/2 top-[80px] -translate-x-1/2 w-4 h-4 rounded-full bg-[#3F8D65] border-4 border-white shadow" aria-hidden="true"></div>
+        <div class="hidden lg:block absolute left-[83.33%] top-[80px] -translate-x-1/2 w-4 h-4 rounded-full bg-[#3F8D65] border-4 border-white shadow" aria-hidden="true"></div>
+
+        <!-- Étape 1 -->
+        <article class="relative bg-white border border-[#E5E7EB] rounded-2xl p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          data-step="diagnostic">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <!-- Loupe -->
+              <svg aria-hidden="true" class="w-6 h-6 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <div>
+              <span class="inline-block mb-1 px-2 py-0.5 text-xs font-medium rounded-full bg-[#C0E2D0] text-[#1E2939]">Étape 1</span>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Diagnostic et devis</h3>
+            </div>
+          </div>
+          <p class="text-[#475569] leading-relaxed">
+            Inspection du balcon et de ses accès, <strong>sur place ou à partir de vos photos</strong> selon l’urgence.
+            Identification des salissures et points sensibles, puis devis précis et transparent.
+          </p>
+        </article>
+
+        <!-- Étape 2 -->
+        <article class="relative bg-white border border-[#E5E7EB] rounded-2xl p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          data-step="intervention">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <!-- Outil / Nettoyage (balai + gouttes) -->
+           <!-- Icône spray nettoyage — version solid adaptée Klinova -->
+<svg aria-hidden="true" focusable="false"
+     class="w-6 h-6 text-[#3F8D65]"
+     viewBox="0 0 24 24" fill="currentColor">
+  <path d="M 7.5587444,23.59205 C 7.3938489,23.55139 7.1551943,23.454176 7.0284008,23.376018 6.9016082,23.297861 6.7068897,23.087884 6.5956942,22.909403 6.4060266,22.604965 6.3941711,22.430913 6.4040458,20.095749 c 0.00823,-1.944028 0.044884,-2.606136 0.1674098,-3.023364 0.086287,-0.293823 0.2505401,-0.691623 0.3650075,-0.884001 0.1144684,-0.192378 0.9180117,-1.071956 1.7856523,-1.954618 1.0364565,-1.054401 1.6465916,-1.75708 1.7788856,-2.048701 0.184282,-0.40622 0.201543,-0.654011 0.203551,-2.9220621 l 0.0022,-2.4782031 0.267975,-0.248351 C 11.215551,6.3132331 11.227154,6.2725814 11.08935,6.1347764 10.951544,5.9969714 10.903908,6.0315075 10.618663,6.4760226 10.444113,6.7480355 10.066476,7.1915738 9.7794691,7.4616652 9.4924635,7.7317544 8.8304115,8.1808394 8.3082427,8.4596316 7.7860739,8.7384236 7.188492,9.0214951 6.9802831,9.0886785 6.6561407,9.1932711 6.5647017,9.1865742 6.3441986,9.0420951 6.1280586,8.9004749 6.0953933,8.8196303 6.1409314,8.5390146 6.1707728,8.3551248 6.6256539,7.3137953 7.1517792,6.224949 7.6779035,5.1361016 8.1083695,4.1944231 8.1083695,4.1323294 c 0,-0.062095 -0.1011863,-0.143555 -0.2248574,-0.1810246 C 7.7598406,3.9138353 7.0331705,3.8486224 6.2686904,3.8063776 4.9101457,3.7313147 4.8732565,3.7232198 4.6366926,3.4481942 4.405284,3.1791663 4.3961071,3.1149219 4.4276707,1.984981 4.4576546,0.91148071 4.4815673,0.78231051 4.6885645,0.57579242 l 0.2278795,-0.22735915 4.9688231,0.005782 c 3.3515719,0.00382 5.1801429,0.0440156 5.6180779,0.12333761 0.357092,0.064676 0.930201,0.25590993 1.273579,0.42495443 0.420174,0.20685149 0.779539,0.48714089 1.099007,0.85717849 0.261076,0.3024035 0.732096,0.9099301 1.04671,1.3500581 0.314612,0.440128 0.600916,0.9542441 0.63623,1.1424797 0.03531,0.1882356 0.03557,0.4563662 6.04e-4,0.5958459 -0.035,0.1394787 -0.198824,0.3358029 -0.364037,0.4362747 -0.184786,0.1123745 -0.602315,0.2078562 -1.084941,0.2481052 -0.431504,0.035983 -1.045989,0.1553772 -1.365522,0.265313 -0.319534,0.1099346 -0.691664,0.2724124 -0.826959,0.3610599 l -0.245993,0.1611778 0.2096,0.1622413 c 0.11528,0.089229 0.235371,0.2746705 0.266869,0.4120842 0.0315,0.1374127 0.09899,0.9019272 0.149984,1.6989219 0.06661,1.041035 0.17633,1.7727035 0.389657,2.5983515 0.163318,0.632099 0.591023,2.273559 0.950457,3.647687 l 0.653516,2.498414 0.02288,2.675389 c 0.02167,2.535139 0.01244,2.689313 -0.176149,2.94191 -0.109461,0.146611 -0.323167,0.359288 -0.474903,0.472615 -0.268865,0.200806 -0.397102,0.206459 -5.040624,0.222207 -2.620607,0.0089 -4.8996546,-0.01711 -5.0645501,-0.05777 z m 9.6188986,-0.959428 c 0.09554,-0.03214 0.12492,-0.637162 0.12492,-2.572546 0,-1.860928 -0.03749,-2.674908 -0.141688,-3.076185 -0.07793,-0.300117 -0.421075,-1.62498 -0.76255,-2.944143 -0.341473,-1.319163 -0.696587,-2.735765 -0.789141,-3.148003 L 15.440902,10.14222 h -1.84241 -1.84241 l -0.05381,0.949399 c -0.03802,0.670686 -0.117663,1.090146 -0.271307,1.428842 -0.119619,0.263694 -0.311075,0.600981 -0.425457,0.749525 -0.11438,0.148543 -0.849462,0.922165 -1.633516,1.71916 -0.9435714,0.959146 -1.5079844,1.618024 -1.669366,1.948763 -0.2355436,0.482733 -0.2448307,0.584095 -0.2737754,2.988125 -0.0206,1.711041 0.00432,2.522777 0.079756,2.598351 0.071346,0.07147 1.0080076,0.127385 2.6782814,0.159878 1.41271,0.02749 3.535451,0.03656 4.717201,0.02017 1.18175,-0.01638 2.204851,-0.0487 2.273558,-0.07182 z m -7.037007,-1.404299 c -0.03308,-0.08622 0.03791,-0.527999 0.157775,-0.981729 0.186258,-0.705057 0.203675,-0.918315 0.119839,-1.467206 -0.05395,-0.353232 -0.07726,-0.822125 -0.0518,-1.041985 0.02546,-0.219861 0.09646,-0.557147 0.157775,-0.749525 0.06131,-0.192378 0.236085,-0.532236 0.388384,-0.755242 0.152298,-0.223003 0.458984,-0.569956 0.681521,-0.771006 0.222537,-0.201049 0.621765,-0.475583 0.887171,-0.610073 0.265404,-0.134492 0.738283,-0.318873 1.050843,-0.409735 0.312558,-0.09086 0.715379,-0.151044 0.89516,-0.133735 0.320935,0.0309 0.327434,0.04136 0.357761,0.575772 0.01699,0.299364 -0.03827,0.980932 -0.122792,1.514593 -0.08452,0.533662 -0.246041,1.217155 -0.358928,1.518874 -0.112888,0.301718 -0.338868,0.733031 -0.502176,0.958472 -0.16331,0.225442 -0.474194,0.538306 -0.690854,0.695255 -0.222769,0.161372 -0.659098,0.341633 -1.004226,0.414874 -0.390875,0.08295 -0.64487,0.09494 -0.706456,0.03336 -0.06159,-0.06159 0.191175,-0.666366 0.703026,-1.682128 0.439551,-0.872283 0.77974,-1.605414 0.755976,-1.629178 -0.02377,-0.02377 -0.184186,0.108192 -0.356494,0.293236 -0.172307,0.185043 -0.483031,0.583786 -0.690496,0.886095 -0.207467,0.302307 -0.470285,0.732717 -0.584042,0.956467 -0.113754,0.223748 -0.297687,0.695949 -0.408736,1.049334 -0.111049,0.353385 -0.250896,0.833647 -0.31077,1.067249 -0.05987,0.233601 -0.153512,0.42473 -0.208084,0.42473 -0.05457,0 -0.126291,-0.07054 -0.159376,-0.156765 z M 15.217831,8.1434886 c -0.01634,-0.4946865 -0.07327,-0.9444013 -0.126482,-0.9993665 -0.0533,-0.055053 -0.756706,-0.1122455 -1.566108,-0.1273427 -0.808142,-0.015075 -1.522628,0.00826 -1.587747,0.051832 -0.07478,0.050045 -0.123232,0.4098922 -0.131522,0.9768043 -0.0072,0.4936591 -0.01012,0.9323534 -0.0065,0.9748744 0.0036,0.042523 0.780939,0.065007 1.727353,0.049968 l 1.72075,-0.027344 -0.02972,-0.8994294 z M 8.1060552,7.4357246 C 8.3886259,7.2937967 8.7782638,7.038559 8.9719169,6.8685296 9.1655711,6.6985001 9.5002148,6.299918 9.7155711,5.982791 9.9309271,5.665665 10.107128,5.3854634 10.107128,5.3601217 10.107128,5.3347837 9.8778651,5.1493352 9.597655,4.9480251 9.3174458,4.7467139 9.0751814,4.5963381 9.0592915,4.6138566 9.0434013,4.6313782 8.6877532,5.3315224 8.2689629,6.16974 7.8501725,7.0079587 7.5265977,7.6937738 7.549908,7.6937738 c 0.02331,0 0.2735764,-0.1161225 0.5561472,-0.2580492 z M 14.774199,5.8567823 c 0.04395,-0.075941 0.292159,-0.2805692 0.551565,-0.4547359 0.259406,-0.1741656 0.799063,-0.4320383 1.199238,-0.5730482 0.400177,-0.14101 1.008664,-0.2798217 1.352197,-0.3084716 0.38999,-0.032524 0.624604,-0.097107 0.624604,-0.1719333 0,-0.065915 -0.224434,-0.4082867 -0.498741,-0.7608265 C 17.728755,3.2352271 17.299639,2.7132103 17.049471,2.4277295 16.71542,2.0465243 16.443126,1.8503622 16.02418,1.689108 15.546074,1.5050841 15.146376,1.4568776 13.55494,1.3912981 12.510603,1.3482634 10.811179,1.3096272 9.7784431,1.3054456 l -1.8777027,-0.00764 0.028876,0.863673 0.028875,0.863673 0.3997464,0.1192282 c 0.2198606,0.065574 0.5810355,0.2124757 0.8026119,0.3264433 0.2215765,0.1139676 0.9221793,0.6122101 1.5568983,1.1072052 0.634718,0.4949963 1.230224,1.0162738 1.323344,1.1583947 0.167061,0.2549683 0.185823,0.2584034 1.41125,0.2584034 0.951438,0 1.260631,-0.032297 1.321857,-0.1380693 z M 6.9091564,2.0473555 V 1.2978308 H 6.2096002 5.5100439 v 0.6829004 c 0,0.3755945 0.029981,0.7128811 0.066624,0.7495246 0.036643,0.036644 0.3514432,0.066627 0.6995563,0.066627 h 0.6329314 z"></path>
+</svg>
+
+            </div>
+            <div>
+              <span class="inline-block mb-1 px-2 py-0.5 text-xs font-medium rounded-full bg-[#C0E2D0] text-[#1E2939]">Étape 2</span>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Intervention sécurisée</h3>
+            </div>
+          </div>
+          <p class="text-[#475569] leading-relaxed">
+            Zone balisée et sécurisée. Nettoyage mécanique ou vapeur selon les matériaux, avec désinfection virucide
+            <strong>EN 14476</strong> si fientes. Protocole maîtrisé et traçable.
+          </p>
+        </article>
+
+        <!-- Étape 3 -->
+        <article class="relative bg-white border border-[#E5E7EB] rounded-2xl p-6 lg:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          data-step="controle">
+          <div class="flex items-start mb-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#EAF6F0] mr-3 flex-shrink-0">
+              <!-- Check -->
+              <svg aria-hidden="true" class="w-6 h-6 text-[#3F8D65]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12l2 2 4-4"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <div>
+              <span class="inline-block mb-1 px-2 py-0.5 text-xs font-medium rounded-full bg-[#C0E2D0] text-[#1E2939]">Étape 3</span>
+              <h3 class="text-xl lg:text-2xl font-bold text-[#1E2939]">Contrôle qualité</h3>
+            </div>
+          </div>
+          <p class="text-[#475569] leading-relaxed">
+            Vérification du séchage, finitions et absence d’odeurs.
+            Photos “après” archivées, rapport d’intervention et conseils d’entretien.
+          </p>
+        </article>
+      </div>
+    </div>
+
+   
+</section>
+
+<!-- Animation -->
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    #processus-balcon [data-step] {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUpProcess .6s ease-out forwards;
+    }
+    #processus-balcon [data-step="diagnostic"] { animation-delay: .1s; }
+    #processus-balcon [data-step="intervention"] { animation-delay: .2s; }
+    #processus-balcon [data-step="controle"] { animation-delay: .3s; }
+    @keyframes fadeUpProcess { to { opacity: 1; transform: translateY(0); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #processus-balcon [data-step] { opacity: 1; transform: none; animation: none; }
+  }
+</style>
+
+<script is:inline>
+  const steps = document.querySelectorAll('#processus-balcon [data-step]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  steps.forEach(step => {
+    step.style.animationPlayState = 'paused';
+    observer.observe(step);
+  });
+</script>
+
+
+
+<section id="faq-balcon" class="py-16 md:py-20 bg-[#FCFCFC]">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+          Questions fréquentes
+        </h2>
+        <p class="text-xl text-[#475569] leading-relaxed">
+          Les réponses aux questions les plus courantes sur le nettoyage de balcon et la prévention anti-pigeons.
+        </p>
+      </div>
+
+      <Accordion
+        variant="splitted"
+        style="--ac-accordion-background-color:#DFF1E8; --ac-accordion-border-color:#C0E2D0; --ac-accordion-border-width:1px; --ac-accordion-rounded:1rem; --ac-accordion-spacing:1rem;"
+      >
+        {faq.map((item) => (
+          <AccordionItem title={item.title} name="faq-balcon">
+            <p class="whitespace-pre-line text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
+<style is:inline>
+  /* 🌿 Klinova — cartes vert clair, bordures douces */
+  #faq-balcon :where(details) {
+    background-color: #DFF1E8 !important;
+    border: 1px solid #C0E2D0 !important;
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(63, 141, 101, 0.08);
+    transition: box-shadow 0.2s ease;
+  }
+
+  #faq-balcon :where(details[open]) {
+    box-shadow: 0 0 0 2px rgba(63, 141, 101, 0.25);
+  }
+
+  #faq-balcon :where(details + details) {
+    margin-top: 1rem;
+  }
+
+  #faq-balcon :where(summary) {
+    background: transparent !important;
+    font-weight: 600;
+    color: #1E2939;
+  }
+
+  /* Corrige un cas où la lib met le fond sur un div interne */
+  #faq-balcon :where(details > div, details > p) {
+    background-color: transparent !important;
+  }
+</style>
+
+<!-- Section CTA finale avec formulaire -->
+---
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+---
+
+<section class="bg-[#DFF1E8] py-16 md:py-24" data-section="cta-final">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <!-- Message principal -->
+      <div class="mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2939] leading-tight mb-6">
+          Redonnez à votre balcon tout son éclat
+        </h2>
+        <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
+          Diagnostic gratuit, intervention professionnelle et solutions anti-pigeons. 
+          Retrouvez un espace propre et sain pour profiter pleinement de vos extérieurs.
+        </p>
+      </div>
+
+      <!-- Formulaire inline spécialisé balcons -->
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+        <div class="mb-6 text-center">
+          <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
+            Programmer votre diagnostic gratuit
+          </h3>
+          <p class="text-[#475569]">
+            Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h
+          </p>
+        </div>
+
+        <form action="/api/contact" method="POST" class="space-y-6" id="balcon-form" novalidate>
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+          
+          <!-- Champs cachés pour tracking et API -->
+          <input type="hidden" name="source" value="page-balcons">
+          <input type="hidden" name="service" value="Nettoyage balcon - Diagnostic gratuit">
+          <input type="hidden" name="rgpd" value="accepte">
+          
+          <!-- Ligne 1 : Prénom/Nom -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Prénom <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                autocomplete="given-name"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre prénom"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="nom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Nom
+              </label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                autocomplete="family-name"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="Votre nom (optionnel)"
+              >
+            </div>
+          </div>
+
+          <!-- Ligne 2 : Email/Téléphone -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="votre@email.fr"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Téléphone <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="06 12 34 56 78"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+          </div>
+
+          <!-- Ligne 3 : Code postal/Surface balcon -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="code_postal" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Code postal <span class="text-[#DC2626]">*</span>
+              </label>
+              <input
+                type="text"
+                id="code_postal"
+                name="code_postal"
+                pattern="[0-9]{5}"
+                required
+                maxlength="5"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                placeholder="75017"
+              >
+              <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+            </div>
+            <div>
+              <label for="surface" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Surface du balcon
+              </label>
+              <select
+                id="surface"
+                name="surface"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="< 5 m²">Moins de 5 m²</option>
+                <option value="5-10 m²">5 à 10 m²</option>
+                <option value="10-20 m²">10 à 20 m²</option>
+                <option value="20-30 m²">20 à 30 m²</option>
+                <option value="> 30 m²">Plus de 30 m²</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Ligne 4 : Type de balcon/Problématique -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="type_balcon" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Type de revêtement
+              </label>
+              <select
+                id="type_balcon"
+                name="type_balcon"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Carrelage">Carrelage</option>
+                <option value="Béton">Béton</option>
+                <option value="Pierre naturelle">Pierre naturelle</option>
+                <option value="Bois composite">Bois composite</option>
+                <option value="Résine">Résine</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div>
+              <label for="problematique" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Situation actuelle
+              </label>
+              <select
+                id="problematique"
+                name="problematique"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+              >
+                <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                <option value="Fientes de pigeons">Fientes de pigeons</option>
+                <option value="Pollution urbaine">Pollution urbaine</option>
+                <option value="Après travaux">Remise en état après travaux</option>
+                <option value="Entretien régulier">Entretien régulier</option>
+                <option value="Mousse/végétaux">Mousse et végétaux</option>
+                <option value="Autre">Autre situation</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Photos avec Cloudinary -->
+          <div>
+            <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+              Photos du balcon (optionnel - nous aide pour le devis)
+            </label>
+            
+            <!-- Input caché -->
+            <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+            
+            <!-- Zone de drop -->
+            <div id="photos-drop-zone" 
+                 class="border-2 border-dashed border-[#E5E7EB] rounded-lg p-6 text-center cursor-pointer
+                        hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200 bg-[#F9FAFB]">
+              <div class="flex flex-col items-center space-y-2">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+                <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+              </div>
+            </div>
+            
+            <!-- Statut des photos -->
+            <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+            
+            <!-- Liste des photos -->
+            <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+            
+            <!-- Container pour les URLs Cloudinary -->
+            <div id="photos-hidden"></div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-[#1E2939] mb-2">
+              Décrivez votre besoin
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+              placeholder="Type de salissures, niveau d'encrassement, contraintes d'accès, besoin de solutions anti-pigeons, fréquence souhaitée..."
+            ></textarea>
+          </div>
+
+          <!-- RGPD simplifié -->
+          <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3 border border-[#E5E7EB]">
+            En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+            <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline font-medium" target="_blank">
+              Voir notre politique de confidentialité
+            </a>
+          </div>
+
+          <!-- Bouton de soumission -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] disabled:bg-[#9CA3AF] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:transform-none"
+              id="submit-btn"
+            >
+              <span class="loading-spinner hidden mr-2">
+                <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+              <svg class="w-5 h-5 mr-2 email-icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span id="btn-text">Envoyer ma demande</span>
+            </button>
+          </div>
+        </form>
+        
+        <!-- Promesses clés sous le formulaire -->
+        <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+            <p class="text-xs text-[#475569]">Devis détaillé et planning</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Diagnostic gratuit</h4>
+            <p class="text-xs text-[#475569]">Sur site ou sur photo</p>
+          </div>
+          
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+              <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Suivi complet</h4>
+            <p class="text-xs text-[#475569]">Photos avant/après</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informations de contact -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+          <div class="space-y-2">
+            <a href={`tel:${PHONE_E164}`} class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              {PHONE_DISPLAY}
+            </a>
+            <a href="mailto:contact@klinova.fr" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              contact@klinova.fr
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-semibold text-[#1E2939] mb-3">Zone d'intervention</h3>
+          <div class="flex items-center justify-center text-[#475569]">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Paris et Île-de-France</span>
+          </div>
+          <p class="text-sm text-[#475569] mt-2">
+            Intervention rapide sur toute la région parisienne
+          </p>
+        </div>
+      </div>
+
+      <!-- Mentions finales -->
+      <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+        <p class="text-sm text-[#6B7280]">
+          KLINOVA - SASU au capital de 1000€ - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Styles pour les photos */
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1E2939;
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: #3F8D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.form-error:not(:empty) {
+  display: block !important;
+}
+
+/* Animation fade-in pour le message de succès */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById('balcon-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const loadingSpinner = document.querySelector('.loading-spinner');
+  const emailIcon = document.querySelector('.email-icon');
+  
+  // Upload de photos
+  const photosInput = document.getElementById('photos-input');
+  const dropZone = document.getElementById('photos-drop-zone');
+  const photosList = document.getElementById('photos-list');
+  const photosStatus = document.getElementById('photos-status');
+  const photosHidden = document.getElementById('photos-hidden');
+  
+  let uploadingCount = 0;
+  let uploadedFiles = [];
+  const maxFiles = 4;
+  const maxMB = 8;
+
+  // Fonctions utilitaires
+  function setLoading(loading) {
+    submitBtn.disabled = loading || uploadingCount > 0;
+    loadingSpinner.classList.toggle('hidden', !loading);
+    emailIcon.classList.toggle('hidden', loading);
+    btnText.textContent = loading ? 'Envoi en cours...' : 'Envoyer ma demande';
+  }
+
+  function bytesToMB(bytes) {
+    return (bytes / 1024 / 1024).toFixed(1);
+  }
+
+  function updatePhotosStatus() {
+    const total = uploadedFiles.length;
+    const success = uploadedFiles.filter(f => f.status === 'success').length;
+    const uploading = uploadingCount;
+    
+    if (total === 0) {
+      photosStatus.textContent = 'Aucune photo';
+      photosList.classList.add('hidden');
+    } else {
+      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+      photosList.classList.remove('hidden');
+    }
+    
+    submitBtn.disabled = uploadingCount > 0;
+  }
+
+  function addPhotoToList(file) {
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'photo-item';
+    photoDiv.dataset.fileName = file.name;
+    
+    photoDiv.innerHTML = `
+      <span class="photo-name">${file.name}</span>
+      <span class="photo-size">${bytesToMB(file.size)} MB</span>
+      <span class="photo-status uploading">Upload...</span>
+      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+      <div class="photo-progress">
+        <div class="photo-progress-fill"></div>
+      </div>
+    `;
+    
+    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+      removePhoto(file.name);
+    });
+    
+    photosList.appendChild(photoDiv);
+  }
+
+  function updatePhotoStatus(fileName, status, progress = 0) {
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!photoDiv) return;
+    
+    const statusEl = photoDiv.querySelector('.photo-status');
+    const progressFill = photoDiv.querySelector('.photo-progress-fill');
+    
+    statusEl.className = `photo-status ${status}`;
+    
+    switch (status) {
+      case 'uploading':
+        statusEl.textContent = `${progress}%`;
+        progressFill.style.width = `${progress}%`;
+        break;
+      case 'success':
+        statusEl.textContent = 'Importée ✓';
+        progressFill.style.width = '100%';
+        break;
+      case 'error':
+        statusEl.textContent = 'Erreur ⚠';
+        progressFill.style.width = '0%';
+        break;
+    }
+  }
+
+  function removePhoto(fileName) {
+    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+    if (fileIndex !== -1) {
+      const file = uploadedFiles[fileIndex];
+      if (file.cloudinaryUrl) {
+        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+        if (hiddenInput) hiddenInput.remove();
+      }
+      uploadedFiles.splice(fileIndex, 1);
+    }
+    
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (photoDiv) photoDiv.remove();
+    
+    updatePhotosStatus();
+  }
+
+  // API Cloudinary avec votre système existant
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file) {
+    const fileObj = {
+      name: file.name,
+      size: file.size,
+      status: 'uploading',
+      progress: 0,
+      cloudinaryUrl: null
+    };
+    
+    uploadedFiles.push(fileObj);
+    addPhotoToList(file);
+    uploadingCount++;
+    updatePhotosStatus();
+    
+    try {
+      const signature = await getCloudinarySignature();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', signature.apiKey);
+      formData.append('timestamp', String(signature.timestamp));
+      formData.append('signature', signature.signature);
+      formData.append('folder', signature.folder);
+      if (signature.uploadPreset) {
+        formData.append('upload_preset', signature.uploadPreset);
+      }
+
+      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+      
+      const xhr = new XMLHttpRequest();
+      
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const progress = Math.round((e.loaded / e.total) * 100);
+          fileObj.progress = progress;
+          updatePhotoStatus(file.name, 'uploading', progress);
+        }
+      };
+      
+      xhr.onload = () => {
+        uploadingCount--;
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+            fileObj.status = 'success';
+            fileObj.cloudinaryUrl = result.secure_url;
+            updatePhotoStatus(file.name, 'success');
+            
+            // Ajouter l'URL au formulaire
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'photos[]';
+            hiddenInput.value = result.secure_url;
+            photosHidden.appendChild(hiddenInput);
+          } else {
+            throw new Error('Upload failed');
+          }
+        } catch (err) {
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          console.error('Upload error:', err);
+        }
+        updatePhotosStatus();
+      };
+      
+      xhr.onerror = () => {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Upload network error');
+      };
+      
+      xhr.open('POST', uploadUrl);
+      xhr.send(formData);
+      
+    } catch (error) {
+      uploadingCount--;
+      fileObj.status = 'error';
+      updatePhotoStatus(file.name, 'error');
+      updatePhotosStatus();
+      console.error('Cloudinary error:', error);
+    }
+  }
+
+  function validateFiles(files) {
+    const validFiles = [];
+    
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        alert(`${file.name} n'est pas une image valide`);
+        continue;
+      }
+      
+      if (file.size > maxMB * 1024 * 1024) {
+        alert(`${file.name} dépasse la limite de ${maxMB} MB`);
+        continue;
+      }
+      
+      if (uploadedFiles.length + validFiles.length >= maxFiles) {
+        alert(`Maximum ${maxFiles} photos autorisées`);
+        break;
+      }
+      
+      validFiles.push(file);
+    }
+    
+    return validFiles;
+  }
+
+  function handleFiles(files) {
+    const validFiles = validateFiles(Array.from(files));
+    validFiles.forEach(file => uploadToCloudinary(file));
+  }
+
+  // Event listeners pour les photos
+  if (photosInput && dropZone) {
+    photosInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
+      }
+    });
+
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFiles(files);
+      }
+    });
+  }
+
+  // Validation basique des champs
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorDiv = field.parentNode.querySelector('.form-error');
+    
+    if (field.required && !value) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    field.classList.remove('border-red-500');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.classList.add('hidden');
+    }
+    return true;
+  }
+
+  // Soumission du formulaire
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        alert('Veuillez attendre la fin de l\'upload des photos');
+        return;
+      }
+      
+      // Validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      // Validation email si rempli
+      const emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) {
+          isValid = false;
+        }
+      }
+      
+      if (!isValid) {
+        alert('Veuillez corriger les erreurs ci-dessus');
+        return;
+      }
+      
+      setLoading(true);
+      
+      try {
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'page_balcons',
+            form_type: 'diagnostic_balcons'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'diagnostic_balcons',
+            service: 'Nettoyage balcon - Diagnostic gratuit',
+            source: 'page-balcons'
+          });
+        }
+
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch {}
+
+        if (response.ok) {
+          // Remplacer complètement le contenu du formulaire par le message de succès
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = `
+            <div class="text-center py-10 animate-fade-in">
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+              <p class="text-[#475569] max-w-md mx-auto">
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre diagnostic gratuit.<br>
+                Un expert Klinova analysera votre situation<br>
+                et vous proposera la solution adaptée.
+              </p>
+            </div>
+          `;
+
+          // Scroll vers le formulaire transformé
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch {}
+        } else {
+          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          alert(err);
+        }
+      } catch (error) {
+        alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+        console.error('Submit error:', error);
+      } finally {
+        setLoading(false);
+      }
+    });
+  }
+})();
+</script>
+
+</LayoutWithCTA>
