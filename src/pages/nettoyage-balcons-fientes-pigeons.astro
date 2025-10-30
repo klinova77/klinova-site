@@ -19,7 +19,7 @@ const seo = {
 };
 
 const popupContext = {
-  title: 'Devis nettoyage de moquettes',
+  title: 'Devis nettoyage de balcon',
   subtitle: 'Obtenez un devis personnalisé sous 24h',
   serviceKey: 'moquette',
   serviceLabel: 'Nettoyage de moquette',
@@ -42,8 +42,10 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
 <!-- HERO – Nettoyage de balcons infestés par les fientes -->
 <section
+data-section="hero"
   id="hero-balcons-fientes"
   data-hero
+  data-hide-cta
   aria-labelledby="hero-title"
   class="relative py-16 lg:py-24 bg-gradient-to-br from-[#DFF1E8] to-[#EAF6F0] overflow-hidden"
 >
@@ -636,7 +638,9 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
 
 <section
-  id="cta-final-balcon"
+data-section="cta-final"
+data-hide-cta
+  id="formulaire"
   class="section-padding bg-[#DFF1E8]"
   aria-labelledby="cta-title"
 >

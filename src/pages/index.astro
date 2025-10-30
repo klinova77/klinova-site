@@ -40,7 +40,8 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
   description="Expert punaises de lit à Paris. Intervention sous 24h, certifié Certibiocide. Devis gratuit. Garantie 6 mois."
   >
 
- <section data-hero class="relative isolate flex items-end min-h-[90vh] overflow-hidden">
+ <section data-hero class="relative isolate flex items-end min-h-[90vh] overflow-hidden"
+ data-section="hero">
   <!-- Image LCP optimisée -->
   <Image
     src={heroImg}
@@ -948,7 +949,15 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
 
 
-<section class="section-padding bg-[#F0F9F4]">
+<section class="section-padding bg-[#F0F9F4]"
+
+data-section="cta-final"
+data-hide-cta
+data-section="hero" 
+  id="formulaire"
+
+
+>
   <div class="container-responsive">
     <div class="max-w-6xl mx-auto">
       
