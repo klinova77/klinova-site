@@ -181,15 +181,39 @@ html[data-theme-action="blue-deep"] {
 /* -------------------------------------------------------------
    BOUTONS — Styles unifiés (Klinova / Stop-Punaises)
 -------------------------------------------------------------- */
+/* CORRECTION BOUTONS KLINOVA - Section à remplacer dans global.css */
+
+/* -------------------------------------------------------------
+   BOUTONS — Styles unifiés (Klinova / Stop-Punaises)
+-------------------------------------------------------------- */
+
+/* === Variantes de taille === */
+.btn-sm {
+  padding: 0.5rem 1rem; /* équiv. px-4 py-2 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem; /* équiv. px-6 py-3 */
+  font-size: 1rem; /* text-base */
+  line-height: 1.5rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem; /* équiv. px-8 py-4 */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+}
 
 /* === Bouton principal === */
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg transition-all duration-300;
-  padding: 0.75rem 1.5rem; /* équiv. px-6 py-3 */
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300;
   background-color: var(--color-action-500);
   color: #fff;
   box-shadow: var(--shadow-soft);
   touch-action: manipulation;
+  border: 2px solid transparent; /* Pour alignement avec btn-secondary */
 }
 .btn-primary:hover {
   background-color: var(--color-action-600);
@@ -203,11 +227,10 @@ html[data-theme-action="blue-deep"] {
 
 /* === Bouton secondaire === */
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg border transition-all duration-300;
-  padding: 0.75rem 1.5rem;
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl border transition-all duration-300;
   background-color: #fff;
   color: var(--color-primary-600);
-  border-color: var(--color-neutral-200);
+  border: 2px solid var(--color-neutral-200);
   box-shadow: var(--shadow-soft);
   touch-action: manipulation;
 }
@@ -224,12 +247,12 @@ html[data-theme-action="blue-deep"] {
 
 /* === Bouton WhatsApp === */
 .btn-whatsapp {
-  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl sm:px-8 sm:py-4 sm:text-lg transition-all duration-300;
-  padding: 0.75rem 1.5rem;
+  @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-300;
   background-color: var(--color-whatsapp);
   color: #fff;
   box-shadow: var(--shadow-soft);
   touch-action: manipulation;
+  border: 2px solid transparent; /* Pour alignement */
 }
 .btn-whatsapp:hover {
   background-color: #1ebe57;
@@ -244,7 +267,6 @@ html[data-theme-action="blue-deep"] {
 /* === Bouton tertiaire === */
 .btn-tertiary {
   @apply inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-colors duration-200;
-  padding: 0.5rem 1rem;
   color: var(--sp-primary-600);
   border: 2px solid var(--sp-primary-600);
   background-color: transparent;
@@ -268,11 +290,80 @@ html[data-theme-action="blue-deep"] {
 /* === États de focus (accessibilité + finition premium) === */
 .btn-primary:focus-visible,
 .btn-secondary:focus-visible,
-.btn-tertiary:focus-visible {
+.btn-tertiary:focus-visible,
+.btn-whatsapp:focus-visible {
   outline: 2px solid color-mix(in srgb, var(--sp-primary-600) 60%, transparent);
   outline-offset: 3px;
   transition: outline-color 0.25s ease, outline-offset 0.25s ease;
   animation: focusGlow 0.4s ease-out;
+}
+
+/* Halo animé du focus (fade-in/out fluide) */
+@keyframes focusGlow {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--sp-primary-500) 30%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--sp-primary-500) 0%, transparent);
+  }
+}
+
+/* Désactivation du mouvement pour accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .btn-tertiary:focus-visible,
+  .btn-whatsapp:focus-visible {
+    animation: none;
+  }
+}
+
+/* === Application des tailles aux boutons === */
+.btn-primary.btn-sm,
+.btn-secondary.btn-sm,
+.btn-tertiary.btn-sm,
+.btn-whatsapp.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.btn-primary.btn-md,
+.btn-secondary.btn-md,
+.btn-tertiary.btn-md,
+.btn-whatsapp.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.btn-primary.btn-lg,
+.btn-secondary.btn-lg,
+.btn-tertiary.btn-lg,
+.btn-whatsapp.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.header-btn {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.headerLP-btn {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+
+
+/* Halo animé du focus (fade-in/out fluide) */
+@keyframes focusGlow {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--sp-primary-500) 30%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--sp-primary-500) 0%, transparent);
+  }
 }
 
 /* Halo animé du focus (fade-in/out fluide) */
