@@ -4,15 +4,27 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PopupForm from "../components/PopupForm.astro";
 
-interface PopupCtx {
+type PopupCtxNew = {
   serviceKey?: string;
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-  popupTitle?: string | null;
-  popupSubtitle?: string | null;
+  title?: string | null;      // nouveau nom
+  subtitle?: string | null;   // nouveau nom
   creditImpotEnabled?: boolean;
-}
+
+  // ✅ Ajouts pour l’upload
+  showFileUpload?: boolean;
+  maxFiles?: number;
+};
+
+type PopupCtxLegacy = {
+  popupTitle?: string | null;     // compat
+  popupSubtitle?: string | null;  // compat
+};
+
+// Props acceptent les deux (nouveau + legacy)
+type PopupCtx = PopupCtxNew & PopupCtxLegacy;
 
 interface Props {
   popupContext?: PopupCtx;
@@ -21,39 +33,66 @@ interface Props {
 
 const { popupContext, seo } = Astro.props as Props;
 
-const defaults: Required<PopupCtx> = {
-  serviceKey: "general",
-  serviceLabel: "Service Klinova",
-  trackingSource: "popup-general",
+// Defaults centralisés (incluent l’upload)
+const DEFAULTS: Required<Pick<
+  PopupCtxNew,
+  'serviceKey' | 'serviceLabel' | 'trackingSource' | 'creditImpotEnabled' | 'showFileUpload' | 'maxFiles'
+>> & {
+  presetSubject: string | null;
+  title: string | null;
+  subtitle: string | null;
+} = {
+  serviceKey: 'general',
+  serviceLabel: 'Service Klinova',
+  trackingSource: 'popup-general',
   presetSubject: null,
-  popupTitle: null,
-  popupSubtitle: null,
-  creditImpotEnabled: false
+  title: 'Devis express Klinova',
+  subtitle: 'Réponse sous 24h',
+  creditImpotEnabled: false,
+
+  // ✅ Valeurs par défaut pour l’upload
+  showFileUpload: true,
+  maxFiles: 5,
 };
 
-const ctx = { ...defaults, ...(popupContext || {}) };
+// Normalisation du contexte + compat legacy
+function normalize(ctx?: PopupCtx) {
+  const merged = { ...DEFAULTS, ...(ctx || {}) };
+  const title = merged.title ?? merged.popupTitle ?? DEFAULTS.title;
+  const subtitle = merged.subtitle ?? merged.popupSubtitle ?? DEFAULTS.subtitle;
+
+  return {
+    serviceKey: merged.serviceKey,
+    serviceLabel: merged.serviceLabel,
+    trackingSource: merged.trackingSource,
+    presetSubject: merged.presetSubject ?? null,
+    title,
+    subtitle,
+    creditImpotEnabled: !!merged.creditImpotEnabled,
+
+    // ✅ on remonte bien ces deux propriétés au composant
+    showFileUpload: merged.showFileUpload,
+    maxFiles: merged.maxFiles,
+  };
+}
+
+const ctx = normalize(popupContext);
 ---
 
-<!-- Injecte le preload font DANS le head du layout parent -->
+<!-- Preload font -->
 <Fragment slot="head">
-  <link
-    rel="preload"
-    href="/fonts/CaviarDreams-Bold.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
+  <link rel="preload" href="/fonts/CaviarDreams-Bold.woff2" as="font" type="font/woff2" crossorigin />
 </Fragment>
 
-<!-- Pose les data-* sur <body> existant -->
-<script is:inline define:vars={{ ctx, popupContext }}>
-  document.body.setAttribute('data-service-key', ctx.serviceKey);
-  document.body.setAttribute('data-service-label', ctx.serviceLabel);
-  document.body.setAttribute('data-tracking-source', ctx.trackingSource);
-  document.body.setAttribute('data-preset-subject', ctx.presetSubject || '');
-  document.body.setAttribute('data-popup-title', popupContext?.popupTitle || '');
-  document.body.setAttribute('data-popup-subtitle', popupContext?.popupSubtitle || '');
-  document.body.setAttribute('data-credit-impot', popupContext?.creditImpotEnabled ? '1' : '0');
+<!-- (Optionnel) data-* pour analytics -->
+<script is:inline define:vars={{ ctx }}>
+  document.body.dataset.serviceKey = ctx.serviceKey;
+  document.body.dataset.serviceLabel = ctx.serviceLabel;
+  document.body.dataset.trackingSource = ctx.trackingSource;
+  document.body.dataset.presetSubject = ctx.presetSubject || '';
+  document.body.dataset.popupTitle = ctx.title || '';
+  document.body.dataset.popupSubtitle = ctx.subtitle || '';
+  document.body.dataset.creditImpot = ctx.creditImpotEnabled ? '1' : '0';
 </script>
 
 <Header />
@@ -64,8 +103,8 @@ const ctx = { ...defaults, ...(popupContext || {}) };
 
 <Footer />
 
-<!-- Popup unique, global -->
-<PopupForm />
+<!-- ✅ Passage du contexte complet (incluant showFileUpload/maxFiles) -->
+<PopupForm context={ctx} />
 
 <!-- Analytics événementiels -->
 <script is:inline>
@@ -74,12 +113,13 @@ const ctx = { ...defaults, ...(popupContext || {}) };
 
     window.addEventListener('sp:popup_open', (e) => {
       const type = (e && e.detail && e.detail.type) || 'unknown';
+      const b = document.body?.dataset || {};
       window.dataLayer.push({
         event: 'popup_open',
         popup_type: type,
         page_type: 'site',
-        service_key: document.body?.dataset?.serviceKey,
-        service_label: document.body?.dataset?.serviceLabel
+        service_key: b.serviceKey,
+        service_label: b.serviceLabel
       });
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'popup_open', {
@@ -90,11 +130,12 @@ const ctx = { ...defaults, ...(popupContext || {}) };
     });
 
     window.addEventListener('sp:popup_close', () => {
+      const b = document.body?.dataset || {};
       window.dataLayer.push({
         event: 'popup_close',
         page_type: 'site',
-        service_key: document.body?.dataset?.serviceKey,
-        service_label: document.body?.dataset?.serviceLabel
+        service_key: b.serviceKey,
+        service_label: b.serviceLabel
       });
     });
 

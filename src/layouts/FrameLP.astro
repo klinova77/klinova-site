@@ -7,33 +7,68 @@ import FooterLP from '../components/FooterLP.astro';
 import FloatingBottomCTA from '../components/UI/FloatingBottomCTA.astro';
 import PopupForm from '../components/PopupForm.astro';
 
-type PopupCtx = {
+type PopupCtxNew = {
   serviceKey?: string;
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-  popupTitle?: string | null;   // alias accepté
-  popupSubtitle?: string | null;// alias accepté
-  title?: string | null;        // normalisé -> popupTitle
-  subtitle?: string | null;     // normalisé -> popupSubtitle
+  title?: string | null;        // nouveau nom
+  subtitle?: string | null;     // nouveau nom
   creditImpotEnabled?: boolean;
+
+  // ✅ support upload comme SiteFrame
+  showFileUpload?: boolean;
+  maxFiles?: number;
 };
 
-const { popupContext = {} } = Astro.props as { popupContext?: PopupCtx };
+type PopupCtxLegacy = {
+  popupTitle?: string | null;   // compat
+  popupSubtitle?: string | null;// compat
+};
 
-// Normalisation (avec valeurs par défaut sûres)
-const ctx: Required<Omit<PopupCtx, 'title' | 'subtitle'>> & {
-  popupTitle: string | null;
-  popupSubtitle: string | null;
+type PopupCtx = PopupCtxNew & PopupCtxLegacy;
+
+const { popupContext } = Astro.props as { popupContext?: PopupCtx };
+
+// Defaults centralisés (identiques à SiteFrame)
+const DEFAULTS: Required<Pick<
+  PopupCtxNew,
+  'serviceKey' | 'serviceLabel' | 'trackingSource' | 'creditImpotEnabled' | 'showFileUpload' | 'maxFiles'
+>> & {
+  presetSubject: string | null;
+  title: string | null;
+  subtitle: string | null;
 } = {
-  serviceKey: popupContext.serviceKey ?? 'general',
-  serviceLabel: popupContext.serviceLabel ?? 'Service Klinova',
-  trackingSource: popupContext.trackingSource ?? 'popup-general',
-  presetSubject: popupContext.presetSubject ?? null,
-  popupTitle: (popupContext.popupTitle ?? popupContext.title ?? null) ?? null,
-  popupSubtitle: (popupContext.popupSubtitle ?? popupContext.subtitle ?? null) ?? null,
-  creditImpotEnabled: !!popupContext.creditImpotEnabled,
+  serviceKey: 'general',
+  serviceLabel: 'Service Klinova',
+  trackingSource: 'popup-general',
+  presetSubject: null,
+  title: 'Devis express Klinova',
+  subtitle: 'Réponse sous 24h',
+  creditImpotEnabled: false,
+  showFileUpload: true, // ✅ défaut global
+  maxFiles: 5,          // ✅ défaut global
 };
+
+function normalize(ctx?: PopupCtx) {
+  const merged = { ...DEFAULTS, ...(ctx || {}) };
+  const title = merged.title ?? merged.popupTitle ?? DEFAULTS.title;
+  const subtitle = merged.subtitle ?? merged.popupSubtitle ?? DEFAULTS.subtitle;
+
+  return {
+    serviceKey: merged.serviceKey,
+    serviceLabel: merged.serviceLabel,
+    trackingSource: merged.trackingSource,
+    presetSubject: merged.presetSubject ?? null,
+    title,
+    subtitle,
+    creditImpotEnabled: !!merged.creditImpotEnabled,
+    showFileUpload: merged.showFileUpload,
+    maxFiles: merged.maxFiles,
+  };
+}
+
+const ctx = normalize(popupContext);
 ---
 
 <!-- Wrapper interne (pas de <body> ici) -->
@@ -43,8 +78,8 @@ const ctx: Required<Omit<PopupCtx, 'title' | 'subtitle'>> & {
   data-service-label={ctx.serviceLabel}
   data-tracking-source={ctx.trackingSource}
   data-preset-subject={ctx.presetSubject ?? ''}
-  data-popup-title={ctx.popupTitle ?? ''}
-  data-popup-subtitle={ctx.popupSubtitle ?? ''}
+  data-popup-title={ctx.title ?? ''}       
+  data-popup-subtitle={ctx.subtitle ?? ''}  
   data-credit-impot={ctx.creditImpotEnabled ? '1' : '0'}
 >
   <HeaderLP />
@@ -63,7 +98,7 @@ const ctx: Required<Omit<PopupCtx, 'title' | 'subtitle'>> & {
     mobileOnly={true}
   />
 
-  <!-- Popup (lecture via props +/ou body.dataset selon ton composant) -->
+  <!-- ✅ PopupForm reçoit bien title/subtitle + upload -->
   <PopupForm context={ctx} />
 </div>
 
