@@ -56,13 +56,22 @@ const faqSchema = {
 
 
 const popupContext = {
-  title: 'Devis nettoyage de moquettes',
-  subtitle: 'Obtenez un devis personnalisé sous 24h',
-  serviceKey: 'moquette',
-  serviceLabel: 'Nettoyage de moquette',
-  trackingSource: 'popup-moquette',
-  presetSubject: 'Devis nettoyage moquette (copro / pro)',
-  creditImpotEnabled: true, 
+  // Titres plus engageants
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  
+  // Tracking plus précis
+  serviceKey: 'rappel-balcons',
+  serviceLabel: 'Demande rappel - Page balcons',
+  trackingSource: 'popup-balcons-header', // ou 'popup-home-hero'
+  
+  // Email plus contextualisé
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  
+  // Désactivé sur page institutionnelle
+  creditImpotEnabled: true,
+  
+ 
 };
 ---
 
@@ -212,7 +221,7 @@ const popupContext = {
   }
 </style>
 
-<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden" data-section="hero" data-hide-cta >
+<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"  >
   <div class="container-responsive">
     <!-- Grille responsive : texte à gauche, image à droite -->
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -261,35 +270,19 @@ const popupContext = {
         </ul>
 
         <!-- CTA principal -->
-        <div class="flex flex-col sm:flex-row gap-4 hero-cta">
-         
-<Button
-  href="/#formulaire"
-  label="Demander un devis gratuit"
-  variant="primary"
-  size="lg"
-  tracking={{ action: 'cta_click', source: 'hero_balcons', intent: 'devis' }}
-  withTrackingParams={false}
-  class="hero-cta"
->
-Demander un devis gratuit
-  <!-- petite icône flèche -->
-  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-  </svg>
-</Button>
-
-<!-- CTA secondaire (appel) -->
-<Button
-  href="tel:+33676738661"
-  label="06 76 73 86 61"
-  variant="secondary"
-  size="lg"
-  tracking={{ action: 'cta_click', source: 'hero_balcons', intent: 'call' }}
-  withTrackingParams={false}
-/>
-
-        </div>
+        <div class="hidden md:flex flex-col sm:flex-row gap-4 hero-cta">
+  <Button
+    href="#formulaire"
+    variant="tertiary"
+    size="lg"
+    class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+    ariaLabel="Nous contacter pour le nettoyage de balcons"
+    tracking={{ action: 'lead', source: 'hero-balcons', intent: 'cta-tertiary' }}
+    data={{ service: 'devis-balcons' }}
+  >
+    Nous contacter
+  </Button>
+</div>
 
         <!-- Informations de réassurance -->
         <div class="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#3F8D65]/20 hero-reassurance">
@@ -501,7 +494,7 @@ Demander un devis gratuit
         Une situation spécifique ? Parlons-en pour trouver la solution adaptée.
       </p>
       <Button
-        href="/contact#formulaire"
+        href="#formulaire"
         label="Contactez nous"
         variant="tertiary"
         size="lg"
@@ -822,7 +815,7 @@ Demander un devis gratuit
             <svg aria-hidden="true" class="w-4 h-4 mr-2 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.51.643.763 1.254 1.182 1.745a3.066 3.066 0 010 3.976c-.419.491-.672 1.102-.723 1.745A3.066 3.066 0 0115.21 18a3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0A3.066 3.066 0 007.744 18 3.066 3.066 0 014.932 15.188c-.051-.643-.304-1.254-.723-1.745a3.066 3.066 0 010-3.976c.419-.491.672-1.102.723-1.745A3.066 3.066 0 017.744 4.178a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723z" clip-rule="evenodd"></path>
             </svg>
-            Assurance responsabilité
+            Assurance RC pro
           </span>
         </div>
       </div>
@@ -1080,7 +1073,7 @@ Demander un devis gratuit
         </div>
 
         <Button
-          href="/contact#formulaire"
+          href="#formulaire"
           label="Diagnostic gratuit sous 48h"
           variant="tertiary"
           size="lg"
@@ -1142,12 +1135,12 @@ Demander un devis gratuit
     <p class="text-[#475569] mb-6">
       Découvrez notre méthode spécialisée de nettoyage en profondeur et nos solutions anti-récidive garanties.
     </p>
-    <a href="/nettoyage-fientes-pigeons" class="inline-flex items-center px-8 py-4 bg-[#3F8D65] text-white font-semibold rounded-xl hover:bg-[#387B58] transition-all duration-200 shadow-lg hover:shadow-xl">
-      Voir notre méthode spécialisée
-      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-      </svg>
-    </a>
+  <a href="/nettoyage-balcons-fientes-pigeons" class="inline-flex items-center px-8 py-4 bg-transparent border border-gray-700/80 text-gray-800 font-semibold rounded-xl hover:bg-gray-50 hover:border-gray-800 transition-all duration-200 shadow-sm hover:shadow-md">
+  Voir notre méthode spécialisée
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+  </svg>
+</a>
   </div>
 </div>
 </section>
@@ -1377,9 +1370,7 @@ Demander un devis gratuit
 </style>
 
 <!-- Section CTA finale avec formulaire -->
----
-import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
----
+
 
 <section class="bg-[#DFF1E8] py-16 md:py-24" data-section="cta-final"
 data-hide-cta
