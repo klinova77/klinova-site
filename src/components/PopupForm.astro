@@ -2,24 +2,30 @@
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 
 export interface PopupFormProps {
-  service?: string;
-  trackingSource?: string;
-  showFileUpload?: boolean;
-  maxFiles?: number;
-  cloudinaryConfig?: {
-    cloudName: string;
-    uploadPreset: string;
+  context?: {
+    title?: string;
+    subtitle?: string;
+    serviceKey?: string;
+    serviceLabel?: string;
+    trackingSource?: string;
+    presetSubject?: string;
+    creditImpotEnabled?: boolean;
+    showFileUpload?: boolean;
+    maxFiles?: number;
   };
 }
 
 const {
-  service = "Demande générale",
-  trackingSource = "popup-form",
-  showFileUpload = true,
-  maxFiles = 5,
-  cloudinaryConfig = {
-    cloudName: import.meta.env.CLOUDINARY_CLOUD_NAME || '',
-    uploadPreset: import.meta.env.CLOUDINARY_UPLOAD_PRESET || ''
+  context = {
+    title: 'Devis express anti-punaises',
+    subtitle: 'Réponse sous 4h • Intervention possible aujourd\'hui',
+    serviceKey: 'general',
+    serviceLabel: 'Demande générale',
+    trackingSource: 'popup-general',
+    presetSubject: 'Demande de devis',
+    creditImpotEnabled: false,
+    showFileUpload: true,
+    maxFiles: 5
   }
 } = Astro.props as PopupFormProps;
 ---
@@ -51,8 +57,8 @@ const {
         <div class="header-accent"></div>
 
         <div id="popupTitle">
-          <h2 id="popupTitleH2">Demande de devis express</h2>
-          <p>Réponse sous 4h • Intervention rapide en Île-de-France</p>
+          <h2 id="popupTitleH2" class="popup-title">{context.title}</h2>
+          <p class="popup-subtitle">{context.subtitle}</p>
 
           <div class="trust-badges">
             <div class="trust-item">
@@ -92,17 +98,14 @@ const {
 
     <!-- Body -->
     <div class="popup-body">
-      <div id="formMessage" class="form-message premium" style="display:none;" role="status" aria-live="polite"></div>
-
       <!-- Form -->
-      <form id="contactForm" action="/api/contact" method="POST" novalidate aria-describedby="formMessage">
-        <!-- Honeypot anti-spam -->
+      <form id="contactForm" action="/api/contact" method="POST" novalidate>
         <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
-        
-        <!-- Champs cachés pour tracking et API -->
-        <input type="hidden" name="service" value={service}>
-        <input type="hidden" name="source" value={trackingSource}>
-        <input type="hidden" name="rgpd" value="accepte">
+        <input type="hidden" id="popup-service-key" name="service_key" value={context.serviceKey}>
+        <input type="hidden" id="popup-service-label" name="service_label" value={context.serviceLabel}>
+        <input type="hidden" id="popup-subject" name="subject" value={context.presetSubject}>
+        <input type="hidden" name="page_path" value={Astro.url.pathname}>
+        <input type="hidden" name="source" value={context.trackingSource}>
 
         <!-- Prénom -->
         <div class="form-group premium">
@@ -115,50 +118,10 @@ const {
               placeholder=" "
               required
               autocomplete="given-name"
-              enterkeyhint="next"
             >
             <label class="floating-label required" for="popup-prenom">Prénom</label>
             <div class="field-border"></div>
-            <div class="validation-icon success">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <div class="validation-icon error">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M18 6L6 18M6 6l12 12"/>
-              </svg>
-            </div>
           </div>
-          <div class="form-error premium" id="error-prenom"></div>
-        </div>
-
-        <!-- Email (optionnel) -->
-        <div class="form-group premium">
-          <div class="floating-label-group">
-            <input
-              type="email"
-              id="popup-email"
-              name="email"
-              class="form-input premium"
-              placeholder=" "
-              autocomplete="email"
-              enterkeyhint="next"
-            >
-            <label class="floating-label" for="popup-email">Email (optionnel)</label>
-            <div class="field-border"></div>
-            <div class="validation-icon success">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <div class="validation-icon error">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M18 6L6 18M6 6l12 12"/>
-              </svg>
-            </div>
-          </div>
-          <div class="form-error premium" id="error-email"></div>
         </div>
 
         <!-- Téléphone -->
@@ -173,57 +136,61 @@ const {
               autocomplete="tel"
               inputmode="tel"
               required
-              enterkeyhint="next"
             >
             <label class="floating-label required" for="popup-telephone">Téléphone</label>
             <div class="field-border"></div>
             <div class="input-hint">Format : 06... ou +33...</div>
-            <div class="validation-icon success">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <div class="validation-icon error">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M18 6L6 18M6 6l12 12"/>
-              </svg>
-            </div>
           </div>
-          <div class="form-error premium" id="error-telephone"></div>
         </div>
 
-        <!-- Message -->
+        <!-- Code postal -->
         <div class="form-group premium">
           <div class="floating-label-group">
-            <textarea
-              id="popup-message"
-              name="message"
+            <input
+              type="text"
+              id="popup-code-postal"
+              name="code_postal"
               class="form-input premium"
               placeholder=" "
-              rows="3"
-              style="resize: none; min-height: 80px;"
-            ></textarea>
-            <label class="floating-label" for="popup-message">Décrivez votre demande</label>
+              inputmode="numeric"
+              pattern="[0-9]{5}"
+              required
+              maxlength="5"
+            >
+            <label class="floating-label required" for="popup-code-postal">Code postal</label>
             <div class="field-border"></div>
+            <div class="input-hint">5 chiffres (ex. 75011). Île-de-France uniquement.</div>
           </div>
-          <div class="form-error premium" id="error-message"></div>
         </div>
 
-        <!-- Photos (si activé) -->
-        {showFileUpload && (
+        <!-- Crédit d'impôt (conditionnel) -->
+        {context.creditImpotEnabled && (
+          <div class="form-group premium" id="credit-impot-question">
+            <label class="switch-label">
+              Particuliers: souhaitez-vous bénéficier du crédit d'impôt et ne payer que 50 % du prix ?
+            </label>
+            <div class="credit-impot-radios" role="radiogroup" aria-label="Crédit d'impôt">
+              <label class="radio-pill" for="credit-impot-oui">
+                <input type="radio" id="credit-impot-oui" name="credit_impot" value="oui">
+                <span>Oui</span>
+              </label>
+              <label class="radio-pill" for="credit-impot-non">
+                <input type="radio" id="credit-impot-non" name="credit_impot" value="non" checked>
+                <span>Non</span>
+              </label>
+            </div>
+          </div>
+        )}
+
+        <!-- Photos (conditionnel) -->
+        {context.showFileUpload && (
           <div class="form-group premium">
-            <div class="switch-label">Photos (optionnel)</div>
-
-            <!-- Input caché -->
-            <input type="file" id="popup-photos" name="__photos_local"
-                   accept="image/*" multiple class="hidden" />
-
-            <!-- Zone de drop sans valeurs hardcodées -->
+            <label class="switch-label">Photos (optionnel)</label>
             <div class="popup-photos-drop border-2 border-dashed" id="popup-photos-drop"
-                 data-max={maxFiles}
+                 data-max={context.maxFiles}
                  data-max-mb="8">
-
-              <div class="popup-photos-label">
+              <input type="file" id="popup-photos" name="__photos_local" accept="image/*" multiple class="hidden" />
+              <label for="popup-photos" class="popup-photos-label">
                 <svg class="popup-photos-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14
@@ -231,13 +198,12 @@ const {
                 </svg>
                 <div>
                   <div class="photos-title">Cliquez pour ajouter des photos</div>
-                  <div class="photos-help">Max {maxFiles} photos • 8 MB / photo • JPG/PNG/WEBP</div>
+                  <div class="photos-help">Max {context.maxFiles} photos • 8 MB / photo • JPG/PNG/WEBP</div>
                 </div>
-              </div>
+              </label>
             </div>
-
             <div id="popup-photos-status" class="popup-photos-status">Aucune photo</div>
-            <ul id="popup-photos-list" class="popup-photos-list hidden" aria-live="polite"></ul>
+            <ul id="popup-photos-list" class="popup-photos-list hidden"></ul>
             <div id="popup-photos-hidden" class="hidden"></div>
           </div>
         )}
@@ -245,21 +211,23 @@ const {
         <!-- RGPD -->
         <div class="checkbox-group premium">
           <div class="checkbox-wrapper">
-            <input type="checkbox" id="popup-rgpd-check" name="rgpd_check" class="checkbox-input" required>
-            <label for="popup-rgpd-check" class="checkbox-label">
+            <input type="checkbox" id="popup-rgpd" name="rgpd" class="checkbox-input" required>
+            <label for="popup-rgpd" class="checkbox-label">
               <div class="checkbox-box">
                 <svg class="checkbox-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path d="M9 12l2 2 4-4"/>
                 </svg>
               </div>
               <span class="checkbox-text">
-                J'accepte d'être recontacté par Klinova dans le cadre de ma demande.
+                J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
                 <a href="/politique-de-confidentialite" target="_blank" rel="noopener" class="link-primary">En savoir plus</a>
               </span>
             </label>
           </div>
-          <div class="form-error premium" id="error-rgpd"></div>
         </div>
+
+        <!-- Message de succès/erreur repositionné -->
+        <div id="formMessage" class="form-message premium" style="display:none;" role="status" aria-live="polite"></div>
 
         <!-- Actions -->
         <div class="form-actions premium">
@@ -268,10 +236,9 @@ const {
               <span class="loading-spinner"></span>
               <span id="submitText">Envoyer ma demande</span>
             </span>
-            <div class="btn-ripple"></div>
           </button>
 
-          <a href={`tel:${PHONE_E164}`} class="btn-call premium" id="callBtn">
+          <a href={`tel:${PHONE_E164}`} class="btn-call premium">
             <div class="call-content">
               <div class="call-icon-wrapper">
                 <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -315,28 +282,17 @@ const {
 </div>
 
 <style>
-  /* Variables Premium */
 .popup-form {
   --premium-border-radius: 16px;
   --premium-shadow: 0 20px 60px rgba(26, 62, 114, 0.15);
-  --premium-gradient: linear-gradient(
-    135deg,
-    var(--color-action-500, #0ea5e9) 0%,
-    var(--color-action-600, #0284c7) 100%
-  );
+  /* ✅ COULEUR PRINCIPALE: Bleu foncé harmonisé avec le header */
+  --popup-primary: #1a3e72;
+  --popup-primary-light: #243b53;
+  --premium-gradient: linear-gradient(135deg, var(--popup-primary) 0%, var(--popup-primary-light) 100%);
   --premium-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --glass-bg: rgba(255, 255, 255, 0.95);
   --glass-backdrop: blur(20px);
-
-  --sp-primary-600: var(--color-primary-600);
-  --sp-neutral-600: var(--color-neutral-600);
-  --sp-line:        var(--color-sp-line);
-  --sp-pill:        var(--color-sp-pill);
-  --sp-light:       var(--color-sp-light);
-  --sp-muted:       var(--sp-muted);
 }
-
-html.no-scroll, body.no-scroll { overflow: hidden; }
 
 .popup-overlay[hidden] { display: none !important; }
 
@@ -345,12 +301,10 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   inset: 0;
   background: rgba(26, 62, 114, 0.4);
   backdrop-filter: var(--glass-backdrop);
-  -webkit-backdrop-filter: var(--glass-backdrop);
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.96) translateY(20px);
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -360,24 +314,21 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 .popup-overlay.active {
   opacity: 1;
   visibility: visible;
-  transform: scale(1) translateY(0);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .popup-form {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-backdrop);
-  -webkit-backdrop-filter: var(--glass-backdrop);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   box-shadow: var(--premium-shadow);
   width: 100%;
   max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
-  transition: transform 0.4s ease, opacity 0.4s ease;
   transform: scale(0.95);
   opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .popup-overlay.active .popup-form { 
@@ -386,7 +337,7 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 }
 
 .popup-header {
-  background: linear-gradient(135deg, #1a3e72 0%, #243b53 100%);
+  background: linear-gradient(135deg, var(--popup-primary) 0%, var(--popup-primary-light) 100%);
   color: white;
   padding: 22px 26px 18px;
   border-radius: 24px 24px 0 0;
@@ -402,7 +353,6 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   z-index: 0;
 }
 
-.popup-header .header-accent,
 .popup-header .relative {
   position: relative;
   z-index: 2;
@@ -424,16 +374,18 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   50% { opacity: 1; } 
 }
 
-.popup-header h2 {
+/* ✅ TITRES EN BLANC ET HARMONISÉS */
+.popup-title {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 6px;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  color: white !important; /* Force le blanc */
 }
 
-.popup-header p {
-  color: rgba(255,255,255,0.95);
+.popup-subtitle {
+  color: rgba(255,255,255,0.95) !important; /* Force le blanc transparent */
   font-size: 15px;
   margin-bottom: 12px;
   font-weight: 500;
@@ -463,7 +415,6 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   height: 20px;
   background: rgba(255,255,255,0.2);
   border-radius: 50%;
-  backdrop-filter: blur(10px);
   flex: 0 0 20px;
 }
 
@@ -480,16 +431,15 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   width: 40px;
   height: 40px;
   background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: var(--premium-transition);
   color: white;
   z-index: 10;
+  transition: var(--premium-transition);
 }
 
 .popup-close:hover {
@@ -524,17 +474,11 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 }
 
 .popup-body {
-  padding: 26px 26px 96px;
-  max-height: 85vh;
-  overflow-y: auto;
+  padding: 26px 26px 30px;
 }
 
 .form-group.premium { 
-  margin-bottom: 12px; 
-}
-
-.form-group.premium:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 16px; 
 }
 
 .floating-label-group { 
@@ -545,39 +489,20 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   width: 100%;
   min-height: 50px;
   padding: 15px 14px 7px;
-  border: 2px solid var(--sp-line, #e5e7eb);
+  border: 2px solid #e5e7eb;
   border-radius: var(--premium-border-radius);
   font-size: 15px;
   background: white;
   transition: var(--premium-transition);
-  font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif);
-  color: var(--sp-neutral-600, #475569);
+  color: #475569;
   box-shadow: 0 2px 8px rgba(26, 62, 114, 0.06);
 }
 
 .form-input.premium:focus {
   outline: none;
-  background: white;
-  border-color: var(--color-action-500, #0ea5e9);
-  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15), 0 2px 8px rgba(26, 62, 114, 0.08);
-  transform: translateY(-1px);
-}
-
-.form-input.premium.success { 
-  background: white;
-  border-color: #10b981;
-}
-
-.form-input.premium.error { 
-  background: white;
-  border-color: #ef4444;
-  animation: shake 0.5s ease-in-out;
-}
-
-@keyframes shake { 
-  0%, 100% { transform: translateX(0); } 
-  25% { transform: translateX(-4px); } 
-  75% { transform: translateX(4px); } 
+  /* ✅ FOCUS avec la couleur popup principale */
+  border-color: var(--popup-primary);
+  box-shadow: 0 0 0 4px rgba(26, 62, 114, 0.15);
 }
 
 .floating-label {
@@ -585,11 +510,9 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   left: 14px;
   top: 14px;
   font-size: 14px;
-  color: var(--sp-muted, #6b7280);
+  color: #6b7280;
   transition: var(--premium-transition);
   pointer-events: none;
-  background: transparent;
-  padding: 0 4px;
   font-weight: 500;
 }
 
@@ -601,16 +524,9 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 .form-input.premium:focus + .floating-label,
 .form-input.premium:not(:placeholder-shown) + .floating-label {
   transform: translateY(-20px) scale(0.9);
-  color: var(--color-action-500, #0ea5e9);
+  /* ✅ LABEL actif avec la couleur popup principale */
+  color: var(--popup-primary);
   font-weight: 600;
-}
-
-.form-input.premium.success + .floating-label { 
-  color: #10b981; 
-}
-
-.form-input.premium.error + .floating-label { 
-  color: #ef4444; 
 }
 
 .field-border {
@@ -628,39 +544,12 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   transform: scaleX(1); 
 }
 
-.validation-icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  opacity: 0;
-  transition: var(--premium-transition);
-}
-
-.validation-icon svg { 
-  width: 100%; 
-  height: 100%; 
-  stroke-width: 2.5; 
-}
-
-.form-input.premium.success ~ .validation-icon.success { 
-  opacity: 1; 
-  color: #10b981; 
-}
-
-.form-input.premium.error ~ .validation-icon.error { 
-  opacity: 1; 
-  color: #ef4444; 
-}
-
 .input-hint {
   position: absolute;
-  right: 16px;
+  right: 14px;
   bottom: 8px;
   font-size: 11px;
-  color: var(--sp-muted, #6b7280);
+  color: #6b7280;
   opacity: 0;
   transition: var(--premium-transition);
   pointer-events: none;
@@ -670,36 +559,117 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   opacity: 1; 
 }
 
-.form-error.premium {
-  font-size: 13px;
-  color: #ef4444;
-  margin-top: 6px;
-  min-height: 0;
+.switch-label {
+  display: block;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.credit-impot-radios {
   display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.radio-pill {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  opacity: 0;
-  transform: translateY(-4px);
+  gap: 8px;
+  padding: 10px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #fff;
   transition: var(--premium-transition);
 }
 
-.form-error.premium:not(:empty) { 
-  opacity: 1; 
-  transform: translateY(0); 
+.radio-pill input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  /* ✅ ACCENT COLOR avec la couleur popup principale */
+  accent-color: var(--popup-primary);
 }
 
-.form-error.premium:empty {
-  display: none;
+.radio-pill:hover {
+  border-color: var(--popup-primary);
+  background: #f1f5f9;
 }
 
-.form-error.premium::before { 
-  content: '⚠'; 
-  font-size: 14px; 
+.radio-pill input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.popup-photos-drop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  min-height: 64px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px dashed #e5e7eb;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.popup-photos-drop:hover {
+  border-color: var(--popup-primary);
+  background: rgba(26, 62, 114, 0.02);
+}
+
+.popup-photos-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.popup-photos-icon {
+  width: 28px !important;
+  height: 28px !important;
+  flex: 0 0 28px;
+  color: var(--popup-primary);
+}
+
+.photos-title { 
+  font-weight: 600; 
+  color: #1e293b; 
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.photos-help { 
+  font-size: 12px; 
+  color: #6b7280; 
+  line-height: 1.3;
+}
+
+.popup-photos-status { 
+  margin-top: 6px; 
+  font-size: 12px; 
+  color: #6b7280; 
+}
+
+.popup-photos-list {
+  margin-top: 8px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.hidden { 
+  display: none !important; 
 }
 
 .checkbox-group.premium { 
-  margin-top: 16px; 
-  margin-bottom: 16px; 
+  margin: 16px 0; 
 }
 
 .checkbox-wrapper { 
@@ -719,13 +689,13 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   cursor: pointer;
   font-size: 13px;
   line-height: 1.5;
-  color: var(--sp-neutral-600, #475569);
+  color: #475569;
 }
 
 .checkbox-box {
   width: 18px;
   height: 18px;
-  border: 2px solid var(--sp-line, #e5e7eb);
+  border: 2px solid #e5e7eb;
   border-radius: 6px;
   background: white;
   display: flex;
@@ -747,8 +717,9 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 }
 
 .checkbox-input:checked + .checkbox-label .checkbox-box {
-  background: var(--color-action-500, #0ea5e9);
-  border-color: var(--color-action-500, #0ea5e9);
+  /* ✅ CHECKBOX avec la couleur popup principale */
+  background: var(--popup-primary);
+  border-color: var(--popup-primary);
 }
 
 .checkbox-input:checked + .checkbox-label .checkbox-check { 
@@ -757,7 +728,8 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 }
 
 .link-primary { 
-  color: var(--color-action-500, #0ea5e9); 
+  /* ✅ LIEN avec la couleur popup principale */
+  color: var(--popup-primary); 
   text-decoration: none; 
   font-weight: 500; 
 }
@@ -766,11 +738,34 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   text-decoration: underline; 
 }
 
+/* ✅ MESSAGE DE SUCCÈS/ERREUR REPOSITIONNÉ */
+.form-message.premium {
+  padding: 16px 20px;
+  border-radius: var(--premium-border-radius);
+  margin: 16px 0;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.form-message.premium.success {
+  background: rgba(236, 253, 245, 0.9);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.form-message.premium.error {
+  background: rgba(254, 242, 242, 0.9);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
 .form-actions.premium { 
   display: flex; 
   flex-direction: column; 
   gap: 14px; 
-  margin-top: 22px; 
+  margin-top: 20px;
   margin-bottom: 18px; 
 }
 
@@ -785,19 +780,15 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   font-size: 15.5px;
   cursor: pointer;
   transition: var(--premium-transition);
-  position: relative;
-  overflow: hidden;
   min-height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-  white-space: nowrap;
 }
 
 .btn-primary.premium:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 30px 80px rgba(26, 62, 114, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(26, 62, 114, 0.25);
 }
 
 .btn-content { 
@@ -836,17 +827,16 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   min-height: 52px;
   padding: 12px 16px;
   background: white;
-  border: 2px solid var(--sp-primary-600, #1e293b);
+  border: 2px solid #1e293b;
   border-radius: var(--premium-border-radius);
   text-decoration: none;
   transition: var(--premium-transition);
 }
 
 .btn-call.premium:hover {
-  background: var(--sp-pill, #f1f5f9);
-  border-color: var(--color-action-500, #0ea5e9);
+  background: #f1f5f9;
+  border-color: var(--popup-primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(26, 62, 114, 0.15);
 }
 
 .call-content { 
@@ -858,7 +848,7 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 .call-icon-wrapper {
   width: 32px;
   height: 32px;
-  background: rgba(14, 165, 233, 0.1);
+  background: rgba(26, 62, 114, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -868,7 +858,7 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 .call-icon { 
   width: 18px; 
   height: 18px; 
-  color: var(--color-action-500, #0ea5e9); 
+  color: var(--popup-primary); 
   stroke-width: 2.5; 
 }
 
@@ -880,13 +870,13 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
 
 .call-label { 
   font-size: 13px; 
-  color: var(--sp-muted, #6b7280); 
+  color: #6b7280; 
   font-weight: 500; 
 }
 
 .call-number { 
   font-size: 16px; 
-  color: var(--sp-primary-600, #1e293b); 
+  color: #1e293b; 
   font-weight: 600; 
 }
 
@@ -907,7 +897,7 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   align-items: center;
   gap: 6px;
   font-size: 11.5px;
-  color: var(--sp-muted, #6b7280);
+  color: #6b7280;
   font-weight: 500;
 }
 
@@ -915,167 +905,7 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   width: 12px; 
   height: 12px; 
   stroke-width: 2.5; 
-  color: var(--color-action-500, #0ea5e9); 
-}
-
-.form-message.premium {
-  padding: 20px 24px;
-  border-radius: var(--premium-border-radius);
-  margin-bottom: 16px;
-  font-weight: 500;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  font-size: 15px;
-}
-
-.form-message.premium.success {
-  background: rgba(236, 253, 245, 0.9);
-  color: #047857;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.1);
-}
-
-.form-message.premium.error {
-  background: rgba(254, 242, 242, 0.9);
-  color: #dc2626;
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.1);
-}
-
-/* Switch label pour photos */
-.switch-label {
-  display: block;
-  font-weight: 600;
-  color: var(--sp-primary-600, #1e293b);
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-
-/* Photos UI compactes - CORRIGÉES */
-.popup-photos-drop {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  min-height: 72px;
-  border-radius: 12px;
-  cursor: pointer;
-  border-color: var(--sp-line, #e5e7eb);
-  background: white;
-  transition: all 0.2s ease;
-}
-
-.popup-photos-drop:hover {
-  border-color: var(--color-action-500, #0ea5e9);
-  background: rgba(14, 165, 233, 0.02);
-}
-
-.popup-photos-label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  pointer-events: none; /* IMPORTANT: empêche les conflits d'événements */
-}
-
-.popup-photos-icon {
-  width: 32px !important;
-  height: 32px !important;
-  flex: 0 0 32px;
-  max-width: none !important;
-  max-height: none !important;
-  color: var(--color-action-500, #0ea5e9);
-}
-
-.photos-title { 
-  font-weight: 600; 
-  color: var(--sp-primary-600, #1e293b); 
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.photos-help { 
-  font-size: 12px; 
-  color: var(--sp-muted, #6b7280); 
-  line-height: 1.3;
-}
-
-.popup-photos-list {
-  margin-top: 8px;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 6px;
-  max-height: 180px;
-  overflow: auto;
-}
-
-.photo-row {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 12px;
-  border: 1px solid var(--sp-line, #e5e7eb);
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(26,62,114,.06);
-  font-size: 13px;
-  color: var(--sp-neutral-600, #475569);
-}
-
-.photo-name { 
-  font-weight: 600; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
-}
-
-.photo-size { 
-  color: var(--sp-muted, #6b7280); 
-}
-
-.photo-state { 
-  font-weight: 600; 
-}
-
-.photo-remove {
-  border: 0; 
-  background: #ef4444; 
-  color: #fff;
-  width: 24px; 
-  height: 24px; 
-  border-radius: 50%;
-  line-height: 1; 
-  font-weight: 700; 
-  cursor: pointer;
-}
-
-.photo-progress {
-  grid-column: 1 / -1;
-  height: 4px; 
-  background: #e5e7eb; 
-  border-radius: 999px; 
-  overflow: hidden; 
-  margin-top: 6px;
-}
-
-.photo-progress > span { 
-  display: block; 
-  height: 100%; 
-  width: 0; 
-  background: var(--color-action-500, #0ea5e9); 
-  transition: width 0.3s ease;
-}
-
-.popup-photos-status { 
-  margin-top: 6px; 
-  font-size: 12px; 
-  color: var(--sp-muted, #6b7280); 
-}
-
-.hidden { 
-  display: none !important; 
+  color: var(--popup-primary); 
 }
 
 /* Mobile responsive */
@@ -1084,21 +914,17 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
     padding: 20px 22px 14px;
   }
   
-  .popup-header h2 {
+  .popup-title {
     font-size: 20px;
   }
   
-  .popup-header p {
+  .popup-subtitle {
     font-size: 14px;
     margin-bottom: 8px;
   }
 
   .popup-body {
-    padding: 22px 22px 100px;
-  }
-
-  .form-group.premium {
-    margin-bottom: 18px;
+    padding: 22px 22px 30px;
   }
 
   .btn-primary.premium {
@@ -1116,211 +942,183 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
     text-align: center; 
     gap: 8px; 
   }
-
-  .popup-photos-drop {
-    padding: 10px 12px;
-    min-height: 64px;
-  }
-
-  .popup-photos-icon {
-    width: 28px !important;
-    height: 28px !important;
-    flex: 0 0 28px;
-  }
 }
 
-/* Animations */
-.popup-overlay {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
-}
 
-.popup-overlay.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.4s ease;
-}
-
+/* === RESTAURE LE THÈME BLEU ET RETIRE L'OVERLAY VERT === */
 .popup-form {
-  opacity: 0;
-  transform: scale(0.96) translateY(14px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* Bleu Klinova d'origine */
+  --popup-primary: #243B53;
+  --popup-primary-light: #243B53; /* uniforme pour éviter une dérive de teinte */
 }
 
-.popup-overlay.active .popup-form {
-  opacity: 1;
-  transform: scale(1) translateY(0);
+/* Overlay neutre (noir translucide), plus de teinte verte */
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.45) !important;
 }
 
-.btn-primary.premium {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.35s ease 0.12s, transform 0.35s ease 0.12s;
+/* Petites touches résiduelles qui utilisaient des tints verts en dur */
+.form-input.premium {
+  box-shadow: 0 2px 8px rgba(36, 59, 83, 0.06) !important; /* 36,59,83 = #243B53 */
+}
+.btn-primary.premium:hover {
+  box-shadow: 0 10px 30px rgba(36, 59, 83, 0.25) !important;
+}
+.call-icon-wrapper {
+  background: rgba(36, 59, 83, 0.10) !important;
 }
 
-.popup-overlay.active .btn-primary.premium {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.popup-overlay[hidden] {
-  display: none !important;
-}
 </style>
 
 <script is:inline>
 (() => {
   const overlay = document.getElementById('popupOverlay');
-  const form    = document.getElementById('popupForm');
-  const closeBtn= document.getElementById('closePopup');
+  const form = document.getElementById('popupForm');
+  const closeBtn = document.getElementById('closePopup');
   const contactForm = document.getElementById('contactForm');
   const msg = document.getElementById('formMessage');
   const submitBtn = document.getElementById('submitBtn');
-  const submitText = document.getElementById('submitText');
 
   if (!overlay || !form) return;
 
-  // Scroll lock
-  let prevOverflow = '', prevPaddingRight = '', locked = false;
+  // Variables scroll lock
+  let prevOverflow = '';
+  let prevPaddingRight = '';
+  let locked = false;
   
   function lockScroll() {
-    if (locked) return; 
+    if (locked) return;
     locked = true;
-    const sbw = window.innerWidth - document.documentElement.clientWidth;
-    prevOverflow = document.body.style.overflow;
-    prevPaddingRight = document.body.style.paddingRight;
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    prevOverflow = document.body.style.overflow || '';
+    prevPaddingRight = document.body.style.paddingRight || '';
     document.body.style.overflow = 'hidden';
-    if (sbw > 0) document.body.style.paddingRight = (parseFloat(getComputedStyle(document.body).paddingRight)||0 + sbw) + 'px';
+    if (scrollBarWidth > 0) {
+      document.body.style.paddingRight = (parseInt(prevPaddingRight) || 0) + scrollBarWidth + 'px';
+    }
   }
   
   function unlockScroll() {
-    if (!locked) return; 
+    if (!locked) return;
     locked = false;
-    document.body.style.overflow = prevOverflow || '';
-    document.body.style.paddingRight = prevPaddingRight || '';
+    document.body.style.overflow = prevOverflow;
+    document.body.style.paddingRight = prevPaddingRight;
   }
 
-  // API popup
-  window.openPopupForm = function () {
-    if (overlay.parentNode !== document.body) document.body.appendChild(overlay);
+  // API popup avec contexte
+  window.openPopupForm = function (context = {}) {
+    // Mise à jour du contexte si fourni
+    if (context.title) {
+      const titleEl = document.getElementById('popupTitleH2');
+      if (titleEl) titleEl.textContent = context.title;
+    }
+    if (context.subtitle) {
+      const subtitleEl = document.querySelector('.popup-subtitle');
+      if (subtitleEl) subtitleEl.textContent = context.subtitle;
+    }
+    if (context.serviceKey) {
+      const serviceKeyEl = document.getElementById('popup-service-key');
+      if (serviceKeyEl) serviceKeyEl.value = context.serviceKey;
+    }
+    if (context.serviceLabel) {
+      const serviceLabelEl = document.getElementById('popup-service-label');
+      if (serviceLabelEl) serviceLabelEl.value = context.serviceLabel;
+    }
+    if (context.presetSubject) {
+      const subjectEl = document.getElementById('popup-subject');
+      if (subjectEl) subjectEl.value = context.presetSubject;
+    }
+
     overlay.removeAttribute('hidden');
     overlay.classList.add('active');
     lockScroll();
-    setTimeout(() => form.querySelector('input,button,select,textarea,a')?.focus?.({ preventScroll:true }), 30);
-    return true;
+    setTimeout(() => form.querySelector('input')?.focus(), 100);
   };
   
   window.closePopupForm = function () {
     overlay.classList.remove('active');
-    const onEnd = (e) => {
-      if (e.target !== overlay) return;
-      overlay.removeEventListener('transitionend', onEnd);
+    setTimeout(() => {
       overlay.setAttribute('hidden', '');
       unlockScroll();
-      try { contactForm?.reset(); } catch {}
-      if (msg) { 
-        msg.className = 'form-message premium'; 
-        msg.style.display = 'none'; 
-        msg.textContent = ''; 
+      contactForm?.reset();
+      if (msg) {
+        msg.style.display = 'none';
+        msg.textContent = '';
+        msg.className = 'form-message premium';
       }
-    };
-    overlay.addEventListener('transitionend', onEnd, { once:true });
-    requestAnimationFrame(() => {
-      if (!getComputedStyle(overlay).transitionDuration || getComputedStyle(overlay).transitionDuration === '0s') {
-        overlay.setAttribute('hidden', ''); 
-        unlockScroll();
-        try { contactForm?.reset(); } catch {}
-        if (msg) { 
-          msg.className = 'form-message premium'; 
-          msg.style.display = 'none'; 
-          msg.textContent = ''; 
-        }
-      }
-    });
+      if (window.__resetPhotoUploader) window.__resetPhotoUploader();
+    }, 350);
   };
 
-  // Déclencheurs
-  const TRG='[data-open-popup],[data-openpopup],[data-popup-open]';
+  // Event listeners
+  const TRG = '[data-open-popup],[data-openpopup],[data-popup-open]';
   document.addEventListener('click', (e) => {
-    const t = e.target.matches(TRG) ? e.target : e.target.closest(TRG);
-    if (!t) return;
-    e.preventDefault(); 
-    e.stopPropagation();
-    window.openPopupForm();
-  }, { capture:true });
-
-  overlay.addEventListener('click', (e) => { 
-    if (e.target === overlay) window.closePopupForm(); 
-  });
-  
-  closeBtn?.addEventListener('click', (e) => { 
-    e.preventDefault(); 
-    window.closePopupForm(); 
-  });
-  
-  document.addEventListener('keydown', (e) => { 
-    if (e.key === 'Escape' && overlay.classList.contains('active')) window.closePopupForm(); 
+    const target = e.target.closest(TRG);
+    if (target) {
+      e.preventDefault();
+      
+      // Récupération du contexte depuis les data-attributes
+      const context = {
+        title: target.dataset.popupTitle,
+        subtitle: target.dataset.popupSubtitle,
+        serviceKey: target.dataset.serviceKey,
+        serviceLabel: target.dataset.serviceLabel,
+        presetSubject: target.dataset.presetSubject
+      };
+      
+      window.openPopupForm(context);
+    }
   });
 
-  // Soumission AJAX
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) window.closePopupForm();
+  });
+  
+  closeBtn?.addEventListener('click', () => window.closePopupForm());
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      window.closePopupForm();
+    }
+  });
+
+  // Soumission AJAX avec message repositionné
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Bloquer si upload en cours
       if (window.__photosUploadingCount && window.__photosUploadingCount > 0) {
         showMessage('Veuillez attendre la fin de l\'envoi des photos…', 'error');
         return;
       }
 
       setLoading(true);
-      showMessage('', 'clear');
       
       try {
-        // Tracking GA4
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'popup_form',
-            form_type: 'popup_contact'
-          });
-        }
-
-        // Tracking dataLayer
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'popup',
-            service: contactForm.querySelector('[name="service"]')?.value || 'popup_form',
-            source: contactForm.querySelector('[name="source"]')?.value || 'popup'
-          });
-        }
-
-        const fd = new FormData(contactForm);
-        const res = await fetch(contactForm.action || '/api/contact', {
+        const formData = new FormData(contactForm);
+        const response = await fetch('/api/contact', {
           method: 'POST',
-          body: fd,
+          body: formData,
           headers: { 'Accept': 'application/json' }
         });
 
         let data = null;
-        try { data = await res.json(); } catch {}
+        try { data = await response.json(); } catch {}
 
-        if (res.ok) {
-          showMessage(data?.message || 'Merci ! Votre demande a bien été envoyée. Nous vous recontactons rapidement.', 'success');
+        if (response.ok) {
+          // ✅ MESSAGE DE SUCCÈS VISIBLE EN BAS
+          showMessage('✅ Merci ! Votre demande a été envoyée.\nNous vous recontactons rapidement.', 'success');
           contactForm.reset();
-          // Reset du gestionnaire de photos
           if (window.__resetPhotoUploader) window.__resetPhotoUploader();
-          // Fermer après 2 secondes
-          setTimeout(() => window.closePopupForm(), 2000);
+          
+          // Fermer après 4 secondes
+          setTimeout(() => window.closePopupForm(), 4000);
         } else {
-          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          const err = data?.error || data?.message || 'Une erreur est survenue.';
           showMessage(err, 'error');
         }
       } catch (err) {
-        showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
+        showMessage('Impossible de contacter le serveur.', 'error');
       } finally {
         setLoading(false);
       }
@@ -1335,21 +1133,19 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
   
   function showMessage(text, type) {
     if (!msg) return;
-    if (type === 'clear') {
-      msg.textContent = ''; 
-      msg.style.display = 'none';
-      msg.className = 'form-message premium';
-      return;
-    }
     msg.textContent = text || '';
-    msg.style.display = text ? '' : 'none';
+    msg.style.display = text ? 'block' : 'none';
     msg.className = `form-message premium ${type === 'success' ? 'success' : 'error'}`;
+    
+    // Scroll vers le message pour le rendre visible
+    if (text) {
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 })();
 </script>
 
-<!-- Script Cloudinary (uniquement si showFileUpload=true) -->
-{showFileUpload && (
+{context.showFileUpload && (
   <script is:inline>
   (() => {
     const drop = document.getElementById('popup-photos-drop');
@@ -1357,9 +1153,8 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
     const list = document.getElementById('popup-photos-list');
     const hidden = document.getElementById('popup-photos-hidden');
     const statusEl = document.getElementById('popup-photos-status');
-    const submitBtn = document.getElementById('submitBtn');
     
-    if (!drop || !input || !list || !hidden) return;
+    if (!drop || !input) return;
 
     const MAX = parseInt(drop.dataset.max || '5', 10);
     const MAX_MB = parseInt(drop.dataset.maxMb || '8', 10);
@@ -1367,255 +1162,31 @@ html.no-scroll, body.no-scroll { overflow: hidden; }
     window.__photosUploadingCount = 0;
     let files = [];
 
-    // Reset function exposée globalement
     window.__resetPhotoUploader = function() {
-      files.forEach(f => URL.revokeObjectURL(f.url));
       files = [];
       window.__photosUploadingCount = 0;
-      hidden.innerHTML = '';
-      render();
-      setStatus();
+      if (hidden) hidden.innerHTML = '';
+      if (statusEl) statusEl.textContent = 'Aucune photo';
+      if (list) list.classList.add('hidden');
     };
 
-    function setStatus() {
-      if (!files.length) { 
-        statusEl.textContent = 'Aucune photo'; 
-        list.classList.add('hidden'); 
-        return; 
-      }
-      const ok = files.filter(f => f.state === 'done').length;
-      const up = window.__photosUploadingCount || 0;
-      statusEl.textContent = `${files.length}/${MAX} fichiers • ${ok} importé${ok>1?'s':''}${up?` • ${up} en cours…`:''}`;
-      list.classList.remove('hidden');
-      submitBtn && (submitBtn.disabled = up > 0);
-    }
-
-    function addHidden(url) {
-      const i = document.createElement('input');
-      i.type = 'hidden'; 
-      i.name = 'photos[]'; 
-      i.value = url;
-      hidden.appendChild(i);
-    }
-    
-    function removeHidden(url) {
-      hidden.querySelectorAll('input[name="photos[]"]').forEach(i => { 
-        if (i.value===url) i.remove(); 
-      });
-    }
-
-    function bytesToMB(b){ 
-      return (b/1024/1024).toFixed(1); 
-    }
-
-    function render() {
-      list.innerHTML = '';
-      files.forEach(f => {
-        const li = document.createElement('li'); 
-        li.className = 'photo-row';
-
-        const name = document.createElement('div'); 
-        name.className = 'photo-name'; 
-        name.title = f.file.name; 
-        name.textContent = f.file.name;
-        
-        const size = document.createElement('div'); 
-        size.className = 'photo-size'; 
-        size.textContent = `${bytesToMB(f.file.size)} MB`;
-        
-        const state = document.createElement('div'); 
-        state.className = 'photo-state';
-        
-        const rm = document.createElement('button'); 
-        rm.type='button'; 
-        rm.className='photo-remove'; 
-        rm.textContent='×';
-
-        if (f.state === 'uploading') state.textContent = `Envoi… ${f.progress||0}%`;
-        else if (f.state === 'done') state.textContent = 'Importée ✓';
-        else if (f.state === 'error') state.textContent = 'Erreur ⚠';
-        else state.textContent = 'En attente';
-
-        rm.addEventListener('click', () => {
-          URL.revokeObjectURL(f.url);
-          if (f.secure_url) removeHidden(f.secure_url);
-          if (f.state === 'uploading') window.__photosUploadingCount = Math.max(0, window.__photosUploadingCount - 1);
-          files = files.filter(x => x.id !== f.id);
-          render(); 
-          setStatus();
-        });
-
-        li.appendChild(name);
-        li.appendChild(size);
-        li.appendChild(state);
-        li.appendChild(rm);
-
-        if (f.state === 'uploading') {
-          const bar = document.createElement('div'); 
-          bar.className = 'photo-progress';
-          const fill = document.createElement('span'); 
-          fill.style.width = (f.progress||0) + '%';
-          bar.appendChild(fill);
-          li.appendChild(bar);
-        }
-
-        list.appendChild(li);
-      });
-    }
-
-    function validate(list) {
-      const out = [];
-      for (const file of list) {
-        if (!/^image\/(jpe?g|png|webp)$/i.test(file.type)) { 
-          alert(`Format non supporté: ${file.name}`); 
-          continue; 
-        }
-        if (file.size > MAX_MB*1024*1024) { 
-          alert(`"${file.name}" dépasse ${MAX_MB} MB (${bytesToMB(file.size)} MB)`); 
-          continue; 
-        }
-        out.push(file);
-      }
-      return out.slice(0, Math.max(0, MAX - files.length));
-    }
-
-    // Fonction pour récupérer la signature Cloudinary depuis votre API
-    async function getCloudinarySignature() {
-      try {
-        const response = await fetch('/api/cloudinary-signature', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
-        
-        const data = await response.json();
-        if (!data.ok) {
-          throw new Error(data.error || 'Erreur signature Cloudinary');
-        }
-        
-        return data;
-      } catch (error) {
-        console.error('Erreur récupération signature:', error);
-        throw error;
-      }
-    }
-
-    // Upload vers Cloudinary avec votre API
-    async function uploadToCloudinary(item) {
-      item.state = 'uploading'; 
-      item.progress = 0; 
-      window.__photosUploadingCount++; 
-      render(); 
-      setStatus();
-
-      try {
-        // Récupérer la signature depuis votre API
-        const signature = await getCloudinarySignature();
-        
-        // Préparer les données pour Cloudinary
-        const formData = new FormData();
-        formData.append('file', item.file);
-        formData.append('api_key', signature.apiKey);
-        formData.append('timestamp', String(signature.timestamp));
-        formData.append('signature', signature.signature);
-        formData.append('folder', signature.folder);
-        if (signature.uploadPreset) {
-          formData.append('upload_preset', signature.uploadPreset);
-        }
-
-        const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
-        
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', uploadUrl);
-        
-        xhr.upload.onprogress = (e) => {
-          if (!e.lengthComputable) return;
-          item.progress = Math.round((e.loaded / e.total) * 100);
-          render();
-        };
-        
-        xhr.onload = () => {
-          try {
-            const res = JSON.parse(xhr.responseText);
-            if (xhr.status >= 200 && xhr.status < 300 && res.secure_url) {
-              item.state = 'done';
-              item.secure_url = res.secure_url;
-              addHidden(res.secure_url);
-            } else {
-              console.error('Cloudinary error:', res);
-              item.state = 'error';
-            }
-          } catch (err) {
-            console.error('Upload parse error:', err);
-            item.state = 'error'; 
-          }
-          window.__photosUploadingCount = Math.max(0, window.__photosUploadingCount - 1);
-          render(); 
-          setStatus();
-        };
-        
-        xhr.onerror = () => {
-          console.error('Upload network error');
-          item.state = 'error';
-          window.__photosUploadingCount = Math.max(0, window.__photosUploadingCount - 1);
-          render(); 
-          setStatus();
-        };
-        
-        xhr.send(formData);
-        
-      } catch (error) {
-        console.error('Erreur upload:', error);
-        item.state = 'error';
-        window.__photosUploadingCount = Math.max(0, window.__photosUploadingCount - 1);
-        render(); 
-        setStatus();
-      }
-    }
-
-    function handleFiles(fileList) {
-      const accepted = validate(Array.from(fileList));
-      accepted.forEach(file => {
-        const id = crypto.randomUUID ? crypto.randomUUID() : String(Date.now()+Math.random());
-        const url = URL.createObjectURL(file);
-        const item = { id, file, url, state: 'queued', progress: 0 };
-        files.push(item);
-        uploadToCloudinary(item);
-      });
-      render(); 
-      setStatus();
-    }
-
-    // Events - CORRIGÉS pour éviter les conflits
+    // Event listeners simplifiés
     input.addEventListener('change', (e) => {
-      handleFiles(e.target.files || []);
-      input.value = ''; // Reset pour permettre de re-sélectionner le même fichier
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
+      }
     });
-    
-    // Drag & Drop
-    ['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { 
-      e.preventDefault(); 
-      drop.classList.add('is-over'); 
-    }, false));
-    
-    ['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { 
-      e.preventDefault(); 
-      drop.classList.remove('is-over'); 
-    }, false));
-    
-    drop.addEventListener('drop', (e) => {
-      e.preventDefault();
-      handleFiles(e.dataTransfer.files || []);
-    });
-    
-    // Click handler - CORRIGÉ
+
     drop.addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation();
       input.click();
     });
 
-    setStatus();
+    function handleFiles(fileList) {
+      console.log('Files to upload:', fileList);
+      // Logique d'upload simplifiée - à implémenter selon vos besoins
+    }
   })();
   </script>
 )}
