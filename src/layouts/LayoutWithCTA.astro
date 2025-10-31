@@ -3,23 +3,25 @@
 import BaseLayout from './Layout.astro';
 import FloatingBottomCTA from '~/components/UI/FloatingBottomCTA.astro';
 
-/** Contexte du popup (passé tel quel à BaseLayout) */
+
+
+/** Contexte du popup */
 interface PopupCtx {
   serviceKey?: string;
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-  title?: string | null;      // utiliser title / subtitle (pas popupTitle/popupSubtitle)
+  title?: string | null;
   subtitle?: string | null;
   creditImpotEnabled?: boolean;
 }
 
 /** Props du layout */
 export interface Props {
-  /* SEO & contenu */
   title: string;
   description?: string;
   canonical?: string;
+
   popupContext?: PopupCtx;
   seo?: { title?: string; description?: string; lang?: string };
 
@@ -39,47 +41,44 @@ const {
   title,
   description,
   canonical,
+
   popupContext,
   seo,
 
   stickyEnabled = true,
   stickyShowAfter = 'scroll',
   stickyMobileOnly = true,
-  stickyColorMode, // optionnel
+  stickyColorMode,
 
-  // défauts (surchargables depuis la page)
   hideSelector = '[data-hide-floating-cta]',
   activateSelector = '[data-activate-floating-cta]',
   activateDelayMs = 600,
 } = Astro.props as Props;
 
-/* Couleur auto : LP(immediate) => instant ; vitrine(scroll) => progressive */
+// Color mode auto si non forcé
 const computedColorMode =
   stickyColorMode ?? (stickyShowAfter === 'immediate' ? 'instant' : 'progressive');
 
 const path = Astro.url.pathname;
 const isContact = path.includes('contact');
+
+const props = Astro.props;
 ---
 
 <BaseLayout
-  title={title}
-  description={description}
-  canonical={canonical}
-  popupContext={popupContext}
-  seo={seo}
+ {...props}
 >
   <slot />
 
   {stickyEnabled && !isContact && (
     <FloatingBottomCTA
       enabled
-      showAfter={stickyShowAfter}         
-      colorMode={computedColorMode}        
-      mobileOnly={stickyMobileOnly}        
-      
+      showAfter={stickyShowAfter}
+      colorMode={computedColorMode}
       hideSelector={hideSelector}
       activateSelector={activateSelector}
       activateDelayMs={activateDelayMs}
+      mobileOnly={stickyMobileOnly}
     />
   )}
 </BaseLayout>

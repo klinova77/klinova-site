@@ -82,10 +82,40 @@ const popupContext = {
 
 <LayoutWithCTA
   popupContext={popupContext}
-  seo={{
-    title: 'Nettoyage de balcons – Klinova',
-    description: 'Prestations professionel de nettoyage de balcons  en Île-de-France.',
+
+   stickyEnabled={true}
+  stickyShowAfter="scroll"  
+ 
+
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+
+  activateDelayMs={800} 
+  stickyMobileOnly={true}      
+
+
+ <Layout
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de balcons et terrasses — Klinova Paris"
+  description="Restaurez la propreté de vos balcons et terrasses. Nettoyage haute pression, dégraissage des sols et vitres, désinfection complète en copropriété."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-balcons.jpg"
+  appendBrandToTitle={false}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Nettoyage de balcons et terrasses",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Klinova",
+      "areaServed": "Île-de-France",
+      "telephone": "+33676738661"
+    },
+    "description": "Service de nettoyage complet de balcons, rambardes et sols extérieurs. Intervention soignée, adaptée aux copropriétés et immeubles parisiens."
   }}
+>
+
 >
 
 
@@ -221,7 +251,10 @@ const popupContext = {
   }
 </style>
 
-<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"  >
+<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"  
+data-hide-floating-cta
+data-hide-header-cta 
+>
   <div class="container-responsive">
     <!-- Grille responsive : texte à gauche, image à droite -->
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -336,7 +369,9 @@ const popupContext = {
 </section>
 
 <!-- Section — Types d’interventions (icônes vertes) -->
-<section id="types-interventions" class="bg-[#F8FDF9] py-16 lg:py-24" data-source="types_interventions">
+<section id="types-interventions" class="bg-[#F8FDF9] py-16 lg:py-24" data-source="types_interventions"
+data-activate-floating-cta
+>
   <div class="container-responsive">
     <div class="text-center mb-12 lg:mb-16">
       <h2 class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
@@ -1373,7 +1408,8 @@ const popupContext = {
 
 
 <section class="bg-[#DFF1E8] py-16 md:py-24" data-section="cta-final"
-data-hide-cta
+data-hide-header-cta 
+data-hide-floating-cta
   id="formulaire"">
   <div class="container-responsive">
     <div class="max-w-4xl mx-auto text-center">

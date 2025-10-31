@@ -1,0 +1,33 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    /* ── Canonicalisation domaine & schéma ─────────────────────────────── */
+    { "source": "http://www.klinova.fr/:path*",  "destination": "https://klinova.fr/:path*", "permanent": true },
+    { "source": "http://klinova.fr/:path*",      "destination": "https://klinova.fr/:path*", "permanent": true },
+    { "source": "https://www.klinova.fr/:path*", "destination": "https://klinova.fr/:path*", "permanent": true },
+
+    /* ── Normalisation d’URL ──────────────────────────────────────────── */
+    { "source": "/:path*/",          "destination": "/:path*", "permanent": true },
+    { "source": "/:path*/index.html","destination": "/:path*", "permanent": true },
+
+    /* ── Redirections contenu ancien → nouveau ────────────────────────── */
+    { "source": "/nettoyage-de-moquettes",                 "destination": "/nettoyage-moquettes",                 "permanent": true },
+    { "source": "/nettoyage-professionnel-parkings-garages","destination": "/nettoyage-parkings",                  "permanent": true },
+    { "source": "/nettoyage-balcons",                      "destination": "/nettoyage-balcons",                    "permanent": true },
+    { "source": "/nettoyage-terrasses-exterieurs",         "destination": "/nettoyage-balcons-fientes-pigeons",    "permanent": true },
+    { "source": "/nettoyage-terrasses-et-dexterieurs-copy","destination": "/nettoyage-balcons-fientes-pigeons",    "permanent": true },
+    { "source": "/nettoyage-professionnel-exterieurs",     "destination": "/nettoyage-balcons-fientes-pigeons",    "permanent": true },
+    { "source": "/nettoyage-textiles",                     "destination": "/nettoyage-moquettes",                  "permanent": true },
+
+    /* ── Pages non reconduites (temporaire vers accueil) ──────────────── */
+    { "source": "/eradication-punaises-de-lit",            "destination": "/", "permanent": true },
+    { "source": "/remise-en-etat-logement",                "destination": "/", "permanent": true },
+    { "source": "/entretien-dimmeubles-et-coproprietes",   "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel-airbnb",         "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel-bureaux-locaux", "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel-fin-chantier",   "destination": "/", "permanent": true },
+    { "source": "/nettoyage-de-diogene",                   "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel",                "destination": "/", "permanent": true },
+    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/", "permanent": true }
+  ]
+}

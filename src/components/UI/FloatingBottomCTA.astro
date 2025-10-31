@@ -32,6 +32,7 @@ const {
 {enabled && (
   <div
     id="sticky-cta"
+    data-mobile-only={mobileOnly ? 'true' : 'false'}
     role="region"
     aria-label="Actions rapides : appel ou devis"
     data-showafter={showAfter}
@@ -55,43 +56,49 @@ const {
       className,
     ]}
   >
-    <div class="container-responsive py-3 flex items-center gap-3">
-      <!-- 📞 Appel (gauche) -->
-      <Button
-        href={`tel:${phoneE164}`}
-        ariaLabel={`Appeler le ${display}`}
-        variant="secondary"
-        size="md"
-        class="flex-[1.2] min-h-[52px] py-3.5 rounded-xl text-sm font-semibold active:scale-95 text-center"
-        tracking={{ source: 'mobile_bar_bottom', action: 'call_direct', intent: 'urgent_contact' }}
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-        <span class="font-semibold">{display}</span>
-      </Button>
+   <div class="container-responsive py-3 flex items-center gap-3">
+  <!-- 📞 Appel (gauche) — secondaire, plus compact -->
+  <Button
+    href={`tel:${phoneE164}`}
+    ariaLabel={`Appeler le ${display}`}
+    variant="secondary"
+    size="md"
+    class="flex-[0.8] min-h-[52px] py-3.5 rounded-xl text-xs font-medium active:scale-95 text-center"
+    tracking={{ source: 'mobile_bar_bottom', action: 'call_direct', intent: 'urgent_contact' }}
+  >
+    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      />
+    </svg>
+    {display}
+  </Button>
 
-      <!-- 🧾 Devis (droite) — c’est LUI qui devient vert -->
-    <Button
+  <!-- 🧾 Être rappelé (droite) — principal, plus large + devient vert -->
+  <Button
   href="/contact#formulaire"
   ariaLabel="Demander un devis gratuit"
   variant="secondary"
   size="md"
-  class="flex-1 min-h-[52px] py-3.5 rounded-xl text-sm font-semibold active:scale-95 text-center"
+  class="flex-[1.5] min-h-[52px] py-3.5 rounded-xl font-semibold text-base active:scale-95 text-center transition-all"
   tracking={{ source: 'mobile_bar_bottom', action: 'form_request', intent: 'get_quote' }}
-
-  /* ✅ Forward des data-attributes AU NŒUD DOM du bouton */
   data={{ role: 'quote-button', 'open-popup': 'floating-bar-mobile' }}
 >
-  <svg class="w-4 h-4 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  <span>Être rappelé</span>
+  <svg
+    class="w-5 h-5 ml-2 flex-shrink-0"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4-4 4M3 12h18"/>
   </svg>
-  Devis gratuit
 </Button>
-
-    </div>
+</div>
 
     <!-- Indicateur confiance -->
     <div class="text-center pb-1">
@@ -127,14 +134,24 @@ const {
   var delay = Number(bar.dataset.activatedelay || '600');
 
   // helpers visibilité
-  var showBar = function () {
-    if (isMenuOpen()) return;
-    bar.style.display = 'block';
-    bar.setAttribute('data-state', 'shown');
+var showBar = function () {
+  if (isMenuOpen()) return;
+
+  // d'abord rendre visible sans animer
+  bar.style.display = 'block';
+  bar.setAttribute('data-state', 'shown');
+
+  // forcer un reflow pour que le navigateur enregistre le display:block
+  void bar.offsetHeight;
+
+  // ensuite seulement activer la transition visible
+  requestAnimationFrame(() => {
     bar.style.transform = 'translateY(0)';
     bar.style.opacity = '1';
     bar.style.pointerEvents = 'auto';
-  };
+  });
+};
+
   var hideBar = function () {
     bar.setAttribute('data-state', 'hidden');
     bar.style.transform = 'translateY(100%)';
@@ -271,9 +288,72 @@ html[data-menu-open="true"] #sticky-cta { display: none !important; }
   background-color: var(--color-action-500) !important;
   color: #fff !important;
   border-color: var(--color-action-500) !important;
-  transition: background-color .4s ease, color .4s ease, border-color .4s ease;
+  transition: background-color 1.4s ease, color 1.4s ease, border-color 1.4s ease;
 }
 #sticky-cta [data-role="quote-button"][data-active="true"]:hover {
   background-color: var(--color-action-600) !important;
+}
+</style>
+
+
+<style is:global>
+  /* Force le masquage desktop si mobileOnly=true, même après reparenting */
+  @media (min-width: 1024px) {
+    #sticky-cta[data-mobile-only="true"] {
+      display: none !important;
+    }
+  }
+</style>
+
+
+<style is:global>
+/* Apparition/disparition smooth */
+#sticky-cta {
+  transition:
+    transform 820ms cubic-bezier(.22,.61,.36,1),
+    opacity 820ms ease;
+  will-change: transform, opacity;
+}
+
+/* visible */
+#sticky-cta[data-state="shown"] {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* caché */
+#sticky-cta[data-state="hidden"] {
+  transform: translateY(100%);
+  opacity: 0;
+}
+</style>
+
+<style is:global>
+/* Le bouton "Devis" porte data-role="quote-button" dans le markup */
+#sticky-cta [data-role="quote-button"] {
+  transition:
+    background-color 5.6s ease,
+    color 5.6s ease,
+    border-color 5.6s ease,
+    transform .25s ease;
+}
+
+/* Mode progressif: bouton blanc par défaut */
+#sticky-cta[data-color-mode="progressive"] [data-role="quote-button"]:not([data-active="true"]) {
+  background-color: #fff;
+  color: var(--color-primary-600);
+  border-color: var(--color-neutral-200);
+}
+
+/* Après activation: passe au vert en douceur */
+#sticky-cta[data-color-mode="progressive"] [data-role="quote-button"][data-active="true"] {
+  background-color: var(--color-action-600);
+  border-color: var(--color-action-600);
+  color: #fff;
+}
+
+/* Petit hover doux sur le vert */
+#sticky-cta[data-color-mode="progressive"] [data-role="quote-button"][data-active="true"]:hover {
+  background-color: var(--color-action-500);
 }
 </style>

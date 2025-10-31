@@ -133,12 +133,31 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   activateSelector="[data-activate-floating-cta]"
 
   activateDelayMs={800} 
-  stickyMobileOnly={true}      
+  stickyMobileOnly={true}    
+  
+  
+
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de moquettes à domicile, en copropriété et bureaux — Klinova Paris"
+  description="Entretien professionnel des moquettes à domicile, en copropriétés et locaux d’entreprise. Nettoyage en profondeur à l’injection-extraction ou à sec, sans résidus collants."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-moquettes.jpg"
+  appendBrandToTitle={false}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Nettoyage de moquettes",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Klinova",
+      "areaServed": "Île-de-France",
+      "telephone": "+33676738661"
+    },
+    "description": "Service de nettoyage professionnel des moquettes à domicile, en copropriété et bureaux à Paris et IDF. Résultats visibles, séchage rapide, entretien durable."
+  }}
 
 
-
-
-  seo={{ title: 'Nettoyage de moquettes – Klinova', description: '…' }}
 >
 
 
@@ -148,7 +167,8 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   data-hero
   class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
   data-hide-floating-cta
-  data-hero
+  data-hide-header-cta 
+ 
    
 >
   <div class="absolute inset-0 z-0">
@@ -276,6 +296,8 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
  
   id="savoir-faire"
   class="bg-white py-12 md:py-20 border-t border-[#E5E7EB]"
+  data-activate-floating-cta
+  data-hide-header-cta 
 >
   <div class="container mx-auto px-6 lg:px-12">
     <div class="max-w-4xl mx-auto">
@@ -404,7 +426,7 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 
 <!-- Section Problématiques Clients -->
 <section class="py-16 md:py-20 bg-white"
-data-activate-floating-cta>
+>
   <div class="container mx-auto px-6 lg:px-12">
     <!-- En-tête de section -->
     <div class="text-center mb-12">
@@ -1455,7 +1477,7 @@ data-activate-floating-cta>
           et un devis adapté à vos besoins spécifiques.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="/contact" class="inline-flex items-center bg-white border border-gray-700/80 hover:bg-gray-50 hover:border-gray-800 text-gray-800 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
+          <a href="#formulaire" class="inline-flex items-center bg-white border border-gray-700/80 hover:bg-gray-50 hover:border-gray-800 text-gray-800 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg">
   Devis gratuit sous 24h
 </a>
           <div class="text-center sm:text-left">
@@ -1536,8 +1558,10 @@ data-activate-floating-cta>
 
 
 
-<section class="bg-[#DFF1E8] py-16 md:py-24" data-section="cta-final" 
-data-hide-cta
+<section class="bg-[#DFF1E8] py-16 md:py-24" 
+data-section="cta-final" 
+data-hide-header-cta 
+data-hide-floating-cta
   id="formulaire">
   <div class="container-responsive">
     <div class="max-w-4xl mx-auto text-center">

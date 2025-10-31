@@ -44,7 +44,34 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
 <LayoutLP
   popupContext={popupContext}
-  seo={seo}                 
+
+   stickyEnabled={true}
+  stickyShowAfter="immediate"  
+     stickyMobileOnly={true}      
+colorMode="instant"
+
+  <Layout
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de balcons souillés par fientes de pigeons — Klinova Paris"
+  description="Intervention sécurisée avec équipement professionnel et désinfection complète des surfaces contaminées. Traitement anti-bactérien et enlèvement des fientes."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-fientes.jpg"
+  appendBrandToTitle={false}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Nettoyage de balcons souillés par fientes de pigeons",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Klinova",
+      "areaServed": "Île-de-France",
+      "telephone": "+33676738661"
+    },
+    "description": "Nettoyage et désinfection des balcons et rebords contaminés par les fientes de pigeons. Méthode professionnelle sécurisée, respect des protocoles d’hygiène."
+  }}
+>
+                 
 >
 
 
@@ -53,7 +80,7 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
   id="hero-balcons-fientes"
   data-hero
- 
+ data-activate-floating-cta
   aria-labelledby="hero-title"
   class="relative py-16 lg:py-24 bg-gradient-to-br from-[#DFF1E8] to-[#EAF6F0] overflow-hidden"
 >

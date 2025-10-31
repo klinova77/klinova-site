@@ -111,9 +111,42 @@ const popupContext = {
 
 <LayoutWithCTA
   popupContext={popupContext}
-  seo={{ title: 'Nettoyage de parkings – Klinova', description: 'Prestations pro…' }}
+
+   stickyEnabled={true}
+  stickyShowAfter="scroll"  
+ 
+
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+
+  activateDelayMs={800} 
+  stickyMobileOnly={true}      
+
+
+   pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de parkings, parkings souterrains et garages — Klinova Paris"
+  description="Décapage, dégraissage et entretien régulier de parkings. Méthodes professionnelles à l’autolaveuse et produits adaptés aux sols béton."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-parkings.jpg"
+  appendBrandToTitle={false}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Nettoyage de parkings",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Klinova",
+      "areaServed": "Île-de-France",
+      "telephone": "+33676738661"
+    },
+    "description": "Nettoyage professionnel de parkings et garages à Paris et en Île-de-France. Décapage des traces d’huile, lavage haute pression, finitions soignées."
+  }}
 >
-  <Fragment slot="head">
+ 
+
+
+<Fragment slot="head">
     <link
       rel="preload"
       as="image"
@@ -129,6 +162,9 @@ const popupContext = {
 
 <section
   class="relative bg-gradient-to-br from-[#F8FAFC] to-[#DBEAFE] pt-24 pb-16"
+  data-hide-floating-cta
+   data-section="hero"
+   data-hide-header-cta 
  
 >
   <div class="container-responsive">
@@ -260,7 +296,10 @@ const popupContext = {
 
 
 <!-- Section 2 : Pourquoi faire appel à des professionnels ? -->
-<section class="bg-[#FCFCFC] py-16 md:py-24">
+<section class="bg-[#FCFCFC] py-16 md:py-24"
+data-activate-floating-cta
+data-hide-header-cta 
+>
   <div class="container-responsive">
     <!-- En-tête -->
     <div class="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
@@ -642,10 +681,6 @@ const popupContext = {
 
 
 
----
-// Section 4 : Process en 3 étapes (diagnostic → intervention → contrôle)
-// Timeline verticale avec mise en sécurité détaillée
----
 
 <!-- Section 4 : Process en 3 étapes (diagnostic → intervention → contrôle) -->
 <section class="bg-[#FCFCFC] py-16 md:py-24" data-section="process-3-etapes">
@@ -928,9 +963,9 @@ const popupContext = {
         Besoin d'une intervention rapide après sinistre ?
       </p>
       <Button
-        href="/contact#formulaire"
+        href="#formulaire"
         label="Diagnostic sous 24&nbsp;h et protocole d'action adapté"
-        variant="primary"
+        variant="secondary"
         size="lg"
         tracking={{ action: 'cta_post_sinistre', source: 'section_post_sinistre', intent: 'lead' }}
         data={{ section: 'post-sinistre' }}
@@ -1020,9 +1055,9 @@ const popupContext = {
     <!-- CTA -->
     <div class="mt-8">
       <Button
-        href="/contact#formulaire"
+        href="#formulaire"
         label="Obtenir une estimation précise"
-        variant="primary"
+        variant="secondary"
         size="lg"
         tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
         data={{ section: 'tarifs' }}
@@ -1074,15 +1109,18 @@ const popupContext = {
         <p class="text-lg text-[#475569] mb-6">
           Une question spécifique sur votre parking ?
         </p>
-        <a
-          href="/contact#formulaire"
-          class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-        >
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-          </svg>
-          Poser une question personnalisée
-        </a>
+       <Button
+  href="#formulaire"
+  label="Posez-nous la question"
+  variant="tertiary"
+  size="lg"
+  class="inline-flex items-center gap-2 font-semibold hover:-translate-y-0.5 transition-transform duration-200"
+  tracking={{ source: 'section-hero', action: 'ask_question', intent: 'cta-secondary' }}
+>
+  
+  Posez-nous la question
+</Button>
+
         <p class="text-sm text-[#475569] mt-3">
           Réponse sous 24h - Diagnostic gratuit sur site
         </p>
@@ -1164,6 +1202,8 @@ const popupContext = {
 <!-- Section CTA finale -->
 <section class="bg-[#DBEAFE] py-16 md:py-24" data-section="cta-final"
 data-hide-cta
+data-hide-floating-cta
+data-hide-header-cta 
   id="formulaire">
   <div class="container-responsive">
     <div class="max-w-4xl mx-auto text-center">

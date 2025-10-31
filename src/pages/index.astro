@@ -57,9 +57,39 @@ const popupContext = {
 
 <Layout
  popupContext={popupContext}
-  title="Punaises de lit Paris et Île-de-France | Intervention 24h - Stop Punaises"
-  description="Expert punaises de lit à Paris. Intervention sous 24h, certifié Certibiocide. Devis gratuit. Garantie 6 mois."
-  >
+  
+
+
+ /* Props SEO — niveau top */
+  pathname={Astro.url.pathname}
+  pageType="home"
+  title="Klinova — Propreté & maintenance technique à Paris"
+  description="Nettoyage de parkings, moquettes en copropriété, balcons difficiles. Méthodes pro, devis rapide, interventions en Île-de-France."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-home.jpg"   // ⚠️ assure-toi que le fichier existe (1200×630)
+  appendBrandToTitle={false}
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Klinova",
+    "url": "https://klinova.fr",
+    "telephone": "+33676738661",
+    "description": "Entreprise de propreté et maintenance technique à Paris et en Île-de-France.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 rue d'Armaillé",
+      "addressLocality": "Paris",
+      "postalCode": "75017",
+      "addressCountry": "FR"
+    },
+    "areaServed": "Île-de-France",
+    "image": "https://klinova.fr/images/og/og-klinova-home.jpg",
+    "priceRange": "€€"
+  }}
+
+
+
+ >
 
 <section
   data-hero

@@ -3,7 +3,7 @@
 import DocumentShell, { type Props as DocumentShellProps } from './DocumentShell.astro';
 import SiteFrameKlinova from './SiteFrameKlinova.astro';
 
-// Type
+// Contexte optionnel pour tes popups
 interface PopupCtx {
   serviceKey?: string;
   serviceLabel?: string;
@@ -11,20 +11,21 @@ interface PopupCtx {
   presetSubject?: string | null;
   popupTitle?: string | null;
   popupSubtitle?: string | null;
-  creditImpotEnabled?: boolean; // ✅ NEW
+  creditImpotEnabled?: boolean;
 }
 
-
+// ✅ Le Layout accepte TOUT ce que SeoBase sait gérer (via DocumentShellProps)
+// + ton popupContext. AUCUNE prop `seo` imbriquée ici (on garde un seul niveau).
 type Props = DocumentShellProps & {
   popupContext?: PopupCtx;
-  seo?: { title?: string; description?: string; lang?: string };
 };
 
-const { popupContext, seo, ...docShellProps } = Astro.props as Props;
+const { popupContext, ...docShellProps } = Astro.props as Props;
 ---
 
+<!-- ✅ DocumentShell rend SeoBase avec toutes les props reçues -->
 <DocumentShell {...docShellProps} brand="klinova">
-  <SiteFrameKlinova popupContext={popupContext} seo={seo}>
+  <SiteFrameKlinova popupContext={popupContext}>
     <slot />
   </SiteFrameKlinova>
 </DocumentShell>
