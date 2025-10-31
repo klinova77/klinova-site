@@ -19,15 +19,23 @@ const seo = {
 };
 
 const popupContext = {
-  title: 'Devis nettoyage de balcon',
-  subtitle: 'Obtenez un devis personnalisé sous 24h',
-  serviceKey: 'moquette',
-  serviceLabel: 'Nettoyage de moquette',
-  trackingSource: 'popup-moquette',
-  presetSubject: 'Devis nettoyage moquette (copro / pro)',
+  // Titres plus engageants
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  
+  // Tracking plus précis
+  serviceKey: 'rappel-balcons-fientes',
+  serviceLabel: 'Demande rappel - Page balcons-fients',
+  trackingSource: 'popup-balcons-fientes-header', // ou 'popup-home-hero'
+  
+  // Email plus contextualisé
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  
+  // Désactivé sur page institutionnelle
   creditImpotEnabled: true,
+  
+ 
 };
-
 
 import thumbBalcon from '~/assets/images/video-balcon-fientes.webp'; // ← ton image uploadée
 const videoId = 'GvYRj2hhRMo';
@@ -42,10 +50,10 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
 <!-- HERO – Nettoyage de balcons infestés par les fientes -->
 <section
-data-section="hero"
+
   id="hero-balcons-fientes"
   data-hero
-  data-hide-cta
+ 
   aria-labelledby="hero-title"
   class="relative py-16 lg:py-24 bg-gradient-to-br from-[#DFF1E8] to-[#EAF6F0] overflow-hidden"
 >
@@ -64,33 +72,23 @@ data-section="hero"
     </p>
 
     <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 opacity-0">
-      <Button
-        href="#cta-final-balcon"
-        label="Demander un devis gratuit"
-        variant="primary"
-        size="lg"
-        tracking={{ action: 'cta-hero-devis', source: 'lp-balcons' }}
-        withTrackingParams={false}
-        ariaLabel="Aller au formulaire de devis"
-        class="justify-center"
-        data={{ section: 'hero', service: 'balcons-fientes' }}
-      />
-
-      <Button
-        href={`tel:${PHONE_E164}`}
-        label={`📞 ${PHONE_DISPLAY}`}
-        variant="secondary"
-        size="lg"
-        tracking={{ action: 'cta-hero-phone', source: 'lp-balcons' }}
-        withTrackingParams={false}
-        ariaLabel={`Appeler Klinova au ${PHONE_DISPLAY}`}
-        class="justify-center"
-        data={{ section: 'hero', service: 'balcons-fientes' }}
-      />
+      <div class="hidden md:flex flex-col sm:flex-row gap-4 hero-cta">
+  <Button
+    href="#formulaire"
+    variant="tertiary"
+    size="lg"
+    class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+    ariaLabel="Nous contacter pour le nettoyage de balcons"
+    tracking={{ action: 'lead', source: 'hero-balcons-fientes', intent: 'cta-tertiary' }}
+    data={{ service: 'devis-balcons-fientes' }}
+  >
+    Nous contacter
+  </Button>
+</div>
     </div>
 
     <p class="hero-reassurance text-sm text-[#475569] opacity-0">
-      Équipe certifiée • Intervention sans éclaboussures • Devis en 24&nbsp;h
+      Équipe certifiée • Nettoyage et désinfection compléte • Devis en 24&nbsp;h
     </p>
   </div>
 
@@ -227,17 +225,20 @@ data-section="hero"
 
       <!-- CTA -->
       <div class="mt-8">
-        <Button
-          href="#cta-final-balcon"
-          label="Demander la même intervention"
-          variant="primary"
-          size="lg"
-          tracking={{ action: 'cta-video-devis', source: 'lp-balcons' }}
-          withTrackingParams={false}
-          ariaLabel="Aller au formulaire de devis"
-          class="justify-center"
-        />
-      </div>
+  <div class="flex justify-center">
+    <Button
+      href="#formulaire"
+      variant="tertiary"
+      size="lg"
+      class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+      ariaLabel="Faire nettoyer votre balcon"
+      tracking={{ action: 'lead', source: 'section-balcons-fientes', intent: 'cta-tertiary' }}
+      data={{ service: 'devis-balcons' }}
+    >
+      Faites nettoyer votre balcon
+    </Button>
+  </div>
+</div>
     </div>
   </div>
 

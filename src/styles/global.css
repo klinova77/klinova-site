@@ -653,3 +653,10 @@ html[data-brand="klinova"] { background: var(--color-neutral-50) !important; }
 
 /* fin de la configuration klinova */
 
+
+
+
+/* Masquer la barre d'outils Astro en dev pour tester le sticky CTA */
+astro-dev-toolbar { 
+  display: none !important; 
+}

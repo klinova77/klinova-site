@@ -33,22 +33,47 @@ import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
 
+
+
+const popupContext = {
+  // Titres plus engageants
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  
+  // Tracking plus précis
+  serviceKey: 'rappel-home',
+  serviceLabel: 'Demande rappel - Page accueil',
+  trackingSource: 'popup-home-header', // ou 'popup-home-hero'
+  
+  // Email plus contextualisé
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  
+  // Désactivé sur page institutionnelle
+  creditImpotEnabled: false,
+  
+ 
+};
 ---
 
 <Layout
+ popupContext={popupContext}
   title="Punaises de lit Paris et Île-de-France | Intervention 24h - Stop Punaises"
   description="Expert punaises de lit à Paris. Intervention sous 24h, certifié Certibiocide. Devis gratuit. Garantie 6 mois."
   >
 
- <section data-hero class="relative isolate flex items-end min-h-[90vh] overflow-hidden"
- data-section="hero">
-  <!-- Image LCP optimisée -->
+<section
+  data-hero
+  data-section="hero"
+  data-hide-cta
+  class="relative isolate flex min-h-[100svh] md:min-h-[90vh] overflow-hidden items-center justify-center"
+>
+  <!-- Image LCP -->
   <Image
     src={heroImg}
-    alt="Parc d’équipements de nettoyage professionnels Klinova"
+    alt="Parc d'équipements de nettoyage professionnels Klinova"
     formats={['avif','webp','jpeg']}
     widths={[768,1024,1440,1920]}
-     quality={100} 
+    quality={100}
     sizes="100vw"
     loading="eager"
     fetchpriority="high"
@@ -56,63 +81,45 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
     style="filter: brightness(1.2);"
   />
 
-  <!-- Overlay contraste + respiration légère -->
-  <div class="hero-overlay absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent"></div>
+ <!-- Overlay mixte allégé -->
+<div
+  class="absolute inset-0"
+  style="
+    background:
+      /* Linéaire doux : garde de la lumière */
+      linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.05) 100%),
+      /* Radial subtil au centre, plus clair */
+      radial-gradient(circle at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.4) 100%);
+    background-blend-mode: multiply;
+  "
+></div>
+
 
   <!-- Contenu -->
-  <div class="relative z-10 container-responsive pb-20 md:pb-32">
-    <div class="max-w-2xl text-white">
-      <!-- Badge -->
-      <div class="mb-6 anim-in anim-delay-0">
-        <span class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-white/10 border-white/30">
-          <span class="h-2 w-2 rounded-full bg-green-400 pulse-dot"></span>
-          Équipements professionnels
-        </span>
-      </div>
-
-      <!-- Titre -->
-      <h1 class="anim-in anim-delay-1 text-4xl md:text-5xl text-white font-bold leading-tight mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-        Puissance industrielle,<br />
-        <span class="bg-[linear-gradient(45deg,var(--color-action-500),#4ade80)] bg-clip-text text-transparent">
-          exigence artisanale
-        </span>
-      </h1>
-
-      <!-- Sous-titre -->
-      <p class="anim-in anim-delay-2 text-lg md:text-xl mb-8 text-white/90">
-        Des équipements professionnels de pointe au service de la propreté et de la durabilité.
-      </p>
-
-      <!-- CTAs -->
-      <div class="anim-in anim-delay-3 flex flex-wrap items-center gap-4">
-        <a
-          href="#expertises"
-          class="group inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-white shadow-sm transition hover:shadow-lg"
-          style="background: linear-gradient(135deg, var(--color-action-500) 0%, var(--color-action-600) 100%)"
-          data-action="cta" data-source="hero" data-intent="discover-services"
-        >
-          Découvrir nos services
-          <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18" />
-          </svg>
-        </a>
-
-     <a
-  href="/contact"
-  class="inline-flex items-center gap-2 rounded-xl border-2 px-6 py-3 font-semibold transition hover:bg-white/20"
-  style="border-color: rgba(255,255,255,0.7); color: #fff"
-  data-open-popup="cta"
-  data-action="cta"
-  data-source="hero"
-  data-intent="contact"
->
-  Contactez-nous
-</a>
-
-      </div>
+  <div class="relative z-10 flex flex-col items-center justify-center text-center text-white px-6">
+    <!-- Badge -->
+    <div class="mb-6 anim-in anim-delay-0">
+      <span class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-white/10 border-white/30">
+        <span class="h-2 w-2 rounded-full bg-green-400 pulse-dot"></span>
+        Équipements professionnels
+      </span>
     </div>
+
+    <!-- Titre -->
+    <h1 class="anim-in anim-delay-1 text-4xl md:text-5xl font-bold leading-tight mb-4 text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">
+      Puissance industrielle,<br />
+      <span class="bg-[linear-gradient(45deg,var(--color-action-500),#4ade80)] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+        exigence artisanale
+      </span>
+    </h1>
+
+    <!-- Sous-titre -->
+    <p class="anim-in anim-delay-2 text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
+      Des équipements professionnels de pointe au service de la propreté et de la durabilité.
+    </p>
   </div>
 </section>
+
 
 <style is:inline>
   /* Fade-in + slide-up (progressivité) */
@@ -149,7 +156,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
 
 
-/// section présentation klinova
+
 
 
 
@@ -279,7 +286,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
 
 
-// notre mission
+
 
 <section class="section-padding" style="background: linear-gradient(135deg, #1E2939 0%, #2D3748 100%);">
   <div class="container-responsive">
@@ -489,11 +496,9 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
 
 
-/// section nos expertises
 
 
-
-<section class="section-padding bg-white">
+<section class="section-padding bg-white" id="expertises">
   <div class="container-responsive">
     <div class="max-w-6xl mx-auto">
       
@@ -518,7 +523,6 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
       <ul class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <li class="reveal">
           <CapabilityCard
-            href="/proprete-technique"
             title="Propreté technique & sols"
             description="Nettoyage professionnel de tous types de revêtements : moquettes, dalles, parkings, surfaces industrielles."
             tags={['Moquettes', 'Parkings', 'Sols durs']}
@@ -529,7 +533,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
         <li class="reveal">
           <CapabilityCard
-            href="/hygiene-lieux-de-vie"
+            
             title="Hygiène des lieux de vie"
             description="Entretien des espaces résidentiels et collectifs : copropriétés, parties communes, extérieurs."
             tags={['Copropriétés', 'Balcons', 'Terrasses']}
@@ -540,7 +544,6 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
         <li class="reveal">
           <CapabilityCard
-            href="/desinfection-nuisibles"
             title="Désinfection & nuisibles"
             description="Protocoles spécialisés de désinfection et traitement des nuisibles avec traçabilité complète."
             tags={['Punaises de lit', 'Désinfection', 'Biocides']}
@@ -551,7 +554,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
 
         <li class="reveal">
           <CapabilityCard
-            href="/interventions-specialisees"
+            
             title="Interventions spécialisées"
             description="Remise en état après travaux, sinistres, et prestations haute exigence avec protocoles renforcés."
             tags={['Après travaux', 'Sinistres', 'Haute exigence']}
@@ -562,20 +565,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
       </ul>
 
       <!-- CTA global -->
-      <div class="text-center mt-12 pt-8 reveal border-t border-[#E5E7EB]">
-        <p class="text-base mb-6 text-[#475569]">Besoin d'une solution sur-mesure ?</p>
-        <a
-          href="/services"
-          class="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-semibold text-white transition hover:shadow-lg hover:translate-y-[-1px]"
-          style="background: linear-gradient(135deg, #3F8D65 0%, #387B58 100%);"
-          data-action="cta" data-source="capacites" data-intent="voir-tous-services"
-        >
-          Voir tous nos services
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
-          </svg>
-        </a>
-      </div>
+     
 
     </div>
   </div>
@@ -620,136 +610,127 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
         </p>
       </div>
 
-      <!-- Étapes -->
-      <ol class="space-y-12 lg:space-y-16">
+    <!-- Étapes -->
+<ol class="space-y-12 lg:space-y-16">
 
-        <!-- Étape 1 -->
-        <li class="reveal">
-          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <!-- Texte -->
-            <div>
-              <div class="flex items-center gap-4 mb-5">
-                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#3F8D65] text-white font-bold text-lg md:text-xl">01</span>
-                <h3 class="text-2xl font-semibold text-[#1E2939]">Diagnostic & planification</h3>
-              </div>
-              <p class="text-[#475569] mb-4">
-                Évaluation précise : surfaces, contraintes d’accès, objectifs. Recommandations techniques et calendrier.
-              </p>
-              <ul class="space-y-2 text-sm text-[#475569]">
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Analyse des matériaux et des risques</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Choix des équipements & produits</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Devis clair & plan d’intervention</li>
-              </ul>
-            </div>
-
-            <!-- Média (carré, centré) -->
-            <div class="rounded-2xl bg-[#DFF1E8] p-5 md:p-12">
-              <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
-  <Image
-    src={diagnostic}
-    alt="Technicien Klinova en intervention"
-    class="h-full w-full object-cover object-center"
-    format="webp"
-    loading="lazy"
-    width={800}   
-</div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Étape 2 -->
-        <li class="reveal">
-          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <!-- Média à gauche en desktop -->
-            <div class="rounded-2xl bg-[#DBEAFE] p-5 md:p-12 lg:order-1">
-             <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
-  <Image
-    src={interventionKlinova}
-    alt="Technicien Klinova en intervention de nettoyage"
-    class="h-full w-full object-cover object-center"
-    width={900}
-    quality={100}
-    format="webp"
-    loading="lazy"
-    width={800}
-  />
-</div>
-            </div>
-
-            <!-- Texte -->
-            <div class="lg:order-2">
-              <div class="flex items-center gap-4 mb-5">
-                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#387B58] text-white font-bold text-lg md:text-xl">02</span>
-                <h3 class="text-2xl font-semibold text-[#1E2939]">Intervention protocolisée</h3>
-              </div>
-              <p class="text-[#475569] mb-4">
-                Méthodes documentées, EPI adaptés, respect des surfaces et de l’environnement.
-              </p>
-              <ul class="space-y-2 text-sm text-[#475569]">
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Équipements de dernière génération</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Dosages maîtrisés & consignes de site</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Contrôle qualité continu</li>
-              </ul>
-            </div>
-          </div>
-        </li>
-
-        <!-- Étape 3 -->
-        <li class="reveal">
-          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <!-- Texte -->
-            <div>
-              <div class="flex items-center gap-4 mb-5">
-                <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#2D5A3D] text-white font-bold text-lg md:text-xl">03</span>
-                <h3 class="text-2xl font-semibold text-[#1E2939]">Contrôle & traçabilité</h3>
-              </div>
-              <p class="text-[#475569] mb-4">
-                Vérifications finales, preuves d’intervention, conseils d’entretien et plan de suivi si nécessaire.
-              </p>
-              <ul class="space-y-2 text-sm text-[#475569]">
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Check-list signée + photos</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Compte-rendu & recommandations</li>
-                <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Planification d’un suivi</li>
-              </ul>
-            </div>
-
-            <!-- Média -->
-            <div class="rounded-2xl bg-[#C0E2D0] p-5 md:p-12">
-              <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
-  <Image
-    src={controle}
-    alt="Contrôle qualité et traçabilité après intervention"
-    class="h-full w-full object-cover object-center"
-    width={900}
-    quality={90}
-    format="webp"
-    loading="lazy"
-    width={800}
-  />
-</div>
-            </div>
-          </div>
-        </li>
-
-      </ol>
-
-      <!-- CTA (secondaire) -->
-      <div class="text-center mt-14 pt-10 border-t border-[#E5E7EB] reveal">
-        <p class="text-base md:text-lg mb-6 text-[#475569]">
-          Un besoin précis ? On vous répond rapidement avec une méthode adaptée.
+  <!-- Étape 1 -->
+  <li class="reveal">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <!-- Texte -->
+      <div class="order-1">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#3F8D65] text-white font-bold text-lg md:text-xl">01</span>
+          <h3 class="text-2xl font-semibold text-[#1E2939]">Diagnostic & planification</h3>
+        </div>
+        <p class="text-[#475569] mb-4">
+          Évaluation précise : surfaces, contraintes d’accès, objectifs. Recommandations techniques et calendrier.
         </p>
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
-                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]"
-          data-action="cta" data-source="process" data-intent="contact"
-        >
-          Demander un devis
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
-          </svg>
-        </a>
+        <ul class="space-y-2 text-sm text-[#475569]">
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Analyse des matériaux et des risques</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Choix des équipements & produits</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Devis clair & plan d’intervention</li>
+        </ul>
       </div>
+
+      <!-- Média -->
+      <div class="order-2 rounded-2xl bg-[#DFF1E8] p-5 md:p-12">
+        <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+          <Image
+            src={diagnostic}
+            alt="Technicien Klinova en intervention (diagnostic & planification)"
+            class="h-full w-full object-cover object-center"
+            formats={['avif','webp','jpeg']}
+            widths={[400,640,800,1024]}
+            sizes="(min-width:1024px) 480px, 90vw"
+            quality={82}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <!-- Étape 2 -->
+  <li class="reveal">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <!-- Texte (mobile d’abord, desktop à droite) -->
+      <div class="order-1 lg:order-2">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#387B58] text-white font-bold text-lg md:text-xl">02</span>
+          <h3 class="text-2xl font-semibold text-[#1E2939]">Intervention protocolisée</h3>
+        </div>
+        <p class="text-[#475569] mb-4">
+          Méthodes documentées, EPI adaptés, respect des surfaces et de l’environnement.
+        </p>
+        <ul class="space-y-2 text-sm text-[#475569]">
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Équipements de dernière génération</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Dosages maîtrisés & consignes de site</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Contrôle qualité continu</li>
+        </ul>
+      </div>
+
+      <!-- Média (mobile après le texte, desktop à gauche) -->
+      <div class="order-2 lg:order-1 rounded-2xl bg-[#DBEAFE] p-5 md:p-12">
+        <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+          <Image
+            src={interventionKlinova}
+            alt="Technicien Klinova en intervention de nettoyage"
+            class="h-full w-full object-cover object-center"
+            formats={['avif','webp','jpeg']}
+            widths={[400,640,800,1024]}
+            sizes="(min-width:1024px) 480px, 90vw"
+            quality={82}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <!-- Étape 3 -->
+  <li class="reveal">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <!-- Texte -->
+      <div class="order-1">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#2D5A3D] text-white font-bold text-lg md:text-xl">03</span>
+          <h3 class="text-2xl font-semibold text-[#1E2939]">Contrôle & traçabilité</h3>
+        </div>
+        <p class="text-[#475569] mb-4">
+          Vérifications finales, preuves d’intervention, conseils d’entretien et plan de suivi si nécessaire.
+        </p>
+        <ul class="space-y-2 text-sm text-[#475569]">
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Check-list signée + photos</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Compte-rendu & recommandations</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>Planification d’un suivi</li>
+        </ul>
+      </div>
+
+      <!-- Média -->
+      <div class="order-2 rounded-2xl bg-[#C0E2D0] p-5 md:p-12">
+        <div class="aspect-square rounded-xl overflow-hidden shadow-sm bg-white/80 flex items-center justify-center">
+          <Image
+            src={controle}
+            alt="Contrôle qualité et traçabilité après intervention"
+            class="h-full w-full object-cover object-center"
+            formats={['avif','webp','jpeg']}
+            widths={[400,640,800,1024]}
+            sizes="(min-width:1024px) 480px, 90vw"
+            quality={82}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </li>
+
+</ol>
+
+
+    
 
     </div>
   </div>
@@ -909,21 +890,7 @@ import FeatureItem from '~/components/cards/FeatureItem.astro';
       </div>
 
       <!-- CTA discret -->
-      <div class="text-center mt-12 pt-8 border-t border-[#E8F2ED] reveal">
-        <p class="text-base mb-6 text-[#475569]">Une zone nécessite une intervention sanitaire spécialisée ?</p>
-        <a
-          href="/contact"
-          class="inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:shadow
-                 border-2 border-[#CFE3D8] text-[#1E2939] hover:bg-[#E8F2ED]
-                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3F8D65] focus-visible:ring-offset-2"
-          data-action="cta" data-source="hygiene-renforcee" data-intent="contact-specialise"
-        >
-          Nous consulter
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
-          </svg>
-        </a>
-      </div>
+      
     </div>
   </div>
 </section>

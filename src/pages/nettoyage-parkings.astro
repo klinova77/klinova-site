@@ -90,13 +90,22 @@ const faqSchema = {
 
 
 const popupContext = {
-  title: 'Devis nettoyage de moquettes',
-  subtitle: 'Obtenez un devis personnalisé sous 24h',
-  serviceKey: 'moquette',
-  serviceLabel: 'Nettoyage de moquette',
-  trackingSource: 'popup-moquette',
-  presetSubject: 'Devis nettoyage moquette (copro / pro)',
-  creditImpotEnabled: true, 
+  // Titres plus engageants
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  
+  // Tracking plus précis
+  serviceKey: 'rappel-parking',
+  serviceLabel: 'Demande rappel - Page parking',
+  trackingSource: 'popup-parking-header', // ou 'popup-home-hero'
+  
+  // Email plus contextualisé
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  
+  // Désactivé sur page institutionnelle
+  creditImpotEnabled: false,
+  
+ 
 };
 ---
 
@@ -120,8 +129,7 @@ const popupContext = {
 
 <section
   class="relative bg-gradient-to-br from-[#F8FAFC] to-[#DBEAFE] pt-24 pb-16"
-  data-hide-cta
-  data-section="hero" 
+ 
 >
   <div class="container-responsive">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -152,53 +160,22 @@ const popupContext = {
         </p>
 
         <!-- Points de réassurance avec animations décalées -->
-        <div class="flex flex-wrap gap-6 text-[#475569] animate-fade-in-up animation-delay-300">
-          <div class="flex items-center transform hover:scale-105 transition-all duration-200">
-            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            Intervention sur-mesure
-          </div>
-          <div class="flex items-center transform hover:scale-105 transition-all duration-200 animation-delay-100">
-            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            Équipements industriels
-          </div>
-          <div class="flex items-center transform hover:scale-105 transition-all duration-200 animation-delay-200">
-            <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            Devis gratuit
-          </div>
-        </div>
+       
 
-        <!-- CTA principal avec animations -->
-        <div class="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up animation-delay-400">
-          <Button
-            href="tel:0676738661"
-            label="06 76 73 86 61"
-            variant="primary"
-            size="lg"
-            ariaLabel="Appeler Klinova au 06 76 73 86 61"
-            tracking={{ action: 'cta_phone_hero_parking', source: 'hero_parking' }}
-          >
-            <svg class="w-5 h-5 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-            </svg>
-            06 76 73 86 61
-          </Button>
-
-          <Button
-            href="#"
-            label="Demander un devis"
-            variant="secondary"
-            size="lg"
-            tracking={{ action: 'cta_form_hero_parking', source: 'hero_parking' }}
-            data={{ openPopup: 'devis-parking' }}
-          />
-        </div>
-
+       <!-- CTA principal avec animations -->
+<div class="hidden md:flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up animation-delay-400">
+  <Button
+    href="#formulaire"
+    variant="tertiary"
+    size="lg"
+    class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+    ariaLabel="Nous contacter pour le nettoyage de parking"
+    tracking={{ action: 'lead', source: 'hero-parking', intent: 'cta-tertiary' }}
+    data={{ service: 'devis-parking' }}
+  >
+    Nous contacter
+  </Button>
+</div>
         <!-- Mention légale discrete -->
         <p class="text-sm text-[#6B7280] mt-6 animate-fade-in-up animation-delay-500">
           Intervention planifiée • Syndics, copropriétés et entreprises • Urgences sinistres acceptées

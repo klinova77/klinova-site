@@ -1,55 +1,66 @@
 ---
+// src/layouts/LayoutWithCTA.astro
 import BaseLayout from './Layout.astro';
 import FloatingBottomCTA from '~/components/UI/FloatingBottomCTA.astro';
 
-/** Contexte du popup */
+/** Contexte du popup (passé tel quel à BaseLayout) */
 interface PopupCtx {
   serviceKey?: string;
   serviceLabel?: string;
   trackingSource?: string;
   presetSubject?: string | null;
-
-  // ⚠️ utilise "title" / "subtitle" (pas popupTitle/popupSubtitle)
-  title?: string | null;
+  title?: string | null;      // utiliser title / subtitle (pas popupTitle/popupSubtitle)
   subtitle?: string | null;
-
   creditImpotEnabled?: boolean;
 }
 
 /** Props du layout */
 export interface Props {
+  /* SEO & contenu */
   title: string;
   description?: string;
   canonical?: string;
-
-  popupContext?: PopupCtx;                  // ✅ on la déclare ici
+  popupContext?: PopupCtx;
   seo?: { title?: string; description?: string; lang?: string };
 
-  stickyEnabled?: boolean;
-  stickyShowAfter?: 'immediate' | 'scroll';
-  stickyTargetSelector?: string;
-  stickyMobileOnly?: boolean;
+  /* Floating CTA */
+  stickyEnabled?: boolean;                    // active la barre
+  stickyShowAfter?: 'immediate' | 'scroll';   // LP = immediate, vitrine = scroll
+  stickyMobileOnly?: boolean;                 // true = mobile-only
+  stickyColorMode?: 'instant' | 'progressive';// pour forcer la couleur si besoin
+
+  /* Paramètres comportement (peuvent être surchargés par page) */
+  hideSelector?: string;                      // zones qui cachent la barre
+  activateSelector?: string;                  // zone qui déclenche le vert
+  activateDelayMs?: number;                   // délai avant passage au vert
 }
 
 const {
   title,
   description,
   canonical,
-
-  popupContext,   // <- récupéré
-  seo,            // <- récupéré
+  popupContext,
+  seo,
 
   stickyEnabled = true,
   stickyShowAfter = 'scroll',
-  stickyTargetSelector = '[data-hero]',
   stickyMobileOnly = true,
+  stickyColorMode, // optionnel
+
+  // défauts (surchargables depuis la page)
+  hideSelector = '[data-hide-floating-cta]',
+  activateSelector = '[data-activate-floating-cta]',
+  activateDelayMs = 600,
 } = Astro.props as Props;
+
+/* Couleur auto : LP(immediate) => instant ; vitrine(scroll) => progressive */
+const computedColorMode =
+  stickyColorMode ?? (stickyShowAfter === 'immediate' ? 'instant' : 'progressive');
 
 const path = Astro.url.pathname;
 const isContact = path.includes('contact');
 ---
 
-<!-- ✅ on forwarde popupContext & seo vers BaseLayout -->
 <BaseLayout
   title={title}
   description={description}
@@ -59,15 +70,16 @@ const isContact = path.includes('contact');
 >
   <slot />
 
-{stickyEnabled && !isContact && (
-  <FloatingBottomCTA
-    enabled={true}
-    showAfter="scroll"
-    targetSelector="[data-hide-cta]"
-    mobileOnly={true}
-  />
-)}
-
-
-  <!-- ❌ NE PAS rendre un second PopupForm ici -->
+  {stickyEnabled && !isContact && (
+    <FloatingBottomCTA
+      enabled
+      showAfter={stickyShowAfter}         
+      colorMode={computedColorMode}        
+      mobileOnly={stickyMobileOnly}        
+      
+      hideSelector={hideSelector}
+      activateSelector={activateSelector}
+      activateDelayMs={activateDelayMs}
+    />
+  )}
 </BaseLayout>
