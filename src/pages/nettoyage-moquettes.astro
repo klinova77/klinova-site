@@ -118,20 +118,37 @@ const faqSchema = {
 const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 70 });
 const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: [768,1024,1280,1536], quality: 70 });
 
+
+
+
 ---
 
 <LayoutWithCTA
   popupContext={popupContext}
-  seo={{
-    title: 'Nettoyage de moquettes – Klinova',
-    description: 'Prestations pro de nettoyage de moquettes en Île-de-France : protocoles industriels, séchage rapide, devis en 24h.',
-  }}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"  
+ 
+
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+
+  activateDelayMs={800} 
+  stickyMobileOnly={true}      
+
+
+
+
+  seo={{ title: 'Nettoyage de moquettes – Klinova', description: '…' }}
 >
+
+
 
 
 <section
   data-hero
   class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
+  data-hide-floating-cta
+  data-hero
    
 >
   <div class="absolute inset-0 z-0">
@@ -256,6 +273,7 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 
 
 <section
+ 
   id="savoir-faire"
   class="bg-white py-12 md:py-20 border-t border-[#E5E7EB]"
 >
@@ -385,7 +403,8 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 
 
 <!-- Section Problématiques Clients -->
-<section class="py-16 md:py-20 bg-white">
+<section class="py-16 md:py-20 bg-white"
+data-activate-floating-cta>
   <div class="container mx-auto px-6 lg:px-12">
     <!-- En-tête de section -->
     <div class="text-center mb-12">
@@ -2424,6 +2443,8 @@ data-hide-cta
   }
 })();
 </script>
+
+
 
 
 </LayoutWithCTA>
