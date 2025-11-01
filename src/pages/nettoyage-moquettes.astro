@@ -6,9 +6,7 @@ import Button from '~/components/UI/Button.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 
-// Import image optimisée
-import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
-import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.jpg';
+
 
 
 
@@ -195,9 +193,7 @@ const jsonLd = [
   breadcrumb
 ];
 
-// Images responsive déjà optimisées
-const mobileImg = await getImage({ src: heroMoquettesMobile, format: 'webp', widths: [360,480,640,750], quality: 70 });
-const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: [768,1024,1280,1536], quality: 70 });
+
 ---
 
 <LayoutWithCTA
@@ -221,12 +217,11 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 >
 
 <Fragment slot="head">
-  <!-- Préchargement des images principales -->
+  <!-- 🌿 Préchargement direct des images héro -->
   <link
     rel="preload"
     as="image"
-    imagesrcset={desktopImg.srcset}
-    imagesizes="(min-width:768px) 100vw"
+    href="/images/nettoyage-moquette-avant-apres.webp"
     fetchpriority="high"
     type="image/webp"
     media="(min-width:768px)"
@@ -234,8 +229,7 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   <link
     rel="preload"
     as="image"
-    imagesrcset={mobileImg.srcset}
-    imagesizes="100vw"
+    href="/images/nettoyage-moquette-avant-apres-mobile.webp"
     fetchpriority="high"
     type="image/webp"
     media="(max-width:767px)"
@@ -254,28 +248,28 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   <div class="absolute inset-0 z-0">
     <!-- Image mobile (cachée sur desktop) -->
   <!-- Image mobile -->
-<Image
-  {...mobileImg}
-  width={mobileImg.attributes.width}
-  height={mobileImg.attributes.height}
-  alt="Avant et après nettoyage professionnel de moquette"
-  class="w-full h-full object-cover md:hidden"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-/>
+ <img
+    src="/images/nettoyage-moquette-avant-apres-mobile.webp"
+    width="750"
+    height="1000"
+    alt="Avant et après nettoyage professionnel de moquette"
+    class="w-full h-full object-cover md:hidden"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
 
-<!-- Image desktop -->
-<Image
-  {...desktopImg}
-  width={desktopImg.attributes.width}
-  height={desktopImg.attributes.height}
-  alt="Avant et après nettoyage professionnel de moquette"
-  class="w-full h-full object-cover hidden md:block"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-/>
+  <!-- 🌿 Image desktop -->
+  <img
+    src="/images/nettoyage-moquette-avant-apres.webp"
+    width="1920"
+    height="1080"
+    alt="Avant et après nettoyage professionnel de moquette"
+    class="w-full h-full object-cover hidden md:block"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
 
 
 
