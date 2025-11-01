@@ -1,0 +1,101 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image } from 'astro:assets';
+import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.webp';
+import heroMoquettesMobile from '~/assets/images/hero-moquettes-mobile-portrait.webp';
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de moquettes à domicile, en copropriété et bureaux — Klinova Paris"
+  description="Entretien professionnel des moquettes à domicile, en copropriétés et locaux d’entreprise. Nettoyage à sec ou injection-extraction, séchage rapide, résultats durables."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-moquettes.jpg"
+  appendBrandToTitle={false}
+>
+
+<Fragment slot="head">
+  <!-- Préchargement des images Hero -->
+  <link
+    rel="preload"
+    as="image"
+    href={heroMoquettes}
+    imagesizes="(min-width:768px) 100vw"
+    fetchpriority="high"
+    type="image/webp"
+    media="(min-width:768px)"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href={heroMoquettesMobile}
+    imagesizes="100vw"
+    fetchpriority="high"
+    type="image/webp"
+    media="(max-width:767px)"
+  />
+</Fragment>
+
+<section
+  data-hero
+  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
+  data-hide-floating-cta
+  data-hide-header-cta
+>
+  <div class="absolute inset-0 z-0">
+    <!-- Hero mobile -->
+    <Image
+      src={heroMoquettesMobile}
+      width={800}
+      height={1200}
+      alt="Avant et après nettoyage professionnel de moquette"
+      class="w-full h-full object-cover md:hidden"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+
+    <!-- Hero desktop -->
+    <Image
+      src={heroMoquettes}
+      width={1920}
+      height={1080}
+      alt="Avant et après nettoyage professionnel de moquette"
+      class="w-full h-full object-cover hidden md:block"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+
+    <!-- Overlay allégé (optionnel pour tests LCP) -->
+    <div
+      class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-black/10 to-transparent z-[1]"
+      aria-hidden="true"
+    ></div>
+  </div>
+
+  <div class="relative z-10 container px-6">
+    <div class="max-w-xl">
+      <h1 class="text-3xl md:text-5xl font-semibold text-[#1E2939] mb-4">
+        Nettoyage de moquettes professionnel à Paris et en Île-de-France
+      </h1>
+      <p class="text-base text-[#475569] leading-relaxed mb-6">
+        Redonnez vie à vos revêtements textiles grâce à nos équipements haute performance et produits adaptés à chaque fibre.
+      </p>
+      <Button
+        href="tel:0676738661"
+        label="06 76 73 86 61"
+        variant="primary"
+        size="lg"
+      />
+    </div>
+  </div>
+</section>
