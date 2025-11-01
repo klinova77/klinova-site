@@ -6,7 +6,7 @@ import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { LINKS } from '~/lib/links';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import heroImg from '~/assets/images/machines-klinova.jpg';
 import diagnostic from '~/assets/images/diagnostic-klinova.jpg';
 import interventionKlinova from '~/assets/images/intervention-klinova.jpg';
@@ -23,6 +23,17 @@ import equipmentKlinova from '~/assets/images/equipment-klinova-team.webp';
 import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
+
+
+
+// Preload AVIF "utile" (mobile + breakpoint desktop principal)
+const heroSizes = '(min-width:1024px) 1024px, 100vw';
+const heroPreload = await getImage({
+  src: heroImg,
+  widths: [640, 1024],
+  format: 'avif',
+  quality: 62,
+});
 
 // --- Popup / tracking
 const popupContext = {
@@ -148,6 +159,14 @@ const jsonLd = [
   jsonLd={jsonLd}
 >
 
+<link
+  rel="preload"
+  as="image"
+  imagesrcset={heroPreload.srcset}
+  imagesizes={heroSizes}
+  fetchpriority="high"
+/>
+
 <section
   data-hero
   data-section="hero"
@@ -155,17 +174,17 @@ const jsonLd = [
   class="relative isolate flex min-h-[100svh] md:min-h-[90vh] overflow-hidden items-center justify-center"
 >
   <!-- Image LCP -->
-  <Image
+   <Image
     src={heroImg}
     alt="Parc d'équipements de nettoyage professionnels Klinova"
-    formats={['avif','webp','jpeg']}
-    widths={[768,1024,1440,1920]}
-    quality={100}
-    sizes="100vw"
+    formats={['avif','webp']}        /* pas de jpeg ici */
+    widths={[640, 1024, 1440]}       /* évite 1920 si le hero n’en a pas besoin */
+    quality={68}                     /* au lieu de 100 */
+    sizes={heroSizes}
     loading="eager"
     fetchpriority="high"
+    decoding="async"
     class="absolute inset-0 h-full w-full object-cover object-center"
-    style="filter: brightness(1.2);"
   />
 
 
