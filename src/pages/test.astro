@@ -1,8 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import heroMoquettes from '~/assets/images/nettoyage-moquettes-avant-apres.webp';
+import heroMoquettes from '../assets/images/nettoyage-moquettes-avant-apres.jpg';
 ---
 
 <section class="relative min-h-screen flex items-center justify-center">
-  <Image src={heroMoquettes} alt="" loading="eager" fetchpriority="high" width={1920} height={1080} />
+  <Image
+    src={heroMoquettes}
+    alt=""
+    loading="eager"
+    fetchpriority="high"
+    width={1920}
+    height={1080}
+    decoding="async"
+  />
 </section>
