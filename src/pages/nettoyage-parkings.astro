@@ -11,11 +11,12 @@ import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.w
 import { getImage } from 'astro:assets';
 const heroPreload = await getImage({
   src: heroParking,
-  widths: [640, 1024],
+  widths: [640, 1024, 1280],
   format: 'avif',
   quality: 62,
 });
-const preloadSizes = '(min-width:1024px) 640px, 100vw';
+const heroSizes = '(min-width:1024px) 640px, 100vw';
+
 
 
 
@@ -216,7 +217,7 @@ const jsonLd = [
   stickyMobileOnly={true}      
 
 
-   pathname={Astro.url.pathname}
+  pathname={Astro.url.pathname}
   pageType="service"
   title="Nettoyage de parkings, parkings souterrains et garages — Klinova Paris"
   description="Décapage, dégraissage et entretien régulier de parkings. Autolaveuse industrielle, récupération des eaux, protocoles sécurité et finitions soignées."
@@ -230,15 +231,15 @@ const jsonLd = [
 
 
 <Fragment slot="head">
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset={heroPreload.srcset}
-      imagesizes={preloadSizes}
-      type={heroPreload.attributes.type}
-      media="(min-width:768px)"
-      fetchpriority="high"
-    />
+   <link
+  rel="preload"
+  as="image"
+  imagesrcset={heroPreload.srcset}
+  imagesizes={heroSizes}
+  type={heroPreload.attributes.type}  /* "image/avif" */
+  fetchpriority="high"
+/>
+
   </Fragment>
 
 
@@ -313,17 +314,18 @@ const jsonLd = [
   <div class="relative overflow-hidden rounded-2xl group defer-shadow">
     <div class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#F1F5F9]">
       <Image
-        src={heroParking}
-        alt="Parking souterrain propre et sec après nettoyage professionnel"
-        class="w-full h-full object-cover [transition:none]"
-        widths={[384, 640, 768, 1024, 1280]}
-        sizes="(min-width:1024px) 640px, 100vw"
-        format="avif"
-        quality={62}
-        placeholder="blur"
-        loading="lazy"
-        decoding="async"
-      />
+  src={heroParking}
+  alt="Parking souterrain propre et sec après nettoyage professionnel"
+  class="w-full h-full object-cover [transition:none]"
+  formats={['avif','webp']}
+  widths={[640, 1024, 1280]}
+  sizes="(min-width:1024px) 640px, 100vw"
+  quality={62}
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+/>
+
     </div>
   </div>
 </div>
