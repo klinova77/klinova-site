@@ -158,7 +158,6 @@ const jsonLd = [
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
-
 <link
   rel="preload"
   as="image"
@@ -171,35 +170,35 @@ const jsonLd = [
   data-hero
   data-section="hero"
   data-hide-cta
-  class="relative isolate flex min-h-[100svh] md:min-h-[90vh] overflow-hidden items-center justify-center"
+  class="relative flex min-h-[100svh] md:min-h-[90vh] overflow-hidden items-center justify-center"
 >
-  <!-- Image LCP -->
-   <Image
+  <!-- Image LCP : pas de filter, pas de transition, pas de decoding="async" -->
+  <Image
     src={heroImg}
     alt="Parc d'équipements de nettoyage professionnels Klinova"
-    formats={['avif','webp']}        /* pas de jpeg ici */
-    widths={[640, 1024, 1440]}       /* évite 1920 si le hero n’en a pas besoin */
-    quality={68}                     /* au lieu de 100 */
+    formats={['avif','webp']}
+    widths={[640, 1024, 1440]}
+    quality={68}
     sizes={heroSizes}
     loading="eager"
     fetchpriority="high"
-    decoding="async"
-    class="absolute inset-0 h-full w-full object-cover object-center"
+    class="absolute inset-0 h-full w-full object-cover object-center will-change-transform"
+    style="transform: translateZ(0);"  /* force layer composité, peinture plus prévisible */
   />
 
-
- <!-- Overlay mixte allégé -->
-<div
-  class="absolute inset-0"
-  style="
-    background:
-      /* Linéaire doux : garde de la lumière */
-      linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.05) 100%),
-      /* Radial subtil au centre, plus clair */
-      radial-gradient(circle at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.4) 100%);
-    background-blend-mode: multiply;
-  "
-></div>
+  <!-- Overlay ultra-léger (1 seul gradient, pas de blend-mode) -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 pointer-events-none"
+    style="
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.45) 0%,
+        rgba(0,0,0,0.22) 48%,
+        rgba(0,0,0,0.06) 100%
+      );
+    "
+  ></div>
 
 
   <!-- Contenu -->
