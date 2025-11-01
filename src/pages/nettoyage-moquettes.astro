@@ -217,23 +217,12 @@ const jsonLd = [
 >
 
 <Fragment slot="head">
-  <!-- 🌿 Préchargement direct des images héro -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/nettoyage-moquette-avant-apres.webp"
-    fetchpriority="high"
-    type="image/webp"
-    media="(min-width:768px)"
-  />
-  <link
-    rel="preload"
-    as="image"
-    href="/images/nettoyage-moquette-avant-apres-mobile.webp"
-    fetchpriority="high"
-    type="image/webp"
-    media="(max-width:767px)"
-  />
+<link rel="preload" as="image"
+      href="/images/nettoyage-moquette-avant-apres.webp"
+      media="(min-width:768px)" fetchpriority="high" />
+<link rel="preload" as="image"
+      href="/images/nettoyage-moquette-avant-apres-mobile.webp"
+      media="(max-width:767px)" fetchpriority="high" />
 </Fragment>
 
 
@@ -248,28 +237,16 @@ const jsonLd = [
   <div class="absolute inset-0 z-0">
     <!-- Image mobile (cachée sur desktop) -->
   <!-- Image mobile -->
- <img
-    src="/images/nettoyage-moquette-avant-apres-mobile.webp"
-    width="750"
-    height="1000"
-    alt="Avant et après nettoyage professionnel de moquette"
-    class="w-full h-full object-cover md:hidden"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
-  />
-
-  <!-- 🌿 Image desktop -->
+<picture class="absolute inset-0 block">
+  <source media="(min-width:768px)" srcset="/images/nettoyage-moquette-avant-apres.webp" />
   <img
-    src="/images/nettoyage-moquette-avant-apres.webp"
-    width="1920"
-    height="1080"
+    src="/images/nettoyage-moquette-avant-apres-mobile.webp"
     alt="Avant et après nettoyage professionnel de moquette"
-    class="w-full h-full object-cover hidden md:block"
-    loading="eager"
-    fetchpriority="high"
-    decoding="async"
+    width="750" height="1000"
+    loading="eager" fetchpriority="high" decoding="async"
+    class="w-full h-full object-cover"
   />
+</picture>
 
 
 
