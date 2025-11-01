@@ -104,7 +104,8 @@ const ctx = normalize(popupContext);
 <Footer />
 
 <!-- ✅ Passage du contexte complet (incluant showFileUpload/maxFiles) -->
-<PopupForm context={ctx} />
+<PopupForm client:idle context={ctx} />
+
 
 <!-- Analytics événementiels -->
 <script is:inline>
