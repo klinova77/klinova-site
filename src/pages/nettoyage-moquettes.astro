@@ -221,7 +221,7 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 >
 
 <Fragment slot="head">
-  <!-- Précharge desktop -->
+  <!-- Préchargement des images principales -->
   <link
     rel="preload"
     as="image"
@@ -231,7 +231,6 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
     type="image/webp"
     media="(min-width:768px)"
   />
-  <!-- Précharge mobile -->
   <link
     rel="preload"
     as="image"
@@ -254,9 +253,11 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 >
   <div class="absolute inset-0 z-0">
     <!-- Image mobile (cachée sur desktop) -->
-  <Image
-  src={mobileImg.src}
-  srcset={mobileImg.srcset}
+  <!-- Image mobile -->
+<Image
+  {...mobileImg}
+  width={mobileImg.attributes.width}
+  height={mobileImg.attributes.height}
   alt="Avant et après nettoyage professionnel de moquette"
   class="w-full h-full object-cover md:hidden"
   loading="eager"
@@ -264,15 +265,18 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   decoding="async"
 />
 
+<!-- Image desktop -->
 <Image
-  src={desktopImg.src}
-  srcset={desktopImg.srcset}
+  {...desktopImg}
+  width={desktopImg.attributes.width}
+  height={desktopImg.attributes.height}
   alt="Avant et après nettoyage professionnel de moquette"
   class="w-full h-full object-cover hidden md:block"
   loading="eager"
   fetchpriority="high"
   decoding="async"
 />
+
 
 
     <!-- Overlay -->
