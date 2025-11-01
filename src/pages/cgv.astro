@@ -19,13 +19,39 @@ const phoneA = linkAttrs(phoneHref);
 const contactA = linkAttrs(contactHref);
 
 
+const site = 'https://klinova.fr';
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Conditions Générales de Vente — Klinova",
+    "url": `${site}/cgv`,
+    "description": "Conditions générales de vente des prestations de nettoyage et maintenance technique proposées par Klinova à Paris et en Île-de-France.",
+    "breadcrumb": { "@id": `${site}#breadcrumb-cgv` }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${site}#breadcrumb-cgv`,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Conditions Générales de Vente", "item": `${site}/cgv` }
+    ]
+  }
+];
 ---
 
-
-
 <Layout
-  title="Conditions générales de vente - Klinova"
-  description="Conditions générales de vente de Klinova - Modalités d'exécution, responsabilité et règlement des prestations de nettoyage professionnel."
+  pathname={Astro.url.pathname}
+  pageType="legal"
+  title="Conditions Générales de Vente — Klinova"
+  description="CGV de Klinova — prestations de nettoyage professionnel, maintenance technique et désinfection en Île-de-France. Informations sur les conditions de commande, paiement et responsabilité."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Conditions Générales de Vente"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
 >
 
 <section class="section-padding bg-white">

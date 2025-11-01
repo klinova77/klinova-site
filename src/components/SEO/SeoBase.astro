@@ -1,58 +1,58 @@
 ---
 /**
- * SeoBase.astro — SEO centralisé
- * - GTM/GA seulement après consentement → pas de preconnect par défaut
- * - Hreflang rendu uniquement si fourni (site non multilingue sinon)
+ * SeoBase.astro — version Klinova
+ * - Centralise les balises SEO, OpenGraph, Twitter & JSON-LD.
+ * - Compatible Astro 5 + Tailwind v4.
+ * - Pas de dépendance à Stop-Punaises.
  */
+
 import { buildSeo } from '~/lib/seo';
 
 export interface Props {
-  /* ✅ nouveaux inputs “auto” */
-  pathname?: string;            // ex: Astro.url.pathname
-  pageType?: string;            // 'home' | 'faq' | 'contact' | ...
-  appendBrandToTitle?: boolean; // défaut: true
+  /* Inputs automatiques */
+  pathname?: string;
+  pageType?: string;             // 'home' | 'service' | 'contact' | etc.
+  appendBrandToTitle?: boolean;  // défaut: true
 
-  /* ✅ existants (overrides possibles) */
+  /* Overrides manuels */
   title?: string;
   description?: string;
-  canonical?: string;            // chemin relatif ou URL absolue
-  noindex?: boolean;             // "noindex,follow" si true
-  ogImage?: string;              // chemin relatif ou URL absolue
+  canonical?: string;
+  noindex?: boolean;
+  ogImage?: string;
   ogImageAlt?: string;
   articleType?: 'website' | 'article';
-  publishedTime?: string;        // ISO 8601
-  modifiedTime?: string;         // ISO 8601
-  locale?: string;               // ex: "fr_FR"
+  publishedTime?: string;
+  modifiedTime?: string;
+  locale?: string;
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
-  siteName?: string;             // défaut: "Stop-Punaises"
-  hrefLangs?: Record<string, string>;  // ex: { fr: '/chemin', en: 'https://...' }
-  allowThirdPartyHints?: boolean; // défaut: false
+  siteName?: string;
+  hrefLangs?: Record<string, string>;
+  allowThirdPartyHints?: boolean;
 }
 
 const {
-  /* auto */
   pathname,
   pageType,
   appendBrandToTitle = true,
 
-  /* overrides */
   title = '',
   description = '',
   canonical = '',
   noindex = false,
   ogImage = '/images/og/og-default.jpg',
-  ogImageAlt = 'Stop-Punaises – Spécialiste punaises de lit à Paris',
+  ogImageAlt = 'Klinova – Entreprise de propreté et d’entretien à Paris et en Île-de-France',
   articleType = 'website',
   publishedTime,
   modifiedTime,
   locale = 'fr_FR',
   jsonLd,
-  siteName = 'Stop-Punaises',
+  siteName = 'Klinova',
   hrefLangs,
-  allowThirdPartyHints = false
+  allowThirdPartyHints = false,
 } = Astro.props as Props;
 
-/* 🔧 Auto-SEO via helper (respecte tous les overrides fournis) */
+/* Auto-SEO via helper */
 const auto = buildSeo({
   pathname: typeof pathname === 'string' ? pathname : (Astro.url?.pathname ?? '/'),
   pageType,
@@ -64,23 +64,21 @@ const auto = buildSeo({
   appendBrandToTitle,
 });
 
-/* ✅ valeurs finales */
+/* Valeurs finales */
 const finalTitle = auto.title;
 const finalDescription = auto.description;
 const finalCanonical = auto.canonical;
 const finalNoindex = auto.noindex;
 const finalOgImage = auto.ogImage;
 
-/* Base site (sans trailing slash) */
-const site = Astro.site?.toString().replace(/\/+$/, '') || 'https://stop-punaises.fr';
+/* Domaine principal */
+const site = Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr';
 
 /* Helper URL absolue */
-const toAbs = (url: string) => {
-  if (!url) return '';
-  return url.startsWith('http') ? url : `${site}${url.startsWith('/') ? url : `/${url}`}`;
-};
+const toAbs = (url: string) =>
+  !url ? '' : url.startsWith('http') ? url : `${site}${url.startsWith('/') ? url : `/${url}`}`;
 
-/* ❗ utiliser les *final* */
+/* Données finales */
 const canonicalAbs = finalCanonical ? toAbs(finalCanonical) : (Astro.url?.toString() || site);
 const ogImageAbs = finalOgImage ? toAbs(finalOgImage) : '';
 const robots = finalNoindex ? 'noindex, follow' : 'index, follow';
@@ -97,12 +95,11 @@ const robots = finalNoindex ? 'noindex, follow' : 'index, follow';
 <!-- Canonical -->
 {canonicalAbs && <link rel="canonical" href={canonicalAbs} />}
 
-<!-- Hreflang (UNIQUEMENT si variants fournis) -->
+<!-- Hreflang -->
 {hrefLangs &&
   Object.entries(hrefLangs).map(([lang, url]) => (
     <link rel="alternate" hreflang={lang} href={url.startsWith('http') ? url : toAbs(url)} />
-  ))
-}
+  ))}
 
 <!-- Open Graph -->
 <meta property="og:type" content={articleType} />
@@ -115,20 +112,19 @@ const robots = finalNoindex ? 'noindex, follow' : 'index, follow';
   <>
     <meta property="og:image" content={ogImageAbs} />
     <meta property="og:image:alt" content={ogImageAlt} />
-    {/* Pas de type/width/height pour laisser les crawlers gérer (ou assure une 1200x630) */}
   </>
 )}
 
-<!-- Article (si article) -->
+<!-- Article (si type article) -->
 {articleType === 'article' && (
   <>
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     <meta property="article:author" content={siteName} />
-    <meta property="article:section" content="Désinsectisation" />
-    <meta property="article:tag" content="punaises de lit" />
-    <meta property="article:tag" content="désinsectisation" />
+    <meta property="article:section" content="Propreté et hygiène professionnelle" />
+    <meta property="article:tag" content="nettoyage professionnel" />
     <meta property="article:tag" content="Paris" />
+    <meta property="article:tag" content="Île-de-France" />
   </>
 )}
 
@@ -143,28 +139,33 @@ const robots = finalNoindex ? 'noindex, follow' : 'index, follow';
   </>
 )}
 
-<!-- JSON-LD (fallback LocalBusiness si rien n’est fourni) -->
+<!-- JSON-LD : LocalBusiness Klinova -->
 {!jsonLd && (
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": siteName,
-    "description": finalDescription || "Traitement professionnel des punaises de lit à Paris et en Île-de-France. Devis gratuit, intervention rapide, garantie incluse. Certification Certibiocide.",
-    "url": site,
-    "logo": `${site}/images/logo-stop-punaises.webp`,
-    "image": ogImageAbs || `${site}/images/og/og-default.jpg`,
-    "telephone": "+33630221228",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d'Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "areaServed": "Île-de-France",
-    "priceRange": "€€",
-    "openingHours": "Mo-Su 08:00-20:00"
-  })} />
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": siteName,
+      "description":
+        finalDescription ||
+        "Entreprise de propreté et de maintenance à Paris : nettoyage de moquettes, parkings, balcons et désinfection professionnelle.",
+      "url": site,
+      "logo": `${site}/images/logo-klinova.webp`,
+      "image": ogImageAbs || `${site}/images/og/og-default.jpg`,
+      "telephone": "+33676738661",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6 rue d’Armaillé",
+        "addressLocality": "Paris",
+        "postalCode": "75017",
+        "addressCountry": "FR"
+      },
+      "areaServed": "Île-de-France",
+      "priceRange": "€€",
+      "openingHours": "Mo-Su 08:00-20:00"
+    })}
+  />
 )}
 
 {jsonLd && (
@@ -175,7 +176,7 @@ const robots = finalNoindex ? 'noindex, follow' : 'index, follow';
     : <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 )}
 
-<!-- Hints tiers optionnels (après consentement explicite) -->
+<!-- Hints tiers optionnels -->
 {allowThirdPartyHints && (
   <>
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />

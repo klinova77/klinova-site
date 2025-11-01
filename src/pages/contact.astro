@@ -3,30 +3,99 @@ import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/UI/Button.astro';
 import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
 
-const title = 'Devis gratuit en 24h – Stop-Punaises Paris & IDF';
-const description = 'Obtenez votre devis gratuit sous 24h. Expert punaises de lit agréé. Intervention rapide en Île-de-France.';
-const canonical = '/contact';
+
 
 // UID pour isoler l’autofill & éviter conflits si plusieurs formulaires
 const uid = 'cf' + Math.random().toString(36).slice(2, 8);
 const formId = `contact-form-${uid}`;
+
+
+const site = 'https://klinova.fr';
+const orgId = `${site}#organization`;
+const lbId  = `${site}#localbusiness`;
+
+/* --- JSON-LD (ContactPage + Organization + LocalBusiness + Fil d’Ariane) --- */
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Klinova",
+    "url": `${site}/contact`,
+    "description": "Contactez Klinova pour un devis ou une intervention de nettoyage en Île-de-France : parkings, moquettes, balcons, désinfection. Réponse sous 24h.",
+    "breadcrumb": { "@id": `${site}#breadcrumb-contact` },
+    "about": { "@id": orgId },
+    "mainEntity": { "@id": lbId }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": orgId,
+    "name": "Klinova",
+    "url": site,
+    "logo": `${site}/images/logo-klinova.webp`,
+    "brand": "Klinova",
+    "description": "Société de propreté et de maintenance technique à Paris et en Île-de-France : nettoyage de parkings, moquettes, balcons et désinfection professionnelle.",
+    "sameAs": [
+      "https://www.linkedin.com/company/klinova"
+      // "https://g.page/r/CZ8tKlinova"   // ← ajoute quand ta fiche GBP est active
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+33676738661",
+      "contactType": "Service client",
+      "areaServed": "FR",
+      "availableLanguage": ["fr"]
+    }]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": lbId,
+    "name": "Klinova",
+    "url": site,
+    "image": `${site}/images/og/og-klinova-home.png`,
+    "telephone": "+33676738661",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 rue d’Armaillé",
+      "addressLocality": "Paris",
+      "postalCode": "75017",
+      "addressCountry": "FR"
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    "openingHours": "Mo-Su 08:00-20:00",
+    "parentOrganization": { "@id": orgId }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${site}#breadcrumb-contact`,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": `${site}/contact` }
+    ]
+  }
+];
 ---
 
 <Layout
-  pathname="/contact"
+  pathname={Astro.url.pathname}
   pageType="contact"
-  title={title}
-  description={description}
-  canonical={canonical}
+  title="Contact Klinova — Devis et intervention en Île-de-France"
+  description="Besoin d’un devis ou d’une intervention ? Contactez Klinova : nettoyage de parkings, moquettes, balcons et désinfection à Paris et en Île-de-France. Réponse sous 24h."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Contact pour devis de nettoyage à Paris et en Île-de-France"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
 >
+
+
+
   <main class="container-responsive section-padding">
     <!-- HERO + FORMULAIRE (above the fold) -->
 
-
-<!-- Section formulaire de contact -->
-
-
-<!-- Section formulaire de contact -->
 <section class="contact-section">
   <div class="container-responsive">
     <!-- Header de section -->
@@ -61,6 +130,7 @@ const formId = `contact-form-${uid}`;
             <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
             <input type="hidden" name="source" value="contact-page">
             <input type="hidden" name="page_path" value="/contact">
+            <input type="hidden" name="rgpd" value="accepte">
 
             <!-- Informations personnelles -->
             <div class="form-section">
@@ -81,6 +151,7 @@ const formId = `contact-form-${uid}`;
                     <label class="floating-label required" for="contact-prenom">Prénom</label>
                     <div class="field-border"></div>
                   </div>
+                  <div class="form-error" id="error-prenom"></div>
                 </div>
 
                 <div class="form-group">
@@ -108,12 +179,12 @@ const formId = `contact-form-${uid}`;
                       name="email"
                       class="form-input"
                       placeholder=" "
-                      required
                       autocomplete="email"
                     >
-                    <label class="floating-label required" for="contact-email">Email</label>
+                    <label class="floating-label" for="contact-email">Email</label>
                     <div class="field-border"></div>
                   </div>
+                  <div class="form-error" id="error-email"></div>
                 </div>
 
                 <div class="form-group">
@@ -131,6 +202,7 @@ const formId = `contact-form-${uid}`;
                     <label class="floating-label required" for="contact-telephone">Téléphone</label>
                     <div class="field-border"></div>
                   </div>
+                  <div class="form-error" id="error-telephone"></div>
                 </div>
               </div>
 
@@ -225,13 +297,17 @@ const formId = `contact-form-${uid}`;
               </div>
             </div>
 
-            <!-- Upload photos -->
+            <!-- Upload photos - RÉPARÉ avec le système qui fonctionne -->
             <div class="form-section">
               <div class="form-group">
                 <label class="photos-label">Photos (optionnel)</label>
-                <div class="photos-drop" id="photos-drop" data-max="5" data-max-mb="8">
-                  <input type="file" id="contact-photos" name="__photos_local" accept="image/*" multiple class="hidden" />
-                  <label for="contact-photos" class="photos-upload-label">
+                
+                <!-- Input caché -->
+                <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+                
+                <!-- Zone de drop cliquable -->
+                <div id="photos-drop-zone" class="photos-drop-zone">
+                  <div class="photos-drop-content">
                     <svg class="photos-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14
@@ -241,11 +317,17 @@ const formId = `contact-form-${uid}`;
                       <div class="photos-title">Ajoutez vos photos</div>
                       <div class="photos-help">Glissez-déposez ou cliquez • Max 5 photos • 8 MB par photo</div>
                     </div>
-                  </label>
+                  </div>
                 </div>
+                
+                <!-- Statut des photos -->
                 <div id="photos-status" class="photos-status">Aucune photo</div>
-                <ul id="photos-list" class="photos-list hidden"></ul>
-                <div id="photos-hidden" class="hidden"></div>
+                
+                <!-- Liste des photos -->
+                <div id="photos-list" class="photos-list hidden"></div>
+                
+                <!-- Container pour les URLs Cloudinary -->
+                <div id="photos-hidden"></div>
               </div>
             </div>
 
@@ -253,7 +335,7 @@ const formId = `contact-form-${uid}`;
             <div class="form-section">
               <div class="checkbox-group">
                 <div class="checkbox-wrapper">
-                  <input type="checkbox" id="contact-rgpd" name="rgpd" class="checkbox-input" required>
+                  <input type="checkbox" id="contact-rgpd" name="rgpd_consent" class="checkbox-input" required>
                   <label for="contact-rgpd" class="checkbox-label">
                     <div class="checkbox-box">
                       <svg class="checkbox-check" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -266,6 +348,7 @@ const formId = `contact-form-${uid}`;
                     </span>
                   </label>
                 </div>
+                <div class="form-error" id="error-rgpd"></div>
               </div>
             </div>
 
@@ -277,12 +360,14 @@ const formId = `contact-form-${uid}`;
                   <span id="submitText">Envoyer ma demande</span>
                 </span>
               </button>
+              <!-- Message de validation à côté du bouton -->
+              <div id="validation-message" class="validation-message" style="display:none;"></div>
 
               <div class="action-divider">
                 <span>ou</span>
               </div>
 
-              <a href={`tel:${PHONE_E164}`} class="btn-call">
+              <a href="tel:+33676738661" class="btn-call">
                 <div class="call-content">
                   <div class="call-icon-wrapper">
                     <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -291,7 +376,7 @@ const formId = `contact-form-${uid}`;
                   </div>
                   <div class="call-text">
                     <span class="call-label">Appelez-nous directement</span>
-                    <span class="call-number">{PHONE_DISPLAY}</span>
+                    <span class="call-number">06 76 73 86 61</span>
                   </div>
                 </div>
               </a>
@@ -326,7 +411,7 @@ const formId = `contact-form-${uid}`;
             <div>
               <div class="contact-label">Téléphone</div>
               <div class="contact-value">
-                <a href={`tel:${PHONE_E164}`}>{PHONE_DISPLAY}</a>
+                <a href="tel:+33676738661">06 76 73 86 61</a>
               </div>
             </div>
           </div>
@@ -338,7 +423,7 @@ const formId = `contact-form-${uid}`;
             <div>
               <div class="contact-label">WhatsApp</div>
               <div class="contact-value">
-                <a href="https://wa.me/33676738661" target="_blank" rel="noopener">{PHONE_DISPLAY}</a>
+                <a href="https://wa.me/33676738661" target="_blank" rel="noopener">06 76 73 86 61</a>
               </div>
             </div>
           </div>
@@ -383,7 +468,7 @@ const formId = `contact-form-${uid}`;
 </section>
 
 <style>
-/* Variables */
+/* Variables Klinova */
 .contact-section {
   --klinova-green: #3F8D65;
   --klinova-green-dark: #387B58;
@@ -520,6 +605,10 @@ const formId = `contact-form-${uid}`;
   box-shadow: 0 0 0 4px rgba(63, 141, 101, 0.15);
 }
 
+.form-input.error {
+  border-color: #ef4444;
+}
+
 .floating-label {
   position: absolute;
   left: 14px;
@@ -572,6 +661,19 @@ const formId = `contact-form-${uid}`;
   opacity: 1;
 }
 
+/* Messages d'erreur */
+.form-error {
+  font-size: 13px;
+  color: #ef4444;
+  margin-top: 6px;
+  min-height: 18px;
+  display: none;
+}
+
+.form-error:not(:empty) {
+  display: block;
+}
+
 /* Select */
 .select-label {
   display: block;
@@ -581,7 +683,6 @@ const formId = `contact-form-${uid}`;
   font-size: 15px;
 }
 
-/* Espace spécifique pour "Type de client" qui vient après le select */
 .form-group + .form-group .select-label {
   margin-top: 24px;
 }
@@ -698,7 +799,7 @@ const formId = `contact-form-${uid}`;
   transform: scaleX(1);
 }
 
-/* Photos */
+/* PHOTOS - Style optimisé avec le système qui fonctionne */
 .photos-label {
   display: block;
   font-weight: 600;
@@ -707,7 +808,7 @@ const formId = `contact-form-${uid}`;
   font-size: 15px;
 }
 
-.photos-drop {
+.photos-drop-zone {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -720,17 +821,18 @@ const formId = `contact-form-${uid}`;
   min-height: 80px;
 }
 
-.photos-drop:hover {
+.photos-drop-zone:hover,
+.photos-drop-zone.dragover {
   border-color: var(--klinova-green);
   background: var(--klinova-bg-exterieur);
 }
 
-.photos-upload-label {
+.photos-drop-content {
   display: flex;
   align-items: center;
   gap: 16px;
   width: 100%;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .photos-icon {
@@ -757,16 +859,83 @@ const formId = `contact-form-${uid}`;
   margin-top: 12px;
   font-size: 14px;
   color: var(--klinova-text-secondary);
+  font-weight: 500;
 }
 
 .photos-list {
   margin-top: 16px;
-  padding: 0;
-  list-style: none;
   display: grid;
   gap: 12px;
   max-height: 200px;
   overflow-y: auto;
+}
+
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid var(--klinova-separator);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: var(--klinova-text-title);
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: var(--klinova-text-secondary);
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: var(--klinova-separator);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: var(--klinova-green);
+  width: 0%;
+  transition: width 0.3s ease;
 }
 
 .hidden {
@@ -863,6 +1032,18 @@ const formId = `contact-form-${uid}`;
   background: rgba(254, 242, 242, 0.9);
   color: #dc2626;
   border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Message de validation à côté du bouton */
+.validation-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #fecaca;
+  margin-top: 8px;
 }
 
 /* Actions */
@@ -1054,7 +1235,7 @@ const formId = `contact-form-${uid}`;
 }
 
 .whatsapp-icon {
-  color: #25D366 !important; /* Couleur officielle WhatsApp */
+  color: #25D366 !important;
 }
 
 .contact-label {
@@ -1185,135 +1366,358 @@ const formId = `contact-form-${uid}`;
   const msg = document.getElementById('formMessage');
   const submitBtn = document.getElementById('submitBtn');
   const submitText = document.getElementById('submitText');
+  const validationMessage = document.getElementById('validation-message');
 
   if (!contactForm) return;
 
-  // Photos upload handler
+  // ✅ PHOTOS UPLOAD - Système du formulaire moquettes qui fonctionne
   const photosSetup = () => {
-    const drop = document.getElementById('photos-drop');
-    const input = document.getElementById('contact-photos');
-    const list = document.getElementById('photos-list');
-    const hidden = document.getElementById('photos-hidden');
-    const statusEl = document.getElementById('photos-status');
+    const photosInput = document.getElementById('photos-input');
+    const dropZone = document.getElementById('photos-drop-zone');
+    const photosList = document.getElementById('photos-list');
+    const photosStatus = document.getElementById('photos-status');
+    const photosHidden = document.getElementById('photos-hidden');
     
-    if (!drop || !input) return;
+    if (!photosInput || !dropZone) return;
 
-    const MAX = parseInt(drop.dataset.max || '5', 10);
-    const MAX_MB = parseInt(drop.dataset.maxMb || '8', 10);
+    let uploadingCount = 0;
+    let uploadedFiles = [];
+    const maxFiles = 5;
+    const maxMB = 8;
 
-    let files = [];
-
-    function updateStatus() {
-      if (files.length === 0) {
-        statusEl.textContent = 'Aucune photo';
-        list.classList.add('hidden');
+    function updatePhotosStatus() {
+      const total = uploadedFiles.length;
+      const success = uploadedFiles.filter(f => f.status === 'success').length;
+      const uploading = uploadingCount;
+      
+      if (total === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        photosList.classList.add('hidden');
       } else {
-        statusEl.textContent = `${files.length} photo(s) sélectionnée(s)`;
-        list.classList.remove('hidden');
+        photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+        photosList.classList.remove('hidden');
+      }
+      
+      submitBtn.disabled = uploadingCount > 0;
+    }
+
+    function addPhotoToList(file) {
+      const photoDiv = document.createElement('div');
+      photoDiv.className = 'photo-item';
+      photoDiv.dataset.fileName = file.name;
+      
+      photoDiv.innerHTML = `
+        <span class="photo-name">${file.name}</span>
+        <span class="photo-size">${(file.size / 1024 / 1024).toFixed(1)} MB</span>
+        <span class="photo-status uploading">Upload...</span>
+        <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+        <div class="photo-progress">
+          <div class="photo-progress-fill"></div>
+        </div>
+      `;
+      
+      photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+        removePhoto(file.name);
+      });
+      
+      photosList.appendChild(photoDiv);
+    }
+
+    function updatePhotoStatus(fileName, status, progress = 0) {
+      const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+      if (!photoDiv) return;
+      
+      const statusEl = photoDiv.querySelector('.photo-status');
+      const progressFill = photoDiv.querySelector('.photo-progress-fill');
+      
+      statusEl.className = `photo-status ${status}`;
+      
+      switch (status) {
+        case 'uploading':
+          statusEl.textContent = `${progress}%`;
+          progressFill.style.width = `${progress}%`;
+          break;
+        case 'success':
+          statusEl.textContent = 'Importée ✓';
+          progressFill.style.width = '100%';
+          break;
+        case 'error':
+          statusEl.textContent = 'Erreur ⚠';
+          progressFill.style.width = '0%';
+          break;
       }
     }
 
-    function renderFiles() {
-      if (!list) return;
-      
-      list.innerHTML = '';
-      files.forEach((file, index) => {
-        const li = document.createElement('li');
-        li.style.cssText = 'display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid var(--klinova-separator); border-radius: 12px; background: white; font-size: 14px;';
-        
-        li.innerHTML = `
-          <span style="flex: 1; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${file.name}</span>
-          <span style="color: var(--klinova-text-secondary);">${(file.size / 1024 / 1024).toFixed(1)} MB</span>
-          <button type="button" onclick="removeFile(${index})" style="background: #ef4444; color: white; border: none; width: 24px; height: 24px; border-radius: 50%; font-weight: bold; cursor: pointer;">×</button>
-        `;
-        
-        list.appendChild(li);
-      });
-    }
-
-    window.removeFile = function(index) {
-      files.splice(index, 1);
-      updateFileInput();
-      renderFiles();
-      updateStatus();
-    };
-
-    function updateFileInput() {
-      const dt = new DataTransfer();
-      files.forEach(file => dt.items.add(file));
-      input.files = dt.files;
-    }
-
-    function handleFiles(fileList) {
-      const newFiles = Array.from(fileList).filter(file => {
-        if (!/^image\/(jpe?g|png|webp)$/i.test(file.type)) {
-          alert(`Format non supporté: ${file.name}`);
-          return false;
+    function removePhoto(fileName) {
+      const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+      if (fileIndex !== -1) {
+        const file = uploadedFiles[fileIndex];
+        if (file.cloudinaryUrl) {
+          const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+          if (hiddenInput) hiddenInput.remove();
         }
-        if (file.size > MAX_MB * 1024 * 1024) {
-          alert(`"${file.name}" dépasse ${MAX_MB} MB (${(file.size / 1024 / 1024).toFixed(1)} MB)`);
-          return false;
-        }
-        return true;
-      });
-
-      const available = MAX - files.length;
-      const toAdd = newFiles.slice(0, available);
-      
-      if (newFiles.length > available) {
-        alert(`Maximum ${MAX} fichiers autorisés. ${newFiles.length - available} fichier(s) ignoré(s).`);
+        uploadedFiles.splice(fileIndex, 1);
       }
-
-      files.push(...toAdd);
-      updateFileInput();
-      renderFiles();
-      updateStatus();
+      
+      const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+      if (photoDiv) photoDiv.remove();
+      
+      updatePhotosStatus();
     }
 
-    // Events
-    input.addEventListener('change', (e) => {
+    async function getCloudinarySignature() {
+      const response = await fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+      
+      const data = await response.json();
+      if (!data.ok) {
+        throw new Error(data.error || 'Erreur signature Cloudinary');
+      }
+      
+      return data;
+    }
+
+    async function uploadToCloudinary(file) {
+      const fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null
+      };
+      
+      uploadedFiles.push(fileObj);
+      addPhotoToList(file);
+      uploadingCount++;
+      updatePhotosStatus();
+      
+      try {
+        const signature = await getCloudinarySignature();
+        
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('api_key', signature.apiKey);
+        formData.append('timestamp', String(signature.timestamp));
+        formData.append('signature', signature.signature);
+        formData.append('folder', signature.folder);
+        if (signature.uploadPreset) {
+          formData.append('upload_preset', signature.uploadPreset);
+        }
+
+        const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+        
+        const xhr = new XMLHttpRequest();
+        
+        xhr.upload.onprogress = (e) => {
+          if (e.lengthComputable) {
+            const progress = Math.round((e.loaded / e.total) * 100);
+            fileObj.progress = progress;
+            updatePhotoStatus(file.name, 'uploading', progress);
+          }
+        };
+        
+        xhr.onload = () => {
+          uploadingCount--;
+          try {
+            const result = JSON.parse(xhr.responseText);
+            if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+              fileObj.status = 'success';
+              fileObj.cloudinaryUrl = result.secure_url;
+              updatePhotoStatus(file.name, 'success');
+              
+              const hiddenInput = document.createElement('input');
+              hiddenInput.type = 'hidden';
+              hiddenInput.name = 'photos[]';
+              hiddenInput.value = result.secure_url;
+              photosHidden.appendChild(hiddenInput);
+            } else {
+              throw new Error('Upload failed');
+            }
+          } catch (err) {
+            fileObj.status = 'error';
+            updatePhotoStatus(file.name, 'error');
+            console.error('Upload error:', err);
+          }
+          updatePhotosStatus();
+        };
+        
+        xhr.onerror = () => {
+          uploadingCount--;
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          updatePhotosStatus();
+          console.error('Upload network error');
+        };
+        
+        xhr.open('POST', uploadUrl);
+        xhr.send(formData);
+        
+      } catch (error) {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Cloudinary error:', error);
+      }
+    }
+
+    function validateFiles(files) {
+      const validFiles = [];
+      
+      for (const file of files) {
+        if (!file.type.startsWith('image/')) {
+          alert(`${file.name} n'est pas une image valide`);
+          continue;
+        }
+        
+        if (file.size > maxMB * 1024 * 1024) {
+          alert(`${file.name} dépasse la limite de ${maxMB} MB`);
+          continue;
+        }
+        
+        if (uploadedFiles.length + validFiles.length >= maxFiles) {
+          alert(`Maximum ${maxFiles} photos autorisées`);
+          break;
+        }
+        
+        validFiles.push(file);
+      }
+      
+      return validFiles;
+    }
+
+    function handleFiles(files) {
+      const validFiles = validateFiles(Array.from(files));
+      validFiles.forEach(file => uploadToCloudinary(file));
+    }
+
+    // Event listeners pour les photos
+    photosInput.addEventListener('change', (e) => {
       if (e.target.files.length > 0) {
         handleFiles(e.target.files);
+        e.target.value = '';
       }
     });
 
-    // Drag & drop
-    ['dragenter', 'dragover'].forEach(eventName => {
-      drop.addEventListener(eventName, (e) => {
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
         e.preventDefault();
         e.stopPropagation();
-        drop.style.borderColor = 'var(--klinova-green)';
-        drop.style.backgroundColor = 'var(--klinova-bg-exterieur)';
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('dragover');
       });
     });
 
     ['dragleave', 'drop'].forEach(eventName => {
-      drop.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        drop.style.borderColor = 'var(--klinova-separator)';
-        drop.style.backgroundColor = 'white';
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('dragover');
       });
     });
 
-    drop.addEventListener('drop', (e) => {
+    dropZone.addEventListener('drop', (e) => {
       const files = e.dataTransfer.files;
       if (files.length > 0) {
         handleFiles(files);
       }
     });
 
-    drop.addEventListener('click', (e) => {
-      if (e.target.tagName === 'BUTTON') return;
-      input.click();
-    });
-
-    updateStatus();
+    updatePhotosStatus();
+    
+    window.resetPhotosUpload = function() {
+      uploadedFiles = [];
+      photosInput.value = '';
+      photosList.innerHTML = '';
+      updatePhotosStatus();
+    };
   };
+
+  // ✅ VALIDATION AMÉLIORÉE
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorId = 'error-' + field.name.replace('_', '-');
+    const errorDiv = document.getElementById(errorId);
+    
+    if (field.required && !value) {
+      field.classList.add('error');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.style.display = 'block';
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('error');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.style.display = 'block';
+      }
+      return false;
+    }
+    
+    field.classList.remove('error');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.style.display = 'none';
+    }
+    return true;
+  }
+
+  function showValidationMessage(text) {
+    if (!validationMessage) return;
+    validationMessage.textContent = text;
+    validationMessage.style.display = text ? 'block' : 'none';
+  }
 
   // Form submission
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    showValidationMessage('');
+    
+    // Validation des champs obligatoires
+    const requiredFields = contactForm.querySelectorAll('[required]');
+    let isValid = true;
+    let firstErrorField = null;
+    
+    requiredFields.forEach(field => {
+      if (!validateField(field)) {
+        isValid = false;
+        if (!firstErrorField) {
+          firstErrorField = field;
+        }
+      }
+    });
+    
+    // Validation email si rempli
+    const emailField = contactForm.querySelector('[name="email"]');
+    if (emailField && emailField.value.trim()) {
+      if (!validateField(emailField)) {
+        isValid = false;
+        if (!firstErrorField) {
+          firstErrorField = emailField;
+        }
+      }
+    }
+    
+    if (!isValid) {
+      showValidationMessage('⚠️ Veuillez remplir tous les champs obligatoires');
+      if (firstErrorField) {
+        firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstErrorField.focus();
+      }
+      return;
+    }
 
     setLoading(true);
     showMessage('', 'clear');
@@ -1332,17 +1736,16 @@ const formId = `contact-form-${uid}`;
       if (response.ok) {
         showMessage('✅ Merci ! Votre demande a été envoyée.\nNous vous recontactons rapidement.', 'success');
         contactForm.reset();
-        // Reset photos if any
-        if (window.removeFile) {
-          document.querySelectorAll('.photos-list li').forEach((_, index) => {
-            window.removeFile(0); // Always remove the first one
-          });
+        
+        if (window.resetPhotosUpload) {
+          window.resetPhotosUpload();
         }
       } else {
         const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
         showMessage(err, 'error');
       }
     } catch (err) {
+      console.error('Erreur envoi formulaire:', err);
       showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
     } finally {
       setLoading(false);
@@ -1372,9 +1775,15 @@ const formId = `contact-form-${uid}`;
     }
   }
 
-  // Initialize photos
+  // Validation en temps réel
+  contactForm.addEventListener('blur', (e) => {
+    if (e.target.matches('input, select, textarea')) {
+      validateField(e.target);
+    }
+  }, true);
+
+  // ✅ INITIALISATION
   photosSetup();
 })();
 </script>
-
 </Layout>

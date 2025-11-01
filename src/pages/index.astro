@@ -1,19 +1,10 @@
 ---
-
 import Layout from '../layouts/LayoutWithCTA.astro';
 
-import { LINKS, PHONE_DISPLAY, linkAttrs } from '~/lib/links';
 import Button from '~/components/UI/Button.astro';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
-
-import FooterForm2StepV2 from '~/components/FooterForm2StepV2.astro';
-
-const phoneE164 = '+33630221228';
-const phoneDisplay = '06 30 22 12 28';
-const telHref = `tel:${phoneE164.replace(/[^\d+]/g, '')}`;
-import heroImg from '~/assets/images/machines-klinova.jpg';
-
-import ThumbImage from '~/components/UI/images/ThumbImage.astro';
+import { LINKS } from '~/lib/links';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 
 import { Image } from 'astro:assets';
 import heroImg from '~/assets/images/machines-klinova.jpg';
@@ -33,63 +24,129 @@ import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
 
-
-
+// --- Popup / tracking
 const popupContext = {
-  // Titres plus engageants
   title: 'Demander à être rappelé',
   subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
-  
-  // Tracking plus précis
   serviceKey: 'rappel-home',
   serviceLabel: 'Demande rappel - Page accueil',
   trackingSource: 'popup-home-header', // ou 'popup-home-hero'
-  
-  // Email plus contextualisé
   presetSubject: 'Nouvelle demande de rappel - klinova.fr',
-  
-  // Désactivé sur page institutionnelle
   creditImpotEnabled: false,
-  
- 
 };
+
+// --- IDs SEO JSON-LD
+const site = 'https://klinova.fr';
+const orgId = `${site}#organization`;
+const lbId  = `${site}#localbusiness`;
+
+// --- JSON-LD enrichi (HOME) — propre et valide
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": orgId,
+    "name": "Klinova",
+    "url": site,
+    "logo": `${site}/images/logo-klinova.webp`,
+    "brand": "Klinova",
+    "description": "Entreprise de propreté et de maintenance technique opérant à Paris et en Île-de-France. Spécialisée dans le nettoyage de parkings, moquettes, balcons et la désinfection professionnelle.",
+    "sameAs": [
+      "https://www.linkedin.com/company/klinova"
+      // "https://g.page/r/CZ8tKlinova",       // ← ajoute quand ta fiche GBP est live
+      // "https://www.facebook.com/klinova.proprete"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": lbId,
+    "name": "Klinova",
+    "url": site,
+    "image": `${site}/images/og/og-klinova-home.png`,
+    "telephone": "+33676738661",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 rue d’Armaillé",
+      "addressLocality": "Paris",
+      "postalCode": "75017",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.8799,
+      "longitude": 2.2937
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    "openingHours": "Mo-Su 08:00-20:00",
+    "parentOrganization": { "@id": orgId }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Propreté et maintenance technique",
+    "name": "Nettoyage et entretien professionnels en Île-de-France",
+    "provider": { "@id": lbId },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    "category": "Propreté professionnelle",
+    "description": "Klinova propose des prestations de nettoyage et de maintenance technique : parkings souterrains, moquettes en copropriété, balcons souillés par fientes, et désinfection virucide. Interventions sur tout le territoire francilien, avec protocoles documentés et traçabilité complète.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prestations principales Klinova",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nettoyage de parkings souterrains",
+            "description": "Dégraissage, décapage et autolaveuse industrielle."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nettoyage de moquettes en copropriété",
+            "description": "Injection-extraction, vapeur sèche et désodorisation."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nettoyage de balcons et fientes de pigeons",
+            "description": "Désinfection, décontamination et pose de protections anti-pigeons."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Désinfection professionnelle et hygiène renforcée",
+            "description": "Traitements virucides EN14476 et protocoles sanitaires en copropriété."
+          }
+        }
+      ]
+    }
+  }
+];
 ---
 
 <Layout
- popupContext={popupContext}
-  
+  popupContext={popupContext}
 
-
- /* Props SEO — niveau top */
+  /* Props SEO — top */
   pathname={Astro.url.pathname}
   pageType="home"
   title="Klinova — Propreté & maintenance technique à Paris"
   description="Nettoyage de parkings, moquettes en copropriété, balcons difficiles. Méthodes pro, devis rapide, interventions en Île-de-France."
   siteName="Klinova"
-  ogImage="/images/og/og-klinova-home.jpg"   // ⚠️ assure-toi que le fichier existe (1200×630)
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova – Propreté & maintenance à Paris et en Île-de-France"
   appendBrandToTitle={false}
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Klinova",
-    "url": "https://klinova.fr",
-    "telephone": "+33676738661",
-    "description": "Entreprise de propreté et maintenance technique à Paris et en Île-de-France.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d'Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "areaServed": "Île-de-France",
-    "image": "https://klinova.fr/images/og/og-klinova-home.jpg",
-    "priceRange": "€€"
-  }}
-
-
-
- >
+  jsonLd={jsonLd}
+>
 
 <section
   data-hero
@@ -110,6 +167,7 @@ const popupContext = {
     class="absolute inset-0 h-full w-full object-cover object-center"
     style="filter: brightness(1.2);"
   />
+
 
  <!-- Overlay mixte allégé -->
 <div

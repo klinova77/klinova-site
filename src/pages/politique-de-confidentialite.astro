@@ -3,12 +3,44 @@ import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/ui/Button.astro';
 import { LINKS, PHONE_DISPLAY } from '~/lib/links';
 
+
+
+
+const site = 'https://klinova.fr';
+const orgId = `${site}#organization`;
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "PrivacyPolicy",
+    "name": "Politique de confidentialité — Klinova",
+    "url": `${site}/politique-de-confidentialite`,
+    "description": "Politique de confidentialité et protection des données personnelles de Klinova. Conformité RGPD : gestion des formulaires, cookies, droit d’accès et suppression.",
+    "about": { "@id": orgId },
+    "breadcrumb": { "@id": `${site}#breadcrumb-privacy` }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${site}#breadcrumb-privacy`,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Politique de confidentialité", "item": `${site}/politique-de-confidentialite` }
+    ]
+  }
+];
 ---
 
-
 <Layout
-  title="Politique de confidentialité - Klinova"
-  description="Politique de confidentialité de Klinova - Protection de vos données personnelles et respect de votre vie privée."
+  pathname={Astro.url.pathname}
+  pageType="legal"
+  title="Politique de confidentialité — Klinova"
+  description="Politique de confidentialité du site Klinova.fr : collecte, traitement et protection des données personnelles conformément au RGPD."
+  siteName="Klinova"
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Politique de confidentialité et RGPD"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
 >
 
 <section class="section-padding bg-white">

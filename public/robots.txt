@@ -1,30 +1,13 @@
-# Robots.txt — klinova.fr
-# Autorise tout le site sauf quelques pages internes ou techniques
+import sitemap from '@astrojs/sitemap';
 
-User-agent: *
-Allow: /
-
-# 🚫 Pages internes ou sans intérêt SEO
-Disallow: /merci
-Disallow: /confirmation
-Disallow: /admin/
-Disallow: /dev/
-Disallow: /test/
-Disallow: /_assets/
-Disallow: /.astro/
-
-# 🚫 Paramètres de tracking
-Disallow: /*?utm_*
-Disallow: /*?gclid=*
-Disallow: /*?fbclid=*
-
-# 🚫 API et fichiers techniques
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /*.xml$
-
-# 🕷️ Crawl delay (facultatif, Google l’ignore)
-Crawl-delay: 1
-
-# ✅ Sitemap
-Sitemap: https://stop-punaises.fr/sitemap-index.xml
+export default defineConfig({
+  site: 'https://klinova.fr',
+  integrations: [
+    sitemap({
+      filter: (url) => {
+        const p = new URL(url).pathname;
+        return !NOINDEX.has(p);
+      },
+    }),
+  ],
+});

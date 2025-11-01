@@ -25,10 +25,11 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
             protocoles maîtrisés, approche responsable.
           </p>
 
-          <!-- Contact principal -->
+          <!-- Contact principal avec aria-labels -->
           <div class="space-y-3">
             <a
               href={LINKS.phone}
+              aria-label={`Appeler Klinova au ${PHONE_DISPLAY}`}
               class="flex items-center gap-3 text-[var(--color-action-600)] hover:opacity-90 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-action-600)] rounded"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,6 +40,7 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
 
             <a
               href={`mailto:${LINKS.email ?? 'contact@klinova.fr'}`}
+              aria-label="Écrire à Klinova par e-mail"
               class="flex items-center gap-3 text-gray-300 hover:text-[var(--color-action-600)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-action-600)] rounded"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -47,6 +49,14 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
               <span>{LINKS.email ?? 'contact@klinova.fr'}</span>
             </a>
           </div>
+
+          <!-- Bloc adresse NAP -->
+          <address class="not-italic mt-6 text-sm text-gray-300 leading-relaxed">
+            <div class="font-medium text-white">KLINOVA</div>
+            <div>6 rue d’Armaillé, 75017 Paris</div>
+            <div>SIREN 943 439 810 — RCS Paris</div>
+            <div class="mt-1">Ouvert : <time dateTime="Mo-Su 08:00-20:00">Lun-Dim 08:00–20:00</time></div>
+          </address>
         </div>
 
         <!-- Colonne 2: Services -->
@@ -56,10 +66,12 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
             <li><a href="/nettoyage-moquettes" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyage moquettes</a></li>
             <li><a href="/nettoyage-parkings" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyage parkings</a></li>
             <li><a href="/nettoyage-balcons" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Balcons & fientes</a></li>
-            <li><a href="/nettoyage-textiles" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyages de textiles</a></li>
-            <li><a href="/nettoyage-terrasses" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyage terrasses</a></li>
-            <li><a href="/traitement-nuisibles" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Traitement nuisibles</a></li>
-            <li><a href="/autres-services" class="text-gray-400 hover:text-[var(--color-action-600)] transition-colors text-xs">Autres prestations</a></li>
+
+            <!-- En attente de mise en ligne -->
+            <!-- <li><a href="/nettoyage-textiles" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyages de textiles</a></li> -->
+            <!-- <li><a href="/nettoyage-terrasses" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyage terrasses</a></li> -->
+            <!-- <li><a href="/traitement-nuisibles" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Traitement nuisibles</a></li> -->
+            <!-- <li><a href="/autres-services" class="text-gray-400 hover:text-[var(--color-action-600)] transition-colors text-xs">Autres prestations</a></li> -->
           </ul>
         </div>
 
@@ -68,7 +80,7 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
           <h3 class="font-semibold text-lg mb-4 text-white">Entreprise</h3>
           <ul class="space-y-3 text-sm">
             <li><a href="/a-propos" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">À propos</a></li>
-            <li><a href="/avance-immediate" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Avance immédiate</a></li>
+            <!-- <li><a href="/avance-immediate" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Avance immédiate</a></li> -->
             <li><a href="/references" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Références</a></li>
             <li><a href="/contact" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Contact</a></li>
             <li>
@@ -89,7 +101,7 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
           © {new Date().getFullYear()} Klinova — Nettoyage professionnel IDF
         </div>
 
-        <!-- Liens légaux (sans “À propos”) -->
+        <!-- Liens légaux -->
         <div class="flex flex-wrap items-center gap-4 text-xs text-gray-400">
           <a href={withUtm('/politique-de-confidentialite', { source: 'footer' })} class="hover:text-[var(--color-action-600)] transition-colors">Confidentialité</a>
           <span class="text-gray-600">•</span>
