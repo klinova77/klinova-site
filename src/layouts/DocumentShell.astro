@@ -30,6 +30,15 @@ const seoProps = Astro.props as SeoProps;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
+    <!-- 🔹 Preload de la police du header -->
+  <link
+    rel="preload"
+    href="/fonts/CaviarDreams-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
   <body class="font-sans bg-neutral-50 text-primary-900">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
