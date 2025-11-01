@@ -9,12 +9,11 @@
       "permanent": true
     },
 
-    { "source": "/:path*/",           "destination": "/:path*",                        "permanent": true },
-    { "source": "/:path*/index.html", "destination": "/:path*",                        "permanent": true },
+    { "source": "/:path+/",            "destination": "/:path*",                        "permanent": true },
+    { "source": "/:path+/index.html",  "destination": "/:path*",                        "permanent": true },
 
     { "source": "/nettoyage-de-moquettes",                   "destination": "/nettoyage-moquettes",               "permanent": true },
     { "source": "/nettoyage-professionnel-parkings-garages", "destination": "/nettoyage-parkings",                "permanent": true },
-    { "source": "/nettoyage-balcons",                        "destination": "/nettoyage-balcons",                  "permanent": true },
     { "source": "/nettoyage-terrasses-exterieurs",           "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
     { "source": "/nettoyage-terrasses-et-dexterieurs-copy",  "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
     { "source": "/nettoyage-professionnel-exterieurs",       "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
