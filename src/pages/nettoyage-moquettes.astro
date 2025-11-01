@@ -220,7 +220,28 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
   jsonLd={jsonLd}
 >
 
-
+<Fragment slot="head">
+  <!-- Précharge desktop -->
+  <link
+    rel="preload"
+    as="image"
+    imagesrcset={desktopImg.srcset}
+    imagesizes="(min-width:768px) 100vw"
+    fetchpriority="high"
+    type="image/webp"
+    media="(min-width:768px)"
+  />
+  <!-- Précharge mobile -->
+  <link
+    rel="preload"
+    as="image"
+    imagesrcset={mobileImg.srcset}
+    imagesizes="100vw"
+    fetchpriority="high"
+    type="image/webp"
+    media="(max-width:767px)"
+  />
+</Fragment>
 
 
 <section
@@ -233,21 +254,26 @@ const desktopImg = await getImage({ src: heroMoquettes, format: 'webp', widths: 
 >
   <div class="absolute inset-0 z-0">
     <!-- Image mobile (cachée sur desktop) -->
-    <img 
-      src={mobileImg.src}
-      srcset={mobileImg.srcset}
-      alt="Avant et après nettoyage professionnel de moquette"
-      decoding="async"
-      class="w-full h-full object-cover md:hidden"
-    />
-    <!-- Image desktop (cachée sur mobile) -->
-    <img 
-      src={desktopImg.src}
-      srcset={desktopImg.srcset}
-      alt="Avant et après nettoyage professionnel de moquette"
-      decoding="async"
-      class="w-full h-full object-cover hidden md:block"
-    />
+  <Image
+  src={mobileImg.src}
+  srcset={mobileImg.srcset}
+  alt="Avant et après nettoyage professionnel de moquette"
+  class="w-full h-full object-cover md:hidden"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+/>
+
+<Image
+  src={desktopImg.src}
+  srcset={desktopImg.srcset}
+  alt="Avant et après nettoyage professionnel de moquette"
+  class="w-full h-full object-cover hidden md:block"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+/>
+
 
     <!-- Overlay -->
     <div
