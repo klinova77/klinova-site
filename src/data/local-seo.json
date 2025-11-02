@@ -1,0 +1,92 @@
+{
+  "cities": [
+    {
+      "name": "Paris",
+      "slug": "paris",
+      "postalCodes": ["75001", "75002", "75003", "75004", "75005", "75006", "75007", "75008", "75009", "75010", "75011", "75012", "75013", "75014", "75015", "75016", "75017", "75018", "75019", "75020"],
+      "customDescription": "Nos équipes Klinova interviennent dans tous les arrondissements de Paris pour le nettoyage professionnel de moquettes, parkings et balcons. Des interventions planifiées, traçables et respectueuses de l’environnement.",
+      "ctaOverride": "Obtenez un devis express à Paris",
+      "faq": [
+        {
+          "question": "Intervenez-vous dans tous les arrondissements de Paris ?",
+          "answer": "Oui, Klinova intervient dans les 20 arrondissements de Paris, avec des délais courts pour les syndics, hôtels et entreprises."
+        },
+        {
+          "question": "Utilisez-vous des produits écologiques ?",
+          "answer": "Oui, nos protocoles privilégient des produits certifiés écolabel, compatibles avec la santé des occupants et des animaux."
+        }
+      ]
+    },
+    {
+      "name": "Boulogne-Billancourt",
+      "slug": "boulogne",
+      "postalCodes": ["92100"],
+      "customDescription": "Service de nettoyage haut de gamme à Boulogne-Billancourt. Klinova intervient pour les copropriétés, bureaux et logements avec des méthodes professionnelles et un suivi rigoureux."
+    },
+    {
+      "name": "Créteil",
+      "slug": "creteil",
+      "postalCodes": ["94000"]
+    },
+    {
+      "name": "Nogent-sur-Marne",
+      "slug": "nogent",
+      "postalCodes": ["94130"],
+      "customDescription": "Spécialiste du nettoyage en copropriété à Nogent-sur-Marne, Klinova propose des prestations de haute qualité pour les balcons, moquettes et parkings."
+    }
+  ],
+
+  "services": [
+    {
+      "key": "moquettes",
+      "name": "Nettoyage de moquettes",
+      "image": "/images/nettoyage-moquette-avant-apres.webp",
+      "defaultDescription": "Nettoyage professionnel de moquettes dans les bureaux et copropriétés. Désinfection, désodorisant et séchage rapide.",
+      "keywords": ["nettoyage moquette paris", "shampoing moquette copropriété", "entretien textile de sol"],
+      "faq": [
+        {
+          "question": "Quelle est la fréquence idéale de nettoyage de moquette ?",
+          "answer": "Pour les copropriétés ou bureaux, un nettoyage annuel est recommandé. Les zones à fort passage peuvent nécessiter 2 à 3 passages par an."
+        },
+        {
+          "question": "Est-ce que vos produits laissent une odeur forte ?",
+          "answer": "Non, nos produits sont neutres ou légèrement parfumés, et respectent les normes d’air intérieur."
+        }
+      ]
+    },
+    {
+      "key": "parkings",
+      "name": "Nettoyage de parkings",
+      "image": "/images/nettoyage-parking-autolaveuse.jpg",
+      "defaultDescription": "Nettoyage en profondeur des parkings et sous-sols avec autolaveuse, dégraissant et aspiration des eaux usées.",
+      "keywords": ["nettoyage parking souterrain", "dégraissage sol béton", "autolaveuse professionnelle"],
+      "faq": [
+        {
+          "question": "Faut-il évacuer les véhicules pendant le nettoyage ?",
+          "answer": "Oui, pour un décrassage complet, il est préférable de prévoir un créneau sans véhicules sur les zones à traiter."
+        },
+        {
+          "question": "Proposez-vous des contrats d’entretien annuels ?",
+          "answer": "Oui, avec tarifs dégressifs et planification automatique des passages."
+        }
+      ]
+    },
+    {
+      "key": "balcons",
+      "name": "Nettoyage de balcons et terrasses",
+      "image": "/images/nettoyage-balcons-fientes-pigeons.webp",
+      "defaultDescription": "Nettoyage et désinfection complète des balcons et terrasses, élimination des fientes et traitement anti-odeurs.",
+      "keywords": ["nettoyage balcon fientes", "désinfection terrasse", "nettoyage copropriété"],
+      "faq": [
+        {
+          "question": "Utilisez-vous un nettoyeur haute pression ?",
+          "answer": "Oui, lorsque les matériaux le permettent. Sinon, nous utilisons des méthodes manuelles ou vapeur sèche selon le revêtement."
+        },
+        {
+          "question": "Faut-il être présent pendant l’intervention ?",
+          "answer": "Non, nos techniciens peuvent intervenir en votre absence après remise des clés ou coordination avec le syndic."
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,13 @@
 ---
 // src/layouts/DocumentShell.astro
+
 import '../styles/global.css';
 import SeoBase, { type Props as SeoProps } from '~/components/SEO/SeoBase.astro';
 import { SITE_THEME } from '~/config/theme';
 
-export type Props = SeoProps;
-const seoProps = Astro.props as SeoProps;
+// Typage et fallback en cas de props manquants
+export type Props = Partial<SeoProps>;
+const seoProps = Astro.props as Partial<SeoProps>;
 ---
 
 <!DOCTYPE html>
@@ -15,60 +17,60 @@ const seoProps = Astro.props as SeoProps;
   data-bg-style={SITE_THEME.bgStyle}
   data-brand="klinova"
 >
- <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <!-- Préconnect pour GTM/GA -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.google.com">
+    <!-- Préconnect pour GTM/GA -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google.com">
 
-  <SeoBase {...seoProps} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- ✅ SEO Base (protégé si non défini) -->
+    {typeof SeoBase === 'function' && <SeoBase {...(seoProps ?? {})} />}
 
-  <!-- ✅ Preload police DANS le head -->
-  <link
-    rel="preload"
-    href="/fonts/CaviarDreams-Bold.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-    media="(min-width:768px)"
-  />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- ⚙️ GTM différé + sûr (onglets background) -->
-  <script is:inline>
-    (function() {
-      window.dataLayer = window.dataLayer || [];
-      function loadGTM() {
-        if (window.__gtmLoaded) return; window.__gtmLoaded = true;
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-          var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TWMFLQ5X');
+    <!-- ✅ Preload police DANS le head -->
+    <link
+      rel="preload"
+      href="/fonts/CaviarDreams-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      media="(min-width:768px)"
+    />
+
+    <!-- ⚙️ GTM différé + sûr (onglets background) -->
+    <script is:inline>
+      if (typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+        function loadGTM() {
+          if (window.__gtmLoaded) return; window.__gtmLoaded = true;
+          (function(w,d,s,l,i){
+            w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TWMFLQ5X');
+        }
+        window.addEventListener('load', () => setTimeout(loadGTM, 2500));
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') setTimeout(loadGTM, 500);
+        }, { once: true });
       }
-      // Charge après onload (+ délai court) ou dès que l’onglet devient visible
-      window.addEventListener('load', () => setTimeout(loadGTM, 2500));
-      document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible') setTimeout(loadGTM, 500);
-      }, { once: true });
-    })();
-  </script>
-</head>
+    </script>
+  </head>
 
-<body class="font-sans bg-neutral-50 text-primary-900">
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  <body class="font-sans bg-neutral-50 text-primary-900">
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMXB6QZN"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
-  <slot />
+    <slot />
 
-  <!-- Script interne non bloquant -->
-  <script src="/tracking-forms.js" defer></script>
-</body>
-
+    <!-- Script interne non bloquant -->
+    <script src="/tracking-forms.js" defer></script>
+  </body>
 </html>
