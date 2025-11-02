@@ -1,7 +1,7 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel'; // ✅ runtime Node
+import vercel from '@astrojs/vercel'; // ✅ bon import (server runtime)
 import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
 
@@ -19,10 +19,10 @@ export default defineConfig({
 
   // ✅ Adaptateur Vercel (runtime Node, pas Edge)
   adapter: vercel({
-    // includeFiles: [],
+    // includeFiles: [], // si tu veux embarquer des fichiers spécifiques
   }),
 
-  // ✅ Service d’images avec Sharp natif
+  // ✅ Service d’images avec Sharp natif (Astro v4)
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
@@ -47,40 +47,20 @@ export default defineConfig({
   ],
 
   // ────────────────────────────────────────────────────────────────
-  // ⚙️ Configuration Vite (plugins, alias, SSR, optimisations CSS)
+  // ⚙️ Configuration Vite (plugins, alias, SSR)
   // ────────────────────────────────────────────────────────────────
   vite: {
-    plugins: [
-      tailwindcss(),
-
-      // 🌿 Plugin maison : rendre les CSS non bloquants (sauf global index.css)
-      {
-        name: 'async-css-links',
-        transformIndexHtml(html) {
-          return html.replaceAll(
-            /<link\s+rel="stylesheet"\s+href="([^"]+)">/g,
-            (match, href) => {
-              // On garde le CSS principal bloquant
-              if (href.includes('index.')) return match;
-              // Autres CSS → non-bloquants
-              return `<link rel="stylesheet" href="${href}" media="print" onload="this.media='all'">`;
-            }
-          );
-        },
-      },
-    ],
-
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-
     css: { transformer: 'lightningcss' },
 
     // ✅ Important : ne pas bundler certaines libs Node côté SSR
     ssr: {
-      external: ['resend'],
+      external: ['resend'], // évite l’erreur "Rollup failed to resolve import 'resend'"
     },
   },
 });
