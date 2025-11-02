@@ -1,4 +1,21 @@
-<head>
+---
+// src/layouts/DocumentShell.astro
+import '../styles/global.css';
+import SeoBase, { type Props as SeoProps } from '~/components/SEO/SeoBase.astro';
+import { SITE_THEME } from '~/config/theme';
+
+export type Props = SeoProps;
+const seoProps = Astro.props as SeoProps;
+---
+
+<!DOCTYPE html>
+<html 
+  lang="fr" 
+  data-theme-action={SITE_THEME.action}
+  data-bg-style={SITE_THEME.bgStyle}
+  data-brand="klinova"
+>
+ <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
@@ -53,3 +70,5 @@
   <!-- Script interne non bloquant -->
   <script src="/tracking-forms.js" defer></script>
 </body>
+
+</html>
