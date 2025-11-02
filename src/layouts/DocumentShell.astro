@@ -1,64 +1,55 @@
----
-// src/layouts/DocumentShell.astro
-import '../styles/global.css';
-import SeoBase, { type Props as SeoProps } from '~/components/SEO/SeoBase.astro';
-import { SITE_THEME } from '~/config/theme';
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-export type Props = SeoProps;
-const seoProps = Astro.props as SeoProps;
----
+  <!-- Préconnect pour GTM/GA -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google.com">
 
-<!DOCTYPE html>
-<html 
-  lang="fr" 
-  data-theme-action={SITE_THEME.action}
-  data-bg-style={SITE_THEME.bgStyle}
-  data-brand="klinova"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    
- 
-   <!-- ⚙️ GTM différé de 3 secondes -->
-<script is:inline>
-window.dataLayer = window.dataLayer || [];
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TWMFLQ5X');
-  }, 10000); // ⏱️ délai avant chargement réel du GTM
-});
-</script>
+  <SeoBase {...seoProps} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-
-    <SeoBase {...seoProps} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  </head>
-
-    <!-- 🔹 Preload de la police du header -->
+  <!-- ✅ Preload police DANS le head -->
   <link
     rel="preload"
     href="/fonts/CaviarDreams-Bold.woff2"
     as="font"
     type="font/woff2"
     crossorigin
-     media="(min-width:768px)"
+    media="(min-width:768px)"
   />
 
-  <body class="font-sans bg-neutral-50 text-primary-900">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- ⚙️ GTM différé + sûr (onglets background) -->
+  <script is:inline>
+    (function() {
+      window.dataLayer = window.dataLayer || [];
+      function loadGTM() {
+        if (window.__gtmLoaded) return; window.__gtmLoaded = true;
+        (function(w,d,s,l,i){
+          w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TWMFLQ5X');
+      }
+      // Charge après onload (+ délai court) ou dès que l’onglet devient visible
+      window.addEventListener('load', () => setTimeout(loadGTM, 2500));
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') setTimeout(loadGTM, 500);
+      }, { once: true });
+    })();
+  </script>
+</head>
 
-    <slot />
+<body class="font-sans bg-neutral-50 text-primary-900">
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWMFLQ5X"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-    <script is:inline src="/tracking-forms.js"></script>
-  </body>
-</html>
+  <slot />
+
+  <!-- Script interne non bloquant -->
+  <script src="/tracking-forms.js" defer></script>
+</body>
