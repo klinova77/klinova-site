@@ -1,7 +1,7 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel'; // ✅ bon import (server runtime)
+import vercel from '@astrojs/vercel'; // ✅ runtime Node
 import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath } from 'node:url';
 
@@ -19,10 +19,10 @@ export default defineConfig({
 
   // ✅ Adaptateur Vercel (runtime Node, pas Edge)
   adapter: vercel({
-    // includeFiles: [], // si tu veux embarquer des fichiers spécifiques
+    // includeFiles: [],
   }),
 
-  // ✅ Service d’images avec Sharp natif (Astro v4)
+  // ✅ Service d’images avec Sharp natif
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
@@ -47,20 +47,40 @@ export default defineConfig({
   ],
 
   // ────────────────────────────────────────────────────────────────
-  // ⚙️ Configuration Vite (plugins, alias, SSR)
+  // ⚙️ Configuration Vite (plugins, alias, SSR, optimisations CSS)
   // ────────────────────────────────────────────────────────────────
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+
+      // 🌿 Plugin maison : rendre les CSS non bloquants (sauf global index.css)
+      {
+        name: 'async-css-links',
+        transformIndexHtml(html) {
+          return html.replaceAll(
+            /<link\s+rel="stylesheet"\s+href="([^"]+)">/g,
+            (match, href) => {
+              // On garde le CSS principal bloquant
+              if (href.includes('index.')) return match;
+              // Autres CSS → non-bloquants
+              return `<link rel="stylesheet" href="${href}" media="print" onload="this.media='all'">`;
+            }
+          );
+        },
+      },
+    ],
+
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
+
     css: { transformer: 'lightningcss' },
 
     // ✅ Important : ne pas bundler certaines libs Node côté SSR
     ssr: {
-      external: ['resend'], // évite l’erreur "Rollup failed to resolve import 'resend'"
+      external: ['resend'],
     },
   },
 });
