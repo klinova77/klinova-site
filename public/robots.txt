@@ -1,13 +1,17 @@
-import sitemap from '@astrojs/sitemap';
+# Robots.txt — Klinova
+User-agent: *
+Allow: /
 
-export default defineConfig({
-  site: 'https://klinova.fr',
-  integrations: [
-    sitemap({
-      filter: (url) => {
-        const p = new URL(url).pathname;
-        return !NOINDEX.has(p);
-      },
-    }),
-  ],
-});
+# Pages internes ou sans intérêt SEO
+Disallow: /merci
+Disallow: /confirmation
+Disallow: /admin/
+Disallow: /dev/
+Disallow: /test/
+
+# Dossiers techniques (pas utiles à indexer)
+Disallow: /_astro/
+Disallow: /_assets/
+
+# Sitemap
+Sitemap: https://klinova.fr/sitemap-index.xml
