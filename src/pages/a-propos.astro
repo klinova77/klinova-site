@@ -1,86 +1,41 @@
 ---
-// src/pages/a-propos.astro
 import Layout from '../layouts/Layout.astro';
 import { LINKS, PHONE_DISPLAY, linkAttrs } from '~/lib/links';
 import Button from '~/components/UI/Button.astro';
 import HeroCtaGroup from '~/components/UI/HeroCtaGroup.astro';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/a-propos';
+const pageName = 'À propos';
+
+// Contact
 const phoneE164 = '+33630221228';
 const phoneDisplay = '06 30 22 12 28';
 
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-/* --- JSON-LD enrichi (AboutPage + Organization + LocalBusiness + Fil d’Ariane) --- */
+// JSON-LD optimisé
 const jsonLd = [
+  // AboutPage - relie la page à l'Organisation
   {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "À propos de Klinova",
-    "url": `${site}/a-propos`,
-    "description": "Présentation de Klinova, société de propreté et de maintenance technique à Paris. Notre mission : garantir la propreté durable des immeubles, parkings, moquettes et balcons, en combinant efficacité, sécurité et respect de l’environnement.",
-    "breadcrumb": { "@id": `${site}#breadcrumb` },
-    "primaryTopic": { "@id": orgId }
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    'inLanguage': 'fr-FR',
+    'name': `${pageName} de Klinova`,
+    'url': `${site}${pageUrl}`,
+    'mainEntityOfPage': `${site}${pageUrl}`,
+    'about': { '@id': `${site}#organization` },
+    'primaryImageOfPage': { '@type': 'ImageObject', 'url': `${site}/images/og/og-klinova-home.png` },
+    'publisher': { '@id': `${site}#organization` },
+    'isPartOf': { '@id': `${site}#website` }
   },
+
+  // Fil d'Ariane
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": orgId,
-    "name": "Klinova",
-    "url": site,
-    "logo": `${site}/images/logo-klinova.webp`,
-    "brand": "Klinova",
-    "description": "Entreprise de propreté et de maintenance technique opérant à Paris et en Île-de-France. Spécialisée dans le nettoyage professionnel : parkings souterrains, moquettes, balcons et désinfection.",
-    "foundingDate": "2023",
-    "founder": {
-      "@type": "Person",
-      "name": "Julien Lamouchi"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/klinova",
-      "https://g.page/r/CZ8tKlinova"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+33676738661",
-      "contactType": "Service client",
-      "areaServed": "FR",
-      "availableLanguage": ["fr"]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": lbId,
-    "name": "Klinova",
-    "url": site,
-    "image": `${site}/images/og/og-klinova-home.png`,
-    "telephone": "+33676738661",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d’Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 48.8799,
-      "longitude": 2.2937
-    },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "parentOrganization": { "@id": orgId }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": `${site}#breadcrumb`,
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "À propos", "item": `${site}/a-propos` }
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': `${site}/` },
+      { '@type': 'ListItem', 'position': 2, 'name': 'À propos', 'item': `${site}${pageUrl}` }
     ]
   }
 ];
@@ -89,15 +44,14 @@ const jsonLd = [
 <Layout
   pathname={Astro.url.pathname}
   pageType="about"
-  title="À propos de Klinova — Société de propreté et maintenance à Paris"
-  description="Découvrez Klinova, société de propreté et maintenance technique à Paris. Notre équipe assure le nettoyage professionnel des parkings, moquettes et balcons en Île-de-France."
-  siteName="Klinova"
+  title="À propos — Klinova"
+  description="Klinova, entreprise de propreté et de maintenance technique : méthodes documentées, traçabilité, sécurité et interventions à Paris & en Île-de-France."
+  canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
-  ogImageAlt="Klinova — Société de nettoyage et maintenance à Paris et en Île-de-France"
+  ogImageAlt="Klinova — À propos de notre entreprise de propreté"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
-
 
 
 <section class="py-20 md:py-28 bg-gradient-to-br from-[#FCFCFC] to-[#F8F9FA] relative overflow-hidden">
@@ -109,7 +63,7 @@ const jsonLd = [
       <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-8 text-center">Notre mission</h2>
       <div class="bg-white/70 backdrop-blur-sm border border-[#E5E7EB]/50 rounded-2xl p-8 md:p-12 shadow-sm">
         <p class="text-lg text-[#475569] leading-relaxed mb-6">
-          Klinova est une société de propreté et de maintenance technique basée au 6&nbsp;rue d'Armaillé, 75017&nbsp;Paris. Nous accompagnons des copropriétés, syndics, entreprises et particuliers exigeants en Île-de-France avec trois priorités : un environnement sain, des espaces durables, et une exécution sans concession sur les fondamentaux.
+          Klinova est une société de propreté et de maintenance technique basée à Chelles en Seine-et-Marne et dont le siège social est situé au 6&nbsp;rue d'Armaillé, 75017&nbsp;Paris. Nous accompagnons des copropriétés, syndics, entreprises et particuliers exigeants en Île-de-France avec trois priorités : un environnement sain, des espaces durables, et une exécution sans concession sur les fondamentaux.
         </p>
         <div class="grid md:grid-cols-2 gap-8 mt-8">
           <div>

@@ -1,42 +1,59 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-
 import Button from '~/components/UI/Button.astro';
 import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/cgv';
+const pageName = 'Conditions Générales de Vente';
 
-
-
-const phoneHref   = LINKS.phone; // tel:+33630221228
-const phoneLabel  = PHONE_DISPLAY; // "06 30 22 12 28"
+// Contact
+const phoneHref = LINKS.phone;
+const phoneLabel = PHONE_DISPLAY;
 const contactHref = withUtm(LINKS.contactPage, { source: 'cgv', content: 'header-cta' });
 const phoneDisplay = '06 30 22 12 28';
 const phoneE164 = '+33630221228';
-
 
 // Astro ne supporte pas le spread sur éléments HTML -> on prépare les attrs
 const phoneA = linkAttrs(phoneHref);
 const contactA = linkAttrs(contactHref);
 
-
-const site = 'https://klinova.fr';
-
+// JSON-LD optimisé
 const jsonLd = [
+  // WebPage principale
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Conditions Générales de Vente — Klinova",
-    "url": `${site}/cgv`,
-    "description": "Conditions générales de vente des prestations de nettoyage et maintenance technique proposées par Klinova à Paris et en Île-de-France.",
-    "breadcrumb": { "@id": `${site}#breadcrumb-cgv` }
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'inLanguage': 'fr-FR',
+    'name': `${pageName} (CGV) — Klinova`,
+    'url': `${site}${pageUrl}`,
+    'mainEntityOfPage': `${site}${pageUrl}`,
+    'primaryImageOfPage': { '@type': 'ImageObject', 'url': `${site}/images/og/og-klinova-home.png` },
+    'about': { '@id': `${site}#organization` },
+    'publisher': { '@id': `${site}#organization` },
+    'isPartOf': { '@id': `${site}#website` }
   },
+
+  // TermsOfService spécifique
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": `${site}#breadcrumb-cgv`,
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "Conditions Générales de Vente", "item": `${site}/cgv` }
+    '@context': 'https://schema.org',
+    '@type': 'TermsOfService',
+    'inLanguage': 'fr-FR',
+    'name': 'Conditions Générales de Vente – Klinova',
+    'url': `${site}${pageUrl}`,
+    'description': 'Conditions d\'exécution des prestations de nettoyage et maintenance, devis, paiements, responsabilité, litiges et droit applicable.',
+    'provider': { '@id': `${site}#localbusiness` },
+    'mainEntityOfPage': `${site}${pageUrl}`
+  },
+
+  // Fil d'Ariane
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': `${site}/` },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Conditions Générales de Vente', 'item': `${site}${pageUrl}` }
     ]
   }
 ];
@@ -45,14 +62,15 @@ const jsonLd = [
 <Layout
   pathname={Astro.url.pathname}
   pageType="legal"
-  title="Conditions Générales de Vente — Klinova"
-  description="CGV de Klinova — prestations de nettoyage professionnel, maintenance technique et désinfection en Île-de-France. Informations sur les conditions de commande, paiement et responsabilité."
-  siteName="Klinova"
+  title="Conditions Générales de Vente (CGV) — Klinova"
+  description="CGV Klinova : champ d'application, devis, exécution des prestations, responsabilités, délais et modalités de règlement."
+  canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
   ogImageAlt="Klinova — Conditions Générales de Vente"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
+ 
 
 <section class="section-padding bg-white">
   <div class="container-responsive">

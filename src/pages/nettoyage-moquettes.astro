@@ -1,52 +1,38 @@
 ---
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import { Image, getImage } from 'astro:assets';
-
 import Button from '~/components/UI/Button.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
-
-
-
-
+import { Accordion, AccordionItem } from 'free-astro-components';
 
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
 import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
 import moquetteVelours from '~/assets/images/nettoyage-moquettes-velours.jpg';
 import dallesMoquette from '~/assets/images/dalles-moquette.jpg';
-
 import avantApresBureau from '~/assets/images/nettoyage-moquette-bureau-avant-apres.jpg';
 import avantApresDomicile from '~/assets/images/nettoyage-moquette-a-domicile.jpg';
 import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
 
-
-
-const popupContext = {
-  // Titres plus engageants
-  title: 'Demander à être rappelé',
-  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
-  
-  // Tracking plus précis
-  serviceKey: 'rappel-moquette',
-  serviceLabel: 'Demande rappel - Page moquette',
-  trackingSource: 'popup-moquette-header', // ou 'popup-home-hero'
-  
-  // Email plus contextualisé
-  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
-  
-  // Désactivé sur page institutionnelle
-  creditImpotEnabled: true,
-  
- 
-};
-
-
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-moquettes';
+const pageName = 'Nettoyage de moquettes';
 const SUBTITLE = 'Redonnez vie à vos revêtements textiles. Équipements haute performance, produits adaptés à chaque fibre.';
 const BADGE = 'Équipements professionnels industriels';
 
+// Configuration popup
+const popupContext = {
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  serviceKey: 'rappel-moquette',
+  serviceLabel: 'Demande rappel - Page moquette',
+  trackingSource: 'popup-moquette-header',
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  creditImpotEnabled: true,
+};
 
-import { Accordion, AccordionItem } from 'free-astro-components';
-
+// FAQ
 const faq = [
   {
     title: "Combien de temps faut-il pour que ma moquette sèche ?",
@@ -100,7 +86,7 @@ const faq = [
   },
 ];
 
-// --- JSON-LD : FAQ
+// Schema FAQ
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -111,89 +97,53 @@ const faqSchema = {
   })),
 };
 
-// --- JSON-LD : Home > Moquettes (fil d'ariane)
+// Fil d'Ariane
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://klinova.fr/" },
-    { "@type": "ListItem", "position": 2, "name": "Nettoyage de moquettes", "item": "https://klinova.fr/nettoyage-moquettes" }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+    { "@type": "ListItem", "position": 2, "name": "Nettoyage de moquettes", "item": `${site}${pageUrl}` }
   ]
 };
 
-// --- IDs SEO JSON-LD
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-// --- JSON-LD enrichi (Service + entités reliées)
+// JSON-LD optimisé (évite duplication avec SeoBase)
 const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": orgId,
-    "name": "Klinova",
-    "url": site,
-    "logo": `${site}/images/logo-klinova.webp`,
-    "brand": "Klinova",
-    "description": "Entreprise de propreté et de maintenance technique opérant à Paris et en Île-de-France. Spécialisée dans l’entretien et le nettoyage professionnel : moquettes, parkings, balcons, désinfection.",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": lbId,
-    "name": "Klinova",
-    "url": site,
-    "image": `${site}/images/og/og-klinova-moquettes.jpg`,
-    "telephone": "+33676738661",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d’Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "parentOrganization": { "@id": orgId }
-  },
+  // Service spécifique à cette page
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${site}#service-moquettes`,
     "serviceType": "Nettoyage de moquettes",
     "name": "Nettoyage et entretien de moquettes à Paris et en Île-de-France",
-    "alternateName": "Shampooing moquette professionnel",
-    "url": `${site}/nettoyage-moquettes`,
-    "provider": { "@id": lbId },
+    "alternateName": "Shampoinage moquette professionnel",
+    "url": `${site}${pageUrl}`,
+    "provider": { "@id": `${site}#localbusiness` },
     "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
     "category": "Nettoyage professionnel des revêtements textiles",
-    "serviceOutput": "Moquette nettoyée en profondeur, désodorisée et à séchage rapide.",
-    "description": "Prestations d’entretien de moquettes : diagnostic, détachage, nettoyage à sec ou à l’injection-extraction, monobrosse avec mousse, désodorisation. Méthodes adaptées aux fibres (aiguilletée, bouclée, velours, dalles).",
+    "serviceOutput": "Moquette nettoyée en profondeur, désodorisée et à séchage rapide",
+    "description": "Prestations d'entretien de moquettes : diagnostic, détachage, nettoyage à sec ou injection-extraction, monobrosse avec mousse, désodorisation. Méthodes adaptées aux fibres (aiguilletée, bouclée, velours, dalles).",
     "offers": {
       "@type": "Offer",
       "priceCurrency": "EUR",
       "price": "Sur devis",
       "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "Place", "name": "Île-de-France" },
-      "seller": { "@id": lbId }
+      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Méthodes de nettoyage de moquettes",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage à sec", "description": "Idéal fibres délicates et remise en service rapide." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Injection-extraction", "description": "Nettoyage en profondeur, très encrassé / sinistres." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monobrosse + mousse", "description": "Compromis efficacité / séchage rapide." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Désodorisation & neutralisation", "description": "Odeurs traitées, pH rééquilibré." } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage à sec", "description": "Idéal fibres délicates et remise en service rapide" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Injection-extraction", "description": "Nettoyage en profondeur, encrassement marqué" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monobrosse + mousse", "description": "Compromis efficacité et séchage rapide" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Désodorisation", "description": "Neutralisation des odeurs et pH rééquilibré" } }
       ]
     }
   },
   faqSchema,
   breadcrumb
 ];
-
-
 ---
 
 <LayoutWithCTA
@@ -207,14 +157,15 @@ const jsonLd = [
 
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Nettoyage de moquettes à domicile, en copropriété et bureaux — Klinova Paris"
-  description="Entretien professionnel des moquettes à domicile, en copropriétés et locaux d’entreprise. Nettoyage à sec ou injection-extraction, séchage rapide, résultats durables."
-  siteName="Klinova"
-  ogImage="/images/og/og-klinova-moquettes.jpg"
+  title="Nettoyage moquettes Paris & Île-de-France | Copropriétés & Bureaux | Klinova"
+  description="Nettoyage professionnel de moquettes en Île-de-France : injection-extraction, séchage rapide, devis gratuit. Intervention copropriétés, bureaux, particuliers."
+  canonical={pageUrl}
+  ogImage="/images/og-klinova-home.png"
   ogImageAlt="Klinova — Nettoyage professionnel de moquettes à Paris et en Île-de-France"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
+  
 
 <Fragment slot="head">
 <link rel="preload" as="image"

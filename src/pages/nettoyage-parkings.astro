@@ -1,14 +1,20 @@
 ---
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Button from '~/components/UI/Button.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
-
+import { Accordion, AccordionItem } from 'free-astro-components';
 
 import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
+import autolaveuseParkingImage from '~/assets/images/nettoyage-parking-autolaveuse.jpg';
 
-import { getImage } from 'astro:assets';
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-parkings';
+const pageName = 'Nettoyage de parkings souterrains';
+
+// Images optimisées
 const heroPreload = await getImage({
   src: heroParking,
   widths: [640, 1024, 1280],
@@ -17,16 +23,18 @@ const heroPreload = await getImage({
 });
 const heroSizes = '(min-width:1024px) 640px, 100vw';
 
+// Configuration popup
+const popupContext = {
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  serviceKey: 'rappel-parking',
+  serviceLabel: 'Demande rappel - Page parking',
+  trackingSource: 'popup-parking-header',
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  creditImpotEnabled: false
+};
 
-
-
-
-import autolaveuseParkingImage from '../assets/images/nettoyage-parking-autolaveuse.jpg';
-
-
-
-
-import { Accordion, AccordionItem } from 'free-astro-components';
+// FAQ
 const faq = [
   {
     title: "Quelle est la différence entre autolaveuse et monobrosse ?",
@@ -78,157 +86,100 @@ const faq = [
   }
 ];
 
+// Schema FAQ
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faq.map((item) => ({
     "@type": "Question",
     name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content },
-  })),
+    acceptedAnswer: { "@type": "Answer", text: item.content }
+  }))
 };
 
-
-
-const popupContext = {
-  // Titres plus engageants
-  title: 'Demander à être rappelé',
-  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
-  
-  // Tracking plus précis
-  serviceKey: 'rappel-parking',
-  serviceLabel: 'Demande rappel - Page parking',
-  trackingSource: 'popup-parking-header', // ou 'popup-home-hero'
-  
-  // Email plus contextualisé
-  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
-  
-  // Désactivé sur page institutionnelle
-  creditImpotEnabled: false,
-  
- 
-};
-
-
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-/* Fil d’Ariane (bonus) */
+// Fil d'Ariane
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil",  "item": `${site}/` },
-    { "@type": "ListItem", "position": 2, "name": "Nettoyage de parkings", "item": `${site}/nettoyage-parkings` }
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+    { "@type": "ListItem", "position": 2, "name": "Nettoyage de parkings", "item": `${site}${pageUrl}` }
   ]
 };
 
-/* JSON-LD principal : Organization + LocalBusiness + Service + FAQ */
+// JSON-LD optimisé
 const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": orgId,
-    "name": "Klinova",
-    "url": site,
-    "logo": `${site}/images/logo-klinova.webp`,
-    "brand": "Klinova",
-    "description": "Entreprise de propreté et de maintenance technique opérant à Paris et en Île-de-France. Spécialisée dans le nettoyage de parkings souterrains, moquettes en copropriété, balcons et désinfection professionnelle."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": lbId,
-    "name": "Klinova",
-    "url": site,
-    "image": `${site}/images/og/og-klinova-parkings.jpg`,
-    "telephone": "+33676738661",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d’Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "parentOrganization": { "@id": orgId }
-  },
+  // Service spécifique
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Nettoyage de parkings",
-    "name": "Nettoyage de parkings souterrains et garages — Paris & Île-de-France",
-    "alternateName": "Dégraissage parkings souterrains",
-    "url": `${site}/nettoyage-parkings`,
-    "provider": { "@id": lbId },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "category": "Nettoyage professionnel des sols béton / résine",
-    "serviceOutput": "Sols dégraissés, propres et rapidement remis en service, avec évacuation contrôlée des eaux.",
-    "description": "Décapage et dégraissage des sols de parkings (béton, résine, époxy), lavage à l’autolaveuse avec récupération des eaux, brossage des rampes et angles, finitions soignées, séchage assisté et protocole de sécurité complet (balisage, EPI, ventilation).",
+    "@id": `${site}#service-parkings`,
+    "inLanguage": "fr-FR",
+    "serviceType": "Nettoyage de parkings souterrains",
+    "name": "Nettoyage de parkings souterrains à Paris et en Île-de-France",
+    "alternateName": "Nettoyage autolaveuse parkings",
+    "description": "Décapage et dégraissage des sols, autolaveuse industrielle, gestion des rampes et zones piétonnes, protocole sécurisé et traçable.",
+    "url": `${site}${pageUrl}`,
+    "provider": { "@id": `${site}#localbusiness` },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Île-de-France" },
+      { "@type": "City", "name": "Paris" },
+      { "@type": "City", "name": "Chelles" }
+    ],
+    "audience": { "@type": "Audience", "audienceType": ["Syndics", "Entreprises", "Commerces"] },
+    "category": "Nettoyage professionnel",
+    "serviceOutput": "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
     "offers": {
       "@type": "Offer",
+      "price": "1.0-2.0",
       "priceCurrency": "EUR",
-      "price": "Sur devis",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "1.0-2.0",
+        "priceCurrency": "EUR",
+        "unitText": "EUR par m²"
+      },
       "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "Place", "name": "Île-de-France" },
-      "seller": { "@id": lbId }
+      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Prestations Klinova — Parkings",
+      "name": "Prestations parking",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dégraissage hydrocarbures", "description": "Dégraissant alcalin pro (pH contrôlé) pour traces d’huile et gommes." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Autolaveuse industrielle", "description": "Nettoyage + aspiration + séchage en un passage, récupération des eaux." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage/brossage mécanique", "description": "Préparation des sols, angles, rampes et zones difficiles." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traitement anti-mousse (si extérieur)", "description": "Prévention glissance / verdissures sur zones ouvertes." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Séchage assisté (air movers)", "description": "Réduction du temps d’attente avant réouverture (2–4 h)." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestion des eaux usées", "description": "Récupération et évacuation vers réseaux/retention adaptés." } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pré-balayage et déblaiement", "description": "Préparation de la surface avant nettoyage" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dégraissant alcalin sur hydrocarbures", "description": "Traitement spécialisé des taches d'huile" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Autolaveuse eau chaude", "description": "Nettoyage et aspiration en un passage" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Finition rampes et zones piétonnes", "description": "Nettoyage précis des zones difficiles" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Séchage assisté air movers", "description": "Remise en service rapide" } }
       ]
     }
   },
-  /* FAQ en données structurées (réutilise ta constante faq) */
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faq.map((item) => ({
-      "@type": "Question",
-      "name": item.title,
-      "acceptedAnswer": { "@type": "Answer", "text": item.content }
-    }))
-  },
+
+  faqSchema,
   breadcrumb
 ];
 ---
 
 <LayoutWithCTA
   popupContext={popupContext}
-
-   stickyEnabled={true}
-  stickyShowAfter="scroll"  
- 
-
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
   hideSelector="[data-hide-floating-cta]"
   activateSelector="[data-activate-floating-cta]"
-
-  activateDelayMs={800} 
-  stickyMobileOnly={true}      
-
+  activateDelayMs={800}
+  stickyMobileOnly={true}
 
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Nettoyage de parkings, parkings souterrains et garages — Klinova Paris"
-  description="Décapage, dégraissage et entretien régulier de parkings. Autolaveuse industrielle, récupération des eaux, protocoles sécurité et finitions soignées."
-  siteName="Klinova"
-  ogImage="/images/og/og-klinova-parkings.jpg"
-  ogImageAlt="Klinova — Nettoyage professionnel de parkings souterrains à Paris et en Île-de-France"
+  title="Nettoyage parkings souterrains Paris | Autolaveuse & Dégraissage | Klinova"
+  description="Nettoyage professionnel de parkings souterrains : autolaveuse industrielle, dégraissage, séchage rapide. Devis gratuit 24h. Paris & Île-de-France."
+  canonical={pageUrl}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Nettoyage de parkings souterrains en Île-de-France"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
- 
-
+  
 
 <Fragment slot="head">
    <link

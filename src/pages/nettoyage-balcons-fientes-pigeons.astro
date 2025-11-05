@@ -1,16 +1,18 @@
 ---
-// src/pages/nettoyage-balcons-fientes.astro (exemple)
-
 import LayoutLP from '~/layouts/LayoutLP.astro';
 import Button from '~/components/UI/Button.astro';
-// (Garde Image si tu l’utilises plus bas)
 import { Image } from 'astro:assets';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-balcons-fientes-pigeons';
+
+// Contact
 const PHONE_E164 = '+33676738661';
 const PHONE_DISPLAY = '06 76 73 86 61';
 const telHref = `tel:${PHONE_E164.replace(/[^\d+]/g, '')}`;
 
-// Popup context (orthographe "fientes" corrigée)
+// Configuration popup
 const popupContext = {
   title: 'Demander à être rappelé',
   subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
@@ -21,82 +23,49 @@ const popupContext = {
   creditImpotEnabled: true,
 };
 
-// Assets média (si tu affiches une vignette + vidéo plus bas)
+// Assets média
 import thumbBalcon from '~/assets/images/video-balcon-fientes.webp';
 const videoId = 'GvYRj2hhRMo';
 const title = 'Transformation balcon infesté de fientes — Nettoyage professionnel Klinova';
 
-// IDs SEO JSON-LD
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-// JSON-LD : Service + LocalBusiness lié à l’Organization
-const jsonLd = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': orgId,
-    name: 'Klinova',
-    url: site,
-    logo: `${site}/images/logo-klinova.webp`,
-    description:
-      "Entreprise de propreté et de maintenance opérant à Paris et en Île-de-France."
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': lbId,
-    name: 'Klinova',
-    url: site,
-    telephone: '+33676738661',
-    priceRange: '€€',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '6 rue d’Armaillé',
-      addressLocality: 'Paris',
-      postalCode: '75017',
-      addressCountry: 'FR'
-    },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-    openingHours: 'Mo-Su 08:00-20:00',
-    parentOrganization: { '@id': orgId }
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Nettoyage de balcons souillés par fientes de pigeons',
-    provider: { '@id': lbId },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-    description:
-      "Nettoyage et désinfection des balcons et rebords contaminés par les fientes de pigeons. Méthode professionnelle sécurisée, respect des protocoles d’hygiène."
-  }
-];
+// JSON-LD
+const lbId = `${site}#localbusiness`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Nettoyage de balcons souillés par fientes de pigeons",
+  "name": "Nettoyage et désinfection de balcons – Île-de-France",
+  "url": `${site}${pageUrl}`,
+  "provider": { "@id": lbId },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    { "@type": "City", "name": "Paris" },
+    { "@type": "City", "name": "Chelles" }
+  ],
+  "category": "Désinfection et nettoyage de surfaces extérieures",
+  "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons."
+};
 ---
 
 <LayoutLP
   popupContext={popupContext}
-
-  /* Sticky CTA (LP) */
   stickyEnabled={true}
   stickyShowAfter="immediate"
   stickyMobileOnly={true}
   colorMode="instant"
 
-  /* SEO */
   pathname={Astro.url.pathname}
   pageType="service"
   title="Nettoyage de balcons souillés par fientes de pigeons — Klinova Paris"
   description="Intervention sécurisée avec EPI, nettoyage mécanique, enlèvement des fientes, désinfection et remise en propreté. Intervention rapide en Île-de-France."
+  canonical={pageUrl}
   siteName="Klinova"
-
-  /* OG image placée dans /public/images/og/ */
-  ogImage="/images/og/og-klinova-fientes.jpg"
+  ogImage="/images/og/og-klinova-home.png"
   ogImageAlt="Klinova — Nettoyage professionnel de balcons souillés par des fientes de pigeons à Paris et en Île-de-France"
-
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
+
  
 
 

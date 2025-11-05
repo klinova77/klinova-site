@@ -1,6 +1,5 @@
 ---
-import Layout from '../layouts/LayoutWithCTA.astro';
-
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import Button from '~/components/UI/Button.astro';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { LINKS } from '~/lib/links';
@@ -17,16 +16,18 @@ import icFeuille from '~/assets/images/feuille-eco.webp';
 import icBouclier from '~/assets/images/bouclier-excellence.webp';
 import icLoupe from '~/assets/images/loupe-client.webp';
 import desinfectionEquipment from '~/assets/images/desinfection-equipment.avif';
-
 import equipmentKlinova from '~/assets/images/equipment-klinova-team.webp';
 
 import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/';
+const pageName = 'Accueil';
 
-
-// Preload AVIF "utile" (mobile + breakpoint desktop principal)
+// Images optimisées
 const heroSizes = '(min-width:1024px) 1024px, 100vw';
 const heroPreload = await getImage({
   src: heroImg,
@@ -35,129 +36,166 @@ const heroPreload = await getImage({
   quality: 62,
 });
 
-// --- Popup / tracking
+// Configuration popup
 const popupContext = {
   title: 'Demander à être rappelé',
   subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
   serviceKey: 'rappel-home',
   serviceLabel: 'Demande rappel - Page accueil',
-  trackingSource: 'popup-home-header', // ou 'popup-home-hero'
+  trackingSource: 'popup-home-header',
   presetSubject: 'Nouvelle demande de rappel - klinova.fr',
   creditImpotEnabled: false,
 };
 
-// --- IDs SEO JSON-LD
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-// --- JSON-LD enrichi (HOME) — propre et valide
+// JSON-LD optimisé pour la home (évite duplication avec SeoBase)
 const jsonLd = [
+  // WebSite principal
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": orgId,
-    "name": "Klinova",
+    "@type": "WebSite",
+    "@id": `${site}#website`,
     "url": site,
-    "logo": `${site}/images/logo-klinova.webp`,
-    "brand": "Klinova",
-    "description": "Entreprise de propreté et de maintenance technique opérant à Paris et en Île-de-France. Spécialisée dans le nettoyage de parkings, moquettes, balcons et la désinfection professionnelle.",
-    "sameAs": [
-      "https://www.linkedin.com/company/klinova"
-      // "https://g.page/r/CZ8tKlinova",       // ← ajoute quand ta fiche GBP est live
-      // "https://www.facebook.com/klinova.proprete"
+    "name": "Klinova",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": `${site}#organization` },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${site}/?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  // WebPage home
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site}#webpage-home`,
+    "url": site,
+    "name": "Accueil — Klinova",
+    "isPartOf": { "@id": `${site}#website` },
+    "inLanguage": "fr-FR",
+    "primaryImageOfPage": { 
+      "@type": "ImageObject", 
+      "url": `${site}/images/og/og-klinova-home.png`,
+      "width": 1200,
+      "height": 630
+    }
+  },
+
+  // Catalogue des services principaux
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Services de propreté Klinova",
+    "description": "Prestations de nettoyage professionnel à Paris et en Île-de-France",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "@id": `${site}#service-parkings`,
+          "name": "Nettoyage de parkings souterrains",
+          "url": `${site}/nettoyage-parkings`,
+          "category": "Nettoyage professionnel",
+          "provider": { "@id": `${site}#localbusiness` }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "@id": `${site}#service-moquettes`,
+          "name": "Nettoyage de moquettes",
+          "url": `${site}/nettoyage-moquettes`,
+          "category": "Nettoyage professionnel",
+          "provider": { "@id": `${site}#localbusiness` }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "@id": `${site}#service-balcons`,
+          "name": "Nettoyage de balcons et terrasses",
+          "url": `${site}/nettoyage-balcons`,
+          "category": "Nettoyage extérieur",
+          "provider": { "@id": `${site}#localbusiness` }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "@id": `${site}#service-terrasses`,
+          "name": "Nettoyage de terrasses",
+          "url": `${site}/nettoyage-terrasses`,
+          "category": "Nettoyage extérieur",
+          "provider": { "@id": `${site}#localbusiness` }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Service",
+          "@id": `${site}#service-nuisibles`,
+          "name": "Traitement anti-nuisibles",
+          "url": `${site}/traitement-nuisibles`,
+          "category": "Désinfection professionnelle",
+          "provider": { "@id": `${site}#localbusiness` }
+        }
+      }
     ]
   },
+
+  // Fil d'Ariane simple pour la home
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": lbId,
-    "name": "Klinova",
-    "url": site,
-    "image": `${site}/images/og/og-klinova-home.png`,
-    "telephone": "+33676738661",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d’Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 48.8799,
-      "longitude": 2.2937
-    },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "parentOrganization": { "@id": orgId }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Propreté et maintenance technique",
-    "name": "Nettoyage et entretien professionnels en Île-de-France",
-    "provider": { "@id": lbId },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "category": "Propreté professionnelle",
-    "description": "Klinova propose des prestations de nettoyage et de maintenance technique : parkings souterrains, moquettes en copropriété, balcons souillés par fientes, et désinfection virucide. Interventions sur tout le territoire francilien, avec protocoles documentés et traçabilité complète.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Prestations principales Klinova",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Nettoyage de parkings souterrains",
-            "description": "Dégraissage, décapage et autolaveuse industrielle."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Nettoyage de moquettes en copropriété",
-            "description": "Injection-extraction, vapeur sèche et désodorisation."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Nettoyage de balcons et fientes de pigeons",
-            "description": "Désinfection, décontamination et pose de protections anti-pigeons."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Désinfection professionnelle et hygiène renforcée",
-            "description": "Traitements virucides EN14476 et protocoles sanitaires en copropriété."
-          }
-        }
-      ]
-    }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { 
+        "@type": "ListItem", 
+        "position": 1, 
+        "name": "Accueil", 
+        "item": `${site}/` 
+      }
+    ]
   }
 ];
 ---
 
-<Layout
+<LayoutWithCTA
   popupContext={popupContext}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
 
-  /* Props SEO — top */
   pathname={Astro.url.pathname}
   pageType="home"
-  title="Klinova — Propreté & maintenance technique à Paris"
-  description="Nettoyage de parkings, moquettes en copropriété, balcons difficiles. Méthodes pro, devis rapide, interventions en Île-de-France."
-  siteName="Klinova"
+  title="Klinova — Nettoyage professionnel Paris & Île-de-France | Copropriétés & Entreprises"
+  description="Nettoyage de parkings, moquettes, balcons et désinfection professionnelle en Île-de-France. Devis gratuit, interventions rapides pour copropriétés et entreprises."
+  canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
-  ogImageAlt="Klinova – Propreté & maintenance à Paris et en Île-de-France"
+  ogImageAlt="Klinova – Nettoyage professionnel à Paris et en Île-de-France"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
+ 
+
+
+
 <link
   rel="preload"
   as="image"

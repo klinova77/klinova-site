@@ -4,32 +4,45 @@ import { Image } from 'astro:assets';
 import Button from '~/components/UI/Button.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
+import { Accordion, AccordionItem } from 'free-astro-components';
 
-
-
-import heroBalconImage from '../assets/images/balcon-moderne-propre-nettoyage-klinova.webp';
+import heroBalconImage from '~/assets/images/balcon-moderne-propre-nettoyage-klinova.webp';
 import picsAntiPigeons from '~/assets/images/pics-anti-pigeons-inox-balcon.webp';
 import filetAntiPigeons from '~/assets/images/filet-anti-pigeons-pour-balcon.jpg';
 import gelRepulsif from '~/assets/images/gel-repulsif-anti-pigeon-coupelles.jpg';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-balcons';
+const pageName = 'Nettoyage de balcons et terrasses';
 
-import { Accordion, AccordionItem } from 'free-astro-components';
+// Configuration popup
+const popupContext = {
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  serviceKey: 'rappel-balcons',
+  serviceLabel: 'Demande rappel - Page balcons',
+  trackingSource: 'popup-balcons-header',
+  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
+  creditImpotEnabled: true,
+};
 
+// FAQ
 const faq = [
   {
     title: "Intervenez-vous sur tous types de balcons ?",
     content:
-      "Oui, nous adaptons nos techniques à tous les matériaux : carrelage, béton, pierre naturelle, bois composite ou résine. Chaque intervention commence par un test discret sur une zone non visible afin d’ajuster la pression, le produit et la température.",
+      "Oui, nous adaptons nos techniques à tous les matériaux : carrelage, béton, pierre naturelle, bois composite ou résine. Chaque intervention commence par un test discret sur une zone non visible afin d'ajuster la pression, le produit et la température.",
   },
   {
     title: "Quels produits utilisez-vous pour le nettoyage et la désinfection ?",
     content:
-      "Nous utilisons des détergents alcalins biodégradables et des désinfectants virucides homologués EN 14476, choisis selon le type de salissure et le matériau du balcon. Aucun produit agressif n’est employé : les surfaces sont rincées et neutralisées pour garantir sécurité et absence d’odeur.",
+      "Nous utilisons des détergents alcalins biodégradables et des désinfectants virucides homologués EN 14476, choisis selon le type de salissure et le matériau du balcon. Aucun produit agressif n'est employé : les surfaces sont rincées et neutralisées pour garantir sécurité et absence d'odeur.",
   },
   {
     title: "Les fientes de pigeons sont-elles dangereuses pour la santé ?",
     content:
-      "Oui, elles peuvent présenter un risque sanitaire si elles sont manipulées sans protection (bactéries, champignons, virus). Nos techniciens sont équipés d’EPI complets et appliquent un virucide EN 14476 avant le nettoyage mécanique pour supprimer le risque.",
+      "Oui, elles peuvent présenter un risque sanitaire si elles sont manipulées sans protection (bactéries, champignons, virus). Nos techniciens sont équipés d'EPI complets et appliquent un virucide EN 14476 avant le nettoyage mécanique pour supprimer le risque.",
   },
   {
     title: "Proposez-vous aussi la pose de protections anti-pigeons ?",
@@ -39,10 +52,11 @@ const faq = [
   {
     title: "Intervenez-vous aussi le week-end ?",
     content:
-      "Oui, nous intervenons 7 jours sur 7, y compris le week-end, pour les urgences ou les créneaux planifiés. Les horaires sont adaptés à vos disponibilités et aux contraintes d’accès (copropriété, voisinage).",
+      "Oui, nous intervenons 7 jours sur 7, y compris le week-end, pour les urgences ou les créneaux planifiés. Les horaires sont adaptés à vos disponibilités et aux contraintes d'accès (copropriété, voisinage).",
   },
 ];
 
+// Schema FAQ
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -53,71 +67,78 @@ const faqSchema = {
   })),
 };
 
-
-
-const popupContext = {
-  // Titres plus engageants
-  title: 'Demander à être rappelé',
-  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
-  
-  // Tracking plus précis
-  serviceKey: 'rappel-balcons',
-  serviceLabel: 'Demande rappel - Page balcons',
-  trackingSource: 'popup-balcons-header', // ou 'popup-home-hero'
-  
-  // Email plus contextualisé
-  presetSubject: 'Nouvelle demande de rappel - klinova.fr',
-  
-  // Désactivé sur page institutionnelle
-  creditImpotEnabled: true,
-  
- 
+// Fil d'Ariane
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+    { "@type": "ListItem", "position": 2, "name": "Nettoyage de balcons", "item": `${site}${pageUrl}` }
+  ]
 };
+
+// JSON-LD optimisé
+const jsonLd = [
+  // Service spécifique
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${site}#service-balcons`,
+    "inLanguage": "fr-FR",
+    "serviceType": "Nettoyage de balcons et terrasses",
+    "name": "Nettoyage de balcons et terrasses à Paris et en Île-de-France",
+    "alternateName": "Nettoyage haute pression balcons",
+    "url": `${site}${pageUrl}`,
+    "provider": { "@id": `${site}#localbusiness` },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    "audience": { "@type": "Audience", "audienceType": ["Copropriétés", "Résidentiel", "Syndics"] },
+    "category": "Nettoyage de surfaces extérieures",
+    "serviceOutput": "Balcon propre, désinfecté et restauré dans son état d'origine",
+    "description": "Service de nettoyage complet de balcons, rambardes et sols extérieurs. Nettoyage haute pression, dégraissage, désinfection. Intervention adaptée aux copropriétés et immeubles parisiens.",
+    "offers": {
+      "@type": "Offer",
+      "price": "Sur devis",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services de nettoyage balcons",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage haute pression", "description": "Décapage des salissures incrustées" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dégraissage des sols", "description": "Élimination des taches grasses et résidus" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage des vitres", "description": "Vitres et baies vitrées parfaitement propres" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pose de protections anti-pigeons", "description": "Pics, filets et gels répulsifs garantis 2 ans" } }
+      ]
+    }
+  },
+
+  faqSchema,
+  breadcrumb
+];
 ---
-
-
-
-
-
 
 <LayoutWithCTA
   popupContext={popupContext}
-
-   stickyEnabled={true}
-  stickyShowAfter="scroll"  
- 
-
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
   hideSelector="[data-hide-floating-cta]"
   activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
 
-  activateDelayMs={800} 
-  stickyMobileOnly={true}      
-
-
- <Layout
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Nettoyage de balcons et terrasses — Klinova Paris"
-  description="Restaurez la propreté de vos balcons et terrasses. Nettoyage haute pression, dégraissage des sols et vitres, désinfection complète en copropriété."
-  siteName="Klinova"
-  ogImage="/images/og/og-klinova-balcons.jpg"
+  title="Nettoyage balcons terrasses Paris & Île-de-France | Haute pression | Klinova"
+  description="Nettoyage professionnel de balcons et terrasses : haute pression, dégraissage, désinfection. Intervention copropriétés. Devis gratuit en Île-de-France."
+  canonical={pageUrl}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Nettoyage professionnel de balcons et terrasses à Paris et en Île-de-France"
   appendBrandToTitle={false}
-  jsonLd={{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Nettoyage de balcons et terrasses",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Klinova",
-      "areaServed": "Île-de-France",
-      "telephone": "+33676738661"
-    },
-    "description": "Service de nettoyage complet de balcons, rambardes et sols extérieurs. Intervention soignée, adaptée aux copropriétés et immeubles parisiens."
-  }}
+  jsonLd={jsonLd}
 >
-
->
-
+  
 
 
 <style>

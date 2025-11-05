@@ -3,77 +3,53 @@ import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/UI/Button.astro';
 import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
 
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/contact';
+const pageName = 'Contact & devis';
 
-
-// UID pour isoler l’autofill & éviter conflits si plusieurs formulaires
+// UID pour isoler l'autofill & éviter conflits si plusieurs formulaires
 const uid = 'cf' + Math.random().toString(36).slice(2, 8);
 const formId = `contact-form-${uid}`;
 
-
-const site = 'https://klinova.fr';
-const orgId = `${site}#organization`;
-const lbId  = `${site}#localbusiness`;
-
-/* --- JSON-LD (ContactPage + Organization + LocalBusiness + Fil d’Ariane) --- */
+// JSON-LD optimisé
 const jsonLd = [
+  // ContactPage principale
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Klinova",
-    "url": `${site}/contact`,
-    "description": "Contactez Klinova pour un devis ou une intervention de nettoyage en Île-de-France : parkings, moquettes, balcons, désinfection. Réponse sous 24h.",
-    "breadcrumb": { "@id": `${site}#breadcrumb-contact` },
-    "about": { "@id": orgId },
-    "mainEntity": { "@id": lbId }
+    "inLanguage": "fr-FR",
+    "name": `${pageName} — Klinova`,
+    "url": `${site}${pageUrl}`,
+    "mainEntityOfPage": `${site}${pageUrl}`,
+    "isPartOf": { "@id": `${site}#website` },
+    "primaryImageOfPage": { "@type": "ImageObject", "url": `${site}/images/og/og-klinova-home.png` }
   },
+
+  // ContactPoint enrichi (évite duplication avec SeoBase)
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": orgId,
-    "name": "Klinova",
-    "url": site,
-    "logo": `${site}/images/logo-klinova.webp`,
-    "brand": "Klinova",
-    "description": "Société de propreté et de maintenance technique à Paris et en Île-de-France : nettoyage de parkings, moquettes, balcons et désinfection professionnelle.",
-    "sameAs": [
-      "https://www.linkedin.com/company/klinova"
-      // "https://g.page/r/CZ8tKlinova"   // ← ajoute quand ta fiche GBP est active
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+33676738661",
-      "contactType": "Service client",
-      "areaServed": "FR",
-      "availableLanguage": ["fr"]
-    }]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": lbId,
-    "name": "Klinova",
-    "url": site,
-    "image": `${site}/images/og/og-klinova-home.png`,
+    "@type": "ContactPoint",
+    "@id": `${site}#contact-point`,
+    "contactType": "customer service",
     "telephone": "+33676738661",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6 rue d’Armaillé",
-      "addressLocality": "Paris",
-      "postalCode": "75017",
-      "addressCountry": "FR"
-    },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "openingHours": "Mo-Su 08:00-20:00",
-    "parentOrganization": { "@id": orgId }
+    "email": "contact@klinova.fr",
+    "availableLanguage": ["fr"],
+    "hoursAvailable": "Mo-Su 08:00-20:00",
+    "areaServed": "FR",
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    }
   },
+
+  // Fil d'Ariane
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": `${site}#breadcrumb-contact`,
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": `${site}/contact` }
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": `${site}${pageUrl}` }
     ]
   }
 ];
@@ -82,16 +58,15 @@ const jsonLd = [
 <Layout
   pathname={Astro.url.pathname}
   pageType="contact"
-  title="Contact Klinova — Devis et intervention en Île-de-France"
-  description="Besoin d’un devis ou d’une intervention ? Contactez Klinova : nettoyage de parkings, moquettes, balcons et désinfection à Paris et en Île-de-France. Réponse sous 24h."
-  siteName="Klinova"
+  title="Contact & devis — Klinova"
+  description="Contactez Klinova pour un devis : interventions à Paris & en Île-de-France. Disponibles 7j/7, 08:00–20:00."
+  canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
-  ogImageAlt="Klinova — Contact pour devis de nettoyage à Paris et en Île-de-France"
+  ogImageAlt="Klinova — Contact et demande de devis"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
-
-
+ 
 
   <main class="container-responsive section-padding">
     <!-- HERO + FORMULAIRE (above the fold) -->
@@ -459,7 +434,7 @@ const jsonLd = [
         <div class="info-card zone-card">
           <h3 class="info-title">Zone d'intervention</h3>
           <p class="zone-text">
-            Nous intervenons principalement en Île-de-France et nous déplaçons selon vos besoins dans toute la France pour les projets importants.
+            Nous intervenons principalement en Île-de-France et nous nous déplaçons selon vos besoins dans toute la France pour les projets importants.
           </p>
         </div>
       </div>

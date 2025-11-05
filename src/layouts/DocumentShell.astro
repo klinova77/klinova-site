@@ -8,6 +8,8 @@ import { SITE_THEME } from '~/config/theme';
 // Typage et fallback en cas de props manquants
 export type Props = Partial<SeoProps>;
 const seoProps = Astro.props as Partial<SeoProps>;
+
+const favicon = '/favicon.png';
 ---
 
 <!DOCTYPE html>
@@ -29,7 +31,12 @@ const seoProps = Astro.props as Partial<SeoProps>;
     <!-- ✅ SEO Base (protégé si non défini) -->
     {typeof SeoBase === 'function' && <SeoBase {...(seoProps ?? {})} />}
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<meta name="theme-color" content="#3F8D65" />
 
     <!-- ✅ Preload police DANS le head -->
     <link
