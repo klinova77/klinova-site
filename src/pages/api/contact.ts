@@ -99,6 +99,26 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 
     const code_postal  = String((form.get('code_postal') ?? form.get('cp') ?? '')).trim();
     const surface      = String(form.get('surface') || '').trim();
+    // Nouveaux champs spécifiques
+const surfaceLibre = String(form.get('surface_libre') || '').trim();
+const surfaceBalcon = String(form.get('surface_balcon') || '').trim();
+const surfaceParking = String(form.get('surface_parking') || '').trim();
+const surfaceApproximative = String(form.get('surface_approximative') || '').trim();
+
+const ville = String(form.get('ville') || '').trim();
+const typeClient = String(form.get('type_client') || '').trim();
+const problematique = String(form.get('problematique') || '').trim();
+const typeBalcon = String(form.get('type_balcon') || '').trim();
+
+// Moquettes
+const typeMoquette = String(form.get('type_moquette') || '').trim();
+const etatMoquette = String(form.get('etat_moquette') || '').trim();
+const frequenceSouhaitee = String(form.get('frequence_souhaitee') || '').trim();
+
+// Parkings  
+const typeParking = String(form.get('type_parking') || '').trim();
+const revetementSol = String(form.get('revetement_sol') || '').trim();
+
     const message      = String(form.get('message') || '').trim();
     const source       = String(form.get('source') || 'form').trim();
     const rgpd         = String(form.get('rgpd') ?? form.get('consent') ?? '').trim();
@@ -152,25 +172,45 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       `— Email généré automatiquement par ${BRAND_NAME}`,
     ].filter(Boolean).join('\n');
 
-    const html = `
-      <div style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5">
-        <h2 style="margin:0 0 12px">Demande reçue via ${BRAND_NAME}</h2>
-        <p><strong>Prénom :</strong> ${prenom || '-'}</p>
-        <p><strong>Nom :</strong> ${nom || '-'}</p>
-        <p><strong>Email :</strong> ${email || '-'}</p>
-        <p><strong>Téléphone (E164) :</strong> ${telNorm || '-'}</p>
-        ${telephoneRaw ? `<p><strong>Téléphone (brut) :</strong> ${telephoneRaw}</p>` : ''}
-        ${code_postal ? `<p><strong>Code postal :</strong> ${code_postal}</p>` : ''}
-        ${surface ? `<p><strong>Surface :</strong> ${surface}</p>` : ''}
-        <p><strong>Source :</strong> ${source}</p>
-        ${rgpd ? `<p><strong>RGPD :</strong> ${rgpd}</p>` : ''}
-        ${photos?.length ? `<h3>Photos</h3>${toHtmlList(photos)}` : ''}
-        <h3>Message</h3>
-        <pre style="white-space:pre-wrap;background:#f6f7f9;padding:12px;border-radius:8px">${message || 'Aucun message spécifique'}</pre>
-        <hr style="margin:16px 0;border:none;border-top:1px solid #e5e7eb" />
-        <p style="color:#475569">— Email généré automatiquement par ${BRAND_NAME}</p>
-      </div>
-    `;
+   const html = `
+  <div style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5">
+    <h2 style="margin:0 0 12px">Demande reçue via ${BRAND_NAME}</h2>
+    
+    <h3>👤 Informations client :</h3>
+    <p><strong>Prénom :</strong> ${prenom || '-'}</p>
+    <p><strong>Nom :</strong> ${nom || '-'}</p>
+    <p><strong>Email :</strong> ${email || '-'}</p>
+    <p><strong>Téléphone (E164) :</strong> ${telNorm || '-'}</p>
+    ${telephoneRaw ? `<p><strong>Téléphone (brut) :</strong> ${telephoneRaw}</p>` : ''}
+    <p><strong>Code postal :</strong> ${code_postal || '-'}</p>
+    ${ville ? `<p><strong>Ville :</strong> ${ville}</p>` : ''}
+    ${typeClient ? `<p><strong>Type de client :</strong> ${typeClient}</p>` : ''}
+
+    <h3>🏠 Détails du projet :</h3>
+    ${surfaceLibre ? `<p><strong>Surface libre :</strong> ${surfaceLibre}</p>` : ''}
+    ${surfaceBalcon ? `<p><strong>Surface balcon :</strong> ${surfaceBalcon}</p>` : ''}
+    ${surfaceParking ? `<p><strong>Surface parking :</strong> ${surfaceParking}</p>` : ''}
+    ${surfaceApproximative ? `<p><strong>Surface approximative :</strong> ${surfaceApproximative}</p>` : ''}
+    ${problematique ? `<p><strong>Problématique :</strong> ${problematique}</p>` : ''}
+    ${typeBalcon ? `<p><strong>Type de revêtement balcon :</strong> ${typeBalcon}</p>` : ''}
+    ${typeMoquette ? `<p><strong>Type de moquette :</strong> ${typeMoquette}</p>` : ''}
+    ${etatMoquette ? `<p><strong>État moquette :</strong> ${etatMoquette}</p>` : ''}
+    ${typeParking ? `<p><strong>Type de parking :</strong> ${typeParking}</p>` : ''}
+    ${revetementSol ? `<p><strong>Revêtement du sol :</strong> ${revetementSol}</p>` : ''}
+    ${frequenceSouhaitee ? `<p><strong>Fréquence souhaitée :</strong> ${frequenceSouhaitee}</p>` : ''}
+
+    <p><strong>Source :</strong> ${source}</p>
+    ${rgpd ? `<p><strong>RGPD :</strong> ${rgpd}</p>` : ''}
+    
+    ${photos?.length ? `<h3>📷 Photos</h3>${toHtmlList(photos)}` : ''}
+    
+    <h3>💬 Message</h3>
+    <pre style="white-space:pre-wrap;background:#f6f7f9;padding:12px;border-radius:8px">${message || 'Aucun message spécifique'}</pre>
+    
+    <hr style="margin:16px 0;border:none;border-top:1px solid #e5e7eb" />
+    <p style="color:#475569">— Email généré automatiquement par ${BRAND_NAME}</p>
+  </div>
+`;
 
     const okInterne = await sendViaResend({
       from: RESEND_FROM,
