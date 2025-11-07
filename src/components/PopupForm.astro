@@ -1178,10 +1178,11 @@ const {
       }
     });
 
-    drop.addEventListener('click', (e) => {
-      e.preventDefault();
-      input.click();
-    });
+   drop.addEventListener('click', (e) => {
+  // Ne pas empêcher le comportement par défaut du label
+  // e.preventDefault(); <- RETIRE CETTE LIGNE
+  input.click();
+});
 
     function handleFiles(fileList) {
       console.log('Files to upload:', fileList);
