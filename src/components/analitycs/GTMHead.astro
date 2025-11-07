@@ -1,0 +1,80 @@
+---
+const GTM_ID = 'GTM-PMXB6QZN';
+---
+
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+<script is:inline>
+  (function () {
+    var GTM_ID = 'GTM-PMXB6QZN';
+    var loaded = false;
+
+    window.dataLayer = window.dataLayer || [];
+
+    function loadGTM() {
+      if (loaded) return;
+      loaded = true;
+
+      window.dataLayer.push({
+        'gtm.start': Date.now(),
+        event: 'gtm.js'
+      });
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+      document.head.appendChild(s);
+    }
+
+    function afterLCPorLoad(cb) {
+      var done = false;
+      function finish() {
+        if (done) return;
+        done = true;
+        cb();
+      }
+
+      if ('PerformanceObserver' in window) {
+        try {
+          var po = new PerformanceObserver(function (list) {
+            var entries = list.getEntries();
+            if (!entries || !entries.length) return;
+            po.disconnect();
+            setTimeout(finish, 100);
+          });
+          po.observe({ type: 'largest-contentful-paint', buffered: true });
+
+          setTimeout(function () {
+            try { po.disconnect(); } catch(e) {}
+            finish();
+          }, 3000);
+          return;
+        } catch (e) {}
+      }
+
+      if (document.readyState === 'complete') {
+        setTimeout(finish, 500);
+      } else {
+        window.addEventListener('load', function () {
+          setTimeout(finish, 500);
+        }, { once: true });
+      }
+    }
+
+    function hasConsent() {
+      try {
+        return localStorage.getItem('consent.analytics') === 'granted';
+      } catch (e) {
+        return false;
+      }
+    }
+
+    if (hasConsent()) {
+      afterLCPorLoad(loadGTM);
+    }
+
+    window.addEventListener('consent:granted', function () {
+      afterLCPorLoad(loadGTM);
+    }, { once: true });
+  })();
+</script>
