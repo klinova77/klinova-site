@@ -119,7 +119,7 @@ const {
               required
               autocomplete="given-name"
             >
-            <label class="floating-label required" for="popup-prenom">Prénom</label>
+            <label class="floating-label required" for="popup-prenom">Nom</label>
             <div class="field-border"></div>
           </div>
         </div>
@@ -160,6 +160,23 @@ const {
             <label class="floating-label required" for="popup-code-postal">Code postal</label>
             <div class="field-border"></div>
             <div class="input-hint">5 chiffres (ex. 75011). Île-de-France uniquement.</div>
+          </div>
+        </div>
+
+<!-- Message libre -->
+        <div class="form-group premium">
+          <div class="floating-label-group">
+            <textarea
+              id="popup-message"
+              name="message"
+              class="form-textarea premium"
+              placeholder=" "
+              rows="2"
+              maxlength="300"
+            ></textarea>
+            <label class="floating-label" for="popup-message">Votre demande (optionnel)</label>
+            <div class="field-border"></div>
+            <div class="input-hint">Ex: "Moquette très tachée", "Intervention urgente"</div>
           </div>
         </div>
 
@@ -968,6 +985,37 @@ const {
   background: rgba(36, 59, 83, 0.10) !important;
 }
 
+
+
+
+
+.form-textarea.premium {
+  width: 100%;
+  min-height: 70px;
+  padding: 15px 14px 7px;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--premium-border-radius);
+  font-size: 15px;
+  background: white;
+  transition: var(--premium-transition);
+  color: #475569;
+  resize: vertical;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(36, 59, 83, 0.06);
+}
+
+.form-textarea.premium:focus {
+  outline: none;
+  border-color: var(--popup-primary);
+  box-shadow: 0 0 0 4px rgba(36, 59, 83, 0.15);
+}
+
+.form-textarea.premium:focus + .floating-label,
+.form-textarea.premium:not(:placeholder-shown) + .floating-label {
+  transform: translateY(-20px) scale(0.9);
+  color: var(--popup-primary);
+  font-weight: 600;
+}
 </style>
 
 <script is:inline>
