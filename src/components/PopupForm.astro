@@ -1016,6 +1016,58 @@ const {
   color: var(--popup-primary);
   font-weight: 600;
 }
+
+
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  gap: 8px; /* ✅ Espacement entre les éléments */
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1e293b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.photo-status {
+  font-size: 12px;
+  flex-shrink: 0;
+  white-space: nowrap; /* ✅ Empêche le retour à la ligne */
+}
+
+.photo-status.uploading { color: #3b82f6; }
+.photo-status.success { color: #059669; }
+.photo-status.error { color: #dc2626; }
+
+.photo-remove {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.photo-remove:hover {
+  background: #dc2626;
+}
+
+
+
 </style>
 
 <script is:inline>
@@ -1226,82 +1278,184 @@ const {
       }
     });
 
-   drop.addEventListener('click', (e) => {
-  // Ne pas empêcher le comportement par défaut du label
-  // e.preventDefault(); <- RETIRE CETTE LIGNE
-  input.click();
-});
-
- function handleFiles(fileList) {
-  Array.from(fileList).forEach(file => {
-    if (files.length >= MAX) {
-      console.warn(`Maximum ${MAX} fichiers autorisés`);
-      return;
-    }
-    
-    if (file.size > MAX_MB * 1024 * 1024) {
-      console.warn(`Fichier trop volumineux: ${file.name}`);
-      return;
-    }
-    
-    if (!file.type.startsWith('image/')) {
-      console.warn(`Type non supporté: ${file.name}`);
-      return;
-    }
-
-    uploadFile(file);
-  });
-}
-
-async function uploadFile(file) {
-  window.__photosUploadingCount++;
-  
-  try {
-    const sigResponse = await fetch('/api/cloudinary-signature', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ filename: file.name })
-    });
-    
-    const { signature, timestamp, uploadPreset, cloudName, apiKey } = await sigResponse.json();
-    
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('signature', signature);
-    formData.append('timestamp', timestamp);
-    formData.append('upload_preset', uploadPreset);
-    formData.append('api_key', apiKey);
-    
-    const uploadResponse = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-      method: 'POST',
-      body: formData
-    });
-    
-    const result = await uploadResponse.json();
-    
-    if (result.secure_url) {
-      const hiddenInput = document.createElement('input');
-      hiddenInput.type = 'hidden';
-      hiddenInput.name = 'photos[]';
-      hiddenInput.value = result.secure_url;
-      hidden.appendChild(hiddenInput);
-      
-      files.push(result.secure_url);
-      updateStatus();
-    }
-    
-  } catch (error) {
-    console.error('Erreur upload:', error);
-  } finally {
-    window.__photosUploadingCount--;
-  }
-}
-
 function updateStatus() {
-  if (statusEl) {
-    statusEl.textContent = files.length ? `${files.length} photo(s) ajoutée(s)` : 'Aucune photo';
+      const total = files.length;
+      const success = files.filter(f => f.status === 'success').length;
+      
+      if (total === 0) {
+        statusEl.textContent = 'Aucune photo';
+        list.classList.add('hidden');
+      } else {
+        statusEl.textContent = `${total}/${MAX} photos • ${success} importée${success > 1 ? 's' : ''}${window.__photosUploadingCount > 0 ? ` • ${window.__photosUploadingCount} en cours...` : ''}`;
+        list.classList.remove('hidden');
+      }
+    }
+
+
+function addFileToList(fileObj) {
+  const li = document.createElement('li');
+  li.className = 'photo-item';
+  li.dataset.fileName = fileObj.name;
+  
+  const statusText = getStatusText(fileObj.status);
+  const statusHtml = statusText ? `<span class="photo-status ${fileObj.status}">${statusText}</span>` : '';
+  
+  li.innerHTML = `
+    <span class="photo-name">${fileObj.name}</span>
+    ${statusHtml}
+    <button type="button" class="photo-remove" onclick="removeFile('${fileObj.name}')">×</button>
+  `;
+  
+  list.appendChild(li);
+}
+    
+    function updateFileStatus(fileName, status) {
+  const item = list.querySelector(`[data-file-name="${fileName}"]`);
+  if (!item) return;
+  
+  const statusEl = item.querySelector('.photo-status');
+  const statusText = getStatusText(status);
+  
+  if (statusText) {
+    statusEl.className = `photo-status ${status}`;
+    statusEl.textContent = statusText;
+    statusEl.style.display = '';
+  } else {
+    statusEl.style.display = 'none'; // ✅ Cache l'élément status si vide
   }
 }
+    
+ function getStatusText(status) {
+  switch(status) {
+    case 'uploading': return 'Upload...';
+    case 'success': return ''; // ✅ Plus de texte pour success
+    case 'error': return '❌ Erreur';
+    default: return '';
+  }
+}
+    
+    window.removeFile = function(fileName) {
+      const fileIndex = files.findIndex(f => f.name === fileName);
+      if (fileIndex !== -1) {
+        const file = files[fileIndex];
+        // Supprimer l'input hidden
+        if (file.cloudinaryUrl) {
+          const hiddenInput = hidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+          if (hiddenInput) hiddenInput.remove();
+        }
+        files.splice(fileIndex, 1);
+      }
+      
+      // Supprimer de la liste visuelle
+      const item = list.querySelector(`[data-file-name="${fileName}"]`);
+      if (item) item.remove();
+      
+      updateStatus();
+    };
+    
+
+
+
+    async function getCloudinarySignature() {
+      const response = await fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+      
+      const data = await response.json();
+      if (!data.ok) {
+        throw new Error(data.error || 'Erreur signature Cloudinary');
+      }
+      
+      return data;
+    }
+
+     async function uploadToCloudinary(file) {
+      const fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        cloudinaryUrl: null
+      };
+      
+      files.push(fileObj);
+      addFileToList(fileObj); // ✅ Ajout à la liste visuelle
+      window.__photosUploadingCount++;
+      updateStatus();
+      
+      try {
+        const signature = await getCloudinarySignature();
+        
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('api_key', signature.apiKey);
+        formData.append('timestamp', String(signature.timestamp));
+        formData.append('signature', signature.signature);
+        if (signature.folder) {
+          formData.append('folder', signature.folder);
+        }
+        if (signature.uploadPreset) {
+          formData.append('upload_preset', signature.uploadPreset);
+        }
+
+        const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+        
+        const response = await fetch(uploadUrl, {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+         if (response.ok && result.secure_url) {
+          fileObj.status = 'success';
+          fileObj.cloudinaryUrl = result.secure_url;
+          updateFileStatus(file.name, 'success'); // ✅ Mise à jour visuelle
+          
+          const hiddenInput = document.createElement('input');
+          hiddenInput.type = 'hidden';
+          hiddenInput.name = 'photos[]';
+          hiddenInput.value = result.secure_url;
+          hidden.appendChild(hiddenInput);
+        } else {
+          throw new Error('Upload failed');
+        }
+        
+      } catch (error) {
+        fileObj.status = 'error';
+        updateFileStatus(file.name, 'error'); // ✅ Mise à jour visuelle
+        console.error('Upload error:', error);
+      } finally {
+        window.__photosUploadingCount--;
+        updateStatus();
+      }
+    }
+
+    function handleFiles(fileList) {
+      Array.from(fileList).forEach(file => {
+        if (files.length >= MAX) {
+          console.warn(`Maximum ${MAX} fichiers autorisés`);
+          return;
+        }
+        
+        if (file.size > MAX_MB * 1024 * 1024) {
+          console.warn(`Fichier trop volumineux: ${file.name}`);
+          return;
+        }
+        
+        if (!file.type.startsWith('image/')) {
+          console.warn(`Type non supporté: ${file.name}`);
+          return;
+        }
+
+        uploadToCloudinary(file);
+      });
+          }
+
+ drop.addEventListener('click', () => {
+      input.click();
+    });
 
 
   })();
