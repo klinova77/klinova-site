@@ -1,111 +1,140 @@
 ---
+// src/components/consent/ConsentBannerKlinova.astro
+
+import logoKlinova from '~/assets/images/logo_klinova.webp';
+
 const STORAGE_KEY = 'consent.analytics';
 ---
 
 <style>
-  @keyframes slideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
-  .consent-banner-show {
-    animation: slideUp 0.3s ease;
+  @keyframes slideUp {
+    from {
+      transform: translateY(12px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .consent-overlay-show {
+    animation: fadeIn 0.25s ease-out;
+  }
+
+  .consent-modal-show {
+    animation: slideUp 0.28s cubic-bezier(0.33, 1, 0.68, 1);
   }
 </style>
 
-<!-- Desktop -->
 <div
-  id="consent-banner"
-  class="fixed inset-x-0 bottom-0 z-50 hidden items-center gap-4 px-4 py-3 md:px-6 md:py-4
-         bg-white/95 backdrop-blur border-t border-gray-200 shadow-sm consent-banner-show"
+  id="consent-overlay"
+  class="fixed inset-0 z-50 hidden bg-black/40 backdrop-blur-sm consent-overlay-show
+         flex items-center justify-center p-4 md:p-6"
 >
-  <p class="text-sm text-[#475569]">
-    Nous utilisons des cookies de mesure d’audience (Google Tag Manager/Analytics) pour améliorer le site.
-    Vous pouvez accepter ou refuser.
-  </p>
-  <div class="ml-auto flex gap-2">
-    <button
-      id="consent-decline"
-      class="px-3 py-2 text-sm rounded-lg border border-gray-300 text-[#1E2939] hover:bg-gray-50"
-    >
-      Refuser
-    </button>
-    <button
-      id="consent-accept"
-      class="px-3 py-2 text-sm rounded-lg bg-[#3F8D65] text-white hover:opacity-90"
-    >
-      Accepter
-    </button>
-  </div>
-</div>
+  <div
+    class="consent-modal-show bg-white w-full max-w-lg md:max-w-xl mx-auto
+           rounded-2xl shadow-2xl px-6 py-6 md:px-10 md:py-8"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="consent-title"
+  >
+    <!-- Logo + titre -->
+    <div class="flex items-center gap-3 mb-4">
+      <img
+        src={logoKlinova.src}
+        alt="Klinova"
+        class="h-9 w-auto object-contain"
+        loading="lazy"
+      />
+      <div>
+        <h2
+          id="consent-title"
+          class="text-xl font-semibold text-[#1E2939]"
+        >
+          Bienvenue chez Klinova
+        </h2>
+        <p class="text-sm text-[#64748B]">
+          Votre confiance est notre priorité.
+        </p>
+      </div>
+    </div>
 
-<!-- Mobile -->
-<div
-  id="consent-banner-mobile"
-  class="fixed inset-x-3 bottom-3 z-50 hidden rounded-xl bg-white/95 backdrop-blur
-         border border-gray-200 shadow-lg p-3 consent-banner-show md:hidden"
->
-  <p class="text-xs text-[#475569]">
-    Cookies de mesure d’audience (GTM/GA). Accepter ?
-  </p>
-  <div class="mt-2 flex gap-2 justify-end">
-    <button
-      id="m-consent-decline"
-      class="px-2.5 py-1.5 text-xs rounded-lg border border-gray-300 text-[#1E2939]"
-    >
-      Non
-    </button>
-    <button
-      id="m-consent-accept"
-      class="px-2.5 py-1.5 text-xs rounded-lg bg-[#3F8D65] text-white"
-    >
-      Oui
-    </button>
+    <!-- Texte principal -->
+    <div class="space-y-3 mb-6">
+      <p class="text-base text-[#475569] leading-relaxed">
+        Nous respectons votre vie privée&nbsp;: nous utilisons uniquement des cookies
+        de mesure d’audience pour améliorer notre site.
+        Aucune donnée n’est revendue ni partagée avec des tiers publicitaires.
+      </p>
+
+      <ul class="space-y-1.5 text-sm text-[#1E2939]">
+        <li class="flex items-start gap-2">
+          <span class="mt-1 inline-block h-3 w-3 rounded-full bg-[#3F8D65]"></span>
+          <span>Données utilisées uniquement pour analyser l’usage du site.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 inline-block h-3 w-3 rounded-full bg-[#3F8D65]"></span>
+          <span>Pas de reciblage publicitaire, pas de vente de vos informations.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Actions -->
+    <div class="space-y-2">
+      <button
+        id="consent-accept"
+        type="button"
+        class="w-full inline-flex items-center justify-center
+               rounded-xl bg-[#3F8D65] px-4 py-3
+               text-base font-semibold text-white
+               hover:bg-[#387B58] transition-colors"
+      >
+        Accepter et continuer
+      </button>
+
+      <button
+        id="consent-decline"
+        type="button"
+        class="w-full text-sm text-[#475569] text-center
+               underline underline-offset-2 hover:text-[#1E2939]"
+      >
+        Continuer sans accepter
+      </button>
+    </div>
   </div>
 </div>
 
 <script is:inline>
   (function () {
     var KEY = 'consent.analytics';
-    var value = null;
+    var overlay = document.getElementById('consent-overlay');
 
+    var stored = null;
     try {
-      value = localStorage.getItem(KEY);
+      stored = localStorage.getItem(KEY);
     } catch (e) {}
 
-    var banner = document.getElementById('consent-banner');
-    var bannerMobile = document.getElementById('consent-banner-mobile');
-
     function show() {
-      if (!banner && !bannerMobile) return;
-
-      // Desktop
-      if (banner) {
-        banner.classList.remove('hidden');
-        banner.classList.add('flex'); // on impose flex ici
-      }
-
-      // Mobile
-      if (bannerMobile) {
-        bannerMobile.classList.remove('hidden');
-        bannerMobile.classList.add('flex');
-      }
+      if (!overlay) return;
+      overlay.classList.remove('hidden');
+      // classes flex / center déjà dans le HTML
+      document.body.dataset.consentScrollLock = '1';
+      document.body.style.overflow = 'hidden';
     }
 
     function hide() {
-      if (banner) {
-        banner.classList.add('hidden');
-        banner.classList.remove('flex');
+      if (!overlay) return;
+      overlay.classList.add('hidden');
+      if (document.body.dataset.consentScrollLock) {
+        delete document.body.dataset.consentScrollLock;
+        document.body.style.overflow = '';
       }
-      if (bannerMobile) {
-        bannerMobile.classList.add('hidden');
-        bannerMobile.classList.remove('flex');
-      }
-    }
-
-    // Affiche seulement si pas encore choisi
-    if (value !== 'granted' && value !== 'denied') {
-      show();
     }
 
     function accept() {
@@ -124,14 +153,16 @@ const STORAGE_KEY = 'consent.analytics';
       window.dispatchEvent(new CustomEvent('consent:denied'));
     }
 
-    ['consent-accept', 'm-consent-accept'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.addEventListener('click', accept);
-    });
+    if (stored !== 'granted' && stored !== 'denied') {
+      show();
+    }
 
-    ['consent-decline', 'm-consent-decline'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.addEventListener('click', decline);
-    });
+    var acceptBtn = document.getElementById('consent-accept');
+    var declineBtn = document.getElementById('consent-decline');
+
+    if (acceptBtn) acceptBtn.addEventListener('click', accept);
+    if (declineBtn) declineBtn.addEventListener('click', decline);
+
+    // Pas de fermeture sur clic overlay : on force un choix explicite.
   })();
 </script>
