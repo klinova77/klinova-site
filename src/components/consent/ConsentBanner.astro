@@ -1,0 +1,137 @@
+---
+const STORAGE_KEY = 'consent.analytics';
+---
+
+<style>
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .consent-banner-show {
+    animation: slideUp 0.3s ease;
+  }
+</style>
+
+<!-- Desktop -->
+<div
+  id="consent-banner"
+  class="fixed inset-x-0 bottom-0 z-50 hidden items-center gap-4 px-4 py-3 md:px-6 md:py-4
+         bg-white/95 backdrop-blur border-t border-gray-200 shadow-sm consent-banner-show"
+>
+  <p class="text-sm text-[#475569]">
+    Nous utilisons des cookies de mesure d’audience (Google Tag Manager/Analytics) pour améliorer le site.
+    Vous pouvez accepter ou refuser.
+  </p>
+  <div class="ml-auto flex gap-2">
+    <button
+      id="consent-decline"
+      class="px-3 py-2 text-sm rounded-lg border border-gray-300 text-[#1E2939] hover:bg-gray-50"
+    >
+      Refuser
+    </button>
+    <button
+      id="consent-accept"
+      class="px-3 py-2 text-sm rounded-lg bg-[#3F8D65] text-white hover:opacity-90"
+    >
+      Accepter
+    </button>
+  </div>
+</div>
+
+<!-- Mobile -->
+<div
+  id="consent-banner-mobile"
+  class="fixed inset-x-3 bottom-3 z-50 hidden rounded-xl bg-white/95 backdrop-blur
+         border border-gray-200 shadow-lg p-3 consent-banner-show md:hidden"
+>
+  <p class="text-xs text-[#475569]">
+    Cookies de mesure d’audience (GTM/GA). Accepter ?
+  </p>
+  <div class="mt-2 flex gap-2 justify-end">
+    <button
+      id="m-consent-decline"
+      class="px-2.5 py-1.5 text-xs rounded-lg border border-gray-300 text-[#1E2939]"
+    >
+      Non
+    </button>
+    <button
+      id="m-consent-accept"
+      class="px-2.5 py-1.5 text-xs rounded-lg bg-[#3F8D65] text-white"
+    >
+      Oui
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var KEY = 'consent.analytics';
+    var value = null;
+
+    try {
+      value = localStorage.getItem(KEY);
+    } catch (e) {}
+
+    var banner = document.getElementById('consent-banner');
+    var bannerMobile = document.getElementById('consent-banner-mobile');
+
+    function show() {
+      if (!banner && !bannerMobile) return;
+
+      // Desktop
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.classList.add('flex'); // on impose flex ici
+      }
+
+      // Mobile
+      if (bannerMobile) {
+        bannerMobile.classList.remove('hidden');
+        bannerMobile.classList.add('flex');
+      }
+    }
+
+    function hide() {
+      if (banner) {
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }
+      if (bannerMobile) {
+        bannerMobile.classList.add('hidden');
+        bannerMobile.classList.remove('flex');
+      }
+    }
+
+    // Affiche seulement si pas encore choisi
+    if (value !== 'granted' && value !== 'denied') {
+      show();
+    }
+
+    function accept() {
+      try {
+        localStorage.setItem(KEY, 'granted');
+      } catch (e) {}
+      hide();
+      window.dispatchEvent(new CustomEvent('consent:granted'));
+    }
+
+    function decline() {
+      try {
+        localStorage.setItem(KEY, 'denied');
+      } catch (e) {}
+      hide();
+      window.dispatchEvent(new CustomEvent('consent:denied'));
+    }
+
+    ['consent-accept', 'm-consent-accept'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('click', accept);
+    });
+
+    ['consent-decline', 'm-consent-decline'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('click', decline);
+    });
+  })();
+</script>

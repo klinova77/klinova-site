@@ -4,12 +4,13 @@
 import '../styles/global.css';
 import SeoBase, { type Props as SeoProps } from '~/components/SEO/SeoBase.astro';
 import { SITE_THEME } from '~/config/theme';
+import GTMHead from '~/components/analytics/GTMHead.astro';
+import GTMBODYNoscript from '~/components/analytics/GTMBODYNoscript.astro';
+import ConsentBanner from '~/components/consent/ConsentBanner.astro';
 
 // Typage et fallback en cas de props manquants
 export type Props = Partial<SeoProps>;
 const seoProps = Astro.props as Partial<SeoProps>;
-
-const favicon = '/favicon.png';
 ---
 
 <!DOCTYPE html>
@@ -23,22 +24,18 @@ const favicon = '/favicon.png';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <!-- Préconnect pour GTM/GA -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.google.com">
-
-    <!-- ✅ SEO Base (protégé si non défini) -->
+    <!-- ✅ SEO Base -->
     {typeof SeoBase === 'function' && <SeoBase {...(seoProps ?? {})} />}
 
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" href="/favicon.ico" sizes="48x48" />
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-<meta name="theme-color" content="#3F8D65" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <meta name="theme-color" content="#3F8D65" />
 
-    <!-- ✅ Preload police DANS le head -->
+    <!-- Preload police -->
     <link
       rel="preload"
       href="/fonts/CaviarDreams-Bold.woff2"
@@ -48,36 +45,20 @@ const favicon = '/favicon.png';
       media="(min-width:768px)"
     />
 
-    <!-- ⚙️ GTM différé + sûr (onglets background) -->
-    <script is:inline>
-      if (typeof window !== 'undefined') {
-        window.dataLayer = window.dataLayer || [];
-        function loadGTM() {
-          if (window.__gtmLoaded) return; window.__gtmLoaded = true;
-          (function(w,d,s,l,i){
-            w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-TWMFLQ5X');
-        }
-        window.addEventListener('load', () => setTimeout(loadGTM, 2500));
-        document.addEventListener('visibilitychange', () => {
-          if (document.visibilityState === 'visible') setTimeout(loadGTM, 500);
-        }, { once: true });
-      }
-    </script>
+    <!-- ✅ GTM optimisé -->
+    <GTMHead />
   </head>
 
   <body class="font-sans bg-neutral-50 text-primary-900">
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMXB6QZN"
-              height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    <GTMBODYNoscript />
 
+     <ConsentBanner />
+     
     <slot />
 
     <!-- Script interne non bloquant -->
     <script src="/tracking-forms.js" defer></script>
+
+
   </body>
 </html>
