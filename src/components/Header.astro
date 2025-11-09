@@ -40,7 +40,7 @@ const DISPLAY_SERVICES = NAV_SERVICES.filter(s => s.enabled !== false);
 
 
         <!-- Navigation desktop -->
-        <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav class="hidden lg:flex items-center gap-6 lg:gap-8">
           <!-- Services avec dropdown -->
           <div class="relative group">
             <button 
@@ -141,7 +141,7 @@ const DISPLAY_SERVICES = NAV_SERVICES.filter(s => s.enabled !== false);
 
         <!-- Menu mobile burger -->
         <button 
-          class="md:hidden p-2 text-gray-600 hover:text-emerald-600 transition-colors"
+          class="lg:hidden p-2 text-gray-600 hover:text-emerald-600 transition-colors"
           aria-label="Menu mobile"
           data-mobile-menu-toggle
         >
@@ -154,7 +154,7 @@ const DISPLAY_SERVICES = NAV_SERVICES.filter(s => s.enabled !== false);
 
     <!-- Menu mobile -->
     <div 
-      class="md:hidden border-t border-gray-100 bg-white hidden"
+      class="lg:hidden border-t border-gray-100 bg-white hidden"
       data-mobile-menu
     >
       <div class="py-4 space-y-2">
