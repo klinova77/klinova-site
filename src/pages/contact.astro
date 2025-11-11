@@ -15,17 +15,49 @@ const formId = `contact-form-${uid}`;
 
 // JSON-LD optimisé
 const jsonLd = [
-  // ContactPage principale
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "inLanguage": "fr-FR",
-    "name": `${pageName} — Klinova`,
+    "@id": `${site}${pageUrl}#webpage`,
     "url": `${site}${pageUrl}`,
-    "mainEntityOfPage": `${site}${pageUrl}`,
+    "name": "Contact & devis — Klinova",
     "isPartOf": { "@id": `${site}#website` },
-    "primaryImageOfPage": { "@type": "ImageObject", "url": `${site}/images/og/og-klinova-home.png` }
+    "inLanguage": "fr-FR",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${site}/images/og/og-klinova-home.png`,
+      "width": 1200,
+      "height": 630
+    },
+    "mainEntityOfPage": { "@id": `${site}#contact-point` }
   },
+
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    "@id": `${site}#contact-point`,
+    "contactType": "customer service",
+    "telephone": "+33676738661",
+    "email": "contact@klinova.fr",
+    "availableLanguage": ["fr"],
+    "hoursAvailable": "Mo-Su 08:00-20:00",
+    "areaServed": "FR",
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    }
+  },
+
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": `${site}${pageUrl}` }
+    ]
+  }
+];
+
 
   // ContactPoint enrichi (évite duplication avec SeoBase)
   {

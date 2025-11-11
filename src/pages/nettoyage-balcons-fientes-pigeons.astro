@@ -31,21 +31,41 @@ const title = 'Transformation balcon infesté de fientes — Nettoyage professio
 
 // JSON-LD
 const lbId = `${site}#localbusiness`;
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Nettoyage de balcons souillés par fientes de pigeons",
-  "name": "Nettoyage et désinfection de balcons – Île-de-France",
-  "url": `${site}${pageUrl}`,
-  "provider": { "@id": lbId },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    { "@type": "City", "name": "Paris" },
-    { "@type": "City", "name": "Chelles" }
-  ],
-  "category": "Désinfection et nettoyage de surfaces extérieures",
-  "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons."
-};
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site}${pageUrl}#webpage`,
+    "url": `${site}${pageUrl}`,
+    "name": "Nettoyage de balcons souillés par fientes de pigeons — Klinova",
+    "isPartOf": { "@id": `${site}#website` },
+    "inLanguage": "fr-FR",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${site}/images/og/og-klinova-home.png`,
+      "width": 1200,
+      "height": 630
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${site}#service-balcons-fientes`,
+    "serviceType": "Nettoyage de balcons souillés par fientes de pigeons",
+    "name": "Nettoyage et désinfection de balcons – Île-de-France",
+    "url": `${site}${pageUrl}`,
+    "provider": { "@id": lbId },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Île-de-France" },
+      { "@type": "City", "name": "Paris" },
+      { "@type": "City", "name": "Chelles" }
+    ],
+    "category": "Désinfection et nettoyage de surfaces extérieures",
+    "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons."
+  }
+];
+
 ---
 
 <LayoutLP

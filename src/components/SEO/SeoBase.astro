@@ -157,7 +157,25 @@ const localBusinessJsonLd = {
 
 // JSON-LD additionnels
 const extraJsonLd = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []
-const jsonLdBlocks = [orgJsonLd, localBusinessJsonLd, ...extraJsonLd]
+
+
+ const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site}#website`,
+  url: site,
+  name: siteName,
+  publisher: { '@id': orgId },
+  inLanguage: 'fr-FR'
+}
+
+const jsonLdBlocks = [
+  websiteJsonLd,
+  orgJsonLd,
+  localBusinessJsonLd,
+  ...extraJsonLd,
+]
+
 ---
 
 <title>{finalTitle}</title>

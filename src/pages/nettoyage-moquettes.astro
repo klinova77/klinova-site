@@ -110,6 +110,22 @@ const breadcrumb = {
 
 // JSON-LD optimisé (évite duplication avec SeoBase)
 const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site}${pageUrl}#webpage`,
+    "url": `${site}${pageUrl}`,
+    "name": "Nettoyage de moquettes — Klinova",
+    "isPartOf": { "@id": `${site}#website` },
+    "inLanguage": "fr-FR",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${site}/images/og/og-moquettes.png`,
+      "width": 1200,
+      "height": 630
+    }
+  },
+
   // Service spécifique à cette page
   {
     "@context": "https://schema.org",
@@ -120,7 +136,11 @@ const jsonLd = [
     "alternateName": "Shampoinage moquette professionnel",
     "url": `${site}${pageUrl}`,
     "provider": { "@id": `${site}#localbusiness` },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Île-de-France" },
+      { "@type": "City", "name": "Paris" }
+    ],
+    "audience": { "@type": "Audience", "audienceType": ["Bureaux", "Copropriétés", "Particuliers"] },
     "category": "Nettoyage professionnel des revêtements textiles",
     "serviceOutput": "Moquette nettoyée en profondeur, désodorisée et à séchage rapide",
     "description": "Prestations d'entretien de moquettes : diagnostic, détachage, nettoyage à sec ou injection-extraction, monobrosse avec mousse, désodorisation. Méthodes adaptées aux fibres (aiguilletée, bouclée, velours, dalles).",
@@ -142,9 +162,12 @@ const jsonLd = [
       ]
     }
   },
+
   faqSchema,
   breadcrumb
 ];
+
+
 ---
 
 <LayoutWithCTA

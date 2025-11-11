@@ -110,6 +110,23 @@ const breadcrumb = {
 
 // JSON-LD optimisé
 const jsonLd = [
+  // WebPage spécifique
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site}${pageUrl}#webpage`,
+    "url": `${site}${pageUrl}`,
+    "name": "Nettoyage de parkings souterrains — Klinova",
+    "isPartOf": { "@id": `${site}#website` },
+    "inLanguage": "fr-FR",
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${site}/images/og/og-klinova-home.png`,
+      "width": 1200,
+      "height": 630
+    }
+  },
+
   // Service spécifique
   {
     "@context": "https://schema.org",
@@ -159,6 +176,7 @@ const jsonLd = [
   faqSchema,
   breadcrumb
 ];
+
 ---
 
 <LayoutWithCTA

@@ -21,42 +21,60 @@ const contactA = linkAttrs(contactHref);
 
 // JSON-LD optimisé
 const jsonLd = [
-  // WebPage principale
+  // WebPage CGV
   {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    'inLanguage': 'fr-FR',
-    'name': `${pageName} (CGV) — Klinova`,
-    'url': `${site}${pageUrl}`,
-    'mainEntityOfPage': `${site}${pageUrl}`,
-    'primaryImageOfPage': { '@type': 'ImageObject', 'url': `${site}/images/og/og-klinova-home.png` },
-    'about': { '@id': `${site}#organization` },
-    'publisher': { '@id': `${site}#organization` },
-    'isPartOf': { '@id': `${site}#website` }
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${site}${pageUrl}#webpage`,
+    "url": `${site}${pageUrl}`,
+    "name": `${pageName} — Klinova`,
+    "inLanguage": "fr-FR",
+    "isPartOf": { "@id": `${site}#website` },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": `${site}/images/og/og-klinova-home.png`
+    },
+    "about": {
+      "@id": `${site}#organization`
+    },
+    "publisher": {
+      "@id": `${site}#organization`
+    }
   },
 
-  // TermsOfService spécifique
+  // CGV comme document
   {
-    '@context': 'https://schema.org',
-    '@type': 'TermsOfService',
-    'inLanguage': 'fr-FR',
-    'name': 'Conditions Générales de Vente – Klinova',
-    'url': `${site}${pageUrl}`,
-    'description': 'Conditions d\'exécution des prestations de nettoyage et maintenance, devis, paiements, responsabilité, litiges et droit applicable.',
-    'provider': { '@id': `${site}#localbusiness` },
-    'mainEntityOfPage': `${site}${pageUrl}`
+    "@context": "https://schema.org",
+    "@type": "DigitalDocument",
+    "@id": `${site}${pageUrl}#cgv`,
+    "name": "Conditions Générales de Vente – Klinova",
+    "description": "Conditions d'exécution des prestations de nettoyage et maintenance : devis, paiements, responsabilité, litiges et droit applicable.",
+    "url": `${site}${pageUrl}`,
+    "inLanguage": "fr-FR",
+    "author": { "@id": `${site}#organization` },
+    "publisher": { "@id": `${site}#organization` },
+    "isPartOf": { "@id": `${site}#website` }
+  },
+
+  // Enrichissement de l'Organization principale : lien vers les CGV
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site}#organization`,
+    "termsOfService": `${site}${pageUrl}`
   },
 
   // Fil d'Ariane
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Accueil', 'item': `${site}/` },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Conditions Générales de Vente', 'item': `${site}${pageUrl}` }
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
+      { "@type": "ListItem", "position": 2, "name": "Conditions Générales de Vente", "item": `${site}${pageUrl}` }
     ]
   }
 ];
+
 ---
 
 <Layout

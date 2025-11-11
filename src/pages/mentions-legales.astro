@@ -8,16 +8,40 @@ const pageName = 'Mentions légales';
 
 // JSON-LD optimisé
 const jsonLd = [
+  // WebPage Mentions légales
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
+    "@id": `${site}${pageUrl}#webpage`,
     "inLanguage": "fr-FR",
     "name": `${pageName} — Klinova`,
     "url": `${site}${pageUrl}`,
     "description": "Mentions légales du site Klinova.fr — société de propreté et maintenance technique à Paris & en Île-de-France.",
-    "mainEntityOfPage": `${site}${pageUrl}`,
-    "isPartOf": { "@id": `${site}#website` }
+    "isPartOf": { "@id": `${site}#website` },
+    "publisher": { "@id": `${site}#organization` }
   },
+
+  // Mentions légales comme document
+  {
+    "@context": "https://schema.org",
+    "@type": "DigitalDocument",
+    "@id": `${site}${pageUrl}#legal-document`,
+    "name": "Mentions légales Klinova",
+    "url": `${site}${pageUrl}`,
+    "inLanguage": "fr-FR",
+    "author": { "@id": `${site}#organization` },
+    "publisher": { "@id": `${site}#organization` }
+  },
+
+  // Lien depuis l'Organization vers les mentions (facultatif mais propre)
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site}#organization`,
+    "termsOfService": `${site}${pageUrl}`
+  },
+
+  // Fil d'Ariane
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -27,6 +51,7 @@ const jsonLd = [
     ]
   }
 ];
+
 ---
 
 <Layout

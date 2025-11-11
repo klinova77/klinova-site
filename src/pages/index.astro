@@ -49,24 +49,8 @@ const popupContext = {
 
 // JSON-LD optimisé pour la home (évite duplication avec SeoBase)
 const jsonLd = [
-  // WebSite principal
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${site}#website`,
-    "url": site,
-    "name": "Klinova",
-    "inLanguage": "fr-FR",
-    "publisher": { "@id": `${site}#organization` },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${site}/?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
-    }
-  },
+ 
+  
 
   // WebPage home
   {
