@@ -24,12 +24,12 @@
 
     { "source": "/nettoyage-de-moquettes",                   "destination": "/nettoyage-moquettes",               "permanent": true },
     { "source": "/nettoyage-professionnel-parkings-garages", "destination": "/nettoyage-parkings",                "permanent": true },
-    { "source": "/nettoyage-terrasses-exterieurs",           "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
-    { "source": "/nettoyage-terrasses-et-dexterieurs-copy",  "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
-    { "source": "/nettoyage-professionnel-exterieurs",       "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
+    { "source": "/nettoyage-terrasses-exterieurs",           "destination": "/nettoyage-balcons", "permanent": true },
+    { "source": "/nettoyage-terrasses-et-dexterieurs-copy",  "destination": "/nettoyage-balcons", "permanent": true },
+    { "source": "/nettoyage-professionnel-exterieurs",       "destination": "/nettoyage-parkings", "permanent": true },
     { "source": "/nettoyage-textiles",                       "destination": "/nettoyage-moquettes",               "permanent": true },
 
-    { "source": "/nettoyage-de-balcons",                     "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
+    { "source": "/nettoyage-de-balcons",                     "destination": "/nettoyage-balcons", "permanent": true },
     { "source": "/devis-nettoyage-gratuit",                  "destination": "/contact",                           "permanent": true },
     { "source": "/services-eco-responsables",                "destination": "/",                                  "permanent": true },
     { "source": "/page",                                     "destination": "/",                                  "permanent": true },
