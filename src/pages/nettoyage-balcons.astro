@@ -2,6 +2,7 @@
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import { Image } from 'astro:assets';
 import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
@@ -1668,23 +1669,24 @@ data-hide-floating-cta
 
           <!-- Bouton de soumission -->
           <div class="text-center">
-            <button
-              type="submit"
-              class="inline-flex items-center px-8 py-4 bg-[#3F8D65] hover:bg-[#387B58] disabled:bg-[#9CA3AF] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:transform-none"
-              id="submit-btn"
-            >
-              <span class="loading-spinner hidden mr-2">
-                <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              </span>
-              <svg class="w-5 h-5 mr-2 email-icon" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-              </svg>
-              <span id="btn-text">Envoyer ma demande</span>
-            </button>
+            <ButtonSubmit
+  label="Envoyer ma demande"
+  variant="primary"
+  size="lg"
+  fullWidth={false}
+  id="submit-btn"
+  formId="balcons-form"
+  formName="Balcons Contact Form"
+  formType="devis"
+  value={180}
+  source="page-balcons"
+  className="inline-flex items-center px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+  tracking={{
+    action: 'lead',
+    source: 'balcons-form',
+    intent: 'nettoyage-request'
+  }}
+/>
           </div>
         </form>
         
@@ -1766,7 +1768,7 @@ data-hide-floating-cta
       <!-- Mentions finales -->
       <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
         <p class="text-sm text-[#6B7280]">
-          KLINOVA - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+          KLINOVA - RCS Paris 943 439 810 - 9 allée de la prairie, 77500 Chelles
         </p>
       </div>
     </div>

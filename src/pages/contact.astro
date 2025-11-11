@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
 
 // Variables de base
@@ -329,12 +330,24 @@ const jsonLd = [
 
             <!-- Actions -->
             <div class="form-actions">
-              <button type="submit" class="btn-primary" id="submitBtn">
-                <span class="btn-content">
-                  <span class="loading-spinner"></span>
-                  <span id="submitText">Envoyer ma demande</span>
-                </span>
-              </button>
+             <ButtonSubmit
+  label="Envoyer ma demande"
+  variant="primary"
+  size="lg"
+  fullWidth={true}
+  id="submitBtn"
+  formId="contact-form"
+  formName="Contact Form"
+  formType="contact"
+  value={0}
+  source="contact-page"
+  className="btn-primary"
+  tracking={{
+    action: 'lead',
+    source: 'contact-page',
+    intent: 'form-submit'
+  }}
+/>
               <!-- Message de validation à côté du bouton -->
               <div id="validation-message" class="validation-message" style="display:none;"></div>
 

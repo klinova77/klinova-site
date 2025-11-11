@@ -1,6 +1,7 @@
 ---
 import LayoutLP from '~/layouts/LayoutLP.astro';
 import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { Image } from 'astro:assets';
 
 // Variables de base
@@ -822,38 +823,31 @@ data-hide-cta
       </div>
 
       <!-- CTA form -->
-      <div class="mt-2 flex flex-col sm:flex-row gap-3 sm:items-center">
-        <button
-          type="submit"
-          id="submit-btn"
-          class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl px-5 py-3 text-base font-semibold
-                 bg-[#3F8D65] text-white shadow-sm hover:opacity-95 focus-visible:outline-none
-                 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65]
-                 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-          data-action="cta-submit-devis"
-          data-source="lp-balcons"
-        >
-          <span class="loading-spinner hidden mr-2">
-            <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-          </span>
-          <span id="submit-text">Recevoir mon devis sous 24&nbsp;h</span>
-        </button>
+     
+       <ButtonSubmit
+  label="Recevoir mon devis"
+  variant="primary"
+  size="lg"
+  fullWidth={true}
+  id="submit-btn"
+  formId="fientes-pigeons-form"
+  formName="Fientes Pigeons Contact Form"
+  formType="devis"
+  value={220}
+  source="lp-balcons"
+  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+  tracking={{
+    action: 'cta-submit-devis',
+    source: 'lp-balcons',
+    intent: 'fientes-pigeons-devis'
+  }}
+  data={{
+    action: 'cta-submit-devis',
+    source: 'lp-balcons'
+  }}
+/>
 
-        <a
-          href={`tel:${PHONE_E164}`}
-          class="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl px-5 py-3 text-base font-semibold
-                 border border-[#CFE3D8] text-[#1E2939] bg-white hover:bg-[#F8FAFC]
-                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#CFE3D8]
-                 transition-all duration-200"
-          aria-label={`Appeler Klinova au ${PHONE_DISPLAY}`}
-          data-action="cta-form-phone"
-          data-source="lp-balcons"
-        >
-          📞&nbsp;{PHONE_DISPLAY}
-        </a>
+       
       </div>
     </form>
   </div>
@@ -953,8 +947,8 @@ data-hide-cta
   const form = document.getElementById('devis-balcons-form');
   const messagesContainer = document.getElementById('form-messages');
   const submitBtn = document.getElementById('submit-btn');
-  const submitText = document.getElementById('submit-text');
-  const loadingSpinner = document.querySelector('.loading-spinner');
+  const submitText = document.getElementById('btn-text');
+const loadingSpinner = document.querySelector('.loading-spinner');
   
   // Upload de photos
   const photosInput = document.getElementById('photos-input');
@@ -984,11 +978,11 @@ data-hide-cta
     }
   }
 
-  function setLoading(loading) {
-    submitBtn.disabled = loading || uploadingCount > 0;
-    loadingSpinner.classList.toggle('hidden', !loading);
-    submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis sous 24 h';
-  }
+function setLoading(loading) {
+  submitBtn.disabled = loading || uploadingCount > 0;
+  if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+  if (submitText) submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
+}
 
   function bytesToMB(bytes) {
     return (bytes / 1024 / 1024).toFixed(1);
