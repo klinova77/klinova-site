@@ -1,0 +1,33 @@
+---
+import CityPage from '~/components/CityPage.astro'; // ⬅️ ton composant CityPage (celui dont tu as collé le code)
+import { generateCityPaths } from '~/utils/generate-city-pages';
+import type { City, ServiceConfig } from '~/types/geo';
+
+export const prerender = true;
+
+type Params = {
+  department: string;
+  city: string;
+  service: string;
+};
+
+export async function getStaticPaths() {
+  // Génère: /zones-d-intervention/{department}/{city}/{service}
+  // props: { department, city, service } déjà prêts pour CityPage
+  return generateCityPaths();
+}
+
+// Les props sont injectés par getStaticPaths()
+const {
+  department,
+  city,
+  service,
+} = Astro.props as {
+  department: { name: string; code?: string; slug: string };
+  city: City;
+  service: ServiceConfig;
+};
+---
+
+<!-- On délègue l'affichage à ton composant CityPage en lui passant les props -->
+<CityPage department={department} city={city} service={service} />

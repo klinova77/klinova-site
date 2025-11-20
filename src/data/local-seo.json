@@ -1,90 +1,389 @@
 {
-  "cities": [
+  "departments": [
     {
       "name": "Paris",
       "slug": "paris",
-      "postalCodes": ["75001", "75002", "75003", "75004", "75005", "75006", "75007", "75008", "75009", "75010", "75011", "75012", "75013", "75014", "75015", "75016", "75017", "75018", "75019", "75020"],
-      "customDescription": "Nos équipes Klinova interviennent dans tous les arrondissements de Paris pour le nettoyage professionnel de moquettes, parkings et balcons. Des interventions planifiées, traçables et respectueuses de l’environnement.",
-      "ctaOverride": "Obtenez un devis express à Paris",
-      "faq": [
+      "code": "75",
+      "intro": "Interventions spécialisées à Paris intra-muros : copropriétés, immeubles haussmanniens, bureaux et hôtels dans l'ensemble des arrondissements.",
+      "cities": [
         {
-          "question": "Intervenez-vous dans tous les arrondissements de Paris ?",
-          "answer": "Oui, Klinova intervient dans les 20 arrondissements de Paris, avec des délais courts pour les syndics, hôtels et entreprises."
-        },
-        {
-          "question": "Utilisez-vous des produits écologiques ?",
-          "answer": "Oui, nos protocoles privilégient des produits certifiés écolabel, compatibles avec la santé des occupants et des animaux."
+          "name": "Paris",
+          "slug": "paris",
+          "postalCodes": [
+            "75001", "75002", "75003", "75004", "75005", "75006", "75007", "75008",
+            "75009", "75010", "75011", "75012", "75013", "75014", "75015", "75016",
+            "75017", "75018", "75019", "75020"
+          ],
+          "customDescription": "Intervention professionnelle dans tous les arrondissements",
+          "detailedDescription": "Paris représente un défi unique pour le nettoyage professionnel. Avec ses 20 arrondissements, ses immeubles haussmanniens classés et ses copropriétés densément peuplées, chaque intervention nécessite une planification méticuleuse.\n\nKlinova intervient à Paris depuis 2020 et connaît parfaitement les contraintes locales : accès parfois complexes dans le Marais (3e et 4e arrondissements), stationnement limité dans les quartiers centraux, normes strictes pour les bâtiments patrimoniaux, et horaires d'intervention adaptés aux copropriétés occupées.\n\nNos équipes sont formées pour travailler dans le respect des règlements de copropriété parisiens. Nous coordonnons systématiquement avec les syndics pour obtenir les autorisations d'accès, planifier les interventions en dehors des heures de pointe, et assurer une communication transparente avec les résidents.\n\nQue vous soyez dans un immeuble haussmannien du 8e arrondissement, une copropriété moderne de Bercy (12e), ou un bâtiment rénové de Belleville (20e), Klinova adapte ses protocoles à votre environnement spécifique. Nous intervenons également dans les bureaux des quartiers d'affaires (La Défense, Opéra) avec des créneaux tôt le matin ou tard le soir pour ne pas perturber l'activité professionnelle.",
+          "cityImage": "/images/paris-immeubles-haussmanniens.jpg",
+          "ctaOverride": "Obtenez un devis express à Paris",
+          "districts": [
+            "Marais (3e/4e)",
+            "Montmartre (18e)",
+            "Saint-Germain-des-Prés (6e)",
+            "Quartier Latin (5e)",
+            "Champs-Élysées (8e)",
+            "Batignolles (17e)",
+            "Belleville (20e)",
+            "Bastille (11e/12e)"
+          ],
+          "landmarks": [
+            "Proche Tour Eiffel / Trocadéro",
+            "Secteur Opéra Garnier",
+            "Quartier d'affaires La Défense",
+            "Gare du Nord / Gare de l'Est",
+            "Bercy - Bibliothèque François Mitterrand",
+            "Proche Parc Monceau"
+          ],
+          "specificChallenges": [
+            "Immeubles haussmanniens avec contraintes patrimoniales",
+            "Copropriétés densément peuplées nécessitant des horaires adaptés",
+            "Accès parfois complexe dans certains arrondissements historiques",
+            "Stationnement limité nécessitant une coordination précise",
+            "Normes strictes pour les immeubles classés"
+          ],
+          "testimonial": {
+            "text": "Klinova a su nettoyer notre parking souterrain de 120 places en une nuit sans gêner les copropriétaires. L'équipe est arrivée à 22h et a terminé à 6h du matin. Un travail impeccable, tout était propre et sec au réveil des résidents.",
+            "author": "Jean-Marc Lefebvre",
+            "role": "Syndic de copropriété",
+            "building": "Résidence Victor Hugo, 16e arrondissement"
+          },
+          "faq": [
+            {
+              "question": "Intervenez-vous dans tous les arrondissements de Paris ?",
+              "answer": "Oui, Klinova intervient dans l'ensemble des 20 arrondissements avec des créneaux adaptés aux contraintes des copropriétés, hôtels et bureaux. Nous connaissons les spécificités de chaque quartier et adaptons nos protocoles en conséquence."
+            },
+            {
+              "question": "Pouvez-vous intervenir tôt le matin ou en horaires décalés ?",
+              "answer": "Absolument. Nous planifions régulièrement des interventions entre 6h et 9h ou après 19h pour limiter la gêne des occupants et des clients, particulièrement dans les zones à forte densité comme le centre de Paris."
+            },
+            {
+              "question": "Comment se passe le stationnement de vos véhicules dans Paris ?",
+              "answer": "Nos équipes sont habituées aux contraintes de stationnement parisiennes. Nous coordonnons systématiquement avec le syndic pour obtenir les autorisations nécessaires ou utilisons les zones de livraison selon la réglementation."
+            }
+          ]
         }
       ]
     },
     {
-      "name": "Boulogne-Billancourt",
-      "slug": "boulogne",
-      "postalCodes": ["92100"],
-      "customDescription": "Service de nettoyage haut de gamme à Boulogne-Billancourt. Klinova intervient pour les copropriétés, bureaux et logements avec des méthodes professionnelles et un suivi rigoureux."
+      "name": "Yvelines",
+      "slug": "yvelines",
+      "code": "78",
+      "intro": "Zones d'intervention dans les Yvelines : résidences, immeubles anciens, secteurs résidentiels premium et communes limitrophes.",
+      "cities": [
+        {
+          "name": "Versailles",
+          "slug": "versailles",
+          "postalCodes": ["78000"],
+          "customDescription": "Service professionnel respectueux du patrimoine versaillais",
+          "detailedDescription": "Versailles, ville royale au patrimoine exceptionnel, demande une approche particulière pour le nettoyage professionnel. Klinova intervient à Versailles en tenant compte du cadre architectural unique de la ville.\n\nNos équipes sont sensibilisées à la préservation des bâtiments anciens. Dans le centre historique, de nombreux immeubles datent du XVIIIe siècle et nécessitent des produits et techniques adaptés pour ne pas endommager les matériaux d'origine : pierres de taille, parquets anciens, marbres.\n\nNous intervenons régulièrement dans les quartiers Notre-Dame, Montreuil et Saint-Louis, où les copropriétés allient charme de l'ancien et exigences modernes de confort. Nos prestations respectent les règlements de copropriété stricts tout en garantissant un résultat impeccable.\n\nQue vous soyez dans un immeuble ancien du centre-ville ou une résidence plus récente des quartiers Porchefontaine ou Chantiers, Klinova adapte ses méthodes à votre environnement spécifique. Nous couvrons également les communes limitrophes comme Le Chesnay-Rocquencourt, Viroflay et Vélizy-Villacoublay.",
+          "ctaOverride": "Demander un devis à Versailles",
+          "districts": [
+            "Centre-ville",
+            "Quartier Notre-Dame",
+            "Montreuil",
+            "Porchefontaine",
+            "Chantiers",
+            "Saint-Louis"
+          ],
+          "landmarks": [
+            "Proche Château de Versailles",
+            "Secteur Gare Rive-Droite",
+            "Avenue de Paris",
+            "Quartier des Antiquaires",
+            "Parc de Versailles"
+          ],
+          "specificChallenges": [
+            "Immeubles anciens nécessitant une approche délicate",
+            "Respect du cadre patrimonial et architectural unique",
+            "Accès parfois étroit dans le centre historique",
+            "Produits adaptés aux matériaux anciens (pierre, marbre, parquet)",
+            "Coordination avec les règlements de copropriété stricts"
+          ],
+          "testimonial": {
+            "text": "Nous avons fait appel à Klinova pour nettoyer les parties communes de notre immeuble classé du XVIIIe siècle. L'équipe a utilisé des produits respectueux de nos parquets anciens et de nos pierres de taille. Un résultat magnifique sans aucun dommage.",
+            "author": "Marie-Christine Dubois",
+            "role": "Présidente du conseil syndical",
+            "building": "Copropriété rue de la Paroisse"
+          },
+          "faq": [
+            {
+              "question": "Vos produits sont-ils adaptés aux bâtiments anciens ?",
+              "answer": "Oui, nous utilisons des produits professionnels spécifiquement sélectionnés pour les matériaux anciens et délicats (pierre, marbre, parquet d'époque). Nos équipes sont formées pour intervenir dans des bâtiments patrimoniaux sans endommager les surfaces."
+            },
+            {
+              "question": "Couvrez-vous tout Versailles et les communes voisines ?",
+              "answer": "Oui, nous intervenons sur l'ensemble de la ville de Versailles ainsi que les communes limitrophes : Le Chesnay-Rocquencourt, Viroflay, Vélizy-Villacoublay, Jouy-en-Josas."
+            },
+            {
+              "question": "Travaillez-vous avec les syndics versaillais ?",
+              "answer": "Oui, nous collaborons régulièrement avec les principaux syndics de Versailles et connaissons bien les spécificités des copropriétés locales. Nous fournissons des devis détaillés et des comptes-rendus après chaque intervention."
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Créteil",
-      "slug": "creteil",
-      "postalCodes": ["94000"]
-    },
-    {
-      "name": "Nogent-sur-Marne",
-      "slug": "nogent",
-      "postalCodes": ["94130"],
-      "customDescription": "Spécialiste du nettoyage en copropriété à Nogent-sur-Marne, Klinova propose des prestations de haute qualité pour les balcons, moquettes et parkings."
+      "name": "Hauts-de-Seine",
+      "slug": "hauts-de-seine",
+      "code": "92",
+      "intro": "Interventions dans les Hauts-de-Seine : résidences de standing, immeubles modernes, bureaux et parkings souterrains.",
+      "cities": [
+        {
+          "name": "Boulogne-Billancourt",
+          "slug": "boulogne-billancourt",
+          "postalCodes": ["92100"],
+          "customDescription": "Prestations haut de gamme pour résidences de standing et espaces professionnels",
+          "detailedDescription": "Boulogne-Billancourt, deuxième ville des Hauts-de-Seine, concentre de nombreuses résidences haut de gamme et espaces professionnels exigeants. Klinova y déploie son expertise premium pour répondre aux standards de qualité les plus élevés.\n\nLa ville a connu une transformation majeure ces vingt dernières années, avec la construction de résidences modernes de standing, particulièrement dans les quartiers Pont de Sèvres et Île Seguin. Ces immeubles récents, souvent équipés de matériaux nobles et de finitions soignées, nécessitent un entretien professionnel rigoureux.\n\nNous intervenons également dans les nombreux bureaux et espaces tertiaires de Boulogne-Billancourt, notamment dans le quartier d'affaires Pont de Sèvres. Nos équipes sont habituées aux contraintes des environnements professionnels : interventions en dehors des heures ouvrées, discrétion, et résultats irréprochables.\n\nQue vous soyez dans une résidence de standing près de Roland-Garros, un immeuble moderne de Billancourt, ou des bureaux du quartier Marcel Sembat, Klinova adapte ses prestations à vos exigences. Nous garantissons un niveau de finition exemplaire et un service personnalisé.",
+          "cityImage": "/images/boulogne-billancourt-moderne.jpg",
+          "ctaOverride": "Devis personnalisé Boulogne-Billancourt",
+          "districts": [
+            "Pont de Sèvres",
+            "Marcel Sembat",
+            "Billancourt",
+            "Reine - Point du Jour",
+            "Île Seguin"
+          ],
+          "landmarks": [
+            "Secteur Seine Musicale",
+            "Proche Roland-Garros",
+            "Quartier d'affaires Pont de Sèvres",
+            "Île Seguin",
+            "Parc de Boulogne-Edmond de Rothschild"
+          ],
+          "specificChallenges": [
+            "Immeubles de standing avec exigences qualité élevées",
+            "Nombreux espaces professionnels et bureaux",
+            "Parkings de grande capacité en sous-sol",
+            "Matériaux nobles nécessitant un entretien spécialisé",
+            "Horaires d'intervention strictement encadrés"
+          ],
+          "testimonial": {
+            "text": "Nous faisons appel à Klinova depuis 2 ans pour l'entretien de notre résidence de 150 appartements. Le niveau de finition est toujours impeccable, l'équipe est ponctuelle et professionnelle. Nos résidents sont très satisfaits.",
+            "author": "Philippe Martin",
+            "role": "Gestionnaire de copropriété",
+            "building": "Résidence Le Carré des Arts, Billancourt"
+          },
+          "faq": [
+            {
+              "question": "Travaillez-vous avec des résidences de standing ?",
+              "answer": "Oui, Klinova accompagne régulièrement des résidences haut de gamme à Boulogne-Billancourt. Nous adaptons nos prestations aux standards de qualité attendus avec un niveau de finition irréprochable et des équipes formées aux exigences premium."
+            },
+            {
+              "question": "Intervenez-vous dans les bureaux et espaces tertiaires ?",
+              "answer": "Absolument. Nous réalisons des prestations de nettoyage pour bureaux, cabinets et espaces de coworking, avec possibilité d'intervention en dehors des heures ouvrées (soirs, week-ends) pour ne pas perturber l'activité professionnelle."
+            },
+            {
+              "question": "Proposez-vous des contrats d'entretien régulier ?",
+              "answer": "Oui, nous proposons des contrats mensuels, trimestriels ou annuels adaptés aux besoins des copropriétés et entreprises. Ces contrats incluent des interventions planifiées et un interlocuteur dédié pour assurer la continuité du service."
+            }
+          ]
+        }
+      ]
     }
   ],
-
   "services": [
     {
       "key": "moquettes",
       "name": "Nettoyage de moquettes",
-      "image": "/images/nettoyage-moquette-avant-apres.webp",
-      "defaultDescription": "Nettoyage professionnel de moquettes dans les bureaux et copropriétés. Désinfection, désodorisant et séchage rapide.",
-      "keywords": ["nettoyage moquette paris", "shampoing moquette copropriété", "entretien textile de sol"],
-      "faq": [
+      "defaultDescription": "Nettoyage professionnel de moquettes en copropriété, bureaux et hôtels : détachage ciblé, désinfection et séchage rapide.",
+      "keywords": [
+        "nettoyage moquette copropriété",
+        "shampoing moquette professionnel",
+        "entretien textile de sol"
+      ],
+      "benefits": [
+        "Détachage en profondeur avec extraction d'eau sale",
+        "Désinfection complète éliminant 99,9% des bactéries et acariens",
+        "Séchage rapide (3 à 6 heures) pour usage immédiat",
+        "Prolongation de la durée de vie de vos moquettes (+30%)",
+        "Matériel professionnel haute performance (injection-extraction)",
+        "Devis transparent avec surface mesurée au m²"
+      ],
+      "process": [
         {
-          "question": "Quelle est la fréquence idéale de nettoyage de moquette ?",
-          "answer": "Pour les copropriétés ou bureaux, un nettoyage annuel est recommandé. Les zones à fort passage peuvent nécessiter 2 à 3 passages par an."
+          "step": "Inspection préalable",
+          "description": "Évaluation de l'état de la moquette, identification des taches tenaces (café, encre, graisses) et mesure précise des surfaces à traiter pour établir un devis exact."
         },
         {
-          "question": "Est-ce que vos produits laissent une odeur forte ?",
-          "answer": "Non, nos produits sont neutres ou légèrement parfumés, et respectent les normes d’air intérieur."
+          "step": "Prétraitement des taches",
+          "description": "Application manuelle de détachants professionnels sur les zones problématiques. Temps de pose nécessaire pour décomposer les taches incrustées avant le lavage principal."
+        },
+        {
+          "step": "Shampoing injection-extraction",
+          "description": "Nettoyage en profondeur avec machine professionnelle : injection de solution nettoyante haute performance et extraction immédiate de l'eau sale chargée en saletés."
+        },
+        {
+          "step": "Rinçage et finition",
+          "description": "Rinçage à l'eau claire pour éliminer tout résidu de produit, puis passage final pour uniformiser les fibres et accélérer le séchage. Ventilation si nécessaire."
+        }
+      ],
+      "equipment": [
+        "Machine injection-extraction haute performance",
+        "Détachants professionnels adaptés par type de tache",
+        "Aspirateur industriel eau et poussière",
+        "Ventilateurs de séchage accéléré",
+        "Protège-chaussures jetables"
+      ],
+      "averageDuration": "1 à 3 heures selon la surface",
+      "pricing": {
+        "from": "3€ HT",
+        "unit": "par m²"
+      },
+      "faq": [
+        {
+          "question": "Combien de temps faut-il pour que la moquette sèche ?",
+          "answer": "Avec notre matériel professionnel d'extraction, la moquette sèche généralement en 3 à 6 heures. Nous pouvons accélérer le processus avec des ventilateurs si nécessaire. Il est recommandé d'éviter une circulation intense pendant les premières heures."
+        },
+        {
+          "question": "Pouvez-vous enlever toutes les taches ?",
+          "answer": "Nous réussissons à éliminer la majorité des taches courantes (boissons, boue, traces de pas). Certaines taches anciennes ou de nature chimique peuvent laisser des traces résiduelles, que nous évaluons lors du diagnostic préalable."
+        },
+        {
+          "question": "À quelle fréquence faut-il nettoyer une moquette en copropriété ?",
+          "answer": "Nous recommandons un nettoyage professionnel tous les 6 à 12 mois pour les parties communes selon le trafic. Les zones de fort passage (halls, couloirs) peuvent nécessiter un nettoyage plus fréquent, tous les 3 à 6 mois."
+        },
+        {
+          "question": "Utilisez-vous des produits écologiques ?",
+          "answer": "Oui, nos produits sont certifiés Ecolabel et sans danger pour les occupants. Ils sont biodégradables et ne laissent pas de résidus toxiques. Nous privilégions les solutions respectueuses de l'environnement."
         }
       ]
     },
     {
       "key": "parkings",
       "name": "Nettoyage de parkings",
-      "image": "/images/nettoyage-parking-autolaveuse.jpg",
-      "defaultDescription": "Nettoyage en profondeur des parkings et sous-sols avec autolaveuse, dégraissant et aspiration des eaux usées.",
-      "keywords": ["nettoyage parking souterrain", "dégraissage sol béton", "autolaveuse professionnelle"],
-      "faq": [
+      "defaultDescription": "Nettoyage en profondeur des parkings et sous-sols : balayage, autolaveuse, dégraissage des traces d'huile et collecte des eaux usées.",
+      "keywords": [
+        "nettoyage parking souterrain",
+        "dégraissage sol béton",
+        "autolaveuse professionnelle"
+      ],
+      "benefits": [
+        "Autolaveuse professionnelle pour un nettoyage homogène",
+        "Dégraissage des taches d'huile et de carburant",
+        "Élimination des poussières et traces de pneus",
+        "Collecte et évacuation réglementaire des eaux usées",
+        "Amélioration de la sécurité (sol moins glissant)",
+        "Intervention en horaires décalés ou nocturnes possible"
+      ],
+      "process": [
         {
-          "question": "Faut-il évacuer les véhicules pendant le nettoyage ?",
-          "answer": "Oui, pour un décrassage complet, il est préférable de prévoir un créneau sans véhicules sur les zones à traiter."
+          "step": "Préparation et sécurisation",
+          "description": "Balisage de la zone d'intervention, protection des équipements sensibles et coordination avec le syndic pour informer les copropriétaires ou usagers."
         },
         {
-          "question": "Proposez-vous des contrats d’entretien annuels ?",
-          "answer": "Oui, avec tarifs dégressifs et planification automatique des passages."
+          "step": "Balayage mécanique",
+          "description": "Élimination des déchets, graviers et poussières accumulés avec balayeuse industrielle pour préparer le lavage en profondeur."
+        },
+        {
+          "step": "Dégraissage ciblé",
+          "description": "Traitement des taches d'huile, de carburant et autres traces tenaces avec dégraissants professionnels haute performance. Temps de pose sur les taches anciennes."
+        },
+        {
+          "step": "Lavage à l'autolaveuse",
+          "description": "Passage complet du parking avec autolaveuse pour un lavage homogène et une aspiration immédiate de l'eau sale."
+        },
+        {
+          "step": "Séchage et contrôle",
+          "description": "Vérification de la propreté, repassage si nécessaire sur zones difficiles, et remise en état des lieux avec enlèvement de la signalétique."
+        }
+      ],
+      "equipment": [
+        "Autolaveuse professionnelle (réservoir 70L)",
+        "Balayeuse industrielle",
+        "Dégraissants haute performance biodégradables",
+        "Nettoyeur haute pression (jusqu'à 150 bars)",
+        "Système de récupération d'eaux usées conforme",
+        "Signalétique de sécurité"
+      ],
+      "averageDuration": "4 à 8 heures selon la surface",
+      "pricing": {
+        "from": "2,50€ HT",
+        "unit": "par m²"
+      },
+      "faq": [
+        {
+          "question": "Pouvez-vous intervenir la nuit pour ne pas gêner les résidents ?",
+          "answer": "Oui, nous réalisons régulièrement des interventions nocturnes (après 21h) ou très tôt le matin (à partir de 6h) pour minimiser l'impact sur les usagers du parking. Nous adaptons nos horaires à vos contraintes."
+        },
+        {
+          "question": "Comment gérez-vous les eaux de lavage ?",
+          "answer": "Nous utilisons une autolaveuse avec système d'aspiration intégré qui récupère immédiatement l'eau sale. Les eaux usées sont ensuite évacuées conformément à la réglementation en vigueur, via les réseaux d'assainissement appropriés."
+        },
+        {
+          "question": "Pouvez-vous enlever les taches d'huile anciennes ?",
+          "answer": "Oui, nous utilisons des dégraissants professionnels puissants spécifiquement conçus pour dissoudre les hydrocarbures. Les taches d'huile anciennes et très incrustées peuvent nécessiter plusieurs passages avec temps de pose prolongé."
+        },
+        {
+          "question": "À quelle fréquence nettoyer un parking de copropriété ?",
+          "answer": "Nous recommandons un nettoyage complet tous les 3 à 6 mois pour maintenir un niveau d'hygiène correct et éviter l'accumulation de saletés. Un entretien plus fréquent peut être nécessaire pour les parkings de plus de 100 places ou très fréquentés."
         }
       ]
     },
     {
       "key": "balcons",
       "name": "Nettoyage de balcons et terrasses",
-      "image": "/images/nettoyage-balcons-fientes-pigeons.webp",
-      "defaultDescription": "Nettoyage et désinfection complète des balcons et terrasses, élimination des fientes et traitement anti-odeurs.",
-      "keywords": ["nettoyage balcon fientes", "désinfection terrasse", "nettoyage copropriété"],
-      "faq": [
+      "defaultDescription": "Nettoyage et désinfection des balcons et terrasses : retrait des fientes, lavage des surfaces et traitement anti-odeurs.",
+      "keywords": [
+        "nettoyage balcon fientes",
+        "désinfection terrasse",
+        "nettoyage copropriété"
+      ],
+      "benefits": [
+        "Retrait complet des fientes de pigeons et débris organiques",
+        "Lavage haute pression adapté à chaque type de revêtement",
+        "Désinfection professionnelle contre bactéries et parasites",
+        "Protection des canalisations et évacuations d'eau",
+        "Respect des surfaces délicates (bois, pierre naturelle, carrelage)",
+        "Intervention balcon par balcon ou façade complète"
+      ],
+      "process": [
         {
-          "question": "Utilisez-vous un nettoyeur haute pression ?",
-          "answer": "Oui, lorsque les matériaux le permettent. Sinon, nous utilisons des méthodes manuelles ou vapeur sèche selon le revêtement."
+          "step": "Protection et diagnostic",
+          "description": "Protection des menuiseries, évaluation de l'état des surfaces et identification du type de revêtement pour adapter la technique de nettoyage."
         },
         {
-          "question": "Faut-il être présent pendant l’intervention ?",
-          "answer": "Non, nos techniciens peuvent intervenir en votre absence après remise des clés ou coordination avec le syndic."
+          "step": "Retrait des déchets solides",
+          "description": "Élimination manuelle des fientes, feuilles mortes et débris volumineux avec équipements de protection individuelle appropriés."
+        },
+        {
+          "step": "Lavage et détachage",
+          "description": "Nettoyage avec nettoyeur haute pression (pression adaptée au matériau) ou lavage manuel selon le type de surface. Élimination des traces tenaces et des salissures incrustées."
+        },
+        {
+          "step": "Désinfection et traitement",
+          "description": "Application de désinfectant professionnel pour éliminer bactéries et champignons. Traitement anti-odeurs si nécessaire et vérification des évacuations."
+        }
+      ],
+      "equipment": [
+        "Nettoyeur haute pression à pression variable",
+        "Brosses adaptées aux différentes surfaces",
+        "Désinfectants professionnels",
+        "Équipements de protection (harnais si nécessaire)",
+        "Produits anti-odeurs spécifiques"
+      ],
+      "averageDuration": "30 min à 2h par balcon",
+      "pricing": {
+        "from": "80€ HT",
+        "unit": "par balcon"
+      },
+      "faq": [
+        {
+          "question": "Le nettoyage haute pression n'abîme-t-il pas les surfaces ?",
+          "answer": "Non, nous adaptons systématiquement la pression selon le type de surface (carrelage, bois, pierre). Pour les matériaux délicats, nous utilisons un lavage manuel ou basse pression. Nos techniciens sont formés pour préserver vos revêtements."
+        },
+        {
+          "question": "Pouvez-vous nettoyer tous les balcons d'un immeuble en une fois ?",
+          "answer": "Oui, nous pouvons planifier une intervention sur l'ensemble de la façade ou par tranches selon vos contraintes. Cela permet d'optimiser les coûts et de garantir une homogénéité de résultat."
+        },
+        {
+          "question": "Comment se passe l'accès aux balcons ?",
+          "answer": "L'accès se fait généralement par l'intérieur des appartements avec accord préalable des occupants. Pour les façades, nous pouvons utiliser une nacelle ou des techniques d'accès par cordes selon la configuration de l'immeuble."
+        },
+        {
+          "question": "Proposez-vous des solutions anti-pigeons après le nettoyage ?",
+          "answer": "Nous ne posons pas de dispositifs anti-pigeons, mais nous pouvons vous orienter vers des partenaires spécialisés en pose de filets ou pics. Notre prestation se concentre sur le nettoyage et la désinfection."
         }
       ]
     }

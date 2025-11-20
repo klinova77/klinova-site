@@ -2,16 +2,25 @@
 User-agent: *
 Allow: /
 
-# Pages internes ou sans intérêt SEO
+# 🚫 Pages internes ou sans intérêt SEO
 Disallow: /merci
 Disallow: /confirmation
 Disallow: /admin/
 Disallow: /dev/
 Disallow: /test/
-
-# Dossiers techniques (pas utiles à indexer)
 Disallow: /_astro/
 Disallow: /_assets/
+Disallow: /api/
+Disallow: /*.json$
 
-# Sitemap
+# 🚫 Paramètres de tracking
+Disallow: /*?utm_*
+Disallow: /*?gclid=*
+Disallow: /*?fbclid=*
+
+# 🕷️ Crawl delay (optionnel)
+Crawl-delay: 1
+
+# ✅ Sitemaps
 Sitemap: https://klinova.fr/sitemap-index.xml
+Sitemap: https://klinova.fr/sitemap-zones.xml
