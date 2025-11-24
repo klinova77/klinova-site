@@ -4,6 +4,9 @@
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
 
+import ButtonSubmit from './UI/ButtonSubmit.astro';
+import BookingTextiles from '~/components/BookingTextiles';
+
 // 🗂️ Data imports
 import citiesIndex from '~/data/cities';
 
@@ -12,6 +15,13 @@ import heroParkingsDesktop from '~/assets/images/nettoyage-parking-professionnel
 import heroParkingsMobile  from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
 import heroBalconsDesktop  from '~/assets/images/Klinova_nettoyage_balcon_soigne.png';
 import heroBalconsMobile   from '~/assets/images/Klinova_nettoyage_balcon_soigne.png';
+import heroMoquettesDesktop from '~/assets/images/nettoyage-moquettes-avant-apres.jpg';
+import heroMoquettesMobile from '~/assets/images/nettoyage-moquette-avant-apres-mobile.webp';
+import heroCanapesDesktop from '~/assets/images/nettoyage-canapes-tapis-matelas-desktop.jpg';
+import heroCanapesMobile from '~/assets/images/nettoyage-canapes-tapis-matelas-klinova.jpeg';
+
+
+
 
 interface Props {
   city: City;
@@ -77,27 +87,32 @@ const otherCitiesForService = (citiesIndex as City[])
 type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
 const heroFallback: Record<ServiceKey, { desktop: ImgLike; mobile: ImgLike }> = {
   moquettes: {
-    desktop: '/images/nettoyage-moquette-avant-apres.webp',
-    mobile: '/images/nettoyage-moquette-avant-apres-mobile.webp',
+    desktop: heroMoquettesDesktop,
+    mobile: heroMoquettesMobile,
   },
   parkings: { desktop: heroParkingsDesktop, mobile: heroParkingsMobile },
   balcons: { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
   'balcons-fientes': { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
   'canapes-tapis': {
-    desktop: '/images/nettoyage-canape-tapis.webp',
-    mobile: '/images/nettoyage-canape-tapis-mobile.webp',
+    desktop: heroCanapesDesktop,
+    mobile: heroCanapesMobile,
   },
 };
 
-const heroDesktop =
+
+const heroDesktop = toSrc(
   service.images?.heroDesktop ??
   city.images?.heroDesktop ??
-  toSrc(heroFallback[service.key as ServiceKey]?.desktop ?? '/images/default-hero.webp');
+  heroFallback[service.key as ServiceKey]?.desktop ??
+  '/images/default-hero.webp',
+);
 
-const heroMobile =
+const heroMobile = toSrc(
   service.images?.heroMobile ??
   city.images?.heroMobile ??
-  toSrc(heroFallback[service.key as ServiceKey]?.mobile ?? '/images/default-hero-mobile.webp');
+  heroFallback[service.key as ServiceKey]?.mobile ??
+  '/images/default-hero-mobile.webp',
+);
 
 // URLs service parent
 const serviceUrl =
@@ -319,6 +334,7 @@ const photos = cityNote?.photos ?? [];
 >
   <!-- Preload hero images -->
   <Fragment slot="head">
+  {heroDesktop && (
     <link
       rel="preload"
       as="image"
@@ -326,6 +342,8 @@ const photos = cityNote?.photos ?? [];
       fetchpriority="high"
       media="(min-width:768px)"
     />
+  )}
+  {heroMobile && (
     <link
       rel="preload"
       as="image"
@@ -333,7 +351,9 @@ const photos = cityNote?.photos ?? [];
       fetchpriority="high"
       media="(max-width:767px)"
     />
-  </Fragment>
+  )}
+</Fragment>
+
 
   <main class="min-h-[70vh] bg-neutral-50">
     <!-- 🧭 Fil d'Ariane -->
@@ -1015,171 +1035,2179 @@ const photos = cityNote?.photos ?? [];
       </section>
     )}
 
-    <!-- 🧾 CTA final (téléphone + formulaire) -->
-    <section
-      id="contact-form"
-      class="bg-gradient-to-br from-[#3F8D65] to-[#48a674] section-padding"
-    >
-      <div class="container-responsive">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-              Prêt à {serviceVerbs[service.key] || 'traiter'} vos surfaces à {city.name} ?
-            </h2>
-            <p
-              class="text-white/90 text-lg leading-relaxed max-w-2xl mx-auto"
-            >
-              Obtenez un devis gratuit et sans engagement. Un expert Klinova vous répond
-              sous 2 heures.
+
+
+
+
+<!-- 🧾 CTA final balcon  (téléphone + formulaire) -->
+
+
+{service.key === 'balcons' && (
+  <section
+    class="bg-[#DFF1E8] py-16 md:py-24"
+    data-section="cta-final"
+    data-hide-header-cta
+    data-hide-floating-cta
+    id="formulaire"
+  >
+    <div class="container-responsive">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Formulaire inline spécialisé balcons -->
+        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+          <div class="mb-6 text-center">
+            <h3 class="text-3xl font-semibold text-[#1E2939] mb-2">
+              Demandez le nettoyage de votre balcon à {city.name}
+            </h3>
+            <p class="text-[#475569]">
+              Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h
             </p>
           </div>
 
-          <div class="bg-white rounded-2xl shadow-xl p-8">
-            <form
-              id="form-city"
-              method="post"
-              action="/api/contact"
-              class="space-y-6"
-            >
+          <form
+            action="/api/contact"
+            method="POST"
+            class="space-y-6"
+            id="balcon-form"
+            novalidate
+          >
+            <!-- Honeypot anti-spam -->
+            <input
+              type="text"
+              name="website"
+              style="display:none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <!-- Champs cachés pour tracking et API -->
+            <input
+              type="hidden"
+              name="source"
+              value={`page-balcons-${city.slug ?? 'city'}`}
+            />
+            <input
+              type="hidden"
+              name="service"
+              value={`Nettoyage balcon - Diagnostic gratuit - ${city.name}`}
+            />
+            <input type="hidden" name="rgpd" value="accepte" />
+
+            <!-- Ligne 1 : Prénom/Nom -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="prenom"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Prénom <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  required
+                  autocomplete="given-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre prénom"
+                />
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label
+                  for="nom"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  autocomplete="family-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre nom (optionnel)"
+                />
+              </div>
+            </div>
+
+            <!-- Ligne 2 : Email/Téléphone -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="votre@email.fr"
+                />
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label
+                  for="telephone"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Téléphone <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="06 12 34 56 78"
+                />
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+            </div>
+
+            <!-- Ligne 3 : Code postal/Surface balcon -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="code_postal"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Code postal <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="code_postal"
+                  name="code_postal"
+                  pattern="[0-9]{5}"
+                  required
+                  maxlength="5"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder={city.postalCodes?.[0] ?? '75017'}
+                />
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label
+                  for="surface"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Surface du balcon
+                </label>
+                <select
+                  id="surface"
+                  name="surface_balcon"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">
+                    Sélectionner
+                  </option>
+                  <option value="< 5 m²">Moins de 5 m²</option>
+                  <option value="5-10 m²">5 à 10 m²</option>
+                  <option value="10-20 m²">10 à 20 m²</option>
+                  <option value="20-30 m²">20 à 30 m²</option>
+                  <option value="> 30 m²">Plus de 30 m²</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 4 : Type de balcon/Problématique -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="type_balcon"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Type de revêtement
+                </label>
+                <select
+                  id="type_balcon"
+                  name="type_balcon"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">
+                    Sélectionner
+                  </option>
+                  <option value="Carrelage">Carrelage</option>
+                  <option value="Béton">Béton</option>
+                  <option value="Pierre naturelle">Pierre naturelle</option>
+                  <option value="Bois composite">Bois composite</option>
+                  <option value="Résine">Résine</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="problematique"
+                  class="block text-sm font-medium text-[#1E2939] mb-2"
+                >
+                  Situation actuelle
+                </label>
+                <select
+                  id="problematique"
+                  name="problematique"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">
+                    Sélectionner
+                  </option>
+                  <option value="Fientes de pigeons">Fientes de pigeons</option>
+                  <option value="Pollution urbaine">Pollution urbaine</option>
+                  <option value="Après travaux">Remise en état après travaux</option>
+                  <option value="Entretien régulier">Entretien régulier</option>
+                  <option value="Mousse/végétaux">Mousse et végétaux</option>
+                  <option value="Autre">Autre situation</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Photos avec Cloudinary -->
+            <div>
+              <label
+                for="photos-input"
+                class="block text-sm font-medium text-[#1E2939] mb-2"
+              >
+                Photos du balcon (optionnel - nous aide pour le devis)
+              </label>
+
+              <!-- Input caché -->
               <input
-                type="hidden"
-                name="source"
-                value={`citypage-${service.key}-${citySlug}`}
+                type="file"
+                id="photos-input"
+                name="__photos_local"
+                accept="image/*"
+                multiple
+                class="hidden"
               />
-              <input type="hidden" name="service" value={service.name} />
-              <input type="hidden" name="city" value={city.name} />
 
-              <div class="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label
-                    for="form-name"
-                    class="block text-sm font-medium text-primary-600 mb-2"
+              <!-- Zone de drop -->
+              <div
+                id="photos-drop-zone"
+                class="border-2 border-dashed border-[#E5E7EB] rounded-lg p-6 text-center cursor-pointer hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200 bg-[#F9FAFB]"
+              >
+                <div class="flex flex-col items-center space-y-2">
+                  <svg
+                    class="w-8 h-8 text-[#3F8D65]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    Nom complet <span class="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="form-name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Jean Dupont"
-                    class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-primary-600 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent transition"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    for="form-phone"
-                    class="block text-sm font-medium text-primary-600 mb-2"
-                  >
-                    Téléphone <span class="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="form-phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    placeholder="06 12 34 56 78"
-                    class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-primary-600 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent transition"
-                  />
-                </div>
-
-                <div class="md:col-span-2">
-                  <label
-                    for="form-email"
-                    class="block text-sm font-medium text-primary-600 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="form-email"
-                    name="email"
-                    type="email"
-                    placeholder="jean.dupont@example.com"
-                    class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-primary-600 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent transition"
-                  />
-                </div>
-
-                <div class="md:col-span-2">
-                  <label
-                    for="form-message"
-                    class="block text-sm font-medium text-primary-600 mb-2"
-                  >
-                    Votre message
-                  </label>
-                  <textarea
-                    id="form-message"
-                    name="message"
-                    rows="5"
-                    placeholder={`Décrivez votre besoin : surface à traiter, fréquence souhaitée, contraintes particulières pour votre intervention à ${city.name}...`}
-                    class="w-full border border-neutral-300 rounded-lg px-4 py-3 text-primary-600 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent transition resize-none"
-                  ></textarea>
-                </div>
-
-                <div class="md:col-span-2">
-                  <button
-                    type="submit"
-                    class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#3F8D65] text-white font-semibold rounded-xl shadow-lg hover:bg-[#387B58] transition-all duration-300"
-                  >
-                    Envoyer ma demande
-                    <svg
-                      class="ml-2 w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-
-                <div class="md:col-span-2 text-sm text-neutral-600">
-                  <p>
-                    En soumettant ce formulaire, vous acceptez d'être contacté par Klinova
-                    concernant votre demande.
-                    <a
-                      href="/politique-de-confidentialite"
-                      class="text-[#3F8D65] hover:underline ml-1"
-                    >
-                      Politique de confidentialité
-                    </a>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p class="text-[#475569] font-medium">
+                    Cliquez pour ajouter des photos
+                  </p>
+                  <p class="text-xs text-[#64748B]">
+                    Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune
                   </p>
                 </div>
               </div>
-            </form>
 
-            <div class="mt-8 text-center border-t border-neutral-100 pt-8">
-              <p class="text-sm text-neutral-600 mb-4">
-                Vous préférez nous appeler directement ?
-              </p>
-              <a
-                href="tel:+33676738661"
-                class="inline-flex items-center gap-2 text-[#3F8D65] font-bold text-xl hover:text-[#387B58] transition-colors"
+              <!-- Statut des photos -->
+              <div
+                id="photos-status"
+                class="mt-2 text-sm text-[#64748B]"
               >
+                Aucune photo
+              </div>
+
+              <!-- Liste des photos -->
+              <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+
+              <!-- Container pour les URLs Cloudinary -->
+              <div id="photos-hidden"></div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-[#1E2939] mb-2"
+              >
+                Décrivez votre besoin
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+                placeholder="Type de salissures, niveau d'encrassement, contraintes d'accès, besoin de solutions anti-pigeons, fréquence souhaitée..."
+              ></textarea>
+            </div>
+
+            <!-- RGPD simplifié -->
+            <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3 border border-[#E5E7EB]">
+              En soumettant ce formulaire, vous acceptez d'être recontacté par
+              Klinova dans le cadre de votre demande.
+              <a
+                href="/politique-de-confidentialite"
+                class="text-[#3F8D65] hover:underline font-medium"
+                target="_blank"
+              >
+                Voir notre politique de confidentialité
+              </a>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="text-center">
+              <ButtonSubmit
+                label="Envoyer ma demande"
+                variant="primary"
+                size="lg"
+                fullWidth={false}
+                id="submit-btn-balcon-city"
+                formId="balcon-form"
+                formName={`Balcons Contact Form - ${city.name}`}
+                formType="devis"
+                value={180}
+                source={`page-balcons-${city.slug ?? 'city'}`}
+                className="inline-flex items-center px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                tracking={{
+                  action: 'lead',
+                  source: `balcons-form-${city.slug ?? 'city'}`,
+                  intent: 'nettoyage-request',
+                }}
+              />
+            </div>
+          </form>
+
+          <!-- Promesses clés sous le formulaire -->
+          <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
                 <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  class="w-5 h-5 text-[#3F8D65]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  ></path>
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
-                06 76 73 86 61
-              </a>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">
+                Réponse sous 24h
+              </h4>
+              <p class="text-xs text-[#475569]">
+                Devis détaillé et planning
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+                <svg
+                  class="w-5 h-5 text-[#3F8D65]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">
+                Diagnostic gratuit
+              </h4>
+              <p class="text-xs text-[#475569]">
+                Sur site ou sur photo
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+                <svg
+                  class="w-5 h-5 text-[#3F8D65]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">
+                Suivi complet
+              </h4>
+              <p class="text-xs text-[#475569]">
+                Photos avant/après
+              </p>
             </div>
           </div>
         </div>
+
+        <!-- Informations de contact + mentions, conservées telles quelles -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8">
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+            <div class="space-y-2">
+              <a
+                href="tel:+33676738661"
+                class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                06 76 73 86 61
+              </a>
+              <a
+                href="https://wa.me/33676738661"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center justify-center text-[#475569] hover:text-[#25D366] transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488" />
+                </svg>
+                WhatsApp
+              </a>
+              <a
+                href="mailto:contact@klinova.fr"
+                class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors"
+              >
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                contact@klinova.fr
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">
+              Zone d'intervention
+            </h3>
+            <div class="flex items-center justify-center text-[#475569]">
+              <svg
+                class="w-5 h-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Paris et Île-de-France</span>
+            </div>
+            <p class="text-sm text-[#475569] mt-2">
+              Intervention rapide sur toute la région parisienne
+            </p>
+          </div>
+        </div>
+
+        <!-- Mentions finales -->
+        <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+          <p class="text-sm text-[#6B7280]">
+            KLINOVA - RCS Paris 943 439 810 - 9 allée de la prairie, 77500
+            Chelles
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Script pour gérer le sélecteur de fichiers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const photosInput = document.getElementById('photos-input');
+      const photosDropZone = document.getElementById('photos-drop-zone');
+      const photosStatus = document.getElementById('photos-status');
+      const photosList = document.getElementById('photos-list');
+      const photosHidden = document.getElementById('photos-hidden');
+
+      if (!photosInput || !photosDropZone || !photosStatus) return;
+
+      // Fonction pour ouvrir le sélecteur de fichiers
+      function openFileSelector() {
+        photosInput.click();
+      }
+
+      // Gestionnaire de clic sur la zone de drop
+      photosDropZone.addEventListener('click', openFileSelector);
+
+      // Gestionnaire de changement de fichiers
+      photosInput.addEventListener('change', function(e) {
+        const files = Array.from(e.target.files);
+        handleFiles(files);
+      });
+
+      // Gestionnaire drag & drop
+      photosDropZone.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        photosDropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+
+      photosDropZone.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+
+      photosDropZone.addEventListener('drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+        
+        const files = Array.from(e.dataTransfer.files).filter(file => 
+          file.type.startsWith('image/')
+        );
+        
+        if (files.length > 0) {
+          // Mettre à jour l'input file
+          const dt = new DataTransfer();
+          files.slice(0, 4).forEach(file => dt.items.add(file)); // Max 4 photos
+          photosInput.files = dt.files;
+          handleFiles(files.slice(0, 4));
+        }
+      });
+
+      // Fonction pour gérer les fichiers sélectionnés
+      function handleFiles(files) {
+        if (files.length === 0) {
+          photosStatus.textContent = 'Aucune photo';
+          photosList.classList.add('hidden');
+          return;
+        }
+
+        const fileCount = Math.min(files.length, 4);
+        photosStatus.textContent = `${fileCount} photo(s) sélectionnée(s)`;
+        
+        // Afficher la liste des fichiers
+        photosList.innerHTML = '';
+        photosList.classList.remove('hidden');
+        
+        files.slice(0, 4).forEach((file, index) => {
+          const fileItem = document.createElement('div');
+          fileItem.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm';
+          
+          const fileName = file.name.length > 30 ? 
+            file.name.substring(0, 30) + '...' : file.name;
+          
+          const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+          
+          fileItem.innerHTML = `
+            <span class="text-[#475569]">${fileName} (${fileSize} MB)</span>
+            <button type="button" class="text-red-500 hover:text-red-700" onclick="removeFile(${index})">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          `;
+          
+          photosList.appendChild(fileItem);
+        });
+      }
+
+      // Fonction pour supprimer un fichier (à définir globalement)
+      window.removeFile = function(index) {
+        const files = Array.from(photosInput.files);
+        files.splice(index, 1);
+        
+        const dt = new DataTransfer();
+        files.forEach(file => dt.items.add(file));
+        photosInput.files = dt.files;
+        
+        handleFiles(files);
+      };
+    });
+  </script>
+)}
+
+
+<!-- 🧾 CTA final moquette (téléphone + formulaire) -->
+
+<!-- 🧾 CTA final moquettes pour CityPage -->
+{service.key === 'moquettes' && (
+  <section class="bg-[#DFF1E8] py-16 md:py-24" 
+  data-section="cta-final" 
+  data-hide-header-cta 
+  data-hide-floating-cta
+    id="formulaire">
+    <div class="container-responsive">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2939] leading-tight mb-6">
+            Redonnez vie à vos moquettes à {city.name}
+          </h2>
+         <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
+            Nettoyage professionnel pour particuliers, hôtels, bureaux et copropriétés. 
+          </p>
+        </div>
+
+        <!-- Formulaire spécialisé moquettes -->
+        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+          <div class="mb-6 text-center">
+            <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
+              Demandez votre devis personnalisé
+            </h3>
+            <p class="text-[#475569]">
+              Particuliers, professionnels : obtenez une évaluation adaptée à vos besoins
+            </p>
+          </div>
+
+          <form action="/api/contact" method="POST" class="space-y-6" id="moquettes-city-form" novalidate>
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <input type="hidden" name="source" value={`page-moquettes-${city.slug}`}>
+            <input type="hidden" name="service" value={`Nettoyage moquettes - Devis personnalisé - ${city.name}`}>
+            <input type="hidden" name="city" value={city.name}>
+            <input type="hidden" name="rgpd" value="accepte">
+            
+            <!-- Ligne 1 : Prénom/Nom -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="moquettes-city-prenom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Prénom <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="moquettes-city-prenom"
+                  name="prenom"
+                  required
+                  autocomplete="given-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre prénom"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="moquettes-city-nom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  id="moquettes-city-nom"
+                  name="nom"
+                  autocomplete="family-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre nom (optionnel)"
+                >
+              </div>
+            </div>
+
+            <!-- Ligne 2 : Email/Téléphone -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="moquettes-city-email" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="moquettes-city-email"
+                  name="email"
+                  autocomplete="email"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="votre@email.fr"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="moquettes-city-telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Téléphone <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="moquettes-city-telephone"
+                  name="telephone"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="06 12 34 56 78"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+            </div>
+
+            <!-- Ligne 3 : Code postal/Type de client -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="moquettes-city-code-postal" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Code postal <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="moquettes-city-code-postal"
+                  name="code_postal"
+                  pattern="[0-9]{5}"
+                  required
+                  maxlength="5"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder={city.postalCodes?.[0] ?? '75017'}
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="moquettes-city-type-client" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Vous êtes
+                </label>
+                <select
+                  id="moquettes-city-type-client"
+                  name="type_client"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Particulier">Particulier</option>
+                  <option value="Syndic de copropriété">Syndic de copropriété</option>
+                  <option value="Hôtel/Hébergement">Hôtel / Hébergement</option>
+                  <option value="Bureau/Entreprise">Bureau / Entreprise</option>
+                  <option value="Établissement de santé">Établissement de santé</option>
+                  <option value="Commerce/Restaurant">Commerce / Restaurant</option>
+                  <option value="Autre professionnel">Autre professionnel</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 4 : Surface/Type de moquette -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="moquettes-city-surface" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Surface approximative
+                </label>
+                <select
+                  id="moquettes-city-surface"
+                  name="surface_approximative"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="< 20 m²">Moins de 20 m²</option>
+                  <option value="20-50 m²">20 à 50 m²</option>
+                  <option value="50-100 m²">50 à 100 m²</option>
+                  <option value="100-200 m²">100 à 200 m²</option>
+                  <option value="200-500 m²">200 à 500 m²</option>
+                  <option value="> 500 m²">Plus de 500 m²</option>
+                </select>
+              </div>
+              <div>
+                <label for="moquettes-city-type" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Type de moquette
+                </label>
+                <select
+                  id="moquettes-city-type"
+                  name="type_moquette"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Synthétique">Synthétique (polyamide, polypropylène)</option>
+                  <option value="Naturelle">Naturelle (laine, coton, jute)</option>
+                  <option value="Mixte">Mixte (synthétique + naturelle)</option>
+                  <option value="Je ne sais pas">Je ne sais pas</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 5 : État/Fréquence -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="moquettes-city-etat" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  État actuel
+                </label>
+                <select
+                  id="moquettes-city-etat"
+                  name="etat_moquette"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Légèrement sale">Légèrement sale</option>
+                  <option value="Moyennement encrassée">Moyennement encrassée</option>
+                  <option value="Très encrassée">Très encrassée</option>
+                  <option value="Taches spécifiques">Taches spécifiques à traiter</option>
+                  <option value="Odeurs persistantes">Odeurs persistantes</option>
+                  <option value="Neuve (entretien préventif)">Neuve (entretien préventif)</option>
+                </select>
+              </div>
+              <div>
+                <label for="moquettes-city-frequence" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Fréquence souhaitée
+                </label>
+                <select
+                  id="moquettes-city-frequence"
+                  name="frequence_souhaitee"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Intervention unique">Intervention unique</option>
+                  <option value="Mensuelle">Mensuelle</option>
+                  <option value="Trimestrielle">Trimestrielle</option>
+                  <option value="Semestrielle">Semestrielle</option>
+                  <option value="Annuelle">Annuelle</option>
+                  <option value="À définir">À définir ensemble</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Photos avec Cloudinary - IDs uniques -->
+            <div>
+              <label for="moquettes-city-photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Photos des moquettes (optionnel)
+              </label>
+              
+              <input type="file" id="moquettes-city-photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+              
+              <div id="moquettes-city-photos-drop-zone" 
+                   class="border-2 border-dashed border-[#E5E7EB] rounded-lg p-6 text-center cursor-pointer hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200 bg-[#F9FAFB]">
+                <div class="flex flex-col items-center space-y-2">
+                  <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+                  <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 5 photos • 8 MB chacune</p>
+                </div>
+              </div>
+              
+              <div id="moquettes-city-photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+              <div id="moquettes-city-photos-list" class="mt-3 space-y-2 hidden"></div>
+              <div id="moquettes-city-photos-hidden"></div>
+            </div>
+
+            <!-- Message détaillé -->
+            <div>
+              <label for="moquettes-city-message" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Détails de votre demande
+              </label>
+              <textarea
+                id="moquettes-city-message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#3F8D65] focus:border-[#3F8D65] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+                placeholder="Décrivez vos besoins : type de taches, zones prioritaires, contraintes d'accès, délais souhaités, budget indicatif..."
+              ></textarea>
+            </div>
+
+            <!-- RGPD simplifié -->
+            <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3 border border-[#E5E7EB]">
+              En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+              <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline font-medium" target="_blank">
+                Voir notre politique de confidentialité
+              </a>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="text-center">
+              <ButtonSubmit
+                label="Obtenir mon devis personnalisé"
+                variant="primary"
+                size="lg"
+                fullWidth={false}
+                id="moquettes-city-submit-btn"
+                formId="moquettes-city-form"
+                formName={`Moquettes Contact Form - ${city.name}`}
+                formType="devis"
+                value={250}
+                source={`page-moquettes-${city.slug}`}
+                className="inline-flex items-center px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                tracking={{
+                  action: 'lead',
+                  source: `moquettes-city-form-${city.slug}`,
+                  intent: 'devis-request'
+                }}
+              />
+            </div>
+          </form>
+          
+          <!-- Promesses clés sous le formulaire -->
+          <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+              <p class="text-xs text-[#475569]">Devis détaillé par type de moquette</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Techniques adaptées</h4>
+              <p class="text-xs text-[#475569]">Selon le type de fibre</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#EAF6F0] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Particuliers & pros</h4>
+              <p class="text-xs text-[#475569]">Tarifs dégressifs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informations de contact -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+            <div class="space-y-2">
+              <a href="tel:+33676738661" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                06 76 73 86 61
+              </a>
+              <a href="https://wa.me/33676738661" target="_blank" rel="noopener" class="flex items-center justify-center text-[#475569] hover:text-[#25D366] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+                </svg>
+                WhatsApp
+              </a>
+              <a href="mailto:contact@klinova.fr" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                contact@klinova.fr
+              </a>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">Zone d'intervention</h3>
+            <div class="flex items-center justify-center text-[#475569]">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Paris et Île-de-France</span>
+            </div>
+            <p class="text-sm text-[#475569] mt-2">
+              Intervention rapide pour professionnels et particuliers
+            </p>
+          </div>
+        </div>
+
+        <!-- Mentions finales -->
+        <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+          <p class="text-sm text-[#6B7280]">
+            KLINOVA - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script spécifique moquettes avec namespace -->
+  <script>
+    (() => {
+      const FORM_PREFIX = 'moquettes-city';
+      const form = document.getElementById('moquettes-city-form');
+      const submitBtn = document.getElementById('moquettes-city-submit-btn');
+      const photosInput = document.getElementById('moquettes-city-photos-input');
+      const dropZone = document.getElementById('moquettes-city-photos-drop-zone');
+      const photosList = document.getElementById('moquettes-city-photos-list');
+      const photosStatus = document.getElementById('moquettes-city-photos-status');
+      const photosHidden = document.getElementById('moquettes-city-photos-hidden');
+      
+      const moquettesFormState = {
+        uploadingCount: 0,
+        uploadedFiles: [],
+        maxFiles: 5,
+        maxMB: 8
+      };
+
+      function setLoading(loading) {
+        if (submitBtn) {
+          submitBtn.disabled = loading || moquettesFormState.uploadingCount > 0;
+          const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+          const btnText = submitBtn.querySelector('span');
+          if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+          if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon devis personnalisé';
+        }
+      }
+
+      function bytesToMB(bytes) {
+        return (bytes / 1024 / 1024).toFixed(1);
+      }
+
+      function updatePhotosStatus() {
+        if (!photosStatus) return;
+        const total = moquettesFormState.uploadedFiles.length;
+        const success = moquettesFormState.uploadedFiles.filter(f => f.status === 'success').length;
+        const uploading = moquettesFormState.uploadingCount;
+        
+        if (total === 0) {
+          photosStatus.textContent = 'Aucune photo';
+          if (photosList) photosList.classList.add('hidden');
+        } else {
+          photosStatus.textContent = `${total}/${moquettesFormState.maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+          if (photosList) photosList.classList.remove('hidden');
+        }
+        
+        if (submitBtn) submitBtn.disabled = moquettesFormState.uploadingCount > 0;
+      }
+
+      function addPhotoToList(file) {
+        if (!photosList) return;
+        const photoDiv = document.createElement('div');
+        photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+        photoDiv.dataset.fileName = file.name;
+        
+        photoDiv.innerHTML = `
+          <span class="text-[#475569] flex-1 truncate mr-2">${file.name}</span>
+          <span class="text-[#64748B] mr-2">${bytesToMB(file.size)} MB</span>
+          <span class="text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>
+          <button type="button" class="text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center">×</button>
+        `;
+        
+        photoDiv.querySelector('button').addEventListener('click', () => removePhoto(file.name));
+        photosList.appendChild(photoDiv);
+      }
+
+      function updatePhotoStatus(fileName, status, progress = 0) {
+        if (!photosList) return;
+        const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+        if (!photoDiv) return;
+        const statusEl = photoDiv.querySelector('span:nth-child(3)');
+        if (!statusEl) return;
+        
+        switch (status) {
+          case 'uploading':
+            statusEl.textContent = `${progress}%`;
+            statusEl.className = 'text-[#3B82F6] mr-2 min-w-[60px] text-center';
+            break;
+          case 'success':
+            statusEl.textContent = 'Importée ✓';
+            statusEl.className = 'text-[#10B981] mr-2 min-w-[60px] text-center';
+            break;
+          case 'error':
+            statusEl.textContent = 'Erreur ⚠';
+            statusEl.className = 'text-[#EF4444] mr-2 min-w-[60px] text-center';
+            break;
+        }
+      }
+
+      function removePhoto(fileName) {
+        const fileIndex = moquettesFormState.uploadedFiles.findIndex(f => f.name === fileName);
+        if (fileIndex !== -1) {
+          const file = moquettesFormState.uploadedFiles[fileIndex];
+          if (file.cloudinaryUrl && photosHidden) {
+            const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+            if (hiddenInput) hiddenInput.remove();
+          }
+          moquettesFormState.uploadedFiles.splice(fileIndex, 1);
+        }
+        
+        if (photosList) {
+          const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+          if (photoDiv) photoDiv.remove();
+        }
+        updatePhotosStatus();
+      }
+
+      async function getCloudinarySignature() {
+        const response = await fetch('/api/cloudinary-signature', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({})
+        });
+        
+        const data = await response.json();
+        if (!data.ok) {
+          throw new Error(data.error || 'Erreur signature Cloudinary');
+        }
+        return data;
+      }
+
+      async function uploadToCloudinary(file) {
+        const fileObj = {
+          name: file.name,
+          size: file.size,
+          status: 'uploading',
+          progress: 0,
+          cloudinaryUrl: null
+        };
+        
+        moquettesFormState.uploadedFiles.push(fileObj);
+        addPhotoToList(file);
+        moquettesFormState.uploadingCount++;
+        updatePhotosStatus();
+        
+        try {
+          const signature = await getCloudinarySignature();
+          const formData = new FormData();
+          formData.append('file', file);
+          formData.append('api_key', signature.apiKey);
+          formData.append('timestamp', String(signature.timestamp));
+          formData.append('signature', signature.signature);
+          formData.append('folder', signature.folder);
+          if (signature.uploadPreset) {
+            formData.append('upload_preset', signature.uploadPreset);
+          }
+
+          const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+          const xhr = new XMLHttpRequest();
+          
+          xhr.upload.onprogress = (e) => {
+            if (e.lengthComputable) {
+              const progress = Math.round((e.loaded / e.total) * 100);
+              fileObj.progress = progress;
+              updatePhotoStatus(file.name, 'uploading', progress);
+            }
+          };
+          
+          xhr.onload = () => {
+            moquettesFormState.uploadingCount--;
+            try {
+              const result = JSON.parse(xhr.responseText);
+              if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+                fileObj.status = 'success';
+                fileObj.cloudinaryUrl = result.secure_url;
+                updatePhotoStatus(file.name, 'success');
+                
+                if (photosHidden) {
+                  const hiddenInput = document.createElement('input');
+                  hiddenInput.type = 'hidden';
+                  hiddenInput.name = 'photos[]';
+                  hiddenInput.value = result.secure_url;
+                  photosHidden.appendChild(hiddenInput);
+                }
+              } else {
+                throw new Error('Upload failed');
+              }
+            } catch (err) {
+              fileObj.status = 'error';
+              updatePhotoStatus(file.name, 'error');
+            }
+            updatePhotosStatus();
+          };
+          
+          xhr.onerror = () => {
+            moquettesFormState.uploadingCount--;
+            fileObj.status = 'error';
+            updatePhotoStatus(file.name, 'error');
+            updatePhotosStatus();
+          };
+          
+          xhr.open('POST', uploadUrl);
+          xhr.send(formData);
+          
+        } catch (error) {
+          moquettesFormState.uploadingCount--;
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          updatePhotosStatus();
+        }
+      }
+
+      function validateFiles(files) {
+        const validFiles = [];
+        for (const file of files) {
+          if (!file.type.startsWith('image/')) {
+            alert(`${file.name} n'est pas une image valide`);
+            continue;
+          }
+          if (file.size > moquettesFormState.maxMB * 1024 * 1024) {
+            alert(`${file.name} dépasse la limite de ${moquettesFormState.maxMB} MB`);
+            continue;
+          }
+          if (moquettesFormState.uploadedFiles.length + validFiles.length >= moquettesFormState.maxFiles) {
+            alert(`Maximum ${moquettesFormState.maxFiles} photos autorisées`);
+            break;
+          }
+          validFiles.push(file);
+        }
+        return validFiles;
+      }
+
+      function handleFiles(files) {
+        const validFiles = validateFiles(Array.from(files));
+        validFiles.forEach(file => uploadToCloudinary(file));
+      }
+
+      if (photosInput && dropZone) {
+        photosInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            handleFiles(e.target.files);
+            e.target.value = '';
+          }
+        });
+
+        dropZone.addEventListener('click', () => photosInput.click());
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, () => {
+            dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+          });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, () => {
+            dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+          });
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          const files = e.dataTransfer.files;
+          if (files.length > 0) handleFiles(files);
+        });
+      }
+
+      function validateField(field) {
+        const value = field.value.trim();
+        const errorDiv = field.parentNode.querySelector('.form-error');
+        
+        if (field.required && !value) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Ce champ est requis';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Format email invalide';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        field.classList.remove('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = '';
+          errorDiv.classList.add('hidden');
+        }
+        return true;
+      }
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          if (moquettesFormState.uploadingCount > 0) {
+            alert('Veuillez attendre la fin de l\'upload des photos');
+            return;
+          }
+          
+          const requiredFields = form.querySelectorAll('[required]');
+          let isValid = true;
+          
+          requiredFields.forEach(field => {
+            if (!validateField(field)) isValid = false;
+          });
+          
+          const emailField = form.querySelector('[name="email"]');
+          if (emailField && emailField.value.trim()) {
+            if (!validateField(emailField)) isValid = false;
+          }
+          
+          if (!isValid) {
+            alert('Veuillez corriger les erreurs ci-dessus');
+            return;
+          }
+          
+          setLoading(true);
+          
+          try {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'form_submit', {
+                form_location: 'citypage_moquettes',
+                form_type: 'devis_moquettes'
+              });
+            }
+
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'lead_generated',
+                form_type: 'devis_moquettes',
+                service: 'Nettoyage moquettes - Devis personnalisé',
+                source: `page-moquettes-${window.location.pathname.split('/').pop()}`
+              });
+            }
+
+            const formData = new FormData(form);
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+
+            let data = null;
+            try { data = await response.json(); } catch {}
+
+            if (response.ok) {
+              form.setAttribute('aria-hidden', 'true');
+              form.style.pointerEvents = 'none';
+              form.innerHTML = `
+                <div class="text-center py-10" style="animation: fade-in 0.5s ease-out;">
+                  <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+                  <p class="text-[#475569] max-w-md mx-auto">
+                    Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté au type de moquette.<br>
+                    Un expert Klinova évaluera la technique de nettoyage<br>
+                    la plus appropriée à vos fibres.
+                  </p>
+                </div>
+              `;
+
+              try { 
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+              } catch {}
+            } else {
+              const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+              alert(err);
+            }
+          } catch (error) {
+            alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+          } finally {
+            setLoading(false);
+          }
+        });
+      }
+    })();
+  </script>
+)}
+
+
+
+<!-- 🧾 CTA final parkings pour CityPage -->
+{service.key === 'parkings' && (
+  <section class="bg-[#DBEAFE] py-16 md:py-24" data-section="cta-final"
+  data-hide-cta
+  data-hide-floating-cta
+  data-hide-header-cta 
+    id="formulaire">
+    <div class="container-responsive">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <!-- Message principal -->
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E2939] leading-tight mb-6">
+            Besoin d'un expert pour l'entretien de vos parkings à {city.name} ?
+          </h2>
+          <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
+            Diagnostic gratuit, intervention professionnelle et traçabilité complète. 
+            Nous garantissons la propreté, la sécurité et la conformité de vos installations.
+          </p>
+        </div>
+
+        <!-- Formulaire spécialisé parking -->
+        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
+          <div class="mb-6 text-center">
+            <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
+              Programmer votre diagnostic gratuit
+            </h3>
+            <p class="text-[#475569]">
+              Particuliers et professionnels : obtenez un devis précis sous 24h
+            </p>
+          </div>
+
+          <form action="/api/contact" method="POST" class="space-y-6" id="parking-city-form" novalidate>
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <!-- Champs cachés pour tracking et API -->
+            <input type="hidden" name="source" value={`page-parking-${city.slug}`}>
+            <input type="hidden" name="service" value={`Nettoyage parking - Diagnostic gratuit - ${city.name}`}>
+            <input type="hidden" name="city" value={city.name}>
+            <input type="hidden" name="rgpd" value="accepte">
+            
+            <!-- Ligne 1 : Prénom/Nom -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="parking-city-prenom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Prénom <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="parking-city-prenom"
+                  name="prenom"
+                  required
+                  autocomplete="given-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre prénom"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="parking-city-nom" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  id="parking-city-nom"
+                  name="nom"
+                  autocomplete="family-name"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="Votre nom (optionnel)"
+                >
+              </div>
+            </div>
+
+            <!-- Ligne 2 : Email/Téléphone -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="parking-city-email" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="parking-city-email"
+                  name="email"
+                  autocomplete="email"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="votre@email.fr"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="parking-city-telephone" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Téléphone <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="parking-city-telephone"
+                  name="telephone"
+                  required
+                  autocomplete="tel"
+                  inputmode="tel"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder="06 12 34 56 78"
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+            </div>
+
+            <!-- Ligne 3 : Code postal/Type de client -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="parking-city-code-postal" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Code postal <span class="text-[#DC2626]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="parking-city-code-postal"
+                  name="code_postal"
+                  pattern="[0-9]{5}"
+                  required
+                  maxlength="5"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 placeholder-[#9CA3AF]"
+                  placeholder={city.postalCodes?.[0] ?? '75017'}
+                >
+                <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+              </div>
+              <div>
+                <label for="parking-city-type-client" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Vous êtes
+                </label>
+                <select
+                  id="parking-city-type-client"
+                  name="type_client"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Particulier">Particulier</option>
+                  <option value="Syndic de copropriété">Syndic de copropriété</option>
+                  <option value="Gestionnaire immobilier">Gestionnaire immobilier</option>
+                  <option value="Entreprise/Bureau">Entreprise / Bureau</option>
+                  <option value="Commerce/Centre commercial">Commerce / Centre commercial</option>
+                  <option value="Collectivité">Collectivité / Administration</option>
+                  <option value="Autre professionnel">Autre professionnel</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 4 : Surface/Type de parking -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="parking-city-surface" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Surface approximative
+                </label>
+                <select
+                  id="parking-city-surface"
+                  name="surface_parking"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="< 100 m²">Moins de 100 m² (garage particulier)</option>
+                  <option value="100-500 m²">100 à 500 m² (petit parking)</option>
+                  <option value="500-1000 m²">500 à 1000 m² (parking résidentiel)</option>
+                  <option value="1000-5000 m²">1000 à 5000 m² (centre commercial)</option>
+                  <option value="> 5000 m²">Plus de 5000 m² (grande surface)</option>
+                </select>
+              </div>
+              <div>
+                <label for="parking-city-type" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Type de parking
+                </label>
+                <select
+                  id="parking-city-type"
+                  name="type_parking"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Souterrain">Souterrain</option>
+                  <option value="Couvert">Couvert (sous bâtiment)</option>
+                  <option value="Extérieur">Extérieur à ciel ouvert</option>
+                  <option value="Semi-couvert">Semi-couvert</option>
+                  <option value="Garage individuel">Garage individuel</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ligne 5 : Revêtement/Fréquence -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="parking-city-revetement" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Revêtement du sol
+                </label>
+                <select
+                  id="parking-city-revetement"
+                  name="revetement_sol"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Béton lisse">Béton lisse</option>
+                  <option value="Béton rugueux">Béton rugueux</option>
+                  <option value="Asphalte/Bitume">Asphalte / Bitume</option>
+                  <option value="Pavés autobloquants">Pavés autobloquants</option>
+                  <option value="Résine">Résine</option>
+                  <option value="Je ne sais pas">Je ne sais pas</option>
+                </select>
+              </div>
+              <div>
+                <label for="parking-city-frequence" class="block text-sm font-medium text-[#1E2939] mb-2">
+                  Fréquence souhaitée
+                </label>
+                <select
+                  id="parking-city-frequence"
+                  name="frequence_souhaitee"
+                  class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 text-[#374151]"
+                >
+                  <option value="" class="text-[#9CA3AF]">Sélectionner</option>
+                  <option value="Intervention unique">Intervention unique</option>
+                  <option value="Mensuelle">Mensuelle</option>
+                  <option value="Trimestrielle">Trimestrielle</option>
+                  <option value="Semestrielle">Semestrielle</option>
+                  <option value="Annuelle">Annuelle</option>
+                  <option value="À définir">À définir ensemble</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Photos avec Cloudinary - IDs uniques -->
+            <div>
+              <label for="parking-city-photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Photos du parking (optionnel - accélère l'établissement du devis)
+              </label>
+              
+              <input type="file" id="parking-city-photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+              
+              <div id="parking-city-photos-drop-zone" 
+                   class="border-2 border-dashed border-[#E5E7EB] rounded-lg p-6 text-center cursor-pointer hover:border-[#1E40AF] hover:bg-[#F0F9FF] transition-all duration-200 bg-[#F9FAFB]">
+                <div class="flex flex-col items-center space-y-2">
+                  <svg class="w-8 h-8 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+                  <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+                </div>
+              </div>
+              
+              <div id="parking-city-photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+              <div id="parking-city-photos-list" class="mt-3 space-y-2 hidden"></div>
+              <div id="parking-city-photos-hidden"></div>
+            </div>
+
+            <!-- Message détaillé -->
+            <div>
+              <label for="parking-city-message" class="block text-sm font-medium text-[#1E2939] mb-2">
+                Décrivez votre besoin
+              </label>
+              <textarea
+                id="parking-city-message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 border-2 border-[#E5E7EB] bg-[#F9FAFB] rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-[#1E40AF] focus:bg-white transition-all duration-200 resize-vertical placeholder-[#9CA3AF]"
+                placeholder="Type de salissures (huile, pneus, feuilles...), état général, contraintes d'accès, budget indicatif, délais..."
+              ></textarea>
+            </div>
+
+            <!-- RGPD simplifié -->
+            <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3 border border-[#E5E7EB]">
+              En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+              <a href="/politique-de-confidentialite" class="text-[#1E40AF] hover:underline font-medium" target="_blank">
+                Voir notre politique de confidentialité
+              </a>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="text-center">
+              <ButtonSubmit
+                label="Obtenir mon diagnostic gratuit"
+                variant="primary"
+                size="lg"
+                fullWidth={false}
+                formId="parking-city-form"
+                formName={`Parking Contact Form - ${city.name}`}
+                formType="devis"
+                value={350}
+                source={`page-parking-${city.slug}`}
+                className="inline-flex items-center px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                id="parking-city-submit-btn"  
+                tracking={{
+                  action: 'lead',
+                  source: `parking-city-form-${city.slug}`,
+                  intent: 'diagnostic-request'
+                }}
+              />
+            </div>
+          </form>
+          
+          <!-- Promesses clés sous le formulaire -->
+          <div class="grid md:grid-cols-3 gap-6 text-center mt-8 pt-8 border-t border-[#E5E7EB]">
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+              <p class="text-xs text-[#475569]">Devis adapté au revêtement</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Devis sur photo</h4>
+              <p class="text-xs text-[#475569]">Estimation rapide possible</p>
+            </div>
+            
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-[#DBEAFE] rounded-lg flex items-center justify-center mb-2">
+                <svg class="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Particuliers & pros</h4>
+              <p class="text-xs text-[#475569]">Tarifs dégressifs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informations de contact -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">Nous contacter</h3>
+            <div class="space-y-2">
+              <a href="tel:+33676738661" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                06 76 73 86 61
+              </a>
+              <a href="https://wa.me/33676738661" target="_blank" rel="noopener" class="flex items-center justify-center text-[#475569] hover:text-[#25D366] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.488"/>
+                </svg>
+                WhatsApp
+              </a>
+              <a href="mailto:contact@klinova.fr" class="flex items-center justify-center text-[#475569] hover:text-[#3F8D65] transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                contact@klinova.fr
+              </a>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <h3 class="font-semibold text-[#1E2939] mb-3">Zone d'intervention</h3>
+            <div class="flex items-center justify-center text-[#475569]">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Paris et Île-de-France</span>
+            </div>
+            <p class="text-sm text-[#475569] mt-2">
+              Intervention rapide pour professionnels et particuliers
+            </p>
+          </div>
+        </div>
+
+        <!-- Mentions finales -->
+        <div class="mt-12 pt-8 border-t border-[#E5E7EB]">
+          <p class="text-sm text-[#6B7280]">
+            KLINOVA - RCS Paris 943 439 810 - 6 rue d'Armaillé, 75017 Paris
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script spécifique parkings avec namespace -->
+  <script>
+    (() => {
+      const FORM_PREFIX = 'parking-city';
+      const form = document.getElementById('parking-city-form');
+      const submitBtn = document.getElementById('parking-city-submit-btn');
+      const photosInput = document.getElementById('parking-city-photos-input');
+      const dropZone = document.getElementById('parking-city-photos-drop-zone');
+      const photosList = document.getElementById('parking-city-photos-list');
+      const photosStatus = document.getElementById('parking-city-photos-status');
+      const photosHidden = document.getElementById('parking-city-photos-hidden');
+      
+      const parkingFormState = {
+        uploadingCount: 0,
+        uploadedFiles: [],
+        maxFiles: 4,
+        maxMB: 8
+      };
+
+      function setLoading(loading) {
+        if (submitBtn) {
+          submitBtn.disabled = loading || parkingFormState.uploadingCount > 0;
+          const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+          const btnText = submitBtn.querySelector('span');
+          if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+          if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon diagnostic gratuit';
+        }
+      }
+
+      function bytesToMB(bytes) {
+        return (bytes / 1024 / 1024).toFixed(1);
+      }
+
+      function updatePhotosStatus() {
+        if (!photosStatus) return;
+        const total = parkingFormState.uploadedFiles.length;
+        const success = parkingFormState.uploadedFiles.filter(f => f.status === 'success').length;
+        const uploading = parkingFormState.uploadingCount;
+        
+        if (total === 0) {
+          photosStatus.textContent = 'Aucune photo';
+          if (photosList) photosList.classList.add('hidden');
+        } else {
+          photosStatus.textContent = `${total}/${parkingFormState.maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+          if (photosList) photosList.classList.remove('hidden');
+        }
+        
+        if (submitBtn) submitBtn.disabled = parkingFormState.uploadingCount > 0;
+      }
+
+      function addPhotoToList(file) {
+        if (!photosList) return;
+        const photoDiv = document.createElement('div');
+        photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+        photoDiv.dataset.fileName = file.name;
+        
+        photoDiv.innerHTML = `
+          <span class="text-[#475569] flex-1 truncate mr-2">${file.name}</span>
+          <span class="text-[#64748B] mr-2">${bytesToMB(file.size)} MB</span>
+          <span class="text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>
+          <button type="button" class="text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center">×</button>
+        `;
+        
+        photoDiv.querySelector('button').addEventListener('click', () => removePhoto(file.name));
+        photosList.appendChild(photoDiv);
+      }
+
+      function updatePhotoStatus(fileName, status, progress = 0) {
+        if (!photosList) return;
+        const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+        if (!photoDiv) return;
+        const statusEl = photoDiv.querySelector('span:nth-child(3)');
+        if (!statusEl) return;
+        
+        switch (status) {
+          case 'uploading':
+            statusEl.textContent = `${progress}%`;
+            statusEl.className = 'text-[#3B82F6] mr-2 min-w-[60px] text-center';
+            break;
+          case 'success':
+            statusEl.textContent = 'Importée ✓';
+            statusEl.className = 'text-[#10B981] mr-2 min-w-[60px] text-center';
+            break;
+          case 'error':
+            statusEl.textContent = 'Erreur ⚠';
+            statusEl.className = 'text-[#EF4444] mr-2 min-w-[60px] text-center';
+            break;
+        }
+      }
+
+      function removePhoto(fileName) {
+        const fileIndex = parkingFormState.uploadedFiles.findIndex(f => f.name === fileName);
+        if (fileIndex !== -1) {
+          const file = parkingFormState.uploadedFiles[fileIndex];
+          if (file.cloudinaryUrl && photosHidden) {
+            const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+            if (hiddenInput) hiddenInput.remove();
+          }
+          parkingFormState.uploadedFiles.splice(fileIndex, 1);
+        }
+        
+        if (photosList) {
+          const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+          if (photoDiv) photoDiv.remove();
+        }
+        updatePhotosStatus();
+      }
+
+      async function getCloudinarySignature() {
+        const response = await fetch('/api/cloudinary-signature', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({})
+        });
+        
+        const data = await response.json();
+        if (!data.ok) {
+          throw new Error(data.error || 'Erreur signature Cloudinary');
+        }
+        return data;
+      }
+
+      async function uploadToCloudinary(file) {
+        const fileObj = {
+          name: file.name,
+          size: file.size,
+          status: 'uploading',
+          progress: 0,
+          cloudinaryUrl: null
+        };
+        
+        parkingFormState.uploadedFiles.push(fileObj);
+        addPhotoToList(file);
+        parkingFormState.uploadingCount++;
+        updatePhotosStatus();
+        
+        try {
+          const signature = await getCloudinarySignature();
+          const formData = new FormData();
+          formData.append('file', file);
+          formData.append('api_key', signature.apiKey);
+          formData.append('timestamp', String(signature.timestamp));
+          formData.append('signature', signature.signature);
+          formData.append('folder', signature.folder);
+          if (signature.uploadPreset) {
+            formData.append('upload_preset', signature.uploadPreset);
+          }
+
+          const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+          const xhr = new XMLHttpRequest();
+          
+          xhr.upload.onprogress = (e) => {
+            if (e.lengthComputable) {
+              const progress = Math.round((e.loaded / e.total) * 100);
+              fileObj.progress = progress;
+              updatePhotoStatus(file.name, 'uploading', progress);
+            }
+          };
+          
+          xhr.onload = () => {
+            parkingFormState.uploadingCount--;
+            try {
+              const result = JSON.parse(xhr.responseText);
+              if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+                fileObj.status = 'success';
+                fileObj.cloudinaryUrl = result.secure_url;
+                updatePhotoStatus(file.name, 'success');
+                
+                if (photosHidden) {
+                  const hiddenInput = document.createElement('input');
+                  hiddenInput.type = 'hidden';
+                  hiddenInput.name = 'photos[]';
+                  hiddenInput.value = result.secure_url;
+                  photosHidden.appendChild(hiddenInput);
+                }
+              } else {
+                throw new Error('Upload failed');
+              }
+            } catch (err) {
+              fileObj.status = 'error';
+              updatePhotoStatus(file.name, 'error');
+            }
+            updatePhotosStatus();
+          };
+          
+          xhr.onerror = () => {
+            parkingFormState.uploadingCount--;
+            fileObj.status = 'error';
+            updatePhotoStatus(file.name, 'error');
+            updatePhotosStatus();
+          };
+          
+          xhr.open('POST', uploadUrl);
+          xhr.send(formData);
+          
+        } catch (error) {
+          parkingFormState.uploadingCount--;
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          updatePhotosStatus();
+        }
+      }
+
+      function validateFiles(files) {
+        const validFiles = [];
+        for (const file of files) {
+          if (!file.type.startsWith('image/')) {
+            alert(`${file.name} n'est pas une image valide`);
+            continue;
+          }
+          if (file.size > parkingFormState.maxMB * 1024 * 1024) {
+            alert(`${file.name} dépasse la limite de ${parkingFormState.maxMB} MB`);
+            continue;
+          }
+          if (parkingFormState.uploadedFiles.length + validFiles.length >= parkingFormState.maxFiles) {
+            alert(`Maximum ${parkingFormState.maxFiles} photos autorisées`);
+            break;
+          }
+          validFiles.push(file);
+        }
+        return validFiles;
+      }
+
+      function handleFiles(files) {
+        const validFiles = validateFiles(Array.from(files));
+        validFiles.forEach(file => uploadToCloudinary(file));
+      }
+
+      if (photosInput && dropZone) {
+        photosInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            handleFiles(e.target.files);
+            e.target.value = '';
+          }
+        });
+
+        dropZone.addEventListener('click', () => photosInput.click());
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          });
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, () => {
+            dropZone.classList.add('border-[#1E40AF]', 'bg-[#F0F9FF]');
+          });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, () => {
+            dropZone.classList.remove('border-[#1E40AF]', 'bg-[#F0F9FF]');
+          });
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          const files = e.dataTransfer.files;
+          if (files.length > 0) handleFiles(files);
+        });
+      }
+
+      function validateField(field) {
+        const value = field.value.trim();
+        const errorDiv = field.parentNode.querySelector('.form-error');
+        
+        if (field.required && !value) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Ce champ est requis';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Format email invalide';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+          field.classList.add('border-red-500');
+          if (errorDiv) {
+            errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+            errorDiv.classList.remove('hidden');
+          }
+          return false;
+        }
+        
+        field.classList.remove('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = '';
+          errorDiv.classList.add('hidden');
+        }
+        return true;
+      }
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          if (parkingFormState.uploadingCount > 0) {
+            alert('Veuillez attendre la fin de l\'upload des photos');
+            return;
+          }
+          
+          const requiredFields = form.querySelectorAll('[required]');
+          let isValid = true;
+          
+          requiredFields.forEach(field => {
+            if (!validateField(field)) isValid = false;
+          });
+          
+          const emailField = form.querySelector('[name="email"]');
+          if (emailField && emailField.value.trim()) {
+            if (!validateField(emailField)) isValid = false;
+          }
+          
+          if (!isValid) {
+            alert('Veuillez corriger les erreurs ci-dessus');
+            return;
+          }
+          
+          setLoading(true);
+          
+          try {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'form_submit', {
+                form_location: 'citypage_parking',
+                form_type: 'diagnostic_parking'
+              });
+            }
+
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'lead_generated',
+                form_type: 'diagnostic_parking',
+                service: 'Nettoyage parking - Diagnostic gratuit',
+                source: `page-parking-${window.location.pathname.split('/').pop()}`
+              });
+            }
+
+            const formData = new FormData(form);
+            const response = await fetch('/api/contact', {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+
+            let data = null;
+            try { data = await response.json(); } catch {}
+
+            if (response.ok) {
+              form.setAttribute('aria-hidden', 'true');
+              form.style.pointerEvents = 'none';
+              form.innerHTML = `
+                <div class="text-center py-10" style="animation: fade-in 0.5s ease-out;">
+                  <div class="w-16 h-16 bg-[#DBEAFE] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+                  <p class="text-[#475569] max-w-md mx-auto">
+                    Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté à votre parking.<br>
+                    Un expert Klinova évaluera la technique de nettoyage<br>
+                    la plus appropriée à votre revêtement.
+                  </p>
+                </div>
+              `;
+
+              try { 
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+              } catch {}
+            } else {
+              const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+              alert(err);
+            }
+          } catch (error) {
+            alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+          } finally {
+            setLoading(false);
+          }
+        });
+      }
+    })();
+  </script>
+)}
+
+
+
+{service.key === 'canapes-tapis' && (
+  <section class="py-16">
+    <div class="container-responsive">
+      <BookingTextiles client:load cityName={city.name} />
+    </div>
+  </section>
+)}
+
+
+
+
+
+
+
   </main>
 </LayoutWithCTA>

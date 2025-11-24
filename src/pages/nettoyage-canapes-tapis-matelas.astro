@@ -1,0 +1,499 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image } from 'astro:assets';
+import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+import { Accordion, AccordionItem } from 'free-astro-components';
+
+import BookingTextiles from '../components/BookingTextiles.tsx';
+
+import heroTextilesImage from '~/assets/images/nettoyage-canapes-tapis-matelas-klinova.jpeg';
+
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-canapes-tapis-matelas';
+const pageName = 'Nettoyage de canapés, tapis et matelas';
+
+// Configuration popup
+const popupContext = {
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous rappelle pour estimer le nettoyage de votre canapé, tapis ou matelas.',
+  serviceKey: 'rappel-textiles',
+  serviceLabel: 'Demande rappel - Page canapés / tapis / matelas',
+  trackingSource: 'popup-textiles-header',
+  presetSubject: 'Nouvelle demande de rappel – nettoyage canapés / tapis / matelas',
+  creditImpotEnabled: true,
+};
+
+// FAQ
+const faq = [
+  {
+    title: 'Pouvez-vous enlever toutes les taches sur un canapé ou un matelas ?',
+    content:
+      "Nous améliorons nettement l’état visuel et l’hygiène des textiles, mais nous ne pouvons jamais garantir à l’avance la disparition de 100 % des taches. Le résultat dépend du type de tache, de son ancienneté et du textile. Nous vous indiquons toujours ce qui est réaliste avant l’intervention, à partir des photos et de l’état réel sur place.",
+  },
+  {
+    title: 'Combien de temps met un canapé ou un matelas à sécher après le nettoyage ?',
+    content:
+      "En général, il faut compter entre 4 et 12 heures de séchage selon la température, l’aération de la pièce et l’épaisseur du textile. Nous limitons au maximum la quantité d’eau injectée et nous repassons plusieurs fois pour extraire un maximum d’humidité. Nous vous donnons des conseils pratiques (aération, chauffage, circulation d’air) pour accélérer le séchage en toute sécurité.",
+  },
+  {
+    title: 'Intervenez-vous aussi pour les tapis et les matelas très anciens ou fragiles ?',
+    content:
+      "Certains textiles (tapis anciens, fibres très délicates, matelas endommagés) ne supportent pas toujours un nettoyage humide classique. Dans ce cas, nous vous le signalons en amont et nous adaptons notre intervention : nettoyage plus doux, zone limitée ou, si le risque d’endommagement est trop important, recommandation de ne pas intervenir. L’objectif est de privilégier la sécurité du textile plutôt que de forcer un résultat incertain.",
+  },
+];
+
+// Schema FAQ
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: { '@type': 'Answer', text: item.content },
+  })),
+};
+
+// Fil d'Ariane
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${site}/` },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Nettoyage de canapés, tapis et matelas',
+      item: `${site}${pageUrl}`,
+    },
+  ],
+};
+
+// JSON-LD optimisé
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${site}${pageUrl}#webpage`,
+    url: `${site}${pageUrl}`,
+    name: 'Nettoyage de canapés, tapis et matelas — Klinova',
+    isPartOf: { '@id': `${site}#website` },
+    inLanguage: 'fr-FR',
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630,
+    },
+  },
+
+  // Service spécifique
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${site}#service-canapes-tapis-matelas`,
+    inLanguage: 'fr-FR',
+    serviceType: 'Nettoyage de canapés, tapis et matelas',
+    name: 'Nettoyage de canapé, tapis et matelas à Paris et en Île-de-France',
+    alternateName: 'Désodorisation canapé, traitement urine de chat et chien, nettoyage matelas odeurs',
+    url: `${site}${pageUrl}`,
+    provider: { '@id': `${site}#localbusiness` },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+    audience: {
+      '@type': 'Audience',
+      audienceType: ['Particuliers', 'Résidentiel'],
+    },
+    category: 'Nettoyage de textiles d’ameublement',
+    serviceOutput:
+      'Canapés, tapis et matelas nettoyés en profondeur, visuellement améliorés et assainis',
+    description:
+      'Spécialiste du nettoyage et de la désodorisation profonde des canapés, tapis et matelas : traitement des odeurs d’urine d’animaux, auréoles, taches, odeurs persistantes et textiles imprégnés.',
+    offers: {
+      '@type': 'Offer',
+      price: 'Sur devis',
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Services de nettoyage textiles',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Nettoyage de canapés en tissu',
+            description: 'Détachage, nettoyage en profondeur et réduction des odeurs.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Nettoyage de tapis de salon',
+            description: 'Aspiration, pré-traitement des taches et nettoyage en profondeur.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Nettoyage de matelas',
+            description:
+              'Nettoyage ciblé pour améliorer l’hygiène, l’aspect et limiter les odeurs persistantes.',
+          },
+        },
+      ],
+    },
+  },
+
+  faqSchema,
+  breadcrumb,
+];
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de canapés, tapis et matelas • Désodorisation & traitement des odeurs d’urine"
+  description="Nettoyage professionnel et désodorisation de canapés, tapis et matelas : traitement des odeurs d’urine de chat/chien, taches, auréoles et odeurs incrustées. Intervention à Paris & Île-de-France."
+  canonical={pageUrl}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Nettoyage professionnel de canapés, tapis et matelas à Paris et en Île-de-France"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
+>
+
+
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(3deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(3deg);
+    }
+  }
+
+  .hero-badge {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .hero-title {
+    animation: fadeInUp 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .hero-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .hero-list {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .hero-reassurance {
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  .hero-image {
+    animation: fadeInRight 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  /* Hover microinteractions */
+  .service-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .service-item:hover {
+    transform: translateX(8px);
+  }
+
+  .service-item:hover .service-icon {
+    transform: scale(1.1);
+    color: #387B58;
+  }
+
+  .service-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reassurance-item {
+    transition: all 0.3s ease;
+  }
+
+  .reassurance-item:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Animation des formes décoratives */
+  .floating-shape {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .floating-shape:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 10s;
+  }
+
+  /* Accessibilité : désactiver animations si demandé */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-list,
+    .hero-cta,
+    .hero-reassurance,
+    .hero-image {
+      animation: none;
+      opacity: 1;
+    }
+
+    .floating-shape {
+      animation: none;
+    }
+
+    .service-item:hover,
+    .reassurance-item:hover {
+      transform: none;
+    }
+
+    .service-item:hover .service-icon {
+      transform: none;
+      color: #387B58;
+    }
+  }
+</style>
+
+<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"  
+data-hide-floating-cta
+data-hide-header-cta 
+>
+  <div class="container-responsive">
+    <!-- Grille responsive : texte à gauche, image à droite -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Contenu textuel -->
+      <div class="order-1 lg:order-1">
+        <!-- Badge optionnel -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#3F8D65] border border-[#3F8D65]/20 mb-6 hero-badge">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Service aux particuliers en Île-de-France
+        </div>
+
+        <!-- Titre principal H1 -->
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1E2939] leading-tight mb-6 hero-title">
+          Nettoyage de 
+          <span class="text-[#3F8D65]">canapés, tapis & matelas</span>
+          à domicile
+        </h1>
+
+        <!-- Sous-titre descriptif -->
+        <p class="text-xl lg:text-2xl text-[#475569] leading-relaxed mb-8 hero-subtitle">
+          Désodorisation professionnelle, traitement des urines d'animaux et élimination des taches tenaces par injection-extraction
+        </p>
+
+        <!-- Liste des services -->
+        <ul class="space-y-3 mb-10 hero-list">
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Élimination des odeurs d'urine de chat et chien</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Détachage professionnel avec matériel spécialisé</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Hygiénisation et désinfection textile complète</span>
+          </li>
+        </ul>
+
+        <!-- CTA principal -->
+        <div class="flex flex-col sm:flex-row gap-4 hero-cta mt-6">
+          <Button
+            href="#formulaire"
+            variant="tertiary"
+            size="lg"
+            class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+            ariaLabel="Demander un devis pour le nettoyage de textiles"
+            tracking={{ action: 'lead', source: 'hero-textiles', intent: 'cta-tertiary' }}
+            data={{ service: 'devis-textiles' }}
+          >
+            Réserver une intervention
+          </Button>
+        </div>
+
+        <!-- Informations de réassurance -->
+        <div class="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#3F8D65]/20 hero-reassurance">
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Estimation rapide par photos
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Matériel professionnel
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Intervention sous 48h
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="order-2 lg:order-2 hero-image">
+        <div class="relative">
+          <!-- Décoration de fond animée -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#3F8D65]/10 to-transparent rounded-2xl floating-shape" aria-hidden="true"></div>
+          
+          <!-- Container image -->
+          <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+            <Image 
+              src={heroTextilesImage}
+              alt="Salon moderne avec canapé beige et tapis propres après nettoyage professionnel Klinova"
+              formats={['avif', 'webp', 'jpeg']}
+              widths={[480, 720, 960, 1200]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={88}
+              loading="eager"
+              class="w-full aspect-[4/3] lg:aspect-[5/4] object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forme décorative unique -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-[#3F8D65]/5 rounded-full blur-3xl floating-shape" aria-hidden="true"></div>
+</section>
+
+
+<section class="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm">
+  <h2 class="text-xl font-semibold text-[#1E2939]">
+    Désodorisation et traitement des odeurs d’urine d’animaux
+  </h2>
+
+  <p class="mt-4 text-sm md:text-base text-[#475569]">
+    Les odeurs d’urine de chat ou de chien sont l’une des principales raisons pour lesquelles nos
+    clients font appel à nous. L’urée, l’ammoniac et les bactéries s’incrustent profondément dans
+    les fibres et provoquent des odeurs très tenaces, difficiles à traiter avec des produits
+    classiques.
+  </p>
+
+  <p class="mt-4 text-sm md:text-base text-[#475569]">
+    Notre protocole repose sur trois étapes : neutralisation de l’ammoniac, action enzymatique
+    ciblée pour décomposer les résidus organiques, puis nettoyage en profondeur pour extraire
+    l’humidité et les résidus odorants. Ce procédé permet de réduire très fortement les odeurs
+    persistantes sur les canapés, matelas et tapis, même lorsque l’accident remonte à plusieurs
+    jours.
+  </p>
+
+  <ul class="mt-4 space-y-2 text-sm md:text-base text-[#475569] list-disc pl-5">
+    <li>Traitement spécialisé urine de chat (odeur très tenace).</li>
+    <li>Neutralisation des odeurs d’urine de chien.</li>
+    <li>Désodorisation de canapés, tapis et matelas imprégnés.</li>
+    <li>Réduction des auréoles et taches persistantes.</li>
+    <li>Conseils pour éviter la réapparition des odeurs.</li>
+  </ul>
+
+  <p class="mt-4 text-sm md:text-base text-[#475569]">
+    Nous privilégions toujours les solutions qui respectent les textiles, les couleurs et les
+    occupants de la maison (enfants, animaux). Si un textile présente un risque d’endommagement,
+    nous vous l’indiquons en amont avant toute intervention.
+  </p>
+</section>
+
+
+
+
+
+
+  <!-- Section Réservation - LE COMPOSANT REACT -->
+  <section id="reservation" class="py-16 bg-gray-50">
+    <div class="container-responsive">
+    
+      
+      <div class="mt-12">
+        <BookingTextiles client:load />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LayoutWithCTA>

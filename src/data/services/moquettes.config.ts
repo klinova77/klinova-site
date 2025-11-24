@@ -76,10 +76,7 @@ const moquettesConfig: ServiceConfig = {
     parent: '/nettoyage-moquettes'
   },
   
-  images: {
-    heroDesktop: '/images/nettoyage-moquette-professionnel-hero.webp',
-    heroMobile: '/images/nettoyage-moquette-professionnel-hero-mobile.webp'
-  }
+  
 };
 
 export default moquettesConfig;

@@ -1,5 +1,6 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel'; // ✅ bon import (server runtime)
 import tailwindcss from '@tailwindcss/vite';
@@ -14,6 +15,7 @@ const NOINDEX = new Set([]);
 export default defineConfig({
   site: 'https://klinova.fr',
 
+   
   // ✅ Sortie "server" nécessaire pour les routes API (Cloudinary, Resend…)
   output: 'server',
 
@@ -38,6 +40,7 @@ export default defineConfig({
 
   // ✅ Intégrations (sitemap, etc.)
   integrations: [
+    react(),
     sitemap({
       filter: (url) => {
         const p = new URL(url).pathname;

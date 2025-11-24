@@ -100,4 +100,4 @@ const TEMPLATE_CITY: City = {
   ]
 };
 
-export default chelles;
+export default TEMPLATE_CITY;
