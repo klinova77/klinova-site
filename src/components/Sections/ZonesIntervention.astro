@@ -1,0 +1,55 @@
+---
+// src/components/Sections/ZonesIntervention.astro
+
+
+
+import { DEPARTMENTS } from '~/data/departments';
+
+interface Props {
+  /**
+   * Variante éventuelle de fond (par défaut gris très clair)
+   */
+  variant?: 'default' | 'white';
+}
+
+const { variant = 'default' } = Astro.props;
+const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
+---
+
+<section class={`py-16 ${sectionBg} border-t border-[#E5E7EB]`}>
+  <div class="container-responsive">
+    <div class="text-center max-w-4xl mx-auto">
+      
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Zones d'intervention
+      </p>
+
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Intervention dans toute l'Île-de-France
+      </h2>
+
+      <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-8">
+        Klinova intervient dans l'ensemble de la région Île-de-France.
+        Chaque intervention est planifiée pour garantir ponctualité, réactivité et qualité, quel que soit votre département.
+      </p>
+
+      <!-- Grid de départements cliquables -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        {DEPARTMENTS.map((dept) => (
+          <a
+            href={`/zones-d-intervention/${dept.slug}`}
+            class="flex items-center justify-center p-3 bg-white border border-[#E5E7EB] rounded-lg hover:shadow-sm hover:border-[#3F8D65]/40 transition"
+          >
+            <span class="text-[#1E2939] font-medium text-sm md:text-base">
+              {dept.shortLabel}
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <p class="text-sm text-[#475569] mt-6">
+        Délais d'intervention généralement sous 48h selon disponibilités
+      </p>
+    </div>
+  </div>
+</section>

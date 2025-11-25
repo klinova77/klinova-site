@@ -7,6 +7,8 @@ import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 
+import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
 import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
 import moquetteVelours from '~/assets/images/nettoyage-moquettes-velours.jpg';
@@ -612,6 +614,183 @@ const jsonLd = [
     </div>
   </div>
 </section>
+
+
+<!-- Section 3: Désodorisation & traitement des odeurs sur moquettes -->
+<section class="py-16 bg-[#DFF1E8]">
+  <div class="container-responsive">
+    <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 lg:p-10 shadow-sm">
+      
+      <!-- Header de section -->
+      <div class="text-center mb-8">
+        <!-- Sur-titre contextuel -->
+        <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+          Odeurs sur moquettes
+        </p>
+        
+        <!-- H2 principal -->
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+          Désodorisation & traitement des odeurs sur moquettes
+        </h2>
+        
+        <!-- Paragraphe introductif -->
+        <div class="max-w-4xl mx-auto">
+          <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+            Les odeurs persistantes sur moquettes sont parmi nos interventions les plus fréquentes : odeurs d'humidité, marquage animal, matières organiques incrustées dans les fibres, remontées d'odeurs en copropriété ou odeurs de locataires sortants. Ces substances s'accumulent dans les fibres et le backing, créant des sources d'odeurs que les produits grand public ne peuvent éliminer, se contentant de masquer temporairement le problème.
+          </p>
+        </div>
+      </div>
+
+      <!-- H3 spécifique odeurs moquettes -->
+      <div class="mb-10">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">
+          Odeurs persistantes sur moquettes (humidité, animaux, usure)
+        </h3>
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Les moquettes retiennent particulièrement les odeurs car leurs fibres forment un véritable piège à particules organiques et bactéries. L'humidité ambiante réactive ces résidus et les fait remonter en surface, créant des odeurs tenaces même après aspiration. Les moquettes de copropriétés, d'appartements anciens ou ayant subi des accidents d'animaux nécessitent un traitement en profondeur qui agit jusqu'au backing, pas un simple nettoyage de surface.
+        </p>
+      </div>
+
+      <!-- Protocole en 3 étapes -->
+      <div class="mb-10">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-6 text-center">
+          Un protocole en 3 étapes adapté aux moquettes
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Étape 1 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                1
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Réactivation et localisation
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Identification des zones problématiques, adaptation selon le type de fibre (courte/longue) et réactivation contrôlée des résidus pour permettre leur neutralisation. Préparation spécifique selon l'ancienneté et la nature des odeurs.
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                2
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Action enzymatique & biotechnologique
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Application de produits enzymatiques qui décomposent les matières organiques incrustées dans les fibres et le backing. Action ciblée sur les bactéries responsables des odeurs, avec temps de contact adapté à la densité de la moquette.
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                3
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Extraction profonde spécialisée moquette
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Nettoyage par injecteur-extracteur avec puissance adaptée aux fibres moquette. Extraction maximale des résidus et de l'humidité, traitement du backing si nécessaire, gestion du séchage pour éviter les remontées d'odeurs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Encadré technologie O.N.T. adapté moquettes -->
+      <div class="mt-8 border border-[#E5E7EB] bg-[#F1F7F3] rounded-xl p-5">
+        <h4 class="text-base md:text-lg font-semibold text-[#1E2939] mb-2">
+          Technologie O.N.T. – Application ciblée sur zones malodorantes
+        </h4>
+        <p class="text-sm md:text-base text-[#475569] leading-relaxed">
+          Sur les zones spécifiquement malodorantes de la moquette, nous utilisons certains produits 
+          professionnels contenant la technologie brevetée O.N.T. (Odour Neutralizing Technology). 
+          Cette technologie neutralise les molécules responsables des mauvaises odeurs plutôt que de 
+          les masquer. Appliquée en pré-traitement sur les zones problématiques (coins d'animaux, 
+          zones d'humidité, passages intensifs), elle capture et désactive les composés odorants avant 
+          le nettoyage principal. Combinée à notre protocole enzymatique et à l'extraction spécialisée, 
+          cette approche ciblée permet une désodorisation durable des moquettes les plus problématiques.
+        </p>
+      </div>
+
+      <!-- Pourquoi ça marche avec Klinova -->
+      <div class="mb-8">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-6">
+          Pourquoi ça marche avec Klinova
+        </h3>
+        
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Adaptation technique selon le type de moquette (fibres courtes/longues, synthétique/laine, backing foam/jute).</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Produits enzymatiques professionnels qui décomposent les matières organiques incrustées dans les fibres et le support.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Approche différenciée : moquettes de copropriétés vs résidentielles, zones de passages vs coins problématiques.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Traitement du backing si nécessaire pour éliminer les sources d'odeurs en profondeur, pas seulement en surface.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Neutralisation authentique des odeurs (action moléculaire) vs masquage temporaire par parfums ou désodorisants.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Tests préalables sur zones discrètes et évaluation de l'état du backing avant intervention sur moquettes anciennes ou fragiles.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloc limites et honnêteté -->
+      <div class="mt-8 border border-[#E5E7EB] bg-[#F9FAFB] rounded-xl p-4 md:p-5">
+        <h4 class="text-sm font-semibold text-[#1E2939] mb-2">
+          Limites et honnêteté
+        </h4>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Les moquettes très anciennes ou dont le backing est détérioré peuvent conserver une odeur résiduelle même après traitement professionnel. Les odeurs imprégnées depuis plusieurs années ou les moquettes ayant subi des dégâts des eaux répétés peuvent nécessiter un remplacement plutôt qu'un traitement. Klinova privilégie toujours l'évaluation honnête de l'état de la moquette et peut recommander de ne pas intervenir si le risque de détérioration est trop important. Notre objectif est une amélioration significative et durable, pas une promesse irréaliste sur toutes les situations.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
 
 <!-- Section Processus unifié (processus en 4 étapes simplifié) -->
@@ -1528,7 +1707,7 @@ const jsonLd = [
   </div>
 </section>
 
-
+<ZonesIntervention />
 
 <section class="py-16 md:py-20 bg-[#FCFCFC]">
   <div class="container mx-auto px-6 lg:px-12">

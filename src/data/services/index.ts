@@ -1,3 +1,4 @@
+// src/pages/[city]/[service]/index.astro
 // Types partagés (tu peux aussi importer depuis ~/types/services)
 export type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
 

@@ -7,7 +7,11 @@ import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 
+import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+
 import BookingTextiles from '../components/BookingTextiles.tsx';
+
+
 
 import heroTextilesImage from '~/assets/images/nettoyage-canapes-tapis-matelas-klinova.jpeg';
 
@@ -32,17 +36,17 @@ const faq = [
   {
     title: 'Pouvez-vous enlever toutes les taches sur un canapé ou un matelas ?',
     content:
-      "Nous améliorons nettement l’état visuel et l’hygiène des textiles, mais nous ne pouvons jamais garantir à l’avance la disparition de 100 % des taches. Le résultat dépend du type de tache, de son ancienneté et du textile. Nous vous indiquons toujours ce qui est réaliste avant l’intervention, à partir des photos et de l’état réel sur place.",
+      "Nous améliorons nettement l'état visuel et l'hygiène des textiles, mais nous ne pouvons jamais garantir à l'avance la disparition de 100 % des taches. Le résultat dépend du type de tache, de son ancienneté et du textile. Nous vous indiquons toujours ce qui est réaliste avant l'intervention, à partir des photos et de l'état réel sur place.",
   },
   {
     title: 'Combien de temps met un canapé ou un matelas à sécher après le nettoyage ?',
     content:
-      "En général, il faut compter entre 4 et 12 heures de séchage selon la température, l’aération de la pièce et l’épaisseur du textile. Nous limitons au maximum la quantité d’eau injectée et nous repassons plusieurs fois pour extraire un maximum d’humidité. Nous vous donnons des conseils pratiques (aération, chauffage, circulation d’air) pour accélérer le séchage en toute sécurité.",
+      "En général, il faut compter entre 4 et 12 heures de séchage selon la température, l'aération de la pièce et l'épaisseur du textile. Nous limitons au maximum la quantité d'eau injectée et nous repassons plusieurs fois pour extraire un maximum d'humidité. Nous vous donnons des conseils pratiques (aération, chauffage, circulation d'air) pour accélérer le séchage en toute sécurité.",
   },
   {
     title: 'Intervenez-vous aussi pour les tapis et les matelas très anciens ou fragiles ?',
     content:
-      "Certains textiles (tapis anciens, fibres très délicates, matelas endommagés) ne supportent pas toujours un nettoyage humide classique. Dans ce cas, nous vous le signalons en amont et nous adaptons notre intervention : nettoyage plus doux, zone limitée ou, si le risque d’endommagement est trop important, recommandation de ne pas intervenir. L’objectif est de privilégier la sécurité du textile plutôt que de forcer un résultat incertain.",
+      "Certains textiles (tapis anciens, fibres très délicates, matelas endommagés) ne supportent pas toujours un nettoyage humide classique. Dans ce cas, nous vous le signalons en amont et nous adaptons notre intervention : nettoyage plus doux, zone limitée ou, si le risque d'endommagement est trop important, recommandation de ne pas intervenir. L'objectif est de privilégier la sécurité du textile plutôt que de forcer un résultat incertain.",
   },
 ];
 
@@ -55,6 +59,25 @@ const faqSchema = {
     name: item.title,
     acceptedAnswer: { '@type': 'Answer', text: item.content },
   })),
+};
+
+// Schema VideoObject pour la vidéo de démonstration
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: 'Nettoyage de canapé à domicile - démonstration Klinova',
+  description: 'Démonstration réelle d\'une intervention Klinova : canapé taché, passage de l\'injecteur-extracteur, eau sale extraite et résultat final visiblement plus propre.',
+  thumbnailUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/so_3/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.jpg',
+  uploadDate: '2024-11-24T00:00:00+01:00',
+  duration: 'PT0M30S',
+  contentUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4',
+  embedUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4',
+  url: `${site}${pageUrl}`,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Klinova',
+    url: 'https://klinova.fr'
+  }
 };
 
 // Fil d'Ariane
@@ -107,6 +130,7 @@ const jsonLd = [
       audienceType: ['Particuliers', 'Résidentiel'],
     },
     category: 'Nettoyage de textiles d’ameublement',
+
     serviceOutput:
       'Canapés, tapis et matelas nettoyés en profondeur, visuellement améliorés et assainis',
     description:
@@ -151,6 +175,7 @@ const jsonLd = [
     },
   },
 
+  videoSchema,
   faqSchema,
   breadcrumb,
 ];
@@ -425,6 +450,683 @@ data-hide-header-cta
   <!-- Forme décorative unique -->
   <div class="absolute top-0 right-0 w-64 h-64 bg-[#3F8D65]/5 rounded-full blur-3xl floating-shape" aria-hidden="true"></div>
 </section>
+
+
+
+<!-- Section 2: Les situations les plus fréquentes -->
+<section class="py-16 bg-white" data-activate-floating-cta>
+  <div class="container-responsive">
+    
+    <!-- Petit titre contextuel -->
+    <div class="text-center mb-6">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Situations fréquentes
+      </p>
+      
+      <!-- Titre principal H2 -->
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Les situations que nous traitons le plus souvent
+      </h2>
+      
+      <!-- Paragraphe court (ton terrain) -->
+      <p class="text-lg text-[#475569] max-w-3xl mx-auto leading-relaxed">
+        Chaque semaine, nous intervenons pour des taches tenaces, des odeurs incrustées ou des textiles abîmés par l'humidité. Voici les cas les plus courants.
+      </p>
+    </div>
+
+    <!-- Grid responsive des cartes problèmes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      
+      <!-- Carte 1: Taches alimentaires -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Taches alimentaires & boissons
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Taches grasses, café, vin, chocolat, huiles, traces de sauce qui résistent aux nettoyages classiques.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 2: Urine animaux -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Urine de chat ou de chien
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Odeur forte, auréoles anciennes ou récurrentes malgré les nettoyages maison répétés.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 3: Odeurs persistantes -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Odeurs persistantes
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Transpiration, humidité, odeur animale, textiles imprégnés après plusieurs années d'usage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 4: Matelas jaunis -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Matelas jaunis ou marqués
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Zones sombres, auréoles d'humidité, traces d'accidents nocturnes qui altèrent l'aspect.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 5: Auréoles humidité -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Auréoles d'humidité
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Suite à un dégât des eaux ou à une infiltration légère dans le canapé ou le matelas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 6: Odeurs qui reviennent -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Odeurs qui reviennent après nettoyage maison
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Cas classique : les bactéries sont toujours présentes dans la mousse en profondeur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 3: Désodorisation & traitement des urines d'animaux -->
+<section class="py-16 bg-[#DFF1E8]">
+  <div class="container-responsive">
+    <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 lg:p-10 shadow-sm">
+      
+      <!-- Header de section -->
+      <div class="text-center mb-8">
+        <!-- Sur-titre contextuel -->
+        <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+          Urines d'animaux
+        </p>
+        
+        <!-- H2 principal -->
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+          Désodorisation & traitement des urines d'animaux
+        </h2>
+        
+        <!-- Paragraphe introductif -->
+        <div class="max-w-4xl mx-auto">
+          <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+            Les odeurs d'urine de chat ou de chien sont l'une des principales raisons pour lesquelles nos clients font appel à nous. L'urée, l'ammoniac et les bactéries s'incrustent profondément dans les fibres et créent des odeurs très tenaces. Les produits grand public masquent temporairement l'odeur avec des parfums, mais ne neutralisent pas les molécules responsables qui réapparaissent dès qu'il y a chaleur ou humidité.
+          </p>
+        </div>
+      </div>
+
+      <!-- H3 spécifique urine de chat -->
+      <div class="mb-10">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">
+          Traitement de l'urine de chat (odeur très tenace)
+        </h3>
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          L'urine de chat est particulièrement tenace car elle contient une concentration d'ammoniac très élevée et des phéromones spécifiques. L'odeur remonte facilement dès qu'il y a chaleur ou humidité dans la pièce, même plusieurs mois après l'accident. Le traitement nécessite un protocole spécifique avec neutralisation chimique et action enzymatique, pas un simple spray parfumé qui ne fait que masquer temporairement le problème.
+        </p>
+      </div>
+
+      <!-- Protocole en 3 étapes -->
+      <div class="mb-10">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-6 text-center">
+          Un protocole en 3 étapes
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Étape 1 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                1
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Neutralisation des résidus d'urine
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Localisation précise de la zone affectée, pré-humidification si nécessaire pour réactiver les résidus, puis neutralisation de l'ammoniac et stabilisation du pH du textile avant le traitement principal.
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                2
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Action enzymatique ciblée
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Application de produits enzymatiques professionnels qui décomposent les matières organiques (urée, protéines, acides aminés) à la source. Les enzymes agissent en profondeur pour détruire les molécules responsables des odeurs.
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-5 relative">
+            <!-- Badge numéro -->
+            <div class="flex justify-center mb-4">
+              <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+                3
+              </div>
+            </div>
+            
+            <h4 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+              Nettoyage & extraction en profondeur
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Nettoyage par injecteur-extracteur avec extraction maximale de l'humidité et des résidus odorants. Gestion spécifique du séchage pour éviter la réapparition d'odeurs résiduelles.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="mt-8 border border-[#E5E7EB] bg-[#F1F7F3] rounded-xl p-5">
+  <h4 class="text-base md:text-lg font-semibold text-[#1E2939] mb-2">
+    Technologie O.N.T. – Neutralisation des mauvaises odeurs
+  </h4>
+  <p class="text-sm md:text-base text-[#475569] leading-relaxed">
+    Nous utilisons certains produits professionnels contenant la technologie brevetée O.N.T. 
+    (Odour Neutralizing Technology), conçue pour neutraliser les molécules responsables des 
+    mauvaises odeurs plutôt que de les masquer.  
+    Ce procédé permet de capturer, transformer ou désactiver les composés odorants (urée, 
+    ammoniac, matières organiques). Lorsqu’elle est combinée à notre action enzymatique et 
+    à l’extraction en profondeur, la réduction des odeurs est nettement supérieure à un 
+    traitement classique.
+  </p>
+</div>
+
+
+      <!-- Pourquoi ça marche avec Klinova -->
+      <div class="mb-8">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-6">
+          Pourquoi ça marche avec Klinova
+        </h3>
+        
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Utilisation de produits enzymatiques professionnels spécialement adaptés aux textiles d'ameublement.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Neutralisation chimique des molécules d'odeurs au niveau moléculaire, pas un simple masquage parfumé.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Certains de nos produits professionnels utilisent la technologie O.N.T. brevetée, qui neutralise les molécules responsables des mauvaises odeurs au niveau chimique.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Adaptation du protocole au type de textile, à l'ancienneté de la tache et aux couleurs pour préserver l'intégrité du mobilier.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-base md:text-lg text-[#475569]">Tests préalables et explications claires données au client avant toute intervention sur les zones à risque.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bloc limites et honnêteté -->
+      <div class="mt-8 border border-[#E5E7EB] bg-[#F9FAFB] rounded-xl p-4 md:p-5">
+        <h4 class="text-sm font-semibold text-[#1E2939] mb-2">
+          Limites et honnêteté
+        </h4>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Certains textiles très anciens ou abîmés peuvent garder une légère trace ou une odeur résiduelle après traitement. Plus l'urine est ancienne ou répétée sur la même zone, plus le résultat devient incertain. Klinova préfère parfois refuser une intervention plutôt que de prendre un risque de dégradation du mobilier. Notre objectif est une amélioration nette et durable, pas une promesse magique de résultat à 100 % dans tous les cas.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section 4: Comment se déroule une intervention ? -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+    
+    <!-- Header de section -->
+    <div class="text-center mb-12">
+      <!-- Sur-titre contextuel -->
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Déroulement d'une intervention
+      </p>
+      
+      <!-- H2 principal -->
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Comment se déroule une intervention ?
+      </h2>
+      
+      <!-- Paragraphe introductif -->
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Chaque intervention suit un protocole précis, afin d'obtenir le meilleur résultat possible tout en respectant le textile et ses couleurs. Voici les étapes que nous suivons systématiquement.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6 étapes en grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+      
+      <!-- Étape 1 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            1
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Repérage précis des zones à traiter
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Inspection du textile, analyse des taches (origine, ancienneté, acide/protéique), détection des zones odorantes et évaluation de la compatibilité avec le traitement.
+        </p>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            2
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Aspiration minutieuse
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Retrait mécanique de la poussière, poils d'animaux et particules pour éviter la création de boue lors du nettoyage humide et garantir une efficacité maximale.
+        </p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            3
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Pré-traitement détachant professionnel
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Application ciblée de produits adaptés aux fibres et aux couleurs, avec temps d'action contrôlé selon le type de tache et l'ancienneté des résidus.
+        </p>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            4
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Nettoyage en profondeur
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Nettoyage par injection-extraction ou procédé adapté selon les textiles délicats, en respectant la structure des fibres et l'intégrité des couleurs.
+        </p>
+      </div>
+
+      <!-- Étape 5 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            5
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Extraction maximale
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Extraction poussée de l'humidité et des résidus pour favoriser un séchage rapide et limiter les remontées d'odeurs après l'intervention.
+        </p>
+      </div>
+
+      <!-- Étape 6 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <!-- Badge numéro -->
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            6
+          </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Conseils de séchage & entretien
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Instructions personnalisées pour sécuriser le textile après intervention : aération optimale, délais d'utilisation et conseils d'entretien préventif.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bloc bonus : Durée d'une intervention -->
+    <div class="max-w-3xl mx-auto mt-10">
+      <div class="border border-[#E5E7EB] bg-white rounded-xl p-5">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-base font-semibold text-[#1E2939] mb-2">
+              ⏱ Durée d'une intervention
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Une intervention sur canapé ou matelas dure généralement entre 45 minutes et 1h30 selon le type de textile, l'ancienneté des taches et le nombre de places à traiter. Pour les tapis, comptez 20 à 45 minutes selon la surface et l'état.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 5: Résultats attendus & limites honnêtes -->
+<section class="py-16 bg-white">
+  <div class="container-responsive">
+    
+    <!-- Header de section -->
+    <div class="text-center mb-10">
+      <!-- Sur-titre contextuel -->
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        transparence
+      </p>
+      
+      <!-- H2 principal -->
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Résultats attendus
+      </h2>
+      
+      <!-- Paragraphe introductif -->
+      <div class="max-w-4xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Nous améliorons nettement l'état visuel, l'hygiène et les odeurs de vos textiles. Cependant, le résultat final dépend toujours du type de textile, de l'ancienneté des taches et de l'historique d'entretien. La transparence fait partie intégrante de notre façon de travailler chez Klinova.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bloc vidéo + texte en 2 colonnes -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-10">
+      
+      <!-- Colonne vidéo -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#1E2939] mb-4 text-center">
+          Une intervention en 30 secondes
+        </h3>
+        <div class="rounded-2xl border border-[#E5E7EB] overflow-hidden bg-black shadow-sm">
+          <video
+            class="w-full h-auto"
+            src="https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4"
+            poster="https://res.cloudinary.com/dgpeykj44/video/upload/so_3/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.jpg"
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="Démonstration d'une intervention de nettoyage de canapé par Klinova"
+          ></video>
+        </div>
+      </div>
+
+      <!-- Colonne texte -->
+      <div>
+        <!-- Ce que vous pouvez attendre -->
+        <h3 class="text-xl font-semibold text-[#1E2939] mb-4">
+          Ce que vous pouvez raisonnablement attendre
+        </h3>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Amélioration visuelle nette des tissus encrassés avec atténuation des taches et couleurs ravivées.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Réduction importante des mauvaises odeurs (urine, aliments, animaux, humidité).</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Nettoyage en profondeur qui extrait une grande quantité de saletés non visibles.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Textile plus sain pour le quotidien, particulièrement bénéfique pour les enfants et personnes allergiques.</span>
+          </li>
+        </ul>
+
+        <!-- Ce que nous ne promettons pas -->
+        <h4 class="text-lg font-semibold text-[#1E2939] mb-4">
+          Ce que nous ne promettons pas
+        </h4>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Retour à l'état "neuf" sur un canapé très ancien ou très taché.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Disparition totale des taches acides, colorants, encres ou anciens dégâts d'eau.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Traitement sans risque sur textiles fragiles ou déjà décolorés.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">Résultats identiques sur tous les types de matériaux et d'ancienneté de taches.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Conclusion honnête -->
+    <div class="max-w-4xl mx-auto mt-10">
+      <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-xl p-5">
+        <p class="text-[#475569] text-sm md:text-base leading-relaxed text-center">
+          Klinova vise une amélioration significative et durable de vos textiles. En cas de doute sur la faisabilité d'un traitement, nous vous expliquons clairement ce qui est possible ou non AVANT l'intervention. Nous préférons refuser une intervention plutôt que de faire une promesse irréaliste qui pourrait endommager votre mobilier.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Section 6: Zones d'intervention -->
+<ZonesIntervention />
+
+<!-- Section 3: Désodorisation urine d'animaux -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm">
+        <h2 class="text-2xl lg:text-3xl font-bold text-[#1E2939] mb-6">
+          Désodorisation et traitement des odeurs d'urine d'animaux
+        </h2>
+
+        <p class="text-base lg:text-lg text-[#475569] leading-relaxed mb-6">
+          Les odeurs d'urine de chat ou de chien sont l'une des principales raisons pour lesquelles nos
+          clients font appel à nous. L'urée, l'ammoniac et les bactéries s'incrustent profondément dans
+          les fibres et provoquent des odeurs très tenaces, difficiles à traiter avec des produits
+          classiques.
+        </p>
+
+        <p class="text-base lg:text-lg text-[#475569] leading-relaxed mb-6">
+          Notre protocole repose sur trois étapes : neutralisation de l'ammoniac, action enzymatique
+          ciblée pour décomposer les résidus organiques, puis nettoyage en profondeur pour extraire
+          l'humidité et les résidus odorants. Ce procédé permet de réduire très fortement les odeurs
+          persistantes sur les canapés, matelas et tapis, même lorsque l'accident remonte à plusieurs
+          jours.
+        </p>
+
+        <ul class="space-y-3 mb-6 text-base lg:text-lg text-[#475569]">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Traitement spécialisé urine de chat (odeur très tenace)</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Neutralisation des odeurs d'urine de chien</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Désodorisation de canapés, tapis et matelas imprégnés</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Réduction des auréoles et taches persistantes</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Conseils pour éviter la réapparition des odeurs</span>
+          </li>
+        </ul>
+
+        <p class="text-base lg:text-lg text-[#475569] leading-relaxed">
+          Nous privilégions toujours les solutions qui respectent les textiles, les couleurs et les
+          occupants de la maison (enfants, animaux). Si un textile présente un risque d'endommagement,
+          nous vous l'indiquons en amont avant toute intervention.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Réservation - LE COMPOSANT REACT -->
+<section id="reservation" class="py-16 bg-gray-50">
+  <div class="container-responsive">
+    <div class="mt-12">
+      <BookingTextiles client:load />
+    </div>
+  </div>
+</section>
+
+
 
 
 <section class="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm">

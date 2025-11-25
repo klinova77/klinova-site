@@ -1,9 +1,13 @@
-import cities from '~/data/cities';              // export default: City[]
-import services from '~/data/services';          // ✅ l’index qu’on vient de créer
+import cities from '~/data/cities';
+import services from '~/data/services';
 
 const slugify = (v: string) =>
-  v.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+  v
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
 
 export function generateCityPaths() {
   const paths: any[] = [];
@@ -17,16 +21,21 @@ export function generateCityPaths() {
     for (const service of services) {
       if (!service?.key) continue;
 
+      // 👉 slug de la page service principale
+      //    ex: "/nettoyage-moquettes" → "nettoyage-moquettes"
+      const serviceSlug =
+        (service.urls?.parent ?? `/nettoyage-${service.key}`).replace(/^\//, '');
+
       paths.push({
         params: {
           department: deptSlug,
           city: citySlug,
-          service: service.key,
+          service: serviceSlug,
         },
         props: {
-          department: city.department, // { name, slug, ... }
+          department: city.department,
           city,
-          service,
+          service, // on passe bien l’objet complet au composant
         },
       });
     }

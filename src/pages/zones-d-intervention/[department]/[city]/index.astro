@@ -1,0 +1,105 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import cities from '~/data/cities';
+import services from '~/data/services';
+
+const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+
+const { department, city } = Astro.params;
+
+// On récupère la ville depuis la data
+const currentCity = cities.find(
+  (c) => (c.slug ?? '') === city && (c.department?.slug ?? '') === department
+);
+
+if (!currentCity) {
+  throw new Error(`Ville inconnue : ${city} dans département ${department}`);
+}
+
+// Title & description
+const title = `Services de nettoyage à ${currentCity.name}`;
+const description =
+  currentCity.customDescription ||
+  `Klinova intervient pour le nettoyage de moquettes, balcons, parkings, canapés et tapis à ${currentCity.name}.`;
+
+// Canonical
+const canonical = `/zones-d-intervention/${department}/${city}`;
+
+// JSON-LD minimal
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    url: `${baseUrl}${canonical}`,
+    description,
+  },
+];
+
+// Mapping services → slugs locaux
+const serviceSlug = (s) =>
+  (s.urls?.parent ?? `/nettoyage-${s.key}`).replace(/^\//, '');
+---
+<LayoutWithCTA
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  popupContext={{
+    title: 'Demander un devis',
+    subtitle: `Intervention à ${currentCity.name}.`,
+    serviceKey: 'city-hub',
+    serviceLabel: `Hub ville – ${currentCity.name}`,
+    trackingSource: `hub-${currentCity.slug}`,
+  }}
+>
+  <main class="py-16 bg-white">
+    <div class="container-responsive">
+      <header class="max-w-3xl mx-auto text-center mb-12">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+          Services de nettoyage à {currentCity.name}
+        </h1>
+
+        <p class="text-[#475569] text-base md:text-lg leading-relaxed">
+          {description}
+        </p>
+      </header>
+
+      <!-- 5 cartes services -->
+      <section class="max-w-4xl mx-auto mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {services.map((s) => (
+            <a
+              href={`/zones-d-intervention/${department}/${city}/${serviceSlug(s)}`}
+              class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+            >
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-2">
+                {s.name}
+              </h2>
+
+              <p class="text-sm text-[#475569] leading-relaxed">
+                {s.defaultDescription}
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA bas de page -->
+      <section class="max-w-3xl mx-auto">
+        <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">
+          <p class="text-base md:text-lg text-[#1E2939] mb-3">
+            Besoin d’un nettoyage à {currentCity.name} ?
+          </p>
+
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3F8D65] text-white text-sm md:text-base font-semibold hover:bg-[#387B58] transition"
+          >
+            Nous contacter
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</LayoutWithCTA>

@@ -5,7 +5,17 @@ import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
 
 import ButtonSubmit from './UI/ButtonSubmit.astro';
+import Button from './UI/Button.astro';
+
 import BookingTextiles from '~/components/BookingTextiles';
+import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+import ResultatsTextilesCity from '~/components/Sections/ResultatsTextilesCity.astro';
+import CityTextilesSituations from '~/components/Sections/CityTextilesSituations.astro';
+import CityMoquettesDetail from '~/components/Sections/CityMoquettesDetail.astro';
+import CityParkingsExpertise from '~/components/Sections/CityParkingsExpertise.astro';
+import CityBalconsFientesLocal from '~/components/Sections/CityBalconsFientesDetail.astro';
+import CityBalconsComplete from './Sections/CityBalconsComplete.astro';
+
 
 // 🗂️ Data imports
 import citiesIndex from '~/data/cities';
@@ -23,6 +33,7 @@ import heroCanapesMobile from '~/assets/images/nettoyage-canapes-tapis-matelas-k
 
 
 
+
 interface Props {
   city: City;
   service: ServiceConfig;
@@ -30,6 +41,60 @@ interface Props {
 }
 
 const { city, service, department } = Astro.props as Props;
+
+
+
+
+const serviceContextLabels: Record<string, string> = {
+  moquettes: 'vos moquettes',
+  'canapes-tapis': 'vos canapés, tapis et matelas',
+  parkings: 'vos parkings et garages',
+  balcons: 'vos balcons',
+  'balcons-fientes': 'vos balcons souillés par les pigeons',
+};
+const serviceContext =
+  serviceContextLabels[service.key] ?? 'les surfaces concernées';
+
+// 🔧 Config des services pour la section "Autres services à {ville}"
+const allServicesForCards = [
+  {
+    key: 'moquettes',
+    name: 'Nettoyage de moquettes',
+    shortDescription:
+      'Entretien et détachage de moquettes en copropriété, bureaux et parties communes.',
+  },
+  {
+    key: 'parkings',
+    name: 'Nettoyage de parkings',
+    shortDescription:
+      'Nettoyage en profondeur des parkings souterrains, rampes et zones de circulation.',
+  },
+  {
+    key: 'balcons',
+    name: 'Nettoyage de balcons et terrasses',
+    shortDescription:
+      'Remise en état des balcons, terrasses et loggias en respectant les revêtements.',
+  },
+  {
+    key: 'balcons-fientes',
+    name: 'Balcons – fientes de pigeons (désinfection)',
+    shortDescription:
+      'Décontamination et désinfection de balcons souillés par les fientes de pigeons.',
+  },
+  {
+    key: 'canapes-tapis',
+    name: 'Nettoyage de canapés, tapis et matelas',
+    shortDescription:
+      'Nettoyage professionnel des textiles d’ameublement directement au domicile.',
+  },
+];
+
+// 👉 On enlève le service courant pour ne proposer que les autres
+const otherServicesForCity = allServicesForCards.filter(
+  (s) => s.key !== service.key
+);
+
+
 
 // Utils
 const slugify = (v: string) =>
@@ -43,16 +108,35 @@ const slugify = (v: string) =>
 type ImgLike = string | { src: string };
 const toSrc = (x?: ImgLike) => (typeof x === 'string' ? x : x?.src || '');
 
+// 🔑 Clés de service et slugs locaux associés
+type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
+
+const serviceSlugByKey: Record<ServiceKey, string> = {
+  moquettes: 'nettoyage-moquettes',
+  parkings: 'nettoyage-parkings',
+  balcons: 'nettoyage-balcons',
+  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
+  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
+};
+
+// Slug du service courant pour cette page locale
+const currentServiceSlug =
+  (service.urls?.parent ?? `/nettoyage-${service.key}`)
+    .replace(/^\//, '');
+
 // Slugs & canonical
 const citySlug = city.slug ?? slugify(city.name);
 const departmentSlug = department.slug ?? slugify(department.name);
-const canonical = `/zones-d-intervention/${departmentSlug}/${citySlug}/${service.key}`;
+const canonical = `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+
 
 // Service note spécifique ville
 const cityNote: CityServiceLocal | undefined =
   Array.isArray(city.services)
     ? city.services.find((s: CityServiceLocal) => s.serviceKey === service.key)
     : undefined;
+
+const ogImageAlt = `Klinova — Nettoyage professionnel de ${serviceContext} à ${city.name}`;
 
 // Résolution des villes proches à partir de city.nearbyCities
 const nearbyCitiesResolved =
@@ -84,7 +168,11 @@ const otherCitiesForService = (citiesIndex as City[])
   });
 
 // Images hero par service
-type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
+
+
+
+
+
 const heroFallback: Record<ServiceKey, { desktop: ImgLike; mobile: ImgLike }> = {
   moquettes: {
     desktop: heroMoquettesDesktop,
@@ -122,8 +210,8 @@ const serviceUrl =
       moquettes: '/nettoyage-moquettes',
       parkings: '/nettoyage-parkings',
       balcons: '/nettoyage-balcons',
-      'balcons-fientes': '/nettoyage-balcons#fientes-pigeons',
-      'canapes-tapis': '/nettoyage-canapes-tapis',
+      'balcons-fientes': '/nettoyage-balcons-fientes-pigeons',
+      'canapes-tapis': '/nettoyage-canapes-tapis-matelas',
     } as Record<string, string>
   )[service.key] ?? '/');
 
@@ -137,7 +225,8 @@ const description =
       : `${service.name} professionnel à ${city.name} pour copropriétés et gestionnaires exigeants.`;
 
 // Contenu dynamique
-const ctaLabel = cityNote?.ctaOverride ?? city.ctaOverride ?? 'Demander un devis gratuit';
+const ctaLabel = cityNote?.ctaOverride || city.ctaOverride || 'Contactez-nous';
+
 const serviceLabel = `${service.name} – ${city.name}`;
 
 // Verbes par service pour CTA naturel
@@ -216,17 +305,24 @@ const breadcrumbJsonLd = {
     {
       '@type': 'ListItem',
       position: 2,
+      name: `${department.name} (${department.code})`,
+      item: `${baseUrl}/zones-d-intervention/${departmentSlug}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
       name: city.name,
       item: `${baseUrl}/zones-d-intervention/${departmentSlug}/${citySlug}`,
     },
     {
       '@type': 'ListItem',
-      position: 3,
+      position: 4,
       name: service.name,
       item: `${baseUrl}${canonical}`,
     },
   ],
 };
+
 
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
@@ -320,10 +416,6 @@ const photos = cityNote?.photos ?? [];
 ---
 
 <LayoutWithCTA
-  title={pageTitle}
-  description={description}
-  canonical={canonical}
-  jsonLd={jsonLd}
   popupContext={{
     title: 'Demande de devis',
     subtitle: 'Un expert Klinova vous répond sous 2h',
@@ -331,7 +423,27 @@ const photos = cityNote?.photos ?? [];
     serviceLabel,
     trackingSource: `citypage-${service.key}-${citySlug}`,
   }}
+
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
+
+  pathname={Astro.url.pathname}
+  
+  title={pageTitle}
+  description={description}
+  canonical={canonical}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt={ogImageAlt}
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
 >
+
+
+
   <!-- Preload hero images -->
   <Fragment slot="head">
   {heroDesktop && (
@@ -356,40 +468,59 @@ const photos = cityNote?.photos ?? [];
 
 
   <main class="min-h-[70vh] bg-neutral-50">
-    <!-- 🧭 Fil d'Ariane -->
-    <nav aria-label="Fil d'Ariane" class="bg-white border-b border-neutral-200">
-      <div class="container-responsive py-3">
-        <ol class="flex flex-wrap gap-2 text-sm text-neutral-600">
-          <li>
-            <a href="/" class="hover:text-primary-600 transition-colors">Accueil</a>
-          </li>
-          <li aria-hidden="true" class="text-neutral-400">/</li>
-          <li>
-            <a href="/zones-d-intervention" class="hover:text-primary-600 transition-colors">
-              Zones d'intervention
-            </a>
-          </li>
-          <li aria-hidden="true" class="text-neutral-400">/</li>
-          <li>
-            <a
-              href={`/zones-d-intervention/${departmentSlug}/${citySlug}`}
-              class="hover:text-primary-600 transition-colors"
-            >
-              {city.name}
-            </a>
-          </li>
-          <li aria-hidden="true" class="text-neutral-400">/</li>
-          <li aria-current="page" class="font-medium text-primary-600">
-            {service.name}
-          </li>
-        </ol>
-      </div>
-    </nav>
+   <!-- 🧭 Fil d'Ariane -->
+<nav aria-label="Fil d'Ariane" class="bg-white border-b border-neutral-200">
+  <div class="container-responsive py-3">
+    <ol class="flex flex-wrap gap-2 text-sm text-neutral-600">
+      <li>
+        <a href="/" class="hover:text-primary-600 transition-colors">Accueil</a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      <li>
+        <a href="/zones-d-intervention" class="hover:text-primary-600 transition-colors">
+          Zones d'intervention
+        </a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      {/* Nouveau niveau : département */}
+      <li>
+        <a
+          href={`/zones-d-intervention/${departmentSlug}`}
+          class="hover:text-primary-600 transition-colors"
+        >
+          {department.name}
+        </a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      {/* Niveau ville */}
+      <li>
+        <a
+          href={`/zones-d-intervention/${departmentSlug}/${citySlug}`}
+          class="hover:text-primary-600 transition-colors"
+        >
+          {city.name}
+        </a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      {/* Page actuelle = service */}
+      <li aria-current="page" class="font-medium text-primary-600">
+        {service.name}
+      </li>
+    </ol>
+  </div>
+</nav>
+
 
     <!-- 1️⃣ Hero local (image + H1 + CTA) -->
     <section
       class="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden"
-    >
+    data-hide-floating-cta
+data-hide-header-cta 
+      >
       <div class="absolute inset-0 z-0">
         <picture class="absolute inset-0 block">
           <source media="(min-width:768px)" srcset={heroDesktop} />
@@ -409,18 +540,18 @@ const photos = cityNote?.photos ?? [];
       </div>
 
       <div class="relative z-10 text-center px-6 md:px-12 max-w-5xl mx-auto">
-        <div
-          class="inline-flex items-center px-4 py-2 bg-[#3F8D65]/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 text-white/90"
-        >
-          <span class="w-2 h-2 bg-[#3F8D65] rounded-full mr-2 animate-pulse"></span>
-          {department.name} • Intervention professionnelle
-        </div>
+  <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#3F8D65] border border-[#3F8D65]/20 mb-6 hero-badge">
+  <span class="w-2 h-2 bg-[#3F8D65] rounded-full mr-2 animate-pulse"></span>
+  {department.name} • Intervention professionnelle
+</div>
+
+
 
         <h1
           class="text-4xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg leading-tight mb-6"
         >
           <span class="block">{service.name}</span>
-          <span class="block text-[#3F8D65]">à {city.name}</span>
+          <span class="block">à {city.name}</span>
         </h1>
 
         {city.customDescription && (
@@ -432,56 +563,87 @@ const photos = cityNote?.photos ?? [];
         )}
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="#contact-form"
-            data-open-popup
-            class="group relative inline-flex items-center px-8 py-4 bg-[#3F8D65] text-white font-semibold rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:bg-[#387B58] hover:shadow-2xl hover:-translate-y-1"
-          >
-            <span
-              class="absolute inset-0 w-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:w-full transition-all duration-700"
-            ></span>
-            <span class="relative z-10">{ctaLabel}</span>
-            <svg
-              class="ml-2 w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              ></path>
-            </svg>
-          </a>
+  <!-- CTA principal -->
+  <Button
+  href="#formulaire"
+  label={ctaLabel}
+  variant="primary"
+  size="lg"
+ 
+  tracking={{
+    action: 'lead',
+    source: `hero-citypage`,
+    intent: 'devis-form',
+    campaign: 'klinova-citypages',
+  }}
+  data={{
+    category: 'conversion',
+    channel: 'form',
+    context: serviceLabel, // "Nettoyage de moquette – Chelles"
+  }}
+>
+  <span
+    class="absolute inset-0 w-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:w-full transition-all duration-700"
+  ></span>
+  <span class="relative z-10">{ctaLabel}</span>
+  <svg
+    class="w-6 h-6 relative z-10"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+  </svg>
+</Button>
 
-          <a
-            href="tel:+33676738661"
-            class="group inline-flex items-center px-6 py-4 border-2 border-white/30 text-white font-medium rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/50"
-          >
-            <svg
-              class="w-5 h-5 mr-2 transition-transform group-hover:rotate-12"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              ></path>
-            </svg>
-            06 76 73 86 61
-          </a>
-        </div>
+
+  <!-- CTA secondaire -->
+<Button
+  href="tel:+33676738661"
+  label="06 76 73 86 61"
+  variant="secondary"
+  size="lg"
+ 
+
+  tracking={{
+    action: 'call',
+    source: `hero-citypage`,
+    intent: 'phone-contact',
+  }}
+  data={{
+    category: 'conversion',
+    channel: 'phone',
+    context: serviceLabel,
+  }}
+>
+  <svg
+    class="w-5 h-5 mr-2 transition-transform group-hover:rotate-12"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    ></path>
+  </svg>
+  06 76 73 86 61
+</Button>
+
+</div>
+
       </div>
     </section>
 
     <!-- 2️⃣ Intro locale (uniqueIntro) -->
     {cityNote?.uniqueIntro && (
-      <section class="bg-white section-padding border-b border-neutral-100">
+      <section class="bg-white section-padding border-b border-neutral-100"
+      data-hide-floating-cta
+data-hide-header-cta >
         <div class="container-responsive">
           <div class="max-w-6xl mx-auto">
             <div
@@ -495,7 +657,8 @@ const photos = cityNote?.photos ?? [];
 
     <!-- 3️⃣ Contexte local & quartiers desservis -->
     {(city.districts || city.landmarks || city.specificChallenges) && (
-      <section class="bg-neutral-50 section-padding border-b border-neutral-100">
+      <section class="bg-neutral-50 section-padding border-b border-neutral-100"
+      data-activate-floating-cta>
         <div class="container-responsive">
           <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
             <div>
@@ -558,93 +721,115 @@ const photos = cityNote?.photos ?? [];
       </section>
     )}
 
-    <!-- 4️⃣ Process ou promesse locale -->
-    <section class="bg-neutral-50 section-padding">
-      <div class="container-responsive">
-        <div class="max-w-4xl mx-auto">
-          <h2
-            class="text-3xl md:text-4xl font-bold text-center text-primary-600 mb-4"
-          >
-            Notre méthode à {city.name}
-          </h2>
-          <p
-            class="text-center text-neutral-600 text-lg mb-12 max-w-2xl mx-auto"
-          >
-            Un processus éprouvé et transparent adapté aux spécificités de vos
-            immeubles à {city.name}.
-          </p>
+    
 
-          <div class="space-y-8">
-            {serviceProcess.map((item, index) => (
-              <div class="flex gap-6 items-start">
-                <div
-                  class="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-[#3F8D65] to-[#48a674] text-white font-bold flex items-center justify-center text-xl shadow-lg"
-                >
-                  {index + 1}
-                </div>
-                <div class="flex-1 pt-2">
-                  <h3 class="text-xl font-semibold text-primary-600 mb-3">
-                    {item.step}
-                  </h3>
-                  <p class="text-neutral-600 leading-relaxed text-lg">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          {service.averageDuration && (
-            <div
-              class="mt-12 p-6 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-100 text-center"
-            >
-              <p class="text-primary-600 text-lg">
-                <span class="font-semibold">Durée moyenne d'intervention :</span>{' '}
-                {service.averageDuration}
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
 
-    <!-- 5️⃣ Bloc repères tarifaires locaux -->
-    {pricingHintEntries.length > 0 && (
-      <section class="bg-white section-padding border-y border-neutral-100">
-        <div class="container-responsive">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
-              Repères tarifaires à {city.name}
-            </h2>
-            <p class="text-neutral-600 mb-6">
-              Ces indications ont pour but de vous donner un ordre d'idée selon les
-              cas les plus fréquents à {city.name}. Un devis précis reste établi
-              après analyse de votre situation.
-            </p>
 
-            <div class="grid gap-4 md:grid-cols-2">
-              {pricingHintEntries.map(([label, value]) => (
-                <div
-                  class="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3"
-                >
-                  <p class="text-sm font-semibold text-primary-600 mb-1">
-                    {label}
-                  </p>
-                  <p class="text-neutral-700 text-sm">{value}</p>
-                </div>
-              ))}
-            </div>
+  {service.key === 'canapes-tapis' && (
+  <CityTextilesSituations cityName={city.name} />
+)}
 
-            {pricingHintNote && (
-              <p class="mt-4 text-sm text-neutral-600 italic">
-                {pricingHintNote}
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
+
+  {service.key === 'canapes-tapis' && (
+  <ResultatsTextilesCity cityName={city.name} />
+)}
+    
+{service.key === 'moquettes' && (
+  <CityMoquettesDetail cityName={city.name} />
+)}
+
+ {service.key === 'parkings' && (
+      <CityParkingsExpertise cityName={city.name} />
     )}
 
+<section id="video">
+  {service.key === 'balcons-fientes' && (
+    <CityBalconsFientesLocal
+      cityName={city.name}
+      videoId="GvYRj2hhRMo"
+      title="Nettoyage balcon infesté de fientes – avant / après"
+    />
+  )}
+</section>
+
+
+
+{service.key === 'balcons' && (
+      <CityBalconsComplete cityName={city.name} city={city} isLocal={true} />
+    )}
+
+
+
+<!-- Section ServiceProcess optimisée style Klinova -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Notre méthode
+      </p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Comment nous procédons à {city.name}
+      </h2>
+      <div class="max-w-3xl mx-auto">
+       <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+  Un processus éprouvé et transparent, adapté à {serviceContext} à {city.name}.
+</p>
+
+      </div>
+    </div>
+
+    <!-- Grid des étapes (version moderne) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      {serviceProcess.map((item, index) => (
+        <div class="bg-white border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+          
+          <!-- Badge numéro -->
+      <div class="flex justify-center mb-4">
+  <div
+    class="w-10 h-8 rounded-full bg-[#3F8D65]/10 text-[#3F8D65] font-medium flex items-center justify-center text-base"
+  >
+    {index + 1}
+  </div>
+</div>
+
+          
+          <!-- Contenu -->
+          <div class="text-center">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+              {item.step}
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Durée moyenne (si définie) -->
+    {service.averageDuration && (
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-[#F1F7F3] border border-[#E5E7EB] rounded-xl p-6 text-center">
+          <div class="flex items-center justify-center space-x-3">
+            <svg class="w-6 h-6 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-base md:text-lg text-[#1E2939]">
+              <span class="font-semibold">Durée moyenne d'intervention :</span> {service.averageDuration}
+            </p>
+          </div>
+        </div>
+      </div>
+    )}
+
+  </div>
+</section>
+
+
+{/* 
     <!-- 6️⃣ Étude de cas locale -->
     {caseStudy && (
       <section class="bg-neutral-50 section-padding border-b border-neutral-100">
@@ -760,60 +945,7 @@ const photos = cityNote?.photos ?? [];
       </section>
     )}
 
-    <!-- 8️⃣ CTA intermédiaire -->
-    <section class="bg-gradient-to-r from-[#3F8D65] to-[#48a674] py-12">
-      <div class="container-responsive text-center">
-        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
-          Besoin d'une intervention rapide à {city.name} ?
-        </h3>
-        <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-          Contactez-nous dès maintenant pour un devis gratuit et personnalisé.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#contact-form"
-            data-open-popup
-            class="inline-flex items-center px-8 py-4 bg-white text-[#3F8D65] font-semibold rounded-xl shadow-xl hover:bg-neutral-50 transition-all duration-300"
-          >
-            {ctaLabel}
-            <svg
-              class="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              ></path>
-            </svg>
-          </a>
-          <a
-            href="tel:+33676738661"
-            class="inline-flex items-center px-6 py-4 border-2 border-white text-white font-medium rounded-xl hover:bg-white/10 transition-all duration-300"
-          >
-            <svg
-              class="w-5 h-5 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              ></path>
-            </svg>
-            06 76 73 86 61
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9️⃣ Avis / témoignage local -->
+ <!-- 9️⃣ Avis / témoignage local 
     {city.testimonial && (
       <section class="bg-white section-padding">
         <div class="container-responsive">
@@ -846,12 +978,328 @@ const photos = cityNote?.photos ?? [];
         </div>
       </section>
     )}
+--> */} 
 
-    <!-- 🔁 Section "À proximité" (nearbyCities) -->
+<section class="bg-white section-padding">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-2">
+  Avis Google – Klinova
+</h2>
+
+<h3 class="text-lg md:text-xl text-neutral-600 mb-8">
+  Merci à nos clients qui nous ont fait confiance !
+</h3>
+
+
+      <!-- Widget Google Reviews -->
+      <div class="sk-ww-google-reviews" data-embed-id="25566122"></div>
+      <script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>
+    </div>
+  </div>
+</section>
+<style>
+  .sk-ww-google-reviews {
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 640px) {
+    .sk-ww-google-reviews {
+      max-height: 240px;
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+
+<ZonesIntervention />
+
+
+
+    
+
+
+    <!-- 8️⃣ CTA intermédiaire -->
+   
+
+  <section class="relative overflow-hidden bg-[#243B53] py-16 md:py-20">
+
+  
+  <!-- Motif quadrillage premium -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none" aria-hidden="true">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <pattern id="klinova-grid" width="8" height="8" patternUnits="userSpaceOnUse">
+          <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="klinova-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.15)"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#klinova-grid)"/>
+      <rect width="100" height="100" fill="url(#klinova-dots)"/>
+    </svg>
+  </div>
+
+  <!-- Éléments décoratifs flottants -->
+  <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+  <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+
+  <div class="container-responsive relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+        Besoin d'une intervention rapide pour {serviceContext} à {city.name} ?
+      </h3>
+      
+      <p class="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Contactez-nous dès maintenant pour un devis gratuit et personnalisé. Intervention rapide, résultats garantis.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        
+        <!-- CTA principal - Devis en ligne -->
+         <!-- CTA principal - Devis en ligne -->
+<Button
+  href="#formulaire"
+  label="Contactez-nous"
+  variant="secondary"
+  size="lg"
+  fullWidth={false}
+  tracking={{
+    action: 'lead',
+    source: 'cta-intermediaire',
+    intent: 'devis-form',
+  }}
+  data={{
+    category: 'conversion',
+    channel: 'form',
+    context: serviceLabel,
+  }}
+>
+  <span class="font-bold">{/* label est déjà utilisé, slot si besoin */}</span>
+  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+  </svg>
+  Contactez-nous
+</Button>
+
+
+
+
+
+      </div>
+
+      <!-- Garanties premium -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto">
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Intervention rapide</div>
+            <div class="text-sm text-white/70">Sous 48h en Île-de-France</div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Résultats garantis</div>
+            <div class="text-sm text-white/70">Satisfaction ou on revient</div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Devis transparent</div>
+            <div class="text-sm text-white/70">Prix fixe, pas de surprise</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   
+
+
+
+    <!-- 📚 Deep Dive (uniqueDeepDive) - Section technique avancée -->
+    {cityNote?.uniqueDeepDive && (
+      <section class="bg-white section-padding border-y border-neutral-100">
+        <div class="container-responsive">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-6">
+              Particularités à {city.name} – ce que nous prenons en compte
+            </h2>
+            <div
+              class="prose prose-lg prose-slate max-w-none text-neutral-600 leading-relaxed"
+            >
+              <div set:html={cityNote.uniqueDeepDive} />
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+
+
+    <!-- 5️⃣ Bloc repères tarifaires locaux -->
+    {pricingHintEntries.length > 0 && (
+      <section class="bg-white section-padding border-y border-neutral-100">
+        <div class="container-responsive">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
+              Repères tarifaires à {city.name}
+            </h2>
+            <p class="text-neutral-600 mb-6">
+              Ces indications ont pour but de vous donner un ordre d'idée selon les
+              cas les plus fréquents à {city.name}. Un devis précis reste établi
+              après analyse de votre situation.
+            </p>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              {pricingHintEntries.map(([label, value]) => (
+                <div
+                  class="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3"
+                >
+                  <p class="text-sm font-semibold text-primary-600 mb-1">
+                    {label}
+                  </p>
+                  <p class="text-neutral-700 text-sm">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            {pricingHintNote && (
+              <p class="mt-4 text-sm text-neutral-600 italic">
+                {pricingHintNote}
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+    )}
+
+
+
+
+    <!-- ❓ FAQ locale -->
+   {combinedFaq.length > 0 && (
+  <section class="bg-neutral-50 section-padding">
+    <div class="container-responsive">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-600 mb-4">
+          Questions fréquentes
+        </h2>
+        <p class="text-center text-neutral-600 mb-12 text-lg">
+          Tout ce qu'il faut savoir sur {service.name.toLowerCase()} à {city.name}
+        </p>
+
+        <div class="space-y-4">
+          {combinedFaq.map((item) => (
+            <details class="group border border-neutral-200 rounded-xl px-6 py-4 bg-white hover:border-[#3F8D65] hover:bg-green-50 transition-colors">
+              <summary class="cursor-pointer font-semibold text-primary-600 list-none flex justify-between items-center">
+                <span class="pr-8">{item.question}</span>
+                <svg
+                  class="w-5 h-5 text-[#3F8D65] group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-neutral-600 leading-relaxed">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+
+{/* 🎯 Section autres services pour la même ville */}
+{otherServicesForCity.length > 0 && (
+  <section class="bg-gradient-to-br from-gray-50 to-white section-padding border-y border-neutral-100">
+    <div class="container-responsive">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
+          Nos autres services à {city.name}
+        </h2>
+        <p class="text-neutral-600 mb-10">
+          Découvrez l’ensemble de nos prestations professionnelles à {city.name}.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {otherServicesForCity.map((srv) => (
+            <a
+                                          href={`/zones-d-intervention/${departmentSlug}/${citySlug}/${serviceSlugByKey[srv.key as ServiceKey]}`}
+
+
+              class="group block rounded-xl border border-neutral-200 bg-white p-6 hover:border-[#3F8D65] hover:bg-green-50 hover:shadow-md transition-all duration-200"
+            >
+              <h3 class="font-semibold text-lg text-primary-600 group-hover:text-[#3F8D65] mb-2">
+                {srv.name}
+              </h3>
+              <p class="text-neutral-600 text-sm mb-4">
+                {srv.shortDescription}
+              </p>
+              <span class="text-[#3F8D65] font-medium inline-flex items-center gap-2">
+                En savoir plus
+                <svg
+                  class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+
+ <!-- 🔁 Section "À proximité" (nearbyCities) -->
     {nearbyCitiesResolved.length > 0 && (
       <section class="bg-neutral-50 section-padding">
         <div class="container-responsive">
-          <div class="max-w-6xl mx-auto">
+          <div class="max-w-6xl mx-auto text-center">
+
             <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
               Interventions à proximité de {city.name}
             </h2>
@@ -863,7 +1311,8 @@ const photos = cityNote?.photos ?? [];
             <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {nearbyCitiesResolved.map((c) => (
                 <a
-                  href={`/zones-d-intervention/${c.deptSlug}/${c.slug}/${service.key}`}
+                  href={`/zones-d-intervention/${c.deptSlug}/${c.slug}/${serviceSlugByKey[service.key as ServiceKey]}`}
+
                   class="group block rounded-xl border border-neutral-200 bg-white px-6 py-4 hover:border-[#3F8D65] hover:bg-green-50 transition-all duration-200"
                 >
                   <div class="flex items-center justify-between gap-2">
@@ -909,7 +1358,8 @@ const photos = cityNote?.photos ?? [];
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {otherCitiesForService.map((c) => (
                 <a
-                  href={`/zones-d-intervention/${c.deptSlug}/${c.slug}/${service.key}`}
+                 href={`/zones-d-intervention/${c.deptSlug}/${c.slug}/${serviceSlugByKey[service.key as ServiceKey]}`}
+
                   class="group block rounded-xl border border-neutral-200 bg-neutral-50 px-6 py-4 hover:border-[#3F8D65] hover:bg-green-50 transition-all duration-200"
                 >
                   <div class="flex items-center justify-between">
@@ -940,109 +1390,116 @@ const photos = cityNote?.photos ?? [];
       </section>
     )}
 
+
+
     <!-- 🔎 Bloc info + lien vers la page service principale -->
-    <section class="bg-white section-padding border-y border-neutral-100">
-      <div class="container-responsive">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
-            Notre expertise complète en {service.name.toLowerCase()}
-          </h2>
-          <p class="text-neutral-600 text-lg mb-8 leading-relaxed">
-            Pour mieux comprendre notre approche détaillée, nos certifications et toutes
-            les garanties que nous proposons, découvrez notre page dédiée au service.
-          </p>
-          <a
-            href={serviceUrl}
-            class="inline-flex items-center px-8 py-4 bg-neutral-100 text-primary-600 font-semibold rounded-xl hover:bg-neutral-200 transition-all duration-300 group"
-          >
-            Voir notre expertise complète
-            <svg
-              class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              ></path>
+ <section class="relative overflow-hidden bg-[#243B53] py-16 md:py-20">
+  
+  <!-- Motif quadrillage premium -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none" aria-hidden="true">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <pattern id="klinova-grid-expertise" width="8" height="8" patternUnits="userSpaceOnUse">
+          <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="klinova-dots-expertise" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.15)"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#klinova-grid-expertise)"/>
+      <rect width="100" height="100" fill="url(#klinova-dots-expertise)"/>
+    </svg>
+  </div>
+
+  <!-- Éléments décoratifs flottants -->
+  <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+  <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+
+  <div class="container-responsive relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+        Notre expertise complète en 
+        <span class="text-green-200">{service.name.toLowerCase()}</span>
+      </h2>
+      
+      <p class="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Découvrez en détail notre approche professionnelle, nos certifications, 
+        notre matériel spécialisé et toutes les garanties que nous proposons.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <Button
+          href={serviceUrl}
+          label="Voir notre expertise complète"
+          variant="secondary"
+          size="lg"
+          fullWidth={false}
+          tracking={{
+            action: 'navigation',
+            source: 'expertise-cta',
+            intent: 'service-page',
+          }}
+          data={{
+            category: 'expertise',
+            channel: 'internal-link',
+            context: service.name,
+          }}
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Voir notre expertise complète
+        </Button>
+      </div>
+
+      <!-- Points forts expertise -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto">
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ❓ FAQ locale -->
-   {combinedFaq.length > 0 && (
-  <section class="bg-neutral-50 section-padding">
-    <div class="container-responsive">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-600 mb-4">
-          Questions fréquentes
-        </h2>
-        <p class="text-center text-neutral-600 mb-12 text-lg">
-          Tout ce qu'il faut savoir sur {service.name.toLowerCase()} à {city.name}
-        </p>
-
-        <div class="space-y-4">
-          {combinedFaq.map((item) => (
-            <details class="group border border-neutral-200 rounded-xl px-6 py-4 bg-white hover:border-[#3F8D65] hover:bg-green-50 transition-colors">
-              <summary class="cursor-pointer font-semibold text-primary-600 list-none flex justify-between items-center">
-                <span class="pr-8">{item.question}</span>
-                <svg
-                  class="w-5 h-5 text-[#3F8D65] group-open:rotate-180 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </summary>
-              <p class="mt-4 text-neutral-600 leading-relaxed">
-                {item.answer}
-              </p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-)}
-
-
-    <!-- 📚 Deep Dive (uniqueDeepDive) - Section technique avancée -->
-    {cityNote?.uniqueDeepDive && (
-      <section class="bg-white section-padding border-y border-neutral-100">
-        <div class="container-responsive">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-6">
-              Particularités à {city.name} – ce que nous prenons en compte
-            </h2>
-            <div
-              class="prose prose-lg prose-slate max-w-none text-neutral-600 leading-relaxed"
-            >
-              <div set:html={cityNote.uniqueDeepDive} />
-            </div>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Certifications pro</div>
+            <div class="text-sm text-white/70">Certibiocide & formations</div>
           </div>
         </div>
-      </section>
-    )}
+        
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Matériel professionnel</div>
+            <div class="text-sm text-white/70">Équipements spécialisés</div>
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center gap-3 text-white/90">
+          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold text-white">Méthodes éprouvées</div>
+            <div class="text-sm text-white/70">Protocoles détaillés</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🧾 formulaire balcon  (téléphone + formulaire) -->
 
 
-
-
-
-<!-- 🧾 CTA final balcon  (téléphone + formulaire) -->
-
-
-{service.key === 'balcons' && (
+{(service.key === 'balcons' || service.key === 'balcons-fientes') && (
   <section
     class="bg-[#DFF1E8] py-16 md:py-24"
     data-section="cta-final"
@@ -1642,9 +2099,9 @@ const photos = cityNote?.photos ?? [];
 )}
 
 
-<!-- 🧾 CTA final moquette (téléphone + formulaire) -->
 
-<!-- 🧾 CTA final moquettes pour CityPage -->
+
+<!-- 🧾 formualaire moquettes pour CityPage -->
 {service.key === 'moquettes' && (
   <section class="bg-[#DFF1E8] py-16 md:py-24" 
   data-section="cta-final" 
@@ -2417,7 +2874,7 @@ const photos = cityNote?.photos ?? [];
 
 
 
-<!-- 🧾 CTA final parkings pour CityPage -->
+<!-- 🧾 formualaire parkings pour CityPage -->
 {service.key === 'parkings' && (
   <section class="bg-[#DBEAFE] py-16 md:py-24" data-section="cta-final"
   data-hide-cta
@@ -3194,7 +3651,7 @@ const photos = cityNote?.photos ?? [];
 )}
 
 
-
+<!-- 🧾 formualaire canapes pour CityPage -->
 {service.key === 'canapes-tapis' && (
   <section class="py-16">
     <div class="container-responsive">

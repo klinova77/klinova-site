@@ -7,6 +7,8 @@ import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 
+import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+
 import heroBalconImage from '~/assets/images/balcon-moderne-propre-nettoyage-klinova.webp';
 import picsAntiPigeons from '~/assets/images/pics-anti-pigeons-inox-balcon.webp';
 import filetAntiPigeons from '~/assets/images/filet-anti-pigeons-pour-balcon.jpg';
@@ -447,7 +449,7 @@ data-activate-floating-cta
 <!-- Lien spécialisé -->
 <div class="mb-4">
   <a 
-    href="/nettoyage-balcon-fientes-pigeons"
+    href="/nettoyage-balcons-fientes-pigeons"
     class="inline-flex items-center text-sm text-[#3F8D65] hover:text-[#387B58] underline underline-offset-4 hover:no-underline transition-colors duration-200"
     data-action="specialization_link" 
     data-service="fientes"
@@ -514,7 +516,7 @@ data-activate-floating-cta
           </h3>
         </div>
         <p class="text-[#475569] leading-relaxed">
-          Évacuation légère des résidus, retrait des traces de plâtre/peinture, dégraissage et remise en état complète du balcon.
+          Évacuation des résidus, retrait des traces de plâtre/peinture, dégraissage et remise en état complète du balcon.
         </p>
         <ul class="mt-4 space-y-2">
           <li class="flex items-center text-sm text-[#475569]">
@@ -1382,7 +1384,7 @@ data-activate-floating-cta
   });
 </script>
 
-
+<ZonesIntervention />
 
 <section id="faq-balcon" class="py-16 md:py-20 bg-[#FCFCFC]">
   <div class="container mx-auto px-6 lg:px-12">

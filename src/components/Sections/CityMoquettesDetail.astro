@@ -1,0 +1,133 @@
+---
+interface Props {
+  cityName: string;
+}
+
+const { cityName } = Astro.props;
+---
+
+<!-- Section 1: Solution Klinova (bénéfices) -->
+<section class="py-16 bg-[#DFF1E8]">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Titre de transition -->
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6 leading-tight">
+        La solution Klinova pour des moquettes impeccables à {cityName}
+      </h2>
+      
+      <!-- Message principal -->
+      <div class="bg-white rounded-2xl p-6 md:p-8 mb-12 shadow-sm border border-[#E5E7EB]">
+        <p class="text-lg md:text-xl text-[#1E2939] leading-relaxed mb-4">
+          Nous maîtrisons les techniques de nettoyage professionnel pour redonner à vos moquettes leur éclat d'origine et prolonger leur durée de vie.
+        </p>
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Chaque intervention à {cityName} est adaptée au type de fibre et au niveau d'encrassement. Nous visons une amélioration nette et durable, sans compromis sur la sécurité ou l'environnement.
+        </p>
+      </div>
+
+      <!-- Bénéfices clés en grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+        <div class="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-[#E5E7EB]">
+          <h3 class="font-semibold text-[#1E2939] mb-2 text-sm md:text-base">Taches éliminées</h3>
+          <p class="text-xs md:text-sm text-[#475569]">Détachage ciblé en profondeur</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-[#E5E7EB]">
+          <h3 class="font-semibold text-[#1E2939] mb-2 text-sm md:text-base">Fibres préservées</h3>
+          <p class="text-xs md:text-sm text-[#475569]">Durée de vie prolongée</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-[#E5E7EB]">
+          <h3 class="font-semibold text-[#1E2939] mb-2 text-sm md:text-base">Air assaini</h3>
+          <p class="text-xs md:text-sm text-[#475569]">Réduction allergènes</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-[#E5E7EB]">
+          <h3 class="font-semibold text-[#1E2939] mb-2 text-sm md:text-base">Éclat retrouvé</h3>
+          <p class="text-xs md:text-sm text-[#475569]">Couleurs ravivées</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Désodorisation moquettes -->
+<section class="py-16 bg-white">
+  <div class="container-responsive">
+    
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Traitement anti-odeurs
+      </p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Désodorisation professionnelle des moquettes à {cityName}
+      </h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Les odeurs persistantes nécessitent un traitement spécialisé : humidité, marquage animal, matières organiques incrustées. Les produits grand public masquent temporairement le problème.
+        </p>
+      </div>
+    </div>
+
+    <!-- Protocole simplifié en 3 étapes -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      
+      <!-- Étape 1 -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6">
+        <div class="flex justify-center mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+            1
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Localisation & réactivation
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Identification des zones problématiques et réactivation contrôlée selon le type de fibre.
+        </p>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6">
+        <div class="flex justify-center mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+            2
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Action enzymatique
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Produits enzymatiques qui décomposent les matières organiques dans les fibres et le backing.
+        </p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6">
+        <div class="flex justify-center mb-4">
+          <div class="w-8 h-8 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-sm font-semibold text-[#3F8D65]">
+            3
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Extraction spécialisée
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Extraction adaptée aux fibres avec gestion optimisée du séchage.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Technologie O.N.T. (version condensée) -->
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-[#F1F7F3] rounded-xl p-6 border border-[#E5E7EB]">
+        <h3 class="text-lg md:text-xl font-semibold text-[#1E2939] mb-3">
+          Technologie O.N.T. – Application ciblée
+        </h3>
+        <p class="text-sm md:text-base text-[#475569] leading-relaxed">
+          Sur les zones malodorantes, nous utilisons des produits professionnels intégrant la technologie O.N.T. Cette approche neutralise les molécules responsables des odeurs plutôt que de les masquer, assurant une désodorisation durable à {cityName}.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

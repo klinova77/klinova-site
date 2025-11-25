@@ -1,0 +1,243 @@
+---
+interface Props {
+  cityName: string;
+}
+
+const { cityName } = Astro.props;
+---
+
+<!-- Section 1: Points critiques essentiels -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+    
+    <!-- En-tête -->
+    <div class="text-center mb-12 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+        <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+        Points critiques
+      </div>
+      
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6 leading-tight">
+        Pourquoi faire appel à des professionnels à {cityName} ?
+      </h2>
+      
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Les parkings souterrains nécessitent un entretien spécialisé : pollution, graisses, circulation et sécurité. Nos équipes interviennent avec des protocoles adaptés pour garantir hygiène et durabilité.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid des problématiques essentielles (4 cards) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      
+      <!-- Taches d'huile -->
+      <div class="p-6 rounded-xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-3 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Taches d'huile tenaces
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Traitement dégraissant spécifique avec rinçage maîtrisé pour prévenir les sols glissants.
+        </p>
+      </div>
+
+      <!-- Accumulation poussières -->
+      <div class="p-6 rounded-xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-3 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Poussières & salissures
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Dépoussiérage complet avec aspirateurs industriels et autolaveuses haute filtration.
+        </p>
+      </div>
+
+      <!-- Sécurité sols -->
+      <div class="p-6 rounded-xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-3 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Sécurité piétonne
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Dégraissants antidérapants et contrôle d'humidité pour limiter les risques de chute.
+        </p>
+      </div>
+
+      <!-- Conformité -->
+      <div class="p-6 rounded-xl bg-white shadow-sm border border-[#E5E7EB] hover:shadow-md transition-all duration-300">
+        <h3 class="font-semibold text-[#1E2939] mb-3 text-lg flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Conformité hygiène
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed">
+          Prestations conformes aux normes avec produits biodégradables et procédures sécurisées.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA transition -->
+    <div class="text-center">
+      <div class="inline-flex items-center px-6 py-3 bg-white border border-[#E5E7EB] rounded-lg shadow-sm">
+        <svg class="w-5 h-5 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-[#1E2939] font-medium text-sm">
+          Notre protocole répond à chacun de ces enjeux
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 2: Process structuré 3 étapes -->
+<section class="py-16 bg-white">
+  <div class="container-responsive">
+    
+    <!-- En-tête -->
+    <div class="text-center mb-12 max-w-3xl mx-auto">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Méthode & suivi
+      </p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Notre méthode d'intervention à {cityName}
+      </h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Du diagnostic au contrôle qualité : un protocole clair pour un résultat conforme et durable.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 étapes en timeline -->
+    <div class="max-w-4xl mx-auto">
+      <div class="relative">
+        <!-- Ligne de connexion -->
+        <div class="absolute left-6 top-0 w-0.5 h-full bg-[#3F8D65]/20 hidden md:block"></div>
+        
+        <div class="space-y-8">
+          
+          <!-- Étape 1: Diagnostic -->
+          <div class="relative flex items-start gap-6">
+            <!-- Numéro -->
+            <div class="flex-shrink-0 w-12 h-12 bg-[#3F8D65] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              1
+            </div>
+            <!-- Contenu -->
+            <div class="flex-1 bg-[#FCFCFC] rounded-xl p-6 border border-[#E5E7EB]">
+              <h3 class="text-xl font-semibold text-[#1E2939] mb-3">
+                Diagnostic initial
+              </h3>
+              <ul class="text-[#475569] text-sm space-y-2 mb-4">
+                <li>• Repérage zones critiques : taches d'huile, rampes, caniveaux</li>
+                <li>• Vérification points d'eau et contraintes horaires</li>
+                <li>• Choix méthode adaptée (autolaveuse, monobrosse si localisé)</li>
+              </ul>
+              <div class="p-3 rounded-lg bg-[#F1F7F3] border-l-4 border-[#3F8D65]">
+                <p class="text-xs font-medium text-[#1E2939]">
+                  Synthèse diagnostic + estimation sous 24h
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Étape 2: Intervention -->
+          <div class="relative flex items-start gap-6">
+            <!-- Numéro -->
+            <div class="flex-shrink-0 w-12 h-12 bg-[#3F8D65] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              2
+            </div>
+            <!-- Contenu -->
+            <div class="flex-1 bg-[#FCFCFC] rounded-xl p-6 border border-[#E5E7EB]">
+              <h3 class="text-xl font-semibold text-[#1E2939] mb-3">
+                Intervention sécurisée
+              </h3>
+              
+              <!-- Mise en sécurité -->
+              <div class="rounded-lg border border-[#E5E7EB] bg-white p-4 mb-4">
+                <h4 class="font-semibold text-[#1E2939] text-sm mb-2 flex items-center">
+                  <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                  </svg>
+                  Sécurisation du site
+                </h4>
+                <div class="text-xs text-[#475569] space-y-1">
+                  <p>• Signalisation, balisage circulations</p>
+                  <p>• EPI équipe, ventilation si nécessaire</p>
+                </div>
+              </div>
+
+              <ul class="text-[#475569] text-sm space-y-2 mb-4">
+                <li>• Application protocole validé (dégraissage, autolaveuse, finitions)</li>
+                <li>• Supervision technicien responsable</li>
+              </ul>
+              <div class="p-3 rounded-lg bg-[#F1F7F3] border-l-4 border-[#3F8D65]">
+                <p class="text-xs font-medium text-[#1E2939]">
+                  Confirmation d'exécution + photos intervention
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Étape 3: Contrôle -->
+          <div class="relative flex items-start gap-6">
+            <!-- Numéro -->
+            <div class="flex-shrink-0 w-12 h-12 bg-[#3F8D65] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              3
+            </div>
+            <!-- Contenu -->
+            <div class="flex-1 bg-[#FCFCFC] rounded-xl p-6 border border-[#E5E7EB]">
+              <h3 class="text-xl font-semibold text-[#1E2939] mb-3">
+                Contrôle qualité & suivi
+              </h3>
+              <ul class="text-[#475569] text-sm space-y-2 mb-4">
+                <li>• Inspection finale : visuelle, adhérence, écoulements</li>
+                <li>• <strong>Report photo</strong> avant/après sous 24h</li>
+                <li>• <strong>Recommandations</strong> périodicité (1-4 passages/an)</li>
+                <li>• Option contrat annuel et rappels automatiques</li>
+              </ul>
+              <div class="p-3 rounded-lg bg-[#F1F7F3] border-l-4 border-[#3F8D65]">
+                <p class="text-xs font-medium text-[#1E2939]">
+                  Rapport final + préconisations fréquence
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Traçabilité -->
+    <div class="max-w-4xl mx-auto mt-10">
+      <div class="bg-[#F1F7F3] rounded-xl p-6 border border-[#E5E7EB]">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#3F8D65]/10 flex items-center justify-center text-[#3F8D65]">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Traçabilité & transparence
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Chaque intervention à {cityName} est archivée dans notre registre numérique. Ce suivi facilite les échanges avec syndics, auditeurs et assureurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

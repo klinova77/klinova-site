@@ -1,0 +1,191 @@
+---
+interface Props {
+  cityName: string;
+}
+
+const { cityName } = Astro.props;
+---
+
+<section class="py-16 bg-white">
+  <div class="container-responsive">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Situations fréquentes
+      </p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Les situations que nous traitons le plus souvent à {cityName}
+      </h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Chaque semaine, nous intervenons à {cityName} pour des taches tenaces, des odeurs incrustées ou des textiles abîmés par l'humidité. Voici les cas les plus courants.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid des cartes problèmes (style cohérent avec page principale) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      
+      <!-- Carte 1: Taches alimentaires -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Taches alimentaires & boissons
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Café, vin, sauces, chocolat, huiles qui résistent aux nettoyages classiques.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 2: Urine animaux -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Urine de chat ou de chien
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Odeurs tenaces, auréoles récurrentes malgré les nettoyages maison répétés.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 3: Odeurs persistantes -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Odeurs persistantes
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Transpiration, humidité, textiles imprégnés après plusieurs années d'usage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 4: Matelas jaunis -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Matelas jaunis ou marqués
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Zones sombres, auréoles d'humidité, traces d'accidents qui altèrent l'aspect.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 5: Auréoles humidité -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Auréoles d'humidité
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Suite à un dégât des eaux ou infiltration dans le canapé ou matelas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte 6: Odeurs qui reviennent -->
+      <div class="bg-[#FCFCFC] border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0 w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center group-hover:bg-[#3F8D65]/20 transition-colors">
+            <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Odeurs qui reviennent après nettoyage maison
+            </h3>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              Bactéries toujours présentes dans la mousse en profondeur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bloc spécialisé désodorisation -->
+    <div class="bg-[#F1F7F3] rounded-xl p-6 md:p-8 border border-[#E5E7EB]">
+      <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">
+        Traitement spécialisé des odeurs tenaces & urines d'animaux
+      </h3>
+
+      <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-6">
+        Les odeurs d'urine sont parmi nos interventions les plus fréquentes à {cityName}. L'ammoniac et les résidus organiques s'incrustent profondément dans les fibres, créant des sources d'odeurs que les produits grand public ne peuvent éliminer - ils ne font que masquer temporairement avec des parfums.
+      </p>
+
+      <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-6">
+        Notre protocole professionnel combine neutralisation chimique, action enzymatique et extraction en profondeur. Certains de nos produits intègrent la technologie O.N.T. (Odour Neutralizing Technology), conçue pour neutraliser les molécules responsables des mauvaises odeurs plutôt que de les masquer.
+      </p>
+
+      <!-- Protocole simplifié -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-6 h-6 rounded-full bg-[#3F8D65]/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-sm font-bold text-[#3F8D65]">1</span>
+          </div>
+          <span class="text-[#475569] text-sm">Détection précise des zones affectées</span>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="w-6 h-6 rounded-full bg-[#3F8D65]/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-sm font-bold text-[#3F8D65]">2</span>
+          </div>
+          <span class="text-[#475569] text-sm">Neutralisation chimique initiale</span>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="w-6 h-6 rounded-full bg-[#3F8D65]/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-sm font-bold text-[#3F8D65]">3</span>
+          </div>
+          <span class="text-[#475569] text-sm">Action enzymatique ciblée</span>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="w-6 h-6 rounded-full bg-[#3F8D65]/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-sm font-bold text-[#3F8D65]">4</span>
+          </div>
+          <span class="text-[#475569] text-sm">Extraction maximale</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

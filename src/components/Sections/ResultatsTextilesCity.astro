@@ -1,0 +1,150 @@
+---
+interface Props {
+  cityName: string;
+}
+
+const { cityName } = Astro.props as Props;
+---
+
+<section class="py-16 bg-white">
+  <div class="container-responsive">
+    
+    <!-- Header de section -->
+    <div class="text-center mb-10">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Transparence
+      </p>
+      
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Résultats attendus
+      </h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Nous améliorons nettement l'état visuel, l'hygiène et les odeurs de vos textiles.
+          Cependant, le résultat final dépend toujours du type de textile, de l'ancienneté des taches
+          et de l'historique d'entretien. La transparence fait partie intégrante de notre façon
+          de travailler chez Klinova.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bloc vidéo + texte en 2 colonnes -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-10">
+      
+      <!-- Colonne vidéo -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#1E2939] mb-2 text-center">
+          Une intervention en 30&nbsp;secondes
+        </h3>
+        <p class="text-xs md:text-sm text-[#6B7280] mb-4 text-center">
+          Exemple réel d'intervention similaire à ce que nous réalisons régulièrement à {cityName}
+          et dans le reste de l'Île-de-France.
+        </p>
+        <div class="rounded-2xl border border-[#E5E7EB] overflow-hidden bg-black shadow-sm">
+          <video
+            class="w-full h-auto"
+            src="https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4"
+            poster="https://res.cloudinary.com/dgpeykj44/video/upload/so_3/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.jpg"
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="Démonstration d'une intervention de nettoyage de canapé par Klinova"
+          ></video>
+        </div>
+      </div>
+
+      <!-- Colonne texte -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#1E2939] mb-4">
+          Ce que vous pouvez raisonnablement attendre
+        </h3>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Amélioration visuelle nette des tissus encrassés avec atténuation des taches et couleurs ravivées.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Réduction importante des mauvaises odeurs (urine, aliments, animaux, humidité).
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Nettoyage en profondeur qui extrait une grande quantité de saletés non visibles.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Textile plus sain pour le quotidien, particulièrement bénéfique pour les enfants et personnes allergiques.
+            </span>
+          </li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-[#1E2939] mb-4">
+          Ce que nous ne promettons pas
+        </h4>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Retour à l'état « neuf » sur un canapé très ancien ou très taché.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Disparition totale des taches acides, colorants, encres ou anciens dégâts d'eau.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Traitement sans aucun risque sur des textiles déjà fragilisés ou décolorés&nbsp;: nous expliquons toujours le niveau de risque avant d'intervenir.
+            </span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 text-[#475569] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-[#475569] text-sm md:text-base">
+              Résultats identiques sur tous les types de matériaux et d'ancienneté de taches.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Conclusion -->
+    <div class="max-w-4xl mx-auto mt-10">
+      <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-xl p-5">
+        <p class="text-[#475569] text-sm md:text-base leading-relaxed text-center">
+          Klinova vise une amélioration significative et durable de vos textiles. En cas de doute sur la faisabilité d'un traitement,
+          nous vous expliquons clairement ce qui est possible ou non avant l'intervention. Nous préférons refuser une intervention
+          plutôt que de faire une promesse irréaliste qui pourrait endommager votre mobilier.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

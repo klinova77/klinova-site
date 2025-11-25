@@ -1,0 +1,205 @@
+---
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { DEPARTMENTS } from '~/data/departments';
+import cities from '~/data/cities';
+
+const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+
+// Récupération du slug depuis l’URL
+const { departmentSlug } = Astro.params;
+
+// On cherche le département correspondant
+const department = DEPARTMENTS.find((d) => d.slug === departmentSlug);
+
+if (!department) {
+  throw new Error(`Département inconnu : ${departmentSlug}`);
+}
+
+const title = `Entreprise de nettoyage dans le ${department.name} (${department.code}) – Klinova`;
+const description =
+  `Nettoyage professionnel (moquettes, canapés, tapis, balcons, parkings) dans le ${department.name} (${department.code}). ` +
+  `Intervention à domicile, en pavillon ou en copropriété dans tout le département.`;
+
+const canonical = `/zones-d-intervention/${department.slug}`;
+
+// 🏙️ Villes de ce département (données /cities normalisées)
+const departmentCities = (cities ?? [])
+  .filter((city) => city.department?.slug === department.slug)
+  .sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
+
+// JSON-LD basique pour la page département
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Zones d’intervention',
+      item: `${baseUrl}/zones-d-intervention`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: `${department.name} (${department.code})`,
+      item: `${baseUrl}${canonical}`,
+    },
+  ],
+};
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${baseUrl}${canonical}#webpage`,
+  url: `${baseUrl}${canonical}`,
+  name: title,
+  inLanguage: 'fr-FR',
+  description,
+};
+
+const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+---
+
+
+<LayoutWithCTA
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  popupContext={{
+    title: 'Demander un devis',
+    subtitle: `Un expert Klinova vous répond pour une intervention dans le ${department.name}.`,
+    serviceKey: 'departement',
+    serviceLabel: `Demande depuis page département – ${department.name}`,
+    trackingSource: `departement-${department.slug}`,
+  }}
+>
+  <main class="py-16 bg-white">
+    <div class="container-responsive">
+      <header class="max-w-3xl mx-auto text-center mb-12">
+        <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+          Zones d'intervention
+        </p>
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+          Entreprise de nettoyage dans le {department.name} ({department.code})
+        </h1>
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Klinova intervient dans tout le {department.name} pour le nettoyage de moquettes, canapés, tapis,
+          balcons et parkings souterrains. Nous travaillons aussi bien pour les particuliers que pour les copropriétés
+          et gestionnaires d'immeubles.
+        </p>
+      </header>
+
+      <!-- Liens vers tes 4 services principaux -->
+      <section class="max-w-4xl mx-auto mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a
+            href="/nettoyage-moquettes"
+            class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+          >
+            <h2 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Nettoyage de moquettes
+            </h2>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Halls, paliers, couloirs ou bureaux : décrassage en profondeur des moquettes de copropriété
+              et de locaux professionnels dans tout le {department.name}.
+            </p>
+          </a>
+
+          <a
+            href="/nettoyage-canapes-tapis-matelas"
+            class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+          >
+            <h2 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Nettoyage de canapés, tapis & matelas
+            </h2>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Nettoyage à domicile des canapés, tapis et matelas : taches, odeurs d'animaux, auréoles,
+              désodorisation en profondeur.
+            </p>
+          </a>
+
+          <a
+            href="/nettoyage-balcons"
+            class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+          >
+            <h2 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Nettoyage de balcons & terrasses
+            </h2>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Décrassage de balcons encrassés, fientes de pigeons, sols noircis et traces de pollution,
+              en immeuble comme en pavillon.
+            </p>
+          </a>
+
+          <a
+            href="/nettoyage-parkings"
+            class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+          >
+            <h2 class="text-lg font-semibold text-[#1E2939] mb-2">
+              Nettoyage de parkings souterrains
+            </h2>
+            <p class="text-sm text-[#475569] leading-relaxed">
+              Nettoyage mécanisé et décrassage en profondeur des parkings souterrains et aériens de copropriété
+              ou d'entreprises dans le {department.name}.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Petit bloc CTA -->
+      <section class="max-w-3xl mx-auto">
+        <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">
+          <p class="text-base md:text-lg text-[#1E2939] mb-3">
+            Vous avez un projet de nettoyage dans le {department.name} ({department.code}) ?
+          </p>
+          <p class="text-sm md:text-base text-[#475569] mb-4">
+            Envoyez-nous quelques informations et, si possible, des photos : nous vous répondrons rapidement
+            avec une estimation et une proposition d'intervention.
+          </p>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3F8D65] text-white text-sm md:text-base font-semibold hover:bg-[#387B58] transition"
+          >
+            Nous contacter
+          </a>
+        </div>
+      </section>
+
+
+      
+    </div>
+
+          <!-- Villes du département -->
+      {departmentCities.length > 0 && (
+        <section class="max-w-4xl mx-auto mb-16 mt-16">
+          <h2 class="text-xl md:text-2xl font-bold text-[#1E2939] mb-4">
+            Villes où nous intervenons dans le {department.name}
+          </h2>
+          <p class="text-sm md:text-base text-[#475569] mb-6">
+            Voici quelques communes du {department.name} où nous réalisons
+            régulièrement des interventions de nettoyage de moquettes, balcons,
+            parkings et textiles d’ameublement.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {departmentCities.map((city) => (
+              <a
+                href={`/zones-d-intervention/${department.slug}/${city.slug}`}
+
+                class="block rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] px-4 py-3 text-sm text-[#1E2939] hover:border-[#3F8D65]/60 hover:bg-white transition"
+              >
+                <span class="font-medium">{city.name}</span>
+                {city.postalCodes?.[0] && (
+                  <span class="ml-1 text-[#6B7280] text-xs">
+                    ({city.postalCodes[0]})
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+  </main>
+</LayoutWithCTA>

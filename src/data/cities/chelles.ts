@@ -1,6 +1,6 @@
 import type { City } from '~/types/geo';
 
-const TEMPLATE_CITY: City = {
+const chelles: City = {
   name: 'Chelles',
   slug: 'chelles',
   postalCodes: ['77500'],
@@ -25,10 +25,10 @@ const TEMPLATE_CITY: City = {
 
   nearbyCities: [
     'vaires-sur-marne',
-    'brou-sur-chantereine',
+    'torcy',
     'gournay-sur-marne',
     'noisy-le-grand',
-    'courtry'
+    'lagny-sur-marne'
   ],
 
   ctaOverride: '',
@@ -56,20 +56,22 @@ const TEMPLATE_CITY: City = {
     building: 'Maison individuelle, quartier Bords de Marne'
   },
 
-  faq: [
-    {
-      question: "À quelle fréquence faut-il nettoyer les moquettes ou les tapis dans une maison à Chelles ?",
-      answer: "À Chelles, nous recommandons un nettoyage en profondeur des moquettes et tapis tous les 12 à 18 mois, surtout dans les maisons avec enfants ou animaux. Dans les quartiers pavillonnaires comme les Coudreaux ou les Abbesses, les moquettes des chambres ou escaliers sont souvent soumises à un encrassement progressif (poussières, humidité, traces de jardin). Ce rythme permet de conserver une bonne hygiène, limiter les allergènes, et prolonger la durée de vie des fibres."
-    },
-    {
-      question: "Comment se déroule une intervention typique dans une maison ou un appartement à Chelles ?",
-      answer: "Après une première évaluation, nous intervenons avec un matériel silencieux et compact, adapté aux habitats chellois. Pour les moquettes ou canapés, le protocole comprend un prétraitement ciblé des taches, un nettoyage en profondeur maîtrisé en eau, puis un séchage naturel ou assisté si besoin. La durée varie de 1h30 à 3h selon les surfaces. À Chelles, de nombreuses interventions se font dans des résidences avec accès limité : nous nous adaptons à chaque configuration."
-    },
-    {
-      question: "Faut-il préparer quelque chose avant notre venue ?",
-      answer: "À Chelles comme ailleurs, un accès dégagé à la zone d’intervention facilite notre travail. Pour les balcons, il est utile de retirer les plantes ou objets fragiles. Pour les moquettes et tapis, un passage d’aspirateur est un plus, mais pas obligatoire. Nous protégeons les zones non traitées et intervenons avec des équipements propres. En cas de doute (présence d’animaux, taches anciennes), un simple échange en amont permet de mieux préparer l’intervention."
-    }
-  ],
+ faq: [
+  {
+    question: "Comment se déroule une intervention de nettoyage à Chelles ?",
+    answer: `À Chelles, une intervention commence par un repérage des accès (ascenseurs, stationnement, circulations internes) et un échange rapide avec l’occupant, le gardien ou le syndic pour valider les zones à traiter. Nous protégeons ensuite les surfaces sensibles avant de réaliser le nettoyage. Un contrôle final permet de vérifier le résultat et de répondre aux éventuelles questions du client.`
+  },
+  {
+    question: "Dois-je préparer quelque chose avant votre venue à Chelles ?",
+    answer: `Ce n’est pas obligatoire. Sur un balcon, libérer un peu d’espace aide à accéder aux angles et aux garde-corps. Pour les moquettes ou tapis, retirer les petits objets au sol facilite simplement le passage. Dans les parkings ou parties communes, avertir les occupants lorsqu’une zone doit être libérée est utile, mais nous pouvons nous organiser autrement si ce n’est pas possible.`
+  },
+  {
+    question: "Quels sont vos horaires d’intervention à Chelles ?",
+    answer: `La majorité des interventions ont lieu en semaine entre 9 h et 17 h. Toutefois, pour limiter la gêne dans les parkings, halls ou locaux professionnels, nous pouvons programmer des interventions tôt le matin, en fin de journée ou le samedi. Nous nous adaptons aux contraintes de la résidence ou du client.`
+  }
+],
+
+
 
   services: [
     {
@@ -100,4 +102,4 @@ const TEMPLATE_CITY: City = {
   ]
 };
 
-export default TEMPLATE_CITY;
+export default chelles;
