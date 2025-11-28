@@ -57,19 +57,23 @@ export function optimizeDescription(description?: string, pageType?: string): st
  * Image OG par défaut selon la page
  * ─────────────────────────────────────────────── */
 export function getOgImage(pageType?: string): string {
+  const fallback = '/images/og/og-klinova-home.png';
+
   const images: Record<string, string> = {
-    home: '/images/og/og-home.jpg',
-    contact: '/images/og/og-contact.jpg',
-    moquettes: '/images/og/og-moquettes.jpg',
-    parkings: '/images/og/og-parkings.jpg',
-    balcons: '/images/og/og-balcons.jpg',
-    balconsFientes: '/images/og/og-balcons-fientes.jpg',
-    terrasses: '/images/og/og-terrasses.jpg',
-    nuisibles: '/images/og/og-nuisibles.jpg',
-    textiles: '/images/og/og-textiles.jpg',
+    home: fallback,
+    contact: fallback,
+    moquettes: fallback,
+    parkings: fallback,
+    balcons: fallback,
+    balconsFientes: fallback,
+    terrasses: fallback,
+    nuisibles: fallback,
+    textiles: fallback,
   };
-  return images[pageType || 'default'] || '/images/og/og-default.jpg';
+
+  return images[pageType || 'home'] || fallback;
 }
+
 
 /* ───────────────────────────────────────────────
  * Build SEO complet (utilisé par SeoBase.astro)
