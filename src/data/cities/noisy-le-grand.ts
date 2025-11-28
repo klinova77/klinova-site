@@ -85,7 +85,7 @@ faq: [
     answer:
       'Pas uniquement. Nous privilégions les interventions en semaine, mais proposons aussi des créneaux tôt le matin, en soirée ou le week-end si cela limite les nuisances ou facilite l’organisation. Les horaires sont définis avec vous à l’avance.',
   },
-]
+],
 
 
 
