@@ -91,6 +91,23 @@ const canonicalAbs =
       ? toAbs(canonical)
       : `${site}${effectivePath}`
 
+let canonicalNormalized = canonicalAbs;
+
+try {
+  const urlObj = new URL(canonicalAbs);
+
+  // On enlève le / final sauf pour la home
+  if (urlObj.pathname !== '/' && urlObj.pathname.endsWith('/')) {
+    urlObj.pathname = urlObj.pathname.slice(0, -1);
+  }
+
+  canonicalNormalized = urlObj.toString();
+} catch {
+  // En cas d'URL bizarre, on ne casse pas le build, on garde canonicalAbs tel quel
+}
+
+
+
 const ogImageAbs = finalOgImage ? toAbs(finalOgImage) : ''
 const robots     = finalNoindex ? 'noindex, follow' : 'index, follow'
 
@@ -184,7 +201,7 @@ const jsonLdBlocks = [
 <meta name="robots" content={robots} />
 <meta name="googlebot" content={robots} />
 
-{canonicalAbs && <link rel="canonical" href={canonicalAbs} />}
+{canonicalNormalized && <link rel="canonical" href={canonicalNormalized} />}
 
 {hrefLangs &&
   Object.entries(hrefLangs).map(([lang, url]) => (
@@ -199,7 +216,7 @@ const jsonLdBlocks = [
 <meta property="og:site_name" content={siteName} />
 <meta property="og:title" content={finalTitle} />
 {finalDescription && <meta property="og:description" content={finalDescription} />}
-{canonicalAbs && <meta property="og:url" content={canonicalAbs} />}
+{canonicalNormalized && <meta property="og:url" content={canonicalNormalized} />}
 {locale && <meta property="og:locale" content={locale} />}
 {ogImageAbs && (
   <>

@@ -14,6 +14,7 @@ const NOINDEX = new Set([]);
 // ────────────────────────────────────────────────────────────────
 export default defineConfig({
   site: 'https://klinova.fr',
+  trailingSlash: 'never',
 
    
   // ✅ Sortie "server" nécessaire pour les routes API (Cloudinary, Resend…)
