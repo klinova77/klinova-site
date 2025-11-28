@@ -1,6 +1,7 @@
 ---
 // src/components/consent/ConsentBannerKlinova.astro
 
+import { Image } from 'astro:assets';
 import logoKlinova from '~/assets/images/logo_klinova.webp';
 
 const STORAGE_KEY = 'consent.analytics';
@@ -46,13 +47,15 @@ const STORAGE_KEY = 'consent.analytics';
   >
     <!-- Logo + titre -->
     <div class="flex items-center gap-3 mb-4">
-      <img
-        src={logoKlinova.src}
-        alt="Klinova"
-        class="h-9 w-auto object-contain"
-        loading="lazy"
-      />
-      <div>
+  <Image
+    src={logoKlinova}
+    alt="Klinova"
+    width={140}
+    height={96}
+    loading="lazy"
+    class="h-9 w-auto object-contain"
+  />
+  <div>
         <h2
           id="consent-title"
           class="text-xl font-semibold text-[#1E2939]"
