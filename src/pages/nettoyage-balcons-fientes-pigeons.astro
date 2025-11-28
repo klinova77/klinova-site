@@ -4,7 +4,7 @@ import Button from '~/components/UI/Button.astro';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { Image } from 'astro:assets';
 
-
+import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
 
 // Variables de base
 const site = 'https://klinova.fr';
@@ -115,6 +115,19 @@ const jsonLd = [
     >
       Intervention rapide en Île-de-France — nettoyage, désinfection et remise en état complète de votre balcon.
     </p>
+    <p
+        class="text-sm md:text-base text-[#3F8D65] mb-8 font-medium
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:480ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <span class="inline-flex items-center group">
+          <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Particuliers : payez seulement 50% aujourd'hui<br class="sm:hidden" /> avec l'avance immédiate
+        </span>
+      </p>
 
     <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 opacity-0">
       <div class="flex flex-col sm:flex-row gap-4 hero-cta">
@@ -678,7 +691,8 @@ const jsonLd = [
 </section>
 
 
-
+<!-- Section 6: Zones d'intervention -->
+<ZonesIntervention />
 
 <!-- Section Formulaire Final -->
 

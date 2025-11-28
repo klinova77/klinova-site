@@ -2,61 +2,65 @@ import type { ServiceConfig } from '~/types/geo';
 
 const balconsFientes: ServiceConfig = {
   key: 'balcons-fientes',
-  name: 'Balcons – fientes de pigeons (désinfection)',
+  name: 'Nettoyage de balcons – fientes de pigeons',
+  urls: {
+    parent: '/nettoyage-balcons-fientes-pigeons',
+  },
   defaultDescription:
-    "Protocole sanitaire complet : EPI, pré-désinfection, retrait des fientes, nettoyage support, désinfection finale, gestion des déchets. Prévention possible (pics/effaroucheurs).",
+    "Nettoyage et désinfection de balcons souillés par des fientes et pose de solutions anti-pigeons.",
   benefits: [
-    'EPI & protocole sanitaire',
-    'Désinfection avant & après',
-    'Aspiration HEPA',
-    'Prévention anti-perchoirs'
+    'Intervention avec EPI complets',
+    'Désinfection avant et après',
+    'Aspiration HEPA sécurisée',
+    'Prévention possible après nettoyage'
   ],
   process: [
-    { step: 'Sécurisation', description: 'EPI, périmètre et pré-désinfection (temps de contact).' },
-    { step: 'Retrait', description: 'Raclage + aspiration HEPA des résidus.' },
-    { step: 'Nettoyage', description: 'Produit compatible support, rinçage maîtrisé.' },
-    { step: 'Désinfection', description: 'Traitement final et évacuation des déchets.' },
+    {
+      step: 'Préparation & sécurité',
+      description: 'Port des EPI, balisage du périmètre, pré-humectation et désinfection avec respect du temps de contact.'
+    },
+    {
+      step: 'Retrait des fientes',
+      description: 'Élimination mécanique par raclage ou aspiration HEPA selon les surfaces et le niveau de dépôt.'
+    },
+    {
+      step: 'Nettoyage du balcon',
+      description: 'Application d’un détergent adapté au matériau, brossage si nécessaire, rinçage contrôlé sans coulure.'
+    },
+    {
+      step: 'Désinfection finale',
+      description: 'Pulvérisation d’un désinfectant certifié et évacuation des déchets biologiques dans des sacs dédiés.'
+    },
   ],
-  pricing: { from: '240 €', unit: 'intervention' },
+  pricing: { from: '240 €', unit: 'par intervention' },
 
- faq: [
-  {
-    question: 'Est-ce dangereux pour la santé de nettoyer soi-même des fientes de pigeons ?',
-    answer:
-      'Oui, les fientes sèches peuvent contenir des bactéries, champignons et parasites qui se diffusent en poussières. Nous travaillons avec équipements de protection (masques, gants, combinaisons) et un protocole encadré pour éviter l’inhalation ou la projection vers les voisins.'
-  },
-  {
-    question: 'Quels produits utilisez-vous pour désinfecter mon balcon ?',
-    answer:
-      'Nous utilisons un détergent désinfectant professionnel prêt à l’emploi, sans odeur, conforme aux normes EN1276, EN13697, EN1650 et EN13697. Il permet de nettoyer et désinfecter en une seule étape, sans rinçage obligatoire, tout en restant compatible avec la plupart des sols de balcon.'
-  },
-  {
-    question: 'Faut-il vider complètement le balcon avant votre intervention ?',
-    answer:
-      'Idéalement, il faut dégager au maximum le sol : meubles légers, bacs, jouets, textile extérieur. Si certains éléments sont lourds ou difficiles à déplacer, nous nous adaptons et travaillons autour, mais plus l’espace est dégagé, plus le nettoyage est efficace et homogène.'
-  },
-  {
-    question: 'Comment évitez-vous que les saletés et produits coulent chez les voisins du dessous ?',
-    answer:
-      'Nous humidifions d’abord les fientes pour limiter les poussières, puis nous travaillons en quantité d’eau maîtrisée. Quand c’est possible, nous orientons les eaux vers l’évacuation prévue et utilisons raclettes et microfibres pour limiter les coulures. L’objectif est de remettre le balcon au propre sans gêner les voisins.'
-  },
-  {
-    question: 'Au bout de combien de temps puis-je réutiliser mon balcon après votre passage ?',
-    answer:
-      'En général, le balcon peut être réutilisé dès que les surfaces sont sèches, soit quelques heures après l’intervention selon la météo et l’aération. Le produit que nous utilisons est sans odeur et ne laisse pas de résidus gras : une fois sec, l’espace est de nouveau praticable normalement.'
-  },
-  {
-    question: 'Pouvez-vous aussi prévenir le retour des pigeons après le nettoyage ?',
-    answer:
-      'Le nettoyage et la désinfection sont notre cœur de mission. Selon les cas, nous pouvons vous conseiller sur les dispositifs anti-pigeons à installer (pics, filets, etc.) ou vous orienter vers un prestataire spécialisé pour la pose. L’important est de traiter d’abord proprement l’existant avant de mettre en place des solutions de prévention.'
-  }
-],
-
-urls: {
-  parent: '/nettoyage-balcons-fientes-pigeons',
-},
-
-  
+  faq: [
+    {
+      question: 'Nettoyer soi-même les fientes de pigeons, est-ce risqué pour la santé ?',
+      answer: `<p>Oui, les fientes sèches peuvent contenir des agents pathogènes (bactéries, champignons, parasites) qui se diffusent sous forme de poussières fines.</p><p>Nos interventions limitent ce risque grâce au port d’EPI (masque FFP3, gants, combinaison) et à une méthode rigoureuse de pré-humectation, retrait sécurisé et désinfection.</p>`
+    },
+    {
+      question: 'Quels produits utilisez-vous pour désinfecter ?',
+      answer: `<p>Nous utilisons un désinfectant professionnel prêt à l’emploi, sans parfum, conforme aux normes EN1276, EN13697, EN1650. Il agit en une seule étape (nettoyage + désinfection), sans rinçage obligatoire, et reste compatible avec la plupart des revêtements de balcon.</p>`
+    },
+    {
+      question: 'Dois-je vider complètement mon balcon avant l’intervention ?',
+      answer: `<p>Oui, il est préférable de retirer les éléments mobiles : petits meubles, plantes, textiles, jouets. Cela permet un nettoyage complet et sans gêne.</p><p>Si besoin, nous pouvons aussi prendre en charge le retrait des déchets accumulés.</p>`
+    },
+    {
+      question: 'Comment évitez-vous que les produits ou saletés coulent chez les voisins ?',
+      answer: `<p>Nous pré-humidifions les fientes pour éviter les poussières volatiles, puis utilisons peu d’eau pour le nettoyage. Quand c’est possible, nous guidons les eaux vers l’évacuation et utilisons des raclettes pour contenir les écoulements. Le travail est propre, sans nuisance pour les voisins.</p>`
+    },
+    {
+      question: 'Quand pourrai-je réutiliser mon balcon ?',
+      answer: `<p>Le balcon est généralement réutilisable quelques heures après l’intervention, une fois les surfaces sèches. Cela dépend de l’aération et des conditions météo. Le produit désinfectant est sans odeur et ne laisse pas de résidu gênant.</p>`
+    },
+    {
+       question: 'Proposez-vous des solutions pour éviter le retour des pigeons ?',
+      answer: `<p>Oui. Nous proposons la pose de <strong>pics anti-pigeons</strong> sur les rebords, garde-corps ou appuis exposés. Dans les rares cas où cela ne suffit pas, nous pouvons également installer un <strong>filet de protection</strong> discret et résistant, si la configuration du balcon le permet.</p>`
+    }
+  ],
 };
 
 export default balconsFientes;
+

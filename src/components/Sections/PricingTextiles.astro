@@ -1,0 +1,199 @@
+---
+export interface Props {
+  id?: string;
+  title?: string;
+  intro?: string;
+}
+
+const { id, title, intro } = Astro.props;
+---
+
+<section id={id} class="py-16 bg-white">
+  <div class="container-responsive">
+    <!-- En-tête de section -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
+        {title ?? 'Des prestations claires, à des tarifs transparents'}
+      </h2>
+      <p class="text-lg text-[#475569] max-w-2xl mx-auto">
+        {intro ??
+          'Chez Klinova, pas de mauvaise surprise : vous savez exactement ce que vous payez, et pour quel résultat.'}
+      </p>
+    </div>
+
+    <!-- Tableau des tarifs -->
+    <div class="bg-white border border-[#E5E7EB] rounded-lg overflow-hidden mb-12">
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <th class="px-6 py-4 text-left text-[#1E2939] font-semibold">Type d'article</th>
+              <th class="px-6 py-4 text-center text-[#1E2939] font-semibold">Nettoyage standard</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Canapé 2 places</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">110 €</td>
+            </tr>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Canapé 3 places</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">130 €</td>
+            </tr>
+            <tr class="border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Canapé d'angle</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">160 €</td>
+            </tr>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Matelas 1 place</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">70 €</td>
+            </tr>
+            <tr class="border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Matelas 2 places</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">100 €</td>
+            </tr>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <td class="px-6 py-4 text-[#475569]">Tapis (&lt; 4 m²)</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">80 €</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-[#475569]">Tapis (&gt; 4 m²)</td>
+              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">20 €/m²</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Note importante textiles délicats -->
+    <div class="bg-[#DBEAFE] border border-[#93C5FD] rounded-lg p-6 mb-12">
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-8 h-8 bg-[#387B58] rounded-full flex items-center justify-center mt-1">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+            Textiles délicats : expertise sur mesure
+          </h3>
+          <p class="text-[#475569] mb-4">
+            <strong>Certains textiles nécessitent un traitement spécialisé</strong> et ne doivent
+            généralement pas être nettoyés à l'injecteur-extracteur classique. Chez Klinova, nous
+            adaptons toujours la méthode au tissu pour protéger les fibres et les couleurs.
+          </p>
+
+          <div class="bg-white border border-[#E5E7EB] rounded-lg p-4 mb-4">
+            <h4 class="font-semibold text-[#1E2939] mb-2">Textiles traités sur devis :</h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              <strong>Velours</strong> (tous types), <strong>viscose/rayonne</strong>, <strong>lin pur</strong>,
+              <strong>soie</strong>, <strong>laine vierge épaisse</strong>, <strong>microfibres suédine</strong>,
+              <strong>tapis en fibres végétales</strong> (jute, sisal, coco), <strong>tapis tuftés collés</strong> et
+              <strong>textiles à teinture instable</strong>.
+            </p>
+          </div>
+
+          <p class="text-[#475569] text-sm">
+            <strong>Notre approche :</strong> selon le cas, nous privilégions le nettoyage à sec, la mousse
+            sèche, la vapeur contrôlée ou une micro-extraction très limitée.
+            <span class="text-[#3F8D65] font-medium">
+              Diagnostic gratuit et devis personnalisé pour ces textiles spéciaux.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offre dégressive -->
+    <div class="bg-[#DFF1E8] border border-[#3F8D65]/20 rounded-lg p-6 mb-12">
+      <h3 class="text-2xl font-bold text-[#1E2939] mb-4">
+        Offre dégressive – Formule "Maison Saine"
+      </h3>
+      <p class="text-[#475569] mb-4">
+        <strong>Offre spéciale pour les nettoyages de 2 pièces ou plus !</strong><br />
+        À partir de 2 pièces nettoyées, vous bénéficiez d'une remise progressive sur le total de votre facture.
+        Cette offre est valable pour les canapés, matelas et tapis.
+      </p>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-lg overflow-hidden mb-4">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <th class="px-4 py-3 text-left text-[#1E2939] font-semibold">Nombre de pièces</th>
+              <th class="px-4 py-3 text-center text-[#1E2939] font-semibold">Remise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-[#E5E7EB]">
+              <td class="px-4 py-3 text-[#475569]">2 pièces</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-10%</td>
+            </tr>
+            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
+              <td class="px-4 py-3 text-[#475569]">3 pièces</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-15%</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-[#475569]">4 pièces ou +</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-20%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-sm text-[#475569]">
+        <strong>Conditions :</strong> Les remises sont appliquées sur le total de la facture et concernent uniquement
+        les services de nettoyage de canapés, matelas et tapis.
+      </p>
+    </div>
+
+    <!-- Prestations complémentaires -->
+    <div class="bg-white border border-[#E5E7EB] rounded-lg p-6">
+      <h3 class="text-2xl font-bold text-[#1E2939] mb-6">
+        Prestations complémentaires premium
+      </h3>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Protection textile -->
+        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+          <h4 class="font-semibold text-[#1E2939] mb-2">Protection textile après nettoyage</h4>
+          <p class="text-[#475569] text-sm mb-2">
+            Traitement anti-tache et imperméabilisant pour prolonger la propreté de vos textiles.
+          </p>
+          <p class="text-[#3F8D65] font-semibold">25–40 € selon l'objet</p>
+        </div>
+
+        <!-- Désinfection vapeur -->
+        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+          <h4 class="font-semibold text-[#1E2939] mb-2">Désinfection vapeur haute température</h4>
+          <p class="text-[#475569] text-sm mb-2">
+            Détruit 99% des bactéries, virus et autres agents pathogènes.
+          </p>
+          <p class="text-[#3F8D65] font-semibold">+30 à +40 € selon l'objet</p>
+        </div>
+
+        <!-- Neutralisation odeurs -->
+        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+          <h4 class="font-semibold text-[#1E2939] mb-2">Neutralisation des odeurs</h4>
+          <p class="text-[#475569] text-sm mb-2">
+            Traitement spécialisé contre les odeurs de tabac, animaux ou moisissures.
+          </p>
+          <p class="text-[#3F8D65] font-semibold">Inclus dans le nettoyage standard</p>
+        </div>
+
+        <!-- Nettoyage après sinistre -->
+        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+          <h4 class="font-semibold text-[#1E2939] mb-2">Nettoyage après sinistre</h4>
+          <p class="text-[#475569] text-sm mb-2">
+            Décontamination et restauration après inondation ou dégâts des eaux.
+          </p>
+          <p class="text-[#3F8D65] font-semibold">Sur devis selon les dégâts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

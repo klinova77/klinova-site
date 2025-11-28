@@ -1,4 +1,21 @@
 ---
+
+import type { ServiceConfig } from '~/types/geo';
+
+type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
+
+const serviceSlugByKey: Record<ServiceKey, string> = {
+  moquettes: 'nettoyage-moquettes',
+  parkings: 'nettoyage-parkings',
+  balcons: 'nettoyage-balcons',
+  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
+  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
+};
+
+const serviceSlug = (s: ServiceConfig) =>
+  serviceSlugByKey[s.key as ServiceKey];
+
+
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import cities from '~/data/cities';
 import services from '~/data/services';
@@ -36,9 +53,7 @@ const jsonLd = [
   },
 ];
 
-// Mapping services → slugs locaux
-const serviceSlug = (s) =>
-  (s.urls?.parent ?? `/nettoyage-${s.key}`).replace(/^\//, '');
+
 ---
 <LayoutWithCTA
   title={title}

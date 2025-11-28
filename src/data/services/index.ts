@@ -17,6 +17,7 @@ export interface ServiceConfig {
 }
 
 // ⬇️ adapte ces chemins à tes vrais noms de fichiers
+
 import moquettes from './moquettes.config';
 import parkings from './parkings.config';
 import balcons from './balcons.config';

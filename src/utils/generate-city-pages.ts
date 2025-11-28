@@ -1,5 +1,6 @@
 import cities from '~/data/cities';
 import services from '~/data/services';
+import type { ServiceConfig } from '~/types/geo';
 
 const slugify = (v: string) =>
   v
@@ -8,6 +9,19 @@ const slugify = (v: string) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '');
+
+type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
+
+const serviceSlugByKey: Record<ServiceKey, string> = {
+  moquettes: 'nettoyage-moquettes',
+  parkings: 'nettoyage-parkings',
+  balcons: 'nettoyage-balcons',
+  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
+  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
+};
+
+const getServiceSlug = (service: ServiceConfig) =>
+  serviceSlugByKey[service.key as ServiceKey];
 
 export function generateCityPaths() {
   const paths: any[] = [];
@@ -21,10 +35,7 @@ export function generateCityPaths() {
     for (const service of services) {
       if (!service?.key) continue;
 
-      // 👉 slug de la page service principale
-      //    ex: "/nettoyage-moquettes" → "nettoyage-moquettes"
-      const serviceSlug =
-        (service.urls?.parent ?? `/nettoyage-${service.key}`).replace(/^\//, '');
+      const serviceSlug = getServiceSlug(service);
 
       paths.push({
         params: {
@@ -35,7 +46,7 @@ export function generateCityPaths() {
         props: {
           department: city.department,
           city,
-          service, // on passe bien l’objet complet au composant
+          service,
         },
       });
     }

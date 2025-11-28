@@ -3,12 +3,17 @@ import type { ServiceConfig } from '~/types/geo';
 const canapesTapis: ServiceConfig = {
   key: 'canapes-tapis',
   name: 'Nettoyage de canapés, tapis et matelas',
+   urls: {
+    parent: '/nettoyage-canapes-tapis-matelas',
+  },
   defaultDescription:
-    "Nettoyage à domicile : test couleurs, pré-spray enzymatique, brossage doux, extraction à faible humidité. Méthodes adaptées aux fibres naturelles.",
+    "Nettoyage de canapés, tapis et matelas avec traitement ciblé des taches et neutralisation des odeurs d'urine.",
+
+  ctaOverride: 'réserver une intervention',
 
   benefits: [
     'Faible humidité',
-    'Additifs neutralisants d’odeurs',
+    'Additifs neutralisants d’odeurs: technologie O.N.T',
     'Compatibilité animaux/enfants',
     'Conseils d’entretien',
   ],
@@ -20,14 +25,14 @@ const canapesTapis: ServiceConfig = {
     },
     {
       step: 'Pré-traitement ciblé',
-      description: 'Application enzymatique sur les taches, brossage souple pour préparation.',
+      description: "Application d'un détergent enzymatique ou alcalin sur les taches, brossage souple pour préparation.",
     },
     {
-      step: 'Nettoyage par extraction',
+      step: 'Nettoyage par injection-extraction',
       description: 'Injection-extraction avec pression maîtrisée, passes croisées anti-auréoles.',
     },
     {
-      step: 'Finitions & conseils',
+      step: 'Finitions et conseils',
       description: "Neutralisation d'odeurs, séchage optimisé et recommandations d'entretien.",
     },
   ],
@@ -43,12 +48,12 @@ const canapesTapis: ServiceConfig = {
     {
       question: 'Combien de temps faut-il pour que le canapé ou le tapis sèche après le nettoyage ?',
       answer:
-        'Le séchage complet prend généralement entre 4 et 8 heures selon la fibre, l’aération du logement et l’humidité ambiante. Nous utilisons un niveau d’humidité contrôlé pour limiter les temps de séchage et vous pouvez accélérer le processus en aérant la pièce ou en laissant tourner la ventilation.',
+        'Le séchage complet prend généralement entre 4 et 8 heures selon la fibre, l’aération du logement et l’humidité ambiante.',
     },
     {
       question: 'Les taches anciennes ou les mauvaises odeurs peuvent-elles être éliminées ?',
       answer:
-        'Nous traitons les taches avec des produits enzymatiques et des techniques adaptées à chaque fibre. La majorité des taches récentes partent très bien ; les taches anciennes ou prétraitées avec des produits inadaptés peuvent laisser une trace résiduelle. Pour les odeurs (animaux, tabac, humidité), le nettoyage en profondeur améliore nettement la situation, mais certaines odeurs très incrustées peuvent nécessiter plusieurs traitements.',
+        'Nous traitons les taches avec des détachants professionnels et des techniques adaptées à chaque fibre. La majorité des taches récentes partent très bien. Les taches anciennes, surtout si elles ont été mal traitées, peuvent laisser une marque. Pour les odeurs (urine, tabac, humidité), le nettoyage en profondeur et nos neutralisateurs d\'odeurs améliorent nettement la situation, mais certaines odeurs très incrustées peuvent nécessiter plusieurs traitements.',
     },
     {
       question: 'Le nettoyage est-il sans danger pour les tissus délicats ou les couleurs ?',
@@ -67,9 +72,7 @@ const canapesTapis: ServiceConfig = {
     },
   ],
 
-  urls: {
-    parent: '/nettoyage-canapes-tapis-matelas',
-  },
+ 
 };
 
 export default canapesTapis;

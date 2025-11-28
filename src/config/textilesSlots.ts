@@ -17,7 +17,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 29 novembre',
     timeLabel: '9h00',
     datetime: '2025-11-29T09:00:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -25,7 +25,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 29 novembre',
     timeLabel: '10h30',
     datetime: '2025-11-29T10:30:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -41,7 +41,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 29 novembre',
     timeLabel: '13h30',
     datetime: '2025-11-29T13:30:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -57,7 +57,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 29 novembre',
     timeLabel: '16h30',
     datetime: '2025-11-29T16:30:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -75,7 +75,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 6 décembre',
     timeLabel: '9h00',
     datetime: '2025-12-06T09:00:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -133,7 +133,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 13 décembre',
     timeLabel: '9h00',
     datetime: '2025-12-13T09:00:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {
@@ -149,7 +149,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: 'Samedi 13 décembre',
     timeLabel: '12h00',
     datetime: '2025-12-13T12:00:00+01:00',
-    open: true,
+    open: false,
     duration: '1h30'
   },
   {

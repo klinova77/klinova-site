@@ -1,3 +1,5 @@
+// ~/types/geo.ts
+
 export type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
 
 export interface Department {
@@ -23,6 +25,9 @@ export interface CityServiceLocal {
   patternOverride?: 'A' | 'B' | 'C' | 'D';
   ctaOverride?: string;
   photos?: string[];
+
+  // ✅ heroDescription par ville + service
+  heroDescription?: string;
 }
 
 export interface City {
@@ -37,9 +42,44 @@ export interface City {
   districts?: string[];
   landmarks?: string[];
   specificChallenges?: string[];
+
+  // ✅ ici, bien dans City (et pas après services:)
+  whyUsBullets?: string[];
+
   department: Department;
   nearbyCities?: string[];
   images?: { heroDesktop?: string; heroMobile?: string };
   cityImage?: string;
   services: CityServiceLocal[];
+}
+
+export interface ServiceProcessStep {
+  step: string;
+  description: string;
+}
+
+export interface ServiceFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface ServiceUrls {
+  parent?: string;
+}
+
+export interface ServiceConfig {
+  key: ServiceKey;
+  name: string;
+  defaultDescription?: string;
+  benefits?: string[];
+  process?: ServiceProcessStep[];
+  equipment?: string[];
+  averageDuration?: string;
+  pricing?: { from: string; unit: string };
+  faq?: ServiceFaqItem[];
+  urls?: ServiceUrls;
+  images?: { heroDesktop?: string; heroMobile?: string };
+
+  // 🆕 CTA global par service
+  ctaOverride?: string;
 }

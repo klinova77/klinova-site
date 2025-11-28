@@ -353,12 +353,16 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
-      <div className="bg-[#DFF1E8] p-6 border-b">
-        <h3 className="text-2xl font-bold text-[#1E2939] mb-2">Réserver votre intervention</h3>
-        <p className="text-[#475569]">
-          Choisissez un créneau disponible ou optez pour une intervention urgente selon disponibilité
-        </p>
-      </div>
+    <div class="bg-[#DFF1E8] p-6 border-b text-center">
+  <h3 class="text-2xl font-bold text-[#1E2939] mb-3">
+    Réserver votre intervention
+  </h3>
+  <p class="text-[#475569] max-w-xl mx-auto">
+    Choisissez un créneau disponible ou optez pour une intervention urgente selon disponibilité
+  </p>
+</div>
+
+
 
       <form onSubmit={handleSubmit} className="p-6 space-y-8">
         {/* Type d'intervention */}

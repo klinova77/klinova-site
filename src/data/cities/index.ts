@@ -1,24 +1,6 @@
 // src/data/cities/index.ts
-type City = {
-  name: string;
-  slug?: string;
-  postalCodes?: string[];
-  customDescription?: string;
-  detailedDescription?: string;
-  ctaOverride?: string;
-  faq?: { question: string; answer: string }[];
-  testimonial?: { text: string; author: string; role: string; building?: string };
-  districts?: string[];
-  landmarks?: string[];
-  specificChallenges?: string[];
-  department?: { name: string; slug: string; code?: string }; // ✅ ajouté pour URL
 
-
-  department?: { name: string; code?: string; slug: string };
-  nearbyCities?: string[];
-  images?: { heroDesktop?: string; heroMobile?: string };
-  services?: { serviceKey: string; uniqueIntro?: string; uniqueDeepDive?: string }[];
-};
+import type { City } from '~/types/geo';
 
 const slugify = (v: string) =>
   v
@@ -35,57 +17,57 @@ function normalizeCity(input: any): City {
   if (!input.name) {
     throw new Error(`City is missing "name": ${JSON.stringify(input)}`);
   }
+
   return {
+    // Champs obligatoires
     name: String(input.name),
     slug: input.slug ?? slugify(String(input.name)),
     postalCodes: Array.isArray(input.postalCodes) ? input.postalCodes : [],
+
+    // Champs optionnels texte
     customDescription: input.customDescription ?? '',
     detailedDescription: input.detailedDescription ?? '',
     ctaOverride: input.ctaOverride ?? '',
+
+    // FAQ & témoignage
     faq: Array.isArray(input.faq) ? input.faq : [],
     testimonial: input.testimonial ?? undefined,
+
+    // Contexte local
     districts: Array.isArray(input.districts) ? input.districts : [],
     landmarks: Array.isArray(input.landmarks) ? input.landmarks : [],
-    specificChallenges: Array.isArray(input.specificChallenges) ? input.specificChallenges : [],
+    specificChallenges: Array.isArray(input.specificChallenges)
+      ? input.specificChallenges
+      : [],
+
+    // 🆕 Pourquoi nous choisir
+    whyUsBullets: Array.isArray(input.whyUsBullets)
+      ? input.whyUsBullets
+      : [],
+
+    // Département & voisinage
     department: input.department ?? undefined,
-    
-    // 🎯 AJOUTS MANQUANTS :
-    services: Array.isArray(input.services) ? input.services : [],
-    nearbyCities: Array.isArray(input.nearbyCities) ? input.nearbyCities : [],
+    nearbyCities: Array.isArray(input.nearbyCities)
+      ? input.nearbyCities
+      : [],
+
+    // Images
     images: input.images ?? undefined,
     cityImage: input.cityImage ?? undefined,
-  };
 
-
-
-  if (!input.name) {
-    throw new Error(`City is missing "name": ${JSON.stringify(input)}`);
-  }
-  return {
-    name: String(input.name),
-    slug: input.slug ?? slugify(String(input.name)),
-    postalCodes: Array.isArray(input.postalCodes) ? input.postalCodes : [],
-    customDescription: input.customDescription ?? '',
-    detailedDescription: input.detailedDescription ?? '',
-    ctaOverride: input.ctaOverride ?? '',
-    faq: Array.isArray(input.faq) ? input.faq : [],
-    testimonial: input.testimonial ?? undefined,
-    districts: Array.isArray(input.districts) ? input.districts : [],
-    landmarks: Array.isArray(input.landmarks) ? input.landmarks : [],
-    specificChallenges: Array.isArray(input.specificChallenges) ? input.specificChallenges : [],
-    department: input.department ?? undefined,
+    // Services locaux
+    services: Array.isArray(input.services) ? input.services : [],
   };
 }
 
-// --- Option A: auto-import de toutes les villes
+// --- Auto-import de toutes les villes
 const modules = import.meta.glob('./*.ts', { eager: true });
 const raws = Object.values(modules)
   .map((m: any) => m?.default)
   .filter(Boolean);
 
 const cities: City[] = raws.map(normalizeCity).sort((a, b) =>
-  a.slug!.localeCompare(b.slug!)
+  (a.slug ?? '').localeCompare(b.slug ?? '')
 );
 
-export default cities;      // ✅ indispensable
-export type { City };
+export default cities;

@@ -25,11 +25,13 @@ export const NAV_MAIN: NavLink[] = [
 // Les autres sont conservés mais masqués jusqu’à publication.
 export const NAV_SERVICES: NavLink[] = [
   { label: 'Nettoyage de moquettes', href: '/nettoyage-moquettes', enabled: true },
+  { label: 'Nettoyage de canapés, tapis et matelas', href: '/nettoyage-canapes-tapis-matelas', enabled: true },
+   { label: 'Nettoyage de balcons', href: '/nettoyage-balcons', enabled: true },
   { label: 'Nettoyage de parkings', href: '/nettoyage-parkings', enabled: true },
-  { label: 'Nettoyage de balcons', href: '/nettoyage-balcons', enabled: true },
+ 
 
   // 🚧 Pages prévues mais pas encore prêtes :
-  { label: 'Nettoyage de textiles', href: '/nettoyage-textiles', enabled: false },
+  
   { label: 'Nettoyage de terrasses', href: '/nettoyage-terrasses', enabled: false },
   { label: 'Traitement nuisibles', href: '/traitement-nuisibles', enabled: false },
 ];

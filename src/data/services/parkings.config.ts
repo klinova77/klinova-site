@@ -2,10 +2,10 @@ import type { ServiceConfig } from '~/types/geo';
 
 const parkings: ServiceConfig = {
   key: 'parkings',
-  name: 'Nettoyage de parkings souterrains',
+  name: 'Nettoyage de parkings',
    
   defaultDescription:
-    "Remise en état des parkings : dégraissant ciblé, autolaveuse forte aspiration, reprise des gîtes d’hydrocarbures, gestion des eaux et remise en service rapide.",
+    "Nettoyage et dégraissage de parkings avec balayage, autolaveuse et reprise des taches d’hydrocarbures.",
   benefits: [
     'Intervention de nuit possible',
     'Balisage & jalonnement clairs',
@@ -14,9 +14,9 @@ const parkings: ServiceConfig = {
   ],
   process: [
     { step: 'Pré-visite', description: 'Repérage siphons, pentes, zones sensibles, communication.' },
-    { step: 'Dégraissage', description: 'Application alcaline contrôlée et brossage localisé.' },
-    { step: 'Autolaveuse', description: 'Aspiration renforcée et rinçages successifs.' },
-    { step: 'Finition', description: 'Contrôle flaques, siphons, réouverture par travées.' },
+    { step: 'Dégraissage', description: "Application d'un nettoyant alcalin sur les taches d'huile et brossage localisé." },
+    { step: 'Autolaveuse', description: 'Lavage, aspiration renforcée et rinçage.' },
+    { step: 'Finition', description: 'Contrôle des siphons, suppression des flaques résiduelles, réouverture progressive par zones.', },
   ],
   averageDuration: 'Nuit entière pour 1–2 niveaux',
   pricing: { from: '1,80 €', unit: 'm²' },
@@ -27,19 +27,22 @@ faq: [
   },
   {
     question: 'Combien de temps le parking reste-t-il indisponible après votre passage ?',
-    answer: 'Pour un parking classique de résidence, comptez en général entre 3 et 6 heures d’intervention selon la surface et l’encrassement. Grâce à l’aspiration immédiate des eaux et à la ventilation, les zones traitées peuvent souvent être réouvertes 2 à 4 heures après la fin du nettoyage.'
+    answer: 'Pour un parking classique de résidence, comptez en général entre 5 et 8 heures d’intervention selon la surface et l’encrassement. Grâce à l’aspiration immédiate des eaux et à la ventilation, les zones traitées peuvent souvent être réouvertes 2 à 4 heures après la fin du nettoyage.'
   },
   {
     question: 'Quels matériels utilisez-vous pour nettoyer un parking ?',
-    answer: 'Nous combinons autolaveuse, monobrosse et matériel manuel. L’autolaveuse est utilisée pour les grandes allées et les zones dégagées, la monobrosse pour les rampes, les zones très marquées et les angles, et des outils manuels pour les pieds de poteaux, caniveaux et recoins difficiles d’accès.'
+    answer: 'Nous combinons autolaveuse, monobrosse et outils manuels. L’autolaveuse est utilisée pour les grandes allées et les zones dégagées, la monobrosse pour les rampes et les zones très encrassées, et des outils manuels pour les pieds de poteaux, caniveaux et recoins difficiles d’accès.'
   },
   {
     question: 'Les produits utilisés sont-ils agressifs pour le sol ou l’environnement ?',
     answer: 'Nous utilisons des dégraissants alcalins professionnels spécifiquement formulés pour les sols béton et les polluants de type hydrocarbures. Le pH est contrôlé pour ne pas abîmer les revêtements, et les eaux de lavage sont récupérées par aspiration puis évacuées dans le respect des normes environnementales en vigueur.'
   },
   {
-    question: 'Comment gérez-vous les eaux usées après le nettoyage ?',
-    answer: 'Les eaux de lavage sont aspirées directement par nos autolaveuses ou aspirateurs adaptés : elles ne partent pas librement dans les caniveaux. Elles sont ensuite envoyées vers les réseaux prévus ou vers des dispositifs de rétention selon la configuration du site et les consignes du gestionnaire.'
+    
+  question: 'Peut-on nettoyer un parking même s’il n’y a pas d’évacuation d’eau prévue ?',
+  answer: `Oui. En l’absence de siphon ou d’évacuation directe, nous adaptons notre méthode avec une récupération complète des eaux par aspiration. Les eaux usées sont ensuite transférées dans des contenants adaptés, puis évacuées selon les consignes du site ou emportées par nos soins si nécessaire.`
+
+
   },
   {
     question: 'Proposez-vous des contrats d’entretien régulier pour les parkings ?',

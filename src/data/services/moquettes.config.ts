@@ -3,7 +3,7 @@ import type { ServiceConfig } from '~/types/geo';
 const moquettesConfig: ServiceConfig = {
   key: 'moquettes',
   name: 'Nettoyage de moquettes',
-  defaultDescription: 'Nettoyage professionnel de moquettes pour copropriétés et espaces commerciaux. Extraction haute performance, séchage rapide, produits écologiques.',
+  defaultDescription: 'Nettoyage de moquettes avec traitement des taches, fibres encrassées et auréoles pour un rendu propre et homogène.',
   
   benefits: [
     'Extraction haute performance sans sur-mouillage',
@@ -20,11 +20,11 @@ const moquettesConfig: ServiceConfig = {
       description: 'Évaluation des fibres, identification des taches, protection des zones sensibles et test préalable sur zone cachée'
     },
     {
-      step: 'Prétraitement spécialisé', 
-      description: 'Application de pré-spray enzymatique sur les zones critiques et détachage ciblé selon la nature des salissures'
+      step: 'Prétraitement', 
+      description: 'Application de pré-spray enzymatique sur les zones critiques et détachage ciblé selon la nature des taches'
     },
     {
-      step: 'Nettoyage par extraction',
+      step: 'Nettoyage par injection-extraction',
       description: 'Injection-extraction contrôlée avec régulation d\'humidité pour préserver les fibres et accélérer le séchage'
     },
     {
@@ -45,7 +45,7 @@ const moquettesConfig: ServiceConfig = {
   averageDuration: '3-6 heures selon surface et état',
   
   pricing: {
-    from: '8€',
+    from: '8 €',
     unit: 'par m²'
   },
   
@@ -56,15 +56,15 @@ const moquettesConfig: ServiceConfig = {
     },
     {
       question: 'Tous les types de moquettes peuvent-ils être nettoyés ?',
-      answer: 'Nous intervenons sur tous types de fibres : synthétiques, laine, aiguilletée, bouclée. Chaque matériau nécessite un protocole spécifique que nous maîtrisons. Un test préalable est systématiquement réalisé pour adapter notre méthode.'
+      answer: 'Nous intervenons sur tous types de fibres : synthétiques, laine, aiguilletée, bouclée. Chaque matériau demande une approche différente que nous appliquons après test préalable. Seules certaines fibres très fragiles peuvent nécessiter un nettoyage à sec.'
     },
     {
       question: 'Le nettoyage est-il efficace sur les taches anciennes ?',
-      answer: 'Nos produits enzymatiques et techniques de détachage permettent d\'éliminer la plupart des taches anciennes. Cependant, certaines taches très anciennes ou ayant subi des traitements inadaptés peuvent laisser des traces résiduelles.'
+      answer: 'Nos produits enzymatiques et nos détachants permettent d\'éliminer la plupart des taches tenaces. Cependant, certaines taches très anciennes ou ayant subi des traitements inadaptés peuvent rester partiellement visibles malgré nos efforts.'
     },
     {
       question: 'À quelle fréquence faut-il faire nettoyer les moquettes ?',
-      answer: 'Pour un usage résidentiel normal : 12-18 mois. Pour les zones de fort passage (halls, couloirs de copropriété) : 6-12 mois. Après sinistre ou en cas de taches importantes : intervention immédiate recommandée.'
+      answer: 'Pour un usage résidentiel normal : 12-18 mois. Pour les zones de fort passage (halls, couloirs de copropriété) : 6-12 mois. Après sinistre ou en cas de taches importantes : intervention dans les meilleurs délais recommandée.'
     },
     {
       question: 'Les produits utilisés sont-ils sans danger ?',

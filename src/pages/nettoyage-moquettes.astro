@@ -21,19 +21,20 @@ import restaurationHotel from '~/assets/images/restauration-moquette-hotel.jpg';
 const site = 'https://klinova.fr';
 const pageUrl = '/nettoyage-moquettes';
 const pageName = 'Nettoyage de moquettes';
-const SUBTITLE = 'Redonnez vie à vos revêtements textiles. Équipements haute performance, produits adaptés à chaque fibre.';
+const SUBTITLE = 'Redonnez vie à vos revêtements textiles.';
 const BADGE = 'Équipements professionnels industriels';
 
 // Configuration popup
 const popupContext = {
   title: 'Demander à être rappelé',
-  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  subtitle: 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
   serviceKey: 'rappel-moquette',
   serviceLabel: 'Demande rappel - Page moquette',
   trackingSource: 'popup-moquette-header',
   presetSubject: 'Nouvelle demande de rappel - klinova.fr',
   creditImpotEnabled: true,
 };
+
 
 // FAQ
 const faq = [
@@ -205,27 +206,22 @@ const jsonLd = [
 
 <section
   data-hero
-  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-center overflow-hidden"
+  class="relative isolate min-h-[calc(100svh-72px)] bg-[#FCFCFC] flex items-start overflow-hidden"
   data-hide-floating-cta
   data-hide-header-cta 
- 
-   
 >
   <div class="absolute inset-0 z-0">
-    <!-- Image mobile (cachée sur desktop) -->
-  <!-- Image mobile -->
-<picture class="absolute inset-0 block">
-  <source media="(min-width:768px)" srcset="/images/nettoyage-moquette-avant-apres.webp" />
-  <img
-    src="/images/nettoyage-moquette-avant-apres-mobile.webp"
-    alt="Avant et après nettoyage professionnel de moquette"
-    width="750" height="1000"
-    loading="eager" fetchpriority="high" decoding="async"
-    class="w-full h-full object-cover"
-  />
-</picture>
-
-
+    <!-- Image mobile -->
+    <picture class="absolute inset-0 block">
+      <source media="(min-width:768px)" srcset="/images/nettoyage-moquette-avant-apres.webp" />
+      <img
+        src="/images/nettoyage-moquette-avant-apres-mobile.webp"
+        alt="Avant et après nettoyage professionnel de moquette"
+        width="750" height="1000"
+        loading="eager" fetchpriority="high" decoding="async"
+        class="w-full h-full object-cover"
+      />
+    </picture>
 
     <!-- Overlay -->
     <div
@@ -234,8 +230,8 @@ const jsonLd = [
     ></div>
   </div>
 
-  <!-- Content -->
-  <div class="container mx-auto px-6 lg:px-12 relative z-10 py-16 md:py-24">
+  <!-- Content remonté -->
+  <div class="container mx-auto px-6 lg:px-12 relative z-10 pt-24 md:pt-32">
     <div class="max-w-2xl">
       <h1
         class="text-4xl md:text-5xl xl:text-5xl font-bold mb-6 leading-tight
@@ -244,7 +240,7 @@ const jsonLd = [
                [animation-delay:220ms]
                [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
       >
-        Nettoyage <span class="text-[#4ADEEF] inline-block transform hover:scale-105 transition-transform duration-300">de moquettes</span> en Île-de-France
+        Nettoyage <span class="text-[#4ADEEF] inline-block transform hover:scale-105 transition-transform duration-300">de moquettes</span> <br class="sm:hidden" /> en Île-de-France
       </h1>
 
       <p
@@ -267,30 +263,30 @@ const jsonLd = [
           <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
           </svg>
-          Particuliers : payez seulement 50% aujourd'hui avec l'avance immédiate
+          Particuliers : payez seulement 50% aujourd'hui<br class="sm:hidden" /> avec l'avance immédiate
         </span>
       </p>
 
       <div
-  class="hidden md:flex flex-col sm:flex-row gap-4 items-start sm:items-center
-         opacity-100 motion-safe:animate-fade-in-up
-         [animation-delay:600ms]
-         [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
->
-  <div class="flex flex-col gap-2">
-    <Button
-      href="#formulaire"
-      variant="tertiary"
-      size="lg"
-      class="border border-white/90 text-white bg-white/5 hover:bg-white/15 active:bg-white/25 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.6)] transition-all duration-300"
-      ariaLabel="Nous contacter"
-      tracking={{ action: 'lead', source: 'hero-moquettes', intent: 'cta-tertiary' }}
-      data={{ service: 'devis-moquettes' }}
-    >
-      Nous contacter
-    </Button>
-  </div>
-</div>
+        class="flex flex-col sm:flex-row gap-4 items-start sm:items-center
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:600ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <div class="flex flex-col gap-2 mt-22 sm:mt-0">
+          <Button
+            href="#formulaire"
+            variant="tertiary"
+            size="lg"
+            class="border border-white/90 text-white bg-white/5 hover:bg-white/15 active:bg-white/25 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.6)] transition-all duration-300"
+            ariaLabel="Nous contacter"
+            tracking={{ action: 'lead', source: 'hero-moquettes', intent: 'cta-tertiary' }}
+            data={{ service: 'devis-moquettes' }}
+          >
+            Nous contacter
+          </Button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -323,8 +319,6 @@ const jsonLd = [
     }
   </style>
 </section>
-
-
 
 
 

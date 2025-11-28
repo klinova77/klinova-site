@@ -1,14 +1,18 @@
 import type { City } from '~/types/geo';
 
+/**
+ * Configuration détaillée pour la ville de Noisy-le-Grand (93160).
+ * Toutes les descriptions ont été révisées pour améliorer le style et le contenu marketing.
+ */
 const noisyLeGrand: City = {
   name: 'Noisy-le-Grand',
   slug: 'noisy-le-grand',
   postalCodes: ['93160'],
 
   customDescription:
-    'À Noisy-le-Grand, nous intervenons dans les immeubles récents, parkings et logements pour entretenir moquettes, balcons et textiles en respectant les usages de chaque site.',
-
-  department: {
+    'À la croisée des dynamiques de l’Est parisien, Noisy-le-Grand combine des quartiers d’affaires (Mont d’Est) et de grandes résidences, où l’entretien régulier des parties communes et des parkings est un enjeu majeur de qualité de vie.',
+  
+    department: {
     name: 'Seine-Saint-Denis',
     code: '93',
     slug: 'seine-saint-denis',
@@ -23,11 +27,11 @@ const noisyLeGrand: City = {
   ],
 
   nearbyCities: [
-    'vaires-sur-marne',
+    'chelles',
     'torcy',
-    'gournay-sur-marne',
-    'noisy-le-grand',
-    'lagny-sur-marne'
+    'neuilly-sur-marne',
+    'noisiel',
+    'lagny-sur-marne',
   ],
 
   ctaOverride: '',
@@ -35,17 +39,25 @@ const noisyLeGrand: City = {
   landmarks: [
     'Centre commercial Les Arcades',
     'Gare RER A Noisy-le-Grand Mont d’Est',
-    'Hôtel de Ville de Noisy-le-Grand',
+    'Mairie de Noisy-le-Grand',
     'Maille-Horizon Nord',
     'Esplanade du Mont d’Est',
   ],
 
   specificChallenges: [
-    'Présence de nombreux immeubles récents avec moquettes en circulations et bureaux autour du Mont d’Est, soumis à un fort trafic quotidien.',
-    'Parkings souterrains et aériens liés aux Arcades et au RER A, nécessitant une organisation précise des flux véhicules et piétons.',
-    'Terrasses exposées au vent et à la pluie sur Maille-Horizon, avec écoulements à maîtriser pour ne pas gêner les voisins.',
-    'Loggias plus abritées dans certains quartiers, avec dépôts fins (poussières, pollens) qui s’incrustent dans les joints et les angles.',
-    'Contraintes horaires importantes pour limiter la gêne dans les parkings, halls et commerces (interventions tôt le matin ou en soirée).',
+    'Environnement tertiaire et résidentiel dense (Mont d’Est) avec des moquettes en zones de circulation et bureaux soumises à une usure importante.',
+    'Parkings souterrains et aériens à forte fréquentation (Arcades, RER A) exigeant une organisation précise pour ne pas impacter les flux véhicules et piétons.',
+    'Terrasses et balcons sur Maille-Horizon exposés aux intempéries, nécessitant une gestion stricte des écoulements pour éviter les désagréments aux étages inférieurs.',
+    'Loggias plus abritées (Pavé Neuf) où les dépôts fins (poussières, pollens) s’accumulent et s’incrustent dans les joints et les revêtements poreux.',
+    'Nécessité d’interventions en horaires décalés (tôt le matin ou en soirée) pour minimiser la gêne dans les halls, parkings et locaux commerciaux.',
+  ],
+
+  whyUsBullets: [
+    'Nous maîtrisons les protocoles adaptés aux moquettes très sollicitées des immeubles récents autour du Mont d’Est, garantissant longévité des fibres.',
+    'Nous organisons nos interventions dans les parkings (Arcades, RER A) avec des <strong>horaires décalés</strong> et un <strong>balisage sécurisé</strong> des zones de travail.',
+    'Nous garantissons la <strong>maîtrise des écoulements</strong> d’eau sur les terrasses exposées (Maille-Horizon) pour éviter tout ruissellement chez les voisins du dessous.',
+    'Nous appliquons des protocoles sanitaires stricts pour les balcons souillés par les fientes dans les grands ensembles, incluant EPI et désinfection professionnelle.',
+    'Nous proposons des <strong>créneaux flexibles</strong> en soirée ou le samedi afin de réduire l’impact sur les résidences, bureaux et commerces de Noisy-le-Grand.',
   ],
 
   testimonial: {
@@ -58,51 +70,135 @@ const noisyLeGrand: City = {
   faq: [
     {
       question:
-        'Comment se déroule une intervention de nettoyage à Noisy-le-Grand ?',
-      answer: `<p>À Noisy-le-Grand, nous commençons par identifier les accès (esplanades, ascenseurs, galeries commerçantes, coursives) et échangeons avec l’occupant ou le syndic pour définir précisément les zones à traiter.</p>
-<p>Les protections nécessaires sont installées avant le nettoyage. En fin d’intervention, un contrôle commun permet de valider le résultat et les éventuelles recommandations d’entretien.</p>`,
+        'Comment se déroule une intervention de nettoyage professionnel à Noisy-le-Grand ?',
+      answer: `<p>À Noisy-le-Grand, notre processus est rigoureux : nous commençons par une reconnaissance des lieux (accès, galeries, ascenseurs) et validons avec vous ou le syndic les zones prioritaires.</p>
+<p>Nous installons ensuite les <strong>protections nécessaires</strong> avant le nettoyage. L’intervention se termine par un contrôle qualité et la transmission de nos conseils pour l’entretien futur.</p>`,
     },
     {
       question:
-        'Faut-il prévoir quelque chose avant l’intervention à Noisy-le-Grand ?',
-      answer: `<p>Pour les balcons ou terrasses, dégager un peu l’espace facilite l’accès aux gardes-corps et aux évacuations. Pour les moquettes et tapis, aucune préparation obligatoire.</p>
-<p>Dans les parkings souterrains, il peut être utile de libérer une zone ou de prévenir les résidents. Si ce n’est pas faisable, nous adaptons la méthode en travaillant par segments.</p>`,
+        'Faut-il prévoir une préparation spécifique avant votre intervention ?',
+      answer: `<p>Pour les balcons ou terrasses, dégager les objets facilite notre accès aux garde-corps et aux évacuations d’eau. Aucune préparation majeure n’est requise pour les moquettes ou tapis.</p>
+<p>Concernant les parkings, s’il n’est pas possible de libérer une zone, nous travaillons par segments pour <strong>maintenir la circulation</strong>. Dans tous les cas, l’information préalable aux résidents est recommandée.</p>`,
     },
     {
       question:
-        'Intervenez-vous le soir ou le week-end à Noisy-le-Grand ?',
-      answer: `<p>Oui. Même si la majorité des interventions se fait en semaine, nous proposons des créneaux en soirée ou le samedi, notamment pour les parkings, halls, commerces ou locaux professionnels.</p>
-<p>Les horaires sont définis avec vous pour limiter la gêne et respecter les contraintes des immeubles du centre et des quartiers pavillonnaires.</p>`,
+        'Proposez-vous des interventions en soirée ou le week-end à Noisy-le-Grand ?',
+      answer: `<p>Oui. Bien que nous intervenions majoritairement en journée, nous proposons des créneaux en soirée ou le week-end. Ces horaires sont privilégiés pour les zones à fort passage, les halls ou les locaux professionnels.</p>
+<p>Les horaires sont toujours définis <strong>en collaboration avec vous</strong> afin de respecter les contraintes des immeubles et des zones commerciales.</p>`,
     },
   ],
 
-  services: [
-    {
-      serviceKey: 'moquettes',
-      uniqueIntro: `À Noisy-le-Grand, beaucoup de moquettes en bureaux autour du Mont d’Est et circulations d’immeubles récents. Problèmes : taches de café, marques de trafic, auréoles après petits dégâts des eaux. Interventions avant 9 h / après 19 h.`,
-      uniqueDeepDive: `Repérage : ascenseurs, open-spaces, type de fibre. Méthodes : pré-traitement, brossage mécanique, encapsulation (séchage 1–2 h) ou extraction contrôlée si salissures profondes. Post-inondation : contrôle humidité, reprise des auréoles. Conseils : tapis de propreté aux accès, aspiration 2x/semaine. Éviter sur-mouillage au spray ménager.`,
-    },
-    {
-      serviceKey: 'parkings',
-      uniqueIntro: `Les parkings proches des Arcades et du RER A demandent une coordination fine : horaires décalés, gestion des allées piétonnes, information en amont.`,
-      uniqueDeepDive: `Process : balayage → dégraissant ciblé → autolaveuse → reprises huiles → rinçage → siphons. Séquencé par zones (A/B/C) avec rubalise. Affichage 72 h, rappel J-1. À éviter : jet haute pression sur murs peints, flaques persistantes. Options : turbines de séchage, reprise marquage si besoin. Fréquence : 2/an si forte fréquentation.`,
-    },
-    {
-      serviceKey: 'balcons',
-      uniqueIntro: `Noisy-le-Grand combine terrasses très exposées (Maille-Horizon) et loggias abritées (Pavé Neuf). On ajuste produits/outil pour préserver supports et limiter écoulements.`,
-      uniqueDeepDive: `Préparation : retirer objets/textiles. Méthode : dépoussiérage → détergent pH adapté → brossage → rinçage maîtrisé → vitres/garde-corps anti-traces. Algues/lichens : biocide pro. Grès clair : éviter acides, privilégier pH doux + brossage. Entretien mensuel : eau tiède + microfibre.`,
-    },
-    {
-      serviceKey: 'balcons-fientes',
-      uniqueIntro: `Autour des grands ensembles, les fientes s’accumulent vite. On suit un protocole désinfection → retrait → nettoyage → désinfection avec EPI et gestion des déchets.`,
-      uniqueDeepDive: `Traitement des garde-corps (dessus/dessous), seuils, coffres. Pré-désinfection (temps de contact), raclage/aspiration HEPA, nettoyage compatible support, désinfection finale. Prévention : pics inox / effaroucheurs si autorisés. Conseils : 48–72 h sans textiles dehors, ne pas balayer à sec, ne pas arroser avant notre venue.`,
-    },
-    {
-      serviceKey: 'canapes-tapis',
-      uniqueIntro: `Demandes : canapés tissus quotidiens (boissons, auréoles) et tapis modernes en fibres synthétiques. Retour d’usage le jour même visé.`,
-      uniqueDeepDive: `Canapés : test couleurs, pré-spray ciblé, brossage doux, extraction maîtrisée. Microfibres : éviter auréoles via passes croisées. Tapis : attention fibres naturelles (laine/jute) → très basse humidité. Conseils : aspiration régulière, éviter “détachants miracles”, surélever l’assise 2–3 h après.`,
-    },
-  ],
+ services: [
+  {
+    serviceKey: 'moquettes',
+    heroDescription:
+      'Nettoyage de moquettes professionnelles et résidentielles à Noisy-le-Grand : élimination des taches incrustées et entretien en profondeur des fibres textiles.',
+    uniqueIntro: `
+      <p>À Noisy-le-Grand, les moquettes sont courantes dans les bureaux (Mont d’Est, Côté Gare) comme dans les résidences récentes. Le trafic quotidien, les taches localisées ou les auréoles après incident altèrent leur aspect.</p>
+      <p>Nous proposons des créneaux adaptés aux contraintes des sites : <strong>avant 9h, après 19h ou le week-end</strong>, sans interruption d’activité.</p>
+    `,
+    uniqueDeepDive: `
+      <p>Notre intervention débute par un repérage technique : type de fibres, niveau d’encrassement, accessibilité (ascenseurs, open-spaces). Cette analyse conditionne le choix des méthodes :</p>
+      <ul>
+        <li>Prétraitement localisé des taches + brossage mécanique pour décoller les salissures.</li>
+        <li><strong>Encapsulation</strong> (séchage rapide 1–2 h) pour les surfaces entretenues régulièrement.</li>
+        <li><strong>Injection-extraction contrôlée</strong> pour les moquettes plus encrassées ou anciennes.</li>
+        <li>Protocole spécifique après dégât des eaux : contrôle de l’humidité, traitement des auréoles, séchage renforcé.</li>
+      </ul>
+      <p>Bonnes pratiques : tapis de propreté aux accès, aspiration fréquente, éviter les produits ménagers qui saturent les fibres.</p>
+    `,
+    ctaOverride: '',
+  },
+
+  {
+    serviceKey: 'parkings',
+    heroDescription:
+      'Nettoyage complet des parkings à Noisy-le-Grand : élimination des poussières, hydrocarbures et taches persistantes dans les sous-sols résidentiels et commerciaux.',
+    uniqueIntro: `
+      <p>Les parkings proches du RER A ou du centre commercial Les Arcades supportent un trafic dense et continu. Nous adaptons notre logistique aux contraintes de sécurité et de circulation, en planifiant l’intervention par zones (zones piétonnes, accès véhicules).</p>
+      <p>Notre priorité : garantir propreté, accessibilité et respect du planning établi avec la copropriété ou le syndic.</p>
+    `,
+    uniqueDeepDive: `
+      <p>Notre protocole de nettoyage comprend :</p>
+      <ul>
+        <li><strong>Balayage mécanique</strong> initial pour éliminer les débris secs.</li>
+        <li>Application d’un <strong>dégraissant professionnel</strong> sur les zones souillées.</li>
+        <li><strong>Lavage à l’autolaveuse</strong> avec aspiration intégrée pour un sol propre et non glissant.</li>
+        <li>Finition manuelle : taches d’huile, siphons, angles inaccessibles.</li>
+      </ul>
+      <p>Une signalétique provisoire est mise en place, avec affichage <strong>72 h avant</strong> pour prévenir les usagers. Fréquence recommandée : semestrielle pour les parkings très fréquentés.</p>
+    `,
+    ctaOverride: '',
+  },
+
+  {
+    serviceKey: 'balcons',
+    heroDescription:
+      'Nettoyage expert des balcons et terrasses à Noisy-le-Grand : élimination des salissures, algues et dépôts liés aux intempéries.',
+    uniqueIntro: `
+      <p>À Noisy-le-Grand, les balcons varient selon les quartiers : loggias abritées au Pavé Neuf, grandes terrasses exposées à Maille-Horizon. Chaque configuration nécessite un choix précis de produits et un contrôle des écoulements.</p>
+      <p>Nous intervenons sur les dalles, les carrelages, les gardes-corps et les vitrages attenants.</p>
+    `,
+    uniqueDeepDive: `
+      <p>Le nettoyage suit un protocole adapté :</p>
+      <ul>
+        <li>Dépoussiérage à sec pour préparer les surfaces.</li>
+        <li>Nettoyage avec un <strong>détergent au pH adapté</strong>.</li>
+        <li>Brossage manuel ou mécanique selon le support, puis <strong>rinçage maîtrisé</strong>.</li>
+        <li>Finition : vitres, garde-corps, seuils, pour un rendu net et sans traces.</li>
+      </ul>
+      <p>En cas de mousses ou lichens, nous appliquons un <strong>biocide professionnel</strong> autorisé. Pour les matériaux sensibles comme le grès clair, nous évitons les acides et privilégions un pH neutre.</p>
+    `,
+    ctaOverride: '',
+  },
+
+  {
+    serviceKey: 'balcons-fientes',
+    heroDescription:
+      'Nettoyage et désinfection des balcons souillés par des fientes à Noisy-le-Grand.',
+    uniqueIntro: `
+      <p>Dans certains secteurs (résidences proches des parcs, immeubles à corniches), les balcons sont rapidement souillés par des fientes de pigeons. Ces dépôts posent un risque sanitaire, notamment pour les enfants, les personnes fragiles ou les animaux.</p>
+      <p>Nous appliquons un protocole strict, avec EPI, produits désinfectants certifiés, et évacuation des déchets biologiques.</p>
+    `,
+    uniqueDeepDive: `
+      <p>Les zones traitées incluent garde-corps (dessus/dessous), appuis, coffres, vitrages. Le protocole :</p>
+      <ul>
+        <li><strong>Pré-désinfection</strong> avec un produit fongicide/bactéricide (temps de contact respecté).</li>
+        <li>Retrait des fientes par raclage ou <strong>aspiration HEPA</strong> (aspirateur avec filtre absolu).</li>
+        <li>Nettoyage humide du support, compatible avec les matériaux sensibles.</li>
+        <li><strong>Désinfection finale</strong> de la zone + rinçage éventuel.</li>
+      </ul>
+      <p>Ne pas balayer ou arroser avant notre passage. Sur demande, nous pouvons proposer la pose de <strong>pics ou répulsifs anti-oiseaux</strong>, si autorisée par la copropriété.</p>
+    `,
+    ctaOverride: '',
+  },
+
+  {
+    serviceKey: 'canapes-tapis',
+    heroDescription:
+      'Nettoyage à domicile des canapés et tapis à Noisy-le-Grand : traitement des taches, auréoles et allergènes.',
+    uniqueIntro: `
+      <p>Nous intervenons sur les canapés en tissu tachés (boissons, auréoles, sébum) et les tapis en fibres synthétiques ou naturelles. Un diagnostic préalable permet d’ajuster les produits et techniques selon les matières et couleurs.</p>
+      <p>Notre objectif : <strong>un séchage rapide et un usage possible dans la journée</strong>.</p>
+    `,
+    uniqueDeepDive: `
+      <p>Canapés :</p>
+      <ul>
+        <li>Test de compatibilité couleur et tissu.</li>
+        <li>Application d’un pré-spray ciblé, brossage doux, puis <strong>extraction maîtrisée</strong>.</li>
+        <li>Sur les microfibres, passages croisés pour éviter les auréoles.</li>
+      </ul>
+      <p>Tapis :</p>
+      <ul>
+        <li>Ajustement de l’humidité selon la fibre (laine, viscose, jute = faible injection).</li>
+        <li>Nettoyage en surface ou en profondeur selon l’épaisseur et le support.</li>
+      </ul>
+      <p>Conseils : surélever l’assise après intervention. Ne pas utiliser de détachant ménager qui risque de fixer les taches.</p>
+    `,
+    ctaOverride: '',
+  },
+],
+
 };
 
 export default noisyLeGrand;

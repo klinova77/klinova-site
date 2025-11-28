@@ -1,0 +1,145 @@
+---
+// src/pages/zones-d-intervention/index.astro
+
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { DEPARTMENTS } from '~/data/departments';
+
+const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+
+const title =
+  'Zones d’intervention Klinova – Nettoyage professionnel en Île-de-France';
+const description =
+  'Klinova intervient en Île-de-France pour le nettoyage de moquettes, canapés, tapis, balcons et parkings souterrains. ' +
+  'Découvrez nos zones d’intervention par département et par ville.';
+const canonical = '/zones-d-intervention';
+
+// JSON-LD basique pour la page "index des zones"
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: "Zones d'intervention",
+      item: `${baseUrl}${canonical}`,
+    },
+  ],
+};
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${baseUrl}${canonical}#webpage`,
+  url: `${baseUrl}${canonical}`,
+  name: title,
+  inLanguage: 'fr-FR',
+  description,
+};
+
+const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+---
+
+<LayoutWithCTA
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  popupContext={{
+    title: 'Demander un devis',
+    subtitle:
+      "Un expert Klinova vous répond rapidement pour une intervention en Île-de-France.",
+    serviceKey: 'zones-intervention',
+    serviceLabel: "Demande depuis la page des zones d'intervention",
+    trackingSource: 'zones-intervention-index',
+  }}
+>
+  <main class="py-16 bg-white">
+    <div class="container-responsive">
+      <!-- Header / Hero simple -->
+      <header class="max-w-3xl mx-auto text-center mb-14">
+        <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+          Zones d'intervention
+        </p>
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+          Nos zones d’intervention en Île-de-France
+        </h1>
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Klinova intervient pour le nettoyage de moquettes, canapés, tapis, balcons
+          et parkings souterrains dans plusieurs départements d’Île-de-France.
+          Sélectionnez votre département pour découvrir les villes déjà structurées
+          avec des pages locales détaillées.
+        </p>
+      </header>
+
+      <!-- Liste des départements -->
+      <section class="max-w-5xl mx-auto mb-16">
+        <div class="mb-6 text-center max-w-3xl mx-auto">
+          <h2 class="text-xl md:text-2xl font-bold text-[#1E2939] mb-2">
+            Départements couverts par Klinova
+          </h2>
+          <p class="text-sm md:text-base text-[#475569]">
+            Chaque département ci-dessous dispose d’une page dédiée avec un récapitulatif
+            de nos services et une liste de villes pour lesquelles nous avons déjà créé
+            des pages locales.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {DEPARTMENTS.map((department) => (
+            <a
+              href={`/zones-d-intervention/${department.slug}`}
+              class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/60 hover:shadow-sm transition"
+            >
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-1">
+                {department.name} ({department.code})
+              </h2>
+              <p class="text-sm text-[#475569] leading-relaxed mb-2">
+  {department.code === '75'
+    ? 'Pages locales de nettoyage pour tous les arrondissements de Paris.'
+    : 'Pages locales de nettoyage pour plusieurs villes de ce département.'}
+</p>
+
+              <span class="inline-flex items-center text-sm font-medium text-[#3F8D65]">
+                Voir les villes du département
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- Petit bloc CTA global -->
+      <section class="max-w-3xl mx-auto">
+        <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">
+          <p class="text-base md:text-lg text-[#1E2939] mb-3">
+            Vous ne trouvez pas encore votre ville dans la liste&nbsp;?
+          </p>
+          <p class="text-sm md:text-base text-[#475569] mb-4">
+            Nous intervenons dans de nombreuses communes d’Île-de-France, même si
+            leur page locale n’est pas encore publiée. Envoyez-nous quelques infos
+            sur votre projet : nous vérifierons ensemble la faisabilité.
+          </p>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3F8D65] text-white text-sm md:text-base font-semibold hover:bg-[#387B58] transition"
+          >
+            Contacter Klinova
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</LayoutWithCTA>
