@@ -108,7 +108,7 @@ const chelles: City = {
     {
       serviceKey: 'balcons',
       heroDescription:
-        'À Chelles, nous remettons en état les balcons encrassés par poussières, usage intensif et dépôts extérieurs.',
+        'À Chelles, nous remettons en état les balcons encrassés par la poussière, l\'usage intensif et les dépôts extérieurs.',
       uniqueIntro: `<p>À Chelles, les balcons sont souvent utilisés comme de véritables extensions de l'appartement : repas, plantes, vélos, jeux d’enfants. Mais ils se salissent vite à cause des dépôts de poussière ou des micro-végétations qui s’y développent.</p><p>Nos interventions permettent de remettre en état ces espaces de vie sans détériorer les joints ni les sols fragiles. Nous adaptons nos méthodes selon les revêtements et la configuration (garde-corps, évacuation, étanchéité...).</p><p>Dans chaque quartier, nous proposons un nettoyage respectueux de votre logement… et de vos voisins du dessous.</p>`,
       uniqueDeepDive: `<h3>Une remise en état soignée et discrète de votre balcon</h3><p>Nous utilisons des équipements basse pression ou vapeur, sans projections vers l’extérieur. Nos produits sont biodégradables et sans rinçage obligatoire.</p><p>Le protocole comprend :</p><ul><li>Protection des zones sensibles (portes-fenêtres, garde-corps)</li><li>Nettoyage du sol, des joints, et des bordures</li><li>Élimination des mousses, poussières ou taches organiques</li></ul><p>En fin d’intervention, les eaux sont évacuées de manière contrôlée, pour éviter tout écoulement chez les voisins. Un espace de vie sain, sans odeurs ni traces au sol.</p>`,
     },
