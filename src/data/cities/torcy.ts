@@ -49,23 +49,24 @@ const torcy: City = {
   },
 
 
-  faq: [
+ faq: [
   {
     question: 'Comment se déroule une intervention de nettoyage à Torcy ?',
-    answer: `<p>Chaque intervention débute par une reconnaissance des accès (parkings, ascenseurs, immeubles des ZAC...) afin d’organiser correctement l'intervention. Nous confirmons ensuite avec l’occupant ou le gestionnaire les zones à traiter et installons les protections nécessaires.</p>
-<p>Le nettoyage est réalisé selon un protocole adapté au site. Un contrôle final est effectué avec le client pour valider le résultat et s’assurer que tout est conforme.</p>`,
+    answer:
+      'Chaque intervention commence par une reconnaissance des accès (parkings, ascenseurs, organisation des ZAC…) afin de planifier l’intervention de façon optimale. Nous validons ensuite les zones à traiter avec l’occupant ou le gestionnaire, installons les protections nécessaires, puis appliquons un protocole adapté. Un contrôle final permet de s’assurer que tout est conforme.',
   },
   {
     question: 'Dois-je préparer quelque chose avant votre venue à Torcy ?',
-    answer: `<p>Aucune préparation indispensable n’est requise. Sur les balcons, déplacer quelques objets peut faciliter l’accès. Pour les moquettes ou tapis, dégager le sol nous permet de nettoyer toute la surface .</p>
-<p>Dans les parkings des résidences, prévenir les occupants lorsqu’une zone doit être libérée est un plus, mais nous pouvons aussi travailler par sections pour éviter toute gêne.</p>`,
+    answer:
+      'Aucune préparation n’est indispensable. Si possible, il est utile de dégager les accès, nous transmettre les consignes d’entrée, ou prévenir les résidents concernés. Nous nous adaptons aux configurations sur place.',
   },
   {
     question: 'Pouvez-vous intervenir en horaires élargis à Torcy ?',
-    answer: `<p>Oui, nous proposons des créneaux élargis pour s’adapter aux contraintes des résidences, bureaux ou commerces. Les interventions en soirée ou le week-end sont possibles lorsque la circulation doit être limitée.</p>
-<p>Les horaires sont définis en fonction des besoins du site et des disponibilités du client, afin de garantir une intervention fluide et sans perturbation.</p>`,
+    answer:
+      'Oui. Nous proposons des créneaux tôt le matin, en soirée ou le week-end, en particulier lorsque cela facilite la circulation ou réduit les nuisances. Les horaires sont définis en fonction des contraintes du site et de vos disponibilités.',
   },
 ],
+
 
 
 
