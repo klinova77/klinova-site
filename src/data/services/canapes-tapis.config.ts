@@ -7,7 +7,7 @@ const canapesTapis: ServiceConfig = {
     parent: '/nettoyage-canapes-tapis-matelas',
   },
   defaultDescription:
-    "Nettoyage de canapés, tapis et matelas avec traitement ciblé des taches et neutralisation des odeurs d'urine.",
+    "Nettoyage de canapés, tapis et matelas avec traitement ciblé des taches et neutralisation des odeurs.",
 
   ctaOverride: 'réserver une intervention',
 

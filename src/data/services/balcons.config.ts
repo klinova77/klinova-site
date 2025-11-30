@@ -5,7 +5,7 @@ const balcons: ServiceConfig = {
   key: 'balcons',
   name: 'Nettoyage de balcons',
   defaultDescription:
-    "Remise en état et entretien de balcons : élimination des dépôts, traces noires, mousses, et salissures organiques. Intervention soignée, sans projections chez les voisins.",
+    "Remise en état et entretien de balcons : élimination des dépôts, traces noires, mousses, et salissures organiques. Intervention soignée, sans projection ni nuisance chez les voisins.",
   benefits: [
     'Méthodes adaptées aux revêtements (carrelage, béton, pierre, bois composite)',
     'Protocole discret, sans projections vers la façade ou les voisins',

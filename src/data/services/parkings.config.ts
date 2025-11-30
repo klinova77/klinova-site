@@ -4,9 +4,9 @@ const parkings: ServiceConfig = {
   key: 'parkings',
   name: 'Nettoyage de parkings',
    
-  defaultDescription:
-    "Nettoyage et dégraissage de parkings avec balayage, autolaveuse et reprise des taches d’hydrocarbures.",
-  benefits: [
+  defaultDescription: "Nettoyage et dégraissage de parkings souterrains ou extérieurs avec balayage mécanique, autolaveuse et reprise ciblée des taches d’hydrocarbure.",
+
+    benefits: [
     'Intervention de nuit possible',
     'Balisage & jalonnement clairs',
     'Gestion des eaux sales maîtrisée',

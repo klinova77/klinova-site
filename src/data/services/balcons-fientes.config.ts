@@ -7,7 +7,7 @@ const balconsFientes: ServiceConfig = {
     parent: '/nettoyage-balcons-fientes-pigeons',
   },
   defaultDescription:
-    "Nettoyage et désinfection de balcons souillés par des fientes et pose de solutions anti-pigeons.",
+    "Nettoyage et désinfection de balcons souillés par des fientes et pose de pics ou filets anti-pigeons.",
   benefits: [
     'Intervention avec EPI complets',
     'Désinfection avant et après',

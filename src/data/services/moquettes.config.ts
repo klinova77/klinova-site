@@ -3,8 +3,8 @@ import type { ServiceConfig } from '~/types/geo';
 const moquettesConfig: ServiceConfig = {
   key: 'moquettes',
   name: 'Nettoyage de moquettes',
-  defaultDescription: 'Nettoyage de moquettes avec traitement des taches, fibres encrassées et auréoles pour un rendu propre et homogène.',
-  
+  defaultDescription: "Nettoyage des moquettes avec détachage ciblé, neutralisation des odeurs et séchage rapide. Résultat homogène et remise en service rapide.",
+
   benefits: [
     'Extraction haute performance sans sur-mouillage',
     'Produits enzymatiques respectueux de l\'environnement',

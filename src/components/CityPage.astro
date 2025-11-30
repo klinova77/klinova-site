@@ -247,12 +247,11 @@ const serviceUrl =
   )[service.key] ?? '/');
 
 // SEO optimisé
-const pageTitle = `${service.name} à ${city.name} | Intervention Professionnelle – Klinova`;
+const pageTitle = `${service.name} à ${city.name} | Intervention professionnelle – Klinova`;
 const description =
   service.defaultDescription
-    ? `${service.defaultDescription} Intervention à ${city.name} et en Île-de-France.`
-    : `${service.name} à ${city.name} pour copropriétés, résidences et gestionnaires.`;
-
+     ? `${service.defaultDescription} Intervention à ${city.name} (${city.department.code}) et dans les communes voisines de ${city.department.name}.`
+    : `${service.name} à ${city.name} (${city.department.code}) pour copropriétés, résidences et gestionnaires.`;
 
 // Contenu dynamique
 const ctaLabel =
@@ -357,32 +356,29 @@ const breadcrumbJsonLd = {
   ],
 };
 
+// ID stable pour le service local
+const serviceId = `${baseUrl}${canonical}#service`;
 
-const localBusinessJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Klinova',
-  url: 'https://klinova.fr',
-  telephone: '+33676738661',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '6 rue d\'Armaillé',
-    addressLocality: 'Paris',
-    postalCode: '75017',
-    addressCountry: 'FR',
+  '@type': 'Service',
+  '@id': serviceId,
+  serviceType: 'Nettoyage professionnel',
+  name: `${service.name} à ${city.name}`,
+  description,
+
+  // 🔗 On rattache ce service au LocalBusiness global défini dans SeoBase
+  provider: {
+    '@id': `${baseUrl}#localbusiness`,
   },
-  priceRange: service.pricing ? '€€' : '€€€',
 
   areaServed: {
-    '@type': 'Place',
+    '@type': 'City',
     name: city.name,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: city.name,
-      postalCode: city.postalCodes?.[0],
-      addressCountry: 'FR',
-    },
+    postalCode: city.postalCodes?.[0],
+    addressCountry: 'FR',
   },
+
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: service.name,
@@ -422,7 +418,7 @@ const howToJsonLd =
     : null;
 
 const jsonLd: any[] = [
-  localBusinessJsonLd,
+  serviceJsonLd,
   breadcrumbJsonLd,
   ...(faqEntities.length
     ? [
@@ -442,12 +438,14 @@ const pricingHintEntries =
     ? Object.entries(cityNote.pricingHint).filter(([key]) => key !== 'note')
     : [];
 
-const pricingHintNote = cityNote?.pricingHint && 'note' in cityNote.pricingHint
-  ? (cityNote.pricingHint as any).note
-  : undefined;
+const pricingHintNote =
+  cityNote?.pricingHint && 'note' in cityNote.pricingHint
+    ? (cityNote.pricingHint as any).note
+    : undefined;
 
 const caseStudy = cityNote?.caseStudy;
 const photos = cityNote?.photos ?? [];
+
 ---
 
 <LayoutWithCTA
