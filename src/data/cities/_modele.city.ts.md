@@ -1,67 +1,109 @@
-// template city
 
 
-import type { City } from '~/types/geo';
+import type { City } from "~/types/geo";
 
 const TEMPLATE_CITY: City = {
-  name: '',               // Nom de la ville (ex: "Chelles")
-  slug: '',               // slug (ex: "chelles")
-  postalCodes: [],        // ["77500"]
+  name: "",
+  slug: "",
+  postalCodes: [],
 
-  customDescription: '',  // 1 phrase max : description spécifique pour meta + header
+  customDescription: "",
 
   department: {
-    name: '',             // "Seine-et-Marne"
-    code: '',             // "77"
-    slug: ''              // "seine-et-marne"
+    name: "",
+    code: "",
+    slug: ""
   },
 
-  districts: [],          // quartiers pertinents
-  nearbyCities: [],       // slugs des villes voisines pour maillage interne
-  ctaOverride: '',        // CTA facultatif
+  districts: [],
+  nearbyCities: [],
 
-  landmarks: [],          // repères locaux (gare, centre commercial, parc…)
+  landmarks: [],
 
-  specificChallenges: [], // 3-6 phrases : contraintes locales réelles
-
-  testimonial: {
-    text: '',
-    author: '',
-    role: '',
-    building: ''
+  testimonial: {     // ,e pas modifier
+    text: "",
+    author: "",
+    role: "",
+    building: ""
   },
 
-  faq: [
-    { question: '', answer: '' },
-    { question: '', answer: '' },
-    { question: '', answer: '' }
-  ],
+  ctaOverride: "",  // ne pas modifier
 
   services: [
     {
-      serviceKey: 'moquettes',
-      uniqueIntro: ``,      // HTML léger uniquement (p, h3, ul/li, strong…)
-      uniqueDeepDive: ``
+      serviceKey: "moquettes",
+      heroDescription: "",
+      whyUsBullets: [],
+      uniqueIntro: ``,
+      uniqueDeepDive: ``,
+      specificChallenges: [],
+      faqAdditions: [
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." }
+      ],
+      ctaOverride: ""
     },
     {
-      serviceKey: 'parkings',
+      serviceKey: "parkings",
+      heroDescription: "",
+      whyUsBullets: [],
       uniqueIntro: ``,
-      uniqueDeepDive: ``
+      uniqueDeepDive: ``,
+      specificChallenges: [],
+      faqAdditions: [
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." }
+      ],
+      ctaOverride: ""
     },
     {
-      serviceKey: 'balcons',
+      serviceKey: "balcons",
+      heroDescription: "",
+      whyUsBullets: [],
       uniqueIntro: ``,
-      uniqueDeepDive: ``
+      uniqueDeepDive: ``,
+      specificChallenges: [],
+      faqAdditions: [
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." }
+      ],
+      ctaOverride: ""
     },
     {
-      serviceKey: 'balcons-fientes',
+      serviceKey: "balcons-fientes",
+      heroDescription: "",
+      whyUsBullets: [],
       uniqueIntro: ``,
-      uniqueDeepDive: ``
+      uniqueDeepDive: ``,
+      specificChallenges: [],
+      faqAdditions: [
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." }
+      ],
+      ctaOverride: ""
     },
     {
-      serviceKey: 'canapes-tapis',
+      serviceKey: "canapes-tapis",
+      heroDescription: "",
+      whyUsBullets: [],
       uniqueIntro: ``,
-      uniqueDeepDive: ``
+      uniqueDeepDive: ``,
+      specificChallenges: [],
+      faqAdditions: [
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." },
+        { question: "...", answer: "..." }
+      ],
+      ctaOverride: ""
     }
   ]
 };

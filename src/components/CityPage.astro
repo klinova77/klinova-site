@@ -158,6 +158,14 @@ const cityNote: CityServiceLocal | undefined =
     ? city.services.find((s: CityServiceLocal) => s.serviceKey === service.key)
     : undefined;
 
+// 🔎 Défis spécifiques pour le service courant (au niveau ville + service)
+const specificChallenges =
+  cityNote?.specificChallenges && cityNote.specificChallenges.length > 0
+    ? cityNote.specificChallenges
+    : [];
+
+
+
     // Texte court pour le hero
 let heroDescription = cityNote?.heroDescription;
 
@@ -313,13 +321,8 @@ const uniqueLocalFaq = cityNote?.faqAdditions ?? [];
 // On comble les trous jusqu'à 6 avec les questions techniques (Séchage, produits...)
 const slotsRemaining = Math.max(0, MAX_FAQ_TOTAL - uniqueLocalFaq.length);
 
-const serviceGeneralFaq = (service.faq ?? []).slice(0, slotsRemaining).map(item => ({
-  // On injecte toujours la ville pour la forme
-  question: item.question.includes(city.name) 
-    ? item.question 
-    : `${item.question} à ${city.name} ?`, 
-  answer: item.answer
-}));
+const serviceGeneralFaq = (service.faq ?? []).slice(0, slotsRemaining);
+
 
 // L'ASSEMBLAGE SIMPLE
 const combinedFaq = [
@@ -762,6 +765,7 @@ data-hide-header-cta
             class="
               relative z-10
               text-lg leading-relaxed
+              text-center
               [&>p]:mb-6
               [&>p]:text-[#475569]
               [&>p:first-child]:text-xl
@@ -1253,152 +1257,6 @@ data-hide-header-cta
 
 
    
-  <!-- ❓ FAQ locale -->
-   {combinedFaq.length > 0 && (
-  <section class="bg-neutral-50 section-padding">
-    <div class="container-responsive">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-600 mb-4">
-          Questions fréquentes
-        </h2>
-        <p class="text-center text-neutral-600 mb-12 text-lg">
-          Tout ce qu'il faut savoir sur {service.name.toLowerCase()} à {city.name}
-        </p>
-
-        <div class="space-y-4">
-          {combinedFaq.map((item) => (
-            <details class="group border border-neutral-200 rounded-xl px-6 py-4 bg-white hover:border-[#3F8D65] hover:bg-green-50 transition-colors">
-              <summary class="cursor-pointer font-semibold text-primary-600 list-none flex justify-between items-center">
-                <span class="pr-8">{item.question}</span>
-                <svg
-                  class="w-5 h-5 text-[#3F8D65] group-open:rotate-180 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </summary>
-              <p class="mt-4 text-neutral-600 leading-relaxed">
-                {item.answer}
-              </p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-)}
-
-  <!-- 🔎 Bloc info + lien vers la page service principale -->
- <section class="relative overflow-hidden bg-[#243B53] py-16 md:py-20">
-  
-  <!-- Motif quadrillage premium -->
-  <div class="absolute inset-0 opacity-20 pointer-events-none" aria-hidden="true">
-    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <defs>
-        <pattern id="klinova-grid-expertise" width="8" height="8" patternUnits="userSpaceOnUse">
-          <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-        </pattern>
-        <pattern id="klinova-dots-expertise" width="20" height="20" patternUnits="userSpaceOnUse">
-          <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.15)"/>
-        </pattern>
-      </defs>
-      <rect width="100" height="100" fill="url(#klinova-grid-expertise)"/>
-      <rect width="100" height="100" fill="url(#klinova-dots-expertise)"/>
-    </svg>
-  </div>
-
-  <!-- Éléments décoratifs flottants -->
-  <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-  <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
-
-  <div class="container-responsive relative z-10">
-    <div class="max-w-4xl mx-auto text-center">
-      
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-        Notre expertise complète en 
-        <span class="text-green-200">{service.name.toLowerCase()}</span>
-      </h2>
-      
-      <p class="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-        Découvrez en détail notre approche professionnelle, nos certifications, 
-        notre matériel spécialisé et toutes les garanties que nous proposons.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-        <Button
-          href={serviceUrl}
-          label="Voir notre expertise complète"
-          variant="secondary"
-          size="lg"
-          fullWidth={false}
-          tracking={{
-            action: 'navigation',
-            source: 'expertise-cta',
-            intent: 'service-page',
-          }}
-          data={{
-            category: 'expertise',
-            channel: 'internal-link',
-            context: service.name,
-          }}
-        >
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          Voir notre expertise complète
-        </Button>
-      </div>
-
-      <!-- Points forts expertise -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto">
-        <div class="flex items-center justify-center gap-3 text-white/90">
-          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="font-semibold text-white">Certifications pro</div>
-            <div class="text-sm text-white/70">Certibiocide & formations</div>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-center gap-3 text-white/90">
-          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="font-semibold text-white">Matériel professionnel</div>
-            <div class="text-sm text-white/70">Équipements spécialisés</div>
-          </div>
-        </div>
-        
-        <div class="flex items-center justify-center gap-3 text-white/90">
-          <div class="flex-shrink-0 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <div>
-            <div class="font-semibold text-white">Méthodes éprouvées</div>
-            <div class="text-sm text-white/70">Protocoles détaillés</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 
 
 
@@ -1440,6 +1298,7 @@ data-hide-header-cta
                   text-[#475569] 
                   leading-relaxed
                   [&>h3]:text-xl 
+                  text-center
                   [&>h3]:font-semibold 
                   [&>h3]:text-[#1E2939] 
                   [&>h3]:mb-4 
@@ -1525,29 +1384,28 @@ data-hide-header-cta
     )}
 
     <!-- 3️⃣ Contexte local & quartiers desservis -->
-    {(city.districts || city.landmarks || city.specificChallenges) && (
+{specificChallenges.length > 0 && (
   <section class="py-16 bg-gradient-to-br from-[#FCFCFC] to-[#F8F9FA] border-b border-[#E5E7EB]"
     data-activate-floating-cta
   >
     <div class="container-responsive">
       <div class="max-w-6xl mx-auto">
         
-        <!-- En-tête avec design moderne -->
-      <div class="text-center mb-12">
-  <AvailabilityBadge cityName={city.name} position="hero" variant="default" />
-  <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4 mt-4">
-    Klinova à {city.name}
-  </h2>
-</div>
-
+        {/* En-tête avec design moderne */}
+        <div class="text-center mb-12">
+          <AvailabilityBadge cityName={city.name} position="hero" variant="default" />
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4 mt-4">
+            Klinova à {city.name}
+          </h2>
+        </div>
 
         <div class="grid gap-8 lg:grid-cols-3">
           
-          <!-- Colonne principale - Description -->
+          {/* Colonne principale - Description */}
           <div class="lg:col-span-2">
             <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm p-8">
               
-              <!-- Icône et titre -->
+              {/* Icône et titre */}
               <div class="flex items-start gap-4 mb-6">
                 <div class="flex-shrink-0 w-12 h-12 bg-[#3F8D65] rounded-xl flex items-center justify-center">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1564,30 +1422,29 @@ data-hide-header-cta
                 </div>
               </div>
 
-              {city.specificChallenges && city.specificChallenges.length > 0 && (
-                <div class="border-t border-[#E5E7EB] pt-6">
-                  <h4 class="font-semibold text-[#1E2939] mb-4 flex items-center gap-2">
-                    <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    Défis spécifiques à {city.name}
-                  </h4>
-                  <div class="space-y-3">
-                    {city.specificChallenges.map((item) => (
-                      <div class="flex items-start gap-3 p-3 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]/50">
-                        <div class="w-2 h-2 bg-[#3F8D65] rounded-full mt-2 flex-shrink-0"></div>
-                        <span class="text-[#475569] leading-relaxed">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+              {/* Défis spécifiques au service courant dans cette ville */}
+              <div class="border-t border-[#E5E7EB] pt-6">
+                <h4 class="font-semibold text-[#1E2939] mb-4 flex items-center gap-2">
+                  <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Défis spécifiques à {city.name}
+                </h4>
+                <div class="space-y-3">
+                  {specificChallenges.map((item) => (
+                    <div class="flex items-start gap-3 p-3 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]/50">
+                      <div class="w-2 h-2 bg-[#3F8D65] rounded-full mt-2 flex-shrink-0"></div>
+                      <span class="text-[#475569] leading-relaxed">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              )}
+              </div>
+
             </div>
           </div>
 
-          <!-- Colonne droite - Quartiers et repères -->
+          {/* Colonne droite - Quartiers et repères */}
           <div class="space-y-6">
-            
             {city.districts && city.districts.length > 0 && (
               <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm p-6">
                 <div class="flex items-center gap-3 mb-4">
@@ -1633,14 +1490,10 @@ data-hide-header-cta
                 </div>
               </div>
             )}
-
-            <!-- Card bonus - Certification -->
-           
-
           </div>
         </div>
 
-        <!-- Footer de section -->
+        {/* Footer de section */}
         <div class="text-center mt-12 pt-8 border-t border-[#E5E7EB]">
           <div class="inline-flex items-center gap-3 text-sm text-[#475569] bg-white border border-[#E5E7EB] rounded-full px-6 py-3">
             <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1656,8 +1509,49 @@ data-hide-header-cta
 )}
 
 
-    
 
+    
+  <!-- ❓ FAQ locale -->
+   {combinedFaq.length > 0 && (
+  <section class="bg-neutral-50 section-padding">
+    <div class="container-responsive">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-600 mb-4">
+          Questions fréquentes
+        </h2>
+        <p class="text-center text-neutral-600 mb-12 text-lg">
+          Tout ce qu'il faut savoir sur {service.name.toLowerCase()} à {city.name}
+        </p>
+
+        <div class="space-y-4">
+          {combinedFaq.map((item) => (
+            <details class="group border border-neutral-200 rounded-xl px-6 py-4 bg-white hover:border-[#3F8D65] hover:bg-green-50 transition-colors">
+              <summary class="cursor-pointer font-semibold text-primary-600 list-none flex justify-between items-center">
+                <span class="pr-8">{item.question}</span>
+                <svg
+                  class="w-5 h-5 text-[#3F8D65] group-open:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <p class="mt-4 text-neutral-600 leading-relaxed">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
 
   
 <!-- 🧾 formulaire balcon  (téléphone + formulaire) -->
@@ -3824,6 +3718,66 @@ data-hide-header-cta
     </div>
   </section>
 )}
+
+
+
+
+{/* 🔎 Bloc lien vers page Service Principale (Version Contrastée) */}
+<section class="py-12 bg-white border-t border-neutral-100">
+  <div class="container-responsive">
+    
+    {/* La Carte Sombre */}
+    <div class="relative bg-[#243B53] rounded-2xl p-8 shadow-xl overflow-hidden flex flex-col md:flex-row items-center gap-6 text-center md:text-left group">
+      
+      {/* 1. Motif de fond (Réintroduit pour la texture) */}
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid-box" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="white" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid-box)"/>
+        </svg>
+      </div>
+
+      {/* 2. Icône "Expertise" mise en valeur */}
+      <div class="relative flex-shrink-0 w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-white border border-white/10 shadow-inner group-hover:scale-105 transition-transform duration-300">
+        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+        </svg>
+      </div>
+
+      {/* 3. Texte Blanc sur Fond Foncé */}
+      <div class="relative flex-1">
+        <h3 class="text-xl font-bold text-white mb-2">
+          Tout savoir sur notre expertise {service.name.toLowerCase()}
+        </h3>
+        <p class="text-blue-100 text-sm leading-relaxed max-w-2xl">
+          Protocole détaillé, matériel utilisé, certifications officielles et garanties : découvrez pourquoi Klinova est la référence.
+        </p>
+      </div>
+
+      {/* 4. Bouton Blanc (Contraste fort) */}
+      <div class="relative">
+        <Button
+          href={serviceUrl}
+          label="Voir l'expertise complète"
+          variant="secondary" 
+          size="lg"
+          class="bg-white text-[#243B53] hover:bg-blue-50 border-none shadow-md whitespace-nowrap font-bold"
+        >
+          Voir l'expertise complète
+        </Button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 {/* 🔧 Section "Autres services" (Version Compacte) */}
 {otherServicesForCity.length > 0 && (
   <section class="bg-white py-12 border-t border-neutral-200">

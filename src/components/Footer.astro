@@ -30,7 +30,7 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
             <a
               href={LINKS.phone}
               aria-label={`Appeler Klinova au ${PHONE_DISPLAY}`}
-              class="flex items-center gap-3 text-[var(--color-action-600)] hover:opacity-90 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-action-600)] rounded"
+              class="flex items-center gap-3 text-gray-300 hover:text-[var(--color-action-600)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-action-600)] rounded"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -67,6 +67,7 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
             <li><a href="/nettoyage-canapes-tapis-matelas" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyages de canapés, tapis et matelas</a></li>
             <li><a href="/nettoyage-balcons" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">nettoyage de balcons</a></li>
             <li><a href="/nettoyage-parkings" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Nettoyage parkings</a></li>
+            <li><a href="/nettoyage-balcons-fientes-pigeons" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">nettoyage fientes de pigeons</a></li>
             
 
             <!-- En attente de mise en ligne -->
@@ -77,22 +78,41 @@ import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
           </ul>
         </div>
 
-        <!-- Colonne 3: Entreprise -->
-        <div>
-          <h3 class="font-semibold text-lg mb-4 text-white">Entreprise</h3>
-          <ul class="space-y-3 text-sm">
-            <li><a href="/a-propos" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">À propos</a></li>
-            <!-- <li><a href="/avance-immediate" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Avance immédiate</a></li> -->
-            <li><a href="/contact" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Contact</a></li>
-            <li>
-              <span class="text-gray-400 text-xs">Zone d'intervention</span>
-              <div class="text-gray-300 text-xs mt-1">Paris & Île-de-France</div>
-            </li>
-          </ul>
-        </div>
+      
 
-      </div>
-    </div>
+        <!-- Colonne 3: Entreprise -->
+      <div>
+  <h3 class="font-semibold text-lg mb-4 text-white">Entreprise</h3>
+  <ul class="space-y-3 text-sm">
+    <li>
+      <a
+        href="/a-propos"
+        class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors"
+      >
+        A propos
+      </a>
+    </li>
+    <!-- <li><a href="/avance-immediate" class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors">Avance immédiate</a></li> -->
+    <li>
+      <a
+        href="/contact"
+        class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors"
+      >
+        Contact
+      </a>
+    </li>
+    <li>
+      <a
+        href="/zones-d-intervention"
+        class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors"
+      >
+        <span>Zones d'intervention</span>
+        <div class="text-xs text-gray-400">Paris &amp; Ile-de-France</div>
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
 
     <!-- Barre du bas -->
     <div class="border-t border-gray-700 py-6">
