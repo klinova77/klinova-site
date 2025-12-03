@@ -1,132 +1,244 @@
-   
- import type { City } from '~/types/geo';
+const city: City = {
+  name: "Chelles",
+  slug: "chelles",
+  postalCodes: ["77500"],
 
-const chelles: City = {
-  name: 'Chelles',
-  slug: 'chelles',
-  postalCodes: ['77500'],
-
-  customDescription:
-  'Commune majeure de Seine-et-Marne, Chelles alterne grands ensembles résidentiels et secteurs pavillonnaires, exigeant une gestion ciblée des infrastructures et services de proximité.',
+  customDescription: "À Chelles, la forte densité résidentielle autour de la gare RER E et l'alternance entre pavillons anciens du centre historique et grandes résidences des Coudreaux facilitent la circulation des nuisibles. Les déplacements pendulaires vers Paris et la proximité des bords de Marne accélèrent la dispersion accidentelle dans les foyers.",
 
   department: {
-    name: 'Seine-et-Marne',
-    code: '77',
-    slug: 'seine-et-marne',
+    name: "Seine-et-Marne",
+    code: "77",
+    slug: "seine-et-marne"
   },
 
-  districts: [
-    'Centre-ville – Résistance',
-    'Bords de Marne',
-    'Grande Prairie',
-    'Abbesses',
-    'Les Coudreaux',
-    'Aulnoy',
-    'Monts-Chalats',
-  ],
-
-  nearbyCities: [
-    'neuilly-sur-marne',
-    'villepinte',
-    'gournay-sur-marne',
-    'noisy-le-grand',
-    'lagny-sur-marne',
-  ],
-
-  ctaOverride: '',
+  districts: ["Centre-ville", "Coudreaux", "Aulnoy", "Chantereine", "Bords de Marne", "Arcades"],
+  nearbyCities: ["torcy", "montfermeil", "gagny", "vaires-sur-marne", "courtry", "brou-sur-chantereine"],
 
   landmarks: [
-    'Gare de Chelles-Gournay',
-    'Centre commercial Terre-Ciel',
-    'Parc du Souvenir Émile-Fouchard',
-    'Canal de Chelles',
-    'Île de loisirs de Vaires-Torcy',
+    "Gare de Chelles - Gournay",
+    "Centre commercial Terre-Ciel",
+    "Parc du Souvenir Émile-Fouchard",
+    "Fort de Chelles",
+    "Mairie de Chelles",
+    "Bords de Marne"
   ],
 
   specificChallenges: [
-    'Dans les pavillons proches des Coudreaux, les escaliers moquettés accumulent rapidement des poussières et traces de jardin, surtout en période humide.',
-    'Autour du canal ou des Bords de Marne, l’humidité ambiante favorise les odeurs persistantes dans les textiles d’ameublement et les moquettes.',
-    'Dans les résidences récentes de l’Aulnoy, les balcons sont très utilisés et souvent tachés par les arrosages, les jeux d’enfants ou les fientes de pigeons.',
-    'Les box privatifs du quartier Grande Prairie présentent souvent des traces d’huile ou des résidus poussiéreux, difficiles à entretenir sans matériel pro.',
-    'Autour de la gare et du centre-ville, les canapés des familles avec enfants ou animaux sont souvent marqués par des taches et des poils incrustés.',
-  ],
-
-  whyUsBullets: [
-    'Nous adaptons nos méthodes aux immeubles récents, aux moquettes des copropriétés et aux balcons exposés aux dépôts poussiéreux de Chelles.',
-    'Nous intervenons sur des configurations variées : parkings souterrains, pavillons familiaux, résidences denses et espaces communs fortement sollicités.',
-    "Nous anticipons les contraintes d'accès (ascenseurs, stationnement, passages étroits) pour planifier une intervention fluide et sans gêne.",
-    'Nous appliquons des protocoles spécifiques selon les surfaces : textiles, carrelage, dalles extérieures, rampes de parking ou garde-corps.',
-    'Nous proposons des créneaux élargis pour s’adapter au rythme des familles et copropriétés de Chelles.',
+    "L'humidité constante des bords de Marne favorise le développement de mousses et lichens sur les balcons exposés, nécessitant un décrassage régulier des surfaces extérieures.",
+    "La densité du quartier gare et l'intense circulation sur la RN34 génèrent des dépôts de pollution atmosphérique qui encrassent rapidement les vitres et noircissent les textiles d'ameublement.",
+    "Les résidences des années 1960-70 du quartier Noue-Brossard présentent des moquettes d'escalier vieillissantes où s'incrustent poussières et salissures du passage quotidien.",
+    "Les parkings souterrains des copropriétés récentes d'Aulnoy accumulent traces d'huile et résidus de sel hivernal, compliquant l'entretien des sols béton."
   ],
 
   testimonial: {
-    text: 'Nous habitons près de la Marne, dans un pavillon des années 90. Les moquettes de l’étage étaient ternies par le temps et les escaliers prenaient la poussière à chaque passage. L’équipe a travaillé efficacement, sans odeur forte ni humidité excessive. On sent vraiment la différence au quotidien.',
-    author: 'Sophie B.',
-    role: 'Propriétaire',
-    building: 'Maison individuelle, quartier Bords de Marne',
+    text: '',
+    author: '',
+    role: '',
+    building: ''
   },
-
-  faq: [
-    {
-      question: 'Comment se déroule une intervention de nettoyage à Chelles ?',
-      answer:
-        'À Chelles, une intervention commence par un repérage des accès (ascenseurs, stationnement, circulations internes) et un échange rapide avec l’occupant, le gardien ou le syndic pour valider les zones à traiter. Nous protégeons ensuite les surfaces sensibles avant de réaliser le nettoyage. Un contrôle final permet de vérifier le résultat et de répondre aux éventuelles questions du client.',
-    },
-    {
-      question: 'Dois-je préparer quelque chose avant votre venue à Chelles ?',
-      answer:
-        'Ce n’est pas obligatoire. Par exemple, sur un balcon, libérer un peu d’espace peut aider à accéder aux angles et aux garde-corps. Pour les moquettes ou tapis, retirer les petits objets au sol facilite simplement le passage. Dans les parkings ou parties communes, avertir les occupants lorsqu’une zone doit être libérée est utile, mais nous pouvons nous organiser autrement si ce n’est pas possible.',
-    },
-    {
-  question: 'Êtes-vous une entreprise locale ou une plateforme intermédiaire ?',
-  answer:
-    'Nous sommes une entreprise de proximité, basée en Île-de-France. Nos interventions sont réalisées en direct, sans sous-traitance anonyme ni plateforme de mise en relation. Cela nous permet de mieux comprendre les contraintes locales, de garantir un suivi rigoureux, et d’assurer la qualité des prestations, du devis au nettoyage final.',
-},
-
-    {
-      question: 'Quels sont vos horaires d’intervention à Chelles ?',
-      answer:
-        'La majorité des interventions ont lieu en semaine entre 9 h et 19 h. Toutefois, pour limiter la gêne dans les parkings, halls, locaux professionnels, ou pour nous adapter aux contraintes de nos clients, nous pouvons programmer des interventions tôt le matin, en fin de journée ou le week-end. Nous nous adaptons aux contraintes de la résidence ou du client.',
-    },
-  ],
 
   services: [
     {
       serviceKey: 'moquettes',
-      heroDescription:
-        'À Chelles, nous nettoyons les moquettes des logements et des copropriétés exposées aux poussières fines et passages répétés.',
-      uniqueIntro: `<p>À Chelles, les moquettes couvrent souvent les chambres des maisons ou des appartements, ainsi que les parties communes de certaines copropriétés. Ces surfaces sont particulièrement sensibles aux poussières fines et aux salissures liées aux allées et venues quotidiennes.</p><p>Dans les résidences modernes ou rénovées, les moquettes de halls ou de paliers ont besoin d’un entretien régulier pour éviter les taches incrustées ou les odeurs liées à l’humidité. Un nettoyage professionnel permet de retrouver un confort au sol, sans humidité résiduelle ni résidus irritants.</p><p>Nous intervenons dans tous les quartiers de Chelles, en nous adaptant aux contraintes d’accès ou liées à la configuration de la copropriété.</p>`,
-      uniqueDeepDive: `<h3>Notre protocole pour le nettoyage de moquette à domicile, en copropriété, ou en entreprise</h3><p>Nous commençons par une inspection rapide des surfaces à traiter, pour identifier les zones les plus encrassées, les taches visibles ou les éventuels risques (dégâts des eaux, moisissures anciennes).</p><p>Le nettoyage s’effectue par injection-extraction maîtrisée ou par méthode basse humidité selon les cas. Nous utilisons des produits non allergènes, efficaces contre les acariens et adaptés aux environnements familiaux ou à un trafic plus intensif.</p><p>Dans les escaliers ou paliers, nos outils permettent un nettoyage soigné sans abîmer les angles ou les plinthes. En fin d’intervention, nous vérifions avec vous la qualité du résultat et vous donnons des conseils d’entretien adaptés à votre usage quotidien.</p>`,
+      heroDescription: "À Chelles, les moquettes des halls d'entrée et escaliers des résidences subissent un passage intense lié à la proximité de la gare RER E.",
+      whyUsBullets: [
+        "Intervention maîtrisée dans les copropriétés denses du centre-ville et des Coudreaux",
+        "Matériel injection-extraction adapté aux moquettes d'escalier encrassées par le passage quotidien",
+        "Créneaux aménagés en journée pour limiter la gêne des résidents actifs"
+      ],
+      uniqueIntro: `<p>À Chelles, les copropriétés du centre-ville et des nouveaux quartiers comme Aulnoy présentent des moquettes d'escalier très sollicitées.</p>
+<p>Entre les allées et venues vers la gare RER E et l'usure naturelle, ces surfaces textiles accumulent rapidement poussières urbaines et traces de passage.</p>
+<p>Un entretien professionnel permet de prolonger leur durée de vie tout en conservant un aspect soigné dans les parties communes.</p>`,
+      uniqueDeepDive: `<p>Dans les résidences chelloises, l'entretien des moquettes demande une approche technique adaptée aux contraintes d'accès des immeubles anciens et récents.</p>
+<ul>
+  <li>Diagnostic préalable pour évaluer l'état des fibres et identifier les zones de forte usure près des boîtes aux lettres</li>
+  <li>Protection des surfaces adjacentes et balisage des escaliers pendant l'intervention</li>
+  <li>Injection-extraction à haute pression pour désincruster les salissures urbaines et les dépôts liés au passage</li>
+  <li>Adaptation du matériel aux contraintes d'accès des résidences du vieux Chelles</li>
+</ul>
+<p>L'intervention se déroule par paliers successifs, avec un séchage maîtrisé pour permettre une remise en circulation rapide des escaliers.</p>`,
+      specificChallenges: [],
+      faqAdditions: [
+        { 
+          question: "La pollution de l'avenue de la Résistance encrasse-t-elle plus vite les moquettes d'entrée ?", 
+          answer: "Effectivement, la circulation dense vers la gare génère des particules qui s'incrustent plus rapidement dans les fibres textiles des halls d'entrée. Nos produits professionnels éliminent ces dépôts urbains sans abîmer la moquette."
+        },
+        { 
+          question: "Intervenez-vous dans les grands ensembles du quartier Arcades ?", 
+          answer: "Nous traitons régulièrement les parties communes des résidences collectives de tous les quartiers de Chelles, y compris les grands ensembles. Notre matériel s'adapte aux contraintes d'accès de ces bâtiments."
+        },
+        { 
+          question: "Le stationnement est-il possible pour votre camion près des résidences du centre historique ?", 
+          answer: "Nous organisons systématiquement une reconnaissance préalable pour identifier les possibilités de stationnement. Dans le centre ancien, nous adaptons notre matériel et privilégions les créneaux de moindre circulation."
+        },
+        { 
+          question: "Vos produits respectent-ils les parquets anciens des maisons chelloises ?", 
+          answer: "Nos produits sont sélectionnés pour leur compatibilité avec tous types de revêtements. Pour les parquets d'époque, nous appliquons un protocole spécifique avec protection renforcée des surfaces bois."
+        }
+      ],
+      ctaOverride: ""
     },
     {
       serviceKey: 'parkings',
-      heroDescription:
-        'À Chelles, nous entretenons les parkings souterrains des immeubles récents ou plus anciens.',
-      uniqueIntro: `<p>À Chelles, de nombreux logements récents disposent de parkings en sous-sol ou de box individuels. Ces espaces, bien que peu visibles, accumulent souvent poussières, traces d’huile ou déchets.</p><p>Nous intervenons sur ces petites surfaces, avec un matériel professionnel capable de nettoyer les salissures sans endommager les revêtements. L’objectif : retrouver un sol propre, plus sain, et moins glissant.</p><p>Nos prestations s’adressent aussi bien aux particuliers qu’aux copropriétés et aux entreprises.</p>`,
-      uniqueDeepDive: `<h3>Intervention rapide sur parkings privés ou copro</h3><p>Un parking propre limite la propagation de poussières vers l’intérieur de la copropriété. C’est aussi une sécurité pour éviter que le sol ne devienne glissant.</p><ul><li>Balayage mécanique ou manuel selon l’accessibilité</li><li>Dégraissage ciblé des zones tachées</li><li>Évacuation des résidus si besoin</li></ul><p>Nous intervenons souvent à Chelles dans les box de la Grande Prairie ou les petites résidences autour du centre-ville. Chaque prestation inclut un repérage préalable et des conseils d’entretien à long terme.</p>`,
+      heroDescription: "Dans les parkings souterrains de Chelles, l'accumulation de poussières, traces d'huile et résidus de sel hivernal nécessite un nettoyage professionnel régulier.",
+      whyUsBullets: [
+        "Expertise des parkings en sous-sol des résidences récentes d'Aulnoy et du quartier gare",
+        "Autolaveuse professionnelle pour traiter efficacement les sols béton encrassés",
+        "Horaires adaptés aux contraintes d'accès des copropriétés et de circulation des résidents"
+      ],
+      uniqueIntro: `<p>Les parkings souterrains des copropriétés chelloises sont confrontés à des salissures spécifiques liées à l'usage quotidien.</p>
+<p>Entre les traces d'huile des véhicules, les résidus de sel hivernal et l'accumulation de poussières, ces espaces requièrent un entretien technique adapté.</p>
+<p>Notre intervention permet de retrouver un parking propre et sécurisé, tout en respectant l'organisation de la copropriété.</p>`,
+      uniqueDeepDive: `<p>Dans les parkings chellois, l'intervention combine nettoyage de surface et traitement des salissures incrustées selon un protocole éprouvé.</p>
+<ul>
+  <li>Inspection préalable pour évaluer l'état du sol béton et localiser les taches d'hydrocarbures</li>
+  <li>Balayage mécanique des détritus et débris accumulés dans les angles et caniveaux</li>
+  <li>Autolaveuse avec détergent professionnel pour décaper les traces d'huile et résidus de sel</li>
+  <li>Gestion des eaux de lavage selon les normes, particulièrement dans les parkings avec évacuation vers le réseau</li>
+</ul>
+<p>L'organisation tient compte des créneaux d'entrée et sortie des véhicules, avec possibilité d'intervention par zones pour maintenir l'accès.</p>`,
+      specificChallenges: [],
+      faqAdditions: [
+        { 
+          question: "L'humidité des bords de Marne pose-t-elle des problèmes spécifiques dans les parkings ?", 
+          answer: "La proximité de la Marne peut effectivement créer une humidité résiduelle dans certains parkings. Nos produits et notre protocole de séchage sont adaptés pour traiter ces conditions particulières."
+        },
+        { 
+          question: "Nettoyez-vous les parkings des résidences récentes du quartier Aulnoy ?", 
+          answer: "Nous intervenons dans tous types de parkings souterrains à Chelles, des plus récents aux plus anciens. Chaque intervention est adaptée aux spécificités du parking et aux contraintes d'accès."
+        },
+        { 
+          question: "L'accès avec votre matériel est-il possible dans les parkings à hauteur limitée ?", 
+          answer: "Nous vérifions systématiquement les contraintes de hauteur lors de notre visite préalable. Notre matériel peut être adapté ou déplacé manuellement si nécessaire pour accéder à tous les parkings."
+        },
+        { 
+          question: "Peut-on programmer l'intervention en soirée pour les copropriétés actives ?", 
+          answer: "Nous proposons des créneaux en soirée ou le week-end pour s'adapter aux contraintes de circulation des résidents. Cette flexibilité est particulièrement appréciée dans les résidences proches de la gare."
+        }
+      ],
+      ctaOverride: ""
     },
     {
       serviceKey: 'balcons',
-      heroDescription:
-        'À Chelles, nous remettons en état les balcons encrassés par la poussière, l\'usage intensif et les dépôts extérieurs.',
-      uniqueIntro: `<p>À Chelles, les balcons sont souvent utilisés comme de véritables extensions de l'appartement : repas, plantes, vélos, jeux d’enfants. Mais ils se salissent vite à cause des dépôts de poussière ou des micro-végétations qui s’y développent.</p><p>Nos interventions permettent de remettre en état ces espaces de vie sans détériorer les joints ni les sols fragiles. Nous adaptons nos méthodes selon les revêtements et la configuration (garde-corps, évacuation, étanchéité...).</p><p>Dans chaque quartier, nous proposons un nettoyage respectueux de votre logement… et de vos voisins du dessous.</p>`,
-      uniqueDeepDive: `<h3>Une remise en état soignée et discrète de votre balcon</h3><p>Nous utilisons des équipements basse pression ou vapeur, sans projections vers l’extérieur. Nos produits sont biodégradables et sans rinçage obligatoire.</p><p>Le protocole comprend :</p><ul><li>Protection des zones sensibles (portes-fenêtres, garde-corps)</li><li>Nettoyage du sol, des joints, et des bordures</li><li>Élimination des mousses, poussières ou taches organiques</li></ul><p>En fin d’intervention, les eaux sont évacuées de manière contrôlée, pour éviter tout écoulement chez les voisins. Un espace de vie sain, sans odeurs ni traces au sol.</p>`,
+      heroDescription: "Les balcons des résidences chelloises, exposés aux poussières urbaines et à l'humidité des bords de Marne, nécessitent un décrassage professionnel.",
+      whyUsBullets: [
+        "Maîtrise des balcons exposés aux conditions spécifiques des bords de Marne et du centre dense",
+        "Techniques de nettoyage respectueuses des revêtements et du voisinage immédiat",
+        "Intervention programmée selon les contraintes des copropriétés et des horaires de tranquillité"
+      ],
+      uniqueIntro: `<p>À Chelles, les balcons des résidences sont particulièrement sollicités par l'environnement urbain et la proximité de la Marne.</p>
+<p>L'humidité ambiante favorise le développement de mousses sur les garde-corps, tandis que la pollution urbaine laisse des dépôts tenaces sur les sols et mobiliers.</p>
+<p>Un entretien professionnel redonne un aspect soigné à ces espaces extérieurs sans gêner le voisinage.</p>`,
+      uniqueDeepDive: `<p>L'entretien des balcons chellois nécessite une approche technique adaptée aux différents revêtements et à l'exposition aux éléments.</p>
+<ul>
+  <li>Diagnostic des surfaces pour identifier mousses, lichens et dépôts selon l'exposition aux vents dominants</li>
+  <li>Protection des biens mobiliers et des appartements adjacents pendant l'intervention</li>
+  <li>Décrassage par monobrosse et produits adaptés aux carrelages, dalles ou revêtements spécifiques</li>
+  <li>Traitement spécifique des garde-corps métalliques exposés à l'humidité des bords de Marne</li>
+</ul>
+<p>L'intervention respecte les horaires de tranquillité et les règles de copropriété, avec évacuation contrôlée des eaux de lavage.</p>`,
+      specificChallenges: [],
+      faqAdditions: [
+        { 
+          question: "L'humidité des bords de Marne accélère-t-elle l'encrassement des balcons ?", 
+          answer: "L'humidité favorise effectivement le développement de mousses et lichens sur les surfaces exposées. Notre protocole inclut un traitement préventif adapté à ces conditions spécifiques aux abords de la Marne."
+        },
+        { 
+          question: "Intervenez-vous dans les maisons individuelles du quartier des Coudreaux ?", 
+          answer: "Nous traitons les balcons et terrasses de tous types d'habitations à Chelles, des maisons individuelles aux résidences collectives. Chaque intervention est adaptée au contexte du logement."
+        },
+        { 
+          question: "Comment gérez-vous l'accès aux balcons des étages élevés ?", 
+          answer: "L'accès se fait exclusivement par l'intérieur de l'appartement, avec protection complète des sols et mobiliers. Notre matériel portable permet d'intervenir à tous les étages sans contrainte particulière."
+        },
+        { 
+          question: "Les horaires d'intervention respectent-ils la tranquillité des résidents ?", 
+          answer: "Nous programmons systématiquement nos interventions aux heures autorisées par la copropriété, généralement en journée en semaine. Des créneaux weekend peuvent être aménagés selon les besoins."
+        }
+      ],
+      ctaOverride: ""
     },
     {
       serviceKey: 'balcons-fientes',
-      heroDescription:
-        'À Chelles, nous désinfectons les balcons souillés par les fientes de pigeons pour limiter les risques sanitaires.',
-      uniqueIntro: `<p>À Chelles, comme dans le reste de l’Île-de-France, les balcons souillés par des fientes de pigeons posent des risques sanitaires importants. Ce type de salissure nécessite une intervention spécifique pour protéger les habitants, en particulier les jeunes enfants ou les personnes fragiles.</p><p>Nous intervenons dans tous les quartiers touchés, avec un protocole strict incluant nettoyage en profondeur, désinfection, et précautions de sécurité. Le but : remettre en état sans risque pour votre santé ni pour le bâti, et éviter le retour des pigeons.</p>`,
-      uniqueDeepDive: `<h3>Un protocole rigoureux en 5 étapes</h3><ul><li>Préparation du chantier avec protection respiratoire, signalisation et équipement adapté</li><li>Enlèvement manuel des fientes et résidus solides</li><li>Nettoyage approfondi à l’eau chaude ou vapeur selon le sol</li><li>Désinfection fongicide/bactéricide et contrôle final visuel</li><li>Installation de dispositifs anti-pigeons</li></ul><p>Ce type d’intervention est fréquent à Chelles, notamment autour du canal ou dans les résidences bordant les axes arborés. Un rapport photo peut être fourni à la demande pour vos assurances ou syndics.</p>`,
+      heroDescription: "À Chelles, la prolifération de pigeons près des espaces verts et des bords de Marne génère des souillures importantes sur les balcons exposés.",
+      whyUsBullets: [
+        "Intervention ciblée dans les résidences exposées aux nuisances aviaires près du parc du Souvenir et des bords de Marne",
+        "Protocole de désinfection complet respectant les normes sanitaires en milieu résidentiel",
+        "Planification discrète pour préserver la tranquillité des occupants et du voisinage"
+      ],
+      uniqueIntro: `<p>Les balcons chellois sont régulièrement confrontés aux souillures de pigeons, particulièrement dans les secteurs proches des espaces verts.</p>
+<p>Ces déjections créent non seulement un problème esthétique mais aussi sanitaire, nécessitant un traitement spécialisé.</p>
+<p>Notre intervention combine nettoyage en profondeur et désinfection pour retrouver un balcon sain et utilisable.</p>`,
+      uniqueDeepDive: `<p>Le traitement des souillures aviaires sur les balcons chellois suit un protocole sanitaire strict adapté au milieu résidentiel.</p>
+<ul>
+  <li>Évaluation de l'étendue des souillures et identification des zones de nidification potentielles</li>
+  <li>Équipements de protection renforcés pour l'intervenant et protection hermétique des espaces intérieurs</li>
+  <li>Décapage mécanique des fientes incrustées puis désinfection avec produits bactéricides et virucides</li>
+  <li>Rinçage contrôlé avec récupération des eaux souillées selon les normes environnementales</li>
+</ul>
+<p>L'intervention se termine par des conseils de prévention adaptés à la configuration du balcon et à son exposition aux passages d'oiseaux.</p>`,
+      specificChallenges: [],
+      faqAdditions: [
+        { 
+          question: "La proximité du parc du Souvenir aggrave-t-elle les problèmes de fientes sur les balcons ?", 
+          answer: "Les espaces verts attirent effectivement les pigeons qui peuvent ensuite se poser sur les balcons environnants. Notre protocole de désinfection est spécialement conçu pour ces situations récurrentes."
+        },
+        { 
+          question: "Traitez-vous les balcons des résidences du centre-ville exposées aux nuisances aviaires ?", 
+          answer: "Nous intervenons sur tous types de balcons souillés par les fientes d'oiseaux, dans tous les quartiers de Chelles. Chaque situation est évaluée pour adapter le protocole de désinfection."
+        },
+        { 
+          question: "L'intervention nécessite-t-elle l'évacuation temporaire de l'appartement ?", 
+          answer: "L'évacuation n'est généralement pas nécessaire. Nous protégeons hermétiquement l'accès intérieur et travaillons exclusivement sur l'espace extérieur avec des équipements adaptés."
+        },
+        { 
+          question: "Proposez-vous des conseils pour limiter le retour des pigeons après nettoyage ?", 
+          answer: "Après désinfection, nous fournissons des recommandations pratiques sur l'aménagement du balcon pour décourager la nidification, adaptées à la configuration de chaque espace."
+        }
+      ],
+      ctaOverride: ""
     },
     {
       serviceKey: 'canapes-tapis',
-      heroDescription:
-        'À Chelles, nous nettoyons canapés, tapis et matelas marqués par les taches, poils d’animaux et poussières fines.',
-      uniqueIntro: `<p>À Chelles, les canapés, tapis et matelas sont souvent soumis à rude épreuve : goûters, animaux, taches de boisson, transpiration, ou poussières fines. Ces textiles accumulent vite les salissures même quand ils paraissent propres en surface.</p><p>Notre protocole de nettoyage permet de restaurer un bon niveau d’hygiène, sans déformation ni détrempage des fibres.</p>`,
-      uniqueDeepDive: `<h3>Un nettoyage complet de vos textiles d’ameublement</h3><p>Chaque intervention commence par un diagnostic rapide : tissu, taches, risques de décoloration. Nous appliquons ensuite un prétraitement localisé avant un nettoyage par injection/extraction ou méthode sèche.</p><p>Les produits utilisés sont choisis pour leur compatibilité avec les environnements familiaux.</p><ul><li>Nettoyage sur place, sans démontage</li><li>Temps de séchage rapide (souvent 4–6 h)</li><li>Conseils d’entretien après notre passage</li></ul><p>Idéal pour retrouver un canapé agréable et sans allergènes dans votre salon.</p>`,
-    },
-  ],
+      heroDescription: "Dans les logements chellois, l'entretien des canapés et tapis permet d'éliminer poussières urbaines, odeurs et taches du quotidien familial.",
+      whyUsBullets: [
+        "Intervention à domicile dans tous les quartiers de Chelles, des pavillons du centre aux appartements récents",
+        "Matériel d'injection-extraction portable adapté aux textiles d'ameublement délicats",
+        "Créneaux flexibles en journée, soirée ou week-end selon les disponibilités des occupants"
+      ],
+      uniqueIntro: `<p>Les textiles d'ameublement des foyers chellois sont exposés quotidiennement aux poussières urbaines et à l'usage familial.</p>
+<p>Entre les traces de vie quotidienne et l'accumulation de particules liées à la circulation proche, canapés et tapis perdent progressivement leur aspect d'origine.</p>
+<p>Un nettoyage professionnel à domicile permet de retrouver fraîcheur et propreté sans contrainte de transport.</p>`,
+      uniqueDeepDive: `<p>L'entretien des textiles d'ameublement à domicile à Chelles combine expertise technique et respect de l'environnement familial.</p>
+<ul>
+  <li>Diagnostic des textiles pour identifier la nature des fibres et adapter les produits de traitement</li>
+  <li>Protection soignée du mobilier adjacent et des sols pendant toute l'intervention</li>
+  <li>Injection-extraction avec aspiration puissante pour éliminer salissures incrustées et résidus de produits</li>
+  <li>Séchage accéléré pour permettre une réutilisation rapide des textiles traités</li>
+</ul>
+<p>L'intervention se déroule entièrement au domicile, avec des créneaux adaptés aux contraintes familiales et professionnelles des occupants.</p>`,
+      specificChallenges: [],
+      faqAdditions: [
+        { 
+          question: "La pollution urbaine de Chelles encrasse-t-elle plus vite les textiles d'intérieur ?", 
+          answer: "La circulation dense et la proximité de axes routiers génèrent effectivement des particules fines qui s'incrustent dans les fibres. Nos produits professionnels éliminent ces dépôts sans abîmer les textiles."
+        },
+        { 
+          question: "Intervenez-vous dans les maisons du quartier Chantereine ?", 
+          answer: "Nous nous déplaçons dans tous les quartiers de Chelles pour traiter vos textiles d'ameublement à domicile. Notre matériel portable s'adapte à tous types de logements."
+        },
+        { 
+          question: "Le stationnement est-il facile pour votre technicien dans les rues résidentielles ?", 
+          answer: "Notre technicien se déplace avec un véhicule compact pour faciliter le stationnement dans les quartiers résidentiels. Nous organisons toujours l'intervention pour minimiser les contraintes."
+        },
+        { 
+          question: "Vos produits conviennent-ils aux textiles délicats des canapés récents ?", 
+          answer: "Nous adaptons systématiquement nos produits et techniques au type de textile traité. Un test préalable sur zone non visible garantit la compatibilité avec les tissus les plus délicats."
+        }
+      ],
+      ctaOverride: ""
+    }
+  ]
 };
 
-export default chelles;
+export default city;

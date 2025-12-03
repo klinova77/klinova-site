@@ -1,34 +1,73 @@
 ---
+// src/components/Sections/CityWhyUs.astro
+
 interface Props {
   cityName: string;
-  bullets?: string[];
+  bullets: string[];
 }
 
-const { cityName, bullets = [] } = Astro.props;
+const { cityName, bullets } = Astro.props;
+
+// Configuration des 3 Piliers (Labels + Icônes + Couleurs)
+const PILLARS = [
+  {
+    label: "Expertise Locale", // Index 0
+    iconPath: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z", // Icône Map
+    bgColor: "bg-blue-50 border-blue-100",
+    textColor: "text-blue-700"
+  },
+  {
+    label: "Maîtrise Technique", // Index 1
+    iconPath: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", // Icône Check/Qualité
+    bgColor: "bg-green-50 border-green-100",
+    textColor: "text-green-700"
+  },
+  {
+    label: "Flexibilité", // Index 2
+    iconPath: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", // Icône Horloge
+    bgColor: "bg-purple-50 border-purple-100",
+    textColor: "text-purple-700"
+  }
+];
 ---
 
-{bullets.length > 0 && (
-  <section class="py-16 bg-gradient-to-br from-[#FCFCFC] to-white border-y border-[#E5E7EB]">
-    <div class="container-responsive">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
-            Pourquoi nous choisir à {cityName} ?
-          </h2>
-          <p class="text-lg text-[#475569] max-w-2xl mx-auto">
-            Quelques raisons concrètes de faire appel à Klinova dans votre secteur.
-          </p>
-        </div>
-
-        <div class="space-y-4">
-          {bullets.map((item) => (
-            <div class="flex items-start gap-3 bg-white border border-[#E5E7EB] rounded-xl p-4">
-              <span class="mt-1 w-2 h-2 rounded-full bg-[#3F8D65] flex-shrink-0"></span>
-              <p class="text-[#475569] leading-relaxed">{item}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+<section class="bg-white py-16 border-t border-neutral-100">
+  <div class="container-responsive">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-4">
+        Pourquoi Klinova à {cityName} ?
+      </h2>
+      <p class="text-[#475569]">
+        Une intervention pensée pour votre confort et votre sécurité.
+      </p>
     </div>
-  </section>
-)}
+
+    <div class="grid md:grid-cols-3 gap-8"> 
+      {bullets.slice(0, 3).map((bullet, index) => {
+        // On récupère la config du pilier correspondant
+        // Si jamais il y a plus de 3 bullets, on boucle proprement
+        const pillar = PILLARS[index % PILLARS.length];
+
+        return (
+          <div class="flex flex-col items-start p-6 rounded-2xl border border-neutral-100 bg-white hover:shadow-md transition-all duration-300 group">
+            
+            {/* Badge avec Icône et Label */}
+            <div class={`flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide border ${pillar.bgColor} ${pillar.textColor}`}>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={pillar.iconPath} />
+              </svg>
+              {pillar.label}
+            </div>
+            
+            {/* Le texte rédigé */}
+            <p class="text-base text-[#475569] leading-relaxed group-hover:text-[#1E2939] transition-colors">
+              {bullet}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
