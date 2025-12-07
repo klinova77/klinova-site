@@ -62,6 +62,145 @@ Les textes doivent être :
 
 ---
 
+ANTI-DUPLICATION — RÈGLES STRICTES
+
+Pour éviter les répétitions entre villes, tu dois impérativement respecter les contraintes suivantes :
+
+1. Variations d’ouverture
+
+Interdiction de commencer plus de deux villes par :
+
+“À [Ville], …”
+
+“Dans la ville de [Ville]…”
+
+“Beaucoup de logements de [Ville]…”
+
+→ Toujours varier :
+
+“Les résidences situées autour de …”
+
+“Dans ce secteur, les copropriétés rencontrent souvent…”
+
+“Autour de la gare / des axes / des quartiers, on observe…”
+
+“Selon la configuration des immeubles…”
+
+2. Expressions bannies si déjà utilisées dans 2 villes
+
+Tu n’as pas le droit de réutiliser exactement les mêmes formulations telles que :
+
+“Un nettoyage professionnel bien structuré permet de…”
+
+“Nos équipes utilisent une méthode rigoureuse…”
+
+“Ce nettoyage redonne une propreté visible dès…”
+
+“Nous intervenons avec du matériel adapté…”
+
+→ Reformuler intégralement si ces phrases existent déjà dans un précédent texte.
+
+3. FAQ anti-duplicate
+
+Les FAQ doivent être totalement différentes d'une ville à l'autre.
+
+Interdictions :
+
+Interdiction d'utiliser les mêmes questions d'une autre ville.
+
+Interdiction de reformuler à 95% la même question.
+
+Interdiction d'utiliser les mêmes réponses ou la même structure.
+
+Chaque ville doit avoir :
+
+4 FAQ uniques (hub ville)
+
+4 FAQ uniques par service
+Basées sur contexte local réel : gare, circulation, humidité, axes, typologie d’immeubles, stationnement, ZAC, etc.
+
+4. Pourquoi Nous — variations obligatoires
+
+Les bullet points “Pourquoi nous” doivent varier en :
+
+vocabulaire
+
+structure
+
+angle d’approche
+
+Interdit :
+
+répéter “Connaissance du contexte local” dans plus de 3 villes
+
+répéter “Compte-rendu d’intervention disponible” dans toutes les villes
+
+Exemples de variations possibles :
+
+accent sur contraintes d’accès
+
+accent sur humidité locale
+
+accent sur type de bâti
+
+accent sur coordination syndic / rotation véhicules
+
+5. Protocole → même bases, mais phrasing différent
+
+Les étapes du protocole sont OBLIGATOIRES (diagnostic, protections, méthode, séchage, etc.).
+Mais la rédaction doit différer :
+
+❌ Pas de copier-coller d’une ville à l’autre
+❌ Pas de structure identique phrase par phrase
+
+✔️ Tu dois reformuler :
+
+l’ordre
+
+les transitions
+
+des détails terrain adaptés à la ville
+
+ajouter ou retirer un exemple local
+
+changer le rythme des phrases
+
+Exemple :
+
+Une ville peut insister sur “cages étroites”,
+
+Une autre sur “halls ouverts sur rue”,
+
+Une autre sur “résidences pavillonnaires”.
+
+6. Indices locaux obligatoires
+
+Pour éviter le contenu générique, chaque service doit mentionner au moins 2 éléments locaux, par exemple :
+
+quartiers
+
+axes (RN, D…)
+
+gares
+
+zones résidentielles
+
+types d'immeubles
+
+caractéristiques géographiques (humidité, végétation, bords de rivière…)
+
+👉 Résultat :
+
+Grâce à ces règles :
+
+Mistral ne pourra plus répéter ses mêmes FAQ
+
+Claude ne pourra plus recycler son protocole mot pour mot
+
+Les textes deviendront différents d’une ville à l’autre
+
+Et ton SEO local sera beaucoup plus propre et crédible
+
 🗣️ Ton & style
 
 - Français clair, professionnel.
@@ -366,6 +505,7 @@ les textes doivent être équilibrés et s'adresser autant aux professionnels qu
 “entreprise nettoyage moquettes immeuble [VILLE]”
 
 “nettoyage moquette cage d’escalier [VILLE]”
+“nettoyage moquetteparties communes [VILLE]”
 
 
 En respectant strictement le brief Klinova et les protocoles que tu as reçus plus haut, écris:
@@ -378,13 +518,13 @@ Ne jamais répéter le H1 ou reformuler simplement “nettoyage de X à Y”.
 
 Toujours exprimer le résultat concret pour le client.
 
-1 phrase qui insiste sur l’état des halls, escaliers et paliers (propreté visible, image de l’immeuble, confort des résidents) dans le contexte de [VILLE].
+1 phrase qui insiste sur l’état des parties communes (propreté visible, image de l’immeuble, confort des résidents) dans le contexte de [VILLE].
 
 2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
 
 Décris la situation typique dans la ville :
 
-moquettes de halls, paliers, cages d’escaliers, couloirs, bureaux,
+moquettes de parties communes (halls, paliers, cages d’escaliers), bureaux,
 
 ce que voient les résidents / usagers (taches, usure, salissures, ternissement),
 

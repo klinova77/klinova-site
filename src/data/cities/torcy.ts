@@ -58,14 +58,14 @@ landmarks: [
 ],
 
 
-  nearbyCities: [
-    "noisiel",
-    "lognes",
-    "champs-sur-marne",
-    "saint-thibault-des-vignes",
-    "bussy-saint-georges",
-    "collegien"
-  ],
+nearbyCities: [
+  "vaires-sur-marne",
+  "lagny-sur-marne",
+  "champs-sur-marne",
+  "noisy-le-grand",
+  "chelles",
+],
+
 
   
 

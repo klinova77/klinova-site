@@ -31,13 +31,13 @@ const city: City = {
   },
 
   nearbyCities: [
-    "gagny",
-    "gournay-sur-marne",
-    "neuilly-plaisance",
-    "noisy-le-grand",
-    "bry-sur-marne",
-    "villemomble"
-  ],
+  "gagny",
+  "noisy-le-grand",
+  "chelles",
+  "champs-sur-marne",
+  "gagny",
+],
+
 
   // Mistral + Gemini
 districts: [

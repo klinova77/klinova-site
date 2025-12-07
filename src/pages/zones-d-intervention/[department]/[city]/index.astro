@@ -42,6 +42,18 @@ if (!currentCity) {
   throw new Error(`Ville inconnue : ${city} dans département ${department}`);
 }
 
+
+// ==========================
+// Villes voisines (nearbyCities)
+// ==========================
+const nearbyCitiesResolved =
+  currentCity.nearbyCities && currentCity.nearbyCities.length > 0
+    ? currentCity.nearbyCities
+        .map((slug) => cities.find((c) => c.slug === slug))
+        .filter((c): c is (typeof cities)[number] => Boolean(c))
+    : [];
+
+
 // ==========================
 // SEO : helpers département
 // ==========================
@@ -924,44 +936,48 @@ const phoneHref = toTelHref(PHONE_E164);
 
       {/* COLONNE DROITE (Latérale) : Maillage Villes Voisines */}
       <div class="lg:col-span-5">
-        <div class="bg-[#F8FAFC] rounded-2xl p-6 border border-neutral-200 h-full">
-          <h3 class="text-lg font-bold text-[#1E2939] mb-4">
-            Autour de {currentCity.name}
-          </h3>
-          <p class="text-sm text-[#64748B] mb-6">
-            Klinova intervient dans tout le département ({departmentName}). Retrouvez nos équipes dans les communes limitrophes :
-          </p>
+  <div class="bg-[#F8FAFC] rounded-2xl p-6 border border-neutral-200 h-full">
+    <h3 class="text-lg font-bold text-[#1E2939] mb-4">
+      Autour de {currentCity.name}
+    </h3>
 
-          {/* Ici, idéalement tu boucles sur `nearbyCities` si tu as cette data */}
-          {/* Exemple statique ou semi-dynamique selon ta structure de données */}
-          <nav>
-            <ul class="space-y-3">
-              {/* Simulation de lien vers ville voisine - À adapter avec ta vraie data */}
-              {/* Si tu as une liste 'nearbyCities' dans ton objet city : */}
-              {/* {currentCity.nearbyCities?.map(neighbor => (
-                 <li>
-                  <a href={`/zones-d-intervention/${department}/${neighbor.slug}`} class="flex items-center justify-between group p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all">
-                    <span class="text-[#475569] font-medium group-hover:text-[#3F8D65]">{neighbor.name}</span>
-                    <span class="text-neutral-300 group-hover:text-[#3F8D65]">→</span>
-                  </a>
-                </li>
-              ))}
-              */}
-              
-              {/* Fallback visuel si pas de data (À retirer quand tu auras connecté) */}
-              <li class="text-sm text-neutral-400 italic">
-                (Liste des villes voisines à générer dynamiquement)
-              </li>
-            </ul>
-          </nav>
-          
-          <div class="mt-8 pt-6 border-t border-neutral-200">
-            <a href={`/zones-d-intervention/${department}`} class="inline-flex items-center text-sm font-semibold text-[#3F8D65] hover:underline">
-              Voir toute la zone {departmentName}
-            </a>
-          </div>
-        </div>
-      </div>
+    <p class="text-sm text-[#64748B] mb-6">
+      Klinova intervient dans tout le département ({departmentName}). Retrouvez nos équipes dans les communes voisines fréquemment desservies&nbsp;:
+    </p>
+
+    {nearbyCitiesResolved.length > 0 ? (
+      <nav aria-label={`Communes autour de ${currentCity.name}`}>
+        <ul class="flex flex-wrap gap-2">
+          {nearbyCitiesResolved.map((neighbor) => (
+            <li>
+              <a
+                href={`/zones-d-intervention/${neighbor.department?.slug}/${neighbor.slug}`}
+                class="inline-flex items-center px-3 py-1.5 rounded-full text-xs md:text-sm border border-neutral-200 bg-white text-[#475569] hover:text-[#3F8D65] hover:border-[#3F8D65] hover:shadow-sm transition-all"
+              >
+                <span>{neighbor.name}</span>
+                <span class="ml-1 text-neutral-300 group-hover:text-[#3F8D65]">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    ) : (
+      <p class="text-sm text-neutral-400 italic">
+        (Les communes voisines seront bientôt affichées ici.)
+      </p>
+    )}
+
+    <div class="mt-8 pt-6 border-t border-neutral-200">
+      <a
+        href={`/zones-d-intervention/${department}`}
+        class="inline-flex items-center text-sm font-semibold text-[#3F8D65] hover:underline"
+      >
+        Voir toute la zone {departmentName}
+      </a>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>

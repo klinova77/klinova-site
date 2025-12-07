@@ -31,13 +31,13 @@ const city: City = {
   },
 
    nearbyCities: [
-    "vaires-sur-marne",
-    "brou-sur-chantereine",
-    "gournay-sur-marne",
-    "noisiel",
-    "torcy",
-    "montfermeil"
-  ],
+  "vaires-sur-marne",
+  "lagny-sur-marne",
+  "champs-sur-marne",
+  "gagny",
+  "noisy-le-grand",
+],
+
 
   districts: [
     "Bords de Marne",

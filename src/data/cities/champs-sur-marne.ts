@@ -45,12 +45,13 @@ Nous garantissons une gestion globale de l'hygiène de vos bâtiments grâce à 
   ],
 
   nearbyCities: [
-    "noisiel",
-    "noisy-le-grand",
-    "lognes",
-    "emerainville",
-    "bussy-saint-georges",
-  ],
+  "noisy-le-grand",
+  "torcy",
+  "gagny",
+  "chelles",
+  "neuilly-sur-marne",
+],
+
 
   landmarks: [
     "Mairie de Champs-sur-Marne",

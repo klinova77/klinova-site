@@ -37,7 +37,13 @@ const city: City = {
     "Quartier du Canal"
   ],
 
-  nearbyCities: ["chelles", "brou-sur-chantereine", "torcy", "noisiel", "lognes"],
+ nearbyCities: [
+  "chelles",
+  "lagny-sur-marne",
+  "torcy",
+  "champs-sur-marne",
+],
+
 
   landmarks: [
     "Mairie de Vaires-sur-Marne",

@@ -52,12 +52,12 @@ const city: City = {
 
   // ✅ nearbyCities repris de A (slugs)
   nearbyCities: [
-    "thorigny-sur-marne",
-    "pomponne",
-    "montevrain",
-    "bussy-saint-georges",
-    "saint-thibault-des-vignes"
-  ],
+  "vaires-sur-marne",
+  "chelles",
+  "torcy",
+  "champs-sur-marne",
+],
+
 
   // ✅ LANDMARKS = fusion A+B
   landmarks: [
