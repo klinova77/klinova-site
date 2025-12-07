@@ -32,7 +32,7 @@ const balconsFientes: ServiceConfig = {
       description: 'Pulvérisation d’un désinfectant certifié et évacuation des déchets biologiques dans des sacs dédiés.'
     },
   ],
-  pricing: { from: '240 €', unit: 'par intervention' },
+  pricing: { from: '290 €', unit: 'par intervention' },
 
  faq: [
   {

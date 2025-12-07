@@ -16,6 +16,129 @@ tu dois produire **un objet TypeScript complet** et strictement conforme au type
 
 tout en restant **factuel, crédible**, sans jamais survendre ni inventer des faits douteux.
 
+Ce fichier servira à créer des pages locales pour le site internet de Klinova, une entreprise de nettoyage qui a son activité en Ile de France, France
+
+Ces fichiers city.ts alimentent des pages locales par ville pour les 5 services Klinova.
+Chaque page doit être efficace à la fois pour :
+
+La conversion (prendre contact / demander un devis)
+
+Le SEO local (être pertinent pour “service + ville”)
+
+0.1 Objectif de la page
+
+Une bonne page locale doit :
+
+Répondre clairement à 3 questions du visiteur :
+
+“Est-ce bien pour ma situation / mon immeuble ?”
+
+“Est-ce que ces gens savent vraiment faire dans ma ville / mon type de bâtiment ?”
+
+“Comment ça se passe concrètement si je les appelle ?”
+
+Conduire naturellement vers un contact (appel, formulaire, devis) sans discours commercial agressif.
+
+Les textes doivent donc être :
+
+Concrets, orientés “terrain” (types de bâtiments, surfaces, contraintes réelles)
+
+Rassurants (procédé clair, organisation, sécurité, respect des occupants)
+
+Lisibles (phrases claires, pas de jargon gratuit)
+
+0.2 Rôle des principaux champs
+
+Sur chaque service d’une ville :
+
+heroDescription
+
+Doit parler du résultat pour le client, pas répéter le H1.
+
+Exemple : “retrouver un hall propre et accueillant”, “un parking non glissant et lisible”, “un balcon sain et agréable à utiliser”.
+
+whyUsBullets
+
+Sert à résumer en 3 points :
+
+On connaît votre ville / vos quartiers (expertise locale)
+
+On maîtrise la technique (matériel, protocole)
+
+On s’adapte à vos contraintes (horaires, accès, syndic, voisins)
+
+uniqueIntro
+
+Mise en situation côté client : ce qu’il voit, ce qui le gêne, pourquoi ça devient un problème.
+
+On insiste sur la “douleur” : image de l’immeuble, inconfort, gêne, honte, risques, etc.
+
+On termine en ouvrant vers : “un nettoyage structuré change la donne”.
+
+uniqueDeepDive
+
+Partie technique organisée, qui montre qu’on sait comment on travaille : diagnostic, préparation, nettoyage, contraintes locales.
+
+C’est ici qu’on donne l’impression que le technicien connaît la ville et les configs typiques (parkings, balcons, moquettes…).
+
+specificChallenges
+
+1 point local (ville / quartier / environnement),
+
+2 points techniques propres au service (moquettes, parkings, balcons, etc.).
+
+faqAdditions
+
+Complète la FAQ globale avec 4 questions très concrètes, liées à :
+
+La ville / l’environnement
+
+Les types de bâtiments
+
+La technique / les supports
+
+L’organisation / les horaires
+
+0.3 Principes SEO locaux
+
+Les contenus doivent :
+
+Utiliser naturellement les mots-clés métier selon le service :
+
+Moquettes : halls, escaliers, paliers, circulations, copropriétés (pour les particuliers: domicile, chambre, salon)…
+
+Parkings : souterrains, rampes, box, marquages, poussière, huile…
+
+Balcons : sols, garde-corps, joints, mousses, pollution,…
+
+Balcons-fientes : fientes de pigeons, désinfection, balayage, EPI…
+
+Canapés-tapis : textiles d’ameublement, taches, acariens, odeurs…
+
+Ancrer le texte dans la réalité locale sans tomber dans la brochure touristique :
+
+mention de la gare, de 1–2 axes routiers, de quelques quartiers, éventuellement d’une zone d’activité.
+
+pas de phrases “guide de voyage” ou de mise en avant touristique.
+
+Rester uniques d’une ville à l’autre :
+
+varier les tournures, les exemples, les mentions de quartiers,
+
+éviter de dupliquer les mêmes phrases en changeant juste le nom de la ville.
+
+0.4 Ce qu’il faut éviter absolument
+
+Répéter le H1 dans heroDescription.
+
+Blabla générique type “Entreprise sérieuse à votre service depuis 10 ans” qui pourrait être partout.
+
+Fiche touristique (“ville dynamique, riche de son patrimoine…”).
+
+Survente (“numéro 1”, “les meilleurs”, “garantie de résultat absolu”).
+
+Parler de prix, remises ou promotions.
+
 ---
 
 ## 1. CONTEXTE BUSINESS KLINOVA
@@ -34,55 +157,47 @@ tout en restant **factuel, crédible**, sans jamais survendre ni inventer des fa
 
    * Moquettes de copropriété (halls, paliers, escaliers, circulations)
    * Moquettes de bureaux et zones de passage
-   * Moquettes de logement (séjour, chambres) dans certains cas
+   * Moquettes de logement (séjour, chambres) dans certains cas : nettoyage de moquette à domicile
+Public visé : copropriétés/syndics, entreprises, particuliers
 
 2. **Nettoyage de parkings** (`serviceKey: "parkings"`)
 
-   * Parkings souterrains et aériens
-   * Rampes, zones de circulation, places, box
+   * Parkings souterrains et aériens, dans des copropriétés ou des entreprises
+   * Rampes, zones de circulation, places
    * Traces d’huile, poussières, marquages, bas de murs
+Public visé : copropriétés/syndics, entreprises
 
-3. **Nettoyage de balcons & terrasses** (`serviceKey: "balcons"`)
+
+3. **Nettoyage de balcons** (`serviceKey: "balcons"`)
 
    * Balcons encrassés (pollution, traces d’eau, végétation, terre)
-   * Terrasses d’appartements, loggias, petites terrasses privatives
+   * loggias
    * Respect des revêtements (béton, carrelage, bois, dalles sur plots)
+Public visé : particuliers
 
 4. **Balcons souillés par fientes de pigeons** (`serviceKey: "balcons-fientes"`)
 
-   * Nettoyage, désinfection et remise en état de balcons contaminés
+   * Nettoyage, désinfection et remise en état de balcons contaminés par des fientes de pigeons
    * Gestion des dépôts importants, évacuation sécurisée des déchets
    * Protection des zones intérieures, port EPI, méthode rigoureuse
+    *Remise en état et désinfection du balcon
+
+Public visé : particuliers
+
 
 5. **Canapés, tapis & matelas** (`serviceKey: "canapes-tapis"`)
 
    * Nettoyage sur place chez les particuliers
    * Machines injection-extraction, produits textiles adaptés
    * Taches courantes (boissons, nourriture, sébum, animaux, odeurs)
+*désodorisation (notamment des odeurs d’urine)
 
-### Publics visés
-
-1. **Particuliers**
-
-   * Propriétaires / locataires en maison ou appartement
-   * Attentifs au résultat visible, à la protection de l’intérieur, aux explications claires
-
-2. **Copropriétés & syndics**
-
-   * Immeubles avec parkings, moquettes, cages d’escaliers, balcons
-   * Besoin de prestataires fiables, ponctuels, autonomes
-   * Importance des comptes-rendus, de la communication simple, du résultat constaté
-
-3. **Entreprises & petits commerces**
-
-   * Bureaux, locaux de service, petites surfaces commerciales
-   * Créneaux adaptés (tôt le matin, entre midi et deux, soir / week-end)
 
 ### Méthode de travail Klinova
 
-1. **Diagnostic** : repérage des surfaces, contraintes d’accès, circulation, stationnement
+1. **Diagnostic** : repérage des surfaces, contraintes d’accès, signalisation
 2. **Préparation** : protection des zones sensibles, signalisation, matériel adapté
-3. **Intervention** : nettoyage méthodique, produits professionnels, gestion des eaux de lavage
+3. **Intervention** : nettoyage méthodique, protocole rigoureux, produits professionnels, gestion des eaux de lavage
 4. **Contrôle final** : vérification, ajustements, communication des résultats
 
 ### Positionnement & valeurs
@@ -112,12 +227,33 @@ L’objectif est d’éviter que les fiches villes se ressemblent trop entre ell
 
 ### 2.2 Ancrage local spécifique
 
-Chaque champ textuel important doit contenir **au moins un élément concret propre à la ville** quand c’est pertinent :
+## 6. ANCRAGE LOCAL : COHÉRENCE AVANT TOUT
 
-* Nom de quartier, type d’habitat, axe routier, gare,
-* Zone résidentielle, ZAC, bords de fleuve/canal, zone d’activités.
+### 6.1 Répartition des mentions locales
 
-Éviter les phrases trop génériques qui pourraient s’appliquer à n’importe quelle ville.
+Pour chaque ville, viser au moins **2 à 4 mentions locales par service**, réparties entre :
+
+* `heroDescription` ou `uniqueIntro`,
+* `uniqueDeepDive`,
+* `specificChallenges`,
+* éventuellement une question/réponse dans `faqAdditions`.
+
+Pas besoin de forcer une mention locale dans chaque phrase. Mieux vaut rester cohérent.
+
+### 6.2 Cohérence
+
+Ne pas créer de liens artificiels ou absurdes.
+
+
+### **Objectif**
+Ancrer textes dans réalité locale, SANS inventer liens techniques absurdes.
+
+Il N'EST PAS obligatoire que CHAQUE phrase ou CHAQUE champ ait élément local.
+Si pas de lien logique, rester GÉNÉRIQUE sur ce champ et placer info locale dans autre.
+
+Règle "cohérence d'abord":
+Ancrage local uniquement si cohérent avec le service.
+---
 
 ### 2.3 Différenciation par service
 
@@ -147,6 +283,28 @@ const TEMPLATE_CITY: City = {
   postalCodes: [],
 
   customDescription: "",
+
+  hubIntro: "<p></p>
+
+<p></p>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>",
+
+  
+  localStats: {
+    clientsDepartment: 80,  
+    satisfaction: "4,9/5",
+  },
+
+   citySpecificChallenges: [
+    "...",
+    "...",
+    "...",
+  ],
 
   department: {
     name: "",
@@ -286,6 +444,10 @@ const TEMPLATE_CITY: City = {
 
 * `services[].uniqueIntro`
 * `services[].uniqueDeepDive`
+* `hubintro`
+faq
+
+
 
 Balises autorisées :
 
@@ -327,9 +489,7 @@ uniqueIntro: `<p>À Chelles, les balcons des résidences récentes sont très so
 ### 4.6 Prix et commerce
 
 * Ne jamais mentionner de tarifs, devis chiffrés, remises ou promotions.
-* Rester centré sur : besoin, contexte, surfaces, protocole global, organisation.
 
----
 
 ## 5. REMPLISSAGE DÉTAILLÉ DES CHAMPS
 
@@ -424,7 +584,7 @@ Le tableau `services` contient **exactement** 5 services, dans cet ordre :
 
 3. **"balcons"**
 
-   * Cibles : particuliers en appartement, pavillons avec balcony / terrasse.
+   * Cibles : particuliers en appartement.
    * Parler usage courant : repas, jardinières, poussière de la route, etc.
 
 4. **"balcons-fientes"**
@@ -439,56 +599,59 @@ Le tableau `services` contient **exactement** 5 services, dans cet ordre :
 
 ---
 
-### 5.3 Champs des services
-
-#### `serviceKey: string`
-
-* Garder exactement les valeurs prévues :
-  `"moquettes"`, `"parkings"`, `"balcons"`, `"balcons-fientes"`, `"canapes-tapis"`.
-
- heroDescription :
-    • petit texte situé sour le heroTitle
-    • 20–35 mots
-    • une phrase qui décrit ce que klinova fait pour la cible dans cette ville.
-
-#### `whyUsBullets: string[]` (exactement 3 éléments)
-
-Chaque élément fait **entre 12 et 20 mots maximum**.
-
+### 5.3 Champs par service services
+serviceKey: string
+•	Garder exactement les valeurs prévues :
+"moquettes", "parkings", "balcons", "balcons-fientes", "canapes-tapis".
+________________________________________
+heroDescription: string
+Texte court juste sous le H1 (le hero).
+•	1 seule phrase, 20–35 mots.
+•	Ne jamais répéter le H1 ou reformuler simplement “nettoyage de X à Y”.
+•	Toujours exprimer le résultat concret pour le client, par exemple :
+o	“retrouver un balcon propre, sain et agréable à utiliser”
+o	“redonner une bonne image aux parties communes dès le hall”
+o	“retrouver un parking propre, non glissant et lisible”
+o	“redonner fraîcheur et confort aux canapés et tapis”
+•	Mentionner si possible la cible (copropriétés, familles, petites entreprises…) ou la situation typique (parties communes, balcon encrassé, etc.).
+________________________________________
+whyUsBullets: string[] (exactement 3 éléments)
+Chaque élément fait entre 12 et 20 mots maximum.
 Ordre IMPÉRATIF du contenu des 3 puces :
-
-1. **Expertise locale**  
-   - Mentionner un quartier, type d’immeuble ou spécificité propre à la ville.  
-   - Exemple d’angle : "copropriétés proches de la gare", "pavillons familiaux des Coudreaux", "résidences récentes de l’Aulnoy", etc.
-
-2. **Maîtrise technique**  
-   - Mettre en avant le **matériel**, la **méthode** ou le **niveau de résultat**.  
-   - Exemple d’angle : injecteur-extracteur, autolaveuse, protocole en plusieurs passes, séchage rapide, etc.
-
-3. **Flexibilité / contraintes d’occupation**  
-   - Parler des **horaires**, de la gestion des **accès** ou des contraintes des **occupants** (résidents, entreprises…).  
-   - Exemple d’angle : interventions tôt le matin, en soirée, par cage d’escalier, coordination avec le syndic, etc.
-
-
-#### `uniqueIntro: string` (100–160 mots, HTML)
-
-* HTML simple, dans des backticks.
-* Utiliser `<p>` et éventuellement `<ul>/<li>`.
-* Décrire les **situations typiques** de ce service dans cette ville :
-
-  * Moquettes : flux dans les halls, escaliers, couloirs, ascenseurs.
-  * Parkings : circulation, poussière, huile, rampes, box.
-  * Balcons : pollution, dépôts, usages du quotidien.
-  * Balcons-fientes : degré de souillure, gêne des occupants.
-  * Canapés-tapis : vie de famille, animaux, petites surfaces pro.
-
-Ne pas détailler toutes les étapes du protocole ici (garder ça pour `uniqueDeepDive`).
-
-#### `uniqueDeepDive: string` (150–250 mots, HTML – structure obligatoire)
-
+1.	Expertise locale
+o	Mentionner un quartier, type d’immeuble ou spécificité propre à la ville.
+o	Formulations à privilégier :
+	“Nous intervenons régulièrement dans les copropriétés proches de la gare…”
+	“Habitués aux pavillons familiaux des Coudreaux…”
+o	Exemples d’angle : "copropriétés proches de la gare", "pavillons familiaux des Coudreaux", "résidences récentes de l’Aulnoy", etc.
+2.	Maîtrise technique
+o	Mettre en avant le matériel, la méthode ou le niveau de résultat.
+o	Exemple d’angle : injecteur-extracteur, autolaveuse, protocole en plusieurs passes, séchage rapide, haute pression contrôlée, etc.
+3.	Flexibilité / contraintes d’occupation
+o	Parler des horaires, de la gestion des accès ou des contraintes des occupants (résidents, entreprises…).
+o	Exemple d’angle : interventions tôt le matin, en soirée, par cage d’escalier, coordination avec le syndic, travail par zones, etc.
+________________________________________
+uniqueIntro: string (100–160 mots, HTML)
+•	HTML simple, dans des backticks.
+•	Utiliser exclusivement <p> (et éventuellement un second <p> ou un troisième) ; éviter listes ici.
+•	Structure rédactionnelle recommandée en 3 paragraphes courts :
+1.	Constat visible
+o	Ce que le client voit au quotidien : salissures, traces, odeurs, état général.
+o	Exemples :
+	Moquettes : halls ternes, marches marquées, taches qui reviennent.
+	Parkings : poussière, taches d’huile, marquages peu visibles.
+	Balcons : joints noirs, dépôts verts, sol toujours sale.
+	Balcons-fientes : déjections, odeurs, impossibilité d’utiliser le balcon.
+	Canapés-tapis : taches, odeurs, poils, inconfort.
+2.	Douleur / conséquences
+o	Gêne ressentie : image de l’immeuble, inconfort des résidents, honte, risque de glissade, impression de laisser-aller, allergie possible, etc.
+3.	Pourquoi un pro change la donne
+o	Expliquer qu’un nettoyage structuré avec du matériel adapté permet de retrouver un état propre et sain, sans détailler le protocole.
+o	Ouvrir vers la solution Klinova, sans survente.
+Ne pas détailler les étapes du protocole ici : garder les détails techniques et les étapes pour uniqueDeepDive.
+________________________________________
+uniqueDeepDive: string (150–250 mots, HTML – structure obligatoire)
 Structure à respecter :
-
-```html
 <p>Paragraphe bref de contexte local (ville + service).</p>
 <ul>
 <li>Étape / matériel / action 1.</li>
@@ -497,51 +660,39 @@ Structure à respecter :
 <li>Étape ou contrainte spécifique à cette ville.</li>
 </ul>
 <p>Paragraphe final avec conseils ou précautions pour le client.</p>
-```
-
-* Mentionner au moins un élément local (quartier, zone, axe, type d’immeuble).
-* Style : technique, concret, crédible.
-* Parler organisation : diagnostic, protections, balisage, gestion des eaux, respect des occupants.
-
-#### `specificChallenges: string[]` (3 éléments)
-
+•	Mentionner au moins un élément local (quartier, zone, axe, type d’immeuble).
+•	Style : technique, concret, crédible.
+•	Ici, on peut détailler le protocole : diagnostic, protections, balisage, gestion des eaux, respect des occupants, organisation par zones, etc.
+________________________________________
+specificChallenges: string[] (3 éléments)
 Structure recommandée :
-
-1. **Point 1 – Local** : relier une caractéristique de la ville au service.
-   Exemples :
-
-   * Moquettes : pollution d’un axe, forte fréquentation d’une gare.
-   * Parkings : rampes étroites dans un quartier dense.
-   * Balcons : humidité liée à un fleuve ou à une orientation.
-   * Canapés : vie de famille dans les quartiers pavillonnaires.
-
-2. **Points 2 & 3 – Techniques** :
-   Problèmes universels mais formulés de façon experte pour ce service :
-
-   * Moquettes : poussières, passages répétés, marches, paliers, remontées d’humidité.
-   * Parkings : huile, pneus, poussière noire, accès bas plafond.
-   * Balcons : pollution, projections d’eau, mousses, terre, végétation.
-   * Balcons-fientes : accumulation de fientes, risques sanitaires, garde-corps.
-   * Canapés-tapis : sébum, taches, poils, odeurs, textiles fragiles.
-
-#### `faqAdditions: { question; answer }[]` (exactement 4 entrées)
-
-* Pas de HTML.
-* Questions courtes, type titre.
-* Réponses de 50 à 80 mots.
-
+1.	Point 1 – Local : relier une caractéristique de la ville au service.
+Exemples :
+o	Moquettes : pollution d’un axe, forte fréquentation d’une gare.
+o	Parkings : rampes étroites dans un quartier dense.
+o	Balcons : humidité liée à un fleuve ou à l’ombre d’un parc.
+o	Balcons-fientes : parcs arborés, combles, zones à pigeons.
+o	Canapés : vie de famille dans les quartiers pavillonnaires.
+2–3. Points 2 & 3 – Techniques :
+Problèmes universels mais formulés de façon experte pour ce service :
+•	Moquettes : poussières, passages répétés, marches, paliers, remontées d’humidité.
+•	Parkings : huile, pneus, poussière noire, accès bas plafond.
+•	Balcons : pollution, projections d’eau, mousses, terre, végétation.
+•	Balcons-fientes : accumulation de fientes, risques sanitaires, garde-corps.
+•	Canapés-tapis : sébum, taches, poils, odeurs, textiles fragiles.
+________________________________________
+faqAdditions: { question; answer }[] (exactement 4 entrées)
+•	Pas de HTML.
+•	Questions courtes, type titre.
+•	Réponses de 50 à 80 mots.
 Les 4 Q/R doivent couvrir :
-
-1. **Environnement / ville** : lien entre spécificité locale (trafic, pollution, type de bâti) et besoin de nettoyage.
-2. **Type de bâtiment** : où on intervient (pavillons, grandes résidences, petits bureaux, etc.).
-3. **Technique / supports** : compatibilité des produits et méthodes avec les surfaces (moquette, béton, bois, textile…).
-4. **Organisation / horaires** : gestion des créneaux d’intervention, gêne limitée pour les occupants, possibilité de créneaux adaptés.
-
-#### `ctaOverride: string`
-
-* Toujours `""` (vide).
-
----
+1.	Environnement / ville : lien entre spécificité locale (trafic, pollution, type de bâti) et besoin de nettoyage.
+2.	Type de bâtiment : où on intervient (pavillons, grandes résidences, petits bureaux, etc.).
+3.	Technique / supports : compatibilité des produits et méthodes avec les surfaces (moquette, béton, bois, textile…).
+4.	Organisation / horaires : gestion des créneaux d’intervention, gêne limitée pour les occupants, possibilité de créneaux adaptés.
+________________________________________
+ctaOverride: string
+•	Toujours "" (vide).
 
 ## 6. ANCRAGE LOCAL : COHÉRENCE AVANT TOUT
 
@@ -565,10 +716,8 @@ Ne pas créer de liens artificiels ou absurdes.
 * Balcons : lier la proximité d’une voie, d’une rivière, d’un parc → poussière, mousses, traces.
 * Canapés : lier la vie familiale dans certains quartiers, maisons avec jardin → salissures textiles.
 
-
 ### **Objectif**
 Ancrer textes dans réalité locale, SANS inventer liens techniques absurdes.
-
 
 Pour CHAQUE VILLE, viser 2 à 4 mentions locales par service, réparties sur :
 - `heroDescription` OU `uniqueIntro`
@@ -597,8 +746,8 @@ Champs lexicaux à privilégier :
 * **Propreté** : nettoyage, décrassage, remise en état, entretien.
 * **Surfaces** : moquettes, paliers, halls, couloirs, escaliers, ascenseurs.
 * **Parkings** : souterrains, rampes, box, marquages, eaux de lavage.
-* **Balcons** : terrasses, garde-corps, fientes de pigeons, désinfection.
-* **Textiles** : canapés, tapis, matelas, textiles d’ameublement, taches, odeurs.
+* **Balcons** : garde-corps, fientes de pigeons, remise en état, désinfection.
+* **Textiles** : canapés, tapis, matelas, textiles d’ameublement, taches, odeurs, urine.
 * **Organisation** : diagnostic, pré-visite, protections, balisage, intervention planifiée, contrôle final.
 
 ---
@@ -801,3 +950,5 @@ export default city;
 **Aucune explication autour.**
 Pas de commentaires `//` dans la sortie.
 Uniquement cet objet `city: City` complet, avec tout le contenu rédigé.
+
+

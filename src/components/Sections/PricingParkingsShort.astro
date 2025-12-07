@@ -1,0 +1,155 @@
+---
+import Button from '~/components/UI/Button.astro';
+
+interface Props {
+  cityName?: string;
+}
+
+const { cityName } = Astro.props;
+
+const citySuffix = cityName ? ` à ${cityName}` : '';
+---
+
+<section class="bg-white py-16 md:py-20 border-y border-neutral-100" data-section="tarifs" id="tarifs">
+  <div class="container-responsive">
+    
+    {/* En-tête SEO Localisé */}
+    <div class="max-w-4xl mb-12 text-center mx-auto">
+      <div
+        class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-wide mb-6
+               bg-blue-50 border-blue-100 text-[#1E40AF]"
+      >
+        <span class="block h-2 w-2 rounded-full bg-[#1E40AF] animate-pulse" aria-hidden="true"></span>
+        Transparence Tarifaire
+      </div>
+      
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] leading-tight mb-4">
+        Coût nettoyage parking <span class="text-[#3F8D65]">{citySuffix}</span>
+      </h2>
+      
+      <p class="text-lg text-[#475569] max-w-2xl mx-auto">
+        Une tarification adaptée à la surface et à l'encrassement.
+        <br class="hidden md:block" />
+        Pour les copropriétés de {cityName || 'la région'}, nos prix varient généralement <strong>entre 1,0 et 2,0 €/m²</strong>.
+      </p>
+    </div>
+
+    {/* Bandes de surface (Design Carte Amélioré) */}
+    <div class="grid md:grid-cols-3 gap-6 items-start">
+      
+      {/* < 1 000 m² (Petites Copros) */}
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm hover:shadow-md transition-all">
+        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-2xl">🚗</div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Petites Surfaces</h3>
+        <p class="text-xs text-[#64748B] font-semibold uppercase tracking-wide mb-4">Jusqu’à 1 000 m²</p>
+        
+        <div class="text-2xl font-bold text-[#1E2939] mb-2">1,4 – 2,5 € <span class="text-sm font-normal text-gray-500">/m²</span></div>
+        
+        <p class="text-sm text-[#475569] mb-6 leading-relaxed">
+          Idéal pour petites résidences ou niveaux uniques. Préparation & finitions manuelles incluses.
+        </p>
+        
+        <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
+          Forfait minimum de déplacement applicable.
+        </div>
+      </article>
+
+      {/* 1 000 – 5 000 m² (OFFRE VEDETTE / SYNDIC) */}
+      <article class="relative rounded-2xl border-2 border-[#3F8D65]/20 bg-[#F0FDF4]/30 p-8 shadow-lg transform md:-translate-y-2 z-10">
+        {/* Badge Pop */}
+        <div class="absolute top-0 right-0 bg-[#3F8D65] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+          STANDARD COPRO
+        </div>
+        
+        <div class="w-12 h-12 bg-[#3F8D65]/10 text-[#3F8D65] rounded-full flex items-center justify-center mb-4 text-2xl">🏢</div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Moyennes Surfaces</h3>
+        <p class="text-xs text-[#3F8D65] font-semibold uppercase tracking-wide mb-4">1 000 – 5 000 m²</p>
+        
+        <div class="text-3xl font-bold text-[#3F8D65] mb-2">1,0 – 1,4 € <span class="text-sm font-normal text-gray-500">/m²</span></div>
+        
+        <p class="text-sm text-[#1E2939] mb-6 leading-relaxed font-medium">
+          Ratio optimisé machine/temps. Tarif dégressif spécial Syndic.
+        </p>
+        
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-sm text-[#475569]">
+            <span class="text-[#3F8D65] font-bold">✓</span> Dégraissage inclus
+          </li>
+          <li class="flex items-center gap-2 text-sm text-[#475569]">
+            <span class="text-[#3F8D65] font-bold">✓</span> Dépoussiérage box/tubes
+          </li>
+        </ul>
+      </article>
+
+      {/* > 5 000 m² (Grands Comptes) */}
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm hover:shadow-md transition-all">
+        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-2xl">🏭</div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Grands Volumes</h3>
+        <p class="text-xs text-[#64748B] font-semibold uppercase tracking-wide mb-4">Plus de 5 000 m²</p>
+        
+        <div class="text-2xl font-bold text-[#1E2939] mb-2">Sur Devis</div>
+        <p class="text-sm text-gray-500 mb-2">Étude sur mesure</p>
+        
+        <p class="text-sm text-[#475569] mb-6 leading-relaxed">
+          Optimisation logistique lourde. Possibilité de lisser la facturation sur l'année (Contrat).
+        </p>
+        
+        <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
+          Intervention en équipe renforcée.
+        </div>
+      </article>
+    </div>
+
+    {/* Facteurs & particuliers */}
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
+      <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+        <h4 class="text-base font-bold text-amber-900 mb-3 flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Ce qui fait varier le devis {citySuffix}
+        </h4>
+        <ul class="space-y-2 text-sm text-amber-800">
+          <li class="flex gap-2">
+            <span class="font-bold">• État des sols :</span> Traces d’hydrocarbures anciennes vs entretien courant.
+          </li>
+          <li class="flex gap-2">
+            <span class="font-bold">• Accessibilité :</span> Points d'eau éloignés, rampes d'accès pentues.
+          </li>
+          <li class="flex gap-2">
+            <span class="font-bold">• Sécurité :</span> Nécessité de balisage complexe ou ventilation.
+          </li>
+        </ul>
+      </div>
+      
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-center">
+        <h4 class="text-base font-bold text-[#1E2939] mb-2">
+          Box individuels & Petites surfaces
+        </h4>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Pour les surfaces réduites (&lt; 200m²) ou les box fermés à {cityName || 'domicile'}, 
+          nous intervenons avec des machines compactes (monobrosses). 
+          <br/>
+          <span class="text-[#3F8D65] font-medium mt-1 block">Un forfait minimum d'intervention s'applique.</span>
+        </p>
+      </div>
+    </div>
+
+    {/* CTA */}
+    <div class="mt-12 text-center">
+      <div class="inline-block">
+        <Button
+          href="#formulaire"
+          label={`Obtenir mon devis parking ${citySuffix}`}
+          variant="primary" 
+          size="lg"
+          tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
+          data={{ section: 'tarifs' }}
+          ariaLabel={`Obtenir une estimation précise pour le nettoyage de parking ${citySuffix}`}
+          className="bg-[#3F8D65] hover:bg-[#357a53] text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+        />
+      </div>
+      <p class="text-sm text-[#64748B] mt-4">
+        Réponse sous 24 h • Visite technique gratuite sur {cityName || 'site'}
+      </p>
+    </div>
+  </div>
+</section>

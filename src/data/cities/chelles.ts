@@ -4,313 +4,391 @@ const city: City = {
   name: "Chelles",
   slug: "chelles",
   postalCodes: ["77500"],
+
   customDescription:
-    "À Chelles, ville dynamique de Seine-et-Marne desservie par le RER E, la forte densité résidentielle autour de la gare de Chelles-Gournay et le mélange d'immeubles récents et de pavillons plus anciens rendent l'entretien des copropriétés prioritaire. Les halls d'immeubles du centre-ville, les parkings des résidences récentes de l'Aulnoy et les balcons le long de la Marne ou sur les grands axes comme l'avenue de la Résistance nécessitent un nettoyage régulier et professionnel pour maintenir la qualité de vie et la valeur du patrimoine immobilier.",
+    "Ville majeure de Seine-et-Marne, Chelles bénéficie d'une desserte RER E et d'un important axe routier comme la RN34. L'activité commerciale et résidentielle génère des besoins constants en entretien : nettoyage des moquettes d'immeubles, des parkings souterrains et des balcons exposés aux intempéries, essentiels pour la valeur patrimoniale.",
+
+  hubIntro: `<p>À Chelles, la maintenance immobilière requiert un partenaire de proximité fiable et réactif. Klinova s'impose comme un intervenant rigoureux pour les syndics de copropriété et gestionnaires, assurant une propreté durable des parties communes et espaces privés grâce à des méthodes éprouvées.</p>
+<p>Notre partenariat repose sur une gestion globale et protocolée, avec un reporting systématique pour une traçabilité complète des interventions. Nous nous adaptons aux exigences spécifiques de chaque résidence et bâtiment professionnel à Chelles.</p>
+<ul>
+  <li>Maintenance préventive et curative des surfaces (sols durs, moquettes, revêtements) pour maintenir l'hygiène et la sécurité des circulations.</li>
+  <li>Nettoyage technique des parkings souterrains et des cages d'escalier, confrontés à l'encrassement et aux dépôts divers.</li>
+  <li>Entretien régulier des balcons, loggias et façades légères, soumis aux aléas climatiques et aux pollutions environnementales.</li>
+  <li>Protocole d'intervention flexible pour les urgences (dégâts des eaux) et les chantiers de fin de travaux, en coordination avec les syndics.</li>
+</ul>`,
+
+  citySpecificChallenges: [
+    "Encrassement accru des façades et balcons dû au trafic de la RN34 et de la RN3, associé aux intempéries.",
+    "Développement de mousses et dépôts verts sur les sols des terrasses et parkings aériens, favorisé par la proximité du canal et de la Marne.",
+    "Fort passage dans les halls d'entrée des résidences près de la gare RER E, nécessitant un entretien très fréquent des moquettes et sols.",
+    "Salissures tenaces (hydrocarbures, poussières de frein) dans les parkings souterrains des ensembles immobiliers récents."
+  ],
 
   department: {
     name: "Seine-et-Marne",
     code: "77",
-    slug: "seine-et-marne",
+    slug: "seine-et-marne"
   },
 
-  districts: [
-    "Centre-ville / Gare",
-    "Chantereine",
-    "Aulnoy",
-    "Monts-Chalats",
-    "Les Coudreaux",
-    "Grande Prairie",
-    "Bords de Marne",
-  ],
-
-  nearbyCities: [
-    "torcy",
-    "noisy-le-grand",
-    "neuilly-sur-marne",
+   nearbyCities: [
+    "vaires-sur-marne",
+    "brou-sur-chantereine",
     "gournay-sur-marne",
     "noisiel",
-    "champs-sur-marne",
-    
+    "torcy",
+    "montfermeil"
   ],
+
+  districts: [
+    "Bords de Marne",
+    "Le Village",
+    "Le Bois de la Villedieu",
+    "Montjay",
+    "Les Coudreaux",
+    "La Tuilerie",
+    "Les Hauts de Chelles",
+    "La Prairie",
+    "Le Pont de Chelles",
+    "Les Godets",
+    "Résistance",
+    "Maréchal Foch",
+    "Grande Prairie",
+    "Trentaine",
+    "Abbesses",
+    "Noue-Brossard",
+    "Périchelles",
+    "Bel Air",
+    "Clos Roger",
+    "Les Arcades fleuries",
+    "Castermant",
+    "Gambetta",
+    "Tournelles",
+    "Château Gaillard",
+    "Aulnoy",
+    "Monts-Chalats",
+    "Chantereine",
+    "Madeleine",
+    "La Villeneuve"
+  ],
+
+  
 
   landmarks: [
     "Mairie de Chelles",
-    "Gare de Chelles–Gournay",
-    "Gare RER E / Transilien P)",
-    "Centre commercial Terre Ciel",
-    "Bords de Marne et canal de Chelles",
-    "Fort de Chelles",
-    "Parc du Souvenir Émile-Fouchard",
-    "Zone d'activités de la Trentaine",
+    "Gare de Chelles - Gournay (RER E)",
+   "Parc du Souvenir Émile-Fouchard",
+"Centre commercial Terre Ciel",
+    "Église Saint-André",
+    "Canal de Chelles"
+  ],
+
+  faq: [
+    {
+      question: "Quelle est votre réactivité pour une intervention à Chelles ?",
+      answer:
+        "Nous intervenons à Chelles et dans ses alentours sous 24 à 48h pour une demande urgente. Une équipe dédiée sur le secteur Seine-et-Marne Est garantit cette réactivité."
+    },
+    {
+      question:
+        "Comment gérez-vous les accès sécurisés (Vigik, digicodes) aux immeubles ?",
+      answer:
+        "Nos techniciens sont formés et équipés pour respecter strictement vos protocoles d'accès. La gestion des badges ou clés remises est sécurisée et documentée, une procédure standard avec les syndics de Chelles."
+    },
+     {
+      question: "Comment gérez-vous la présence des résidents pendant l’intervention dans les cages d’escalier ?",
+      answer: "La communication est clé. Nous convenons avec le syndic des dates et créneaux d’intervention, et nous l’incitons à informer les résidents en amont, par note dans les boîtes aux lettres par exemple. Sur place, notre technicien travaille par tronçons, balise éventuellement la zone en cours de nettoyage et laisse toujours un accès libre et sécurisé aux logements. L’intervention sur un palier est rapide, limitant la gêne à quelques dizaines de minutes par étage."
+    },
+    {
+      question: "Les déplacements pour devis sont-ils payants ?",
+      answer:
+        "Non. L'établissement d'un devis détaillé et gratuit est notre standard, y compris pour l'ensemble de la commune de Chelles. Cela nous permet d'évaluer précisément vos besoins sur site."
+    },
+    
+    {
+      question:
+        "Proposez-vous des interventions en urgence, comme après un dégât des eaux ?",
+      answer:
+        "Absolument. Nous disposons de matériels d'aspiration et de déshumidification puissants pour ce type de sinistre. Une équipe peut se déployer rapidement à Chelles pour limiter les dommages et préparer la remise en état."
+    }
   ],
 
   testimonial: {
     text: "",
     author: "",
     role: "",
-    building: "",
+    building: ""
   },
 
   ctaOverride: "",
 
   services: [
+    // =========================
+    // SERVICE 1 – MOQUETTES
+    // =========================
     {
       serviceKey: "moquettes",
       heroDescription:
-        "Nettoyage de moquettes à Chelles pour les halls et escaliers de copropriétés, les bureaux, et les logements du centre-ville ou des quartiers résidentiels.",
+        "Un nettoyage professionnel redonne éclat et hygiène aux moquettes de votre immeuble à Chelles, renforçant l'image de la copropriété et le confort des résidents dès l'entrée dans le hall.",
       whyUsBullets: [
-        "Nous intervenons régulièrement pour le nettoyage des moquettes de halls et d'escaliers dans les copropriétés du centre-ville de Chelles.",
-        "Utilisation d'injecteur-extracteur professionnel pour un résultat en profondeur, préservant les fibres des moquettes d'immeuble.",
-        "Interventions planifiées en accord avec le syndic, aux horaires qui limitent la gêne pour les résidents.",
+        "Notre connaissance des copropriétés de Chelles, des Bords de Marne au centre-ville, nous permet d'anticiper les contraintes d'accès et les typologies de moquettes rencontrées.",
+        "Nous utilisons un matériel professionnel d'injection-extraction qui garantit un nettoyage en profondeur sans abîmer les fibres, pour un résultat pérenne et visible.",
+        "Nous organisons les interventions en dehors des heures de pointe si nécessaire et assurons une communication transparente avec le syndic pour limiter toute gêne pour les résidents.",
+        "Chaque intervention fait l'objet d'un compte-rendu succinct à l'attention du conseil syndical, attestant des zones traitées et des recommandations d'entretien."
       ],
-      uniqueIntro: `<p>À Chelles, les moquettes des parties communes subissent une forte fréquentation, notamment dans les résidences proches de la gare RER et du pôle commercial Terre Ciel.</p>
-<p>Les halls d'entrée, les paliers et les cages d'escaliers accumulent poussières, salissures de chaussures et traces d'humidité, affectant l'image et l'hygiène de l'immeuble.</p>
-<p>Un nettoyage professionnel régulier redonne son éclat à la moquette et lui permet de conserver une meilleure durée de vie .</p>`,
-      uniqueDeepDive: `<p>Notre intervention pour les moquettes à Chelles commence par un diagnostic des zones les plus passantes, comme les halls des immeubles de l'avenue de la Résistance ou du quartier de la Gare.</p>
-<ul>
-<li>Préparation et balisage des zones d'intervention pour assurer la sécurité et informer les résidents.</li>
-<li>Dépoussiérage mécanique approfondi suivi d'un nettoyage par injection-extraction avec des solutions adaptées au trafic piétonnier local.</li>
-<li>Focus sur les zones critiques : marches d'escalier, bas de murs et contours d'ascenseurs, souvent négligés.</li>
-<li>Séchage accéléré par ventilation pour permettre une réouverture rapide des circulations, essentielle dans les immeubles denses.</li>
-</ul>
-<p>Nous conseillons un entretien annuel ou semestriel selon l'exposition et les fréquences de passage.</p>`,
+      uniqueIntro: `<p>À Chelles, les moquettes des halls d'entrée, cages d'escalier et paliers des copropriétés subissent une usure constante. Le passage des résidents, les intempéries suivies depuis l'extérieur, et la proximité d'axes très fréquentés comme la RN34 laissent des traces visibles : poussières incrustées, taches localisées et ternissement général.</p>
+<p>Pour un syndic, cet état donne une impression de négligence qui peut affecter la valeur de l'immeuble et générer des réclamations. Dans les bureaux ou les parties communes de résidences, une moquette sale devient un sujet récurrent de mécontentement. Face à ce constat, un nettoyage technique approfondi et planifié est la seule réponse durable pour restaurer un cadre de vie sain et soigné.</p>`,
+      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis de l'état des moquettes et des types de salissures (boues, taches organiques, traces grasses). Nous identifions les zones de fort trafic, souvent situées près des entrées et des ascenseurs. Cette analyse guide notre préparation : protection des surfaces adjacentes, balisage sécurisé et organisation du chantier en concertation avec le syndic pour minimiser la gêne, notamment dans les escaliers étroits des immeubles chellois des années 70-80 ou les halls ouverts des résidences récentes.</p>
+<p>La méthode centrale est l'injection-extraction à l'eau chaude, réalisée avec des machines professionnelles. Cette technique permet d'extraire en profondeur les salissures sans détremper le support. Nous portons une attention particulière aux marches d'escalier, aux bordures et aux zones de pivotement devant les portes.</p>
+<p>Un séchage rapide, accéléré par une ventilation appropriée, permet une remise en service des espaces sous quelques heures. Pour maintenir le résultat, nous conseillons un nettoyage professionnel tous les 12 à 18 mois dans les zones de passage intensif, comme celles des immeubles proches de la gare RER E.</p>`,
       specificChallenges: [
-        "Encrassement lié à la proximité de la RN34 et des grands axes, apportant poussières et particules dans les halls.",
-        "Trafic important dans les cages d'escalier des résidences étudiantes ou des immeubles proches du RER.",
-        "Variété des types de moquettes posées selon les époques de construction, des années 70 aux résidences récentes.",
+        "Encroûtement des fibres par les poussières fines et résidus d'hydrocarbures issus du trafic routier dense (RN34, RN3).",
+        "Humidité et boues régulières dans les halls d'entrée des résidences, nécessitant un nettoyage fréquent pour éviter les moisissures.",
+        "Usure accentuée des moquettes sur les marches d'escalier des cages étroites, difficiles d'accès pour le matériel standard.",
+        "Taches tenaces (chewing-gums, traces de canettes) dans les halls des immeubles à forte rotation locative près du centre commercial."
       ],
       faqAdditions: [
         {
           question:
-            "Les moquettes de Chelles s'encrassent-elles plus vite à cause de la gare ?",
+            "Les halls d'immeubles près de la gare RER de Chelles sont très passants. Comment traitez-vous cet encrassement accéléré ?",
           answer:
-            "Oui, la forte fréquentation de la gare de Chelles-Gournay génère un trafic piéton important dans les immeubles adjacents. Les halls et couloirs captent poussières, saletés et humidité, nécessitant un nettoyage plus régulier qu'en zone purement résidentielle.",
+            "Nous adaptons notre protocole à ces zones de fort passage. Un prétraitement spécifique des taches localisées et un temps d'action prolongé des solutions nettoyantes sont systématiques. La méthode d'injection-extraction à eau chaude est particulièrement efficace pour éliminer les salissures incrustées caractéristiques de ces entrées."
         },
         {
-          question: "Intervenez-vous dans les petits immeubles du vieux Chelles ?",
+          question:
+            "Intervenez-vous dans tous les types de résidences à Chelles, des petites copropriétés aux grands ensembles ?",
           answer:
-            "Absolument. Nous intervenons dans tous les types de copropriétés, des petits immeubles du quartier Gambetta aux grandes résidences des Coudreaux. Notre matériel est adapté pour accéder aux parties communes parfois étroites et pour travailler avec les contraintes de stationnement du centre-ville.",
+            "Oui, notre matériel est adapté à différentes configurations. Nous intervenons aussi bien dans les petites copropriétés du centre-ville avec escaliers étroits que dans les grandes résidences des Coudreaux ou des Godets avec de vastes halls. Pour les bureaux ou les locaux commerciaux, la méthode est identique et nous tenons compte des contraintes horaires."
         },
         {
-          question: "Quels produits utilisez-vous pour les moquettes d'immeuble ?",
+          question:
+            "Le nettoyage à l'eau chaude risque-t-il d'abîmer les moquettes anciennes ou de laisser de l'humidité ?",
           answer:
-            "Nous utilisons des détergents professionnels adaptés aux moquettes de locaux, non moussants et au pH neutre pour préserver les fibres et les coloris. Ils sont efficaces contre les taches courantes (boue, traces de pas) et éliminent les odeurs. Un traitement anti-tâches peut être appliqué en finition sur demande.",
+            "Notre procédé d'injection-extraction n'imbibe pas la moquette. Il injecte la solution nettoyante et l'extrait immédiatement avec les salissures. Le taux d'humidité résiduel est faible et permet un séchage en quelques heures. Nous adaptons pression et température selon l'âge et la fragilité de la fibre."
         },
         {
-          question: "Comment organisez-vous l'intervention avec les résidents ?",
+          question:
+            "Comment organisez-vous l'intervention pour déranger le moins possible les résidents ?",
           answer:
-            "Nous coordonnons l'intervention avec le syndic ou le gardien. Les dates et plages horaires sont communiquées à l'avance. Nous travaillons par étages, en balisant clairement les zones. L'objectif est de minimiser la gêne, souvent en travaillant en journée en semaine pour les parties communes.",
-        },
+            "Nous planifions le chantier en étroite coordination avec le syndic. Les parties traitées sont balisées et séchées rapidement pour être rendues accessibles. Nous travaillons généralement en semaine et pouvons intervenir par étages si besoin. Une information préalable des résidents sur les plages horaires et les accès alternatifs est recommandée et nous nous y conformons."
+        }
       ],
-      ctaOverride: "",
+      ctaOverride: ""
     },
+
+    // =========================
+    // SERVICE 2 – PARKINGS
+    // =========================
     {
       serviceKey: "parkings",
       heroDescription:
-        "Nettoyage de parkings à Chelles pour les copropriétés et les entreprises.",
+        "Un nettoyage professionnel rend votre parking à Chelles propre, non glissant et sécurisé, redonnant de la clarté aux marquages et une image soignée à votre résidence ou entreprise.",
       whyUsBullets: [
-        "Expérience des parkings souterrains des résidences récentes de l'Aulnoy et des parkings aériens des quartiers pavillonnaires.",
-        "Matériel haute pression et balayeuse adaptés aux surfaces de béton, aux rampes et aux marquages au sol.",
-        "Organisation des interventions en tenant compte de la circulation et des créneaux de stationnement des occupants.",
+        "Notre expérience des parkings de Chelles nous permet d'anticiper les contraintes d'accès et de revêtement.",
+        "Nous utilisons un matériel professionnel adapté (autolaveuses, pompes) et des produits puissants pour éliminer la poussière noire grasse spécifique au secteur.",
+        "Nous organisons l'intervention par zones et communiquons en amont avec le syndic pour planifier la rotation des véhicules, minimisant ainsi la gêne pour les résidents.",
+        "Un compte-rendu post-intervention peut être transmis au gestionnaire, mentionnant les zones traitées et les observations éventuelles sur l'état des structures."
       ],
-      uniqueIntro: `<p>Les parkings de Chelles, qu'ils soient souterrains sous les nouvelles résidences ou aériens dans les quartiers plus anciens, sont exposés aux poussières de la RN34, aux traces d'huile et aux salissures liées aux intempéries.</p>
-<p>Dans les zones denses comme près du centre-ville ou de la gare, l'espace est optimisé, rendant l'entretien technique mais essentiel pour la sécurité et la valorisation des biens.</p>
-<p>Un nettoyage professionnel élimine les dépôts gras, ravive les marquages et améliore l'éclairage apparent.</p>`,
-      uniqueDeepDive: `<p>Pour les parkings chellois, nous prenons en compte les spécificités d'accès, comme les rampes étroites de certains souterrains du quartier des Arcades, et la gestion des eaux usées vers les réseaux adaptés.</p>
-<ul>
-<li>Diagnostic complet incluant l'état des sols (béton, peinture), la présence de fuites d'huile et l'accessibilité.</li>
-<li>Balayage mécanique initial pour éliminer les graviers et poussières sèches, particulièrement abondants près des axes routiers.</li>
-<li>Nettoyage haute pression avec dégraissant biodégradable sur les zones de stationnement, les rampes et les bas de murs.</li>
-<li>Évacuation et filtration des eaux de lavage conformément à la réglementation, point crucial pour les parkings en sous-sol.</li>
-</ul>
-<p>Nous conseillons un nettoyage semestriel ou trimestriel pour les parkings très fréquentés de copropriétés importantes.</p>`,
+      uniqueIntro: `<p>Les parkings souterrains et aériens de Chelles sont soumis à un encrassement rapide. La poussière noire issue du trafic de la RN34 et de la RN3, les taches d'huile et de fluides automobiles, ainsi que les marquages au sol effacés deviennent rapidement la norme.</p>
+<p>Dans les copropriétés proches de la gare ou du centre commercial, le va-et-vient quotidien accentue ces salissures. Cet état génère une sensation d'inconfort et d'insécurité pour les résidents et utilisateurs, avec des risques de glissade et une luminosité réduite par la saleté sur les murs et plafonds.</p>
+<p>Un décrassage technique complet n'est pas qu'une question d'esthétique ; il améliore la sécurité, la lisibilité de la circulation et revalorise l'image globale de l'immeuble.</p>`,
+      uniqueDeepDive: `<p>Notre intervention débute par un diagnostic du parking : type de revêtement (béton brut, peinture epoxy), état du réseau d'évacuation des eaux, hauteur sous plafond et configuration des accès. Cette analyse détermine notre méthode.</p>
+<p>Nous préparons ensuite le chantier par un balayage mécanique des gros débris, une signalisation appropriée et, en accord avec le syndic, une organisation par zones pour gérer la rotation des véhicules sans vider l'intégralité du parking.</p>
+<p>La méthode combine l'utilisation d'une autolaveuse industrielle pour les grandes surfaces et le nettoyage haute pression contrôlé pour les angles, les piliers et les zones très encrassées. Nous appliquons des dégraissants professionnels sur les taches d'huile persistantes.</p>
+<p>La gestion des eaux de lavage est primordiale, notamment dans les parkings anciens où les siphons sont souvent inefficaces ; nous utilisons des pompes d'évacuation et des bacs de rétention si nécessaire. Nous privilégions les créneaux en début de semaine ou tôt le matin pour limiter la gêne. Une fréquence de nettoyage annuelle à biannuelle est recommandée pour maintenir un niveau de propreté et de sécurité optimal.</p>`,
       specificChallenges: [
-        "Poussière noire caractéristique apportée par le trafic de la RN34 et de la Francilienne voisine, se déposant dans les parkings aérés.",
-        "Accès parfois restreints dans les parkings souterrains des immeubles des années 80, nécessitant un matériel compact.",
-        "Présence de zones humides ou de remontées capillaires dans certains parkings proches des bords de Marne.",
+        "Poussière noire abrasive et tenace, mélange de particules fines issues du trafic routier dense et des résidus de pneus.",
+        "Taches d'huile et de carburant fréquentes dans les places de stationnement attitrées des parkings de copropriétés résidentielles.",
+        "Configuration avec rampes d'accès en pente prononcée et virages serrés, compliquant le passage des machines dans les parkings souterrains anciens.",
+        "Gestion complexe des eaux usées dans les ouvrages où les pentes et les siphons sont mal dimensionnés, nécessitant un pompage."
       ],
       faqAdditions: [
         {
-          question: "Faut-il vider le parking pour intervenir ?",
+          question:
+            "La poussière noire revient très vite dans notre parking de Chelles, surtout près des entrées. Que proposez-vous ?",
           answer:
-            "Pas entièrement. Nous organisons un planning par secteurs (niveaux ou rangées) en coordination avec le syndic. Les résidents sont informés des créneaux de stationnement temporairement indisponibles. Pour les petites opérations, une organisation en soirée ou le week-end est possible pour limiter la gêne.",
+            "Cette poussière grasse est caractéristique des zones proches des axes routiers. Notre protocole inclut un dégraissage préalable et un nettoyage à l'eau chaude sous pression pour décoller ces particules qui adhèrent au béton. Un nettoyage professionnel annuel l'élimine en profondeur et ralentit son ré-encrassement."
         },
         {
           question:
-            "Nettoyez-vous les parkings d'entreprises sur la zone de la Trentaine ?",
+            "Faut-il impérativement vider tout le parking de la copropriété pour votre intervention ?",
           answer:
-            "Oui, nous intervenons pour les petites et moyennes entreprises, les sièges sociaux et les locaux d'activité. Nous adaptons nos horaires en dehors des heures de forte affluence (tôt le matin, soir ou samedi) pour ne pas perturber l'activité commerciale ou industrielle.",
+            "Non, une organisation par zones est notre mode opératoire standard. En coordination avec le syndic, nous établissons un planning de rotation des véhicules. Cela permet de maintenir une partie des places disponibles pendant l'intervention."
         },
         {
-          question: "Comment traitez-vous les taches d'huile tenaces ?",
+          question:
+            "Pouvez-vous vraiment faire disparaître les vieilles taches d'huile incrustées dans le sol du parking ?",
           answer:
-            "Nous appliquons un dégraissant professionnel spécifique aux hydrocarbures, que nous laissons agir. Un brossage mécanique peut être nécessaire sur les taches anciennes avant le rinçage haute pression. Pour les taches très incrustées, un gommage léger de la surface peut être proposé.",
+            "Nous parvenons à les atténuer significativement. L'application d'un dégraissant professionnel à longue durée d'action, suivi d'un nettoyage haute pression, permet de les faire remonter et de les éliminer en grande partie. Certaines taches très anciennes peuvent cependant rester partiellement visibles."
         },
         {
-          question: "Proposez-vous le rebalisage au sol ?",
+          question:
+            "Comment gérez-vous les eaux de lavage, surtout si les canalisations ou le siphon du parking sont peu efficaces ?",
           answer:
-            "Le nettoyage ravive souvent les marquages existants. Pour un rebalisage neuf (places numérotées, sens de circulation), nous pouvons vous orienter vers des partenaires spécialisés. Notre prestation de nettoyage prépare idéalement la surface pour une telle intervention.",
-        },
+            "Nous nous adaptons à l'infrastructure existante. Si l'évacuation est fonctionnelle, nous dirigeons les eaux vers les bouches prévues. Dans le cas contraire, nous déployons des pompes d'évacuation et des bacs de rétention pour collecter les eaux usées et les évacuer conformément à la réglementation."
+        }
       ],
-      ctaOverride: "",
+      ctaOverride: ""
     },
+
+    // =========================
+    // SERVICE 3 – BALCONS 
+    // =========================
     {
       serviceKey: "balcons",
       heroDescription:
-        "Nettoyage de balcons et terrasses à Chelles pour les particuliers des immeubles du centre-ville et des alentours.",
+        "Redonnez vie à votre balcon à Chelles : un nettoyage professionnel élimine les dépôts tenaces pour vous offrir un espace extérieur propre, accueillant et qui valorise votre logement.",
       whyUsBullets: [
-        "Connaissance des nuisances spécifiques à Chelles : pollution routière, humidité de la Marne, dépôts des pigeons près des parcs.",
-        "Méthode manuelle et mécanique douce adaptée à tous les revêtements (carrelage, béton, bois composite, dalles).",
-        "Respect strict du voisinage et gestion des projections d'eau depuis les étages.",
+        "Nous connaissons les spécificités des balcons à Chelles, exposés aux poussières des axes routiers ou à l'humidité des bords de Marne.",
+        "Nos techniciens utilisent des méthodes et produits adaptés à chaque support pour un résultat profond sans altération des matériaux.",
+        "Nous nous adaptons à votre emploi du temps et intervenons avec discrétion, en gérant proprement les eaux usées pour le voisinage.",
+        "Un résultat immédiatement visible vous permet de profiter à nouveau de votre espace extérieur sans délai inutile."
       ],
-      uniqueIntro: `<p>Les balcons chellois, qu'ils donnent sur les rues animées du centre ou sur les espaces verts des Coudreaux, sont des espaces de vie très sollicités.</p>
-<p>Ils accumulent rapidement un voile noir de pollution liée aux axes routiers, des traces d'eau et de calcaire, de la terre des jardinières et parfois des dépôts organiques.</p>
-<p>Un nettoyage professionnel permet de retrouver un espace extérieur sain et agréable, sans risquer d'endommager le revêtement ou de causer des désagréments aux voisins du dessous.</p>`,
-      uniqueDeepDive: `<p>Notre intervention sur les balcons à Chelles est précédée d'une inspection du revêtement et des joints, et de la mise en place de bâches de protection.</p>
-<ul>
-<li>Enlèvement manuel des gros débris (feuilles, terre) et des éventuels nids ou fientes superficielles.</li>
-<li>Application d'un nettoyant adapté au support (dégraissant pour le carrelage, produit spécifique pour le bois) pour décoller les salissures incrustées.</li>
-<li>Nettoyage mécanique doux (brosse rotative à basse pression) ou manuel pour préserver l'intégrité du sol et des joints.</li>
-<li>Rinçage soigné avec contrôle des écoulements, particulièrement important pour les balcons situés en étage dans les résidences denses.</li>
-</ul>
-<p>Nous recommandons un entretien annuel, idéalement au printemps, pour profiter pleinement de son balcon la belle saison venue.</p>`,
+      uniqueIntro: `<p>À Chelles, les balcons et loggias sont soumis à des agressions constantes. La poussière noire du trafic de la RN34, les dépôts verts d'humidité favorisés par la proximité du canal et de la Marne, les pollens et les fientes d'oiseaux encrassent rapidement les sols, les joints et les garde-corps.</p>
+<p>Ajoutez à cela les traces de barbecue, la terre des jardinières et les résidus d'intempéries, et cet espace de vie potentiel devient un lieu abandonné, peu engageant. Cette saleté incrustée donne une impression de négligence et décourage toute utilisation.</p>
+<p>Pour les propriétaires et locataires, un nettoyage technique approfondi est la clé pour réinvestir pleinement ce précieux mètre carré extérieur et en tirer à nouveau profit.</p>`,
+      uniqueDeepDive: `<p>Notre intervention commence par une évaluation des surfaces (carrelage, béton, bois composite) et un état des lieux des salissures. Nous protégeons systématiquement la porte-fenêtre d'accès et proposons de déplacer ou de bâcher les meubles et plantations.</p>
+<p>L'étape préparatoire consiste à retirer manuellement les gros débris (feuilles, terre, déchets). Nous traitons ensuite les surfaces avec des nettoyeurs haute pression à basse pression ou des méthodes manuelles adaptées pour ne pas endommager les joints ou le revêtement.</p>
+<p>Un soin particulier est apporté aux joints de carrelage, souvent noircis par les moisissures et les dépôts, que nous traitons avec des produits adaptés. Les garde-corps (verre, aluminium, acier) sont nettoyés séparément.</p>
+<p>La gestion de l'eau est cruciale : nous dirigeons systématiquement le ruissellement vers l'évacuation prévue et utilisons des techniques d'absorption pour éviter toute coulure chez le voisin du dessous ou sur la façade. Après rinçage, nous accélérons le séchage. Nous conseillons un entretien simple par balayage régulier et un nettoyage complet tous les 12 à 24 mois selon l'exposition.</p>`,
       specificChallenges: [
-        "Pollution grasse et particulaire importante sur les balcons exposés à l'avenue de la Résistance ou au boulevard de la Gare.",
-        "Développement de mousses et de lichens sur les balcons orientés au nord ou à l'ombre, fréquents dans les quartiers boisés.",
-        "Présence de joints de carrelage fragilisés par les cycles gel/dégel sur les balcons non protégés des immeubles anciens.",
+        "Dépôts noirs gras et tenaces sur les garde-corps et sols, provenant des particules fines du trafic routier.",
+        "Développement rapide de mousses et micro-algues vertes sur les joints et surfaces ombragées, dû à l'humidité ambiante.",
+        "Nettoyage délicat des loggias fermées, où les salissures sont mêlées à des poussières domestiques, nécessitant une méthode sèche/humide.",
+        "Impératif de maîtriser l'écoulement de l'eau pour prévenir les conflits de voisinage dans les immeubles collectifs."
       ],
       faqAdditions: [
+      
         {
           question:
-            "Mon balcon donne sur les bords de Marne, est-ce plus humide ?",
+            "Comment garantissez-vous que l’eau de nettoyage ne coulera pas chez mon voisin du dessous ou ne salira pas la façade ?",
           answer:
-            "Oui, la proximité de la Marne et du canal peut entraîner une humidité ambiante plus élevée, favorisant les dépôts verdâtres (algues, micro-organismes) et les mousses sur les sols et garde-corps. Notre nettoyage inclut des produits actifs contre ces micro-organismes pour un résultat durable.",
-        },
-        {
-          question:
-            "Pouvez-vous nettoyer mon balcon sans mouiller mon voisin du dessous ?",
-          answer:
-            "C'est une priorité. Nous utilisons un système de rinçage contrôlé avec un débit d'eau minimal et des bâches de protection étanches fixées au garde-corps. Nous communiquons également avec les voisins immédiats si nécessaire pour les prévenir de l'intervention.",
-        },
-        {
-          question: "Qu'en est-il des balcons avec des dalles sur plots ?",
-          answer:
-            "Ces revêtements techniques, courants dans les constructions récentes, nécessitent une méthode spécifique. Nous nettoyons la surface des dalles et assurons un rinçage dirigé pour évacuer les saletés présentes dans le vide sanitaire, sans forcer sur les plots.",
+            "Avant de commencer, nous identifions et dégageons la bonde d'évacuation. Nous travaillons toujours en dirigeant l'eau vers cette évacuation et utilisons des raclettes et des chiffons absorbants pour contenir l'excédent d'eau. Nous ne laissons jamais l'eau s'écouler librement par-dessus la bordure."
         },
         {
           question:
-            "Faut-il rentrer tous mes meubles et jardinières ?",
+            "Les produits que vous utilisez sont-ils sans danger pour mes plantes en pots ou pour un animal de compagnie ?",
           answer:
-            "Il est préférable de dégager au maximum la surface à nettoyer. Nous pouvons déplacer les objets légers (pots, petites jardinières). Pour les meubles lourds ou fixes, nous nettoyons autour. Nous vous conseillons sur la préparation optimale avant notre passage.",
+            "Nous utilisons principalement des détergents neutres ou biodégradables spécifiques au nettoyage des surfaces extérieures. Nous vous conseillons de protéger ou de rentrer les plantes. Les produits sont abondamment rincés. Sur demande, nous pouvons utiliser exclusivement des produits écologiques certifiés."
         },
+        {
+          question:
+            "Combien de temps faut-il attendre pour pouvoir remettre les meubles et utiliser le balcon après votre passage ?",
+          answer:
+            "Sous des conditions normales de ventilation et de temps sec, le carrelage est praticable en 1 à 2 heures. Pour un séchage complet, notamment des joints, nous recommandons d'attendre 3 à 4 heures avant de remettre les meubles en place."
+        }
       ],
-      ctaOverride: "",
+      ctaOverride: ""
     },
+
+    // =========================
+    // SERVICE 4 – BALCONS FIENTES
+    // =========================
     {
       serviceKey: "balcons-fientes",
       heroDescription:
-        "Nettoyage et désinfection de balcons souillés par les fientes de pigeons à Chelles, particulièrement dans les quartiers arborés ou près du parc du Souvenir.",
+        "Nous éliminons les fientes de pigeons et désinfectons votre balcon à Chelles, pour vous rendre un espace extérieur sain, sécurisé et de nouveau agréable à vivre.",
       whyUsBullets: [
-        "Expérience des situations critiques rencontrées dans les immeubles chellois proches des grands arbres ou des combles infestés.",
-        "Protocole strict incluant EPI, désinfection et évacuation sécurisée des déchets contaminés.",
-        "Respect des règles sanitaires et de bon voisinage lors d'interventions sensibles en copropriété.",
+        "Notre connaissance des immeubles de Chelles, notamment ceux situés près des parcs et zones arborées, nous permet d'intervenir avec pertinence.",
+        "Nous appliquons un protocole sanitaire rigoureux avec des produits biocides puissants et un conditionnement sécurisé des déchets contaminés.",
+        "Nous intervenons rapidement sur ce type d'urgence sanitaire, en coordonnant nos horaires avec les occupants pour une gêne minimale.",
+        "Une attestation d'intervention peut être remise pour informer le syndic ou justifier de la remise en état auprès d'un bailleur."
       ],
-      uniqueIntro: `<p>À Chelles, la présence de parcs, de la forêt régionale de Bondy à proximité et de nombreux espaces verts attire une population de pigeons qui peuvent nicher sous les balcons, notamment dans les quartiers comme les Coudreaux ou Monts-Chalât.</p>
-<p>Les déjections accumulées sont non seulement inesthétiques et odorantes, mais présentent aussi des risques sanitaires (bactéries, champignons) et peuvent endommager les revêtements (carrelage, bois, métal).</p>
-<p>Une intervention professionnelle de nettoyage et de désinfection est nécessaire pour rendre le balcon à un usage serein et sécurisé.</p>`,
-      uniqueDeepDive: `<p>Face à une forte contamination sur un balcon chellois, nous mettons en œuvre un protocole rigoureux pour protéger l'intervenant, l'occupant et l'environnement.</p>
-<ul>
-<li>Mise en place d'une zone de travail sécurisée et port d'équipements de protection individuelle (combinaison, masque, gants, lunettes).</li>
-<li>Humidification préalable des dépôts pour éviter la dispersion de poussières potentiellement pathogènes dans l'air.</li>
-<li>Décollage manuel et mécanique des fientes incrustées, avec grattage doux si nécessaire pour préserver le support.</li>
-<li>Application d'un désinfectant bactéricide et fongicide professionnel sur l'ensemble de la surface traitée, incluant le sol et le garde-corps.</li>
-</ul>
-<p>Nous vous fournissons ensuite des conseils pour dissuader le retour des pigeons (picots, fils tendus) en concertation avec le syndic si besoin.</p>`,
+      uniqueIntro: `<p>À Chelles, la présence de nombreux parcs, de grands arbres et de combles d'immeubles offre un habitat propice aux pigeons, dont les colonies souillent massivement les balcons et loggias. L'accumulation de fientes crée une situation insalubre : odeurs persistantes, surfaces impraticables et risques sanitaires réels.</p>
+<p>Pour les résidents, cet espace devient une source de gêne permanente et de conflits potentiels au sein de la copropriété. La simple tentative de nettoyage est insuffisante et dangereuse sans protections adaptées. Seul un traitement professionnel complet, incluant le ramassage des déchets, le nettoyage en profondeur et une désinfection certifiée, permet de restaurer un environnement sain.</p>`,
+      uniqueDeepDive: `<p>Notre intervention suit un protocole strict de sécurité et d'hygiène. Après une évaluation des lieux, nos techniciens équipés d'EPI (combinaison, masque FFP2, gants, lunettes) installent des bâches de protection. La première étape consiste à humidifier les déchets secs pour éviter la dispersion de poussières potentiellement pathogènes.</p>
+<p>Les fientes et les débris de nids sont ensuite ramassés manuellement, conditionnés dans des sacs étanches et évacués via une filière adaptée. Le nettoyage proprement dit s'effectue avec des détergents spécifiques et des techniques adaptées au support (carrelage, béton, métal) pour décrocher les salissures incrustées.</p>
+<p>Ensuite, une désinfection minutieuse est réalisée à l'aide de produits virucides et bactéricides agréés, en respectant scrupuleusement leur temps de contact pour une efficacité maximale. Nous veillons à une gestion stricte des eaux usées pour ne pas contaminer les canalisations communes.</p>
+<p>Nous conseillons une aération prolongée du logement après notre passage et pouvons suggérer des solutions de dissuasion (picots, fils tendus) pour prévenir une ré-infestation.</p>`,
       specificChallenges: [
-        "Accumulation importante sous les balcons protégés par des visières ou des débords de toit, fréquents dans l'architecture des années 70-80 à Chelles.",
-        "Risque de corrosion accéléré sur les garde-corps en métal des balcons exposés aux déjections acides.",
-        "Difficulté d'accès et de travail sur les balcons en étage élevé nécessitant un matériel adapté et des mesures de sécurité renforcées.",
+        "Problématique accrue dans les quartiers arborés et sur les immeubles offrant des corniches ou des recoins abrités.",
+        "Nettoyage délicat des fientes sèches devenues poussiéreuses, générant un aérosol contaminant nécessitant une humidification préalable et des EPI stricts.",
+        "Corrosion active des garde-corps en métal et dégradation des joints de carrelage provoquées par l'acidité des déjections accumulées.",
+        "Gestion réglementaire stricte de l'évacuation des déchets biologiques, nécessitant un circuit d'élimination spécifique."
       ],
       faqAdditions: [
         {
           question:
-            "Les fientes de pigeons sont-elles dangereuses à Chelles ?",
+            "Quels sont les risques sanitaires réels et pourquoi ne pas nettoyer moi-même ?",
           answer:
-            "Oui, comme partout, les fientes de pigeons peuvent contenir des agents pathogènes (comme Chlamydia psittaci) et des champignons (Cryptococcus). Leur nettoyage sans précautions expose à des risques d'inhalation. Notre protocole avec désinfection élimine ces risques biologiques.",
+            "Les fientes de pigeons peuvent transmettre des maladies via l'inhalation de poussières contaminées. Leurs nids abritent aussi des acariens et des puces. Un nettoyage sans équipement de protection adapté expose à ces pathogènes. Notre protocole, avec EPI et désinfection adaptée, élimine ces risques pour vous et vos voisins."
         },
         {
           question:
-            "Le nettoyage abîmera-t-il mon carrelage ou ma peinture de balcon ?",
+            "Les produits de désinfection que vous utilisez sont-ils sans danger après séchage pour mes enfants ou mes animaux domestiques ?",
           answer:
-            "Non, nous utilisons des méthodes et des produits adaptés qui nettoient en profondeur sans être abrasifs. Sur les peintures fragiles, nous privilégions un nettoyage manuel doux. Un test préalable sur une zone discrète est toujours effectué pour s'assurer de la compatibilité.",
-        },
-        {
-          question: "Que faites-vous des déchets contaminés ?",
-          answer:
-            "Ils sont collectés dans des sacs étanches et résistants, spécifiquement dédiés aux déchets d'activités de soins à risques infectieux (DASRI) ou assimilés, puis évacués selon la réglementation en vigueur vers une filière d'élimination agréée. Ils ne sont pas mélangés aux ordures ménagères classiques.",
+            "Nous utilisons des désinfectants professionnels autorisés pour les surfaces de contact. Ils sont appliqués selon un dosage précis et rincés après le temps de contact recommandé. Une fois les surfaces sèches, il ne reste pas de résidu actif ou toxique."
         },
         {
           question:
-            "Peut-on intervenir si les pigeons nichent encore sur le balcon ?",
+            "Les fientes peuvent-elles avoir endommagé de manière irréversible le carrelage ou la peinture de mon balcon ?",
           answer:
-            "Il est préférable que le nid soit inactif. Nous ne délogeons pas les oiseaux en période de nidification. Nous pouvons intervenir pour nettoyer les déjections accumulées autour, puis planifier un nettoyage complet après le départ des pigeons, éventuellement en lien avec une entreprise de répulsion animale.",
+            "L'acidité des déjections peut corroder certains matériaux. Sur la peinture métallique, elle peut provoquer cloques et rouille, et sur le carrelage, dégrader les joints. Notre intervention permet de stopper ce processus et de nettoyer en profondeur. Nous vous signalons ensuite les éventuels travaux de réparation à prévoir."
         },
+        {
+          question:
+            "Que faites-vous des déchets (fientes, nids) que vous ramassez ?",
+          answer:
+            "Ces déchets biologiques sont conditionnés dans des sacs étanches et évacués via une filière spécialisée, distincte des ordures ménagères. Ils sont pris en charge par un organisme habilité afin de garantir leur élimination sans risque pour l'environnement ou la santé publique."
+        }
       ],
-      ctaOverride: "",
+      ctaOverride: ""
     },
+
+    // =========================
+    // SERVICE 5 – CANAPÉS / TAPIS / MATELAS
+    // =========================
     {
       serviceKey: "canapes-tapis",
       heroDescription:
-        "Nettoyage de canapés, tapis et matelas à domicile à Chelles pour les familles et les professionnels.",
+        "Redonnez confort et hygiène à votre intérieur à Chelles : un nettoyage professionnel à domicile élimine en profondeur taches, acariens et odeurs de vos canapés, tapis et matelas.",
       whyUsBullets: [
-        "Intervention à domicile dans tout Chelles, des pavillons de Chantereine aux appartements du centre-ville, avec matériel transportable.",
-        "Technique d'injection-extraction profonde éliminant taches, acariens et allergènes, adaptée aux textiles délicats.",
-        "Flexibilité horaire pour s'adapter aux emplois du temps des familles et des actifs chellois.",
+        "Notre connaissance des intérieurs à Chelles, des appartements du centre aux pavillons avec jardin, nous permet d'anticiper les contraintes d'accès et les types de salissures courantes.",
+        "Nous utilisons des injecteurs-extracteurs professionnels et des produits spécifiques pour chaque type de tache et de textile, garantissant un résultat hygiénique.",
+        "Nous nous organisons selon vos disponibilités et intervenons avec discrétion, en protégeant vos sols et en limitant au maximum le temps d'immobilisation de votre mobilier.",
+        "Le résultat est immédiatement visible : des textiles assainis, une absence d'odeur et un confort retrouvé pour toute la famille."
       ],
-      uniqueIntro: `<p>Dans les foyers chellois, des quartiers familiaux comme les Coudreaux aux résidences étudiantes près de la gare, les canapés, tapis et matelas sont au cœur de la vie quotidienne.</p>
-<p>Ils subissent taches de nourriture et de boisson, poussières apportées de l'extérieur, poils d'animaux et accumulation de sébum et de peaux mortes, pouvant affecter la qualité de l'air intérieur et le confort.</p>
-<p>Un nettoyage professionnel à domicile redonne fraîcheur et hygiène à vos textiles d'ameublement, sans avoir à les déplacer.</p>`,
-      uniqueDeepDive: `<p>Notre intervention à votre domicile à Chelles commence par l'identification des types de tissus (velours, lin, coton, synthétique) et des taches présentes.</p>
-<ul>
-<li>Pré-traitement manuel des taches tenaces (vin, café, encres) avec des produits spécifiques adaptés à leur nature.</li>
-<li>Nettoyage par injection-extraction : injection d'une solution nettoyante tiède suivie d'une aspiration immédiate qui extrait saletés et résidus.</li>
-<li>Focus sur les zones de fort contact : accoudoirs, dossiers de canapé, centre des tapis de séjour, et tête de lit des matelas.</li>
-<li>Ventilation et séchage accéléré de la pièce pour une réutilisation rapide de vos meubles, généralement en quelques heures.</li>
-</ul>
-<p>Nous vous conseillons un entretien tous les 12 à 18 mois pour maintenir un environnement intérieur sain, notamment en présence d'enfants ou d'animaux.</p>`,
+      uniqueIntro: `<p>Au quotidien à Chelles, canapés, tapis et matelas accumulent les salissures invisibles et visibles. Entre les repas en famille, les jeux d'enfants, la présence d'animaux domestiques et le va-et-vient quotidien, les taches de nourriture, les traces de boue, les poils et les poussières s'incrustent.</p>
+<p>Ces textiles deviennent des nids à acariens et à allergènes, pouvant affecter le confort respiratoire. Les odeurs tenaces (transpiration, urine, renfermé) s'ajoutent à l'inconfort, rendant l'espace de vie moins agréable malgré un ménage régulier.</p>
+<p>Un nettoyage professionnel spécifique est la solution pour éliminer ces nuisances en profondeur, assainir votre habitat et retrouver le plaisir d'un mobilier propre et sain.</p>`,
+      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis du textile (coton, laine, synthétique, cuir) et une identification des types de taches (graisse, protéine, tanin). Cette analyse détermine les produits de prétraitement adaptés, appliqués manuellement sur les souillures tenaces comme le vin, le café ou les traces organiques.</p>
+<p>Nous procédons ensuite au nettoyage principal grâce à une machine à injection-extraction à eau chaude. Cette méthode injecte une solution nettoyante et l'extrait immédiatement avec les salissures, sans détremper le rembourrage.</p>
+<p>Notre matériel compact est conçu pour les interventions à domicile, s'adaptant aux contraintes d'accès des appartements ou des pavillons de Chelles. Une attention particulière est portée au rinçage neutre pour éviter tout résidu.</p>
+<p>Le séchage est accéléré par notre procédé, mais nous vous donnerons des conseils pour l'optimiser (aération, chauffage modéré). Pour un entretien durable, nous recommandons un nettoyage professionnel tous les 12 à 18 mois pour les canapés très utilisés et un dépoussiérage régulier des tapis.</p>`,
       specificChallenges: [
-        "Poussières fines liées au trafic routier pouvant s'infiltrer profondément dans les fibres des tapis des rez-de-chaussée ou des appartements avec balcon rue.",
-        "Taches multiples sur les canapés des familles avec jeunes enfants dans les quartiers pavillonnaires très familiaux.",
-        "Présence fréquente de tissus délicats (velours, soie) ou de canapés avec médaillon nécessitant une technique douce et précise.",
+        "Présence importante d'acariens et de poussières domestiques aggravée par une humidité relative élevée.",
+        "Taches complexes mélangeant terre des jardins ou balcons, graisses alimentaires et résidus organiques liées à la vie de famille.",
+        "Nettoyage délicat des tissus d'ameublement clairs ou des tapis anciens, nécessitant une méthode douce.",
+        "Séchage parfois ralenti dans les pièces peu ensoleillées ou les logements moins ventilés, nécessitant des conseils adaptés."
       ],
       faqAdditions: [
         {
           question:
-            "Le nettoyage élimine-t-il les acariens, un problème fréquent à Chelles ?",
+            "Votre nettoyage est-il efficace contre les acariens et les allergènes pour une personne asthmatique ?",
           answer:
-            "Notre méthode d'injection-extraction à l'eau chaude élimine une très grande majorité des acariens, de leurs déjections (principaux allergènes) et des poussières qui leur servent de nourriture. C'est une solution efficace pour les personnes souffrant d'allergies respiratoires, sans utiliser d'acaricides chimiques agressifs.",
-        },
-        {
-          question: "Pouvez-vous enlever toutes les taches de mon canapé ?",
-          answer:
-            "Nous pouvons enlever la grande majorité des taches courantes (nourriture, boissons, boue, graisse). Certaines taches anciennes, de colorants ou ayant décoloré le tissu peuvent être atténuées mais pas toujours totalement effacées. Un diagnostic sur place nous permet de vous donner un avis réaliste sur le résultat attendu.",
+            "Oui, notre méthode est très efficace pour réduire la population d'acariens et éliminer leurs déjections, principaux allergènes. L'injection-extraction à eau chaude lessive en profondeur les fibres où ils prolifèrent et l'extraction retire une grande partie des particules allergisantes."
         },
         {
           question:
-            "Faut-il préparer la pièce avant votre venue ?",
+            "Pouvez-vous venir à bout des odeurs d'urine de chien ou de chat incrustées dans un canapé ou un matelas ?",
           answer:
-            "Il est idéal de pouvoir dégager l'accès au meuble et l'espace autour. Pour un canapé, retirer les coussins amovibles. Pour un tapis, le laisser en place si possible. Nous apportons des protections pour le sol. Vous n'avez pas à démonter ou déplacer les meubles lourds.",
+            "C'est une demande fréquente. Notre protocole inclut l'application d'un enzymeur spécifique qui décompose les cristaux responsables de l'odeur, même ancienne, puis un nettoyage par injection-extraction pour éliminer les résidus."
         },
         {
           question:
-            "Le séchage est-il long dans un appartement chellois ?",
+            "Combien de temps faut-il attendre avant de pouvoir réutiliser son canapé ou remettre le tapis en place ?",
           answer:
-            "Grâce à l'aspiration puissante, nos machines extraient la majeure partie de l'humidité. Le séchage complet varie de 4 à 12 heures selon l'épaisseur du textile, la ventilation de la pièce et la température ambiante. Nous vous conseillons d'aérer largement après notre passage pour l'accélérer.",
+            "En conditions normales (pièce aérée, chauffage modéré), un canapé est utilisable en 4 à 6 heures. Un tapis peut être reposé et marcher dessus en 1 à 2 heures, même si un séchage complet peut prendre 12 à 24 heures selon l'épaisseur."
         },
+        {
+          question:
+            "Que devons-nous faire pour préparer la pièce avant votre arrivée ?",
+          answer:
+            "Nous vous recommandons de libérer au maximum l'accès au meuble (déplacer les petites tables, les objets fragiles) et de retirer les coussins et plaids si possible. Aucune autre préparation n'est nécessaire, nos techniciens apportent toutes les protections pour vos sols et meubles."
+        }
       ],
-      ctaOverride: "",
-    },
-  ],
+      ctaOverride: ""
+    }
+  ]
 };
 
 export default city;

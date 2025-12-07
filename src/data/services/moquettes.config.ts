@@ -45,7 +45,7 @@ const moquettesConfig: ServiceConfig = {
   averageDuration: '3-6 heures selon surface et état',
   
   pricing: {
-    from: '8 €',
+    from: '10 €',
     unit: 'par m²'
   },
   

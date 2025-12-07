@@ -11,64 +11,6 @@ export interface TextileSlot {
 }
 
 export const TEXTILES_SLOTS: TextileSlot[] = [
-  // Samedi 6 décembre 2025
-  {
-    id: "2025-12-06-0900",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "9h00",
-    datetime: "2025-12-06T09:00:00+01:00",
-    open: false,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1030",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "10h30",
-    datetime: "2025-12-06T10:30:00+01:00",
-    open: false,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1200",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "12h00",
-    datetime: "2025-12-06T12:00:00+01:00",
-    open: false,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1330",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "13h30",
-    datetime: "2025-12-06T13:30:00+01:00",
-    open: true,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1500",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "15h00",
-    datetime: "2025-12-06T15:00:00+01:00",
-    open: true,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1630",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "16h30",
-    datetime: "2025-12-06T16:30:00+01:00",
-    open: false,
-    duration: "1h30",
-  },
-  {
-    id: "2025-12-06-1800",
-    dateLabel: "Samedi 6 décembre",
-    timeLabel: "18h00",
-    datetime: "2025-12-06T18:00:00+01:00",
-    open: true,
-    duration: "1h30",
-  },
-
   // Samedi 13 décembre 2025
   {
     id: "2025-12-13-0900",
@@ -83,7 +25,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: "Samedi 13 décembre",
     timeLabel: "10h30",
     datetime: "2025-12-13T10:30:00+01:00",
-    open: true,
+    open: false,
     duration: "1h30",
   },
   {
@@ -133,7 +75,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: "Samedi 20 décembre",
     timeLabel: "9h00",
     datetime: "2025-12-20T09:00:00+01:00",
-    open: true,
+    open: false,
     duration: "1h30",
   },
   {
@@ -141,7 +83,7 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: "Samedi 20 décembre",
     timeLabel: "10h30",
     datetime: "2025-12-20T10:30:00+01:00",
-    open: true,
+    open: false,
     duration: "1h30",
   },
   {
@@ -239,6 +181,64 @@ export const TEXTILES_SLOTS: TextileSlot[] = [
     dateLabel: "Samedi 27 décembre",
     timeLabel: "18h00",
     datetime: "2025-12-27T18:00:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+
+  // Samedi 3 janvier 2026
+  {
+    id: "2026-01-03-0900",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "9h00",
+    datetime: "2026-01-03T09:00:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1030",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "10h30",
+    datetime: "2026-01-03T10:30:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1200",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "12h00",
+    datetime: "2026-01-03T12:00:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1330",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "13h30",
+    datetime: "2026-01-03T13:30:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1500",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "15h00",
+    datetime: "2026-01-03T15:00:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1630",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "16h30",
+    datetime: "2026-01-03T16:30:00+01:00",
+    open: true,
+    duration: "1h30",
+  },
+  {
+    id: "2026-01-03-1800",
+    dateLabel: "Samedi 3 janvier",
+    timeLabel: "18h00",
+    datetime: "2026-01-03T18:00:00+01:00",
     open: true,
     duration: "1h30",
   },

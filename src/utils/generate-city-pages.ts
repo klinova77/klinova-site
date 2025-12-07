@@ -1,3 +1,5 @@
+// D:\Klinova-site\src\utils\generate-city-pages.ts
+
 import cities from '~/data/cities';
 import services from '~/data/services';
 import type { ServiceConfig } from '~/types/geo';

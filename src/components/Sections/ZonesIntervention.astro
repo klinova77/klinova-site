@@ -2,13 +2,10 @@
 // src/components/Sections/ZonesIntervention.astro
 
 
-
 import { DEPARTMENTS } from '~/data/departments';
+import { highlightedCities } from '~/data/highlightedCities';
 
 interface Props {
-  /**
-   * Variante éventuelle de fond (par défaut gris très clair)
-   */
   variant?: 'default' | 'white';
 }
 
@@ -16,40 +13,85 @@ const { variant = 'default' } = Astro.props;
 const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
 ---
 
+
 <section class={`py-16 ${sectionBg} border-t border-[#E5E7EB]`}>
   <div class="container-responsive">
-    <div class="text-center max-w-4xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       
-      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
-        Zones d'intervention
-      </p>
-
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
-        Intervention dans toute l'Île-de-France
-      </h2>
-
-      <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-8">
-        Klinova intervient dans l'ensemble de la région Île-de-France.
-        Chaque intervention est planifiée pour garantir ponctualité, réactivité et qualité, quel que soit votre département.
-      </p>
-
-      <!-- Grid de départements cliquables -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-        {DEPARTMENTS.map((dept) => (
-          <a
-            href={`/zones-d-intervention/${dept.slug}`}
-            class="flex items-center justify-center p-3 bg-white border border-[#E5E7EB] rounded-lg hover:shadow-sm hover:border-[#3F8D65]/40 transition"
-          >
-            <span class="text-[#1E2939] font-medium text-sm md:text-base">
-              {dept.shortLabel}
-            </span>
-          </a>
-        ))}
+      {/* --- EN-TÊTE GLOBAL --- */}
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+          Zones d'intervention
+        </p>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+          Intervention dans toute l'Île-de-France
+        </h2>
+        <p class="text-base text-[#475569] leading-relaxed">
+          Klinova intervient dans l'ensemble de la région.
+          Chaque intervention est planifiée pour garantir ponctualité et qualité.
+        </p>
       </div>
 
-      <p class="text-sm text-[#475569] mt-6">
-        Délais d'intervention généralement sous 48h selon disponibilités
-      </p>
+      {/* --- BLOC 1 : DÉPARTEMENTS --- */}
+      <div class="mb-12">
+        <h3 class="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider mb-4 text-center">
+          Par Département
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {DEPARTMENTS.map((dept) => (
+            <a
+              href={`/zones-d-intervention/${dept.slug}`}
+              class="flex items-center justify-center p-3 bg-white border border-[#E5E7EB] rounded-lg hover:shadow-sm hover:border-[#3F8D65]/60 hover:text-[#3F8D65] transition group"
+            >
+              <span class="font-medium text-sm md:text-base group-hover:scale-105 transition-transform duration-200">
+                {dept.shortLabel}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* --- BLOC 2 : VILLES (Seulement si dispo) --- */}
+      {highlightedCities.length > 0 && (
+        <div class="pt-8 border-t border-dashed border-gray-200">
+          <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-2 text-center md:text-left">
+            <h3 class="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider">
+              Dernières ouvertures de zones
+            </h3>
+            <a href="/zones-d-intervention" class="text-xs font-medium text-[#3F8D65] hover:underline">
+              Voir toutes les villes →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {highlightedCities.map((city) => (
+              <a
+                href={`/zones-d-intervention/${city.department.slug}/${city.slug}`}
+                class="flex items-center justify-center p-3 bg-white border border-[#E5E7EB] rounded-lg hover:shadow-sm hover:border-[#3F8D65]/60 hover:text-[#3F8D65] transition group"
+              >
+                <div class="flex items-center gap-2">
+                  {/* Petit point vert pour signifier "Actif" ou "Nouveau" */}
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65]/40 group-hover:bg-[#3F8D65]"></span>
+                  <span class="font-medium text-sm text-[#1E2939] group-hover:text-[#3F8D65]">
+                    {city.name}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* --- FOOTER DE SECTION --- */}
+      <div class="text-center mt-10">
+        <p class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-xs md:text-sm text-[#475569]">
+          <svg class="w-4 h-4 text-[#3F8D65]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Délais d'intervention généralement sous 48h selon disponibilités
+        </p>
+      </div>
+
     </div>
   </div>
 </section>

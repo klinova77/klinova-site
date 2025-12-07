@@ -1,3 +1,5 @@
+// src/pages/sitemap-zones.xml.ts
+
 import type { APIRoute } from 'astro';
 import { generateCityPaths } from '~/utils/generate-city-pages';
 
@@ -10,7 +12,8 @@ export const GET: APIRoute = () => {
 
   const urls = paths
     .map(({ params }) => {
-      const loc = `${SITE_URL}/zones-d-intervention/${params.city}/${params.service}`;
+      const loc = `${SITE_URL}/zones-d-intervention/${params.department}/${params.city}/${params.service}`;
+
       return `
   <url>
     <loc>${loc}</loc>

@@ -3,6 +3,7 @@
 
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
+
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 
 import ButtonSubmit from './UI/ButtonSubmit.astro';
@@ -15,8 +16,11 @@ import CityMoquettesDetail from '~/components/Sections/CityMoquettesDetail.astro
 import CityParkingsExpertise from '~/components/Sections/CityParkingsExpertise.astro';
 import CityBalconsFientesLocal from '~/components/Sections/CityBalconsFientesDetail.astro';
 import CityBalconsComplete from './Sections/CityBalconsComplete.astro';
-import PricingTextiles from '~/components/Sections/PricingTextiles.astro';
+import CityBalconsPigeons from '~/components/Sections/CityBalconsPigeons.astro';
 
+import PricingTextiles from '~/components/Sections/PricingTextiles.astro';
+import PricingMoquettes from '~/components/Sections/PricingMoquettes.astro';
+import PricingParkingsShort from '~/components/Sections/PricingParkingsShort.astro';
 
 import AvailabilityBadge from '~/components/AvailabilityBadge.astro';
 import CityWhyUs from '~/components/Sections/CityWhyUs.astro';
@@ -122,6 +126,9 @@ const serviceSlugByKey: Record<ServiceKey, string> = {
   'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
 };
 
+
+const showAvanceImmed = service.key !== "parkings";
+
 // Slug du service courant pour cette page locale
 const currentServiceSlug =
   serviceSlugByKey[service.key as ServiceKey];
@@ -185,6 +192,19 @@ if (!heroDescription && city.customDescription) {
     heroDescription = text.split('. ')[0] + '.';
   }
 }
+
+
+const pricingHintEntries =
+  service.pricing
+    ? [
+        [
+          "Intervention type",
+          `À partir de ${service.pricing.from} ${service.pricing.unit}`,
+        ],
+      ]
+    : [];
+
+const pricingHintNote = service.pricing?.note ?? "";
 
 
 
@@ -259,6 +279,55 @@ const serviceUrl =
     } as Record<string, string>
   )[service.key] ?? '/');
 
+
+
+// ============================================================
+// LOGIQUE DE ROTATION DES QUARTIERS (subset déterministe)
+// ============================================================
+
+// 1. Fonction de "hash" simple pour avoir un seed stable par service
+const getSeedFromString = (str: string) => {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return Math.abs(hash);
+};
+
+// 2. Préparation de la liste des quartiers
+const allDistricts = Array.isArray(city.districts) ? city.districts : [];
+const DISPLAY_COUNT = 6; // nb max de quartiers à afficher sur la page service
+
+let selectedDistricts = allDistricts;
+
+if (allDistricts.length > DISPLAY_COUNT && service) {
+  // On utilise une info du service comme "graine" pour que :
+  // - le subset soit stable pour ce service
+  // - différent d'un service à l'autre
+  const seedSource =
+    (service.urls && service.urls.parent) ||
+    (service.key as string) ||
+    service.name ||
+    '';
+
+  const seed = getSeedFromString(seedSource);
+
+  // Liste circulaire pour pouvoir couper n'importe où
+  const circularList = [...allDistricts, ...allDistricts];
+
+  // Index de départ déterministe
+  const startIndex = seed % allDistricts.length;
+
+  // On prend le "morceau" voulu
+  selectedDistricts = circularList.slice(startIndex, startIndex + DISPLAY_COUNT);
+}
+
+///Fin de LOGIQUE DE ROTATION DES QUARTIERS (subset déterministe)
+
+
+
+
+
 // SEO optimisé
 const pageTitle = `${service.name} à ${city.name} – Klinova`;
 const description =
@@ -308,6 +377,28 @@ const defaultProcess = [
   },
 ];
 const serviceProcess = service.process ?? defaultProcess;
+
+
+
+
+const cleanPriceToNumber = (p?: string): number | undefined => {
+  if (!p) return undefined;
+  // "10 €", " 240 € TTC " → "10", "240"
+  const numeric = p.replace(/[^0-9.,]/g, '').replace(',', '.').trim();
+  const value = Number(numeric);
+  return Number.isFinite(value) ? value : undefined;
+};
+
+const unitCodeFromLabel = (unit?: string): string | undefined => {
+  if (!unit) return undefined;
+  const u = unit.toLowerCase();
+
+  if (u.includes('m²') || u.includes('m2')) return 'MTK'; // square metre
+  if (u.includes('intervention') || u.includes('forfait')) return 'C62'; // "unit"
+
+  return undefined;
+};
+
 
 // --- DANS CityPage.astro ---
 
@@ -386,15 +477,17 @@ const breadcrumbJsonLd = {
 // ID stable pour le service local
 const serviceId = `${baseUrl}${canonical}#service`;
 
-const serviceJsonLd = {
+const basePrice = cleanPriceToNumber(service.pricing?.from);
+const unitCode = unitCodeFromLabel(service.pricing?.unit);
+
+const serviceJsonLd: Record<string, any> = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': serviceId,
-  serviceType: 'Nettoyage professionnel',
+  serviceType: service.name, // "Nettoyage de moquettes", "Nettoyage de parkings", etc.
   name: `${service.name} à ${city.name}`,
   description,
 
-  // 🔗 On rattache ce service au LocalBusiness global défini dans SeoBase
   provider: {
     '@id': `${baseUrl}#localbusiness`,
   },
@@ -404,6 +497,8 @@ const serviceJsonLd = {
     name: city.name,
     postalCode: city.postalCodes?.[0],
     addressCountry: 'FR',
+    // Si un jour tu ajoutes city.wikipediaUrl :
+    ...(city.wikipediaUrl && { sameAs: city.wikipediaUrl }),
   },
 
   hasOfferCatalog: {
@@ -421,6 +516,27 @@ const serviceJsonLd = {
     ],
   },
 };
+
+// 🔁 On n'ajoute "offers" que si on a un prix exploitable
+if (basePrice !== undefined) {
+  serviceJsonLd.offers = {
+    '@type': 'Offer',
+    priceCurrency: 'EUR',
+    price: basePrice,
+    ...(unitCode && {
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'EUR',
+        price: basePrice,
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          unitCode,
+        },
+      },
+    }),
+  };
+}
+
 
 // HowTo basé sur le process (optionnel)
 const howToJsonLd =
@@ -459,16 +575,9 @@ const jsonLd: any[] = [
   ...(howToJsonLd ? [howToJsonLd] : []),
 ];
 
-// Aides pour pricingHint
-const pricingHintEntries =
-  cityNote?.pricingHint
-    ? Object.entries(cityNote.pricingHint).filter(([key]) => key !== 'note')
-    : [];
 
-const pricingHintNote =
-  cityNote?.pricingHint && 'note' in cityNote.pricingHint
-    ? (cityNote.pricingHint as any).note
-    : undefined;
+
+
 
 const caseStudy = cityNote?.caseStudy;
 const photos = cityNote?.photos ?? [];
@@ -619,7 +728,7 @@ data-hide-header-cta
    
    {heroDescription && (
   <div class="mb-2 md:mb-4">
-    <p class="text-lg md:text-xl text-white/95 mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed">
+    <p class="text-lg md:text-2xl text-white/95 mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed">
       {heroDescription}
     </p>
     <p
@@ -628,9 +737,23 @@ data-hide-header-cta
              [animation-delay:480ms]
              [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
     >
-      <span class="inline-flex items-center group">
-        {/* ...svg + texte... */}
-      </span>
+     
+      {showAvanceImmed && (
+  <p
+    class="text-sm md:text-base text-orange-200 mb-8 font-medium
+           opacity-100 motion-safe:animate-fade-in-up
+           [animation-delay:480ms]
+           [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+  >
+    <span class="inline-flex items-center group">
+      <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+      </svg>
+      Particuliers : payez seulement 50% aujourd'hui<br class="sm:hidden" /> avec l'avance immédiate du crédit d'impôt SAP
+    </span>
+  </p>
+)}
+
     </p>
   </div>
 )}
@@ -726,97 +849,114 @@ data-hide-header-cta
 })()}
 
 
-
-    <!-- 2️⃣ Intro locale (uniqueIntro) -->
-    {cityNote?.uniqueIntro && (
-  <section class="py-12 md:py-16 bg-white border-b border-[#E5E7EB]" 
+{/* 2️⃣ Intro locale (Version "Double Carte Équilibrée") */}
+{cityNote?.uniqueIntro && (
+  <section
+    class="py-16 bg-white border-b border-neutral-100"
     data-hide-floating-cta
     data-hide-header-cta
   >
-   <div class="container-responsive">
-  <div class="max-w-5xl mx-auto">
-    
-    <!-- Badge centré -->
-    <div class="text-center mb-8">
-      <span class="inline-block text-xl font-medium text-[#3F8D65] uppercase tracking-wide">
-        Notre expertise à {city.name}
-      </span>
-    </div>
-
-    <!-- Indicateur visuel d'introduction (optionnel, décoratif) -->
-    <div class="flex justify-center mb-8">
-      <div class="flex items-center gap-3">
-        <div class="w-3 h-3 bg-[#3F8D65] rounded-full"></div>
-        <div class="w-2 h-2 bg-[#3F8D65]/60 rounded-full"></div>
-        <div class="w-1 h-1 bg-[#3F8D65]/30 rounded-full"></div>
-      </div>
-    </div>
-
-    <!-- Contenu principal -->
-    <div class="relative">
-          <!-- Quote décorative en arrière-plan -->
-          <div class="absolute -top-4 -left-4 text-[#3F8D65]/10 text-8xl font-serif leading-none pointer-events-none hidden md:block">
-            "
-          </div>
+    <div class="container-responsive">
+      <div class="max-w-6xl mx-auto"> {/* J'ai élargi un peu le max-w pour l'aération */}
+        
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
           
-          <!-- Contenu -->
-          <div 
-            set:html={cityNote.uniqueIntro}
-            class="
-              relative z-10
-              text-lg leading-relaxed
-              text-center
-              [&>p]:mb-6
-              [&>p]:text-[#475569]
-              [&>p:first-child]:text-xl
-              [&>p:first-child]:font-medium
-              [&>p:first-child]:text-[#1E2939]
-              [&>p:first-child]:leading-relaxed
-              [&>p:first-child]:mb-8
-              [&>strong]:text-[#1E2939]
-              [&>strong]:font-semibold
-              [&>em]:text-[#3F8D65]
-              [&>em]:font-medium
-              [&>em]:not-italic
-              [&>h3]:text-2xl
-              [&>h3]:font-bold
-              [&>h3]:text-[#1E2939]
-              [&>h3]:mb-6
-              [&>h3]:mt-10
-              [&>h3:first-child]:mt-0
-              [&>ul]:mb-6
-              [&>ul]:space-y-3
-              [&>li]:pl-6
-              [&>li]:relative
-              [&>li]:text-[#475569]
-              [&>li]:before:content-['→']
-              [&>li]:before:absolute
-              [&>li]:before:left-0
-              [&>li]:before:text-[#3F8D65]
-              [&>li]:before:font-semibold
-            "
-          />
-        </div>
-
-        <!-- Signature visuelle en bas -->
-        <div class="flex items-center justify-center mt-12 pt-8 border-t border-[#E5E7EB]">
-          <div class="flex items-center gap-3 text-sm text-[#475569]">
-            <svg class="w-5 h-5 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <span><strong class="text-[#1E2939]">Klinova</strong> • Service professionnel à {city.name}</span>
+          {/* COLONNE GAUCHE (4 cols) : Titre + Fiche Contexte (remplit le vide) */}
+          <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
             
-          </div>
-        </div>
+            {/* Nouveau Titre plus "Business" */}
 
+            <div>
+              <div class="inline-flex items-center gap-2 text-[#3F8D65] font-bold text-sm uppercase tracking-wide mb-3">
+                <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+                Diagnostic Local
+              </div>
+              <h2 class="text-3xl font-bold text-[#1E2939] leading-tight">
+                Les enjeux de propreté à <span class="text-[#3F8D65]">{city.name}</span>
+              </h2>
+            </div>
+
+            {/* LA FICHE VISUELLE (Pour combler le vide) */}
+            <div class="bg-[#F8FAFC] border border-neutral-200 rounded-xl p-6 shadow-sm">
+              <h3 class="font-semibold text-[#1E2939] mb-4 text-sm flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#3F8D65]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Points de vigilance :
+              </h3>
+              
+              {/* Liste décorative qui fait "Pro" */}
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-1.5 h-1.5 rounded-full bg-[#3F8D65] shrink-0"></div>
+                  <div class="text-sm text-[#64748B]">
+                    <strong class="text-[#1E2939]">Fréquentation :</strong><br/>
+                    Adaptation aux flux résidents/usagers.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-1.5 h-1.5 rounded-full bg-[#3F8D65] shrink-0"></div>
+                  <div class="text-sm text-[#64748B]">
+                    <strong class="text-[#1E2939]">Spécificités bâtis :</strong><br/>
+                    Sols anciens et matériaux modernes.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="mt-1 w-1.5 h-1.5 rounded-full bg-[#3F8D65] shrink-0"></div>
+                  <div class="text-sm text-[#64748B]">
+                    <strong class="text-[#1E2939]">Accessibilité :</strong><br/>
+                    Gestion des accès Vigik & clés.
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-6 pt-4 border-t border-neutral-200 text-xs text-[#94A3B8] italic text-center">
+                Analyse basée sur nos interventions secteur {department}
+              </div>
+            </div>
+
+          </div>
+
+          {/* COLONNE DROITE (8 cols) : Le Texte Riche */}
+          <div class="lg:col-span-8">
+             <div class="relative bg-white rounded-2xl p-8 border border-neutral-200 shadow-xl shadow-neutral-100/50">
+                
+                {/* Petit badge décoratif "Rapport" */}
+                <div class="absolute top-0 right-0 bg-[#3F8D65] text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                  Focus Expert
+                </div>
+
+                {/* CONTENU TEXTE ALIGNÉ À GAUCHE */}
+                <div 
+                  class="
+                    prose prose-lg prose-slate max-w-none 
+                    text-left
+                    
+                    prose-p:text-[#475569] 
+                    prose-p:leading-relaxed 
+                    prose-p:mb-6
+                    prose-p:last:mb-0
+                    
+                    prose-strong:text-[#1E2939] 
+                    prose-strong:font-semibold
+                  "
+                  set:html={cityNote.uniqueIntro}
+                />
+                
+                {/* Signature en bas de carte */}
+                <div class="mt-8 flex items-center gap-4">
+                   <div class="h-px flex-grow bg-neutral-100"></div>
+                   <div class="text-xs font-medium text-[#3F8D65] uppercase tracking-wider">
+                     Klinova {city.name}
+                   </div>
+                </div>
+
+             </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
 )}
-
-    
-
-
 
 
 
@@ -855,75 +995,10 @@ data-hide-header-cta
       <CityBalconsComplete cityName={city.name} city={city} isLocal={true} />
     )}
 
-
-
-<!-- Section ServiceProcess optimisée style Klinova -->
-<section class="py-16 bg-[#FCFCFC]">
-  <div class="container-responsive">
-    
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
-        Notre méthode
-      </p>
-      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
-        Comment nous procédons à {city.name}
-      </h2>
-      <div class="max-w-3xl mx-auto">
-       <p class="text-base md:text-lg text-[#475569] leading-relaxed">
-  Un processus éprouvé et transparent, adapté à {serviceContext} à {city.name}.
-</p>
-
-      </div>
-    </div>
-
-    <!-- Grid des étapes (version moderne) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-      {serviceProcess.map((item, index) => (
-        <div class="bg-white border border-[#E5E7EB] rounded-xl p-6 hover:shadow-md transition-all duration-300 group">
-          
-          <!-- Badge numéro -->
-      <div class="flex justify-center mb-4">
-  <div
-    class="w-10 h-8 rounded-full bg-[#3F8D65]/10 text-[#3F8D65] font-medium flex items-center justify-center text-base"
-  >
-    {index + 1}
-  </div>
-</div>
-
-          
-          <!-- Contenu -->
-          <div class="text-center">
-            <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
-              {item.step}
-            </h3>
-            <p class="text-[#475569] text-sm leading-relaxed">
-              {item.description}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Durée moyenne (si définie) -->
-    {service.averageDuration && (
-      <div class="max-w-2xl mx-auto">
-        <div class="bg-[#F1F7F3] border border-[#E5E7EB] rounded-xl p-6 text-center">
-          <div class="flex items-center justify-center space-x-3">
-            <svg class="w-6 h-6 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <p class="text-base md:text-lg text-[#1E2939]">
-              <span class="font-semibold">Durée moyenne d'intervention :</span> {service.averageDuration}
-            </p>
-          </div>
-        </div>
-      </div>
+{service.key === 'balcons-fientes' && (
+      <CityBalconsPigeons cityName={city.name} city={city} isLocal={true} />
+      
     )}
-
-  </div>
-</section>
-
 
 {/* 
     <!-- 6️⃣ Étude de cas locale -->
@@ -1260,82 +1335,87 @@ data-hide-header-cta
 
 
 
-
-    <!-- 📚 Deep Dive (uniqueDeepDive) - Section technique avancée -->
-    {cityNote?.uniqueDeepDive && (
-  <section class="py-16 bg-[#FCFCFC]">
+{/* 📚 Deep Dive (uniqueDeepDive) - Section technique avancée */}
+{/* Vérifie bien que ta variable s'appelle cityNote ou city selon ton code */}
+{cityNote?.uniqueDeepDive && (
+  <section class="py-16 md:py-24 bg-[#FCFCFC] border-b border-[#E5E7EB]">
     <div class="container-responsive">
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-4xl mx-auto">
         
-        <!-- En-tête avec icône et design moderne -->
+        {/* En-tête : On garde le centré ici car c'est le titre de la section */}
         <div class="text-center mb-12">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-[#3F8D65] rounded-xl mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
+         
           <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
-            Particularités à {city.name}
+            Notre méthode de travail
           </h2>
           <p class="text-lg text-[#475569] max-w-2xl mx-auto">
-            Notre expertise locale pour des interventions parfaitement adaptées
+            Notre expertise locale pour des interventions parfaitement adaptées à {city.name}.
           </p>
         </div>
 
-        <!-- Contenu principal dans une carte élégante -->
-        <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm overflow-hidden">
+        {/* Contenu principal : Carte Élégante */}
+        <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-xl shadow-neutral-200/40 overflow-hidden">
           
-          <!-- Barre colorée en haut -->
-          <div class="h-1 bg-gradient-to-r from-[#3F8D65] to-[#387B58]"></div>
+          {/* Liseré supérieur aux couleurs Klinova */}
+          <div class="h-1.5 w-full bg-gradient-to-r from-[#3F8D65] via-[#2d6a4b] to-[#1E2939]"></div>
           
-          <!-- Contenu -->
+          {/* Zone de contenu Texte */}
           <div class="p-8 md:p-12">
-            <div class="prose prose-lg max-w-none">
-              <div 
-                set:html={cityNote.uniqueDeepDive}
-                class="
-                  text-[#475569] 
-                  leading-relaxed
-                  [&>h3]:text-xl 
-                  text-center
-                  [&>h3]:font-semibold 
-                  [&>h3]:text-[#1E2939] 
-                  [&>h3]:mb-4 
-                  [&>h3]:mt-8
-                  [&>h3:first-child]:mt-0
-                  [&>p]:mb-4
-                  [&>p]:text-[#475569]
-                  [&>strong]:text-[#1E2939]
-                  [&>strong]:font-semibold
-                  [&>ul]:mb-6
-                  [&>ul]:pl-0
-                  [&>li]:mb-2
-                  [&>li]:pl-6
-                  [&>li]:relative
-                  [&>li]:before:content-['✓']
-                  [&>li]:before:absolute
-                  [&>li]:before:left-0
-                  [&>li]:before:text-[#3F8D65]
-                  [&>li]:before:font-semibold
-                "
-              />
-            </div>
+            
+            {/* AMÉLIORATION UX : 
+               On aligne le texte à GAUCHE (text-left) pour la lisibilité.
+               J'ai ajouté 'prose-headings' pour gérer les titres dans le HTML injecté.
+            */}
+            <div 
+              set:html={cityNote.uniqueDeepDive}
+              class="
+                text-[#475569] text-lg leading-relaxed text-left
+                
+                [&>h3]:text-2xl 
+                [&>h3]:font-bold 
+                [&>h3]:text-[#1E2939] 
+                [&>h3]:mb-6 
+                [&>h3]:mt-10 
+                [&>h3:first-child]:mt-0
+                
+                [&>p]:mb-6 
+                [&>p]:text-[#475569]
+                
+                [&>strong]:text-[#1E2939] 
+                [&>strong]:font-semibold
+                
+                [&>ul]:my-8 
+                [&>ul]:space-y-3
+                [&>li]:pl-8 
+                [&>li]:relative
+                [&>li]:before:content-['✓'] 
+                [&>li]:before:absolute 
+                [&>li]:before:left-0 
+                [&>li]:before:text-[#3F8D65] 
+                [&>li]:before:font-bold
+                [&>li]:before:text-xl
+              "
+            />
           </div>
 
-          <!-- Footer de la carte avec CTA subtil -->
-          <div class="bg-[#FCFCFC] border-t border-[#E5E7EB] px-8 md:px-12 py-6">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <p class="text-sm text-[#475569]">
-                <strong class="text-[#1E2939]">Expertise locale Klinova</strong> – 
-                Interventions adaptées aux spécificités de {city.name}
-              </p>
-              <div class="flex items-center gap-2 text-sm text-[#3F8D65]">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                Entreprise de confiance
+          {/* Footer de la carte (Rassurance) */}
+          <div class="bg-[#F8FAFC] border-t border-[#E5E7EB] px-8 py-5 md:px-12 md:py-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              
+              <div class="flex items-center gap-3">
+                <div class="flex -space-x-2">
+                  <div class="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-bold text-gray-500">K</div>
+                  <div class="w-8 h-8 rounded-full bg-[#3F8D65] border-2 border-white flex items-center justify-center text-xs text-white">✓</div>
+                </div>
+                <span class="text-sm font-medium text-[#1E2939]">
+                  Protocole validé pour {city.name}
+                </span>
               </div>
+
+              <div class="text-sm text-[#64748B] italic">
+                Dernière mise à jour : {new Date().getFullYear()}
+              </div>
+              
             </div>
           </div>
 
@@ -1346,42 +1426,7 @@ data-hide-header-cta
 )}
 
 
-    <!-- 5️⃣ Bloc repères tarifaires locaux -->
-    {pricingHintEntries.length > 0 && (
-      <section class="bg-white section-padding border-y border-neutral-100">
-        <div class="container-responsive">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
-              Repères tarifaires à {city.name}
-            </h2>
-            <p class="text-neutral-600 mb-6">
-              Ces indications ont pour but de vous donner un ordre d'idée selon les
-              cas les plus fréquents à {city.name}. Un devis précis reste établi
-              après analyse de votre situation.
-            </p>
-
-            <div class="grid gap-4 md:grid-cols-2">
-              {pricingHintEntries.map(([label, value]) => (
-                <div
-                  class="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3"
-                >
-                  <p class="text-sm font-semibold text-primary-600 mb-1">
-                    {label}
-                  </p>
-                  <p class="text-neutral-700 text-sm">{value}</p>
-                </div>
-              ))}
-            </div>
-
-            {pricingHintNote && (
-              <p class="mt-4 text-sm text-neutral-600 italic">
-                {pricingHintNote}
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-    )}
+    
 
     <!-- 3️⃣ Contexte local & quartiers desservis -->
 {specificChallenges.length > 0 && (
@@ -1395,7 +1440,7 @@ data-hide-header-cta
         <div class="text-center mb-12">
           <AvailabilityBadge cityName={city.name} position="hero" variant="default" />
           <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4 mt-4">
-            Klinova à {city.name}
+            {service.name} à {city.name}
           </h2>
         </div>
 
@@ -1444,53 +1489,36 @@ data-hide-header-cta
           </div>
 
           {/* Colonne droite - Quartiers et repères */}
-          <div class="space-y-6">
-            {city.districts && city.districts.length > 0 && (
-              <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm p-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center">
-                    <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-lg font-semibold text-[#1E2939]">
-                    Quartiers d'intervention
-                  </h3>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                  {city.districts.map((q) => (
-                    <span class="inline-flex items-center bg-gradient-to-r from-[#3F8D65]/10 to-[#387B58]/10 text-[#3F8D65] px-3 py-1.5 rounded-full text-sm font-medium border border-[#3F8D65]/20 hover:bg-[#3F8D65]/20 transition-colors">
-                      {q}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+          {selectedDistricts.length > 0 && (
+  <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm p-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-[#1E2939]">
+        Quartiers d'intervention
+      </h3>
+    </div>
 
-            {city.landmarks && city.landmarks.length > 0 && (
-              <div class="bg-white border border-[#E5E7EB] rounded-2xl shadow-sm p-6">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-8 h-8 bg-[#3F8D65]/10 rounded-lg flex items-center justify-center">
-                    <svg class="w-4 h-4 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-1 4h1m-1 4h1"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-lg font-semibold text-[#1E2939]">
-                    Repères locaux
-                  </h3>
-                </div>
-                <div class="space-y-2">
-                  {city.landmarks.map((l) => (
-                    <div class="flex items-start gap-3 text-sm text-[#475569]">
-                      <div class="w-1.5 h-1.5 bg-[#3F8D65] rounded-full mt-1.5 flex-shrink-0"></div>
-                      <span class="leading-relaxed">{l}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+    <div class="flex flex-wrap gap-2">
+      {selectedDistricts.map((q) => (
+        <span class="inline-flex items-center bg-gradient-to-r from-[#3F8D65]/10 to-[#387B58]/10 text-[#3F8D65] px-3 py-1.5 rounded-full text-sm font-medium border border-[#3F8D65]/20 hover:bg-[#3F8D65]/20 transition-colors">
+          {q}
+        </span>
+      ))}
+
+      {allDistricts.length > DISPLAY_COUNT && (
+        <span class="text-xs text-[#94A3B8] italic self-center">
+          + autres quartiers de {city.name}
+        </span>
+      )}
+    </div>
+  </div>
+)}
+
         </div>
 
         {/* Footer de section */}
@@ -1509,6 +1537,13 @@ data-hide-header-cta
 )}
 
 
+{service.key === 'moquettes' && (
+  <PricingMoquettes cityName={city.name} />
+)}
+
+{service.key === 'parkings' && (
+  <PricingParkingsShort cityName={city.name} />
+)}
 
     
   <!-- ❓ FAQ locale -->
@@ -1542,9 +1577,11 @@ data-hide-header-cta
                   ></path>
                 </svg>
               </summary>
-              <p class="mt-4 text-neutral-600 leading-relaxed">
-                {item.answer}
-              </p>
+              <div
+  class="mt-4 text-neutral-600 leading-relaxed"
+  set:html={item.answer}
+/>
+
             </details>
           ))}
         </div>

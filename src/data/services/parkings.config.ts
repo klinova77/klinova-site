@@ -19,7 +19,7 @@ const parkings: ServiceConfig = {
     { step: 'Finition', description: 'Contrôle des siphons, suppression des flaques résiduelles, réouverture progressive par zones.', },
   ],
   averageDuration: 'Nuit entière pour 1–2 niveaux',
-  pricing: { from: '1,80 €', unit: 'm²' },
+  pricing: { from: '1 €', unit: 'm²' },
 faq: [
   {
     question: 'Faut-il libérer toutes les places avant le nettoyage du parking ?',

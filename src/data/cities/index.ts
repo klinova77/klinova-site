@@ -10,6 +10,9 @@ const slugify = (v: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '');
 
+
+
+
 function normalizeCity(input: any): City {
   if (!input || typeof input !== 'object') {
     throw new Error(`City object invalid: ${JSON.stringify(input)}`);
@@ -33,12 +36,17 @@ function normalizeCity(input: any): City {
     faq: Array.isArray(input.faq) ? input.faq : [],
     testimonial: input.testimonial ?? undefined,
 
-    // Contexte local
+       // Contexte local (retrocompatible)
     districts: Array.isArray(input.districts) ? input.districts : [],
     landmarks: Array.isArray(input.landmarks) ? input.landmarks : [],
-    specificChallenges: Array.isArray(input.specificChallenges)
-      ? input.specificChallenges
-      : [],
+
+    // ✅ City-specific challenges (alias pour ancien specificChallenges)
+    citySpecificChallenges: Array.isArray(input.citySpecificChallenges)
+      ? input.citySpecificChallenges
+      : Array.isArray(input.specificChallenges)
+        ? input.specificChallenges
+        : [],
+
 
     // 🆕 Pourquoi nous choisir
     whyUsBullets: Array.isArray(input.whyUsBullets)
@@ -54,6 +62,11 @@ function normalizeCity(input: any): City {
     // Images
     images: input.images ?? undefined,
     cityImage: input.cityImage ?? undefined,
+
+        // 🆕 Hub ville – pitch global
+    hubIntro: input.hubIntro ?? '',
+
+
 
     // Services locaux
     services: Array.isArray(input.services) ? input.services : [],

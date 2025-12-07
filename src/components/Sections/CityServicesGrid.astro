@@ -1,0 +1,85 @@
+---
+// D:\Klinova-site\src\components\Sections\CityServicesGrid.astro
+
+
+import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
+
+interface Props {
+  city: any; // Ton type City
+}
+
+const { city } = Astro.props;
+
+// On récupère les services (ou une sélection si tu ne veux pas tout afficher)
+const servicesList = Object.values(services);
+---
+
+<section class="py-16 bg-white border-b border-neutral-100">
+  <div class="container-responsive">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold text-[#1E2939] mb-4">
+        Nos prestations de nettoyage à <span class="text-[#3F8D65]">{city.name}</span>
+      </h2>
+      <p class="text-[#64748B]">
+        Des solutions techniques adaptées à chaque surface.
+      </p>
+    </div>
+
+    {/* GRILLE DES SERVICES */}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      {servicesList.map((service: ServiceConfig) => (
+        <a 
+          href={`${service.urls.parent}`} 
+          class="group flex flex-col h-full bg-white border border-neutral-200 rounded-xl overflow-hidden hover:shadow-lg hover:border-[#3F8D65]/30 transition-all duration-300"
+        >
+          
+          {/* HEADER DE CARTE */}
+          <div class="p-6 pb-4 flex-grow">
+            {/* Icône ou Titre */}
+            <h3 class="text-xl font-bold text-[#1E2939] mb-3 group-hover:text-[#3F8D65] transition-colors">
+              {service.name}
+            </h3>
+            
+            {/* DESCRIPTION (C'est là qu'on utilise defaultDescription) */}
+            <p class="text-sm text-[#64748B] leading-relaxed line-clamp-3">
+              {service.defaultDescription}
+            </p>
+
+            {/* AFFICHER UN "BENEFIT" CLÉ (Optionnel mais sympa) */}
+            {service.benefits && service.benefits.length > 0 && (
+              <div class="mt-4 pt-4 border-t border-neutral-100">
+                <p class="text-xs font-medium text-[#3F8D65] flex items-center gap-2">
+                  <span>✨</span> {service.benefits[0]}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* FOOTER DE CARTE (Prix + CTA) */}
+          <div class="px-6 py-4 bg-[#F8FAFC] border-t border-neutral-100 flex items-center justify-between mt-auto">
+            <div class="text-sm font-semibold text-[#1E2939]">
+              Dès {service.pricing?.from}
+              <span class="text-xs text-[#64748B] font-normal"> / {service.pricing?.unit?.replace('par ', '')}</span>
+            </div>
+            
+            <span class="text-sm font-bold text-[#3F8D65] group-hover:translate-x-1 transition-transform">
+              Voir l'offre →
+            </span>
+          </div>
+
+        </a>
+      ))}
+
+    </div>
+
+    {/* Bouton global si besoin */}
+    <div class="mt-12 text-center">
+      <a href="/services" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-[#1E2939] bg-white border border-neutral-300 rounded-full hover:bg-neutral-50 transition-colors">
+        Voir tous nos services
+      </a>
+    </div>
+
+  </div>
+</section>

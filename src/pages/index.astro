@@ -23,6 +23,11 @@ import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
 
+
+
+import { highlightedCities } from '~/data/highlightedCities';
+
+
 // Variables de base
 const site = 'https://klinova.fr';
 const pageUrl = '/';
@@ -237,7 +242,7 @@ data-hide-header-cta
     </div>
 
     <!-- Titre -->
-    <h1 class="anim-in anim-delay-1 text-4xl md:text-5xl font-bold leading-tight mb-4 text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">
+    <h1 class="anim-in anim-delay-1 text-5xl md:text-6xl font-bold leading-tight mb-4 text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.7)]">
       Puissance industrielle,<br />
       <span class="bg-[linear-gradient(45deg,var(--color-action-500),#4ade80)] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
         exigence artisanale
@@ -245,7 +250,7 @@ data-hide-header-cta
     </h1>
 
     <!-- Sous-titre -->
-    <p class="anim-in anim-delay-2 text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
+    <p class="anim-in anim-delay-2 text-lg md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
       Des équipements professionnels de pointe au service de la propreté et de la durabilité.
     </p>
   </div>
@@ -1364,6 +1369,7 @@ data-section="hero"
 
 <!-- Section 6: Zones d'intervention -->
 <ZonesIntervention />
+
 
 
 </Layout>

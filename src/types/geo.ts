@@ -8,6 +8,11 @@ export interface Department {
   slug: string;
 }
 
+export interface ServicePricing {
+  from: string;
+  unit: string;
+  note?: string;
+}
 export interface CityServiceLocal {
   serviceKey: ServiceKey;
   uniqueIntro?: string;
@@ -28,6 +33,8 @@ export interface CityServiceLocal {
 
   // ✅ heroDescription par ville + service
   heroDescription?: string;
+  pricing?: ServicePricing; 
+  
 }
 
 export interface City {
@@ -41,17 +48,22 @@ export interface City {
   testimonial?: { text: string; author: string; role: string; building?: string };
   districts?: string[];
   landmarks?: string[];
-  specificChallenges?: string[];
-
-  // ✅ ici, bien dans City (et pas après services:)
+  citySpecificChallenges?: string[];
   whyUsBullets?: string[];
-
   department: Department;
   nearbyCities?: string[];
   images?: { heroDesktop?: string; heroMobile?: string };
   cityImage?: string;
+
+  // 🆕 contenu spécifique hub
+  hubIntro?: string;
+
+
+
   services: CityServiceLocal[];
 }
+
+
 
 export interface ServiceProcessStep {
   step: string;

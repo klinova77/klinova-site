@@ -34,12 +34,12 @@ const balcons: ServiceConfig = {
         'Contrôle visuel avec le client, évacuation des résidus, conseils d’entretien pour garder le balcon propre plus longtemps.',
     },
   ],
-  pricing: { from: '150 €', unit: 'balcon' },
+  pricing: { from: '190 €', unit: 'balcon' },
 
   
  faq: [
   {
-    question: 'Intervenez-vous sur tous types de balcons et terrasses ?',
+    question: 'Intervenez-vous sur tous types de balcons ?',
     answer:
       'Oui, nous adaptons notre méthode au revêtement : carrelage, béton, dalle pierre, bois composite, résine ou revêtement poreux. Nous réalisons toujours un test discret pour ajuster pression, produit et quantité d’eau selon la surface.'
   },

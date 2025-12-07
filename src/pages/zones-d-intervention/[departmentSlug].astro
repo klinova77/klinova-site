@@ -120,6 +120,32 @@ const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
     trackingSource: `departement-${department.slug}`,
   }}
 >
+
+
+
+<nav aria-label="Fil d'Ariane" class="bg-white border-b border-neutral-200">
+  <div class="container-responsive py-3">
+    <ol class="flex flex-wrap gap-2 text-sm text-neutral-600">
+      <li>
+        <a href="/" class="hover:text-primary-600 transition-colors">Accueil</a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      <li>
+        <a href="/zones-d-intervention" class="hover:text-primary-600 transition-colors">
+          Zones d'intervention
+        </a>
+      </li>
+      <li aria-hidden="true" class="text-neutral-400">/</li>
+
+      <li aria-current="page" class="font-medium text-primary-600">
+        {department.name} ({department.code})
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
   <main class="py-16 bg-white">
     <div class="container-responsive">
       <header class="max-w-3xl mx-auto text-center mb-12">
