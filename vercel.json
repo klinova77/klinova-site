@@ -37,6 +37,7 @@
     { "source": "/page2",                                    "destination": "/",                                  "permanent": true },
     { "source": "/accueil",                                  "destination": "/",                                  "permanent": true },
     { "source": "/brouillons",                               "destination": "/",                                  "permanent": true },
+    { "source": "/references",                               "destination": "/",                                  "permanent": true },
 
     { "source": "/devis-nettoyage-moquette",                 "destination": "/nettoyage-moquettes",               "permanent": true },
     { "source": "/test-terrasses",                           "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
