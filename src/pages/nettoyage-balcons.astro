@@ -115,13 +115,24 @@ const jsonLd = [
     "category": "Nettoyage de surfaces extérieures",
     "serviceOutput": "Balcon propre, désinfecté et restauré dans son état d'origine",
     "description": "Service de nettoyage complet de balcons, rambardes et sols extérieurs. Nettoyage haute pression, dégraissage, désinfection. Intervention adaptée aux copropriétés et immeubles parisiens.",
-    "offers": {
-      "@type": "Offer",
-      "price": "Sur devis",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
-    },
+  "offers": {
+  "@type": "Offer",
+  "price": 190,                       // ✅ nombre, pas une string
+  "priceCurrency": "EUR",
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": 190,
+    "priceCurrency": "EUR",
+    "unitText": "Forfait intervention balcon"
+  },
+  "availability": "https://schema.org/InStock",
+  "eligibleRegion": { 
+    "@type": "AdministrativeArea", 
+    "name": "Île-de-France" 
+  },
+  "description": "Tarif à partir de 190 € TTC pour un balcon standard, ajusté selon la surface, l’encrassement et les contraintes d’accès."
+},
+
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Services de nettoyage balcons",

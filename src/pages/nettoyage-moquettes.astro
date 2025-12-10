@@ -147,13 +147,21 @@ const jsonLd = [
     "category": "Nettoyage professionnel des revêtements textiles",
     "serviceOutput": "Moquette nettoyée en profondeur, désodorisée et à séchage rapide",
     "description": "Prestations d'entretien de moquettes : diagnostic, détachage, nettoyage à sec ou injection-extraction, monobrosse avec mousse, désodorisation. Méthodes adaptées aux fibres (aiguilletée, bouclée, velours, dalles).",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "EUR",
-      "price": "Sur devis",
-      "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
-    },
+   "offers": { 
+  "@type": "Offer",
+  "price": 10,
+  "priceCurrency": "EUR",
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": 10,
+    "priceCurrency": "EUR",
+    "unitText": "EUR par m²"
+  },
+  "availability": "https://schema.org/InStock",
+  "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+  "description": "Tarif à partir de 10 € TTC par m², ajusté selon la surface, l’encrassement et les contraintes d’accès."
+},
+
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Méthodes de nettoyage de moquettes",
