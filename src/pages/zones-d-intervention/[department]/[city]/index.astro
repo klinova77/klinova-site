@@ -1,4 +1,5 @@
 ---
+// D:\Klinova-site\src\pages\zones-d-intervention\[department]\[city]\index.astro
 import type { ServiceConfig } from '~/types/geo';
 
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
@@ -169,13 +170,19 @@ const cityFaq =
 // ==========================
 // JSON-LD : WebPage + Breadcrumb + Service + FAQ
 // ==========================
+const pageUrl = `${baseUrl}${canonical}`;
+
 const webPageLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  '@id': `${pageUrl}#webpage-city-hub`,
+  url: pageUrl,
   name: title,
-  url: `${baseUrl}${canonical}`,
   description,
+  isPartOf: { '@id': `${baseUrl}#website` },
+  inLanguage: 'fr-FR',
 };
+
 
 const breadcrumbLd = {
   '@context': 'https://schema.org',

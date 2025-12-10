@@ -1,10 +1,11 @@
 ---
 // src/pages/zones-d-intervention/index.astro
 
+// src/pages/zones-d-intervention/index.astro
+
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import { DEPARTMENTS } from '~/data/departments';
 import cities from '~/data/cities'; 
-
 
 const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
 
@@ -33,17 +34,20 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const pageUrl = `${baseUrl}${canonical}`;
 const webPageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `${baseUrl}${canonical}#webpage`,
-  url: `${baseUrl}${canonical}`,
+  '@id': `${pageUrl}#webpage-zones`,
+  url: pageUrl,
   name: title,
-  inLanguage: 'fr-FR',
   description,
+  isPartOf: { '@id': `${baseUrl}#website` },
+  inLanguage: 'fr-FR',
 };
 
 const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+
 ---
 
 <LayoutWithCTA

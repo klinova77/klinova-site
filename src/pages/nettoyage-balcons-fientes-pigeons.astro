@@ -64,7 +64,21 @@ const jsonLd = [
       { "@type": "City", "name": "Chelles" }
     ],
     "category": "Désinfection et nettoyage de surfaces extérieures",
-    "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons."
+    "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons.",
+    "offers": {
+      "@type": "Offer",
+      "price": 290,
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": 290,
+        "priceCurrency": "EUR",
+        "unitText": "Forfait intervention balcon"
+      },
+      "availability": "https://schema.org/InStock",
+      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+      "description": "Tarif à partir de 290 € TTC pour un balcon standard, ajusté selon la surface, l’encrassement et les contraintes d’accès."
+    }
   }
 ];
 

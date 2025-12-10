@@ -29,9 +29,14 @@ import { highlightedCities } from '~/data/highlightedCities';
 
 
 // Variables de base
-const site = 'https://klinova.fr';
-const pageUrl = '/';
+// Variables de base
+const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+const site = baseUrl;                 // alias, pour tout ce qui utilise déjà `site`
+
+const canonical = '/';
+const pageUrl = `${baseUrl}${canonical}`;
 const pageName = 'Accueil';
+
 
 // Images optimisées
 const heroSizes = '(min-width:1024px) 1024px, 100vw';
@@ -55,10 +60,6 @@ const popupContext = {
 
 // JSON-LD optimisé pour la home (évite duplication avec SeoBase)
 const jsonLd = [
- 
-  
-
-  // WebPage home
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -66,6 +67,8 @@ const jsonLd = [
     "url": site,
     "name": "Accueil — Klinova",
     "isPartOf": { "@id": `${site}#website` },
+    "@id": `${pageUrl}#webpage-home`,
+    "url": pageUrl,
     "inLanguage": "fr-FR",
     "primaryImageOfPage": { 
       "@type": "ImageObject", 
@@ -74,6 +77,7 @@ const jsonLd = [
       "height": 630
     }
   },
+ 
 
   // Catalogue des services principaux
   {
@@ -176,7 +180,7 @@ const jsonLd = [
   pageType="home"
   title="Klinova — Nettoyage professionnel Paris & Île-de-France | Copropriétés & Entreprises"
   description="Nettoyage de parkings, moquettes, balcons et désinfection professionnelle en Île-de-France. Devis gratuit, interventions rapides pour copropriétés et entreprises."
-  canonical={pageUrl}
+  canonical={canonical} 
   ogImage="/images/og/og-klinova-home.png"
   ogImageAlt="Klinova – Nettoyage professionnel à Paris et en Île-de-France"
   appendBrandToTitle={false}

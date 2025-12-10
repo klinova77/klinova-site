@@ -149,15 +149,19 @@ const jsonLd = [
     "category": "Nettoyage professionnel",
     "serviceOutput": "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
     "offers": {
-      "@type": "Offer",
-      "price": "1.0-2.0",
-      "priceCurrency": "EUR",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "1.0-2.0",
-        "priceCurrency": "EUR",
-        "unitText": "EUR par m²"
-      },
+  "@type": "Offer",
+  "price": 1.0,                       
+  "priceCurrency": "EUR",
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": 1.0,                     
+    "priceCurrency": "EUR",
+    "unitText": "EUR par m²"
+  },
+  "availability": "https://schema.org/InStock",
+  "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+  "description": "Tarif à partir de 1,0 € / m², ajusté selon la surface, l'état et la fréquence d'entretien."
+},
       "availability": "https://schema.org/InStock",
       "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
     },

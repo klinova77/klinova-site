@@ -8,10 +8,6 @@ import cities from '~/data/cities';
 const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
 
 // 🔧 Helper pour avoir la bonne préposition :
-// - en Seine-Saint-Denis / en Val-de-Marne / en Essonne / en Seine-et-Marne
-// - dans les Hauts-de-Seine / dans les Yvelines
-// - à Paris
-// - fallback : dans le {nom}
 function getDepartmentLocationPhrase(dep: { slug: string; name: string }): string {
   switch (dep.slug) {
     case 'seine-saint-denis':
@@ -68,6 +64,7 @@ const description =
   `Intervention à domicile, en pavillon ou en copropriété dans tout le département.`;
 
 const canonical = `/zones-d-intervention/${department.slug}`;
+const pageUrl = `${baseUrl}${canonical}`;
 
 // 🏙️ Villes de ce département (données /cities normalisées)
 const departmentCities = (cities ?? [])
@@ -89,7 +86,7 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 2,
       name: `${department.name} (${department.code})`,
-      item: `${baseUrl}${canonical}`,
+      item: pageUrl,
     },
   ],
 };
@@ -97,14 +94,16 @@ const breadcrumbJsonLd = {
 const webPageJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `${baseUrl}${canonical}#webpage`,
-  url: `${baseUrl}${canonical}`,
+  '@id': `${pageUrl}#webpage-department`,
+  url: pageUrl,
   name: title,
-  inLanguage: 'fr-FR',
   description,
+  isPartOf: { '@id': `${baseUrl}#website` },
+  inLanguage: 'fr-FR',
 };
 
 const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+
 ---
 
 <LayoutWithCTA

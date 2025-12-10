@@ -4,7 +4,7 @@
  * SEO centralisé pour le site Klinova :
  * - balises meta (title, desc, OG, Twitter)
  * - JSON-LD Organization (KLINOVA) + LocalBusiness (siège Chelles + zones IDF)
- * - relation hasBrand avec Stop-Punaises
+ * - relation brand avec Stop-Punaises
  */
 
 import { buildSeo } from '~/lib/seo'
@@ -50,7 +50,7 @@ const {
 } = Astro.props as Props
 
 // Domaine & helper URL
-const site = (Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr') as string
+const site = (Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr/') as string
 
 const toAbs = (url?: string) =>
   !url
@@ -91,22 +91,20 @@ const canonicalAbs =
       ? toAbs(canonical)
       : `${site}${effectivePath}`
 
-let canonicalNormalized = canonicalAbs;
+let canonicalNormalized = canonicalAbs
 
 try {
-  const urlObj = new URL(canonicalAbs);
+  const urlObj = new URL(canonicalAbs)
 
   // On enlève le / final sauf pour la home
   if (urlObj.pathname !== '/' && urlObj.pathname.endsWith('/')) {
-    urlObj.pathname = urlObj.pathname.slice(0, -1);
+    urlObj.pathname = urlObj.pathname.slice(0, -1)
   }
 
-  canonicalNormalized = urlObj.toString();
+  canonicalNormalized = urlObj.toString()
 } catch {
   // En cas d'URL bizarre, on ne casse pas le build, on garde canonicalAbs tel quel
 }
-
-
 
 const ogImageAbs = finalOgImage ? toAbs(finalOgImage) : ''
 const robots     = finalNoindex ? 'noindex, follow' : 'index, follow'
@@ -115,6 +113,7 @@ const robots     = finalNoindex ? 'noindex, follow' : 'index, follow'
 const orgId = `${site}#organization`
 const lbId  = `${site}#localbusiness`
 
+// Organization JSON-LD (KLINOVA)
 // Organization JSON-LD (KLINOVA)
 const orgJsonLd = {
   '@context': 'https://schema.org',
@@ -126,24 +125,31 @@ const orgJsonLd = {
   logo: `${site}/images/logo-klinova.webp`,
   description:
     'Entreprise de propreté et de maintenance technique en Île-de-France : parkings, moquettes, balcons, hygiène renforcée.',
+  sameAs: [
+    'https://www.facebook.com/KlinovaNettoyage',
+    'https://www.youtube.com/@KlinovaNettoyage',
+  ],
   brand: {
     '@type': 'Brand',
+    '@id': 'https://stop-punaises.fr#brand',
     name: 'Stop-Punaises',
     url: 'https://stop-punaises.fr',
   },
 }
 
 // LocalBusiness JSON-LD (siège Chelles + zones IDF)
+const localBusinessDescription =
+  'Klinova intervient en Île-de-France pour l’entretien professionnel des immeubles : nettoyage de moquettes, parkings souterrains, balcons, terrasses et textiles d’ameublement. Nous appliquons des protocoles documentés, une traçabilité complète, des produits adaptés et un contrôle qualité systématique afin d’assurer propreté durable et sécurité des occupants.';
+
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'CleaningService','ProfessionalService'],
   '@id': lbId,
   name: 'Klinova',
   legalName: 'KLINOVA',
   url: site,
   image: ogImageAbs || `${site}/images/og/og-klinova-home.png`,
   telephone: '+33676738661',
-  
   priceRange: '€€',
   address: {
     '@type': 'PostalAddress',
@@ -153,38 +159,57 @@ const localBusinessJsonLd = {
     addressRegion: 'Île-de-France',
     addressCountry: 'FR',
   },
+    geo: {
+    '@type': 'GeoCoordinates',
+   latitude: 48.8814,  
+   longitude: 2.5936,
+  },
   serviceArea: [
     { '@type': 'AdministrativeArea', name: 'Île-de-France' },
     { '@type': 'AdministrativeArea', name: 'Paris' },
     { '@type': 'AdministrativeArea', name: 'Seine-et-Marne' },
-    { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' },
     { '@type': 'AdministrativeArea', name: 'Seine-Saint-Denis' },
     { '@type': 'AdministrativeArea', name: 'Val-de-Marne' },
+    { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' },
+    { '@type': 'AdministrativeArea', name: 'Essonne' },
+    { '@type': 'AdministrativeArea', name: 'Yvelines' },
+    { '@type': 'AdministrativeArea', name: "Val-d'Oise" },
   ],
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Île-de-France' },
     { '@type': 'City', name: 'Paris' },
     { '@type': 'City', name: 'Chelles' },
   ],
-  openingHours: 'Mo-Su 08:00-20:00',
-  parentOrganization: { '@id': orgId },
-  description:
-    finalDescription ||
-    'Nettoyage professionnel (parkings, moquettes, balcons) et hygiène renforcée en Île-de-France. Protocoles documentés, traçabilité.',
-}
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      opens: '08:00',
+      closes: '20:00',
+    },
+  ],
+ description: localBusinessDescription,
+};
 
 // JSON-LD additionnels
 const extraJsonLd = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []
 
-
- const websiteJsonLd = {
+const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${site}#website`,
   url: site,
   name: siteName,
   publisher: { '@id': orgId },
-  inLanguage: 'fr-FR'
+  inLanguage: 'fr-FR',
 }
 
 const jsonLdBlocks = [
@@ -193,7 +218,6 @@ const jsonLdBlocks = [
   localBusinessJsonLd,
   ...extraJsonLd,
 ]
-
 ---
 
 <title>{finalTitle}</title>
@@ -234,7 +258,10 @@ const jsonLdBlocks = [
     {modifiedTime && (
       <meta property="article:modified_time" content={modifiedTime} />
     )}
-    <meta property="article:author" content={siteName} />
+    <meta
+      property="article:author"
+      content={siteName}
+    />
     <meta
       property="article:section"
       content="Propreté et hygiène professionnelle"

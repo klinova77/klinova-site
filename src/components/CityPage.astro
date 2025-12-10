@@ -325,15 +325,19 @@ if (allDistricts.length > DISPLAY_COUNT && service) {
 ///Fin de LOGIQUE DE ROTATION DES QUARTIERS (subset déterministe)
 
 
-
-
-
 // SEO optimisé
 const pageTitle = `${service.name} à ${city.name} – Klinova`;
+
+const departmentName = department.name ?? city.department?.name ?? 'Île-de-France';
+const departmentCode = department.code ?? city.department?.code ?? 'IDF';
+
 const description =
   service.defaultDescription
-     ? `${service.defaultDescription} Intervention à ${city.name} (${city.department.code}) et dans les communes voisines de ${city.department.name}.`
-    : `${service.name} à ${city.name} (${city.department.code}) pour copropriétés, résidences et gestionnaires.`;
+    ? `${service.defaultDescription} Intervention à ${city.name} (${departmentCode}) et dans les communes voisines de ${departmentName}.`
+    : `${service.name} à ${city.name} (${departmentCode}) pour copropriétés, résidences et gestionnaires.`;
+
+
+
 
 // Contenu dynamique
 const ctaLabel =
@@ -423,25 +427,22 @@ const combinedFaq = [
 
 
 // JSON-LD optimisé
-const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
 
-const faqEntities = [
-  ...(service.faq ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-  ...(city.faq ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-  ...(cityNote?.faqAdditions ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-];
+const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+const pageUrl = `${baseUrl}${canonical}`;
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${pageUrl}#webpage-city-service`,
+  url: pageUrl,
+  name: pageTitle,
+  description,
+  isPartOf: { '@id': `${baseUrl}#website` },
+  inLanguage: 'fr-FR',
+};
+
+const serviceId = `${pageUrl}#service`;
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -469,13 +470,33 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 4,
       name: service.name,
-      item: `${baseUrl}${canonical}`,
+      item: pageUrl,
     },
   ],
 };
 
-// ID stable pour le service local
-const serviceId = `${baseUrl}${canonical}#service`;
+
+
+const faqEntities = [
+  ...(service.faq ?? []).map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+  ...(city.faq ?? []).map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+  ...(cityNote?.faqAdditions ?? []).map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+];
+
+
+
 
 const basePrice = cleanPriceToNumber(service.pricing?.from);
 const unitCode = unitCodeFromLabel(service.pricing?.unit);
@@ -561,6 +582,7 @@ const howToJsonLd =
     : null;
 
 const jsonLd: any[] = [
+  webPageJsonLd,
   serviceJsonLd,
   breadcrumbJsonLd,
   ...(faqEntities.length
@@ -574,6 +596,7 @@ const jsonLd: any[] = [
     : []),
   ...(howToJsonLd ? [howToJsonLd] : []),
 ];
+
 
 
 
