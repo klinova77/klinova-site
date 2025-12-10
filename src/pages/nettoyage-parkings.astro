@@ -113,74 +113,123 @@ const breadcrumb = {
 const jsonLd = [
   // WebPage spécifique
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
-    "url": `${site}${pageUrl}`,
-    "name": "Nettoyage de parkings souterrains — Klinova",
-    "isPartOf": { "@id": `${site}#website` },
-    "inLanguage": "fr-FR",
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": `${site}/images/og/og-klinova-home.png`,
-      "width": 1200,
-      "height": 630
-    }
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${site}${pageUrl}#webpage`,
+    url: `${site}${pageUrl}`,
+    name: 'Nettoyage de parkings souterrains — Klinova',
+    isPartOf: { '@id': `${site}#website` },
+    inLanguage: 'fr-FR',
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630,
+    },
   },
 
   // Service spécifique
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${site}#service-parkings`,
-    "inLanguage": "fr-FR",
-    "serviceType": "Nettoyage de parkings souterrains",
-    "name": "Nettoyage de parkings souterrains à Paris et en Île-de-France",
-    "alternateName": "Nettoyage autolaveuse parkings",
-    "description": "Décapage et dégraissage des sols, autolaveuse industrielle, gestion des rampes et zones piétonnes, protocole sécurisé et traçable.",
-    "url": `${site}${pageUrl}`,
-    "provider": { "@id": `${site}#localbusiness` },
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Île-de-France" },
-      { "@type": "City", "name": "Paris" },
-      { "@type": "City", "name": "Chelles" }
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${site}#service-parkings`,
+    inLanguage: 'fr-FR',
+    serviceType: 'Nettoyage de parkings souterrains',
+    name: 'Nettoyage de parkings souterrains à Paris et en Île-de-France',
+    alternateName: 'Nettoyage autolaveuse parkings',
+    description:
+      "Décapage et dégraissage des sols, autolaveuse industrielle, gestion des rampes et zones piétonnes, protocole sécurisé et traçable.",
+    url: `${site}${pageUrl}`,
+    provider: { '@id': `${site}#localbusiness` },
+
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+      { '@type': 'City', name: 'Paris' },
+      { '@type': 'City', name: 'Chelles' },
     ],
-    "audience": { "@type": "Audience", "audienceType": ["Syndics", "Entreprises", "Commerces"] },
-    "category": "Nettoyage professionnel",
-    "serviceOutput": "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
-    "offers": {
-  "@type": "Offer",
-  "price": 1.0,                       
-  "priceCurrency": "EUR",
-  "priceSpecification": {
-    "@type": "UnitPriceSpecification",
-    "price": 1.0,                     
-    "priceCurrency": "EUR",
-    "unitText": "EUR par m²"
-  },
-  "availability": "https://schema.org/InStock",
-  "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-  "description": "Tarif à partir de 1,0 € / m², ajusté selon la surface, l'état et la fréquence d'entretien."
-},
-      "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" }
+
+    audience: {
+      '@type': 'Audience',
+      audienceType: ['Syndics', 'Entreprises', 'Commerces'],
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Prestations parking",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pré-balayage et déblaiement", "description": "Préparation de la surface avant nettoyage" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dégraissant alcalin sur hydrocarbures", "description": "Traitement spécialisé des taches d'huile" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Autolaveuse eau chaude", "description": "Nettoyage et aspiration en un passage" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Finition rampes et zones piétonnes", "description": "Nettoyage précis des zones difficiles" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Séchage assisté air movers", "description": "Remise en service rapide" } }
-      ]
-    }
+
+    category: 'Nettoyage professionnel',
+    serviceOutput:
+      "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
+
+    // ✅ Prix structuré + "à partir de"
+    offers: {
+      '@type': 'Offer',
+      price: 1.0,
+      priceCurrency: 'EUR',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: 1.0,
+        priceCurrency: 'EUR',
+        unitText: 'EUR par m²',
+      },
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: {
+        '@type': 'AdministrativeArea',
+        name: 'Île-de-France',
+      },
+      description:
+        "Tarif à partir de 1,0 € / m², ajusté selon la surface, l'état et la fréquence d'entretien.",
+    },
+
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Prestations parking',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Pré-balayage et déblaiement',
+            description: 'Préparation de la surface avant nettoyage',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Dégraissant alcalin sur hydrocarbures',
+            description: "Traitement spécialisé des taches d'huile",
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Autolaveuse eau chaude',
+            description: 'Nettoyage et aspiration en un passage',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Finition rampes et zones piétonnes',
+            description: 'Nettoyage précis des zones difficiles',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Séchage assisté air movers',
+            description: 'Remise en service rapide',
+          },
+        },
+      ],
+    },
   },
 
+  // ✅ On réutilise les objets déjà définis au-dessus
   faqSchema,
-  breadcrumb
+  breadcrumb,
 ];
+
 
 ---
 
