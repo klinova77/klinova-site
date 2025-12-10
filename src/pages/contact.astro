@@ -103,7 +103,7 @@ const jsonLd = [
         <div class="form-card">
           <div id="formMessage" class="form-message" style="display:none;" role="status" aria-live="polite"></div>
 
-          <form id="contactForm" action="/api/contact" method="POST" novalidate>
+          <form id="formulaire" action="/api/contact" method="POST" novalidate>
             <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
             <input type="hidden" name="source" value="contact-page">
             <input type="hidden" name="page_path" value="/contact">
@@ -1351,7 +1351,7 @@ const jsonLd = [
 
 <script is:inline>
 (() => {
-  const contactForm = document.getElementById('contactForm');
+  const contactForm = document.getElementById('formulaire');
   const msg = document.getElementById('formMessage');
   const submitBtn = document.getElementById('submitBtn');
   const submitText = document.getElementById('submitText');
