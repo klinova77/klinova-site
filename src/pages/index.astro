@@ -204,7 +204,7 @@ const jsonLd = [
   
   data-hide-floating-cta
 data-hide-header-cta 
-  class="relative flex min-h-[100svh] md:min-h-[90vh] overflow-hidden items-center justify-center"
+  class="relative flex min-h-[85svh] md:min-h-[85vh] lg:min-h-[90vh] overflow-hidden items-center justify-center"
 >
   <!-- Image LCP : pas de filter, pas de transition, pas de decoding="async" -->
   <Image
@@ -257,6 +257,21 @@ data-hide-header-cta
     <p class="anim-in anim-delay-2 text-lg md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.6)]">
       Des équipements professionnels de pointe au service de la propreté et de la durabilité.
     </p>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 anim-in anim-delay-3 z-20 pointer-events-none">
+    <span class="text-[10px] uppercase tracking-[0.2em] text-white/70 font-medium">
+      Découvrir
+    </span>
+    <svg 
+      class="w-6 h-6 text-white animate-bounce" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
   </div>
 </section>
 
