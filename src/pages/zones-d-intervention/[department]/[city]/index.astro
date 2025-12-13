@@ -40,8 +40,9 @@ const currentCity = cities.find(
 );
 
 if (!currentCity) {
-  throw new Error(`Ville inconnue : ${city} dans département ${department}`);
+  return new Response("Not found", { status: 404 });
 }
+
 
 
 // ==========================

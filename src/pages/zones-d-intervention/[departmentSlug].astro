@@ -51,8 +51,9 @@ const { departmentSlug } = Astro.params;
 const department = DEPARTMENTS.find((d) => d.slug === departmentSlug);
 
 if (!department) {
-  throw new Error(`Département inconnu : ${departmentSlug}`);
+  return new Response("Not found", { status: 404 });
 }
+
 
 // 💬 Expressions correctes
 const departmentLocationPhrase = getDepartmentLocationPhrase(department);
