@@ -3,8 +3,6 @@ User-agent: *
 Allow: /
 
 # 🚫 Pages internes ou sans intérêt SEO
-Disallow: /merci
-Disallow: /confirmation
 Disallow: /admin/
 Disallow: /dev/
 Disallow: /test/
