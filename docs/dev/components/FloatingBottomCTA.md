@@ -50,7 +50,7 @@ Importée via `LayoutWithCTA.astro` :
 🧱 Structure HTML
 <div id="sticky-cta">
   <div class="container-responsive">
-    <a href="tel:+33630221228">📞 06 30 22 12 28</a>
+    <a href="tel:+33676738661">📞 06 76 73 86 61</a>
     <a data-role="quote-button" data-open-popup="floating-bar-mobile">Devis gratuit</a>
   </div>
 </div>
