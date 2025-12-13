@@ -8,8 +8,7 @@ Disallow: /confirmation
 Disallow: /admin/
 Disallow: /dev/
 Disallow: /test/
-Disallow: /_astro/
-Disallow: /_assets/
+
 Disallow: /api/
 Disallow: /*.json$
 
@@ -18,8 +17,7 @@ Disallow: /*?utm_*
 Disallow: /*?gclid=*
 Disallow: /*?fbclid=*
 
-# 🕷️ Crawl delay (optionnel)
-Crawl-delay: 1
+
 
 # ✅ Sitemaps
 Sitemap: https://klinova.fr/sitemap-index.xml
