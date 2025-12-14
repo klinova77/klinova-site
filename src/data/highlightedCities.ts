@@ -3,10 +3,16 @@
 import cities from '~/data/cities';
 
 const HIGHLIGHTED_CITY_SLUGS = [
-  'chelles',
+  'montfermeil',
   'gagny',
+  'villeparisis',
+  'gournay-sur-marne',
   'neuilly-sur-marne',
   'vaires-sur-marne',
+
+  'claye-souilly',
+  'torcy',
+'champs-sur-marne',
 'noisy-le-grand',
   'lagny-sur-marne',
   'torcy',

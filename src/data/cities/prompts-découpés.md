@@ -12,7 +12,199 @@ Ce canevas servira ensuite à remplir des fichiers TypeScript, MAIS dans cette p
 - PAS de code
 - Juste du TEXTE BRUT bien structuré, orienté SEO + conversion.
 
----
+-------------------------------------------------------
+
+VARIATION DE STYLE — OBLIGATOIRE (PAR SERVICE, PAS PAR VILLE)
+
+Tu dois produire le contenu en respectant un style précis POUR CHAQUE SERVICE.
+
+Un service = un seul style (A/B/C/D)
+
+Tu n’as pas le droit de mélanger les styles à l’intérieur d’un même service
+
+En revanche, tu dois varier les styles d’un service à l’autre dans la même ville (c’est obligatoire).
+
+Le STYLE impacte :
+
+l’angle d’attaque
+
+le vocabulaire
+
+le rythme et la structure des phrases
+
+Le fond reste conforme au brief Klinova et aux protocoles obligatoires.
+
+
+STYLE A — Terrain & usage quotidien
+
+Accent sur l’usage réel des lieux (passage, salissures visibles, inconfort).
+
+Ton concret, phrases assez courtes.
+
+Approche “ce que voient et vivent les occupants”.
+
+
+
+STYLE B — Technique & maintenance
+
+Accent sur méthodes, contraintes techniques, matériaux.
+
+Vocabulaire plus précis (sans jargon inutile).
+
+Phrases plus structurées.
+
+
+
+STYLE C — Organisation & gestion
+
+Accent sur la coordination, la planification, la rotation, la gêne minimale.
+
+Point de vue gestionnaire / conseil syndical.
+
+Rythme posé, rassurant.
+
+
+
+STYLE D — Problèmes récurrents & prévention
+
+Accent sur ce qui se dégrade avec le temps si rien n’est fait.
+
+Mise en avant de la régularité, de l’anticipation.
+
+Ton pédagogique, sans dramatiser.
+
+
+
+⚠️ IMPORTANT
+
+Le STYLE impacte :
+
+l’angle d’attaque
+
+le vocabulaire
+
+la structure des phrases
+
+Le fond reste conforme au brief Klinova et aux protocoles obligatoires.
+
+
+IMPORTANT: RÈGLE GÉNÉRALE (OBLIGATOIRE)
+
+Tu ne dois JAMAIS utiliser le même style rédactionnel pour tous les services d’une même ville.
+
+👉 Le style doit être choisi par service, pas par ville.
+
+Pour chaque service, tu dois choisir UN SEUL style parmi les styles autorisés ci-dessous,
+de manière aléatoire, afin de varier les textes d’une ville à l’autre.
+
+🎯 STYLES AUTORISÉS PAR SERVICE (À RESPECTER STRICTEMENT)
+
+SERVICE 1 — NETTOYAGE DE MOQUETTES
+
+👉 Choisir UN SEUL style :
+
+STYLE B – Technique & Maintenance
+
+STYLE D – Usure / Prévention / Patrimoine
+
+❌ Interdiction d’utiliser le STYLE A (trop émotionnel pour des parties communes).
+
+SERVICE 2 — NETTOYAGE DE PARKINGS
+
+👉 Choisir UN SEUL style :
+
+STYLE B – Technique & Industriel
+
+STYLE C – Organisation / Syndic / Logistique
+
+❌ Interdiction d’utiliser le STYLE A (on ne “vit” pas dans un parking).
+
+
+
+SERVICE 3 — NETTOYAGE DE BALCONS / TERRASSES
+
+STYLE choisi pour ce service : A/B/C/D ?
+
+👉 Choisir UN SEUL style :
+
+STYLE A – Usage / Confort / Réappropriation
+
+STYLE B – Matériaux / Supports / Étanchéité
+
+❌ Interdiction d’utiliser le STYLE C (trop administratif pour un usage domestique).
+
+
+
+
+SERVICE 4 — BALCONS SOUILLÉS PAR FIENTES DE PIGEONS
+
+STYLE choisi pour ce service : A/B/C/D ?
+
+👉 Choisir UN SEUL style :
+
+STYLE B – Sécurité / Méthode / EPI
+
+STYLE D – Problème Sanitaire / Conséquences / Assainissement
+
+❌ Interdiction absolue d’utiliser le STYLE A.
+
+
+
+SERVICE 5 — CANAPÉS / TAPIS / MATELAS
+
+STYLE choisi pour ce service : A/B/C/D ?
+
+
+👉 Choisir UN SEUL style :
+
+STYLE A – Vie de famille / Confort / Quotidien
+
+STYLE D – Hygiène / Allergènes / Santé domestique
+
+❌ Interdiction d’utiliser le STYLE C (trop froid et logistique).
+
+🧠 RAPPEL DES STYLES (POUR GUIDER L’ÉCRITURE)
+
+STYLE A – Terrain & Usage
+Point de vue occupant / particulier.
+Confort, vécu quotidien, enfants, animaux, usage réel.
+Ton empathique, concret, rassurant.
+
+STYLE B – Technique & Maintenance
+Point de vue expert.
+Matériaux, méthodes, contraintes techniques, efficacité.
+Ton précis, factuel, professionnel.
+
+STYLE C – Organisation & Gestion
+Point de vue syndic / gestionnaire.
+Accès, planning, rotation, circulation, tranquillité des résidents.
+Ton structuré, fluide, orienté coordination.
+
+STYLE D – Problème & Solution
+Point de vue pédagogique.
+Conséquences si on ne fait rien, dégradation, risques, assainissement.
+Ton sérieux, explicatif, jamais alarmiste.
+
+⚠️ RÈGLE DE SÉCURITÉ (TRÈS IMPORTANTE)
+
+Quel que soit le style choisi :
+
+Tu ne dois JAMAIS supprimer une étape obligatoire du protocole Klinova.
+
+Le style influence le ton, les exemples et l’angle,
+mais jamais la complétude technique.
+
+✅ Résultat attendu
+
+Les services d’une même ville ont des styles différents et cohérents.
+
+Deux villes n’auront jamais exactement le même texte, même pour le même service.
+
+Le contenu reste crédible, terrain, SEO-safe et orienté conversion.
+
+Tu peux lancer le même prompt à l’infini, sans le modifier.
+
+-------------------------------------------------------------------------------------
 
 🏢 Contexte entreprise
 
@@ -28,7 +220,7 @@ KLINOVA intervient notamment sur :
 1) Nettoyage de moquettes des copropriétés, hotels, bureaux, et aux domiciles des particuliers
 2) Nettoyage de parkings (souterrains / aériens)
 3) Nettoyage de balcons / terrasses
-4) Balcons souillés par fientes de pigeons (nettoyage + désinfection)
+4) Balcons souillés par fientes de pigeons (nettoyage + désinfection + pose de solutions anti-pigeons: pics,filets)
 5) Nettoyage de canapés / tapis / matelas chez les particuliers
 
 ---
@@ -304,7 +496,9 @@ Nettoyage des surfaces (sol, garde-corps, murs) avec produit adapté ; éventuel
 
 Rinçage, aération du balcon, délai avant réutilisation (souvent 24h) + conseils éventuels de dissuasion (picots, etc.).
 
-Mention de la filière d’évacuation des déchets (filière spécialisée, jamais dans les ordures classiques).
+Eventuellement pose de solutions anti-pigeons: pics,filets
+
+Evacuation des déchets contamininés: sécurité  (ne pas parler de filiere spécialisée)
 
 5) Méthode de base – CANAPÉS, TAPIS & MATELAS
 
@@ -380,7 +574,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
   * Gare (RER, métro, Transilien),
   * Axe routier principal,
   * Quartier, zone résidentielle, ZAC, bords de fleuve, etc.
-* Parler de propreté, surfaces, entretien (moquettes, parkings, balcons).
+* Parler de propreté, surfaces, entretien. ne pas faire une liste de services de nettoyage qui pourrait faire croire que klinova se limite à ces services dans cette liste. 
 Ne pas parler d'un service en particulier, ou limiter un service à certains quartiers (exemple: ne pas écrire: "À Chelles, les copropriétés du centre-ville près de la gare RER E et les résidences des Coudreaux nécessitent un entretien régulier : moquettes de halls etc )
 exemple: " "Deuxième ville de Seine-et-Marne, Chelles allie une desserte RER/Transilien performante à une forte activité commerciale. L'entretien des moquettes dans les halls de copropriété, des parkings des résidences et des balcons des particuliers y est une demande constante pour maintenir le cadre de vie.",
 
@@ -480,6 +674,8 @@ etc.
 
 SERVICE 1 – NETTOYAGE DE MOQUETTES
 
+STYLE choisi pour ce service : A/B/C/D ?
+
 Ville cible : [NOM DE LA VILLE]
 Contexte local (en 3–6 lignes) :
 
@@ -556,7 +752,7 @@ Format "carte" : 12 à 20 mots max par point, dans cet ordre:
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
-4. Optionnel : suivi / compte-rendu pour le syndic ou le client
+
 Chaque élément fait entre 12 et 20 mots maximum.
 lier les éléments à des noms de quartiers ou de reperes géographique locaux si c'est pertinent. Interdiction de faire des liens artificiels ou qui n'ont pas de sens.
 
@@ -631,6 +827,8 @@ R4 : ...
 
 SERVICE 2 – NETTOYAGE DE PARKINGS
 
+STYLE choisi pour ce service : A/B/C/D ?
+
 Ville cible : [NOM DE LA VILLE]
 Contexte local (en 3–6 lignes) :
 
@@ -704,7 +902,7 @@ Format "carte" : 12 à 20 mots max par point, dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
-4. Optionnel : suivi / compte-rendu pour le syndic ou le client
+
 Chaque élément fait entre 12 et 20 mots maximum.
 
 
@@ -863,7 +1061,7 @@ Format "carte" : 12 à 20 mots max par point., dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
-4. Optionnel : suivi / compte-rendu pour le syndic ou le client
+
 Chaque élément fait entre 12 et 20 mots maximum.
 
 
@@ -940,6 +1138,160 @@ R4 : ...
 
 
 
+
+
+
+SERVICE 4 – BALCONS SOUILLÉS PAR FIENTES DE PIGEONS
+
+Ville cible : [NOM DE LA VILLE]
+Contexte local (3–6 lignes) :
+
+Présence de parcs, grands arbres, immeubles propices aux pigeons
+
+Types d’immeubles concernés (balcons en étage, loggias, cours intérieures)
+
+Problèmes fréquents : fientes accumulées, odeurs, conflit de voisinage
+[À COLLER ICI]
+
+🎯 Cible principale
+
+Particuliers en appartement avec balcon très souillé
+
+Parfois bailleurs / gestionnaires en conflit avec des locataires gênés
+
+🎯 Intentions SEO
+
+“fientes de pigeons balcon nettoyage [VILLE]”
+
+“désinfection balcon pigeons [VILLE]”
+
+“nettoyage balcon contaminé fientes [VILLE]”
+
+
+En respectant strictement le brief Klinova et les protocoles que tu as reçus plus haut, écris:
+
+1) HERO DESCRIPTION
+
+Une phrase unique de 20–35 mots qui souligne qu’après intervention, le balcon redevient sain, désinfecté et utilisable en toute sécurité à [VILLE].
+
+2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+
+Décris la situation :
+
+balcon recouvert de fientes, odeur forte, impossibilité d’utiliser le balcon,
+
+gêne pour l’occupant, peur des risques sanitaires, parfois tensions avec les voisins / copropriété.
+
+Relie à la présence de pigeons dans cette ville (parcs, combles, toits, corniches).
+
+Termine en expliquant qu’un traitement professionnel sécurisé est nécessaire.
+
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+
+Décris le protocole Klinova :
+
+protections (EPI : combinaison, gants, masque, etc., bâches de protection),
+
+humidification préalable pour éviter les poussières,
+
+ramassage des fientes et nids, conditionnement en sacs adaptés,
+
+nettoyage des surfaces (sol, garde-corps, murs),
+
+désinfection avec produit virucide/bactéricide, respect des temps de contact.
+
+Insiste sur la sécurité, le respect des voisins et l’évacuation des déchets.
+
+Termine par des recommandations (aération, délai avant réutilisation, éventuelles solutions de dissuasion).
+
+"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+
+
+
+
+4) POURQUOI NOUS (arguments)
+
+
+Format "carte" : 12 à 20 mots max par point., dans cet ordre :
+1. Expertise locale (quartiers, types d’immeubles, contexte ville)
+2. Maîtrise technique (matériel, méthode, niveau de résultat)
+3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
+
+Chaque élément fait entre 12 et 20 mots maximum.
+
+
+
+5) SPECIFIC CHALLENGES
+
+Ajoute une sous-partie “SPECIFIC CHALLENGES” avec 3 ou 4 phrases courtes :
+
+Un enjeu local (quartiers plus touchés, proximité de parcs/arbres, type de bâti).
+
+Une difficulté technique (accès en étage, corrosion des supports, poussières de fientes sèches).
+
+Une contrainte liée à la gestion des déchets contaminés et aux précautions à prendre.
+
+6) faqAddition (4 questions / réponses)
+
+Q1 : question sur les risques sanitaires et la nécessité de faire intervenir un pro.
+
+Q2 : question sur la sécurité des produits pour les habitants/animaux après séchage.
+
+Q3 : question sur les dégâts éventuels sur les supports (peinture, béton).
+
+Q4 : question sur ce qu’il advient des déchets (fientes, nids).
+
+Réponses 60–90 mots.
+
+Rappels :
+
+Pas de HTML, pas de code.
+
+Style sobre, très sérieux, orienté sécurité & hygiène.
+
+FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+
+BLOC 1 – HERO DESCRIPTION
+[texte]
+
+BLOC 2 – INTRO
+[texte]
+
+BLOC 3 – PROTOCOLE
+[texte]
+
+BLOC 4 – POURQUOI NOUS
+[texte]
+
+BLOC 5 – SPECIFIC CHALLENGES
+[texte]
+
+BLOC 6 – FAQ ADDITION
+Q1 : ...
+R1 : ...
+
+Q2 : ...
+R2 : ...
+
+Q3 : ...
+R3 : ...
+
+Q4 : ...
+R4 : ...
+
+
+“Important :
+– Pas de HTML, pas de Markdown, pas de code.
+– Texte brut uniquement.
+– Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
+
+
+```
+
+
+
+
+
 SERVICE 5 – CANAPÉS, TAPIS & MATELAS
 
 Ville cible : [NOM DE LA VILLE]
@@ -1012,7 +1364,7 @@ Format "carte" : 12 à 20 mots max par point., dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
-4. Optionnel : suivi / compte-rendu pour le syndic ou le client
+
 Chaque élément fait entre 12 et 20 mots maximum.
 
 

@@ -45,11 +45,11 @@ Nous garantissons une gestion globale de l'hygiène de vos bâtiments grâce à 
   ],
 
   nearbyCities: [
-  "noisy-le-grand",
-  "torcy",
-  "gagny",
+  "gournay-sur-marne",
   "chelles",
-  "neuilly-sur-marne",
+  "noisy-le-grand",
+  "vaires-sur-marne",
+  "torcy",
 ],
 
 
@@ -115,7 +115,7 @@ Nous garantissons une gestion globale de l'hygiène de vos bâtiments grâce à 
         "1. Connaissance pointue des résidences étudiantes de la Cité Descartes et des grands ensembles du Nesles.",
         "2. Matériel d'injection-extraction industriel capable de traiter de grandes surfaces de couloirs rapidement.",
         "3. Planification flexible pour s'adapter aux périodes de vacance scolaire ou aux horaires de bureau.",
-        "4. Compte-rendu détaillé après intervention pour faciliter le suivi technique du gestionnaire.",
+        
       ],
 
       uniqueIntro: `<p>
@@ -314,14 +314,14 @@ Le nettoyage se poursuit par un brossage mécanique suivi d'un rinçage à la ha
 Avec près de 50 % de son territoire couvert d'espaces verts et boisés, comme le Bois de la Grange ou le Parc du Château, Champs-sur-Marne offre un cadre idéal... pour les pigeons. Ces volatiles trouvent refuge sur les corniches et balcons des immeubles, notamment dans les quartiers denses comme le Nesles ou les résidences du Bois de Grâce. L'accumulation rapide de fientes transforme alors les loggias en zones insalubres : l'odeur devient insupportable, le sol glissant, et l'aspect visuel repoussant condamne l'accès à l'extérieur.
 </p>
 <p class="mt-4">
-Au-delà de la gêne olfactive, cette situation pose un grave problème de santé publique. Les déjections séchées se transforment en poussières volatiles chargées de bactéries et de champignons, risquant de contaminer l'air intérieur du logement. Face à ce danger biologique, le nettoyage domestique est inefficace et dangereux. Une intervention spécialisée en bio-nettoyage est impérative pour neutraliser les risques infectieux et assainir durablement les surfaces.
+Au-delà de la gêne olfactive, cette situation pose un grave problème de santé publique. Les déjections séchées se transforment en poussières volatiles chargées de bactéries et de champignons, risquant de contaminer l'air intérieur du logement. Face à ce risque sanitaire, un nettoyage domestique sans équipement adéquat est déconseillé. Une intervention spécialisée en bio-nettoyage est impérative pour garantir une désinfection sécurisée, neutraliser les risques infectieux et assainir durablement les surfaces.
 </p>`,
 
       uniqueDeepDive: `<p>
 Notre protocole d'intervention à Champs-sur-Marne est conçu pour garantir une sécurité sanitaire maximale. Nos techniciens interviennent équipés de combinaisons intégrales, de gants et de masques respiratoires FFP2 pour se protéger des agents pathogènes. Nous commençons par confiner la zone de travail pour éviter toute propagation de contaminants vers l'intérieur de l'appartement. Avant toute manipulation, nous humidifions les fientes sèches pour empêcher la formation de poussières nocives. Nous procédons ensuite au grattage manuel et à l'évacuation des déjections et nids dans des sacs hermétiques à double épaisseur, destinés aux déchets à risques.
 </p>
 <p class="mt-4">
-La seconde phase consiste en un nettoyage technique des sols, garde-corps et murs à l'aide de détergents professionnels pour éliminer les résidus organiques incrustés. L'étape clé est la désinfection par pulvérisation d'un produit virucide et bactéricide homologué, avec un temps de pose strict pour assurer la destruction des germes. Enfin, nous rinçons les surfaces à l'eau claire en contrôlant les écoulements. Les déchets sont évacués par nos soins vers une filière de traitement spécialisée. Nous vous conseillons de laisser sécher et d'aérer l'espace pendant 24 heures avant de le réinvestir.
+La seconde phase consiste en un nettoyage technique des sols, garde-corps et murs à l'aide de détergents professionnels pour éliminer les résidus organiques incrustés. L'étape clé est la désinfection par pulvérisation d'un produit virucide et bactéricide homologué, avec un temps de pose strict pour assurer la destruction des germes. Enfin, nous rinçons les surfaces à l'eau claire en contrôlant les écoulements. Les déchets sont znsuite évacués par nos soins en toute sécurité. Nous vous conseillons de laisser sécher et d'aérer l'espace pendant 24 heures avant de le réinvestir.
 </p>`,
 
       specificChallenges: [
@@ -353,7 +353,7 @@ La seconde phase consiste en un nettoyage technique des sols, garde-corps et mur
           question:
             "Où jetez-vous les déchets récupérés sur mon balcon ?",
           answer:
-            `<p>Nous ne les jetons jamais dans les poubelles de l'immeuble ni dans la nature. Les fientes de pigeons sont classées comme déchets présentant un risque sanitaire. Nous les conditionnons dans des sacs étanches spécifiques et les transportons nous-mêmes vers des sites de traitement habilités à incinérer ou traiter les déchets biologiques contaminés, assurant ainsi une traçabilité et une sécurité totale.</p>`,
+            `<p>L'évacuation suit un protocole strict : aucun déchet n'est laissé sur place: les résidus sont emballés dans des sacs hermétiques sécurisés et évacués par nos techniciens pour garantir une sécurité totale.</p>`,
         },
       ],
 

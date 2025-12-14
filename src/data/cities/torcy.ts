@@ -60,12 +60,11 @@ landmarks: [
 
 nearbyCities: [
   "vaires-sur-marne",
-  "lagny-sur-marne",
   "champs-sur-marne",
-  "noisy-le-grand",
+  "lagny-sur-marne",
   "chelles",
+  "gournay-sur-marne",
 ],
-
 
   
 
@@ -277,13 +276,13 @@ nearbyCities: [
 <p class="mt-4">Cette situation génère un inconfort majeur pour les résidents, des inquiétudes concernant les risques sanitaires et parfois des tensions avec le voisinage ou la copropriété. Les immeubles du secteur Arche-Guédon et les résidences récentes offrent de nombreux recoins propices à la nidification des pigeons. Un traitement professionnel sécurisé s'impose pour décontaminer efficacement l'espace et permettre aux occupants de retrouver l'usage de leur balcon en toute sécurité.</p>`,
 
       uniqueDeepDive: `<p>Notre intervention respecte un protocole strict de décontamination biologique. Nos techniciens s'équipent d'EPI complets : combinaison étanche, gants renforcés, masque respiratoire FFP2 et lunettes de protection. L'espace est sécurisé par des bâches pour éviter la dispersion des contaminants vers l'intérieur du logement et les balcons adjacents. Une humidification préalable des fientes sèches empêche la formation de poussières potentiellement dangereuses lors du ramassage.</p>
-<p>Les fientes, nids et débris organiques sont collectés manuellement et conditionnés dans des sacs étanches spécialement conçus pour les déchets biologiques contaminés. Le nettoyage complet des surfaces s'effectue avec des produits adaptés, suivi d'une désinfection obligatoire avec un virucide et bactéricide homologué. Le temps de contact du désinfectant est scrupuleusement respecté avant rinçage final, puis les déchets sont évacués via une filière spécialisée agréée.</p>`,
+<p>Les fientes, nids et débris organiques sont collectés manuellement et conditionnés dans des sacs étanches spécialement conçus pour les déchets biologiques contaminés. Le nettoyage complet des surfaces s'effectue avec des produits adaptés, suivi d'une désinfection obligatoire avec un virucide et bactéricide homologué. Le temps de contact du désinfectant est scrupuleusement respecté avant rinçage final, puis les déchets sont évacués par nos équipes.</p>`,
 
       specificChallenges: [
         "Balcons des étages supérieurs du secteur étangs particulièrement exposés en raison de la proximité des zones humides attractives pour les pigeons.",
         "Accès en hauteur pour le nettoyage des garde-corps et façades souillées nécessitant des équipements de protection contre les chutes et une coordination précise.",
         "Fientes anciennes pouvant avoir corrodé certains supports métalliques et joints, imposant un traitement adapté pour éviter l'aggravation des dégâts.",
-        "Gestion des déchets contaminés imposant un conditionnement étanche et une évacuation par filière spécialisée, sans mélange avec les déchets ménagers classiques."
+        "Gestion des déchets contaminés imposant un conditionnement étanche et une évacuation par nos équipes."
       ],
 
       faqAdditions: [
@@ -305,7 +304,7 @@ nearbyCities: [
         {
           question: "Que deviennent les fientes et nids collectés ?",
           answer:
-            "Tous les déchets biologiques contaminés sont conditionnés dans des sacs étanches spéciaux et évacués via une filière d'élimination agréée."
+            "Les déchets sont conditionnés sur place dans des sacs étanches et sécurisés. Ils sont intégralement emportés par nos techniciens pour ne laisser aucune souillure dans les parties communes de la résidence.",
         }
       ],
       ctaOverride: ""
@@ -349,11 +348,16 @@ nearbyCities: [
           answer:
             "Nous utilisons des produits enzymatiques spécialement formulés pour décomposer les protéines de l'urine et éliminer durablement les odeurs organiques. Ces enzymes agissent en profondeur même sur les taches anciennes. Selon l'ancienneté et la nature du tissu, une légère trace visuelle peut persister, mais le confort olfactif est fortement amélioré."
         },
-       
+
+       {
+  question: "Quand pourrai-je m'asseoir sur mon canapé ?",
+  answer:
+    "Comptez environ une demi-journée. L'humidité résiduelle s'évapore en 4 à 6 heures si la pièce est bien ventilée (fenêtres ouvertes). Nous vous conseillons de ne pas remettre les coussins immédiatement.",
+},
         {
           question: "Que dois-je préparer avant votre intervention à domicile ?",
           answer:
-            "Libérez l'accès aux textiles à traiter en déplaçant les objets posés dessus et en dégageant un passage pour notre matériel. Pour les tapis, un passage d'aspirateur préalable est idéal. Nous nous occupons de la protection des sols et meubles environnants et nous adaptons à la configuration de votre logement."
+            "Libérez l'accès aux textiles à traiter en déplaçant les objets posés dessus et en dégageant un passage pour notre matériel. Pour les tapis, un passage d'aspirateur préalable est idéal. Nous nous occupons de la protection des sols et meubles environnants et nous adaptons à la configuration de votre logement.",
         }
       ],
       ctaOverride: ""

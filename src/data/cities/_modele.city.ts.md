@@ -10,6 +10,12 @@ const city: City = {
   slug: "",
   postalCodes: [""],
 
+   department: {
+    name: "",
+    code: "",
+    slug: "",
+  },
+
   customDescription: "",
 
   hubIntro: "",
@@ -21,11 +27,7 @@ const city: City = {
 
   citySpecificChallenges: [],
 
-  department: {
-    name: "",
-    code: "",
-    slug: "",
-  },
+ 
 
   districts: [],
   nearbyCities: [],

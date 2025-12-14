@@ -35,14 +35,16 @@ const balconsFientes: ServiceConfig = {
   pricing: { from: '290 €', unit: 'par intervention' },
 
  faq: [
-  {
-    question: 'Nettoyer soi-même les fientes de pigeons, est-ce risqué pour la santé ?',
-    answer: `Oui, les fientes sèches peuvent contenir des agents pathogènes (bactéries, champignons, parasites) qui se diffusent sous forme de poussières fines. Nos interventions limitent ce risque grâce au port d’EPI (masque FFP3, gants, combinaison) et à une méthode rigoureuse de pré-humectation, retrait sécurisé et désinfection.`
-  },
-  {
+  
+{
     question: 'Quels produits utilisez-vous pour désinfecter ?',
     answer: `Nous utilisons un désinfectant professionnel prêt à l’emploi, sans parfum, conforme aux normes EN1276, EN13697, EN1650. Il agit en une seule étape (nettoyage + désinfection), sans rinçage obligatoire, et reste compatible avec la plupart des revêtements de balcon.`
   },
+  {
+    question: 'Proposez-vous des solutions pour éviter le retour des pigeons ?',
+    answer: `Oui. Nous proposons la pose de pics anti-pigeons sur les rebords, garde-corps ou appuis exposés. Dans les rares cas où cela ne suffit pas, nous pouvons également installer un filet de protection discret et résistant, si la configuration du balcon le permet.`
+  },
+  
   {
     question: 'Dois-je vider complètement mon balcon avant l’intervention ?',
     answer: `Oui, il est préférable de retirer les éléments mobiles : petits meubles, plantes, textiles, jouets. Cela permet un nettoyage complet et sans gêne. Si besoin, nous pouvons aussi prendre en charge le retrait des déchets accumulés.`
@@ -55,10 +57,7 @@ const balconsFientes: ServiceConfig = {
     question: 'Quand pourrai-je réutiliser mon balcon ?',
     answer: `Le balcon est généralement réutilisable quelques heures après l’intervention, une fois les surfaces sèches. Cela dépend de l’aération et des conditions météo. Le produit désinfectant est sans odeur et ne laisse pas de résidu gênant.`
   },
-  {
-    question: 'Proposez-vous des solutions pour éviter le retour des pigeons ?',
-    answer: `Oui. Nous proposons la pose de pics anti-pigeons sur les rebords, garde-corps ou appuis exposés. Dans les rares cas où cela ne suffit pas, nous pouvons également installer un filet de protection discret et résistant, si la configuration du balcon le permet.`
-  }
+  
 ],
 
 };

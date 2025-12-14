@@ -21,6 +21,15 @@ const parkings: ServiceConfig = {
   averageDuration: 'Nuit entière pour 1–2 niveaux',
   pricing: { from: '1 €', unit: 'm²' },
 faq: [
+
+   {
+    question: 'Quels matériels utilisez-vous pour nettoyer un parking ?',
+    answer: 'Nous combinons autolaveuse, monobrosse et outils manuels. L’autolaveuse est utilisée pour les grandes allées et les zones dégagées, la monobrosse pour les rampes et les zones très encrassées, et des outils manuels pour les pieds de poteaux, caniveaux et recoins difficiles d’accès.'
+  },
+  {
+    question: 'Proposez-vous des contrats d’entretien régulier pour les parkings ?',
+    answer: 'Oui, nous pouvons mettre en place un contrat d’entretien avec 1 à 4 passages par an selon le trafic, la ventilation et l’usage du parking. Cela permet de garder un sol propre, de limiter les dépôts gras et de réduire le coût des gros nettoyages ponctuels.'
+  },
   {
     question: 'Faut-il libérer toutes les places avant le nettoyage du parking ?',
     answer: 'Idéalement, nous travaillons par zones : une partie du parking est libérée pendant l’intervention pendant que le reste reste accessible. Nous fournissons le balisage et, si besoin, un modèle d’affichage pour prévenir les résidents ou usagers quelques jours avant le chantier.'
@@ -44,10 +53,7 @@ faq: [
 
 
   },
-  {
-    question: 'Proposez-vous des contrats d’entretien régulier pour les parkings ?',
-    answer: 'Oui, nous pouvons mettre en place un contrat d’entretien avec 1 à 4 passages par an selon le trafic, la ventilation et l’usage du parking. Cela permet de garder un sol propre, de limiter les dépôts gras et de réduire le coût des gros nettoyages ponctuels.'
-  },
+  
   {
     question: 'Intervenez-vous en horaires décalés ou après sinistre ?',
     answer: 'Pour limiter la gêne, nous pouvons intervenir tôt le matin, en soirée ou le week-end, en particulier sur les parkings de bureaux ou les grands ensembles. Après sinistre (incendie, dégât des eaux, fuite importante), un diagnostic rapide est possible afin de coordonner l’intervention avec le gestionnaire et l’assurance.'

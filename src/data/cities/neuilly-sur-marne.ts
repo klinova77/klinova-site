@@ -31,11 +31,11 @@ const city: City = {
   },
 
   nearbyCities: [
-  "gagny",
   "noisy-le-grand",
+  "gagny",
+  "gournay-sur-marne",
   "chelles",
   "champs-sur-marne",
-  "gagny",
 ],
 
 
@@ -125,7 +125,7 @@ districts: [
       ],
       uniqueIntro: `<p>À Neuilly-sur-Marne, les moquettes des parties communes sont constamment mises à rude épreuve. Le trafic piéton en provenance des gares de proximité (RER A de Neuilly-Plaisance, RER E de Chelles-Gagny) ou des grands axes de circulation (RN 34) dépose quotidiennement boue, poussières fines et polluants.</p>
 <p>Cet encrassement nuit à l’esthétique du hall, première image de la résidence, et retient allergènes, poussière et bactéries, impactant l’hygiène globale du bâtiment. Un nettoyage régulier est indispensable pour prolonger la durée de vie de la moquette et garantir un air sain aux habitants des logements collectifs.</p>`,
-      uniqueDeepDive: `<p><strong>Diagnostic sur place :</strong> examen du type de moquette (aiguilletée, velours, dalles, etc.), évaluation du niveau d’encrassement général, identification des taches (graisse, café, urine, etc.) et prise en compte des contraintes d’accès (ascenseur, escaliers, halls ouverts sur rue).</p>
+      uniqueDeepDive: `<p><strong>Diagnostic sur place :</strong> examen du type de moquette (aiguilletée, velours, dalles, etc.), évaluation du niveau d’encrassement général, identification des taches (graisse, café, urine, etc.) et prise en compte des contraintes d’accès (ascenseur, escaliers, halls donnant sur rue).</p>
 <p><strong>Préparation et protections :</strong> balisage systématique de la zone d’intervention, protection des bas de murs, plinthes et angles avec des bâches ou rubans, organisation par cage d’escalier ou par étage pour minimiser la gêne.</p>
 <p><strong>Méthode principale – injection-extraction :</strong> application d’une solution nettoyante professionnelle adaptée à la fibre. Le matériel injecte une eau souvent chaude et un produit détergent, puis aspire immédiatement l’eau sale en profondeur, avec plusieurs passes sur les zones les plus sollicitées (halls de copropriétés, abords d’ascenseurs).</p>
 <p><strong>Gestion de l’humidité et du séchage :</strong> extraction maximisée pour laisser la moquette la moins humide possible, aération des espaces et indication d’un délai typique de séchage de quelques heures avant rétablissement complet des circulations.</p>
@@ -297,12 +297,12 @@ districts: [
 <p>Les fientes sèches, en plus d’être inesthétiques, peuvent transmettre des maladies et corroder les supports (peinture, béton, métal). La présence importante de pigeons dans la ville, attirés par les arbres et les toits plats, aggrave le problème. Un nettoyage et une désinfection professionnels sont indispensables pour éliminer les risques, restaurer l’hygiène et retrouver un balcon sain.</p>`,
       uniqueDeepDive: `<p>Notre intervention commence par la mise en place d’équipements de protection individuelle (combinaison, gants, masque FFP2, lunettes) et le confinement de la zone avec des bâches pour éviter toute dispersion de poussières contaminées. Nous humidifions d’abord les fientes sèches pour limiter les particules en suspension, puis nous procédons au ramassage manuel des déjections et des nids, conditionnés dans des sacs étanches spécialement prévus pour les déchets contaminés.</p>
 <p>Le nettoyage des surfaces (sol, garde-corps, murs) est réalisé avec un produit détergent adapté, suivi d’une désinfection complète à l’aide d’un virucide/bactéricide homologué, avec respect strict du temps de contact pour une efficacité maximale. Nous rinçons ensuite les surfaces et aérons le balcon avant de le rendre accessible.</p>
-<p>À Neuilly-sur-Marne, nous recommandons un délai de 24 heures avant réutilisation et pouvons conseiller des solutions de dissuasion (picots, fils tendus) pour limiter les retours de pigeons. Les déchets sont évacués vers une filière spécialisée, conformément à la réglementation.</p>`,
+<p>À Neuilly-sur-Marne, nous recommandons un délai de 24 heures avant réutilisation et pouvons conseiller et installer des solutions de dissuasion (picots, fils tendus) pour limiter les retours de pigeons.</p>`,
       specificChallenges: [
         "Balcons situés près du parc de la Haute-Île ou des grands arbres particulièrement exposés aux fientes de pigeons.",
         "Fientes sèches et nids en hauteur nécessitant un accès sécurisé et une manipulation prudente pour éviter les poussières contaminées.",
         "Supports corrodés (peinture écaillée, béton poreux) demandant un traitement spécifique pour éviter d’aggraver les dégâts.",
-        "Évacuation des déchets contaminés devant respecter une filière dédiée, distincte des ordures ménagères classiques."
+        "Évacuation des déchets contaminés gérée par nos équipe, afin de vous garantir un haut niveau de sécurité sanitaire."
       ],
       faqAdditions: [
         {
@@ -327,7 +327,7 @@ districts: [
           question:
             "Que deviennent les fientes et les nids après l’intervention ?",
           answer:
-            "Les déchets sont conditionnés dans des sacs étanches et évacués vers une filière spécialisée pour les déchets contaminés, conformément à la réglementation. Ils ne sont jamais jetés avec les ordures ménagères."
+            "Nous ne laissons rien sur place. Les déchets sont conditionnés dans des sacs hermétiques et emportés par nos équipes, garantissant une hygiène totale pour votre résidence.",
         }
       ],
       ctaOverride: ""
@@ -376,7 +376,7 @@ districts: [
           question:
             "Combien de temps faut-il pour que mon canapé ou tapis soit sec après l’intervention ?",
           answer:
-            "Le séchage prend généralement entre 4 et 8 heures, selon le tissu et l’aération de la pièce. Nous vous conseillons d’attendre ce délai avant de réutiliser le meuble ou de marcher sur le tapis."
+            "Comptez une demi-journée en moyenne. L'extraction mécanique retire le plus gros de l'eau, mais une ventilation naturelle reste indispensable pour sécher les fibres à cœur en quelques heures."
         },
         {
           question:

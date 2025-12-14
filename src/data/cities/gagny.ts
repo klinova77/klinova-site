@@ -6,7 +6,7 @@ const city: City = {
   postalCodes: ["93220"],
 
   customDescription:
-    "Entre les coteaux pavillonnaires de l’Époque et les grandes copropriétés de l’est gabinien, Gagny présente une diversité de surfaces à entretenir. La proximité des carrières et des nombreux espaces boisés (Arboretum, Bois de l’Étoile) accentue l’exposition des immeubles aux poussières de terre, aux mousses et à l’humidité, exigeant une maintenance technique régulière.",
+    "Entre les coteaux pavillonnaires de l’Époque et les grandes copropriétés de l’est de la ville, Gagny présente une diversité de surfaces à entretenir. La proximité des carrières et des nombreux espaces boisés (Arboretum, Bois de l’Étoile) accentue l’exposition des immeubles aux poussières de terre, aux mousses et à l’humidité, exigeant une maintenance technique régulière.",
 
   hubIntro:
     `<p>Gagny se distingue par une topographie vallonnée et une mixité urbaine forte, alternant zones pavillonnaires calmes (Maison Blanche, Franceville) et ensembles collectifs denses (Jean Moulin, les Peupliers). Pour les syndics et gestionnaires, cela implique de gérer des problématiques variées : l’humidité des sous-sols en pied de coteau, l’encrassement des halls par la végétation environnante ou l’entretien des parkings vieillissants.</p>
@@ -40,14 +40,14 @@ const city: City = {
     "Les Abbesses",
     "Plateau de Franceville",
     "Jean Moulin",
-    "Jean Bouin",
     "Les Peupliers",
   ],
 
-  nearbyCities: [
+nearbyCities: [
   "neuilly-sur-marne",
-  "noisy-le-grand",
   "chelles",
+  "gournay-sur-marne",
+  "noisy-le-grand",
   "champs-sur-marne",
 ],
 
@@ -62,6 +62,7 @@ const city: City = {
     "Gare de Gagny (RER E)",
     "Gare du Chénay-Gagny (RER E)",
     "Parc Courbet",
+    "Jean Bouin",
   ],
 
   faq: [
@@ -161,7 +162,7 @@ const city: City = {
       ],
 
       uniqueIntro:
-        `<p>Les parkings des résidences gabiniennes, qu'ils soient situés sous les immeubles du centre-ville ou dans les complexes de la Pointe de Gournay, accumulent une pollution spécifique. Poussières de freinage, suies d'échappement et fuites d'huile encrassent les bétons et les résines, rendant les surfaces glissantes et les marquages invisibles.</p>
+        `<p>Les parkings des résidences de Gagny, qu'ils soient situés sous les immeubles du centre-ville ou dans les complexes de la Pointe de Gournay, accumulent une pollution spécifique. Poussières de freinage, suies d'échappement et fuites d'huile encrassent les bétons et les résines, rendant les surfaces glissantes et les marquages invisibles.</p>
         <p class="mt-4">Au-delà de l'aspect visuel, un parking sale génère un sentiment d'insécurité et peut provoquer des chutes. L'entretien mécanique régulier est indispensable pour préserver la qualité de l'air (en limitant les poussières volatiles) et assurer la pérennité des revêtements de sol face à l'acidité des hydrocarbures.</p>`,
 
       uniqueDeepDive:
@@ -251,7 +252,7 @@ const city: City = {
         "Protocole sanitaire strict (EPI, confinement, désinfection).",
         "Produits virucides et bactéricides homologués.",
         "Nettoyage des traces acides corrosives sur les garde-corps et sols.",
-        "Évacuation des déchets contaminants en filière spécialisée.",
+        
       ],
 
       uniqueIntro:
@@ -279,7 +280,7 @@ const city: City = {
           question:
             "Installez-vous des pics anti-pigeons après le nettoyage ?",
           answer:
-            `<p>Notre cœur de métier est le nettoyage et la désinfection. Cependant, une fois le support propre, nous pouvons vous conseiller sur les dispositifs existants (pics, filets) ou vous orienter vers des partenaires spécialisés pour la pose de systèmes de dépigeonnage durables.</p>`,
+            `<p>Oui, absolument. Le nettoyage est le moment idéal pour sécuriser la zone. Nous pouvons installer des pics sur les garde-corps ou les appuis de fenêtre pour empêcher les pigeons de se poser à nouveau.</p>`,
         },
       ],
 
@@ -322,12 +323,7 @@ const city: City = {
           answer:
             `<p>Pour un canapé 3 places standard, comptez environ 1h30 à 2h d'intervention. Cela inclut la préparation, le détachage, le nettoyage par extraction et le nettoyage de la zone de travail. C'est rapide et efficace.</p>`,
         },
-        {
-          question:
-            "Est-ce que toutes les taches partent ?",
-          answer:
-            `<p>Nous retirons la grande majorité des taches courantes (café, chocolat, terre, sébum). Cependant, certaines taches anciennes, "cuites" par des tentatives de nettoyage ménager, ou des décolorations chimiques (Javel, produits agressifs) peuvent être indélébiles. Nous vous prévenons toujours du résultat attendu lors du diagnostic initial.</p>`,
-        },
+       
       ],
 
       ctaOverride: "",

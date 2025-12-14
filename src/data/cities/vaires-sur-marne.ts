@@ -37,13 +37,13 @@ const city: City = {
     "Quartier du Canal"
   ],
 
- nearbyCities: [
-  "chelles",
-  "lagny-sur-marne",
+nearbyCities: [
   "torcy",
   "champs-sur-marne",
+  "chelles",
+  "gournay-sur-marne",
+  "lagny-sur-marne",
 ],
-
 
   landmarks: [
     "Mairie de Vaires-sur-Marne",
@@ -105,20 +105,15 @@ const city: City = {
       uniqueIntro:
         "<p>À Vaires-sur-Marne, de nombreux halls d’immeubles sont recouverts de moquettes soumises à une forte sollicitation quotidienne : passages répétés, poussières extérieures, traces de chaussures, taches d’usage. C’est aussi le cas des paliers, escaliers et couloirs dans les cages d’escalier, notamment dans les résidences des quartiers comme le Parc de l’Aulnay, les Pêcheurs ou la cité de la Gare.</p><p class=\"mt-4\">Avec le temps, les fibres ternissent, les taches s’installent et les moquettes perdent leur fonction d’accueil visuel. Cela peut générer un inconfort pour les résidents et nuire à l’image du syndic ou du bailleur. Un nettoyage professionnel bien structuré, avec du matériel adapté et une méthode rigoureuse, permet de redonner une propreté visible dès les premières marches.</p>",
       uniqueDeepDive:
-        "<p>Chaque intervention débute par un diagnostic complet de l’état des moquettes : type de fibre, niveau d’encrassement, nature des taches, circulation dans les cages, contraintes d’accès ou d’ascenseur. Nos équipes adaptent leur protocole à la configuration locale, qu’il s’agisse de cages étroites dans les résidences anciennes ou de halls ouverts sur rue dans les constructions plus récentes.</p><p class=\"mt-4\">La préparation inclut la protection des plinthes et des bas de murs, la sécurisation des zones de travail, le balisage des escaliers et la coordination avec les résidents ou gardiens si besoin. Le nettoyage se fait par injection-extraction à l’eau chaude, avec plusieurs passes sur les zones les plus sollicitées (accès d’entrée, devant les boîtes aux lettres, paliers intermédiaires). Le séchage est optimisé par extraction puissante et aération. Nous conseillons une fréquence d’entretien tous les 12 à 18 mois selon la fréquentation.</p>",
+        "<p>Chaque intervention débute par un diagnostic complet de l’état des moquettes : type de fibre, niveau d’encrassement, nature des taches, circulation dans les cages, contraintes d’accès ou d’ascenseur. Nos équipes adaptent leur protocole à la configuration locale, qu’il s’agisse de cages étroites dans les résidences anciennes ou de halls donnant sur rue dans les constructions plus récentes.</p><p class=\"mt-4\">La préparation inclut la protection des plinthes et des bas de murs, la sécurisation des zones de travail, le balisage des escaliers et la coordination avec les résidents ou gardiens si besoin. Le nettoyage se fait par injection-extraction à l’eau chaude, avec plusieurs passes sur les zones les plus sollicitées (accès d’entrée, devant les boîtes aux lettres, paliers intermédiaires). Le séchage est optimisé par extraction puissante et aération. Nous conseillons une fréquence d’entretien tous les 12 à 18 mois selon la fréquentation.</p>",
       specificChallenges: [
-        "Moquettes régulièrement exposées aux salissures extérieures dans les halls ouverts sur la D934.",
+        "Moquettes régulièrement exposées aux salissures extérieures dans les halls proches de la D934.",
         "Présence de poussières fines en provenance de la gare de Vaires-Torcy et des axes routiers proches.",
         "Nombreux escaliers en moquette dans les résidences sans ascenseur, rendant le nettoyage plus complexe.",
         "Humidité fréquente en rez-de-chaussée, avec des délais de séchage à anticiper."
       ],
       faqAdditions: [
-        {
-          question:
-            "Nos halls sont ouverts sur la rue, est-ce vraiment utile de nettoyer la moquette ?",
-          answer:
-            "Oui, les halls ouverts comme on en trouve sur l’avenue Jean Jaurès ou près du canal sont exposés à un encrassement rapide. Un nettoyage professionnel restaure l’apparence des moquettes et permet un entretien plus simple ensuite. Nous intervenons avec des machines puissantes même dans les halls très exposés."
-        },
+      
         {
           question:
             "Vous intervenez aussi dans les petites copropriétés ou les immeubles avec peu de lots ?",
@@ -287,7 +282,7 @@ const city: City = {
         {
           question: "Que deviennent les déchets retirés du balcon ?",
           answer:
-            "Ils sont conditionnés dans des sacs adaptés aux déchets potentiellement contaminés, puis évacués via une filière sécurisée. Ils ne sont jamais jetés dans les ordures classiques. Ce traitement spécifique garantit la sécurité sanitaire et respecte les obligations réglementaires."
+            "Tout est emporté par nos soins dans des emballages étanches. Nous ne laissons rien dans les conteneurs de la résidence ni sur le trottoir. L'évacuation est gérée en externe pour garantir une propreté absolue des lieux."
         }
       ],
       ctaOverride: ""
@@ -333,7 +328,7 @@ const city: City = {
           question:
             "Combien de temps faut-il attendre avant de réutiliser le canapé ou le tapis ?",
           answer:
-            "Le temps de séchage moyen est de 4 à 8 heures, selon l’aération et le type de tissu. Pour un canapé ou un matelas, il est recommandé d’attendre une nuit complète avant de l’utiliser de nouveau. Nous vous donnons les consignes exactes à la fin de l’intervention."
+            "Prévoyez une indisponibilité de quelques heures. Bien que l'extraction mécanique retire l'essentiel de l'eau, une ventilation active (fenêtres ouvertes) est nécessaire pour sécher les fibres en profondeur avant de vous rasseoir."
         },
         {
           question:

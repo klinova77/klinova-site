@@ -51,11 +51,12 @@ const city: City = {
   ],
 
   // ✅ nearbyCities repris de A (slugs)
-  nearbyCities: [
-  "vaires-sur-marne",
-  "chelles",
+nearbyCities: [
   "torcy",
+  "vaires-sur-marne",
+  "claye-souilly",
   "champs-sur-marne",
+  "chelles",
 ],
 
 
@@ -120,7 +121,7 @@ const city: City = {
       uniqueIntro: `<p>À Lagny-sur-Marne, les moquettes des halls, paliers et cages d’escaliers subissent un encrassement constant : traces de chaussures, poussières fines apportées par la proximité de la gare de Lagny-Thorigny et des axes comme la Francilienne, ainsi que les taches liées aux allers-retours des résidents. Les copropriétés des quartiers du centre-ville ou des Hauts de Lagny, souvent très fréquentées, voient leurs moquettes s’user prématurément, perdant leur aspect d’origine et donnant une impression de négligence. Pour les syndics et gestionnaires, cela se traduit par des remarques récurrentes des occupants et une dégradation de l’image de l’immeuble.</p>
 <p class="mt-4">Un nettoyage professionnel régulier permet de restaurer l’éclat des moquettes, d’éliminer les salissures incrustées et de prolonger leur durée de vie, tout en améliorant le cadre de vie des résidents et la valorisation du patrimoine immobilier.</p>`,
 
-      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis sur place : état général des moquettes, nature des taches (graisse, boue, traces de chaussures), niveau d’usure et contraintes d’accès (escaliers étroits, ascenseurs, halls ouverts sur rue). Nous identifions aussi les zones de fort passage, typiques des immeubles près de la gare ou des axes routiers, où l’encrassement est plus marqué.</p>
+      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis sur place : état général des moquettes, nature des taches (graisse, boue, traces de chaussures), niveau d’usure et contraintes d’accès (escaliers étroits, ascenseurs, halls donnant sur la rue). Nous identifions aussi les zones de fort passage, typiques des immeubles près de la gare ou des axes routiers, où l’encrassement est plus marqué.</p>
 <p>La préparation est essentielle : protection des plinthes, balisage des zones en cours de traitement et organisation par étage pour limiter la gêne. Nous utilisons une méthode d’injection-extraction à l’eau, adaptée aux moquettes des copropriétés, avec plusieurs passes sur les zones critiques comme les devants d’ascenseur et les paliers. Le séchage est optimisé par une extraction puissante et une aération contrôlée, pour un retour à la normale en 4 à 6 heures. Nous adaptons nos protocoles aux spécificités locales, comme l’humidité en rez-de-chaussée ou les moquettes anciennes des immeubles des années 70-80. Enfin, nous conseillons une fréquence de nettoyage tous les 12 à 18 mois pour les parties communes très sollicitées, afin de maintenir un résultat optimal.</p>`,
 
       specificChallenges: [
@@ -289,13 +290,13 @@ const city: City = {
 <p class="mt-4">Un nettoyage professionnel est indispensable pour éliminer ces salissures en profondeur, désinfecter les surfaces et restaurer un environnement sain. Sans intervention adaptée, le problème persiste et s’aggrave, compromettant le confort et la sécurité des résidents.</p>`,
 
       uniqueDeepDive: `<p>Notre intervention commence par la mise en place de protections strictes : nos techniciens portent des combinaisons, gants, masques FFP2 et lunettes pour éviter tout contact avec les poussières contaminées. Le balcon est isolé avec des bâches pour protéger l’intérieur du logement et limiter la dispersion des particules. Les fientes sèches sont humidifiées avant d’être ramassées manuellement, puis conditionnées dans des sacs étanches dédiés aux déchets contaminés.</p>
-<p>Le nettoyage des surfaces (sol, garde-corps, murs) est réalisé avec des produits adaptés, suivis d’une désinfection avec un virucide et bactéricide homologué, en respectant scrupuleusement le temps de contact nécessaire. Après rinçage, le balcon est aéré pendant 24 heures avant toute réutilisation. Nous évacuons les déchets selon une filière spécialisée et pouvons conseiller des solutions de dissuasion, comme des picots ou des filets, pour limiter les retours de pigeons.</p>`,
+<p>Le nettoyage des surfaces (sol, garde-corps, murs) est réalisé avec des produits adaptés, suivis d’une désinfection avec un virucide et bactéricide homologué, en respectant scrupuleusement le temps de contact nécessaire. Après rinçage, le balcon est aéré pendant 24 heures avant toute réutilisation. Nous évacuons les déchets hors de votre logement et pouvons conseiller des solutions de dissuasion, comme des picots ou des filets, pour limiter les retours de pigeons.</p>`,
 
       specificChallenges: [
         "Balcons des étages élevés et loggias des immeubles proches des parcs ou de la Marne, particulièrement exposés aux fientes de pigeons.",
         "Poussières de fientes sèches très volatiles, nécessitant une humidification préalable pour éviter toute dispersion.",
         "Corrosion des supports métalliques comme les garde-corps et rambardes due à l’acidité des fientes, exigeant un nettoyage et une protection adaptés.",
-        "Évacuation des déchets contaminés selon une filière spécialisée, pour respecter les normes sanitaires et environnementales."
+        "Évacuation des déchets contaminés, dans le respectdes normes sanitaires et environnementales."
       ],
 
       faqAdditions: [
@@ -321,7 +322,7 @@ const city: City = {
           question:
             "Que deviennent les fientes et les nids après le nettoyage ?",
           answer:
-            "Les fientes et nids sont conditionnés dans des sacs étanches dédiés aux déchets contaminés, puis évacués vers une filière spécialisée. Aucun déchet n’est jeté dans les poubelles classiques, conformément à la réglementation sanitaire."
+            "L'enlèvement des déchets est total : rien n'est laissé sur votre balcon ni jeté dans les locaux poubelles de la résidence. Tout est conditionné hermétiquement et évacué vers une filière de traitement agréée pour les déchets biologiques à risque."
         }
       ],
       ctaOverride: ""
@@ -375,9 +376,9 @@ const city: City = {
         },
         {
           question:
-            "Que dois-je faire pour préparer mon logement avant votre intervention ?",
+            "L'accès à mon immeuble dans le centre historique de Lagny est difficile, est-ce un problème ?",
           answer:
-            "Il suffit de dégager les objets fragiles ou personnels autour du canapé, tapis ou matelas à nettoyer. Nous nous chargeons du reste : protection des sols, déplacement des meubles légers si nécessaire et installation du matériel. Aucune préparation complexe n’est requise."
+            "Non, notre matériel est portable et compact. Si le stationnement est éloigné (rues piétonnes vers la Place de la Fontaine), nous pouvons transporter l'équipement à pied jusqu'à votre appartement sans difficulté."
         }
       ],
       ctaOverride: ""

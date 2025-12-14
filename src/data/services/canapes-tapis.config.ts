@@ -40,6 +40,17 @@ const canapesTapis: ServiceConfig = {
   pricing: { from: '80 €', unit: 'canapé 2 places' },
 
   faq: [
+
+     {
+      question: 'Intervenez-vous le soir ou le week-end si je ne suis pas disponible en journée ?',
+      answer:
+        'Oui. Nous pouvons intervenir tôt le matin, en soirée ou le week-end selon vos contraintes. Les créneaux sont organisés avec vous à l’avance pour limiter toute gêne et garantir des conditions de travail adaptées.',
+    },
+     {
+      question: 'Les taches anciennes ou les mauvaises odeurs peuvent-elles être éliminées ?',
+      answer:
+        'Nous traitons les taches avec des détachants professionnels et des techniques adaptées à chaque fibre. La majorité des taches récentes partent très bien. Les taches anciennes, surtout si elles ont été mal traitées, peuvent laisser une marque. Pour les odeurs (urine, tabac, humidité), le nettoyage en profondeur et nos neutralisateurs d\'odeurs améliorent nettement la situation, mais certaines odeurs très incrustées peuvent nécessiter plusieurs traitements.',
+    },
     {
       question: 'Faut-il préparer quelque chose avant votre intervention sur le canapé ou le tapis ?',
       answer:

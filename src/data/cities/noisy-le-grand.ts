@@ -64,13 +64,15 @@ const city: City = {
     "Bas Heurts",
   ],
 
+// Noisy-le-Grand
 nearbyCities: [
+  "gournay-sur-marne",
   "neuilly-sur-marne",
   "champs-sur-marne",
-  "torcy",
   "chelles",
   "gagny",
 ],
+
 
 
 landmarks: [

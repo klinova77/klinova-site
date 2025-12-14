@@ -130,17 +130,17 @@ const serviceSlugByKey: Record<ServiceKey, string> = {
 const showAvanceImmed = service.key !== "parkings";
 
 // Slug du service courant pour cette page locale
-const currentServiceSlug =
-  serviceSlugByKey[service.key as ServiceKey];
+const currentServiceSlug = serviceSlugByKey[service.key as ServiceKey];
+if (!currentServiceSlug) throw new Error(`Unknown service key: ${service.key}`);
+
 
 // Slugs & canonical
 const citySlug = city.slug ?? slugify(city.name);
 const departmentSlug = department.slug ?? slugify(department.name);
 
 // Canonical = toujours l'URL réelle de la page
-const canonical =
-  Astro.url?.pathname ??
-  `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+const canonical = Astro.url.pathname || `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+
 
 // 🔀 Autres services Klinova pour cette ville (maillage local cross-service)
 const otherServicesForCity = allServicesForCards
@@ -408,22 +408,10 @@ const unitCodeFromLabel = (unit?: string): string | undefined => {
 
 const MAX_FAQ_TOTAL = 6;
 
-// 1. TOUT L'UNIQUE (Objectif : 4 questions générées par l'IA)
-// Elles couvriront : Le local + La logistique (accès/horaires) contextualisée
-const uniqueLocalFaq = cityNote?.faqAdditions ?? [];
-
-// 2. LE COMPLÉMENT TECHNIQUE (Service)
-// On comble les trous jusqu'à 6 avec les questions techniques (Séchage, produits...)
-const slotsRemaining = Math.max(0, MAX_FAQ_TOTAL - uniqueLocalFaq.length);
-
-const serviceGeneralFaq = (service.faq ?? []).slice(0, slotsRemaining);
+// ✅ FAQ unique ville + service (objectif anti-duplicate)
+const combinedFaq = (cityNote?.faqAdditions ?? []).slice(0, MAX_FAQ_TOTAL);
 
 
-// L'ASSEMBLAGE SIMPLE
-const combinedFaq = [
-  ...uniqueLocalFaq,
-  ...serviceGeneralFaq
-];
 
 
 // JSON-LD optimisé
@@ -477,23 +465,12 @@ const breadcrumbJsonLd = {
 
 
 
-const faqEntities = [
-  ...(service.faq ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-  ...(city.faq ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-  ...(cityNote?.faqAdditions ?? []).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-];
+const faqEntities = combinedFaq.map((item) => ({
+  "@type": "Question",
+  name: item.question,
+  acceptedAnswer: { "@type": "Answer", text: item.answer },
+}));
+
 
 
 
@@ -749,37 +726,40 @@ data-hide-header-cta
         </h1>
 
    
-   {heroDescription && (
+{heroDescription && (
   <div class="mb-2 md:mb-4">
     <p class="text-lg md:text-2xl text-white/95 mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed">
       {heroDescription}
     </p>
-    <p
-      class="text-sm md:text-base text-orange-200 mb-8 font-medium
-             opacity-100 motion-safe:animate-fade-in-up
-             [animation-delay:480ms]
-             [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
-    >
-     
-      {showAvanceImmed && (
-  <p
-    class="text-sm md:text-base text-orange-200 mb-8 font-medium
-           opacity-100 motion-safe:animate-fade-in-up
-           [animation-delay:480ms]
-           [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
-  >
-    <span class="inline-flex items-center group">
-      <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-      </svg>
-      Particuliers : payez seulement 50% aujourd'hui<br class="sm:hidden" /> avec l'avance immédiate du crédit d'impôt SAP
-    </span>
-  </p>
-)}
 
-    </p>
+    {showAvanceImmed && (
+      <p
+        class="text-sm md:text-base text-orange-200 mb-8 font-medium
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:480ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <span class="inline-flex items-center group">
+          <svg
+            class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          Particuliers : payez seulement 50% aujourd'hui
+          <br class="sm:hidden" /> avec l'avance immédiate du crédit d'impôt SAP
+        </span>
+      </p>
+    )}
   </div>
 )}
+
 
 
 
@@ -932,7 +912,7 @@ data-hide-header-cta
               </ul>
 
               <div class="mt-6 pt-4 border-t border-neutral-200 text-xs text-[#94A3B8] italic text-center">
-                Analyse basée sur nos interventions secteur {department}
+                Analyse basée sur nos interventions secteur {department.name} ({department.code})
               </div>
             </div>
 

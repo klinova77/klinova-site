@@ -31,11 +31,15 @@ export interface CityServiceLocal {
   ctaOverride?: string;
   photos?: string[];
 
-  // ✅ heroDescription par ville + service
+  // ✅ par ville + service
   heroDescription?: string;
-  pricing?: ServicePricing; 
-  
+  whyUsBullets?: string[];
+  specificChallenges?: string[];
+
+  pricing?: ServicePricing;
 }
+
+
 
 export interface City {
   name: string;

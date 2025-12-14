@@ -51,6 +51,14 @@ const moquettesConfig: ServiceConfig = {
   
   faq: [
     {
+      question: 'Les produits utilisés sont-ils sans danger ?',
+      answer: 'Nous privilégions les produits enzymatiques et écologiques, sans COV nocifs. Nos solutions sont adaptées aux environnements sensibles (crèches, EHPAD) et respectent les normes les plus strictes en matière de sécurité et d\'environnement.'
+    },
+     {
+      question: 'Le nettoyage est-il efficace sur les taches anciennes ?',
+      answer: 'Nos produits enzymatiques et nos détachants permettent d\'éliminer la plupart des taches tenaces. Cependant, certaines taches très anciennes ou ayant subi des traitements inadaptés peuvent rester partiellement visibles malgré nos efforts.'
+    },
+    {
       question: 'Combien de temps faut-il pour que la moquette sèche ?',
       answer: 'Grâce à notre technique d\'extraction contrôlée et nos ventilateurs professionnels, le séchage complet est généralement obtenu en 3-6 heures. Les zones peuvent être remises en service progressivement dès 2-3 heures après l\'intervention.'
     },
@@ -58,18 +66,12 @@ const moquettesConfig: ServiceConfig = {
       question: 'Tous les types de moquettes peuvent-ils être nettoyés ?',
       answer: 'Nous intervenons sur tous types de fibres : synthétiques, laine, aiguilletée, bouclée. Chaque matériau demande une approche différente que nous appliquons après test préalable. Seules certaines fibres très fragiles peuvent nécessiter un nettoyage à sec.'
     },
-    {
-      question: 'Le nettoyage est-il efficace sur les taches anciennes ?',
-      answer: 'Nos produits enzymatiques et nos détachants permettent d\'éliminer la plupart des taches tenaces. Cependant, certaines taches très anciennes ou ayant subi des traitements inadaptés peuvent rester partiellement visibles malgré nos efforts.'
-    },
+   
     {
       question: 'À quelle fréquence faut-il faire nettoyer les moquettes ?',
       answer: 'Pour un usage résidentiel normal : 12-18 mois. Pour les zones de fort passage (halls, couloirs de copropriété) : 6-12 mois. Après sinistre ou en cas de taches importantes : intervention dans les meilleurs délais recommandée.'
-    },
-    {
-      question: 'Les produits utilisés sont-ils sans danger ?',
-      answer: 'Nous privilégions les produits enzymatiques et écologiques, sans COV nocifs. Nos solutions sont adaptées aux environnements sensibles (crèches, EHPAD) et respectent les normes les plus strictes en matière de sécurité et d\'environnement.'
     }
+    
   ],
   
   urls: {

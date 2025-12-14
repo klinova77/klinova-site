@@ -21,7 +21,8 @@ const city: City = {
     "Encrassement accru des façades et balcons dû au trafic de la RN34 et de la RN3, associé aux intempéries.",
     "Développement de mousses et dépôts verts sur les sols des terrasses et parkings aériens, favorisé par la proximité du canal et de la Marne.",
     "Fort passage dans les halls d'entrée des résidences près de la gare RER E, nécessitant un entretien très fréquent des moquettes et sols.",
-    "Salissures tenaces (hydrocarbures, poussières de frein) dans les parkings souterrains des ensembles immobiliers récents."
+    "Salissures tenaces (hydrocarbures, poussières de frein) dans les parkings souterrains des ensembles immobiliers récents.",
+    "Remontées d'humidité et odeurs de renfermé dans les rez-de-chaussée des quartiers Bords de Marne et Abbesses, accentuées lors des épisodes de crues hivernales."
   ],
 
   department: {
@@ -30,12 +31,12 @@ const city: City = {
     slug: "seine-et-marne"
   },
 
-   nearbyCities: [
-  "vaires-sur-marne",
-  "lagny-sur-marne",
+  nearbyCities: [
+  "gournay-sur-marne",
   "champs-sur-marne",
-  "gagny",
+  "vaires-sur-marne",
   "noisy-le-grand",
+  "gagny",
 ],
 
 
@@ -137,7 +138,7 @@ const city: City = {
       ],
       uniqueIntro: `<p>À Chelles, les moquettes des halls d'entrée, cages d'escalier et paliers des copropriétés subissent une usure constante. Le passage des résidents, les intempéries suivies depuis l'extérieur, et la proximité d'axes très fréquentés comme la RN34 laissent des traces visibles : poussières incrustées, taches localisées et ternissement général.</p>
 <p>Pour un syndic, cet état donne une impression de négligence qui peut affecter la valeur de l'immeuble et générer des réclamations. Dans les bureaux ou les parties communes de résidences, une moquette sale devient un sujet récurrent de mécontentement. Face à ce constat, un nettoyage technique approfondi et planifié est la seule réponse durable pour restaurer un cadre de vie sain et soigné.</p>`,
-      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis de l'état des moquettes et des types de salissures (boues, taches organiques, traces grasses). Nous identifions les zones de fort trafic, souvent situées près des entrées et des ascenseurs. Cette analyse guide notre préparation : protection des surfaces adjacentes, balisage sécurisé et organisation du chantier en concertation avec le syndic pour minimiser la gêne, notamment dans les escaliers étroits des immeubles chellois des années 70-80 ou les halls ouverts des résidences récentes.</p>
+      uniqueDeepDive: `<p>Notre intervention commence par un diagnostic précis de l'état des moquettes et des types de salissures (boues, taches organiques, traces grasses). Nous identifions les zones de fort trafic, souvent situées près des entrées et des ascenseurs. Cette analyse guide notre préparation : protection des surfaces adjacentes, balisage sécurisé et organisation du chantier en concertation avec le syndic pour minimiser la gêne, notamment dans les escaliers étroits des immeubles chellois des années 70-80 ou les halls des résidences récentes.</p>
 <p>La méthode centrale est l'injection-extraction à l'eau chaude, réalisée avec des machines professionnelles. Cette technique permet d'extraire en profondeur les salissures sans détremper le support. Nous portons une attention particulière aux marches d'escalier, aux bordures et aux zones de pivotement devant les portes.</p>
 <p>Un séchage rapide, accéléré par une ventilation appropriée, permet une remise en service des espaces sous quelques heures. Pour maintenir le résultat, nous conseillons un nettoyage professionnel tous les 12 à 18 mois dans les zones de passage intensif, comme celles des immeubles proches de la gare RER E.</p>`,
       specificChallenges: [
@@ -296,7 +297,7 @@ const city: City = {
       uniqueIntro: `<p>À Chelles, la présence de nombreux parcs, de grands arbres et de combles d'immeubles offre un habitat propice aux pigeons, dont les colonies souillent massivement les balcons et loggias. L'accumulation de fientes crée une situation insalubre : odeurs persistantes, surfaces impraticables et risques sanitaires réels.</p>
 <p>Pour les résidents, cet espace devient une source de gêne permanente et de conflits potentiels au sein de la copropriété. La simple tentative de nettoyage est insuffisante et dangereuse sans protections adaptées. Seul un traitement professionnel complet, incluant le ramassage des déchets, le nettoyage en profondeur et une désinfection certifiée, permet de restaurer un environnement sain.</p>`,
       uniqueDeepDive: `<p>Notre intervention suit un protocole strict de sécurité et d'hygiène. Après une évaluation des lieux, nos techniciens équipés d'EPI (combinaison, masque FFP2, gants, lunettes) installent des bâches de protection. La première étape consiste à humidifier les déchets secs pour éviter la dispersion de poussières potentiellement pathogènes.</p>
-<p>Les fientes et les débris de nids sont ensuite ramassés manuellement, conditionnés dans des sacs étanches et évacués via une filière adaptée. Le nettoyage proprement dit s'effectue avec des détergents spécifiques et des techniques adaptées au support (carrelage, béton, métal) pour décrocher les salissures incrustées.</p>
+<p>Les fientes et les débris de nids sont ensuite ramassés manuellement, conditionnés dans des sacs étanches et évacués par nos soins. Le nettoyage proprement dit s'effectue avec des détergents spécifiques et des techniques adaptées au support (carrelage, béton, métal) pour décrocher les salissures incrustées.</p>
 <p>Ensuite, une désinfection minutieuse est réalisée à l'aide de produits virucides et bactéricides agréés, en respectant scrupuleusement leur temps de contact pour une efficacité maximale. Nous veillons à une gestion stricte des eaux usées pour ne pas contaminer les canalisations communes.</p>
 <p>Nous conseillons une aération prolongée du logement après notre passage et pouvons suggérer des solutions de dissuasion (picots, fils tendus) pour prévenir une ré-infestation.</p>`,
       specificChallenges: [
@@ -328,7 +329,7 @@ const city: City = {
           question:
             "Que faites-vous des déchets (fientes, nids) que vous ramassez ?",
           answer:
-            "Ces déchets biologiques sont conditionnés dans des sacs étanches et évacués via une filière spécialisée, distincte des ordures ménagères. Ils sont pris en charge par un organisme habilité afin de garantir leur élimination sans risque pour l'environnement ou la santé publique."
+            "L'évacuation est strictement encadrée : nous ne laissons aucun déchet sur place. Les résidus sont emballés hermétiquement et transportés en déchétterie."
         }
       ],
       ctaOverride: ""
