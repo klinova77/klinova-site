@@ -67,6 +67,25 @@ export interface City {
   services: CityServiceLocal[];
 }
 
+// types/geo.ts
+export interface ServicePricingTier {
+  name: string
+  description?: string
+  priceType: 'from' | 'range' | 'quote'
+  currency?: 'EUR'
+  // from:
+  from?: number
+  vatIncluded?: boolean
+  // range:
+  low?: number
+  high?: number
+  unitCode?: 'MTK' | string
+}
+
+export interface ServiceConfig {
+  // ...
+  pricingTiers?: ServicePricingTier[]
+}
 
 
 export interface ServiceProcessStep {

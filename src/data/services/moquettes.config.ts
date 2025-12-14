@@ -44,11 +44,36 @@ const moquettesConfig: ServiceConfig = {
   
   averageDuration: '3-6 heures selon surface et état',
   
-  pricing: {
-    from: '10 €',
-    unit: 'par m²'
-  },
+
   
+// services.config.ts (moquettes)
+pricingTiers: [
+  {
+    name: "Nettoyage de moquette à domicile (forfait)",
+    description: "Forfaits fixes dès 150€ TTC. Idéal : tapis, chambres, salon, escaliers privatifs.",
+    priceType: "from",
+    from: 150,
+    vatIncluded: true,
+    currency: "EUR",
+  },
+  {
+    name: "Parties communes (tarif au m²)",
+    description: "10–15€/m², dégressif selon surface. Idéal : couloirs, paliers, halls.",
+    priceType: "range",
+    low: 10,
+    high: 15,
+    unitCode: "MTK",
+    currency: "EUR",
+  },
+  {
+    name: "Grands plateaux (sur devis)",
+    description: "Sur devis. Étude technique offerte. Idéal : open-spaces, moquettes collées, > 100m².",
+    priceType: "quote",
+    currency: "EUR",
+  },
+]
+
+
   faq: [
     {
       question: 'Les produits utilisés sont-ils sans danger ?',

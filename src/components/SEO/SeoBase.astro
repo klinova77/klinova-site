@@ -50,7 +50,8 @@ const {
 } = Astro.props as Props
 
 // Domaine & helper URL
-const site = (Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr/') as string
+const site = (Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr') as string
+
 
 const toAbs = (url?: string) =>
   !url
@@ -129,13 +130,13 @@ const orgJsonLd = {
     'https://www.facebook.com/KlinovaNettoyage',
     'https://www.youtube.com/@KlinovaNettoyage',
   ],
-  brand: {
-    '@type': 'Brand',
-    '@id': 'https://stop-punaises.fr#brand',
-    name: 'Stop-Punaises',
-    url: 'https://stop-punaises.fr',
-  },
-}
+ brand: {
+  '@type': 'Brand',
+  '@id': `${site}#brand-stop-punaises`,
+  name: 'Stop-Punaises',
+  url: 'https://stop-punaises.fr',
+},
+
 
 // LocalBusiness JSON-LD (siège Chelles + zones IDF)
 const localBusinessDescription =
@@ -175,11 +176,7 @@ const localBusinessJsonLd = {
     { '@type': 'AdministrativeArea', name: 'Yvelines' },
     { '@type': 'AdministrativeArea', name: "Val-d'Oise" },
   ],
-  areaServed: [
-    { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-    { '@type': 'City', name: 'Paris' },
-    { '@type': 'City', name: 'Chelles' },
-  ],
+ 
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
