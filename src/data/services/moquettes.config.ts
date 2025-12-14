@@ -71,7 +71,7 @@ pricingTiers: [
     priceType: "quote",
     currency: "EUR",
   },
-]
+],
 
 
   faq: [
