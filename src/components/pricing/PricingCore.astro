@@ -1,0 +1,143 @@
+---
+// src/components/pricing/PricingCore.astro
+import type { PricingTier } from "~/types/geo"; // adapte le chemin
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  cityName?: string;
+
+  tiers: PricingTier[];
+  badgeLabel?: string;
+
+  // optionnels
+  factorsTitle?: string;
+  factorsLeft?: string[];
+  factorsRight?: string[];
+
+  ctaHref?: string;
+  ctaLabel?: string;
+  ctaNote?: string;
+}
+
+const {
+  title,
+  subtitle,
+  cityName,
+  tiers,
+  badgeLabel,
+
+  factorsTitle,
+  factorsLeft = [],
+  factorsRight = [],
+
+  ctaHref = "/contact",
+  ctaLabel = "Obtenir mon chiffrage précis",
+  ctaNote,
+} = Astro.props;
+---
+
+<section class="py-16 bg-white border-y border-neutral-100" id="tarifs">
+  <div class="container-responsive">
+
+    <div class="text-center mb-12">
+      {badgeLabel && (
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 text-[#3F8D65] text-xs font-bold uppercase tracking-wide mb-4">
+          {badgeLabel}
+        </div>
+      )}
+
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
+        {title}
+        {cityName && <span class="text-[#3F8D65]"> à {cityName}</span>}
+      </h2>
+
+      {subtitle && (
+        <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
+          {subtitle}
+        </p>
+      )}
+    </div>
+
+    <div class="max-w-6xl mx-auto mb-12">
+      <div class="bg-[#FCFCFC] rounded-2xl p-8 border border-[#E5E7EB]">
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          {tiers.slice(0, 3).map((tier) => {
+            const isRange = tier.priceType === "range";
+            const isFrom = tier.priceType === "from";
+            const isQuote = tier.priceType === "quote";
+
+            return (
+              <div class="bg-white rounded-xl p-6 border border-[#E5E7EB] text-center hover:shadow-lg transition-all">
+                <h4 class="text-lg font-bold text-[#1E2939] mb-2">{tier.name}</h4>
+
+                {isFrom && (
+                  <>
+                    <div class="text-3xl font-bold text-[#3F8D65] mb-2">
+                      Dès {tier.from}€
+                    </div>
+                    <p class="text-xs text-[#475569]">
+                      {tier.vatIncluded === false ? "HT" : "TTC"}
+                    </p>
+                  </>
+                )}
+
+                {isRange && (
+                  <>
+                    <div class="text-3xl font-bold text-[#3F8D65] mb-2">
+                      {tier.low}–{tier.high}€
+                      <span class="text-sm font-normal text-gray-500">
+                        {tier.unitCode === "MTK" ? " /m²" : ""}
+                      </span>
+                    </div>
+                    <p class="text-xs text-[#475569]">Dégressif selon surface</p>
+                  </>
+                )}
+
+                {isQuote && (
+                  <>
+                    <div class="text-2xl font-bold text-[#1E2939] mb-2">Sur devis</div>
+                    <p class="text-sm text-[#64748B]">Étude technique offerte</p>
+                  </>
+                )}
+
+                <div class="mt-4 border-t border-dashed border-gray-200 pt-4">
+                  <p class="text-xs text-[#475569] italic">{tier.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {(factorsLeft.length > 0 || factorsRight.length > 0) && (
+          <div class="bg-amber-50 rounded-xl p-6 border border-amber-200">
+            <h4 class="font-bold text-amber-900 mb-3">
+              {factorsTitle ?? `Ce qui fait varier le devis${cityName ? ` à ${cityName}` : ""}`}
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-amber-800">
+              <ul class="space-y-1">
+                {factorsLeft.map((t) => <li>• {t}</li>)}
+              </ul>
+              <ul class="space-y-1">
+                {factorsRight.map((t) => <li>• {t}</li>)}
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a
+        href={ctaHref}
+        class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-[#3F8D65] rounded-full hover:bg-[#357a53] hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+      >
+        {ctaLabel}
+      </a>
+      <p class="mt-4 text-sm text-[#94A3B8]">
+        {ctaNote ?? `Réponse sous 24h • Intervention à ${cityName || "Paris & IDF"}`}
+      </p>
+    </div>
+
+  </div>
+</section>

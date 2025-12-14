@@ -1,14 +1,52 @@
 ---
 import Button from '~/components/UI/Button.astro';
+import type { ServiceConfig } from '~/types/geo';
 
 interface Props {
   cityName?: string;
+  service: ServiceConfig;
 }
 
-const { cityName } = Astro.props;
+const { cityName, service } = Astro.props;
 
 const citySuffix = cityName ? ` à ${cityName}` : '';
+
+// Helpers
+const fmtEuro = (n?: number) =>
+  typeof n === 'number' && Number.isFinite(n) ? n.toLocaleString('fr-FR') : '';
+
+const tiers = Array.isArray(service.pricingTiers) ? service.pricingTiers : [];
+const rangeTiers = tiers.filter((t) => t.priceType === 'range');
+const quoteTier = tiers.find((t) => t.priceType === 'quote');
+const fromTier = tiers.find((t) => t.priceType === 'from');
+
+// Si tu as 2 ranges (petit / standard) on les mappe.
+// Sinon fallback : on prend le seul range partout.
+const smallRange = rangeTiers[0];
+const standardRange = rangeTiers[1] ?? rangeTiers[0];
+
+const smallText =
+  smallRange?.low != null && smallRange?.high != null
+    ? `${fmtEuro(smallRange.low)} – ${fmtEuro(smallRange.high)} €`
+    : 'Sur devis';
+
+const standardText =
+  standardRange?.low != null && standardRange?.high != null
+    ? `${fmtEuro(standardRange.low)} – ${fmtEuro(standardRange.high)} €`
+    : 'Sur devis';
+
+// Phrase “générale” sous le titre
+const generalRange = standardRange ?? smallRange;
+const generalRangeText =
+  generalRange?.low != null && generalRange?.high != null
+    ? `${fmtEuro(generalRange.low)} et ${fmtEuro(generalRange.high)} €/m²`
+    : 'sur devis';
+
+// Note forfait minimum (si tu utilises un tier from)
+const minimumText =
+  fromTier?.from != null ? `Forfait minimum dès ${fmtEuro(fromTier.from)} €` : '';
 ---
+
 
 <section class="bg-white py-16 md:py-20 border-y border-neutral-100" data-section="tarifs" id="tarifs">
   <div class="container-responsive">
@@ -30,7 +68,8 @@ const citySuffix = cityName ? ` à ${cityName}` : '';
       <p class="text-lg text-[#475569] max-w-2xl mx-auto">
         Une tarification adaptée à la surface et à l'encrassement.
         <br class="hidden md:block" />
-        Pour les copropriétés de {cityName || 'la région'}, nos prix varient généralement <strong>entre 1,0 et 2,0 €/m²</strong>.
+        Pour les copropriétés de {cityName || 'la région'}, nos prix varient généralement <strong>entre {generalRangeText}</strong>.
+
       </p>
     </div>
 
@@ -43,15 +82,18 @@ const citySuffix = cityName ? ` à ${cityName}` : '';
         <h3 class="text-lg font-bold text-[#1E2939] mb-1">Petites Surfaces</h3>
         <p class="text-xs text-[#64748B] font-semibold uppercase tracking-wide mb-4">Jusqu’à 1 000 m²</p>
         
-        <div class="text-2xl font-bold text-[#1E2939] mb-2">1,4 – 2,5 € <span class="text-sm font-normal text-gray-500">/m²</span></div>
-        
+        <div class="text-2xl font-bold text-[#1E2939] mb-2">
+  {smallText} <span class="text-sm font-normal text-gray-500">/m²</span>
+</div>
+
         <p class="text-sm text-[#475569] mb-6 leading-relaxed">
           Idéal pour petites résidences ou niveaux uniques. Préparation & finitions manuelles incluses.
         </p>
         
-        <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
-          Forfait minimum de déplacement applicable.
-        </div>
+       <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
+  {minimumText || "Forfait minimum de déplacement applicable."}
+</div>
+
       </article>
 
       {/* 1 000 – 5 000 m² (OFFRE VEDETTE / SYNDIC) */}
@@ -65,7 +107,10 @@ const citySuffix = cityName ? ` à ${cityName}` : '';
         <h3 class="text-lg font-bold text-[#1E2939] mb-1">Moyennes Surfaces</h3>
         <p class="text-xs text-[#3F8D65] font-semibold uppercase tracking-wide mb-4">1 000 – 5 000 m²</p>
         
-        <div class="text-3xl font-bold text-[#3F8D65] mb-2">1,0 – 1,4 € <span class="text-sm font-normal text-gray-500">/m²</span></div>
+        <div class="text-3xl font-bold text-[#3F8D65] mb-2">
+  {standardText} <span class="text-sm font-normal text-gray-500">/m²</span>
+</div>
+
         
         <p class="text-sm text-[#1E2939] mb-6 leading-relaxed font-medium">
           Ratio optimisé machine/temps. Tarif dégressif spécial Syndic.
@@ -128,7 +173,9 @@ const citySuffix = cityName ? ` à ${cityName}` : '';
           Pour les surfaces réduites (&lt; 200m²) ou les box fermés à {cityName || 'domicile'}, 
           nous intervenons avec des machines compactes (monobrosses). 
           <br/>
-          <span class="text-[#3F8D65] font-medium mt-1 block">Un forfait minimum d'intervention s'applique.</span>
+         <span class="text-[#3F8D65] font-medium mt-1 block">
+  {minimumText || "Un forfait minimum d'intervention s'applique."}
+</span>
         </p>
       </div>
     </div>

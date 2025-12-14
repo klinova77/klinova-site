@@ -1,12 +1,59 @@
 ---
+import type { ServiceConfig } from "~/types/geo";
+
 export interface Props {
   id?: string;
   title?: string;
   intro?: string;
+  cityName?: string;
+  service?: ServiceConfig;
 }
 
-const { id, title, intro } = Astro.props;
+const { id, title, intro, cityName, service } = Astro.props;
+
+// 1) pricing tiers
+const tiers = Array.isArray(service?.pricingTiers) ? service!.pricingTiers : [];
+
+// helpers
+const formatEuro = (n: number) =>
+  new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 }).format(n) + " €";
+
+// 2) table rows fallback (si jamais pricingTiers absent)
+const fallbackRows = [
+  { label: "Fauteuils", value: "80 €" },
+  { label: "Canapé 2 places", value: "110 €" },
+  { label: "Canapé 3 places", value: "130 €" },
+  { label: "Canapé d'angle", value: "160 €" },
+  { label: "Matelas 1 place", value: "70 €" },
+  { label: "Matelas 2 places", value: "100 €" },
+  { label: "Tapis (< 4 m²)", value: "80 €" },
+  { label: "Tapis (> 4 m²)", value: "20 €/m²" },
+];
+
+// 3) on construit les rows depuis pricingTiers si possible
+// Convention simple : on utilise tier.name comme label, et on affiche from / range
+const rowsFromTiers =
+  tiers.length > 0
+    ? tiers
+        // tu peux filtrer ici si tu mets aussi des “tiers” qui ne sont pas dans le tableau
+        .filter((t) => t.priceType === "from" || t.priceType === "range")
+        .map((t) => {
+          if (t.priceType === "from") {
+            return { label: t.name, value: formatEuro(t.from) };
+          }
+          // range
+          const unit = t.unitLabel ?? (t.unitCode === "MTK" ? "/m²" : "");
+          return {
+            label: t.name,
+            value: `${formatEuro(t.low)}–${formatEuro(t.high)}${unit ? " " + unit : ""}`,
+          };
+        })
+    : fallbackRows;
+
+// 4) rows finales
+const tableRows = rowsFromTiers;
 ---
+
 
 <section id={id} class="py-16 bg-white">
   <div class="container-responsive">
@@ -32,39 +79,14 @@ const { id, title, intro } = Astro.props;
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Fauteuils</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">80 €</td>
-            </tr>
-            <tr class="border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Canapé 2 places</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">110 €</td>
-            </tr>
-            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Canapé 3 places</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">130 €</td>
-            </tr>
-            <tr class="border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Canapé d'angle</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">160 €</td>
-            </tr>
-            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Matelas 1 place</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">70 €</td>
-            </tr>
-            <tr class="border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Matelas 2 places</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">100 €</td>
-            </tr>
-            <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
-              <td class="px-6 py-4 text-[#475569]">Tapis (&lt; 4 m²)</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">80 €</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 text-[#475569]">Tapis (&gt; 4 m²)</td>
-              <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">20 €/m²</td>
-            </tr>
-          </tbody>
+  {tableRows.map((row, idx) => (
+    <tr class={idx % 2 === 1 ? "bg-[#FCFCFC] border-b border-[#E5E7EB]" : "border-b border-[#E5E7EB]"}>
+      <td class="px-6 py-4 text-[#475569]">{row.label}</td>
+      <td class="px-6 py-4 text-center text-[#1E2939] font-semibold">{row.value}</td>
+    </tr>
+  ))}
+</tbody>
+
         </table>
       </div>
     </div>
