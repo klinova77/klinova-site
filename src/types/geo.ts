@@ -68,19 +68,40 @@ export interface City {
 }
 
 // types/geo.ts
-export interface ServicePricingTier {
-  name: string
-  description?: string
-  priceType: 'from' | 'range' | 'quote'
-  currency?: 'EUR'
-  // from:
-  from?: number
-  vatIncluded?: boolean
-  // range:
-  low?: number
-  high?: number
-  unitCode?: 'MTK' | string
+export type PricingTier =
+  | {
+      name: string;
+      description: string;
+      priceType: "from";
+      from: number;
+      vatIncluded?: boolean;
+      currency?: string; // default EUR
+    }
+  | {
+      name: string;
+      description: string;
+      priceType: "range";
+      low: number;
+      high: number;
+      unitCode: string; // ex: "MTK"
+      vatIncluded?: boolean;
+      currency?: string;
+    }
+  | {
+      name: string;
+      description: string;
+      priceType: "quote";
+      currency?: string;
+    };
+
+export interface ServiceConfig {
+  key: string;
+  name: string;
+  // ...
+  pricing?: { from: string; unit?: string; note?: string }; // legacy
+  pricingTiers?: PricingTier[]; // new
 }
+
 
 export interface ServiceConfig {
   // ...

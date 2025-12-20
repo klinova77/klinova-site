@@ -130,12 +130,21 @@ const orgJsonLd = {
     'https://www.facebook.com/KlinovaNettoyage',
     'https://www.youtube.com/@KlinovaNettoyage',
   ],
-"brand": {
-  "@type": "Brand",
-  "@id": "https://stop-punaises.fr#brand",
-  "name": "Stop-Punaises",
-  "url": "https://stop-punaises.fr"
-}
+  brand: {
+    '@type': 'Brand',
+    '@id': `${site}#brand`,
+    name: 'Klinova',
+    url: site,
+  },
+  owns: [
+    {
+      '@type': 'Brand',
+      '@id': 'https://stop-punaises.fr#brand',
+      name: 'Stop-Punaises',
+      url: 'https://stop-punaises.fr','description': 'Service spécialisé dans le traitement des punaises de lit.'
+    },
+  ],
+
 
 }
 
