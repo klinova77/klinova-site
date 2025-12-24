@@ -1,15 +1,20 @@
 ---
-import Button from '~/components/UI/Button.astro';
-import type { ServiceConfig } from '~/types/geo';
+import Button from "~/components/UI/Button.astro";
+import type { ServiceConfig } from "~/types/geo";
+import { aVille, deVille } from "~/lib/geo-klinova";
 
 interface Props {
   cityName?: string;
   service: ServiceConfig;
 }
 
-const { cityName, service } = Astro.props;
+const { cityName, service } = Astro.props as Props;
 
-const citySuffix = cityName ? ` à ${cityName}` : '';
+const cityAt = cityName ? aVille(cityName) : "";
+const cityFrom = cityName ? deVille(cityName) : "";
+
+const citySuffix = cityAt ? ` ${cityAt}` : ""; // ex: " au Raincy"
+
 
 // Helpers
 const fmtEuro = (n?: number) =>
@@ -68,7 +73,7 @@ const minimumText =
       <p class="text-lg text-[#475569] max-w-2xl mx-auto">
         Une tarification adaptée à la surface et à l'encrassement.
         <br class="hidden md:block" />
-        Pour les copropriétés de {cityName || 'la région'}, nos prix varient généralement <strong>entre {generalRangeText}</strong>.
+        Pour les copropriétés {cityFrom}, nos prix varient généralement <strong>entre {generalRangeText}</strong>.
 
       </p>
     </div>
@@ -170,7 +175,7 @@ const minimumText =
           Box individuels & Petites surfaces
         </h4>
         <p class="text-sm text-[#475569] leading-relaxed">
-          Pour les surfaces réduites (&lt; 200m²) ou les box fermés à {cityName || 'domicile'}, 
+          Pour les surfaces réduites (&lt; 200m²) ou les box fermés {cityAt || 'domicile'}, 
           nous intervenons avec des machines compactes (monobrosses). 
           <br/>
          <span class="text-[#3F8D65] font-medium mt-1 block">

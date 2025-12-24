@@ -1,10 +1,16 @@
 ---
+import { aVille, deVille } from "~/lib/geo-klinova";
+
 interface Props {
   cityName: string;
 }
 
-const { cityName } = Astro.props;
+const { cityName } = Astro.props as Props;
+
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
 ---
+
 
 <!-- Section 1: Solution Klinova (bénéfices) -->
 <section class="py-16 bg-[#DFF1E8]">
@@ -12,7 +18,7 @@ const { cityName } = Astro.props;
     <div class="max-w-4xl mx-auto text-center">
       <!-- Titre de transition -->
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6 leading-tight">
-        La solution Klinova pour des moquettes impeccables à {cityName}
+        La solution Klinova pour des moquettes impeccables {cityAt}
       </h2>
       
       <!-- Message principal -->
@@ -21,7 +27,7 @@ const { cityName } = Astro.props;
           Nous maîtrisons les techniques de nettoyage professionnel pour redonner à vos moquettes leur éclat d'origine et prolonger leur durée de vie.
         </p>
         <p class="text-base md:text-lg text-[#475569] leading-relaxed">
-          Chaque intervention à {cityName} est adaptée au type de fibre et au niveau d'encrassement. Nous visons une amélioration nette et durable, sans compromis sur la sécurité ou l'environnement.
+          Chaque intervention {cityAt} est adaptée au type de fibre et au niveau d'encrassement. Nous visons une amélioration nette et durable, sans compromis sur la sécurité ou l'environnement.
         </p>
       </div>
 
@@ -58,7 +64,7 @@ const { cityName } = Astro.props;
         Traitement anti-odeurs
       </p>
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
-        Désodorisation professionnelle des moquettes à {cityName}
+        Désodorisation professionnelle des moquettes {cityAt}
       </h2>
       <div class="max-w-3xl mx-auto">
         <p class="text-base md:text-lg text-[#475569] leading-relaxed">
@@ -124,7 +130,7 @@ const { cityName } = Astro.props;
           Technologie O.N.T. – Application ciblée
         </h3>
         <p class="text-sm md:text-base text-[#475569] leading-relaxed">
-          Sur les zones malodorantes, nous utilisons des produits professionnels intégrant la technologie O.N.T. Cette approche neutralise les molécules responsables des odeurs plutôt que de les masquer, assurant une désodorisation durable à {cityName}.
+          Sur les zones malodorantes, nous utilisons des produits professionnels intégrant la technologie O.N.T. Cette approche neutralise les molécules responsables des odeurs plutôt que de les masquer, assurant une désodorisation durable {cityAt}.
         </p>
       </div>
     </div>

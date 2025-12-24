@@ -1,25 +1,32 @@
 ---
-// D:\Klinova-site\src\components\Sections\CityServicesGrid.astro
+// src/components/Sections/CityServicesGrid.astro
 
+import type { City } from "~/types/geo";
+import { aVille, deVille } from "~/lib/geo-klinova";
 
-import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
+// (assure-toi que `services` est bien importé aussi, je ne l'ai pas dans ton snippet)
+// import { services } from "~/data/services"; // exemple
 
 interface Props {
-  city: any; // Ton type City
+  city: City;
 }
 
-const { city } = Astro.props;
+const { city } = Astro.props as Props;
 
-// On récupère les services (ou une sélection si tu ne veux pas tout afficher)
+const cityAt = aVille(city.name);
+const cityFrom = deVille(city.name);
+
+// On récupère les services
 const servicesList = Object.values(services);
 ---
+
 
 <section class="py-16 bg-white border-b border-neutral-100">
   <div class="container-responsive">
     
     <div class="text-center max-w-3xl mx-auto mb-12">
       <h2 class="text-3xl font-bold text-[#1E2939] mb-4">
-        Nos prestations de nettoyage à <span class="text-[#3F8D65]">{city.name}</span>
+        Nos prestations de nettoyage <span class="text-[#3F8D65]">{cityAt}</span>
       </h2>
       <p class="text-[#64748B]">
         Des solutions techniques adaptées à chaque surface.

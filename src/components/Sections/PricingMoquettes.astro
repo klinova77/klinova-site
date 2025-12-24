@@ -2,12 +2,23 @@
 // src/components/pricing/PricingMoquettes.astro
 import type { ServiceConfig, PricingTier } from "~/types/geo";
 
+import { aVille } from "~/lib/geo-klinova";
+
 interface Props {
   cityName?: string;
   service: ServiceConfig;
 }
 
+
 const { cityName, service } = Astro.props;
+
+
+const cityAt = cityName ? aVille(cityName) : "";
+
+
+const cityAtText = cityName ? aVille(cityName) : "à Paris & IDF";
+
+
 
 const tiers: PricingTier[] = Array.isArray(service.pricingTiers)
   ? (service.pricingTiers as PricingTier[])
@@ -40,7 +51,7 @@ const formatRangeUnit = (unitCode?: string) => (unitCode === "MTK" ? "/m²" : ""
       </div>
       <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-6">
         Tarifs nettoyage moquette
-        {cityName && <span class="text-[#3F8D65]"> à {cityName}</span>}
+        {cityName && <span class="text-[#3F8D65]"> {cityAt}</span>}
       </h2>
       <p class="text-xl text-[#475569] max-w-4xl mx-auto leading-relaxed">
         Que ce soit pour un salon, un couloir d'immeuble ou un plateau de bureaux.
@@ -163,7 +174,7 @@ const formatRangeUnit = (unitCode?: string) => (unitCode === "MTK" ? "/m²" : ""
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Ce qui fait varier le devis {cityName ? `à ${cityName}` : ""}
+            Ce qui fait varier le devis {cityAt}
           </h4>
 
           <div class="grid md:grid-cols-2 gap-4 text-sm text-amber-800">
@@ -243,7 +254,8 @@ const formatRangeUnit = (unitCode?: string) => (unitCode === "MTK" ? "/m²" : ""
         Obtenir mon chiffrage précis
       </a>
       <p class="mt-4 text-sm text-[#94A3B8]">
-        Réponse sous 24h • Intervention à {cityName || "Paris & IDF"}
+        Réponse sous 24h • Intervention {cityAtText} ?
+
       </p>
     </div>
   </div>

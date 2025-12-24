@@ -8,9 +8,8 @@ Nous allons construire un canevas éditorial pour 5 services de nettoyage profes
 
 Ce canevas servira ensuite à remplir des fichiers TypeScript, MAIS dans cette première phase tu ne t’occupes PAS de formatage technique :
 - PAS de TypeScript
-- PAS de HTML
 - PAS de code
-- Juste du TEXTE BRUT bien structuré, orienté SEO + conversion.
+- Juste du TEXTE bien structuré, orienté SEO + conversion.
 
 -------------------------------------------------------
 
@@ -98,6 +97,10 @@ Pour chaque service, tu dois choisir UN SEUL style parmi les styles autorisés c
 de manière aléatoire, afin de varier les textes d’une ville à l’autre.
 
 🎯 STYLES AUTORISÉS PAR SERVICE (À RESPECTER STRICTEMENT)
+
+
+
+
 
 SERVICE 1 — NETTOYAGE DE MOQUETTES
 
@@ -310,6 +313,8 @@ Chaque ville doit avoir :
 
 4 FAQ uniques par service
 Basées sur contexte local réel : gare, circulation, humidité, axes, typologie d’immeubles, stationnement, ZAC, etc.
+
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
 
 4. Pourquoi Nous — variations obligatoires
 
@@ -534,7 +539,7 @@ Pour chaque service, tu écriras un texte structuré en 6 blocs, toujours dans c
 
 
 
-AUCUN code, AUCUN HTML, AUCUNE structure TypeScript.
+AUCUN code, AUCUNE structure TypeScript.
 
 ci-dessous tu trouveras une fiche wikipedia dont tu peux te servir pour rédiger tes réponses
 
@@ -572,12 +577,11 @@ exemple: " "Deuxième ville de Seine-et-Marne, Chelles allie une desserte RER/Tr
 Tâche : Rédige une section FAQ (Foire Aux Questions) de 4 à 5 questions/réponses spécifiquement pour la page dédiée à la ville 
 
 Cible : Syndics de copropriété, gestionnaires de biens et conseils syndicaux exigeants. Ton ton doit être professionnel, rassurant et direct,et particuliers (pour les nettoyge de balcons, de canapés ou de moquette)
+
 Consignes de Rédaction :
     Injection Locale : Le nom de la ville ([VILLE]) doit apparaître naturellement dans 2 ou 3 réponses (pas dans toutes pour éviter le spam).
     Sujets à traiter (choisis-en 4) :
         La réactivité d'intervention sur ce secteur précis.
-
-        La gestion des clés/badges (Vigik) et accès sécurisés.
 
         La gratuité des déplacements pour devis (malgré la distance).
 
@@ -586,6 +590,9 @@ Consignes de Rédaction :
         L'intervention en urgence (sinistre, fin de chantier).
     Style : Évite le blabla marketing. Sois concret ("protocole", "techniciens", "matériel pro").
 
+    Bien que tu ne doives pas faire de mise en page complexe, tu DOIS utiliser la balise <strong> pour mettre en gras les mots-clés importants ou les débuts de paragraphes (ex: '<strong>Diagnostic précis :</strong> Le technicien vérifie...').
+
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
 
 3) hubIntro:
 Tâche : Rédige le texte d'introduction (champ hubIntro) pour la page dédiée à la ville de : [INSÉRER NOM VILLE ICI]. c'est un Pitch commercial : Présente Klinova comme un partenaire clé à [VILLE].
@@ -657,9 +664,8 @@ etc.
 
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
-– Texte brut uniquement.
-– Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
+- N'utilise pas de structure de page complète (pas de <html>, <body>). EN REVANCHE, tu DOIS utiliser les balises <p> pour les paragraphes et <strong> pour le gras à l'intérieur du texte, pour que ce soit prêt à intégrer dans le code.
+- Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
 SERVICE 1 – NETTOYAGE DE MOQUETTES
@@ -718,7 +724,7 @@ les conséquences : image de l’immeuble, inconfort, impression de laisser-alle
 
 Termine en ouvrant vers l’idée qu’un nettoyage professionnel structuré change la donne.
 
-3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
 
 Décris la façon dont Klinova travaille, de manière concrète :
 
@@ -734,16 +740,16 @@ Montre que le technicien connaît les contextes typiques : années de constructi
 
 Termine par quelques conseils simples (entretien régulier, fréquence recommandée).
 
-"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+Structure impérativement ce texte en 3 étapes clés ou 3 points forts. Utilise des phrases courtes et percutantes. Utilise des sauts de ligne doubles entre chaque idée pour aérer visuellement le texte.
 
 4) POURQUOI NOUS (arguments)
 
-Format "carte" : 12 à 20 mots max par point, dans cet ordre: 
+Format "carte" : 10 à 18 mots max par point, dans cet ordre: 
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
 
-Chaque élément fait entre 12 et 20 mots maximum.
+Chaque élément fait entre 10 et 18 mots maximum.
 lier les éléments à des noms de quartiers ou de reperes géographique locaux si c'est pertinent. Interdiction de faire des liens artificiels ou qui n'ont pas de sens.
 
 5) SPECIFIC CHALLENGES
@@ -766,11 +772,13 @@ Q3 : question sur la technique (est-ce que la méthode abîme la moquette ? temp
 
 Q4 : question sur l’organisation (horaires, information des résidents, gêne pendant l’intervention).
 
-Chaque réponse doit faire environ 60–90 mots, texte simple, sans liste.
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
+
+Chaque réponse doit faire environ 40–60 mots, texte simple, sans liste.
 
 Rappels :
 
-Pas de code, pas de HTML, pas de TypeScript.
+Pas de code, pas de TypeScript.
 
 Pas de prix, pas de remises, pas de “numéro 1”.
 
@@ -778,7 +786,7 @@ Style : terrain, pro, concret, crédible.
 
 
 
-FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+FORMAT DE SORTIE OBLIGATOIRE (texte) :
 
 BLOC 1 – HERO DESCRIPTION
 [texte]
@@ -809,8 +817,6 @@ Q4 : ...
 R4 : ...
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
-– Texte brut uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
@@ -865,7 +871,7 @@ Relie cela aux usages : va-et-vient quotidien, proximité d’axes routiers, zon
 
 Termine en expliquant qu’un décrassage complet améliore sécurité, lisibilité et image de l’immeuble.
 
-3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
 
 Décris le déroulé d’une intervention Klinova :
 
@@ -881,19 +887,19 @@ Montre une vraie maîtrise : organisation par zones, travail tôt le matin ou en
 
 Conclus par des recommandations de fréquence d’entretien.
 
-"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+Structure impérativement ce texte en 3 étapes clés ou 3 points forts. Utilise des phrases courtes et percutantes. Utilise des sauts de ligne doubles entre chaque idée pour aérer visuellement le texte.
 
 
 
 4) POURQUOI NOUS (arguments)
 
 
-Format "carte" : 12 à 20 mots max par point, dans cet ordre :
+Format "carte" : 10 à 18 mots max par point, dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
 
-Chaque élément fait entre 12 et 20 mots maximum.
+Chaque élément fait entre 10 et 18 mots maximum.
 
 
 
@@ -918,17 +924,20 @@ Q3 : question sur les taches d’huile anciennes et les limites réalistes.
 
 Q4 : question sur la gestion de l’eau (eaux de lavage, évacuation, réglementation).
 
-Réponses de 60–90 mots, simples, sans liste.
+
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
+
+Réponses de 40–60 mots, simples, sans liste.
 
 Rappels :
 
-Pas de HTML, pas de code.
+pas de code.
 
 Pas de prix, pas de superlatifs.
 
 Ton = pro, concret, rassurant.
 
-FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+FORMAT DE SORTIE OBLIGATOIRE (texte) :
 
 BLOC 1 – HERO DESCRIPTION
 [texte]
@@ -960,7 +969,7 @@ R4 : ...
 
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
+– pas de code.
 – Texte brut uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
@@ -1024,7 +1033,7 @@ Relie ça au contexte local (pollution, arbres, orientation…).
 
 Termine en suggérant qu’une remise en état pro permet de “réinvestir” le balcon.
 
-3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
 
 Décris l’intervention typique :
 
@@ -1040,19 +1049,19 @@ Mentionne la gestion de l’eau (écoulement, éviter les coulures chez les vois
 
 Termine par des conseils sur le séchage et l’entretien simple par le client.
 
-"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+Structure impérativement ce texte en 3 étapes clés ou 3 points forts. Utilise des phrases courtes et percutantes. Utilise des sauts de ligne doubles entre chaque idée pour aérer visuellement le texte.
 
 
 
 4) POURQUOI NOUS (arguments)
 
 
-Format "carte" : 12 à 20 mots max par point., dans cet ordre :
+Format "carte" : 10 à 18 mots max par point., dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
 
-Chaque élément fait entre 12 et 20 mots maximum.
+Chaque élément fait entre 10 et 18 mots maximum.
 
 
 
@@ -1078,18 +1087,20 @@ Q3 : question sur les produits utilisés et leur impact pour les plantes / anima
 
 Q4 : question sur le temps de séchage et le moment où on peut réutiliser le balcon.
 
-Chaque réponse : 60–90 mots, texte simple, sans liste.
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
+
+Chaque réponse : 40–60 mots, texte simple, sans liste.
 
 Rappels généraux :
 
-Pas de HTML, pas de code.
+pas de code.
 
 Pas de prix / promos.
 
 Ton = pro, rassurant, concret.
 
 
-FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+FORMAT DE SORTIE OBLIGATOIRE (texte) :
 
 BLOC 1 – HERO DESCRIPTION
 [texte]
@@ -1121,8 +1132,8 @@ R4 : ...
 
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
-– Texte brut uniquement.
+– pas de code.
+– Texte uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
@@ -1176,7 +1187,7 @@ Relie à la présence de pigeons dans cette ville (parcs, combles, toits, cornic
 
 Termine en expliquant qu’un traitement professionnel sécurisé est nécessaire.
 
-3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
 
 Décris le protocole Klinova :
 
@@ -1194,7 +1205,7 @@ Insiste sur la sécurité, le respect des voisins et l’évacuation des déchet
 
 Termine par des recommandations (aération, délai avant réutilisation, éventuelles solutions de dissuasion).
 
-"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+Structure impérativement ce texte en 3 étapes clés ou 3 points forts. Utilise des phrases courtes et percutantes. Utilise des sauts de ligne doubles entre chaque idée pour aérer visuellement le texte.
 
 
 
@@ -1202,12 +1213,12 @@ Termine par des recommandations (aération, délai avant réutilisation, éventu
 4) POURQUOI NOUS (arguments)
 
 
-Format "carte" : 12 à 20 mots max par point., dans cet ordre :
+Format "carte" : 10 à 18 mots max par point., dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
 
-Chaque élément fait entre 12 et 20 mots maximum.
+Chaque élément fait entre 10 et 18 mots maximum.
 
 
 
@@ -1231,15 +1242,17 @@ Q3 : question sur les dégâts éventuels sur les supports (peinture, béton).
 
 Q4 : question sur ce qu’il advient des déchets (fientes, nids).
 
-Réponses 60–90 mots.
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
+
+Réponses 40–60 mots.
 
 Rappels :
 
-Pas de HTML, pas de code.
+pas de code.
 
 Style sobre, très sérieux, orienté sécurité & hygiène.
 
-FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+FORMAT DE SORTIE OBLIGATOIRE (texte) :
 
 BLOC 1 – HERO DESCRIPTION
 [texte]
@@ -1271,7 +1284,7 @@ R4 : ...
 
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
+– pas de code.
 – Texte brut uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
@@ -1327,7 +1340,7 @@ inconfort, gêne vis-à-vis des invités, allergies possibles, impression de sal
 
 Termine en expliquant qu’un nettoyage pro redonne confort et hygiène.
 
-3) PROTOCOLE / FAÇON DE TRAVAILLER — 250 à 300 mots
+3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
 
 Décris comment Klinova intervient à domicile :
 
@@ -1343,19 +1356,19 @@ Mentionne l’adaptation aux contraintes du logement (espace, accès, bruit rais
 
 Termine par des conseils d’entretien au quotidien.
 
-"Rédige ce texte en 2 paragraphes distincts pour aérer la lecture."
+Structure impérativement ce texte en 3 étapes clés ou 3 points forts. Utilise des phrases courtes et percutantes. Utilise des sauts de ligne doubles entre chaque idée pour aérer visuellement le texte.
 
 
 
 4) POURQUOI NOUS (arguments)
 
 
-Format "carte" : 12 à 20 mots max par point., dans cet ordre :
+Format "carte" : 10 à 18 mots max par point., dans cet ordre :
 1. Expertise locale (quartiers, types d’immeubles, contexte ville)
 2. Maîtrise technique (matériel, méthode, niveau de résultat)
 3. Organisation / contraintes d’occupation (horaires, accès, gêne limitée)
 
-Chaque élément fait entre 12 et 20 mots maximum.
+Chaque élément fait entre 10 et 18 mots maximum.
 
 
 
@@ -1381,18 +1394,20 @@ Q3 : question sur le temps de séchage et l’utilisation du canapé/tapis.
 
 Q4 : question sur la préparation du logement (ce que le client doit faire avant l’intervention).
 
-Réponses de 60–90 mots.
+Les questions doivent refléter de vraies préoccupations terrain (syndic, occupant, bailleur, particuliers), pas des questions ‘SEO’ génériques
+
+Réponses de 40–60 mots.
 
 Rappels :
 
-Pas de HTML, pas de code.
+pas de code.
 
 Pas de prix, pas de superlatifs.
 
 Ton : pro, bienveillant, concret.
 
 
-FORMAT DE SORTIE OBLIGATOIRE (texte brut, sans HTML) :
+FORMAT DE SORTIE OBLIGATOIRE (texte) :
 
 BLOC 1 – HERO DESCRIPTION
 [texte]
@@ -1425,6 +1440,6 @@ R4 : ...
 
 
 “Important :
-– Pas de HTML, pas de Markdown, pas de code.
+– pas de code.
 – Texte brut uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”

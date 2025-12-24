@@ -1,20 +1,28 @@
 ---
-import Button from '~/components/UI/Button.astro';
-import type { City } from '~/types/geo';
-
-
+import Button from "~/components/UI/Button.astro";
+import type { City } from "~/types/geo";
+import { aVille, deVille } from "~/lib/geo-klinova";
 
 interface Props {
-  city?: City;          // 🔹 devient optionnel
-  cityName?: string;    // 🔹 string de secours
-  isLocal?: boolean;    // true = page locale, false = page globale
+  city?: City;
+  cityName?: string;
+  isLocal?: boolean;
 }
 
-const { city, cityName, isLocal: isLocalProp } = Astro.props;
+const { city, cityName, isLocal: isLocalProp } = Astro.props as Props;
 
-// 🔹 On dérive un "label" de ville et un flag local/global robustes
+// Local si on a un objet city (page locale)
 const isLocal = !!city && (isLocalProp ?? true);
-const cityLabel = city?.name ?? cityName ?? 'Île-de-France';
+
+// Nom “brut” de ville si dispo
+const resolvedCityName = city?.name ?? cityName ?? "";
+
+// Labels
+const cityLabel = resolvedCityName || "Île-de-France";
+
+// Prépositions (uniquement si on a une vraie ville)
+const cityAt = resolvedCityName ? aVille(resolvedCityName) : "";
+const cityFrom = resolvedCityName ? deVille(resolvedCityName) : "";
 ---
 
 
@@ -95,7 +103,7 @@ const cityLabel = city?.name ?? cityName ?? 'Île-de-France';
           </h3>
         </div>
         <p class="text-[#475569] leading-relaxed mb-4">
-          Dépoussiérage en profondeur, dégraissage et rinçage maîtrisé. Adapté aux balcons sur rue ou cour intérieure à {cityName}.
+          Dépoussiérage en profondeur, dégraissage et rinçage maîtrisé. Adapté aux balcons sur rue ou cour intérieure {cityAt}.
         </p>
         <ul class="space-y-2">
           <li class="flex items-center text-sm text-[#475569]">
@@ -185,7 +193,7 @@ const cityLabel = city?.name ?? cityName ?? 'Île-de-France';
     <!-- CTA de section -->
     <div class="text-center mt-12 lg:mt-16">
       <p class="text-[#475569] mb-6">
-        Une situation spécifique à {cityName} ? Parlons-en pour trouver la solution adaptée.
+        Une situation spécifique {cityAt} ? Parlons-en pour trouver la solution adaptée.
       </p>
       <Button
         href="#formulaire"

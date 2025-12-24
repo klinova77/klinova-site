@@ -1,11 +1,13 @@
 ---
-import { Image } from 'astro:assets';
-import Button from '~/components/UI/Button.astro';
-import type { City } from '~/types/geo';
+import { Image } from "astro:assets";
+import Button from "~/components/UI/Button.astro";
+import type { City } from "~/types/geo";
 
-import picsAntiPigeons from '~/assets/images/pics-anti-pigeons-inox-balcon.webp';
-import filetAntiPigeons from '~/assets/images/filet-anti-pigeons-pour-balcon.jpg';
-import gelRepulsif from '~/assets/images/gel-repulsif-anti-pigeon-coupelles.jpg';
+import { aVille, deVille } from "~/lib/geo-klinova";
+
+import picsAntiPigeons from "~/assets/images/pics-anti-pigeons-inox-balcon.webp";
+import filetAntiPigeons from "~/assets/images/filet-anti-pigeons-pour-balcon.jpg";
+import gelRepulsif from "~/assets/images/gel-repulsif-anti-pigeon-coupelles.jpg";
 
 interface Props {
   city?: City;
@@ -13,13 +15,20 @@ interface Props {
   isLocal?: boolean;
 }
 
-const { city, cityName, isLocal: isLocalProp } = Astro.props;
+const { city, cityName, isLocal: isLocalProp } = Astro.props as Props;
 
-// Flag local/global utilisable plus tard si besoin
+// Flag local/global
 const isLocal = !!city && (isLocalProp ?? true);
 
-// Label de ville robuste
-const cityLabel = city?.name ?? cityName ?? 'Île-de-France';
+// Nom brut de ville (si dispo)
+const resolvedCityName = city?.name ?? cityName ?? "";
+
+// Label d’affichage (fallback IDF)
+const cityLabel = resolvedCityName || "Île-de-France";
+
+// Prépositions (uniquement si on a une ville)
+const cityAt = resolvedCityName ? aVille(resolvedCityName) : "";
+const cityFrom = resolvedCityName ? deVille(resolvedCityName) : "";
 ---
 
 <section id="anti-pigeons" class="bg-[#DFF1E8] py-16 lg:py-24">

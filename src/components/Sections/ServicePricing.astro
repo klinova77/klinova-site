@@ -1,20 +1,24 @@
 ---
-// src/components/ServicePricing.astro
-import type { ServiceConfig, City } from '~/types/geo';
+import type { ServiceConfig, City } from "~/types/geo";
+import { aVille, deVille } from "~/lib/geo-klinova";
 
 interface Props {
   service: ServiceConfig;
   city: City;
 }
 
-const { service, city } = Astro.props;
+const { service, city } = Astro.props as Props;
 
 // Sécurité : Si pas de prix configuré, on n'affiche pas la section
 if (!service.pricing) return null;
 
+const cityAt = aVille(city.name);
+const cityFrom = deVille(city.name);
+
 const priceValue = service.pricing.from; // ex: "15 €"
 const priceUnit = service.pricing.unit;  // ex: "par m²"
 ---
+
 
 <section class="py-16 bg-white border-b border-neutral-100" id="tarifs">
   <div class="container-responsive max-w-5xl mx-auto">
@@ -25,7 +29,7 @@ const priceUnit = service.pricing.unit;  // ex: "par m²"
         Transparence tarifaire
       </div>
       <h2 class="text-3xl font-bold text-[#1E2939] mb-4">
-        Tarifs {service.name.toLowerCase()} à <span class="text-[#3F8D65]">{city.name}</span>
+        Tarifs {service.name.toLowerCase()} {cityAt}</span>
       </h2>
       <p class="text-[#64748B] max-w-2xl mx-auto text-lg">
         Une tarification claire, sans frais cachés. Le prix final dépend de la surface et de l'état d'encrassement constaté sur place.
@@ -127,7 +131,7 @@ const priceUnit = service.pricing.unit;  // ex: "par m²"
         <strong class="text-[#1E2939]">Comment est calculé le prix pour {service.name.toLowerCase()} ?</strong>
       </p>
       <p>
-        Le tarif indiqué ({priceValue} {priceUnit}) est une base de référence pour une prestation standard à {city.name}. 
+        Le tarif indiqué ({priceValue} {priceUnit}) est une base de référence pour une prestation standard {cityAt}. 
         Le coût final peut varier selon plusieurs critères techniques : l'accessibilité de la zone (étage sans ascenseur, hauteur sous plafond), 
         l'état d'ancienneté des revêtements, ou la nécessité de traitements spécifiques (détachage intensif, imperméabilisation). 
         Un devis précis est systématiquement établi avant toute intervention.

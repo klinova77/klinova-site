@@ -1,10 +1,16 @@
 ---
+import { aVille, deVille } from "~/lib/geo-klinova";
+
 interface Props {
   cityName: string;
 }
 
-const { cityName } = Astro.props;
+const { cityName } = Astro.props as Props;
+
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
 ---
+
 
 <section class="py-16 bg-white">
   <div class="container-responsive">
@@ -15,11 +21,11 @@ const { cityName } = Astro.props;
         Situations fréquentes
       </p>
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
-        Les situations que nous traitons le plus souvent à {cityName}
+        Les situations que nous traitons le plus souvent {cityAt}
       </h2>
       <div class="max-w-3xl mx-auto">
         <p class="text-base md:text-lg text-[#475569] leading-relaxed">
-          Chaque semaine, nous intervenons à {cityName} pour des taches tenaces, des odeurs incrustées ou des textiles abîmés par l'humidité. Voici les cas les plus courants.
+          Chaque semaine, nous intervenons {cityAt} pour des taches tenaces, des odeurs incrustées ou des textiles abîmés par l'humidité. Voici les cas les plus courants.
         </p>
       </div>
     </div>
@@ -150,7 +156,7 @@ const { cityName } = Astro.props;
       </h3>
 
       <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-6">
-        Les odeurs d'urine sont parmi nos interventions les plus fréquentes à {cityName}. L'ammoniac et les résidus organiques s'incrustent profondément dans les fibres, créant des sources d'odeurs que les produits grand public ne peuvent éliminer - ils ne font que masquer temporairement avec des parfums.
+        Les odeurs d'urine sont parmi nos interventions les plus fréquentes {cityAt}. L'ammoniac et les résidus organiques s'incrustent profondément dans les fibres, créant des sources d'odeurs que les produits grand public ne peuvent éliminer - ils ne font que masquer temporairement avec des parfums.
       </p>
 
       <p class="text-base md:text-lg text-[#475569] leading-relaxed mb-6">

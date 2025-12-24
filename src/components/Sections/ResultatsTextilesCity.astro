@@ -1,10 +1,16 @@
 ---
+import { aVille, deVille } from "~/lib/geo-klinova";
+
 interface Props {
   cityName: string;
 }
 
 const { cityName } = Astro.props as Props;
+
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
 ---
+
 
 <section class="py-16 bg-white">
   <div class="container-responsive">
@@ -38,7 +44,7 @@ const { cityName } = Astro.props as Props;
           Une intervention en 30&nbsp;secondes
         </h3>
         <p class="text-xs md:text-sm text-[#6B7280] mb-4 text-center">
-          Exemple réel d'intervention similaire à ce que nous réalisons régulièrement à {cityName}
+          Exemple réel d'intervention similaire à ce que nous réalisons régulièrement {cityAt}
           et dans le reste de l'Île-de-France.
         </p>
         <div class="rounded-2xl border border-[#E5E7EB] overflow-hidden bg-black shadow-sm">

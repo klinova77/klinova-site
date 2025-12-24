@@ -8,6 +8,9 @@ import services from '~/data/services';
 import { PHONE_DISPLAY, PHONE_E164, toTelHref } from '~/lib/phone';
 import { getExperienceYears } from '~/lib/company';
 import Button from '~/components/UI/Button.astro';
+
+import { aVille, deVille } from "~/lib/geo-klinova";
+
 // ==========================
 // Types / helpers services
 // ==========================
@@ -44,7 +47,9 @@ if (!currentCity) {
 }
 
 
-
+const cityName = currentCity.name;
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
 // ==========================
 // Villes voisines (nearbyCities)
 // ==========================
@@ -130,9 +135,9 @@ const clientsDepartment =
 // ==========================
 // Title / description / canonical
 // ==========================
-const title = `Entreprise de nettoyage à ${currentCity.name} – Klinova`;
+const title = `Entreprise de nettoyage ${cityAt} – Klinova`;
 
-const description = `Société de nettoyage à ${currentCity.name} : copropriétés, parkings souterrains, moquettes et balcons. Interventions professionnelles en ${departmentName}. Devis gratuit.`;
+const description = `Société de nettoyage ${cityAt} : copropriétés, parkings souterrains, moquettes et balcons. Interventions professionnelles en ${departmentName}. Devis gratuit.`;
 
 const canonical = `/zones-d-intervention/${department}/${city}`;
 
@@ -146,7 +151,7 @@ const fallbackCityFaq = [
       `Pour une copropriété à <strong>${currentCity.name}</strong>, ...`
   },
   {
-    question: `Sous quels délais pouvez-vous intervenir à ${currentCity.name} ?`,
+    question: `Sous quels délais pouvez-vous intervenir ${cityAt} ?`,
     answer:
       "Pour un contrat d’entretien régulier, la mise en place se fait généralement ... <strong>24 à 48h</strong>."
   },
@@ -216,7 +221,7 @@ const serviceLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': `${cityUrl}#service`,
-  name: `Entreprise de nettoyage à ${currentCity.name}`,
+  name: `Entreprise de nettoyage ${cityAt}`,
   serviceType: 'Nettoyage professionnel d’immeubles et de parkings',
   description, // ta meta description, déjà définie plus haut
 
@@ -255,11 +260,10 @@ const jsonLd = [webPageLd, breadcrumbLd, serviceLd, faqLd];
 // ==========================
 // Hero vars
 // ==========================
-const cityName = currentCity.name;
 const postalCode = currentCity.postalCodes?.[0] ?? '';
 const customDescription =
   currentCity.customDescription ??
-  `Klinova est une entreprise de nettoyage basée en Île-de-France. Nous intervenons à ${cityName} pour l’entretien des copropriétés, parkings souterrains, moquettes et balcons.`;
+  `Klinova est une entreprise de nettoyage basée en Île-de-France. Nous intervenons à ${cityAt} pour l’entretien des copropriétés, parkings souterrains, moquettes et balcons.`;
 const phoneHref = toTelHref(PHONE_E164);
 ---
 
@@ -270,7 +274,7 @@ const phoneHref = toTelHref(PHONE_E164);
   jsonLd={jsonLd}
   popupContext={{
     title: 'Demander un devis',
-    subtitle: `Intervention à ${currentCity.name}.`,
+    subtitle: `Intervention ${cityAt}.`,
     serviceKey: 'city-hub',
     serviceLabel: `Hub ville – ${currentCity.name}`,
     trackingSource: `hub-${currentCity.slug}`,
@@ -325,7 +329,10 @@ const phoneHref = toTelHref(PHONE_E164);
 
 
 
-<section class="relative pt-20 pb-16 lg:pt-28 lg:pb-24 border-b border-neutral-100/80 overflow-hidden bg-gradient-to-b from-white to-[#FCFCFC]">
+<section class="relative pt-20 pb-16 lg:pt-28 lg:pb-24 border-b border-neutral-100/80 overflow-hidden bg-gradient-to-b from-white to-[#FCFCFC]"
+ data-hide-floating-cta
+data-hide-header-cta 
+>
   
   {/* Motif de fond sophistiqué et subtil */}
   <div class="absolute inset-0 opacity-[0.015] pointer-events-none" aria-hidden="true">
@@ -370,7 +377,7 @@ const phoneHref = toTelHref(PHONE_E164);
       <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#1E2939] mb-6 leading-[1.1] tracking-tight">
         <span class="block">Entreprise de nettoyage</span>
         <span class="block text-[#3F8D65] relative">
-          à {cityName}
+          {cityAt}
           <span class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3F8D65]/20 to-transparent rounded-full"></span>
         </span>
       </h1>
@@ -523,7 +530,11 @@ const phoneHref = toTelHref(PHONE_E164);
 </style>
 
 {/* Section Stats Locales (Version Efficace) */}
-<section class="py-8 bg-[#F8FAFC] border-b border-neutral-200">
+<section class="py-8 bg-[#F8FAFC] border-b border-neutral-200"
+ data-hide-floating-cta
+data-hide-header-cta 
+>
+
   <div class="container-responsive">
     
     <div class="grid grid-cols-3 divide-x divide-neutral-200">
@@ -570,7 +581,10 @@ const phoneHref = toTelHref(PHONE_E164);
 {/* 3. SECTION HUB INTRO (SEO Sémantique & Confiance Syndic) */}
     {/* On ne l'affiche que si le champ existe dans la data pour éviter les erreurs */}
     {currentCity.hubIntro && (
-      <section class="py-12 md:py-20 bg-white border-b border-neutral-100">
+      <section class="py-12 md:py-20 bg-white border-b border-neutral-100"
+       data-hide-floating-cta
+data-hide-header-cta 
+>
         <div class="container-responsive">
           <div class="max-w-3xl mx-auto">
             
@@ -602,7 +616,7 @@ const phoneHref = toTelHref(PHONE_E164);
                 <span class="text-2xl shrink-0" role="img" aria-label="localisation">📍</span>
                 <div>
                   <p class="text-sm md:text-base text-[#1E2939] leading-snug">
-                    <strong>Note pour les gestionnaires et syndics à {currentCity.name} :</strong><br/>
+                    <strong>Note pour les gestionnaires et syndics {cityAt} :</strong><br/>
                     Nos équipes mobiles circulent quotidiennement dans votre secteur. 
                     Nous pouvons intervenir pour un chiffrage ou une urgence nettoyage très rapidement.
                   </p>
@@ -647,7 +661,7 @@ const phoneHref = toTelHref(PHONE_E164);
            <p class="text-sm text-[#64748B] leading-relaxed">
   {service.defaultDescription}
   <span class="hidden md:inline">
-    {" "}Intervention à {currentCity.name} et dans le reste {departmentAreaLabel}.
+    {" "}Intervention {cityAt} et dans le reste {departmentAreaLabel}.
   </span>
 </p>
 
@@ -901,11 +915,11 @@ const phoneHref = toTelHref(PHONE_E164);
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          Secteurs d'intervention à {currentCity.name}
+          Secteurs d'intervention {cityAt}
         </h2>
 
         <p class="text-[#64748B] mb-8 leading-relaxed">
-          Nos équipes mobiles sont sectorisées pour garantir une intervention rapide dans tous les quartiers de {currentCity.name}, du centre-ville aux zones périphériques.
+          Nos équipes mobiles sont sectorisées pour garantir une intervention rapide dans tous les quartiers {cityFrom}, du centre-ville aux zones périphériques.
         </p>
 
         {/* Nuage de Tags pour les quartiers (Visuellement dense) */}
@@ -946,7 +960,7 @@ const phoneHref = toTelHref(PHONE_E164);
       <div class="lg:col-span-5">
   <div class="bg-[#F8FAFC] rounded-2xl p-6 border border-neutral-200 h-full">
     <h3 class="text-lg font-bold text-[#1E2939] mb-4">
-      Autour de {currentCity.name}
+      Autour {cityFrom}
     </h3>
 
     <p class="text-sm text-[#64748B] mb-6">
@@ -954,7 +968,7 @@ const phoneHref = toTelHref(PHONE_E164);
     </p>
 
     {nearbyCitiesResolved.length > 0 ? (
-      <nav aria-label={`Communes autour de ${currentCity.name}`}>
+      <nav aria-label={`Communes autour ${cityFrom}`}>
         <ul class="flex flex-wrap gap-2">
           {nearbyCitiesResolved.map((neighbor) => (
             <li>

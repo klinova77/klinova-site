@@ -1,18 +1,23 @@
 ---
+import { aVille, deVille } from "~/lib/geo-klinova";
+
 interface Props {
   cityName: string;
-  position?: 'hero' | 'form';
-  variant?: 'default' | 'compact';
+  position?: "hero" | "form";
+  variant?: "default" | "compact";
 }
 
-const { cityName, position = 'hero', variant = 'default' } = Astro.props;
+const { cityName, position = "hero", variant = "default" } = Astro.props as Props;
+
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
 
 // Messages de disponibilité (un message fixe par ville)
 const availabilityMessages = [
-  `Créneaux disponibles cette semaine à ${cityName}`,
-  `Intervention possible sous 72h à ${cityName}`,
-  `Disponibilités ouvertes actuellement à ${cityName}`,
-  `Rendez-vous possibles cette semaine à ${cityName}`
+  `Créneaux disponibles cette semaine ${cityAt}`,
+  `Intervention possible sous 72h ${cityAt}`,
+  `Disponibilités ouvertes actuellement ${cityAt}`,
+  `Rendez-vous possibles cette semaine ${cityAt}`
 ];
 
 const messageIndex = cityName.length % availabilityMessages.length;
