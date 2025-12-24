@@ -43,6 +43,7 @@ nearbyCities: [
   "chelles",
   "gournay-sur-marne",
   "lagny-sur-marne",
+  "bussy-saint-georges",
 ],
 
   landmarks: [

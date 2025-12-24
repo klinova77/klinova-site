@@ -43,6 +43,7 @@ nearbyCities: [
   "gagny",
   "villeparisis",
   "le-raincy",
+  "livry-gargan",
 ],
 
   landmarks: [

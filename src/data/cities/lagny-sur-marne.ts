@@ -57,8 +57,9 @@ nearbyCities: [
   "claye-souilly",
   "champs-sur-marne",
   "chelles",
-],
+  "bussy-saint-georges",
 
+],
 
   // ✅ LANDMARKS = fusion A+B
   landmarks: [

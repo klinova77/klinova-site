@@ -36,6 +36,8 @@ const city: City = {
   "gournay-sur-marne",
   "chelles",
   "champs-sur-marne",
+  "livry-gargan",
+  "le-raincy",
 ],
 
 

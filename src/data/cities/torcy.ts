@@ -64,6 +64,7 @@ nearbyCities: [
   "lagny-sur-marne",
   "chelles",
   "gournay-sur-marne",
+  "bussy-saint-georges",
 ],
 
   

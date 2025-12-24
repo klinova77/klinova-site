@@ -3,6 +3,9 @@
 import cities from '~/data/cities';
 
 const HIGHLIGHTED_CITY_SLUGS = [
+  "bussy-saint-georges",
+  "livry-gargan",
+  "le-raincy",
   'montfermeil',
   'gagny',
   'villeparisis',

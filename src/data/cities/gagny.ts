@@ -1,3 +1,4 @@
+
 import type { City } from "~/types/geo";
 
 const city: City = {
@@ -6,19 +7,18 @@ const city: City = {
   postalCodes: ["93220"],
 
   customDescription:
-    "Entre les coteaux pavillonnaires de l’Époque et les grandes copropriétés de l’est de la ville, Gagny présente une diversité de surfaces à entretenir. La proximité des carrières et des nombreux espaces boisés (Arboretum, Bois de l’Étoile) accentue l’exposition des immeubles aux poussières de terre, aux mousses et à l’humidité, exigeant une maintenance technique régulière.",
+    "Entre les coteaux pavillonnaires de l'Époque et les grandes copropriétés de l'est de la ville, Gagny présente une diversité de surfaces à entretenir. La proximité des carrières et des nombreux espaces boisés (Arboretum, Bois de l'Étoile) accentue l'exposition des immeubles aux poussières de terre, aux mousses et à l'humidité, exigeant une maintenance technique régulière.",
 
-  hubIntro:
-    `<p>Gagny se distingue par une topographie vallonnée et une mixité urbaine forte, alternant zones pavillonnaires calmes (Maison Blanche, Franceville) et ensembles collectifs denses (Jean Moulin, les Peupliers). Pour les syndics et gestionnaires, cela implique de gérer des problématiques variées : l’humidité des sous-sols en pied de coteau, l’encrassement des halls par la végétation environnante ou l’entretien des parkings vieillissants.</p>
-    <p class="mt-4">Klinova intervient comme un partenaire de proximité, capable d’adapter ses protocoles à cette réalité locale. Nous déployons des solutions techniques pour rénover les sols encrassés, assainir les moquettes des parties communes et sécuriser les accès véhicules, tout en respectant la tranquillité des zones résidentielles.</p>
-    <ul>
-      <li><strong>Maîtrise des terrains en pente</strong> : gestion logistique adaptée pour les résidences situées sur les coteaux ou disposant de rampes de parking difficiles.</li>
-      <li><strong>Traitements anti-mousse et humidité</strong> : expertise spécifique pour les balcons et terrasses exposés au nord ou proches des étangs.</li>
-      <li><strong>Suivi rigoureux</strong> : rapports d’intervention avec photos pour justifier les prestations auprès des copropriétaires exigeants.</li>
-    </ul>`,
+  hubIntro: `<p>Gagny se distingue par une topographie vallonnée et une mixité urbaine forte, alternant zones pavillonnaires calmes (Maison Blanche, Franceville) et ensembles collectifs denses (Jean Moulin, les Peupliers). Pour les syndics et gestionnaires, cela implique de gérer des problématiques variées : l'humidité des sous-sols en pied de coteau, l'encrassement des halls par la végétation environnante ou l'entretien des parkings vieillissants.</p>
+<p class="mt-4">Klinova intervient comme un partenaire de proximité, capable d'adapter ses protocoles à cette réalité locale. Nous déployons des solutions techniques pour rénover les sols encrassés, assainir les moquettes des parties communes et sécuriser les accès véhicules, tout en respectant la tranquillité des zones résidentielles.</p>
+<ul>
+  <li><strong>Maîtrise des terrains en pente :</strong> gestion logistique adaptée pour les résidences situées sur les coteaux ou disposant de rampes de parking difficiles.</li>
+  <li><strong>Traitements anti-mousse et humidité :</strong> expertise spécifique pour les balcons et terrasses exposés au nord ou proches des étangs.</li>
+  <li><strong>Suivi rigoureux :</strong> rapports d'intervention avec photos pour justifier les prestations auprès des copropriétaires exigeants.</li>
+</ul>`,
 
   citySpecificChallenges: [
-    "Apport constant de débris végétaux et de terre dans les halls d'entrée dû à la proximité immédiate des grands parcs (Courbet, Arboretum, Bois de l’Étoile).",
+    "Apport constant de débris végétaux et de terre dans les halls d'entrée dû à la proximité immédiate des grands parcs (Courbet, Arboretum, Bois de l'Étoile).",
     "Gestion de l'humidité remontante dans les parkings semi-enterrés ou les caves, fréquente dans les quartiers situés en bas des coteaux (proche canal).",
     "Encrassement spécifique des façades et balcons des résidences des années 70/80 (Jean Moulin, Carette) par la pollution atmosphérique et les lichens.",
     "Accessibilité parfois complexe pour les engins de nettoyage dans les petites rues pavillonnaires du quartier des Abbesses ou de Franceville.",
@@ -33,7 +33,7 @@ const city: City = {
   districts: [
     "Centre-ville",
     "Maison Blanche",
-    "L’Époque",
+    "L'Époque",
     "Parc Carette",
     "Le Chénay",
     "Pointe de Gournay",
@@ -43,21 +43,21 @@ const city: City = {
     "Les Peupliers",
   ],
 
-nearbyCities: [
-  "neuilly-sur-marne",
-  "chelles",
-  "gournay-sur-marne",
-  "noisy-le-grand",
-  "champs-sur-marne",
-  "le-raincy",
-],
-
+  nearbyCities: [
+    "neuilly-sur-marne",
+    "chelles",
+    "gournay-sur-marne",
+    "noisy-le-grand",
+    "champs-sur-marne",
+    "le-raincy",
+    "livry-gargan",
+  ],
 
   landmarks: [
     "Hôtel de Ville (Place Foch)",
     "Théâtre André Malraux",
     "Château de Maison-Blanche",
-    "Parc Forestier du Bois de l’Étoile",
+    "Parc Forestier du Bois de l'Étoile",
     "Arboretum de Gagny",
     "Lac de Maison-Blanche",
     "Gare de Gagny (RER E)",
@@ -68,24 +68,26 @@ nearbyCities: [
 
   faq: [
     {
-      question: "Vos équipes interviennent-elles dans les quartiers résidentiels excentrés comme Franceville ?",
+      question:
+        "Vos équipes interviennent-elles dans les quartiers résidentiels excentrés comme Franceville ?",
       answer:
-        `<p>Absolument. Notre rayon d'action couvre l'intégralité de Gagny, du centre-ville historique aux quartiers limitrophes de Montfermeil ou Villemomble. Nous sommes équipés pour intervenir aussi bien dans les grandes copropriétés que dans les zones pavillonnaires plus difficiles d'accès.</p>`,
+        "<p><strong>Absolument, notre rayon d'action couvre l'intégralité de Gagny,</strong> du centre-ville historique aux quartiers limitrophes de Montfermeil ou Villemomble. Nous sommes équipés pour intervenir aussi bien dans les grandes copropriétés que dans les zones pavillonnaires plus difficiles d'accès.</p>",
     },
     {
-      question: "Comment traitez-vous les problèmes de mousse sur les parkings extérieurs ?",
+      question:
+        "Comment traitez-vous les problèmes de mousse sur les parkings extérieurs ?",
       answer:
-        `<p>À Gagny, l'humidité et la végétation favorisent les dépôts verts. Nous utilisons des traitements fongicides professionnels suivis d'un nettoyage haute pression maîtrisé (avec cloche de lavage pour éviter les projections) afin de décaper les sols sans abîmer l'enrobé ou le béton.</p>`,
+        "<p><strong>À Gagny, l'humidité et la végétation favorisent les dépôts verts.</strong> Nous utilisons des traitements fongicides professionnels suivis d'un nettoyage haute pression maîtrisé (avec cloche de lavage pour éviter les projections) afin de décaper les sols sans abîmer l'enrobé ou le béton.</p>",
     },
     {
       question: "Le déplacement pour un devis est-il facturé ?",
       answer:
-        `<p>Non, c'est gratuit. Que vous soyez syndic bénévole à l'Époque ou gestionnaire d'un grand ensemble au Chénay, nous venons sur place évaluer les surfaces (moquettes, parkings, vitrerie) et les contraintes techniques avant de vous remettre une proposition chiffrée.</p>`,
+        "<p><strong>Non, c'est gratuit.</strong> Que vous soyez syndic bénévole à l'Époque ou gestionnaire d'un grand ensemble au Chénay, nous venons sur place évaluer les surfaces et les contraintes techniques avant de vous remettre une proposition chiffrée.</p>",
     },
     {
       question: "Proposez-vous des contrats d'entretien annuel ?",
       answer:
-        `<p>Oui, nous mettons en place des plannings de maintenance (1 à 2 passages par an pour les parkings et moquettes) adaptés au budget de la copropriété. Cela permet de maintenir un niveau de propreté constant et d'éviter une dégradation irréversible des supports.</p>`,
+        "<p><strong>Oui, nous mettons en place des plannings de maintenance</strong> (1 à 2 passages par an pour les parkings et moquettes) adaptés au budget de la copropriété. Cela permet de maintenir un niveau de propreté constant et d'éviter une dégradation irréversible des supports.</p>",
     },
   ],
 
@@ -115,13 +117,17 @@ nearbyCities: [
         "Séchage optimisé pour une remise en service rapide des couloirs.",
       ],
 
-      uniqueIntro:
-        `<p>Dans les immeubles de Gagny, notamment les grandes résidences du secteur Jean Moulin ou du Chénay, les moquettes des parties communes sont soumises à rude épreuve. Le passage intensif, combiné aux apports de terre des espaces verts environnants, crée des zones d'usure prématurée et un grisaillement général.</p>
-        <p class="mt-4">Un simple aspirateur ne suffit pas à extraire la poussière incrustée ni à raviver les couleurs. Pour les gestionnaires, laisser les moquettes s'encrasser dévalorise le patrimoine et donne une image négligée de la résidence. Notre intervention technique vise à désincruster la fibre en profondeur, redonnant luminosité et hygiène aux halls et circulations.</p>`,
+      uniqueIntro: `<p>Dans les immeubles de Gagny, notamment les grandes résidences du secteur Jean Moulin ou du Chénay, les moquettes des parties communes sont soumises à rude épreuve. Le passage intensif, combiné aux apports de terre des espaces verts environnants (Parc Courbet, Bois de l'Étoile), crée des zones d'usure prématurée et un grisaillement général qui donne une impression de négligence. Les halls d'entrée, particulièrement dans les immeubles proches des gares RER E, accumulent boues, poussières et taches que l'aspirateur ne parvient pas à déloger.</p>
+<p class="mt-4">Pour les gestionnaires et syndics, laisser les moquettes s'encrasser dévalorise le patrimoine et génère des réclamations lors des AG. Les résidents se plaignent de l'aspect terne, des odeurs d'humidité et de la saleté visible. Certains locataires potentiels sont même rebutés par l'état des parties communes lors des visites. <strong>Une intervention technique approfondie désincruste la fibre en profondeur,</strong> redonne luminosité et hygiène aux halls et circulations, et valorise immédiatement l'image de la résidence sans nécessiter un remplacement coûteux du revêtement.</p>`,
 
-      uniqueDeepDive:
-        `<p>Le protocole débute par un diagnostic de la fibre (bouclé, velours, aiguilleté) pour adapter la pression et la température de l'eau. Nous protégeons soigneusement les bas de murs et les portes palières. Les taches tenaces font l'objet d'un pré-traitement manuel avec des agents détachants spécifiques.</p>
-        <p class="mt-4">Nous procédons ensuite au nettoyage complet par injection-extraction : la machine propulse une solution nettoyante au cœur de la moquette et l'aspire instantanément avec les salissures. Cette méthode permet de "rincer" la fibre sans détremper la sous-couche. À Gagny, où l'humidité peut être un facteur, nous veillons particulièrement à l'aspiration finale pour garantir un séchage rapide et éviter toute odeur d'humidité.</p>`,
+      uniqueDeepDive: `<h3>1. Analyse technique et protection</h3>
+<p>Identification de la fibre (bouclé, velours, aiguilleté) pour adapter la pression et la température de l'eau. <strong>Protection soigneuse des bas de murs et des portes palières.</strong> Les taches tenaces (chewing-gum, café, traces de semelles) font l'objet d'un pré-traitement manuel avec des agents détachants spécifiques selon leur nature.</p>
+
+<h3>2. Nettoyage par injection-extraction</h3>
+<p>La machine propulse une solution nettoyante au cœur de la moquette et l'aspire instantanément avec les salissures. Cette méthode permet de rincer la fibre sans détremper la sous-couche. <strong>À Gagny, où l'humidité peut être un facteur,</strong> nous veillons particulièrement à l'aspiration finale pour garantir un séchage rapide (4 à 6 heures selon ventilation) et éviter toute odeur d'humidité.</p>
+
+<h3>3. Contrôle final et recommandations</h3>
+<p>Vérification de l'homogénéité du résultat et de la bonne répartition du séchage. Les zones de fort passage sont inspectées visuellement pour s'assurer de l'élimination complète des traces. <strong>Fréquence recommandée : nettoyage professionnel tous les 12 à 18 mois</strong> pour les halls et couloirs à fort trafic, notamment dans les résidences proches des gares.</p>`,
 
       specificChallenges: [
         "Halls d'entrée souvent carrelés mais tapis d'escaliers et couloirs en moquette nécessitant une transition de nettoyage propre.",
@@ -134,13 +140,25 @@ nearbyCities: [
           question:
             "La méthode d'injection-extraction est-elle adaptée aux vieilles moquettes ?",
           answer:
-            `<p>Oui, c'est souvent la meilleure solution pour rénover sans remplacer. Si la fibre n'est pas limée jusqu'à la trame, le nettoyage va retirer le voile gris et redresser le poil. Cela permet souvent de prolonger la durée de vie du revêtement de plusieurs années.</p>`,
+            "<p><strong>Oui, c'est souvent la meilleure solution pour rénover sans remplacer.</strong> Si la fibre n'est pas limée jusqu'à la trame, le nettoyage va retirer le voile gris et redresser le poil. Cela permet souvent de prolonger la durée de vie du revêtement de plusieurs années.</p>",
         },
         {
           question:
             "Intervenez-vous le samedi pour ne pas gêner les professions libérales ?",
           answer:
-            `<p>Nous savons que de nombreux cabinets médicaux ou bureaux sont installés dans les résidences du centre de Gagny. Nous pouvons planifier l'intervention sur des créneaux horaires adaptés (tôt le matin, fin de journée ou samedi) pour ne pas perturber votre activité.</p>`,
+            "<p><strong>Nous savons que de nombreux cabinets médicaux ou bureaux sont installés dans les résidences du centre de Gagny.</strong> Nous pouvons planifier l'intervention sur des créneaux horaires adaptés (tôt le matin, fin de journée ou samedi) pour ne pas perturber votre activité.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous l'humidité dans les halls d'entrée situés en bas des coteaux ?",
+          answer:
+            "<p><strong>Nous adaptons notre méthode aux conditions locales.</strong> Dans les zones humides, nous réduisons la quantité d'eau injectée et augmentons la puissance d'extraction. Nous recommandons également une ventilation forcée pendant le séchage pour éviter toute réapparition d'odeurs.</p>",
+        },
+        {
+          question:
+            "Traitez-vous aussi les moquettes des escaliers dans les immeubles anciens ?",
+          answer:
+            "<p><strong>Oui, c'est même l'une de nos spécialités.</strong> Les escaliers nécessitent une technique adaptée car la moquette y est souvent tendue et collée. Nous utilisons des buses spéciales et procédons marche par marche pour éviter toute déformation ou décollement du revêtement.</p>",
         },
       ],
 
@@ -162,13 +180,17 @@ nearbyCities: [
         "Planification par zones pour maintenir le stationnement résidentiel.",
       ],
 
-      uniqueIntro:
-        `<p>Les parkings des résidences de Gagny, qu'ils soient situés sous les immeubles du centre-ville ou dans les complexes de la Pointe de Gournay, accumulent une pollution spécifique. Poussières de freinage, suies d'échappement et fuites d'huile encrassent les bétons et les résines, rendant les surfaces glissantes et les marquages invisibles.</p>
-        <p class="mt-4">Au-delà de l'aspect visuel, un parking sale génère un sentiment d'insécurité et peut provoquer des chutes. L'entretien mécanique régulier est indispensable pour préserver la qualité de l'air (en limitant les poussières volatiles) et assurer la pérennité des revêtements de sol face à l'acidité des hydrocarbures.</p>`,
+      uniqueIntro: `<p>Les parkings des résidences de Gagny, qu'ils soient situés sous les immeubles du centre-ville ou dans les complexes de la Pointe de Gournay, accumulent une pollution spécifique. Poussières de freinage, suies d'échappement et fuites d'huile encrassent les bétons et les résines, rendant les surfaces glissantes et les marquages invisibles. Dans les parkings semi-enterrés des quartiers en bas des coteaux, l'humidité aggrave la situation en favorisant l'apparition de mousses et de taches verdâtres sur les sols et les murs.</p>
+<p class="mt-4">Au-delà de l'aspect visuel dégradé, un parking sale génère un sentiment d'insécurité chez les résidents et peut provoquer des chutes, particulièrement sur les rampes glissantes. Les copropriétaires se plaignent de salir leurs chaussures, de l'odeur d'hydrocarbures et du manque de clarté. Certains syndics reçoivent des réclamations régulières en AG. <strong>L'entretien mécanique régulier est indispensable</strong> pour préserver la qualité de l'air (en limitant les poussières volatiles), assurer la pérennité des revêtements de sol face à l'acidité des hydrocarbures, et maintenir une image soignée de la résidence.</p>`,
 
-      uniqueDeepDive:
-        `<p>Notre intervention démarre par un dépoussiérage complet (balayage mécanique) pour retirer les gros déchets. Nous traitons ensuite les sols à l'aide d'autolaveuses portées ou accompagnées selon la surface, qui brossent et aspirent simultanément. Les taches d'huile incrustées sont traitées localement.</p>
-        <p class="mt-4">Une attention particulière est portée aux rampes d'accès, souvent critiques en hiver ou par temps de pluie. Nous les décapons à la haute pression pour restaurer leur adhérence. La gestion des eaux de lavage est stricte : récupération via l'autolaveuse et évacuation dans les réseaux appropriés, un point crucial pour les copropriétés soucieuses de l'environnement.</p>`,
+      uniqueDeepDive: `<h3>1. Dépoussiérage et traitement préalable</h3>
+<p>Balayage mécanique complet pour retirer les gros déchets, graviers et feuilles. <strong>Application ciblée de dégraissant professionnel</strong> sur les taches d'huile incrustées avec temps de contact adapté (10 à 15 minutes) pour dissoudre les résidus huileux en profondeur.</p>
+
+<h3>2. Lavage mécanique des surfaces</h3>
+<p>Traitement des sols à l'aide d'autolaveuses portées ou accompagnées selon la surface, qui brossent et aspirent simultanément. Les rampes d'accès, souvent critiques en hiver ou par temps de pluie, sont décapées à la haute pression pour restaurer leur adhérence. <strong>Les zones de stationnement fréquent</strong> et les virages reçoivent plusieurs passes pour un résultat homogène.</p>
+
+<h3>3. Gestion des eaux et finitions</h3>
+<p>La gestion des eaux de lavage est stricte : récupération via l'autolaveuse et évacuation dans les réseaux appropriés, un point crucial pour les copropriétés soucieuses de l'environnement. <strong>Contrôle final de la propreté</strong> et vérification de l'absence de flaques résiduelles. Fréquence recommandée : 1 à 2 décrassages annuels selon le trafic et l'exposition à l'humidité.</p>`,
 
       specificChallenges: [
         "Parkings sur plusieurs niveaux avec rampes hélicoïdales nécessitant des machines maniables.",
@@ -178,16 +200,27 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question:
-            "Est-il nécessaire de vider totalement le parking ?",
+          question: "Est-il nécessaire de vider totalement le parking ?",
           answer:
-            `<p>L'idéal est un parking vide, mais c'est rarement possible à Gagny. Nous procédons donc par phasage (niveau par niveau ou zone par zone). Nous balisons la zone de travail le temps du nettoyage et du séchage, permettant aux résidents de déplacer leurs véhicules sans devoir les sortir de la résidence.</p>`,
+            "<p><strong>L'idéal est un parking vide, mais c'est rarement possible à Gagny.</strong> Nous procédons donc par phasage (niveau par niveau ou zone par zone). Nous balisons la zone de travail le temps du nettoyage et du séchage, permettant aux résidents de déplacer leurs véhicules sans devoir les sortir.</p>",
         },
         {
           question:
             "Nettoyez-vous aussi les portes de garage et les tuyauteries ?",
           answer:
-            `<p>Le décrassage standard concerne les sols et les rampes. Cependant, sur devis complémentaire, nous pouvons effectuer le dépoussiérage des tuyauteries aériennes, des luminaires et le nettoyage des portes de boxes, ce qui améliore considérablement la luminosité du sous-sol.</p>`,
+            "<p><strong>Le décrassage standard concerne les sols et les rampes.</strong> Cependant, sur devis complémentaire, nous pouvons effectuer le dépoussiérage des tuyauteries aériennes, des luminaires et le nettoyage des portes de boxes, ce qui améliore considérablement la luminosité du sous-sol.</p>",
+        },
+        {
+          question:
+            "Comment traitez-vous l'humidité et les mousses dans les parkings semi-enterrés ?",
+          answer:
+            "<p><strong>Nous appliquons un traitement fongicide professionnel</strong> sur les zones verdâtres avant le lavage mécanique. Cela permet d'éliminer les mousses et micro-algues qui rendent les sols glissants. Nous recommandons ensuite une ventilation améliorée et un nettoyage plus fréquent dans ces zones sensibles.</p>",
+        },
+        {
+          question:
+            "Les rampes en pente des coteaux de Gagny sont-elles difficiles à nettoyer ?",
+          answer:
+            "<p><strong>Nous avons l'habitude des configurations complexes.</strong> Les rampes pentues nécessitent une technique spécifique avec haute pression orientée et contrôle du débit pour éviter les éclaboussures. Nos équipes sont formées pour travailler en toute sécurité sur ce type de configuration.</p>",
         },
       ],
 
@@ -209,13 +242,17 @@ nearbyCities: [
         "Intervention efficace sur carrelage, béton, dalles sur plots ou bois.",
       ],
 
-      uniqueIntro:
-        `<p>L'environnement verdoyant de Gagny a un revers : la prolifération rapide de mousses et d'algues sur les balcons, en particulier ceux exposés au nord ou situés près des parcs comme le Bois de l'Étoile. Couplés à la pollution urbaine, ces dépôts rendent les sols noirs, glissants et inesthétiques.</p>
-        <p class="mt-4">Beaucoup de résidents n'osent plus utiliser leur terrasse ou craignent d'abîmer le revêtement en le nettoyant eux-mêmes. Notre service professionnel permet de décaper les surfaces en profondeur sans risque, redonnant ainsi une véritable pièce supplémentaire à votre appartement.</p>`,
+      uniqueIntro: `<p>L'environnement verdoyant de Gagny a un revers : la prolifération rapide de mousses et d'algues sur les balcons, en particulier ceux exposés au nord ou situés près des parcs comme le Bois de l'Étoile ou l'Arboretum. Dans les quartiers de Maison Blanche ou des Abbesses, l'humidité ambiante et la proximité des arbres accélèrent l'apparition de dépôts verts glissants. Couplés à la pollution urbaine, ces dépôts rendent les sols noirs, inesthétiques et dangereux.</p>
+<p class="mt-4">Beaucoup de résidents n'osent plus utiliser leur terrasse par crainte de glisser ou par gêne de l'aspect sale. D'autres tentent un nettoyage domestique qui risque d'abîmer le revêtement ou de créer des coulures chez les voisins du dessous. Vous finissez par ne plus profiter de cet espace extérieur qui pourrait être un véritable atout de votre logement. <strong>Notre service professionnel permet de décaper les surfaces en profondeur</strong> sans risque pour l'étanchéité, les joints ou le voisinage, redonnant ainsi une véritable pièce supplémentaire à votre appartement et valorisant votre bien immobilier.</p>`,
 
-      uniqueDeepDive:
-        `<p>Après avoir protégé votre intérieur et déplacé le mobilier, nous retirons manuellement les débris accumulés. Nous appliquons ensuite un nettoyant professionnel adapté au support (fongicide ou dégraissant). Le nettoyage s'effectue par action mécanique ou haute pression maîtrisée, pour ne pas dégrader les joints de carrelage ni rendre le béton poreux.</p>
-        <p class="mt-4">Le point crucial en immeuble est la gestion de l'eau. Nous utilisons des aspirateurs à eau ou des systèmes de barrage pour canaliser les flux vers les évacuations, évitant ainsi les coulures disgracieuses sur la façade ou chez les voisins du dessous. Les vitres et garde-corps sont essuyés en fin de chantier.</p>`,
+      uniqueDeepDive: `<h3>1. Préparation et sécurisation</h3>
+<p>Protection de votre intérieur (baies vitrées, seuils) et déplacement du mobilier et des plantes. <strong>Retrait manuel des débris accumulés</strong> (feuilles mortes, terre, déchets végétaux). Inspection de l'évacuation du balcon pour adapter le débit d'eau et éviter tout débordement.</p>
+
+<h3>2. Application et décapage</h3>
+<p>Application d'un nettoyant professionnel adapté au support (fongicide pour les mousses, dégraissant pour les traces de barbecue). Le nettoyage s'effectue par action mécanique (brossage) ou haute pression maîtrisée, pour ne pas dégrader les joints de carrelage ni rendre le béton poreux. <strong>Les garde-corps (verre, aluminium, acier) sont traités séparément</strong> avec des produits spécifiques non abrasifs.</p>
+
+<h3>3. Rinçage maîtrisé et finitions</h3>
+<p>Le rinçage est orienté systématiquement vers l'évacuation du balcon. Nous utilisons des aspirateurs à eau ou des systèmes de barrage (raclettes, chiffons absorbants) pour canaliser les flux, évitant ainsi les coulures disgracieuses sur la façade ou chez les voisins du dessous. <strong>Les vitres et garde-corps sont essuyés en fin de chantier.</strong> Séchage naturel en quelques heures selon exposition et ventilation.</p>`,
 
       specificChallenges: [
         "Balcons 'casquette' ou loggias nécessitant une vigilance accrue sur les évacuations d'eau.",
@@ -225,16 +262,26 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question:
-            "Utilisez-vous de l'eau de Javel ?",
+          question: "Utilisez-vous de l'eau de Javel ?",
           answer:
-            `<p>Non, nous évitons l'eau de Javel qui est corrosive pour les bétons, toxique pour l'environnement et risque de décolorer les façades en cas de coulure. Nous privilégions des détergents professionnels spécifiques et biodégradables, beaucoup plus sûrs pour votre bâtiment et vos plantations.</p>`,
+            "<p><strong>Non, nous évitons l'eau de Javel</strong> qui est corrosive pour les bétons, toxique pour l'environnement et risque de décolorer les façades en cas de coulure. Nous privilégions des détergents professionnels spécifiques et biodégradables, beaucoup plus sûrs pour votre bâtiment et vos plantations.</p>",
+        },
+        {
+          question: "Pouvez-vous nettoyer les stores bannes en même temps ?",
+          answer:
+            "<p><strong>Le nettoyage du tissu des stores demande une intervention spécifique différente du sol.</strong> Nous pouvons cependant nettoyer les armatures métalliques et le coffre du store lors du nettoyage du balcon pour une finition impeccable.</p>",
         },
         {
           question:
-            "Pouvez-vous nettoyer les stores bannes en même temps ?",
+            "Les balcons exposés au nord près du Bois de l'Étoile nécessitent-ils un entretien plus fréquent ?",
           answer:
-            `<p>Le nettoyage du tissu des stores demande une intervention spécifique différente du sol. Nous pouvons cependant nettoyer les armatures métalliques et le coffre du store lors du nettoyage du balcon pour une finition impeccable.</p>`,
+            "<p><strong>Oui, nettement.</strong> L'absence d'ensoleillement direct et la proximité de la végétation favorisent l'apparition rapide de mousses et d'algues. Pour ces balcons, nous recommandons un nettoyage annuel au printemps, parfois complété par un traitement anti-mousse préventif en automne.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous l'eau pour éviter de mouiller les voisins du dessous ?",
+          answer:
+            "<p><strong>C'est notre priorité absolue en immeuble.</strong> Nous contrôlons le débit en permanence, orientons le rinçage vers l'évacuation et utilisons des raclettes et chiffons absorbants pour récupérer l'eau. Dans les configurations sensibles (évacuation bouchée, balcon sans pente), nous adaptons la méthode en privilégiant un nettoyage plus manuel.</p>",
         },
       ],
 
@@ -253,16 +300,19 @@ nearbyCities: [
         "Protocole sanitaire strict (EPI, confinement, désinfection).",
         "Produits virucides et bactéricides homologués.",
         "Nettoyage des traces acides corrosives sur les garde-corps et sols.",
-        
       ],
 
-      uniqueIntro:
-        `<p>Certains quartiers de Gagny, proches des gares ou des zones pavillonnaires anciennes, sont particulièrement touchés par les nuisances de pigeons. Lorsqu'un balcon est colonisé, l'accumulation de fientes le rend non seulement impraticable à cause de l'odeur et de la saleté, mais présente surtout un risque sanitaire réel (bactéries, parasites).</p>
-        <p class="mt-4">Face à une telle situation, un simple nettoyage domestique est déconseillé sans équipement. Klinova intervient pour remettre le logement en état de salubrité, en garantissant la sécurité de l'intervenant et des occupants.</p>`,
+      uniqueIntro: `<p>Certains quartiers de Gagny, proches des gares RER E (Gagny, Chénay-Gagny) ou des zones pavillonnaires anciennes comme les Abbesses, sont particulièrement touchés par les nuisances de pigeons. Les immeubles offrant des corniches, des retraits ou des balcons abrités deviennent rapidement des zones de repos et de nidification privilégiées. Lorsqu'un balcon est colonisé, l'accumulation de fientes le rend non seulement impraticable à cause de l'odeur forte et de la saleté repoussante, mais présente surtout un risque sanitaire réel : les déjections contiennent des bactéries, champignons et parasites nocifs pour la santé humaine.</p>
+<p class="mt-4">Les occupants n'osent plus ouvrir leur porte-fenêtre, craignent pour leur santé et celle de leurs enfants, et subissent parfois la gêne des voisins incommodés par l'aspect ou l'odeur. Certains propriétaires ou bailleurs reçoivent des réclamations du conseil syndical exigeant un assainissement rapide. Face à une telle situation, un simple nettoyage domestique est non seulement inefficace mais dangereusement déconseillé sans équipement adapté : les fientes sèches dégagent des poussières infectieuses dont l'inhalation expose à des risques respiratoires. <strong>Klinova intervient pour remettre le logement en état de salubrité,</strong> en garantissant la sécurité de l'intervenant et des occupants grâce à un protocole professionnel strict.</p>`,
 
-      uniqueDeepDive:
-        `<p>Nos techniciens interviennent en tenue de protection complète. La première étape consiste à humidifier les zones souillées pour éviter la dispersion de poussières contaminées, puis à gratter et ensacher les fientes et nids. Ces déchets sont traités comme des matières dangereuses.</p>
-        <p class="mt-4">Une fois le gros œuvre retiré, nous procédons au lavage et à la désinfection des sols et parois avec des produits biocides puissants. Cette étape est essentielle pour éliminer les pathogènes et les mauvaises odeurs. Le balcon est rendu propre, sain et prêt à être réaménagé (après séchage complet).</p>`,
+      uniqueDeepDive: `<h3>1. Confinement et protection</h3>
+<p>Nos techniciens interviennent en tenue de protection complète : combinaison jetable, gants épais, masque respiratoire de type <strong>FFP3</strong> et lunettes de protection. Installation de bâches de protection devant la porte-fenêtre pour limiter la dispersion des poussières vers l'intérieur du logement. <strong>Humidification légère des zones souillées</strong> pour éviter la dispersion de poussières contaminées lors de la manipulation.</p>
+
+<h3>2. Ramassage et nettoyage des surfaces</h3>
+<p>Grattage et ensachage manuel des fientes et nids avec des outils dédiés. Les déchets sont conditionnés dans des sacs étanches prévus pour les matières dangereuses, en aucun cas jetés dans les ordures ménagères classiques. <strong>Lavage des sols et parois</strong> (dalles, garde-corps, vitreries, murs mitoyens) avec des produits biocides puissants qui dissolvent les résidus organiques incrustés.</p>
+
+<h3>3. Désinfection virucide et aération</h3>
+<p>Application d'un produit virucide et bactéricide homologué avec respect strict du temps de contact préconisé pour garantir l'élimination des agents pathogènes. Rinçage final pour retirer les résidus chimiques. <strong>Le balcon est laissé en aération complète pendant 24 heures</strong> avant toute réutilisation. Installation possible de pics ou de filets anti-pigeons pour prévenir une récidive et préserver durablement la salubrité du balcon.</p>`,
 
       specificChallenges: [
         "Accès parfois difficile aux balcons via l'appartement, obligeant à un confinement strict du passage.",
@@ -275,61 +325,75 @@ nearbyCities: [
           question:
             "Les produits de désinfection sont-ils dangereux pour mes animaux ?",
           answer:
-            `<p>Pendant l'application, l'accès au balcon doit être interdit aux animaux. Une fois le protocole terminé, les surfaces rincées et sèches (généralement après 24h), il n'y a plus aucun danger pour vos animaux de compagnie. Le balcon est redevenu sain.</p>`,
+            "<p><strong>Pendant l'application, l'accès au balcon doit être interdit aux animaux.</strong> Une fois le protocole terminé, les surfaces rincées et sèches (généralement après 24h), il n'y a plus aucun danger pour vos animaux de compagnie. Le balcon est redevenu sain.</p>",
         },
         {
           question:
             "Installez-vous des pics anti-pigeons après le nettoyage ?",
           answer:
-            `<p>Oui, absolument. Le nettoyage est le moment idéal pour sécuriser la zone. Nous pouvons installer des pics sur les garde-corps ou les appuis de fenêtre pour empêcher les pigeons de se poser à nouveau.</p>`,
+            "<p><strong>Oui, absolument. Le nettoyage est le moment idéal pour sécuriser la zone.</strong> Nous pouvons installer des pics sur les garde-corps ou les appuis de fenêtre pour empêcher les pigeons de se poser à nouveau. Nous proposons également des filets de protection pour les balcons particulièrement exposés.</p>",
         },
-      ],
-
-      ctaOverride: "",
-    },
-
-    // =========================
-    // SERVICE 5 – CANAPÉS / TAPIS / MATELAS
-    // =========================
-    {
-      serviceKey: "canapes-tapis",
-      heroDescription:
-        "Nettoyage à domicile de canapés, tapis et matelas à Gagny : une solution radicale contre les taches et les acariens.",
-
-      whyUsBullets: [
-        "Intervention rapide à domicile sur rendez-vous.",
-        "Détachage précis respectant la nature des fibres (tissu, velours, laine).",
-        "Élimination des odeurs et des allergènes en profondeur.",
-        "Séchage accéléré grâce à une aspiration haute performance.",
-      ],
-
-      uniqueIntro:
-        `<p>Dans les foyers de Gagny, le mobilier textile est au cœur de la vie de famille. Taches de nourriture, poils d'animaux, poussière et transpiration s'accumulent au fil du temps dans les canapés et matelas. L'aspirateur ne traite que la surface, laissant les allergènes et la saleté incrustés dans le rembourrage.</p>
-        <p class="mt-4">Que vous habitiez une maison à Maison Blanche ou un appartement au Chénay, notre service de nettoyage à domicile permet de redonner fraîcheur et hygiène à votre intérieur sans avoir à remplacer votre mobilier. C'est une solution économique et écologique.</p>`,
-
-      uniqueDeepDive:
-        `<p>Notre technicien commence par analyser le type de textile pour choisir les produits adaptés. Nous appliquons ensuite une solution nettoyante et détachante, suivie d'un brossage si nécessaire. La phase d'injection-extraction permet de rincer la fibre en profondeur et d'aspirer l'eau sale chargée d'impuretés.</p>
-        <p class="mt-4">Ce procédé élimine non seulement les taches visibles mais aussi les acariens et bactéries responsables d'allergies. Pour les matelas, c'est une véritable cure de jouvence hygiénique. Nous laissons le mobilier humide mais non trempé ; il suffit de quelques heures de séchage naturel avant réutilisation.</p>`,
-
-      specificChallenges: [
-        "Traitement des odeurs d'urine d'animaux sur les tapis ou canapés, fréquent en pavillon.",
-        "Nettoyage de grands canapés d'angle ou panoramiques nécessitant de l'espace pour travailler.",
-        "Gestion des tissus délicats (viscose, soie) demandant une expertise technique pour éviter les auréoles.",
-      ],
-
-      faqAdditions: [
         {
           question:
-            "Combien de temps dure l'intervention pour un canapé ?",
-          answer:
-            `<p>Pour un canapé 3 places standard, comptez environ 1h30 à 2h d'intervention. Cela inclut la préparation, le détachage, le nettoyage par extraction et le nettoyage de la zone de travail. C'est rapide et efficace.</p>`,
-        },
-       
-      ],
+            "Les fientes peuvent-elles avoir endommagé mon balcon de manière irréversible ?",
+answer:
+"<p><strong>L'acidité des fientes attaque progressivement les matériaux.</strong> Les garde-corps métalliques peuvent se corroder, la peinture s'écaille et les joints se dégradent. Notre intervention stoppe ce processus et nettoie en profondeur, mais certains dégâts structurels avancés peuvent nécessiter des réparations complémentaires par un maçon.</p>",
+},
+{
+question:
+"Que deviennent les fientes et les nids ramassés lors de l'intervention ?",
+answer:
+"<p><strong>Les fientes, nids et débris organiques sont conditionnés dans des sacs étanches,</strong> puis évacués en déchetterie selon les normes sanitaires. Nous ne jetons jamais ces déchets dans les ordures ménagères classiques car ils pourraient contaminer d'autres personnes lors de la collecte.</p>",
+},
+],  ctaOverride: "",
+},
 
-      ctaOverride: "",
+// =========================
+// SERVICE 5 – CANAPÉS / TAPIS / MATELAS
+// =========================
+
+
+{
+  serviceKey: "canapes-tapis",
+  heroDescription:
+    "Nettoyage à domicile de canapés, tapis et matelas à Gagny : une solution radicale contre les taches et les acariens.",  whyUsBullets: [
+    "Intervention rapide à domicile sur rendez-vous.",
+    "Détachage précis respectant la nature des fibres (tissu, velours, laine).",
+    "Élimination des odeurs et des allergènes en profondeur.",
+    "Séchage accéléré grâce à une aspiration haute performance.",
+  ],  uniqueIntro: `<p>Dans les foyers de Gagny, que ce soit dans les pavillons de Maison Blanche ou les appartements du Chénay, le mobilier textile est au cœur de la vie de famille. Les canapés accueillent les soirées télé, les goûters d'anniversaire et les siestes du dimanche. Les tapis supportent les jeux des enfants et les allers-retours quotidiens. Les matelas emmagasinent chaque nuit transpiration et poussières. Résultat : taches de nourriture, de boissons, poils d'animaux, traces de semelles et poussières s'accumulent au fil du temps dans les fibres.</p>
+<p class="mt-4">L'aspirateur ne traite que la surface, laissant les allergènes et la saleté profondément incrustés dans le rembourrage. Les odeurs persistent (transpiration, urine d'animaux, humidité), les couleurs ternissent et certaines familles hésitent à recevoir des invités par gêne de l'aspect taché de leur canapé. Les personnes allergiques souffrent davantage car les acariens prolifèrent dans ces environnements. <strong>Notre service de nettoyage à domicile permet de redonner fraîcheur et hygiène</strong> à votre intérieur sans avoir à remplacer votre mobilier, une solution économique et écologique qui prolonge la durée de vie de vos textiles de plusieurs années.</p>`,  uniqueDeepDive: `<h3>1. Diagnostic textile et pré-traitement</h3>
+<p>Analyse du type de textile pour choisir les produits adaptés (coton, laine, synthétique, velours, microfibre). <strong>Test préalable sur zone discrète</strong> pour les tissus fragiles ou fortement teintés. Application ciblée d'une solution détachante et nettoyante sur les zones très souillées (accoudoirs, assises, passages de tapis). Temps d'action pour dissoudre les salissures avant extraction.</p><h3>2. Injection-extraction professionnelle</h3>
+<p>La machine injecte une solution nettoyante adaptée à la fibre puis aspire immédiatement l'eau sale chargée d'impuretés, d'acariens et de leurs déjections. <strong>Plusieurs passes sur les zones critiques</strong> pour garantir un résultat homogène. Ce procédé élimine non seulement les taches visibles mais aussi les allergènes responsables d'allergies respiratoires. Pour les matelas, c'est une véritable cure de jouvence hygiénique.</p><h3>3. Extraction maximale et conseils</h3>
+<p>L'aspiration puissante de notre équipement retire l'essentiel de l'humidité : le mobilier reste légèrement humide mais non trempé. <strong>Séchage naturel en quelques heures</strong> (4 à 8h selon épaisseur du textile et ventilation de la pièce). Nous recommandons d'ouvrir les fenêtres pour accélérer l'évaporation et de ne pas utiliser le canapé avant séchage complet. Conseils d'entretien pour prolonger le résultat.</p>`,  specificChallenges: [
+    "Traitement des odeurs d'urine d'animaux sur les tapis ou canapés, fréquent en pavillon.",
+    "Nettoyage de grands canapés d'angle ou panoramiques nécessitant de l'espace pour travailler.",
+    "Gestion des tissus délicats (viscose, soie) demandant une expertise technique pour éviter les auréoles.",
+  ],  faqAdditions: [
+    {
+      question: "Combien de temps dure l'intervention pour un canapé ?",
+      answer:
+        "<p><strong>Pour un canapé 3 places standard, comptez environ 1h30 à 2h d'intervention.</strong> Cela inclut la préparation, le détachage, le nettoyage par extraction et le nettoyage de la zone de travail. C'est rapide et efficace.</p>",
     },
-  ],
-};
-
-export default city;
+    {
+      question:
+        "Pouvez-vous éliminer les odeurs d'urine de chat ou de chien ?",
+      answer:
+        "<p><strong>Oui, nous utilisons des produits enzymatiques spécifiques</strong> qui décomposent les protéines responsables de l'odeur à la source, plutôt que de la masquer. Pour les contaminations profondes ayant atteint le rembourrage, nous pouvons effectuer plusieurs passes d'extraction pour éliminer complètement les résidus.</p>",
+    },
+    {
+      question:
+        "Le nettoyage est-il efficace contre les acariens pour les personnes allergiques ?",
+      answer:
+        "<p><strong>Oui, c'est l'une des principales raisons de faire appel à nous.</strong> L'injection-extraction retire une grande partie des acariens, de leurs déjections et des allergènes accumulés en profondeur. Les personnes allergiques constatent souvent une amélioration rapide de leur confort respiratoire après notre passage.</p>",
+    },
+    {
+      question:
+        "Dois-je préparer quelque chose avant votre arrivée ?",
+      answer:
+        "<p><strong>Oui, quelques préparations simples facilitent notre travail.</strong> Retirez les coussins décoratifs, plaids et objets posés sur le canapé. Dégagez un espace de circulation autour des textiles. Pour les matelas, retirez draps, couette et protège-matelas. Cela nous permet de démarrer immédiatement.</p>",
+    },
+  ],  ctaOverride: "",
+},
+],
+};export default city;

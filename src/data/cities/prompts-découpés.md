@@ -105,12 +105,12 @@ de manière aléatoire, afin de varier les textes d’une ville à l’autre.
 SERVICE 1 — NETTOYAGE DE MOQUETTES
 
 👉 Choisir UN SEUL style :
-
+style A 
 STYLE B – Technique & Maintenance
 
 STYLE D – Usure / Prévention / Patrimoine
 
-❌ Interdiction d’utiliser le STYLE A (trop émotionnel pour des parties communes).
+
 
 SERVICE 2 — NETTOYAGE DE PARKINGS
 
@@ -712,7 +712,7 @@ Toujours exprimer le résultat concret pour le client.
 
 1 phrase qui insiste sur l’état des parties communes (propreté visible, image de l’immeuble, confort des résidents) dans le contexte de [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
 
 Décris la situation typique dans la ville :
 
@@ -859,7 +859,7 @@ Une phrase unique de 20–35 mots, qui insiste sur un parking propre, non glissa
 
 (Cette phrase jouait auparavant le rôle de phrase d’ouverture dans l’INTRO.)
 
-2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage  :
 
 Décris l’état habituel des parkings dans cette ville :
 
@@ -1019,7 +1019,7 @@ un balcon ou une terrasse propre, agréable à utiliser, où l’on a de nouveau
 
 La phrase doit mettre en avant le fait de retrouver un espace extérieur propre, utilisable et valorisant le logement dans le contexte de [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
 
 Décris le vécu d’un occupant avec un balcon encrassé :
 
@@ -1175,7 +1175,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 
 Une phrase unique de 20–35 mots qui souligne qu’après intervention, le balcon redevient sain, désinfecté et utilisable en toute sécurité à [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
 
 Décris la situation :
 
@@ -1326,7 +1326,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 
 Une phrase unique de 20–35 mots qui met en avant le fait de retrouver des canapés, tapis et matelas propres, plus sains et agréables à utiliser à [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 100 à 150 mots
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
 
 Décris le quotidien :
 

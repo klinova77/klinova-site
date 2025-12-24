@@ -73,20 +73,22 @@ const cards = order
   .filter((x) => typeof x.bullet === "string" && x.bullet.trim().length > 0);
 ---
 
-<section class="bg-white py-16 border-t border-neutral-100">
+<section class="bg-white pt-8 pb-1 md:pt-10 md:pb-6 border-t border-neutral-100">
+
   <div class="container-responsive">
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-4">
-        Pourquoi Klinova {cityAt} ?
-      </h2>
+    <div class="text-center max-w-3xl mx-auto mb-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-4">
+  Pourquoi Klinova&nbsp;{cityAt}&nbsp;?
+</h2>
+
       <p class="text-[#475569]">
         Une intervention pensée pour votre confort et votre sécurité.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-4">
       {cards.slice(0, 3).map(({ bullet, pillar }) => (
-        <div class="flex flex-col items-start p-6 rounded-2xl border border-neutral-100 bg-white hover:shadow-md transition-all duration-300 group">
+        <div class="flex flex-col items-start p-2 rounded-2xl border border-neutral-100 bg-white hover:shadow-md transition-all duration-300 group">
           <div
             class={`flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide border ${pillar.bgColor} ${pillar.textColor}`}
           >
