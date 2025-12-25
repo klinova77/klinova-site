@@ -1,7 +1,4 @@
-// src/data/cities/villeparisis.ts
-// Balises autorisées :
-// <p>`, `<h3>`, `<ul>`, `<li>`, `<strong>`, <br>, <p class="mt-4">
-// dans hubintro / uniqueintro / uniquedeepdive / faq / faqAddition
+
 
 import type { City } from "~/types/geo";
 
