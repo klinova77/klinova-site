@@ -47,7 +47,7 @@ const balconsFientes: ServiceConfig = {
    */
   pricingTiers: [
     {
-      name: "Balcon souillé par fientes (désinfection + retrait sécurisé)",
+      name: "Balcon souillé par des fientes (désinfection + retrait sécurisé)",
       description:
         "À partir de 390€ TTC. Inclut EPI, pré-désinfection, retrait sécurisé et désinfection finale. Tarif indicatif selon surface, volume de dépôt et accès.",
       priceType: "from",

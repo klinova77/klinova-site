@@ -139,7 +139,7 @@ STYLE B – Matériaux / Supports / Étanchéité
 
 
 
-SERVICE 4 — BALCONS SOUILLÉS PAR FIENTES DE PIGEONS
+SERVICE 4 — BALCONS SOUILLÉS par des fientes DE PIGEONS
 
 STYLE choisi pour ce service : A/B/C/D ?
 
@@ -223,7 +223,7 @@ KLINOVA intervient notamment sur :
 1) Nettoyage de moquettes des copropriétés, hotels, bureaux, et aux domiciles des particuliers
 2) Nettoyage de parkings (souterrains / aériens)
 3) Nettoyage de balcons / terrasses
-4) Balcons souillés par fientes de pigeons (nettoyage + désinfection + pose de solutions anti-pigeons: pics,filets)
+4) Balcons souillés par des fientes de pigeons (nettoyage + désinfection + pose de solutions anti-pigeons: pics,filets)
 5) Nettoyage de canapés / tapis / matelas chez les particuliers
 
 ---
@@ -416,7 +416,7 @@ Interdictions de style (local) :
 
 
 
-Pour chaque service, le bloc “PROTOCOLE / FAÇON DE TRAVAILLER” doit obligatoirement couvrir toutes les étapes ci-dessous (adaptées à la ville), même si ce n’est pas dans le contexte Wikipédia.
+Pour chaque service, le bloc “PROTOCOLE / FAÇON DE TRAVAILLER” doit obligatoirement couvrir toutes les étapes ci-dessous (adaptées à la ville)
 Il est interdit d’oublier une étape clé (diagnostic, protections, méthode principale, gestion de l’eau, finitions).
 
 1) Méthode de base – NETTOYAGE DE MOQUETTES
@@ -473,7 +473,7 @@ Gestion de l’eau pour éviter coulures chez les voisins / le long de la façad
 
 Conseils de séchage (délais) + entretien simple (balayage, nettoyage léger régulier).
 
-4) Méthode de base – BALCONS SOUILLÉS PAR FIENTES DE PIGEONS
+4) Méthode de base – BALCONS SOUILLÉS par des fientes DE PIGEONS
 
 Étapes incontournables à mentionner dans le PROTOCOLE :
 
@@ -541,16 +541,10 @@ Pour chaque service, tu écriras un texte structuré en 6 blocs, toujours dans c
 
 AUCUN code, AUCUNE structure TypeScript.
 
-ci-dessous tu trouveras une fiche wikipedia dont tu peux te servir pour rédiger tes réponses
+ci-dessous tu trouveras des données dont tu peux te servir pour rédiger tes réponses
 
 Si tu as bien compris, réponds simplement :
 “OK, j’ai compris le contexte Klinova. Prêt pour le service 0 (hub ville).”
-
-fiche wikipedia:
-
-
-
-
 
 
 
@@ -1142,7 +1136,7 @@ R4 : ...
 
 
 
-SERVICE 4 – BALCONS SOUILLÉS PAR FIENTES DE PIGEONS
+SERVICE 4 – BALCONS SOUILLÉS par des fientes DE PIGEONS
 
 Ville cible : [NOM DE LA VILLE]
 Contexte local (3–6 lignes) :

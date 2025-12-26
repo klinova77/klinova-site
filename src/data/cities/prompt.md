@@ -175,7 +175,7 @@ Public visé : copropriétés/syndics, entreprises
    * Respect des revêtements (béton, carrelage, bois, dalles sur plots)
 Public visé : particuliers
 
-4. **Balcons souillés par fientes de pigeons** (`serviceKey: "balcons-fientes"`)
+4. **Balcons souillés par des fientes de pigeons** (`serviceKey: "balcons-fientes"`)
 
    * Nettoyage, désinfection et remise en état de balcons contaminés par des fientes de pigeons
    * Gestion des dépôts importants, évacuation sécurisée des déchets
@@ -589,7 +589,7 @@ Le tableau `services` contient **exactement** 5 services, dans cet ordre :
 
 4. **"balcons-fientes"**
 
-   * Cibles : particuliers ayant des balcons très souillés par fientes.
+   * Cibles : particuliers ayant des balcons très souillés par des fientes.
    * Mettre en avant hygiène, sécurité, nettoyage/désinfection.
 
 5. **"canapes-tapis"**

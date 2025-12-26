@@ -113,7 +113,7 @@ const city: City = {
 <h3>2. Préparation et protection des circulations</h3>
 <p>Les zones sont balisées, les angles et plinthes protégés et le travail est organisé par paliers/étages pour maintenir un passage sécurisé. La coordination avec le syndic permet d'informer les occupants et de choisir un créneau qui limite les perturbations.</p>
 <h3>3. Injection-extraction + finitions</h3>
-<p>Pré-traitement des zones marquées, agitation/brossage contrôlé, puis injection-extraction avec aspiration puissante pour retirer l'eau chargée. Les zones de fort trafic (entrées, devant ascenseurs) reçoivent des passes supplémentaires. En fin d'intervention, une ventilation ciblée est recommandée.</p>`,
+<p>Pré-traitement des zones marquées, agitation/brossage contrôlé, puis injection-extraction avec aspiration puissante pour retirer l'eau chargée. Les zones de fort trafic (entrées, devant les ascenseurs) reçoivent des passes supplémentaires. En fin d'intervention, une ventilation ciblée est recommandée.</p>`,
 
       specificChallenges: [
         "Autour de la gare RER A, le passage et les particules fines accélèrent le ternissement des fibres et l'encrassement en surface.",

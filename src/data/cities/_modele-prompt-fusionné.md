@@ -34,7 +34,7 @@ tout en restant factuel, crédible, sans jamais survendre ni inventer des faits 
    - Terrasses d'appartements, loggias, petites terrasses privatives
    - Respect revêtements (béton, carrelage, bois, dalles sur plots)
 
-4. **Balcons souillés par fientes de pigeons** (`serviceKey: "balcons-fientes"`)
+4. **Balcons souillés par des fientes de pigeons** (`serviceKey: "balcons-fientes"`)
    - Nettoyage, désinfection et remise en état balcons contaminés
    - Gestion dépôts importants, sécurité occupants, évacuation déchets
    - Protection zones intérieures, port EPI, méthodes rigoureuses
