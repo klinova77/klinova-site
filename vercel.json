@@ -8,16 +8,7 @@
       "destination": "https://klinova.fr/:path*",
       "permanent": true
     },
-    {
-      "source": "/:path+/",
-      "destination": "/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/index.html",
-      "destination": "/:path*",
-      "permanent": true
-    },
+   
 
     { "source": "/nettoyage-de-moquettes", "destination": "/nettoyage-moquettes", "permanent": true },
     { "source": "/nettoyage-professionnel-parkings-garages", "destination": "/nettoyage-parkings", "permanent": true },
@@ -52,6 +43,51 @@
     { "source": "/nettoyage-terrasses", "destination": "/nettoyage-balcons", "permanent": true },
     { "source": "/test-hero-stat", "destination": "/", "permanent": true },
 
-    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/", "permanent": true }
+    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/", "permanent": true },
+
+       {
+      "source": "/zones-d-intervention/noisy-le-grand/nettoyage-balcons-fientes-pigeons",
+      "destination": "/zones-d-intervention/seine-saint-denis/noisy-le-grand/nettoyage-balcons-fientes-pigeons",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/noisy-le-grand/nettoyage-balcons",
+      "destination": "/zones-d-intervention/seine-saint-denis/noisy-le-grand/nettoyage-balcons",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/noisy-le-grand/nettoyage-parkings",
+      "destination": "/zones-d-intervention/seine-saint-denis/noisy-le-grand/nettoyage-parkings",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/neuilly-sur-marne/nettoyage-balcons",
+      "destination": "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne/nettoyage-balcons",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/neuilly-sur-marne/nettoyage-balcons-fientes-pigeons",
+      "destination": "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne/nettoyage-balcons-fientes-pigeons",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/neuilly-sur-marne/nettoyage-parkings",
+      "destination": "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne/nettoyage-parkings",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/chelles/nettoyage-parkings",
+      "destination": "/zones-d-intervention/seine-et-marne/chelles/nettoyage-parkings",
+      "permanent": true
+    },
+    {
+      "source": "/zones-d-intervention/chelles/nettoyage-balcons-fientes-pigeons",
+      "destination": "/zones-d-intervention/seine-et-marne/chelles/nettoyage-balcons-fientes-pigeons",
+      "permanent": true
+    }
+
+    
+  
+  
   ]
 }
