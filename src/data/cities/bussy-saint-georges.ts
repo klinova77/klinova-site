@@ -38,13 +38,14 @@ const city: City = {
     "Clos, Tillet, Génitoy et Golf",
   ],
 
-  nearbyCities: [
-    "torcy",
-    "pontault-combault",
-    "croissy-beaubourg",
-    "lagny-sur-marne",
-    "vaires-sur-marne",
-  ],
+nearbyCities: [
+  "champs-sur-marne",
+  "lagny-sur-marne",
+  "noisy-le-grand",
+  "pontault-combault",
+  "serris",
+  "torcy",
+],
 
   landmarks: [
     "Mairie de Bussy-Saint-Georges",

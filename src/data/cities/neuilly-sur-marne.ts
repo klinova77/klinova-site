@@ -31,15 +31,14 @@ const city: City = {
     slug: "seine-saint-denis",
   },
 
-  nearbyCities: [
-    "noisy-le-grand",
-    "gagny",
-    "gournay-sur-marne",
-    "chelles",
-    "champs-sur-marne",
-    "livry-gargan",
-    "le-raincy",
-  ],
+ nearbyCities: [
+  "champs-sur-marne",
+  "gagny",
+  "gournay-sur-marne",
+  "le-raincy",
+  "montfermeil",
+  "noisy-le-grand",
+],
 
   districts: [
     "Centre-ville",

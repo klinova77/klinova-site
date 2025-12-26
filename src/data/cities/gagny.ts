@@ -43,15 +43,14 @@ const city: City = {
     "Les Peupliers",
   ],
 
-  nearbyCities: [
-    "neuilly-sur-marne",
-    "chelles",
-    "gournay-sur-marne",
-    "noisy-le-grand",
-    "champs-sur-marne",
-    "le-raincy",
-    "livry-gargan",
-  ],
+nearbyCities: [
+  "chelles",
+  "gournay-sur-marne",
+  "le-raincy",
+  "montfermeil",
+  "neuilly-sur-marne",
+  "villeparisis",
+],
 
   landmarks: [
     "Hôtel de Ville (Place Foch)",

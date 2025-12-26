@@ -38,7 +38,14 @@ const city: City = {
     "La Vallée (Zone commerciale)",
   ],
 
-  nearbyCities: [],
+  nearbyCities: [
+  "bussy-saint-georges",
+  "champs-sur-marne",
+  "lagny-sur-marne",
+  "meaux",
+  "torcy",
+  "vaires-sur-marne",
+],
 
   landmarks: [
     "Mairie de Serris",

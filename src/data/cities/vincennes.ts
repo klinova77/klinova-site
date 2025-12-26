@@ -39,7 +39,14 @@ const city: City = {
     "Diderot / Domaine du bois",
   ],
 
-  nearbyCities: [],
+ nearbyCities: [
+  "charenton-le-pont",
+  "fontenay-sous-bois",
+  "montreuil",
+  "nogent-sur-marne",
+  "saint-mande",
+  "saint-maur-des-fosses",
+],
 
   landmarks: [
     "Mairie de Vincennes",

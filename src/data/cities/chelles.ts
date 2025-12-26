@@ -31,14 +31,14 @@ const city: City = {
     slug: "seine-et-marne",
   },
 
-    nearbyCities: [
-    "gournay-sur-marne",
-    "champs-sur-marne",
-    "vaires-sur-marne",
-    "noisy-le-grand",
-    "gagny",
-  ],
-
+nearbyCities: [
+  "champs-sur-marne",
+  "claye-souilly",
+  "gagny",
+  "gournay-sur-marne",
+  "montfermeil",
+  "vaires-sur-marne",
+],
   districts: [
     "Bords de Marne",
     

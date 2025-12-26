@@ -129,19 +129,14 @@ export const valDeMarne: DepartmentKln = {
   // =========================
   // Liens internes (villes “phares”)
   // =========================
-  internalLinks: [
-    // { label: "Créteil", href: "/zones-d-intervention/val-de-marne/creteil" },
-    { label: "Vincennes", href: "/zones-d-intervention/val-de-marne/vincennes" },
-    {
-      label: "Saint-Maur-des-Fossés",
-      href: "/zones-d-intervention/val-de-marne/saint-maur-des-fosses",
-    },
-    {
-      label: "Nogent-sur-Marne",
-      href: "/zones-d-intervention/val-de-marne/nogent-sur-marne",
-    },
-   //  { label: "Vitry-sur-Seine", href: "/zones-d-intervention/val-de-marne/vitry-sur-seine" },
-  ],
+internalLinks: [
+  { label: "Vincennes", href: "/zones-d-intervention/val-de-marne/vincennes" },
+  { label: "Saint-Maur", href: "/zones-d-intervention/val-de-marne/saint-maur-des-fosses" },
+  { label: "Nogent-sur-Marne", href: "/zones-d-intervention/val-de-marne/nogent-sur-marne" },
+  { label: "Charenton", href: "/zones-d-intervention/val-de-marne/charenton-le-pont" },
+  { label: "Fontenay", href: "/zones-d-intervention/val-de-marne/fontenay-sous-bois" },
+  { label: "Saint-Mandé", href: "/zones-d-intervention/val-de-marne/saint-mande" },
+],
 
   // =========================
   // SEO override

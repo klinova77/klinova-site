@@ -44,14 +44,14 @@ const city: City = {
     "Ville nouvelle (secteur gare / Bay / zone industrielle)"
   ],
 
-  nearbyCities: [
-    "vaires-sur-marne",
-    "champs-sur-marne",
-    "lagny-sur-marne",
-    "chelles",
-    "gournay-sur-marne",
-    "bussy-saint-georges"
-  ],
+nearbyCities: [
+  "bussy-saint-georges",
+  "champs-sur-marne",
+  "lagny-sur-marne",
+  "noisy-le-grand",
+  "serris",
+  "vaires-sur-marne",
+],
 
   landmarks: [
     "Mairie de Torcy",

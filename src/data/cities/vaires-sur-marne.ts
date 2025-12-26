@@ -43,14 +43,14 @@ const city: City = {
     "Quartier du Canal"
   ],
 
-  nearbyCities: [
-    "torcy",
-    "champs-sur-marne",
-    "chelles",
-    "gournay-sur-marne",
-    "lagny-sur-marne",
-    "bussy-saint-georges",
-  ],
+nearbyCities: [
+  "champs-sur-marne",
+  "chelles",
+  "claye-souilly",
+  "lagny-sur-marne",
+  "meaux",
+  "torcy",
+],
 
   landmarks: [
     "Mairie de Vaires-sur-Marne",

@@ -41,13 +41,14 @@ const city: City = {
     "Cité Descartes",
   ],
 
-  nearbyCities: [
-    "gournay-sur-marne",
-    "chelles",
-    "noisy-le-grand",
-    "vaires-sur-marne",
-    "torcy",
-  ],
+nearbyCities: [
+  "bussy-saint-georges",
+  "chelles",
+  "gournay-sur-marne",
+  "neuilly-sur-marne",
+  "noisy-le-grand",
+  "torcy",
+],
 
   landmarks: [
     "Mairie de Champs-sur-Marne",

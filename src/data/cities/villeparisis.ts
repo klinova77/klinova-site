@@ -43,12 +43,13 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "claye-souilly",
-    "chelles",
-    "gagny",
-    "vaires-sur-marne",
-    "gournay-sur-marne",
-  ],
+  "chelles",
+  "claye-souilly",
+  "gagny",
+  "le-raincy",
+  "livry-gargan",
+  "meaux",
+],
 
   landmarks: [
     "Mairie de Villeparisis",

@@ -132,14 +132,14 @@ imageAlt: "Immeubles collectifs en Seine-Saint-Denis",
   // =========================
   // Liens internes (villes “phares”)
   // =========================
-  internalLinks: [
-    { label: "Montreuil", href: "/zones-d-intervention/seine-saint-denis/montreuil" },
-    { label: "Neuilly-sur-Marne", href: "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne" },
-    { label: "Le Raincy", href: "/zones-d-intervention/seine-saint-denis/le-raincy" },
-    { label: "Noisy-le-Grand", href: "/zones-d-intervention/seine-saint-denis/noisy-le-grand" },
-     
-    
-  ],
+ internalLinks: [
+  { label: "Montreuil", href: "/zones-d-intervention/seine-saint-denis/montreuil" },
+  { label: "Le Raincy", href: "/zones-d-intervention/seine-saint-denis/le-raincy" },
+  { label: "Neuilly-sur-Marne", href: "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne" },
+  { label: "Noisy-le-Grand", href: "/zones-d-intervention/seine-saint-denis/noisy-le-grand" },
+  { label: "Gagny", href: "/zones-d-intervention/seine-saint-denis/gagny" },
+  { label: "Livry-Gargan", href: "/zones-d-intervention/seine-saint-denis/livry-gargan" },
+],
 
   // =========================
   // SEO override

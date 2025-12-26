@@ -36,11 +36,13 @@ const city: City = {
   // ✅ Quartiers (IRIS INSEE) — 6 au Raincy
   districts: ["Chatrian", "Hérôld", "Nicolas Carnot", "Thiellement", "Thiers", "Valère Lefebvre"],
 
-  nearbyCities: [
-  "neuilly-sur-marne",
+nearbyCities: [
   "gagny",
-  "montfermeil",
   "livry-gargan",
+  "montfermeil",
+  "montreuil",
+  "neuilly-sur-marne",
+  "villeparisis",
 ],
 
 

@@ -50,7 +50,14 @@ districts: [
 ],
 
 
-  nearbyCities: [],
+nearbyCities: [
+  "charenton-le-pont",
+  "montreuil",
+  "nogent-sur-marne",
+  "noisy-le-grand",
+  "saint-mande",
+  "vincennes",
+],
 
   landmarks: [
     "Mairie de Fontenay-sous-Bois",

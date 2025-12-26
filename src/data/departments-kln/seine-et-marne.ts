@@ -143,13 +143,14 @@ imageCaption:
   // =========================
   // Liens internes (villes)
   // =========================
-  internalLinks: [
-    { label: "Chelles", href: "/zones-d-intervention/seine-et-marne/chelles" },
-    { label: "Champs-sur-Marne", href: "/zones-d-intervention/seine-et-marne/champs-sur-marne" },
-    { label: "Torcy", href: "/zones-d-intervention/seine-et-marne/torcy" },
-    { label: "Bussy-Saint-Georges", href: "/zones-d-intervention/seine-et-marne/bussy-saint-georges" },
- 
-  ],
+internalLinks: [
+  { label: "Meaux", href: "/zones-d-intervention/seine-et-marne/meaux" },
+  { label: "Chelles", href: "/zones-d-intervention/seine-et-marne/chelles" },
+  { label: "Serris", href: "/zones-d-intervention/seine-et-marne/serris" },
+  { label: "Bussy-St-Georges", href: "/zones-d-intervention/seine-et-marne/bussy-saint-georges" },
+  { label: "Pontault-Combault", href: "/zones-d-intervention/seine-et-marne/pontault-combault" },
+  { label: "Lagny-sur-Marne", href: "/zones-d-intervention/seine-et-marne/lagny-sur-marne" },
+],
 
   // =========================
   // SEO override

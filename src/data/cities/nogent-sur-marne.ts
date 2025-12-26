@@ -48,7 +48,14 @@ const city: City = {
 ],
 
 
-  nearbyCities: [],
+ nearbyCities: [
+  "charenton-le-pont",
+  "fontenay-sous-bois",
+  "le-perreux-sur-marne", // Note: Ville charnière
+  "saint-maur-des-fosses",
+  "vaires-sur-marne",
+  "vincennes",
+],
 
   landmarks: [
     "Mairie de Nogent-sur-Marne",

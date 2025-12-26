@@ -50,8 +50,14 @@ const city: City = {
 ],
 
 
-  nearbyCities: [],
-
+nearbyCities: [
+  "fontenay-sous-bois",
+  "montreuil",
+  "nogent-sur-marne",
+  "saint-mande",
+  "saint-maur-des-fosses",
+  "vincennes",
+],
   landmarks: [
     "Mairie de Charenton-le-Pont",
     "Hôtel de Ville (Pavillon Antoine de Navarre)",

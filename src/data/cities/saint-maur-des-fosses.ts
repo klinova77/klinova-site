@@ -42,7 +42,14 @@ const city: City = {
     "Saint-Maur–Créteil",
   ],
 
-  nearbyCities: [],
+ nearbyCities: [
+  "charenton-le-pont",
+  "fontenay-sous-bois",
+  "nogent-sur-marne",
+  "pontault-combault",
+  "saint-mande",
+  "vincennes",
+],
 
   landmarks: [
     "Mairie de Saint-Maur-des-Fossés",

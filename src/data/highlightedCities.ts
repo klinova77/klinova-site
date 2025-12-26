@@ -18,22 +18,20 @@ export interface FeaturedCityKln {
  * (si tu le dupliques, tu risques d'avoir 2 fois la même ville dans une UI)
  */
 export const FEATURED_CITY_SLUGS = [
-  // ✅ 77 – Seine-et-Marne
-  "bussy-saint-georges",
-  "chelles",
-  "serris",
- 
+  // ✅ 77 – Seine-et-Marne (Pôles dynamiques et touristiques)
+  "serris",              // Val d'Europe / Prestige
+  "meaux",               // Volume et autorité départementale
+  "bussy-saint-georges", // Clientèle familiale et active
 
-  // ✅ 93 – Seine-Saint-Denis
-  "montreuil",
-  "neuilly-sur-marne",
-  "noisy-le-grand",
+  // ✅ 93 – Seine-Saint-Denis (Zones denses et Lofts)
+  "montreuil",           // Ville phare, secteur en mutation
+  "le-raincy",           // Le "Petit Neuilly" du 93 (Prestige)
+  "noisy-le-grand",      // Carrefour stratégique de l'Est
 
-  "vincennes",
-  "fontenay-sous-bois",
-  "nogent-sur-marne",
-
-  
+  // ✅ 94 – Val-de-Marne (Le triangle d'or du Bois de Vincennes)
+  "vincennes",           // La vitrine premium numéro 1
+  "saint-maur-des-fosses",// Patrimoine et très haut standing
+  "charenton-le-pont"    // Densité et appartements de luxe
 ] as const;
 
 /**
@@ -60,18 +58,16 @@ export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
  * Mets ici les villes les plus “business” / les plus recherchées.
  */
 export const FOOTER_CITY_SLUGS = [
-  "noisy-le-grand",
-  "fontenay-sous-bois",
-  "bussy-saint-georges",
-  "torcy",
-  "champs-sur-marne",
-  "lagny-sur-marne",
-  "villeparisis",
-  "livry-gargan",
-  "le-raincy",
-  "montfermeil",
-  "montreuil",
-  "nogent-sur-marne"
+  "vincennes",          // Incontournable (Prestige + Volume)
+  "montreuil",          // Énorme bassin de population (93)
+  "saint-maur-des-fosses", // Très haut standing (94)
+  "meaux",              // Capitale locale (77), gros volume
+  "noisy-le-grand",     // Pôle central entre 93 et 77
+  "fontenay-sous-bois", // Ville stratégique (Haut/Bas Fontenay)
+  "bussy-saint-georges",// Ville "neuve" très demandeuse en nettoyage
+  "chelles",            // Gros volume de recherche (77)
+  "nogent-sur-marne",   // Haut standing Bords de Marne
+  "charenton-le-pont"   // Très haute densité, cible CSP+
 ] as const;
 
 export const footerCities: FeaturedCityKln[] = FOOTER_CITY_SLUGS

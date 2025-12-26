@@ -44,13 +44,13 @@ const city: City = {
     "Victor Hugo",
   ],
 
-  nearbyCities: [
-    "villeparisis",
-    "lagny-sur-marne",
-    "vaires-sur-marne",
-    "chelles",
-    "torcy",
-  ],
+nearbyCities: [
+  "chelles",
+  "livry-gargan",
+  "meaux",
+  "vaires-sur-marne",
+  "villeparisis",
+],
 
   landmarks: [
     "Mairie de Claye-Souilly",

@@ -47,14 +47,14 @@ const city: City = {
     "Zone industrielle de la Francilienne",
   ],
 
-  nearbyCities: [
-    "torcy",
-    "vaires-sur-marne",
-    "claye-souilly",
-    "champs-sur-marne",
-    "chelles",
-    "bussy-saint-georges",
-  ],
+ nearbyCities: [
+  "bussy-saint-georges",
+  "meaux",
+  "serris",
+  "torcy",
+  "vaires-sur-marne",
+  "villeparisis",
+],
 
   landmarks: [
     "Mairie de Lagny-sur-Marne (Hôtel de Ville, ancien cloître de l'abbaye Saint-Pierre)",

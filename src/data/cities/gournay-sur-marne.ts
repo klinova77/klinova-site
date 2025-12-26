@@ -41,13 +41,14 @@ hubIntro: `<p>Située entre Chelles et Neuilly-sur-Marne, Gournay-sur-Marne pré
     "Zone pavillonnaire sud",
   ],
 
-  nearbyCities: [
-    "noisy-le-grand",
-    "champs-sur-marne",
-    "chelles",
-    "neuilly-sur-marne",
-    "gagny",
-  ],
+nearbyCities: [
+  "champs-sur-marne",
+  "chelles",
+  "gagny",
+  "neuilly-sur-marne",
+  "noisy-le-grand",
+  "vaires-sur-marne",
+],
 
   landmarks: [
     "Mairie de Gournay-sur-Marne",

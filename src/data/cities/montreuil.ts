@@ -47,7 +47,14 @@ const city: City = {
     "Villiers – Barbusse",
   ],
 
-  nearbyCities: [],
+  nearbyCities: [
+  "charenton-le-pont",
+  "fontenay-sous-bois",
+  "le-raincy",
+  "neuilly-sur-marne",
+  "saint-mande",
+  "vincennes",
+],
 
   landmarks: [
     "Mairie de Montreuil",
