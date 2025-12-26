@@ -130,7 +130,7 @@ export const valDeMarne: DepartmentKln = {
   // Liens internes (villes “phares”)
   // =========================
   internalLinks: [
-    { label: "Créteil", href: "/zones-d-intervention/val-de-marne/creteil" },
+    // { label: "Créteil", href: "/zones-d-intervention/val-de-marne/creteil" },
     { label: "Vincennes", href: "/zones-d-intervention/val-de-marne/vincennes" },
     {
       label: "Saint-Maur-des-Fossés",
@@ -140,7 +140,7 @@ export const valDeMarne: DepartmentKln = {
       label: "Nogent-sur-Marne",
       href: "/zones-d-intervention/val-de-marne/nogent-sur-marne",
     },
-    { label: "Vitry-sur-Seine", href: "/zones-d-intervention/val-de-marne/vitry-sur-seine" },
+   //  { label: "Vitry-sur-Seine", href: "/zones-d-intervention/val-de-marne/vitry-sur-seine" },
   ],
 
   // =========================

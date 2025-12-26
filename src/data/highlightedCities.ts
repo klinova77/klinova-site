@@ -20,21 +20,20 @@ export interface FeaturedCityKln {
 export const FEATURED_CITY_SLUGS = [
   // ✅ 77 – Seine-et-Marne
   "bussy-saint-georges",
-  "torcy",
-  "champs-sur-marne",
-  "noisy-le-grand",
-  "lagny-sur-marne",
-  "claye-souilly",
-  "villeparisis",
-  "vaires-sur-marne",
-  "gournay-sur-marne",
+  "chelles",
+  "serris",
+ 
 
   // ✅ 93 – Seine-Saint-Denis
-  "livry-gargan",
-  "le-raincy",
-  "montfermeil",
-  "gagny",
+  "montreuil",
   "neuilly-sur-marne",
+  "noisy-le-grand",
+
+  "vincennes",
+  "fontenay-sous-bois",
+  "nogent-sur-marne",
+
+  
 ] as const;
 
 /**
@@ -62,6 +61,7 @@ export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
  */
 export const FOOTER_CITY_SLUGS = [
   "noisy-le-grand",
+  "fontenay-sous-bois",
   "bussy-saint-georges",
   "torcy",
   "champs-sur-marne",
@@ -70,7 +70,8 @@ export const FOOTER_CITY_SLUGS = [
   "livry-gargan",
   "le-raincy",
   "montfermeil",
-  "gagny",
+  "montreuil",
+  "nogent-sur-marne"
 ] as const;
 
 export const footerCities: FeaturedCityKln[] = FOOTER_CITY_SLUGS

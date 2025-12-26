@@ -2,17 +2,17 @@
 // src/components/local/DepartmentCardsKln.astro
 
 import { DEPARTMENTS } from "~/data/departments";
-import cities from "~/data/cities";
-import type { City } from "~/types/geo";
+import { featuredCities } from "~/data/highlightedCities";
+import type { FeaturedCityKln } from "~/data/highlightedCities";
 
 type Props = {
   variant?: "default" | "white";
   showDescription?: boolean;
-  onlyCovered?: boolean;          // si true : n'affiche que les départements qui ont au moins 1 ville dispo
-  topCitiesPerDept?: number;      // nb de villes affichées sous chaque département
+  onlyCovered?: boolean;            // si true : n'affiche que les départements avec >= 1 featured city
+  topCitiesPerDept?: number;        // nb de villes affichées sous chaque département
   title?: string;
   description?: string;
-  excludeDeptSlug?: string | null; // utile sur une page département si tu veux masquer le dept courant
+  excludeDeptSlug?: string | null;  // utile sur page département : masquer le dept courant
 };
 
 const {
@@ -27,22 +27,10 @@ const {
 
 const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
 
-// villes normalisées -> on filtre celles qui ont un department.slug
-const allCities = (cities ?? []).filter((c: any) => c?.department?.slug) as City[];
+// ✅ Source unique : villes “stars” (ordre business déjà imposé par FEATURED_CITY_SLUGS)
+const featured = (Array.isArray(featuredCities) ? featuredCities : []) as FeaturedCityKln[];
 
-function getTopCitiesForDept(deptSlug: string, limit: number) {
-  if (limit <= 0) return [];
-  return allCities
-    .filter((c: any) => c?.department?.slug === deptSlug)
-    .sort((a: any, b: any) => (a?.name ?? "").localeCompare(b?.name ?? ""))
-    .slice(0, limit);
-}
-
-function isDeptCovered(deptSlug: string) {
-  return allCities.some((c: any) => c?.department?.slug === deptSlug);
-}
-
-// petit texte “SEO” simple (tu peux le raffiner plus tard via un fichier data-driven)
+// SEO mini-text
 const DEPT_SEO_TEXT: Record<string, string> = {
   paris: "Interventions en immeubles et résidences, contraintes d’accès et d’horaires.",
   "seine-et-marne": "Pavillons et résidences récentes : surfaces variées, accès/stationnement.",
@@ -53,6 +41,16 @@ const DEPT_SEO_TEXT: Record<string, string> = {
   "val-de-marne": "Copropriétés, pavillons : nettoyage adapté aux matériaux et usages.",
   "val-d-oise": "Sites étendus : tournées optimisées, interventions coordonnées.",
 };
+
+function getTopFeaturedCitiesForDept(deptSlug: string, limit: number) {
+  if (limit <= 0) return [];
+  // ✅ garde l'ordre business (pas de tri alpha)
+  return featured.filter((c) => c.deptSlug === deptSlug).slice(0, limit);
+}
+
+function isDeptCovered(deptSlug: string) {
+  return featured.some((c) => c.deptSlug === deptSlug);
+}
 
 const departmentsToRender = DEPARTMENTS
   .filter((d) => (excludeDeptSlug ? d.slug !== excludeDeptSlug : true))
@@ -79,7 +77,7 @@ const departmentsToRender = DEPARTMENTS
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {departmentsToRender.map((dept) => {
-        const topCities = getTopCitiesForDept(dept.slug, topCitiesPerDept);
+        const topCities = getTopFeaturedCitiesForDept(dept.slug, topCitiesPerDept);
         const hasCities = topCities.length > 0;
 
         return (
@@ -116,7 +114,7 @@ const departmentsToRender = DEPARTMENTS
                   </p>
 
                   <ul class="space-y-2 mb-5">
-                    {topCities.map((city: any) => (
+                    {topCities.map((city) => (
                       <li>
                         <a
                           href={`/zones-d-intervention/${dept.slug}/${city.slug}`}

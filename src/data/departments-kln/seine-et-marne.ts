@@ -148,7 +148,7 @@ imageCaption:
     { label: "Champs-sur-Marne", href: "/zones-d-intervention/seine-et-marne/champs-sur-marne" },
     { label: "Torcy", href: "/zones-d-intervention/seine-et-marne/torcy" },
     { label: "Bussy-Saint-Georges", href: "/zones-d-intervention/seine-et-marne/bussy-saint-georges" },
-    { label: "Pontault-Combault", href: "/zones-d-intervention/seine-et-marne/pontault-combault" },
+ 
   ],
 
   // =========================
