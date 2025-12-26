@@ -1,8 +1,10 @@
 ---
-// src/components/Footer.astro
-import { LINKS, withUtm, PHONE_DISPLAY } from '~/lib/links';
-import { highlightedCities } from '~/data/highlightedCities';
+import { LINKS, withUtm, PHONE_DISPLAY } from "~/lib/links";
+import { footerCities as footerCitiesRaw } from "~/data/highlightedCities";
+
+const footerCities = Array.isArray(footerCitiesRaw) ? footerCitiesRaw : [];
 ---
+
 
 <footer class="relative bg-[#020617] text-white border-t border-white/10">
   <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-100"></div>
@@ -21,6 +23,7 @@ import { highlightedCities } from '~/data/highlightedCities';
               Klinova
             </span>
           </a>
+<p class="text-xs text-gray-500">footerCities: {footerCities.length}</p>
 
           <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
             Nettoyage professionnel en Île-de-France. Équipements industriels,
@@ -107,30 +110,30 @@ import { highlightedCities } from '~/data/highlightedCities';
 
         <!-- Colonne 4: Zones mises en avant -->
         <div>
-          <h3 class="font-semibold text-lg mb-4 text-white">Zones</h3>
-          <ul class="space-y-2 text-sm">
-            {highlightedCities.map((city) => (
-              <li>
-                <a
-                  href={`/zones-d-intervention/${city.department.slug}/${city.slug}`}
-                  class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors"
-                >
-                  {city.name}
-                </a>
-              </li>
-            ))}
-            <li class="pt-1">
-              <a
-                href="/zones-d-intervention"
-                class="text-xs text-gray-400 hover:text-[var(--color-action-600)] transition-colors"
-              >
-                Voir toutes les zones →
-              </a>
-            </li>
-          </ul>
-        </div>
+  <h3 class="font-semibold text-lg mb-4 text-white">Zones</h3>
+  <ul class="space-y-2 text-sm">
+    {footerCities.map((city) => (
+      <li>
+        <a
+          href={`/zones-d-intervention/${city.deptSlug}/${city.slug}`}
+          class="text-gray-300 hover:text-[var(--color-action-600)] transition-colors"
+        >
+          {city.name}
+        </a>
+      </li>
+    ))}
 
-      </div>
+    <li class="pt-1">
+      <a
+        href="/zones-d-intervention"
+        class="text-xs text-gray-400 hover:text-[var(--color-action-600)] transition-colors"
+      >
+        Voir toutes les zones →
+      </a>
+    </li>
+  </ul>
+</div>
+
 
       <!-- Barre du bas -->
       <div class="border-t border-gray-700 py-6 mt-8">

@@ -1,0 +1,167 @@
+---
+// src/components/local/DepartmentCardsKln.astro
+
+import { DEPARTMENTS } from "~/data/departments";
+import cities from "~/data/cities";
+import type { City } from "~/types/geo";
+
+type Props = {
+  variant?: "default" | "white";
+  showDescription?: boolean;
+  onlyCovered?: boolean;          // si true : n'affiche que les départements qui ont au moins 1 ville dispo
+  topCitiesPerDept?: number;      // nb de villes affichées sous chaque département
+  title?: string;
+  description?: string;
+  excludeDeptSlug?: string | null; // utile sur une page département si tu veux masquer le dept courant
+};
+
+const {
+  variant = "default",
+  showDescription = true,
+  onlyCovered = false,
+  topCitiesPerDept = 3,
+  title = "Klinova intervient dans toute l'Île-de-France",
+  description = "Nettoyage professionnel (moquettes, canapés, tapis, balcons, parkings) : interventions organisées par secteurs, avec une méthode constante et des finitions propres.",
+  excludeDeptSlug = null,
+} = Astro.props as Props;
+
+const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
+
+// villes normalisées -> on filtre celles qui ont un department.slug
+const allCities = (cities ?? []).filter((c: any) => c?.department?.slug) as City[];
+
+function getTopCitiesForDept(deptSlug: string, limit: number) {
+  if (limit <= 0) return [];
+  return allCities
+    .filter((c: any) => c?.department?.slug === deptSlug)
+    .sort((a: any, b: any) => (a?.name ?? "").localeCompare(b?.name ?? ""))
+    .slice(0, limit);
+}
+
+function isDeptCovered(deptSlug: string) {
+  return allCities.some((c: any) => c?.department?.slug === deptSlug);
+}
+
+// petit texte “SEO” simple (tu peux le raffiner plus tard via un fichier data-driven)
+const DEPT_SEO_TEXT: Record<string, string> = {
+  paris: "Interventions en immeubles et résidences, contraintes d’accès et d’horaires.",
+  "seine-et-marne": "Pavillons et résidences récentes : surfaces variées, accès/stationnement.",
+  yvelines: "Résidentiel et copropriétés : protocole régulier et finitions propres.",
+  essonne: "Habitat mixte : organisation par secteurs, interventions planifiées.",
+  "hauts-de-seine": "Résidences denses et sites tertiaires : exigence d’image et propreté.",
+  "seine-saint-denis": "Forte fréquentation : rigueur, traçabilité et résultats visibles.",
+  "val-de-marne": "Copropriétés, pavillons : nettoyage adapté aux matériaux et usages.",
+  "val-d-oise": "Sites étendus : tournées optimisées, interventions coordonnées.",
+};
+
+const departmentsToRender = DEPARTMENTS
+  .filter((d) => (excludeDeptSlug ? d.slug !== excludeDeptSlug : true))
+  .filter((d) => (onlyCovered ? isDeptCovered(d.slug) : true));
+---
+
+<section class={`py-16 ${sectionBg} border-t border-[#E5E7EB]`}>
+  <div class="container-responsive">
+    <div class="text-center max-w-4xl mx-auto mb-12">
+      <p class="text-xs font-bold text-[#3F8D65] uppercase tracking-widest mb-3">
+        Couverture régionale
+      </p>
+
+      <h2 class="text-3xl md:text-4xl font-extrabold text-[#1E2939] mb-6 tracking-tight">
+        {title}
+      </h2>
+
+      {showDescription && (
+        <p class="text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {departmentsToRender.map((dept) => {
+        const topCities = getTopCitiesForDept(dept.slug, topCitiesPerDept);
+        const hasCities = topCities.length > 0;
+
+        return (
+          <article class="flex flex-col h-full bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            {/* Header */}
+            <a href={`/zones-d-intervention/${dept.slug}`} class="block p-6 pb-2 relative overflow-hidden">
+              <span class="absolute -top-4 -right-4 text-8xl font-black text-[#F1F5F9] group-hover:text-[#DFF1E8] transition-colors duration-500 select-none z-0">
+                {dept.code}
+              </span>
+
+              <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#DFF1E8] text-[#387B58] font-bold text-sm border border-[#C0E2D0]">
+                    {dept.code}
+                  </span>
+                  <h3 class="text-xl font-bold text-[#1E2939] group-hover:text-[#387B58] transition-colors">
+                    {dept.name}
+                  </h3>
+                </div>
+
+                <p class="text-sm text-[#475569] leading-snug min-h-[3rem]">
+                  {DEPT_SEO_TEXT[dept.slug] ?? "Interventions planifiées, méthode constante et finitions propres."}
+                </p>
+              </div>
+            </a>
+
+            {/* Corps : top villes */}
+            <div class="px-6 pb-6 mt-auto relative z-10">
+              {hasCities ? (
+                <>
+                  <div class="w-full h-px bg-[#E5E7EB] my-4"></div>
+                  <p class="text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mb-3">
+                    Villes (pages locales)
+                  </p>
+
+                  <ul class="space-y-2 mb-5">
+                    {topCities.map((city: any) => (
+                      <li>
+                        <a
+                          href={`/zones-d-intervention/${dept.slug}/${city.slug}`}
+                          class="flex items-center text-sm font-medium text-[#475569] hover:text-[#387B58] hover:pl-1 transition-all duration-200 group/link"
+                        >
+                          <svg class="w-3 h-3 text-[#C0E2D0] mr-2 group-hover/link:text-[#3F8D65]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                          {city.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={`/zones-d-intervention/${dept.slug}`}
+                    class="inline-flex items-center text-xs font-bold text-[#3F8D65] hover:text-[#387B58] uppercase tracking-wide"
+                  >
+                    Voir tout le {dept.code}
+                    <svg class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                </>
+              ) : (
+                <div class="mt-4 pt-4 border-t border-[#E5E7EB]">
+                  <a
+                    href={`/zones-d-intervention/${dept.slug}`}
+                    class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-[#475569] bg-[#FCFCFC] rounded-lg border border-[#E5E7EB] hover:bg-white hover:border-[#3F8D65]/40 hover:text-[#387B58] transition-all"
+                  >
+                    Voir la zone
+                  </a>
+                </div>
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="inline-flex items-center gap-2 px-4 py-2 bg-[#DFF1E8] text-[#1E2939] rounded-full text-sm font-medium border border-[#C0E2D0]">
+        <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+        Intervention organisée par secteurs en Île-de-France
+      </p>
+    </div>
+  </div>
+</section>

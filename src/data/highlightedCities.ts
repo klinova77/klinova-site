@@ -1,27 +1,94 @@
-// D:\Klinova-site\src\data\highlightedCities.ts
+// src/data/highlightedCities.ts
 
-import cities from '~/data/cities';
+import type { City } from "~/types/geo";
+import cities from "~/data/cities";
 
-const HIGHLIGHTED_CITY_SLUGS = [
+export interface FeaturedCityKln {
+  name: string;
+  slug: string;
+  deptSlug: string;
+  deptCode: string;
+}
+
+/**
+ * Liste ordonnée de villes "stars" (priorité business/SEO).
+ * - /home : topCitiesPerDept max par département (prises dans cet ordre)
+ *
+ * ⚠️ Important : mets chaque slug UNE seule fois.
+ * (si tu le dupliques, tu risques d'avoir 2 fois la même ville dans une UI)
+ */
+export const FEATURED_CITY_SLUGS = [
+  // ✅ 77 – Seine-et-Marne
   "bussy-saint-georges",
+  "torcy",
+  "champs-sur-marne",
+  "noisy-le-grand",
+  "lagny-sur-marne",
+  "claye-souilly",
+  "villeparisis",
+  "vaires-sur-marne",
+  "gournay-sur-marne",
+
+  // ✅ 93 – Seine-Saint-Denis
   "livry-gargan",
   "le-raincy",
-  'montfermeil',
-  'gagny',
-  'villeparisis',
-  'gournay-sur-marne',
-  'neuilly-sur-marne',
-  'vaires-sur-marne',
+  "montfermeil",
+  "gagny",
+  "neuilly-sur-marne",
+] as const;
 
-  'claye-souilly',
-  'torcy',
-'champs-sur-marne',
-'noisy-le-grand',
-  'lagny-sur-marne',
-  'torcy',
-'champs-sur-marne',
-];
+/**
+ * Backward compat : ancien nom si jamais déjà utilisé ailleurs
+ */
+export const HIGHLIGHTED_CITY_SLUGS = [...FEATURED_CITY_SLUGS];
 
-export const highlightedCities = HIGHLIGHTED_CITY_SLUGS
-  .map((slug) => cities.find((c) => c.slug === slug))
-  .filter(Boolean);
+export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
+  .map((slug) => {
+    const city = (cities as City[]).find((c) => c.slug === slug);
+    if (!city?.department?.slug || !city?.department?.code) return null;
+
+    return {
+      name: city.name,
+      slug: city.slug,
+      deptSlug: city.department.slug,
+      deptCode: city.department.code,
+    };
+  })
+  .filter(Boolean) as FeaturedCityKln[];
+
+/**
+ * Footer : liste dédiée (ex: 10) — indépendante de l’ordre global.
+ * Mets ici les villes les plus “business” / les plus recherchées.
+ */
+export const FOOTER_CITY_SLUGS = [
+  "noisy-le-grand",
+  "bussy-saint-georges",
+  "torcy",
+  "champs-sur-marne",
+  "lagny-sur-marne",
+  "villeparisis",
+  "livry-gargan",
+  "le-raincy",
+  "montfermeil",
+  "gagny",
+] as const;
+
+export const footerCities: FeaturedCityKln[] = FOOTER_CITY_SLUGS
+  .map((slug) => {
+    const city = (cities as City[]).find((c) => c.slug === slug);
+    if (!city) return null;
+    if (!city.department?.slug || !city.department?.code) return null;
+
+    return {
+      name: city.name,
+      slug: city.slug,
+      deptSlug: city.department.slug,
+      deptCode: city.department.code,
+    };
+  })
+  .filter(Boolean) as FeaturedCityKln[];
+/**
+ * Backward compat : si ton code importe encore highlightedCities
+ */
+export const highlightedCities = featuredCities;
+export type HighlightedCity = FeaturedCityKln;

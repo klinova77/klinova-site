@@ -126,11 +126,28 @@ const city: City = {
       faqAdditions: [
          // ... (Garder l'existant)
          {
+          question:
+            "Les moquettes des immeubles proches de la Marne nécessitent-elles un entretien particulier ?",
+          answer:
+            `<p>Oui, l'humidité constante de la presqu'île ralentit le séchage et favorise le développement d'odeurs de moisi si l'extraction n'est pas suffisamment puissante. <strong>Nous adaptons notre protocole</strong> : extraction maximale, aération recommandée sur 12 heures, et conseillons un nettoyage annuel pour les copropriétés riveraines. Les immeubles des bords de Marne, du Vieux Saint-Maur ou de La Pie bénéficient particulièrement de cette attention renforcée.</p>`,
+        },
+        {
+          question:
+            "Intervenez-vous dans les pavillons convertis en petites copropriétés ?",
+          answer:
+            `<p>Absolument. Nous travaillons autant dans les immeubles R+3/R+4 de La Varenne que dans les anciennes meulières transformées en 4 à 8 logements. Le diagnostic et la méthode restent identiques, seule la surface varie. Nos véhicules compacts s'adaptent aux rues résidentielles bordées d'arbres et aux branches basses qui caractérisent le tissu urbain saint-maurien.</p>`,
+        },
+        {
           question: "Les pollens du printemps abîment-ils définitivement les moquettes ?",
           answer:
-            `<p>Oui, s'ils ne sont pas traités. Les pollens sont légèrement acides et gras. Avec le temps, ils "cuisent" la fibre et fixent la poussière grise. <strong>Intervenir juste après la saison des pollens (juin)</strong> est le meilleur investissement pour doubler la durée de vie de vos moquettes à Saint-Maur.</p>`,
+            `<p>Les pollens collants des platanes et tilleuls s'incrustent rapidement dans les fibres et peuvent former des taches jaunâtres permanentes s'ils ne sont pas traités dans les premiers mois. <strong>Un nettoyage professionnel au printemps</strong>, juste après la période de pollinisation (avril-mai), extrait ces particules avant qu'elles ne s'oxydent et ne marquent définitivement les fibres. C'est la période idéale pour les copropriétés saint-mauriennes.</p>`,
         },
-        // ... (Suite FAQ)
+        {
+          question: "Comment organisez-vous l'accès malgré les embouteillages aux ponts ?",
+          answer:
+            `<p>Nous planifions chaque intervention en dehors des heures de pointe (avant 8h30 ou après 10h le matin, entre 14h et 16h l'après-midi) pour éviter les goulets d'étranglement aux ponts de Créteil et Chennevières. Nos techniciens repèrent les zones de stationnement temporaire près des quatre gares RER A et coordonnent avec le syndic pour valider l'horaire optimal selon la configuration de l'immeuble.</p>`,
+        },
+         
       ],
       ctaOverride: "Demander un devis moquette copropriété",
     },
@@ -168,9 +185,27 @@ const city: City = {
         "Logistique nominative : Respect absolu des places privatives grâce à une communication rigoureuse en amont.",
       ],
 
-      // ... (Garder FAQ existante, elle est très bien)
-      faqAdditions: [
-         // ... (Garder l'existant)
+     faqAdditions: [
+        {
+          question: "Pourquoi les parkings proches des berges développent-ils autant de mousses ?",
+          answer:
+            `<p>L'humidité constante de la Marne génère un taux d'humidité ambiante élevé dans les parkings souterrains ou en rez-de-jardin. Les sols en béton poreux retiennent cette humidité et favorisent le développement rapide de mousses et lichens, surtout dans les zones mal ventilées ou peu exposées à la lumière. <strong>Nous appliquons un traitement anti-mousse spécifique</strong> avant le nettoyage pour éliminer durablement ces dépôts verts glissants.</p>`,
+        },
+        {
+          question: "Comment organisez-vous l'intervention sans que je perde mon emplacement attitré ?",
+          answer:
+            `<p>Nous travaillons par rotation : moitié A le matin, moitié B l'après-midi, ou étage par étage selon la configuration. Vous stationnez temporairement dans la zone non traitée ou sur un emplacement visiteur pendant 2 à 3 heures, puis vous récupérez votre place dès le séchage terminé. Le syndic informe les copropriétaires 72h à l'avance avec un plan précis indiquant les zones et horaires. Cette organisation maintient l'accès au parking en permanence.</p>`,
+        },
+        {
+          question: "Les feuilles mortes des platanes peuvent-elles obstruer les siphons d'évacuation ?",
+          answer:
+            `<p>Oui, c'est un problème fréquent à Saint-Maur en automne. Les feuilles mortes transportées par les pneus se décomposent et forment une boue qui obstrue progressivement les siphons et caniveaux. <strong>Nous effectuons systématiquement un dégagement manuel des évacuations</strong> avant le lavage pour garantir que l'eau s'évacue correctement. Cette vérification préalable évite toute stagnation ou refoulement pendant l'intervention.</p>`,
+        },
+        {
+          question: "Faut-il prévoir un nettoyage plus fréquent pour les parkings saint-mauriens ?",
+          answer:
+            `<p>Cela dépend de l'exposition. Les parkings proches de la Marne ou bordés d'arbres anciens nécessitent souvent un décrassage annuel, voire semestriel pour les zones très humides ou exposées aux chutes massives de feuilles. Les parkings des quartiers plus secs comme Champignol peuvent espacer les interventions tous les 18 mois. Nous adaptons nos recommandations de fréquence selon la configuration de votre copropriété et les observations du premier passage.</p>`,
+        },
       ],
 
       ctaOverride: "Obtenir un chiffrage nettoyage parking",
@@ -209,10 +244,29 @@ const city: City = {
         "Protection des baies vitrées : Nous protégeons systématiquement vos menuiseries avant toute pulvérisation.",
       ],
 
-       // ... (Garder FAQ existante)
        faqAdditions: [
-         // ... (Garder l'existant)
-       ],
+        {
+          question:
+            "Le nettoyage à pression risque-t-il d'endommager ma terrasse en Ipe ou mes murets en meulière ?",
+          answer:
+            `<p>Non, si les paramètres sont correctement ajustés. Pour les terrasses en bois exotique, nous utilisons une pression très faible (30-50 bars) après application d'un dégriseur, et brossons manuellement dans le sens des fibres. Pour les meulières à joints friables, la pression est limitée à 50-80 bars maximum avec un jet large. <strong>Nous effectuons toujours un test sur une zone discrète</strong> avant de traiter l'ensemble, protocole indispensable pour les supports nobles typiques de Saint-Maur.</p>`,
+        },
+        {
+          question: "Pourquoi ma terrasse côté jardin développe-t-elle autant de mousses ?",
+          answer:
+            `<p>L'humidité constante de la Marne, l'ombre portée des arbres anciens et l'exposition nord créent un environnement idéal pour les mousses et lichens. Les terrasses situées près des berges ou dans les propriétés boisées du Parc Saint-Maur sont particulièrement exposées. Nous appliquons un anti-mousse curatif puis préventif qui ralentit la recolonisation pendant 12 à 18 mois. Un nettoyage annuel maintient la propreté et la sécurité des surfaces.</p>`,
+        },
+        {
+          question: "Les produits utilisés présentent-ils un risque pour mes plantations et mon jardin paysager ?",
+          answer:
+            `<p>Non, nous utilisons des produits biodégradables sans danger pour la végétation après dilution et rinçage. L'eau de rinçage est dirigée vers les zones non plantées ou les évacuations. Les dégriseurs pour bois exotique et anti-mousses sont formulés pour un usage résidentiel et ne nuisent pas aux arbres, pelouses ou massifs environnants. Cette précaution est essentielle dans les jardins soignés typiques de la presqu'île.</p>`,
+        },
+        {
+          question: "Ma terrasse en Teck peut-elle retrouver sa teinte dorée d'origine ?",
+          answer:
+            `<p>Oui, le dégriseur professionnel élimine la couche grise oxydée en surface et révèle la teinte naturelle du bois. Le résultat est immédiatement visible après traitement et séchage. Pour maintenir cette teinte dorée durablement, nous recommandons l'application d'une huile de protection (saturateur) 48h après le nettoyage. Sans cette protection, le bois grisaillera de nouveau sous l'effet des UV et de l'humidité en 6 à 12 mois. Cette finition est courante dans les propriétés de standing saint-mauriennes.</p>`,
+        },
+      ],
       ctaOverride: "Devis rénovation terrasse & balcon",
     },
 
@@ -249,10 +303,29 @@ const city: City = {
         "Accès difficile : Nous intervenons même sur des balcons encombrés ou difficiles d'accès via les parties communes.",
       ],
 
-       // ... (Garder FAQ existante)
        faqAdditions: [
-         // ... (Garder l'existant)
-       ],
+        {
+          question:
+            "Les fientes de pigeons représentent-elles un risque sanitaire réel pour ma famille ?",
+          answer:
+            `<p>Oui, les fientes contiennent des bactéries pathogènes (salmonelles), des champignons (cryptocoques, histoplasma) et des parasites pouvant provoquer infections respiratoires graves, mycoses pulmonaires ou troubles gastro-intestinaux. Les poussières de fientes sèches sont particulièrement dangereuses lorsqu'inhalées, surtout pour les enfants, personnes âgées ou immunodéprimées. Un nettoyage domestique sans équipements de protection aggrave considérablement le risque d'exposition. <strong>Seul un protocole professionnel</strong> avec EPI complets, humidification préalable et désinfection virucide garantit l'élimination totale des dangers sanitaires.</p>`,
+        },
+        {
+          question: "Le nettoyage peut-il endommager ma terrasse en Teck ou mes murets en meulière ?",
+          answer:
+            `<p>Non, si le protocole est correctement adapté. Nous ajustons la pression de rinçage selon le support : 30-50 bars maximum pour les bois exotiques, 50-80 bars pour les meulières à joints friables, méthode manuelle pour les pierres naturelles très sensibles. Les produits désinfectants sont sélectionnés pour leur compatibilité avec les supports nobles (pH neutre, pas d'agents chlorés agressifs). Cette précaution technique est indispensable pour préserver la valeur patrimoniale des propriétés saint-mauriennes.</p>`,
+        },
+        {
+          question: "Les fientes ont-elles déjà causé des dégâts irréversibles sur ma terrasse ?",
+          answer:
+            `<p>Cela dépend de l'ancienneté de la contamination. Sur les terrasses en bois exotique, l'acidité des fientes érode la finition et crée des taches brunâtres qui peuvent pénétrer profondément dans les fibres. Sur les meulières, elle déchausse les joints à la chaux et provoque une érosion superficielle de la pierre. Sur les garde-corps métalliques, elle accélère l'oxydation et fragilise la structure. Une intervention rapide limite les dégâts. Les contaminations anciennes (plusieurs mois) peuvent laisser des marques résiduelles, mais le nettoyage professionnel stoppe la dégradation active et préserve le reste du support.</p>`,
+        },
+        {
+          question: "Comment éviter que les pigeons ne reviennent après le nettoyage ?",
+          answer:
+            `<p>Nous proposons la pose de solutions anti-pigeons adaptées à l'architecture résidentielle de Saint-Maur : pics discrets sur les corniches et avancées de toit, filets transparents pour les loggias, répulsifs visuels pour les garde-corps. Ces dispositifs préservent l'esthétique des pavillons de prestige tout en empêchant durablement la nidification. L'inspection régulière des points d'accès et l'intervention rapide dès les premiers signes de retour limitent également le risque de recolonisation massive et de nouveaux dégâts sur les supports nobles.</p>`,
+        },
+      ],
       ctaOverride: "Demander une désinfection urgente",
     },
 
@@ -289,15 +362,32 @@ const city: City = {
         "Tissus délicats : Respect total des velours et lins fragiles grâce à des buses d'injection spécifiques.",
       ],
 
-       // ... (Garder FAQ existante)
        faqAdditions: [
-         // ... (Garder l'existant)
-       ],
-      ctaOverride: "Devis nettoyage canapé / matelas",
-
-  },
+        {
+          question: "Le nettoyage élimine-t-il les acariens qui prolifèrent dans l'humidité de Saint-Maur ?",
+          answer:
+            `<p>Oui, l'injection-extraction à eau chaude (65-70°C) tue les acariens adultes, larves et œufs par choc thermique. Cette température est particulièrement importante à Saint-Maur où l'humidité de la Marne favorise leur prolifération rapide. L'aspiration puissante retire ensuite les acariens morts et leurs déjections allergisantes. Les familles constatent généralement une amélioration des symptômes (rhinites, éternuements, irritations) sous 48 à 72h. Pour maintenir ce résultat dans l'environnement humide de la presqu'île, nous recommandons un nettoyage annuel.</p>`,
+        },
+        {
+          question: "Pouvez-vous traiter les taches de boue et les traces de pattes d'animaux sur mon tapis ?",
+          answer:
+            `<p>Oui, nous utilisons un détachant adapté aux salissures organiques et minérales. La boue transportée depuis les jardins ou les promenades en bords de Marne est d'abord brossée à sec une fois sèche, puis traitée avec un produit spécifique avant l'injection-extraction. Les traces de pattes grasses reçoivent un pré-traitement dégraissant. L'eau chaude et l'aspiration puissante éliminent ensuite les résidus incrustés dans les fibres. Les taches récentes partent complètement, les anciennes s'atténuent fortement.</p>`,
+        },
+        {
+          question: "Combien de temps avant de pouvoir réutiliser mon canapé dans un environnement humide ?",
+          answer:
+            `<p>Le séchage complet intervient sous 6 à 10 heures à Saint-Maur, durée supérieure aux zones urbaines sèches en raison de l'humidité ambiante de la Marne. Vous pouvez vous asseoir légèrement sur les accoudoirs dès 3h, mais évitez de vous installer complètement avant séchage total pour ne pas écraser les fibres humides. Aérez la pièce en ouvrant les fenêtres, orientez un ventilateur vers le canapé. Pour un usage en soirée, planifiez l'intervention tôt le matin.</p>`,
+        },
+        {
+          question: "Dois-je ranger mes meubles de jardin avant votre intervention ?",
+          answer:
+            `<p>Non, concentrez-vous uniquement sur les textiles à traiter : retirez les coussins amovibles du canapé, dégagez les objets posés sur le tapis (magazines, jouets, plantes en pot), et si vous avez des animaux, placez-les dans une autre pièce ou le jardin pendant l'intervention. Les meubles légers seront déplacés par le technicien si nécessaire. Cette simplicité de préparation est appréciée dans les pavillons saint-mauriens où les espaces de vie s'ouvrent souvent sur les jardins et vérandas.</p>`,
+        },
       ],
+
+      ctaOverride: "",
     },
-  
+  ],
 };
+
 export default city;

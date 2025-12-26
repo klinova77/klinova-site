@@ -1,0 +1,681 @@
+---
+import LayoutWithCTA from "~/layouts/LayoutWithCTA.astro";
+
+import { DEPARTMENTS } from "~/data/departments";
+import { DEPARTMENTS_KLN } from "~/data/departments-kln";
+
+import cities from "~/data/cities";
+import type { City } from "~/types/geo";
+
+import { PHONE_DISPLAY, PHONE_E164, toTelHref } from "~/lib/phone";
+import type { DepartmentKln } from "~/types/department-klinova";
+
+import DepartmentCardsKln from "~/components/local/DepartmentCardsKln.astro";
+
+
+
+const baseUrl = import.meta.env.SITE ?? "https://klinova.fr";
+
+// Helpers FR (déjà présents chez toi)
+function getDepartmentLocationPhrase(dep: { slug: string; name: string }): string {
+  switch (dep.slug) {
+    case "seine-saint-denis":
+    case "seine-et-marne":
+    case "val-de-marne":
+    case "essonne":
+      return `en ${dep.name}`;
+    case "hauts-de-seine":
+    case "yvelines":
+      return `dans les ${dep.name}`;
+    case "paris":
+      return "à Paris";
+    default:
+      return `dans le ${dep.name}`;
+  }
+}
+
+function getDepartmentCommunesPhrase(dep: { slug: string; name: string }): string {
+  switch (dep.slug) {
+    case "paris":
+      return "de Paris";
+    case "seine-saint-denis":
+    case "seine-et-marne":
+    case "val-de-marne":
+      return `de la ${dep.name}`;
+    case "hauts-de-seine":
+    case "yvelines":
+      return `des ${dep.name}`;
+    case "essonne":
+      return "de l'Essonne";
+    default:
+      return `du ${dep.name}`;
+  }
+}
+
+
+
+export async function getStaticPaths() {
+  return DEPARTMENTS.map((d) => ({ params: { departmentSlug: d.slug } }));
+}
+
+const { departmentSlug } = Astro.params;
+const department = DEPARTMENTS.find((d) => d.slug === departmentSlug);
+
+if (!department) {
+  return new Response("Not found", { status: 404 });
+}
+
+const departmentLocationPhrase = getDepartmentLocationPhrase(department);
+const departmentCommunesPhrase = getDepartmentCommunesPhrase(department);
+
+const canonical = `/zones-d-intervention/${department.slug}`;
+const pageUrl = `${baseUrl}${canonical}`;
+
+const phoneLink = toTelHref(PHONE_E164);
+
+// Villes du département
+const departmentCities = (cities ?? [])
+  .filter((city: any) => city?.department?.slug === department.slug)
+  .sort((a: any, b: any) => (a?.name ?? "").localeCompare(b?.name ?? ""));
+
+// Top 3 pour micro-precision (comme SP)
+const topCitiesList = departmentCities.slice(0, 3);
+const topCitiesString = topCitiesList.map((c: City) => c.name).join(", ");
+const geoPrecision = topCitiesString ? `(${topCitiesString} et alentours)` : `sur l'ensemble du département`;
+
+// ✅ deptContent data-driven (peut être null)
+const deptContent =
+  (DEPARTMENTS_KLN as Record<string, DepartmentKln | undefined>)[departmentSlug] ?? null;
+
+// Sections helpers (comme SP)
+const sections = Array.isArray(deptContent?.sections) ? deptContent!.sections! : [];
+const getSection = (id: string) => sections.find((s) => s?.id === id);
+const getSectionsByIds = (ids: string[]) => ids.map(getSection).filter(Boolean) as any[];
+
+const contexteSections = getSectionsByIds(["contexte"]);
+const processSections = getSectionsByIds(["process"]);
+
+const kickerParts = (deptContent?.heroKicker ?? "")
+  .split("•")
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+const kickerZone = kickerParts[0] ?? "";
+const kickerDelay = kickerParts[1] ?? "";
+
+// SEO : data si dispo sinon fallback actuel
+const title =
+  deptContent?.seo?.title ??
+  `Entreprise de nettoyage ${departmentLocationPhrase} (${department.code}) – Klinova`;
+
+const description =
+  deptContent?.seo?.description ??
+  `Nettoyage professionnel (moquettes, canapés, tapis, balcons, parkings) ${departmentLocationPhrase} (${department.code}). ` +
+    `Intervention à domicile, en pavillon ou en copropriété ${geoPrecision}.`;
+
+// JSON-LD : page + breadcrumb + collection (itemlist)
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Zones d’intervention", item: `${baseUrl}/zones-d-intervention` },
+    { "@type": "ListItem", position: 2, name: `${department.name} (${department.code})`, item: pageUrl },
+  ],
+};
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["WebPage", "CollectionPage"],
+  "@id": `${pageUrl}#webpage-department`,
+  url: pageUrl,
+  name: title,
+  description,
+  isPartOf: { "@id": `${baseUrl}#website` },
+  inLanguage: "fr-FR",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: (departmentCities ?? []).slice(0, 80).map((city: any, index: number) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${baseUrl}/zones-d-intervention/${department.slug}/${city.slug}`,
+      name: `Entreprise de nettoyage à ${city.name}`,
+    })),
+  },
+};
+
+const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+
+// FAQ pour Layout (si ton Layout l’utilise un jour : prêt)
+const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
+---
+
+<LayoutWithCTA
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  popupContext={{
+    title: "Demander un devis",
+    subtitle: `Un expert Klinova vous répond pour une intervention ${departmentLocationPhrase}.`,
+    serviceKey: "departement",
+    serviceLabel: `Demande depuis page département – ${department.name}`,
+    trackingSource: `departement-${department.slug}`,
+  }}
+>
+  {/* Breadcrumb simple (pas de composant dédié) */}
+  <nav aria-label="Fil d'Ariane" class="bg-white border-b border-neutral-200">
+    <div class="container-responsive py-3">
+      <ol class="flex flex-wrap gap-2 text-sm text-neutral-600">
+        <li><a href="/" class="hover:text-[#3F8D65] transition-colors">Accueil</a></li>
+        <li aria-hidden="true" class="text-neutral-400">/</li>
+        <li>
+          <a href="/zones-d-intervention" class="hover:text-[#3F8D65] transition-colors">
+            Zones d'intervention
+          </a>
+        </li>
+        <li aria-hidden="true" class="text-neutral-400">/</li>
+        <li aria-current="page" class="font-medium text-[#3F8D65]">
+          {department.name} ({department.code})
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+
+
+
+
+  {/* =========================
+      ✅ MODE DATA-DRIVEN (comme SP)
+     ========================= */}
+  {deptContent ? (
+    <>
+      {(() => {
+        const heroImg = deptContent?.images?.items?.[0] ?? null;
+
+        return (
+          <>
+            {/* HERO SPLIT (adapté Klinova) */}
+            <section class="relative bg-[#FCFCFC] overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+              <div class="container-responsive">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                  <div class="lg:col-span-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-neutral-200 rounded-full text-xs font-bold uppercase tracking-wider text-[#3F8D65] mb-6 shadow-sm">
+                      <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+                      Zone d'intervention : {department.name}
+                    </div>
+
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1E2939] mb-6 leading-tight">
+                      {deptContent.heroTitle ? (
+                        deptContent.heroTitle
+                      ) : (
+                        <>
+                          Entreprise de nettoyage <br />
+                          <span class="text-[#3F8D65]">{department.name} ({department.code})</span>
+                        </>
+                      )}
+                    </h1>
+
+                    {deptContent.heroDescription ? (
+                      <p class="text-lg text-[#475569] max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        {deptContent.heroDescription}
+                      </p>
+                    ) : null}
+
+                    {/* ✅ boutons : on garde l’esprit de la page actuelle */}
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                      <a href="/contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg shadow-sm">
+                        Demander un devis
+                      </a>
+                      <a href={phoneLink} class="btn-secondary px-8 py-4 text-lg bg-white">
+                        Appeler le {PHONE_DISPLAY}
+                      </a>
+                    </div>
+
+                    {/* Micro-réassurance (kicker) */}
+                    <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-sm font-medium text-neutral-500">
+                      <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+                        Intervention {departmentLocationPhrase}
+                      </div>
+
+                      {kickerZone && (
+                        <div class="flex items-center gap-2">
+                          <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+                          {kickerZone}
+                        </div>
+                      )}
+
+                      {kickerDelay && (
+                        <div class="flex items-center gap-2">
+                          <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
+                          {kickerDelay}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Image optionnelle */}
+                  {heroImg ? (
+                    <div class="lg:col-span-6 relative mt-10 lg:mt-0">
+                      <div class="absolute -top-10 -right-10 w-64 h-64 bg-[#DFF1E8] rounded-full mix-blend-multiply blur-3xl opacity-70 -z-10"></div>
+
+                      <div class="relative w-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-white aspect-video">
+                        <img
+                          src={heroImg.src}
+                          alt={heroImg.alt}
+                          width={heroImg.width}
+                          height={heroImg.height}
+                          class="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                          loading="eager"
+                        />
+                      </div>
+
+                      {heroImg.caption ? (
+                        <p class="mt-3 text-sm text-neutral-500 text-center lg:text-left">
+                          {heroImg.caption}
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </section>
+
+            {/* Quick links (optionnel) */}
+            {deptContent?.internalLinks && deptContent.internalLinks.length >= 3 ? (
+              <div class="border-b border-neutral-200 bg-[#FCFCFC] py-4">
+                <div class="container-responsive">
+                  <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-center md:text-left">
+                    <span class="text-xs font-bold uppercase tracking-wider text-neutral-500 flex-shrink-0">
+                      Accès rapide :
+                    </span>
+
+                    <div class="flex flex-wrap justify-center gap-2">
+                      {deptContent.internalLinks.slice(0, 5).map((l) => (
+                        <a
+                          href={l.href}
+                          class="inline-flex items-center px-3 py-1 rounded-full bg-white border border-neutral-200 shadow-sm text-xs font-semibold text-neutral-700 hover:border-[#3F8D65]/40 hover:text-[#3F8D65] hover:shadow-md transition-all duration-200"
+                        >
+                          {l.label}
+                        </a>
+                      ))}
+
+                      <a
+                        href="#communes"
+                        class="inline-flex items-center px-2 py-1 text-xs font-medium text-neutral-500 hover:text-[#3F8D65] underline decoration-dotted underline-offset-2 transition-colors"
+                      >
+                        + autres villes
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+
+            {/* Services (on garde tes 4 cards) */}
+            <section class="bg-white py-12">
+              <div class="container-responsive">
+                <div class="max-w-4xl mx-auto">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="/nettoyage-moquettes" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+                      <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de moquettes</h2>
+                      <p class="text-sm text-[#475569] leading-relaxed">
+                        Halls, paliers, couloirs ou bureaux : décrassage en profondeur des moquettes de copropriété et de locaux professionnels.
+                      </p>
+                    </a>
+
+                    <a href="/nettoyage-canapes-tapis-matelas" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+                      <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de canapés, tapis & matelas</h2>
+                      <p class="text-sm text-[#475569] leading-relaxed">
+                        Nettoyage à domicile des canapés, tapis et matelas : taches, odeurs d'animaux, auréoles, désodorisation en profondeur.
+                      </p>
+                    </a>
+
+                    <a href="/nettoyage-balcons" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+                      <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de balcons & terrasses</h2>
+                      <p class="text-sm text-[#475569] leading-relaxed">
+                        Décrassage de balcons encrassés, fientes de pigeons, sols noircis et traces de pollution, en immeuble comme en pavillon.
+                      </p>
+                    </a>
+
+                    <a href="/nettoyage-parkings" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+                      <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de parkings souterrains</h2>
+                      <p class="text-sm text-[#475569] leading-relaxed">
+                        Nettoyage mécanisé et décrassage en profondeur des parkings souterrains et aériens de copropriété ou d'entreprises.
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Contexte / Process (HTML data-driven) */}
+            {contexteSections.length ? (
+              <section class="pt-6 pb-6 bg-white">
+                <div class="container-responsive">
+                  <div class="max-w-5xl mx-auto space-y-16">
+                    {contexteSections.map((section: any, index: number) => {
+                      const hasImage = !!section.image;
+                      const isOdd = index % 2 === 1;
+
+                      return (
+                        <div class="grid md:grid-cols-12 gap-8 items-center" data-section={section.id}>
+                         <div
+  class:list={[
+    hasImage ? "md:col-span-7" : "md:col-span-12",
+    hasImage && isOdd ? "md:order-last" : "",
+  ]}
+>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-6">{section.title}</h2>
+                            <div class="prose prose-neutral max-w-none text-[#475569] leading-relaxed text-lg" set:html={section.html} />
+                          </div>
+
+                          {hasImage ? (
+                            <div class:list={["md:col-span-5 relative mt-6 md:mt-0", isOdd ? "md:order-first" : ""]}>
+                              <figure class="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white aspect-[4/3]">
+                                <img
+                                  src={section.image}
+                                  alt={section.imageAlt || section.title}
+                                  width={section.imageWidth || 1200}
+                                  height={section.imageHeight || 900}
+                                  loading="lazy"
+                                  decoding="async"
+                                  class="w-full h-full object-cover"
+                                />
+                              </figure>
+
+                              {section.imageCaption ? <p class="mt-3 text-sm text-[#475569]">{section.imageCaption}</p> : null}
+                            </div>
+                          ) : null}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
+            {processSections.length ? (
+              <section class="py-10 bg-white">
+                <div class="container-responsive max-w-5xl mx-auto">
+                  {processSections.map((section: any) => (
+                    <div class="mb-10 last:mb-0" data-section={section.id}>
+                      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-6">{section.title}</h2>
+                      <div class="prose prose-neutral max-w-none text-[#475569] leading-relaxed text-lg" set:html={section.html} />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
+            {/* Logistics (optionnel) */}
+            {deptContent.logistics ? (
+              <section class="py-10 bg-white">
+                <div class="container-responsive max-w-3xl mx-auto">
+                  <div class="bg-[#DFF1E8] rounded-2xl p-8 border border-[#C0E2D0] shadow-sm">
+                    <h3 class="font-bold text-xl text-[#1E2939] mb-4">Organisation & logistique</h3>
+                    <p class="text-[#475569] text-lg leading-relaxed" set:html={deptContent.logistics} />
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
+            {/* Challenges */}
+            {deptContent.challenges?.items?.length ? (
+              <section class="py-10 bg-white">
+                <div class="container-responsive max-w-3xl mx-auto">
+                  <h3 class="font-bold text-xl text-[#1E2939] mb-6">
+                    {deptContent.challenges.title || `Spécificités d’intervention ${departmentLocationPhrase} (${department.code})`}
+                  </h3>
+                  <ul class="grid sm:grid-cols-1 gap-4">
+                    {deptContent.challenges.items.map((item: string) => (
+                      <li class="flex items-start gap-4 p-4 bg-[#FCFCFC] rounded-xl border border-[#E5E7EB]">
+                        <span class="w-2 h-2 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
+                        <span class="text-[#475569] font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            ) : null}
+
+            {/* FAQ (optionnelle) */}
+            {deptContent?.faq?.length ? (
+              <section class="bg-[#FCFCFC] border-t border-[#E5E7EB] py-14">
+                <div class="container-responsive">
+                  <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-10">
+                      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939]">
+                        Questions fréquentes — {department.name}
+                      </h2>
+                      <p class="mt-3 text-[#475569] max-w-2xl mx-auto">
+                        Les réponses les plus utiles pour une intervention {departmentLocationPhrase}.
+                      </p>
+                    </div>
+
+                    <div class="space-y-3">
+                      {deptContent.faq.map((item: any) => (
+                        <details class="group border border-[#E5E7EB] bg-white rounded-xl overflow-hidden">
+                          <summary class="list-none cursor-pointer flex items-start gap-4 py-4 px-5 font-medium text-[#1E2939] hover:bg-[#FCFCFC] [&::-webkit-details-marker]:hidden">
+                            <span class="w-2 h-2 rounded-full bg-[#3F8D65] mt-2"></span>
+                            <span class="flex-1 text-left">{item.question}</span>
+                          </summary>
+                          <div class="px-5 pb-5 pl-8 text-[#475569] leading-relaxed">
+                            <div class="pt-3 border-t border-[#E5E7EB]">
+                              <p>{item.answer}</p>
+                            </div>
+                          </div>
+                        </details>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            ) : null}
+
+            {/* Liste des communes */}
+            <section id="communes" class="py-12 bg-white">
+              <div class="container-responsive">
+                <div class="mb-8 border-b border-neutral-100 pb-4 flex flex-wrap items-end justify-between md:grid md:grid-cols-3 md:items-end gap-4">
+                  <h2 class="text-2xl font-bold text-[#1E2939] md:col-start-2 md:text-center">
+                    Communes couvertes ({department.code})
+                  </h2>
+                  {departmentCities.length >= 12 && (
+                    <span class="text-sm text-neutral-500 bg-neutral-100 px-3 py-1 rounded-full font-medium md:col-start-1 md:justify-self-start">
+                      {departmentCities.length} communes listées
+                    </span>
+                  )}
+                  <div class="hidden md:block" aria-hidden="true"></div>
+                </div>
+
+                {departmentCities.length > 0 ? (
+                  <>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {departmentCities.map((city: any) => (
+                        <li>
+                          <a
+                            href={`/zones-d-intervention/${department.slug}/${city.slug}`}
+                            class="block p-3 rounded-lg border border-[#E5E7EB] bg-white hover:border-[#3F8D65]/50 hover:bg-[#DFF1E8]/30 transition-colors text-sm font-medium text-[#1E2939] text-center sm:text-left truncate"
+                          >
+                            {city.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div class="mt-12 p-8 bg-[#FCFCFC] rounded-xl border border-[#E5E7EB] text-center md:text-left">
+                      <div class="grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-7 lg:col-span-8">
+                          <h3 class="text-lg font-bold text-[#1E2939] mb-2">
+                            Votre commune n’est pas dans la liste ?
+                          </h3>
+                          <p class="text-[#475569] leading-relaxed">
+                            Pas d'inquiétude. Nous intervenons sur <strong>tout le {department.name}</strong> ({department.code}), même si la commune n’apparaît pas encore ci-dessus.
+                          </p>
+                        </div>
+
+                        <div class="md:col-span-5 lg:col-span-4 flex flex-col sm:flex-row gap-3 justify-center md:justify-end">
+                          <a href="/contact" class="btn-primary py-3 px-5 text-sm shadow-sm">
+                            Demander un devis
+                          </a>
+                          <a href={phoneLink} class="btn-secondary py-3 px-5 text-sm bg-white">
+                            Appeler
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div class="text-center p-12 bg-[#FCFCFC] rounded-xl border border-[#E5E7EB]">
+                    <p class="text-lg text-[#475569] mb-6">
+                      Les pages villes de ce département sont en cours de création.
+                    </p>
+                    <a href="/contact" class="btn-primary inline-flex items-center gap-2">
+                      Demander un devis
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            {/* CTA final (même esprit que ta page actuelle) */}
+            <section class="py-12 bg-white">
+              <div class="container-responsive">
+                <div class="max-w-3xl mx-auto border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">
+                  <p class="text-base md:text-lg text-[#1E2939] mb-3">
+                    Vous avez un projet de nettoyage {departmentLocationPhrase} ({department.code}) ?
+                  </p>
+                  <p class="text-sm md:text-base text-[#475569] mb-4">
+                    Envoyez-nous quelques informations et, si possible, des photos : nous vous répondrons rapidement.
+                  </p>
+                  <a
+                    href="/contact"
+                    class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3F8D65] text-white text-sm md:text-base font-semibold hover:bg-[#387B58] transition"
+                  >
+                    Nous contacter
+                  </a>
+                </div>
+              </div>
+            </section>
+          </>
+        );
+      })()}
+    </>
+  ) : (
+    /* =========================
+       ✅ FALLBACK (ta page actuelle)
+       ========================= */
+    <main class="py-16 bg-white">
+      <div class="container-responsive">
+        <header class="max-w-3xl mx-auto text-center mb-12">
+          <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+            Zones d'intervention
+          </p>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
+            Entreprise de nettoyage {departmentLocationPhrase} ({department.code})
+          </h1>
+          <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+            Klinova intervient {departmentLocationPhrase} pour le nettoyage de moquettes, canapés, tapis,
+            balcons et parkings souterrains. Nous travaillons aussi bien pour les particuliers que pour les
+            copropriétés et gestionnaires d'immeubles, dans tout le département.
+          </p>
+        </header>
+
+        <section class="max-w-4xl mx-auto mb-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/nettoyage-moquettes" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de moquettes</h2>
+              <p class="text-sm text-[#475569] leading-relaxed">
+                Halls, paliers, couloirs ou bureaux : décrassage en profondeur des moquettes de copropriété
+                et de locaux professionnels dans tout le {department.name}.
+              </p>
+            </a>
+
+            <a href="/nettoyage-canapes-tapis-matelas" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de canapés, tapis & matelas</h2>
+              <p class="text-sm text-[#475569] leading-relaxed">
+                Nettoyage à domicile des canapés, tapis et matelas : taches, odeurs d'animaux, auréoles,
+                désodorisation en profondeur.
+              </p>
+            </a>
+
+            <a href="/nettoyage-balcons" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de balcons & terrasses</h2>
+              <p class="text-sm text-[#475569] leading-relaxed">
+                Décrassage de balcons encrassés, fientes de pigeons, sols noircis et traces de pollution,
+                en immeuble comme en pavillon.
+              </p>
+            </a>
+
+            <a href="/nettoyage-parkings" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+              <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de parkings souterrains</h2>
+              <p class="text-sm text-[#475569] leading-relaxed">
+                Nettoyage mécanisé et décrassage en profondeur des parkings souterrains et aériens de copropriété
+                ou d'entreprises dans le {department.name}.
+              </p>
+            </a>
+          </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto mb-16">
+          <div class="mb-6 text-center max-w-3xl mx-auto">
+            <h2 class="text-xl md:text-2xl font-bold text-[#1E2939] mb-2">
+              Villes où nous intervenons {departmentLocationPhrase}
+            </h2>
+            <p class="text-sm md:text-base text-[#475569]">
+              Voici quelques communes {departmentCommunesPhrase} pour lesquelles nous avons déjà structuré des pages locales.
+              Chaque ville dispose d’une page "hub" avec des liens vers nos principaux services.
+            </p>
+          </div>
+
+          {departmentCities.length > 0 ? (
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {departmentCities.map((city: any) => (
+                <li>
+                  <a
+                    href={`/zones-d-intervention/${department.slug}/${city.slug}`}
+                    class="block px-4 py-2 rounded-full border border-[#E5E7EB] bg-white text-sm text-[#1E2939] hover:border-[#3F8D65]/60 hover:text-[#3F8D65] hover:shadow-sm transition"
+                  >
+                    {city.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-sm text-[#94A3B8] italic">
+              Les pages villes de ce département sont en cours de création.
+            </p>
+          )}
+        </section>
+
+        <section class="max-w-3xl mx-auto">
+          <div class="border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">
+            <p class="text-base md:text-lg text-[#1E2939] mb-3">
+              Vous avez un projet de nettoyage {departmentLocationPhrase} ({department.code}) ?
+            </p>
+            <p class="text-sm md:text-base text-[#475569] mb-4">
+              Envoyez-nous quelques informations et, si possible, des photos : nous vous répondrons rapidement
+              avec une estimation et une proposition d'intervention.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#3F8D65] text-white text-sm md:text-base font-semibold hover:bg-[#387B58] transition"
+            >
+              Nous contacter
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  )}
+
+  <DepartmentCardsKln
+  variant="white"
+  onlyCovered={false}
+  topCitiesPerDept={0}
+  
+/>
+
+</LayoutWithCTA>
