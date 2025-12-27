@@ -163,7 +163,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
     trackingSource: `departement-${department.slug}`,
   }}
 >
-  {/* Breadcrumb simple (pas de composant dédié) */}
+  <!--Breadcrumb simple (pas de composant dédié) -->
   <nav aria-label="Fil d'Ariane" class="bg-white border-b border-neutral-200">
     <div class="container-responsive py-3">
       <ol class="flex flex-wrap gap-2 text-sm text-neutral-600">
@@ -186,9 +186,9 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
 
 
 
-  {/* =========================
+  <!--=========================
       ✅ MODE DATA-DRIVEN (comme SP)
-     ========================= */}
+     ========================= -->
   {deptContent ? (
     <>
       {(() => {
@@ -196,7 +196,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
 
         return (
           <>
-            {/* HERO SPLIT (adapté Klinova) */}
+            <!--HERO SPLIT (adapté Klinova) -->
             <section class="relative bg-[#FCFCFC] overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
               <div class="container-responsive">
                 <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -223,7 +223,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
                       </p>
                     ) : null}
 
-                    {/* ✅ boutons : on garde l’esprit de la page actuelle */}
+                    <!--✅ boutons : on garde l’esprit de la page actuelle -->
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                       <a href="/contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg shadow-sm">
                         Demander un devis
@@ -233,7 +233,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
                       </a>
                     </div>
 
-                    {/* Micro-réassurance (kicker) */}
+                    <!--Micro-réassurance (kicker) -->
                     <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-sm font-medium text-neutral-500">
                       <div class="flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
@@ -256,7 +256,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
                     </div>
                   </div>
 
-                  {/* Image optionnelle */}
+                  <!--Image optionnelle -->
                   {heroImg ? (
                     <div class="lg:col-span-6 relative mt-10 lg:mt-0">
                       <div class="absolute -top-10 -right-10 w-64 h-64 bg-[#DFF1E8] rounded-full mix-blend-multiply blur-3xl opacity-70 -z-10"></div>
@@ -283,7 +283,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </div>
             </section>
 
-            {/* Quick links (optionnel) */}
+            <!--Quick links (optionnel) -->
             {deptContent?.internalLinks && deptContent.internalLinks.length >= 3 ? (
               <div class="border-b border-neutral-200 bg-[#FCFCFC] py-4">
                 <div class="container-responsive">
@@ -314,7 +314,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </div>
             ) : null}
 
-            {/* Services (on garde tes 4 cards) */}
+            <!--Services (on garde tes 4 cards) -->
             <section class="bg-white py-12">
               <div class="container-responsive">
                 <div class="max-w-4xl mx-auto">
@@ -351,7 +351,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </div>
             </section>
 
-            {/* Contexte / Process (HTML data-driven) */}
+            <!--Contexte / Process (HTML data-driven) -->
             {contexteSections.length ? (
               <section class="pt-6 pb-6 bg-white">
                 <div class="container-responsive">
@@ -411,7 +411,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </section>
             ) : null}
 
-            {/* Logistics (optionnel) */}
+            <!--Logistics (optionnel) -->
             {deptContent.logistics ? (
               <section class="py-10 bg-white">
                 <div class="container-responsive max-w-3xl mx-auto">
@@ -423,7 +423,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </section>
             ) : null}
 
-            {/* Challenges */}
+            <!--Challenges -->
             {deptContent.challenges?.items?.length ? (
               <section class="py-10 bg-white">
                 <div class="container-responsive max-w-3xl mx-auto">
@@ -442,7 +442,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </section>
             ) : null}
 
-            {/* FAQ (optionnelle) */}
+            <!--FAQ (optionnelle) -->
             {deptContent?.faq?.length ? (
               <section class="bg-[#FCFCFC] border-t border-[#E5E7EB] py-14">
                 <div class="container-responsive">
@@ -476,7 +476,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </section>
             ) : null}
 
-            {/* Liste des communes */}
+            <!--Liste des communes -->
             <section id="communes" class="py-12 bg-white">
               <div class="container-responsive">
                 <div class="mb-8 border-b border-neutral-100 pb-4 flex flex-wrap items-end justify-between md:grid md:grid-cols-3 md:items-end gap-4">
@@ -541,7 +541,7 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
               </div>
             </section>
 
-            {/* CTA final (même esprit que ta page actuelle) */}
+            <!--CTA final (même esprit que ta page actuelle) -->
             <section class="py-12 bg-white">
               <div class="container-responsive">
                 <div class="max-w-3xl mx-auto border border-[#E5E7EB] bg-[#F9FAFB] rounded-2xl p-6 text-center">

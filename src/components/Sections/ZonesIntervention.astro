@@ -18,7 +18,7 @@ const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
   <div class="container-responsive">
     <div class="max-w-5xl mx-auto">
       
-      {/* --- EN-TÊTE GLOBAL --- */}
+      <!----- EN-TÊTE GLOBAL --- -->
       <div class="text-center max-w-3xl mx-auto mb-10">
         <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
           Zones d'intervention
@@ -32,7 +32,7 @@ const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
         </p>
       </div>
 
-      {/* --- BLOC 1 : DÉPARTEMENTS --- */}
+      <!----- BLOC 1 : DÉPARTEMENTS --- -->
       <div class="mb-12">
         <h3 class="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider mb-4 text-center">
           Par Département
@@ -51,7 +51,7 @@ const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
         </div>
       </div>
 
-      {/* --- BLOC 2 : VILLES (Seulement si dispo) --- */}
+      <!----- BLOC 2 : VILLES (Seulement si dispo) --- -->
       {highlightedCities.length > 0 && (
         <div class="pt-8 border-t border-dashed border-gray-200">
           <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-2 text-center md:text-left">
@@ -71,7 +71,7 @@ const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
                 class="flex items-center justify-center p-3 bg-white border border-[#E5E7EB] rounded-lg hover:shadow-sm hover:border-[#3F8D65]/60 hover:text-[#3F8D65] transition group"
               >
                 <div class="flex items-center gap-2">
-                  {/* Petit point vert pour signifier "Actif" ou "Nouveau" */}
+                  <!--Petit point vert pour signifier "Actif" ou "Nouveau" -->
                   <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65]/40 group-hover:bg-[#3F8D65]"></span>
                   <span class="font-medium text-sm text-[#1E2939] group-hover:text-[#3F8D65]">
                     {city.name}
@@ -83,7 +83,7 @@ const sectionBg = variant === 'white' ? 'bg-white' : 'bg-[#FCFCFC]';
         </div>
       )}
 
-      {/* --- FOOTER DE SECTION --- */}
+      <!----- FOOTER DE SECTION --- -->
       <div class="text-center mt-10">
         <p class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-xs md:text-sm text-[#475569]">
           <svg class="w-4 h-4 text-[#3F8D65]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
