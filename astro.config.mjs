@@ -18,7 +18,7 @@ export default defineConfig({
 
    
   // ✅ Sortie "server" nécessaire pour les routes API (Cloudinary, Resend…)
-  output: 'server',
+  output: 'static',
 
   // ✅ Adaptateur Vercel (runtime Node, pas Edge)
   adapter: vercel({

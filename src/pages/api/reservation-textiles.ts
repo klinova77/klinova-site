@@ -1,3 +1,4 @@
+export const prerender = false;
 import type { APIRoute } from 'astro';
 import { getSlotById, formatSlotLabel } from '../../config/textilesSlots';
 // import { Resend } from 'resend'; // Uncomment when ready to use
