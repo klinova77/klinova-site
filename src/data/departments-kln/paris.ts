@@ -188,14 +188,7 @@ export const paris: DepartmentKln = {
   // Liens internes (arrondissements stratégiques)
   // =========================
   internalLinks: [
-    { label: "Paris 16e", href: "/zones-d-intervention/paris/paris-16" },
-    { label: "Paris 17e", href: "/zones-d-intervention/paris/paris-17" },
-    { label: "Paris 8e", href: "/zones-d-intervention/paris/paris-8" },
-    { label: "Paris 7e", href: "/zones-d-intervention/paris/paris-7" },
-    { label: "Paris 15e", href: "/zones-d-intervention/paris/paris-15" },
-    { label: "Paris 12e", href: "/zones-d-intervention/paris/paris-12" },
-    { label: "Paris 9e", href: "/zones-d-intervention/paris/paris-9" },
-    { label: "Paris 11e", href: "/zones-d-intervention/paris/paris-11" },
+
   ],
 
   // =========================
