@@ -1,11 +1,14 @@
 ---
 // D:\Klinova-site\src\pages\zones-d-intervention\[department]\[city]\[service].astro
-
+export const prerender = true;
 import CityPage from '~/components/CityPage.astro'; // ⬅️ ton composant CityPage (celui dont tu as collé le code)
 import { generateCityPaths } from '~/utils/generate-city-pages';
 import type { City, ServiceConfig } from '~/types/geo';
 
-export const prerender = true;
+import { FEATURED_CITY_SLUGS, FOOTER_CITY_SLUGS } from "~/data/highlightedCities";
+
+
+
 
 type Params = {
   department: string;
@@ -29,7 +32,13 @@ const {
   city: City;
   service: ServiceConfig;
 };
+
+const showReviewsWidget =
+  FEATURED_CITY_SLUGS.includes(city.slug as any) ||
+  FOOTER_CITY_SLUGS.includes(city.slug as any);
+
 ---
 
 <!-- On délègue l'affichage à ton composant CityPage en lui passant les props -->
-<CityPage department={department} city={city} service={service} />
+<CityPage department={department} city={city} service={service}  showReviewsWidget={showReviewsWidget}/>
+

@@ -1181,6 +1181,95 @@ data-hide-header-cta
 
 
 
+<!-- AVIS GOOGLE -->
+<section class="bg-white section-padding">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-2">
+        Avis Google – Klinova
+      </h2>
+
+      <h3 class="text-lg md:text-xl text-neutral-600 mb-8">
+        Merci à nos clients qui nous ont fait confiance&nbsp;!
+      </h3>
+
+      <div class="sk-ww-google-reviews" data-embed-id="25566122">
+        <p>Chargement des avis Google…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ⚠️ idéalement, mets ça dans ton CSS global / utilities,
+     mais si tu le laisses ici, ok tant que tu sais que c'est global */
+  .sk-ww-google-reviews {
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 640px) {
+    .sk-ww-google-reviews {
+      max-height: 240px;
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const TARGET_SELECTOR = ".sk-ww-google-reviews";
+    const SCRIPT_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
+
+    function injectScriptOnce() {
+      if (window.__SK_WIDGET_SCRIPT_LOADED) return;
+      window.__SK_WIDGET_SCRIPT_LOADED = true;
+
+      // évite double ajout si déjà présent dans le DOM
+      if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return;
+
+      const s = document.createElement("script");
+      s.src = SCRIPT_SRC;
+      s.defer = true;
+      document.body.appendChild(s);
+    }
+
+    function init() {
+      const target = document.querySelector(TARGET_SELECTOR);
+      if (!target) return;
+
+      if (!("IntersectionObserver" in window)) {
+        injectScriptOnce();
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            injectScriptOnce();
+            obs.disconnect();
+          }
+        },
+        { rootMargin: "200px 0px" }
+      );
+
+      observer.observe(target);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
+
+
+
+
 <!-- Section FAQ -->
 <section class="py-16 md:py-24 bg-white" data-section="faq">
   <div class="container-responsive">

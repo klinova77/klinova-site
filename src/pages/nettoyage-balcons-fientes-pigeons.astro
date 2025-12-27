@@ -667,43 +667,92 @@ const jsonLd = [
 </section>
 
 
-<!-- Section Témoignage -->
-<section class="py-12 lg:py-16 bg-[#F8FDF9]">
+
+<!-- AVIS GOOGLE -->
+<section class="bg-white section-padding">
   <div class="container-responsive">
-    <div class="max-w-3xl mx-auto">
-      
-      <div class="text-center mb-8">
-        <h2 class="text-2xl lg:text-3xl font-bold text-[#1E2939] mb-4">
-          Ils nous font confiance
-        </h2>
-      </div>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-2">
+        Avis Google – Klinova
+      </h2>
 
-      <!-- Témoignage -->
-      <div class="bg-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-8 shadow-sm">
-        <div class="flex items-start">
-          <div class="flex-1">
-            <div class="flex items-center mb-2">
-              <div class="flex text-yellow-400 mr-3">
-                <!-- 5 étoiles -->
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-                <!-- Répéter 4 fois -->
-              </div>
-              <span class="text-sm text-[#475569] font-medium">Avis client</span>
-            </div>
-            <h4 class="font-semibold text-[#1E2939] mb-1">Françoise DAVENNE</h4>
-            <p class="text-sm text-[#475569] mb-4">Septembre 2025</p>
-            <blockquote class="text-[#475569] italic">
-              "KLINOVA Nettoyage est à l'écoute de nos besoins. Prestations de qualité et travail soigné. Je conseillerais KLINOVA Nettoyage dans mon entourage."
-            </blockquote>
-          </div>
-        </div>
-      </div>
+      <h3 class="text-lg md:text-xl text-neutral-600 mb-8">
+        Merci à nos clients qui nous ont fait confiance&nbsp;!
+      </h3>
 
+      <div class="sk-ww-google-reviews" data-embed-id="25566122">
+        <p>Chargement des avis Google…</p>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* ⚠️ idéalement, mets ça dans ton CSS global / utilities,
+     mais si tu le laisses ici, ok tant que tu sais que c'est global */
+  .sk-ww-google-reviews {
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 640px) {
+    .sk-ww-google-reviews {
+      max-height: 240px;
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const TARGET_SELECTOR = ".sk-ww-google-reviews";
+    const SCRIPT_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
+
+    function injectScriptOnce() {
+      if (window.__SK_WIDGET_SCRIPT_LOADED) return;
+      window.__SK_WIDGET_SCRIPT_LOADED = true;
+
+      // évite double ajout si déjà présent dans le DOM
+      if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return;
+
+      const s = document.createElement("script");
+      s.src = SCRIPT_SRC;
+      s.defer = true;
+      document.body.appendChild(s);
+    }
+
+    function init() {
+      const target = document.querySelector(TARGET_SELECTOR);
+      if (!target) return;
+
+      if (!("IntersectionObserver" in window)) {
+        injectScriptOnce();
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            injectScriptOnce();
+            obs.disconnect();
+          }
+        },
+        { rootMargin: "200px 0px" }
+      );
+
+      observer.observe(target);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
 
 
 
