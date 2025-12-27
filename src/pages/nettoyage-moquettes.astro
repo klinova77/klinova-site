@@ -8,6 +8,7 @@ import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 
 import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import moquetteAiguilletee from '~/assets/images/moquette-aiguillettee.jpg';
 import moquetteBouclee from '~/assets/images/moquette-bouclee.jpg';
@@ -2687,7 +2688,36 @@ data-hide-floating-cta
 })();
 </script>
 
-<ZonesIntervention />
+
+
+ <DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={2}
+  title="Interventions moquettes par département"
+  description="Nettoyage et remise en état des sols textiles en Île-de-France : injection-extraction, détachage ciblé et séchage maîtrisé, avec une organisation par secteurs."
+  serviceSlug="nettoyage-moquettes"
+  deptSeoTextOverride={{
+    paris:
+      "Immeubles haussmanniens et bureaux : gestion des accès, intervention discrète et séchage maîtrisé.",
+    "seine-et-marne":
+      "Pavillons et grandes surfaces : poussières, allergènes et traces d’usage, extraction en profondeur.",
+    yvelines:
+      "Résidentiel de standing : soin des fibres délicates (laine, synthétiques) et finitions soignées.",
+    essonne:
+      "Habitat mixte et tertiaire : intervention planifiée par secteurs pour limiter les contraintes d’activité.",
+    "hauts-de-seine":
+      "Sites tertiaires et résidences denses : remise en état rapide des espaces et organisation fluide.",
+    "seine-saint-denis":
+      "Copropriétés et zones urbaines : encrassement intensif, rigueur d’exécution et résultats visibles.",
+    "val-de-marne":
+      "Zones résidentielles et bords de Marne : allergènes, humidité ambiante et entretien durable des moquettes.",
+    "val-d-oise":
+      "Secteurs pavillonnaires et étendus : tournées optimisées et protocoles réguliers par zones."
+  }}
+/>
+
 
 
 </LayoutWithCTA>

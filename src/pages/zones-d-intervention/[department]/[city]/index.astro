@@ -11,6 +11,33 @@ import Button from '~/components/UI/Button.astro';
 
 import { aVille, deVille } from "~/lib/geo-klinova";
 
+
+
+
+const slugify = (v: string) =>
+  v
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+
+    export const prerender = true;
+
+
+export async function getStaticPaths() {
+  return cities
+    .filter((city) => city?.name && city?.department)
+    .map((city) => {
+      const deptSlug = city.department.slug ?? slugify(city.department.name);
+      const citySlug = city.slug ?? slugify(city.name);
+
+      return {
+        params: { department: deptSlug, city: citySlug },
+        props: { department: city.department, city },
+      };
+    });
+}
 // ==========================
 // Types / helpers services
 // ==========================

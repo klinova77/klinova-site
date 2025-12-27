@@ -7,7 +7,7 @@ import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 
-import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import BookingTextiles from '../components/BookingTextiles.tsx';
 
@@ -1079,7 +1079,34 @@ data-hide-header-cta
 
 
 <!-- Section 6: Zones d'intervention -->
-<ZonesIntervention />
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={2}
+  title="Canapés & tapis : nos secteurs d’intervention"
+  description="Nettoyage de canapés et tapis en Île-de-France : détachage ciblé, traitement des odeurs et respect des fibres, avec une organisation par secteurs."
+  serviceSlug="nettoyage-canapes-tapis-matelas"
+
+  deptSeoTextOverride={{
+    paris:
+      "Appartements et immeubles anciens : taches d’usage, textiles délicats et contraintes d’accès maîtrisées.",
+    "seine-et-marne":
+      "Pavillons et maisons familiales : canapés et tapis exposés aux animaux, poussières et usages intensifs.",
+    yvelines:
+      "Résidentiel de standing : entretien des textiles haut de gamme, finitions soignées et discrétion.",
+    essonne:
+      "Habitat mixte : nettoyage ciblé des tissus d’ameublement dans des intérieurs très sollicités.",
+    "hauts-de-seine":
+      "Appartements denses et cadres de vie actifs : détachage efficace et remise en usage rapide.",
+    "seine-saint-denis":
+      "Logements très occupés : taches incrustées, odeurs et textiles fortement sollicités.",
+    "val-de-marne":
+      "Intérieurs familiaux et bords de Marne : allergènes, humidité ambiante et hygiène des textiles.",
+    "val-d-oise":
+      "Zones pavillonnaires étendues : entretien régulier des canapés et tapis du quotidien."
+  }}
+/>
 
 
 

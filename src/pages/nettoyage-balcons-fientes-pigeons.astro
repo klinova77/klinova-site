@@ -4,7 +4,7 @@ import Button from '~/components/UI/Button.astro';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { Image } from 'astro:assets';
 
-import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 // Variables de base
 const site = 'https://klinova.fr';
@@ -1424,7 +1424,23 @@ function setLoading(loading) {
 
 
 <!-- Section 6: Zones d'intervention -->
-<ZonesIntervention />
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={2}
+  title="Balcons souillés par fientes de pigeons : nos secteurs d’intervention"
+  description="Nettoyage et assainissement de balcons souillés par fientes de pigeons en Île-de-France : retrait des déjections, désinfection ciblée et remise en état des surfaces, avec organisation par secteurs."
+  serviceSlug="nettoyage-balcons-fientes-pigeons"
+  deptSeoTextOverride={{
+    paris:
+      "Immeubles anciens et balcons enclavés : accumulation de fientes, risques sanitaires et intervention sécurisée en hauteur.",
+    "seine-saint-denis":
+      "Copropriétés denses : prolifération rapide des pigeons, souillures importantes et désinfection rigoureuse.",
+    "val-de-marne":
+      "Résidences et balcons exposés : dépôts récurrents de fientes, odeurs et remise en état durable des surfaces."
+  }}
+/>
 
 
 </LayoutLP>

@@ -6,7 +6,8 @@ import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
-import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
 import autolaveuseParkingImage from '~/assets/images/nettoyage-parking-autolaveuse.jpg';
@@ -2227,8 +2228,32 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
 </script>
 
 
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={2}
+  title="Nettoyage de parkings : nos secteurs d’intervention"
+  description="Nettoyage de parkings souterrains et extérieurs en Île-de-France : décrassage mécanique, élimination des poussières fines et organisation par secteurs."
+  serviceSlug="nettoyage-parkings"
+  deptSeoTextOverride={{
+    paris:
+      "Parkings d’immeubles et sites tertiaires : contraintes d’accès, horaires et circulation maîtrisés.",
+    "seine-et-marne":
+      "Parkings de résidences et zones commerciales : grandes surfaces, poussières et traces d’usage intensif.",
+    yvelines:
+      "Copropriétés et ensembles résidentiels : nettoyage régulier et maintien de l’image des parkings.",
+    essonne:
+      "Zones d’activités et habitats mixtes : interventions planifiées pour limiter les nuisances.",
+    "hauts-de-seine":
+      "Parkings tertiaires et sièges d’entreprises : exigence de propreté et continuité d’exploitation.",
+    "seine-saint-denis":
+      "Parkings très fréquentés : encrassement marqué, rigueur d’exécution et résultats visibles.",
+    "val-de-marne":
+      "Résidences collectives et parkings d’habitat dense : poussières fines et entretien récurrent.",
+    "val-d-oise":
+      "Sites étendus et parkings multi-niveaux : tournées optimisées et organisation par zones."
+  }}
+/>
 
-
-<!-- Section 6: Zones d'intervention -->
-<ZonesIntervention />
 </LayoutWithCTA>

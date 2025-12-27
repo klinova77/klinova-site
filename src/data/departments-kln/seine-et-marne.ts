@@ -8,156 +8,172 @@ export const seineEtMarne: DepartmentKln = {
   },
 
   // =========================
-  // SEO & Hero (sobre, local, crédible)
+  // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage en Seine-et-Marne (77)",
-  heroKicker: "Nord-77 & Sud-77 • Délais rapides selon secteur",
+  heroTitle: "Entreprise de nettoyage professionnel en Seine-et-Marne (77)",
+  heroKicker: "Interventions Nord-77 & Sud-77 • Devis sous 24h",
   heroDescription:
-    "En Seine-et-Marne, Klinova intervient par secteurs (Nord-77 / Sud-77) pour tenir des délais réalistes, des résidences du Val d’Europe aux zones pavillonnaires plus éloignées. Moquettes de copropriété, canapés & tapis à domicile, balcons, parkings : protocole adapté au lieu, accès, contraintes et niveau d’encrassement.",
+    "Klinova intervient partout en Seine-et-Marne avec une organisation par secteurs géographiques pour garantir réactivité et disponibilité. Du Val d'Europe aux zones pavillonnaires de Brie, nous adaptons nos protocoles de nettoyage aux spécificités de chaque site : résidences récentes, copropriétés anciennes, pavillons individuels.",
 
   // =========================
-  // Images (tu peux remplacer les chemins plus tard)
+  // Images
   // =========================
-images: {
-  items: [
-    {
-      src: "/images/77-seine-et-marne-rue-pavillonnaire.webp",
-      alt: "Rue pavillonnaire en Seine-et-Marne avec maisons individuelles et trottoirs résidentiels",
-      width: 1200,
-      height: 800,
-      caption:
-        "Quartiers pavillonnaires de Seine-et-Marne : interventions de nettoyage adaptées aux accès résidentiels et aux surfaces extérieures.",
-    },
-  ],
-},
+  images: {
+    items: [
+      
+     {
+  src: "/images/77-seine-et-marne-rue-pavillonnaire.webp",
+  alt: "Quartier résidentiel pavillonnaire en Seine-et-Marne, zone d'intervention Klinova",
+  width: 1200,
+  height: 800,
+  caption:
+    "Zones pavillonnaires du 77 : des solutions de nettoyage flexibles pour les maisons individuelles et résidences de grande couronne.",
 
+      },
+    ],
+  },
 
   // =========================
   // Spécificités terrain
   // =========================
   challenges: {
-    title: "Spécificités d’intervention en Seine-et-Marne (77)",
+    title: "Contraintes d'intervention en Seine-et-Marne",
     items: [
-      "Département vaste : planification par secteurs (Nord-77 / Sud-77) pour limiter les trajets et tenir des créneaux cohérents.",
-      "Habitat très mixte (pavillons, résidences récentes, copropriétés) : méthodes différentes selon accès, charges, surfaces et matériaux.",
-      "Parkings et circulations en sous-sol fréquents : poussières fines, traces de pneus, zones humides, contraintes de ventilation et d’évacuation.",
-      "Textiles d’ameublement très sollicités en zones familiales : taches alimentaires, auréoles, odeurs d’animaux, besoin de rinçage et séchage maîtrisés.",
-      "Balcons exposés : pollution, mousses, coulures, fientes (selon secteurs) — intervention sécurisée, protection des écoulements et des abords.",
+      "Organisation géographique Nord-77 / Sud-77 pour optimiser délais et disponibilité sur un département de 5 915 km²",
+      "Typologie mixte (pavillons, résidences collectives, copropriétés) nécessitant adaptation des méthodes selon configurations",
+      "Parkings souterrains avec contraintes techniques : ventilation limitée, zones humides, accès restreints, évacuation des eaux",
+      "Textiles d'ameublement fortement sollicités en zones résidentielles : taches organiques, odeurs animales, usure prématurée",
+      "Balcons et terrasses exposés aux intempéries : mousses, coulures, fientes, salissures atmosphériques selon exposition",
     ],
   },
 
   // =========================
-  // Sections éditoriales (contexte + process)
+  // Sections éditoriales
   // =========================
   sections: [
     {
       id: "contexte",
-      title: "Nettoyage en Seine-et-Marne : résidences récentes, pavillons et parties communes",
-     image: "/images/77-seine-et-marne-residence-copropriete.webp",
-imageAlt: "Vue aérienne d’une résidence récente en Seine-et-Marne avec immeubles et espaces extérieurs",
-imageCaption:
-  "Résidences récentes et copropriétés : organisation des accès, des étages et des surfaces à entretenir.",
-
+      title: "Nettoyage professionnel en Seine-et-Marne : enjeux et spécificités",
+      image: "/images/77-seine-et-marne-residence-copropriete.webp",
+      imageAlt: "Résidence collective moderne en Seine-et-Marne avec espaces extérieurs aménagés",
+      imageCaption:
+        "Copropriétés Seine-et-Marne : gestion des parties communes et coordination syndic.",
       html: `
         <p>
-          La <strong>Seine-et-Marne (77)</strong> combine de grandes zones pavillonnaires, des pôles urbains récents
-          et des secteurs très denses autour des gares et des zones d’activité. Cette diversité se retrouve dans
-          les demandes de nettoyage : <strong>moquettes de copropriété</strong> (halls, paliers, couloirs),
-          <strong>parkings</strong> (traces de pneus, poussières fines), <strong>balcons</strong> (pollution, mousses),
-          et <strong>textiles d’ameublement</strong> à domicile (canapés, tapis, matelas).
+          La <strong>Seine-et-Marne</strong> présente une configuration territoriale hétérogène : 
+          pôles urbains denses (Chelles, Meaux, Melun), zones pavillonnaires étendues, 
+          et secteurs résidentiels récents (Val d'Europe, Bussy-Saint-Georges). Cette diversité 
+          se traduit par des problématiques de nettoyage distinctes selon le type d'habitat.
         </p>
         <p class="mt-4">
-          En résidence, l’enjeu est souvent la <strong>tenue dans le temps</strong> : une méthode stable, un bon
-          séchage, une protection des abords et une organisation claire avec le syndic ou le gardien.
-          En pavillon, l’enjeu est plutôt la <strong>qualité du résultat</strong> sur des surfaces très visibles
-          (textiles, terrasses, abords), avec une attention particulière au rinçage, aux finitions et aux temps de séchage.
+          En <strong>résidence collective</strong>, les enjeux portent sur la pérennité des 
+          interventions : moquettes de parties communes soumises à fort trafic, parkings souterrains 
+          avec traces de pneus et poussières abrasives, coordination avec syndics et gardiens pour 
+          planification optimale. Le protocole privilégie <strong>méthode reproductible</strong> 
+          et <strong>tenue dans le temps</strong>.
+        </p>
+        <p class="mt-4">
+          En <strong>habitat pavillonnaire</strong>, la priorité est la qualité du rendu final : 
+          nettoyage de canapés et tapis à domicile (détachage précis, rinçage complet), 
+          décrassage de terrasses et balcons (finitions soignées, protection des évacuations). 
+          L'objectif : un résultat impeccable sur surfaces très visibles.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Notre méthode Klinova en Seine-et-Marne (77) : diagnostic, préparation, intervention, contrôle",
+      title: "Protocole d'intervention Klinova en Seine-et-Marne",
       html: `
         <p>
-          Chaque prestation commence par un <strong>diagnostic</strong> : identification des zones à traiter,
-          du type de support (moquette, textile, dalle, carrelage, béton), du niveau d’encrassement et des contraintes
-          (accès, eau, évacuation, stationnement, voisinage, horaires). En copropriété, on raisonne aussi en
-          <strong>flux de circulation</strong> (halls, ascenseurs, escaliers) et en <strong>risque de re-salissure</strong>.
+          Chaque chantier débute par un <strong>diagnostic terrain</strong> systématique : 
+          analyse du type de support (textile, dalle, béton, carrelage), évaluation du niveau 
+          d'encrassement, identification des contraintes logistiques (accès, eau, évacuation, 
+          horaires imposés). En copropriété, nous intégrons les flux de circulation et le risque 
+          de re-salissure rapide.
         </p>
         <p class="mt-4">
-          L’intervention vise un résultat net et durable : <strong>pré-aspiration</strong> et détachage ciblé sur textiles,
-          <strong>injection-extraction</strong> lorsque c’est pertinent, rinçage contrôlé, et <strong>séchage maîtrisé</strong>.
-          Sur parties communes et parkings, la priorité est la <strong>méthode</strong> (passes, bordures, angles, zones techniques)
-          et la <strong>sécurité</strong> (signalisation, glissance, gestion de l’eau).
+          Le <strong>protocole technique</strong> est adapté à chaque situation :
         </p>
+        <ul class="mt-3 space-y-2 text-[#475569]">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
+            <span><strong>Textiles</strong> : pré-aspiration, détachage ciblé, injection-extraction contrôlée, rinçage sans résidu, séchage maîtrisé</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
+            <span><strong>Parties communes</strong> : organisation par zones, signalisation, protection des abords, passes méthodiques, finitions bordures et angles</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
+            <span><strong>Parkings</strong> : gestion eau et évacuation, sécurité glissance, traitement poussières fines, respect zones techniques</span>
+          </li>
+        </ul>
         <p class="mt-4">
-          En fin d’intervention, on valide la zone (contrôle visuel, finitions) et on te donne des recommandations simples
-          pour éviter une re-salissure rapide (fréquences, points sensibles, protections éventuelles).
+          En fin d'intervention : <strong>contrôle visuel systématique</strong>, validation 
+          avec le client ou le gestionnaire, et recommandations d'entretien pour prolonger 
+          le résultat (fréquences optimales, points sensibles, protections éventuelles).
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique (callout)
+  // Logistique
   // =========================
   logistics:
-    "Pour couvrir efficacement la Seine-et-Marne, Klinova planifie les interventions en tournées <strong>Nord-77</strong> et <strong>Sud-77</strong>. Accès résidence, badge, ascenseur, stationnement, contraintes d’horaires : on anticipe la logistique avec vous pour une intervention fluide, propre et discrète. Selon le chantier (textiles / parkings / balcons), le temps de séchage et les conditions de ventilation sont pris en compte dès la préparation.",
+    "Couverture Seine-et-Marne organisée en tournées <strong>Nord-77</strong> (Meaux, Chelles, Lagny, Val d'Europe) et <strong>Sud-77</strong> (Melun, Pontault-Combault, Savigny-le-Temple). Coordination anticipée des contraintes logistiques : accès résidence, badges, ascenseurs, stationnement, créneaux horaires. Temps de séchage et ventilation intégrés dès la planification pour garantir un résultat optimal.",
 
   // =========================
-  // FAQ (4–6)
+  // FAQ optimisée SEO + conversion
   // =========================
   faq: [
     {
-      question: "Intervenez-vous partout en Seine-et-Marne (77) ?",
+      question: "Quelles villes de Seine-et-Marne couvrez-vous ?",
       answer:
-        "Oui. Même si toutes les communes n’ont pas encore une page dédiée, Klinova intervient sur l’ensemble du 77. Les créneaux sont proposés selon le secteur (Nord-77 / Sud-77) et la nature de la prestation.",
+        "Klinova intervient sur l'ensemble du département (77). Nos principaux secteurs incluent Meaux, Chelles, Melun, Pontault-Combault, Bussy-Saint-Georges, Serris, Lagny-sur-Marne, Savigny-le-Temple, ainsi que toutes les communes environnantes. Organisation par secteurs Nord-77 et Sud-77 pour optimiser délais et disponibilité.",
     },
     {
-      question: "Combien de temps faut-il pour sécher une moquette après injection-extraction ?",
+      question: "Quel délai de séchage pour une moquette nettoyée par injection-extraction ?",
       answer:
-        "Le temps de séchage dépend de l’épaisseur, de la ventilation, de la température et du niveau d’humidité. En conditions normales, on vise un séchage progressif sur plusieurs heures. On adapte la méthode (rinçage, extraction, passes) pour limiter l’eau résiduelle et on vous donne les consignes de ventilation.",
+        "Le séchage dépend de plusieurs facteurs : épaisseur de la moquette, température ambiante, ventilation, taux d'humidité. En conditions standards, le séchage complet s'étale sur 6 à 12 heures. Notre méthode limite l'eau résiduelle (extraction poussée, passes contrôlées) et nous vous fournissons des consignes de ventilation précises.",
     },
     {
-      question: "Pouvez-vous enlever les odeurs sur un canapé (animaux, tabac, humidité) ?",
+      question: "Pouvez-vous traiter les odeurs tenaces sur canapés et matelas ?",
       answer:
-        "Souvent oui, surtout si l’odeur est liée à des salissures ou à des résidus organiques. Le résultat dépend de la profondeur de la contamination et de la nature du textile/mousse. On combine détachage ciblé, rinçage/extraction et désodorisation selon le cas.",
+        "Oui, dans la majorité des cas. L'efficacité dépend de la nature de l'odeur (animaux, tabac, humidité) et de sa profondeur dans les mousses. Notre protocole combine détachage ciblé, extraction en profondeur, rinçage complet et désodorisation adaptée. Diagnostic préalable systématique pour définir la méthode optimale.",
     },
     {
-      question: "En copropriété, comment gérez-vous les parties communes (halls, paliers, couloirs) ?",
+      question: "Comment organisez-vous le nettoyage des parties communes en copropriété ?",
       answer:
-        "On intervient avec une organisation pensée pour la circulation : signalisation, protection des zones sensibles, ordre de passage logique, finitions sur bordures/angles. L’objectif est un résultat propre et homogène, sans gêner inutilement les résidents.",
+        "Intervention planifiée avec le syndic ou le gardien : définition des zones (halls, paliers, couloirs, escaliers), ordre de passage logique pour limiter gêne résidents, signalisation claire, protection zones sensibles. Objectif : résultat homogène, finitions soignées (bordures, angles), circulation maintenue dans la mesure du possible.",
     },
     {
-      question: "Nettoyez-vous aussi les parkings souterrains en Seine-et-Marne ?",
+      question: "Intervenez-vous dans les parkings souterrains de copropriété ?",
       answer:
-        "Oui. Les parkings demandent une méthode spécifique : gestion de l’eau, sécurité (glissance), poussières fines, zones techniques, ventilation. Le protocole est adapté à la surface, au niveau d’encrassement et aux contraintes du site.",
+        "Oui. Les parkings nécessitent un protocole spécifique : gestion eau et évacuation, traitement poussières fines et traces de pneus, sécurisation (glissance, signalisation), respect des zones techniques et contraintes de ventilation. Méthode adaptée à la surface, au niveau d'encrassement et à la configuration du site.",
     },
     {
-      question: "Doit-on préparer quelque chose avant votre venue ?",
+      question: "Quelle préparation avant votre intervention ?",
       answer:
-        "Selon la prestation, oui : dégager l’accès aux zones, libérer les surfaces à traiter (textiles/sols), prévoir un accès à l’eau si nécessaire, et nous signaler les contraintes (badge, horaires, stationnement). On vous donne des consignes simples en amont.",
+        "Selon la prestation : dégager les accès, libérer les surfaces à traiter (déplacer meubles légers pour textiles), prévoir un accès eau/électricité si nécessaire, communiquer contraintes logistiques (badges, horaires, stationnement). Nous vous transmettons une checklist simple lors de la confirmation du rendez-vous.",
     },
   ],
 
   // =========================
-  // Liens internes (villes)
+  // Liens internes (villes principales)
   // =========================
-internalLinks: [
-  { label: "Meaux", href: "/zones-d-intervention/seine-et-marne/meaux" },
-  { label: "Chelles", href: "/zones-d-intervention/seine-et-marne/chelles" },
-  { label: "Serris", href: "/zones-d-intervention/seine-et-marne/serris" },
-  { label: "Bussy-St-Georges", href: "/zones-d-intervention/seine-et-marne/bussy-saint-georges" },
-  { label: "Pontault-Combault", href: "/zones-d-intervention/seine-et-marne/pontault-combault" },
-  { label: "Lagny-sur-Marne", href: "/zones-d-intervention/seine-et-marne/lagny-sur-marne" },
-],
+  internalLinks: [
+   
+    
+    
+  ],
 
   // =========================
-  // SEO override
+  // SEO (title/description optimisés)
   // =========================
   seo: {
-    title: "Entreprise de nettoyage Seine-et-Marne (77) | Klinova",
+    title: "Nettoyage Professionnel Seine-et-Marne (77) | Entreprise Klinova",
     description:
-      "Entreprise de nettoyage en Seine-et-Marne (77) : moquettes de copropriété, canapés & tapis à domicile, balcons, parkings. Intervention par secteurs (Nord-77 / Sud-77), méthode adaptée, finitions soignées. Devis rapide.",
+      "Entreprise de nettoyage Seine-et-Marne : moquettes copropriété, canapés & tapis domicile, parkings, balcons. Intervention Nord-77 / Sud-77. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
   },
 };

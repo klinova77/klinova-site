@@ -6,8 +6,7 @@ import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
-
-import ZonesIntervention from '~/components/Sections/ZonesIntervention.astro';
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import heroBalconImage from '~/assets/images/balcon-moderne-propre-nettoyage-klinova.webp';
 import picsAntiPigeons from '~/assets/images/pics-anti-pigeons-inox-balcon.webp';
@@ -2335,6 +2334,24 @@ data-hide-floating-cta
 })();
 </script>
 
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={2}
+  title="Nettoyage de balcons : nos secteurs d’intervention"
+  description="Nettoyage et remise en état de balcons en Île-de-France : sols, garde-corps et surfaces extérieures, avec une organisation par secteurs et le respect du voisinage."
+  serviceSlug="nettoyage-balcons"
+  deptSeoTextOverride={{
+    "paris":
+      "Balcons d’immeubles anciens et récents : accès contraints, étages élevés et intervention maîtrisée.",
+    "seine-saint-denis":
+      "Copropriétés denses : balcons très exposés aux poussières urbaines et à l’encrassement rapide.",
+    "val-de-marne":
+      "Résidences et pavillons : balcons exposés aux intempéries, feuilles et dépôts extérieurs."
+  }}
+/>
 
-<ZonesIntervention />
+
+
 </LayoutWithCTA>

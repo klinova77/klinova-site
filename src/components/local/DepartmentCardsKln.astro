@@ -13,6 +13,10 @@ type Props = {
   title?: string;
   description?: string;
   excludeDeptSlug?: string | null;  // utile sur page département : masquer le dept courant
+  serviceSlug?: string | null; // si fourni -> liens ville vers /{dept}/{city}/{serviceSlug}
+  autoDescription?: boolean
+   deptSeoTextOverride?: Partial<Record<string, string>>;
+
 };
 
 const {
@@ -21,9 +25,30 @@ const {
   onlyCovered = false,
   topCitiesPerDept = 3,
   title = "Klinova intervient dans toute l'Île-de-France",
-  description = "Nettoyage professionnel (moquettes, canapés, tapis, balcons, parkings) : interventions organisées par secteurs, avec une méthode constante et des finitions propres.",
+  description = "",
+
   excludeDeptSlug = null,
+  serviceSlug = null,
+  deptSeoTextOverride = {},
+
+
 } = Astro.props as Props;
+
+const resolvedDescription =
+  (description && description.trim().length > 0)
+    ? description
+    : (serviceSlug ? (SERVICE_DESCRIPTION[serviceSlug] ?? "") : "Interventions organisées par secteurs en Île-de-France, avec une méthode constante et des finitions propres.");
+
+    
+  function getDeptText(deptSlug: string) {
+  return (
+    deptSeoTextOverride?.[deptSlug] ??
+    DEPT_SEO_TEXT[deptSlug] ??
+    "Interventions planifiées, méthode constante et finitions propres."
+  );
+}
+
+
 
 const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
 
@@ -41,6 +66,20 @@ const DEPT_SEO_TEXT: Record<string, string> = {
   "val-de-marne": "Copropriétés, pavillons : nettoyage adapté aux matériaux et usages.",
   "val-d-oise": "Sites étendus : tournées optimisées, interventions coordonnées.",
 };
+
+const SERVICE_DESCRIPTION: Record<string, string> = {
+  "nettoyage-moquettes":
+    "Nettoyage de moquettes en Île-de-France : extraction, détachage et séchage maîtrisé, avec une organisation par secteurs pour limiter les nuisances.",
+  "nettoyage-parkings":
+    "Nettoyage de parkings en Île-de-France : autolaveuse, décrassage en profondeur et finitions propres, avec interventions planifiées par secteurs.",
+  "nettoyage-balcons":
+    "Nettoyage de balcons en Île-de-France : remise au propre des sols et surfaces, rinçage contrôlé et finitions nettes, selon l’accès et les contraintes d’immeuble.",
+  "nettoyage-balcons-fientes-pigeons":
+    "Nettoyage de balcons souillés par fientes en Île-de-France : protocole d’hygiène renforcée, désinfection et remise au propre, avec protections adaptées.",
+  "nettoyage-canapes-tapis-matelas":
+    "Nettoyage de canapés, tapis et matelas en Île-de-France : injection-extraction ou méthodes adaptées, détachage ciblé et séchage rapide.",
+};
+
 
 function getTopFeaturedCitiesForDept(deptSlug: string, limit: number) {
   if (limit <= 0) return [];
@@ -68,11 +107,12 @@ const departmentsToRender = DEPARTMENTS
         {title}
       </h2>
 
-      {showDescription && (
-        <p class="text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
-          {description}
-        </p>
-      )}
+     {showDescription && resolvedDescription && (
+  <p class="text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+    {resolvedDescription}
+  </p>
+)}
+
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -98,9 +138,11 @@ const departmentsToRender = DEPARTMENTS
                   </h3>
                 </div>
 
-                <p class="text-sm text-[#475569] leading-snug min-h-[3rem]">
-                  {DEPT_SEO_TEXT[dept.slug] ?? "Interventions planifiées, méthode constante et finitions propres."}
-                </p>
+             <p class="text-sm text-[#475569] leading-snug min-h-[3rem]">
+  {getDeptText(dept.slug)}
+</p>
+
+
               </div>
             </a>
 
@@ -117,7 +159,12 @@ const departmentsToRender = DEPARTMENTS
                     {topCities.map((city) => (
                       <li>
                         <a
-                          href={`/zones-d-intervention/${dept.slug}/${city.slug}`}
+                         href={
+  serviceSlug
+    ? `/zones-d-intervention/${dept.slug}/${city.slug}/${serviceSlug}`
+    : `/zones-d-intervention/${dept.slug}/${city.slug}`
+}
+
                           class="flex items-center text-sm font-medium text-[#475569] hover:text-[#387B58] hover:pl-1 transition-all duration-200 group/link"
                         >
                           <svg class="w-3 h-3 text-[#C0E2D0] mr-2 group-hover/link:text-[#3F8D65]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
