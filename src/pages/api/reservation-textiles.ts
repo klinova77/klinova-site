@@ -1,4 +1,4 @@
-D:\Klinova-site\src\pages\api\reservation-textiles.ts
+// D:\Klinova-site\src\pages\api\reservation-textiles.ts
 export const prerender = false;
 import type { APIRoute } from 'astro';
 import { getSlotById, formatSlotLabel } from '../../config/textilesSlots';
