@@ -19,5 +19,4 @@ Disallow: /*?fbclid=*
 
 # ✅ Sitemaps
 Sitemap: https://klinova.fr/sitemap-index.xml
-Sitemap: https://klinova.fr/sitemap-zones.xml
-Sitemap: https://klinova.fr/sitemap-hubs.xml
+
