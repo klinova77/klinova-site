@@ -202,11 +202,17 @@ const departmentsToRender = DEPARTMENTS
       })}
     </div>
 
-    <div class="mt-12 text-center">
-      <p class="inline-flex items-center gap-2 px-4 py-2 bg-[#DFF1E8] text-[#1E2939] rounded-full text-sm font-medium border border-[#C0E2D0]">
-        <span class="w-2 h-2 rounded-full bg-[#3F8D65]"></span>
-        Intervention organisée par secteurs en Île-de-France
-      </p>
+ <div class="mt-12 text-center">
+      <a 
+        href="/zones-d-intervention" 
+        class="inline-flex items-center gap-2 px-6 py-2 bg-[#DFF1E8] text-[#1E2939] rounded-full text-sm font-semibold border border-[#C0E2D0] hover:bg-[#C0E2D0] hover:shadow-md transition-all duration-300 group"
+      >
+        <span class="w-2 h-2 rounded-full bg-[#3F8D65] animate-pulse"></span>
+        Voir toutes nos zones d'intervention en Île-de-France
+        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
     </div>
   </div>
 </section>

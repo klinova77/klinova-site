@@ -4,6 +4,7 @@
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
 
+import CrossServiceMoquettesNote from "~/components/Sections/CrossServiceMoquettesNote.astro";
 
 
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
@@ -1300,6 +1301,7 @@ const photos = cityNote?.photos ?? [];
   </div>
 </section>
     
+<CrossServiceMoquettesNote city={city} service={service} />
 
 
    

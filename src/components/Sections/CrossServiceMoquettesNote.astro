@@ -1,0 +1,79 @@
+---
+// src/components/Sections/CrossServiceMoquettesNote.astro
+import type { City, ServiceConfig } from "~/types/geo";
+import { aVille } from "~/lib/geo-klinova";
+
+interface Props {
+  city: City;
+  service: ServiceConfig;
+}
+
+const { city, service } = Astro.props as Props;
+
+const shouldRender = service.key !== "moquettes";
+const cityAt = aVille(city.name);
+
+const serviceLabel: Record<string, string> = {
+  parkings: "parkings et garages",
+  balcons: "balcons et terrasses",
+  "balcons-fientes": "balcons souillés par les pigeons",
+  "canapes-tapis": "canapés, tapis et matelas",
+};
+const currentServiceLabel = serviceLabel[service.key] ?? "ce service";
+
+const variants = [
+  // A — Expertise & Séchage (Focus technique)
+  `<p>Klinova intervient également en <strong>nettoyage de moquettes ${cityAt}</strong>. Nous redonnons vie aux sols textiles avec des procédés professionnels et un séchage maîtrisé.</p>`,
+
+  // B — Copropriété & Parties communes (Focus cible rentable)
+  `<p>Au-delà du nettoyage de <strong>${currentServiceLabel}</strong>, nous intervenons pour le <strong>nettoyage de moquettes en copropriété ${cityAt}</strong> (halls, paliers, escaliers).</p>`,
+
+  // C — Hygiène & Allergènes (Focus santé)
+  `<p>Besoin d'un air plus sain ${cityAt}&nbsp;? Nous assurons également le <strong>nettoyage approfondi de vos moquettes</strong>&nbsp;: réduction des allergènes, détachage et neutralisation des odeurs.</p>`,
+
+  // D — Image de marque & Durabilité (NOUVELLE : Focus entretien long terme)
+  `<p>En plus du nettoyage de ${currentServiceLabel}, <strong>protégez également votre moquette ${cityAt}</strong> avec un entretien professionnel. Nous prolongeons la durée de vie de vos textiles tout en préservant l'éclat des fibres.</p>`,
+];
+
+const getIndex = (s: string) => {
+  let hash = 0;
+  for (let i = 0; i < s.length; i++) hash = s.charCodeAt(i) + ((hash << 5) - hash);
+  return Math.abs(hash % variants.length);
+};
+
+const html = variants[getIndex(`${city.slug}:${service.key}`)];
+---
+
+{shouldRender && (
+  <div class="my-10 px-4 reveal">
+    <div class="max-w-4xl mx-auto rounded-2xl border border-[#CFE3D8] bg-[#F9FBFA] p-6 md:p-8">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-5">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-white border border-[#CFE3D8] flex items-center justify-center shadow-sm">
+          <svg class="w-5 h-5 text-[#3F8D65]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.674M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+
+        <div class="flex-1 text-center md:text-left">
+          <div class="text-base md:text-lg text-neutral-700 leading-relaxed mb-3" set:html={html} />
+
+          <a
+            href="/nettoyage-moquettes"
+            class="inline-flex items-center gap-2 font-bold text-[#1E2939] hover:text-[#3F8D65] transition-colors group"
+            data-action="link"
+            data-source="citypage-note"
+            data-intent="cross-service-moquettes"
+            data-service="moquettes"
+          >
+            <span class="underline underline-offset-4 decoration-[#CFE3D8] group-hover:decoration-[#3F8D65]">
+              Voir notre expertise moquettes
+            </span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4-4 4M3 12h18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
