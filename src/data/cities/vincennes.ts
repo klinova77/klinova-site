@@ -40,13 +40,14 @@ const city: City = {
   ],
 
  nearbyCities: [
-  "charenton-le-pont",
-  "fontenay-sous-bois",
   "montreuil",
-  "nogent-sur-marne",
   "saint-mande",
-  "saint-maur-des-fosses",
+  "fontenay-sous-bois",
+  "nogent-sur-marne",
+  "charenton-le-pont",
+  "joinville-le-pont",
 ],
+
 
   landmarks: [
     "Mairie de Vincennes",

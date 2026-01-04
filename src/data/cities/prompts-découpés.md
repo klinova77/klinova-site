@@ -372,20 +372,144 @@ Une autre sur “résidences pavillonnaires”.
 
 6. Indices locaux obligatoires
 
-Pour éviter le contenu générique, chaque service doit mentionner au moins 2 éléments locaux, par exemple :
+### ANCRAGE LOCAL RENFORCÉ (obligatoire pour chaque service)
 
-quartiers
+Chaque texte DOIT contenir **3 mentions locales minimum** :
 
-axes (RN, D…)
+1. **Une mention géographique précise** :
+   - Quartier + caractéristique (ex: "résidences du Plateau avec leurs balcons exposés sud")
+   - Axe + flux (ex: "proximité de la N34 qui génère des particules fines")
 
-gares
+2. **Une mention de typologie de bâti réelle** :
+   - "immeubles de faubourg du centre-ville" ✅
+   - "résidences des années 70 près de la gare" ✅
+   - PAS "les immeubles de la ville" ❌
 
-zones résidentielles
+3. **Une mention d'usage/contexte local** :
+   - Lien avec gare/transport
+   - Lien avec parc/végétation
+   - Lien avec zone commerciale/industrielle
 
-types d'immeubles
+→ Ces 3 mentions doivent être **différentes** de celles des autres services de la même ville.
 
-caractéristiques géographiques (humidité, végétation, bords de rivière…)
 
+### DISTRIBUTION DES MENTIONS LOCALES (règle multi-pages)
+
+**IMPORTANT** : Le contenu généré sera réparti sur **6 pages distinctes** :
+- 1 page hub ville
+- 5 pages services
+
+**Règle de répartition :**
+
+**Page HUB (service 0) :**
+- Peut mentionner 3-4 quartiers/landmarks de manière panoramique
+- Doit rester général (vue d'ensemble de la ville)
+
+**Pages SERVICES (1 à 5) :**
+- Chaque service DOIT utiliser des quartiers/landmarks **DIFFÉRENTS** des autres services
+- Maximum 2-3 mentions locales par service (pour éviter la saturation)
+- Privilégier la **pertinence** : 
+  - Moquettes → résidence de standing, zones avec bureau, pavillons
+  - Parkings → zones commerciales, zones avec immeubles résidentiels
+  - Balcons → zones avec immeubles résidentiels
+  - Fientes pigeons → zones avec immeubles résidentiels
+  - Canapés/tapis → quartiers pavillonnaires
+
+**Exemple de répartition pour une ville avec 6 quartiers :**
+- Hub : mention générale des 3 principaux quartiers
+- Service 1 (moquettes) : Quartier A (près gare)
+- Service 2 (parkings) : Quartier B (zone commerciale)
+- Service 3 (balcons) : Quartier C (résidentiel)
+- Service 4 (fientes) : Quartier D (près parc)
+- Service 5 (canapés) : Quartier E (pavillonnaire)
+
+→ **Aucun quartier ne doit être répété exactement de la même manière sur 2 services.**
+
+### ANTI-DUPLICATE INTER-PAGES (TRÈS IMPORTANT)
+
+Puisque chaque service génère une **page distincte**, les règles anti-duplicate doivent être **STRICTES** :
+
+**Phrases d'ouverture :**
+- ❌ INTERDIT : Commencer 2 services par "À [Ville], les [espaces] nécessitent..."
+- ✅ OBLIGATOIRE : Varier radicalement la structure d'entrée
+
+**Protocole :**
+- ❌ INTERDIT : Copier-coller la même structure "Diagnostic → Préparation → Méthode → Finitions" sur 2 pages
+- ✅ OBLIGATOIRE : Alterner les structures :
+  - Service 1 : Chronologique classique
+  - Service 2 : Par zone/type de surface
+  - Service 3 : Problème → Solution
+  - Service 4 : Focus sécurité → technique
+  - Service 5 : Expérience client → méthode
+
+**FAQ :**
+- ❌ INTERDIT : Réutiliser une question similaire sur 2 pages
+  - Ex : "Combien de temps dure l'intervention ?" ne peut apparaître que sur 1 page maximum
+- ✅ OBLIGATOIRE : 4 questions UNIQUES par page, soit **24 questions différentes** pour la ville
+
+**"Pourquoi nous" :**
+- ❌ INTERDIT : Répéter le même argument sur 2 pages
+  - Ex : "Connaissance approfondie du tissu local" ne peut être utilisé que 1 fois
+- ✅ OBLIGATOIRE : Varier les angles :
+  - Service 1 : Focus matériel
+  - Service 2 : Focus organisation
+  - Service 3 : Focus expertise terrain
+  - Service 4 : Focus sécurité/EPI
+  - Service 5 : Focus adaptabilité
+
+**Pensez multi-pages :**
+Un visiteur pourrait consulter **plusieurs pages de services** pour la même ville.
+Si les 5 pages se ressemblent trop → effet "duplicate content" + perte de crédibilité.
+
+### SIGNATURE STYLISTIQUE PAR PAGE
+
+Chaque page doit avoir une **identité propre** au-delà du service :
+
+**Service 1 (Moquettes) - STYLE [A/B/D]** :
+- Vocabulaire dominant : encrassement, trafic, usure
+- Rythme : phrases moyennes, factuelles
+- Angle : maintenance régulière
+
+**Service 2 (Parkings) - STYLE [B/C]** :
+- Vocabulaire dominant : décrassage, sécurité, lisibilité
+- Rythme : phrases techniques, précises
+- Angle : contraintes industrielles
+
+**Service 3 (Balcons) - STYLE [A/B]** :
+- Vocabulaire dominant : réappropriation, confort, usage
+- Rythme : phrases fluides, empathiques
+- Angle : espace de vie
+
+**Service 4 (Fientes pigeons) - STYLE [B/D]** :
+- Vocabulaire dominant : assainissement, contamination, protocole
+- Rythme : phrases courtes, sécuritaires
+- Angle : risque sanitaire
+
+**Service 5 (Canapés/tapis) - STYLE [A/D]** :
+- Vocabulaire dominant : hygiène, allergènes, famille
+- Rythme : phrases accessibles, rassurantes
+- Angle : santé domestique
+
+→ Un visiteur qui lit 2 pages doit **sentir qu'il change d'univers**.
+
+
+
+### ROTATION LEXICALE OBLIGATOIRE
+
+Pour les mots-clés récurrents, tu DOIS varier les synonymes d'un service à l'autre :
+
+**"Nettoyage" → variantes :**
+- Service 1 : nettoyage, entretien
+- Service 2 : décrassage, assainissement
+- Service 3 : remise en état, traitement
+- Service 4 : assainissement, décontamination
+- Service 5 : rafraîchissement, rénovation
+
+**"Intervention" → variantes :**
+- passage, opération, traitement, action, prestation
+
+**"Résultat" → variantes :**
+- rendu, état final, finition, aspect, propreté obtenue
 
 
 🗣️ Ton & style
@@ -403,13 +527,47 @@ Interdictions de style (local) :
 – “les copropriétés de Chelles”, “les habitants de Chelles”,
 – “les logements situés près de la gare de Chelles-Gournay”, etc.
 
----
+✅ Langage strictement grand public.
+Éviter tout vocabulaire administratif, sociologique ou technocratique.
+
+❌ Mots interdits (exemples) :
+– pendulaires
+– noiséen, balbynien, courneuvien, etc.
+– mobilité pendulaire
+– flux pendulaires
+
+✅ Préférer des formulations simples et naturelles :
+– “habitants qui se déplacent chaque jour pour travailler”
+– “trajets quotidiens en RER / métro”
+– “personnes qui prennent les transports tous les jours”
+
 
 🔁 Anti-duplicate
 
 - Ne pas commencer tous les textes par la même formule (“À [Ville], …”).
 - Varier les tournures et la façon de poser le problème.
 - Toujours garder quelques mentions locales cohérentes (quartiers, axes, types d’immeubles) mais sans forcer à chaque phrase.
+
+
+### PHRASES ABSOLUMENT INTERDITES (bannies après 2 utilisations)
+
+**Ouvertures génériques :**
+- "Un nettoyage professionnel bien structuré permet de..."
+- "Nos équipes utilisent une méthode rigoureuse..."
+- "Ce nettoyage redonne une propreté visible dès..."
+
+**Transitions clichés :**
+- "L'intervention se déroule en plusieurs étapes..."
+- "Notre protocole repose sur..."
+- "Nous intervenons avec du matériel adapté..."
+
+**Closings génériques :**
+- "Retrouvez ainsi un [espace] propre et agréable..."
+- "Pour un résultat durable et professionnel..."
+
+→ **Consigne** : Reformule TOTALEMENT chaque fois, change la structure syntaxique.
+
+
 
 ---
 
@@ -539,12 +697,9 @@ Pour chaque service, tu écriras un texte structuré en 6 blocs, toujours dans c
 
 
 
-AUCUN code, AUCUNE structure TypeScript.
+AUCUN code, 
 
-ci-dessous tu trouveras des données dont tu peux te servir pour rédiger tes réponses
 
-Si tu as bien compris, réponds simplement :
-“OK, j’ai compris le contexte Klinova. Prêt pour le service 0 (hub ville).”
 
 
 
@@ -552,6 +707,28 @@ Si tu as bien compris, réponds simplement :
 
 
 service 0:  Page CITY hub
+
+### SERVICE 0 - PAGE HUB : Rôle spécifique
+
+**ATTENTION** : Cette page est **différente** des 5 pages services.
+
+**Objectif de la page HUB :**
+- Présenter Klinova comme partenaire global pour [VILLE]
+- Donner une vision panoramique des enjeux de propreté locaux
+- Servir de **porte d'entrée** vers les 5 services détaillés
+
+**Ton de la page HUB :**
+- Plus institutionnel que les pages services
+- Focus sur la relation syndic/gestionnaire
+- Pas de protocole technique détaillé (c'est pour les pages services)
+
+**Contenu spécifique HUB :**
+- customDescription : vision d'ensemble propreté ville
+- hubIntro : positionnement Klinova comme partenaire local
+- FAQ : questions générales sur l'entreprise (pas sur un service précis)
+- citySpecificChallenges : défis de propreté globaux de la ville
+
+→ La page HUB doit donner envie d'explorer les pages services.
 
 En respectant strictement le brief Klinova et les protocoles que tu as reçus plus haut, écris:
 
@@ -658,7 +835,7 @@ etc.
 
 
 “Important :
-- N'utilise pas de structure de page complète (pas de <html>, <body>). EN REVANCHE, tu DOIS utiliser les balises <p> pour les paragraphes et <strong> pour le gras à l'intérieur du texte, pour que ce soit prêt à intégrer dans le code.
+- N'utilise pas de structure de page complète (pas de <html>, <body>). EN REVANCHE, tu DOIS utiliser les balises <p> pour les paragraphes et <strong> pour le gras à l'intérieur du texte, ou d'autres balises pour la mise en forme du texte, pour que ce soit prêt à intégrer dans le code.
 - Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
@@ -710,6 +887,16 @@ Toujours exprimer le résultat concret pour le client.
 
 Décris la situation typique dans la ville :
 
+### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
+
+Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
+
+**INTRO :**
+- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure B : Commencer par un constat visuel ("Les traces de...")
+- Structure C : Commencer par une question implicite ("Comment expliquer que...")
+- Structure D : Commencer par une temporalité ("Après quelques mois...")
+
 moquettes de parties communes (halls, paliers, cages d’escaliers), bureaux,
 
 ce que voient les résidents / usagers (taches, usure, salissures, ternissement),
@@ -719,6 +906,11 @@ les conséquences : image de l’immeuble, inconfort, impression de laisser-alle
 Termine en ouvrant vers l’idée qu’un nettoyage professionnel structuré change la donne.
 
 3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
+**PROTOCOLE :**
+- Structure A : Ordre chronologique classique
+- Structure B : Partir du résultat pour remonter à la méthode
+- Structure C : Découpage par zone/type de surface
+- Structure D : Focus problème → solution pour chaque étape
 
 Décris la façon dont Klinova travaille, de manière concrète :
 
@@ -777,6 +969,20 @@ Pas de code, pas de TypeScript.
 Pas de prix, pas de remises, pas de “numéro 1”.
 
 Style : terrain, pro, concret, crédible.
+
+### FAQ - PATTERNS INTERDITS
+
+**Questions à éviter absolument** (trop génériques) :
+- "Combien de temps dure l'intervention ?"
+- "Quels produits utilisez-vous ?"
+- "Est-ce que c'est dangereux ?"
+
+**À la place, privilégier** :
+- Questions liées au bâti local ("Les immeubles anciens de [quartier] posent-ils problème ?")
+- Questions liées aux contraintes terrain ("Comment gérez-vous [contrainte locale spécifique] ?")
+- Questions liées à l'usage réel ("Puis-je utiliser [espace] tout de suite après ?")
+
+→ Chaque FAQ doit contenir AU MOINS un élément local (quartier, type de bâti, contrainte).
 
 
 
@@ -854,6 +1060,15 @@ Une phrase unique de 20–35 mots, qui insiste sur un parking propre, non glissa
 (Cette phrase jouait auparavant le rôle de phrase d’ouverture dans l’INTRO.)
 
 2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage  :
+### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
+
+Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
+
+**INTRO :**
+- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure B : Commencer par un constat visuel ("Les traces de...")
+- Structure C : Commencer par une question implicite ("Comment expliquer que...")
+- Structure D : Commencer par une temporalité ("Après quelques mois...")
 
 Décris l’état habituel des parkings dans cette ville :
 
@@ -866,7 +1081,11 @@ Relie cela aux usages : va-et-vient quotidien, proximité d’axes routiers, zon
 Termine en expliquant qu’un décrassage complet améliore sécurité, lisibilité et image de l’immeuble.
 
 3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
-
+**PROTOCOLE :**
+- Structure A : Ordre chronologique classique
+- Structure B : Partir du résultat pour remonter à la méthode
+- Structure C : Découpage par zone/type de surface
+- Structure D : Focus problème → solution pour chaque étape
 Décris le déroulé d’une intervention Klinova :
 
 diagnostic (revêtement béton/peinture, évacuation des eaux, accès, hauteur),
@@ -964,7 +1183,6 @@ R4 : ...
 
 “Important :
 – pas de code.
-– Texte brut uniquement.
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
@@ -1014,6 +1232,17 @@ un balcon ou une terrasse propre, agréable à utiliser, où l’on a de nouveau
 La phrase doit mettre en avant le fait de retrouver un espace extérieur propre, utilisable et valorisant le logement dans le contexte de [VILLE].
 
 2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
+
+Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
+
+**INTRO :**
+- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure B : Commencer par un constat visuel ("Les traces de...")
+- Structure C : Commencer par une question implicite ("Comment expliquer que...")
+- Structure D : Commencer par une temporalité ("Après quelques mois...")
+
+
 
 Décris le vécu d’un occupant avec un balcon encrassé :
 
@@ -1028,6 +1257,11 @@ Relie ça au contexte local (pollution, arbres, orientation…).
 Termine en suggérant qu’une remise en état pro permet de “réinvestir” le balcon.
 
 3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
+**PROTOCOLE :**
+- Structure A : Ordre chronologique classique
+- Structure B : Partir du résultat pour remonter à la méthode
+- Structure C : Découpage par zone/type de surface
+- Structure D : Focus problème → solution pour chaque étape
 
 Décris l’intervention typique :
 
@@ -1170,6 +1404,17 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 Une phrase unique de 20–35 mots qui souligne qu’après intervention, le balcon redevient sain, désinfecté et utilisable en toute sécurité à [VILLE].
 
 2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
+
+Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
+
+**INTRO :**
+- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure B : Commencer par un constat visuel ("Les traces de...")
+- Structure C : Commencer par une question implicite ("Comment expliquer que...")
+- Structure D : Commencer par une temporalité ("Après quelques mois...")
+
+
 
 Décris la situation :
 
@@ -1182,6 +1427,12 @@ Relie à la présence de pigeons dans cette ville (parcs, combles, toits, cornic
 Termine en expliquant qu’un traitement professionnel sécurisé est nécessaire.
 
 3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
+**PROTOCOLE :**
+- Structure A : Ordre chronologique classique
+- Structure B : Partir du résultat pour remonter à la méthode
+- Structure C : Découpage par zone/type de surface
+- Structure D : Focus problème → solution pour chaque étape
+
 
 Décris le protocole Klinova :
 
@@ -1279,7 +1530,7 @@ R4 : ...
 
 “Important :
 – pas de code.
-– Texte brut uniquement.
+– 
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
@@ -1321,6 +1572,12 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 Une phrase unique de 20–35 mots qui met en avant le fait de retrouver des canapés, tapis et matelas propres, plus sains et agréables à utiliser à [VILLE].
 
 2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+**INTRO :**
+- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure B : Commencer par un constat visuel ("Les traces de...")
+- Structure C : Commencer par une question implicite ("Comment expliquer que...")
+- Structure D : Commencer par une temporalité ("Après quelques mois...")
+
 
 Décris le quotidien :
 
@@ -1335,6 +1592,11 @@ inconfort, gêne vis-à-vis des invités, allergies possibles, impression de sal
 Termine en expliquant qu’un nettoyage pro redonne confort et hygiène.
 
 3) PROTOCOLE / FAÇON DE TRAVAILLER — 150 à 180 mots
+**PROTOCOLE :**
+- Structure A : Ordre chronologique classique
+- Structure B : Partir du résultat pour remonter à la méthode
+- Structure C : Découpage par zone/type de surface
+- Structure D : Focus problème → solution pour chaque étape
 
 Décris comment Klinova intervient à domicile :
 
@@ -1435,5 +1697,45 @@ R4 : ...
 
 “Important :
 – pas de code.
-– Texte brut uniquement.
+– 
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
+
+
+---
+
+## ✅ CHECKLIST FINALE AVANT ENVOI (vérifie mentalement)
+
+Pour CHAQUE service, as-tu :
+- ✅ Utilisé un STYLE différent des autres services ?
+- ✅ Évité les 10 phrases bannies listées plus haut ?
+- ✅ Intégré 3 mentions locales DIFFÉRENTES des autres services ?
+- ✅ Varié les synonymes des mots-clés récurrents ?
+- ✅ Changé la structure syntaxique du protocole par rapport aux autres services ?
+- ✅ Créé 4 FAQ uniques avec au moins 1 élément local par question ?
+- ✅ Évité de commencer 2 services par la même formule d'ouverture ?
+
+Si OUI partout → tu peux envoyer.
+Si NON quelque part → reformule avant d'envoyer.
+
+---
+
+## 🔄 CROSS-CHECK MENTAL MULTI-PAGES
+
+Avant de finaliser, vérifie mentalement :
+
+**Question 1 :** Si un visiteur lit la page HUB + 2 pages services, va-t-il voir :
+- ✅ 3 textes avec des angles différents ?
+- ✅ 3 textes avec des quartiers/landmarks différents ?
+- ✅ 3 textes avec des structures de phrase variées ?
+
+**Question 2 :** Est-ce que j'ai utilisé :
+- ❌ La même phrase d'ouverture sur 2 pages ?
+- ❌ Le même argument "Pourquoi nous" sur 2 pages ?
+- ❌ La même question FAQ sur 2 pages ?
+
+**Question 3 :** Est-ce que les 5 styles (A/B/C/D) sont bien répartis ?
+- Pas 3 services en STYLE B
+- Pas 2 services consécutifs avec le même style
+
+Si tout est OK → envoie.
+Si doute → reformule avant.

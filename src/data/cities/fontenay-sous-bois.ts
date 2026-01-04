@@ -49,15 +49,15 @@ districts: [
   "Voisins du Bois"
 ],
 
-
 nearbyCities: [
-  "charenton-le-pont",
-  "montreuil",
   "nogent-sur-marne",
-  "noisy-le-grand",
-  "saint-mande",
+  "montreuil",
   "vincennes",
+  "joinville-le-pont",
+  "neuilly-sur-marne",
+  "saint-mande",
 ],
+
 
   landmarks: [
     "Mairie de Fontenay-sous-Bois",
