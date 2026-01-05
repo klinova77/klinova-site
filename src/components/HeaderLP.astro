@@ -3,7 +3,7 @@
 // Header optimisé pour landing pages Google Ads
 
 import Button from './UI/Button.astro';
-import { PHONE_DISPLAY } from "~/lib/phone";
+import { PHONE_E164, PHONE_DISPLAY, toTelHref } from "~/lib/phone";
 
 interface Props {
   ctaText?: string;
