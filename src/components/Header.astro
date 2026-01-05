@@ -3,7 +3,7 @@
 // On importe NAV_SERVICES si disponible, puis on met un fallback local
 import type { NavLink } from '~/lib/nav';
 import { NAV_SERVICES as NAV_SERVICES_IN } from '~/lib/nav';
-import { LINKS, PHONE_DISPLAY, linkAttrs } from '~/lib/links';
+import { PHONE_E164, PHONE_DISPLAY, toTelHref } from "~/lib/phone";
 
 import Button from './UI/Button.astro';
 
@@ -105,13 +105,13 @@ const DISPLAY_SERVICES = NAV_SERVICES.filter(s => s.enabled !== false);
         <!-- Numéro téléphone (desktop uniquement) -->
       <!-- Bouton téléphone -->
 <Button
-  href="tel:+33676738661"
-  label="06 76 73 86 61"
+  href={toTelHref(PHONE_E164)}
+  label={PHONE_DISPLAY}
   variant="secondary"
   size="lg"
-  tracking={{ action: 'click_phone_header', source: 'header' }}
+  tracking={{ action: "click_phone_header", source: "header" }}
   withTrackingParams={false}
-   class="header-btn hidden lg:flex items-center gap-2"
+  class="header-btn hidden lg:flex items-center gap-2"
 >
   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
