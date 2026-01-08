@@ -56,11 +56,9 @@ Phrases plus structurées.
 
 STYLE C — Organisation & gestion
 
-Accent sur la coordination, la planification, la rotation, la gêne minimale.
-
-Point de vue gestionnaire / conseil syndical.
-
-Rythme posé, rassurant.
+Accent sur la coordination, la planification, la gêne minimale et la continuité d’usage.
+Point de vue responsable de site : syndic, direction d’hôtel, office manager, commerçant, exploitant, occupant organisateur.
+Rythme posé, rassurant, orienté contraintes réelles (accès, horaires, circulation, sécurité).
 
 
 
@@ -179,9 +177,9 @@ Matériaux, méthodes, contraintes techniques, efficacité.
 Ton précis, factuel, professionnel.
 
 STYLE C – Organisation & Gestion
-Point de vue syndic / gestionnaire.
-Accès, planning, rotation, circulation, tranquillité des résidents.
-Ton structuré, fluide, orienté coordination.
+Accent sur la coordination, la planification, la gêne minimale et la continuité d’usage.
+Point de vue responsable de site : syndic ou direction d’hôtel ou office manager ou commerçant ou occupant organisateur.
+Rythme posé, rassurant, orienté contraintes réelles (accès, horaires, circulation, sécurité).
 
 STYLE D – Problème & Solution
 Point de vue pédagogique.
@@ -226,15 +224,24 @@ KLINOVA intervient notamment sur :
 4) Balcons souillés par des fientes de pigeons (nettoyage + désinfection + pose de solutions anti-pigeons: pics,filets)
 5) Nettoyage de canapés / tapis / matelas chez les particuliers
 
+
+✅ RÈGLE MULTI-SEGMENTS (OBLIGATOIRE)
+Services 3/4/5 (balcons, fientes, canapés/tapis/matelas) : particuliers uniquement.
+
+Service 2 (parkings) : professionnels uniquement.
+
+Service 1 (moquettes) : professionnels + particuliers (diversifier les pros, pas “copro only”).
+
+
 ---
 
 🧠 Objectif des textes par service
 
 Chaque service + ville doit permettre de répondre à 3 questions clés du visiteur :
 
-1) “Est-ce bien adapté à ma situation / mon immeuble / mon logement ?”
+1) “Est-ce bien adapté à ma situation / mon établissemen / mon bureau / mon local / mon immeuble / mon logement ?”
 2) “Est-ce qu’ils savent vraiment faire, techniquement, dans ma ville ?”
-3) “Comment ça se passe concrètement si je les appelle ?”
+3) “Comment ça s’organise concrètement selon mon contexte (résidents, salariés, clients, vie à domicile) ?”
 
 Et doit naturellement pousser vers un contact (demande de devis, appel) sans discours commercial agressif.
 
@@ -280,6 +287,11 @@ Interdiction de commencer plus de deux villes par :
 “Autour de la gare / des axes / des quartiers, on observe…”
 
 “Selon la configuration des immeubles…”
+"Dans les couloirs et les salles de réunion…”
+
+“Autour des gares et des zones d’activités, les entrées se chargent vite…”
+
+“À domicile, la moquette marque surtout dans les zones de passage…”
 
 2. Expressions bannies si déjà utilisées dans 2 villes
 
@@ -392,6 +404,15 @@ Chaque texte DOIT contenir **3 mentions locales minimum** :
 
 → Ces 3 mentions doivent être **différentes** de celles des autres services de la même ville.
 
+Les mentions locales doivent être compatibles avec le service :
+
+Moquettes : inclure au moins 1 repère tertiaire (zone d’activités, hôtels proches gare, axes vers bureaux) si la ville s’y prête.
+
+Canapés/tapis / balcons : privilégier pavillonnaire/résidentiel.
+
+balcons-fientes: privilégier les zones avec des résidences collectives (immmeubles d'habitation)
+
+Parkings : zones commerciales / copro / pôles denses.
 
 ### DISTRIBUTION DES MENTIONS LOCALES (règle multi-pages)
 
@@ -404,6 +425,14 @@ Chaque texte DOIT contenir **3 mentions locales minimum** :
 **Page HUB (service 0) :**
 - Peut mentionner 3-4 quartiers/landmarks de manière panoramique
 - Doit rester général (vue d'ensemble de la ville)
+
+Règle SIGNATURE (obligatoire)
+
+Utiliser la “Signature ville” une seule fois, uniquement sur la page HUB (service 0).
+
+Sur les pages services (1 à 5) : interdiction de reprendre la signature telle quelle, même reformulée à 90%.
+
+Chaque page service doit s’appuyer sur 2 ancrages secondaires issus de la section 7, et ces ancrages doivent être différents entre les services.
 
 **Pages SERVICES (1 à 5) :**
 - Chaque service DOIT utiliser des quartiers/landmarks **DIFFÉRENTS** des autres services
@@ -499,11 +528,11 @@ Chaque page doit avoir une **identité propre** au-delà du service :
 Pour les mots-clés récurrents, tu DOIS varier les synonymes d'un service à l'autre :
 
 **"Nettoyage" → variantes :**
-- Service 1 : nettoyage, entretien
+- Service 1 : nettoyage, entretien, détachage, élimination des odeurs
 - Service 2 : décrassage, assainissement
 - Service 3 : remise en état, traitement
 - Service 4 : assainissement, décontamination
-- Service 5 : rafraîchissement, rénovation
+- Service 5 : nettoyage, rafraîchissement, rénovation
 
 **"Intervention" → variantes :**
 - passage, opération, traitement, action, prestation
@@ -683,7 +712,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 2) hubIntro
 3) FAQ
 4) citySpecificChallenges
-4) districs
+4) districts
 5) landmarks
 
 Pour chaque service, tu écriras un texte structuré en 6 blocs, toujours dans cet ordre :
@@ -697,7 +726,8 @@ Pour chaque service, tu écriras un texte structuré en 6 blocs, toujours dans c
 
 
 
-AUCUN code, 
+Pas de TypeScript, pas de JS, pas de structure HTML complète.
+Autorisé : balises inline simples (<p>, <strong>) pour que ce soit intégrable.
 
 
 
@@ -719,7 +749,7 @@ service 0:  Page CITY hub
 
 **Ton de la page HUB :**
 - Plus institutionnel que les pages services
-- Focus sur la relation syndic/gestionnaire
+- Focus sur la gestion des lieux (copropriétés, entreprises, commerces) et sur les besoins à domicile quand ils s’appliquent (balcons, textiles, moquettes).
 - Pas de protocole technique détaillé (c'est pour les pages services)
 
 **Contenu spécifique HUB :**
@@ -736,13 +766,16 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 
 * Mini "diagnostic propreté" de la ville, pas une fiche touristique.
 * Doit citer au moins un élément local réel :
-
+  * 1 élément de la signature (pas la ligne entière),
   * Gare (RER, métro, Transilien),
   * Axe routier principal,
   * Quartier, zone résidentielle, ZAC, bords de fleuve, etc.
 * Parler de propreté, surfaces, entretien. ne pas faire une liste de services de nettoyage qui pourrait faire croire que klinova se limite à ces services dans cette liste. 
 Ne pas parler d'un service en particulier, ou limiter un service à certains quartiers (exemple: ne pas écrire: "À Chelles, les copropriétés du centre-ville près de la gare RER E et les résidences des Coudreaux nécessitent un entretien régulier : moquettes de halls etc )
-exemple: " "Deuxième ville de Seine-et-Marne, Chelles allie une desserte RER/Transilien performante à une forte activité commerciale. L'entretien des moquettes dans les halls de copropriété, des parkings des résidences et des balcons des particuliers y est une demande constante pour maintenir le cadre de vie.",
+exemple: " “Entre gare, axes routiers et zones résidentielles, les entrées d’immeubles, circulations et abords extérieurs se chargent vite en poussières et traces. Un entretien structuré aide à maintenir une propreté visible et régulière sur les zones les plus sollicitées.”
+
+Interdiction : mettre la phrase “Signature : …” telle quelle.
+Objectif : une phrase qui “sonne vraie” sans être un slogan.
 
 2) faq:
 Tâche : Rédige une section FAQ (Foire Aux Questions) de 4 à 5 questions/réponses spécifiquement pour la page dédiée à la ville 
@@ -769,6 +802,8 @@ Les questions doivent refléter de vraies préoccupations terrain (syndic, occup
 Tâche : Rédige le texte d'introduction (champ hubIntro) pour la page dédiée à la ville de : [INSÉRER NOM VILLE ICI]. c'est un Pitch commercial : Présente Klinova comme un partenaire clé à [VILLE].
   • Parle de "gestion globale", de "proximité" et de "partenariat avec les syndics/entreprises".
   • Ne focalise pas sur un seul service.
+
+  Tu peux utiliser la signature complète “Signature : …” mais une seule fois (ex : en fin du 1er paragraphe ou au début du 2e).Ensuite tu passes à “propreté / maintenance / organisation”, sans relister des services.
 
 Cible : Syndics de copropriété, gestionnaires d'immeubles et professionnels. Le ton doit être expert, sobre et rassurant. Pas de superlatifs marketing (ex: évite "les meilleurs", "incroyable"). Préfère "rigoureux", "éprouvé", "protocolisé".
 Mots-clés à placer naturellement :
@@ -804,14 +839,14 @@ Consignes de Rédaction :
 
     Plausibilité : Ne mentionne pas de lieux inexistants. Reste sur des constats qui pourraient s'appliquer à 80% des immeubles de cette ville.
 
-Format de Sortie (JSON Array uniquement) :
+Format de Sortie :
 
-  "Phrase 1",
-  "Phrase 2",
-  "Phrase 3"
+  Phrase 1:
+  Phrase 2:
+  Phrase 3:
 
 
-5) districts: liste tous les quartier de la ville
+5) districts: liste le maximum de quartiers officiels et quartiers usuels de la ville 
 * Interdiction d’inventer un quartier.
 
 
@@ -841,6 +876,12 @@ etc.
 
 SERVICE 1 – NETTOYAGE DE MOQUETTES
 
+Obligation de diversité : dse réferer à la fiche factuelle
+
+Interdit : écrire comme si le décideur unique était “le syndic”.
+
+Ça garantit que l’IA ne retombe pas en mode “copro only”.
+
 STYLE choisi pour ce service : A/B/C/D ?
 
 Ville cible : [NOM DE LA VILLE]
@@ -868,7 +909,7 @@ les textes doivent être équilibrés et s'adresser autant aux professionnels qu
 “entreprise nettoyage moquettes immeuble [VILLE]”
 
 “nettoyage moquette cage d’escalier [VILLE]”
-“nettoyage moquetteparties communes [VILLE]”
+“nettoyage moquette parties communes [VILLE]”
 
 
 En respectant strictement le brief Klinova et les protocoles que tu as reçus plus haut, écris:
@@ -881,9 +922,9 @@ Ne jamais répéter le H1 ou reformuler simplement “nettoyage de X à Y”.
 
 Toujours exprimer le résultat concret pour le client.
 
-1 phrase qui insiste sur l’état des parties communes (propreté visible, image de l’immeuble, confort des résidents) dans le contexte de [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleur et les besoins du clients, puis sur les bénéfices qu'il aurait à bénéficier d'un nettoyage 
 
 Décris la situation typique dans la ville :
 
@@ -892,7 +933,7 @@ Décris la situation typique dans la ville :
 Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
 
 **INTRO :**
-- Structure A : Commencer par une observation terrain ("Dans les halls de...")
+- Structure A : Commencer par une observation terrain ("Dans les halls de...", "Dans les couloirs de ..." etc)
 - Structure B : Commencer par un constat visuel ("Les traces de...")
 - Structure C : Commencer par une question implicite ("Comment expliquer que...")
 - Structure D : Commencer par une temporalité ("Après quelques mois...")
@@ -901,7 +942,7 @@ moquettes de parties communes (halls, paliers, cages d’escaliers), bureaux,
 
 ce que voient les résidents / usagers (taches, usure, salissures, ternissement),
 
-les conséquences : image de l’immeuble, inconfort, impression de laisser-aller, gêne pour le syndic.
+conséquences : image du lieu, confort, plaintes/usagers, impression de négligé, contraintes d’exploitation (accueil, circulation, chambres/bureaux), ou inconfort à domicile
 
 Termine en ouvrant vers l’idée qu’un nettoyage professionnel structuré change la donne.
 
@@ -1037,7 +1078,7 @@ Contraintes typiques (poussière noire, huile, rampes étroites, etc.)
 
 🎯 Cible principale
 
-Syndics, gestionnaires de copropriétés, bailleurs
+Syndics, gestionnaires de copropriétés, entreprises qui ont des parkings, supermarchés
 
 Gestionnaires de parkings d’entreprise ou de commerces
 
@@ -1059,7 +1100,7 @@ Une phrase unique de 20–35 mots, qui insiste sur un parking propre, non glissa
 
 (Cette phrase jouait auparavant le rôle de phrase d’ouverture dans l’INTRO.)
 
-2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage  :
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la  et les besoins du clients, puis sur les bénéfices qu'il aurait à bénéficier d'un nettoyage  :
 ### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
 
 Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
@@ -1231,7 +1272,7 @@ un balcon ou une terrasse propre, agréable à utiliser, où l’on a de nouveau
 
 La phrase doit mettre en avant le fait de retrouver un espace extérieur propre, utilisable et valorisant le logement dans le contexte de [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleur et les besoins du clients, puis sur les bénéfices qu'il aurait à bénéficier d'un nettoyage 
 ### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
 
 Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
@@ -1403,7 +1444,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 
 Une phrase unique de 20–35 mots qui souligne qu’après intervention, le balcon redevient sain, désinfecté et utilisable en toute sécurité à [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleur et les besoins du clients, puis sur les bénéfices qu'il aurait à bénéficier d'un nettoyage 
 ### VARIATEUR DE STYLE - Phrases d'amorce obligatoires
 
 Pour éviter les débuts répétitifs, tu DOIS utiliser une de ces structures (choix aléatoire) :
@@ -1534,7 +1575,7 @@ R4 : ...
 – Remplace [VILLE] par le vrai nom de la ville fournie (ne laisse jamais de crochets).”
 
 
-```
+
 
 
 
@@ -1571,7 +1612,7 @@ En respectant strictement le brief Klinova et les protocoles que tu as reçus pl
 
 Une phrase unique de 20–35 mots qui met en avant le fait de retrouver des canapés, tapis et matelas propres, plus sains et agréables à utiliser à [VILLE].
 
-2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleurs et les besoins du cllients, puis sur les bénéfices qu'il aurait à bénécifier d'un nettoyage 
+2) INTRO (problème / enjeux / contexte) — 150 à 200 mots: insister d'abord sur la douleur et les besoins du clients, puis sur les bénéfices qu'il aurait à bénéficier d'un nettoyage 
 **INTRO :**
 - Structure A : Commencer par une observation terrain ("Dans les halls de...")
 - Structure B : Commencer par un constat visuel ("Les traces de...")
