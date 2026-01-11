@@ -35,13 +35,14 @@ const city: City = {
   ],
 
   districts: ["Polangis", "Palissy", "Île Fanac", "Marne", "Paris", "Vautier-Leclerc", "Europe"],
-  nearbyCities: [
-  "nogent-sur-marne",
-  "saint-maur-des-fosses",
+  
+nearbyCities: [
+  "saint-maur-des-fossés",
   "maisons-alfort",
-  "fontenay-sous-bois",
-  "creteil",
-  "vincennes",
+  "nogent-sur-marne",
+  "le-perreux-sur-marne",
+  "champigny-sur-marne",
+  "charenton-le-pont",
 ],
 
 

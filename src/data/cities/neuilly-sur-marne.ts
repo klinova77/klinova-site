@@ -31,13 +31,14 @@ const city: City = {
     slug: "seine-saint-denis",
   },
 
- nearbyCities: [
-  "champs-sur-marne",
+ 
+nearbyCities: [
+  "neuilly-plaisance",
   "gagny",
-  "gournay-sur-marne",
-  "le-raincy",
-  "montfermeil",
+  "villemomble",
+  "le-perreux-sur-marne",
   "noisy-le-grand",
+  "gournay-sur-marne",
 ],
 
   districts: [

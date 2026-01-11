@@ -50,12 +50,12 @@ districts: [
 ],
 
 nearbyCities: [
-  "nogent-sur-marne",
-  "montreuil",
   "vincennes",
-  "joinville-le-pont",
-  "neuilly-sur-marne",
-  "saint-mande",
+  "montreuil",
+  "rosny-sous-bois",
+  "neuilly-plaisance",
+  "le-perreux-sur-marne",
+  "nogent-sur-marne",
 ],
 
 

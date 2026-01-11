@@ -47,13 +47,13 @@ const city: City = {
     "Villiers – Barbusse",
   ],
 
-  nearbyCities: [
-  "charenton-le-pont",
-  "fontenay-sous-bois",
-  "le-raincy",
-  "neuilly-sur-marne",
-  "saint-mande",
+nearbyCities: [
   "vincennes",
+  "saint-mandé",
+  "rosny-sous-bois",
+  "fontenay-sous-bois",
+  "bagnolet",
+  "romainville",
 ],
 
   landmarks: [

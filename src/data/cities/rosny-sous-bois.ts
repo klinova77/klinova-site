@@ -43,17 +43,28 @@ const city: City = {
     "Boissière",
     "Coteaux Beauclair",
     "Marnaudes – Bois-Perrier",
-    "Pré-Gentil (secteur identifié en politique de la ville)",
+    "Pré-Gentil",
+    "Bois Perrier / Les Marnaudes",
   ],
-  nearbyCities: [],
+  nearbyCities: [
+  "neuilly-plaisance",
+  "montreuil",
+  "fontenay-sous-bois",
+  "villemomble",
+  "noisy-le-sec",
+  "bondy",
+],
 
   landmarks: [
     "Mairie de Rosny-sous-Bois",
     "Gare de Rosny-sous-Bois (RER E)",
-    "Gare de Rosny–Bois-Perrier (RER E)",
+    "Gare de Rosny–Bois-Perrier (RER E / Métro 11)",
     "Westfield Rosny 2",
     "Centre commercial Domus",
     "Parc nature du plateau d’Avron",
+    "Domus",
+    "Échangeur A86 / A3",
+    "Golf de Rosny-sous-Bois.",
   ],
 
   faq: [
@@ -291,7 +302,7 @@ const city: City = {
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive: `<h3>1) Sécurité et confinement.</h3>
-<p>EPI obligatoires : combinaison, gants, lunettes, <strong>masque respiratoire</strong> type FFPMise en protection : bâches côté intérieur, limitation de la dispersion des poussières et projections.</p>
+<p>EPI obligatoires : combinaison, gants, lunettes, <strong>masque respiratoire</strong> type FFP3. Mise en protection : bâches côté intérieur, limitation de la dispersion des poussières et projections.</p>
 
 <h3>2) Retrait contrôlé des matières.</h3>
 <p>Humidification préalable des fientes sèches pour éviter l’aérosolisation. Ramassage manuel des fientes, nids et débris, conditionnement en sacs étanches. Nettoyage des surfaces (sol, garde-corps, murs mitoyens, vitrerie accessible) avec produit adapté, pression modérée si nécessaire.</p>

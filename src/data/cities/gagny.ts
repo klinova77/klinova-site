@@ -44,12 +44,12 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "chelles",
-  "gournay-sur-marne",
-  "le-raincy",
-  "montfermeil",
+  "neuilly-plaisance",
   "neuilly-sur-marne",
-  "villeparisis",
+  "montfermeil",
+  "le-raincy",
+  "villemomble",
+  "clichy-sous-bois",
 ],
 
   landmarks: [

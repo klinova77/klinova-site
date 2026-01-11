@@ -47,14 +47,13 @@ const city: City = {
   "Beauté – Baltard",
 ],
 
-
 nearbyCities: [
+  "le-perreux-sur-marne",
   "fontenay-sous-bois",
   "joinville-le-pont",
+  "saint-maur-des-fossés",
   "vincennes",
-  "montreuil",
   "neuilly-sur-marne",
-  "saint-maur-des-fosses",
 ],
 
 

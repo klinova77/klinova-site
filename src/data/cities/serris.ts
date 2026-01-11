@@ -61,22 +61,22 @@ const city: City = {
   faq: [
     {
       question:
-        "Q1 : Intervenez-vous rapidement malgré le trafic touristique intense du Val d'Europe ?",
+        "Intervenez-vous rapidement malgré le trafic touristique intense du Val d'Europe ?",
       answer: `<p><strong>Oui, nous planifions chaque intervention en tenant compte des pics de saturation</strong> autour du centre commercial Val d'Europe, de La Vallée Village et de la gare RER A. Nos techniciens privilégient les créneaux en semaine hors vacances scolaires et évitent les week-ends touristiques. Nous utilisons des véhicules utilitaires compacts adaptés aux parkings souterrains à hauteur limitée (1m90) pour accéder directement aux résidences sans saturer la voirie de surface.</p>`,
     },
     {
       question:
-        "Q2 : Le diagnostic sur site est-il gratuit pour toutes les résidences de Serris ?",
+        "Le diagnostic sur site est-il gratuit pour toutes les résidences de Serris ?",
       answer: `<p><strong>Oui, le déplacement et le diagnostic restent gratuits</strong> quel que soit le quartier (Centre Urbain, Quartier du Lac, Le Bourg, Serris-Sud, secteur La Vallée). Le technicien évalue les surfaces, identifie les contraintes spécifiques (matériaux de standing, accès sécurisé, flux touristique) et remet un chiffrage détaillé sous 48h adapté à votre copropriété ou résidence de services.</p>`,
     },
     {
       question:
-        "Q3 : Comment gérez-vous les accès dans les résidences sécurisées avec codes et badges ?",
+        "Comment gérez-vous les accès dans les résidences sécurisées avec codes et badges ?",
       answer: `<p><strong>Nous coordonnons systématiquement avec la conciergerie ou le syndic</strong> pour obtenir les codes d'accès, badges et autorisations de passage aux barrières automatiques avant chaque intervention. Ces informations sont transmises au technicien 48h à l'avance. Pour les résidences de services et appart-hôtels exigeant discrétion et rapidité, nous adaptons nos horaires et notre organisation pour limiter toute visibilité auprès des résidents ou clients.</p>`,
     },
     {
       question:
-        "Q4 : Vos méthodes sont-elles adaptées aux matériaux de standing des immeubles récents ?",
+        "Vos méthodes sont-elles adaptées aux matériaux de standing des immeubles récents ?",
       answer: `<p><strong>Oui, nous ajustons systématiquement nos protocoles selon les supports</strong>. Les pierres de taille et enduits clairs des façades néo-haussmanniennes reçoivent des produits neutres et une pression modérée pour éviter coulures et traces. Les carrelages grand format et pierres naturelles des halls sont traités avec des détergents adaptés préservant les joints. Les parquets stratifiés haute résistance nécessitent une extraction maximale pour limiter l'humidité résiduelle. Ces adaptations techniques sont essentielles dans le parc immobilier serrisien récent et exigeant.</p>`,
     },
   ],
@@ -125,25 +125,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Les moquettes des immeubles proches de la gare Val d'Europe nécessitent-elles un entretien plus fréquent ?",
+            "Les moquettes des immeubles proches de la gare Val d'Europe nécessitent-elles un entretien plus fréquent ?",
           answer:
             "Oui, le flux piéton quotidien lié aux trajets Paris-Val d'Europe et au tourisme Disney génère une usure et un encrassement bien supérieurs aux copropriétés classiques. Les particules transportées, les traces de valises et l'humidité des jours de pluie s'accumulent rapidement. Nous recommandons un nettoyage semestriel pour les immeubles du Centre Urbain très exposés, et un traitement localisé trimestriel sur les seuils d'entrée pour maintenir l'aspect soigné attendu dans les résidences de standing serrisiennes.",
         },
         {
           question:
-            "Q2 : Intervenez-vous dans les résidences de services et appart-hôtels avec leurs exigences spécifiques ?",
+            "Intervenez-vous dans les résidences de services et appart-hôtels avec leurs exigences spécifiques ?",
           answer:
             "Absolument. Nous adaptons nos protocoles aux standards hôteliers : intervention en dehors des heures de passage des clients, discrétion maximale, séchage accéléré pour réouverture rapide des zones, coordination avec la conciergerie pour accès et organisation. Notre expérience dans les résidences de services du Val d'Europe nous permet de respecter les exigences de rapidité et d'hygiène propres à ce type d'établissement, tout en maintenant la qualité d'extraction nécessaire.",
         },
         {
           question:
-            "Q3 : Votre matériel peut-il accéder aux parkings souterrains à hauteur limitée de Serris ?",
+            "Votre matériel peut-il accéder aux parkings souterrains à hauteur limitée de Serris ?",
           answer:
             "Oui, nous utilisons des véhicules utilitaires compacts spécialement sélectionnés pour respecter la hauteur limite stricte de 1m90 typique des parkings souterrains serrisiens. Nous effectuons systématiquement une vérification préalable des contraintes (hauteur, largeur de rampe, codes d'accès) lors du diagnostic. Cette adaptation logistique nous permet d'accéder directement aux résidences sans encombrer la voirie de surface saturée par le trafic touristique.",
         },
         {
           question:
-            "Q4 : Comment organisez-vous l'intervention dans les résidences sécurisées avec codes et badges ?",
+            "Comment organisez-vous l'intervention dans les résidences sécurisées avec codes et badges ?",
           answer:
             "Nous coordonnons avec le syndic ou la conciergerie 72h à l'avance pour obtenir tous les codes d'accès, badges temporaires et autorisations de passage aux barrières automatiques. Ces informations sont transmises au technicien avant son départ. Pour les résidences du Centre Urbain et du Quartier du Lac hautement sécurisées, nous signons parfois des protocoles spécifiques et respectons des créneaux horaires définis. Cette rigueur organisationnelle est indispensable dans l'environnement serrisien où la sécurité des résidences est une priorité.",
         },
@@ -186,25 +186,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Votre matériel peut-il vraiment accéder aux parkings souterrains avec hauteur limitée à 1m90 ?",
+            "Votre matériel peut-il vraiment accéder aux parkings souterrains avec hauteur limitée à 1m90 ?",
           answer:
             "Oui, nous utilisons une autolaveuse compacte spécialement dimensionnée avec une hauteur totale inférieure à 1m80, conçue précisément pour les parkings souterrains à contraintes strictes comme ceux de Serris. Nous effectuons systématiquement une visite préalable pour mesurer la hauteur exacte sous plafond, repérer les zones à hauteur variable (rampes, poutres) et valider la faisabilité technique. Cette vérification garantit une intervention sans risque pour le matériel et les installations du parking.",
         },
         {
           question:
-            "Q2 : Comment organisez-vous l'intervention sans perturber les résidents qui ont des places nominatives ?",
+            "Comment organisez-vous l'intervention sans perturber les résidents qui ont des places nominatives ?",
           answer:
             "Nous travaillons par rotation planifiée : moitié A le matin, moitié B l'après-midi, ou étage par étage selon la configuration. Les résidents stationnent temporairement dans la zone non traitée ou sur les emplacements visiteurs pendant 2 à 3 heures, puis récupèrent leur place dès le séchage terminé. Le syndic ou la conciergerie informe les copropriétaires 72h à l'avance avec un plan précis indiquant les zones et horaires. Cette organisation maintient l'accès permanent au parking, point essentiel dans les résidences serrisiennes où le stationnement est compté.",
         },
         {
           question:
-            "Q3 : Les poussières des chantiers de Serris-Sud nécessitent-elles des interventions plus fréquentes ?",
+            "Les poussières des chantiers de Serris-Sud nécessitent-elles des interventions plus fréquentes ?",
           answer:
             "Oui, pendant les phases actives de construction dans les secteurs en développement, les poussières fines de chantier et la boue de terrassement s'accumulent rapidement dans les parkings des résidences proches. Nous recommandons un décrassage semestriel au lieu d'annuel pour ces copropriétés, permettant de maintenir la propreté malgré l'environnement de chantier. Une fois les travaux terminés dans le secteur, la fréquence peut être espacée à un rythme annuel classique.",
         },
         {
           question:
-            "Q4 : Intervenez-vous également dans les parkings des résidences de services et appart-hôtels ?",
+            "Intervenez-vous également dans les parkings des résidences de services et appart-hôtels ?",
           answer:
             "Absolument. Nous adaptons notre organisation aux contraintes spécifiques de ces établissements : intervention en semaine plutôt que week-end pour éviter les pics d'arrivées/départs, coordination avec la conciergerie pour gérer les flux de clients, séchage accéléré pour réouverture rapide, discrétion maximale. Nous comprenons que ces résidences exigent des standards hôteliers et une gêne minimale pour la clientèle. Notre expérience dans les résidences de services du Val d'Europe nous permet de respecter ces exigences tout en maintenant la qualité du décrassage.",
         },
@@ -247,25 +247,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Le nettoyage à pression risque-t-il d'endommager les enduits clairs de mon immeuble neuf ?",
+            "Le nettoyage à pression risque-t-il d'endommager les enduits clairs de mon immeuble neuf ?",
           answer:
             "Non, si la pression et les produits sont correctement ajustés. Pour les enduits clairs des façades néo-haussmanniennes, nous utilisons une pression très modérée (60-80 bars maximum), un produit neutre (pH 7) et un jet large pour éviter toute altération. L'eau de rinçage est dirigée vers les évacuations pour éviter coulures et traces sur l'enduit poreux. Nous effectuons toujours un test sur une zone discrète avant de traiter l'ensemble, protocole indispensable pour les façades de prestige typiques de Serris.",
         },
         {
           question:
-            "Q2 : Mon balcon donnant sur Serris-Sud accumule beaucoup de poussière blanche, est-ce normal ?",
+            "Mon balcon donnant sur Serris-Sud accumule beaucoup de poussière blanche, est-ce normal ?",
           answer:
             "Oui, c'est lié aux chantiers de développement actifs dans ce secteur. Les poussières fines de plâtre, ciment et terrassement se déposent quotidiennement sur les balcons des résidences proches. Nous recommandons un balayage hebdomadaire pour éliminer ces particules avant qu'elles ne s'incrustent dans les joints, et un nettoyage professionnel semestriel pendant les phases actives de construction. Une fois les chantiers terminés dans le secteur, la fréquence pourra être espacée à un rythme annuel.",
         },
         {
           question:
-            "Q3 : Les produits utilisés peuvent-ils tacher les pierres naturelles ou le carrelage grand format ?",
+            "Les produits utilisés peuvent-ils tacher les pierres naturelles ou le carrelage grand format ?",
           answer:
             "Non, nous sélectionnons des détergents professionnels testés et compatibles avec les matériaux récents. Pour les pierres naturelles (calcaire, travertin), nous utilisons exclusivement des produits neutres (pH 7) sans acides ni agents chlorés qui pourraient créer des taches ou altérer la surface. Pour les carrelages grand format en grès cérame, les produits sont formulés pour préserver les finitions et les joints calibrés. Cette sélection rigoureuse garantit un nettoyage efficace sans risque pour les supports de standing serrisiens.",
         },
         {
           question:
-            "Q4 : Combien de temps avant de pouvoir profiter de mon balcon après le nettoyage ?",
+            "Combien de temps avant de pouvoir profiter de mon balcon après le nettoyage ?",
           answer:
             "Le séchage complet intervient sous 2 à 4 heures selon l'exposition au soleil et la ventilation. Les balcons exposés sud du Quartier du Lac sèchent plus rapidement que ceux orientés nord du Centre Urbain. Vous pouvez marcher sur le balcon dès que les surfaces sont sèches au toucher, généralement en milieu d'après-midi si l'intervention a lieu le matin. Pour réinstaller mobilier et plantes, attendez le séchage total des joints et des angles, soit environ une demi-journée. Cette rapidité permet de profiter rapidement de votre espace extérieur.",
         },
@@ -308,25 +308,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Les fientes de pigeons représentent-elles un danger sanitaire réel dans une résidence récente ?",
+            "Les fientes de pigeons représentent-elles un danger sanitaire réel dans une résidence récente ?",
           answer:
             "Oui, l'ancienneté de la construction ne change rien aux risques sanitaires. Les fientes contiennent des bactéries pathogènes (salmonelles, chlamydia psittaci), des champignons (cryptocoques, histoplasma) et des parasites pouvant provoquer infections respiratoires graves, mycoses pulmonaires ou troubles gastro-intestinaux. Les poussières de fientes sèches sont particulièrement dangereuses lorsqu'inhalées dans les espaces confinés des appartements. Un nettoyage domestique sans équipements de protection aggrave considérablement le risque d'exposition. Seul un protocole professionnel avec EPI complets, humidification préalable et désinfection virucide garantit l'élimination totale des dangers sanitaires, quel que soit l'âge de l'immeuble.",
         },
         {
           question:
-            "Q2 : Le nettoyage peut-il endommager les matériaux récents de mon balcon neuf ?",
+            "Le nettoyage peut-il endommager les matériaux récents de mon balcon neuf ?",
           answer:
             "Non, si le protocole est correctement adapté. Nous ajustons la pression de rinçage selon le support : pression modérée pour les carrelages grand format à joints calibrés, pression réduite (60-80 bars) pour les pierres naturelles et enduits clairs sensibles, méthode manuelle pour les garde-corps métalliques laqués déjà corrodés par l'acidité des fientes. Les produits désinfectants sont sélectionnés pour leur compatibilité avec les matériaux de standing (pH neutre pour pierres et enduits). Cette précaution technique préserve les finitions coûteuses typiques des résidences serrisiennes récentes.",
         },
         {
           question:
-            "Q3 : Les fientes ont-elles déjà causé des dégâts irréversibles sur mon balcon de résidence neuve ?",
+            "Les fientes ont-elles déjà causé des dégâts irréversibles sur mon balcon de résidence neuve ?",
           answer:
             "Cela dépend de l'ancienneté de la contamination. Sur les garde-corps métalliques laqués, l'acidité provoque une corrosion rapide qui altère la finition et nécessite parfois un traitement antirouille ou une retouche de peinture après nettoyage. Sur les pierres naturelles claires, elle crée des taches brunâtres qui pénètrent profondément et peuvent laisser des marques résiduelles même après traitement professionnel. Sur les enduits clairs poreux, elle provoque des marques acides définitives. Une intervention rapide (dans les premières semaines) limite considérablement les dégâts, mais les contaminations anciennes (plusieurs mois) peuvent laisser des traces permanentes nécessitant des réparations esthétiques complémentaires.",
         },
         {
           question:
-            "Q4 : Comment éviter que les pigeons ne reviennent sur mon balcon après le nettoyage ?",
+            "Comment éviter que les pigeons ne reviennent sur mon balcon après le nettoyage ?",
           answer:
             "Nous proposons la pose de solutions anti-pigeons adaptées à l'architecture néo-haussmannienne de Serris : pics discrets en acier inoxydable sur les garde-corps et corniches, filets transparents pour les loggias, répulsifs visuels pour les avancées de toit. Ces dispositifs préservent l'esthétique de prestige des résidences tout en empêchant durablement la nidification. L'inspection régulière des points d'accès (corniches, éléments décoratifs, structures architecturales) et l'intervention rapide dès les premiers signes de retour limitent également le risque de recolonisation massive et de nouveaux dégâts coûteux sur les matériaux récents.",
         },
@@ -370,17 +370,17 @@ const city: City = {
   faqAdditions: [
     {
       question:
-        "Q1 : Le nettoyage élimine-t-il les poussières de chantier incrustées dans mon canapé neuf ?",
+        "Le nettoyage élimine-t-il les poussières de chantier incrustées dans mon canapé neuf ?",
       answer: `<p>Oui, l'injection-extraction à eau chaude dissout et extrait les particules fines de plâtre et de ciment qui se sont incrustées dans les fibres depuis votre emménagement ou pendant les phases de construction de Serris-Sud. L'aspiration puissante retire ces contaminants invisibles ainsi que les acariens. Même si votre canapé semble propre en surface, ces particules s'accumulent en profondeur et peuvent générer une sensation de poussière persistante. Un nettoyage professionnel après des travaux dans le secteur ou lors de l'installation initiale élimine ces salissures et redonne aux textiles leur fraîcheur d'origine.</p>`,
     },
     {
       question:
-        "Q2 : Mon canapé a seulement deux ans, est-ce vraiment nécessaire de le faire nettoyer ?",
+        "Mon canapé a seulement deux ans, est-ce vraiment nécessaire de le faire nettoyer ?",
       answer: `<p>Oui, l'ancienneté ne détermine pas le besoin de nettoyage. Un canapé utilisé quotidiennement par une famille avec enfants accumule en deux ans des milliers d'heures d'usage : transpiration, squames, miettes, poussières, acariens qui prolifèrent dans les rembourrages. Les textiles récents de qualité méritent d'être entretenus pour préserver leur aspect et leur durée de vie. Un nettoyage bisannuel pour un usage familial intensif, ou annuel pour un usage modéré, maintient le confort et l'hygiène. C'est particulièrement important à Serris où les familles reçoivent souvent des visiteurs venus pour Disneyland.</p>`,
     },
     {
       question:
-        "Q3 : Combien de temps avant que mes enfants puissent réutiliser le canapé ?",
+        "Combien de temps avant que mes enfants puissent réutiliser le canapé ?",
       answer: `<p>Le séchage complet intervient sous 4 à 6 heures grâce à l'extraction puissante et à la bonne ventilation des logements récents serrisiens. Vos enfants peuvent s'asseoir légèrement sur les accoudoirs dès 2h, mais il vaut mieux éviter qu'ils s'installent complètement avant séchage total pour ne pas écraser les fibres humides. Aérez le séjour en ouvrant les fenêtres, orientez un ventilateur si possible. Pour un usage en soirée, planifiez l'intervention le matin. Cette rapidité permet de minimiser la gêne pour la vie familiale quotidienne.</p>`,
     },
    
