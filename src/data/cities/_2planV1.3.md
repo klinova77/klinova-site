@@ -1083,8 +1083,3 @@ H) ALERTES QUALITÉ
 FIN DU PLAN
 ═══════════════════════════════════════════════════════════════════════════════
 
-Ce plan est prêt à être transmis au Prompt Rédaction V10.1 (ou V10.2 adapté).
-
-Aucune invention n'a été faite.
-Toutes les sources sont traçables et vérifiées (✅).
-Les décisions sont justifiées et contrôlables.
