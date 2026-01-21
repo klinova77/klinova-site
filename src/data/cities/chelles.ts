@@ -426,64 +426,7 @@ nearbyCities: [
 // =========================
 // SERVICE – TERRASSES
 // =========================
-{
-  serviceKey: "terrasses",
-  heroDescription:
-    "À Chelles, une terrasse se marque vite : pollution, traces noires, micro-végétation et salissures incrustées. Un nettoyage professionnel redonne un aspect net et durable, sans abîmer le support ni créer de projections.",
-  whyUsBullets: [
-    "Méthode adaptée aux supports extérieurs (dalles, pierre, carrelage, bois composite) avec test préalable si nécessaire.",
-    "Rinçage maîtrisé et finitions soignées pour un rendu homogène, sans coulures ni nuisance.",
-    "Organisation simple : intervention planifiée, protection des abords, et conseils d’entretien pour prolonger le résultat.",
-  ],
 
-  uniqueIntro: `<p>À Chelles, les terrasses et cours privées subissent un encrassement rapide : poussières fines, traces noires liées à la pollution, résidus végétaux et micro-mousses dans les zones humides ou ombragées. En quelques saisons, un revêtement clair ternit, les joints se noircissent, et l’ensemble donne une impression de négligence, même si l’entretien est régulier.</p>
-<p class="mt-4">Le problème, c’est que toutes les méthodes ne se valent pas : un nettoyage trop agressif peut fragiliser les joints, marquer les pierres naturelles ou relever les fibres des supports sensibles. <strong>Notre approche vise un résultat net et homogène</strong>, avec une méthode ajustée au matériau et un rinçage contrôlé pour éviter projections et coulures.</p>`,
-
-  uniqueDeepDive: `<h3>1. Diagnostic du support et préparation</h3>
-<p>Nous identifions le type de revêtement (dalles béton, pierre, carrelage extérieur, bois/composite) et la nature des salissures (dépôts noirs, organiques, traces grasses). Protection des seuils, menuiseries et zones adjacentes, puis organisation du chantier pour travailler proprement, sans nuisance inutile.</p>
-
-<h3>2. Prétraitement et nettoyage en profondeur</h3>
-<p>Un prétraitement ciblé est appliqué pour décoller les salissures incrustées. Le nettoyage est ensuite réalisé avec brossage manuel ou mécanique selon le support, en contrôlant l’action sur les joints et les zones fragiles. <strong>Le protocole est ajusté au matériau</strong> pour éviter tout risque d’altération.</p>
-
-<h3>3. Rinçage maîtrisé, finitions et conseils</h3>
-<p>Le rinçage est effectué avec un débit maîtrisé pour limiter les coulures et projections. Nous reprenons les zones critiques (bords, joints, marches, zones de passage) pour un rendu uniforme. <strong>Nous donnons des conseils d’entretien</strong> pour conserver le résultat plus longtemps (fréquence, gestes simples, prévention des mousses).</p>`,
-
-  specificChallenges: [
-    "Traces noires et ternissement liés à la pollution et aux poussières fines déposées sur les revêtements extérieurs.",
-    "Micro-végétation et mousses dans les zones ombragées ou humides, souvent incrustées dans les joints.",
-    "Supports sensibles (pierre naturelle, joints fragiles, revêtements poreux) nécessitant une méthode contrôlée.",
-    "Contraintes de rinçage et d’évacuation de l’eau (pentes faibles, évacuations limitées, risques de coulures).",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Pouvez-vous nettoyer une terrasse en pierre ou en dalle sans abîmer les joints ?",
-      answer:
-        "<p><strong>Oui, nous adaptons le protocole au support.</strong> Nous évitons les méthodes trop agressives et privilégions un prétraitement + brossage contrôlé, puis un rinçage maîtrisé. Les joints et les matériaux poreux sont traités avec prudence, avec ajustement de la méthode selon l’état du revêtement.</p>",
-    },
-    {
-      question:
-        "Les traces noires et la micro-mousse reviennent vite : comment prolonger le résultat ?",
-      answer:
-        "<p><strong>Le résultat se prolonge surtout par la prévention.</strong> Après nettoyage, nous conseillons une routine simple (balayage, rinçage léger périodique, gestion des zones d’ombre et d’humidité). Selon le contexte, un traitement préventif peut être envisagé pour ralentir la réapparition des mousses.</p>",
-    },
-    {
-      question:
-        "Le nettoyage génère-t-il des projections ou des coulures sur la façade ?",
-      answer:
-        "<p><strong>Non, l’objectif est un chantier propre.</strong> Nous protégeons les abords sensibles et travaillons avec un rinçage maîtrisé. Les finitions (raclette/microfibres) permettent de limiter l’eau résiduelle et d’éviter les coulures sur les zones adjacentes.</p>",
-    },
-    {
-      question:
-        "Faut-il vider complètement la terrasse avant votre intervention ?",
-      answer:
-        "<p><strong>Idéalement, oui sur la zone à traiter.</strong> Retirer le mobilier léger, pots et objets au sol permet un nettoyage homogène et plus rapide. Si certains éléments sont lourds, nous pouvons organiser l’intervention par zones pour rester efficace.</p>",
-    },
-  ],
-
-  ctaOverride: "",
-},
 
 // =========================
 // SERVICE – NETTOYAGE APPARTEMENT / MAISON (remise en état)
