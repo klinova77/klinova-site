@@ -234,7 +234,7 @@ const city: City = {
         "Conseils pratiques après intervention pour préserver la propreté et faciliter l'entretien au quotidien.",
       ],
 
-      uniqueIntro: `<p>À Lagny-sur-Marne, les balcons et terrasses des appartements subissent les dépôts de poussière fine liée à la circulation sur la Francilienne, les feuilles et dépôts verts des arbres des quartiers résidentiels, ainsi que les traces de terre et de graisse après un barbecue ou des jardinières. Les joints noircissent progressivement, les angles s'encrassent et les garde-corps deviennent collants au toucher, rendant l'espace extérieur peu attrayant. Dans les immeubles près des bords de Marne, l'humidité favorise même l'apparition de mousses verdâtres qui rendent les sols glissants.</p>
+      uniqueIntro: `<p>À Lagny-sur-Marne, les balcons et des appartements subissent les dépôts de poussière fine liée à la circulation sur la Francilienne, les feuilles et dépôts verts des arbres des quartiers résidentiels, ainsi que les traces de terre et de graisse après un barbecue ou des jardinières. Les joints noircissent progressivement, les angles s'encrassent et les garde-corps deviennent collants au toucher, rendant l'espace extérieur peu attrayant. Dans les immeubles près des bords de Marne, l'humidité favorise même l'apparition de mousses verdâtres qui rendent les sols glissants.</p>
 <p class="mt-4">Les occupants finissent par délaisser leur balcon, qui devient un simple lieu de stockage plutôt qu'un espace de détente pour prendre le café du matin ou profiter des beaux jours. Vous n'osez plus y inviter des amis, votre mobilier reste bâché et cet espace précieux est gâché. <strong>Un nettoyage professionnel permet de redonner à ces surfaces leur aspect d'origine,</strong> en éliminant les salissures incrustées et en protégeant les matériaux. Ainsi, le balcon redevient un lieu agréable, valorisant le logement et incitant à en profiter pleinement comme un véritable prolongement de votre intérieur.</p>`,
 
       uniqueDeepDive: `<h3>1. Protection des accès et enlèvement des gros dépôts</h3>
@@ -405,6 +405,66 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état d’appartements et de maisons à Lagny-sur-Marne (77400) : avant état des lieux, après travaux ou déménagement, avec une méthode structurée pensée pour le centre historique (accès/escaliers) comme pour les quartiers pavillonnaires des hauteurs.",
+
+  whyUsBullets: [
+    "Ciblage “centre ancien” : intervention adaptée aux rues étroites et immeubles sans ascenseur du cœur médiéval (Place de la Fontaine, autour de l’Abbatiale).",
+    "Gestion des finitions : calcaire marqué (77), cuisines/salles d’eau, et contrôle des détails visibles avant remise des clés.",
+    "Organisation fluide côté gare : prise en compte des accès via le pont depuis Lagny-Thorigny et des créneaux à éviter autour du Pont de Fer aux heures de pointe.",
+  ],
+
+  uniqueIntro: `<p>À Lagny-sur-Marne, une remise en état se joue souvent sur deux réalités très différentes : le centre historique dense — avec ses immeubles anciens, ses escaliers plus étroits et une circulation régulée — et les quartiers résidentiels des coteaux (Heurtebise, Hauts de Lagny) où l’on prépare plutôt une maison avant déménagement ou après travaux. Dans les deux cas, l’objectif est le même : remettre le logement “au propre” de façon nette, sans zones oubliées, pour un usage immédiat ou une restitution sereine.</p>
+<p class="mt-4">Le centre-ville autour de la <strong>Place de la Fontaine</strong> concentre beaucoup de commerces et de passages : on y retrouve plus facilement des traces de poussière fine, des sols sollicités, et des contraintes d’accès (digicode, horaires, stationnement). À l’inverse, les secteurs plus récents comme les Tanneries demandent souvent une attention particulière aux baies vitrées, aux rebords et aux finitions, surtout quand le logement est lumineux et très “visible”.</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Lagny-sur-Marne</strong>, Klinova privilégie un déroulé clair : repérage des surfaces et des matériaux, traitement des pièces “sensibles” (cuisine, salle de bain), puis finitions et contrôle final. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Cela permet d’éviter les incompréhensions, surtout lorsqu’il faut gérer un accès compliqué ou un créneau serré avant un état des lieux.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Préparation et accès (centre historique vs quartiers résidentiels)</h3>
+<p>À Lagny, la logistique est une partie du résultat : stationnement plus compliqué en centre-ville, circulation régulée, immeubles sans ascenseur, et affluence le jour du marché Place de la Fontaine. Nous cadrons l’accès (clé, digicode, badge) et l’organisation (étage, volume, présence de meubles) avant de démarrer, pour travailler efficacement sans perdre de temps sur place.</p>
+
+<h3>T2 : Remise en état “pièce par pièce” avec focus cuisine et sanitaires</h3>
+<p>Le nettoyage suit une logique simple : dépoussiérage structuré, surfaces et points de contact, puis traitement des sols selon le revêtement (parquet ancien en centre, carrelage en pavillon, lino en collectif). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les zones clés (plans, crédences, façades accessibles selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur 77 (robinetterie, parois, joints). Les vitres accessibles et les rebords sont inclus pour homogénéiser le rendu.</p>
+
+<h3>T3 : Finitions, vitrages et contrôle avant remise des clés</h3>
+<p>Nous terminons par les finitions : reprises ponctuelles, contrôle des traces visibles et vérification “à l’œil” des zones qui comptent en état des lieux (cuisine, salle d’eau, plinthes, vitrages accessibles). Une aération est recommandée en fin d’intervention pour retrouver rapidement un logement confortable, particulièrement après un nettoyage complet sur plusieurs pièces.</p>`,
+
+  specificChallenges: [
+    "Centre-ville médiéval : rues étroites, stationnement régulé et immeubles sans ascenseur (organisation clé).",
+    "Jour de marché Place de la Fontaine : affluence et accès plus compliqué (choix du créneau).",
+    "Accès gare / pont : flux pendulaires côté Lagny-Thorigny, congestion possible autour du Pont de Fer.",
+    "Quartiers récents (Tanneries) : beaucoup de lumière et de vitrages, finitions plus “exposées”.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous pour un état des lieux sortant à Lagny-sur-Marne (77400) ?",
+      answer: `<p>Oui. C’est un cas très fréquent à Lagny, notamment en centre-ville et dans les quartiers récents. Nous cadrons l’accès (digicode/clé), l’étage et le périmètre attendu, puis nous livrons une remise en état propre et cohérente pour la remise des clés.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous faire un nettoyage après travaux dans l’ancien, au cœur de Lagny ?",
+      answer: `<p>Oui. Dans l’ancien, la priorité est de retirer les poussières fines et les traces visibles sans abîmer les matériaux (parquet, peintures, menuiseries). Nous adaptons les gestes et l’humidité, puis nous finissons par un contrôle des détails avant restitution.</p>`,
+    },
+    {
+      question:
+        "Est-ce que vous gérez aussi les vitrages (baies, rebords) dans les logements récents des Tanneries ?",
+      answer: `<p>Oui, sur les vitres accessibles. Les logements récents sont très lumineux : un passage soigné sur vitrages et rebords fait une vraie différence sur le rendu final, surtout avant un état des lieux.</p>`,
+    },
+    {
+      question:
+        "Le logement peut-il être utilisé le jour même après votre passage ?",
+      answer: `<p>Dans la majorité des cas, oui. Nous maîtrisons l’humidité résiduelle et conseillons une aération en fin d’intervention pour retrouver rapidement un logement confortable, notamment quand il y a plusieurs pièces et des sols sensibles.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+}
+
   ],
 };
 

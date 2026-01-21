@@ -224,7 +224,7 @@ nearbyCities: [
         "Finitions soignées : rails, angles, garde-corps, vitres accessibles et points de reprise visibles.",
       ],
 
-      uniqueIntro: `<p>À Montfermeil, les balcons et terrasses des logements s'encrassent progressivement sous l'effet des mousses dans les zones ombragées proches de la forêt de Bondy, des dépôts de pollution atmosphérique, des traces d'eau calcaire et des résidus laissés par les jardinières ou les barbecues d'été. Les dalles ternissent, les joints noircissent et les garde-corps deviennent collants au toucher. Au fil des mois, cet extérieur qui devrait être un véritable atout de votre logement devient moins agréable et finit par servir de zone de stockage plutôt que d'espace de détente.</p>
+      uniqueIntro: `<p>À Montfermeil, les balcons s'encrassent progressivement sous l'effet des mousses dans les zones ombragées proches de la forêt de Bondy, des dépôts de pollution atmosphérique, des traces d'eau calcaire et des résidus laissés par les jardinières ou les barbecues d'été. Les dalles ternissent, les joints noircissent et les garde-corps deviennent collants au toucher. Au fil des mois, cet extérieur qui devrait être un véritable atout de votre logement devient moins agréable et finit par servir de zone de stockage plutôt que d'espace de détente.</p>
 <p class="mt-4">Vous finissez par ne plus y sortir prendre votre café du matin, votre mobilier reste bâché toute l'année et vous renoncez à profiter de ces précieux mètres carrés extérieurs. Les enfants n'osent plus y jouer par peur de se salir les genoux. Quand vous recevez des amis, vous évitez d'ouvrir la porte-fenêtre par gêne de l'aspect sale. <strong>Une remise en état professionnelle permet de décaper sans agresser le support,</strong> de retrouver un sol propre et des finitions nettes, et surtout de réutiliser l'espace au quotidien comme un véritable prolongement de votre intérieur. L'intervention est pensée pour être propre, maîtrisée et respectueuse du voisinage en immeuble collectif.</p>`,
 
       uniqueDeepDive: `<h3>1. Protection et enlèvement des gros dépôts</h3>
@@ -238,7 +238,7 @@ nearbyCities: [
 
       specificChallenges: [
         "Dépôts verts rapides sur balcons ombragés : mousses et lichens favorisés par proximité des zones boisées.",
-        "Poussières fines de chantiers : voile tenace sur carrelages et dalles, surtout sur terrasses exposées.",
+        "Poussières fines de chantiers : voile tenace sur carrelages et dalles, surtout sur balcons exposées.",
         "Évacuations parfois inefficaces : nécessité d'aspirer l'eau de lavage pour éviter coulures et infiltrations.",
       ],
 
@@ -396,6 +396,69 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Fin de bail, remise en état après travaux, grand ménage ou logement très encrassé. Intervention pensée pour une ville à deux facettes : pavillonnaire étendu (Franceville / Les Coudreaux) et secteurs collectifs en transformation (Les Bosquets).",
+
+  whyUsBullets: [
+    "Approche “terrain” adaptée à Montfermeil : pentes, rues résidentielles calmes, et accès plus contraints autour du GHI (stationnement, rotations, horaires).",
+    "Remise en état orientée résultat : cuisine/SDB (calcaire), sols et finitions visibles (portes, plinthes, poignées, interrupteurs) pour sécuriser un état des lieux.",
+    "Capacité à gérer des cas très différents : pavillons avec étages et vérandas, appartements en collectif avec badges, et chantiers de rénovation (Bosquets).",
+  ],
+
+  uniqueIntro: `<p>À Montfermeil, un nettoyage “appartement/maison” doit intégrer la géographie et les usages. La commune alterne des quartiers pavillonnaires vastes comme <strong>Franceville</strong> et <strong>Les Coudreaux</strong>, et des zones collectives en mutation autour des <strong>Bosquets</strong>. Ajoute à cela un relief marqué : ce n’est pas rare qu’une intervention soit simple à l’intérieur… mais plus délicate côté accès, portage et stationnement.</p>
+<p class="mt-4">Le second moteur local, c’est le <strong>GHI Le Raincy–Montfermeil</strong> et le terminus du <strong>Tram T4</strong> : on voit davantage de demandes “pragmatiques” (rotation de logements de soignants, états des lieux rapides, remises en état avant relocation) avec des horaires sensibles. Dans ces cas-là, la qualité se joue sur une méthode claire : cadrer le périmètre, traiter en priorité ce qui se voit et se contrôle, puis verrouiller les finitions.</p>
+<p class="mt-4">Enfin, Montfermeil a un vrai ADN “ville-parc” autour de l’<strong>Arboretum</strong> et du <strong>Château des Cèdres</strong>. Concrètement, cela se traduit souvent par des maisons avec jardins, terrasses et vitrages plus exposés (pollen, poussière, traces extérieures). Le bon niveau de prestation consiste à livrer un rendu net, sans bruit inutile, et en protégeant les sols (parquet, carrelage) dans des quartiers où le voisinage est attentif.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3>
+<p>Dans les pavillons, la difficulté est rarement “une pièce”, mais l’enchaînement : entrée, escalier, couloirs, puis cuisine et salles d’eau où le calcaire se voit très vite. Les vérandas, baies vitrées et Velux reviennent souvent : on adapte le périmètre pour obtenir un résultat cohérent, surtout avant visite ou mise en location.</p>
+
+<h3>T2 : Secteurs collectifs (Bosquets / Centre) — accès, badges et séquence de nettoyage</h3>
+<p>En collectif, le rythme est dicté par les accès (digicode, badge, ascenseur) et la circulation. On travaille en séquence “de l’arrière vers la sortie” pour garder les sols propres jusqu’au dernier passage. En fin de bail, on priorise les zones contrôlées : cuisine, salle d’eau, sols, puis finitions (plinthes, portes, interrupteurs).</p>
+
+<h3>T3 : Pôle Hôpital / Tram T4 — demandes réactives et contraintes de stationnement</h3>
+<p>Autour du GHI et des stations T4, la demande est plus “calée” sur des horaires : relèves, créneaux serrés, logements de rotation. L’enjeu ici, c’est l’anticipation : arrivée, déchargement, ordre d’intervention. Cette organisation évite les pertes de temps et garantit un rendu propre même quand la logistique est tendue.</p>`,
+
+  specificChallenges: [
+    "Relief marqué : portage et accès à prévoir (pentes, rues résidentielles), surtout avec matériel et consommables.",
+    "Secteur Hôpital : stationnement difficile et horaires sensibles (relèves), nécessité d’une organisation stricte.",
+    "Ville mixte : pavillons (vérandas/baies/escaliers) vs collectifs (badges, ascenseurs, circulation).",
+    "Rénovations et transformations : demandes après travaux plus fréquentes (poussières fines, traces sur menuiseries).",
+    "Eau calcaire : salles d’eau et robinetteries qui marquent vite, particulièrement en logements de rotation.",
+    "Quartiers calmes : exigence de discrétion et protection des sols (parquet/carrelage) dans le pavillonnaire.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous à Montfermeil (93370) pour un nettoyage avant état des lieux ?",
+      answer: `<p>Oui. On vise un rendu “contrôlable” : cuisine, salle d’eau, sols et finitions visibles (plinthes, portes, interrupteurs). À Montfermeil, on anticipe aussi l’accès (pentes, stationnement) pour tenir le créneau sans bâcler la finition.</p>`,
+    },
+    {
+      question: "Pouvez-vous faire un nettoyage après travaux (poussière de plâtre/peinture) ?",
+      answer: `<p>Oui. Après travaux, l’essentiel est de traiter la poussière fine et les traces sur menuiseries, plinthes et sols, puis d’enchaîner avec un nettoyage complet des points de contact. C’est particulièrement utile sur des rénovations de maisons et sur des appartements en remise en état.</p>`,
+    },
+    {
+      question: "Le logement est proche de l’Hôpital : est-ce que ça change l’organisation ?",
+      answer: `<p>Souvent, oui. Le stationnement et les horaires peuvent être plus contraints. Nous cadrons l’arrivée et le déchargement, puis nous travaillons en séquence pour sécuriser le résultat sans multiplier les allers-retours.</p>`,
+    },
+    {
+      question: "Nettoyez-vous aussi les vitrages (véranda, baies, Velux) ?",
+      answer: `<p>Sur demande, oui pour les vitrages accessibles et leurs encadrements. À Montfermeil, c’est fréquent dans le pavillonnaire (Franceville/Les Coudreaux) et cela améliore nettement le rendu, surtout avant une visite ou une vente.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+    
+
+
+    
   ],
 };
 

@@ -307,59 +307,67 @@ const city: City = {
       ctaOverride: "",
     },
 
+
+    // CITY_CHECK: Émerainville
+
+{
+  serviceKey: "canapes-tapis",
+
+  heroDescription:
+    "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Émerainville retire allergènes, poussières et salissures incrustées, en tenant compte des expositions locales (flux RER E, axes A104/D471, zones d'activités) et des intérieurs familiaux en pavillons comme en résidences du secteur gare/Emery.",
+
+  whyUsBullets: [
+    "Approche “pavillon + animaux + jardin” : Protocole efficace sur poils, boue, odeurs et taches du quotidien, fréquent dans les maisons de Malnoue et du Clos d’Emery (textiles très sollicités, va-et-vient intérieur/extérieur).",
+    "Gestion des poussières fines et dépôts urbains : Injection-extraction à eau chaude + détergent adapté pour décrocher particules et grisaillements liés aux axes A104/D471, aux parkings pendulaires et aux zones d’activités (ZA de la Malnoue, Esplanade).",
+    "Organisation simple et discrète : Accès facilité en pavillon, mais intervention planifiée autour de la gare RER E (stationnement plus tendu) et des résidences avec digicode/badge dans le secteur Emery.",
+  ],
+
+  uniqueIntro: `<p>À Émerainville, les textiles d’ameublement se salissent vite pour des raisons très concrètes : une part importante de pavillons (Malnoue, Clos d’Emery) avec jardins, animaux et entrées/sorties fréquentes, et un secteur gare/Emery plus “pendulaire” autour du RER E. Canapés, tapis et matelas finissent par accumuler des poussières fines, des allergènes et des taches invisibles qui altèrent l’hygiène de l’intérieur, même quand l’aspirateur passe régulièrement.</p>
+<p class="mt-4">Dans les maisons, les fibres captent facilement poils, particules ramenées de l’extérieur, traces de chaussures et odeurs de vie quotidienne (repas, humidité, animaux). Dans les résidences proches de la gare, les textiles subissent une recontamination plus rapide : circulation, parkings, déplacements quotidiens, et dépôts fins liés aux axes (A104/D471) qui noircissent progressivement les tissus clairs.</p>
+<p class="mt-4">Un nettoyage professionnel à domicile remet les textiles au propre “en profondeur” : on décroche la salissure incrustée, on extrait les allergènes et les particules, et on redonne un rendu net sans détremper les supports. C’est la solution la plus efficace quand on veut retrouver une vraie hygiène textile, que l’on vive en pavillon à Malnoue ou en appartement côté gare/Emery.</p>`,
+
+  uniqueDeepDive: `<h3>1. Diagnostic textile et lecture des causes locales (usage + environnement)</h3>
+<p>Le technicien commence par identifier les tissus (microfibre, velours, coton, tissus techniques), l’épaisseur des rembourrages et les zones d’usage intensif (assises, accoudoirs, zones enfants). Il tient compte du contexte : pavillons avec jardin et animaux à Malnoue/Clos d’Emery (poils, boue, odeurs), ou appartements du secteur gare/Emery (poussières fines, grisaillement). Ce diagnostic conditionne le choix des produits et l’intensité d’extraction pour nettoyer efficacement sans fragiliser les fibres.</p>
+<h3>2. Pré-traitement ciblé puis injection-extraction à eau chaude</h3>
+<p class="mt-4">Les taches et zones chargées reçoivent un pré-traitement adapté (enzymatique pour taches organiques, neutralisant d’odeurs si besoin, détergent dégraissant lorsque des dépôts fins “collants” ternissent le tissu). Ensuite, l’injection-extraction à eau chaude travaille au cœur des fibres pour décoller allergènes et salissures. L’aspiration puissante retire immédiatement l’eau sale, ce qui permet un nettoyage en profondeur sans laisser les rembourrages détrempés.</p>
+<h3>3. Extraction finale, séchage maîtrisé et conseils “anti-recontamination”</h3>
+<p class="mt-4">Une extraction maximale est réalisée pour limiter l’humidité résiduelle et accélérer le séchage, généralement sous 6 à 10 heures selon la ventilation. Les conseils sont adaptés à Émerainville : routine d’aspiration et brossage doux sur les zones “animaux” en pavillon, protection simple (plaid/housse) sur les assises les plus sollicitées, et nettoyage périodique plus rapproché si le logement est très exposé aux poussières (proximité gare, stationnement pendulaire, axes A104/D471). L’objectif : garder un intérieur sain et un textile qui reste net plus longtemps.</p>`,
+
+  specificChallenges: [
+    "Vie en pavillon + jardin : poils, boue, odeurs et taches du quotidien (Malnoue, Clos d’Emery) qui s’incrustent dans les fibres.",
+    "Recontamination rapide côté gare : flux RER E et stationnement pendulaire entraînant poussières fines et ternissement des tissus dans le secteur Emery.",
+    "Dépôts fins liés aux axes A104/D471 : particules noires/grisaillement progressif, surtout sur textiles clairs.",
+    "Accès et logistique contrastés : facile en pavillon, plus contraint autour de la gare et dans les résidences avec digicode/badge.",
+  ],
+
+  faqAdditions: [
     {
-      serviceKey: "terrasses",
-      heroDescription:
-        "Retrouvez une terrasse propre et sécurisée, débarrassée de mousse, lichens et dépôts gras, avec traitement adapté à votre support (pierre, bois, composite).",
-      whyUsBullets: [
-        "Expertise des terrasses pavillonnaires d'Émerainville : bois, pierre, composite, exposition ombre/humidité près de l'Étang.",
-        "Maîtrise des traitements anti-mousse préventifs et adaptation haute pression selon support (jamais agressif sur matériaux fragiles).",
-        "Protection plantes et gestion eau d'évacuation : intervention discrète, respect du voisinage, conseils entretien saisonnier inclus.",
-      ],
-      uniqueIntro: `<p>Les terrasses des pavillons et RDC d'Émerainville, particulièrement dans les secteurs Malnoue et Allée des Bois, accumulent rapidement mousse, lichens et traces vertes. L'humidité persistante due à la proximité de l'Étang de Malnoue, combinée aux arbres matures du quartier, crée un environnement où ces dépôts s'installent année après année, rendant les surfaces glissantes et peu engageantes.</p>
-
-<p class="mt-4">Au-delà de l'aspect visuel, ces accumulations posent un vrai problème de sécurité : risque de chute, dégradation progressive du support (pierre qui s'effrite, bois qui grisonne, joints qui se creusent). Les résidus gras du barbecue compliquent encore la situation. Une terrasse bien entretenue, c'est retrouver un espace de vie confortable, où famille et amis se sentent bien, sans crainte de glissade.</p>
-
-<p class="mt-4">Notre approche repose sur un diagnostic précis du support et des salissures, suivi d'un traitement adapté. Nous protégeons vos plantations, gérons l'eau d'évacuation avec attention, et appliquons des solutions durables contre la réapparition rapide de la mousse.</p>`,
-      uniqueDeepDive: `<h3>T1: Préparation et enlèvement des gros dépôts</h3>
-<p>Nous commençons par protéger vos plantes, jardinières et mobilier extérieur. Un balayage minutieux élimine feuilles, terre et débris accumulés. Cette étape est cruciale : elle nous permet d'évaluer l'état réel du support et d'identifier les zones fragiles (joints usés, bois pourri, pierre fissurée).</p>
-
-<h3 class="mt-4">T2: Traitement ciblé selon le support</h3>
-<p>Pour la pierre naturelle, nous appliquons un produit doux associé à un brossage manuel pour préserver les joints. Le bois composite reçoit un traitement spécifique qui élimine mousse et lichens sans agresser la fibre. Le carrelage bénéficie d'un nettoyage plus énergique, avec attention particulière aux joints. Un traitement anti-mousse préventif est proposé selon votre exposition (ombre, arbres proches).</p>
-
-<h3 class="mt-4">T3: Haute pression contrôlée et finition</h3>
-<p>Nous utilisons la haute pression de manière sélective : efficace sur béton et carrelage, elle est écartée sur pierre tendre ou bois. L'eau d'évacuation est dirigée vers les points d'écoulement naturels, sans débordement vers les voisins. Séchage et conseils d'entretien saisonnier complètent l'intervention.</p>`,
-      specificChallenges: [
-        "Mousse et lichens récurrents : l'humidité de l'Étang de Malnoue et les arbres matures du quartier favorisent leur réapparition rapide.",
-        "Supports variés (pierre, bois, composite) exigent des méthodes différentes pour éviter dégradation ou usure prématurée.",
-        "Gestion de l'eau d'évacuation critique : terrasses en hauteur ou proches de jardins voisins nécessitent canalisation précise.",
-        "Barbecue et graisses : résidus tenaces sur dalles et joints, demandant traitement spécifique avant nettoyage général.",
-        "Accès latéral ou par escalier étroit : logistique matériel et protections à adapter selon configuration pavillon.",
-      ],
-      faqAdditions: [
-        {
-          question:
-            "Q1 : Comment nettoyez-vous une terrasse en bois sans l'abîmer, notamment dans les pavillons de Malnoue exposés à l'humidité ?",
-          answer: `<p>Le bois composite ou naturel demande une approche douce. Nous évitons la haute pression directe qui creuse les fibres. À la place, brossage manuel associé à un produit spécifique bois, suivi d'un rinçage contrôlé. Pour les terrasses proches de l'Étang de Malnoue, très humides, nous proposons un traitement hydrofuge préventif après nettoyage.</p>`,
-        },
-        {
-          question:
-            "Q2 : Quelle différence faites-vous entre nettoyage d'une terrasse en pierre et une en carrelage à Émerainville ?",
-          answer: `<p>La pierre naturelle est poreuse et fragile aux joints : nettoyage doux, brossage manuel, produit adapté. Le carrelage supporte mieux la haute pression, idéale pour enlever graisses et dépôts tenaces. Dans les deux cas, nous protégeons les plantations et gérons l'eau d'évacuation. Le traitement anti-mousse s'adapte aussi : plus agressif sur carrelage, préventif sur pierre.</p>`,
-        },
-        {
-          question:
-            "Q3 : Face à mousse et lichens persistants près de l'Étang de Malnoue, existe-t-il une solution durable ?",
-          answer: `<p>Oui, mais elle demande régularité. Après nettoyage initial, un traitement anti-mousse préventif ralentit la réapparition. Nous recommandons un entretien annuel avant l'automne (feuilles, humidité). Pour les terrasses très ombragées, un traitement tous les 18 mois suffit souvent. L'exposition et la proximité de l'eau influencent la fréquence.</p>`,
-        },
-        {
-          question:
-            "Q4 : Utilisez-vous la haute pression sur toutes les terrasses, ou adaptez-vous selon le matériau ?",
-          answer: `<p>Nous adaptons strictement. Haute pression efficace sur béton brut et carrelage robuste. Sur bois, pierre tendre ou joints usés, nous préférons brossage + produit + rinçage doux. Cette sélectivité préserve votre terrasse et garantit un résultat durable sans dégâts cachés. Nous expliquons toujours le choix avant d'intervenir.</p>`,
-        },
-      ],
-      ctaOverride: "",
+      question:
+        "Le nettoyage est-il adapté aux canapés avec animaux (poils, odeurs) dans les pavillons de Malnoue ?",
+      answer: `<p>Oui. Le protocole vise à décrocher ce qui s’accumule dans les fibres (poils, poussières, odeurs) et à extraire en profondeur sans abîmer le tissu. Dans les pavillons avec jardin, c’est souvent la meilleure solution pour retrouver un rendu net et une vraie hygiène sur les assises très sollicitées.</p>`,
     },
+    {
+      question:
+        "Est-ce que ça enlève le ternissement et le grisaillement des textiles près de la gare ?",
+      answer: `<p>Oui, dans la plupart des cas. Les dépôts fins et poussières qui “grisent” progressivement les tissus sont décrochés puis extraits avec l’eau sale grâce à l’injection-extraction et au détergent adapté. Le résultat dépend de l’ancienneté de l’encrassement et du type de fibre, mais on retrouve généralement une couleur plus franche et un toucher plus propre.</p>`,
+    },
+    {
+      question:
+        "Combien de temps faut-il avant de réutiliser le canapé ou le matelas ?",
+      answer: `<p>Le séchage complet est généralement de 6 à 10 heures selon la ventilation et la température. Une utilisation légère est possible plus tôt, mais il est préférable d’attendre le séchage total pour préserver les fibres et le confort. Aérer la pièce accélère nettement le séchage.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous facilement dans le secteur Emery malgré le stationnement autour du RER E ?",
+      answer: `<p>Oui. Le matériel est prévu pour une intervention à domicile, et l’organisation tient compte du secteur gare (stationnement plus tendu). Dans les résidences avec digicode/badge, l’accès est géré en amont pour que l’intervention se déroule sans perte de temps et avec une gêne minimale.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+  
 
     {
       serviceKey: "nettoyage-appartement-maison",

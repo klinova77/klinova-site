@@ -237,7 +237,7 @@ nearbyCities: [
     {
       serviceKey: "balcons",
       heroDescription:
-        "Le nettoyage professionnel des balcons et terrasses à Nogent-sur-Marne préserve les matériaux patrimoniaux nobles tout en éliminant mousses, lichens et dépôts végétaux favorisés par l'humidité de la Marne et la proximité du Bois.",
+        "Le nettoyage professionnel des balcons à Nogent-sur-Marne préserve les matériaux patrimoniaux nobles tout en éliminant mousses, lichens et dépôts végétaux favorisés par l'humidité de la Marne et la proximité du Bois.",
 
       whyUsBullets: [
         "Expertise des matériaux patrimoniaux nogentais : Intervention régulière sur meulières, pierres de taille, joints à la chaux, corniches Art Déco et ferronneries d'art, avec protocoles basse pression et vapeur préservant l'intégrité architecturale.",
@@ -245,7 +245,7 @@ nearbyCities: [
         "Préservation de la valeur patrimoniale : Méthodes validées pour matériaux nobles (meulières de prestige, ferronneries d'art), respect des joints à la chaux friables, finitions soignées conformes au standing architectural exceptionnel de Nogent.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires de maisons de prestige et d'appartements nogentais négligent souvent l'entretien de leurs balcons et terrasses, découragés par la rapidité avec laquelle les salissures réapparaissent. L'humidité constante de la Marne combinée à l'ombre portée de la végétation dense crée un environnement particulièrement propice au développement biologique. Les mousses vertes envahissent les dalles en pierre naturelle, les lichens blancs se fixent sur les murets et garde-corps, les pollens collants du Bois de Vincennes se déposent au printemps sur toutes les surfaces horizontales. Les propriétés du Port et du secteur Sous la Lune sont particulièrement exposées à cette dégradation accélérée.</p>
+      uniqueIntro: `<p>Les propriétaires de maisons de prestige et d'appartements nogentais négligent souvent l'entretien de leurs balcons, découragés par la rapidité avec laquelle les salissures réapparaissent. L'humidité constante de la Marne combinée à l'ombre portée de la végétation dense crée un environnement particulièrement propice au développement biologique. Les mousses vertes envahissent les dalles en pierre naturelle, les lichens blancs se fixent sur les murets et garde-corps, les pollens collants du Bois de Vincennes se déposent au printemps sur toutes les surfaces horizontales. Les propriétés du Port et du secteur Sous la Lune sont particulièrement exposées à cette dégradation accélérée.</p>
 <p class="mt-4">Après une saison, les balcons des villas Art Déco et des copropriétés de standing présentent une dégradation visible : pierres de taille couvertes de dépôts verdâtres, joints noircis par l'humidité, garde-corps en ferronnerie d'art ternis, traces d'eau de pluie qui marquent les enduits clairs. Cette dégradation contraste fortement avec l'architecture soignée et le prestige des adresses nogentaises. Les propriétaires hésitent à intervenir : crainte d'endommager les matériaux patrimoniaux fragiles (meulières, joints à la chaux, ferronneries d'art), incertitude sur les méthodes adaptées aux supports nobles, inquiétude face aux dépôts biologiques qui reviennent rapidement dans cet environnement humide.</p>
 <p class="mt-4">Un nettoyage professionnel avec protocole technique adapté résout ces problématiques patrimoniales. Il élimine les dépôts biologiques sans altérer les supports fragiles, applique les traitements anti-mousse préventifs et restitue l'aspect d'origine. L'intervention devient un acte de préservation du patrimoine architectural, indispensable pour maintenir la valeur des biens d'exception nogentais dans un environnement particulièrement exigeant.</p>`,
 
@@ -308,7 +308,7 @@ nearbyCities: [
         "Préservation de la valeur architecturale : Humidification préalable obligatoire, ramassage méthodique, nettoyage adapté à chaque support noble, proposition de solutions anti-pigeons discrètes respectant l'esthétique Art Déco et l'architecture de prestige nogentaise.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires nogentais découvrent parfois avec stupeur l'ampleur de la contamination de leur balcon ou terrasse après une absence prolongée ou une période d'inutilisation. Les pigeons, attirés par l'architecture Art Déco avec ses corniches travaillées, les avancées de toit des villas de prestige et la végétation dense du Bois de Vincennes, colonisent rapidement les balcons tranquilles des propriétés du Plateau et des bords de Marne. Les résidences secondaires, nombreuses à Nogent en raison de la qualité de vie exceptionnelle, présentent des espaces extérieurs particulièrement vulnérables. Les fientes s'accumulent en couches épaisses sur les pierres de taille, les meulières anciennes et les garde-corps en ferronnerie d'art, formant une croûte durcie qui dégage une odeur insupportable.</p>
+      uniqueIntro: `<p>Les propriétaires nogentais découvrent parfois avec stupeur l'ampleur de la contamination de leur balcon après une absence prolongée ou une période d'inutilisation. Les pigeons, attirés par l'architecture Art Déco avec ses corniches travaillées, les avancées de toit des villas de prestige et la végétation dense du Bois de Vincennes, colonisent rapidement les balcons tranquilles des propriétés du Plateau et des bords de Marne. Les résidences secondaires, nombreuses à Nogent en raison de la qualité de vie exceptionnelle, présentent des espaces extérieurs particulièrement vulnérables. Les fientes s'accumulent en couches épaisses sur les pierres de taille, les meulières anciennes et les garde-corps en ferronnerie d'art, formant une croûte durcie qui dégage une odeur insupportable.</p>
 <p class="mt-4">Sans intervention rapide, la situation se dégrade dangereusement sur le plan sanitaire et patrimonial. L'acidité des fientes corrode les ferronneries d'art anciennes, attaque les joints à la chaux friables des meulières, crée des taches brunâtres permanentes sur les pierres de taille claires, et érode les corniches Art Déco travaillées. L'humidité constante de la Marne aggrave la dégradation en maintenant les fientes humides plus longtemps, accélérant leur action corrosive. Les fientes sèches se transforment en poussière volatile qui pénètre l'intérieur par les portes-fenêtres, contaminant les espaces de vie. Les occupants redoutent les risques sanitaires (cryptococcose, histoplasmose, salmonellose), certains développent des symptômes respiratoires sans comprendre l'origine.</p>
 <p class="mt-4">Les tentatives de nettoyage domestique aggravent doublement le problème : balayer à sec disperse les poussières pathogènes, utiliser une haute pression classique endommage irrémédiablement les matériaux patrimoniaux fragiles (meulières, joints à la chaux, ferronneries). Ce type de contamination nécessite un protocole professionnel strict doublement exigeant : <strong>équipements de protection intégrale</strong> pour la sécurité sanitaire, méthodes basse pression et vapeur pour préserver les matériaux nobles, désinfection homologuée compatible avec les supports anciens. Seule cette double expertise garantit la récupération d'un balcon propre, désinfecté et préservé dans sa valeur patrimoniale exceptionnelle.</p>`,
 
@@ -419,6 +419,67 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Nogent-sur-Marne, intervention précise dans des appartements et maisons souvent anciens : parquets, pièces d’eau et vitrages traités avec soin, en particulier avant vente ou état des lieux.",
+
+  whyUsBullets: [
+    "Approche “standing” : protection des sols (parquet massif, pierre naturelle), finitions soignées (plinthes, menuiseries, robinetterie, vitres) et contrôle visuel pièce par pièce.",
+    "Organisation adaptée au terrain : centre-ville saturé + sens uniques, pentes des coteaux, et accès résidences privées (digicodes, gardiens).",
+    "Gestion des nuisances urbaines typiques : traces de pollution sur vitrages/balcons (A4 / viaduc) et poussières de flux autour des gares RER A/RER E.",
+  ],
+
+  uniqueIntro: `<p>À Nogent-sur-Marne, le nettoyage “classique” ne suffit pas : la ville combine un <strong>niveau d’exigence élevé</strong> et un terrain très concret à gérer. Entre le Village (centre) dense, les <strong>coteaux</strong> qui imposent des montées et des accès parfois serrés, et les bords de Marne plus ouverts, l’intervention doit être préparée comme un chantier court : ordre des tâches, protection, finitions.</p>
+<p class="mt-4">Le bâti est majoritairement <strong>ancien de standing</strong> (pierre, immeubles bourgeois, meulières), avec des résidences privées où les digicodes, interphones et parfois les gardiens sont la norme. Les sols y sont souvent plus sensibles : parquet massif, carrelage haut de gamme, pierre naturelle. L’objectif est donc double : remettre propre, mais surtout <strong>ne rien marquer</strong> (rayures, traces de produit, reprises visibles sur les vitres).</p>
+<p class="mt-4">Enfin, Nogent a ses marqueurs : le <strong>Pavillon Baltard</strong> et le <strong>port de plaisance</strong> structurent des zones de flux, tandis que le <strong>viaduc de Nogent</strong> (A4) et les grands axes amènent une pollution qui se voit vite sur balcons et vitrages. C’est typiquement une ville où la différence se fait sur les détails : finitions, transparence des vitres, et rendu “net” dans la cuisine/salle d’eau.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Le Village / Baltard — finitions, accès serrés et stationnement</h3>
+<p>Le centre nogentais est dense : sens uniques, stationnement tendu, accès parfois étroits dans l’ancien. Pour un fin de bail ou une remise en état, on privilégie un déroulé rapide et lisible : cuisine/salle d’eau en premier, surfaces, puis sols, avant de verrouiller les finitions (plinthes, portes, interrupteurs, inox/robinetterie). C’est aussi la zone où l’organisation “déchargement court + stationnement” fait gagner le plus de temps.</p>
+
+<h3>T2 : Plaisance / Viselets — maisons et parquet massif</h3>
+<p>Dans ces secteurs résidentiels, on trouve plus de pavillons, de meulières et de grands volumes. La priorité est la protection : chaussures propres, patins si nécessaire, et une gestion des sols en plusieurs passes (aspiration, lavage adapté, séchage/contrôle) pour éviter toute trace. Les demandes typiques sont le grand ménage avant emménagement, ou l’après-travaux léger avec beaucoup de poussière fine.</p>
+
+<h3>T3 : Le Port / bords de Marne — vitrages, humidité et balcons</h3>
+<p>Près de l’eau, les vitrages et extérieurs marquent davantage : film, traces minérales, salissures ramenées par les allées et venues du week-end. On traite les vitres accessibles et les garde-corps avec une méthode qui évite les reprises, puis on sécurise les zones de passage (entrée, séjour, cuisine). C’est un secteur où le rendu “clair” est immédiatement visible — et très apprécié.</p>`,
+
+  specificChallenges: [
+    "Stationnement très compliqué en centre-ville et autour des gares : nécessité d’anticiper l’arrivée et le déchargement.",
+    "Coteaux de Nogent : pentes marquées qui compliquent le transport de matériel et la logistique sur maisons en hauteur.",
+    "Bâti ancien de standing : escaliers étroits et absence d’ascenseur dans certains immeubles du centre.",
+    "Résidences privées : digicodes/badges/interphones et gardiens fréquents (organisation d’accès à prévoir).",
+    "Pollution A4 / viaduc de Nogent : suie et dépôts sur vitrages/balcons, surtout côté axes.",
+    "Matériaux sensibles : parquet massif, pierre naturelle, carrelage haut de gamme → risque de traces/rayures si méthode inadaptée.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Nogent-sur-Marne (94130) pour un nettoyage de fin de bail / état des lieux ?",
+      answer: `<p>Oui. On cible un rendu “état des lieux” : cuisine et salle d’eau (dégraissage, calcaire, joints), sols, vitres accessibles, puis finitions visibles (plinthes, portes, interrupteurs). À Nogent, on anticipe surtout le stationnement en centre et l’accès en résidence privée (digicode, gardien).</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous nettoyer après des travaux dans une meulière (quartier Plaisance) ?",
+      answer: `<p>Oui. Après travaux, la difficulté est la poussière fine (ponçage, plâtre). On procède par étapes : dépoussiérage minutieux (surfaces/menusieries), puis sols, puis finitions. Sur parquet massif, on adapte produits et dosage pour éviter toute trace et protéger le bois.</p>`,
+    },
+    {
+      question:
+        "Faites-vous les vitres et garde-corps, notamment vers le Port et les bords de Marne ?",
+      answer: `<p>Oui, sur les vitrages accessibles. Dans ces zones, on rencontre plus de film et de traces minérales : on traite vitres et garde-corps avec une méthode sans reprises, puis on contrôle le rendu à la lumière pour un résultat net.</p>`,
+    },
+    {
+      question:
+        "Le centre est difficile pour se garer : comment gérez-vous la logistique ?",
+      answer: `<p>On planifie l’arrivée et le déchargement (créneau, parking souterrain si nécessaire), puis on optimise l’ordre des pièces pour limiter les allers-retours. C’est souvent ce qui fait la différence sur la ponctualité et le temps réellement passé à nettoyer.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ],
 };
 

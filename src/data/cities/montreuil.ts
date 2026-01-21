@@ -419,6 +419,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Fin de bail, remise en état après travaux, grand ménage, ou logement très encrassé. Pour lofts et ateliers du Bas-Montreuil, collectifs denses autour Mairie/Croix de Chavaux, et secteurs plus “verts” vers Montreau–Beaumonts.",
+
+  whyUsBullets: [
+    "Organisation pensée pour Montreuil : stationnement compliqué, accès par badges, et créneaux à éviter près des marchés (Croix de Chavaux) et des axes très chargés.",
+    "Savoir-faire sur surfaces “atypiques” : béton ciré, résine, parquet ancien, et surtout verrières/hautes baies typiques des lofts du Bas-Montreuil.",
+    "Approche orientée état des lieux : priorisation cuisine/SDB, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs) pour sécuriser le rendu.",
+  ],
+
+  uniqueIntro: `<p>À Montreuil, le même mot “nettoyage” recouvre des réalités très différentes. Entre <strong>Bas-Montreuil</strong> et ses ateliers reconvertis, le secteur <strong>Mairie / Croix de Chavaux</strong> très dense, et les zones plus résidentielles vers <strong>Montreau</strong> ou <strong>Ramenas</strong>, on passe d’un loft à verrières à un appartement en collectif, puis à une maison avec étage. L’enjeu n’est pas seulement de “faire propre” : c’est de choisir la bonne méthode selon les surfaces et l’accès.</p>
+<p class="mt-4">Le deuxième point, c’est la logistique. Montreuil se gère comme une ville de proche couronne collée à Paris : <strong>stationnement saturé</strong>, rues étroites, sens uniques, et des pics d’activité autour des stations de la <strong>ligne 9</strong> (Mairie de Montreuil, Croix de Chavaux, Robespierre). Les jours de marché, les abords se bloquent vite — et un bon résultat commence par une arrivée bien cadrée.</p>
+<p class="mt-4">Enfin, Montreuil a des marqueurs très spécifiques : les <strong>Murs à Pêches</strong> (terre/poussières fines ramenées sur les entrées) et des parcs en relief comme le <strong>Parc des Beaumonts</strong>. Cela se retrouve dans les demandes : sols à reprendre après passages, vitrages marqués (pollution + poussière), et remises en état rapides pour des rotations locatives proches métro.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Bas-Montreuil — lofts, ateliers et verrières</h3>
+<p>Dans le Bas-Montreuil, on rencontre plus souvent des volumes ouverts, des surfaces techniques (béton ciré, résine) et des vitrages atypiques (verrières, grandes baies). Le nettoyage se joue sur la bonne chimie et la bonne gestuelle : dépoussiérage fin, dégraissage cuisine, puis remise à niveau des sols sans laisser de voile. Les finitions (poignées, interrupteurs, plinthes) font toute la différence en sortie de location.</p>
+
+<h3>T2 : Mairie / Croix de Chavaux — densité, badges et contraintes de timing</h3>
+<p>Autour de la Mairie et de Croix de Chavaux, la contrainte n°1 est l’accès : digicode, interphone, parfois ascenseurs étroits, et un stationnement rarement simple. On travaille en séquence “zones sèches puis zones humides”, en gardant la sortie pour la fin afin de ne pas re-salir les sols. Les jours de marché, on privilégie des créneaux plus calmes pour éviter le temps perdu.</p>
+
+<h3>T3 : Haut-Montreuil — maisons, chantiers et résidences récentes</h3>
+<p>Dans les secteurs pavillonnaires et les résidences récentes (ZAC et grands ensembles requalifiés), les demandes tournent beaucoup autour des fins de chantier, du grand ménage et des états des lieux. Ici, on insiste sur la poussière de travaux, les traces sur menuiseries, et la remise en état des salles d’eau (calcaire, joints). L’objectif : un rendu net et homogène, sans “zones oubliées”.</p>`,
+
+  specificChallenges: [
+    "Stationnement très contraint : centre, Bas-Montreuil, Mairie/Croix de Chavaux (zones payantes et saturation).",
+    "Bâtis hétérogènes : lofts et ateliers, immeubles anciens sans ascenseur, grands ensembles, pavillons.",
+    "Vitrages atypiques : verrières, grandes baies, hauteurs (lofts) + risque de traces si méthode inadaptée.",
+    "Rues étroites et sens uniques : circulation lente, portage matériel plus fréquent.",
+    "Marchés et pics de flux : Croix de Chavaux et centre, créneaux à éviter selon jours/horaires.",
+    "Pollution périphérique/A3 : vitres et balcons plus marqués près des axes et portes.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous à Montreuil (93100) pour un nettoyage de fin de bail / état des lieux ?",
+      answer: `<p>Oui. Nous cadrons le périmètre pour viser un rendu “contrôlable” : cuisine, salle d’eau, sols, vitrages accessibles, puis finitions (plinthes, portes, interrupteurs). À Montreuil, on anticipe aussi l’accès (badges) et le stationnement pour tenir le créneau sans bâcler la finition.</p>`,
+    },
+    {
+      question: "Pouvez-vous nettoyer un loft avec verrière ou grandes baies (Bas-Montreuil) ?",
+      answer: `<p>Oui. Les lofts demandent surtout une méthode adaptée aux surfaces (béton ciré/résine) et aux vitrages (verrières, hauteurs). On sécurise le dépoussiérage fin, le dégraissage, puis on termine par les vitres accessibles et les finitions pour éviter le voile et les traces.</p>`,
+    },
+    {
+      question: "Le stationnement est compliqué : comment vous organisez-vous ?",
+      answer: `<p>Nous planifions l’arrivée et le déchargement, et nous évitons les secteurs les plus saturés aux heures critiques (notamment autour Mairie/Croix de Chavaux). L’objectif est simple : limiter les allers-retours et garder du temps pour la finition.</p>`,
+    },
+    {
+      question: "Faites-vous un nettoyage après travaux (poussière fine, traces) ?",
+      answer: `<p>Oui. Après rénovation, on traite la poussière fine et les traces sur menuiseries, plinthes et sols avant le nettoyage complet. C’est fréquent à Montreuil, notamment sur des remises en état rapides proches métro et dans les secteurs en travaux.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
   ],
 };
 

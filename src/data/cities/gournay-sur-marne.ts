@@ -231,7 +231,7 @@ nearbyCities: [
         "Finitions soignées sur les zones visibles : joints, angles, garde-corps.",
       ],
 
-      uniqueIntro: `<p>À Gournay-sur-Marne, les balcons et terrasses s'encrassent progressivement sous l'effet combiné des poussières extérieures, des dépôts naturels et de l'humidité ambiante liée à la proximité de la Marne. Feuilles mortes venues des arbres environnants, terre issue des jardinières, traces de pollution atmosphérique et dépôts verts finissent par ternir les sols, noircir les joints et altérer l'aspect des garde-corps. Dans les zones pavillonnaires nord et sud, les balcons donnant sur des jardins accumulent également des résidus végétaux transportés par le vent.</p>
+      uniqueIntro: `<p>À Gournay-sur-Marne, les balcons et s'encrassent progressivement sous l'effet combiné des poussières extérieures, des dépôts naturels et de l'humidité ambiante liée à la proximité de la Marne. Feuilles mortes venues des arbres environnants, terre issue des jardinières, traces de pollution atmosphérique et dépôts verts finissent par ternir les sols, noircir les joints et altérer l'aspect des garde-corps. Dans les zones pavillonnaires nord et sud, les balcons donnant sur des jardins accumulent également des résidus végétaux transportés par le vent.</p>
 <p class="mt-4">Avec le temps, cet encrassement transforme le balcon en espace peu accueillant, souvent délaissé par les occupants. Vous finissez par ne plus y sortir votre café du matin, votre mobilier reste bâché toute l'année et vous renoncez à profiter de cet extérieur pourtant précieux. Les enfants n'osent plus y jouer par peur de se salir. <strong>Une remise en état professionnelle permet de redonner un aspect propre et homogène aux surfaces,</strong> de retrouver le plaisir d'un vrai espace de détente et de réinvestir pleinement cet extérieur comme un véritable prolongement du logement, valorisant par la même occasion votre bien immobilier.</p>`,
 
       uniqueDeepDive: `<h3>1. Préparation et protection des accès</h3>
@@ -397,6 +397,68 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état d’appartements et de maisons à Gournay-sur-Marne, avant remise des clés ou après déménagement, avec une intervention structurée et un soin particulier des surfaces vitrées (vérandas, baies).",
+
+  whyUsBullets: [
+    "Approche adaptée au cadre “bords de Marne” : villas, parquet bois, terre cuite et pièces humides à traiter sans excès d’eau.",
+    "Organisation fluide sans gare intra-muros : coordination d’accès avec Chelles-Gournay/Noisy-Champs et créneaux optimisés.",
+    "Finitions utiles pour l’état des lieux : cuisine, sanitaires, points de contact, vitres accessibles et contrôle visuel final.",
+  ],
+
+  uniqueIntro: `<p>Gournay-sur-Marne a une configuration à part : une petite commune résidentielle, entre la Place de la Libération et les Bords de Marne, où l’on attend une intervention discrète et précise. Ici, les demandes portent souvent sur une remise en état après déménagement, une préparation avant remise des clés, ou un logement qui a peu vécu pendant un moment et qui doit redevenir net, sans “sur-traiter” les matériaux.</p>
+<p class="mt-4">Entre les villas avec parquet bois et véranda, les maisons plus récentes, et quelques résidences R+2/R+3 en centre, les surfaces ne réagissent pas pareil : traces sur les vitrages, plinthes marquées, dépôts calcaires dans la salle de bain, cuisine à remettre au propre sur les zones accessibles. Sur les bords de l’eau, l’humidité impose aussi une méthode maîtrisée pour éviter les reprises ou les odeurs d’humide après passage.</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Gournay-sur-Marne</strong>, Klinova applique un cadre clair : <strong>selon l’état réel du logement, une visite technique peut être nécessaire.</strong> On définit le périmètre, on cale l’accès (clé, badge, stationnement), puis on déroule une remise en état par pièces, avec un contrôle final pour livrer un résultat propre et cohérent.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Cadrage et repérage du logement</h3>
+<p>Nous commençons par identifier le contexte (logement vide, avant état des lieux, remise en état du logement après période d’inoccupation) et les matériaux : parquet, carrelage, terre cuite, vitrages (baies, petits carreaux, véranda). Nous anticipons aussi les contraintes de Gournay : stationnement plus tendu autour de la Place de la Libération et circulation vers le Pont de Gournay aux heures chargées.</p>
+
+<h3>T2 : Intervention par zones, avec priorité aux pièces d’eau</h3>
+<p>Nous procédons de haut en bas : dépoussiérage des surfaces, plinthes, menuiseries, puis traitement des sols selon le revêtement. La cuisine est remise au propre avec un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires reçoivent un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour un rendu homogène. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à traiter.</p>
+
+<h3>T3 : Finitions, aération et contrôle</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce, et une aération conseillée pour limiter l’humidité résiduelle, particulièrement utile près des Bords de Marne. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong>, sans promesse absolue : l’intervention vise un rendu propre, lisible et conforme au périmètre défini.</p>`,
+
+  specificChallenges: [
+    "Cadre bords de Marne : humidité plus sensible, besoin de techniques maîtrisées et de conseils d’aération.",
+    "Vitrages fréquents (vérandas, baies) : finition sans traces sur vitres accessibles et rebords.",
+    "Centre-ville compact : stationnement plus compliqué autour de la Place de la Libération, surtout jours de marché.",
+    "Accès et circulation : bouchons possibles au Pont de Gournay vers Chelles, à anticiper dans le créneau.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Quelle prestation recommandez-vous pour préparer une maison des Bords de Marne avant remise des clés ?",
+      answer: `<p>Nous proposons une remise en état du logement structurée : sols et plinthes, cuisine (zones accessibles), salle de bain et sanitaires, points de contact et vitres accessibles. Le périmètre est défini avant l’intervention, ce qui permet d’aller à l’essentiel pour un rendu net et cohérent le jour de la remise.</p>`,
+    },
+    {
+      question:
+        "Traitez-vous les vérandas et grandes baies vitrées que l’on trouve souvent à Gournay ?",
+      answer: `<p>Oui, sur les vitres accessibles. Nous intégrons un passage soigné sur les vitrages et les rebords, avec des produits adaptés pour limiter les traces. Pour les hauteurs ou accès spécifiques, on le précise au moment du cadrage.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous sur un appartement en résidence en centre-ville avant état des lieux ?",
+      answer: `<p>Oui. Nous calons l’accès (clé, badge/digicode) et planifions l’intervention en tenant compte du stationnement autour de la Place de la Libération. L’objectif est un <strong>nettoyage avant état des lieux</strong> propre et homogène, avec contrôle visuel final.</p>`,
+    },
+    {
+      question:
+        "Comment évitez-vous l’humidité résiduelle après intervention, surtout près de la Marne ?",
+      answer: `<p>Nous privilégions des techniques qui limitent l’eau sur les sols et recommandons une aération en fin d’intervention. Cela aide à retrouver un logement confortable rapidement, notamment quand l’air est plus humide sur les Bords de Marne.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
   ],
 };
 

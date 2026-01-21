@@ -103,7 +103,7 @@ Cas C — Ville "Mixte" (équilibré 50/50) :
 
 ────────────────────────────────────────────────────────────────────────────────
 
-**Service 3 (Balcons/Terrasses)** : Mix **PRO + Particuliers** (adaptation selon ville)
+**Service 3 (Balcons)** : Mix **PRO + Particuliers** (adaptation selon ville)
   → Cibles : occupants, familles, bailleurs
   → Ton : empathique_professionnel (CSP+)
   ❌ INTERDIT : "syndic", "gestionnaire", "entreprise"
@@ -369,7 +369,7 @@ SEO PACK — SERVICE 3 : Nettoyage balcons
 **Mot-clé principal** : "nettoyage balcon {VILLE}" (2-3× max)
 
 **Variantes naturelles** :
-- balcon, terrasse, loggia
+- balcon, loggia
 - remise en état, traitement, rafraîchissement, entretien
 
 **Méthodes techniques (mentionner ≥1)** :
@@ -384,12 +384,11 @@ SEO PACK — SERVICE 3 : Nettoyage balcons
 - Voisinage : coulures chez voisins du dessous, gestion eau de lavage, protection façade
 
 **Contextes d'usage (mentionner ≥1)** :
-- Types : balcon ouvert, terrasse, loggia (balcon fermé)
+- Types : balcon ouvert, loggia (balcon fermé)
 - Supports : carrelage grès/céramique, béton brut/peint, dalles sur plots, bois composite
 
 **Longue traîne (à piocher)** :
 - nettoyage balcon appartement {VILLE}
-- nettoyage terrasse {VILLE}
 - nettoyage loggia {VILLE}
 - traitement dépôts verts balcon {VILLE}
 - remise en état balcon {VILLE}
@@ -1006,7 +1005,7 @@ SERVICE 2 (PARKINGS) — B2B pur (inchangé) :
 
 ────────────────────────────────────────────────────────────────
 
-SERVICE 3 (BALCONS/TERRASSES) — B2C pur (inchangé) :
+SERVICE 3 (BALCONS) — B2C pur (inchangé) :
 
 → profil_communication = b2c_csp_plus (toujours)
 → Cible : particuliers (appartements), bailleurs UNIQUEMENT
@@ -1228,7 +1227,7 @@ SERVICE 2 (PARKINGS) — 12 INTENTIONS POSSIBLES
 
 **Règle de couverture** : Les 4 intentions choisies doivent couvrir AU MOINS 3 tags différents.
 
-SERVICE 3 (BALCONS/TERRASSES) — 12 INTENTIONS POSSIBLES
+SERVICE 3 (BALCONS) — 12 INTENTIONS POSSIBLES
 
 1. (tech) Risque d'endommager carrelage/joints/dalles
 2. (orga) Gestion de l'eau (coulures chez voisins du dessous)
@@ -1255,7 +1254,7 @@ SERVICE 4 (FIENTES PIGEONS) — 12 INTENTIONS POSSIBLES
 6. (orga) Évacuation des déchets contaminés (sacs étanches)
 7. (résultat) Solutions anti-retour pigeons (pics, filets) après nettoyage
 8. (résultat) Odeurs persistantes après nettoyage
-9. (tech) Différence balcon vs loggia vs terrasse (confinement)
+9. (tech) Différence balcon vs loggia (confinement)
 10. (dégradation) Zones à risque dans la ville (parcs, grands arbres, corniches)
 11. (dégradation) Fréquence de réinfestation si pas de prévention
 12. (orga) Coordination avec voisinage (nuisances, odeurs pendant intervention)
@@ -1448,7 +1447,7 @@ EXCEPTION : RANG 4-5 AUTORISÉ (B2C UNIQUEMENT)
 du client particulier (B2C).
 
 **Services concernés** :
-- SERVICE 3 (Balcons/Terrasses) : toujours B2C
+- SERVICE 3 (Balcons) : toujours B2C
 - SERVICE 4 (Fientes pigeons) : toujours B2C
 - SERVICE 1 (Moquettes) : SI ville résidentielle (pas de secteur B2B)
 - SERVICE 5 (Canapés/Tapis/Matelas) : SI ville résidentielle (pas de secteur B2B)
@@ -1601,7 +1600,7 @@ STYLES AUTORISÉS PAR SERVICE
 
 Service 1 — Moquettes : A ou B ou D
 Service 2 — Parkings : B ou C (A interdit)
-Service 3 — Balcons/Terrasses : A ou B (C interdit)
+Service 3 — Balcons : A ou B (C interdit)
 Service 4 — Fientes pigeons : B ou D (A interdit)
 Service 5 — Canapés/Tapis/Matelas : A ou D (C interdit)
 

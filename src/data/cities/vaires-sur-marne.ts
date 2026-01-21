@@ -399,7 +399,64 @@ nearbyCities: [
         }
       ],
       ctaOverride: ""
-    }
+    },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Vaires-sur-Marne, nettoyage ciblé pour pavillons, logements proches de la gare ou de la Marne : gestion du calcaire, vitrages et finitions avant état des lieux ou relocation.",
+
+  whyUsBullets: [
+    "Organisation adaptée aux rythmes locaux : créneaux gare (matin/soir) et jours de marché, pour éviter les complications de stationnement et gagner du temps sur place.",
+    "Méthode “maison/pavillon” : progression par niveaux et par zones, avec attention aux pièces humides et aux vitrages (vérandas, baies).",
+    "Prise en compte du contexte bords de Marne : poussières et terre ramenées, humidité, calcaire — pour un rendu net qui tient dans le temps.",
+  ],
+
+  uniqueIntro: `<p>À Vaires-sur-Marne, les demandes de nettoyage sont souvent liées à des situations très concrètes : état des lieux, grand ménage avant remise en location, nettoyage après travaux légers, ou remise en ordre après une période de passages. La commune combine un pavillonnaire dominant (Bois-Lumière, Cour d’Orange) et des secteurs plus “collectifs” près de la gare de Vaires-Torcy (Ligne P), ce qui impose des approches différentes : volumes et vitrages côté maisons, accès Vigik/digicode et stationnement plus contraint côté immeubles.</p>
+<p class="mt-4">Le terrain est aussi marqué par la proximité de la Marne et de l’Île de loisirs / stade nautique : on retrouve plus facilement de la terre fine, du sable et des traces de passage, surtout dans les entrées et sur les sols. Dans les pièces d’eau, l’eau dure du 77 et l’humidité en bord de Marne se voient vite sur les parois, la robinetterie et les joints. Pour obtenir un résultat propre “au premier regard”, il faut donc une intervention structurée, avec un vrai contrôle final.</p>
+<p class="mt-4">L’objectif n’est pas de “faire partout un coup de propre”, mais de remettre le logement à un niveau cohérent : cuisine et salle d’eau traitées sérieusement, sols uniformes sans voile, et finitions propres sur les zones qui trahissent un ménage bâclé (plinthes, bas de portes, interrupteurs, poignées, rebords). C’est particulièrement important quand l’enjeu est un état des lieux ou une relocation rapide.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Gare Vaires-Torcy / centre-ville — remise en état pratique et accès à anticiper</h3>
+<p>Autour de la gare (Ligne P) et du centre, les logements en collectif demandent surtout une bonne organisation : badges/digicodes, consignes d’immeuble et stationnement plus serré aux heures pendulaires. On priorise alors les zones à fort impact : cuisine, salle d’eau, sols, puis finitions visibles.</p>
+
+<h3>T2 : Bois-Lumière / Cour d’Orange — pavillons, vérandas et volumes à homogénéiser</h3>
+<p>En pavillonnaire, la difficulté est rarement la saleté “intense”, mais l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite (vérandas, baies, Velux). Une intervention réussie se joue sur l’uniformité : pas de traces au sol, poussière extraite des angles, et pièces d’eau nettes sans agresser les surfaces.</p>
+
+<h3>T3 : Les Pêcheurs / bords de Marne — traces de passage et humidité</h3>
+<p>Près des berges, on retrouve plus facilement des traces de chaussures et un besoin plus fréquent de traitement des zones humides (dépôts, joints, ventilation). Le bon rendu passe par une remise à plat progressive : dépoussiérage, dégraissage, traitement calcaire, puis sols et contrôle final pour éviter le “voile” et les reprises visibles.</p>`,
+
+  specificChallenges: [
+    "Gare de Vaires-Torcy (Ligne P) : stationnement et accès plus délicats aux heures pendulaires.",
+    "Bords de Marne / base nautique : terre, sable et traces de passage ramenées plus facilement.",
+    "Humidité locale : joints et parois de douche qui marquent vite si le nettoyage n’est pas cadré.",
+    "Calcaire (77) : robinetterie et parois à traiter sans abîmer ni laisser de traces.",
+    "Pavillons avec vitrages : vérandas/baies/Velux à gérer proprement (traces visibles).",
+    "Typologies mixtes : cités cheminotes et bâti ancien (accès/escaliers) vs résidences récentes (Vigik/digicode).",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous pour un nettoyage d’état des lieux à Vaires-sur-Marne (77360) ?",
+      answer: `<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau en priorité, sols ensuite, puis finitions (plinthes, poignées, interrupteurs, bas de portes). Le but est un rendu net et homogène, sans traces au sol ni dépôts visibles en pièces d’eau.</p>`,
+    },
+    {
+      question: "Pouvez-vous faire un nettoyage après travaux (poussières fines) à Vaires-sur-Marne ?",
+      answer: `<p>Oui. Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne : surfaces et menuiseries d’abord, sols ensuite, puis contrôle des rebords et angles. Cela donne un résultat propre sans voile, surtout sur stratifié et carrelage.</p>`,
+    },
+    {
+      question: "Nettoyez-vous les vérandas et grandes baies vitrées des pavillons ?",
+      answer: `<p>Oui, c’est fréquent sur Vaires (pavillons). On peut intégrer les vitrages accessibles dans la prestation, en adaptant la méthode pour éviter traces et reprises visibles, notamment sur les grandes surfaces vitrées.</p>`,
+    },
+    {
+      question: "Comment gérez-vous le stationnement près de la gare de Vaires-Torcy ?",
+      answer: `<p>On anticipe le déchargement et le créneau. Autour de la gare, certains horaires sont plus chargés ; quand c’est possible, on privilégie des créneaux plus calmes et on organise l’intervention pour limiter les allers-retours.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ]
 };
 

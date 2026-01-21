@@ -222,7 +222,7 @@ nearbyCities: [
     {
       serviceKey: "balcons",
       heroDescription:
-        "Le nettoyage professionnel des balcons et terrasses à Fontenay-sous-Bois redonne un espace extérieur utilisable et propre, libéré des dépôts végétaux du Bois dans le Haut-Fontenay et de la pollution noire de l'A86 dans le Val de Fontenay.",
+        "Le nettoyage professionnel des balcons à Fontenay-sous-Bois redonne un espace extérieur utilisable et propre, libéré des dépôts végétaux du Bois dans le Haut-Fontenay et de la pollution noire de l'A86 dans le Val de Fontenay.",
 
       whyUsBullets: [
         "Double expertise végétale et pollution : Traitement anti-mousse et détergent spécifique pour dépôts végétaux du Bois dans le Haut-Fontenay, dégraissant alcalin pour pollution noire de l'A86 dans le Val de Fontenay.",
@@ -230,7 +230,7 @@ nearbyCities: [
         "Organisation logistique par secteur : Véhicules compacts pour rues étroites bordées de végétation du Village, accès standard pour les copropriétés modernes du Val de Fontenay, planification tenant compte de la fracture urbaine.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires fontenaysiens finissent par renoncer à utiliser leur balcon ou terrasse, découragés par un encrassement qui varie radicalement selon le quartier. Dans le Haut-Fontenay (Village, Plateau, Voisins du Bois), les balcons des villas bourgeoises et des copropriétés bordant le Bois de Vincennes accumulent les pollens collants au printemps, la sève des platanes et tilleuls qui marque les dalles de taches brunâtres tenaces, puis les feuilles mortes massives en automne qui se décomposent dans les angles. L'humidité élevée du quartier des Voisins du Bois favorise le développement de mousses vertes sur les pierres de taille et les murets, rendant les surfaces glissantes. À l'inverse, dans le Val de Fontenay et les Rigollots, les balcons des copropriétés modernes proches de l'A86 accumulent une poussière noire grasse qui colle aux dalles et aux garde-corps en quelques semaines, formant une pellicule tenace difficile à éliminer.</p>
+      uniqueIntro: `<p>Les propriétaires fontenaysiens finissent par renoncer à utiliser leur balcon, découragés par un encrassement qui varie radicalement selon le quartier. Dans le Haut-Fontenay (Village, Plateau, Voisins du Bois), les balcons des villas bourgeoises et des copropriétés bordant le Bois de Vincennes accumulent les pollens collants au printemps, la sève des platanes et tilleuls qui marque les dalles de taches brunâtres tenaces, puis les feuilles mortes massives en automne qui se décomposent dans les angles. L'humidité élevée du quartier des Voisins du Bois favorise le développement de mousses vertes sur les pierres de taille et les murets, rendant les surfaces glissantes. À l'inverse, dans le Val de Fontenay et les Rigollots, les balcons des copropriétés modernes proches de l'A86 accumulent une poussière noire grasse qui colle aux dalles et aux garde-corps en quelques semaines, formant une pellicule tenace difficile à éliminer.</p>
 <p class="mt-4">Après une saison, les balcons deviennent des espaces négligés : dans le Plateau, les joints noircissent et les surfaces se couvrent de dépôts verdâtres, les feuilles s'accumulent dans les angles, le garde-corps se ternit sous l'effet de l'humidité. Au Val de Fontenay, le sol carrelé prend une teinte grisâtre uniforme, les garde-corps métalliques sont couverts d'une patine noire, l'eau de pluie forme des traînées sombres sur les façades. On hésite à y installer une chaise ou à y prendre un café le matin. Les tentatives de nettoyage avec un balai-brosse et un seau donnent des résultats décevants : la poussière grasse résiste dans le Bas-Fontenay, les dépôts végétaux s'incrustent dans le Haut-Fontenay.</p>
 <p class="mt-4">Un nettoyage professionnel adapté à chaque environnement change complètement la donne. Il élimine les dépôts végétaux et les mousses dans le Haut-Fontenay, dissout la pollution atmosphérique dans le Bas-Fontenay, et restitue l'aspect d'origine des surfaces partout. Les habitants redécouvrent le plaisir d'utiliser cet espace extérieur, d'y prendre l'air ou d'y installer quelques plantes. Cette remise en état valorise aussi le logement en cas de mise en location ou de vente, que ce soit une villa historique du Village ou un appartement moderne du Val de Fontenay.</p>`,
 
@@ -385,6 +385,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état complète d’appartements et de maisons à Fontenay-sous-Bois, avant état des lieux ou après déménagement, avec un périmètre défini en amont et des méthodes adaptées aux matériaux.",
+
+  whyUsBullets: [
+    "Lecture fine des typologies locales : Village (parquet ancien), pavillons des Rigollots/Plateau, résidences récentes du Val de Fontenay.",
+    "Traitement ciblé des zones clés : sols et plinthes, cuisine, salle de bain, points de contact, vitrages accessibles, finitions.",
+    "Organisation solide en secteur dense : gestion des accès (digicodes/gardiens) et créneaux compatibles avec le trafic Val de Fontenay.",
+  ],
+
+  uniqueIntro: `<p>À Fontenay-sous-Bois, la demande de remise en état du logement suit souvent les rythmes de la double gare (Fontenay-sous-Bois et Val de Fontenay) : déménagements, rotations locatives, remises de clés et biens à préparer rapidement. Entre le Village aux rues resserrées, les pavillons des Rigollots et les résidences plus récentes du Val de Fontenay, un logement peut cumuler poussière de circulation, traces sur les sols, cuisine sollicitée et pièces d’eau marquées.</p>
+<p class="mt-4">Un <strong>nettoyage appartement maison Fontenay-sous-Bois</strong> efficace, c’est d’abord une méthode : traiter ce qui se voit, mais aussi ce qui fait la différence le jour de la visite ou de l’état des lieux. Parquet ancien à préserver côté Village, carrelage et revêtements récents à entretenir sans voile, moquette ponctuelle en logements de standing : chaque surface demande le bon geste et le bon produit.</p>
+<p class="mt-4">Klinova intervient avec une organisation claire : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous gérons l’accès (digicodes, gardiens, consignes de copropriété), puis nous déroulons une remise en état structurée par zones, avec un contrôle final pour rendre un logement propre, lisible et prêt à être occupé ou présenté.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+<p>Nous vérifions l’état réel du bien (logement vide, usage intensif, remise en état du logement après période d’inoccupation), la nature des revêtements (parquet ancien, carrelage, stratifié, textiles) et les contraintes d’accès : rues étroites du Village, stationnement tendu autour de Val de Fontenay, digicodes et gardiens. Cette étape fixe l’ordre d’intervention et le niveau de détail attendu.</p>
+
+<h3>T2 : Grand ménage par zones, sans approximation</h3>
+<p>Nous commençons par un dépoussiérage complet (plinthes, menuiseries, surfaces accessibles), puis les sols sont traités selon leur nature. En cuisine : <strong>dégraissage cuisine</strong> sur les éléments accessibles (plans, crédences, façades selon l’état). En salle de bain : <strong>détartrage sanitaires</strong> adapté sur les zones critiques (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitrages accessibles sont inclus pour un rendu homogène. Si nécessaire, nous réalisons un <strong>débarras léger si nécessaire</strong> afin de dégager les zones à traiter.</p>
+
+<h3>T3 : Contrôle final et remise</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> avec un rendu propre et cohérent, sans surpromesse : on vise la propreté attendue pour une restitution sereine.</p>`,
+
+  specificChallenges: [
+    "Stationnement et circulation compliqués autour de Val de Fontenay : planification indispensable pour tenir le créneau.",
+    "Bâti contrasté : parquet ancien au Village, pavillons (Rigollots/Plateau), collectifs et résidences récentes côté Val de Fontenay.",
+    "Accès souvent encadrés : digicodes, interphones, gardiens et règles de copropriété (horaires, ascenseurs).",
+    "Pollution A86 et flux RER : vitres et rebords plus vite marqués, nécessité d’un traitement soigné des vitrages accessibles.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous pour une remise en état avant état des lieux à Fontenay-sous-Bois (94120) ?",
+      answer: `<p>Oui. Nous organisons l’intervention en fonction des contraintes d’accès (digicode, gardien, consignes de copropriété) et du stationnement, notamment près de Val de Fontenay. Le but est de livrer un logement propre et présentable dans un délai compatible avec votre date de remise des clés.</p>`,
+    },
+    {
+      question:
+        "Comment protégez-vous un parquet ancien dans le secteur Village lors d’un grand ménage ?",
+      answer: `<p>Lors du diagnostic, nous identifions le type de parquet et son état. Nous privilégions des méthodes maîtrisées (sans excès d’eau, sans abrasion), avec des produits compatibles. L’objectif est un rendu net sans risque de voile ni d’altération des finitions.</p>`,
+    },
+    {
+      question:
+        "Que comprend votre méthode pour cuisine et salle de bain ?",
+      answer: `<p>Nous travaillons par zones : dépoussiérage, puis traitement ciblé. En cuisine, le <strong>dégraissage cuisine</strong> porte sur les surfaces accessibles (plans, crédences, façades selon l’état). En salle de bain, le <strong>détartrage sanitaires</strong> est adapté aux matériaux, avec une attention particulière aux zones qui se voient le plus (robinetterie, parois, joints).</p>`,
+    },
+    {
+      question:
+        "Le logement peut-il être réutilisé le jour même après intervention ?",
+      answer: `<p>Dans la majorité des cas, oui. Nous limitons l’humidité résiduelle et prévoyons une aération en fin de prestation. Pour les logements très encrassés ou certains revêtements, nous vous indiquons simplement le temps d’aération conseillé au moment du diagnostic.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+}
+
   ],
 };
 

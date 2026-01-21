@@ -385,6 +385,72 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état soignée d’appartements et de maisons avant état des lieux ou remise des clés, avec diagnostic préalable et méthodes adaptées à chaque surface.",
+
+  whyUsBullets: [
+    "Connaissance des logements locaux : pavillons familiaux et résidences récentes de Bussy-Saint-Georges.",
+    "Traitement cohérent de l’ensemble du logement : sols, cuisines, sanitaires, vitrages accessibles et finitions.",
+    "Organisation fiable pour délais courts : intervention calée sur les contraintes d’état des lieux et de remise des clés.",
+  ],
+
+  uniqueIntro: `<p>Organiser un <strong>nettoyage appartement maison Bussy-Saint-Georges</strong> intervient souvent à un moment clé : départ d’un locataire, emménagement, ou préparation d’un état des lieux. Dans une ville structurée par le RER A et des quartiers résidentiels comme le Sycomore ou le Golf, les logements connaissent des rotations régulières qui laissent peu de place à l’approximation.</p>
+<p class="mt-4">Sols marqués par l’usage, dépôts de calcaire dans les pièces d’eau, cuisine encrassée, vitrages ternis ou détails oubliés : un logement peut sembler propre à première vue tout en restant insuffisant pour une restitution sans réserve. Pavillons et appartements récents présentent en outre des matériaux variés qui exigent une approche maîtrisée.</p>
+<p class="mt-4">Klinova intervient avec une méthode claire : diagnostic du logement, choix des techniques selon les surfaces, gestion des accès (digicodes, badges) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> L’objectif est de rendre un logement propre, lisible et prêt à être présenté.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+<p>Chaque intervention débute par une évaluation précise : type de logement, nature des salissures (usage courant, logement inoccupé, résidus légers après intervention technique), surfaces sensibles et contraintes d’accès propres aux résidences de Bussy-Saint-Georges. Les éléments fragiles sont protégés et l’ordre de traitement est planifié.</p>
+
+<h3>T2 : Nettoyage par zones</h3>
+<p>La <strong>remise en état du logement</strong> s’effectue pièce par pièce. Les sols sont nettoyés selon leur revêtement, les plinthes et points de contact sont traités, la cuisine fait l’objet d’un <strong>dégraissage cuisine</strong> ciblé, et la salle de bain d’un <strong>détartrage sanitaires</strong> adapté. Les vitres accessibles et finitions visuelles complètent l’intervention, qu’il s’agisse d’un <strong>nettoyage avant état des lieux</strong> ou d’un <strong>nettoyage après déménagement</strong>.</p>
+
+<h3>T3 : Contrôle et restitution</h3>
+<p>Un contrôle visuel est réalisé dans chaque pièce, suivi d’une aération du logement. L’intervention se conclut par une restitution claire, permettant une réoccupation immédiate ou une présentation sereine lors de l’état des lieux.</p>`,
+
+  specificChallenges: [
+    "Rotations locatives fréquentes autour de la gare RER A, avec délais d’intervention réduits.",
+    "Présence majoritaire de logements récents aux surfaces sensibles nécessitant des méthodes adaptées.",
+    "Accès sécurisés par badges et digicodes dans la plupart des résidences.",
+    "Exigence élevée sur les finitions visuelles lors des états des lieux sortants.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Dans quels cas recommandez-vous une remise en état complète plutôt qu’un simple passage de ménage ?",
+      answer: `<p>Une remise en état est pertinente lorsque le logement doit être restitué ou réoccupé rapidement : état des lieux, mise en location, logement resté inoccupé. Elle permet de traiter les zones souvent négligées lors d’un entretien courant, comme les plinthes, points de contact et finitions visibles.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous pour un état des lieux sortant dans les logements proches du RER A ?",
+      answer: `<p>Oui. Les secteurs proches de la gare connaissent des rotations fréquentes. L’intervention est organisée en tenant compte des contraintes d’accès et de stationnement afin de respecter les délais imposés par l’agence ou le propriétaire.</p>`,
+    },
+    {
+      question:
+        "Comment adaptez-vous vos méthodes aux parquets et sols récents des résidences de Bussy-Saint-Georges ?",
+      answer: `<p>Lors du diagnostic, chaque sol est identifié. Les parquets sont nettoyés sans excès d’humidité, et les carrelages récents avec des produits compatibles afin de préserver leur aspect et éviter toute trace ou altération.</p>`,
+    },
+    {
+      question:
+        "Le logement peut-il être utilisé immédiatement après votre intervention ?",
+      answer: `<p>Dans la majorité des situations, oui. Les méthodes employées limitent l’humidité résiduelle et une aération est prévue en fin d’intervention, permettant une réutilisation rapide du logement.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
+
   ],
 };
 

@@ -238,7 +238,7 @@ nearbyCities: [
         "Gestion rigoureuse de l'eau pour éviter toute coulure en façade ou chez les voisins.",
       ],
 
-      uniqueIntro: `<p>Les balcons et terrasses des logements de Claye-Souilly accumulent dépôts verts, traces de terre, résidus de feuilles et poussières fines liées aux axes proches comme la RN3 ou l'A104. Ces salissures sont accentuées par la proximité d'espaces végétalisés et par les zones peu exposées au soleil, notamment dans les immeubles du centre-ville ou du quartier Victor Hugo. Les dalles se ternissent, les joints noircissent, et des mousses ou algues apparaissent progressivement.</p>
+      uniqueIntro: `<p>Les balcons des logements de Claye-Souilly accumulent dépôts verts, traces de terre, résidus de feuilles et poussières fines liées aux axes proches comme la RN3 ou l'A104. Ces salissures sont accentuées par la proximité d'espaces végétalisés et par les zones peu exposées au soleil, notamment dans les immeubles du centre-ville ou du quartier Victor Hugo. Les dalles se ternissent, les joints noircissent, et des mousses ou algues apparaissent progressivement.</p>
 <p class="mt-4">Les garde-corps se couvrent de traces de doigts, de coulures calcaires et de dépôts atmosphériques. Cette dégradation décourage l'usage du balcon, qui pourrait redevenir un véritable espace de détente. Vous finissez par ne plus sortir, votre mobilier reste bâché et votre balcon sert de débarras. <strong>Un nettoyage professionnel permet de retirer les dépôts incrustés,</strong> de redonner de la clarté aux surfaces et de réinvestir pleinement cet espace extérieur sans craindre de salir vêtements ou mobilier.</p>`,
 
       uniqueDeepDive: `<h3>1. Repérage et protection</h3>
@@ -265,9 +265,9 @@ nearbyCities: [
         },
         {
           question:
-            "Klinova intervient-il aussi bien sur les petits balcons d'appartement que sur les grandes terrasses ?",
+            "Klinova intervient-il aussi bien sur tous types de balcons ?",
           answer:
-            "<p><strong>Oui, nous intervenons sur tous types de balcons et terrasses,</strong> qu'il s'agisse de petits espaces en immeuble collectif ou de surfaces plus importantes. La méthode est systématiquement adaptée à la configuration des lieux, à l'encombrement et aux éléments à protéger.</p>",
+            "<p><strong>Oui, nous intervenons sur tous types de balcons</strong> qu'il s'agisse de petits espaces en immeuble collectif ou de surfaces plus importantes. La méthode est systématiquement adaptée à la configuration des lieux, à l'encombrement et aux éléments à protéger.</p>",
         },
         {
           question:
@@ -399,5 +399,67 @@ uniqueDeepDive: `<h3>1. Diagnostic et pré-traitement</h3>
     },
   ],  ctaOverride: "",
 },
+
+{
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état complète d’appartements et de maisons à Claye-Souilly, avec un périmètre défini en amont et des méthodes adaptées aux sols, cuisines, sanitaires et vitrages.",
+
+  whyUsBullets: [
+    "Connaissance des typologies locales : pavillons de Bois-Fleuri et logements récents de Mauperthuis.",
+    "Traitement soigné des zones critiques : cuisine, salle de bain, sols et points de contact, sans abîmer les finitions.",
+    "Organisation efficace malgré les contraintes : accès badges en résidences et circulation dense autour de la N3.",
+  ],
+
+  uniqueIntro: `<p>À Claye-Souilly, les demandes de remise en état se concentrent souvent autour des moments charnières : déménagement, logement resté inoccupé, mise en location ou préparation d’un état des lieux. Entre les pavillons de Bois-Fleuri et les résidences plus récentes de Mauperthuis, les matériaux varient, et le rendu attendu est le même : un logement propre, homogène, prêt à être présenté ou réoccupé.</p>
+<p class="mt-4">La commune est aussi marquée par deux réalités très concrètes : la proximité de la N3, qui favorise les dépôts de poussière sur les vitres et les entrées, et un eau souvent calcaire en Seine-et-Marne, qui laisse rapidement des traces dans la salle de bain. Sur les maisons avec véranda ou grandes baies vitrées, comme sur les appartements du centre, la remise en état demande une méthode régulière et des produits compatibles avec chaque surface.</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Claye-Souilly</strong>, Klinova intervient avec une approche claire : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Puis nous déroulons un protocole par zones, en tenant compte des accès (digicodes, badges) et des contraintes de circulation, notamment près du pôle Shopping Promenade et des axes vers Mitry-Claye.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Diagnostic et cadrage</h3>
+<p>Nous évaluons l’état réel du logement et ses contraintes : niveau de salissures, pièces prioritaires, revêtements (carrelage, parquet stratifié), vitrages (baies, véranda) et accès. En résidence, nous anticipons les badges/interphones ; en pavillon, nous planifions l’itinéraire d’intervention pour limiter les déplacements et gagner en efficacité.</p>
+
+<h3>T2 : Nettoyage structuré par zones</h3>
+<p>Nous commençons par un dépoussiérage complet (plinthes, menuiseries, surfaces hautes accessibles), puis nous traitons les sols avec une méthode adaptée au revêtement. La cuisine fait l’objet d’un <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon l’état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, robinetterie et joints selon tolérance des matériaux. Les points de contact (interrupteurs, poignées) et les vitres accessibles complètent la remise en état pour un rendu net et cohérent.</p>
+
+<h3>T3 : Contrôle final et conseils de restitution</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>grand ménage maison Claye-Souilly</strong> sans zones “à reprendre”, avec un rendu lisible pour une visite, une remise des clés ou une réinstallation rapide.</p>`,
+
+  specificChallenges: [
+    "Dépôts liés aux axes routiers (N3, proximité A104) : finitions sur vitres, entrées et plinthes à soigner.",
+    "Eau calcaire en Seine-et-Marne : traces rapides sur robinetterie, parois et sanitaires.",
+    "Grandes surfaces vitrées (vérandas, baies) fréquentes en pavillons : méthode anti-traces indispensable.",
+    "Accès en résidences récentes (Mauperthuis) : digicodes/badges et stationnement parfois contraint en centre.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous pour une remise en état avant état des lieux dans le centre de Claye-Souilly (77410) ?",
+      answer: `<p>Oui. Nous planifions l’intervention en fonction de la date de remise des clés et des contraintes d’accès (digicode, clés, horaires). Le stationnement en centre-ville peut être plus serré : on l’anticipe pour tenir le créneau et livrer un logement prêt à être présenté.</p>`,
+    },
+    {
+      question:
+        "Que change une remise en état dans un logement récent de Mauperthuis par rapport à un pavillon de Bois-Fleuri ?",
+      answer: `<p>En logement récent, on porte une attention particulière aux finitions (parquet stratifié, surfaces modernes, baies vitrées) et aux accès (badge/interphone). En pavillon, le volume et les vitrages (véranda, grandes ouvertures) comptent davantage : on structure le passage pièce par pièce pour garder un rendu homogène.</p>`,
+    },
+    {
+      question:
+        "Comment évitez-vous les traces de calcaire dans la salle de bain après intervention ?",
+      answer: `<p>Nous utilisons un détartrage adapté aux matériaux (robinetterie, parois, joints) et nous rinçons correctement pour limiter les résidus. Nous pouvons aussi laisser des conseils simples d’aération et d’essuyage sur les zones qui marquent vite, surtout dans le 77.</p>`,
+    },
+    {
+      question:
+        "Est-ce que vous proposez aussi un nettoyage des vitres et baies vitrées d’une maison ?",
+      answer: `<p>Oui, sur les vitrages accessibles. C’est fréquent à Claye-Souilly, notamment sur les pavillons avec véranda ou grandes baies. Nous intégrons cette partie au périmètre défini avant intervention pour garantir un rendu propre et cohérent.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
 ],
 };export default city;

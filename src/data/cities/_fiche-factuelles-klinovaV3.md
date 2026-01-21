@@ -91,7 +91,7 @@ ANCRAGE # :
 - Type : transport / axe / bâti / usage / équipement
 - Preuve :
 - Statut : ✅/⚠️
-- Utile pour : hub / moquettes / parkings / balcons / fientes / canapés
+- Utile pour : hub / moquettes / parkings / balcons / fientes / canapés / terasses / nettoyage-appartements-et-maisons
 - Distinctif vs voisins : oui/non
 
 SECTION 8 — CIBLAGE RÉALISTE PAR SERVICE (PAS DE TEXTE, JUSTE CHOIX)
@@ -100,6 +100,7 @@ Parkings : types + donneurs d’ordre
 Balcons : typologies + facteurs salissure (✅/⚠️)
 Fientes : contextes probables + zones plausibles (uniquement si sourçables)
 Canapés/tapis/matelas : contextes + contraintes
+
 
 SECTION 8bis — REQUÊTES LOCALES (INSPIRATION UNIQUEMENT)
 12–20 requêtes max.

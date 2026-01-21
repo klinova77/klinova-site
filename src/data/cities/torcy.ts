@@ -215,12 +215,12 @@ nearbyCities: [
     },
 
     // =========================
-    // SERVICE 3 – BALCONS / TERRASSES
+    // SERVICE 3 – BALCONS 
     // =========================
     {
       serviceKey: "balcons",
       heroDescription:
-        "Retrouvez le plaisir d'utiliser votre balcon ou terrasse à Torcy grâce à un nettoyage professionnel qui élimine mousses, dépôts et salissures accumulées.",
+        "Retrouvez le plaisir d'utiliser votre balcon à Torcy grâce à un nettoyage professionnel qui élimine mousses, dépôts et salissures accumulées.",
       whyUsBullets: [
         "Connaissance des typologies de balcons des résidences récentes et immeubles anciens de Torcy.",
         "Techniques adaptées aux différents revêtements et aux contraintes d'exposition aux étangs environnants.",
@@ -228,7 +228,7 @@ nearbyCities: [
         "Conseils d'entretien personnalisés pour préserver durablement la propreté de votre espace extérieur."
       ],
 
-      uniqueIntro: `<p>Les balcons et terrasses des appartements de Torcy subissent un <strong>encrassement constant</strong> lié à l'exposition aux particules issues du trafic des axes A4 et A104, ainsi qu'aux dépôts organiques favorisés par l'humidité des étangs de Maubuée. Entre les joints noircis, les traces verdâtres de mousses et d'algues et l'accumulation de poussière urbaine, ces espaces extérieurs perdent rapidement leur attrait.</p>
+      uniqueIntro: `<p>Les balcons des appartements de Torcy subissent un <strong>encrassement constant</strong> lié à l'exposition aux particules issues du trafic des axes A4 et A104, ainsi qu'aux dépôts organiques favorisés par l'humidité des étangs de Maubuée. Entre les joints noircis, les traces verdâtres de mousses et d'algues et l'accumulation de poussière urbaine, ces espaces extérieurs perdent rapidement leur attrait.</p>
 <p class="mt-4">Les résidents des copropriétés récentes du secteur Arche-Guédon comme ceux du vieux Torcy se retrouvent avec des balcons qu'ils évitent d'utiliser, devenus peu accueillants et donnant une impression de négligence. Un <strong>nettoyage professionnel</strong> redonne vie à ces espaces extérieurs et permet de les réinvestir pleinement pour les moments de détente.</p>`,
 
       uniqueDeepDive: `<h3>Protection et préparation minutieuse</h3>
@@ -386,7 +386,64 @@ nearbyCities: [
         }
       ],
       ctaOverride: ""
-    }
+    },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Torcy, remise en état adaptée à une ville de flux : logements collectifs, pavillons et secteurs proches du RER, avec une organisation pensée pour stationnement et délais serrés.",
+
+  whyUsBullets: [
+    "Approche “ville de flux” : intervention efficace et cadrée pour états des lieux, relogement, visites d’agence, sans sacrifier les finitions.",
+    "Connaissance des typologies locales : collectifs denses (Mail/Gradins), petits immeubles (Le Clos), pavillons (Bel-Air, Beauregard) et centre ancien (Le Village).",
+    "Logistique maîtrisée : accès Vigik/digicode, parkings et zones bleues, organisation pour limiter les allers-retours et la gêne en copropriété.",
+  ],
+
+  uniqueIntro: `<p>À Torcy, le nettoyage d’un logement est souvent lié à un moment précis : état des lieux, remise en état avant relocation, grand ménage après une période chargée, ou nettoyage après travaux. La gare RER A concentre une partie de la rotation (secteurs Le Mail / Les Gradins / Val de Torcy), tandis que les quartiers pavillonnaires (Bel-Air, Beauregard) génèrent des demandes plus “maison” : plusieurs niveaux, véranda, garage, pièces annexes.</p>
+<p class="mt-4">Le terrain impose aussi sa méthode : accès sécurisés dans beaucoup de résidences (badges, interphones), stationnement plus délicat autour de la gare et des zones commerciales, et créneaux à éviter quand la ville se “sature” (8h–9h, 17h–19h, samedi près de Bay 2). Une intervention bien préparée commence donc par le cadrage : surface, priorités, contraintes d’accès et niveau de finition attendu.</p>
+<p class="mt-4">Côté résultats, Torcy présente des surfaces très courantes en ville nouvelle : sols PVC/lino dans certains collectifs, carrelage dans les pièces d’eau, parquet stratifié dans de nombreux pavillons et résidences récentes. Le bon rendu tient à une progression simple et propre : dégrossir, traiter cuisine/salle d’eau, uniformiser les sols, puis passer au contrôle final sur les détails visibles (plinthes, interrupteurs, poignées, bas de portes).</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Gare RER A / Le Mail / Les Gradins — états des lieux et “remise à niveau” rapide</h3>
+<p>Autour du pôle gare, les demandes sont souvent orientées sortie/entrée de location : cuisine et salle d’eau d’abord (dégraissage, calcaire), puis sols et finitions. Dans ces résidences, l’enjeu est autant l’efficacité que la logistique : badge Vigik, ascenseurs, règles de copro, et stationnement plus contraint.</p>
+
+<h3>T2 : Bel-Air / Beauregard — maisons familiales et volumes sur plusieurs niveaux</h3>
+<p>En pavillonnaire, on rencontre des configurations plus larges : escaliers, chambres, bureau, pièces de rangement. Le nettoyage se joue sur l’homogénéité : sols sans traces, poussière correctement extraite des angles, et pièces d’eau remises “à blanc” sans attaquer les joints ou les surfaces fragiles.</p>
+
+<h3>T3 : Le Village / centre ancien — accès serrés et finitions visibles</h3>
+<p>Le Village apporte un autre contexte : rues plus étroites, stationnement parfois plus délicat, escaliers resserrés dans certains immeubles. Ici, on privilégie une intervention compacte : matériel adapté, passages optimisés, et contrôle final des zones qui marquent vite (entrées, poignées, encadrements, rebords).</p>`,
+
+  specificChallenges: [
+    "Ville de flux : demandes fréquentes liées aux états des lieux et aux relogements autour de la gare RER A.",
+    "Stationnement et circulation : contraintes plus fortes près de la gare et le samedi vers Bay 1/Bay 2.",
+    "Accès sécurisés : digicodes, Vigik, interphones, consignes d’immeuble dans la majorité des collectifs.",
+    "Typologies contrastées : collectifs denses (Mail/Gradins) vs pavillons (Bel-Air/Beauregard) avec plusieurs niveaux.",
+    "Calcaire en pièces d’eau : dépôts rapides, parois et robinetterie à traiter sans abîmer.",
+    "Sols très variés : PVC/lino, carrelage, stratifié — risque de traces si la méthode n’est pas adaptée.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous pour un nettoyage d’état des lieux à Torcy (77200) ?",
+      answer: `<p>Oui. On suit une logique état des lieux : cuisine et salle d’eau en priorité, puis sols, puis finitions (plinthes, poignées, interrupteurs, bas de portes). C’est particulièrement demandé autour de la gare RER A et des quartiers Le Mail / Les Gradins.</p>`,
+    },
+    {
+      question: "Pouvez-vous faire un nettoyage après travaux (poussières fines) à Torcy ?",
+      answer: `<p>Oui. Après travaux, on procède en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries, puis sols, puis contrôle des rebords et angles. L’objectif est un rendu net et uniforme, sans voile sur les sols ni traces sur les vitres accessibles.</p>`,
+    },
+    {
+      question: "Comment gérez-vous le stationnement près de la gare ou des zones commerciales ?",
+      answer: `<p>On anticipe le point de déchargement et le créneau. Autour de la gare et le week-end vers Bay 1/Bay 2, certains horaires sont plus compliqués ; on privilégie des créneaux plus calmes quand c’est possible et on organise l’intervention pour limiter les allers-retours.</p>`,
+    },
+    {
+      question: "Nettoyez-vous aussi des maisons (Bel-Air, Beauregard) avec plusieurs étages ?",
+      answer: `<p>Oui. Sur maison, on structure l’intervention par niveaux et par usages (pièces d’eau/cuisine, chambres, escaliers). L’enjeu est l’homogénéité : sols sans traces, poussière bien extraite, et finitions propres sur les zones de contact et de passage.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ]
 };
 

@@ -389,6 +389,69 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Fin de bail, remise en état après travaux ou déménagement. Intervention pensée pour une ville avec des réalités terrain distinctes entre Charentonneau (pavillons/parquets), Les Juilliottes (grands collectifs) et le secteur Alfort/École Vétérinaire.",
+
+  whyUsBullets: [
+    "Approche “ville multi-niveaux” : pavillons à étages et parquets à Charentonneau, dalles/parties communes en grands ensembles aux Juilliottes.",
+    "Gestion des accès et du timing : digicodes/Vigik fréquents, stationnement tendu autour du Métro 8 et de l’Avenue de la République.",
+    "Focus finitions visibles : cuisine/SDB (calcaire), plinthes et menuiseries, vitrages exposés A4/A86 selon secteurs.",
+  ],
+
+  uniqueIntro: `<p>Maisons-Alfort a une signature très différente des communes “bord de Marne” voisines : ici, le quotidien est rythmé par le <strong>Métro 8</strong> (École Vétérinaire, Stade, Juilliottes) et le <strong>RER D</strong>, avec un bâti qui alterne grands collectifs (Les Juilliottes, Vert-de-Maisons) et zones pavillonnaires plus calmes (Charentonneau, Planètes). Pour un nettoyage d’appartement ou de maison, ça change tout : on ne prépare pas une remise en état de pavillon à étages comme un T3 dans une résidence sur dalle.</p>
+<p class="mt-4">Le secteur <strong>Alfort / ENVA</strong> apporte aussi un contexte très concret : rotation de logements (étudiants, jeunes actifs), passages fréquents, et un standard d’hygiène élevé autour des entrées, sols et pièces d’eau. En parallèle, Charentonneau concentre des maisons avec <strong>parquet chêne</strong>, menuiseries anciennes et parfois des vérandas côté Marne : l’enjeu n’est pas la “force” mais la précision et la protection des matériaux.</p>
+<p class="mt-4">Klinova intervient à Maisons-Alfort avec une méthode orientée résultat : cadrage du périmètre, traitement des zones critiques (cuisine, SDB, sols), puis finitions. L’objectif est simple : un rendu net et cohérent, adapté aux contraintes locales (stationnement, accès, ascenseurs exigus) et aux attentes souvent élevées des quartiers résidentiels.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Secteur Métro 8 / Avenue de la République — logistique et fin de bail</h3>
+<p>Autour des stations et de l’axe central, le point dur est rarement “le nettoyage” mais l’organisation : stationnement, accès, créneaux. Nous structurons l’intervention pour limiter les allers-retours (matériel en une montée), en priorisant les zones contrôlées à l’état des lieux : cuisine, salle d’eau, sols et finitions (plinthes, interrupteurs, poignées).</p>
+
+<h3>T2 : Charentonneau et bords de Marne — parquets, menuiseries et maisons à étages</h3>
+<p>Dans ce secteur, la qualité se joue sur la protection des sols et la régularité du rendu : parquets à traiter sans excès d’eau, reprises des plinthes et des marches, et contrôle des points “poussière” (escaliers, angles, radiateurs). Les maisons à étages demandent une progression par zones pour éviter de re-salir ce qui est déjà fait.</p>
+
+<h3>T3 : Juilliottes / Vert-de-Maisons — grands collectifs, accès et surfaces vastes</h3>
+<p>Ici, les volumes et les circulations internes comptent : ascenseurs parfois exigus, couloirs, dalles, accès Vigik. Nous adaptions l’ordre des tâches pour garder des sols propres jusqu’à la sortie, et nous insistons sur les pièces d’eau (calcaire/joints) et les vitrages/baies des logements récents, qui révèlent vite les traces.</p>`,
+
+  specificChallenges: [
+    "Ville “transport” : flux Métro 8 / RER D, rotation locative et contraintes de timing (fin de bail, créneaux serrés).",
+    "Stationnement tendu autour de l’ENVA, des stations de métro et de l’Avenue de la République.",
+    "Charentonneau : maisons à étages, parquets et menuiseries anciennes nécessitant une approche douce et précise.",
+    "Juilliottes / Vert-de-Maisons : grands collectifs, accès Vigik et ascenseurs exigus, avec volumes à gérer sans re-salissure.",
+    "Exposition A4/A86 selon secteurs : vitrages et balcons pouvant marquer plus vite (poussières urbaines).",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Maisons-Alfort (94700) pour un nettoyage avant état des lieux ?",
+      answer: `<p>Oui. Nous cadrons le périmètre puis nous traitons les zones qui comptent le plus lors d’un contrôle : cuisine, salle d’eau, sols et finitions visibles (plinthes, poignées, interrupteurs, encadrements). La planification tient compte des accès (digicode/Vigik) et des contraintes de stationnement autour des stations.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous faire un nettoyage après travaux (plâtre/peinture) dans une maison à Charentonneau ?",
+      answer: `<p>Oui. Après rénovation, l’enjeu est la poussière fine et les traces sur menuiseries, plinthes et escaliers. Nous organisons un dépoussiérage structuré, puis la remise en état des surfaces et des sols, avec une attention particulière aux parquets et aux marches pour éviter toute marque.</p>`,
+    },
+    {
+      question:
+        "Le logement est dans un grand collectif (Juilliottes / Vert-de-Maisons) : est-ce plus compliqué ?",
+      answer: `<p>Pas si l’accès est anticipé. Nous prévoyons le Vigik, l’ascenseur et le cheminement pour monter le matériel en une fois, puis nous travaillons de façon à conserver les sols propres jusqu’à la sortie. Les pièces d’eau (calcaire/joints) et les baies vitrées sont traitées en priorité selon le besoin.</p>`,
+    },
+    {
+      question:
+        "Faites-vous aussi les vitres et baies vitrées ?",
+      answer: `<p>Sur demande, oui pour les vitrages accessibles et les encadrements. À Maisons-Alfort, c’est utile sur les logements exposés aux axes (A4/A86) ou avec grandes baies (logements récents), car les traces se voient vite au soleil.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+    
   ],
 };
 

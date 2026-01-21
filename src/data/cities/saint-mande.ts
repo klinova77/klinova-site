@@ -395,6 +395,73 @@ nearbyCities: [
         },
       ],
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Saint-Mandé, nettoyage discret et précis dans un bâti dense et exigeant : parquets, pièces d’eau et surfaces sensibles traités avec méthode, en amont d’un état des lieux ou d’une relocation.",
+
+  whyUsBullets: [
+    "Approche “haussmannien” : protection des parquets (point de Hongrie), nettoyage précis des plinthes, moulures basses, portes et interrupteurs pour un rendu haut de gamme.",
+    "Organisation adaptée à Saint-Mandé : accès sécurisés (gardiens, Vigik), rues étroites/sens uniques et stationnement très tendu autour de la Mairie et de l’avenue Gallieni.",
+    "Gestion des salissures typiques : dépôts urbains (axes Gallieni / Avenue de Paris), suie et particules liées au périphérique à proximité, calcaire marqué en pièces d’eau.",
+  ],
+
+  uniqueIntro: `<p>À Saint-Mandé, la demande n’est pas “un ménage standard” : c’est une remise à niveau qui doit être <strong>propre au détail</strong> dans une commune ultra-dense, avec un bâti ancien où les finitions se voient vite. Les appartements haussmanniens et les immeubles des années 30–50 combinent souvent parquets sensibles, entrées en pierre ou marbre, radiateurs et plinthes anciennes : si on néglige ces zones, le logement paraît “à moitié fait” même si le sol brille.</p>
+<p class="mt-4">La logistique est un sujet à part entière. Entre les rues étroites, les sens uniques, les accès par digicode/Vigik et les gardiens, l’intervention doit être préparée : point de dépose, accès confirmé, puis déroulé efficace pour limiter les allers-retours et le bruit. Ici, la discrétion compte autant que le résultat : voisinage proche, cages d’escalier résonnantes et contraintes d’horaires.</p>
+<p class="mt-4">On travaille donc “à la Saint-Mandé” : on démarre par la cuisine et la salle d’eau (gras + calcaire), on enchaîne sur les sols avec protection des parquets, puis on verrouille les détails visibles à l’état des lieux (plinthes, poignées, interrupteurs, traces sur portes). Le but : un rendu net, homogène, sans mauvaise surprise sur les matériaux.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Mairie / Gallieni — densité, stationnement et finitions de centre-ville</h3>
+<p>Autour de la Place Charles Digeon et de l’axe Gallieni, la densité se traduit par une logistique serrée : peu de place, des accès sécurisés et des créneaux à optimiser. On privilégie un plan d’action “pièces d’eau → cuisine → sols → finitions”, avec une attention particulière aux cages d’escalier et au bruit (aspiration, déplacement du matériel).</p>
+
+<h3>T2 : Tourelle / lisière Paris 12 — dépôts urbains et vitrages exposés</h3>
+<p>Proche des grands axes et du périphérique, certains logements cumulent particules fines, traces sur vitrages bas et salissures de rebords. On insiste sur les points de contact (poignées, interrupteurs), les plinthes et les surfaces basses, et on vise un rendu sans traces sur les fenêtres accessibles et les balcons filants.</p>
+
+<h3>T3 : Bord de Bois / secteurs résidentiels — parquets, matériaux nobles, exigence “sans compromis”</h3>
+<p>Dans les immeubles de standing près du Bois de Vincennes, l’enjeu est la protection : parquets anciens, marbre d’entrée, menuiseries bois. On adapte les produits et les gestes, on évite tout excès d’eau, et on termine par une passe de contrôle (angles, plinthes, encadrements) pour un rendu haut de gamme.</p>`,
+
+  specificChallenges: [
+    "Commune très dense : stationnement difficile et rues étroites / sens uniques.",
+    "Accès immeubles : gardiens, digicodes, Vigik et consignes d’immeuble fréquentes.",
+    "Bâti ancien : escaliers sans ascenseur et cages résonnantes (discrétion sonore).",
+    "Matériaux sensibles : parquets anciens, marbre/ pierre d’entrée, menuiseries bois.",
+    "Dépôts urbains : particules/suie à proximité du périphérique et des axes (Avenue de Paris, Gallieni).",
+    "Calcaire en pièces d’eau : traces minérales et joints à reprendre sans agresser les surfaces.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Faites-vous un nettoyage “état des lieux” à Saint-Mandé (94160) dans l’ancien ?",
+      answer: `<p>Oui. On suit une logique orientée état des lieux : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, poignées, portes). Dans l’ancien, ces détails font la différence sur la perception “propre / pas propre”.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir après travaux (peinture, ponçage, plâtre) dans un appartement haussmannien ?",
+      answer: `<p>Oui. Après travaux, on travaille en plusieurs passes pour éviter que la poussière fine se redépose : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. On adapte aussi la méthode pour protéger les parquets et les boiseries.</p>`,
+    },
+    {
+      question:
+        "Comment gérez-vous l’accès (gardiens, digicode) et le stationnement très tendu à Saint-Mandé ?",
+      answer: `<p>On confirme l’accès (Vigik/digicode/gardien) avant le rendez-vous et on définit un point de dépose réaliste. L’intervention est organisée pour limiter les allers-retours et le temps “à vide”, ce qui est essentiel dans une commune aussi dense.</p>`,
+    },
+    {
+      question:
+        "Réalisez-vous aussi le nettoyage des vitres et balcons exposés aux dépôts urbains ?",
+      answer: `<p>Oui, sur les parties accessibles. La proximité des grands axes peut marquer vitrages bas et rebords : on vise un rendu sans traces et on insiste sur les zones où la salissure est la plus visible (bas de châssis, garde-corps, rebords).</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
+
   ],
 };
 

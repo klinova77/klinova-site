@@ -219,7 +219,7 @@ const city: City = {
     {
       serviceKey: "balcons",
       heroDescription:
-        "Le nettoyage professionnel des balcons et terrasses à Serris préserve l'aspect soigné des façades néo-haussmanniennes tout en éliminant les poussières de chantier et les dépôts urbains typiques du secteur touristique.",
+        "Le nettoyage professionnel des balcons à Serris préserve l'aspect soigné des façades néo-haussmanniennes tout en éliminant les poussières de chantier et les dépôts urbains typiques du secteur touristique.",
 
       whyUsBullets: [
         "Maîtrise des matériaux récents serrisiens : Intervention régulière sur carrelages grand format, pierres naturelles et enduits clairs des copropriétés du Centre Urbain, du Quartier du Lac et de Serris-Sud, avec protocoles adaptés.",
@@ -388,6 +388,67 @@ const city: City = {
 
   ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Serris et Val d’Europe, intervention orientée rotation rapide : logements récents, locations courte durée et résidences de standing, avec un niveau de propreté attendu type hôtelier.",
+
+  whyUsBullets: [
+    "Organisation pensée pour la rotation Serris–Val d’Europe : intervention efficace, checklist de finitions, rendu net “prêt à louer / prêt à visiter”.",
+    "Spécificités locales maîtrisées : joints et parois de douche (calcaire), cuisines sollicitées, sols carrelés/parquet stratifié, vitrages et balcons travaillés.",
+    "Logistique adaptée au centre urbain : stationnement réglementé, parkings souterrains, accès Vigik/interphone, et intervention discrète en résidences.",
+  ],
+
+  uniqueIntro: `<p>À Serris, la demande est souvent liée à Val d’Europe : appartements récents, résidences de tourisme, logements meublés et locations de courte durée. Le point clé n’est pas seulement de “faire propre”, mais d’obtenir un rendu <strong>immédiatement présentable</strong> : salle d’eau sans traces, cuisine dégraissée, sols uniformes, et finitions visibles (plinthes, poignées, interrupteurs, vitrages accessibles).</p>
+<p class="mt-4">La ville a deux visages : le centre urbain néo-classique (Place d’Ariane, autour du RER A Val d’Europe) avec ses immeubles sécurisés et ses contraintes de stationnement, et le Bourg / secteurs plus calmes (Faubourg, Gassets) où l’on intervient davantage sur des maisons ou des volumes plus simples. Dans tous les cas, l’accès se prépare : digicode, badge, consignes d’immeuble, créneau horaire compatible avec les arrivées/départs.</p>
+<p class="mt-4">Enfin, Serris concentre des surfaces très “vitrées” (baies, balcons, parfois lucarnes décoratives) et des matériaux modernes : carrelage grand format, parquet stratifié, peintures récentes. Le bon résultat vient d’une méthode propre : peu d’eau sur les sols sensibles, produits adaptés, et une dernière passe de contrôle, surtout sur les zones qui se voient dès l’entrée.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Val d’Europe / Place d’Ariane — résultat “prêt à louer” et accès sécurisés</h3>
+<p>Dans le centre urbain, les interventions ressemblent souvent à une remise en état entre deux occupations : état des lieux, relocation, courte durée. On traite en priorité la salle d’eau (calcaire, joints, paroi), la cuisine (gras, crédence, façades), puis sols et finitions. L’accès est une contrainte réelle : badge, interphone, parkings souterrains et règles de copropriété.</p>
+
+<h3>T2 : Secteur RER A Val d’Europe — cadence et vitrages visibles</h3>
+<p>Autour de la gare, la rotation est forte. Les entrées d’immeuble et paliers ramènent facilement des traces, surtout par temps humide. On vise donc un rendu homogène : pas de marques sur carrelage, plinthes propres, portes et poignées traitées, et un nettoyage des vitrages accessibles pour retrouver la clarté des pièces (baies et portes-fenêtres).</p>
+
+<h3>T3 : Le Bourg / Faubourg / Gassets — volumes plus variés, fin de chantier et “grand ménage”</h3>
+<p>Dans les secteurs plus résidentiels, on rencontre davantage de maisons ou d’anciens bâtiments rénovés. Les demandes portent souvent sur un grand ménage de remise à niveau ou un nettoyage après travaux (poussière fine, traces de peinture). Le déroulé est alors plus “maison” : escaliers, pièces multiples, zones techniques, et contrôle final des rebords, plinthes et bas de murs.</p>`,
+
+  specificChallenges: [
+    "Rotation courte durée (Disney / Val d’Europe) : exigence de rendu “hôtelier” et timing serré.",
+    "Accès très sécurisés : badges, interphones, consignes de résidence, parkings souterrains.",
+    "Stationnement réglementé et déchargement matériel parfois complexe en centre urbain.",
+    "Calcaire en pièces d’eau : parois, robinetterie, joints, dépôts rapides avec forte occupation.",
+    "Cuisines sollicitées (meublés / locations) : dégraissage crédence, hotte, façades, plinthes.",
+    "Vitrages et balcons travaillés (néo-classique) : finitions visibles, rebords et garde-corps.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Faites-vous des nettoyages entre deux locations (type conciergerie / courte durée) à Serris ?",
+      answer: `<p>Oui, quand les créneaux sont compatibles. On vise un rendu “prêt à accueillir” : salle d’eau sans traces, cuisine dégraissée, sols uniformes, et finitions visibles (poignées, interrupteurs, plinthes). L’accès (badge, interphone, consignes) est confirmé en amont pour éviter toute perte de temps.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir pour un état des lieux (entrée/sortie) sur Val d’Europe ?",
+      answer: `<p>Oui. On suit une logique état des lieux : pièces d’eau et cuisine en priorité, puis sols, puis finitions. C’est particulièrement adapté aux logements autour de la gare RER A Val d’Europe où la rotation locative est élevée.</p>`,
+    },
+    {
+      question:
+        "Proposez-vous un nettoyage après travaux (poussière de plâtre, peinture) à Serris ?",
+      answer: `<p>Oui. Après travaux, on procède en plusieurs passes pour éviter la redéposition de poussière fine : surfaces et menuiseries, puis sols, puis contrôle final des rebords, plinthes et zones de passage. Le but est un rendu net, sans voile sur les sols et les vitrages accessibles.</p>`,
+    },
+    {
+      question:
+        "Comment gérez-vous le stationnement et les accès en résidence sécurisée ?",
+      answer: `<p>On prépare l’intervention : point de dépose, parking possible (souvent souterrain), digicode/badge, et règles de copropriété. Ensuite, on organise le déroulé pour limiter les allers-retours et réduire la gêne, tout en gardant un niveau de finition élevé.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ],
 };
 

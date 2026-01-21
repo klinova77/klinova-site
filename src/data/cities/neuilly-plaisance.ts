@@ -225,12 +225,12 @@ const city: City = {
       heroDescription:
         "Un balcon plus net et plus agréable, avec pression contrôlée, joints respectés et gestion de l’eau pensée pour le voisinage.",
       whyUsBullets: [
-        "Habitués aux terrasses du Plateau d’Avron et à l’humidité des bords de Marne.",
+        "Habitués aux balcons du Plateau d’Avron et à l’humidité des bords de Marne.",
         "Produits adaptés support + pression contrôlée pour préserver joints et carrelages.",
         "Gestion anti-coulures et organisation discrète, surtout en environnement résidentiel calme.",
       ],
 
-      uniqueIntro: `<p>Après quelques mois sans entretien, un balcon change vite : dépôts verts dans les joints, traces noires de pollution, salissures grasses (barbecue, cuisine), et un sol qui “accroche” sous les pieds. À Neuilly-Plaisance, l’effet est souvent plus visible vers la <strong>Promenade des Bords de Marne</strong>, où l’humidité favorise mousses et encrassement, et sur les terrasses exposées du <strong>Plateau d’Avron</strong>. Selon le bâti, on rencontre des supports variés : carrelage grès cérame, dalles, béton, avec parfois des garde-corps en métal qui marquent et retiennent les coulures.</p>
+      uniqueIntro: `<p>Après quelques mois sans entretien, un balcon change vite : dépôts verts dans les joints, traces noires de pollution, salissures grasses (barbecue, cuisine), et un sol qui “accroche” sous les pieds. À Neuilly-Plaisance, l’effet est souvent plus visible vers la <strong>Promenade des Bords de Marne</strong>, où l’humidité favorise mousses et encrassement. Selon le bâti, on rencontre des supports variés : carrelage grès cérame, dalles, béton, avec parfois des garde-corps en métal qui marquent et retiennent les coulures.</p>
 <p class="mt-4">Le <strong>nettoyage balcon Neuilly-Plaisance</strong> doit donc être précis : choisir un produit adapté au support, doser la pression, et organiser l’eau pour éviter les ruissellements chez les voisins du dessous. Klinova procède par zones (sol, joints, angles, plinthes, garde-corps), avec brossage manuel là où c’est sensible. L’objectif est de retrouver un espace utilisable, visuellement propre, et plus simple à entretenir ensuite.</p>`,
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
@@ -246,7 +246,6 @@ const city: City = {
 
       specificChallenges: [
         "Humidité vers les Bords de Marne : mousses et dépôts verts plus tenaces.",
-        "Terrasses exposées du Plateau d’Avron : traces de pollution plus visibles.",
         "Joints fragiles : pression à ajuster, brossage manuel souvent nécessaire.",
         "Coulures chez voisins : gestion de l’eau à prévoir dès la préparation.",
         "Salissures grasses (barbecue) : pré-traitement ciblé avant rinçage.",
@@ -263,11 +262,7 @@ const city: City = {
             "Sur un sol en grès cérame ou béton, adaptez-vous la méthode pour éviter d’abîmer joints et surfaces ?",
           answer: `<p>Oui. On ajuste la chimie et l’action mécanique : brossage manuel sur zones sensibles, pression contrôlée si haute pression utilisée, et rinçage raisonné. L’objectif est d’enlever les salissures sans ouvrir les joints ni fragiliser les supports, ce qui ferait revenir l’encrassement plus vite.</p>`,
         },
-        {
-          question:
-            "Sur le Plateau d’Avron, à quelle fréquence faut-il prévoir un entretien pour garder un rendu stable ?",
-          answer: `<p>La fréquence dépend de l’exposition, de la végétation et des usages (barbecue, plantes). Sur une terrasse exposée, les traces de pollution et le noircissement des joints apparaissent plus vite. Un entretien régulier, plus léger, évite d’attendre que les dépôts se fixent profondément et simplifie la remise en état.</p>`,
-        },
+        
         {
           question:
             "Dans un immeuble ancien avec accès étroit, comment intervenez-vous sans compliquer la circulation ?",
@@ -396,6 +391,69 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Fin de bail, remise en état, grand ménage, ou après travaux.",
+
+  whyUsBullets: [
+    "Organisation “secteur Gare / centre” : créneaux adaptés aux pics de flux RER A et au stationnement plus tendu en zone bleue.",
+    "Méthode ajustée au relief et aux accès : portage matériel, escaliers, interphones/badges, et protection des sols (parquets des pavillons du Plateau d’Avron).",
+    "Focus état des lieux et rendu homogène : cuisine/SDB, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs) pour un logement net et présentable.",
+  ],
+
+  uniqueIntro: `<p>Neuilly-Plaisance est une commune résidentielle qui se vit en deux niveaux : d’un côté le <strong>secteur Gare RER A</strong> et le centre-ville, plus denses et plus “rythmés”, de l’autre les hauteurs du <strong>Plateau d’Avron</strong>, avec des pavillons et des rues qui demandent une logistique plus physique (pentes, escaliers, accès jardins). Pour un nettoyage d’appartement ou de maison, on ne travaille pas pareil selon la typologie du logement et l’accès.</p>
+<p class="mt-4">La contrainte la plus fréquente, c’est l’orga : <strong>stationnement compliqué</strong> autour de la gare et du centre, sens uniques, et circulation plus chargée sur la <strong>RN34 (boulevard Gallieni)</strong>. Ici, un bon résultat commence par un plan simple : arrivée/déchargement cadrés, puis enchaînement “zones sèches → zones humides” pour éviter de re-salir en sortie.</p>
+<p class="mt-4">Enfin, la ville a ses marqueurs : le <strong>Parc des Coteaux d’Avron</strong> (terre/poussières ramenées sur les entrées) et la <strong>Voie de l’Est</strong>, promenade linéaire qui traverse des quartiers résidentiels. Résultat : beaucoup de demandes tournent autour du grand ménage, des fins de bail proches RER, et des remises en état après travaux dans les pavillons du Plateau.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Secteur Gare RER A — rotations et contraintes de stationnement</h3>
+<p>Autour de la gare, les demandes sont souvent liées aux états des lieux, aux déménagements et aux remises en état rapides. On priorise ce qui “se voit” et ce qui “se contrôle” : cuisine et salle d’eau, sols, vitres accessibles, puis les finitions. La clé à Neuilly-Plaisance, c’est d’anticiper l’accès (badges, interphones) et le stationnement plus tendu dès le matin.</p>
+
+<h3>T2 : Centre-ville / RN34 — salissures urbaines et circulation</h3>
+<p>Le centre et les axes comme le boulevard Gallieni concentrent davantage de poussière de voirie et de traces sur vitrages bas (trafic, pollution). On adapte la séquence pour éviter le voile : dépoussiérage minutieux, dégraissage ciblé, puis lavage des sols avec contrôle de séchage. Les créneaux sont choisis pour éviter les heures de pointe et limiter les allers-retours.</p>
+
+<h3>T3 : Plateau d’Avron — pavillons, parquets et volumes à étage</h3>
+<p>Sur le Plateau, les logements sont plus grands, compartimentés, parfois avec véranda, chambre mansardée ou escalier. Ici, la priorité est la protection des sols (parquet chêne), le traitement des poussières après travaux, et une finition régulière pièce par pièce. Le relief joue sur la logistique : on vient avec une organisation claire pour que le portage matériel ne “mange” pas le temps de finition.</p>`,
+
+  specificChallenges: [
+    "Relief marqué : pentes vers le Plateau d’Avron, portage matériel et accès jardins plus exigeants.",
+    "Stationnement tendu autour de la gare RER A et du centre (zone bleue, saturation dès le matin).",
+    "Axes très circulés (RN34 / A86 à proximité) : vitrages et balcons plus marqués par la pollution.",
+    "Accès immeubles : interphones, digicodes et badges fréquents, parfois gardiens en collectif.",
+    "Rues étroites et sens uniques au centre : temps d’approche et déchargement à sécuriser.",
+    "Terre/poussières liées aux espaces verts (Coteaux d’Avron) : entrées et sols plus vite re-salies.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Neuilly-Plaisance (93360) pour un nettoyage de fin de bail / état des lieux ?",
+      answer: `<p>Oui. Nous cadrons le périmètre pour viser un rendu net et vérifiable : cuisine, salle d’eau, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs). À Neuilly-Plaisance, on anticipe surtout l’accès (badges) et le stationnement, notamment près de la gare.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir dans un pavillon du Plateau d’Avron (étages, parquet, véranda) ?",
+      answer: `<p>Oui. Les pavillons demandent une organisation par zones (étage → RDC) et une protection renforcée des sols, surtout sur parquet. Nous adaptons aussi le portage matériel au relief et aux accès (escaliers, jardin, véranda) pour garder du temps sur la finition.</p>`,
+    },
+    {
+      question: "Le secteur Gare RER A est compliqué pour se garer : comment faites-vous ?",
+      answer: `<p>Nous planifions l’arrivée et le déchargement, et nous privilégions des créneaux moins chargés quand c’est possible. L’objectif est de limiter les allers-retours et de sécuriser le temps de finition, plutôt que de le perdre en logistique.</p>`,
+    },
+    {
+      question: "Faites-vous un nettoyage après travaux (poussière de plâtre, traces) ?",
+      answer: `<p>Oui. Après chantier, on traite d’abord la poussière fine et les traces sur menuiseries, plinthes et sols, puis on passe au nettoyage complet. C’est un besoin fréquent sur Neuilly-Plaisance, notamment dans les rénovations de pavillons sur le Plateau.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
   ],
 };
 

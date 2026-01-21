@@ -416,6 +416,71 @@ nearbyCities: [
       ],
       ctaOverride: "",
     },
+
+{
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état soignée à Neuilly-sur-Marne : logements familiaux, pavillons et résidences collectives. Intervention adaptée aux états des lieux, retours de location et nettoyages après travaux.",
+
+  whyUsBullets: [
+    "Approche “double ville” : centre ancien et bords de Marne (accès plus contraints) vs résidences neuves de Maison Blanche (rotation locative + poussière de chantier).",
+    "Plan anti-poussière pour zones en travaux : dépoussiérage méthodique, contrôle des retombées, puis finitions propres (plinthes, menuiseries, interrupteurs).",
+    "Organisation sans gare : créneaux et itinéraires calés sur les pics RN34 et les contraintes de stationnement en zone bleue au centre.",
+  ],
+
+  uniqueIntro: `<p>Neuilly-sur-Marne a une configuration particulière : <strong>aucune gare ferroviaire dans la commune</strong>, mais une ville très connectée par les bus et les grands axes, avec une colonne vertébrale routière (la <strong>RN34</strong>) et une vie locale structurée autour du centre et des bords de Marne. Pour un nettoyage d’appartement ou de maison, l’enjeu n’est pas seulement le résultat : c’est aussi la <strong>logistique</strong> (arrivée, stationnement, accès immeuble) et le bon ordre d’exécution.</p>
+<p class="mt-4">La ville se lit en contraste. D’un côté, le <strong>centre ancien</strong> et certains secteurs proches de la Marne : rues plus étroites, accès parfois plus délicats, et une humidité qui marque davantage cuisines, salles d’eau et bas de vitrages. De l’autre, la <strong>ZAC Maison Blanche</strong>, avec du neuf livré par phases : rotation locative, finitions à sécuriser, et surtout une réalité très concrète — <strong>poussières de chantier</strong> (plâtre/terre) qui reviennent vite si on ne nettoie pas dans le bon sens.</p>
+<p class="mt-4">Enfin, Neuilly-sur-Marne a ses repères : le <strong>Parc de la Haute-Île</strong> et le <strong>canal de Chelles</strong> structurent des zones résidentielles, tandis que l’emprise de <strong>Ville-Évrard</strong> et l’écoquartier modifient les flux. Résultat : les demandes typiques tournent autour des fins de bail, des remises en état de pavillons (Primevères / 24 Arpents) et des “après travaux” dans la dynamique Maison Blanche.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : ZAC Maison Blanche — neuf, retombées de chantier et états des lieux</h3>
+<p>Sur Maison Blanche, la contrainte n°1 est la poussière fine (plâtre, découpe, va-et-vient de chantier) qui se redépose vite. On privilégie une séquence “anti-retombées” : dépoussiérage minutieux des hauteurs et surfaces planes, nettoyage des menuiseries, puis sols, avant de verrouiller la finition. C’est particulièrement adapté aux états des lieux et aux entrées/sorties rapides de locataires dans le neuf.</p>
+
+<h3>T2 : Centre-ville / Place Stalingrad — accès plus serrés et stationnement</h3>
+<p>Le centre concentre davantage de circulation, de stationnement contraint et d’accès par badges/digicodes. L’objectif est d’aller droit au rendu : cuisine/salle d’eau, sols, vitres accessibles, puis détails visibles. On organise aussi l’arrivée pour éviter les fenêtres horaires les plus chargées sur la RN34 et en zone bleue.</p>
+
+<h3>T3 : Bords de Marne / canal — humidité, terrasses et surfaces vitrées</h3>
+<p>Près de l’eau, l’humidité marque plus vite certains points : traces minérales, joints, et parfois une sensation de “film” sur les vitrages bas. On adapte les produits et le temps de contact, et on traite les zones de passage (entrée, pièces de vie) en priorité. Dans les pavillons, on sécurise aussi la protection des sols et l’enchaînement des pièces à l’étage pour ne pas re-salir en sortie.</p>`,
+
+  specificChallenges: [
+    "Absence de gare intra-muros : organisation des trajets et des créneaux calée sur les axes et bus, pas sur un pôle ferroviaire local.",
+    "Chantier ZAC Maison Blanche : poussières fines (plâtre/terre) et retombées rapides sur les résidences déjà livrées.",
+    "RN34 très circulée : suie/pollution sur vitrages et balcons, surtout en bord d’axe.",
+    "Centre-ville : stationnement plus difficile (zone bleue) et accès parfois serrés selon les rues.",
+    "Bords de Marne : accès camions plus contraints dans certaines rues, et humidité qui marque cuisines/SDB et bas de vitrages.",
+    "Badges/digicodes et gardiens fréquents en collectif (Fauvettes / Maison Blanche) : accès à anticiper.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Neuilly-sur-Marne (93330) pour un nettoyage de fin de bail / état des lieux ?",
+      answer: `<p>Oui. Nous cadrons le nettoyage pour obtenir un rendu net et contrôlable : cuisine, salle d’eau, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs). À Neuilly-sur-Marne, on anticipe surtout le stationnement en centre-ville et l’accès en résidence (badges/gardiens).</p>`,
+    },
+    {
+      question:
+        "Faites-vous des nettoyages après travaux dans la ZAC Maison Blanche ?",
+      answer: `<p>Oui. Dans le neuf, on traite d’abord la poussière fine (plâtre, découpes, retombées), puis on enchaîne menuiseries, surfaces et sols avant la finition. C’est la meilleure façon d’éviter l’effet “ça re-poussière tout de suite”, fréquent quand le quartier est encore en phase de chantier.</p>`,
+    },
+    {
+      question:
+        "La commune n’a pas de gare : cela complique-t-il l’intervention ?",
+      answer: `<p>Non, mais cela change l’organisation : on se cale sur les axes (RN34) et les créneaux de circulation/parking. L’objectif est de sécuriser le temps de travail sur place et de limiter les pertes liées à la logistique.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir sur une maison côté bords de Marne (humidité, terrasses, vitrages) ?",
+      answer: `<p>Oui. On adapte la méthode aux zones sensibles : dépôts minéraux et humidité en cuisines/salles d’eau, vitrages bas plus marqués, et protection des sols dans les pièces de vie. Pour les accès plus étroits, on prévoit le matériel en conséquence.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
   ],
 };
 

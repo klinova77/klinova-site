@@ -405,6 +405,70 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état soignée d’appartements et de maisons avant état des lieux, emménagement ou remise des clés, avec diagnostic préalable et méthodes adaptées à chaque surface.",
+
+  whyUsBullets: [
+    "Connaissance des typologies locales : pavillons du Bois de Grâce et résidences autour de la Cité Descartes.",
+    "Traitement complet des zones clés : sols, cuisine, sanitaires, vitrages accessibles et finitions visuelles.",
+    "Organisation calée sur les contraintes terrain : accès badges/Vigik, stationnement et créneaux adaptés au secteur Noisy-Champs.",
+  ],
+
+  uniqueIntro: `<p>Quand il faut rendre un logement propre et “lisible” pour un état des lieux, la différence se joue souvent sur les détails : cuisine, sanitaires, plinthes, vitres accessibles, points de contact. À Champs-sur-Marne, les transitions sont fréquentes, notamment autour du campus de la Cité Descartes et du secteur Noisy-Champs, où les rotations peuvent se concentrer sur des délais courts.</p>
+<p class="mt-4">Selon le type de bien, les contraintes ne sont pas les mêmes : pavillons du Bois de Grâce avec pièces multiples, collectifs des Deux Parcs, ou logements récents proches du pôle universitaire. Entre sols carrelés, lino/PVC dans certains logements étudiants, ou parquets plus récents, chaque surface demande une méthode maîtrisée pour éviter traces, sur-humidification ou finitions inégales.</p>
+<p class="mt-4">Klinova intervient avec une approche structurée : repérage des priorités, protocole par zones, gestion des accès (interphones, badges, Vigik) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Objectif : un logement prêt à être occupé ou présenté sereinement.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+<p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les contraintes pratiques sont intégrées dès le départ : accès Vigik en résidences, stationnement plus difficile autour de la gare Noisy-Champs et du campus, et ordre d’intervention optimisé pièce par pièce.</p>
+
+<h3>T2 : Nettoyage par zones</h3>
+<p>La <strong>remise en état du logement</strong> se fait de manière méthodique. Sols et plinthes sont traités selon le revêtement (carrelage, parquet, lino/PVC). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé des surfaces accessibles (plans, façades, crédences selon état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, traitement des joints et points de contact (poignées, interrupteurs). Les vitres accessibles et les finitions visuelles complètent l’intervention, notamment pour un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong>.</p>
+
+<h3>T3 : Contrôle et restitution</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de rendre un résultat cohérent, sans zones “oubliées”, pour une restitution claire le jour de l’état des lieux ou une réoccupation rapide.</p>`,
+
+  specificChallenges: [
+    "Rotations concentrées autour de la Cité Descartes (fin d’année universitaire), avec délais souvent serrés.",
+    "Stationnement et accès plus contraints dans le secteur gare Noisy-Champs et boulevard Newton.",
+    "Accès fréquents via interphones, badges et Vigik, surtout en résidences et logements étudiants.",
+    "Diversité de revêtements (carrelage, lino/PVC, parquet) exigeant une adaptation stricte des méthodes.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Dans quels cas recommandez-vous une remise en état complète plutôt qu’un simple entretien ?",
+      answer: `<p>Une remise en état est indiquée quand le logement doit être rendu ou présenté : entrée/sortie, mise en location, vente, ou logement resté inoccupé. Elle cible les zones qui posent souvent problème en état des lieux : plinthes, cuisine, sanitaires, points de contact, finitions visuelles et vitres accessibles.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous pour un état des lieux dans le secteur Noisy-Champs, malgré les contraintes de stationnement ?",
+      answer: `<p>Oui. Nous intégrons ces contraintes dès la préparation : créneau adapté, consignes d’accès, et organisation du matériel pour limiter les allers-retours. Autour de la gare Noisy-Champs et du boulevard Newton, l’anticipation évite les retards et sécurise la restitution le jour prévu.</p>`,
+    },
+    {
+      question:
+        "Comment adaptez-vous l’intervention aux logements étudiants et résidences récentes de la Cité Descartes ?",
+      answer: `<p>Nous privilégions une méthode efficace et propre : traitement des sols lino/PVC ou parquet, dégraissage de cuisine sur les zones accessibles, et finitions visuelles pour un rendu homogène. Les accès Vigik/badges sont gérés en amont pour éviter toute perte de temps le jour de l’intervention.</p>`,
+    },
+    {
+      question:
+        "Le logement peut-il être utilisé immédiatement après votre passage ?",
+      answer: `<p>Dans la plupart des cas, oui. Nous limitons l’humidité résiduelle et prévoyons une aération en fin d’intervention. Cela permet de réoccuper le logement ou de le présenter rapidement, tout en conservant un rendu propre sur les sols et les pièces d’eau.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
   ],
 };
 

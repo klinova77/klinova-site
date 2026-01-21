@@ -400,6 +400,65 @@ const city: City = {
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Vincennes, approche exigeante pour logements haussmanniens et résidences de standing : parquets anciens, accès contraints et finitions visibles traités avec rigueur et discrétion.",
+
+  whyUsBullets: [
+    "Méthode orientée “résultat net” : pièces d’eau et cuisine traitées en profondeur, puis sols, puis finitions (plinthes, interrupteurs, poignées, rebords).",
+    "Protection des matériaux de Vincennes : parquets anciens, boiseries et surfaces sensibles, avec un nettoyage précis plutôt que trop agressif.",
+    "Logistique réaliste en hyper-centre : accès gardiens/digicodes anticipés, créneaux adaptés aux marchés et aux zones de forte densité piétonne (RER A / métro 1).",
+  ],
+
+  uniqueIntro: `<p>À Vincennes, la demande de nettoyage “appartement/maison” est rarement une simple question de ménage : on vise un rendu impeccable, discret et cohérent, surtout avant un état des lieux, une mise en vente ou une relocation. La ville est très dense, avec un parc de logements presque entièrement en collectif. Entre les immeubles haussmanniens de l’Avenue de Paris et les rues commerçantes comme la Rue de Fontenay, on rencontre souvent des circulations étroites, des étages sans ascenseur et des accès sécurisés (digicode, gardien).</p>
+<p class="mt-4">Le niveau d’exigence est élevé, particulièrement dans les secteurs Carré Magique et Domaine du Bois : les défauts se voient vite sur un parquet ancien, une fenêtre à grands battants ou une salle de bain entartrée. À l’inverse, côté Saint-Louis, République ou Sorano, les logements peuvent être plus “vivants” (activité, commerces, flux), ce qui impose un nettoyage qui tient dans le temps : dégraissage cuisine, calcaire maîtrisé, et finitions propres sur les points de contact.</p>
+<p class="mt-4">L’objectif de la prestation est simple : un logement qui “se présente bien” dès l’entrée. Pas seulement les surfaces : aussi les détails qui trahissent un nettoyage approximatif (plinthes, interrupteurs, portes, rebords de fenêtres). Et à Vincennes, c’est exactement ce que les propriétaires, locataires et agences regardent en premier.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Centre / Avenue de Paris — haussmannien, parquet et accès contraints</h3>
+<p>Dans le cœur de Vincennes, on rencontre souvent des parquets anciens (pointe de Hongrie), des boiseries et des cages d’escalier étroites. L’approche est progressive : dépoussiérage complet, cuisine et pièces d’eau en priorité, puis sols avec une finition qui évite le voile et les traces. On protège les zones sensibles et on contrôle les détails visibles (plinthes, encadrements, poignées).</p>
+
+<h3>T2 : Carré Magique / Domaine du Bois — standing et finitions “sans compromis”</h3>
+<p>Ces secteurs concentrent une clientèle très exigeante : vitrages plus exposés, entrées soignées, matériaux qualitatifs. On travaille “comme un contrôle qualité” : alignement du rendu sur toutes les pièces, traitement du calcaire sur robinetterie et parois, puis finitions nettes (interrupteurs, façades de cuisine, points de contact). Le but : un résultat homogène, pas juste des zones propres par endroits.</p>
+
+<h3>T3 : Rue de Fontenay / Saint-Louis — flux, commerces et organisation jour de marché</h3>
+<p>Autour de l’axe commerçant et des jours de marché, la logistique compte autant que la technique : stationnement, déchargement, circulation piétonne. On structure l’intervention pour limiter les allers-retours et garder du temps utile sur le nettoyage. Sur les logements “en rotation”, l’enjeu est d’obtenir rapidement un niveau de propreté lisible : cuisine dégraissée, salle d’eau sans dépôts, sols uniformes.</p>`,
+
+  specificChallenges: [
+    "Stationnement très difficile à Vincennes : planifier l’accès et limiter les allers-retours, surtout en hyper-centre.",
+    "Bâti ancien fréquent : escaliers étroits, étages sans ascenseur, portes et encadrements à traiter proprement.",
+    "Parquets anciens et surfaces sensibles : éviter les traces et le voile, privilégier une méthode précise.",
+    "Accès sécurisés (digicode, gardien) : coordination indispensable pour ne pas perdre de temps sur place.",
+    "Flux RER A / métro 1 : poussières de voirie et traces sur vitrages bas, surtout près des grands axes.",
+    "Jours de marché Rue de Fontenay : secteur à éviter pour l’intervention ou à cadrer sur des créneaux fluides.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Faites-vous des remises en état pour un état des lieux à Vincennes (94300) ?",
+      answer: `<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau en priorité, sols ensuite, puis finitions (plinthes, interrupteurs, poignées, rebords). L’objectif est un rendu homogène, sans traces au sol ni dépôts visibles sur les points sensibles.</p>`,
+    },
+    {
+      question: "Pouvez-vous intervenir après des travaux (peinture, ponçage léger) ?",
+      answer: `<p>Oui. Après travaux, on procède en passes pour éviter le retour de poussière : surfaces et menuiseries d’abord, sols ensuite, puis contrôle des rebords et angles. Cela limite le “voile” sur les sols et les reprises visibles.</p>`,
+    },
+    {
+      question: "Comment protégez-vous les parquets anciens (haussmannien) ?",
+      answer: `<p>On privilégie une méthode maîtrisée : dépoussiérage complet, nettoyage adapté au support, puis finition qui évite les traces. L’idée est d’obtenir un rendu net sans agresser le bois ni laisser de film.</p>`,
+    },
+    {
+      question: "Le stationnement est compliqué : comment ça se passe ?",
+      answer: `<p>On anticipe avant l’arrivée : créneau, zone de déchargement, accès immeuble (gardien/digicode). Sur Vincennes, cette préparation évite de perdre du temps et sécurise la qualité de l’intervention.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
   ],
 };
 

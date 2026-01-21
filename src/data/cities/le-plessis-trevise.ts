@@ -308,7 +308,124 @@ const city: City = {
       ctaOverride: "",
     },
 
+
+    // CITY_CHECK: Le Plessis-Trévise
+
+{
+  serviceKey: "canapes-tapis",
+
+  heroDescription:
+    "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Le Plessis-Trévise (94420) enlève salissures incrustées, allergènes et odeurs du quotidien, en s’adaptant aux intérieurs familiaux (pavillons “cité-jardin”) comme aux grands ensembles et résidences (Val Roger, Cité de la Joie), avec une organisation discrète dans une ville très résidentielle.",
+
+  whyUsBullets: [
+    "Textiles “vie de famille” : traitement efficace des assises très sollicitées (tissu, microfibre, velours) et des tapis de salon, fréquents dans les pavillons et grands appartements du Plessis-Trévise.",
+    "Gestion des taches réalistes : pré-traitement ciblé (boissons, gras, animaux) puis injection-extraction à eau chaude pour décrocher la salissure au cœur des fibres et l’extraire immédiatement.",
+    "Intervention soignée en environnement calme : planification autour des contraintes locales (zone bleue et marché en centre-ville, accès résidences avec digicode/badge, sensibilité “gêne minimale”).",
+  ],
+
+  uniqueIntro: `<p>À Le Plessis-Trévise, la demande “canapés-tapis” est typiquement liée à des intérieurs soignés, souvent familiaux : pavillons dans l’esprit cité-jardin, mais aussi résidences et grands ensembles (Val Roger, Cité de la Joie). Dans ces logements, les textiles d’ameublement se chargent vite : poussières fines, allergènes, taches du quotidien et odeurs qui s’installent progressivement, même avec un entretien régulier.</p>
+<p class="mt-4">Les canapés en tissu ou microfibre, très utilisés, finissent par se ternir sur les zones de contact (assises, accoudoirs). Les tapis retiennent poussières et particules, surtout quand il y a des enfants, des animaux, ou des allées et venues fréquentes. Dans les immeubles, les textiles peuvent aussi se recharger rapidement à cause des circulations et de la vie collective.</p>
+<p class="mt-4">Un nettoyage professionnel à domicile remet les tissus au propre “en profondeur” : on décroche la salissure, on extrait ce qui est incrusté, et on retrouve un rendu net sans détremper les supports. C’est la bonne option quand l’objectif est l’hygiène, le confort, et une finition propre adaptée à une ville résidentielle attentive aux nuisances.</p>`,
+
+  uniqueDeepDive: `<h3>1. Diagnostic textile et repérage des zones à traiter en priorité</h3>
+<p>On commence par identifier les matières (tissu, microfibre, velours, laine/synthétique), la sensibilité des couleurs et l’état réel des fibres. Le diagnostic cible les zones “chargées” (accoudoirs, têtières, assises, bords de tapis, coins) et les taches spécifiques (boissons, gras, traces d’animaux, poussières incrustées). Cette étape évite les erreurs classiques : trop d’eau sur un textile sensible, ou un produit inadapté qui fixe la tache.</p>
+<h3>2. Pré-traitement ciblé puis injection-extraction à eau chaude</h3>
+<p class="mt-4">Les taches et odeurs reçoivent un pré-traitement adapté (dégraissant, enzymatique, neutralisant d’odeurs selon le cas). Ensuite, l’injection-extraction à eau chaude travaille au cœur des fibres : on injecte la solution, on brosse si nécessaire, puis on aspire immédiatement l’eau sale. Le principe : décoller et extraire, plutôt que “mouiller et étaler”. Résultat : un rendu plus net et une vraie amélioration de l’hygiène textile.</p>
+<h3>3. Extraction finale, séchage maîtrisé et conseils d’entretien réalistes</h3>
+<p class="mt-4">Une extraction maximale est réalisée pour limiter l’humidité résiduelle et accélérer le séchage (souvent 6 à 10 heures selon la ventilation). On donne ensuite des conseils simples pour garder le résultat : aspiration régulière des tapis, protection des assises les plus sollicitées (plaid/housse), et fréquence adaptée à l’usage (enfants/animaux, vie de famille). L’objectif est de prolonger la propreté sans “sur-traiter” les textiles.</p>`,
+
+  specificChallenges: [
+    "Textiles très sollicités : canapés en tissu/microfibre et tapis de salon typiques des pavillons et grands appartements.",
+    "Taches du quotidien : boissons, gras, traces d’animaux et poussières incrustées qui ternissent les couleurs.",
+    "Ville résidentielle calme : besoin de discrétion et de “gêne minimale” pendant l’intervention.",
+    "Contraintes d’accès variables : digicode/badge en résidences (Val Roger, Cité de la Joie) et stationnement plus cadré en centre-ville (zone bleue, marché).",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Est-ce que vous intervenez à domicile pour un canapé en tissu non déhoussable au Plessis-Trévise ?",
+      answer: `<p>Oui. Le protocole est justement conçu pour les canapés non déhoussables : diagnostic, pré-traitement des zones chargées, puis injection-extraction à eau chaude avec aspiration puissante pour nettoyer en profondeur sans détremper les rembourrages.</p>`,
+    },
+    {
+      question:
+        "Combien de temps faut-il pour que le canapé ou le tapis soit sec ?",
+      answer: `<p>Le séchage complet est généralement de 6 à 10 heures selon l’épaisseur du tissu, la température et l’aération. On maximise l’extraction en fin d’intervention pour limiter l’humidité et accélérer le séchage.</p>`,
+    },
+    {
+      question:
+        "Peut-on enlever les odeurs (animaux, tabac, cuisine) ?",
+      answer: `<p>Dans la plupart des cas, oui : les odeurs diminuent nettement quand on extrait la salissure et les résidus incrustés. Selon la source (ancienneté, imprégnation), un neutralisant d’odeurs peut être ajouté au protocole pour améliorer le résultat.</p>`,
+    },
+    {
+      question:
+        "Comment se passe l’accès et le stationnement en résidence ou en centre-ville ?",
+      answer: `<p>On s’organise en amont : accès via digicode/badge si nécessaire, et stationnement adapté aux règles locales (zone bleue en centre-ville, périodes de marché). L’objectif est une intervention fluide et discrète.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
+    {
+      serviceKey: "nettoyage-appartement-maison",
+      heroDescription:
+        "Une remise en état complète de votre logement après travaux ou avant changement de locataire, avec diagnostic initial et protocole adapté à chaque surface.",
+      whyUsBullets: [
+        "Expertise des typologies locales : pavillons rénovés et résidences T3/T4 du secteur.",
+        "Polyvalence surfaces : carrelage, parquet, moquette, finitions délicates sans dégât.",
+        "Respect délais serrés et coordination agences : remise en état rapide, reporting transparent.",
+      ],
+      uniqueIntro: `<p>Comment assurer qu'un appartement ou une maison soit impeccable avant un état des lieux, ou après des travaux de rénovation ? À Le Plessis-Trévise, les agences immobilières et bailleurs de la région (Avenue Ardouin notamment) font face à des délais serrés pour préparer les biens en rotation locative. Poussières de chantier, traces de peinture, résidus de colle, salissures accumulées : chaque élément compte pour la remise de clés.</p>
+<p class="mt-4">Un logement bien préparé change la première impression et évite les litiges d'état des lieux. Pour les pavillons rénovés comme pour les appartements T3/T4 des résidences (Val Roger, Cité de la Joie), la propreté finale doit être irréprochable. Sols carrelés ou parquet, salle de bain, cuisine, placards intérieurs : chaque pièce doit être traitée selon sa nature et son usage.</p>
+<p class="mt-4">Klinova propose une intervention structurée : diagnostic initial, plan d'action adapté au contexte (fin de chantier, état des lieux, déménagement), protections si nécessaire, et contrôle qualité avant remise des clés. Pas de surprise, une coordination claire avec votre agenda.</p>`,
+      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+<p>Avant toute intervention, nous établissons l'état réel du bien : type de salissures (poussière de chantier, traces de peinture, résidus), surfaces fragiles (parquet ancien, carrelage délicat), accès (étages, ascenseur étroit). Nous protégeons les éléments sensibles et planifions l'ordre des pièces pour une efficacité maximale.</p>
+
+<h3>T2: Nettoyage par zones</h3>
+<p>Dépoussiérage complet des plafonds, murs et plinthes. Sols : aspiration puis lavage adapté au revêtement (carrelage, parquet, moquette). Pièces d'eau : sanitaires, faïence, joints, plans de travail cuisine. Détails critiques : interrupteurs, poignées, radiateurs, traces de peinture ou colle si fin de chantier. Placards intérieurs et finitions.</p>
+
+<h3>T3: Contrôle et remise</h3>
+<p>Vérification complète pièce par pièce. Aération du logement. Remise des clés avec rapport d'intervention si demandé. En cas de point non conforme, reprise immédiate sans surcoût.</p>`,
+      specificChallenges: [
+        "Délais d'état des lieux souvent comprimés : coordination requise avec agences avenue Ardouin.",
+        "Traces de chantier (peinture, colle, enduit) nécessitent protocole spécifique par surface.",
+        "Accès étages et ascenseurs parfois petits dans les résidences anciennes : organisation logistique critique.",
+        "Sols fragiles (parquet flottant, carrelage ancien) demandent techniques adaptées sans risque d'abrasion.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Quelle est la différence opérationnelle entre un nettoyage standard et un nettoyage fin de chantier pour un pavillon rénové de Val Roger ?",
+          answer: `<p>Un nettoyage fin de chantier traite les résidus spécifiques : poussière de ponçage, traces de peinture, colle de revêtement, enduit. Nous utilisons des techniques ciblées par surface (décapage doux parquet, détachage chimique carrelage) et des protections pour ne pas endommager les finitions neuves. Un nettoyage standard ne suffit pas après travaux.</p>`,
+        },
+        {
+          question:
+            "Comment calculez-vous le prix pour un nettoyage avant état des lieux d'un appartement T3/T4 au Plessis-Trévise ?",
+          answer: `<p>La tarification repose sur la surface, le type de salissures et les accès. Un T3/T4 standard (70–90 m²) en résidence avec ascenseur coûte moins cher qu'un pavillon isolé. Nous proposons un devis sur site après diagnostic. Les agences avenue Ardouin bénéficient de tarifs partenaires pour rotations régulières.</p>`,
+        },
+        {
+          question:
+            "En cas d'urgence avant état des lieux, quels délais d'intervention garantissez-vous pour un appartement du centre ?",
+          answer: `<p>Pour un bien accessible (digicode, clés disponibles), nous intervenons sous 48 heures en semaine. Centre-ville et Val Roger : délais réduits grâce à la proximité. Coordination directe avec l'agence ou le syndic pour accès et horaires. Remise de clés le jour même si intervention matinale.</p>`,
+        },
+        {
+          question:
+            "Proposez-vous une garantie satisfaction ou une reprise si le niveau propreté après nettoyage fin de chantier n'est pas atteint ?",
+          answer: `<p>Oui. Contrôle qualité systématique avant remise. Si un point ne satisfait pas (trace résiduelle, zone mal traitée), nous repassons sans surcoût. Objectif : état des lieux sans contestation. Rapport d'intervention fourni sur demande pour justifier le niveau atteint.</p>`,
+        },
+      ],
+      ctaOverride: "",
+    },
+
    
+
+
   ],
 };
 

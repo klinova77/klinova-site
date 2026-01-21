@@ -402,6 +402,69 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Noisy-le-Grand, nettoyage structuré pour logements récents ou collectifs denses : remise en état rapide après déménagement, travaux ou rotation locative, avec attention portée aux sols et cuisines.",
+
+  whyUsBullets: [
+    "Approche “multi-typologies” : mêmes standards de finitions pour un appartement à Mont d’Est, une résidence du Pavé Neuf ou un pavillon aux Richardets/Yvris.",
+    "Logistique maîtrisée en zone dense : stationnement/parkings souterrains, créneaux à éviter autour des gares et du centre commercial, accès par badges et gardiens.",
+    "Gestion des salissures locales : poussières de chantier (Noisy-Champs / Maille Horizon), suie et dépôts sur vitrages/balcons (A4), piétinement fort lié aux flux RER A/RER E.",
+  ],
+
+  uniqueIntro: `<p>Noisy-le-Grand, c’est une ville où le service “nettoyage appartement/maison” doit être <strong>calibré au quartier</strong>. Entre Mont d’Est (bureaux, dalles, flux), les grands ensembles et architectures post-modernes (Pavé Neuf, Abraxas, Arènes de Picasso), et les zones pavillonnaires plus calmes (Richardets, Yvris), on n’a ni les mêmes accès, ni les mêmes contraintes, ni les mêmes attentes.</p>
+<p class="mt-4">Dans les secteurs proches des gares RER A (Mont d’Est, Noisy-Champs) et du centre commercial, la difficulté est souvent l’organisation : arrivées, badges, gardiens, parkings souterrains, et <strong>horaires sensibles</strong> (pics pendulaires). Côté salissures, on retrouve du piétinement marqué, de la poussière ferroviaire, et — autour de Noisy-Champs — des poussières fines liées aux travaux et aux aménagements.</p>
+<p class="mt-4">À l’inverse, sur les bords de Marne et dans les quartiers pavillonnaires, on intervient davantage sur des volumes plus grands et des finitions “maison” : vitres, cuisines, salles d’eau, et sols à préserver. La signature de Noisy, c’est aussi ses bâtiments iconiques : <strong>Abraxas</strong> et les <strong>Arènes de Picasso</strong> demandent parfois une approche spécifique sur les vitrages et les communs, avec un rendu net sans traces, même sur des surfaces plus complexes.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Mont d’Est — fin de bail, rotation et contraintes de flux</h3>
+<p>Autour des gares RER A et des zones tertiaires, les demandes typiques sont la remise en état rapide (sortie locataire, remise en location) et le nettoyage ponctuel “niveau état des lieux”. L’enjeu est surtout l’efficacité : accès par badge/Vigik, créneaux à éviter, et parfois passage par parking souterrain. On déroule en séquence : cuisine/salle d’eau, surfaces, sols, puis finitions visibles.</p>
+
+<h3>T2 : Pavé Neuf / Abraxas / Picasso — résidences denses et vitrages atypiques</h3>
+<p>Dans ces ensembles, l’accès (digicodes, gardiens) et les circulations peuvent être plus structurants que la surface elle-même. On adapte l’intervention au logement et au bâtiment : poussière dans les entrées, traces sur vitres, et contraintes de stationnement. Sur certains logements, les vitrages/baies et les matériaux demandent un contrôle rigoureux pour éviter les reprises et obtenir un rendu homogène.</p>
+
+<h3>T3 : Richardets / Yvris / Bords de Marne — maisons, volumes et “rendu premium”</h3>
+<p>Les quartiers pavillonnaires et les bords de Marne amènent d’autres profils : grands ménages, après-travaux, nettoyage avant emménagement. Ici, on priorise la protection des sols, la gestion du calcaire en salle d’eau, et la clarté des vitres. La gare RER E des Yvris apporte aussi des allers-retours quotidiens : l’entrée et les zones de passage sont souvent les plus marquées.</p>`,
+
+  specificChallenges: [
+    "Flux très élevés autour des gares RER A (Mont d’Est / Noisy-Champs) : créneaux pendulaires à éviter et accès parfois contraints.",
+    "Accès résidences : badges/Vigik/interphones et gardiens fréquents dans les grands ensembles et résidences denses.",
+    "Poussières fines de chantiers et aménagements (Noisy-Champs / Maille Horizon / GPE) : besoin d’un dépoussiérage en plusieurs passes.",
+    "Pollution et dépôts sur vitrages/balcons à proximité de l’A4 et des axes internes (Mont d’Est).",
+    "Vitrages et configurations atypiques (Abraxas / Picasso) : risque de reprises visibles si méthode inadaptée.",
+    "Stationnement variable : souvent compliqué en zone tertiaire et centre, plus simple en pavillonnaire (Richardets/Yvris).",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Noisy-le-Grand (93160) pour un nettoyage “état des lieux” près des gares RER ?",
+      answer: `<p>Oui. On vise un rendu propre et lisible : cuisine/salle d’eau (dégraissage + calcaire), sols, vitres accessibles, puis finitions (plinthes, poignées, interrupteurs). À Noisy, on anticipe surtout l’accès (badge/gardien) et le stationnement autour des gares RER A.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous nettoyer après travaux dans le secteur Noisy-Champs / Maille Horizon ?",
+      answer: `<p>Oui. Après travaux, la difficulté principale est la poussière fine (plâtre, coupe, ponçage) qui se redépose. On procède par étapes : dépoussiérage minutieux (surfaces/menusieries), puis sols, puis contrôle final des zones sensibles (rebords, prises, plinthes).</p>`,
+    },
+    {
+      question:
+        "Faites-vous les vitres dans des résidences comme Abraxas ou les Arènes de Picasso ?",
+      answer: `<p>Oui, sur les vitrages accessibles du logement. On travaille pour éviter les reprises (traces à contre-jour) et obtenir un rendu homogène. L’accès en résidence (Vigik/gardien) est vérifié en amont pour ne pas perdre de temps sur place.</p>`,
+    },
+    {
+      question:
+        "Comment gérez-vous la logistique quand le stationnement est compliqué à Mont d’Est ?",
+      answer: `<p>On planifie l’arrivée (créneau, point de déchargement, parking souterrain si nécessaire) et on optimise l’ordre des tâches pour limiter les allers-retours. C’est souvent ce qui permet de tenir des délais réalistes en zone tertiaire dense.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
   ],
 };
 

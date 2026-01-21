@@ -355,6 +355,71 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état avant état des lieux, après travaux ou déménagement. Méthode adaptée au pavillonnaire (Jacob, Sully, Plateau) comme aux collectifs (Danton, Gargan).",
+
+  whyUsBullets: [
+    "Logique “axe RN3” : traitement prioritaire des traces grasses et poussières sur vitrages bas, encadrements et sols d’entrée.",
+    "Ville très pavillonnaire : organisation par zones (séjour/escaliers/chambres) et finitions soignées sur parquets et plinthes.",
+    "Accès transport T4 : interventions calées sur les secteurs Gargan / L’Abbaye, avec anticipation des stationnements et des badges.",
+  ],
+
+  uniqueIntro: `<p>À Livry-Gargan, on change vite de configuration en quelques rues : maisons avec jardin côté <strong>Jacob</strong> ou <strong>Sully-Fragonard</strong>, collectifs autour de <strong>Danton</strong>, et zones plus denses le long de l’<strong>Avenue Aristide Briand (RN3)</strong>. Cette diversité impose un nettoyage “sur mesure” : dans un pavillon, on gère les étages, les escaliers et les pièces en enfilade ; dans un collectif, on anticipe les accès (digicode, gardien) et on optimise l’ordre des tâches pour éviter de re-salir les circulations.</p>
+<p class="mt-4">La RN3 donne un marqueur très concret sur le résultat : les vitrages et rebords proches de l’axe prennent plus vite une <strong>pellicule grasse</strong> (poussières + trafic), surtout en façade basse. C’est souvent ce qui fait la différence lors d’un état des lieux ou avant une visite : vitres, encadrements, plinthes et sols d’entrée doivent être homogènes, sans traces de reprise.</p>
+<p class="mt-4">Klinova intervient à Livry-Gargan pour des remises en état ponctuelles (fin de bail, déménagement, retour de chantier) avec une méthode simple : cadrage du périmètre, traitement des zones qui “se voient” (pièces d’eau, cuisine, sols), puis finitions. L’objectif est un rendu net, sans abîmer les matériaux et en restant discret — surtout dans les secteurs pavillonnaires où le voisinage est attentif au bruit et aux allées/venues.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : RN3 et poussières urbaines — vitrages, rebords et entrées</h3>
+<p>Sur les logements proches de l’Avenue Aristide Briand, les salissures reviennent vite sur les vitres, appuis et encadrements. Nous traitons ces zones en fin de prestation pour éviter les re-traces, en reprenant aussi les points “main” (poignées, interrupteurs) et les sols d’entrée, souvent les premiers contrôlés en fin de bail.</p>
+
+<h3>T2 : Pavillons et circulations — escaliers, parquets et plinthes</h3>
+<p>Dans les quartiers pavillonnaires (Jacob, Sully, Plateau), la difficulté n’est pas la surface brute mais la circulation : escaliers, paliers, pièces multiples et parfois une véranda ou une baie donnant sur jardin. Nous travaillons par étages, avec une attention sur les parquets (humidification maîtrisée) et les plinthes, qui font “sale” même quand le sol paraît propre.</p>
+
+<h3>T3 : Cuisine et salle d’eau — calcaire, joints et finitions visibles</h3>
+<p>Le calcaire et les dépôts sur robinetterie, parois et sanitaires donnent vite un aspect terne. Nous priorisons un détartrage adapté (sans agresser chrome et surfaces) et un dégraissage cuisine ciblé, puis un contrôle final des zones de projection : crédence, angles, contours d’évier, bas de meubles accessibles. Le but : un rendu propre et stable, sans odeur ni traces persistantes.</p>`,
+
+  specificChallenges: [
+    "RN3 : suie/pellicule grasse sur vitrages et façades basses, nécessitant une vraie reprise des encadrements et rebords.",
+    "Mix pavillons / collectifs : organisation différente (étages/escaliers vs digicodes/gardiens) pour éviter les allers-retours inutiles.",
+    "Stationnement variable : compliqué en centre et le long de la RN3, plus simple en pavillonnaire avec accès privés.",
+    "Zones denses (Danton/Gargan) : accès badges, circulation en parties communes, et finitions indispensables pour un rendu homogène.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous à Livry-Gargan pour un nettoyage avant état des lieux (93190) ?",
+      answer: `<p>Oui. Nous définissons le périmètre puis nous traitons les postes qui comptent le plus en fin de bail : cuisine, salle d’eau, sols et finitions visibles (plinthes, poignées, encadrements). Sur les logements proches de la RN3, les vitrages et rebords font aussi partie des points sensibles.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous faire un nettoyage après travaux (plâtre/peinture) dans un pavillon ?",
+      answer: `<p>Oui. Après rénovation, l’enjeu est la poussière fine et les traces de chantier. Nous structurons le dépoussiérage, puis la remise en état des surfaces et des sols, avec une attention particulière aux escaliers, plinthes et menuiseries qui retiennent souvent les résidus.</p>`,
+    },
+    {
+      question:
+        "Le logement est en collectif (digicode/gardien) : comment ça se passe ?",
+      answer: `<p>Nous anticipons l’accès (digicode, badge, horaires de gardien) et nous organisons l’intervention pour limiter les passages en parties communes. Cela réduit les risques de re-salissure et permet d’optimiser le temps sur place.</p>`,
+    },
+    {
+      question:
+        "Faites-vous aussi les vitres, volets et encadrements ?",
+      answer: `<p>Sur demande, oui pour les vitrages accessibles et les encadrements. À Livry-Gargan, c’est particulièrement utile près de la RN3 où les dépôts reviennent vite. Le périmètre exact est cadré avant l’intervention pour éviter toute ambiguïté.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
+
   ],
 };
 

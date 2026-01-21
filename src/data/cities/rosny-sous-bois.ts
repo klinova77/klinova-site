@@ -255,7 +255,7 @@ const city: City = {
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "La proximité du parc nature du plateau d’Avron favorise pollen et dépôts verts sur certaines terrasses.",
+        "La proximité du parc nature du plateau d’Avron favorise pollen et dépôts verts sur certains balcons.",
         "Les sols en dalles ou béton poreux gardent les traces : besoin d’un brossage méthodique et d’un rinçage maîtrisé.",
         "Les garde-corps et angles accumulent la crasse : ce sont eux qui “plombent” l’aspect global si on les oublie.",
         "La contrainte la plus sensible reste l’eau : éviter coulures en façade et chez le voisin du dessous.",
@@ -401,6 +401,72 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Rosny-sous-Bois, intervention adaptée à un habitat mixte : appartements anciens ou récents, gestion des accès d’immeubles et finitions visibles pour un rendu propre et lisible.",
+
+  whyUsBullets: [
+    "Organisation pensée pour Rosny : créneaux et logistique adaptés aux pics Rosny 2 / Domus et au pôle Bois-Perrier (RER E + M11).",
+    "Méthode “fin de bail” efficace : pièces d’eau + cuisine d’abord, puis sols, puis finitions visibles (plinthes, interrupteurs, portes) pour un rendu net à l’état des lieux.",
+    "Traitement des salissures locales : dépôts routiers (A86/A3, RN186), piétinement important sur halls, poussières fines de chantiers côté Coteaux de Beauclair.",
+  ],
+
+  uniqueIntro: `<p>À Rosny-sous-Bois, les demandes de nettoyage sont très souvent dictées par le <strong>rythme des flux</strong>. Entre le pôle Bois-Perrier (RER E + Métro 11), les zones commerciales Rosny 2 / Domus et l’échangeur A86/A3, les logements proches des axes et des centres de passage s’encrassent différemment : entrées plus marquées, rebords exposés, vitrages bas plus “chargés”.</p>
+<p class="mt-4">La ville est aussi contrastée : des collectifs denses (Bois-Perrier, Pré-Gentil) où l’accès se joue au digicode/Vigik et au gardien, et des secteurs pavillonnaires plus calmes (Plateau d’Avron, La Boissière) où l’enjeu devient la qualité des finitions, la protection des sols (parquets) et la gestion des volumes (baies vitrées, escaliers, pièces multiples).</p>
+<p class="mt-4">Notre logique est simple : on vise un résultat “propre visuel” sans perdre du temps. On commence par ce qui se voit et se contrôle à l’état des lieux (cuisine, salle d’eau, sols), puis on verrouille les détails qui font la différence (plinthes, encadrements, traces sur portes, interrupteurs). Côté Rosny, l’organisation compte autant que la technique : stationnement, accès immeuble, et choix d’un créneau réaliste pour ne pas subir la saturation du week-end autour de Rosny 2.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3>
+<p>Autour des gares (RER E et Métro 11), les interventions sont souvent liées à une rotation locative : fin de bail, remise en état avant entrée, grand ménage ponctuel. Ici, l’efficacité vient d’une préparation claire : confirmation digicode/Vigik, point de stationnement, puis un déroulé “pièces d’eau → cuisine → sols → finitions”.</p>
+
+<h3>T2 : Rosny 2 / Domus — environnement flux et salissures de passage</h3>
+<p>Le secteur commercial attire un trafic continu : piétinement, poussière de parkings, dépôts sur vitrages et parties basses. On insiste sur les zones de contact (poignées, plinthes, bas de portes) et sur les sols d’entrée qui se chargent vite. Le timing est crucial : éviter les pics du week-end change tout.</p>
+
+<h3>T3 : Plateau d’Avron / La Boissière — maisons, parquets et finitions</h3>
+<p>Dans les quartiers pavillonnaires, le travail ressemble davantage à une remise à niveau “maison” : volumes, escaliers, vitrages, et finitions. On protège les parquets, on gère le calcaire en pièces d’eau, et on cherche un rendu homogène, particulièrement apprécié dans ces secteurs plus exigeants.</p>`,
+
+  specificChallenges: [
+    "Rosny 2 / Domus : saturation week-end, poussière de parkings et piétinement élevé.",
+    "Bois-Perrier : accès résidences (Vigik, interphones, gardiens) + rotation locative proche des gares.",
+    "A86/A3 + RN186 : dépôts routiers (suie/particules) sur vitrages, rebords et balcons selon l’exposition.",
+    "Écoquartier / chantiers (Coteaux de Beauclair) : poussières fines et traces de travaux dans les logements livrés.",
+    "Relief et rues plus serrées côté centre : manœuvres et déchargement parfois contraints.",
+    "Matériaux à préserver : parquets et finitions plus sensibles dans le pavillonnaire (Plateau d’Avron).",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Pouvez-vous faire un nettoyage “état des lieux” à Rosny-sous-Bois (93110) près du RER E / Métro 11 ?",
+      answer: `<p>Oui. On suit un déroulé orienté contrôle d’état des lieux : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, portes). Dans les résidences du secteur Bois-Perrier, l’accès (Vigik/digicode/gardien) est confirmé avant l’intervention.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous après travaux (ponçage, plâtre, peinture) dans les quartiers en rénovation ?",
+      answer: `<p>Oui. Après travaux, on procède en plusieurs passes pour éviter la redéposition des poussières fines : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. C’est ce qui donne un rendu réellement “fini”.</p>`,
+    },
+    {
+      question:
+        "Comment gérez-vous le stationnement autour de Rosny 2 et du centre-ville ?",
+      answer: `<p>On privilégie un créneau et un point de déchargement réalistes, et on organise l’ordre des tâches pour limiter les allers-retours. Autour de Rosny 2, éviter les pics du week-end et des heures d’affluence améliore nettement la fluidité de l’intervention.</p>`,
+    },
+    {
+      question:
+        "Faites-vous aussi les vitres (baies, vitrages bas) touchées par les dépôts routiers ?",
+      answer: `<p>Oui, sur les vitrages accessibles. À Rosny, la proximité A86/A3 et les grands axes peut marquer les vitres et rebords : on adapte la méthode selon l’exposition et l’encrassement, avec un objectif “sans traces” et un rendu net sur les parties basses.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+}
+
+
+
+
+
   ],
 };
 

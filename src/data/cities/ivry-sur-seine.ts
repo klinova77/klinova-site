@@ -194,7 +194,7 @@ faq: [
       serviceKey: "balcons",
       heroDescription: "Une remise en état complète de votre balcon, avec traitement adapté au support et gestion soignée des écoulements pour préserver le voisinage.",
       whyUsBullets: [
-        "Connaissance des expositions locales : balcons face aux quais, loggias abritées, terrasses en attique sur les constructions neuves.",
+        "Connaissance des expositions locales : balcons face aux quais, loggias abritées, etc.",
         "Pression adaptée à chaque support, du béton anguleux des Étoiles aux dalles sur plots des résidences récentes.",
         "Organisation anti-coulures systématique et créneaux compatibles avec la vie en immeuble dense."
       ],
@@ -285,6 +285,64 @@ faq: [
       ],
       ctaOverride: ""
         },
+
+{
+  serviceKey: "canapes-tapis",
+
+  heroDescription:
+    "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Ivry-sur-Seine élimine allergènes, acariens et particules urbaines incrustées par le trafic, restaurant une hygiène saine dans les logements denses et les lofts industriels.",
+
+  whyUsBullets: [
+    "Adaptation aux logements ivryens variés : Protocoles ajustés aux appartements familiaux du Petit-Ivry, aux grands ensembles (Cité Pierre et Marie Curie) et aux lofts issus d'anciennes usines autour d'Ivry-Port.",
+    "Traitement anti-allergènes en environnement urbain dense : Injection-extraction à eau chaude pour éliminer acariens, poussières fines et particules de suie liées au périphérique, aux quais de Seine et aux axes très circulés.",
+    "Organisation fluide malgré les contraintes locales : Gestion du stationnement tendu, accès digicode et étages sans ascenseur fréquents dans l'ancien, interventions planifiées pour limiter la gêne en habitat dense.",
+  ],
+
+  uniqueIntro: `<p>Dans les appartements et lofts d’Ivry-sur-Seine, les canapés, tapis et matelas sont soumis à une accumulation progressive de salissures invisibles, amplifiée par la densité urbaine et la variété des usages. Dans les logements familiaux du Petit-Ivry ou du Centre-ville, la vie quotidienne, les enfants et parfois les animaux favorisent l’apparition de taches organiques, d’odeurs persistantes et de concentrations élevées d’acariens dans les rembourrages. Dans les grands ensembles comme la Cité Pierre et Marie Curie ou les résidences récentes d’Ivry Confluences, les textiles captent aussi les poussières fines issues des circulations intenses, des chantiers et des axes routiers proches.</p>
+<p class="mt-4">Avec le temps, ces contaminants s’incrustent profondément dans les fibres. Les occupants constatent des symptômes diffus mais récurrents : éternuements au réveil, inconfort respiratoire nocturne, odeurs qui persistent malgré l’aération ou ternissement visible des tissus clairs. Les tentatives d’entretien domestique restent superficielles : l’aspirateur ne retire ni les allergènes incrustés ni les particules de pollution liées aux quais de Seine, au boulevard Paul Vaillant-Couturier ou à la proximité du périphérique. Dans les salles d’attente de cabinets médicaux ou à l’Hôpital Charles-Foix, l’exigence d’hygiène et d’image rend ces limites encore plus visibles.</p>
+<p class="mt-4">Un nettoyage professionnel à domicile permet de rétablir une hygiène textile durable, adaptée aux contraintes urbaines d’Ivry. En traitant en profondeur les fibres, il améliore la qualité de l’air intérieur, ravive l’aspect des tissus et prolonge la durée de vie du mobilier, aussi bien dans les logements résidentiels que dans les espaces recevant du public.</p>`,
+
+  uniqueDeepDive: `<h3>1. Diagnostic textile et repérage des zones contaminées</h3>
+<p>Chaque prestation débute par l’analyse précise des textiles : type de tissu, densité des rembourrages, ancienneté, fragilité et nature des taches. Le technicien identifie les zones les plus exposées selon le contexte ivryen : canapés fortement sollicités dans les appartements familiaux du Petit-Ivry, tapis grand format dans les lofts proches de la Manufacture des Œillets, fauteuils d’accueil ou de salles d’attente autour de l’Hôpital Charles-Foix. Cette étape permet d’adapter température, produits et puissance d’extraction aux contraintes réelles du logement ou du local.</p>
+<h3>2. Pré-traitement ciblé et injection-extraction en profondeur</h3>
+<p class="mt-4">Les taches et zones fortement chargées reçoivent un pré-traitement spécifique : enzymatique pour les matières organiques, neutralisant d’odeurs pour les textiles imprégnés, dégraissant léger pour les dépôts urbains. L’injection-extraction diffuse ensuite de l’eau chaude au cœur des fibres, désagrégeant acariens, allergènes et particules fines. L’aspiration immédiate et puissante extrait l’eau chargée d’impuretés, sans détremper inutilement les supports, un point clé dans les immeubles à accès contraint ou sans ascenseur.</p>
+<h3>3. Extraction maximale, séchage maîtrisé et conseils d’entretien</h3>
+<p class="mt-4">Une attention particulière est portée à l’extraction finale afin de limiter l’humidité résiduelle et d’accélérer le séchage, généralement compris entre 6 et 10 heures selon la ventilation du logement. Le technicien fournit des recommandations adaptées à Ivry-sur-Seine : aération aux heures creuses de circulation, entretien régulier des textiles exposés à la pollution urbaine, fréquence de nettoyage conseillée pour les foyers sensibles ou les espaces accueillant du public.</p>`,
+
+  specificChallenges: [
+    "Accumulation d’acariens dans les logements familiaux denses : usage quotidien intensif des canapés et matelas favorisant allergènes et inconfort respiratoire.",
+    "Particules urbaines incrustées : suie et poussières fines liées aux quais de Seine, au périphérique et aux axes très circulés.",
+    "Accès contraints aux logements : étages sans ascenseur et digicodes fréquents dans l’ancien ivryen.",
+    "Textiles de grands volumes : tapis et canapés surdimensionnés dans les lofts issus d’anciennes usines réhabilitées.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Le nettoyage est-il efficace contre les acariens dans les appartements familiaux du Petit-Ivry ?",
+      answer: `<p>Oui. L’injection-extraction à eau chaude permet de désagréger et d’extraire les acariens ainsi que leurs allergènes, souvent concentrés dans les canapés et matelas très utilisés. Dans les logements familiaux du Petit-Ivry ou du Centre-ville, les occupants constatent généralement une amélioration du confort respiratoire et une réduction des symptômes allergiques quelques jours après l’intervention.</p>`,
+    },
+    {
+      question:
+        "Les particules de pollution liées aux quais de Seine et aux grands axes sont-elles réellement éliminées ?",
+      answer: `<p>Oui. Les poussières fines et particules de suie issues du trafic urbain s’incrustent profondément dans les fibres textiles. Le nettoyage par injection-extraction dissout ces dépôts invisibles et les extrait avec l’eau sale. Les logements proches du boulevard Paul Vaillant-Couturier ou des quais d’Ivry bénéficient ainsi d’un air intérieur plus sain et de textiles visiblement ravivés.</p>`,
+    },
+    {
+      question:
+        "Combien de temps faut-il avant de réutiliser un canapé après nettoyage à Ivry-sur-Seine ?",
+      answer: `<p>Le séchage complet intervient en général entre 6 et 10 heures, selon la ventilation et la saison. Dans les immeubles denses d’Ivry avec peu de courants d’air, une aération régulière est recommandée. Une utilisation légère est possible plus tôt, mais il est préférable d’attendre le séchage total pour préserver les fibres et le confort.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous aussi dans les salles d’attente ou cabinets proches de l’Hôpital Charles-Foix ?",
+      answer: `<p>Oui. Nous réalisons régulièrement le nettoyage de fauteuils, chaises et tapis dans les salles d’attente et cabinets médicaux du secteur. L’intervention est organisée pour limiter l’impact sur l’activité, avec une attention particulière portée à l’hygiène, à la discrétion et au séchage rapide des textiles.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
 
          {
       serviceKey: "nettoyage-appartement-maison",

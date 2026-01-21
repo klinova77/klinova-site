@@ -407,6 +407,73 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état complète d’appartements et de maisons à Créteil, avant état des lieux ou après déménagement, avec un périmètre défini en amont et des méthodes adaptées à chaque surface.",
+
+  whyUsBullets: [
+    "Maîtrise des typologies cristoliennes : tours et collectifs (Mont-Mesly, Front de Lac), pavillons du Port/Ormetteau.",
+    "Méthode par zones : sols, cuisine, salle de bain, points de contact et vitrages accessibles, finitions soignées.",
+    "Organisation terrain en zone dense : gestion digicodes/gardiens, stationnement et créneaux compatibles copropriétés.",
+  ],
+
+  uniqueIntro: `<p>À Créteil, la densité et la diversité du bâti imposent une remise en état rigoureuse : appartements des secteurs Front de Lac, L’Échat ou Les Choux, pavillons plus calmes vers le Port/Ormetteau, logements récents côté Pointe du Lac. Dans ces configurations, un déménagement, une mise en location ou une restitution de clés exige une propreté homogène, sans zone “oubliée”.</p>
+<p class="mt-4">La ville vit au rythme de ses pôles et de ses transports : métro ligne 8, TVM, université (UPEC), Préfecture et Créteil Soleil. Cette intensité se retrouve dans les logements : poussière de voirie, traces sur les sols d’entrée, cuisine sollicitée, et pièces d’eau où le calcaire marque vite. L’objectif n’est pas d’en faire trop, mais de traiter ce qui compte vraiment pour un rendu net et présentable.</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Créteil</strong>, Klinova intervient avec un protocole clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous organisons l’accès (digicodes, gardiens, ascenseurs), puis nous déroulons une remise en état par zones, avec un contrôle final avant remise des clés ou réoccupation.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+<p>Nous évaluons l’état réel du logement (logement vide, traces d’usage, remise en état du logement avant restitution), les revêtements (PVC/lino fréquent, carrelage, parquet stratifié), et les contraintes d’immeuble : étages, ascenseur, règles de copropriété, accès Vigik et créneaux. Cette étape permet d’établir un ordre d’intervention efficace, sans perte de temps sur site.</p>
+
+<h3>T2 : Grand ménage structuré</h3>
+<p>Nous réalisons un dépoussiérage complet (plinthes, menuiseries, surfaces accessibles), puis nous traitons les sols selon leur nature. En cuisine : <strong>dégraissage cuisine</strong> des surfaces accessibles (plans, crédences, façades selon l’état). En salle de bain : <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, zones critiques), puis finitions sur les joints et les surfaces. Les points de contact (poignées, interrupteurs) et les vitrages accessibles sont intégrés pour un rendu cohérent, pièce par pièce.</p>
+
+<h3>T3 : Contrôle final et restitution</h3>
+<p>Nous terminons par un contrôle visuel, une aération du logement et, si besoin, un retour rapide sur un détail. L’objectif est de sécuriser un <strong>nettoyage après déménagement</strong> ou un <strong>nettoyage avant état des lieux</strong> dans des délais réalistes, avec un rendu propre et lisible pour le bailleur, l’agence ou l’occupant.</p>`,
+
+  specificChallenges: [
+    "Stationnement souvent saturé (Préfecture, Université, Créteil Soleil) : logistique à anticiper pour tenir le créneau.",
+    "Accès encadrés en copropriétés : digicodes, Vigik, gardiens, horaires et ascenseurs parfois contraints.",
+    "Bâti très varié : PVC/lino en collectifs, carrelage et parquet stratifié en récent, méthodes à adapter sans excès d’eau.",
+    "Vitrages importants sur certains immeubles (Front de Lac) : traitement des vitres accessibles pour un rendu net.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous rapidement pour une remise en état avant état des lieux à Créteil (94000) ?",
+      answer: `<p>Oui, selon la disponibilité et l’accessibilité du logement. Créteil étant une zone dense, nous calons le créneau en fonction des contraintes d’accès (Vigik, gardien, ascenseur) et du stationnement pour livrer un logement prêt à être présenté sans stress inutile.</p>`,
+    },
+    {
+      question:
+        "Quelle différence entre un nettoyage standard et une remise en état du logement avant remise des clés ?",
+      answer: `<p>Une remise en état vise un rendu homogène : finitions visibles, cuisine et sanitaires traités en priorité, sols et plinthes repris, points de contact et vitrages accessibles inclus. C’est une intervention plus structurée qu’un simple entretien, pensée pour une présentation ou une réinstallation.</p>`,
+    },
+    {
+      question:
+        "Comment traitez-vous les cuisines très sollicitées en appartement (graisses, traces) ?",
+      answer: `<p>Nous procédons par étapes : dépoussiérage, puis <strong>dégraissage cuisine</strong> ciblé sur les surfaces accessibles, avec des produits compatibles. L’objectif est d’obtenir un rendu propre et uniforme sans abîmer les façades, plans ou crédences.</p>`,
+    },
+    {
+      question:
+        "Proposez-vous des produits plus doux ou éco-responsables si on le souhaite ?",
+      answer: `<p>Oui, sur demande. Nous pouvons privilégier des produits plus doux ou biodégradables lorsque cela est compatible avec les surfaces et l’état du logement, tout en conservant une efficacité suffisante pour une remise en état.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
+
+
   ],
 };
 

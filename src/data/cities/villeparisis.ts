@@ -250,7 +250,7 @@ const city: City = {
 
       specificChallenges: [
         "Proximité de la RN3 : dépôt régulier de pollution noire et grasse sur sols, garde-corps et mobilier extérieur.",
-        "Humidité liée au Canal de l'Ourcq favorisant le retour des mousses sur terrasses exposées au nord ou ombragées.",
+        "Humidité liée au Canal de l'Ourcq favorisant le retour des mousses sur balcons exposées au nord ou ombragées.",
         "Dans le quartier rénové du Vieux-Pays, évacuations parfois sensibles nécessitant une aspiration systématique des eaux de lavage.",
       ],
 
@@ -402,6 +402,64 @@ const city: City = {
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "À Villeparisis, intervention équilibrée entre pavillons et collectifs : sols, cuisines et salles de bain remis en état, avec prise en compte des accès et du stationnement local.",
+
+  whyUsBullets: [
+    "Approche “état des lieux” : pièces d’eau et cuisine traitées en priorité, sols uniformes, puis finitions visibles (plinthes, poignées, interrupteurs).",
+    "Gestion terrain Villeparisis : créneaux pensés pour le secteur gare et les jours de marché, afin de limiter les pertes de temps liées au stationnement.",
+    "Prise en compte des contraintes locales : calcaire (77), poussières de voirie (RN3/A104) et vitrages marqués sur les maisons et rez-de-chaussée.",
+  ],
+
+  uniqueIntro: `<p>À Villeparisis, les demandes de nettoyage “appartement/maison” reviennent souvent dans trois scénarios : une remise en état avant état des lieux, un grand ménage après déménagement, ou un nettoyage après travaux légers. Le profil de la commune est contrasté : Vieux-Pays et rues plus resserrées d’un côté, secteurs en collectif plus dense comme La Plaine et Renouveau de l’autre, et un pavillonnaire très étendu à Bois-Fleuri. Cette diversité oblige à raisonner en organisation et en méthode, pas uniquement en “surface”.</p>
+<p class="mt-4">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>
+<p class="mt-4">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>
+<p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : badge/digicode, stationnement plus serré, et interventions à caler sur des créneaux fluides. On vise un rendu homogène : sols sans traces, cuisine et salle d’eau traitées sérieusement, et contrôle des points qui se voient tout de suite (plinthes, bas de portes, poignées).</p>
+
+<h3>T2 : Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>
+<p>Le centre historique impose souvent des accès plus étroits et des escaliers qui ralentissent les allers-retours. On travaille alors de façon séquencée : dépoussiérage complet, dégraissage cuisine, salle d’eau et traitements calcaire, puis sols et finitions. Le but : éviter les reprises et les “manques” typiques des logements anciens (rebords, radiateurs, encadrements).</p>
+
+<h3>T3 : Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>
+<p>En pavillonnaire, la difficulté est l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite. On recherche l’uniformité : poussière extraite des angles, sols nets sans voile, et pièces d’eau propres sur la durée. Les abords RN3/A104 rendent aussi les traces plus visibles sur les fenêtres et surfaces proches de l’extérieur.</p>`,
+
+  specificChallenges: [
+    "Secteur gare Villeparisis–Mitry (RER B) : stationnement plus tendu et accès immeubles à anticiper (digicode/badge).",
+    "RN3 / A104 : poussières de voirie et traces de pollution sur vitrages bas, rebords et balcons.",
+    "Calcaire (77) : robinetterie, parois et joints qui marquent vite si le traitement n’est pas cadré.",
+    "Vieux-Pays : rues plus étroites et escaliers qui compliquent la logistique et imposent une intervention bien séquencée.",
+    "Bois-Fleuri : volumes pavillonnaires, Velux/escaliers, finitions à homogénéiser sur plusieurs niveaux.",
+    "Collectifs denses (La Plaine / Renouveau) : circulation du matériel et contrôle final indispensables pour un rendu “état des lieux”.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous pour un nettoyage d’état des lieux à Villeparisis (77270) ?",
+      answer: `<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau en priorité, sols ensuite, puis finitions (plinthes, poignées, interrupteurs, bas de portes). L’objectif est un rendu net et uniforme, sans traces au sol ni dépôts visibles sur les points sensibles.</p>`,
+    },
+    {
+      question: "Pouvez-vous faire un nettoyage après travaux (poussières fines) ?",
+      answer: `<p>Oui. Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries d’abord, sols ensuite, puis contrôle des rebords, angles et pièces d’eau. Cela évite le “voile” sur les sols et les reprises visibles.</p>`,
+    },
+    {
+      question: "Est-ce que vous gérez aussi les vitrages (baies, Velux) en pavillon ?",
+      answer: `<p>Oui, surtout à Bois-Fleuri où c’est fréquent. Les vitrages accessibles peuvent être intégrés à la prestation, avec une méthode qui limite les traces et laisse un rendu propre et régulier.</p>`,
+    },
+    {
+      question: "Comment gérez-vous les contraintes autour de la gare RER B ?",
+      answer: `<p>On privilégie des créneaux plus fluides quand c’est possible, et on organise l’intervention pour limiter les allers-retours. L’idée est de sécuriser le déchargement et de garder du temps utile pour la qualité du nettoyage.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ],
 };
 

@@ -221,7 +221,7 @@ const city: City = {
       serviceKey: "balcons",
 
       heroDescription:
-        "Le nettoyage professionnel des balcons et terrasses à Meaux redonne un espace extérieur utilisable et propre, libéré des poussières de chantiers, du verdissement de la Marne et des fientes de pigeons du centre ancien.",
+        "Le nettoyage professionnel des balcons à Meaux redonne un espace extérieur utilisable et propre, libéré des poussières de chantiers, du verdissement de la Marne et des fientes de pigeons du centre ancien.",
 
       whyUsBullets: [
         "Triple expertise chantiers, pigeons et humidité : Détergent captant pour poussières minérales des zones en rénovation, protocole sanitaire pour fientes de pigeons du centre ancien, traitement anti-mousse pour humidité de la Marne.",
@@ -229,8 +229,8 @@ const city: City = {
         "Organisation pour ville complexe : Portage de matériel dans les rues étroites du centre historique, adaptation aux accès évolutifs des zones en chantiers, planification tenant compte des ponts sur la Marne.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires meldois finissent par renoncer à utiliser leur balcon ou terrasse, découragés par un encrassement qui varie radicalement selon le quartier dans cette commune la plus peuplée de Seine-et-Marne. Dans les quartiers en rénovation urbaine (Beauval, Dunant, La Pierre Collinet), les balcons des copropriétés rénovées accumulent quotidiennement une couche blanchâtre de poussières minérales : particules fines de béton, ciment et plâtre générées par les chantiers de déconstruction et reconstruction qui se déposent sur les dalles, les garde-corps et les baies vitrées. Cette pellicule poussiéreuse résiste aux tentatives de nettoyage domestique et revient en quelques jours. Dans le centre historique autour de la cathédrale, les balcons des immeubles anciens subissent les salissures massives des pigeons concentrés dans ce secteur : fientes sur les rebords de fenêtres, garde-corps et sols. Sur la Corniche de Meaux et dans les quartiers sud proches du Parc du Pâtis, les balcons se couvrent rapidement de mousses vertes et de micro-algues favorisées par l'humidité fluviale de la Marne, rendant les surfaces glissantes.</p>
-<p class="mt-4">Après une saison, les espaces extérieurs deviennent négligés : dans les quartiers en chantiers, les balcons présentent un dépôt blanchâtre uniforme qui ternit les dalles et opacifie les garde-corps, l'eau de pluie forme des coulures grises. Dans le centre ancien, les fientes de pigeons forment des croûtes malodorantes, les rebords noircissent, l'acidité corrode les matériaux. Sur les bords de Marne, les murets se couvrent de dépôts verdâtres glissants, les joints noircissent, les terrasses gardent une humidité permanente. On hésite à y installer une chaise ou à profiter de la vue sur la Marne ou la cathédrale. Les tentatives de nettoyage avec un balai-brosse et un seau donnent des résultats décevants : les poussières minérales s'étalent sans partir, les mousses reviennent rapidement, les fientes résistent.</p>
+      uniqueIntro: `<p>Les propriétaires meldois finissent par renoncer à utiliser leur balcon, découragés par un encrassement qui varie radicalement selon le quartier dans cette commune la plus peuplée de Seine-et-Marne. Dans les quartiers en rénovation urbaine (Beauval, Dunant, La Pierre Collinet), les balcons des copropriétés rénovées accumulent quotidiennement une couche blanchâtre de poussières minérales : particules fines de béton, ciment et plâtre générées par les chantiers de déconstruction et reconstruction qui se déposent sur les dalles, les garde-corps et les baies vitrées. Cette pellicule poussiéreuse résiste aux tentatives de nettoyage domestique et revient en quelques jours. Dans le centre historique autour de la cathédrale, les balcons des immeubles anciens subissent les salissures massives des pigeons concentrés dans ce secteur : fientes sur les rebords de fenêtres, garde-corps et sols. Sur la Corniche de Meaux et dans les quartiers sud proches du Parc du Pâtis, les balcons se couvrent rapidement de mousses vertes et de micro-algues favorisées par l'humidité fluviale de la Marne, rendant les surfaces glissantes.</p>
+<p class="mt-4">Après une saison, les espaces extérieurs deviennent négligés : dans les quartiers en chantiers, les balcons présentent un dépôt blanchâtre uniforme qui ternit les dalles et opacifie les garde-corps, l'eau de pluie forme des coulures grises. Dans le centre ancien, les fientes de pigeons forment des croûtes malodorantes, les rebords noircissent, l'acidité corrode les matériaux. Sur les bords de Marne, les murs se couvrent de dépôts verdâtres glissants, les joints noircissent. On hésite à y installer une chaise ou à profiter de la vue sur la Marne ou la cathédrale. Les tentatives de nettoyage avec un balai-brosse et un seau donnent des résultats décevants : les poussières minérales s'étalent sans partir, les mousses reviennent rapidement, les fientes résistent.</p>
 <p class="mt-4">Un nettoyage professionnel adapté à chaque environnement change complètement la donne. Il élimine les poussières de chantiers avec des techniques de captation dans les quartiers en rénovation, désinfecte et nettoie les balcons souillés par les pigeons dans le centre historique, traite les mousses liées à l'humidité de la Marne sur les berges, et restitue l'aspect d'origine des surfaces partout. Les habitants redécouvrent le plaisir d'utiliser leur balcon, d'y prendre l'air avec vue sur le patrimoine meldois ou les bords de Marne. Cette remise en état valorise aussi le logement dans une ville où les programmes de rénovation urbaine attirent de nouveaux résidents.</p>`,
 
       uniqueDeepDive: `<h3>1. Préparation et identification des salissures par secteur</h3>
@@ -257,10 +257,7 @@ const city: City = {
           question: "Mon balcon dans le centre-ville est régulièrement souillé par les pigeons, que faire ?",
           answer: `<p>La forte concentration de pigeons dans le secteur cathédrale et marché est un problème récurrent du centre ancien. Nous appliquons un protocole sanitaire strict : humidification préalable des fientes pour éviter la dispersion de poussières pathogènes, ramassage dans des sacs étanches, nettoyage avec produit adapté, puis désinfection virucide avec temps de contact respecté pour éliminer les risques sanitaires (salmonelles, cryptocoques). Nous pouvons également proposer la pose de solutions anti-pigeons (pics discrets, filets) adaptées à l'architecture du bâti ancien protégé pour prévenir la recolonisation.</p>`,
         },
-        {
-          question: "Ma terrasse sur la Corniche verdit rapidement malgré les nettoyages, pourquoi ?",
-          answer: `<p>C'est lié à l'humidité fluviale de la Marne qui génère une hygrométrie élevée favorisant le développement rapide de mousses vertes et de micro-algues sur les surfaces poreuses. Les bords de Marne et les quartiers sud près du Parc du Pâtis sont particulièrement exposés à ce phénomène. Nous appliquons un traitement anti-mousse curatif lors du nettoyage, puis un traitement préventif après séchage qui ralentit le verdissement pendant 12 à 18 mois. Un balayage régulier limite aussi l'accumulation de débris organiques qui favorisent les mousses.</p>`,
-        },
+        
         {
           question: "Combien de temps avant de pouvoir réinstaller mes meubles et profiter de mon balcon ?",
           answer: `<p>Le séchage complet intervient sous 2 à 4 heures selon l'exposition au soleil et la ventilation, durée légèrement rallongée dans les secteurs proches de la Marne en raison de l'humidité ambiante. Vous pouvez marcher sur le balcon dès que les surfaces sont sèches au toucher, généralement en milieu d'après-midi si l'intervention a lieu le matin. Pour réinstaller le mobilier, attendez le séchage total des joints et des angles, soit environ une demi-journée. Cette rapidité permet de profiter rapidement de la vue sur la cathédrale, les bords de Marne ou le cadre rénové des nouveaux quartiers.</p>`,
@@ -389,6 +386,63 @@ const city: City = {
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Spécialiste fin de bail, remise en état après travaux, grand ménage ou logement très encrassé.",
+
+  whyUsBullets: [
+    "Organisation pensée pour Meaux : accès centre piéton/rues médiévales, stationnement réglementé, et volumes plus importants dans les quartiers denses (Beauval).",
+    "Rendu orienté état des lieux : cuisine/SDB (calcaire), sols et finitions visibles (plinthes, portes, interrupteurs), plus vitrages quand l’exposition route/ville marque rapidement.",
+    "Capacité à gérer des configurations très différentes : appartements de rotation (Beauval/Dunant), bâtis atypiques du centre, maisons familiales avec étages et extérieurs.",
+  ],
+
+  uniqueIntro: `<p>À Meaux, un nettoyage d’appartement ou de maison ne se résume pas à “faire propre” : la ville mélange un <strong>centre ancien</strong> avec accès parfois contraints (rues étroites, stationnement réglementé) et des secteurs plus “grands volumes” comme <strong>Beauval</strong>, où la rotation de logements et la densité imposent une intervention structurée. C’est aussi une commune qui vit au rythme de la <strong>gare de Meaux (Ligne P)</strong> et des pôles administratifs, ce qui crée des besoins récurrents de remise en état (déménagements, états des lieux, fin de chantier).</p>
+<p class="mt-4">Le centre-ville autour de la <strong>Cathédrale Saint-Étienne</strong> et du Marché offre souvent des surfaces atypiques : parquets anciens, escaliers étroits, pièces en enfilade, lucarnes ou petites menuiseries. À l’inverse, les zones plus récentes (secteur <strong>Foch</strong> / opérations neuves) demandent surtout des finitions nettes sur baies vitrées, sols modernes et salles d’eau où le calcaire se voit vite.</p>
+<p class="mt-4">Klinova intervient à Meaux avec une méthode “résultat + logistique” : cadrer le périmètre (pièces, niveau d’encrassement, accès), traiter les zones à impact (cuisine/SDB, sols), puis sécuriser les finitions. Objectif : un rendu cohérent, compatible avec une visite d’état des lieux ou une remise en état avant location/vente, sans perdre de temps sur une organisation mal anticipée.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Centre-ville / Cathédrale / Marché — accès contraints et finitions minutieuses</h3>
+<p>Dans le cœur historique, l’enjeu principal est le couple “accès + précision”. On planifie l’arrivée, le déchargement et l’ordre des pièces pour éviter de re-salir. Les parquets anciens et les escaliers demandent une approche mesurée, et les détails (plinthes, moulures, portes, joints) font la différence sur le rendu final.</p>
+
+<h3>T2 : Beauval / Dunant — rotation locative et volumes collectifs</h3>
+<p>Sur les secteurs denses, on travaille en séquence : cuisine et salle d’eau d’abord (zones qui “vendent” le résultat), puis sols et finitions, en gardant une logique de sortie propre. Les accès (digicodes, gardiens) et les ascenseurs influencent le tempo : tout est prévu pour limiter les allers-retours et tenir un créneau réaliste.</p>
+
+<h3>T3 : Saint-Faron / pavillonnaire — maisons, étages et extérieurs</h3>
+<p>Les maisons demandent une progression par zones (haut/bas) et une attention particulière aux traces de circulation (escaliers, entrées, couloirs). Les vérandas, Velux et baies vitrées sont fréquents, tout comme les petites terrasses ou abords de jardin : on adapte le périmètre selon l’objectif (grand ménage, déménagement, remise en état avant vente).</p>`,
+
+  specificChallenges: [
+    "Centre historique : rues étroites, stationnement réglementé, escaliers sans ascenseur et surfaces atypiques à traiter avec précision.",
+    "Beauval : volumes collectifs et rotation de logements, avec accès digicode/gardien et contraintes d’ascenseurs.",
+    "Ville pendulaire (gare Ligne P) : demandes fréquentes en fin de bail et délais parfois courts.",
+    "Eau calcaire (77) : salles d’eau et robinetteries qui marquent vite, surtout sur logements de rotation.",
+    "Vitrages variés : lucarnes/bois ancien en centre, grandes baies dans le récent (Foch), nécessitant une approche différente.",
+    "Zones Marché / samedi matin : créneaux à éviter pour l’accès et le stationnement.",
+  ],
+
+  faqAdditions: [
+    {
+      question: "Intervenez-vous à Meaux (77100) pour un nettoyage avant état des lieux ?",
+      answer: `<p>Oui. Nous cadrons le périmètre puis nous priorisons ce qui est le plus contrôlé : cuisine, salle d’eau, sols et finitions visibles (plinthes, interrupteurs, portes, encadrements). En centre-ville, on anticipe aussi l’accès et le déchargement pour éviter les retards liés au stationnement.</p>`,
+    },
+    {
+      question: "Pouvez-vous faire un nettoyage après travaux (plâtre/peinture) à Meaux ?",
+      answer: `<p>Oui. Après travaux, la difficulté vient de la poussière fine et des traces sur menuiseries, plinthes et sols. Nous organisons un dépoussiérage structuré, puis la remise en état des surfaces, avec une attention particulière aux parquets anciens du centre et aux baies vitrées des logements récents.</p>`,
+    },
+    {
+      question: "Nettoyez-vous les vitrages (baies, Velux, petites fenêtres du centre) ?",
+      answer: `<p>Sur demande, oui pour les vitrages accessibles et les encadrements. À Meaux, c’est souvent pertinent : petites menuiseries en centre ancien (traces et poussières) ou grandes baies dans les résidences récentes, où le rendu se joue sur la transparence et l’absence de traces.</p>`,
+    },
+    {
+      question: "Le logement est à Beauval : est-ce différent d’un nettoyage en centre-ville ?",
+      answer: `<p>Oui, surtout côté organisation. À Beauval, on anticipe les accès (digicode, gardien, ascenseur) et on travaille en séquence pour conserver des sols propres jusqu’à la sortie. En centre-ville, l’enjeu est davantage l’accès, les escaliers et la finesse sur les surfaces anciennes.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ],
 };
 

@@ -288,6 +288,114 @@ const city: City = {
       ],
       ctaOverride: "",
        },
+
+       // CITY_CHECK: Gentilly
+
+{
+  serviceKey: "canapes-tapis",
+
+  heroDescription:
+    "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Gentilly élimine acariens, allergènes et particules urbaines liées au RER B et aux axes A6a/Périphérique, restaurant l'hygiène des intérieurs denses aux portes de Paris.",
+
+  whyUsBullets: [
+    "Double réalité gentilléenne : Protocole ajusté aux familles (Chaperon Vert, Gabriel-Péri) comme aux jeunes actifs proches du RER B, avec traitement ciblé des textiles très sollicités et des petites surfaces.",
+    "Environnement très exposé à la pollution : Injection-extraction à eau chaude pour déloger les allergènes et dépôts fins, avec détergent adapté aux particules noires et grasses liées à l'A6a et au périphérique (Porte de Gentilly).",
+    "Organisation efficace malgré les contraintes : Stationnement tendu, digicodes/badges généralisés et escaliers étroits du centre ancien ; intervention planifiée pour limiter la gêne dans les immeubles denses.",
+  ],
+
+  uniqueIntro: `<p>À Gentilly, les canapés, tapis et matelas accumulent vite des salissures invisibles qui dégradent l’hygiène de l’intérieur. La ville combine des quartiers résidentiels denses (Centre-ville/Frileuse, Reine-Blanche), de grands ensembles (Chaperon Vert, Gabriel-Péri) et des zones plus récentes vers le Val de Bièvre. Dans ces configurations, les textiles captent à la fois les allergènes domestiques (acariens, poussières) et une charge particulaire urbaine plus marquée qu’ailleurs, portée par le trafic de proximité (A6a, périphérique Porte de Gentilly) et les flux du RER B.</p>
+<p class="mt-4">Au quotidien, les symptômes apparaissent souvent sans cause évidente : rhinites au réveil, gêne respiratoire, odeurs persistantes, textiles ternis malgré l’aspirateur. Dans les logements familiaux du Chaperon Vert ou de Gabriel-Péri, l’usage intensif et la promiscuité favorisent l’encrassement rapide des rembourrages. Dans le secteur du Val de Bièvre et autour de la gare RER, la rotation des occupants et la proximité des axes renforcent l’accumulation de particules fines dans les tissus. Un entretien domestique reste superficiel : il ne décroche pas les allergènes incrustés ni les dépôts liés à la pollution urbaine.</p>
+<p class="mt-4">Un nettoyage professionnel à domicile permet de revenir à une hygiène textile saine et durable : extraction en profondeur, neutralisation des sources d’allergènes, amélioration de la qualité de l’air intérieur, et remise en état esthétique des textiles, sans avoir à déplacer le mobilier.</p>`,
+
+  uniqueDeepDive: `<h3>1. Diagnostic textile et identification des contaminations (allergènes + particules urbaines)</h3>
+<p>Le technicien commence par analyser les textiles : nature du tissu, densité des rembourrages, fragilité, zones d’usage intensif et taches visibles. Il tient compte du contexte local : logements familiaux et textiles très sollicités au Chaperon Vert et à Gabriel-Péri, appartements de jeunes actifs proches du RER B, intérieurs plus récents vers le Val de Bièvre. Cette lecture permet de choisir les produits et le niveau d’extraction adaptés, notamment lorsque les dépôts urbains liés à l’A6a et au périphérique sont présents.</p>
+<h3>2. Pré-traitement ciblé puis injection-extraction à eau chaude</h3>
+<p class="mt-4">Les taches et zones les plus chargées reçoivent un pré-traitement : enzymatique pour les matières organiques, neutralisant d’odeurs si nécessaire, et détergent adapté aux dépôts urbains. L’injection-extraction diffuse ensuite de l’eau chaude au cœur des fibres pour décoller allergènes et particules. L’aspiration puissante retire immédiatement l’eau chargée d’impuretés, permettant un nettoyage en profondeur sans détremper les supports, point important dans les logements denses ou avec accès contraints.</p>
+<h3>3. Extraction finale, séchage maîtrisé et conseils adaptés à Gentilly</h3>
+<p class="mt-4">Une extraction maximale est réalisée pour limiter l’humidité résiduelle et accélérer le séchage. Le séchage complet se fait généralement sous 6 à 10 heures selon la ventilation. Le technicien donne des conseils simples et locaux : aérer aux périodes de moindre circulation, entretenir régulièrement les textiles exposés aux axes A6a/Périphérique, et programmer un nettoyage périodique dans les foyers sensibles ou lorsque le logement est très exposé aux flux (gare RER B).</p>`,
+
+  specificChallenges: [
+    "Encrassement accéléré en habitat dense : textiles très sollicités dans les quartiers Centre-ville/Frileuse, Chaperon Vert et Gabriel-Péri.",
+    "Particules fines et suie urbaine : proximité A6a et périphérique (Porte de Gentilly) favorisant dépôts noirs et odeurs incrustées.",
+    "Rotation et flux autour du RER B : apports de poussières extérieures et recontamination plus rapide près de la gare.",
+    "Contraintes d'accès et de logistique : stationnement difficile, digicodes/badges fréquents, escaliers étroits du centre ancien.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Le nettoyage est-il efficace contre les acariens dans les logements familiaux du Chaperon Vert ou de Gabriel-Péri ?",
+      answer: `<p>Oui. L’injection-extraction à eau chaude permet de désincruster en profondeur les allergènes et de retirer une grande partie des acariens et de leurs déjections, souvent concentrés dans les canapés et matelas très utilisés. Dans les foyers où l’usage est intensif (Chaperon Vert, Gabriel-Péri), l’amélioration du confort respiratoire est généralement sensible dans les jours qui suivent.</p>`,
+    },
+    {
+      question:
+        "Peut-on vraiment enlever les dépôts liés à la pollution de l’A6a et du périphérique ?",
+      answer: `<p>Oui. Les particules fines et la suie urbaine peuvent s’incruster dans les fibres et ternir les tissus. Le protocole par injection-extraction, associé à un détergent adapté, dissout et extrait ces dépôts invisibles avec l’eau sale. C’est particulièrement utile pour les logements proches des axes A6a/Périphérique et du nord de Gentilly.</p>`,
+    },
+    {
+      question:
+        "Combien de temps faut-il avant de réutiliser le canapé après l’intervention ?",
+      answer: `<p>En général, le séchage complet se fait sous 6 à 10 heures selon la ventilation et la saison. Une utilisation légère est possible plus tôt, mais il est préférable d’attendre le séchage total pour retrouver un confort normal et préserver les fibres. Nous conseillons d’aérer régulièrement, idéalement aux heures où la circulation est moindre.</p>`,
+    },
+    {
+      question:
+        "Intervenez-vous dans les appartements près de la gare RER B Gentilly malgré les contraintes d’accès ?",
+      answer: `<p>Oui. Nous avons l’habitude des accès par digicode/badge, des escaliers étroits et du stationnement tendu. L’intervention est organisée pour limiter la gêne, notamment dans les immeubles denses autour de la gare et du Centre-ville/Frileuse.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+         {
+      serviceKey: "nettoyage-appartement-maison",
+      heroDescription: "Une remise en état complète de votre logement à Gentilly, avec traitement de chaque pièce et coordination adaptée aux contraintes d'accès pour une restitution dans les délais convenus.",
+      whyUsBullets: [
+        "Connaissance des typologies locales : T2/T3, parquets anciens et sols PVC des résidences de Gentilly.",
+        "Polyvalence technique : traitement adapté à chaque revêtement, finitions soignées sur pièces d'eau et menuiseries.",
+        "Organisation calée sur vos contraintes : coordination agence, accès digicode ou gardien, respect strict des délais de remise.",
+      ],
+      uniqueIntro: `<p>Après plusieurs semaines de travaux ou à l'approche d'un état des lieux, les appartements de la <strong>Cité Gabriel-Péri</strong> présentent souvent des traces tenaces : résidus de peinture sur les plinthes, poussière de plâtre dans les recoins, sols ternis par les passages répétés. Ces dépôts s'accumulent dans les pièces d'eau comme dans les espaces de vie, rendant le logement impropre à une remise de clés sereine.</p>
+<p class="mt-4">Un nettoyage structuré permet de livrer un bien prêt à accueillir un nouveau locataire ou à satisfaire les exigences d'un bailleur. Sur les <strong>parquets anciens du centre-ville</strong> comme sur les sols PVC des résidences sociales, chaque surface retrouve un aspect soigné. Vitres intérieures dégagées, sanitaires détartrés, placards vidés de toute poussière : le logement gagne en clarté et en valeur perçue.</p>
+<p class="mt-4">L'intervention se coordonne avec les agences immobilières ou les gestionnaires locaux. Accès par digicode, passage gardien, horaires imposés : ces paramètres sont intégrés dès la prise de contact pour garantir une exécution fluide et respectueuse des délais de rotation.</p>`,
+      uniqueDeepDive: `<h3>T1: Logement prêt à la remise de clés</h3>
+<p>Un appartement livré propre, sans trace visible de chantier ni résidu d'occupation. Sols lavés, vitres intérieures transparentes, sanitaires désinfectés. Le bien peut être présenté immédiatement à un nouveau locataire ou au propriétaire.</p>
+
+<h3>T2: Traitement méthodique par zones</h3>
+<p>Chaque pièce fait l'objet d'un passage complet. Cuisine : plans de travail, crédence, électroménager. Salle de bain : faïence, joints, robinetterie. Pièces de vie : dépoussiérage plafonds, plinthes, radiateurs. Les placards sont nettoyés intérieurement.</p>
+<p class="mt-4">Les sols reçoivent un traitement adapté au revêtement : aspiration puis lavage sur parquet, décapage léger sur carrelage encrassé, passage humide sur PVC.</p>
+
+<h3>T3: Coordination et accès sécurisé</h3>
+<p>Les informations d'accès (digicode, badge, contact gardien) sont recueillies en amont. L'intervention se cale sur les créneaux validés par l'agence ou le bailleur. Un contrôle qualité clôture chaque prestation avant restitution des clés.</p>`,
+      specificChallenges: [
+        "Fins de chantier dans les logements rénovés de Gabriel-Péri : résidus de peinture et poussière de plâtre à éliminer.",
+        "Parquets anciens du centre-ville nécessitant un lavage adapté pour éviter les traces.",
+        "Accès par digicode ou gardien : coordination indispensable avec le gestionnaire.",
+        "Délais serrés pour les états des lieux imposés par les agences immobilières locales.",
+        "Sols PVC des résidences sociales demandant un décrassage sans agression du revêtement.",
+      ],
+      faqAdditions: [
+        {
+          question: "Q1 : Pour un nettoyage fin de chantier dans la Cité Gabriel-Péri, comment traitez-vous les traces de peinture et la poussière de plâtre ?",
+          answer: `<p>Les projections de peinture sont grattées manuellement sur les surfaces dures, puis essuyées avec un solvant adapté au support. La poussière de plâtre est aspirée en plusieurs passes avant un lavage humide des sols et des plinthes. Les menuiseries et interrupteurs reçoivent un essuyage minutieux pour éliminer tout voile résiduel.</p>`,
+        },
+        {
+          question: "Q2 : Comment coordonnez-vous l'intervention avec une agence immobilière pour un ménage avant état des lieux à Gentilly ?",
+          answer: `<p>Nous recueillons les coordonnées du gestionnaire dès la demande de devis. Le créneau d'intervention est validé conjointement, en tenant compte des visites programmées. Un point téléphonique ou par mail confirme l'accès et les éventuelles consignes spécifiques. Le compte-rendu de fin de prestation peut être transmis directement à l'agence.</p>`,
+        },
+        {
+          question: "Q3 : Quel niveau de propreté livrez-vous pour une remise de clés exigée par un bailleur social à Gentilly ?",
+          answer: `<p>Le logement est restitué sans trace visible : sols lavés, vitres intérieures transparentes, sanitaires détartrés, placards dépoussiérés. Les pièces d'eau sont désinfectées, les interrupteurs et poignées essuyés. Ce niveau de finition répond aux grilles de contrôle habituellement utilisées par les bailleurs sociaux locaux.</p>`,
+        },
+        {
+          question: "Q4 : Si l'accès se fait par digicode ou gardien, quelles informations faut-il transmettre avant l'intervention ?",
+          answer: `<p>Nous avons besoin du code d'entrée, de l'étage et du numéro de porte, ainsi que du nom et des horaires de présence du gardien si un passage par la loge est requis. Ces éléments sont confirmés la veille de l'intervention pour éviter tout retard le jour J.</p>`,
+        },
+      ],
+      ctaOverride: "",
+    },
   ],
 };
 

@@ -1,10 +1,11 @@
+// D:\Klinova-site\src\data\services\nettoyage-appartement-maison.config.ts
 import type { ServiceConfig } from "~/types/geo";
 
 const nettoyageAppartementMaisonConfig: ServiceConfig = {
   key: "nettoyage-appartement-maison",
   name: "Nettoyage d'appartements et maisons",
   defaultDescription:
-    "Nettoyage complet orienté remise en état : logement prêt pour état des lieux, mise en vente/location ou reprise après déménagement. Approche par check-list, finitions soignées et résultat homogène, sans formule de ménage récurrent.",
+    "Nettoyage complet orienté remise en état : logement prêt pour état des lieux, mise en vente/location ou reprise après déménagement. Approche par check-list, finitions soignées et résultat homogène.",
 
   benefits: [
     "Remise en état orientée résultat (pas de ménage à l'heure)",
@@ -53,9 +54,9 @@ const nettoyageAppartementMaisonConfig: ServiceConfig = {
     {
       name: "Studio / T2 (forfait remise en état)",
       description:
-        "Dès 190€ TTC. Idéal : état des lieux, déménagement, remise à niveau avant relocation.",
+        "Dès 290€ TTC. Idéal : état des lieux, déménagement, remise à niveau avant relocation.",
       priceType: "from",
-      from: 190,
+      from: 290,
       vatIncluded: true,
       currency: "EUR",
     },

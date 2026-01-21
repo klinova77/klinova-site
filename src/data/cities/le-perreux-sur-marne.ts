@@ -238,7 +238,7 @@ citySpecificChallenges: [
       ],
 
       uniqueIntro: `<p>Après quelques mois sans entretien, un balcon change vite d’aspect : dépôts verts qui s’installent, traces grasses (barbecue, cuisine), joints qui noircissent et surface qui devient moins agréable au quotidien. Au Perreux-sur-Marne, l’environnement de la <strong>Promenade des Bords de Marne</strong> amène souvent plus d’humidité et de végétation : le verdissement revient facilement si le support n’est pas traité correctement.</p>
-<p class="mt-4">Sur beaucoup d’immeubles, on rencontre des <strong>balcons en carrelage</strong> (et parfois béton sur résidences plus récentes) : la pression et les produits doivent être adaptés pour ne pas fragiliser joints et revêtements. Côté pavillonnaire, notamment vers <strong>La Prairie des Presles</strong>, les terrasses sont souvent remises en état au printemps : l’objectif est un rendu net, sans éclaboussures inutiles. Enfin, l’accès compte : quais parfois encombrés le week-end, rues étroites, et voisinage en dessous. Un <strong>nettoyage balcon Le Perreux-sur-Marne</strong> se prépare autant qu’il se réalise, surtout pour maîtriser l’eau et éviter les coulures.</p>`,
+<p class="mt-4">Sur beaucoup d’immeubles, on rencontre des <strong>balcons en carrelage</strong> (et parfois béton sur résidences plus récentes) : la pression et les produits doivent être adaptés pour ne pas fragiliser joints et revêtements. Enfin, l’accès compte : quais parfois encombrés le week-end, rues étroites, et voisinage en dessous. Un <strong>nettoyage balcon Le Perreux-sur-Marne</strong> se prépare autant qu’il se réalise, surtout pour maîtriser l’eau et éviter les coulures.</p>`,
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
@@ -278,11 +278,7 @@ specificChallenges: [
             "Sur les quais de Marne souvent fréquentés le week-end, comment limitez-vous ruissellements et nuisances ?",
           answer: `<p>On prépare le chantier : protections, choix du point de rinçage, volumes d’eau limités. L’objectif est de maîtriser l’écoulement et d’éviter les coulures chez les voisins du dessous. Quand l’accès est plus contraint, on privilégie des séquences courtes, avec un nettoyage plus “piloté” que massivement arrosé.</p>`,
         },
-        {
-          question:
-            "Vers La Prairie des Presles, comment ravivez-vous l’aspect d’une terrasse encrassée et les joints noircis ?",
-          answer: `<p>On retire d’abord les dépôts, puis on traite par zones : passage principal, bords, angles, et joints. Les taches grasses demandent un pré-traitement avant rinçage. Le rendu final dépend de l’ancienneté des marques, mais on vise un sol plus clair et homogène, avec des conseils d’entretien pour prolonger l’état obtenu.</p>`,
-        },
+       
       ],
       ctaOverride: "",
     },
@@ -414,6 +410,65 @@ specificChallenges: [
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état avant état des lieux, après travaux ou déménagement, avec une attention particulière aux finitions et aux matériaux des pavillons comme aux résidences de standing du centre.",
+
+  whyUsBullets: [
+    "Approche “pavillon & standing” : finitions soignées pour parquet véritable, escaliers étroits, et pièces lumineuses où la moindre trace se voit.",
+    "Organisation terrain : créneaux et accès anticipés (digicode, gardien, stationnement), notamment côté Centre-Ville et Gare Nogent–Le Perreux.",
+    "Focus vitrages : traitement des vitres accessibles, rebords et encadrements, utile avec la suie/poussière liée à l’A4 et aux axes (D86).",
+  ],
+
+  uniqueIntro: `<p>Au Perreux-sur-Marne, une remise en état réussie dépend souvent des détails : parquet véritable dans les villas, surfaces vitrées plus complexes (vérandas, bow-windows), et finitions visibles dès l’entrée. Entre les rues commerçantes du Centre-Ville (Avenue Ledru-Rollin) et les secteurs plus résidentiels vers le <strong>Pont de Bry</strong> ou les bords de Marne, les attentes restent élevées : un logement propre “au premier regard”, sans zones oubliées.</p>
+<p class="mt-4">Le tissu local est très majoritairement pavillonnaire, avec des demeures de caractère et des maisons rénovées. Cela implique de travailler proprement, sans “décaler” le résultat : on évite l’excès d’eau sur les bois, on traite les joints et le calcaire de façon contrôlée, et on finit par un contrôle visuel des points qui comptent en état des lieux (cuisine, salle d’eau, sols, vitrages accessibles).</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Le Perreux-sur-Marne</strong>, Klinova procède avec un déroulé clair : repérage rapide (surfaces, matériaux, priorités), remise en état pièce par pièce, puis finitions. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est particulièrement utile dans les résidences de standing (gardien, badge) et quand l’accès est plus contraint autour de la gare Nogent–Le Perreux.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Accès, organisation et protection des matériaux</h3>
+<p>Le Perreux combine centre-ville dense et quartiers pavillonnaires calmes. Nous cadrons l’accès (clé, digicode, présence d’un gardien) et l’organisation (étage, escaliers, zones à prioriser) avant de démarrer. Dans les pavillons, l’objectif est aussi de protéger les matériaux : parquets, plinthes, menuiseries, et zones fragiles autour des vitrages.</p>
+
+<h3>T2 : Remise en état cuisine / salle de bain avec gestion du calcaire</h3>
+<p>La cuisine et la salle d’eau concentrent la majorité des points de contrôle en état des lieux. Nous réalisons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du 94 (robinetterie, parois, zones d’écoulement, joints si nécessaire). Les sols sont traités selon leur nature : parquet, carrelage, revêtements plus récents en résidence.</p>
+
+<h3>T3 : Vitrages accessibles, finitions et contrôle final “état des lieux”</h3>
+<p>Les logements perreuxiens sont souvent lumineux : une finition imparfaite se remarque vite. Nous terminons par les vitrages accessibles (vitres, rebords, encadrements), puis un contrôle des points visibles : traces au sol, marques sur portes et interrupteurs, bords de plinthes, et zones de passage. En fin d’intervention, une aération est recommandée pour retrouver rapidement un logement confortable.</p>`,
+
+  specificChallenges: [
+    "Bâti pavillonnaire de standing : parquet véritable, escaliers étroits, finitions très visibles (attentes élevées).",
+    "Vitrages complexes : vérandas et bow-windows, rebords à reprendre pour un rendu homogène.",
+    "Accès centre-ville : stationnement plus compliqué autour de la mairie et d’Avenue Ledru-Rollin, horaires sensibles (écoles/marché).",
+    "Suie et poussières : influence de l’A4 et des axes (D86) sur vitrages et rebords bas.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Faites-vous des remises en état avant état des lieux au Perreux-sur-Marne (94170) ?",
+      answer: `<p>Oui. Nous intervenons régulièrement avant restitution : nettoyage complet, focus cuisine/salle d’eau, sols et finitions visibles. Le périmètre est défini en amont (accès, étage, vitrages accessibles) pour éviter les surprises le jour J.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir dans une maison avec parquet et pièces vitrées (véranda, bow-window) ?",
+      answer: `<p>Oui. Nous adaptons les gestes et l’humidité pour préserver le parquet et obtenir un rendu propre sur les vitrages accessibles, encadrements et rebords. C’est souvent ce qui “fait” la différence dans les villas et demeures de caractère.</p>`,
+    },
+    {
+      question:
+        "Proposez-vous un nettoyage après travaux au Perreux-sur-Marne ?",
+      answer: `<p>Oui. Après travaux, l’enjeu principal est la poussière fine : nous structurons le dépoussiérage, traitons les surfaces et finissons par les détails. Le but est un logement utilisable rapidement, sans traces résiduelles visibles.</p>`,
+    },
+    {
+      question:
+        "Le stationnement est-il un problème pour une intervention ?",
+      answer: `<p>Le centre-ville peut être plus contraint. Nous anticipons le créneau et l’accès (badge, gardien), et nous privilégions une organisation simple pour limiter la gêne, surtout autour de la mairie et des axes les plus fréquentés.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
   ],
 };
 

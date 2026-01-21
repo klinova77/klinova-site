@@ -232,7 +232,7 @@ nearbyCities: [
     {
       serviceKey: "balcons",
       heroDescription:
-        "Remise en état de vos balcons et terrasses à Gagny : élimination des mousses, lichens et pollution pour des extérieurs propres et sûrs.",
+        "Remise en état de vos balcons à Gagny : élimination des mousses, lichens et pollution pour des extérieurs propres et sûrs.",
 
       whyUsBullets: [
         "Technique douce respectueuse des étanchéités et des joints.",
@@ -242,7 +242,7 @@ nearbyCities: [
       ],
 
       uniqueIntro: `<p>L'environnement verdoyant de Gagny a un revers : la prolifération rapide de mousses et d'algues sur les balcons, en particulier ceux exposés au nord ou situés près des parcs comme le Bois de l'Étoile ou l'Arboretum. Dans les quartiers de Maison Blanche ou des Abbesses, l'humidité ambiante et la proximité des arbres accélèrent l'apparition de dépôts verts glissants. Couplés à la pollution urbaine, ces dépôts rendent les sols noirs, inesthétiques et dangereux.</p>
-<p class="mt-4">Beaucoup de résidents n'osent plus utiliser leur terrasse par crainte de glisser ou par gêne de l'aspect sale. D'autres tentent un nettoyage domestique qui risque d'abîmer le revêtement ou de créer des coulures chez les voisins du dessous. Vous finissez par ne plus profiter de cet espace extérieur qui pourrait être un véritable atout de votre logement. <strong>Notre service professionnel permet de décaper les surfaces en profondeur</strong> sans risque pour l'étanchéité, les joints ou le voisinage, redonnant ainsi une véritable pièce supplémentaire à votre appartement et valorisant votre bien immobilier.</p>`,
+<p class="mt-4">Beaucoup de résidents n'osent plus utiliser leur balcon par crainte de glisser ou par gêne de l'aspect sale. D'autres tentent un nettoyage domestique qui risque d'abîmer le revêtement ou de créer des coulures chez les voisins du dessous. Vous finissez par ne plus profiter de cet espace extérieur qui pourrait être un véritable atout de votre logement. <strong>Notre service professionnel permet de décaper les surfaces en profondeur</strong> sans risque pour l'étanchéité, les joints ou le voisinage, redonnant ainsi une véritable pièce supplémentaire à votre appartement et valorisant votre bien immobilier.</p>`,
 
       uniqueDeepDive: `<h3>1. Préparation et sécurisation</h3>
 <p>Protection de votre intérieur (baies vitrées, seuils) et déplacement du mobilier et des plantes. <strong>Retrait manuel des débris accumulés</strong> (feuilles mortes, terre, déchets végétaux). Inspection de l'évacuation du balcon pour adapter le débit d'eau et éviter tout débordement.</p>
@@ -394,5 +394,65 @@ answer:
     },
   ],  ctaOverride: "",
 },
+
+{
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état d’appartements et de maisons à Gagny, avant remise des clés ou après déménagement, avec une méthode par zones et des produits adaptés aux revêtements (parquet, carrelage, PVC).",
+
+  whyUsBullets: [
+    "Adaptation aux typologies de Gagny : meulières du Plateau/France-Amériques, collectifs du Chenay, petits immeubles du centre.",
+    "Gestion des contraintes locales : accès Vigik/digicodes, étages sans ascenseur, stationnement tendu près des gares RER E.",
+    "Finitions utiles pour l’état des lieux : cuisine et salle de bain traitées en priorité, points de contact, vitres accessibles.",
+  ],
+
+  uniqueIntro: `<p>À Gagny, la préparation d’un logement se joue souvent entre deux temps : départ d’un occupant, arrivée du suivant, ou remise des clés dans un délai court. Entre les deux gares du RER E (Gagny et Le Chenay-Gagny), les quartiers pavillonnaires du Plateau et les immeubles du centre, les situations varient : logement vidé après déménagement, maison familiale à remettre au propre, ou appartement à présenter pour un état des lieux.</p>
+<p class="mt-4">Un <strong>nettoyage appartement maison Gagny</strong> ne consiste pas à “faire du ménage”, mais à remettre de l’ordre dans les détails qui comptent : sols et plinthes marqués par le passage, cuisine avec graisses sur les zones accessibles, salle de bain où le calcaire ressort vite, vitrages bas exposés à la poussière de voirie. Selon le bâti (meulière avec parquet ancien, résidence récente au Chenay, petit collectif), les méthodes doivent rester maîtrisées pour éviter traces, voile ou excès d’humidité.</p>
+<p class="mt-4">Klinova intervient avec un cadre simple : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous calons l’accès (digicode, badge, gardien si besoin), organisons l’ordre des pièces, puis effectuons une remise en état structurée avec un contrôle visuel final, pour livrer un logement propre et cohérent.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Repérage et organisation</h3>
+<p>Nous identifions le contexte (logement vide, préparation de remise des clés, remise en état du logement après période d’inoccupation) et les surfaces : parquet ancien fréquent dans les meulières, carrelage et PVC en collectifs, vitrages variés (petits carreaux, baies plus récentes). Nous anticipons aussi les contraintes de Gagny : relief du Plateau, escaliers étroits en centre-ville, stationnement autour des gares.</p>
+
+<h3>T2 : Traitement par pièces, priorité aux zones sensibles</h3>
+<p>Nous procédons par zones : dépoussiérage et essuyage des surfaces accessibles, puis sols et plinthes avec une technique adaptée au revêtement. En cuisine, <strong>dégraissage cuisine</strong> sur les éléments accessibles (plans, crédences, façades selon l’état). En salle de bain, <strong>détartrage sanitaires</strong> ciblé sur robinetterie, parois et joints. Les points de contact (poignées, interrupteurs) et les vitres accessibles sont intégrés pour un rendu homogène. Un <strong>débarras léger si nécessaire</strong> peut être prévu pour libérer les zones à traiter.</p>
+
+<h3>T3 : Contrôle final et conseils d’aération</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce et une aération du logement. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> avec un résultat propre, sans promesse absolue : si un point doit être repris, il est traité immédiatement sur place quand c’est possible.</p>`,
+
+  specificChallenges: [
+    "Bâti hétérogène : meulières avec parquet ancien (Plateau/France-Amériques) et collectifs (Chenay/Jean-Moulin) demandent des méthodes différentes.",
+    "Deux gares RER E (Gagny et Chenay-Gagny) : stationnement et accès plus tendus sur ces secteurs, surtout aux heures de pointe.",
+    "Relief et escaliers étroits : logistique à anticiper pour le matériel et l’ordre d’intervention.",
+    "Vitrages et rebords plus marqués près des axes (D111/D10) : besoin d’un passage soigné sur les vitres accessibles.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Dans quels cas recommandez-vous une remise en état plutôt qu’un nettoyage classique à Gagny ?",
+      answer: `<p>Quand il y a un enjeu de remise des clés : logement vidé, changement d’occupant, vente/location, ou surfaces marquées (sols, cuisine, salle de bain). La remise en état du logement est plus complète et suit un ordre d’intervention précis, alors qu’un nettoyage standard reste plus léger.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous intervenir rapidement entre deux rendez-vous d’état des lieux (secteur Chenay-Gagny) ?",
+      answer: `<p>Oui, si l’accès est simple (clé disponible, digicode/badge transmis) et le périmètre validé. Nous calons un créneau compatible avec les contraintes de stationnement près de la gare du Chenay-Gagny et organisons l’intervention par zones pour aller à l’essentiel.</p>`,
+    },
+    {
+      question:
+        "Comment traitez-vous le parquet ancien dans une meulière du Plateau ou des France-Amériques ?",
+      answer: `<p>Nous adaptons la méthode au parquet : pas d’excès d’eau, pas d’abrasion, et des produits compatibles. L’objectif est d’obtenir une propreté nette sans voile ni gonflement du bois, avec une aération conseillée en fin d’intervention.</p>`,
+    },
+    {
+      question:
+        "Que couvre exactement l’intervention côté cuisine et salle de bain ?",
+      answer: `<p>Nous ciblons les zones utiles : <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon l’état) et <strong>détartrage sanitaires</strong> sur robinetterie, parois et joints, avec un nettoyage des points de contact. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
 ],
 };export default city;

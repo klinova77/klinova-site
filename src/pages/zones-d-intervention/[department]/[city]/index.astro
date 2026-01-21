@@ -52,10 +52,27 @@ const citySlug = currentCity.slug ?? slugify(currentCity.name);
 // ==========================
 const cityServiceKeys = new Set((currentCity.services ?? []).map((s) => s.serviceKey));
 
+const SERVICE_ORDER = [
+  "moquettes",
+  "nettoyage-appartement-maison",
+  
+  "balcons",
+  "balcons-fientes",
+  "terrasses",
+  
+  "canapes-tapis",
+  "parkings",
+];
+
 const servicesForCity = (Array.isArray(services) ? services : [])
   .filter((s): s is ServiceConfig => !!s && typeof (s as any).key === "string")
   .filter((s) => typeof s.urls?.parent === "string" && s.urls.parent.length > 0)
-  .filter((s) => cityServiceKeys.has(s.key));
+  .filter((s) => cityServiceKeys.has(s.key))
+  .sort((a, b) => {
+    const ia = SERVICE_ORDER.indexOf(a.key);
+    const ib = SERVICE_ORDER.indexOf(b.key);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+  });
 
 
 

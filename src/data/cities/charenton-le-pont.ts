@@ -240,7 +240,7 @@ nearbyCities: [
     {
       serviceKey: "balcons",
       heroDescription:
-        "Le nettoyage professionnel des balcons et terrasses à Charenton-le-Pont élimine la pollution noire de l'A4 et du Périphérique tout en gérant l'humidité fluviale et les dépôts végétaux du Bois de Vincennes.",
+        "Le nettoyage professionnel des balcons à Charenton-le-Pont élimine la pollution noire de l'A4 et du Périphérique tout en gérant l'humidité fluviale et les dépôts végétaux du Bois de Vincennes.",
 
       whyUsBullets: [
         "Maîtrise des multi-facteurs de salissure : Expertise des protocoles combinant dégraissant pour pollution de l'A4, anti-mousse pour humidité fluviale, traitement des dépôts végétaux du Bois, adaptés aux expositions diverses des balcons charentonnais.",
@@ -248,15 +248,15 @@ nearbyCities: [
         "Organisation logistique dans l'environnement contraint : Stationnement en parkings souterrains, intervention tenant compte de la saturation routière, gestion discrète dans les immeubles de grande hauteur conformément au standing attendu.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires des résidences charentonnaises négligent souvent l'entretien de leurs balcons et terrasses, découragés par la rapidité avec laquelle les salissures réapparaissent dans cet environnement urbain particulièrement exigeant. La situation géographique contrainte de cette "ville-couloir" entre l'A4, le Périphérique et les voies ferrées concentre une pollution atmosphérique intense qui se dépose quotidiennement sur toutes les surfaces extérieures. Les particules noires grasses forment une pellicule tenace sur les dalles, les garde-corps et les pierres de taille des façades haussmanniennes. L'humidité constante de la confluence Seine-Marne aggrave le phénomène en maintenant ces dépôts collants et en favorisant le développement de mousses sur les surfaces poreuses.</p>
+      uniqueIntro: `<p>Les propriétaires des résidences charentonnaises négligent souvent l'entretien de leurs balcons, découragés par la rapidité avec laquelle les salissures réapparaissent dans cet environnement urbain particulièrement exigeant. La situation géographique contrainte de cette "ville-couloir" entre l'A4, le Périphérique et les voies ferrées concentre une pollution atmosphérique intense qui se dépose quotidiennement sur toutes les surfaces extérieures. Les particules noires grasses forment une pellicule tenace sur les dalles, les garde-corps et les pierres de taille des façades haussmanniennes. L'humidité constante de la confluence Seine-Marne aggrave le phénomène en maintenant ces dépôts collants et en favorisant le développement de mousses sur les surfaces poreuses.</p>
 <p class="mt-4">Les résidents du secteur Valmy ou des immeubles proches de la Porte de Charenton constatent un encrassement accéléré : carrelages qui noircissent en quelques semaines, joints qui se colorent de gris foncé, garde-corps métalliques couverts d'une patine noire, pierres de taille des façades qui perdent leur éclat. Les propriétés du Plateau bordant l'Avenue de Gravelle subissent en plus les pollens collants et les feuilles mortes massives du Bois de Vincennes au printemps et en automne. Cette dégradation rapide contraste fortement avec le standing des résidences de luxe et l'architecture soignée typique de Charenton.</p>
-<p class="mt-4">Les propriétaires hésitent à intervenir : incertitude sur les produits capables de dissoudre cette pollution grasse tenace, crainte d'endommager les matériaux de standing (pierres de taille, bois exotiques des terrasses récentes), inquiétude face à l'humidité qui empêche un séchage rapide. Un nettoyage professionnel avec protocole technique adapté résout ces problématiques multiples. Il élimine les dépôts de pollution atmosphérique, traite les mousses liées à l'humidité fluviale, retire les dépôts végétaux du Bois et restitue l'aspect d'origine. L'intervention devient un acte de maintenance préventive indispensable pour préserver la valeur des biens de très haut standing dans cet environnement urbain cumulant les facteurs de salissure.</p>`,
+<p class="mt-4">Les propriétaires hésitent à intervenir : incertitude sur les produits capables de dissoudre cette pollution grasse tenace, crainte d'endommager les matériaux de standing (pierres de taille, bois exotiques...), inquiétude face à l'humidité qui empêche un séchage rapide. Un nettoyage professionnel avec protocole technique adapté résout ces problématiques multiples. Il élimine les dépôts de pollution atmosphérique, traite les mousses liées à l'humidité fluviale, retire les dépôts végétaux du Bois et restitue l'aspect d'origine. L'intervention devient un acte de maintenance préventive indispensable pour préserver la valeur des biens de très haut standing dans cet environnement urbain cumulant les facteurs de salissure.</p>`,
 
       uniqueDeepDive: `<h3>Identification des supports et diagnostic multi-facteurs</h3>
-<p>Le technicien identifie précisément les matériaux présents : pierres de taille des façades haussmanniennes, terrasses en bois exotique des résidences récentes de luxe, carrelages grand format, garde-corps métalliques. Il repère les problématiques spécifiques selon l'exposition : pollution noire grasse sur balcons donnant vers l'A4 ou le Périphérique (secteurs Valmy, Bourg-du-Pont), mousses verdâtres sur surfaces en rez-de-jardin proches de la Seine ou de la Marne (Conflans, Les Carrières), pollens collants et feuilles mortes sur terrasses bordant l'Avenue de Gravelle et le Bois. Cette analyse détermine la combinaison de traitements : dégraissant puissant pour pollution atmosphérique, anti-mousse pour humidité fluviale, détergent spécifique pour dépôts végétaux.</p>
+<p>Le technicien identifie précisément les matériaux présents : pierres de taille des façades haussmanniennes, carrelages grand format, garde-corps métalliques. Il repère les problématiques spécifiques selon l'exposition : pollution noire grasse sur balcons donnant vers l'A4 ou le Périphérique (secteurs Valmy, Bourg-du-Pont), mousses verdâtres sur surfaces en rez-de-jardin proches de la Seine ou de la Marne (Conflans, Les Carrières), pollens collants et feuilles mortes sur balcons bordant l'Avenue de Gravelle et le Bois. Cette analyse détermine la combinaison de traitements : dégraissant puissant pour pollution atmosphérique, anti-mousse pour humidité fluviale, détergent spécifique pour dépôts végétaux.</p>
 
 <h3>Traitement dégraissant et nettoyage adapté par support</h3>
-<p>Pour les balcons exposés à la pollution intense, un dégraissant professionnel alcalin est appliqué en premier pour dissoudre la pellicule noire grasse. Après un temps de contact de 10 à 15 minutes, le brossage manuel décolle les particules incrustées. Pour les pierres de taille des façades haussmanniennes, la pression est modérée (80-100 bars) avec un produit neutre pour éviter traces et altérations. Pour les terrasses en bois exotique des résidences de luxe du Plateau, un dégriseur doux est appliqué après le dégraissage initial, puis rincé à très basse pression (30-50 bars) pour préserver les fibres. Les zones présentant des mousses liées à l'humidité fluviale reçoivent un traitement anti-mousse complémentaire. Les garde-corps métalliques sont nettoyés à l'éponge pour préserver les finitions laquées noircies par la pollution.</p>
+<p>Pour les balcons exposés à la pollution intense, un dégraissant professionnel alcalin est appliqué en premier pour dissoudre la pellicule noire grasse. Après un temps de contact de 10 à 15 minutes, le brossage manuel décolle les particules incrustées. Pour les pierres de taille des façades haussmanniennes, la pression est modérée (80-100 bars) avec un produit neutre pour éviter traces et altérations. Pour les balcons en bois exotique des résidences de luxe du Plateau, un dégriseur doux est appliqué après le dégraissage initial, puis rincé à très basse pression (30-50 bars) pour préserver les fibres. Les zones présentant des mousses liées à l'humidité fluviale reçoivent un traitement anti-mousse complémentaire. Les garde-corps métalliques sont nettoyés à l'éponge pour préserver les finitions laquées noircies par la pollution.</p>
 
 <h3>Gestion de l'eau et recommandations environnementales</h3>
 <p>L'eau de rinçage est dirigée vers les évacuations du balcon à l'aide d'une raclette et de chiffons absorbants, évitant toute coulure sur les façades de prestige. Le séchage naturel intervient sous 3 à 6 heures selon l'exposition et la ventilation, durée rallongée par l'humidité ambiante de la confluence. Le technicien conseille un balayage hebdomadaire pour éliminer les particules de pollution avant qu'elles ne s'incrustent, un rinçage mensuel léger pour les balcons très exposés aux grands axes, un nettoyage des feuilles mortes en automne pour les propriétés proches du Bois, et un nettoyage professionnel annuel pour les résidences exposées à la pollution intense, bisannuel pour celles du Plateau moins exposées aux axes routiers.</p>`,
@@ -264,7 +264,7 @@ nearbyCities: [
       specificChallenges: [
         "Pollution noire grasse multi-sources : Les balcons des secteurs Valmy, Bourg-du-Pont et proches de la Porte de Charenton accumulent des particules de l'A4 et du Périphérique formant une pellicule tenace nécessitant un dégraissant puissant et un brossage méticuleux.",
         "Humidité fluviale de la confluence : La proximité de la Seine et de la Marne génère une hygrométrie élevée favorisant mousses sur surfaces poreuses et ralentissant le séchage, exigeant traitement anti-mousse et extraction renforcée.",
-        "Dépôts végétaux du Bois de Vincennes : Les terrasses du Plateau bordant l'Avenue de Gravelle accumulent pollens collants au printemps et feuilles mortes massives en automne, nécessitant détergent spécifique et nettoyage saisonnier adapté.",
+        "Dépôts végétaux du Bois de Vincennes : Les balcons accumulent pollens collants au printemps et feuilles mortes en automne, nécessitant détergent spécifique et nettoyage saisonnier adapté.",
       ],
 
       faqAdditions: [
@@ -280,12 +280,7 @@ nearbyCities: [
           answer:
             `<p>La pollution atmosphérique de l'A4 et du Périphérique dépose quotidiennement des particules grasses impossibles à éviter dans cette "ville-couloir". <strong>Nous recommandons un balayage hebdomadaire</strong> pour éliminer les dépôts avant qu'ils ne s'incrustent et ne deviennent une pellicule collante, et un rinçage mensuel léger avec un jet d'eau. Un nettoyage professionnel annuel avec dégraissant permet de traiter les salissures tenaces et de préserver l'aspect des surfaces. C'est la réalité de vivre dans l'environnement urbain particulièrement exposé de Charenton.</p>`,
         },
-        {
-          question:
-            "Ma terrasse en bois exotique près du Bois a grisaillé, peut-elle retrouver sa teinte d'origine ?",
-          answer:
-            `<p>Oui, le dégriseur professionnel élimine la couche grise oxydée en surface et révèle la teinte naturelle du bois. Nous appliquons d'abord un dégraissant pour retirer la pollution atmosphérique, puis le dégriseur qui agit sur le grisaillement lié aux UV et à l'humidité. Le résultat est visible immédiatement après traitement et séchage. Pour maintenir cette teinte dorée durablement, nous recommandons l'application d'une huile de protection (saturateur) 48h après le nettoyage. Cette finition est courante dans les résidences de luxe du Plateau où les terrasses en bois exotique représentent un investissement important.</p>`,
-        },
+        
         {
           question:
             "L'humidité de la Seine et de la Marne ralentit-elle vraiment le séchage de mon balcon ?",
@@ -311,15 +306,15 @@ nearbyCities: [
         "Coordination discrète dans les résidences de luxe : Intervention planifiée en coordination avec gestionnaires, évacuation des déchets via ascenseurs en heures creuses, proposition de solutions anti-pigeons discrètes respectant l'esthétique des résidences charentonnaises.",
       ],
 
-      uniqueIntro: `<p>Les propriétaires charentonnais découvrent parfois avec stupeur l'ampleur de la contamination de leur balcon après une absence prolongée ou une période d'inutilisation. Les pigeons, attirés par la verticalité exceptionnelle des immeubles de grande hauteur (R+8 et plus) qui offrent de nombreux points de nidification en hauteur, colonisent rapidement les balcons tranquilles des étages supérieurs. La proximité du Bois de Vincennes et la végétation dense de l'Avenue de Gravelle attirent ces oiseaux qui trouvent dans les résidences charentonnaises des sites de nidification idéaux à l'abri des prédateurs. Les fientes s'accumulent en couches épaisses sur les dalles, les pierres de taille, les terrasses en bois exotique et les garde-corps métalliques, formant une croûte durcie qui dégage une odeur insupportable.</p>
-<p class="mt-4">Sans intervention rapide, la situation se dégrade dangereusement sur plusieurs plans. L'acidité des fientes corrode les garde-corps métalliques des balcons, attaque les joints des carrelages, crée des taches brunâtres permanentes sur les pierres de taille des façades haussmanniennes, et érode les finitions des terrasses en bois exotique des résidences de luxe. L'humidité constante de la confluence Seine-Marne maintient les fientes humides plus longtemps, accélérant leur action corrosive sur tous les matériaux. La pollution atmosphérique de l'A4 et du Périphérique se mélange aux fientes, créant un dépôt noir particulièrement tenace et corrosif. Les fientes sèches se transforment en poussière volatile qui pénètre l'intérieur par les baies vitrées, contaminant les espaces de vie des appartements de prestige.</p>
+      uniqueIntro: `<p>Les propriétaires charentonnais découvrent parfois avec stupeur l'ampleur de la contamination de leur balcon après une absence prolongée ou une période d'inutilisation. Les pigeons, attirés par la verticalité exceptionnelle des immeubles de grande hauteur (R+8 et plus) qui offrent de nombreux points de nidification en hauteur, colonisent rapidement les balcons tranquilles des étages supérieurs. La proximité du Bois de Vincennes et la végétation dense de l'Avenue de Gravelle attirent ces oiseaux qui trouvent dans les résidences charentonnaises des sites de nidification idéaux à l'abri des prédateurs. Les fientes s'accumulent en couches épaisses formant une croûte durcie qui dégage une odeur insupportable.</p>
+<p class="mt-4">Sans intervention rapide, la situation se dégrade dangereusement sur plusieurs plans. L'acidité des fientes corrode les garde-corps métalliques des balcons, attaque les joints des carrelages, et crée des taches brunâtres permanentes sur les pierres de taille des façades haussmanniennes. L'humidité constante de la confluence Seine-Marne maintient les fientes humides plus longtemps, accélérant leur action corrosive sur tous les matériaux. La pollution atmosphérique de l'A4 et du Périphérique se mélange aux fientes, créant un dépôt noir particulièrement tenace et corrosif. Les fientes sèches se transforment en poussière volatile qui pénètre l'intérieur par les baies vitrées, contaminant les espaces de vie des appartements de prestige.</p>
 <p class="mt-4">Les occupants redoutent les risques sanitaires graves (cryptococcose, histoplasmose, salmonellose), certains développent des symptômes respiratoires sans comprendre l'origine, les gestionnaires de résidences de luxe reçoivent des plaintes de propriétaires inquiets. Les tentatives de nettoyage domestique aggravent triplement le problème : balayer à sec disperse les poussières pathogènes dans l'air et l'habitation, utiliser une pression inadaptée endommage les matériaux de standing, négliger la désinfection laisse des agents infectieux actifs. Ce type de contamination nécessite un protocole professionnel strict triplement exigeant : équipements de protection intégrale pour la sécurité sanitaire, méthodes adaptées aux matériaux de prestige, désinfection homologuée compatible avec l'environnement urbain contraint. Seule cette triple expertise garantit la récupération d'un balcon propre, désinfecté et préservé dans sa valeur patrimoniale exceptionnelle.</p>`,
 
       uniqueDeepDive: `<h3>Protection intégrale et confinement en hauteur</h3>
 <p>Le technicien revêt une combinaison jetable intégrale, des gants épais, un masque respiratoire FFP2 filtrant les particules infectieuses et des lunettes de protection étanches. Ces équipements de protection individuelle sont obligatoires face aux pathogènes présents dans les fientes (salmonelles, cryptocoques, histoplasma, chlamydia psittaci). Des bâches étanches protègent les baies vitrées, portes-fenêtres et murs intérieurs, créant un confinement strict qui empêche toute dispersion vers l'intérieur de l'appartement de prestige. Cette protection est particulièrement critique dans les immeubles de grande hauteur où le vent en altitude disperse facilement les particules. Les fientes sèches sont ensuite humidifiées abondamment au pulvérisateur d'eau, technique indispensable pour éviter la mise en suspension de particules contaminées lors du ramassage manuel.</p>
 
 <h3>Ramassage méthodique et nettoyage adapté aux matériaux de standing</h3>
-<p>Les fientes, nids, plumes et débris organiques sont ramassés manuellement zone par zone à l'aide de pelles et racloirs, puis conditionnés immédiatement dans des sacs étanches à double paroi prévus pour déchets contaminés. Cette phase s'effectue méthodiquement pour éviter toute dispersion. Les surfaces sont ensuite nettoyées selon le type de support : dégraissant puissant pour éliminer le mélange de fientes et de pollution atmosphérique formant un dépôt noir particulièrement tenace, pression modérée (80-100 bars) avec produit neutre pour les pierres de taille des façades haussmanniennes, méthode douce à très basse pression pour les terrasses en bois exotique des résidences de luxe, traitement manuel pour les garde-corps métalliques déjà corrodés. Le brossage élimine la couche organique résiduelle avant rinçage contrôlé, point critique pour préserver l'intégrité des matériaux de très haut standing.</p>
+<p>Les fientes, nids, plumes et débris organiques sont ramassés manuellement zone par zone à l'aide de pelles et racloirs, puis conditionnés immédiatement dans des sacs étanches à double paroi prévus pour déchets contaminés. Cette phase s'effectue méthodiquement pour éviter toute dispersion. Les surfaces sont ensuite nettoyées selon le type de support : dégraissant puissant pour éliminer le mélange de fientes et de pollution atmosphérique formant un dépôt noir particulièrement tenace, pression modérée (80-100 bars) avec produit neutre pour les pierres de taille des façades haussmanniennes, méthode douce à très basse pression pour les surface en bois exotique des résidences de luxe, traitement manuel pour les garde-corps métalliques déjà corrodés. Le brossage élimine la couche organique résiduelle avant rinçage contrôlé, point critique pour préserver l'intégrité des matériaux de très haut standing.</p>
 
 <h3>Désinfection virucide et recommandations préventives</h3>
 <p>Un produit désinfectant virucide et bactéricide homologué, sélectionné pour sa compatibilité avec les matériaux de prestige, est appliqué sur l'ensemble du balcon : sol, garde-corps, angles, murs. Le temps de contact réglementaire (10 à 15 minutes) est strictement respecté pour garantir la neutralisation des agents pathogènes. Après rinçage final à pression adaptée selon le support, le balcon est aéré pendant plusieurs heures et ne doit pas être réutilisé avant 24 heures minimum. Les sacs de déchets contaminés sont évacués en toute sécurité via les ascenseurs en dehors des heures de passage des résidents. Le technicien conseille d'inspecter régulièrement les points de nidification en hauteur typiques des immeubles de grande hauteur, et peut proposer la pose de solutions anti-pigeons (pics discrets, filets) adaptées à l'architecture de prestige pour prévenir une recolonisation qui endommagerait de nouveau les matériaux coûteux.</p>`,
@@ -341,13 +336,13 @@ nearbyCities: [
           question:
             "Le nettoyage peut-il endommager les matériaux de standing de mon balcon de résidence de luxe ?",
           answer:
-            `<p>Non, si le protocole est rigoureusement adapté. <strong>Nous ajustons la méthode selon le support</strong> : pression modérée (80-100 bars) avec produit neutre pour les pierres de taille des façades haussmanniennes, très basse pression (30-50 bars) pour les terrasses en bois exotique déjà fragilisées par l'acidité des fientes, nettoyage manuel pour les garde-corps métalliques laqués corrodés. Les produits désinfectants sont sélectionnés pour leur pH neutre et leur compatibilité avec les matériaux de prestige. Cette triple attention sanitaire, technique et patrimoniale est absolument indispensable pour les résidences de très haut standing charentonnaises.</p>`,
+            `<p>Non, si le protocole est rigoureusement adapté. <strong>Nous ajustons la méthode selon le support</strong> : pression modérée (80-100 bars) avec produit neutre pour les pierres de taille des façades haussmanniennes, très basse pression (30-50 bars) pour les sols en bois exotique déjà fragilisées par l'acidité des fientes, nettoyage manuel pour les garde-corps métalliques laqués corrodés. Les produits désinfectants sont sélectionnés pour leur pH neutre et leur compatibilité avec les matériaux de prestige. Cette triple attention sanitaire, technique et patrimoniale est absolument indispensable pour les résidences de très haut standing charentonnaises.</p>`,
         },
         {
           question:
             "Les fientes ont-elles déjà causé des dégâts irréversibles sur mon balcon en hauteur ?",
           answer:
-            `<p>Cela dépend de l'ancienneté de la contamination et de l'exposition à l'humidité. Sur les garde-corps métalliques, l'acidité provoque une corrosion profonde aggravée par l'humidité fluviale, nécessitant souvent un traitement antirouille ou remplacement après nettoyage. Sur les pierres de taille des façades haussmanniennes, elle crée des taches brunâtres qui pénètrent profondément. Sur les terrasses en bois exotique, elle érode les finitions et crée des marques. Le mélange avec la pollution noire de l'A4 et du Périphérique rend les dépôts encore plus corrosifs. <strong>Une intervention rapide</strong> (premières semaines) limite les dégâts, mais les contaminations anciennes (plusieurs mois) laissent souvent des dommages permanents nécessitant des réparations coûteuses.</p>`,
+            `<p>Cela dépend de l'ancienneté de la contamination et de l'exposition à l'humidité. Sur les garde-corps métalliques, l'acidité provoque une corrosion profonde aggravée par l'humidité fluviale, nécessitant souvent un traitement antirouille ou remplacement après nettoyage. Sur les pierres de taille des façades haussmanniennes, elle crée des taches brunâtres qui pénètrent profondément. Sur les balcons en bois exotique, elle érode les finitions et crée des marques. Le mélange avec la pollution noire de l'A4 et du Périphérique rend les dépôts encore plus corrosifs. <strong>Une intervention rapide</strong> (premières semaines) limite les dégâts, mais les contaminations anciennes (plusieurs mois) laissent souvent des dommages permanents nécessitant des réparations coûteuses.</p>`,
         },
         {
           question:
@@ -422,6 +417,70 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état sur-mesure pour appartements à Charenton-le-Pont : cuisine, sanitaires, sols et finitions, avec un périmètre défini dès le départ pour une restitution nette avant état des lieux.",
+
+  whyUsBullets: [
+    "Habitudes du bâti local : immeubles anciens de la rue de Paris et résidences vitrées du secteur Valmy.",
+    "Méthodes adaptées aux surfaces : parquet ancien, carrelage, lino, vitrages accessibles sans traces.",
+    "Organisation “ville dense” : stationnement compliqué, badges/Vigik, respect strict des horaires de copropriété.",
+  ],
+
+  uniqueIntro: `<p>Dans une commune dense comme Charenton-le-Pont, la remise en état d’un logement se joue autant sur la méthode que sur l’organisation. Entre le Centre-Ville et la rue de Paris, les immeubles anciens imposent souvent des escaliers étroits et des ascenseurs compacts ; côté Valmy, les résidences plus récentes ajoutent de grandes surfaces vitrées et des finitions qui marquent vite.</p>
+<p class="mt-4">Quand une date d’état des lieux se rapproche, le besoin est clair : rendre le logement propre, homogène, sans “zones oubliées”. Traces grasses en cuisine, dépôts de calcaire dans la salle de bain, plinthes ternies par la poussière urbaine : la priorité est de traiter ce qui se voit, mais aussi ce qui déclenche les remarques lors d’une visite ou d’une remise des clés. Pour un <strong>nettoyage appartement maison Charenton-le-Pont</strong>, l’objectif n’est pas le volume d’eau ou la force, mais le bon geste sur la bonne surface.</p>
+<p class="mt-4">Klinova intervient avec un cadre simple : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Puis nous déroulons une remise en état par zones, en tenant compte des accès (interphones, badges, gardiens) et des contraintes de stationnement du 94220.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Cadrage et préparation</h3>
+<p>Nous identifions l’état réel du logement et les points sensibles : parquet ancien (souvent en point de Hongrie) dans le Centre-Ville, pièces d’eau marquées par le calcaire, vitrages plus exposés côté Valmy. Les accès sont vérifiés (Vigik, consignes de gardien), et l’ordre d’intervention est planifié pour limiter les allers-retours dans les cages d’escalier étroites.</p>
+
+<h3>T2 : Remise en état par pièces</h3>
+<p>Les sols et plinthes sont traités selon le revêtement : nettoyage maîtrisé des parquets (sans sur-humidifier), lavage adapté des carrelages, traitement des sols souples. La cuisine reçoit un <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, joints et robinetterie selon tolérance des matériaux. Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour un rendu cohérent.</p>
+
+<h3>T3 : Contrôle final et restitution</h3>
+<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. Cette étape sécurise un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> : rendu homogène, sans traces ni finitions approximatives.</p>`,
+
+  specificChallenges: [
+    "Stationnement payant et rare dans le 94220 : intervention pensée “petit utilitaire” et trajets optimisés.",
+    "Bâti ancien rue de Paris : escaliers étroits, ascenseurs petits, manutention à anticiper.",
+    "Pollution urbaine (A4, quais) : dépôts sur vitres et plinthes, finitions plus exigeantes.",
+    "Horaires de copropriété stricts (9h–18h) et accès Vigik/gardiens à coordonner.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous rapidement pour un état des lieux dans le secteur Charenton-Écoles ou Liberté (métro 8) ?",
+      answer: `<p>Oui, en priorité lorsque la date est fixée. Nous validons les accès (interphone, Vigik, clés) et la logistique en amont, car le stationnement est souvent le point critique. Cela permet de sécuriser l’intervention et d’éviter les retards le jour de la restitution.</p>`,
+    },
+    {
+      question:
+        "Comment nettoyez-vous un parquet ancien sans l’abîmer dans un appartement du Centre-Ville ?",
+      answer: `<p>Nous commençons par identifier le type de parquet et son état. La méthode privilégie un nettoyage maîtrisé, avec une humidité limitée et des produits compatibles, pour éviter voile, gonflement ou traces. L’objectif est un rendu propre et régulier, sans agresser la finition.</p>`,
+    },
+    {
+      question:
+        "Que comprend exactement une remise en état pour une cuisine et une salle de bain avant remise des clés ?",
+      answer: `<p>Elle vise les zones qui génèrent le plus de remarques : surfaces de cuisine accessibles avec dégraissage ciblé, et salle de bain/sanitaires avec détartrage adapté. Nous complétons par les plinthes, points de contact et finitions visuelles pour un rendu cohérent dans tout le logement.</p>`,
+    },
+    {
+      question:
+        "Est-ce qu’une visite technique est nécessaire avant d’intervenir à Charenton-le-Pont ?",
+      answer: `<p>Selon l’état réel du logement, une visite technique peut être nécessaire. Elle permet d’aligner le périmètre (pièces, niveau d’encrassement, vitres, contraintes d’accès) et de choisir les bonnes méthodes, surtout dans les immeubles anciens ou les résidences avec règles de copropriété.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
   ],
 };
 

@@ -379,6 +379,70 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état avant état des lieux, après travaux ou déménagement, avec une priorité absolue sur la protection des sols (parquet massif, marbre), la discrétion, et des finitions nettes.",
+
+  whyUsBullets: [
+    "Ville-parc et habitat haut de gamme : méthode adaptée aux villas du Plateau et aux résidences de standing (protection sols, finitions).",
+    "Organisation “centre commerçant” : accès et stationnement anticipés autour de l’Avenue de la Résistance et du Rond-Point de la Fontaine.",
+    "Spécial vitrages & détails visibles : baies vitrées de villas, encadrements, traces basses liées au trafic local et aux flux pendulaires.",
+  ],
+
+  uniqueIntro: `<p>Au Raincy, le niveau d’exigence est souvent supérieur à la moyenne : villas, demeures de caractère et résidences de standing impliquent un nettoyage <strong>très maîtrisé</strong>, autant sur le résultat que sur la façon de travailler. Entre <strong>l’Avenue de la Résistance</strong> (cœur commerçant) et les rues plus calmes du <strong>Plateau</strong>, on retrouve des matériaux sensibles — parquet massif, carrelage marbré, menuiseries anciennes — où l’excès d’eau, les traces de reprise ou les produits mal adaptés se voient immédiatement.</p>
+<p class="mt-4">Klinova intervient au Raincy pour les remises en état avant état des lieux, après chantier (plâtre/peinture), ou lors d’un déménagement. L’approche reste simple : repérage des surfaces et des contraintes (digicode, gardien, stationnement), traitement des zones à fort impact (cuisine, salle d’eau, sols), puis finitions visibles. Dans une ville marquée par un patrimoine fort comme <strong>Notre-Dame du Raincy</strong>, beaucoup de logements conservent des détails architecturaux et des vitrages qui demandent une attention particulière.</p>
+<p class="mt-4">Le but est un rendu “propre au premier regard” sans abîmer : contrôle des traces sur sols, suppression des dépôts minéraux (calcaire), et reprise des zones de passage. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est d’autant plus utile quand l’accès est contraint (centre-ville) ou quand la discrétion est une attente forte du voisinage (secteurs pavillonnaires).</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Protection des sols et gestion du bâti “standing”</h3>
+<p>Au Raincy, la priorité est d’éviter toute dégradation : parquet massif, marbre, menuiseries anciennes, escaliers étroits. Nous adaptons l’humidité, les produits et l’ordre des tâches pour limiter les risques, et nous gardons une logique “protection d’abord” avant d’attaquer les zones techniques. Cette approche est particulièrement adaptée aux villas du Plateau et aux immeubles bourgeois du centre.</p>
+
+<h3>T2 : Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>
+<p>La cuisine et la salle de bain concentrent l’essentiel du contrôle en état des lieux. Nous effectuons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur. Les joints de carrelage et zones d’écoulement sont traités avec méthode, en évitant les produits agressifs qui “marquent” les surfaces ou la robinetterie.</p>
+
+<h3>T3 : Vitrages, traces de circulation et contrôle final</h3>
+<p>Entre flux pendulaires (RER E) et trafic sur les axes locaux, les vitrages et rebords bas peuvent vite se charger en suie/poussière. Nous terminons par les vitres accessibles, encadrements et poignées, puis un contrôle des points visibles : plinthes, interrupteurs, portes, et sols dans les zones de passage. L’objectif : un rendu homogène, sans reprise apparente, prêt pour une visite ou un état des lieux.</p>`,
+
+  specificChallenges: [
+    "Matériaux sensibles : parquet massif, carrelage marbré, finitions haut de gamme qui demandent une méthode douce et précise.",
+    "Stationnement centre-ville : contraintes autour de l’Avenue de la Résistance et des rues adjacentes, surtout le samedi.",
+    "Relief et logistique : secteurs en pente vers le Plateau, gestion du matériel et des accès en villas sécurisées.",
+    "Exigence de discrétion : voisinage calme, attente forte sur le bruit, la propreté des circulations et la protection des sols.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous au Raincy pour une remise en état avant état des lieux (93340) ?",
+      answer: `<p>Oui. Nous cadrons le périmètre (pièces, sols, vitrages accessibles) puis nous traitons les zones les plus contrôlées : cuisine, salle d’eau, sols et finitions visibles. Cela convient bien aux résidences de standing et aux maisons du Plateau.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous nettoyer une maison avec parquet massif et surfaces “fragiles” (marbre, boiseries) ?",
+      answer: `<p>Oui. Nous adaptons l’humidité et les produits pour préserver les matériaux, éviter les auréoles et obtenir un rendu net. La protection des sols fait partie du déroulé, surtout sur les parquets et carrelages marbrés.</p>`,
+    },
+    {
+      question: "Proposez-vous un nettoyage après travaux (plâtre/peinture) ?",
+      answer: `<p>Oui. Après travaux, l’enjeu est la poussière fine. Nous structurons le dépoussiérage, puis la remise en état des surfaces, et nous finissons par les détails (plinthes, encadrements, vitrages accessibles) pour un rendu propre et stable.</p>`,
+    },
+    {
+      question:
+        "Comment gérez-vous le stationnement et les accès en centre-ville ?",
+      answer: `<p>Le centre peut être contraint (zones bleues/payant). Nous anticipons le créneau, l’accès (digicode, gardien) et l’organisation du matériel pour limiter la gêne, notamment autour de l’Avenue de la Résistance.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
+
+
+
   ],
 };
 

@@ -225,7 +225,7 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage professionnel des balcons élimine les dépôts verts liés à l'humidité fluviale, préserve les supports et redonne un espace extérieur propre et fonctionnel à Joinville-le-Pont.",
       whyUsBullets: [
-        "Interventions maîtrisées sur balcons et terrasses dans les quartiers Polangis, Marne et Île Fanac exposés à l'humidité des bords de Marne.",
+        "Interventions maîtrisées sur balcons dans les quartiers Polangis, Marne et Île Fanac exposés à l'humidité des bords de Marne.",
         "Produits et méthodes adaptés aux supports (carrelage, béton, dalle composite) avec pression modérée pour préserver les joints.",
         "Gestion rigoureuse de l'eau pour éviter les écoulements chez les voisins et le long des façades.",
       ],
@@ -403,6 +403,70 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "nettoyage-appartement-maison",
+
+  heroDescription:
+    "Remise en état d’appartements et de maisons à Joinville-le-Pont, avant remise des clés ou après travaux, avec une méthode structurée et une attention particulière aux vitrages (baies, vérandas) et aux finitions.",
+
+  whyUsBullets: [
+    "Connaissance des contraintes locales : centre-ville dense (Rue de Paris) et stationnement tendu autour du RER A Joinville-le-Pont.",
+    "Intervention adaptée aux pavillons de Polangis/Palissy : parquet chêne, pièces lumineuses, vérandas et baies vitrées.",
+    "Organisation efficace en zone flux (A4 / Pont de Joinville) : créneaux optimisés, accès digicodes/badges et contrôle final.",
+  ],
+
+  uniqueIntro: `<p>À Joinville-le-Pont, la demande de remise en état est souvent liée à des transitions rapides : état des lieux à caler autour du centre-ville, rénovation d’un appartement près de la gare RER A, ou maison à préparer dans les quartiers de Polangis et Palissy. Entre les flux du Pont de Joinville, l’accès à l’A4 et la vie des bords de Marne, le besoin est simple : un logement propre, net, prêt à être utilisé ou restitué.</p>
+<p class="mt-4">Les configurations varient beaucoup : parquet chêne et menuiseries soignées dans les villas, petites cages d’escalier dans l’ancien, résidences plus récentes vers les Hauts-de-Joinville. On rencontre aussi des vitrages plus exigeants (baies, vérandas, garde-corps vitrés) et une salissure urbaine plus marquée côté axes routiers. Chaque intervention doit donc être ajustée, sans méthode “copiée-collée”.</p>
+<p class="mt-4">Pour un <strong>nettoyage appartement maison Joinville-le-Pont</strong>, Klinova travaille avec un cadre clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> On valide les surfaces, l’accès (digicode, badge, clés) et la logistique (stationnement, étage), puis on déroule une remise en état par zones, avec finitions et contrôle visuel avant restitution.</p>`,
+
+  uniqueDeepDive: `<h3>T1 : Cadrage, accès et repérage des surfaces</h3>
+<p>Nous identifions le contexte (logement vide, déménagement, avant remise des clés, remise en état du logement après travaux légers) et les matériaux : parquet, carrelage, terre cuite, peintures récentes, vitrages (baies, vérandas). À Joinville, le point clé est souvent la logistique : stationnement en centre-ville, rues en sens unique vers les bords de Marne, et saturation possible autour du Pont de Joinville selon l’horaire.</p>
+
+<h3>T2 : Nettoyage méthodique, pièce par pièce</h3>
+<p>Nous commençons par un dépoussiérage structuré (surfaces, plinthes, menuiseries), puis les sols sont traités selon le revêtement, avec une humidité maîtrisée sur parquet. La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour homogénéiser le rendu. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à nettoyer.</p>
+
+<h3>T3 : Finitions, vitres et contrôle de restitution</h3>
+<p>Nous terminons par les finitions : vérification des traces sur vitrages accessibles, reprise des détails visibles et contrôle final pièce par pièce. Une aération est conseillée en fin d’intervention pour accélérer le confort d’usage. Le but est un rendu propre et lisible pour un état des lieux ou une remise des clés, conformément au périmètre défini.</p>`,
+
+  specificChallenges: [
+    "Centre-ville et secteur gare : stationnement souvent compliqué, surtout Rue de Paris et autour du RER A.",
+    "Zone flux (A4 / Pont de Joinville) : créneaux à choisir pour éviter les bouchons et sécuriser l’accès chantier.",
+    "Vitrages fréquents (baies, vérandas) : finition soignée sur vitres accessibles et rebords.",
+    "Quartiers pavillonnaires exigeants (Polangis/Palissy) : discrétion et méthodes non agressives sur parquet/menusieries.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Intervenez-vous pour un état des lieux sortant près de la gare RER A Joinville-le-Pont ?",
+      answer: `<p>Oui. Le secteur gare est très demandé, avec des délais parfois serrés. Nous planifions l’intervention en fonction du stationnement et des accès (digicode, badge, clés) pour livrer un logement propre et cohérent le jour de l’état des lieux.</p>`,
+    },
+    {
+      question:
+        "Pouvez-vous gérer une remise en état dans une maison à Polangis avec parquet et grandes baies vitrées ?",
+      answer: `<p>Oui. Nous adaptons les techniques au parquet (humidification maîtrisée, produits compatibles) et nous incluons un passage soigné sur les vitres accessibles et les rebords. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>`,
+    },
+    {
+      question:
+        "Faites-vous du nettoyage après travaux à Joinville-le-Pont ?",
+      answer: `<p>Oui, lorsque l’objectif est une remise en état du logement : poussières fines, traces visibles et finitions avant remise des clés. On ajuste les produits et les gestes à chaque surface pour éviter les marques, notamment sur les sols et les sanitaires.</p>`,
+    },
+    {
+      question:
+        "Le logement peut-il être utilisé le jour même après votre passage ?",
+      answer: `<p>Dans la majorité des cas, oui. Nous limitons l’humidité résiduelle et recommandons une aération en fin d’intervention pour retrouver rapidement un logement confortable, surtout lorsque des sols sensibles (parquet) sont présents.</p>`,
+    },
+  ],
+
+  ctaOverride: "",
+}
+
+
+
+
+
   ],
 };
 
