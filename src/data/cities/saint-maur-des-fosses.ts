@@ -43,13 +43,13 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "joinville-le-pont",
-  "creteil",
-  "maisons-alfort",
-  "nogent-sur-marne",
-  "charenton-le-pont",
-  "fontenay-sous-bois",
-],
+        "joinville-le-pont",
+        "creteil",
+        "maisons-alfort",
+        "nogent-sur-marne",
+        "le-perreux-sur-marne",
+        "fontenay-sous-bois"
+      ],
 
 
   landmarks: [

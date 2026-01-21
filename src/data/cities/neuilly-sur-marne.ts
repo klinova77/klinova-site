@@ -33,13 +33,13 @@ const city: City = {
 
  
 nearbyCities: [
-  "neuilly-plaisance",
-  "gagny",
-  "villemomble",
-  "le-perreux-sur-marne",
-  "noisy-le-grand",
-  "gournay-sur-marne",
-],
+        "gagny",
+        "neuilly-plaisance",
+        "gournay-sur-marne",
+        "le-perreux-sur-marne",
+        "noisy-le-grand",
+        "le-raincy"
+      ],
 
   districts: [
     "Centre-ville",

@@ -40,13 +40,13 @@ const city: City = {
   ],
 
  nearbyCities: [
-  "montreuil",
-  "saint-mande",
-  "fontenay-sous-bois",
-  "nogent-sur-marne",
-  "charenton-le-pont",
-  "joinville-le-pont",
-],
+        "saint-mande",
+        "montreuil",
+        "fontenay-sous-bois",
+        "nogent-sur-marne",
+        "charenton-le-pont",
+        "joinville-le-pont"
+      ],
 
 
   landmarks: [

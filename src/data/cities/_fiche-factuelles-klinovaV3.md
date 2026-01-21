@@ -29,6 +29,9 @@ Faire ces requêtes et capturer BRUT :
 - “nettoyage balcon [VILLE]”
 - “nettoyage fientes pigeons balcon [VILLE]”
 - “nettoyage canapé [VILLE]” (ou “nettoyage matelas [VILLE]”)
+- “nettoyage terrasse [VILLE]” 
+- “nettoyage appartement [VILLE]”
+- “nettoyage maison [VILLE]”
 À récupérer :
 A) PAA (3–6)
 B) Titres (6–10)

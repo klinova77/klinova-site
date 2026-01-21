@@ -2,6 +2,8 @@
 // src/components/CityPage.astro - Version Premium Conversion/SEO Optimisée
 
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import services from "~/data/services";
+
 import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/geo';
 
 import CrossServiceMoquettesNote from "~/components/Sections/CrossServiceMoquettesNote.astro";
@@ -43,6 +45,7 @@ import heroMoquettesDesktop from '~/assets/images/nettoyage-moquettes-avant-apre
 import heroMoquettesMobile from '~/assets/images/nettoyage-moquette-avant-apres-mobile.webp';
 import heroCanapesDesktop from '~/assets/images/nettoyage-canapes-tapis-matelas-desktop.jpg';
 import heroCanapesMobile from '~/assets/images/nettoyage-canapes-tapis-matelas-klinova.jpeg';
+import heroGrandMenage from '~/assets/images/grand-menage-remise-en-etat-appartement-cuisine.jpg';
 
 
 import { buildPricingOffers } from "~/lib/schema/pricing";
@@ -59,6 +62,28 @@ interface Props {
 
 const { city, service, department, showReviewsWidget = false, } = Astro.props as Props;
 
+// ==========================
+// Helpers services (source de vérité = configs + city.services)
+// ==========================
+const serviceSlug = (s: ServiceConfig) => s.urls?.parent?.replace(/^\//, "") ?? "";
+
+const currentServiceSlug = serviceSlug(service);
+if (!currentServiceSlug) {
+  throw new Error(`Missing service.urls.parent for service key: ${service.key}`);
+}
+
+// Catalogue global (configs) -> uniquement ceux qui ont une URL
+const allServiceConfigs = (Array.isArray(services) ? services : []).filter(
+  (s): s is ServiceConfig => typeof s === "object" && s !== null && typeof s.urls?.parent === "string" && !!s.urls.parent
+);
+
+// Services activés dans cette ville (source: city.ts)
+const cityServiceKeys = new Set((city.services ?? []).map((s) => s.serviceKey));
+
+// Services disponibles (configs) pour cette ville
+const servicesForCity = allServiceConfigs.filter((s) => cityServiceKeys.has(s.key));
+
+
 
 import { aVille, deVille } from "~/lib/geo-klinova";
 const cityAt = aVille(city.name);   // ex: "au Raincy", "aux Lilas", "à l'Haÿ-les-Roses", "à Paris"
@@ -73,6 +98,8 @@ const serviceContextLabels: Record<string, string> = {
   parkings: 'vos parkings et garages',
   balcons: 'vos balcons',
   'balcons-fientes': 'vos balcons souillés par les pigeons',
+  terrasses: "votre terrasse",
+"nettoyage-appartement-maison": "votre appartement ou maison",
 };
 const serviceContext =
   serviceContextLabels[service.key] ?? 'les surfaces concernées';
@@ -128,22 +155,12 @@ type ImgLike = string | { src: string };
 const toSrc = (x?: ImgLike) => (typeof x === 'string' ? x : x?.src || '');
 
 // 🔑 Clés de service et slugs locaux associés
-type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
 
-const serviceSlugByKey: Record<ServiceKey, string> = {
-  moquettes: 'nettoyage-moquettes',
-  parkings: 'nettoyage-parkings',
-  balcons: 'nettoyage-balcons',
-  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
-  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
-};
 
 
 const showAvanceImmed = service.key !== "parkings";
 
-// Slug du service courant pour cette page locale
-const currentServiceSlug = serviceSlugByKey[service.key as ServiceKey];
-if (!currentServiceSlug) throw new Error(`Unknown service key: ${service.key}`);
+
 
 
 // Slugs & canonical
@@ -151,23 +168,22 @@ const citySlug = city.slug ?? slugify(city.name);
 const departmentSlug = department.slug ?? slugify(department.name);
 
 // Canonical = toujours l'URL réelle de la page
-const canonical = Astro.url.pathname || `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+const canonical =
+  Astro.url.pathname || `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+
 
 
 // 🔀 Autres services Klinova pour cette ville (maillage local cross-service)
-const otherServicesForCity = allServicesForCards
-  .filter((svc) => svc.key !== service.key) // on enlève le service de la page
-  .map((svc) => {
-    const localSlug = serviceSlugByKey[svc.key as ServiceKey];
-    const href = `/zones-d-intervention/${departmentSlug}/${citySlug}/${localSlug}`;
+const otherServicesForCity = servicesForCity
+  .filter((s) => s.key !== service.key)
+  .map((s) => ({
+    key: s.key,
+    name: s.name,
+    shortDescription: s.defaultDescription ?? "",
+    href: `/zones-d-intervention/${departmentSlug}/${citySlug}/${serviceSlug(s)}`,
+  }));
+// .slice(0, 3); // si tu veux limiter
 
-    return {
-      ...svc,
-      href,
-    };
-  });
-  // 👉 si tu veux limiter à 3 cartes max :
-  // .slice(0, 3);
 
 
 
@@ -247,34 +263,34 @@ const excludeSlugs = new Set<string>([
 
 
 
-const heroFallback: Record<ServiceKey, { desktop: ImgLike; mobile: ImgLike }> = {
-  moquettes: {
-    desktop: heroMoquettesDesktop,
-    mobile: heroMoquettesMobile,
-  },
+const heroFallback: Record<string, { desktop: ImgLike; mobile: ImgLike }> = {
+  moquettes: { desktop: heroMoquettesDesktop, mobile: heroMoquettesMobile },
   parkings: { desktop: heroParkingsDesktop, mobile: heroParkingsMobile },
   balcons: { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
-  'balcons-fientes': { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
-  'canapes-tapis': {
-    desktop: heroCanapesDesktop,
-    mobile: heroCanapesMobile,
-  },
+  "balcons-fientes": { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
+  "canapes-tapis": { desktop: heroCanapesDesktop, mobile: heroCanapesMobile },
+  "nettoyage-appartement-maison": { desktop: heroGrandMenage, mobile: heroGrandMenage },
+
+  // optionnel: si tu as des images spécifiques
+  // terrasses: { desktop: heroBalconsDesktop, mobile: heroBalconsMobile },
+  // "nettoyage-appartement-maison": { desktop: heroCanapesDesktop, mobile: heroCanapesMobile },
 };
 
 
 const heroDesktop = toSrc(
   service.images?.heroDesktop ??
-  city.images?.heroDesktop ??
-  heroFallback[service.key as ServiceKey]?.desktop ??
-  '/images/default-hero.webp',
+    city.images?.heroDesktop ??
+    heroFallback[service.key]?.desktop ??
+    "/images/default-hero.webp",
 );
 
 const heroMobile = toSrc(
   service.images?.heroMobile ??
-  city.images?.heroMobile ??
-  heroFallback[service.key as ServiceKey]?.mobile ??
-  '/images/default-hero-mobile.webp',
+    city.images?.heroMobile ??
+    heroFallback[service.key]?.mobile ??
+    "/images/default-hero-mobile.webp",
 );
+
 
 // URLs service parent
 const serviceUrl =
@@ -286,6 +302,9 @@ const serviceUrl =
       balcons: '/nettoyage-balcons',
       'balcons-fientes': '/nettoyage-balcons-fientes-pigeons',
       'canapes-tapis': '/nettoyage-canapes-tapis-matelas',
+      terrasses: "/nettoyage-terrasses",
+"nettoyage-appartement-maison": "/nettoyage-appartement-maison",
+
     } as Record<string, string>
   )[service.key] ?? '/');
 

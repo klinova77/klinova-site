@@ -32,13 +32,13 @@ const city: City = {
   },
 
 nearbyCities: [
-  "champs-sur-marne",
-  "claye-souilly",
-  "gagny",
-  "gournay-sur-marne",
-  "montfermeil",
-  "vaires-sur-marne",
-],
+        "montfermeil",
+        "gournay-sur-marne",
+        "vaires-sur-marne",
+        "gagny",
+        "champs-sur-marne",
+        "neuilly-sur-marne"
+      ],
   districts: [
     "Bords de Marne",
     
@@ -422,6 +422,133 @@ nearbyCities: [
 
   ctaOverride: "",
 },
+
+// =========================
+// SERVICE – TERRASSES
+// =========================
+{
+  serviceKey: "terrasses",
+  heroDescription:
+    "À Chelles, une terrasse se marque vite : pollution, traces noires, micro-végétation et salissures incrustées. Un nettoyage professionnel redonne un aspect net et durable, sans abîmer le support ni créer de projections.",
+  whyUsBullets: [
+    "Méthode adaptée aux supports extérieurs (dalles, pierre, carrelage, bois composite) avec test préalable si nécessaire.",
+    "Rinçage maîtrisé et finitions soignées pour un rendu homogène, sans coulures ni nuisance.",
+    "Organisation simple : intervention planifiée, protection des abords, et conseils d’entretien pour prolonger le résultat.",
+  ],
+
+  uniqueIntro: `<p>À Chelles, les terrasses et cours privées subissent un encrassement rapide : poussières fines, traces noires liées à la pollution, résidus végétaux et micro-mousses dans les zones humides ou ombragées. En quelques saisons, un revêtement clair ternit, les joints se noircissent, et l’ensemble donne une impression de négligence, même si l’entretien est régulier.</p>
+<p class="mt-4">Le problème, c’est que toutes les méthodes ne se valent pas : un nettoyage trop agressif peut fragiliser les joints, marquer les pierres naturelles ou relever les fibres des supports sensibles. <strong>Notre approche vise un résultat net et homogène</strong>, avec une méthode ajustée au matériau et un rinçage contrôlé pour éviter projections et coulures.</p>`,
+
+  uniqueDeepDive: `<h3>1. Diagnostic du support et préparation</h3>
+<p>Nous identifions le type de revêtement (dalles béton, pierre, carrelage extérieur, bois/composite) et la nature des salissures (dépôts noirs, organiques, traces grasses). Protection des seuils, menuiseries et zones adjacentes, puis organisation du chantier pour travailler proprement, sans nuisance inutile.</p>
+
+<h3>2. Prétraitement et nettoyage en profondeur</h3>
+<p>Un prétraitement ciblé est appliqué pour décoller les salissures incrustées. Le nettoyage est ensuite réalisé avec brossage manuel ou mécanique selon le support, en contrôlant l’action sur les joints et les zones fragiles. <strong>Le protocole est ajusté au matériau</strong> pour éviter tout risque d’altération.</p>
+
+<h3>3. Rinçage maîtrisé, finitions et conseils</h3>
+<p>Le rinçage est effectué avec un débit maîtrisé pour limiter les coulures et projections. Nous reprenons les zones critiques (bords, joints, marches, zones de passage) pour un rendu uniforme. <strong>Nous donnons des conseils d’entretien</strong> pour conserver le résultat plus longtemps (fréquence, gestes simples, prévention des mousses).</p>`,
+
+  specificChallenges: [
+    "Traces noires et ternissement liés à la pollution et aux poussières fines déposées sur les revêtements extérieurs.",
+    "Micro-végétation et mousses dans les zones ombragées ou humides, souvent incrustées dans les joints.",
+    "Supports sensibles (pierre naturelle, joints fragiles, revêtements poreux) nécessitant une méthode contrôlée.",
+    "Contraintes de rinçage et d’évacuation de l’eau (pentes faibles, évacuations limitées, risques de coulures).",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Pouvez-vous nettoyer une terrasse en pierre ou en dalle sans abîmer les joints ?",
+      answer:
+        "<p><strong>Oui, nous adaptons le protocole au support.</strong> Nous évitons les méthodes trop agressives et privilégions un prétraitement + brossage contrôlé, puis un rinçage maîtrisé. Les joints et les matériaux poreux sont traités avec prudence, avec ajustement de la méthode selon l’état du revêtement.</p>",
+    },
+    {
+      question:
+        "Les traces noires et la micro-mousse reviennent vite : comment prolonger le résultat ?",
+      answer:
+        "<p><strong>Le résultat se prolonge surtout par la prévention.</strong> Après nettoyage, nous conseillons une routine simple (balayage, rinçage léger périodique, gestion des zones d’ombre et d’humidité). Selon le contexte, un traitement préventif peut être envisagé pour ralentir la réapparition des mousses.</p>",
+    },
+    {
+      question:
+        "Le nettoyage génère-t-il des projections ou des coulures sur la façade ?",
+      answer:
+        "<p><strong>Non, l’objectif est un chantier propre.</strong> Nous protégeons les abords sensibles et travaillons avec un rinçage maîtrisé. Les finitions (raclette/microfibres) permettent de limiter l’eau résiduelle et d’éviter les coulures sur les zones adjacentes.</p>",
+    },
+    {
+      question:
+        "Faut-il vider complètement la terrasse avant votre intervention ?",
+      answer:
+        "<p><strong>Idéalement, oui sur la zone à traiter.</strong> Retirer le mobilier léger, pots et objets au sol permet un nettoyage homogène et plus rapide. Si certains éléments sont lourds, nous pouvons organiser l’intervention par zones pour rester efficace.</p>",
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+// =========================
+// SERVICE – NETTOYAGE APPARTEMENT / MAISON (remise en état)
+// =========================
+{
+  serviceKey: "nettoyage-appartement-maison",
+  heroDescription:
+    "Remise en état d’appartement ou de maison à Chelles : nettoyage complet, finitions soignées et protocole structuré pour retrouver un logement propre, sain et présentable, sans improvisation.",
+  whyUsBullets: [
+    "Approche “remise en état” : priorisation des zones, méthode structurée, contrôle qualité en fin d’intervention.",
+    "Intervention adaptée au contexte (emménagement/déménagement, état d’usage, logement resté fermé, location).",
+    "Devis clair : périmètre, contraintes, et niveau d’encrassement pris en compte avant le démarrage.",
+  ],
+
+  uniqueIntro: `<p>Le “nettoyage appartement” est souvent mal compris : entre un ménage d’entretien et une remise en état, l’écart est énorme. À Chelles, on nous appelle surtout quand il faut repartir propre : logement avant état des lieux, remise en état après location, maison restée fermée, ou nettoyage approfondi après une période d’usage intensif. Dans ces cas, un simple passage rapide ne suffit pas : les détails (graisses, sanitaires, vitres, plinthes, angles) font toute la différence.</p>
+<p class="mt-4">Notre objectif est simple : rendre le logement <strong>net, sain et présentable</strong>, avec une méthode structurée. On traite en priorité les zones critiques (cuisine, salle de bain, sols), puis on déroule un plan de finitions pour éviter les oublis et livrer un résultat cohérent, sans “zones laissées de côté”.</p>`,
+
+  uniqueDeepDive: `<h3>1. Cadrage et priorisation avant intervention</h3>
+<p>Nous définissons le périmètre (pièces, vitres, cuisine, sanitaires, éléments spécifiques) et évaluons le niveau d’encrassement. Nous priorisons les zones qui concentrent l’hygiène et la perception : cuisine, salle de bain, sols, points de contact. <strong>Le plan d’action est clair</strong> avant de démarrer, pour éviter l’improvisation.</p>
+
+<h3>2. Nettoyage en profondeur des zones critiques</h3>
+<p>Décrassage ciblé (graisses, traces, dépôts calcaires), nettoyage des sanitaires, traitement des surfaces en cuisine et sur les points de contact. Les produits et accessoires sont adaptés aux matériaux pour éviter rayures ou dégradations. <strong>La logique est “propre visuel + hygiène réelle”</strong>.</p>
+
+<h3>3. Finitions et contrôle qualité</h3>
+<p>Une fois les zones critiques stabilisées, nous passons aux finitions : plinthes, interrupteurs, poignées, angles, vitrages accessibles, et uniformisation du rendu. <strong>Contrôle final</strong> pour vérifier la cohérence et pointer les éventuelles limites (taches anciennes, matériaux marqués, peinture fatiguée).</p>`,
+
+  specificChallenges: [
+    "Écart de perception entre “ménage” et “remise en état” : nécessité de cadrer un périmètre clair et un niveau de finition attendu.",
+    "Graisses et dépôts incrustés en cuisine (crédence, hotte, zones autour des plaques) demandant un décrassage ciblé.",
+    "Calcaire et traces tenaces dans les sanitaires, nécessitant une méthode progressive pour éviter d’endommager les surfaces.",
+    "Gestion du temps : prioriser les zones à fort impact (hygiène + visuel) pour livrer un résultat homogène.",
+  ],
+
+  faqAdditions: [
+    {
+      question:
+        "Quelle différence entre un ménage classique et votre prestation “nettoyage appartement / maison” ?",
+      answer:
+        "<p><strong>Nous faisons une remise en état, pas un ménage d’entretien.</strong> L’objectif est de retrouver un logement net et présentable : décrassage des zones critiques, finitions (plinthes, détails), et contrôle final. Le périmètre est cadré avant intervention pour éviter les malentendus.</p>",
+    },
+    {
+      question:
+        "Pouvez-vous intervenir pour un état des lieux ou un départ de locataire ?",
+      answer:
+        "<p><strong>Oui, c’est un cas fréquent.</strong> Nous priorisons les zones qui comptent le plus lors d’un état des lieux (sanitaires, cuisine, sols, vitres accessibles) et nous avançons avec une logique de finitions pour rendre un logement propre et cohérent.</p>",
+    },
+    {
+      question:
+        "Faites-vous les vitres et les traces sur les murs ?",
+      answer:
+        "<p><strong>Les vitrages accessibles peuvent être inclus</strong> selon le périmètre convenu. Pour les murs, nous pouvons traiter les traces courantes et les marques superficielles, mais certaines salissures ou peintures fragiles peuvent limiter le rendu : on le précise avant ou pendant l’intervention.</p>",
+    },
+    {
+      question:
+        "Comment fixez-vous le prix si l’état du logement est très variable ?",
+      answer:
+        "<p><strong>Le tarif dépend surtout du niveau d’encrassement et du périmètre.</strong> Nous cadrons les pièces concernées, les options (vitres, intérieur placards, électroménager accessible) et les contraintes d’accès. L’objectif est un devis clair et réaliste avant de démarrer.</p>",
+    },
+  ],
+
+  ctaOverride: "",
+},
+
+
+
 ],
 };
 export default city;

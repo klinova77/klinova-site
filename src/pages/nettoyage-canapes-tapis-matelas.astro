@@ -336,7 +336,7 @@ const jsonLd = [
   }
 </style>
 
-<section class="relative bg-[#DFF1E8] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"  
+<section class="relative bg-[#DFF1E8] pt-12 pb-16 lg:pt-18 lg:pb-24 overflow-hidden"    
 data-hide-floating-cta
 data-hide-header-cta 
 >
@@ -1161,6 +1161,27 @@ data-hide-header-cta
   <div class="container-responsive">
     <div class="mt-12">
       <BookingTextiles client:load />
+    </div>
+  </div>
+</section>
+
+
+<section id="faq" class="py-16 bg-white border-t border-[#E5E7EB]">
+  <div class="container-responsive">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-8 text-center">
+        Questions fréquentes
+      </h2>
+
+      <Accordion>
+        {faq.map((item) => (
+          <AccordionItem title={item.title}>
+            <p class="text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </div>
   </div>
 </section>

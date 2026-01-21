@@ -60,13 +60,13 @@ const city: City = {
   ],
 
  nearbyCities: [
-  "champs-sur-marne",
-  "fontenay-sous-bois",
-  "gournay-sur-marne",
-  "neuilly-sur-marne",
-  "pontault-combault",
-  "torcy",
-],
+        "le-plessis-trevise",
+        "champs-sur-marne",
+        "gournay-sur-marne",
+        "neuilly-sur-marne",
+        "le-perreux-sur-marne",
+        "neuilly-plaisance"
+      ],
 
   landmarks: [
     "Mairie de Noisy-le-Grand",

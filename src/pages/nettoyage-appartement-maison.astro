@@ -1,0 +1,1784 @@
+---
+export const prerender = true;
+import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
+import { Image } from 'astro:assets';
+import Button from '~/components/UI/Button.astro';
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
+import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
+import { LINKS } from '~/lib/links';
+import { Accordion, AccordionItem } from 'free-astro-components';
+
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
+
+
+import heroGrandMenageImage from '~/assets/images/grand-menage-remise-en-etat-appartement-vide-lumineux.webp';
+
+// Variables de base
+const site = 'https://klinova.fr';
+const pageUrl = '/nettoyage-appartement-maison';
+const pageName = 'Nettoyage d\'appartement et de maison';
+
+// Configuration popup
+const popupContext = {
+  title: 'Demander à être rappelé',
+  subtitle: 'Un expert Klinova vous rappelle pour estimer le nettoyage de logement.',
+  serviceKey: 'rappel-nettoyage-appartement-maison',
+  serviceLabel: 'Demande rappel - Page nettoyage-appartement-maison',
+  trackingSource: 'popup-nettoyage-appartement-maison-header',
+  presetSubject: 'Nouvelle demande de rappel – nettoyage-appartement-maison',
+  creditImpotEnabled: true,
+};
+
+// FAQ
+const faq = [
+  {
+    title: "Que comprend un grand ménage ou une remise en état ?",
+    content:
+      "Une remise en état correspond à un nettoyage approfondi du logement : sols et plinthes, cuisine et sanitaires, surfaces, points de contact (poignées, interrupteurs), vitres accessibles et finitions. Le périmètre exact dépend de l’état du logement et de l’objectif (état des lieux, remise en location, vente, emménagement). Le contenu est toujours cadré avant l’intervention.",
+  },
+  {
+    title: "Intervenez-vous après un déménagement ou avant un état des lieux ?",
+    content:
+      "Oui. C’est l’un des cas les plus fréquents. Nous adaptons l’intervention au niveau de finition attendu par le propriétaire ou l’agence : nettoyage en profondeur, traitement des traces visibles, attention particulière aux pièces d’eau, à la cuisine et aux détails qui font la différence lors d’un état des lieux.",
+  },
+  {
+    title: "Le nettoyage après un décès est-il différent d’un grand ménage classique ?",
+    content:
+      "Dans la majorité des situations, il s’agit d’une remise en état classique du logement, notamment lorsque celui-ci est vide. Selon l’état réel des lieux, une visite technique peut être nécessaire afin de confirmer le périmètre et garantir une intervention adaptée.",
+  },
+  {
+    title: "Utilisez-vous des produits spécifiques ou écologiques ?",
+    content:
+      "Nous utilisons des produits professionnels adaptés aux surfaces et aux salissures à traiter (graisses, calcaire, traces). Sur demande, nous pouvons privilégier des produits éco-responsables ou biodégradables lorsque cela est pertinent, sans compromettre l’efficacité du nettoyage.",
+  },
+  {
+    title: "Combien de temps dure une intervention de remise en état ?",
+    content:
+      "La durée dépend principalement de la surface, de l’état d’encrassement et du niveau de finition attendu. Un studio ou un petit appartement peut nécessiter quelques heures, tandis qu’un logement plus grand ou très encrassé peut demander une demi-journée ou une journée complète. Le devis permet de cadrer précisément la durée.",
+  },
+  {
+    title: "Faut-il une visite avant de recevoir un devis ?",
+    content:
+      "Dans de nombreux cas, des photos et un échange téléphonique suffisent pour établir un devis. Pour des logements très encrassés, encombrés ou avec des contraintes particulières, une visite technique peut être proposée afin d’éviter toute mauvaise surprise le jour de l’intervention.",
+  },
+];
+
+const faqLongTail = [
+  {
+    title: "Quel est le prix d’un grand ménage pour un appartement ou une maison ?",
+    content:
+      "Le tarif d’un grand ménage dépend principalement de la surface, de l’état du logement et du niveau de finition attendu. Un nettoyage après déménagement ou avant état des lieux demandera plus de temps qu’un logement déjà entretenu. Un devis gratuit permet d’estimer précisément le coût, sans engagement.",
+  },
+  {
+    title: "Proposez-vous un grand ménage avant une mise en location ou une vente ?",
+    content:
+      "Oui. La remise en état avant une mise en location ou une vente permet de présenter un logement propre, cohérent et plus valorisant. L’intervention est adaptée aux attentes des agences et des futurs occupants, avec une attention particulière portée aux pièces d’eau, à la cuisine et aux finitions visibles.",
+  },
+  {
+    title: "Le nettoyage comprend-il le dégraissage de la cuisine et le détartrage des sanitaires ?",
+    content:
+      "Oui. Lors d’une remise en état, le nettoyage de la cuisine inclut le dégraissage des surfaces et des éléments accessibles, tandis que les sanitaires font l’objet d’un détartrage adapté. Ces zones sont souvent déterminantes dans la perception globale de propreté du logement.",
+  },
+  {
+    title: "Intervenez-vous dans des logements restés longtemps inoccupés ?",
+    content:
+      "Oui. Après une période d’inoccupation prolongée, un nettoyage approfondi est souvent nécessaire pour éliminer la poussière accumulée, les traces, les odeurs stagnantes et redonner au logement un aspect sain. L’intervention est ajustée selon l’état réel des lieux.",
+  },
+  {
+    title: "Utilisez-vous la vapeur pour le nettoyage d’un logement ?",
+    content:
+      "Lorsque cela est pertinent, nous utilisons la vapeur pour décoller certaines salissures, traiter des zones sensibles et limiter l’usage de produits chimiques. La méthode est choisie en fonction des surfaces et du résultat attendu, afin de préserver les matériaux.",
+  },
+  {
+    title: "Pouvez-vous intervenir rapidement pour un nettoyage avant restitution des clés ?",
+    content:
+      "Selon nos disponibilités, des interventions rapides peuvent être organisées, notamment avant un état des lieux ou une restitution de clés. Il est recommandé de nous contacter dès que possible pour évaluer les contraintes de délai et définir une solution adaptée.",
+  },
+];
+
+const faqs = [...faq, ...faqLongTail];
+
+
+// Schema FAQ
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: { '@type': 'Answer', text: item.content },
+  })),
+};
+
+
+
+// Fil d'Ariane
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${site}/` },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Nettoyage-appartement-maison',
+      item: `${site}${pageUrl}`,
+    },
+  ],
+};
+
+// JSON-LD optimisé
+const jsonLd = [
+  // Service spécifique
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${site}#service-nettoyage-appartement-maison`,
+    inLanguage: 'fr-FR',
+    serviceType: 'Grand ménage et remise en état d’appartement et de maison',
+    name: 'Grand ménage d’appartement et de maison à Paris et en Île-de-France',
+    alternateName:
+      'Nettoyage approfondi, remise en état après déménagement, emménagement ou état des lieux',
+    url: `${site}${pageUrl}`,
+    provider: { '@id': `${site}#localbusiness` },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+    audience: {
+      '@type': 'Audience',
+      audienceType: ['Particuliers', 'Résidentiel'],
+    },
+    category: 'Nettoyage de logement',
+
+    serviceOutput:
+      'Logement nettoyé en profondeur, visuellement amélioré et assaini, prêt à être occupé ou restitué',
+    description:
+      'Grand ménage et remise en état d’appartements et de maisons : nettoyage approfondi des pièces de vie, cuisine et salle de bain, dégraissage, détartrage, dépoussiérage minutieux et finitions. Intervention adaptée après déménagement, emménagement, mise en location, vente ou état des lieux.',
+
+    offers: {
+      '@type': 'Offer',
+      price: 290,
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+      description:
+        'Tarif à partir de 180 € TTC, ajusté selon la surface, l’état du logement, l’accessibilité et le niveau de finitions attendu.',
+    },
+
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Services de nettoyage de logement',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Grand ménage d’appartement',
+            description:
+              'Nettoyage complet : sols, poussières, cuisine, salle de bain, vitres accessibles et finitions.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Grand ménage de maison',
+            description:
+              'Remise en état des pièces de vie et points d’eau, avec attention aux accès, escaliers et zones oubliées.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Remise en état avant état des lieux',
+            description:
+              'Nettoyage approfondi et finitions pour présenter un logement propre et cohérent avant restitution.',
+          },
+        },
+      ],
+    },
+  },
+
+  faqSchema,
+  breadcrumb,
+];
+
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de canapés, tapis et matelas • Désodorisation & traitement des odeurs d’urine"
+  description="Nettoyage professionnel et désodorisation de canapés, tapis et matelas : traitement des odeurs d’urine de chat/chien, taches, auréoles et odeurs incrustées. Intervention à Paris & Île-de-France."
+  canonical={pageUrl}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Nettoyage professionnel de canapés, tapis et matelas à Paris et en Île-de-France"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
+>
+
+
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(3deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(3deg);
+    }
+  }
+
+  .hero-badge {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .hero-title {
+    animation: fadeInUp 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .hero-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .hero-list {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .hero-reassurance {
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  .hero-image {
+    animation: fadeInRight 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  /* Hover microinteractions */
+  .service-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .service-item:hover {
+    transform: translateX(8px);
+  }
+
+  .service-item:hover .service-icon {
+    transform: scale(1.1);
+    color: #387B58;
+  }
+
+  .service-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reassurance-item {
+    transition: all 0.3s ease;
+  }
+
+  .reassurance-item:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Animation des formes décoratives */
+  .floating-shape {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .floating-shape:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 10s;
+  }
+
+  /* Accessibilité : désactiver animations si demandé */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-list,
+    .hero-cta,
+    .hero-reassurance,
+    .hero-image {
+      animation: none;
+      opacity: 1;
+    }
+
+    .floating-shape {
+      animation: none;
+    }
+
+    .service-item:hover,
+    .reassurance-item:hover {
+      transform: none;
+    }
+
+    .service-item:hover .service-icon {
+      transform: none;
+      color: #387B58;
+    }
+  }
+</style>
+
+<section class="relative bg-[#DFF1E8] pt-12 pb-16 lg:pt-18 lg:pb-24 overflow-hidden"  
+data-hide-floating-cta
+data-hide-header-cta 
+>
+  <div class="container-responsive">
+    <!-- Grille responsive : texte à gauche, image à droite -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Contenu textuel -->
+      <div class="order-1 lg:order-1">
+        <!-- Badge optionnel -->
+        <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#3F8D65] border border-[#3F8D65]/20 mb-6 hero-badge">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Service aux particuliers en Île-de-France
+        </div>
+
+        <!-- Titre principal H1 -->
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1E2939] leading-tight mb-6 hero-title">
+          Grand ménage  
+          <span class="text-[#3F8D65]">d'appartements ou de maisons</span>
+          – nettoyage complet et remise en état
+        </h1>
+
+        <!-- Sous-titre descriptif -->
+        <p class="text-xl lg:text-2xl text-[#475569] leading-relaxed mb-8 hero-subtitle">
+          Un nettoyage approfondi de votre logement après un événement de vie ou un changement de situation
+        </p>
+        <p
+        class="text-sm md:text-base text-[#3F8D65] mb-8 font-medium
+               opacity-100 motion-safe:animate-fade-in-up
+               [animation-delay:480ms]
+               [animation-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)]"
+      >
+        <span class="inline-flex items-center group">
+          <svg class="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Particuliers : payez seulement 50% aujourd'hui<br class="sm:hidden" /> avec l'avance immédiate
+        </span>
+      </p>
+
+        <!-- Liste des services -->
+        <ul class="space-y-3 mb-10 hero-list">
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Élimination des odeurs d'urine de chat et chien</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Détachage professionnel avec matériel spécialisé</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Hygiénisation et désinfection textile complète</span>
+          </li>
+        </ul>
+
+        <!-- CTA principal -->
+        <div class="flex flex-col sm:flex-row gap-4 hero-cta mt-6">
+          <Button
+            href="#formulaire"
+            variant="tertiary"
+            size="lg"
+            class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+            ariaLabel="Demander un devis pour le nettoyage de votre logement"
+            tracking={{ action: 'lead', source: 'hero-grand-menage', intent: 'cta-tertiary' }}
+            data={{ service: 'devis-grand-menage' }}
+          >
+            Réserver une intervention
+          </Button>
+        </div>
+
+        <!-- Informations de réassurance -->
+        <div class="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#3F8D65]/20 hero-reassurance">
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Estimation rapide par photos
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Matériel professionnel
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Intervention sous 48h
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="order-2 lg:order-2 hero-image">
+        <div class="relative">
+          <!-- Décoration de fond animée -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[#3F8D65]/10 to-transparent rounded-2xl floating-shape" aria-hidden="true"></div>
+          
+          <!-- Container image -->
+          <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+            <Image 
+              src={heroGrandMenageImage}
+              alt="Appartement vide et lumineux après un grand ménage et une remise en état complète"
+              formats={['avif', 'webp', 'jpeg']}
+              widths={[480, 720, 960, 1200]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={88}
+              loading="eager"
+              class="w-full aspect-[4/3] lg:aspect-[5/4] object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forme décorative unique -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-[#3F8D65]/5 rounded-full blur-3xl floating-shape" aria-hidden="true"></div>
+</section>
+
+
+<section
+  id="savoir-faire"
+  class="bg-white py-12 md:py-20 border-t border-[#E5E7EB]"
+  data-activate-floating-cta
+  data-hide-header-cta
+>
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <!-- Badge + Titre -->
+      <div class="text-center mb-8 md:mb-12">
+        <div
+          class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#3F8D65]/10 text-[#3F8D65] text-sm font-semibold tracking-wide"
+        >
+          Notre expérience terrain
+        </div>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-5 leading-tight"
+        >
+          Une remise en état complète, pensée pour un résultat net et cohérent
+        </h2>
+      </div>
+
+      <!-- Storytelling expérience -->
+      <div class="max-w-3xl mx-auto mb-10 text-[#475569] text-base md:text-lg leading-relaxed">
+        <p class="mb-6">
+          Un grand ménage ne se résume pas à “faire propre” : sur une remise en état, ce qui fait la différence,
+          ce sont les détails, l’ordre d’exécution, et la capacité à traiter les zones qui marquent un logement
+          (pièces d’eau, cuisine, plinthes, traces, points de contact),  notamment <strong>après un déménagement</strong>, une longue inoccupation ou une transmission du logement.
+</p>
+        </p>
+
+        <p class="mb-6">
+          Chez Klinova, nous avons construit une approche de nettoyage <strong>méthodique</strong> et <strong>efficace</strong>,
+          avec des équipements professionnels et des techniques adaptées pour <strong>limiter l’humidité résiduelle</strong>,
+          éviter les traces, et obtenir un rendu homogène. L’objectif : un logement <strong>prêt à être occupé ou restitué</strong>,
+          sans “zones oubliées”.
+        </p>
+
+        <p class="mb-6">
+          Parce qu’un intérieur sain dépend aussi de ce qu’on utilise, nous privilégions des <strong>produits maîtrisés</strong>,
+          choisis pour leur efficacité sur le gras, le calcaire et les salissures du quotidien, tout en restant
+          <strong>plus sûrs pour les occupants</strong>. Pas de promesses magiques : un diagnostic simple en amont permet
+          d’annoncer ce qui est réaliste et le niveau de finition attendu.
+        </p>
+
+        <div class="bg-[#3F8D65]/5 border-l-4 border-[#3F8D65] p-6 rounded-r-lg mb-6">
+          <p class="text-[#1E2939]">
+            Pour nos clients, c’est le <strong>meilleur moment</strong> pour remettre un logement “au carré” :
+            avant un état des lieux, une mise en location, une vente, ou après un déménagement. Avec un protocole clair,
+            on obtient un <strong>résultat visuel net</strong> et une <strong>impression de propre immédiate</strong>.
+          </p>
+        </div>
+
+        <p>
+          Chez Klinova, nous combinons <strong>expérience terrain</strong>, <strong>rigueur</strong> et <strong>matériel professionnel</strong>
+          pour livrer une remise en état fiable, propre et cohérente — sans discours anxiogène, et avec un vrai sens du détail.
+        </p>
+      </div>
+
+      <!-- Listes services -->
+      <div class="border-t border-[#E5E7EB] pt-10 mb-10">
+        <h3 class="text-xl font-semibold text-[#1E2939] text-center mb-8">
+          Nos interventions
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Situations courantes</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Emménagement / déménagement</li>
+              <li>Vente ou mise en location</li>
+              <li>État des lieux (entrée / sortie)</li>
+              <li>Période d’inoccupation prolongée</li>
+              <li>Après un décés</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Zones traitées</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Cuisine (dégraissage des surfaces, électroménagers)</li>
+              <li>Salle de bain & sanitaires (détartrage, joints)</li>
+              <li>Sols & plinthes (selon revêtement)</li>
+              <li>Points de contact & finitions</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Sur devis (cas particuliers)</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Après travaux / rénovation</li>
+              <li>Logement très encombré (organisation spécifique)</li>
+              <li>Intervention renforcée (accès, contraintes)</li>
+              <li>Remise en état avant restitution urgente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone d’intervention + CTA -->
+      <div class="text-center pt-8 border-t border-[#E5E7EB]">
+        <p class="text-[#475569] text-sm md:text-base mb-2">
+          <span class="font-semibold text-[#1E2939]">Intervention en Île-de-France</span><br />
+          Paris • Hauts-de-Seine • Seine-Saint-Denis • Val-de-Marne • Val-d’Oise •
+          Seine-et-Marne • Yvelines • Essonne
+        </p>
+
+        <!-- CTA principal -->
+        <a
+          href="#formulaire"
+          class="inline-flex items-center mt-6 px-6 py-3 bg-white border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-800 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/30 shadow-md hover:shadow-lg"
+        >
+          Demander un devis de remise en état
+          <svg
+            class="w-5 h-5 ml-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- AVIS GOOGLE -->
+<section class="bg-white section-padding">
+  <div class="container-responsive">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary-600 mb-2">
+        Avis Google – Klinova
+      </h2>
+
+      <h3 class="text-lg md:text-xl text-neutral-600 mb-8">
+        Merci à nos clients qui nous ont fait confiance&nbsp;!
+      </h3>
+
+      <div class="sk-ww-google-reviews" data-embed-id="25566122">
+        <p>Chargement des avis Google…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ⚠️ idéalement, mets ça dans ton CSS global / utilities,
+     mais si tu le laisses ici, ok tant que tu sais que c'est global */
+  .sk-ww-google-reviews {
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 640px) {
+    .sk-ww-google-reviews {
+      max-height: 240px;
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const TARGET_SELECTOR = ".sk-ww-google-reviews";
+    const SCRIPT_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
+
+    function injectScriptOnce() {
+      if (window.__SK_WIDGET_SCRIPT_LOADED) return;
+      window.__SK_WIDGET_SCRIPT_LOADED = true;
+
+      // évite double ajout si déjà présent dans le DOM
+      if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return;
+
+      const s = document.createElement("script");
+      s.src = SCRIPT_SRC;
+      s.defer = true;
+      document.body.appendChild(s);
+    }
+
+    function init() {
+      const target = document.querySelector(TARGET_SELECTOR);
+      if (!target) return;
+
+      if (!("IntersectionObserver" in window)) {
+        injectScriptOnce();
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            injectScriptOnce();
+            obs.disconnect();
+          }
+        },
+        { rootMargin: "200px 0px" }
+      );
+
+      observer.observe(target);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>
+
+
+<!-- Section: Comment se déroule une intervention ? -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+
+    <!-- Header de section -->
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Déroulement d'une intervention
+      </p>
+
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Comment se déroule une remise en état ?
+      </h2>
+
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          De la prise de contact à la restitution, chaque intervention suit un protocole clair pour obtenir un
+          <strong>nettoyage complet</strong> et un rendu homogène. Selon votre préférence, nous pouvons privilégier des
+          <strong>produits éco-responsables</strong> quand c’est pertinent.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6 étapes en grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <!-- Étape 1 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            1
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Prise de contact & cadrage de la mission
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Échange rapide (photos si possible) pour comprendre le contexte : surface, état général, pièces clés,
+          contraintes d’accès et niveau de finition attendu (état des lieux, remise en location, emménagement…).
+        </p>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            2
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Devis gratuit & plan d’intervention
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Devis clair, sans surprise. Nous définissons l’ordre de passage, les zones à prioriser (cuisine, salle de bain,
+          sols, plinthes…) et les options (vitres accessibles, intérieur de placards, finitions).
+        </p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            3
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Préparation & sécurisation des zones
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Protection des surfaces sensibles si nécessaire, aération, repérage des points critiques
+          (graisses, calcaire, traces, plinthes, points de contact). L’objectif : travailler vite et propre.
+        </p>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            4
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Nettoyage en profondeur
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Nettoyage méthodique des pièces et surfaces : dégraissage cuisine, détartrage sanitaires, sols et plinthes,
+          finitions. Nous utilisons la <strong>vapeur</strong> lorsque c’est pertinent pour décoller les salissures et
+          traiter certaines zones sans surcharger en chimie.
+        </p>
+      </div>
+
+      <!-- Étape 5 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            5
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Contrôle qualité & reprises ciblées
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Vérification pièce par pièce : traces, angles, plinthes, robinetterie, points de contact. Nous faisons les
+          reprises nécessaires pour assurer un rendu homogène, particulièrement important avant un état des lieux.
+        </p>
+      </div>
+
+      <!-- Étape 6 -->
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">
+            6
+          </div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">
+          Restitution & conseils pratiques
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Restitution du logement avec points de vigilance et conseils simples : aération, entretien des surfaces,
+          prévention du calcaire et maintien du résultat. Sur demande, nous privilégions des <strong>produits éco-responsables</strong>.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bloc bonus : Durée d'une intervention -->
+    <div class="max-w-3xl mx-auto mt-10">
+      <div class="border border-[#E5E7EB] bg-white rounded-xl p-5">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-base font-semibold text-[#1E2939] mb-2">
+              ⏱ Durée d'une intervention
+            </h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              La durée dépend surtout de la surface, de l’état d’encrassement et du niveau de finitions attendu.
+              À titre indicatif : un studio/T1 prend souvent quelques heures, un T2/T3 une demi-journée à une journée,
+              et une maison peut nécessiter une journée complète ou plus. Un devis (et des photos) permettent de cadrer précisément.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Section: Prestations complémentaires -->
+<section class="py-16 bg-white border-t border-[#E5E7EB]">
+  <div class="container-responsive">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Prestations complémentaires
+      </p>
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-5">
+        Compléter la remise en état, si nécessaire
+      </h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Lors d’un grand ménage, certaines zones ou surfaces peuvent nécessiter un traitement plus spécifique.
+          Selon votre besoin, ces prestations peuvent être intégrées au devis pour obtenir un résultat homogène,
+          à l’intérieur comme aux abords du logement.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Moquettes -->
+      <a
+        href="/nettoyage-moquettes"
+        class="group bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/20"
+      >
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+          Nettoyage de moquettes
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed mb-4">
+          Aspiration approfondie, nettoyage professionnel et finitions pour retrouver une moquette nette,
+          sans traces ni odeurs persistantes.
+        </p>
+        <p class="text-sm font-semibold text-[#3F8D65] inline-flex items-center gap-2">
+          Découvrir
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+        </p>
+      </a>
+
+      <!-- Textiles -->
+      <a
+        href="/nettoyage-canapes-tapis-matelas"
+        class="group bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/20"
+      >
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+          Canapés, tapis &amp; matelas
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed mb-4">
+          Détachage et nettoyage en profondeur des textiles d’ameublement pour améliorer l’hygiène,
+          l’aspect et limiter les odeurs.
+        </p>
+        <p class="text-sm font-semibold text-[#3F8D65] inline-flex items-center gap-2">
+          Découvrir
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+        </p>
+      </a>
+
+      <!-- Balcons -->
+      <a
+        href="/nettoyage-balcons"
+        class="group bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/20"
+      >
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+          Nettoyage de balcons
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed mb-4">
+          Remise au propre des sols extérieurs, murs bas et garde-corps, avec une méthode adaptée
+          au revêtement et au niveau d’encrassement.
+        </p>
+        <p class="text-sm font-semibold text-[#3F8D65] inline-flex items-center gap-2">
+          Découvrir
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+        </p>
+      </a>
+
+      <!-- Terrasses (optionnel / plus tard) 
+      <a
+        href="/nettoyage-terrasses"
+        class="group bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/20"
+        aria-disabled="true"
+      >
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-2">
+          Nettoyage de terrasses
+        </h3>
+        <p class="text-[#475569] text-sm leading-relaxed mb-4">
+          Décapage et nettoyage des revêtements extérieurs (carrelage, pierre, bois) pour retrouver
+          un rendu net, selon la configuration et l’accès.
+        </p>
+        <p class="text-sm font-semibold text-[#3F8D65] inline-flex items-center gap-2">
+          En savoir plus
+          <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+        </p>
+      </a>-->
+    </div>
+
+    <!-- Note discrète -->
+    <div class="max-w-3xl mx-auto mt-10">
+      <div class="bg-[#3F8D65]/5 border-l-4 border-[#3F8D65] p-6 rounded-r-lg">
+        <p class="text-[#1E2939] text-sm md:text-base leading-relaxed">
+          <strong>Bon à savoir :</strong> ces prestations sont optionnelles. Lors de la prise de contact, nous vous aidons
+          à prioriser ce qui a le plus d’impact sur le rendu final (état des lieux, remise en location, vente, emménagement).
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-10">
+      <a
+        href="#formulaire"
+        class="inline-flex items-center px-6 py-3 bg-white border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-800 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/30 shadow-md hover:shadow-lg"
+      >
+        Demander un devis
+        <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="faq" class="py-16 bg-white border-t border-[#E5E7EB]">
+  <div class="container-responsive">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-8 text-center">
+        Questions fréquentes
+      </h2>
+
+      <Accordion>
+        {faqs.map((item) => (
+          <AccordionItem title={item.title}>
+            <p class="text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  </div>
+</section>
+
+
+<section
+data-section="cta-final"
+data-hide-cta
+  id="formulaire"
+  class="section-padding bg-[#DFF1E8]"
+  aria-labelledby="cta-title"
+>
+  <div class="container-responsive">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Demandez votre devis gratuit
+      </h2>
+      <p class="mt-3 text-[#475569]">
+        Intervention rapide en Île-de-France, protocole professionnel, satisfaction garantie.
+      </p>
+    </div>
+
+    <!-- Messages d'état -->
+    <div id="form-messages" class="mx-auto max-w-2xl mt-6"></div>
+
+    <!-- Form amélioré -->
+    <form
+      id="devis-grand-menage-form"
+      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
+      method="post"
+      action="/api/contact"
+      novalidate
+    >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      
+      <!-- Champs cachés pour tracking -->
+      <input type="hidden" name="source" value="grand-menage">
+      <input type="hidden" name="service" value="Nettoyage appartement-maison - Demande devis">
+      <input type="hidden" name="rgpd" value="accepte">
+
+      <!-- Prénom + Nom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="prenom" class="sr-only">Prénom</label>
+          <input
+            id="prenom" name="prenom" type="text" required
+            placeholder="Prénom"
+            autocomplete="given-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="nom" class="sr-only">Nom</label>
+          <input
+            id="nom" name="nom" type="text"
+            placeholder="Nom (optionnel)"
+            autocomplete="family-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Email + Téléphone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email" name="email" type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="telephone" class="sr-only">Téléphone</label>
+          <input
+            id="telephone" name="telephone" type="tel" inputmode="tel" required
+            placeholder="Téléphone"
+            autocomplete="tel"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Ville -->
+      <div>
+        <label for="ville" class="sr-only">Ville</label>
+        <input
+          id="ville" name="ville" type="text" required
+          placeholder="Ville (ex. Paris 12e)"
+          autocomplete="address-level2"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200"
+        />
+        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+      </div>
+
+      <!-- Message libre -->
+      <div>
+        <label for="message" class="sr-only">Décrivez les services de nettoyage dont vous avez besoin</label>
+        <textarea
+          id="message" name="message"
+          placeholder="Décrivez votre logement : surface, piéces à nettoyer, urgence... (optionnel)"
+          rows="3"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Photos avec Cloudinary -->
+      <div>
+        <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+          Photos (optionnel)
+        </label>
+        
+        <!-- Input caché -->
+        <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+        
+        <!-- Zone de drop -->
+        <div id="photos-drop-zone" 
+             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
+                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
+          <div class="flex flex-col items-center space-y-2">
+            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+          </div>
+        </div>
+        
+        <!-- Statut des photos -->
+        <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+        
+        <!-- Liste des photos -->
+        <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+        
+        <!-- Container pour les URLs Cloudinary -->
+        <div id="photos-hidden"></div>
+      </div>
+
+      <!-- RGPD -->
+      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
+        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
+          En savoir plus
+        </a>
+      </div>
+
+      <!-- CTA form -->
+     
+       <ButtonSubmit
+  label="Recevoir mon devis"
+  variant="primary"
+  size="lg"
+  fullWidth={true}
+  id="submit-btn"
+  formId="fientes-pigeons-form"
+  formName="Fientes Pigeons Contact Form"
+  formType="devis"
+  value={220}
+  source="grand-menage"
+  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+  tracking={{
+    action: 'cta-submit-devis',
+    source: 'grand-menage',
+    intent: 'fientes-pigeons-devis'
+  }}
+  data={{
+    action: 'cta-submit-devis',
+    source: 'grand-menage'
+  }}
+/>
+
+       
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+/* Styles pour les photos */
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1E2939;
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: #3F8D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.form-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #D1FAE5;
+}
+
+.form-message.error {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.form-error:not(:empty) {
+  display: block !important;
+}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById('devis-grand-menage-form');
+  const messagesContainer = document.getElementById('form-messages');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitText = document.getElementById('btn-text');
+const loadingSpinner = document.querySelector('.loading-spinner');
+  
+  // Upload de photos
+  const photosInput = document.getElementById('photos-input');
+  const dropZone = document.getElementById('photos-drop-zone');
+  const photosList = document.getElementById('photos-list');
+  const photosStatus = document.getElementById('photos-status');
+  const photosHidden = document.getElementById('photos-hidden');
+  
+  let uploadingCount = 0;
+  let uploadedFiles = [];
+  const maxFiles = 4;
+  const maxMB = 8;
+
+  // Fonctions utilitaires
+  function showMessage(text, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.textContent = text;
+    messagesContainer.innerHTML = '';
+    messagesContainer.appendChild(messageDiv);
+    
+    if (type === 'success') {
+      setTimeout(() => {
+        messageDiv.style.opacity = '0';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 5000);
+    }
+  }
+
+function setLoading(loading) {
+  submitBtn.disabled = loading || uploadingCount > 0;
+  if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+  if (submitText) submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
+}
+
+  function bytesToMB(bytes) {
+    return (bytes / 1024 / 1024).toFixed(1);
+  }
+
+  function updatePhotosStatus() {
+    const total = uploadedFiles.length;
+    const success = uploadedFiles.filter(f => f.status === 'success').length;
+    const uploading = uploadingCount;
+    
+    if (total === 0) {
+      photosStatus.textContent = 'Aucune photo';
+      photosList.classList.add('hidden');
+    } else {
+      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+      photosList.classList.remove('hidden');
+    }
+    
+    submitBtn.disabled = uploadingCount > 0;
+  }
+
+  function addPhotoToList(file) {
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'photo-item';
+    photoDiv.dataset.fileName = file.name;
+    
+    photoDiv.innerHTML = `
+      <span class="photo-name">${file.name}</span>
+      <span class="photo-size">${bytesToMB(file.size)} MB</span>
+      <span class="photo-status uploading">Upload...</span>
+      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+      <div class="photo-progress">
+        <div class="photo-progress-fill"></div>
+      </div>
+    `;
+    
+    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+      removePhoto(file.name);
+    });
+    
+    photosList.appendChild(photoDiv);
+  }
+
+  function updatePhotoStatus(fileName, status, progress = 0) {
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!photoDiv) return;
+    
+    const statusEl = photoDiv.querySelector('.photo-status');
+    const progressFill = photoDiv.querySelector('.photo-progress-fill');
+    
+    statusEl.className = `photo-status ${status}`;
+    
+    switch (status) {
+      case 'uploading':
+        statusEl.textContent = `${progress}%`;
+        progressFill.style.width = `${progress}%`;
+        break;
+      case 'success':
+        statusEl.textContent = 'Importée ✓';
+        progressFill.style.width = '100%';
+        break;
+      case 'error':
+        statusEl.textContent = 'Erreur ⚠';
+        progressFill.style.width = '0%';
+        break;
+    }
+  }
+
+  function removePhoto(fileName) {
+    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+    if (fileIndex !== -1) {
+      const file = uploadedFiles[fileIndex];
+      if (file.cloudinaryUrl) {
+        // Supprimer l'input caché
+        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+        if (hiddenInput) hiddenInput.remove();
+      }
+      uploadedFiles.splice(fileIndex, 1);
+    }
+    
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (photoDiv) photoDiv.remove();
+    
+    updatePhotosStatus();
+  }
+
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file) {
+    const fileObj = {
+      name: file.name,
+      size: file.size,
+      status: 'uploading',
+      progress: 0,
+      cloudinaryUrl: null
+    };
+    
+    uploadedFiles.push(fileObj);
+    addPhotoToList(file);
+    uploadingCount++;
+    updatePhotosStatus();
+    
+    try {
+      const signature = await getCloudinarySignature();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', signature.apiKey);
+      formData.append('timestamp', String(signature.timestamp));
+      formData.append('signature', signature.signature);
+      formData.append('folder', signature.folder);
+      if (signature.uploadPreset) {
+        formData.append('upload_preset', signature.uploadPreset);
+      }
+
+      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+      
+      const xhr = new XMLHttpRequest();
+      
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const progress = Math.round((e.loaded / e.total) * 100);
+          fileObj.progress = progress;
+          updatePhotoStatus(file.name, 'uploading', progress);
+        }
+      };
+      
+      xhr.onload = () => {
+        uploadingCount--;
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+            fileObj.status = 'success';
+            fileObj.cloudinaryUrl = result.secure_url;
+            updatePhotoStatus(file.name, 'success');
+            
+            // Ajouter l'URL au formulaire
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'photos[]';
+            hiddenInput.value = result.secure_url;
+            photosHidden.appendChild(hiddenInput);
+          } else {
+            throw new Error('Upload failed');
+          }
+        } catch (err) {
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          console.error('Upload error:', err);
+        }
+        updatePhotosStatus();
+      };
+      
+      xhr.onerror = () => {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Upload network error');
+      };
+      
+      xhr.open('POST', uploadUrl);
+      xhr.send(formData);
+      
+    } catch (error) {
+      uploadingCount--;
+      fileObj.status = 'error';
+      updatePhotoStatus(file.name, 'error');
+      updatePhotosStatus();
+      console.error('Cloudinary error:', error);
+    }
+  }
+
+  function validateFiles(files) {
+    const validFiles = [];
+    
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        showMessage(`${file.name} n'est pas une image valide`, 'error');
+        continue;
+      }
+      
+      if (file.size > maxMB * 1024 * 1024) {
+        showMessage(`${file.name} dépasse la limite de ${maxMB} MB`, 'error');
+        continue;
+      }
+      
+      if (uploadedFiles.length + validFiles.length >= maxFiles) {
+        showMessage(`Maximum ${maxFiles} photos autorisées`, 'error');
+        break;
+      }
+      
+      validFiles.push(file);
+    }
+    
+    return validFiles;
+  }
+
+  function handleFiles(files) {
+    const validFiles = validateFiles(Array.from(files));
+    validFiles.forEach(file => uploadToCloudinary(file));
+  }
+
+  // Event listeners pour les photos
+  if (photosInput && dropZone) {
+    photosInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = ''; // Reset pour permettre de re-sélectionner
+      }
+    });
+
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFiles(files);
+      }
+    });
+  }
+
+  // Validation basique des champs
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorDiv = field.parentNode.querySelector('.form-error');
+    
+    if (field.required && !value) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    field.classList.remove('border-red-500');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.classList.add('hidden');
+    }
+    return true;
+  }
+
+  // Soumission du formulaire
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        showMessage('Veuillez attendre la fin de l\'upload des photos', 'error');
+        return;
+      }
+      
+      // Validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      // Validation email si rempli
+      const emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) {
+          isValid = false;
+        }
+      }
+      
+      if (!isValid) {
+        showMessage('Veuillez corriger les erreurs ci-dessus', 'error');
+        return;
+      }
+      
+      setLoading(true);
+      messagesContainer.innerHTML = '';
+      
+      try {
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'landing_grand-menage',
+            form_type: 'devis_grand-menage'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'devis_grand-menage',
+            service: 'Nettoyage grand-menage',
+            source: 'grand-menage'
+          });
+        }
+
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch {}
+
+        if (response.ok) {
+          // Remplacer complètement le contenu du formulaire par le message de succès
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = `
+            <div class="text-center py-10">
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+              <p class="text-[#475569] max-w-md mx-auto">
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>
+                Un expert Klinova analysera votre demande<br>
+                et vous proposera un planning d'intervention.
+              </p>
+            </div>
+          `;
+
+          // Scroll vers le formulaire transformé
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch {}
+        } else {
+          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          showMessage(err, 'error');
+        }
+      } catch (error) {
+        showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
+        console.error('Submit error:', error);
+      } finally {
+        setLoading(false);
+      }
+    });
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section 6: Zones d'intervention -->
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={4}
+  title="Remise en état de logements : nos secteurs d’intervention"
+  description="Nettoyage d'appartements et de maisons en en Île-de-France : détachage ciblé, traitement des odeurs et respect des fibres, avec une organisation par secteurs."
+  serviceSlug="nettoyage-appartement-maison"
+
+  deptSeoTextOverride={{
+    paris:
+      "Appartements et immeubles anciens : taches d’usage, textiles délicats et contraintes d’accès maîtrisées.",
+    "seine-et-marne":
+      "Pavillons et maisons familiales : canapés et tapis exposés aux animaux, poussières et usages intensifs.",
+    yvelines:
+      "Résidentiel de standing : entretien des textiles haut de gamme, finitions soignées et discrétion.",
+    essonne:
+      "Habitat mixte : nettoyage ciblé des tissus d’ameublement dans des intérieurs très sollicités.",
+    "hauts-de-seine":
+      "Appartements denses et cadres de vie actifs : détachage efficace et remise en usage rapide.",
+    "seine-saint-denis":
+      "Logements très occupés : taches incrustées, odeurs et textiles fortement sollicités.",
+    "val-de-marne":
+      "Intérieurs familiaux et bords de Marne : allergènes, humidité ambiante et hygiène des textiles.",
+    "val-d-oise":
+      "Zones pavillonnaires étendues : entretien régulier des canapés et tapis du quotidien."
+  }}
+/>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LayoutWithCTA>

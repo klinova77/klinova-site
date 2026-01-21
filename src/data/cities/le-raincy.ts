@@ -37,13 +37,13 @@ const city: City = {
   districts: ["Chatrian", "Hérôld", "Nicolas Carnot", "Thiellement", "Thiers", "Valère Lefebvre"],
 
 nearbyCities: [
-  "gagny",
-  "livry-gargan",
-  "montfermeil",
-  "montreuil",
-  "neuilly-sur-marne",
-  "villeparisis",
-],
+        "gagny",
+        "livry-gargan",
+        "rosny-sous-bois",
+        "montfermeil",
+        "neuilly-plaisance",
+        "neuilly-sur-marne"
+      ],
 
 
   landmarks: [

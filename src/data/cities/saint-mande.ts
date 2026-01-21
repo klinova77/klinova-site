@@ -11,13 +11,13 @@ const city: City = {
     slug: "val-de-marne",
   },
 nearbyCities: [
-  "vincennes",
-  "charenton-le-pont",
-  "montreuil",
-  "fontenay-sous-bois",
-  "maisons-alfort",
-  "joinville-le-pont",
-],
+        "vincennes",
+        "charenton-le-pont",
+        "montreuil",
+        "ivry-sur-seine",
+        "fontenay-sous-bois",
+        "joinville-le-pont"
+      ],
 
 
   customDescription:

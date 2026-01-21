@@ -60,13 +60,13 @@ const city: City = {
   ],
 
   nearbyCities: [
-  "maisons-alfort",
-  "saint-maur-des-fosses",
-  "joinville-le-pont",
-  "charenton-le-pont",
-  "nogent-sur-marne",
-  "saint-mande",
-],
+        "maisons-alfort",
+        "saint-maur-des-fosses",
+        "joinville-le-pont",
+        "charenton-le-pont",
+        "ivry-sur-seine",
+        "nogent-sur-marne"
+      ],
 
 
   landmarks: [

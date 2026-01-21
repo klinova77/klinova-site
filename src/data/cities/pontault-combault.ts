@@ -48,11 +48,13 @@ const city: City = {
 
 
 nearbyCities: [
-  "bussy-saint-georges",
-  "noisy-le-grand",
-  "saint-maur-des-fosses",
-  "torcy",
-],
+        "le-plessis-trevise",
+        "noisy-le-grand",
+        "champs-sur-marne",
+        "torcy",
+        "bussy-saint-georges",
+        "gournay-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Pontault-Combault",

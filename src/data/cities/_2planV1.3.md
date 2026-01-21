@@ -191,7 +191,7 @@ SEO PACK — SERVICE 4 : Fientes pigeons
 **INTERDIT** : "syndic"
 **RÈGLE** : Mentionner ≥2 méthodes + désinfection OBLIGATOIRE
 
-**Mot-clé principal** : "nettoyage fientes pigeons {VILLE}" (2-3× max)
+**Mot-clé principal** : "nettoyage balcon fientes pigeons {VILLE}" (2-3× max)
 
 **Variantes naturelles** :
 - assainissement, décontamination, désinfection

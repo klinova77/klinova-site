@@ -45,13 +45,13 @@ citySpecificChallenges: [
     "Les Parclairs",
   ],
  nearbyCities: [
-  "nogent-sur-marne",
-  "neuilly-plaisance",
-  "fontenay-sous-bois",
-  "bry-sur-marne",
-  "rosny-sous-bois",
-  "joinville-le-pont",
-],
+        "nogent-sur-marne",
+        "neuilly-plaisance",
+        "fontenay-sous-bois",
+        "neuilly-sur-marne",
+        "rosny-sous-bois",
+        "joinville-le-pont"
+      ],
 
   landmarks: [
     "Mairie du Perreux-sur-Marne",

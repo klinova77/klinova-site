@@ -44,13 +44,13 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "neuilly-plaisance",
-  "neuilly-sur-marne",
-  "montfermeil",
-  "le-raincy",
-  "villemomble",
-  "clichy-sous-bois",
-],
+        "neuilly-sur-marne",
+        "montfermeil",
+        "le-raincy",
+        "neuilly-plaisance",
+        "gournay-sur-marne",
+        "chelles"
+      ],
 
   landmarks: [
     "Hôtel de Ville (Place Foch)",

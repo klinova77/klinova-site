@@ -33,12 +33,13 @@ const city: City = {
 districts: ["Centre", "Danton", "Gargan", "Jacob", "Poudrerie", "Chanzy", "Sévigné"],
    
 nearbyCities: [
-  "claye-souilly",
-  "gagny",
-  "le-raincy",
-  "montfermeil",
-  "villeparisis",
-],
+      "le-raincy",
+      "montfermeil",
+      "gagny",
+      "chelles",
+      "rosny-sous-bois",
+      "neuilly-sur-marne"
+    ],
   landmarks: [
     "Mairie de Livry-Gargan",
     "Parc Lefèvre",

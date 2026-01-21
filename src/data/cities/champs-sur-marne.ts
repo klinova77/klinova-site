@@ -42,13 +42,13 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "bussy-saint-georges",
-  "chelles",
-  "gournay-sur-marne",
-  "neuilly-sur-marne",
-  "noisy-le-grand",
-  "torcy",
-],
+        "gournay-sur-marne",
+        "noisy-le-grand",
+        "vaires-sur-marne",
+        "torcy",
+        "chelles",
+        "neuilly-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Champs-sur-Marne",

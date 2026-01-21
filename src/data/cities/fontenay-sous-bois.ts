@@ -50,13 +50,13 @@ districts: [
 ],
 
 nearbyCities: [
-  "vincennes",
-  "montreuil",
-  "rosny-sous-bois",
-  "neuilly-plaisance",
-  "le-perreux-sur-marne",
-  "nogent-sur-marne",
-],
+      "nogent-sur-marne",
+      "montreuil",
+      "le-perreux-sur-marne",
+      "vincennes",
+      "rosny-sous-bois",
+      "neuilly-plaisance"
+    ],
 
 
   landmarks: [

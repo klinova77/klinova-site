@@ -1,6 +1,13 @@
 // ~/types/geo.ts
 
-export type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
+export type ServiceKey =
+  | "moquettes"
+  | "parkings"
+  | "balcons"
+  | "balcons-fientes"
+  | "canapes-tapis"
+  | "terrasses"
+  | "nettoyage-appartement-maison";
 
 export interface Department {
   name: string;
@@ -13,6 +20,7 @@ export interface ServicePricing {
   unit: string;
   note?: string;
 }
+
 export interface CityServiceLocal {
   serviceKey: ServiceKey;
   uniqueIntro?: string;
@@ -27,7 +35,7 @@ export interface CityServiceLocal {
     testimonial?: { text: string; author?: string };
   };
   faqAdditions?: { question: string; answer: string }[];
-  patternOverride?: 'A' | 'B' | 'C' | 'D';
+  patternOverride?: "A" | "B" | "C" | "D";
   ctaOverride?: string;
   photos?: string[];
 
@@ -38,8 +46,6 @@ export interface CityServiceLocal {
 
   pricing?: ServicePricing;
 }
-
-
 
 export interface City {
   name: string;
@@ -62,12 +68,9 @@ export interface City {
   // 🆕 contenu spécifique hub
   hubIntro?: string;
 
-
-
   services: CityServiceLocal[];
 }
 
-// types/geo.ts
 export type PricingTier =
   | {
       name: string;
@@ -94,21 +97,6 @@ export type PricingTier =
       currency?: string;
     };
 
-export interface ServiceConfig {
-  key: string;
-  name: string;
-  // ...
-  pricing?: { from: string; unit?: string; note?: string }; // legacy
-  pricingTiers?: PricingTier[]; // new
-}
-
-
-export interface ServiceConfig {
-  // ...
-  pricingTiers?: ServicePricingTier[]
-}
-
-
 export interface ServiceProcessStep {
   step: string;
   description: string;
@@ -126,16 +114,23 @@ export interface ServiceUrls {
 export interface ServiceConfig {
   key: ServiceKey;
   name: string;
+
   defaultDescription?: string;
   benefits?: string[];
   process?: ServiceProcessStep[];
   equipment?: string[];
   averageDuration?: string;
-  pricing?: { from: string; unit: string };
+
+  // legacy (si tu l'utilises encore)
+  pricing?: { from: string; unit: string; note?: string };
+
+  // new
+  pricingTiers?: PricingTier[];
+
   faq?: ServiceFaqItem[];
   urls?: ServiceUrls;
   images?: { heroDesktop?: string; heroMobile?: string };
 
-  // 🆕 CTA global par service
+  // CTA global par service
   ctaOverride?: string;
 }

@@ -43,7 +43,14 @@ const city: City = {
     "Plaine Beauval",
     "ZAC Saussaie Beauclair",
   ],
-  nearbyCities: [],
+  nearbyCities: [
+        "rosny-sous-bois",
+        "neuilly-plaisance",
+        "fontenay-sous-bois",
+        "montreuil",
+        "le-raincy",
+        "le-perreux-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Rosny-sous-Bois",

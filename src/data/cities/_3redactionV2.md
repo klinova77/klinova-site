@@ -404,12 +404,12 @@ SEO PACK — SERVICE 4 : Fientes pigeons
 
 **Cible** : Particuliers (appartement)
 **INTERDIT** : "syndic"
-**RÈGLE** : Mentionner ≥2 méthodes + désinfection OBLIGATOIRE
+**RÈGLE** : Mentionner ≥2 méthodes + désinfection OBLIGATOIRE  dépigeonnage OBLIGATOIRE
 
 **Mot-clé principal** : "nettoyage fientes pigeons {VILLE}" (2-3× max)
 
 **Variantes naturelles** :
-- assainissement, décontamination, désinfection
+- assainissement, décontamination, désinfection, dépigeonnage
 - balcon, loggia, rebords, corniches, façade
 
 **Méthodes techniques (mentionner ≥2)** :
@@ -424,7 +424,7 @@ SEO PACK — SERVICE 4 : Fientes pigeons
 - Nuisances : odeurs persistantes fortes, balcon inutilisable, tensions voisinage
 
 **Solutions complémentaires (optionnel)** :
-- Dissuasion : pics anti-pigeons (corniches/rebords), filets de protection, répulsifs
+- Dissuasion : pics anti-pigeons (corniches/rebords), filets de protection, gel répulsif
 
 **Longue traîne (à piocher)** :
 - désinfection balcon pigeons {VILLE}

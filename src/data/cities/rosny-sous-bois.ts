@@ -47,13 +47,13 @@ const city: City = {
     "Bois Perrier / Les Marnaudes",
   ],
   nearbyCities: [
-  "neuilly-plaisance",
-  "montreuil",
-  "fontenay-sous-bois",
-  "villemomble",
-  "noisy-le-sec",
-  "bondy",
-],
+        "neuilly-plaisance",
+        "fontenay-sous-bois",
+        "montreuil",
+        "le-raincy",
+        "le-perreux-sur-marne",
+        "neuilly-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Rosny-sous-Bois",

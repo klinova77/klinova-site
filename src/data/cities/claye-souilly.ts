@@ -45,12 +45,13 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "chelles",
-  "livry-gargan",
-  "meaux",
-  "vaires-sur-marne",
-  "villeparisis",
-],
+        "villeparisis",
+        "lagny-sur-marne",
+        "vaires-sur-marne",
+        "chelles",
+        "montfermeil",
+        "torcy"
+      ],
 
   landmarks: [
     "Mairie de Claye-Souilly",

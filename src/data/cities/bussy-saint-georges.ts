@@ -39,13 +39,13 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "champs-sur-marne",
-  "lagny-sur-marne",
-  "noisy-le-grand",
-  "pontault-combault",
-  "serris",
-  "torcy",
-],
+        "lagny-sur-marne",
+        "torcy",
+        "serris",
+        "vaires-sur-marne",
+        "pontault-combault",
+        "champs-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Bussy-Saint-Georges",

@@ -45,13 +45,13 @@ const city: City = {
     "Voie Lambert",
   ],
   nearbyCities: [
-  "neuilly-sur-marne",
-  "rosny-sous-bois",
-  "fontenay-sous-bois",
-  "le-perreux-sur-marne",
-  "villemomble",
-  "gagny",
-],
+        "rosny-sous-bois",
+        "le-perreux-sur-marne",
+        "neuilly-sur-marne",
+        "fontenay-sous-bois",
+        "gagny",
+        "le-raincy"
+      ],
 
   landmarks: [
     "Mairie de Neuilly-Plaisance",

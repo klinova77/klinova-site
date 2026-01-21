@@ -1,3 +1,4 @@
+//D:\Klinova-site\src\lib\geo-klinova.ts
 export type Preposition = "à" | "de";
 
 const NBSP = "\u00A0"; // espace insécable

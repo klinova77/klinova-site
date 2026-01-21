@@ -51,13 +51,13 @@ const city: City = {
 
 
 nearbyCities: [
-  "maisons-alfort",
-  "saint-mande",
-  "vincennes",
-  "joinville-le-pont",
-  "creteil",
-  "montreuil",
-],
+        "ivry-sur-seine",
+        "saint-mande",
+        "maisons-alfort",
+        "vincennes",
+        "joinville-le-pont",
+        "gentilly"
+      ],
 
   landmarks: [
     "Mairie de Charenton-le-Pont",

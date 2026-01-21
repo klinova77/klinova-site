@@ -34,27 +34,6 @@ const {
 
 } = Astro.props as Props;
 
-const resolvedDescription =
-  (description && description.trim().length > 0)
-    ? description
-    : (serviceSlug ? (SERVICE_DESCRIPTION[serviceSlug] ?? "") : "Interventions organisées par secteurs en Île-de-France, avec une méthode constante et des finitions propres.");
-
-    
-  function getDeptText(deptSlug: string) {
-  return (
-    deptSeoTextOverride?.[deptSlug] ??
-    DEPT_SEO_TEXT[deptSlug] ??
-    "Interventions planifiées, méthode constante et finitions propres."
-  );
-}
-
-
-
-const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
-
-// ✅ Source unique : villes “stars” (ordre business déjà imposé par FEATURED_CITY_SLUGS)
-const featured = (Array.isArray(featuredCities) ? featuredCities : []) as FeaturedCityKln[];
-
 // SEO mini-text
 const DEPT_SEO_TEXT: Record<string, string> = {
   paris: "Interventions en immeubles et résidences, contraintes d’accès et d’horaires.",
@@ -79,6 +58,29 @@ const SERVICE_DESCRIPTION: Record<string, string> = {
   "nettoyage-canapes-tapis-matelas":
     "Nettoyage de canapés, tapis et matelas en Île-de-France : injection-extraction ou méthodes adaptées, détachage ciblé et séchage rapide.",
 };
+
+const resolvedDescription =
+  (description && description.trim().length > 0)
+    ? description
+    : (serviceSlug ? (SERVICE_DESCRIPTION[serviceSlug] ?? "") : "Interventions organisées par secteurs en Île-de-France, avec une méthode constante et des finitions propres.");
+
+    
+  function getDeptText(deptSlug: string) {
+  return (
+    deptSeoTextOverride?.[deptSlug] ??
+    DEPT_SEO_TEXT[deptSlug] ??
+    "Interventions planifiées, méthode constante et finitions propres."
+  );
+}
+
+
+
+const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
+
+// ✅ Source unique : villes “stars” (ordre business déjà imposé par FEATURED_CITY_SLUGS)
+const featured = (Array.isArray(featuredCities) ? featuredCities : []) as FeaturedCityKln[];
+
+
 
 
 function getTopFeaturedCitiesForDept(deptSlug: string, limit: number) {

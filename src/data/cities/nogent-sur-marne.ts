@@ -48,13 +48,13 @@ const city: City = {
 ],
 
 nearbyCities: [
-  "le-perreux-sur-marne",
-  "fontenay-sous-bois",
-  "joinville-le-pont",
-  "saint-maur-des-fossés",
-  "vincennes",
-  "neuilly-sur-marne",
-],
+        "fontenay-sous-bois",
+        "le-perreux-sur-marne",
+        "joinville-le-pont",
+        "vincennes",
+        "neuilly-plaisance",
+        "montreuil"
+      ],
 
 
   landmarks: [

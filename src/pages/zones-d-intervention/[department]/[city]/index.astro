@@ -1,18 +1,14 @@
 ---
 // D:\Klinova-site\src\pages\zones-d-intervention\[department]\[city]\index.astro
-import type { ServiceConfig } from '~/types/geo';
+import type { ServiceConfig } from "~/types/geo";
 
-import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
-import cities from '~/data/cities';
-import services from '~/data/services';
-import { PHONE_DISPLAY, PHONE_E164, toTelHref } from '~/lib/phone';
-import { getExperienceYears } from '~/lib/company';
-import Button from '~/components/UI/Button.astro';
-
+import LayoutWithCTA from "~/layouts/LayoutWithCTA.astro";
+import cities from "~/data/cities";
+import services from "~/data/services";
+import { PHONE_DISPLAY, PHONE_E164, toTelHref } from "~/lib/phone";
+import { getExperienceYears } from "~/lib/company";
+import Button from "~/components/UI/Button.astro";
 import { aVille, deVille } from "~/lib/geo-klinova";
-
-
-
 
 const slugify = (v: string) =>
   v
@@ -22,8 +18,7 @@ const slugify = (v: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "");
 
-    export const prerender = true;
-
+export const prerender = true;
 
 export async function getStaticPaths() {
   return cities
@@ -38,45 +33,43 @@ export async function getStaticPaths() {
       };
     });
 }
-// ==========================
-// Types / helpers services
-// ==========================
-type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
-
-const serviceSlugByKey: Record<ServiceKey, string> = {
-  moquettes: 'nettoyage-moquettes',
-  parkings: 'nettoyage-parkings',
-  balcons: 'nettoyage-balcons',
-  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
-  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
-};
-
-const serviceSlug = (s: ServiceConfig) =>
-  serviceSlugByKey[s.key as ServiceKey];
 
 // ==========================
 // Variables globales
 // ==========================
 const experienceYears = getExperienceYears();
-const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+const baseUrl = import.meta.env.SITE ?? "https://klinova.fr";
 
-const { department, city } = Astro.params;
+// ✅ Source de vérité : props (issus de getStaticPaths)
+const { department: currentDepartment, city: currentCity } = Astro.props;
+
+// Slugs utiles pour URLs
+const departmentSlug = currentDepartment.slug ?? slugify(currentDepartment.name);
+const citySlug = currentCity.slug ?? slugify(currentCity.name);
 
 // ==========================
-// Ville courante
+// Services affichés pour la ville
 // ==========================
-const currentCity = cities.find(
-  (c) => (c.slug ?? '') === city && (c.department?.slug ?? '') === department
-);
+const cityServiceKeys = new Set((currentCity.services ?? []).map((s) => s.serviceKey));
 
-if (!currentCity) {
-  return new Response("Not found", { status: 404 });
-}
+const servicesForCity = (Array.isArray(services) ? services : [])
+  .filter((s): s is ServiceConfig => !!s && typeof (s as any).key === "string")
+  .filter((s) => typeof s.urls?.parent === "string" && s.urls.parent.length > 0)
+  .filter((s) => cityServiceKeys.has(s.key));
 
 
+
+const serviceSlug = (s: ServiceConfig) => s.urls?.parent?.replace(/^\//, "") ?? "";
+
+
+// ==========================
+// Helpers ville
+// ==========================
 const cityName = currentCity.name;
 const cityAt = aVille(cityName);
 const cityFrom = deVille(cityName);
+
+
 // ==========================
 // Villes voisines (nearbyCities)
 // ==========================
@@ -166,7 +159,8 @@ const title = `Entreprise de nettoyage ${cityAt} – Klinova`;
 
 const description = `Société de nettoyage ${cityAt} : copropriétés, parkings souterrains, moquettes et balcons. Interventions professionnelles en ${departmentName}. Devis gratuit.`;
 
-const canonical = `/zones-d-intervention/${department}/${city}`;
+const canonical = `/zones-d-intervention/${departmentSlug}/${citySlug}`;
+
 
 // ==========================
 // FAQ hub ville (données)
@@ -231,7 +225,7 @@ const breadcrumbLd = {
       '@type': 'ListItem',
       position: 2,
       name: departmentName,
-      item: `${baseUrl}/zones-d-intervention/${department}`,
+      item: `${baseUrl}/zones-d-intervention/${departmentSlug}`,
     },
     {
       '@type': 'ListItem',
@@ -330,7 +324,7 @@ const phoneHref = toTelHref(PHONE_E164);
 
         <li>
           <a
-            href={`/zones-d-intervention/${department}`}
+            href={`/zones-d-intervention/${departmentSlug}`}
             class="hover:text-primary-600 transition-colors"
           >
             {departmentName}
@@ -666,15 +660,15 @@ data-hide-header-cta
         Nos prestations de nettoyage à <span class="text-[#3F8D65]">{currentCity.name}</span>
       </h2>
       <p class="text-[#64748B]">
-        Des solutions techniques adaptées aux parkings, moquettes et balcons de {departmentName}.
+        Des solutions techniques adaptées à vos besoins.
       </p>
     </div>
 
     <!-- Grille des services -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map((service) => (
+      {servicesForCity.map((service) => (
         <a
-          href={`/zones-d-intervention/${department}/${city}/${serviceSlug(service)}`}
+          href={`/zones-d-intervention/${departmentSlug}/${citySlug}/${serviceSlug(service)}`}
           class="group flex flex-col h-full bg-white border border-neutral-200 rounded-xl overflow-hidden hover:shadow-lg hover:border-[#3F8D65]/30 transition-all duration-300"
         >
           <!-- Contenu principal de la carte -->
@@ -859,9 +853,8 @@ data-hide-header-cta
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span class="text-[#1E2939] font-medium leading-relaxed">
-                  {challenge}
-                </span>
+               <span class="text-[#1E2939] font-medium leading-relaxed" set:html={challenge} />
+
               </li>
             ))}
           </ul>
@@ -1017,7 +1010,7 @@ data-hide-header-cta
 
     <div class="mt-8 pt-6 border-t border-neutral-200">
       <a
-        href={`/zones-d-intervention/${department}`}
+        href={`/zones-d-intervention/${departmentSlug}`}
         class="inline-flex items-center text-sm font-semibold text-[#3F8D65] hover:underline"
       >
         Voir toute la zone {departmentName}

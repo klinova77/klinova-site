@@ -1,55 +1,52 @@
-// D:\Klinova-site\src\utils\generate-city-pages.ts
-
-import cities from '~/data/cities';
-import services from '~/data/services';
-import type { ServiceConfig } from '~/types/geo';
+// src/utils/generate-city-pages.ts
+import cities from "~/data/cities";
+import services from "~/data/services";
+import type { City, ServiceConfig } from "~/types/geo";
 
 const slugify = (v: string) =>
   v
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '');
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
-type ServiceKey = 'moquettes' | 'parkings' | 'balcons' | 'balcons-fientes' | 'canapes-tapis';
-
-const serviceSlugByKey: Record<ServiceKey, string> = {
-  moquettes: 'nettoyage-moquettes',
-  parkings: 'nettoyage-parkings',
-  balcons: 'nettoyage-balcons',
-  'balcons-fientes': 'nettoyage-balcons-fientes-pigeons',
-  'canapes-tapis': 'nettoyage-canapes-tapis-matelas',
-};
-
-const getServiceSlug = (service: ServiceConfig) =>
-  serviceSlugByKey[service.key as ServiceKey];
+const serviceSlug = (s: ServiceConfig) => s.urls?.parent?.replace(/^\//, "") ?? "";
 
 export function generateCityPaths() {
-  const paths: any[] = [];
+  const allServiceConfigs = (Array.isArray(services) ? services : []).filter(
+    (s): s is ServiceConfig =>
+      typeof s === "object" &&
+      s !== null &&
+      typeof s.key === "string" &&
+      typeof s.urls?.parent === "string" &&
+      !!s.urls.parent
+  );
 
-  for (const city of cities) {
-    if (!city || !city.name || !city.department) continue;
+  const paths: Array<{
+    params: { department: string; city: string; service: string };
+    props: { department: City["department"]; city: City; service: ServiceConfig };
+  }> = [];
 
-    const deptSlug = city.department.slug ?? slugify(city.department.name);
-    const citySlug = city.slug ?? slugify(city.name);
+  for (const city of cities as City[]) {
+    if (!city?.name || !city?.department) continue;
 
-    for (const service of services) {
-      if (!service?.key) continue;
+    const deptSlug = city.department.slug ?? slugify(city.department.name ?? "");
+    const citySlugValue = city.slug ?? slugify(city.name);
 
-      const serviceSlug = getServiceSlug(service);
+    // ✅ services activés dans le city.ts
+    const cityServiceKeys = new Set((city.services ?? []).map((s) => s.serviceKey));
+
+    // ✅ configs disponibles + activées pour cette ville
+    const configsForCity = allServiceConfigs.filter((cfg) => cityServiceKeys.has(cfg.key));
+
+    for (const svc of configsForCity) {
+      const svcSlug = serviceSlug(svc);
+      if (!svcSlug) continue; // sécurité
 
       paths.push({
-        params: {
-          department: deptSlug,
-          city: citySlug,
-          service: serviceSlug,
-        },
-        props: {
-          department: city.department,
-          city,
-          service,
-        },
+        params: { department: deptSlug, city: citySlugValue, service: svcSlug },
+        props: { department: city.department, city, service: svc },
       });
     }
   }
