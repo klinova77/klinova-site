@@ -429,13 +429,13 @@ const city: City = {
 <p class="mt-4">La ville vit au rythme de ses pôles et de ses transports : métro ligne 8, TVM, université (UPEC), Préfecture et Créteil Soleil. Cette intensité se retrouve dans les logements : poussière de voirie, traces sur les sols d’entrée, cuisine sollicitée, et pièces d’eau où le calcaire marque vite. L’objectif n’est pas d’en faire trop, mais de traiter ce qui compte vraiment pour un rendu net et présentable.</p>
 <p class="mt-4">Pour un <strong>nettoyage appartement maison Créteil</strong>, Klinova intervient avec un protocole clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous organisons l’accès (digicodes, gardiens, ascenseurs), puis nous déroulons une remise en état par zones, avec un contrôle final avant remise des clés ou réoccupation.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+  uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Nous évaluons l’état réel du logement (logement vide, traces d’usage, remise en état du logement avant restitution), les revêtements (PVC/lino fréquent, carrelage, parquet stratifié), et les contraintes d’immeuble : étages, ascenseur, règles de copropriété, accès Vigik et créneaux. Cette étape permet d’établir un ordre d’intervention efficace, sans perte de temps sur site.</p>
 
-<h3>T2 : Grand ménage structuré</h3>
+<h3>Grand ménage structuré</h3>
 <p>Nous réalisons un dépoussiérage complet (plinthes, menuiseries, surfaces accessibles), puis nous traitons les sols selon leur nature. En cuisine : <strong>dégraissage cuisine</strong> des surfaces accessibles (plans, crédences, façades selon l’état). En salle de bain : <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, zones critiques), puis finitions sur les joints et les surfaces. Les points de contact (poignées, interrupteurs) et les vitrages accessibles sont intégrés pour un rendu cohérent, pièce par pièce.</p>
 
-<h3>T3 : Contrôle final et restitution</h3>
+<h3>Contrôle final et restitution</h3>
 <p>Nous terminons par un contrôle visuel, une aération du logement et, si besoin, un retour rapide sur un détail. L’objectif est de sécuriser un <strong>nettoyage après déménagement</strong> ou un <strong>nettoyage avant état des lieux</strong> dans des délais réalistes, avec un rendu propre et lisible pour le bailleur, l’agence ou l’occupant.</p>`,
 
   specificChallenges: [

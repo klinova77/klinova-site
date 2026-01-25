@@ -482,13 +482,13 @@ const city: City = {
 <p class="mt-4">La ville est aussi contrastée : des collectifs denses (Bois-Perrier, Pré-Gentil) où l’accès se joue au digicode/Vigik et au gardien, et des secteurs pavillonnaires plus calmes (Plateau d’Avron, La Boissière) où l’enjeu devient la qualité des finitions, la protection des sols (parquets) et la gestion des volumes (baies vitrées, escaliers, pièces multiples).</p>
 <p class="mt-4">Notre logique est simple : on vise un résultat “propre visuel” sans perdre du temps. On commence par ce qui se voit et se contrôle à l’état des lieux (cuisine, salle d’eau, sols), puis on verrouille les détails qui font la différence (plinthes, encadrements, traces sur portes, interrupteurs). Côté Rosny, l’organisation compte autant que la technique : stationnement, accès immeuble, et choix d’un créneau réaliste pour ne pas subir la saturation du week-end autour de Rosny 2.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3>
+  uniqueDeepDive: `<h3>Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3>
 <p>Autour des gares (RER E et Métro 11), les interventions sont souvent liées à une rotation locative : fin de bail, remise en état avant entrée, grand ménage ponctuel. Ici, l’efficacité vient d’une préparation claire : confirmation digicode/Vigik, point de stationnement, puis un déroulé “pièces d’eau → cuisine → sols → finitions”.</p>
 
-<h3>T2 : Rosny 2 / Domus — environnement flux et salissures de passage</h3>
+<h3>Rosny 2 / Domus — environnement flux et salissures de passage</h3>
 <p>Le secteur commercial attire un trafic continu : piétinement, poussière de parkings, dépôts sur vitrages et parties basses. On insiste sur les zones de contact (poignées, plinthes, bas de portes) et sur les sols d’entrée qui se chargent vite. Le timing est crucial : éviter les pics du week-end change tout.</p>
 
-<h3>T3 : Plateau d’Avron / La Boissière — maisons, parquets et finitions</h3>
+<h3>Plateau d’Avron / La Boissière — maisons, parquets et finitions</h3>
 <p>Dans les quartiers pavillonnaires, le travail ressemble davantage à une remise à niveau “maison” : volumes, escaliers, vitrages, et finitions. On protège les parquets, on gère le calcaire en pièces d’eau, et on cherche un rendu homogène, particulièrement apprécié dans ces secteurs plus exigeants.</p>`,
 
   specificChallenges: [

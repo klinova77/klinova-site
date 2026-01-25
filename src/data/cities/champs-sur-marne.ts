@@ -427,13 +427,13 @@ nearbyCities: [
 <p class="mt-4">Selon le type de bien, les contraintes ne sont pas les mêmes : pavillons du Bois de Grâce avec pièces multiples, collectifs des Deux Parcs, ou logements récents proches du pôle universitaire. Entre sols carrelés, lino/PVC dans certains logements étudiants, ou parquets plus récents, chaque surface demande une méthode maîtrisée pour éviter traces, sur-humidification ou finitions inégales.</p>
 <p class="mt-4">Klinova intervient avec une approche structurée : repérage des priorités, protocole par zones, gestion des accès (interphones, badges, Vigik) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Objectif : un logement prêt à être occupé ou présenté sereinement.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+  uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les contraintes pratiques sont intégrées dès le départ : accès Vigik en résidences, stationnement plus difficile autour de la gare Noisy-Champs et du campus, et ordre d’intervention optimisé pièce par pièce.</p>
 
-<h3>T2 : Nettoyage par zones</h3>
+<h3>Nettoyage par zones</h3>
 <p>La <strong>remise en état du logement</strong> se fait de manière méthodique. Sols et plinthes sont traités selon le revêtement (carrelage, parquet, lino/PVC). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé des surfaces accessibles (plans, façades, crédences selon état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, traitement des joints et points de contact (poignées, interrupteurs). Les vitres accessibles et les finitions visuelles complètent l’intervention, notamment pour un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong>.</p>
 
-<h3>T3 : Contrôle et restitution</h3>
+<h3>Contrôle et restitution</h3>
 <p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de rendre un résultat cohérent, sans zones “oubliées”, pour une restitution claire le jour de l’état des lieux ou une réoccupation rapide.</p>`,
 
   specificChallenges: [

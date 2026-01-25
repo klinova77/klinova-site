@@ -468,13 +468,13 @@ nearbyCities: [
 <p class="mt-4">Le terrain impose aussi sa méthode : accès sécurisés dans beaucoup de résidences (badges, interphones), stationnement plus délicat autour de la gare et des zones commerciales, et créneaux à éviter quand la ville se “sature” (8h–9h, 17h–19h, samedi près de Bay 2). Une intervention bien préparée commence donc par le cadrage : surface, priorités, contraintes d’accès et niveau de finition attendu.</p>
 <p class="mt-4">Côté résultats, Torcy présente des surfaces très courantes en ville nouvelle : sols PVC/lino dans certains collectifs, carrelage dans les pièces d’eau, parquet stratifié dans de nombreux pavillons et résidences récentes. Le bon rendu tient à une progression simple et propre : dégrossir, traiter cuisine/salle d’eau, uniformiser les sols, puis passer au contrôle final sur les détails visibles (plinthes, interrupteurs, poignées, bas de portes).</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Gare RER A / Le Mail / Les Gradins — états des lieux et “remise à niveau” rapide</h3>
+  uniqueDeepDive: `<h3>Gare RER A / Le Mail / Les Gradins — états des lieux et “remise à niveau” rapide</h3>
 <p>Autour du pôle gare, les demandes sont souvent orientées sortie/entrée de location : cuisine et salle d’eau d’abord (dégraissage, calcaire), puis sols et finitions. Dans ces résidences, l’enjeu est autant l’efficacité que la logistique : badge Vigik, ascenseurs, règles de copro, et stationnement plus contraint.</p>
 
-<h3>T2 : Bel-Air / Beauregard — maisons familiales et volumes sur plusieurs niveaux</h3>
+<h3>Bel-Air / Beauregard — maisons familiales et volumes sur plusieurs niveaux</h3>
 <p>En pavillonnaire, on rencontre des configurations plus larges : escaliers, chambres, bureau, pièces de rangement. Le nettoyage se joue sur l’homogénéité : sols sans traces, poussière correctement extraite des angles, et pièces d’eau remises “à blanc” sans attaquer les joints ou les surfaces fragiles.</p>
 
-<h3>T3 : Le Village / centre ancien — accès serrés et finitions visibles</h3>
+<h3>Le Village / centre ancien — accès serrés et finitions visibles</h3>
 <p>Le Village apporte un autre contexte : rues plus étroites, stationnement parfois plus délicat, escaliers resserrés dans certains immeubles. Ici, on privilégie une intervention compacte : matériel adapté, passages optimisés, et contrôle final des zones qui marquent vite (entrées, poignées, encadrements, rebords).</p>`,
 
   specificChallenges: [

@@ -410,13 +410,13 @@ const city: City = {
 <p class="mt-4">Le secteur <strong>Alfort / ENVA</strong> apporte aussi un contexte très concret : rotation de logements (étudiants, jeunes actifs), passages fréquents, et un standard d’hygiène élevé autour des entrées, sols et pièces d’eau. En parallèle, Charentonneau concentre des maisons avec <strong>parquet chêne</strong>, menuiseries anciennes et parfois des vérandas côté Marne : l’enjeu n’est pas la “force” mais la précision et la protection des matériaux.</p>
 <p class="mt-4">Klinova intervient à Maisons-Alfort avec une méthode orientée résultat : cadrage du périmètre, traitement des zones critiques (cuisine, SDB, sols), puis finitions. L’objectif est simple : un rendu net et cohérent, adapté aux contraintes locales (stationnement, accès, ascenseurs exigus) et aux attentes souvent élevées des quartiers résidentiels.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Secteur Métro 8 / Avenue de la République — logistique et fin de bail</h3>
+  uniqueDeepDive: `<h3>Secteur Métro 8 / Avenue de la République — logistique et fin de bail</h3>
 <p>Autour des stations et de l’axe central, le point dur est rarement “le nettoyage” mais l’organisation : stationnement, accès, créneaux. Nous structurons l’intervention pour limiter les allers-retours (matériel en une montée), en priorisant les zones contrôlées à l’état des lieux : cuisine, salle d’eau, sols et finitions (plinthes, interrupteurs, poignées).</p>
 
-<h3>T2 : Charentonneau et bords de Marne — parquets, menuiseries et maisons à étages</h3>
+<h3>Charentonneau et bords de Marne — parquets, menuiseries et maisons à étages</h3>
 <p>Dans ce secteur, la qualité se joue sur la protection des sols et la régularité du rendu : parquets à traiter sans excès d’eau, reprises des plinthes et des marches, et contrôle des points “poussière” (escaliers, angles, radiateurs). Les maisons à étages demandent une progression par zones pour éviter de re-salir ce qui est déjà fait.</p>
 
-<h3>T3 : Juilliottes / Vert-de-Maisons — grands collectifs, accès et surfaces vastes</h3>
+<h3>Juilliottes / Vert-de-Maisons — grands collectifs, accès et surfaces vastes</h3>
 <p>Ici, les volumes et les circulations internes comptent : ascenseurs parfois exigus, couloirs, dalles, accès Vigik. Nous adaptions l’ordre des tâches pour garder des sols propres jusqu’à la sortie, et nous insistons sur les pièces d’eau (calcaire/joints) et les vitrages/baies des logements récents, qui révèlent vite les traces.</p>`,
 
   specificChallenges: [

@@ -472,13 +472,13 @@ const city: City = {
 <p class="mt-4">La contrainte la plus fréquente, c’est l’orga : <strong>stationnement compliqué</strong> autour de la gare et du centre, sens uniques, et circulation plus chargée sur la <strong>RN34 (boulevard Gallieni)</strong>. Ici, un bon résultat commence par un plan simple : arrivée/déchargement cadrés, puis enchaînement “zones sèches → zones humides” pour éviter de re-salir en sortie.</p>
 <p class="mt-4">Enfin, la ville a ses marqueurs : le <strong>Parc des Coteaux d’Avron</strong> (terre/poussières ramenées sur les entrées) et la <strong>Voie de l’Est</strong>, promenade linéaire qui traverse des quartiers résidentiels. Résultat : beaucoup de demandes tournent autour du grand ménage, des fins de bail proches RER, et des remises en état après travaux dans les pavillons du Plateau.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Secteur Gare RER A — rotations et contraintes de stationnement</h3>
+  uniqueDeepDive: `<h3>Secteur Gare RER A — rotations et contraintes de stationnement</h3>
 <p>Autour de la gare, les demandes sont souvent liées aux états des lieux, aux déménagements et aux remises en état rapides. On priorise ce qui “se voit” et ce qui “se contrôle” : cuisine et salle d’eau, sols, vitres accessibles, puis les finitions. La clé à Neuilly-Plaisance, c’est d’anticiper l’accès (badges, interphones) et le stationnement plus tendu dès le matin.</p>
 
-<h3>T2 : Centre-ville / RN34 — salissures urbaines et circulation</h3>
+<h3>Centre-ville / RN34 — salissures urbaines et circulation</h3>
 <p>Le centre et les axes comme le boulevard Gallieni concentrent davantage de poussière de voirie et de traces sur vitrages bas (trafic, pollution). On adapte la séquence pour éviter le voile : dépoussiérage minutieux, dégraissage ciblé, puis lavage des sols avec contrôle de séchage. Les créneaux sont choisis pour éviter les heures de pointe et limiter les allers-retours.</p>
 
-<h3>T3 : Plateau d’Avron — pavillons, parquets et volumes à étage</h3>
+<h3>Plateau d’Avron — pavillons, parquets et volumes à étage</h3>
 <p>Sur le Plateau, les logements sont plus grands, compartimentés, parfois avec véranda, chambre mansardée ou escalier. Ici, la priorité est la protection des sols (parquet chêne), le traitement des poussières après travaux, et une finition régulière pièce par pièce. Le relief joue sur la logistique : on vient avec une organisation claire pour que le portage matériel ne “mange” pas le temps de finition.</p>`,
 
   specificChallenges: [

@@ -502,13 +502,13 @@ nearbyCities: [
 <p class="mt-4">Le deuxième point, c’est la logistique. Montreuil se gère comme une ville de proche couronne collée à Paris : <strong>stationnement saturé</strong>, rues étroites, sens uniques, et des pics d’activité autour des stations de la <strong>ligne 9</strong> (Mairie de Montreuil, Croix de Chavaux, Robespierre). Les jours de marché, les abords se bloquent vite — et un bon résultat commence par une arrivée bien cadrée.</p>
 <p class="mt-4">Enfin, Montreuil a des marqueurs très spécifiques : les <strong>Murs à Pêches</strong> (terre/poussières fines ramenées sur les entrées) et des parcs en relief comme le <strong>Parc des Beaumonts</strong>. Cela se retrouve dans les demandes : sols à reprendre après passages, vitrages marqués (pollution + poussière), et remises en état rapides pour des rotations locatives proches métro.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Bas-Montreuil — lofts, ateliers et verrières</h3>
+  uniqueDeepDive: `<h3>Bas-Montreuil — lofts, ateliers et verrières</h3>
 <p>Dans le Bas-Montreuil, on rencontre plus souvent des volumes ouverts, des surfaces techniques (béton ciré, résine) et des vitrages atypiques (verrières, grandes baies). Le nettoyage se joue sur la bonne chimie et la bonne gestuelle : dépoussiérage fin, dégraissage cuisine, puis remise à niveau des sols sans laisser de voile. Les finitions (poignées, interrupteurs, plinthes) font toute la différence en sortie de location.</p>
 
-<h3>T2 : Mairie / Croix de Chavaux — densité, badges et contraintes de timing</h3>
+<h3>Mairie / Croix de Chavaux — densité, badges et contraintes de timing</h3>
 <p>Autour de la Mairie et de Croix de Chavaux, la contrainte n°1 est l’accès : digicode, interphone, parfois ascenseurs étroits, et un stationnement rarement simple. On travaille en séquence “zones sèches puis zones humides”, en gardant la sortie pour la fin afin de ne pas re-salir les sols. Les jours de marché, on privilégie des créneaux plus calmes pour éviter le temps perdu.</p>
 
-<h3>T3 : Haut-Montreuil — maisons, chantiers et résidences récentes</h3>
+<h3>Haut-Montreuil — maisons, chantiers et résidences récentes</h3>
 <p>Dans les secteurs pavillonnaires et les résidences récentes (ZAC et grands ensembles requalifiés), les demandes tournent beaucoup autour des fins de chantier, du grand ménage et des états des lieux. Ici, on insiste sur la poussière de travaux, les traces sur menuiseries, et la remise en état des salles d’eau (calcaire, joints). L’objectif : un rendu net et homogène, sans “zones oubliées”.</p>`,
 
   specificChallenges: [

@@ -473,13 +473,13 @@ nearbyCities: [
 <p class="mt-4">Le terrain impose aussi une vraie organisation. Entre les marchés (Adamville et La Varenne), les rues plus étroites du Vieux Saint-Maur, les sens uniques, et la densité autour des gares, l’intervention doit être planifiée : dépose du matériel, accès digicode/Vigik, puis déroulé sans allers-retours inutiles. Ici, la discrétion compte : voisinage proche, cages d’escalier, gardiens et règlements d’immeuble.</p>
 <p class="mt-4">On vise donc un résultat homogène : cuisine et salle d’eau (gras + calcaire), pièces de vie, puis finitions visibles (plinthes, interrupteurs, poignées, portes, traces sur vitrages accessibles). Sur les maisons, on ajoute la gestion des volumes (escaliers, véranda, baies, pièces techniques) pour que l’ensemble paraisse réellement “remis à niveau”.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Adamville / centre — états des lieux, accès et détails “qui se voient”</h3>
+  uniqueDeepDive: `<h3>Adamville / centre — états des lieux, accès et détails “qui se voient”</h3>
 <p>Autour d’Adamville et du centre, les interventions sont souvent liées à un état des lieux : logement vidé, timing serré, stationnement compliqué les jours de marché. On procède par zones (pièces d’eau → cuisine → sols → finitions) avec un contrôle final des points de contact et des plinthes, qui font la différence sur la perception “prêt à rendre”.</p>
 
-<h3>T2 : La Varenne Saint-Hilaire — villas, vérandas et vitrages exigeants</h3>
+<h3>La Varenne Saint-Hilaire — villas, vérandas et vitrages exigeants</h3>
 <p>À La Varenne, on rencontre fréquemment des maisons avec parquet massif, marbre/carrelage ancien, et de grandes surfaces vitrées (vérandas, baies sur jardin). L’enjeu est double : protéger les matériaux (éviter l’excès d’eau sur parquet, gestes propres sur boiseries) et obtenir un rendu net sur les vitres accessibles et les rebords, sans traces.</p>
 
-<h3>T3 : Vieux Saint-Maur / bords de Marne — logistique étroite et traces de promenade</h3>
+<h3>Vieux Saint-Maur / bords de Marne — logistique étroite et traces de promenade</h3>
 <p>Dans le Vieux Saint-Maur et près des promenades (Promenade des Anglais, quais), on gère souvent des entrées marquées par les allées-venues : terre, boue fine, traces sur carrelage ou parquet d’entrée. Les rues étroites et l’ancien imposent une intervention compacte : matériel limité, passages protégés, et une finition soignée sur les bas de portes, plinthes et escaliers.</p>`,
 
   specificChallenges: [

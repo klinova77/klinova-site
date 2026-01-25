@@ -500,13 +500,13 @@ nearbyCities: [
 <p class="mt-4">La ville se lit en contraste. D’un côté, le <strong>centre ancien</strong> et certains secteurs proches de la Marne : rues plus étroites, accès parfois plus délicats, et une humidité qui marque davantage cuisines, salles d’eau et bas de vitrages. De l’autre, la <strong>ZAC Maison Blanche</strong>, avec du neuf livré par phases : rotation locative, finitions à sécuriser, et surtout une réalité très concrète — <strong>poussières de chantier</strong> (plâtre/terre) qui reviennent vite si on ne nettoie pas dans le bon sens.</p>
 <p class="mt-4">Enfin, Neuilly-sur-Marne a ses repères : le <strong>Parc de la Haute-Île</strong> et le <strong>canal de Chelles</strong> structurent des zones résidentielles, tandis que l’emprise de <strong>Ville-Évrard</strong> et l’écoquartier modifient les flux. Résultat : les demandes typiques tournent autour des fins de bail, des remises en état de pavillons (Primevères / 24 Arpents) et des “après travaux” dans la dynamique Maison Blanche.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : ZAC Maison Blanche — neuf, retombées de chantier et états des lieux</h3>
+  uniqueDeepDive: `<h3>ZAC Maison Blanche — neuf, retombées de chantier et états des lieux</h3>
 <p>Sur Maison Blanche, la contrainte n°1 est la poussière fine (plâtre, découpe, va-et-vient de chantier) qui se redépose vite. On privilégie une séquence “anti-retombées” : dépoussiérage minutieux des hauteurs et surfaces planes, nettoyage des menuiseries, puis sols, avant de verrouiller la finition. C’est particulièrement adapté aux états des lieux et aux entrées/sorties rapides de locataires dans le neuf.</p>
 
-<h3>T2 : Centre-ville / Place Stalingrad — accès plus serrés et stationnement</h3>
+<h3>Centre-ville / Place Stalingrad — accès plus serrés et stationnement</h3>
 <p>Le centre concentre davantage de circulation, de stationnement contraint et d’accès par badges/digicodes. L’objectif est d’aller droit au rendu : cuisine/salle d’eau, sols, vitres accessibles, puis détails visibles. On organise aussi l’arrivée pour éviter les fenêtres horaires les plus chargées sur la RN34 et en zone bleue.</p>
 
-<h3>T3 : Bords de Marne / canal — humidité, terrasses et surfaces vitrées</h3>
+<h3>Bords de Marne / canal — humidité, terrasses et surfaces vitrées</h3>
 <p>Près de l’eau, l’humidité marque plus vite certains points : traces minérales, joints, et parfois une sensation de “film” sur les vitrages bas. On adapte les produits et le temps de contact, et on traite les zones de passage (entrée, pièces de vie) en priorité. Dans les pavillons, on sécurise aussi la protection des sols et l’enchaînement des pièces à l’étage pour ne pas re-salir en sortie.</p>`,
 
   specificChallenges: [

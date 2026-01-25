@@ -475,13 +475,13 @@ answer:
 <p class="mt-4">Un <strong>nettoyage appartement maison Gagny</strong> ne consiste pas à “faire du ménage”, mais à remettre de l’ordre dans les détails qui comptent : sols et plinthes marqués par le passage, cuisine avec graisses sur les zones accessibles, salle de bain où le calcaire ressort vite, vitrages bas exposés à la poussière de voirie. Selon le bâti (meulière avec parquet ancien, résidence récente au Chenay, petit collectif), les méthodes doivent rester maîtrisées pour éviter traces, voile ou excès d’humidité.</p>
 <p class="mt-4">Klinova intervient avec un cadre simple : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous calons l’accès (digicode, badge, gardien si besoin), organisons l’ordre des pièces, puis effectuons une remise en état structurée avec un contrôle visuel final, pour livrer un logement propre et cohérent.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Repérage et organisation</h3>
+  uniqueDeepDive: `<h3>Repérage et organisation</h3>
 <p>Nous identifions le contexte (logement vide, préparation de remise des clés, remise en état du logement après période d’inoccupation) et les surfaces : parquet ancien fréquent dans les meulières, carrelage et PVC en collectifs, vitrages variés (petits carreaux, baies plus récentes). Nous anticipons aussi les contraintes de Gagny : relief du Plateau, escaliers étroits en centre-ville, stationnement autour des gares.</p>
 
-<h3>T2 : Traitement par pièces, priorité aux zones sensibles</h3>
+<h3>Traitement par pièces, priorité aux zones sensibles</h3>
 <p>Nous procédons par zones : dépoussiérage et essuyage des surfaces accessibles, puis sols et plinthes avec une technique adaptée au revêtement. En cuisine, <strong>dégraissage cuisine</strong> sur les éléments accessibles (plans, crédences, façades selon l’état). En salle de bain, <strong>détartrage sanitaires</strong> ciblé sur robinetterie, parois et joints. Les points de contact (poignées, interrupteurs) et les vitres accessibles sont intégrés pour un rendu homogène. Un <strong>débarras léger si nécessaire</strong> peut être prévu pour libérer les zones à traiter.</p>
 
-<h3>T3 : Contrôle final et conseils d’aération</h3>
+<h3>Contrôle final et conseils d’aération</h3>
 <p>Nous terminons par un contrôle visuel pièce par pièce et une aération du logement. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> avec un résultat propre, sans promesse absolue : si un point doit être repris, il est traité immédiatement sur place quand c’est possible.</p>`,
 
   specificChallenges: [

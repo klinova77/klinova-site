@@ -416,13 +416,13 @@ nearbyCities: [
 <p class="mt-4">La logistique est un sujet à part entière. Entre les rues étroites, les sens uniques, les accès par digicode/Vigik et les gardiens, l’intervention doit être préparée : point de dépose, accès confirmé, puis déroulé efficace pour limiter les allers-retours et le bruit. Ici, la discrétion compte autant que le résultat : voisinage proche, cages d’escalier résonnantes et contraintes d’horaires.</p>
 <p class="mt-4">On travaille donc “à la Saint-Mandé” : on démarre par la cuisine et la salle d’eau (gras + calcaire), on enchaîne sur les sols avec protection des parquets, puis on verrouille les détails visibles à l’état des lieux (plinthes, poignées, interrupteurs, traces sur portes). Le but : un rendu net, homogène, sans mauvaise surprise sur les matériaux.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Mairie / Gallieni — densité, stationnement et finitions de centre-ville</h3>
+  uniqueDeepDive: `<h3>Mairie / Gallieni — densité, stationnement et finitions de centre-ville</h3>
 <p>Autour de la Place Charles Digeon et de l’axe Gallieni, la densité se traduit par une logistique serrée : peu de place, des accès sécurisés et des créneaux à optimiser. On privilégie un plan d’action “pièces d’eau → cuisine → sols → finitions”, avec une attention particulière aux cages d’escalier et au bruit (aspiration, déplacement du matériel).</p>
 
-<h3>T2 : Tourelle / lisière Paris 12 — dépôts urbains et vitrages exposés</h3>
+<h3>Tourelle / lisière Paris 12 — dépôts urbains et vitrages exposés</h3>
 <p>Proche des grands axes et du périphérique, certains logements cumulent particules fines, traces sur vitrages bas et salissures de rebords. On insiste sur les points de contact (poignées, interrupteurs), les plinthes et les surfaces basses, et on vise un rendu sans traces sur les fenêtres accessibles et les balcons filants.</p>
 
-<h3>T3 : Bord de Bois / secteurs résidentiels — parquets, matériaux nobles, exigence “sans compromis”</h3>
+<h3>Bord de Bois / secteurs résidentiels — parquets, matériaux nobles, exigence “sans compromis”</h3>
 <p>Dans les immeubles de standing près du Bois de Vincennes, l’enjeu est la protection : parquets anciens, marbre d’entrée, menuiseries bois. On adapte les produits et les gestes, on évite tout excès d’eau, et on termine par une passe de contrôle (angles, plinthes, encadrements) pour un rendu haut de gamme.</p>`,
 
   specificChallenges: [

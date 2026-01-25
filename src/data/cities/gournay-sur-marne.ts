@@ -476,13 +476,13 @@ nearbyCities: [
 <p class="mt-4">Entre les villas avec parquet bois et véranda, les maisons plus récentes, et quelques résidences R+2/R+3 en centre, les surfaces ne réagissent pas pareil : traces sur les vitrages, plinthes marquées, dépôts calcaires dans la salle de bain, cuisine à remettre au propre sur les zones accessibles. Sur les bords de l’eau, l’humidité impose aussi une méthode maîtrisée pour éviter les reprises ou les odeurs d’humide après passage.</p>
 <p class="mt-4">Pour un <strong>nettoyage appartement maison Gournay-sur-Marne</strong>, Klinova applique un cadre clair : <strong>selon l’état réel du logement, une visite technique peut être nécessaire.</strong> On définit le périmètre, on cale l’accès (clé, badge, stationnement), puis on déroule une remise en état par pièces, avec un contrôle final pour livrer un résultat propre et cohérent.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Cadrage et repérage du logement</h3>
+  uniqueDeepDive: `<h3>Cadrage et repérage du logement</h3>
 <p>Nous commençons par identifier le contexte (logement vide, avant état des lieux, remise en état du logement après période d’inoccupation) et les matériaux : parquet, carrelage, terre cuite, vitrages (baies, petits carreaux, véranda). Nous anticipons aussi les contraintes de Gournay : stationnement plus tendu autour de la Place de la Libération et circulation vers le Pont de Gournay aux heures chargées.</p>
 
-<h3>T2 : Intervention par zones, avec priorité aux pièces d’eau</h3>
+<h3>Intervention par zones, avec priorité aux pièces d’eau</h3>
 <p>Nous procédons de haut en bas : dépoussiérage des surfaces, plinthes, menuiseries, puis traitement des sols selon le revêtement. La cuisine est remise au propre avec un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires reçoivent un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour un rendu homogène. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à traiter.</p>
 
-<h3>T3 : Finitions, aération et contrôle</h3>
+<h3>Finitions, aération et contrôle</h3>
 <p>Nous terminons par un contrôle visuel pièce par pièce, et une aération conseillée pour limiter l’humidité résiduelle, particulièrement utile près des Bords de Marne. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong>, sans promesse absolue : l’intervention vise un rendu propre, lisible et conforme au périmètre défini.</p>`,
 
   specificChallenges: [

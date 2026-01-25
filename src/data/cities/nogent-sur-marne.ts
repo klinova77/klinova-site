@@ -499,13 +499,13 @@ nearbyCities: [
 <p class="mt-4">Le bâti est majoritairement <strong>ancien de standing</strong> (pierre, immeubles bourgeois, meulières), avec des résidences privées où les digicodes, interphones et parfois les gardiens sont la norme. Les sols y sont souvent plus sensibles : parquet massif, carrelage haut de gamme, pierre naturelle. L’objectif est donc double : remettre propre, mais surtout <strong>ne rien marquer</strong> (rayures, traces de produit, reprises visibles sur les vitres).</p>
 <p class="mt-4">Enfin, Nogent a ses marqueurs : le <strong>Pavillon Baltard</strong> et le <strong>port de plaisance</strong> structurent des zones de flux, tandis que le <strong>viaduc de Nogent</strong> (A4) et les grands axes amènent une pollution qui se voit vite sur balcons et vitrages. C’est typiquement une ville où la différence se fait sur les détails : finitions, transparence des vitres, et rendu “net” dans la cuisine/salle d’eau.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Le Village / Baltard — finitions, accès serrés et stationnement</h3>
+  uniqueDeepDive: `<h3>Le Village / Baltard — finitions, accès serrés et stationnement</h3>
 <p>Le centre nogentais est dense : sens uniques, stationnement tendu, accès parfois étroits dans l’ancien. Pour un fin de bail ou une remise en état, on privilégie un déroulé rapide et lisible : cuisine/salle d’eau en premier, surfaces, puis sols, avant de verrouiller les finitions (plinthes, portes, interrupteurs, inox/robinetterie). C’est aussi la zone où l’organisation “déchargement court + stationnement” fait gagner le plus de temps.</p>
 
-<h3>T2 : Plaisance / Viselets — maisons et parquet massif</h3>
+<h3>Plaisance / Viselets — maisons et parquet massif</h3>
 <p>Dans ces secteurs résidentiels, on trouve plus de pavillons, de meulières et de grands volumes. La priorité est la protection : chaussures propres, patins si nécessaire, et une gestion des sols en plusieurs passes (aspiration, lavage adapté, séchage/contrôle) pour éviter toute trace. Les demandes typiques sont le grand ménage avant emménagement, ou l’après-travaux léger avec beaucoup de poussière fine.</p>
 
-<h3>T3 : Le Port / bords de Marne — vitrages, humidité et balcons</h3>
+<h3>Le Port / bords de Marne — vitrages, humidité et balcons</h3>
 <p>Près de l’eau, les vitrages et extérieurs marquent davantage : film, traces minérales, salissures ramenées par les allées et venues du week-end. On traite les vitres accessibles et les garde-corps avec une méthode qui évite les reprises, puis on sécurise les zones de passage (entrée, séjour, cuisine). C’est un secteur où le rendu “clair” est immédiatement visible — et très apprécié.</p>`,
 
   specificChallenges: [

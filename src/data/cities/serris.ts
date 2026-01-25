@@ -467,13 +467,13 @@ const city: City = {
 <p class="mt-4">La ville a deux visages : le centre urbain néo-classique (Place d’Ariane, autour du RER A Val d’Europe) avec ses immeubles sécurisés et ses contraintes de stationnement, et le Bourg / secteurs plus calmes (Faubourg, Gassets) où l’on intervient davantage sur des maisons ou des volumes plus simples. Dans tous les cas, l’accès se prépare : digicode, badge, consignes d’immeuble, créneau horaire compatible avec les arrivées/départs.</p>
 <p class="mt-4">Enfin, Serris concentre des surfaces très “vitrées” (baies, balcons, parfois lucarnes décoratives) et des matériaux modernes : carrelage grand format, parquet stratifié, peintures récentes. Le bon résultat vient d’une méthode propre : peu d’eau sur les sols sensibles, produits adaptés, et une dernière passe de contrôle, surtout sur les zones qui se voient dès l’entrée.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Val d’Europe / Place d’Ariane — résultat “prêt à louer” et accès sécurisés</h3>
+  uniqueDeepDive: `<h3>Val d’Europe / Place d’Ariane — résultat “prêt à louer” et accès sécurisés</h3>
 <p>Dans le centre urbain, les interventions ressemblent souvent à une remise en état entre deux occupations : état des lieux, relocation, courte durée. On traite en priorité la salle d’eau (calcaire, joints, paroi), la cuisine (gras, crédence, façades), puis sols et finitions. L’accès est une contrainte réelle : badge, interphone, parkings souterrains et règles de copropriété.</p>
 
-<h3>T2 : Secteur RER A Val d’Europe — cadence et vitrages visibles</h3>
+<h3>Secteur RER A Val d’Europe — cadence et vitrages visibles</h3>
 <p>Autour de la gare, la rotation est forte. Les entrées d’immeuble et paliers ramènent facilement des traces, surtout par temps humide. On vise donc un rendu homogène : pas de marques sur carrelage, plinthes propres, portes et poignées traitées, et un nettoyage des vitrages accessibles pour retrouver la clarté des pièces (baies et portes-fenêtres).</p>
 
-<h3>T3 : Le Bourg / Faubourg / Gassets — volumes plus variés, fin de chantier et “grand ménage”</h3>
+<h3>Le Bourg / Faubourg / Gassets — volumes plus variés, fin de chantier et “grand ménage”</h3>
 <p>Dans les secteurs plus résidentiels, on rencontre davantage de maisons ou d’anciens bâtiments rénovés. Les demandes portent souvent sur un grand ménage de remise à niveau ou un nettoyage après travaux (poussière fine, traces de peinture). Le déroulé est alors plus “maison” : escaliers, pièces multiples, zones techniques, et contrôle final des rebords, plinthes et bas de murs.</p>`,
 
   specificChallenges: [

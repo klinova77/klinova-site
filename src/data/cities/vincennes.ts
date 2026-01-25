@@ -421,13 +421,13 @@ const city: City = {
 <p class="mt-4">Le niveau d’exigence est élevé, particulièrement dans les secteurs Carré Magique et Domaine du Bois : les défauts se voient vite sur un parquet ancien, une fenêtre à grands battants ou une salle de bain entartrée. À l’inverse, côté Saint-Louis, République ou Sorano, les logements peuvent être plus “vivants” (activité, commerces, flux), ce qui impose un nettoyage qui tient dans le temps : dégraissage cuisine, calcaire maîtrisé, et finitions propres sur les points de contact.</p>
 <p class="mt-4">L’objectif de la prestation est simple : un logement qui “se présente bien” dès l’entrée. Pas seulement les surfaces : aussi les détails qui trahissent un nettoyage approximatif (plinthes, interrupteurs, portes, rebords de fenêtres). Et à Vincennes, c’est exactement ce que les propriétaires, locataires et agences regardent en premier.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Centre / Avenue de Paris — haussmannien, parquet et accès contraints</h3>
+  uniqueDeepDive: `<h3>Centre / Avenue de Paris — haussmannien, parquet et accès contraints</h3>
 <p>Dans le cœur de Vincennes, on rencontre souvent des parquets anciens (pointe de Hongrie), des boiseries et des cages d’escalier étroites. L’approche est progressive : dépoussiérage complet, cuisine et pièces d’eau en priorité, puis sols avec une finition qui évite le voile et les traces. On protège les zones sensibles et on contrôle les détails visibles (plinthes, encadrements, poignées).</p>
 
-<h3>T2 : Carré Magique / Domaine du Bois — standing et finitions “sans compromis”</h3>
+<h3>Carré Magique / Domaine du Bois — standing et finitions “sans compromis”</h3>
 <p>Ces secteurs concentrent une clientèle très exigeante : vitrages plus exposés, entrées soignées, matériaux qualitatifs. On travaille “comme un contrôle qualité” : alignement du rendu sur toutes les pièces, traitement du calcaire sur robinetterie et parois, puis finitions nettes (interrupteurs, façades de cuisine, points de contact). Le but : un résultat homogène, pas juste des zones propres par endroits.</p>
 
-<h3>T3 : Rue de Fontenay / Saint-Louis — flux, commerces et organisation jour de marché</h3>
+<h3>Rue de Fontenay / Saint-Louis — flux, commerces et organisation jour de marché</h3>
 <p>Autour de l’axe commerçant et des jours de marché, la logistique compte autant que la technique : stationnement, déchargement, circulation piétonne. On structure l’intervention pour limiter les allers-retours et garder du temps utile sur le nettoyage. Sur les logements “en rotation”, l’enjeu est d’obtenir rapidement un niveau de propreté lisible : cuisine dégraissée, salle d’eau sans dépôts, sols uniformes.</p>`,
 
   specificChallenges: [

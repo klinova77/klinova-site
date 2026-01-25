@@ -465,13 +465,13 @@ nearbyCities: [
 <p class="mt-4">Sols marqués par l’usage, dépôts de calcaire dans les pièces d’eau, cuisine encrassée, vitrages ternis ou détails oubliés : un logement peut sembler propre à première vue tout en restant insuffisant pour une restitution sans réserve. Pavillons et appartements récents présentent en outre des matériaux variés qui exigent une approche maîtrisée.</p>
 <p class="mt-4">Klinova intervient avec une méthode claire : diagnostic du logement, choix des techniques selon les surfaces, gestion des accès (digicodes, badges) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> L’objectif est de rendre un logement propre, lisible et prêt à être présenté.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+  uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Chaque intervention débute par une évaluation précise : type de logement, nature des salissures (usage courant, logement inoccupé, résidus légers après intervention technique), surfaces sensibles et contraintes d’accès propres aux résidences de Bussy-Saint-Georges. Les éléments fragiles sont protégés et l’ordre de traitement est planifié.</p>
 
-<h3>T2 : Nettoyage par zones</h3>
+<h3>Nettoyage par zones</h3>
 <p>La <strong>remise en état du logement</strong> s’effectue pièce par pièce. Les sols sont nettoyés selon leur revêtement, les plinthes et points de contact sont traités, la cuisine fait l’objet d’un <strong>dégraissage cuisine</strong> ciblé, et la salle de bain d’un <strong>détartrage sanitaires</strong> adapté. Les vitres accessibles et finitions visuelles complètent l’intervention, qu’il s’agisse d’un <strong>nettoyage avant état des lieux</strong> ou d’un <strong>nettoyage après déménagement</strong>.</p>
 
-<h3>T3 : Contrôle et restitution</h3>
+<h3>Contrôle et restitution</h3>
 <p>Un contrôle visuel est réalisé dans chaque pièce, suivi d’une aération du logement. L’intervention se conclut par une restitution claire, permettant une réoccupation immédiate ou une présentation sereine lors de l’état des lieux.</p>`,
 
   specificChallenges: [

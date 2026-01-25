@@ -459,13 +459,13 @@ nearbyCities: [
 <p class="mt-4">Klinova intervient au Raincy pour les remises en état avant état des lieux, après chantier (plâtre/peinture), ou lors d’un déménagement. L’approche reste simple : repérage des surfaces et des contraintes (digicode, gardien, stationnement), traitement des zones à fort impact (cuisine, salle d’eau, sols), puis finitions visibles. Dans une ville marquée par un patrimoine fort comme <strong>Notre-Dame du Raincy</strong>, beaucoup de logements conservent des détails architecturaux et des vitrages qui demandent une attention particulière.</p>
 <p class="mt-4">Le but est un rendu “propre au premier regard” sans abîmer : contrôle des traces sur sols, suppression des dépôts minéraux (calcaire), et reprise des zones de passage. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est d’autant plus utile quand l’accès est contraint (centre-ville) ou quand la discrétion est une attente forte du voisinage (secteurs pavillonnaires).</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Protection des sols et gestion du bâti “standing”</h3>
+  uniqueDeepDive: `<h3>Protection des sols et gestion du bâti “standing”</h3>
 <p>Au Raincy, la priorité est d’éviter toute dégradation : parquet massif, marbre, menuiseries anciennes, escaliers étroits. Nous adaptons l’humidité, les produits et l’ordre des tâches pour limiter les risques, et nous gardons une logique “protection d’abord” avant d’attaquer les zones techniques. Cette approche est particulièrement adaptée aux villas du Plateau et aux immeubles bourgeois du centre.</p>
 
-<h3>T2 : Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>
+<h3>Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>
 <p>La cuisine et la salle de bain concentrent l’essentiel du contrôle en état des lieux. Nous effectuons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur. Les joints de carrelage et zones d’écoulement sont traités avec méthode, en évitant les produits agressifs qui “marquent” les surfaces ou la robinetterie.</p>
 
-<h3>T3 : Vitrages, traces de circulation et contrôle final</h3>
+<h3>Vitrages, traces de circulation et contrôle final</h3>
 <p>Entre flux pendulaires (RER E) et trafic sur les axes locaux, les vitrages et rebords bas peuvent vite se charger en suie/poussière. Nous terminons par les vitres accessibles, encadrements et poignées, puis un contrôle des points visibles : plinthes, interrupteurs, portes, et sols dans les zones de passage. L’objectif : un rendu homogène, sans reprise apparente, prêt pour une visite ou un état des lieux.</p>`,
 
   specificChallenges: [

@@ -489,13 +489,13 @@ specificChallenges: [
 <p class="mt-4">Le tissu local est très majoritairement pavillonnaire, avec des demeures de caractère et des maisons rénovées. Cela implique de travailler proprement, sans “décaler” le résultat : on évite l’excès d’eau sur les bois, on traite les joints et le calcaire de façon contrôlée, et on finit par un contrôle visuel des points qui comptent en état des lieux (cuisine, salle d’eau, sols, vitrages accessibles).</p>
 <p class="mt-4">Pour un <strong>nettoyage appartement maison Le Perreux-sur-Marne</strong>, Klinova procède avec un déroulé clair : repérage rapide (surfaces, matériaux, priorités), remise en état pièce par pièce, puis finitions. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est particulièrement utile dans les résidences de standing (gardien, badge) et quand l’accès est plus contraint autour de la gare Nogent–Le Perreux.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Accès, organisation et protection des matériaux</h3>
+  uniqueDeepDive: `<h3>Accès, organisation et protection des matériaux</h3>
 <p>Le Perreux combine centre-ville dense et quartiers pavillonnaires calmes. Nous cadrons l’accès (clé, digicode, présence d’un gardien) et l’organisation (étage, escaliers, zones à prioriser) avant de démarrer. Dans les pavillons, l’objectif est aussi de protéger les matériaux : parquets, plinthes, menuiseries, et zones fragiles autour des vitrages.</p>
 
-<h3>T2 : Remise en état cuisine / salle de bain avec gestion du calcaire</h3>
+<h3>Remise en état cuisine / salle de bain avec gestion du calcaire</h3>
 <p>La cuisine et la salle d’eau concentrent la majorité des points de contrôle en état des lieux. Nous réalisons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du 94 (robinetterie, parois, zones d’écoulement, joints si nécessaire). Les sols sont traités selon leur nature : parquet, carrelage, revêtements plus récents en résidence.</p>
 
-<h3>T3 : Vitrages accessibles, finitions et contrôle final “état des lieux”</h3>
+<h3>Vitrages accessibles, finitions et contrôle final “état des lieux”</h3>
 <p>Les logements perreuxiens sont souvent lumineux : une finition imparfaite se remarque vite. Nous terminons par les vitrages accessibles (vitres, rebords, encadrements), puis un contrôle des points visibles : traces au sol, marques sur portes et interrupteurs, bords de plinthes, et zones de passage. En fin d’intervention, une aération est recommandée pour retrouver rapidement un logement confortable.</p>`,
 
   specificChallenges: [

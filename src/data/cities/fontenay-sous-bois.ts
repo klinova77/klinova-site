@@ -465,13 +465,13 @@ nearbyCities: [
 <p class="mt-4">Un <strong>nettoyage appartement maison Fontenay-sous-Bois</strong> efficace, c’est d’abord une méthode : traiter ce qui se voit, mais aussi ce qui fait la différence le jour de la visite ou de l’état des lieux. Parquet ancien à préserver côté Village, carrelage et revêtements récents à entretenir sans voile, moquette ponctuelle en logements de standing : chaque surface demande le bon geste et le bon produit.</p>
 <p class="mt-4">Klinova intervient avec une organisation claire : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Nous gérons l’accès (digicodes, gardiens, consignes de copropriété), puis nous déroulons une remise en état structurée par zones, avec un contrôle final pour rendre un logement propre, lisible et prêt à être occupé ou présenté.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Diagnostic et préparation</h3>
+  uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Nous vérifions l’état réel du bien (logement vide, usage intensif, remise en état du logement après période d’inoccupation), la nature des revêtements (parquet ancien, carrelage, stratifié, textiles) et les contraintes d’accès : rues étroites du Village, stationnement tendu autour de Val de Fontenay, digicodes et gardiens. Cette étape fixe l’ordre d’intervention et le niveau de détail attendu.</p>
 
-<h3>T2 : Grand ménage par zones, sans approximation</h3>
+<h3>Grand ménage par zones, sans approximation</h3>
 <p>Nous commençons par un dépoussiérage complet (plinthes, menuiseries, surfaces accessibles), puis les sols sont traités selon leur nature. En cuisine : <strong>dégraissage cuisine</strong> sur les éléments accessibles (plans, crédences, façades selon l’état). En salle de bain : <strong>détartrage sanitaires</strong> adapté sur les zones critiques (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitrages accessibles sont inclus pour un rendu homogène. Si nécessaire, nous réalisons un <strong>débarras léger si nécessaire</strong> afin de dégager les zones à traiter.</p>
 
-<h3>T3 : Contrôle final et remise</h3>
+<h3>Contrôle final et remise</h3>
 <p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de sécuriser un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> avec un rendu propre et cohérent, sans surpromesse : on vise la propreté attendue pour une restitution sereine.</p>`,
 
   specificChallenges: [

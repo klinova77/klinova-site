@@ -486,13 +486,13 @@ const city: City = {
 <p class="mt-4">Le centre-ville autour de la <strong>Place de la Fontaine</strong> concentre beaucoup de commerces et de passages : on y retrouve plus facilement des traces de poussière fine, des sols sollicités, et des contraintes d’accès (digicode, horaires, stationnement). À l’inverse, les secteurs plus récents comme les Tanneries demandent souvent une attention particulière aux baies vitrées, aux rebords et aux finitions, surtout quand le logement est lumineux et très “visible”.</p>
 <p class="mt-4">Pour un <strong>nettoyage appartement maison Lagny-sur-Marne</strong>, Klinova privilégie un déroulé clair : repérage des surfaces et des matériaux, traitement des pièces “sensibles” (cuisine, salle de bain), puis finitions et contrôle final. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Cela permet d’éviter les incompréhensions, surtout lorsqu’il faut gérer un accès compliqué ou un créneau serré avant un état des lieux.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Préparation et accès (centre historique vs quartiers résidentiels)</h3>
+  uniqueDeepDive: `<h3>Préparation et accès (centre historique vs quartiers résidentiels)</h3>
 <p>À Lagny, la logistique est une partie du résultat : stationnement plus compliqué en centre-ville, circulation régulée, immeubles sans ascenseur, et affluence le jour du marché Place de la Fontaine. Nous cadrons l’accès (clé, digicode, badge) et l’organisation (étage, volume, présence de meubles) avant de démarrer, pour travailler efficacement sans perdre de temps sur place.</p>
 
-<h3>T2 : Remise en état “pièce par pièce” avec focus cuisine et sanitaires</h3>
+<h3>Remise en état “pièce par pièce” avec focus cuisine et sanitaires</h3>
 <p>Le nettoyage suit une logique simple : dépoussiérage structuré, surfaces et points de contact, puis traitement des sols selon le revêtement (parquet ancien en centre, carrelage en pavillon, lino en collectif). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les zones clés (plans, crédences, façades accessibles selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur 77 (robinetterie, parois, joints). Les vitres accessibles et les rebords sont inclus pour homogénéiser le rendu.</p>
 
-<h3>T3 : Finitions, vitrages et contrôle avant remise des clés</h3>
+<h3>Finitions, vitrages et contrôle avant remise des clés</h3>
 <p>Nous terminons par les finitions : reprises ponctuelles, contrôle des traces visibles et vérification “à l’œil” des zones qui comptent en état des lieux (cuisine, salle d’eau, plinthes, vitrages accessibles). Une aération est recommandée en fin d’intervention pour retrouver rapidement un logement confortable, particulièrement après un nettoyage complet sur plusieurs pièces.</p>`,
 
   specificChallenges: [

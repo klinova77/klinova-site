@@ -439,13 +439,13 @@ nearbyCities: [
 <p class="mt-4">Quand une date d’état des lieux se rapproche, le besoin est clair : rendre le logement propre, homogène, sans “zones oubliées”. Traces grasses en cuisine, dépôts de calcaire dans la salle de bain, plinthes ternies par la poussière urbaine : la priorité est de traiter ce qui se voit, mais aussi ce qui déclenche les remarques lors d’une visite ou d’une remise des clés. Pour un <strong>nettoyage appartement maison Charenton-le-Pont</strong>, l’objectif n’est pas le volume d’eau ou la force, mais le bon geste sur la bonne surface.</p>
 <p class="mt-4">Klinova intervient avec un cadre simple : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Puis nous déroulons une remise en état par zones, en tenant compte des accès (interphones, badges, gardiens) et des contraintes de stationnement du 94220.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Cadrage et préparation</h3>
+  uniqueDeepDive: `<h3>Cadrage et préparation</h3>
 <p>Nous identifions l’état réel du logement et les points sensibles : parquet ancien (souvent en point de Hongrie) dans le Centre-Ville, pièces d’eau marquées par le calcaire, vitrages plus exposés côté Valmy. Les accès sont vérifiés (Vigik, consignes de gardien), et l’ordre d’intervention est planifié pour limiter les allers-retours dans les cages d’escalier étroites.</p>
 
-<h3>T2 : Remise en état par pièces</h3>
+<h3>Remise en état par pièces</h3>
 <p>Les sols et plinthes sont traités selon le revêtement : nettoyage maîtrisé des parquets (sans sur-humidifier), lavage adapté des carrelages, traitement des sols souples. La cuisine reçoit un <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, joints et robinetterie selon tolérance des matériaux. Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour un rendu cohérent.</p>
 
-<h3>T3 : Contrôle final et restitution</h3>
+<h3>Contrôle final et restitution</h3>
 <p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. Cette étape sécurise un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong> : rendu homogène, sans traces ni finitions approximatives.</p>`,
 
   specificChallenges: [

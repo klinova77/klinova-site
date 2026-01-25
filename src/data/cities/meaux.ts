@@ -469,13 +469,13 @@ const city: City = {
 <p class="mt-4">Le centre-ville autour de la <strong>Cathédrale Saint-Étienne</strong> et du Marché offre souvent des surfaces atypiques : parquets anciens, escaliers étroits, pièces en enfilade, lucarnes ou petites menuiseries. À l’inverse, les zones plus récentes (secteur <strong>Foch</strong> / opérations neuves) demandent surtout des finitions nettes sur baies vitrées, sols modernes et salles d’eau où le calcaire se voit vite.</p>
 <p class="mt-4">Klinova intervient à Meaux avec une méthode “résultat + logistique” : cadrer le périmètre (pièces, niveau d’encrassement, accès), traiter les zones à impact (cuisine/SDB, sols), puis sécuriser les finitions. Objectif : un rendu cohérent, compatible avec une visite d’état des lieux ou une remise en état avant location/vente, sans perdre de temps sur une organisation mal anticipée.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Centre-ville / Cathédrale / Marché — accès contraints et finitions minutieuses</h3>
+  uniqueDeepDive: `<h3>Centre-ville / Cathédrale / Marché — accès contraints et finitions minutieuses</h3>
 <p>Dans le cœur historique, l’enjeu principal est le couple “accès + précision”. On planifie l’arrivée, le déchargement et l’ordre des pièces pour éviter de re-salir. Les parquets anciens et les escaliers demandent une approche mesurée, et les détails (plinthes, moulures, portes, joints) font la différence sur le rendu final.</p>
 
-<h3>T2 : Beauval / Dunant — rotation locative et volumes collectifs</h3>
+<h3>Beauval / Dunant — rotation locative et volumes collectifs</h3>
 <p>Sur les secteurs denses, on travaille en séquence : cuisine et salle d’eau d’abord (zones qui “vendent” le résultat), puis sols et finitions, en gardant une logique de sortie propre. Les accès (digicodes, gardiens) et les ascenseurs influencent le tempo : tout est prévu pour limiter les allers-retours et tenir un créneau réaliste.</p>
 
-<h3>T3 : Saint-Faron / pavillonnaire — maisons, étages et extérieurs</h3>
+<h3>Saint-Faron / pavillonnaire — maisons, étages et extérieurs</h3>
 <p>Les maisons demandent une progression par zones (haut/bas) et une attention particulière aux traces de circulation (escaliers, entrées, couloirs). Les vérandas, Velux et baies vitrées sont fréquents, tout comme les petites terrasses ou abords de jardin : on adapte le périmètre selon l’objectif (grand ménage, déménagement, remise en état avant vente).</p>`,
 
   specificChallenges: [

@@ -465,13 +465,13 @@ nearbyCities: [
 <p class="mt-4">La ville subit aussi des impacts très concrets : l’A104 et la RN4 génèrent des dépôts sur les vitres et les rebords, et le pôle commercial (secteur Carrefour) amplifie le trafic et la poussière de parkings autour. Résultat : on rencontre souvent des entrées d’immeubles plus marquées, des vitres basses plus grasses, et des sols qui s’encrassent vite au niveau des zones de passage.</p>
 <p class="mt-4">Notre approche consiste à <strong>séquencer intelligemment</strong> : d’abord les zones qui “font la note” à l’état des lieux (cuisine/salle d’eau, sols, traces sur portes/interrupteurs), puis les finitions visibles (plinthes, vitrages accessibles, détails). Dans le pavillonnaire, on protège les sols, on gère le calcaire et on vise un rendu homogène — surtout quand il y a verrière, Velux ou véranda, très fréquents sur ce secteur.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Quartier de la Gare — interventions rapides et contraintes d’accès</h3>
+  uniqueDeepDive: `<h3>Quartier de la Gare — interventions rapides et contraintes d’accès</h3>
 <p>Autour de la gare RER E, les demandes tournent souvent autour du “prêt à rendre” : fin de bail, remise en état avant relocation, ou grand ménage ponctuel. L’enjeu n’est pas seulement le nettoyage : c’est l’accès (badge, digicode, gardien), le stationnement et les créneaux. On privilégie une progression simple : pièces d’eau et cuisine en premier, puis sols, puis finitions et contrôle.</p>
 
-<h3>T2 : Le Village / centre — bâti plus ancien et rues plus serrées</h3>
+<h3>Le Village / centre — bâti plus ancien et rues plus serrées</h3>
 <p>Sur le cœur historique, on retrouve des accès plus étroits et parfois des immeubles avec escaliers serrés. La logistique (déchargement, allers-retours) doit être optimisée. Ici, le rendu “propre visuel” dépend beaucoup des détails : portes, encadrements, plinthes, et les zones de passage qui accumulent plus vite poussière et traces.</p>
 
-<h3>T3 : La Montagne / Oiseau de France / Val du Muguet — maisons, volumes et vitres</h3>
+<h3>La Montagne / Oiseau de France / Val du Muguet — maisons, volumes et vitres</h3>
 <p>Dans le pavillonnaire, on intervient sur des surfaces plus grandes, avec une attention forte sur les sols, les cuisines/salles d’eau et les vitrages (baies, Velux, vérandas). Les salissures typiques sont différentes : terre ramenée du jardin, traces sur les seuils, dépôts de calcaire et de gras en cuisine. L’objectif est un rendu net et cohérent, sans “zones oubliées”.</p>`,
 
   specificChallenges: [

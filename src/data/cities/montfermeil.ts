@@ -477,13 +477,13 @@ nearbyCities: [
 <p class="mt-4">Le second moteur local, c’est le <strong>GHI Le Raincy–Montfermeil</strong> et le terminus du <strong>Tram T4</strong> : on voit davantage de demandes “pragmatiques” (rotation de logements de soignants, états des lieux rapides, remises en état avant relocation) avec des horaires sensibles. Dans ces cas-là, la qualité se joue sur une méthode claire : cadrer le périmètre, traiter en priorité ce qui se voit et se contrôle, puis verrouiller les finitions.</p>
 <p class="mt-4">Enfin, Montfermeil a un vrai ADN “ville-parc” autour de l’<strong>Arboretum</strong> et du <strong>Château des Cèdres</strong>. Concrètement, cela se traduit souvent par des maisons avec jardins, terrasses et vitrages plus exposés (pollen, poussière, traces extérieures). Le bon niveau de prestation consiste à livrer un rendu net, sans bruit inutile, et en protégeant les sols (parquet, carrelage) dans des quartiers où le voisinage est attentif.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3>
+  uniqueDeepDive: `<h3>Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3>
 <p>Dans les pavillons, la difficulté est rarement “une pièce”, mais l’enchaînement : entrée, escalier, couloirs, puis cuisine et salles d’eau où le calcaire se voit très vite. Les vérandas, baies vitrées et Velux reviennent souvent : on adapte le périmètre pour obtenir un résultat cohérent, surtout avant visite ou mise en location.</p>
 
-<h3>T2 : Secteurs collectifs (Bosquets / Centre) — accès, badges et séquence de nettoyage</h3>
+<h3>Secteurs collectifs (Bosquets / Centre) — accès, badges et séquence de nettoyage</h3>
 <p>En collectif, le rythme est dicté par les accès (digicode, badge, ascenseur) et la circulation. On travaille en séquence “de l’arrière vers la sortie” pour garder les sols propres jusqu’au dernier passage. En fin de bail, on priorise les zones contrôlées : cuisine, salle d’eau, sols, puis finitions (plinthes, portes, interrupteurs).</p>
 
-<h3>T3 : Pôle Hôpital / Tram T4 — demandes réactives et contraintes de stationnement</h3>
+<h3>Pôle Hôpital / Tram T4 — demandes réactives et contraintes de stationnement</h3>
 <p>Autour du GHI et des stations T4, la demande est plus “calée” sur des horaires : relèves, créneaux serrés, logements de rotation. L’enjeu ici, c’est l’anticipation : arrivée, déchargement, ordre d’intervention. Cette organisation évite les pertes de temps et garantit un rendu propre même quand la logistique est tendue.</p>`,
 
   specificChallenges: [

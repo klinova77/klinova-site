@@ -486,13 +486,13 @@ const city: City = {
 <p class="mt-4">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>
 <p class="mt-4">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>
+  uniqueDeepDive: `<h3>Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>
 <p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : badge/digicode, stationnement plus serré, et interventions à caler sur des créneaux fluides. On vise un rendu homogène : sols sans traces, cuisine et salle d’eau traitées sérieusement, et contrôle des points qui se voient tout de suite (plinthes, bas de portes, poignées).</p>
 
-<h3>T2 : Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>
+<h3>Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>
 <p>Le centre historique impose souvent des accès plus étroits et des escaliers qui ralentissent les allers-retours. On travaille alors de façon séquencée : dépoussiérage complet, dégraissage cuisine, salle d’eau et traitements calcaire, puis sols et finitions. Le but : éviter les reprises et les “manques” typiques des logements anciens (rebords, radiateurs, encadrements).</p>
 
-<h3>T3 : Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>
+<h3>Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>
 <p>En pavillonnaire, la difficulté est l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite. On recherche l’uniformité : poussière extraite des angles, sols nets sans voile, et pièces d’eau propres sur la durée. Les abords RN3/A104 rendent aussi les traces plus visibles sur les fenêtres et surfaces proches de l’extérieur.</p>`,
 
   specificChallenges: [

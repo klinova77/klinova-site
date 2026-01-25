@@ -438,13 +438,13 @@ nearbyCities: [
 <p class="mt-4">La RN3 donne un marqueur très concret sur le résultat : les vitrages et rebords proches de l’axe prennent plus vite une <strong>pellicule grasse</strong> (poussières + trafic), surtout en façade basse. C’est souvent ce qui fait la différence lors d’un état des lieux ou avant une visite : vitres, encadrements, plinthes et sols d’entrée doivent être homogènes, sans traces de reprise.</p>
 <p class="mt-4">Klinova intervient à Livry-Gargan pour des remises en état ponctuelles (fin de bail, déménagement, retour de chantier) avec une méthode simple : cadrage du périmètre, traitement des zones qui “se voient” (pièces d’eau, cuisine, sols), puis finitions. L’objectif est un rendu net, sans abîmer les matériaux et en restant discret — surtout dans les secteurs pavillonnaires où le voisinage est attentif au bruit et aux allées/venues.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : RN3 et poussières urbaines — vitrages, rebords et entrées</h3>
+  uniqueDeepDive: `<h3>RN3 et poussières urbaines — vitrages, rebords et entrées</h3>
 <p>Sur les logements proches de l’Avenue Aristide Briand, les salissures reviennent vite sur les vitres, appuis et encadrements. Nous traitons ces zones en fin de prestation pour éviter les re-traces, en reprenant aussi les points “main” (poignées, interrupteurs) et les sols d’entrée, souvent les premiers contrôlés en fin de bail.</p>
 
-<h3>T2 : Pavillons et circulations — escaliers, parquets et plinthes</h3>
+<h3>Pavillons et circulations — escaliers, parquets et plinthes</h3>
 <p>Dans les quartiers pavillonnaires (Jacob, Sully, Plateau), la difficulté n’est pas la surface brute mais la circulation : escaliers, paliers, pièces multiples et parfois une véranda ou une baie donnant sur jardin. Nous travaillons par étages, avec une attention sur les parquets (humidification maîtrisée) et les plinthes, qui font “sale” même quand le sol paraît propre.</p>
 
-<h3>T3 : Cuisine et salle d’eau — calcaire, joints et finitions visibles</h3>
+<h3>Cuisine et salle d’eau — calcaire, joints et finitions visibles</h3>
 <p>Le calcaire et les dépôts sur robinetterie, parois et sanitaires donnent vite un aspect terne. Nous priorisons un détartrage adapté (sans agresser chrome et surfaces) et un dégraissage cuisine ciblé, puis un contrôle final des zones de projection : crédence, angles, contours d’évier, bas de meubles accessibles. Le but : un rendu propre et stable, sans odeur ni traces persistantes.</p>`,
 
   specificChallenges: [

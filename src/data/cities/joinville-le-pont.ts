@@ -488,13 +488,13 @@ nearbyCities: [
 <p class="mt-4">Les configurations varient beaucoup : parquet chêne et menuiseries soignées dans les villas, petites cages d’escalier dans l’ancien, résidences plus récentes vers les Hauts-de-Joinville. On rencontre aussi des vitrages plus exigeants (baies, vérandas, garde-corps vitrés) et une salissure urbaine plus marquée côté axes routiers. Chaque intervention doit donc être ajustée, sans méthode “copiée-collée”.</p>
 <p class="mt-4">Pour un <strong>nettoyage appartement maison Joinville-le-Pont</strong>, Klinova travaille avec un cadre clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> On valide les surfaces, l’accès (digicode, badge, clés) et la logistique (stationnement, étage), puis on déroule une remise en état par zones, avec finitions et contrôle visuel avant restitution.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Cadrage, accès et repérage des surfaces</h3>
+  uniqueDeepDive: `<h3>Cadrage, accès et repérage des surfaces</h3>
 <p>Nous identifions le contexte (logement vide, déménagement, avant remise des clés, remise en état du logement après travaux légers) et les matériaux : parquet, carrelage, terre cuite, peintures récentes, vitrages (baies, vérandas). À Joinville, le point clé est souvent la logistique : stationnement en centre-ville, rues en sens unique vers les bords de Marne, et saturation possible autour du Pont de Joinville selon l’horaire.</p>
 
-<h3>T2 : Nettoyage méthodique, pièce par pièce</h3>
+<h3>Nettoyage méthodique, pièce par pièce</h3>
 <p>Nous commençons par un dépoussiérage structuré (surfaces, plinthes, menuiseries), puis les sols sont traités selon le revêtement, avec une humidité maîtrisée sur parquet. La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour homogénéiser le rendu. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à nettoyer.</p>
 
-<h3>T3 : Finitions, vitres et contrôle de restitution</h3>
+<h3>Finitions, vitres et contrôle de restitution</h3>
 <p>Nous terminons par les finitions : vérification des traces sur vitrages accessibles, reprise des détails visibles et contrôle final pièce par pièce. Une aération est conseillée en fin d’intervention pour accélérer le confort d’usage. Le but est un rendu propre et lisible pour un état des lieux ou une remise des clés, conformément au périmètre défini.</p>`,
 
   specificChallenges: [

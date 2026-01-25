@@ -423,13 +423,13 @@ const city: City = {
 <p class="mt-4">Dans les secteurs proches des gares RER A (Mont d’Est, Noisy-Champs) et du centre commercial, la difficulté est souvent l’organisation : arrivées, badges, gardiens, parkings souterrains, et <strong>horaires sensibles</strong> (pics pendulaires). Côté salissures, on retrouve du piétinement marqué, de la poussière ferroviaire, et — autour de Noisy-Champs — des poussières fines liées aux travaux et aux aménagements.</p>
 <p class="mt-4">À l’inverse, sur les bords de Marne et dans les quartiers pavillonnaires, on intervient davantage sur des volumes plus grands et des finitions “maison” : vitres, cuisines, salles d’eau, et sols à préserver. La signature de Noisy, c’est aussi ses bâtiments iconiques : <strong>Abraxas</strong> et les <strong>Arènes de Picasso</strong> demandent parfois une approche spécifique sur les vitrages et les communs, avec un rendu net sans traces, même sur des surfaces plus complexes.</p>`,
 
-  uniqueDeepDive: `<h3>T1 : Mont d’Est — fin de bail, rotation et contraintes de flux</h3>
+  uniqueDeepDive: `<h3>Mont d’Est — fin de bail, rotation et contraintes de flux</h3>
 <p>Autour des gares RER A et des zones tertiaires, les demandes typiques sont la remise en état rapide (sortie locataire, remise en location) et le nettoyage ponctuel “niveau état des lieux”. L’enjeu est surtout l’efficacité : accès par badge/Vigik, créneaux à éviter, et parfois passage par parking souterrain. On déroule en séquence : cuisine/salle d’eau, surfaces, sols, puis finitions visibles.</p>
 
-<h3>T2 : Pavé Neuf / Abraxas / Picasso — résidences denses et vitrages atypiques</h3>
+<h3>Pavé Neuf / Abraxas / Picasso — résidences denses et vitrages atypiques</h3>
 <p>Dans ces ensembles, l’accès (digicodes, gardiens) et les circulations peuvent être plus structurants que la surface elle-même. On adapte l’intervention au logement et au bâtiment : poussière dans les entrées, traces sur vitres, et contraintes de stationnement. Sur certains logements, les vitrages/baies et les matériaux demandent un contrôle rigoureux pour éviter les reprises et obtenir un rendu homogène.</p>
 
-<h3>T3 : Richardets / Yvris / Bords de Marne — maisons, volumes et “rendu premium”</h3>
+<h3>Richardets / Yvris / Bords de Marne — maisons, volumes et “rendu premium”</h3>
 <p>Les quartiers pavillonnaires et les bords de Marne amènent d’autres profils : grands ménages, après-travaux, nettoyage avant emménagement. Ici, on priorise la protection des sols, la gestion du calcaire en salle d’eau, et la clarté des vitres. La gare RER E des Yvris apporte aussi des allers-retours quotidiens : l’entrée et les zones de passage sont souvent les plus marquées.</p>`,
 
   specificChallenges: [
