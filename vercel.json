@@ -12,8 +12,8 @@
 
     { "source": "/nettoyage-de-moquettes", "destination": "/nettoyage-moquettes", "permanent": true },
     { "source": "/nettoyage-professionnel-parkings-garages", "destination": "/nettoyage-parkings", "permanent": true },
-    { "source": "/nettoyage-terrasses-exterieurs", "destination": "/nettoyage-balcons", "permanent": true },
-    { "source": "/nettoyage-terrasses-et-dexterieurs-copy", "destination": "/nettoyage-balcons", "permanent": true },
+    { "source": "/nettoyage-terrasses-exterieurs", "destination": "/nettoyage-terrasses", "permanent": true },
+    { "source": "/nettoyage-terrasses-et-dexterieurs-copy", "destination": "/nettoyage-terrasses", "permanent": true },
     { "source": "/nettoyage-professionnel-exterieurs", "destination": "/nettoyage-parkings", "permanent": true },
     { "source": "/nettoyage-textiles", "destination": "/nettoyage-moquettes", "permanent": true },
 
@@ -28,22 +28,22 @@
     { "source": "/references", "destination": "/", "permanent": true },
 
     { "source": "/devis-nettoyage-moquette", "destination": "/nettoyage-moquettes", "permanent": true },
-    { "source": "/test-terrasses", "destination": "/nettoyage-balcons-fientes-pigeons", "permanent": true },
+    { "source": "/test-terrasses", "destination": "/nettoyage-terrasses", "permanent": true },
 
     { "source": "/eradication-punaises-de-lit", "destination": "/", "permanent": true },
-    { "source": "/remise-en-etat-logement", "destination": "/", "permanent": true },
+    { "source": "/remise-en-etat-logement", "destination": "/nettoyage-appartement-maison", "permanent": true },
     { "source": "/entretien-dimmeubles-et-coproprietes", "destination": "/", "permanent": true },
-    { "source": "/nettoyage-professionnel-airbnb", "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel-airbnb", "destination": "/nettoyage-appartement-maison", "permanent": true },
     { "source": "/nettoyage-professionnel-bureaux-locaux", "destination": "/", "permanent": true },
-    { "source": "/nettoyage-professionnel-fin-chantier", "destination": "/", "permanent": true },
-    { "source": "/nettoyage-de-diogene", "destination": "/", "permanent": true },
+    { "source": "/nettoyage-professionnel-fin-chantier", "destination": "/nettoyage-appartement-maison", "permanent": true },
+    { "source": "/nettoyage-de-diogene", "destination": "/nettoyage-appartement-maison", "permanent": true },
     { "source": "/nettoyage-professionnel", "destination": "/", "permanent": true },
 
     { "source": "/autres-services", "destination": "/", "permanent": true },
-    { "source": "/nettoyage-terrasses", "destination": "/nettoyage-balcons", "permanent": true },
+    
     { "source": "/test-hero-stat", "destination": "/", "permanent": true },
 
-    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/", "permanent": true },
+    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/nettoyage-appartement-maison", "permanent": true },
 
        {
       "source": "/zones-d-intervention/noisy-le-grand/nettoyage-balcons-fientes-pigeons",
