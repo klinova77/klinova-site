@@ -47,8 +47,12 @@ const city: City = {
 
 
   nearbyCities: [
+       "arcueil",
+       "montrouge",
+       "cachan",
        "ivry-sur-seine",
        "charenton-le-pont",
+       "alfortville",
        "saint-mande",
        "maisons-alfort",
        "vincennes",

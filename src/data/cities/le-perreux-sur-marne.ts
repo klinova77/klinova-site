@@ -48,9 +48,13 @@ citySpecificChallenges: [
         "nogent-sur-marne",
         "neuilly-plaisance",
         "fontenay-sous-bois",
+        "champigny-sur-marne",
         "neuilly-sur-marne",
+        "villiers-sur-marne",
         "rosny-sous-bois",
-        "joinville-le-pont"
+        "joinville-le-pont",
+        "noisy-le-grand",
+        "montreuil"
       ],
 
   landmarks: [
@@ -406,6 +410,64 @@ specificChallenges: [
           question:
             "Pour des odeurs incrustées (animaux, humidité), comment les neutralisez-vous sur canapé ou tapis ?",
           answer: `<p>On combine un pré-traitement ciblé et une extraction sérieuse, car l’odeur est souvent “dans” la fibre, pas seulement en surface. Selon le cas, on insiste sur les zones imprégnées (assise, entrée, bords de tapis) et on donne des consignes d’aération. On annonce aussi les limites possibles si l’imprégnation est ancienne.</p>`,
+        },
+      ],
+      ctaOverride: "",
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Rénovation minutieuse de votre terrasse selon le type de revêtement, retrait des mousses et dépôts organiques, et application d'une protection durable adaptée à l'environnement fluvial.",
+      whyUsBullets: [
+        "Intervention dans tous les quartiers perreuxiens : Centre-Ville, Bords de Marne, Le Parc, Joncs-Marins, secteurs Foch et Joffre.",
+        "Savoir-faire ajusté au patrimoine architectural local : terrasses des meulières Art Nouveau, dallages des villas de villégiature, aménagements contemporains des constructions récentes.",
+        "Protection systématique des abords : bâchage du mobilier de jardin, préservation des massifs et ferronneries décoratives, maîtrise des écoulements vers le jardin.",
+      ],
+      uniqueIntro: `<p>Le Perreux-sur-Marne, surnommée la « <strong>Perle de l'Est parisien</strong> », déploie son tissu pavillonnaire le long d'une boucle de la Marne. Depuis les premières opérations de villégiature lancées vers 1880, la commune a conservé un caractère résidentiel prisé où les <strong>meulières</strong>, <strong>villas Art Nouveau</strong> et <strong>maisons néo-normandes</strong> côtoient des constructions plus récentes.</p>
+
+<p class="mt-4">La proximité immédiate de la rivière et des berges aménagées — héritées de l'âge d'or des guinguettes — génère une humidité ambiante propice au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par les arbres des jardins perreuxiens ou exposées nord subissent un encrassement accéléré qui altère leur aspect et les rend glissantes.</p>
+
+<p class="mt-4">Le diagnostic préalable identifie la nature du support — <strong>dalles anciennes</strong>, <strong>béton</strong>, <strong>carrelage grès cérame</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>`,
+      uniqueDeepDive: `<h3>T1: Inspection et sécurisation du chantier</h3>
+<p>Mobilier extérieur, jardinières et éléments décoratifs sont déplacés ou bâchés. Les façades, ferronneries et menuiseries adjacentes sont protégées des projections. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>
+
+<h3>T2: Nettoyage différencié selon le matériau</h3>
+<p>Le produit est sélectionné en fonction du support identifié : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Traitement préventif et conseils</h3>
+<p>Une protection anti-mousse est appliquée sur les zones les plus exposées à l'humidité des bords de Marne. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement fluvial.</p>`,
+      specificChallenges: [
+        "Meulières et villas Art Nouveau des bords de Marne : matériaux anciens avec joints fragiles et détails architecturaux à préserver.",
+        "Humidité permanente liée à la proximité de la Marne : prolifération rapide des mousses et algues vertes sur toutes les surfaces exposées.",
+        "Terrasses des propriétés du Parc : accès parfois contraints dans ce lotissement privé aux allées étroites.",
+        "Dalles béton des pavillons années 60-70 des Joncs-Marins : porosité variable et joints fragilisés par le temps.",
+        "Carrelage grès cérame des aménagements récents : micro-reliefs antidérapants piégeant les salissures.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment entretenez-vous les terrasses des meulières Art Nouveau au Perreux sans abîmer les éléments décoratifs ?",
+          answer:
+            "<p>Les meulières perreuxiennes présentent souvent des terrasses anciennes avec des détails architecturaux — ferronneries, céramiques, joints rocaillés — qu'il convient de préserver. Nous utilisons un produit à pH neutre qui décolle les salissures biologiques sans attaquer les matériaux. Le brossage manuel contourne les éléments fragiles et le rinçage à pression modérée évite toute dégradation.</p>",
+        },
+        {
+          question:
+            "Ma terrasse en bord de Marne reverdit très rapidement, quelle solution proposez-vous ?",
+          answer:
+            "<p>La proximité de la Marne génère une humidité constante qui favorise la repousse rapide des mousses et algues. Après le nettoyage complet, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat malgré l'environnement fluvial.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous dans le quartier du Parc malgré les accès restreints ?",
+          answer:
+            "<p>Le lotissement privé du Parc présente des configurations avec allées étroites et accès réglementés. Notre équipement portable permet d'intervenir sans difficulté dans ces propriétés. Le matériel est acheminé manuellement et les produits sont conditionnés pour un transport aisé jusqu'à la zone de travail, dans le respect des règles du lotissement.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple nettoyage haute pression et votre prestation sur une terrasse en dalles anciennes ?",
+          answer:
+            "<p>Les dalles anciennes des villas de villégiature présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit adapté au matériau, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader le support ni déchausser les joints.</p>",
         },
       ],
       ctaOverride: "",

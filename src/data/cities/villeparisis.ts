@@ -45,10 +45,14 @@ const city: City = {
   nearbyCities: [
         "claye-souilly",
         "montfermeil",
+        "villepinte",
         "chelles",
         "livry-gargan",
         "vaires-sur-marne",
-        "gagny"
+        "gagny",
+        "le-raincy",
+        "gournay-sur-marne",
+        "lagny-sur-marne"
       ],
 
   landmarks: [
@@ -402,6 +406,68 @@ const city: City = {
 
       ctaOverride: "",
     },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Remise en état complète de votre terrasse selon le revêtement, suppression des dépôts verts et salissures incrustées, et application d'un traitement de protection pour freiner leur réapparition.",
+      whyUsBullets: [
+        "Intervention sur l'ensemble des quartiers pavillonnaires de Villeparisis : Vieux-Pays, Boiparisis, secteur du Marché et lotissements résidentiels.",
+        "Protocole ajusté aux supports rencontrés : béton des pavillons années 80, carrelage extérieur des constructions récentes, bois composite des terrasses rénovées.",
+        "Attention portée aux abords : bâchage du mobilier et des végétaux, rinçage dirigé vers les évacuations, respect des espaces verts privatifs.",
+      ],
+      uniqueIntro: `<p>À Villeparisis, commune traversée par le <strong>canal de l'Ourcq</strong> et située à proximité du <strong>parc forestier de la Poudrerie</strong>, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>
+
+<p class="mt-4">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boiparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>
+
+<p class="mt-4">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>`,
+      uniqueDeepDive: `<h3>T1: Inspection et mise en protection</h3>
+<p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>
+
+<h3>T2: Traitement et action mécanique</h3>
+<p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>
+
+<h3>T3: Application préventive et recommandations</h3>
+<p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>`,
+      specificChallenges: [
+        "Dalles béton des pavillons années 80-90 : porosité variable, joints parfois dégradés par les cycles gel-dégel.",
+        "Carrelage grès cérame texturé : salissures incrustées dans les micro-reliefs nécessitant un brossage appuyé.",
+        "Terrasses bois ou composite des rénovations récentes : sensibilité aux détergents agressifs et à la haute pression.",
+        "Proximité du canal de l'Ourcq et du parc de la Poudrerie : humidité persistante accélérant le développement des mousses.",
+        "Terrasses de plain-pied avec accès direct au jardin : gestion de l'écoulement pour éviter le ruissellement vers les plantations.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Les dalles béton de mon pavillon à Villeparisis sont poreuses, comment éviter qu'elles se tachent lors du nettoyage ?",
+          answer:
+            "<p>Le béton poreux nécessite un produit adapté qui décolle les salissures sans pénétrer en profondeur. Le temps de pose est contrôlé pour limiter l'imprégnation. Le rinçage abondant élimine tout résidu avant séchage, évitant ainsi les auréoles ou traces de produit.</p>",
+        },
+        {
+          question:
+            "Ma terrasse carrelée présente des joints noircis malgré un nettoyage régulier, que faire ?",
+          answer:
+            "<p>Les joints de carrelage extérieur sont souvent plus poreux que les carreaux eux-mêmes. Un traitement ciblé avec brossage manuel permet de désincruster les dépôts accumulés. L'application d'un produit préventif sur les joints ralentit ensuite leur recolonisation par les micro-organismes.</p>",
+        },
+        {
+          question:
+            "Quelle précaution prenez-vous pour ne pas abîmer ma terrasse en bois composite ?",
+          answer:
+            "<p>Le bois composite reçoit exclusivement un produit à pH neutre, sans chlore ni solvant agressif. Le brossage s'effectue dans le sens des lames pour respecter leur structure. Le rinçage reste à basse pression, suffisant pour éliminer les résidus sans marquer la surface ni altérer sa teinte.</p>",
+        },
+        {
+          question:
+            "Combien de temps faut-il attendre avant de remettre le mobilier sur la terrasse après le nettoyage ?",
+          answer:
+            "<p>Le temps de séchage varie selon le matériau et les conditions météo. En général, quelques heures suffisent pour un carrelage ou du béton par temps sec. Pour le bois composite, une demi-journée permet d'éviter toute marque. Nous vous indiquons le délai précis en fin d'intervention.</p>",
+        },
+      ],
+      ctaOverride: "",
+    },
+
+
+
+
 
 
     {

@@ -53,7 +53,11 @@ const city: City = {
         "vaires-sur-marne",
         "serris",
         "claye-souilly",
-        "chelles"
+        "chelles",
+        "champs-sur-marne",
+        "emerainville",
+        "gournay-sur-marne",
+        "villeparisis"
       ],
 
   landmarks: [
@@ -405,6 +409,65 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et entretien de terrasses à Lagny-sur-Marne selon le revêtement et l’exposition, élimination des mousses, traces noires et dépôts organiques, avec des méthodes adaptées au contexte fluvial et au bâti ancien du centre-ville.",
+  whyUsBullets: [
+    "Intervention dans l’ensemble des quartiers latignaciens : Centre ancien, Saint-Laurent, Clemenceau, Les Hauts de Lagny, Orly Parc, ZAC des Hauts de Lagny, bords de Marne.",
+    "Méthodes adaptées au bâti local : terrasses de maisons anciennes du centre historique, pavillons des quartiers résidentiels, dallages et sols extérieurs des résidences récentes.",
+    "Protection rigoureuse des abords : bâchage du mobilier, respect des façades et menuiseries, maîtrise des eaux de rinçage à proximité immédiate de la Marne.",
+  ],
+  uniqueIntro: `<p><strong>Lagny-sur-Marne</strong>, commune historique de Seine-et-Marne d’environ 22 000 habitants, s’organise autour de son centre ancien, de quartiers résidentiels pavillonnaires et de secteurs plus récents. Bordée par la <strong>Marne</strong>, la ville bénéficie d’un cadre agréable mais exposé à une humidité régulière sur les surfaces extérieures.</p>
+
+<p class="mt-4">Les terrasses situées à proximité des <strong>bords de Marne</strong>, dans les quartiers anciens ou en lisière d’espaces végétalisés, sont particulièrement sensibles à l’apparition de <strong>mousses, algues et traces noires</strong>. L’ombre, la rosée matinale et le ruissellement accentuent l’encrassement biologique des sols extérieurs.</p>
+
+<p class="mt-4">Le parc immobilier latignacien est varié : <strong>maisons anciennes du centre-ville</strong>, <strong>pavillons des années 60 à 90</strong>, <strong>résidences contemporaines</strong>. Les terrasses y sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>, chaque matériau nécessitant une méthode de nettoyage spécifique.</p>`,
+  uniqueDeepDive: `<h3>T1: Diagnostic du support et préparation</h3>
+<p>Avant toute intervention, le revêtement est identifié et son état évalué. Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les zones adjacentes (façades, baies vitrées, garde-corps) sont bâchées, notamment dans les terrasses du centre ancien où les abords sont souvent proches.</p>
+
+<h3>T2: Nettoyage adapté au matériau</h3>
+<p>Le protocole est ajusté selon le support : solution alcaline pour dalles béton et carrelages minéraux, produit spécifique pour pierre naturelle ou reconstituée, traitement dédié pour bois et composite. L’action mécanique par brossage contrôlé permet de décoller mousses, biofilm et salissures incrustées. Le rinçage est effectué à pression maîtrisée afin de préserver joints et surfaces.</p>
+
+<h3>T3: Prévention et conseils d’entretien</h3>
+<p>Lorsque l’exposition à l’humidité est marquée — notamment près de la Marne — un traitement préventif peut être proposé pour limiter la reformation rapide des mousses. Les eaux de rinçage sont dirigées vers les écoulements existants. Des recommandations simples sont transmises pour prolonger le résultat dans le temps.</p>`,
+  specificChallenges: [
+    "Terrasses proches des bords de Marne : humidité persistante favorisant la repousse rapide des mousses et algues.",
+    "Centre-ville ancien : dalles et pierres parfois anciennes ou fragilisées nécessitant une pression de rinçage adaptée.",
+    "Quartiers pavillonnaires arborés : accumulation de feuilles, tanins végétaux et dépôts organiques sur les sols extérieurs.",
+    "Résidences récentes avec carrelage ou grès cérame : reliefs de surface retenant les salissures et traces noires.",
+    "Terrasses partiellement couvertes ou orientées nord : zones durablement humides et glissantes après la pluie.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Ma terrasse verdit rapidement à Lagny-sur-Marne, surtout après l’hiver : est-ce normal ?",
+      answer:
+        "<p>La proximité de la Marne et l’humidité hivernale favorisent naturellement le développement des mousses et algues à Lagny-sur-Marne. Après le nettoyage, un traitement préventif ciblé peut ralentir la repousse. Un entretien régulier et l’évacuation des débris végétaux permettent de conserver une terrasse plus propre plus longtemps.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous les terrasses en pierre du centre ancien de Lagny sans les abîmer ?",
+      answer:
+        "<p>Les terrasses en pierre naturelle ou ancienne nécessitent des précautions spécifiques. Nous évitons les produits agressifs et adaptons la pression de rinçage pour préserver la porosité et les joints. Le nettoyage est progressif et respectueux du matériau, notamment dans le centre historique.</p>",
+    },
+    {
+      question:
+        "Quelle différence entre un simple nettoyage haute pression et votre intervention ?",
+      answer:
+        "<p>Un passage haute pression standard peut dégrader les joints, marquer la surface ou fragiliser les matériaux anciens. Notre intervention combine un produit adapté au support, un brossage mécanique contrôlé et un rinçage calibré, pour un nettoyage efficace sans détériorer la terrasse.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous aussi pour les terrasses en copropriété à Lagny-sur-Marne ?",
+      answer:
+        "<p>Nous intervenons également sur les terrasses communes et cours extérieures de copropriétés. Une coordination préalable avec le syndic permet d’adapter le planning, de sécuriser les zones et de respecter les contraintes du site.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
 
     {

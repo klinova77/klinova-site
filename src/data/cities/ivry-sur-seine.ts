@@ -47,9 +47,13 @@ const city: City = {
   ],
   nearbyCities: [
         "charenton-le-pont",
+        "alfortville",
         "gentilly",
         "saint-mande",
         "maisons-alfort",
+        "arcueil",
+        "cachan",
+        "montrouge",
         "vincennes",
         "creteil"
       ],
@@ -341,6 +345,64 @@ faq: [
 
   ctaOverride: "",
 },
+
+{
+      serviceKey: "terrasses",
+      heroDescription:
+        "Intervention adaptée à chaque revêtement de terrasse, suppression des mousses, lichens et salissures urbaines, et application d'un traitement protecteur convenant à l'environnement fluvial et végétalisé de cette commune aux portes de Paris.",
+      whyUsBullets: [
+        "Déplacement dans tous les quartiers ivryens : Petit-Ivry, Centre-ville Gagarine, Marat-Parmentier, Monmousseau-Vérollot, Ivry-Port, Louis Bertrand-Mirabeau-Semard.",
+        "Expertise adaptée à la diversité architecturale locale : terrasses des ensembles brutalistes Renaudie-Gailhoustet, dallages des pavillons anciens, aménagements des résidences contemporaines de la ZAC Confluences.",
+        "Protection soignée des abords : bâchage du mobilier, préservation des jardins partagés et végétations en cascade, maîtrise des eaux de rinçage vers les écoulements existants.",
+      ],
+      uniqueIntro: `<p><strong>Ivry-sur-Seine</strong>, commune de plus de 60 000 habitants située à la confluence de la Seine et de la Marne, conjugue un passé industriel marqué et une transformation urbaine d'envergure. Historiquement cité ouvrière aux portes du 13e arrondissement de Paris, elle abrite un patrimoine architectural singulier, notamment les célèbres <strong>Étoiles d'Ivry</strong> conçues par les architectes Renée Gailhoustet et Jean Renaudie — ensembles brutalistes aux terrasses végétalisées en cascade, classés monuments historiques.</p>
+
+<p class="mt-4">La ville compte de nombreux espaces verts, dont le <strong>parc des Cormailles</strong> (près de 8 hectares, Grand Prix National du Paysage 2007), les jardins partagés et les 250 jardins ouvriers autour du fort d'Ivry. Cette végétation abondante, combinée à la proximité de la Seine, génère une humidité favorable à l'apparition de mousses et algues sur les surfaces extérieures.</p>
+
+<p class="mt-4">La diversité du bâti ivryen — <strong>ensembles brutalistes</strong> aux formes étoilées, <strong>pavillons anciens</strong> du quartier Parmentier, <strong>résidences contemporaines</strong> de la ZAC Ivry Confluences — implique des terrasses aux configurations variées : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun requérant un protocole de nettoyage spécifique.</p>`,
+      uniqueDeepDive: `<h3>T1: Diagnostic et mise en sécurité du chantier</h3>
+<p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades béton brut, garde-corps et menuiseries adjacentes sont bâchés. Un balayage préliminaire élimine feuilles, débris végétaux et poussières accumulés sur le revêtement.</p>
+
+<h3>T2: Nettoyage adapté au support identifié</h3>
+<p>Le produit est choisi selon la nature du revêtement : formule neutre pour les dalles béton des constructions brutalistes, solution adaptée pour carrelage minéral ou pierre, traitement spécifique pour bois et composite. L'action mécanique par brossage ciblé déloge les incrustations biologiques et les dépôts urbains. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Traitement protecteur et conseils personnalisés</h3>
+<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité ambiante. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement fluvial et végétalisé d'Ivry.</p>`,
+      specificChallenges: [
+        "Terrasses en cascade des ensembles Renaudie-Gailhoustet : formes triangulaires, béton brut parfois dégradé, accès contraints entre niveaux décalés.",
+        "Proximité de la Seine et de la Marne : humidité ambiante favorisant la prolifération rapide des mousses et algues vertes.",
+        "Pavillons anciens du quartier Marat-Parmentier : dalles et matériaux d'époque nécessitant un traitement à pH contrôlé.",
+        "Résidences contemporaines de la ZAC Ivry Confluences : grès cérame micro-reliefs, terrasses végétalisées avec contraintes de protection des plantations.",
+        "Jardins partagés et cours végétalisées des ensembles collectifs : gestion rigoureuse des eaux de rinçage pour préserver les plantations adjacentes.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous sur les terrasses des immeubles Renaudie-Gailhoustet du centre-ville d'Ivry ?",
+          answer:
+            "<p>Les ensembles brutalistes des Étoiles d'Ivry — conçus par Renée Gailhoustet et Jean Renaudie dans les années 1960-70 — présentent des terrasses triangulaires en cascade, souvent végétalisées. Nous adaptons notre intervention à ces configurations atypiques : accès par les niveaux décalés, protection rigoureuse des plantations, utilisation de produits compatibles avec le béton brut parfois fragilisé. Une coordination préalable avec le syndic ou le bailleur est recommandée pour ces ensembles classés.</p>",
+        },
+        {
+          question:
+            "Ma terrasse reverdit rapidement car j'habite près de la Seine, quelle solution proposez-vous ?",
+          answer:
+            "<p>La proximité de la confluence Seine-Marne génère une humidité constante propice à la repousse rapide des mousses et algues. Après le nettoyage complet, nous appliquons un traitement préventif renforcé sur les zones les plus exposées. Un balayage régulier des débris végétaux et une nouvelle application préventive annuelle permettent de maintenir le résultat malgré cet environnement fluvial.</p>",
+        },
+        {
+          question:
+            "Travaillez-vous sur les terrasses des nouvelles résidences de la ZAC Ivry Confluences ?",
+          answer:
+            "<p>Les programmes immobiliers récents de la ZAC Ivry Confluences — construits sur d'anciennes friches industrielles — présentent souvent des terrasses contemporaines en grès cérame ou dalles béton, parfois avec jardins suspendus. Notre diagnostic préalable identifie la nature exacte du revêtement et nous adaptons le traitement en conséquence, en protégeant soigneusement les végétalisations intégrées à ces aménagements.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple passage haute pression et votre prestation sur une terrasse de pavillon ivryen ?",
+          answer:
+            "<p>Les pavillons anciens d'Ivry — notamment dans les quartiers Marat-Parmentier ou Petit-Ivry — présentent souvent des terrasses en dalles béton ou matériaux d'époque qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit adapté au support, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader la surface ni déchausser les joints fragilisés par le temps.</p>",
+        },
+      ],
+      ctaOverride: "",
+    },
 
 
 

@@ -52,7 +52,11 @@ const city: City = {
         "montreuil",
         "le-raincy",
         "le-perreux-sur-marne",
-        "neuilly-sur-marne"
+        "neuilly-sur-marne",
+        "nogent-sur-marne",
+        "gagny",
+        "bagnolet",
+        "vincennes"
       ],
 
   landmarks: [
@@ -401,6 +405,65 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Rosny-sous-Bois : suppression des mousses, traces noires et salissures urbaines pour retrouver un sol extérieur propre, net et visuellement valorisé.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers de Rosny-sous-Bois : Centre-ville, Plateau d’Avron, La Boissière, Justice, Changis, secteurs pavillonnaires et résidentiels.",
+    "Expertise des terrasses urbaines et pavillonnaires : sols exposés à la pollution, à l’humidité et aux usages quotidiens.",
+    "Prestation soignée et efficace : protection du mobilier, respect des façades et nettoyage précis pour un résultat immédiatement visible.",
+  ],
+  uniqueIntro: `<p><strong>Rosny-sous-Bois</strong>, commune dynamique de Seine-Saint-Denis, combine un tissu urbain dense, des quartiers pavillonnaires et de nombreux espaces verts. Les terrasses y sont largement utilisées comme prolongement de l’habitat, aussi bien en maison qu’en résidence.</p>
+
+<p class="mt-4">L’environnement urbain, les retombées végétales et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les zones peu exposées au soleil ou proches des jardins et talus.</p>
+
+<p class="mt-4">À Rosny-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement nette.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et sécurisation des abords</h3>
+<p>Le mobilier, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont sécurisés afin de garantir une intervention propre, y compris dans des espaces extérieurs urbains contraints.</p>
+
+<h3>T2: Nettoyage en profondeur du revêtement</h3>
+<p>Le traitement est choisi selon le sol : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
+  specificChallenges: [
+    "Terrasses en environnement urbain : dépôts de pollution et traces noires persistantes.",
+    "Quartiers pavillonnaires arborés : mousses et salissures organiques fréquentes.",
+    "Dalles béton ternies par le temps : zones foncées et aspect irrégulier.",
+    "Terrasses partiellement couvertes ou encaissées : séchage lent et encrassement accéléré.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Rosny-sous-Bois noircissent-elles avec le temps ?",
+      answer:
+        "<p>La combinaison de la <strong>pollution urbaine</strong>, de l’humidité et des passages répétés favorise l’apparition de <strong>traces noires et biofilms</strong> sur les sols extérieurs. Sans nettoyage adapté, ces salissures s’installent durablement.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en zone urbaine ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou négligées ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois laissées sans entretien pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de résidences et petites copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons également sur les <strong>terrasses et cours extérieures</strong> de résidences et petites copropriétés à Rosny-sous-Bois, avec une organisation adaptée aux usages des occupants.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
 
     {

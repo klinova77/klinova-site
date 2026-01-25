@@ -39,7 +39,11 @@ nearbyCities: [
         "livry-gargan",
         "le-raincy",
         "neuilly-sur-marne",
-        "gournay-sur-marne"
+        "gournay-sur-marne",
+        "neuilly-plaisance",
+        "vaires-sur-marne",
+        "champs-sur-marne",
+        "villeparisis"
       ],
 
   landmarks: [
@@ -396,6 +400,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Montfermeil : élimination des mousses, traces noires et salissures incrustées, avec une méthode efficace adaptée aux terrains en pente et aux quartiers pavillonnaires arborés.",
+  whyUsBullets: [
+    "Intervention sur l’ensemble de Montfermeil : Franceville, Les Oiseaux, Les Bosquets, Le Plateau, centre-ville, zones pavillonnaires et résidentielles.",
+    "Maîtrise des contraintes locales : terrasses en pente, sols extérieurs exposés aux ruissellements, surfaces fortement encrassées par la végétation.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour retrouver une terrasse nette et agréable.",
+  ],
+  uniqueIntro: `<p><strong>Montfermeil</strong>, commune résidentielle de Seine-Saint-Denis située en hauteur à l’est de Paris, se distingue par son relief marqué et ses quartiers pavillonnaires verdoyants. Cette configuration entraîne un ruissellement fréquent de l’eau et une exposition importante des terrasses aux salissures extérieures.</p>
+
+<p class="mt-4">Dans de nombreux secteurs — notamment <strong>Franceville</strong>, <strong>Le Plateau</strong> ou les abords boisés — les terrasses sont soumises à l’humidité, aux retombées végétales et aux traces de pollution. Résultat : <strong>mousses, algues, traces noires et zones glissantes</strong> s’installent rapidement sur les sols extérieurs.</p>
+
+<p class="mt-4">Le bâti montfermois est majoritairement composé de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque surface demande une approche spécifique pour un nettoyage en profondeur et un rendu visuel durable.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de la zone</h3>
+<p>Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats (murs, façades, menuiseries) sont bâchés afin de travailler proprement, y compris sur les terrasses en pente typiques de Montfermeil.</p>
+
+<h3>T2: Nettoyage en profondeur adapté au sol</h3>
+<p>Le traitement est choisi selon le matériau : solution renforcée pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les traces de ruissellement. Le rinçage est ajusté pour nettoyer en profondeur sans altérer la surface.</p>
+
+<h3>T3: Finition et mise en valeur de la terrasse</h3>
+<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair, plus homogène et nettement plus confortable à l’usage. Des conseils simples sont transmis pour conserver une terrasse propre plus longtemps.</p>`,
+  specificChallenges: [
+    "Terrasses en pente : ruissellement de l’eau accentuant les traces noires et les zones encrassées.",
+    "Quartiers arborés : dépôts végétaux, feuilles et mousses favorisant l’encrassement rapide.",
+    "Dalles béton très sollicitées : porosité marquée retenant les salissures et l’humidité.",
+    "Terrasses partiellement couvertes : séchage lent et développement de surfaces glissantes.",
+    "Bois et composite exposés plein air : ternissement visuel et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi ma terrasse s’encrasse-t-elle aussi vite à Montfermeil ?",
+      answer:
+        "<p>Le relief de Montfermeil favorise le ruissellement de l’eau, combiné à une végétation dense dans de nombreux quartiers. Cette combinaison accélère l’apparition de mousses, d’algues et de traces noires sur les terrasses, en particulier sur les dalles béton et carrelages extérieurs.</p>",
+    },
+    {
+      question:
+        "Votre nettoyage améliore-t-il vraiment l’aspect visuel de la terrasse ?",
+      answer:
+        "<p>Oui. Le nettoyage en profondeur permet d’éclaircir les surfaces, d’uniformiser l’aspect du sol et de supprimer les zones sombres ou verdies. La terrasse retrouve un rendu plus propre et plus valorisant pour l’usage quotidien ou la réception.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Nous intervenons régulièrement sur des terrasses fortement encrassées, parfois laissées sans entretien depuis plusieurs années. La méthode est adaptée à l’état réel du support pour obtenir un résultat visible et durable.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de petites copropriétés à Montfermeil ?",
+      answer:
+        "<p>Oui, nous intervenons également sur les terrasses et cours extérieures de copropriétés à taille résidentielle, avec une organisation adaptée aux contraintes du site et aux usages des occupants.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
 
     {

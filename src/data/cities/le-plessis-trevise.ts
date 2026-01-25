@@ -48,12 +48,16 @@ const city: City = {
     "Saint-Pierre",
   ],
   nearbyCities: [
+        "emerainville",
+        "villiers-sur-marne",
         "noisy-le-grand",
         "pontault-combault",
+        "champigny-sur-marne",
         "champs-sur-marne",
         "gournay-sur-marne",
         "saint-maur-des-fosses",
-        "le-perreux-sur-marne"
+        "le-perreux-sur-marne",
+        "neuilly-sur-marne"
       ],
 
   // Texte brut uniquement
@@ -366,6 +370,65 @@ const city: City = {
 
   ctaOverride: "",
 },
+
+{
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et entretien de terrasses au Plessis-Trévise selon le matériau et l’exposition, élimination des mousses, traces noires et salissures organiques, avec des méthodes adaptées à l’environnement boisé et résidentiel de la commune.",
+  whyUsBullets: [
+    "Intervention dans tous les secteurs plesséens : Centre, Bois Saint-Martin, Les Touleuses, Marbeau, quartiers pavillonnaires et zones résidentielles calmes.",
+    "Approche adaptée aux terrasses de maisons individuelles : dalles béton, carrelage extérieur, bois et composite, fréquemment exposés à l’ombre et à l’humidité.",
+    "Protection soignée des abords : bâchage du mobilier, respect des jardins et plantations, rinçage maîtrisé sans projections inutiles.",
+  ],
+  uniqueIntro: `<p><strong>Le Plessis-Trévise</strong>, commune résidentielle du Val-de-Marne d’environ 21 000 habitants, se caractérise par un habitat majoritairement pavillonnaire et la proximité immédiate du <strong>bois Saint-Martin</strong>. Cet environnement verdoyant offre un cadre de vie apprécié mais favorise l’humidité sur les surfaces extérieures.</p>
+
+<p class="mt-4">Les terrasses situées à proximité des zones boisées ou dans des jardins arborés sont particulièrement exposées aux <strong>mousses, algues, lichens</strong> et aux <strong>dépôts organiques</strong>. L’ombre prolongée, la rosée matinale et les feuilles mortes accélèrent l’encrassement des sols extérieurs.</p>
+
+<p class="mt-4">Le parc immobilier du Plessis-Trévise est composé en majorité de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Ces supports nécessitent des méthodes de nettoyage spécifiques afin de préserver leur état tout en éliminant efficacement les salissures.</p>`,
+  uniqueDeepDive: `<h3>T1: Diagnostic et préparation de la terrasse</h3>
+<p>Le revêtement est identifié et son état contrôlé avant toute intervention. Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, seuils et menuiseries adjacentes sont bâchés afin d’éviter toute projection, notamment dans les jardins clos.</p>
+
+<h3>T2: Nettoyage ciblé selon le support</h3>
+<p>Le protocole est ajusté au matériau : solution alcaline pour béton et carrelage, produit spécifique pour bois et composite, traitement doux pour supports plus sensibles. Un brossage mécanique contrôlé permet de décoller les mousses et biofilms. Le rinçage est réalisé à pression maîtrisée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Stabilisation du résultat et conseils</h3>
+<p>Sur les terrasses fortement exposées à l’humidité et à l’ombre, un traitement préventif peut être proposé afin de ralentir la réapparition des mousses. Les eaux de rinçage sont orientées vers les écoulements existants. Des recommandations d’entretien simple sont fournies pour prolonger le résultat dans le temps.</p>`,
+  specificChallenges: [
+    "Proximité du bois Saint-Martin : forte humidité ambiante et retombées végétales favorisant les mousses et lichens.",
+    "Terrasses de pavillons ombragées par des arbres : séchage lent après pluie et surfaces rapidement glissantes.",
+    "Dalles béton anciennes : porosité marquée nécessitant un nettoyage progressif et non agressif.",
+    "Terrasses en bois ou composite : sensibilité aux rayures et aux UV, nécessitant un brossage et des produits adaptés.",
+    "Accumulation saisonnière de feuilles et tanins végétaux tachant durablement les sols extérieurs.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Ma terrasse devient glissante après la pluie au Plessis-Trévise, est-ce lié à l’environnement ?",
+      answer:
+        "<p>Oui. La proximité du bois Saint-Martin et la végétation dense favorisent le développement de biofilms (mousses, algues) rendant les terrasses glissantes après la pluie. Un nettoyage ciblé permet d’éliminer ces dépôts et d’améliorer le confort d’usage.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous les terrasses en bois sans les abîmer ?",
+      answer:
+        "<p>Les terrasses en bois nécessitent une approche spécifique. Nous utilisons des produits adaptés et un brossage contrôlé, sans haute pression agressive, afin de nettoyer le support tout en préservant les fibres et l’aspect du bois.</p>",
+    },
+    {
+      question:
+        "À quelle fréquence faut-il nettoyer une terrasse dans un quartier boisé ?",
+      answer:
+        "<p>Dans un environnement comme Le Plessis-Trévise, un nettoyage complet tous les 12 à 18 mois est généralement recommandé. La fréquence dépend toutefois de l’exposition à l’ombre, de la végétation environnante et du matériau de la terrasse.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous uniquement chez les particuliers ou aussi en copropriété ?",
+      answer:
+        "<p>Nous intervenons principalement chez les particuliers, mais également sur les terrasses et cours extérieures de copropriétés de taille résidentielle, après coordination avec le syndic.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
 
 

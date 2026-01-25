@@ -61,11 +61,15 @@ const city: City = {
 
   nearbyCities: [
         "maisons-alfort",
+        "alfortville",
         "saint-maur-des-fosses",
         "joinville-le-pont",
         "charenton-le-pont",
         "ivry-sur-seine",
-        "nogent-sur-marne"
+        "champigny-sur-marne",
+        "nogent-sur-marne",
+        "saint-mande",
+        "vincennes"
       ],
 
 

@@ -50,7 +50,11 @@ nearbyCities: [
         "vaires-sur-marne",
         "chelles",
         "montfermeil",
-        "torcy"
+        "torcy",
+        "livry-gargan",
+        "villepinte",
+        "gournay-sur-marne",
+        "gagny"
       ],
 
   landmarks: [

@@ -37,7 +37,11 @@ nearbyCities: [
         "vaires-sur-marne",
         "gagny",
         "champs-sur-marne",
-        "neuilly-sur-marne"
+        "neuilly-sur-marne",
+        "torcy",
+        "le-raincy",
+        "livry-gargan",
+        "noisy-le-grand"
       ],
   districts: [
     "Bords de Marne",
@@ -426,6 +430,64 @@ nearbyCities: [
 // =========================
 // SERVICE – TERRASSES
 // =========================
+{
+      serviceKey: "terrasses",
+      heroDescription:
+        "Traitement complet de votre terrasse avec adaptation au support, élimination des mousses et dépôts verts, et application d'un produit préventif pour prolonger la propreté obtenue.",
+      whyUsBullets: [
+        "Connaissance des quartiers pavillonnaires des Coudreaux et de Chantereine, avec leurs terrasses exposées à l'humidité des jardins arborés.",
+        "Maîtrise des traitements différenciés selon les supports : dalles béton des pavillons années 70, carrelage grès cérame ou bois composite des rénovations récentes.",
+        "Protection systématique du mobilier et des plantations, gestion de l'évacuation d'eau vers le jardin ou les points d'écoulement existants.",
+      ],
+      uniqueIntro: `<p>Dans les <strong>quartiers pavillonnaires des Coudreaux et de Chantereine</strong>, les terrasses subissent une dégradation progressive liée à l'environnement végétal dense. L'ombre portée par les arbres des jardins, combinée à l'humidité persistante propre à cette zone proche du bois des Coudreaux et des bords de Marne, favorise l'apparition de mousses et de lichens sur les surfaces exposées. Ces dépôts verdâtres s'installent d'abord dans les joints, puis colonisent progressivement l'ensemble du revêtement.</p>
+
+<p class="mt-4">Sur les <strong>dalles béton</strong> caractéristiques des pavillons construits dans les années 70-80, ou sur les <strong>terrasses grès cérame et bois composite</strong> des rénovations récentes, cette prolifération rend le sol glissant et visuellement dégradé. L'espace extérieur perd son attrait, les repas dehors deviennent moins fréquents, et la terrasse finit par servir uniquement de passage vers le jardin.</p>
+
+<p class="mt-4">Une intervention adaptée au matériau permet de retrouver une surface saine et praticable. Le diagnostic préalable identifie le type de support, l'étendue des dépôts et les zones à protéger avant tout traitement mécanique ou chimique.</p>`,
+      uniqueDeepDive: `<h3>T1: Préparation et protection</h3>
+<p>Le mobilier de jardin, les jardinières et les plantes en pot sont déplacés ou bâchés. Les menuiseries des baies vitrées et portes-fenêtres reçoivent une protection contre les projections. Un balayage élimine les feuilles mortes, la terre accumulée et les débris végétaux avant le traitement.</p>
+
+<h3>T2: Nettoyage et traitement adapté</h3>
+<p>Un produit spécifique au support est appliqué : formulation à pH neutre pour le bois composite, solution alcaline désincrustante pour les dalles minérales ou le grès cérame. Le brossage manuel ou mécanique décolle les mousses et lichens installés. La pression de rinçage est ajustée selon la porosité du matériau pour préserver les joints et la surface.</p>
+
+<h3>T3: Finition et prévention</h3>
+<p>L'eau de rinçage est dirigée vers les points d'écoulement existants ou vers le jardin. Un traitement anti-mousse préventif est appliqué sur les zones les plus exposées à l'ombre et à l'humidité. Le séchage naturel s'effectue en quelques heures selon les conditions météo, avec des conseils d'entretien saisonnier transmis en fin d'intervention.</p>`,
+      specificChallenges: [
+        "Dalles béton des pavillons années 70-80 : joints poreux favorisant l'enracinement des mousses.",
+        "Terrasses bois composite sensibles à la pression excessive et aux produits chlorés ou acides.",
+        "Carrelage grès cérame avec relief : encrassement dans les micro-aspérités difficile à déloger.",
+        "Zones ombragées par les arbres des jardins arborés des Coudreaux et Chantereine : humidité persistante.",
+        "Accès par l'intérieur de la maison pour certaines terrasses arrière de pavillons mitoyens.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment traitez-vous les dalles béton des pavillons des Coudreaux sans endommager les joints ?",
+          answer:
+            "<p>Les dalles béton nécessitent un traitement en deux temps. D'abord un produit désincrustant alcalin adapté aux supports minéraux poreux, laissé agir pour décoller les mousses. Puis un rinçage à pression modérée qui élimine les résidus végétaux tout en préservant l'intégrité des joints.</p>",
+        },
+        {
+          question:
+            "Ma terrasse est couverte de traces noires et vertes depuis plusieurs années, est-ce récupérable ?",
+          answer:
+            "<p>Les dépôts anciens de mousses, algues et lichens laissent parfois des traces résiduelles sur les supports poreux, mais l'essentiel de la coloration disparaît après traitement. Un brossage mécanique combiné au produit adapté retire la couche organique. L'application d'un anti-mousse préventif ralentit significativement la réapparition.</p>",
+        },
+        {
+          question:
+            "Quel produit utilisez-vous sur une terrasse bois composite pour ne pas altérer sa teinte d'origine ?",
+          answer:
+            "<p>Le bois composite reçoit un traitement à pH neutre, sans chlore ni acide, qui préserve les pigments du matériau. Le produit agit sur les micro-organismes sans attaquer les fibres synthétiques. Le rinçage s'effectue à basse pression pour éviter tout marquage de la surface.</p>",
+        },
+        {
+          question:
+            "Faut-il éviter le nettoyeur haute pression sur certaines terrasses et comment décidez-vous de la méthode ?",
+          answer:
+            "<p>Le diagnostic initial détermine la résistance du support. Les dalles béton ou le carrelage grès cérame supportent une pression contrôlée. Le bois, le composite et les joints fragiles imposent un nettoyage doux ou une pression très réduite. La méthode est systématiquement adaptée au matériau identifié lors de l'évaluation préalable.</p>",
+        },
+      ],
+      ctaOverride: "",
+    },
+
 
 
 // =========================

@@ -42,9 +42,13 @@ nearbyCities: [
         "lagny-sur-marne",
         "torcy",
         "serris",
+        "emerainville",
         "vaires-sur-marne",
         "pontault-combault",
-        "champs-sur-marne"
+        "champs-sur-marne",
+        "le-plessis-trevise",
+        "gournay-sur-marne",
+        "chelles"
       ],
 
   landmarks: [
@@ -383,6 +387,64 @@ nearbyCities: [
         },
       ],
 
+      ctaOverride: "",
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Remise en état complète de votre terrasse avec traitement adapté au revêtement, élimination des mousses et dépôts végétaux, et application d'une protection préventive contre les conditions humides locales.",
+      whyUsBullets: [
+        "Déplacement dans tous les quartiers buxangeorgiens : Violennes et Vieux Village, Centre-Ville, Clos-Tillet-Génitoy, quartier du Golf, écoquartier du Sycomore.",
+        "Protocole ajusté aux constructions locales : terrasses des pavillons contemporains, dallages des maisons d'architecture briarde, aménagements récents des programmes neufs.",
+        "Précautions rigoureuses pour les abords : bâchage du mobilier extérieur, protection des massifs plantés et des espaces végétalisés, maîtrise des eaux de rinçage.",
+      ],
+      uniqueIntro: `<p><strong>Bussy-Saint-Georges</strong>, intégrée à la ville nouvelle de <strong>Marne-la-Vallée</strong> depuis 1985, a vu sa population passer de 500 à plus de 27 000 habitants en quatre décennies. Cette croissance s'est accompagnée d'un développement urbain qui mêle aujourd'hui le <strong>vieux village briard</strong> aux <strong>quartiers pavillonnaires contemporains</strong> et à l'<strong>écoquartier du Sycomore</strong>.</p>
+
+<p class="mt-4">Surnommée la « ville aux parcs et jardins » avec ses 155 hectares d'espaces verts, Bussy bénéficie d'un environnement végétal dense — parc du Génitoy, lisière de la forêt de Ferrières, bassins écologiques — qui génère une humidité favorable au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par la végétation abondante subissent un encrassement accéléré.</p>
+
+<p class="mt-4">Le diagnostic initial identifie le type de support — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans altérer le revêtement.</p>`,
+      uniqueDeepDive: `<h3>T1: État des lieux et préparation</h3>
+<p>Mobilier de jardin, jardinières et équipements extérieurs sont déplacés ou protégés. Les façades et menuiseries adjacentes sont bâchées. Un balayage préliminaire retire les débris végétaux — feuilles, brindilles, pollens — particulièrement abondants dans cette ville-nature.</p>
+
+<h3>T2: Traitement adapté au matériau</h3>
+<p>Le produit est choisi selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Protection et recommandations d'entretien</h3>
+<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des espaces verts environnants. Les eaux de rinçage sont orientées vers les points d'écoulement du jardin. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Bussy.</p>`,
+      specificChallenges: [
+        "Pavillons contemporains des années 90-2000 : dalles béton ou pierre reconstituée avec joints parfois fragilisés par les cycles gel-dégel seine-et-marnais.",
+        "Maisons d'architecture briarde du Vieux Village : matériaux anciens nécessitant un traitement à pH contrôlé pour préserver leur authenticité.",
+        "Résidences récentes de l'écoquartier Sycomore : carrelage grès cérame avec micro-reliefs antidérapants piégeant les salissures.",
+        "Villas du quartier du Golf : terrasses souvent ombragées par la végétation du parcours, encrassement accéléré par l'humidité ambiante.",
+        "Jardins bordant les espaces verts (parc du Génitoy, bassins écologiques) : prolifération rapide des mousses et algues due à la proximité de la nature.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment traitez-vous les terrasses des maisons anciennes du Vieux Village sans altérer leur caractère briard ?",
+          answer:
+            "<p>Les constructions du quartier des Violennes et du Vieux Village présentent des matériaux traditionnels — pierre, dallages anciens — qui nécessitent une approche spécifique. Nous utilisons un produit à pH neutre qui élimine les salissures biologiques sans attaquer la surface. Le brossage manuel respecte les joints et la patine, et le rinçage à pression modérée évite toute dégradation du revêtement d'origine.</p>",
+        },
+        {
+          question:
+            "Ma terrasse reverdit rapidement à cause de la proximité du parc du Génitoy, quelle solution proposez-vous ?",
+          answer:
+            "<p>La densité des espaces verts buxangeorgiens — parc du Génitoy, forêt de Ferrières, bassins écologiques du Sycomore — génère une humidité constante propice à la repousse rapide des mousses. Après le nettoyage complet, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat malgré cet environnement « ville-nature ».</p>",
+        },
+        {
+          question:
+            "Intervenez-vous dans l'écoquartier du Sycomore sur les terrasses des constructions récentes ?",
+          answer:
+            "<p>Les résidences du Sycomore présentent généralement des terrasses en carrelage grès cérame ou en bois composite. Nos produits et méthodes sont parfaitement adaptés à ces matériaux contemporains. Le grès cérame avec ses micro-reliefs antidérapants nécessite un brossage spécifique pour déloger les salissures incrustées, tandis que le bois composite reçoit un traitement neutre qui préserve sa teinte et sa structure.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un passage au nettoyeur haute pression et votre prestation sur une terrasse en dalle béton ?",
+          answer:
+            "<p>Les dalles béton des pavillons buxangeorgiens, souvent posées dans les années 90-2000, présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader le support ni déchausser les joints fragilisés par les hivers seine-et-marnais.</p>",
+        },
+      ],
       ctaOverride: "",
     },
 

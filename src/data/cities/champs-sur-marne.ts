@@ -44,10 +44,14 @@ const city: City = {
 nearbyCities: [
         "gournay-sur-marne",
         "noisy-le-grand",
+        "emerainville",
         "vaires-sur-marne",
         "torcy",
         "chelles",
-        "neuilly-sur-marne"
+        "villiers-sur-marne",
+        "neuilly-sur-marne",
+        "le-plessis-trevise",
+        "gagny"
       ],
 
   landmarks: [

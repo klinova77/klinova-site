@@ -55,7 +55,11 @@ nearbyCities: [
       "le-perreux-sur-marne",
       "vincennes",
       "rosny-sous-bois",
-      "neuilly-plaisance"
+      "neuilly-plaisance",
+      "joinville-le-pont",
+      "bagnolet",
+      "saint-mande",
+      "champigny-sur-marne"
     ],
 
 
@@ -385,6 +389,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Fontenay-sous-Bois : élimination des mousses, traces noires et salissures urbaines pour redonner aux sols extérieurs un aspect propre, net et agréable à utiliser.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers de Fontenay-sous-Bois : Le Village, Rigollots, Plateau, Victor Hugo, Pasteur, secteurs pavillonnaires et résidentiels.",
+    "Expertise des terrasses urbaines et de maisons de ville : sols exposés à l’humidité, à la végétation et aux usages quotidiens.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un résultat immédiatement visible.",
+  ],
+  uniqueIntro: `<p><strong>Fontenay-sous-Bois</strong>, commune dynamique du Val-de-Marne, combine un centre ancien, des quartiers pavillonnaires et des zones plus denses. Les terrasses y sont largement utilisées comme espaces extérieurs de détente, aussi bien en maison qu’en résidence.</p>
+
+<p class="mt-4">L’environnement urbain, les <strong>jardins en pente</strong>, les zones arborées et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les quartiers comme <strong>Rigollots</strong> ou le <strong>Plateau</strong>, où l’exposition au soleil peut être irrégulière.</p>
+
+<p class="mt-4">À Fontenay-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour obtenir un nettoyage efficace et une remise en état visuellement nette.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de la terrasse</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, y compris dans des configurations urbaines ou en terrain en pente.</p>
+
+<h3>T2: Nettoyage ciblé et approfondi du sol extérieur</h3>
+<p>La méthode est adaptée au matériau : solution performante pour dalles béton et carrelages extérieurs, protocole spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
+  specificChallenges: [
+    "Terrasses urbaines en pente : ruissellement de l’eau accentuant traces noires et encrassement.",
+    "Quartiers arborés et jardins privatifs : dépôts végétaux et mousses persistantes.",
+    "Dalles béton ternies par le temps et l’humidité : zones foncées et aspect irrégulier.",
+    "Terrasses partiellement couvertes ou enclavées : séchage lent et développement de biofilms.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Fontenay-sous-Bois noircissent-elles avec le temps ?",
+      answer:
+        "<p>La combinaison de l’<strong>humidité</strong>, de la <strong>végétation</strong> et des usages quotidiens favorise l’apparition de <strong>traces noires et biofilms</strong> sur les sols extérieurs, en particulier dans les zones peu exposées au soleil.</p>",
+    },
+    {
+      question:
+        "Le nettoyage permet-il d’améliorer visuellement une terrasse ancienne ou ternie ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois laissées sans entretien pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de résidences et petites copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons sur les <strong>terrasses et cours extérieures</strong> de résidences et petites copropriétés à Fontenay-sous-Bois, avec une organisation adaptée aux usages des occupants.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
     {
   serviceKey: "nettoyage-appartement-maison",

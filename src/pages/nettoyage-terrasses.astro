@@ -1,0 +1,1298 @@
+---
+export const prerender = true;
+import LayoutWithCTA from "~/layouts/LayoutWithCTA.astro";
+import { Image } from "astro:assets";
+import Button from "~/components/UI/Button.astro";
+import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
+import { Accordion, AccordionItem } from "free-astro-components";
+
+import DepartmentCardsKln from "~/components/local/DepartmentCardsKln.astro";
+
+// ⚠️ Remplace par ton image réelle (terrasse / sol extérieur)
+// Exemple de nom à créer dans src/assets/images/
+import heroTerrassesImage from "~/assets/images/nettoyage-terrasses-sol-exterieur-avant-apres-visuel.webp";
+
+
+// Variables de base
+const site = "https://klinova.fr";
+const pageUrl = "/nettoyage-terrasses";
+const pageName = "Nettoyage de terrasses";
+
+// Configuration popup
+const popupContext = {
+  title: "Demander à être rappelé",
+  subtitle: "Un expert Klinova vous rappelle pour estimer le nettoyage de votre terrasse.",
+  serviceKey: "rappel-nettoyage-terrasses",
+  serviceLabel: "Demande rappel - Page nettoyage-terrasses",
+  trackingSource: "popup-nettoyage-terrasses-header",
+  presetSubject: "Nouvelle demande de rappel – nettoyage-terrasses",
+  // ⚠️ crédit d’impôt : je le désactive ici par défaut pour éviter une promesse risquée
+  // (à réactiver seulement si tu es sûr que ça s'applique à ce service dans ton cadre).
+  creditImpotEnabled: false,
+};
+
+// FAQ (mix core + long tail, SEO pack)
+const faq = [
+  {
+    title: "Quels types de terrasses nettoyez-vous ?",
+    content:
+      "Nous intervenons sur la plupart des revêtements extérieurs : béton (brut ou lissé), carrelage/grès cérame, pierre naturelle (travertin, calcaire) ou reconstituée, pavés/dallage, bois et bois composite. La méthode dépend du matériau, de l’état de surface et de l’exposition (UV, humidité, pollution).",
+  },
+  {
+    title: "Enlevez-vous la mousse, les algues et les traces noires ?",
+    content:
+      "Oui, selon le support et le niveau d’encrassement. Nous traitons les mousses, algues, lichens (biofilm) ainsi que les traces noires liées à la pollution, au ruissellement et à l’humidité. L’objectif est d’obtenir une terrasse plus nette, sans abîmer le revêtement ni les joints.",
+  },
+  {
+    title: "Utilisez-vous la haute pression ?",
+    content:
+      "Pas comme solution “universelle”. Selon le revêtement, nous privilégions un nettoyage mécanique contrôlé (brossage/monobrosse) et une chimie adaptée, avec un rinçage maîtrisé. Une basse ou moyenne pression peut être utilisée si c’est pertinent, notamment pour préserver les joints, le bois et les pierres tendres.",
+  },
+  {
+    title: "Pouvez-vous traiter les taches grasses (barbecue, repas) et les coulures ?",
+    content:
+      "Oui, dans la plupart des cas. Les graisses alimentaires, taches de jardinières, tanins (feuilles), coulures et zones de passage qui foncent se traitent avec une combinaison produit + action mécanique adaptée. Le résultat dépend de la porosité du support, de l’ancienneté de la tache et des réparations éventuelles.",
+  },
+  {
+    title: "La terrasse devient-elle moins glissante après nettoyage ?",
+    content:
+      "Souvent, oui, surtout quand la glissance vient d’un biofilm humide (algues/mousses). Un nettoyage régulier limite les dépôts biologiques responsables des surfaces glissantes et de l’aspect terne. Nous évitons toutefois les promesses chiffrées ou “normées” si ce n’est pas mesuré.",
+  },
+  {
+    title: "Proposez-vous une protection (hydrofuge / anti-tache) ?",
+    content:
+      "En option, selon le support et le besoin. Une protection peut aider à limiter l’absorption sur certains matériaux poreux et faciliter l’entretien. L’objectif est de protéger et de prolonger l’effet visuel, sans promesse “anti-salissure définitive”.",
+  },
+];
+
+const faqLongTail = [
+  {
+    title: "Quel est le prix d’un nettoyage de terrasse ?",
+    content:
+      "Le tarif dépend surtout de la surface, du revêtement, du niveau d’encrassement (mousses, taches grasses, traces noires), de l’accès et des contraintes de rinçage. Un devis gratuit permet de cadrer précisément la méthode, la durée et le budget, sans engagement.",
+  },
+  {
+    title: "Intervenez-vous en copropriété (terrasses communes, cours intérieures) ?",
+    content:
+      "Oui. Nous intervenons sur des espaces extérieurs de copropriété (terrasses communes, circulations extérieures, cours) avec une organisation adaptée : protection des abords, rinçage maîtrisé et coordination sur site.",
+  },
+  {
+    title: "Faites-vous le dégrisage d’une terrasse en bois ?",
+    content:
+      "Lorsque c’est adapté, oui. Le dégrisage combine un produit dégrisant et une action mécanique contrôlée. Le résultat dépend du type de bois, de l’ancienneté, de l’exposition UV et de l’état de surface. Nous évitons de promettre une uniformité parfaite sur des lames anciennes ou réparées.",
+  },
+  {
+    title: "Pouvez-vous intervenir pour une terrasse de café/restaurant de proximité ?",
+    content:
+      "Oui, sur des terrasses de petits établissements (café/restaurant de proximité) lorsque la configuration est compatible. Le traitement vise surtout les graisses, traces de passage et l’aspect terne, avec des méthodes adaptées au revêtement.",
+  },
+];
+
+const faqs = [...faq, ...faqLongTail];
+
+// Schema FAQ
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.title,
+    acceptedAnswer: { "@type": "Answer", text: item.content },
+  })),
+};
+
+// Fil d'Ariane
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: `${site}/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Nettoyage de terrasses",
+      item: `${site}${pageUrl}`,
+    },
+  ],
+};
+
+// JSON-LD optimisé
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${site}#service-nettoyage-terrasses`,
+    inLanguage: "fr-FR",
+    serviceType: "Nettoyage, décrassage et remise en état de terrasses",
+    name: "Nettoyage de terrasses à Paris et en Île-de-France",
+    alternateName:
+      "Nettoyage de sols extérieurs : béton, carrelage/grès cérame, pierre naturelle, bois et composite",
+    url: `${site}${pageUrl}`,
+    provider: { "@id": `${site}#localbusiness` },
+    areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+    audience: { "@type": "Audience", audienceType: ["Particuliers", "Copropriétés", "professionnels"] },
+    category: "Nettoyage extérieur",
+    serviceOutput:
+      "Terrasse plus propre, plus nette et plus agréable à l’usage, avec une méthode adaptée au revêtement",
+    description:
+      "Nettoyage de terrasses et sols extérieurs : mousses, algues, lichens, traces noires, taches grasses et encrassements. Méthodes adaptées au matériau (béton, carrelage, pierre, bois/composite), avec action mécanique contrôlée, produits adaptés et rinçage maîtrisé. Option de protection selon support.",
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+      eligibleRegion: { "@type": "AdministrativeArea", name: "Île-de-France" },
+      description:
+        "Devis gratuit. Tarif ajusté selon surface, revêtement, niveau d’encrassement, accès et contraintes de rinçage.",
+    },
+  },
+  faqSchema,
+  breadcrumb,
+];
+
+---
+
+<LayoutWithCTA
+  popupContext={popupContext}
+  stickyEnabled={true}
+  stickyShowAfter="scroll"
+  hideSelector="[data-hide-floating-cta]"
+  activateSelector="[data-activate-floating-cta]"
+  activateDelayMs={800}
+  stickyMobileOnly={true}
+  pathname={Astro.url.pathname}
+  pageType="service"
+  title="Nettoyage de terrasses • Décrassage, démoussage & remise en état"
+  description="Nettoyage de terrasses et sols extérieurs : mousses, traces noires, taches grasses, encrassement. Méthode adaptée au revêtement (béton, carrelage, pierre, bois). Intervention à Paris & Île-de-France."
+  canonical={pageUrl}
+  ogImage="/images/og/og-klinova-home.png"
+  ogImageAlt="Klinova — Nettoyage de terrasses : décrassage et remise en état en Île-de-France"
+  appendBrandToTitle={false}
+  jsonLd={jsonLd}
+>
+
+<style>
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes float { 0%,100% { transform: translateY(0px) rotate(3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+  .hero-badge { animation: fadeInUp 0.6s ease-out forwards; }
+  .hero-title { animation: fadeInUp 0.8s ease-out 0.1s forwards; opacity: 0; }
+  .hero-subtitle { animation: fadeInUp 0.8s ease-out 0.2s forwards; opacity: 0; }
+  .hero-list { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
+  .hero-cta { animation: fadeInUp 0.8s ease-out 0.4s forwards; opacity: 0; }
+  .hero-reassurance { animation: fadeInUp 0.8s ease-out 0.5s forwards; opacity: 0; }
+  .hero-image { animation: fadeInRight 1s ease-out 0.3s forwards; opacity: 0; }
+
+  .service-item { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+  .service-item:hover { transform: translateX(8px); }
+  .service-item:hover .service-icon { transform: scale(1.1); color: #387B58; }
+  .service-icon { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+
+  .reassurance-item { transition: all 0.3s ease; }
+  .reassurance-item:hover { transform: translateY(-2px); }
+
+  .floating-shape { animation: float 8s ease-in-out infinite; }
+  .floating-shape:nth-child(2) { animation-delay: -2s; animation-duration: 10s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-badge,.hero-title,.hero-subtitle,.hero-list,.hero-cta,.hero-reassurance,.hero-image { animation: none; opacity: 1; }
+    .floating-shape { animation: none; }
+    .service-item:hover,.reassurance-item:hover { transform: none; }
+    .service-item:hover .service-icon { transform: none; color: #387B58; }
+  }
+</style>
+
+<!-- HERO -->
+<section
+  class="relative bg-[#DFF1E8] pt-12 pb-16 lg:pt-18 lg:pb-24 overflow-hidden"
+  data-hide-floating-cta
+  data-hide-header-cta
+>
+  <div class="container-responsive">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <div class="order-1 lg:order-1">
+        <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-[#3F8D65] border border-[#3F8D65]/20 mb-6 hero-badge">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Particuliers • copropriétés • petits pros
+        </div>
+
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1E2939] leading-tight mb-6 hero-title">
+          Nettoyage
+          <span class="text-[#3F8D65]">de terrasses</span>
+          – décrassage, démoussage et remise en état
+        </h1>
+
+        <p class="text-xl lg:text-2xl text-[#475569] leading-relaxed mb-8 hero-subtitle">
+          Une méthode adaptée au revêtement pour retrouver un sol extérieur plus net, plus sûr et plus agréable à l’usage.
+        </p>
+
+        <ul class="space-y-3 mb-10 hero-list">
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Mousses, algues, lichens : traitement du biofilm et zones glissantes</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Traces noires, voile, aspect terne : action mécanique + produits adaptés</span>
+          </li>
+          <li class="flex items-center text-[#475569] service-item">
+            <svg class="w-5 h-5 text-[#3F8D65] mr-3 flex-shrink-0 service-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Taches grasses (barbecue, repas), coulures : traitement ciblé selon porosité</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-col sm:flex-row gap-4 hero-cta mt-6">
+          <Button
+            href="#formulaire"
+            variant="tertiary"
+            size="lg"
+            class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
+            ariaLabel="Demander un devis pour le nettoyage de votre terrasse"
+            tracking={{ action: "lead", source: "hero-terrasses", intent: "cta-tertiary" }}
+            data={{ service: "devis-nettoyage-terrasses" }}
+          >
+            Réserver une intervention
+          </Button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#3F8D65]/20 hero-reassurance">
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Estimation rapide par photos
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Matériel pro & méthode adaptée
+          </div>
+          <div class="flex items-center text-sm text-[#475569] reassurance-item">
+            <svg class="w-4 h-4 text-[#3F8D65] mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Intervention planifiée rapidement
+          </div>
+        </div>
+      </div>
+
+      <div class="order-2 lg:order-2 hero-image">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#3F8D65]/10 to-transparent rounded-2xl floating-shape" aria-hidden="true"></div>
+          <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden">
+            <Image
+              src={heroTerrassesImage}
+              alt="Terrasse remise au propre après un nettoyage adapté au revêtement extérieur"
+              formats={["avif", "webp", "jpeg"]}
+              widths={[480, 720, 960, 1200]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={88}
+              loading="eager"
+              class="w-full aspect-[4/3] lg:aspect-[5/4] object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="absolute top-0 right-0 w-64 h-64 bg-[#3F8D65]/5 rounded-full blur-3xl floating-shape" aria-hidden="true"></div>
+</section>
+
+<!-- SAVOIR-FAIRE -->
+<section
+  id="savoir-faire"
+  class="bg-white py-12 md:py-20 border-t border-[#E5E7EB]"
+  data-activate-floating-cta
+  data-hide-header-cta
+>
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8 md:mb-12">
+        <div class="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-[#3F8D65]/10 text-[#3F8D65] text-sm font-semibold tracking-wide">
+          Notre expérience terrain
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-5 leading-tight">
+          Une terrasse plus nette, sans abîmer le revêtement
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto mb-10 text-[#475569] text-base md:text-lg leading-relaxed">
+        <p class="mb-6">
+          Sur une terrasse, le “sale” n’est pas toujours visible au premier regard : biofilm (algues/lichens),
+          traces noires, zones de passage qui foncent, taches grasses (barbecue/repas) ou coulures.
+          Le bon résultat vient surtout du <strong>diagnostic du support</strong> et du choix d’une méthode adaptée.
+        </p>
+
+        <p class="mb-6">
+          Chez Klinova, nous privilégions une combinaison <strong>action mécanique contrôlée</strong> (brossage / monobrosse)
+          et <strong>produits adaptés</strong> (neutres, alcalins ou spécifiques selon le matériau), avec un <strong>rinçage maîtrisé</strong>
+          pour limiter les résidus et préserver les joints. La méthode dépend du matériau, de l’état de surface et de l’exposition (UV, humidité, pollution).
+        </p>
+
+        <div class="bg-[#3F8D65]/5 border-l-4 border-[#3F8D65] p-6 rounded-r-lg mb-6">
+          <p class="text-[#1E2939]">
+            <strong>Rappel “safe” :</strong> sur pierre naturelle poreuse, on évite les produits acides ou décapants agressifs.
+            L’objectif est une terrasse <strong>plus propre et plus sûre</strong>, sans promesse d’uniformité parfaite sur des supports anciens ou abimés.
+          </p>
+        </div>
+
+        <p>
+          Selon le cas, un <strong>démoussage</strong> ou un traitement anti-algues peut être proposé : l’action est progressive,
+          et l’efficacité dépend du support, de l’exposition et de la météo. En option, une <strong>protection</strong> (hydrofuge / anti-tache)
+          peut aider à limiter l’absorption et faciliter l’entretien.
+        </p>
+      </div>
+
+      <div class="border-t border-[#E5E7EB] pt-10 mb-10">
+        <h3 class="text-xl font-semibold text-[#1E2939] text-center mb-8">
+          Revêtements & contextes traités
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Revêtements courants</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Béton (brut, lissé, dalles)</li>
+              <li>Carrelage extérieur / grès cérame</li>
+              <li>Pierre naturelle (travertin, calcaire) / reconstituée</li>
+              <li>Bois / bois composite (WPC)</li>
+              <li>Pavés / dallage extérieur</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Problèmes fréquents</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Mousses, algues, lichens (biofilm)</li>
+              <li>Traces noires (pollution, ruissellement, humidité)</li>
+              <li>Taches grasses (barbecue, repas)</li>
+              <li>Tanins (feuilles), coulures, rouille</li>
+              <li>Zones de passage qui foncent</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold text-[#3F8D65] mb-3">Contextes d’usage</h4>
+            <ul class="space-y-2 text-[#475569] text-sm md:text-base">
+              <li>Maison : terrasse, cour, accès extérieur</li>
+              <li>Copropriété : cours, circulations, terrasses communes</li>
+              <li>Petits pros : terrasse de proximité (selon configuration)</li>
+              <li>Avant vente / location : présentation plus nette</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center pt-8 border-t border-[#E5E7EB]">
+        <p class="text-[#475569] text-sm md:text-base mb-2">
+          <span class="font-semibold text-[#1E2939]">Intervention en Île-de-France</span><br />
+          Paris • Hauts-de-Seine • Seine-Saint-Denis • Val-de-Marne • Val-d’Oise •
+          Seine-et-Marne • Yvelines • Essonne
+        </p>
+
+        <a
+          href="#formulaire"
+          class="inline-flex items-center mt-6 px-6 py-3 bg-white border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-800 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/30 shadow-md hover:shadow-lg"
+        >
+          Demander un devis de nettoyage de terrasse
+          <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- (Tu peux garder ta section Avis Google telle quelle ici si tu veux) -->
+
+<!-- PROTOCOLE (adapté terrasses) -->
+<section class="py-16 bg-[#FCFCFC]">
+  <div class="container-responsive">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-[#3F8D65] uppercase tracking-wide mb-3">
+        Déroulement d'une intervention
+      </p>
+
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-6">
+        Comment se déroule un nettoyage de terrasse ?
+      </h2>
+
+      <div class="max-w-3xl mx-auto">
+        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+          Nous cadrons d’abord le support et l’encrassement, puis nous choisissons une méthode adaptée
+          (action mécanique + produit(s) ciblé(s) + rinçage maîtrisé). Objectif : une terrasse plus nette,
+          sans abîmer le revêtement.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">1</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Cadrage (photos / contexte)</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Revêtement (béton, carrelage, pierre, bois…), surface, accès, contraintes de rinçage et zones à problème
+          (mousses, traces noires, taches grasses).
+        </p>
+      </div>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">2</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Devis & méthode</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Devis clair. Choix d’une méthode adaptée : action mécanique contrôlée + produits adaptés + rinçage maîtrisé.
+          Basse/moyenne pression seulement si pertinent.
+        </p>
+      </div>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">3</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Protection des abords</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Protection des plantations/abords si nécessaire, gestion des écoulements, aération et préparation des zones
+          sensibles pour limiter projections et résidus.
+        </p>
+      </div>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">4</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Nettoyage / décrassage</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Traitement des mousses/algues, traces noires et taches selon support. Action mécanique (brossage/monobrosse)
+          et produits adaptés, puis rinçage maîtrisé.
+        </p>
+      </div>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">5</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Contrôle & reprises</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Vérification des zones critiques : reliefs, joints, angles, zones de passage. Reprises ciblées pour un rendu
+          cohérent, sans promesse d’uniformité parfaite sur supports anciens ou abimés.
+        </p>
+      </div>
+
+      <div class="bg-white border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300">
+        <div class="flex justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-[#3F8D65]/10 flex items-center justify-center text-lg font-bold text-[#3F8D65]">6</div>
+        </div>
+        <h3 class="text-lg font-semibold text-[#1E2939] mb-3 text-center">Conseils & options</h3>
+        <p class="text-[#475569] text-sm leading-relaxed text-center">
+          Conseils simples d’entretien. Option dégrisage bois si adapté, et protection (hydrofuge/anti-tache) selon support.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto mt-10">
+      <div class="border border-[#E5E7EB] bg-white rounded-xl p-5">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h4 class="text-base font-semibold text-[#1E2939] mb-2">⏱ Durée d’une intervention</h4>
+            <p class="text-[#475569] text-sm leading-relaxed">
+              La durée dépend surtout de la surface, du revêtement et du niveau d’encrassement (mousses, taches, traces noires),
+              ainsi que des contraintes d’accès et de rinçage. Des photos suffisent souvent pour cadrer précisément.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-16 bg-white border-t border-[#E5E7EB]">
+  <div class="container-responsive">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1E2939] mb-8 text-center">
+        Questions fréquentes
+      </h2>
+
+      <Accordion>
+        {faqs.map((item) => (
+          <AccordionItem title={item.title}>
+            <p class="text-[#475569] leading-relaxed">
+              {item.content}
+            </p>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  </div>
+</section>
+
+
+
+<section
+data-section="cta-final"
+data-hide-cta
+  id="formulaire"
+  class="section-padding bg-[#DFF1E8]"
+  aria-labelledby="cta-title"
+>
+  <div class="container-responsive">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Demandez votre devis gratuit
+      </h2>
+      <p class="mt-3 text-[#475569]">
+        Intervention rapide en Île-de-France, protocole professionnel, satisfaction garantie.
+      </p>
+    </div>
+
+    <!-- Messages d'état -->
+    <div id="form-messages" class="mx-auto max-w-2xl mt-6"></div>
+
+    <!-- Form amélioré -->
+    <form
+      id="devis-terrasses-form"
+      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
+      method="post"
+      action="/api/contact"
+      novalidate
+    >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      
+      <!-- Champs cachés pour tracking -->
+      <input type="hidden" name="source" value="terrasses">
+      <input type="hidden" name="service" value="Nettoyage appartement-maison - Demande devis">
+      <input type="hidden" name="rgpd" value="accepte">
+
+      <!-- Prénom + Nom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="prenom" class="sr-only">Prénom</label>
+          <input
+            id="prenom" name="prenom" type="text" required
+            placeholder="Prénom"
+            autocomplete="given-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="nom" class="sr-only">Nom</label>
+          <input
+            id="nom" name="nom" type="text"
+            placeholder="Nom (optionnel)"
+            autocomplete="family-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Email + Téléphone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email" name="email" type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="telephone" class="sr-only">Téléphone</label>
+          <input
+            id="telephone" name="telephone" type="tel" inputmode="tel" required
+            placeholder="Téléphone"
+            autocomplete="tel"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Ville -->
+      <div>
+        <label for="ville" class="sr-only">Ville</label>
+        <input
+          id="ville" name="ville" type="text" required
+          placeholder="Ville (ex: Créteil)"
+          autocomplete="address-level2"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200"
+        />
+        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+      </div>
+
+      <!-- Message libre -->
+      <div>
+        <label for="message" class="sr-only">Décrivez les services de nettoyage dont vous avez besoin</label>
+        <textarea
+          id="message" name="message"
+          placeholder="Décrivez votre terrasses : surface, type de revêtement, type de salissures, urgence... (optionnel)"
+          rows="3"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Photos avec Cloudinary -->
+      <div>
+        <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+          Photos (optionnel)
+        </label>
+        
+        <!-- Input caché -->
+        <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+        
+        <!-- Zone de drop -->
+        <div id="photos-drop-zone" 
+             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
+                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
+          <div class="flex flex-col items-center space-y-2">
+            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+          </div>
+        </div>
+        
+        <!-- Statut des photos -->
+        <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+        
+        <!-- Liste des photos -->
+        <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
+        
+        <!-- Container pour les URLs Cloudinary -->
+        <div id="photos-hidden"></div>
+      </div>
+
+      <!-- RGPD -->
+      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
+        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
+          En savoir plus
+        </a>
+      </div>
+
+      <!-- CTA form -->
+     
+       <ButtonSubmit
+  label="Recevoir mon devis"
+  variant="primary"
+  size="lg"
+  fullWidth={true}
+  id="submit-btn"
+  formId="fientes-pigeons-form"
+  formName="Fientes Pigeons Contact Form"
+  formType="devis"
+  value={220}
+  source="terrasses"
+  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+  tracking={{
+    action: 'cta-submit-devis',
+    source: 'terrasses',
+    intent: 'fientes-pigeons-devis'
+  }}
+  data={{
+    action: 'cta-submit-devis',
+    source: 'terrasses'
+  }}
+/>
+
+       
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+/* Styles pour les photos */
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.photo-name {
+  font-weight: 500;
+  color: #1E2939;
+  flex: 1;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-size {
+  color: #64748B;
+  margin-right: 8px;
+}
+
+.photo-status {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.photo-status.uploading { color: #3B82F6; }
+.photo-status.success { color: #10B981; }
+.photo-status.error { color: #EF4444; }
+
+.photo-remove {
+  background: #EF4444;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.photo-progress {
+  grid-column: 1 / -1;
+  height: 3px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.photo-progress-fill {
+  height: 100%;
+  background: #3F8D65;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.form-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.form-message.success {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #D1FAE5;
+}
+
+.form-message.error {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+}
+
+.form-error:not(:empty) {
+  display: block !important;
+}
+</style>
+
+<script>
+(() => {
+  const form = document.getElementById('devis-terrasses-form');
+  const messagesContainer = document.getElementById('form-messages');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitText = document.getElementById('btn-text');
+const loadingSpinner = document.querySelector('.loading-spinner');
+  
+  // Upload de photos
+  const photosInput = document.getElementById('photos-input');
+  const dropZone = document.getElementById('photos-drop-zone');
+  const photosList = document.getElementById('photos-list');
+  const photosStatus = document.getElementById('photos-status');
+  const photosHidden = document.getElementById('photos-hidden');
+  
+  let uploadingCount = 0;
+  let uploadedFiles = [];
+  const maxFiles = 4;
+  const maxMB = 8;
+
+  // Fonctions utilitaires
+  function showMessage(text, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.textContent = text;
+    messagesContainer.innerHTML = '';
+    messagesContainer.appendChild(messageDiv);
+    
+    if (type === 'success') {
+      setTimeout(() => {
+        messageDiv.style.opacity = '0';
+        setTimeout(() => messageDiv.remove(), 300);
+      }, 5000);
+    }
+  }
+
+function setLoading(loading) {
+  submitBtn.disabled = loading || uploadingCount > 0;
+  if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+  if (submitText) submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
+}
+
+  function bytesToMB(bytes) {
+    return (bytes / 1024 / 1024).toFixed(1);
+  }
+
+  function updatePhotosStatus() {
+    const total = uploadedFiles.length;
+    const success = uploadedFiles.filter(f => f.status === 'success').length;
+    const uploading = uploadingCount;
+    
+    if (total === 0) {
+      photosStatus.textContent = 'Aucune photo';
+      photosList.classList.add('hidden');
+    } else {
+      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+      photosList.classList.remove('hidden');
+    }
+    
+    submitBtn.disabled = uploadingCount > 0;
+  }
+
+  function addPhotoToList(file) {
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'photo-item';
+    photoDiv.dataset.fileName = file.name;
+    
+    photoDiv.innerHTML = `
+      <span class="photo-name">${file.name}</span>
+      <span class="photo-size">${bytesToMB(file.size)} MB</span>
+      <span class="photo-status uploading">Upload...</span>
+      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
+      <div class="photo-progress">
+        <div class="photo-progress-fill"></div>
+      </div>
+    `;
+    
+    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
+      removePhoto(file.name);
+    });
+    
+    photosList.appendChild(photoDiv);
+  }
+
+  function updatePhotoStatus(fileName, status, progress = 0) {
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (!photoDiv) return;
+    
+    const statusEl = photoDiv.querySelector('.photo-status');
+    const progressFill = photoDiv.querySelector('.photo-progress-fill');
+    
+    statusEl.className = `photo-status ${status}`;
+    
+    switch (status) {
+      case 'uploading':
+        statusEl.textContent = `${progress}%`;
+        progressFill.style.width = `${progress}%`;
+        break;
+      case 'success':
+        statusEl.textContent = 'Importée ✓';
+        progressFill.style.width = '100%';
+        break;
+      case 'error':
+        statusEl.textContent = 'Erreur ⚠';
+        progressFill.style.width = '0%';
+        break;
+    }
+  }
+
+  function removePhoto(fileName) {
+    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
+    if (fileIndex !== -1) {
+      const file = uploadedFiles[fileIndex];
+      if (file.cloudinaryUrl) {
+        // Supprimer l'input caché
+        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+        if (hiddenInput) hiddenInput.remove();
+      }
+      uploadedFiles.splice(fileIndex, 1);
+    }
+    
+    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+    if (photoDiv) photoDiv.remove();
+    
+    updatePhotosStatus();
+  }
+
+  async function getCloudinarySignature() {
+    const response = await fetch('/api/cloudinary-signature', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    });
+    
+    const data = await response.json();
+    if (!data.ok) {
+      throw new Error(data.error || 'Erreur signature Cloudinary');
+    }
+    
+    return data;
+  }
+
+  async function uploadToCloudinary(file) {
+    const fileObj = {
+      name: file.name,
+      size: file.size,
+      status: 'uploading',
+      progress: 0,
+      cloudinaryUrl: null
+    };
+    
+    uploadedFiles.push(fileObj);
+    addPhotoToList(file);
+    uploadingCount++;
+    updatePhotosStatus();
+    
+    try {
+      const signature = await getCloudinarySignature();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', signature.apiKey);
+      formData.append('timestamp', String(signature.timestamp));
+      formData.append('signature', signature.signature);
+      formData.append('folder', signature.folder);
+      if (signature.uploadPreset) {
+        formData.append('upload_preset', signature.uploadPreset);
+      }
+
+      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+      
+      const xhr = new XMLHttpRequest();
+      
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const progress = Math.round((e.loaded / e.total) * 100);
+          fileObj.progress = progress;
+          updatePhotoStatus(file.name, 'uploading', progress);
+        }
+      };
+      
+      xhr.onload = () => {
+        uploadingCount--;
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+            fileObj.status = 'success';
+            fileObj.cloudinaryUrl = result.secure_url;
+            updatePhotoStatus(file.name, 'success');
+            
+            // Ajouter l'URL au formulaire
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'photos[]';
+            hiddenInput.value = result.secure_url;
+            photosHidden.appendChild(hiddenInput);
+          } else {
+            throw new Error('Upload failed');
+          }
+        } catch (err) {
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          console.error('Upload error:', err);
+        }
+        updatePhotosStatus();
+      };
+      
+      xhr.onerror = () => {
+        uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+        console.error('Upload network error');
+      };
+      
+      xhr.open('POST', uploadUrl);
+      xhr.send(formData);
+      
+    } catch (error) {
+      uploadingCount--;
+      fileObj.status = 'error';
+      updatePhotoStatus(file.name, 'error');
+      updatePhotosStatus();
+      console.error('Cloudinary error:', error);
+    }
+  }
+
+  function validateFiles(files) {
+    const validFiles = [];
+    
+    for (const file of files) {
+      if (!file.type.startsWith('image/')) {
+        showMessage(`${file.name} n'est pas une image valide`, 'error');
+        continue;
+      }
+      
+      if (file.size > maxMB * 1024 * 1024) {
+        showMessage(`${file.name} dépasse la limite de ${maxMB} MB`, 'error');
+        continue;
+      }
+      
+      if (uploadedFiles.length + validFiles.length >= maxFiles) {
+        showMessage(`Maximum ${maxFiles} photos autorisées`, 'error');
+        break;
+      }
+      
+      validFiles.push(file);
+    }
+    
+    return validFiles;
+  }
+
+  function handleFiles(files) {
+    const validFiles = validateFiles(Array.from(files));
+    validFiles.forEach(file => uploadToCloudinary(file));
+  }
+
+  // Event listeners pour les photos
+  if (photosInput && dropZone) {
+    photosInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = ''; // Reset pour permettre de re-sélectionner
+      }
+    });
+
+    dropZone.addEventListener('click', () => photosInput.click());
+
+    // Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        handleFiles(files);
+      }
+    });
+  }
+
+  // Validation basique des champs
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorDiv = field.parentNode.querySelector('.form-error');
+    
+    if (field.required && !value) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Ce champ est requis';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      field.classList.add('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = 'Format email invalide';
+        errorDiv.classList.remove('hidden');
+      }
+      return false;
+    }
+    
+    field.classList.remove('border-red-500');
+    if (errorDiv) {
+      errorDiv.textContent = '';
+      errorDiv.classList.add('hidden');
+    }
+    return true;
+  }
+
+  // Soumission du formulaire
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        showMessage('Veuillez attendre la fin de l\'upload des photos', 'error');
+        return;
+      }
+      
+      // Validation
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      // Validation email si rempli
+      const emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) {
+          isValid = false;
+        }
+      }
+      
+      if (!isValid) {
+        showMessage('Veuillez corriger les erreurs ci-dessus', 'error');
+        return;
+      }
+      
+      setLoading(true);
+      messagesContainer.innerHTML = '';
+      
+      try {
+        // Tracking
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'landing_terrasses',
+            form_type: 'devis_terrasses'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'devis_terrasses',
+            service: 'Nettoyage terrasses',
+            source: 'terrasses'
+          });
+        }
+
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        let data = null;
+        try { data = await response.json(); } catch {}
+
+        if (response.ok) {
+          // Remplacer complètement le contenu du formulaire par le message de succès
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = `
+            <div class="text-center py-10">
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+              <p class="text-[#475569] max-w-md mx-auto">
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>
+                Un expert Klinova analysera votre demande<br>
+                et vous proposera un planning d'intervention.
+              </p>
+            </div>
+          `;
+
+          // Scroll vers le formulaire transformé
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch {}
+        } else {
+          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          showMessage(err, 'error');
+        }
+      } catch (error) {
+        showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
+        console.error('Submit error:', error);
+      } finally {
+        setLoading(false);
+      }
+    });
+  }
+})();
+</script>
+
+
+
+
+
+<!-- Zones d’intervention -->
+<DepartmentCardsKln
+  variant="white"
+  showDescription={true}
+  onlyCovered={false}
+  topCitiesPerDept={4}
+  title="Nettoyage de terrasses : nos secteurs d’intervention"
+  description="Nettoyage de terrasses en Île-de-France : décrassage, démoussage et traitement des taches, avec une méthode adaptée au revêtement et un rinçage maîtrisé."
+  serviceSlug="nettoyage-terrasses"
+  deptSeoTextOverride={{
+    paris:
+      "Terrasses urbaines et cours : traces noires, encrassement et contraintes de rinçage maîtrisées.",
+    "seine-et-marne":
+      "Maisons et jardins : mousses, algues et salissures saisonnières sur dalles, béton et pavés.",
+    yvelines:
+      "Résidentiel : revêtements variés (pierre, bois, grès cérame) et finitions soignées.",
+    essonne:
+      "Habitat mixte : zones de passage qui foncent, dépôts biologiques et taches grasses.",
+    "hauts-de-seine":
+      "Terrasses de standing : méthode douce, respect des matériaux et rendu cohérent.",
+    "seine-saint-denis":
+      "Espaces extérieurs sollicités : décrassage ciblé, mousses et traces d’usage.",
+    "val-de-marne":
+      "Bords de Marne et zones humides : biofilm (algues/lichens) et glissance après pluie.",
+    "val-d-oise":
+      "Pavillonnaire : entretien extérieur régulier et remise en état après hiver."
+  }}
+/>
+
+</LayoutWithCTA>

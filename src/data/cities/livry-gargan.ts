@@ -36,9 +36,13 @@ nearbyCities: [
       "le-raincy",
       "montfermeil",
       "gagny",
+      "villepinte",
       "chelles",
+      "neuilly-sur-marne",
       "rosny-sous-bois",
-      "neuilly-sur-marne"
+      "neuilly-plaisance",
+      "villeparisis",
+      "bobigny"
     ],
   landmarks: [
     "Mairie de Livry-Gargan",
@@ -355,6 +359,68 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Livry-Gargan : élimination des mousses, traces noires et salissures incrustées pour redonner aux sols extérieurs un aspect propre, net et agréable au quotidien.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers de Livry-Gargan : Jacob, Danton, Vauban, Chanzy, Gargan, zones pavillonnaires et résidentielles.",
+    "Spécialiste des terrasses de maisons et petits immeubles : sols extérieurs très sollicités, encrassés par l’usage quotidien et la végétation.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement visible.",
+  ],
+  uniqueIntro: `<p><strong>Livry-Gargan</strong>, commune résidentielle de Seine-Saint-Denis, se caractérise par un tissu urbain dense mêlant <strong>maisons individuelles</strong>, petits immeubles et jardins privatifs. Les terrasses y sont très utilisées et exposées aux salissures liées à la vie quotidienne.</p>
+
+<p class="mt-4">Dans de nombreux quartiers pavillonnaires, les sols extérieurs subissent l’encrassement progressif lié aux <strong>mousses, algues, traces noires</strong>, dépôts végétaux et passages répétés. Les terrasses peu entretenues perdent rapidement leur aspect d’origine et deviennent visuellement ternes.</p>
+
+<p class="mt-4">À Livry-Gargan, les terrasses sont majoritairement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visible.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et organisation de l’intervention</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — murs, façades, menuiseries — sont sécurisés afin de garantir une intervention propre, même dans des espaces extérieurs contraints.</p>
+
+<h3>T2: Nettoyage approfondi du sol extérieur</h3>
+<p>La méthode est choisie selon le matériau : traitement adapté pour dalles béton et carrelage, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de façon contrôlée pour un sol nettement plus propre et homogène.</p>
+
+<h3>T3: Finition et valorisation de la terrasse</h3>
+<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées. Le nettoyage améliore visiblement la clarté du sol et le confort d’usage, redonnant à la terrasse une apparence plus nette et plus agréable au quotidien.</p>`,
+  specificChallenges: [
+    "Terrasses très sollicitées : passages fréquents, mobilier déplacé régulièrement, encrassement accéléré.",
+    "Quartiers pavillonnaires arborés : dépôts végétaux, feuilles et mousses persistantes.",
+    "Dalles béton foncées par le temps et l’humidité : aspect terne et zones marquées.",
+    "Terrasses partiellement couvertes : séchage lent et traces noires récurrentes.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi ma terrasse noircit-elle avec le temps à Livry-Gargan ?",
+      answer:
+        "<p>L’humidité, la pollution urbaine et les passages répétés favorisent l’apparition de traces noires et de biofilms sur les sols extérieurs. Sans nettoyage adapté, ces salissures s’installent durablement.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il réellement l’aspect d’une terrasse ancienne ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de réduire fortement les zones foncées et de retrouver un sol visuellement plus homogène et plus propre.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses fortement encrassées, parfois négligées pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de petits immeubles ou copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons également sur les terrasses et cours extérieures de petites copropriétés à Livry-Gargan, avec une organisation adaptée aux usages des résidents.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
+
+
 
     {
   serviceKey: "nettoyage-appartement-maison",

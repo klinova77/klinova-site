@@ -38,7 +38,11 @@ nearbyCities: [
         "gournay-sur-marne",
         "le-perreux-sur-marne",
         "noisy-le-grand",
-        "le-raincy"
+        "le-raincy",
+        "villiers-sur-marne",
+        "montfermeil",
+        "rosny-sous-bois",
+        "champs-sur-marne"
       ],
 
   districts: [
@@ -416,6 +420,69 @@ nearbyCities: [
       ],
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Neuilly-sur-Marne : suppression des mousses, traces noires et salissures extérieures pour retrouver un sol propre, net et agréable à utiliser.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers de Neuilly-sur-Marne : bords de Marne, Centre, L’Écluse, Les 24 Arpents, zones pavillonnaires et résidentielles.",
+    "Expertise des terrasses exposées à l’humidité et à la végétation : sols extérieurs soumis aux dépôts organiques et à l’encrassement progressif.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
+  ],
+  uniqueIntro: `<p><strong>Neuilly-sur-Marne</strong>, commune de Seine-Saint-Denis bordée par la <strong>Marne</strong>, présente un habitat varié mêlant maisons individuelles, résidences et quartiers pavillonnaires. Les terrasses y sont très présentes, aussi bien dans les jardins privés que dans les ensembles résidentiels.</p>
+
+<p class="mt-4">La proximité du fleuve, les alignements d’arbres et les zones ombragées favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont particulièrement visibles sur les terrasses peu exposées au soleil ou proches des berges.</p>
+
+<p class="mt-4">À Neuilly-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement satisfaisante.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et protection de l’environnement</h3>
+<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans les configurations proches de la Marne.</p>
+
+<h3>T2: Nettoyage approfondi du sol extérieur</h3>
+<p>La méthode est adaptée au matériau : solution performante pour béton et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
+  specificChallenges: [
+    "Terrasses situées près des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",
+    "Zones arborées et jardins privatifs : dépôts végétaux et encrassement biologique rapide.",
+    "Dalles béton et carrelages extérieurs ternis par le temps et la pollution.",
+    "Terrasses partiellement ombragées : séchage lent et apparition de surfaces glissantes.",
+    "Bois et composite exposés aux intempéries : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Neuilly-sur-Marne s’encrassent-elles rapidement ?",
+      answer:
+        "<p>La <strong>proximité de la Marne</strong>, combinée à l’humidité et à la végétation environnante, favorise l’apparition de <strong>mousses, algues et traces noires</strong>. Ces salissures s’installent progressivement sur les sols extérieurs si aucun nettoyage adapté n’est réalisé.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il réellement l’aspect visuel d’une terrasse ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet de <strong>clarifier les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois laissées sans entretien pendant plusieurs années, avec une méthode adaptée à l’état réel du support.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de résidences ou de copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons également sur les <strong>terrasses communes et cours extérieures</strong> de résidences et petites copropriétés à Neuilly-sur-Marne, avec une organisation adaptée aux usages des occupants.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
+
+
 
 {
   serviceKey: "nettoyage-appartement-maison",

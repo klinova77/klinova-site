@@ -1,27 +1,111 @@
 {
+  "alfortville": [
+    "maisons-alfort",
+    "creteil",
+    "ivry-sur-seine",
+    "charenton-le-pont",
+    "joinville-le-pont",
+    "saint-mande",
+    "saint-maur-des-fosses",
+    "vincennes",
+    "gentilly",
+    "nogent-sur-marne"
+  ],
+  "arcueil": [
+    "gentilly",
+    "cachan",
+    "montrouge",
+    "ivry-sur-seine",
+    "charenton-le-pont",
+    "alfortville",
+    "saint-mande",
+    "maisons-alfort",
+    "vincennes",
+    "creteil"
+  ],
+  "bagnolet": [
+    "montreuil",
+    "vincennes",
+    "saint-mande",
+    "pantin",
+    "fontenay-sous-bois",
+    "rosny-sous-bois",
+    "bobigny",
+    "charenton-le-pont",
+    "nogent-sur-marne",
+    "joinville-le-pont"
+  ],
+  "bobigny": [
+    "pantin",
+    "bagnolet",
+    "montreuil",
+    "rosny-sous-bois",
+    "le-raincy",
+    "vincennes",
+    "fontenay-sous-bois",
+    "livry-gargan",
+    "neuilly-plaisance",
+    "saint-mande"
+  ],
   "bussy-saint-georges": [
     "lagny-sur-marne",
     "torcy",
     "serris",
+    "emerainville",
     "vaires-sur-marne",
     "pontault-combault",
-    "champs-sur-marne"
+    "champs-sur-marne",
+    "le-plessis-trevise",
+    "gournay-sur-marne",
+    "chelles"
+  ],
+  "cachan": [
+    "arcueil",
+    "gentilly",
+    "montrouge",
+    "ivry-sur-seine",
+    "charenton-le-pont",
+    "alfortville",
+    "maisons-alfort",
+    "saint-mande",
+    "creteil",
+    "vincennes"
+  ],
+  "champigny-sur-marne": [
+    "villiers-sur-marne",
+    "saint-maur-des-fosses",
+    "noisy-le-grand",
+    "le-perreux-sur-marne",
+    "nogent-sur-marne",
+    "joinville-le-pont",
+    "le-plessis-trevise",
+    "fontenay-sous-bois",
+    "neuilly-plaisance",
+    "neuilly-sur-marne"
   ],
   "champs-sur-marne": [
     "gournay-sur-marne",
     "noisy-le-grand",
+    "emerainville",
     "vaires-sur-marne",
     "torcy",
     "chelles",
-    "neuilly-sur-marne"
+    "villiers-sur-marne",
+    "neuilly-sur-marne",
+    "le-plessis-trevise",
+    "gagny"
   ],
   "charenton-le-pont": [
     "ivry-sur-seine",
     "saint-mande",
+    "alfortville",
     "maisons-alfort",
     "vincennes",
     "joinville-le-pont",
-    "gentilly"
+    "gentilly",
+    "bagnolet",
+    "creteil",
+    "montreuil"
   ],
   "chelles": [
     "montfermeil",
@@ -29,15 +113,11 @@
     "vaires-sur-marne",
     "gagny",
     "champs-sur-marne",
-    "neuilly-sur-marne"
-  ],
-  "rosny-sous-bois2": [
-    "rosny-sous-bois",
-    "neuilly-plaisance",
-    "fontenay-sous-bois",
-    "montreuil",
+    "neuilly-sur-marne",
+    "torcy",
     "le-raincy",
-    "le-perreux-sur-marne"
+    "livry-gargan",
+    "noisy-le-grand"
   ],
   "claye-souilly": [
     "villeparisis",
@@ -45,15 +125,35 @@
     "vaires-sur-marne",
     "chelles",
     "montfermeil",
-    "torcy"
+    "torcy",
+    "livry-gargan",
+    "villepinte",
+    "gournay-sur-marne",
+    "gagny"
   ],
   "creteil": [
     "maisons-alfort",
+    "alfortville",
     "saint-maur-des-fosses",
     "joinville-le-pont",
     "charenton-le-pont",
     "ivry-sur-seine",
-    "nogent-sur-marne"
+    "champigny-sur-marne",
+    "nogent-sur-marne",
+    "saint-mande",
+    "vincennes"
+  ],
+  "emerainville": [
+    "le-plessis-trevise",
+    "pontault-combault",
+    "champs-sur-marne",
+    "noisy-le-grand",
+    "villiers-sur-marne",
+    "torcy",
+    "gournay-sur-marne",
+    "vaires-sur-marne",
+    "champigny-sur-marne",
+    "neuilly-sur-marne"
   ],
   "fontenay-sous-bois": [
     "nogent-sur-marne",
@@ -61,7 +161,11 @@
     "le-perreux-sur-marne",
     "vincennes",
     "rosny-sous-bois",
-    "neuilly-plaisance"
+    "neuilly-plaisance",
+    "joinville-le-pont",
+    "bagnolet",
+    "saint-mande",
+    "champigny-sur-marne"
   ],
   "gagny": [
     "neuilly-sur-marne",
@@ -69,11 +173,19 @@
     "le-raincy",
     "neuilly-plaisance",
     "gournay-sur-marne",
-    "chelles"
+    "chelles",
+    "livry-gargan",
+    "rosny-sous-bois",
+    "champs-sur-marne",
+    "le-perreux-sur-marne"
   ],
   "gentilly": [
+    "arcueil",
+    "montrouge",
+    "cachan",
     "ivry-sur-seine",
     "charenton-le-pont",
+    "alfortville",
     "saint-mande",
     "maisons-alfort",
     "vincennes",
@@ -85,13 +197,21 @@
     "chelles",
     "gagny",
     "noisy-le-grand",
-    "montfermeil"
+    "montfermeil",
+    "villiers-sur-marne",
+    "vaires-sur-marne",
+    "neuilly-plaisance",
+    "emerainville"
   ],
   "ivry-sur-seine": [
     "charenton-le-pont",
+    "alfortville",
     "gentilly",
     "saint-mande",
     "maisons-alfort",
+    "arcueil",
+    "cachan",
+    "montrouge",
     "vincennes",
     "creteil"
   ],
@@ -101,7 +221,11 @@
     "maisons-alfort",
     "fontenay-sous-bois",
     "le-perreux-sur-marne",
-    "vincennes"
+    "vincennes",
+    "champigny-sur-marne",
+    "creteil",
+    "saint-mande",
+    "alfortville"
   ],
   "lagny-sur-marne": [
     "torcy",
@@ -109,23 +233,35 @@
     "vaires-sur-marne",
     "serris",
     "claye-souilly",
-    "chelles"
+    "chelles",
+    "champs-sur-marne",
+    "emerainville",
+    "gournay-sur-marne",
+    "villeparisis"
   ],
   "le-perreux-sur-marne": [
     "nogent-sur-marne",
     "neuilly-plaisance",
     "fontenay-sous-bois",
+    "champigny-sur-marne",
     "neuilly-sur-marne",
+    "villiers-sur-marne",
     "rosny-sous-bois",
-    "joinville-le-pont"
+    "joinville-le-pont",
+    "noisy-le-grand",
+    "montreuil"
   ],
   "le-plessis-trevise": [
+    "emerainville",
+    "villiers-sur-marne",
     "noisy-le-grand",
     "pontault-combault",
+    "champigny-sur-marne",
     "champs-sur-marne",
     "gournay-sur-marne",
     "saint-maur-des-fosses",
-    "le-perreux-sur-marne"
+    "le-perreux-sur-marne",
+    "neuilly-sur-marne"
   ],
   "le-raincy": [
     "gagny",
@@ -133,23 +269,35 @@
     "rosny-sous-bois",
     "montfermeil",
     "neuilly-plaisance",
-    "neuilly-sur-marne"
+    "neuilly-sur-marne",
+    "chelles",
+    "gournay-sur-marne",
+    "bobigny",
+    "le-perreux-sur-marne"
   ],
   "livry-gargan": [
     "le-raincy",
     "montfermeil",
     "gagny",
+    "villepinte",
     "chelles",
+    "neuilly-sur-marne",
     "rosny-sous-bois",
-    "neuilly-sur-marne"
+    "neuilly-plaisance",
+    "villeparisis",
+    "bobigny"
   ],
   "maisons-alfort": [
+    "alfortville",
     "creteil",
     "joinville-le-pont",
     "charenton-le-pont",
     "saint-maur-des-fosses",
     "ivry-sur-seine",
-    "saint-mande"
+    "saint-mande",
+    "nogent-sur-marne",
+    "vincennes",
+    "fontenay-sous-bois"
   ],
   "montfermeil": [
     "gagny",
@@ -157,7 +305,23 @@
     "livry-gargan",
     "le-raincy",
     "neuilly-sur-marne",
-    "gournay-sur-marne"
+    "gournay-sur-marne",
+    "neuilly-plaisance",
+    "vaires-sur-marne",
+    "champs-sur-marne",
+    "villeparisis"
+  ],
+  "montrouge": [
+    "arcueil",
+    "gentilly",
+    "cachan",
+    "ivry-sur-seine",
+    "charenton-le-pont",
+    "alfortville",
+    "saint-mande",
+    "maisons-alfort",
+    "vincennes",
+    "bagnolet"
   ],
   "neuilly-plaisance": [
     "rosny-sous-bois",
@@ -165,7 +329,11 @@
     "neuilly-sur-marne",
     "fontenay-sous-bois",
     "gagny",
-    "le-raincy"
+    "le-raincy",
+    "nogent-sur-marne",
+    "montreuil",
+    "noisy-le-grand",
+    "gournay-sur-marne"
   ],
   "neuilly-sur-marne": [
     "gagny",
@@ -173,31 +341,59 @@
     "gournay-sur-marne",
     "le-perreux-sur-marne",
     "noisy-le-grand",
-    "le-raincy"
+    "le-raincy",
+    "villiers-sur-marne",
+    "montfermeil",
+    "rosny-sous-bois",
+    "champs-sur-marne"
   ],
   "nogent-sur-marne": [
     "fontenay-sous-bois",
     "le-perreux-sur-marne",
     "joinville-le-pont",
     "vincennes",
+    "champigny-sur-marne",
     "neuilly-plaisance",
-    "montreuil"
+    "montreuil",
+    "rosny-sous-bois",
+    "saint-maur-des-fosses",
+    "saint-mande"
   ],
   "noisy-le-grand": [
+    "villiers-sur-marne",
+    "champigny-sur-marne",
     "le-plessis-trevise",
     "champs-sur-marne",
     "gournay-sur-marne",
     "neuilly-sur-marne",
     "le-perreux-sur-marne",
-    "neuilly-plaisance"
+    "emerainville",
+    "neuilly-plaisance",
+    "nogent-sur-marne"
+  ],
+  "pantin": [
+    "bobigny",
+    "bagnolet",
+    "montreuil",
+    "vincennes",
+    "rosny-sous-bois",
+    "saint-mande",
+    "fontenay-sous-bois",
+    "le-raincy",
+    "neuilly-plaisance",
+    "charenton-le-pont"
   ],
   "pontault-combault": [
+    "emerainville",
     "le-plessis-trevise",
     "noisy-le-grand",
+    "villiers-sur-marne",
     "champs-sur-marne",
     "torcy",
+    "champigny-sur-marne",
     "bussy-saint-georges",
-    "gournay-sur-marne"
+    "gournay-sur-marne",
+    "vaires-sur-marne"
   ],
   "rosny-sous-bois": [
     "neuilly-plaisance",
@@ -205,38 +401,142 @@
     "montreuil",
     "le-raincy",
     "le-perreux-sur-marne",
-    "neuilly-sur-marne"
+    "neuilly-sur-marne",
+    "nogent-sur-marne",
+    "gagny",
+    "bagnolet",
+    "vincennes"
   ],
   "saint-mande": [
     "vincennes",
     "charenton-le-pont",
+    "bagnolet",
     "montreuil",
     "ivry-sur-seine",
     "fontenay-sous-bois",
-    "joinville-le-pont"
+    "joinville-le-pont",
+    "nogent-sur-marne",
+    "maisons-alfort",
+    "alfortville"
   ],
   "saint-maur-des-fosses": [
     "joinville-le-pont",
+    "champigny-sur-marne",
     "creteil",
     "maisons-alfort",
     "nogent-sur-marne",
     "le-perreux-sur-marne",
-    "fontenay-sous-bois"
+    "villiers-sur-marne",
+    "alfortville",
+    "fontenay-sous-bois",
+    "noisy-le-grand"
+  ],
+  "serris": [
+    "bussy-saint-georges",
+    "lagny-sur-marne",
+    "torcy",
+    "vaires-sur-marne",
+    "claye-souilly",
+    "emerainville",
+    "pontault-combault",
+    "champs-sur-marne",
+    "chelles",
+    "meaux"
+  ],
+  "vaires-sur-marne": [
+    "torcy",
+    "chelles",
+    "champs-sur-marne",
+    "gournay-sur-marne",
+    "lagny-sur-marne",
+    "montfermeil",
+    "emerainville",
+    "gagny",
+    "neuilly-sur-marne",
+    "noisy-le-grand"
   ],
   "villeparisis": [
     "claye-souilly",
     "montfermeil",
+    "villepinte",
     "chelles",
     "livry-gargan",
     "vaires-sur-marne",
-    "gagny"
+    "gagny",
+    "le-raincy",
+    "gournay-sur-marne",
+    "lagny-sur-marne"
+  ],
+  "villiers-sur-marne": [
+    "noisy-le-grand",
+    "champigny-sur-marne",
+    "le-plessis-trevise",
+    "le-perreux-sur-marne",
+    "champs-sur-marne",
+    "neuilly-sur-marne",
+    "gournay-sur-marne",
+    "emerainville",
+    "neuilly-plaisance",
+    "nogent-sur-marne"
   ],
   "vincennes": [
     "saint-mande",
     "montreuil",
+    "bagnolet",
     "fontenay-sous-bois",
     "nogent-sur-marne",
     "charenton-le-pont",
-    "joinville-le-pont"
+    "joinville-le-pont",
+    "rosny-sous-bois",
+    "le-perreux-sur-marne",
+    "maisons-alfort"
+  ],
+  "meaux": [
+    "serris",
+    "claye-souilly",
+    "lagny-sur-marne",
+    "bussy-saint-georges",
+    "villeparisis",
+    "torcy",
+    "vaires-sur-marne",
+    "chelles",
+    "montfermeil",
+    "champs-sur-marne"
+  ],
+  "montreuil": [
+    "bagnolet",
+    "vincennes",
+    "fontenay-sous-bois",
+    "rosny-sous-bois",
+    "saint-mande",
+    "nogent-sur-marne",
+    "neuilly-plaisance",
+    "le-perreux-sur-marne",
+    "bobigny",
+    "pantin"
+  ],
+  "torcy": [
+    "vaires-sur-marne",
+    "champs-sur-marne",
+    "lagny-sur-marne",
+    "emerainville",
+    "chelles",
+    "gournay-sur-marne",
+    "bussy-saint-georges",
+    "noisy-le-grand",
+    "le-plessis-trevise",
+    "pontault-combault"
+  ],
+  "villepinte": [
+    "livry-gargan",
+    "villeparisis",
+    "le-raincy",
+    "montfermeil",
+    "gagny",
+    "bobigny",
+    "chelles",
+    "rosny-sous-bois",
+    "neuilly-sur-marne",
+    "neuilly-plaisance"
   ]
 }

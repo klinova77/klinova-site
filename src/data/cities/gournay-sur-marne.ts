@@ -47,7 +47,11 @@ nearbyCities: [
         "chelles",
         "gagny",
         "noisy-le-grand",
-        "montfermeil"
+        "montfermeil",
+        "villiers-sur-marne",
+        "vaires-sur-marne",
+        "neuilly-plaisance",
+        "emerainville"
       ],
 
   landmarks: [
@@ -395,6 +399,64 @@ nearbyCities: [
         },
       ],
 
+      ctaOverride: "",
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Restauration complète de votre terrasse avec identification du revêtement, suppression des mousses et salissures, et application d'un traitement protecteur adapté aux conditions locales.",
+      whyUsBullets: [
+        "Intervention sur l'ensemble du territoire gournaysien : secteurs Centre-Ville, Bords de Marne, Bel-Air et quartiers pavillonnaires résidentiels.",
+        "Expertise adaptée aux propriétés locales : terrasses des pavillons traditionnels, dallages des maisons en meulière, aménagements contemporains des constructions récentes.",
+        "Précautions renforcées pour les jardins : bâchage du mobilier extérieur, protection des végétaux et massifs fleuris, gestion maîtrisée des eaux de rinçage.",
+      ],
+      uniqueIntro: `<p>Gournay-sur-Marne, plus petite commune de Seine-Saint-Denis avec ses 1,68 km², conserve un caractère de <strong>village résidentiel</strong> prisé aux portes de la Seine-et-Marne. Cette enclave verdoyante, bordée par la <strong>Marne</strong> et le <strong>canal de Chelles</strong>, abrite un parc immobilier majoritairement pavillonnaire où les terrasses constituent un prolongement naturel de l'habitat.</p>
+
+<p class="mt-4">La proximité immédiate de la rivière et du <strong>parc départemental de la Haute-Île</strong> (65 hectares de zone humide classée Natura 2000) génère un taux d'humidité favorable au développement des mousses, algues et lichens. Les terrasses exposées nord ou ombragées par les arbres des jardins gournaysiens subissent un encrassement accéléré, rendant les surfaces glissantes et altérant leur aspect.</p>
+
+<p class="mt-4">L'évaluation initiale identifie le type de revêtement — <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong> ou <strong>bois composite</strong> — et détermine le protocole le mieux adapté pour retrouver une surface propre sans compromettre l'intégrité du support.</p>`,
+      uniqueDeepDive: `<h3>T1: Reconnaissance du site et préparation</h3>
+<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et plantations adjacentes sont bâchées pour éviter les projections. Un balayage soigneux élimine feuilles, débris végétaux et terre accumulée sur le revêtement.</p>
+
+<h3>T2: Traitement adapté au support</h3>
+<p>Le produit nettoyant est sélectionné selon le matériau : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre naturelle, traitement spécifique pour bois et composite. L'action mécanique par brossage déloge les incrustations tenaces. Le rinçage s'effectue à pression ajustée pour respecter les joints et la surface.</p>
+
+<h3>T3: Protection et conseils d'entretien</h3>
+<p>Un traitement préventif anti-mousse est appliqué sur les zones les plus exposées à l'humidité ambiante. L'évacuation des eaux est dirigée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement humide des bords de Marne.</p>`,
+      specificChallenges: [
+        "Humidité permanente liée à la Marne et au canal de Chelles : prolifération rapide des mousses et algues vertes sur toutes les surfaces.",
+        "Pavillons traditionnels avec terrasses en dalles béton années 60-80 : joints fragilisés par les cycles gel-dégel.",
+        "Meulières rénovées avec dallages anciens : supports poreux nécessitant des produits à pH contrôlé.",
+        "Carrelage grès cérame des aménagements récents : micro-reliefs antidérapants retenant les salissures.",
+        "Jardins arborés typiques des propriétés gournaysiennes : ombre favorisant l'encrassement et accès parfois contraints.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Ma terrasse à Gournay reverdit très vite à cause de l'humidité des bords de Marne, que pouvez-vous faire ?",
+          answer:
+            "<p>La proximité de la Marne et du canal de Chelles génère effectivement une humidité propice au développement rapide des mousses et algues. Après le nettoyage complet, nous appliquons un traitement préventif qui freine significativement cette repousse. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat plus longtemps malgré l'environnement humide.</p>",
+        },
+        {
+          question:
+            "Comment traitez-vous les terrasses des pavillons anciens avec des dalles béton vieillissantes ?",
+          answer:
+            "<p>Les dalles béton des pavillons années 60-80 présentent souvent une porosité variable et des joints fragilisés par le temps. Nous utilisons un produit alcalin adapté qui désincruste les salissures sans attaquer le matériau. La pression de rinçage est calibrée pour nettoyer efficacement sans dégrader les joints existants.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur les terrasses des propriétés avec jardin arboré et accès étroit ?",
+          answer:
+            "<p>Les propriétés gournaysiennes disposent souvent de jardins plantés avec des accès par allées étroites ou passages latéraux. Notre équipement portable permet d'intervenir sans difficulté dans ces configurations. Le matériel est acheminé manuellement et les produits sont conditionnés pour un transport aisé jusqu'à la zone de travail.</p>",
+        },
+        {
+          question:
+            "Quelle précaution prenez-vous pour les plantations lors du nettoyage de terrasse ?",
+          answer:
+            "<p>Les jardins fleuris de Gournay — commune labellisée Villes et Villages Fleuris — méritent une attention particulière. Nous bâchons systématiquement les massifs et jardinières à proximité de la zone de travail. Les produits utilisés sont sélectionnés pour leur faible impact environnemental et le rinçage est orienté vers les zones d'écoulement existantes, à l'écart des plantations.</p>",
+        },
+      ],
       ctaOverride: "",
     },
 

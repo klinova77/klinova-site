@@ -44,13 +44,17 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "champs-sur-marne",
-  "chelles",
-  "claye-souilly",
-  "lagny-sur-marne",
-  "meaux",
-  "torcy",
-],
+        "torcy",
+        "chelles",
+        "champs-sur-marne",
+        "gournay-sur-marne",
+        "lagny-sur-marne",
+        "montfermeil",
+        "emerainville",
+        "gagny",
+        "neuilly-sur-marne",
+        "noisy-le-grand"
+      ],
 
   landmarks: [
     "Mairie de Vaires-sur-Marne",
@@ -399,6 +403,64 @@ nearbyCities: [
         }
       ],
       ctaOverride: ""
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Entretien spécialisé de votre terrasse selon la nature du revêtement, élimination des mousses, algues et dépôts végétaux, et application d'une protection adaptée à l'environnement fluvial et boisé de cette commune bordant la Marne.",
+      whyUsBullets: [
+        "Déplacement dans tous les quartiers vairisiens : Centre-Ville, République, quartier du Canal, les Pêcheurs, Square Paul-Algis, parc de l'Aulnay, Bois de Vaires, cité EDF.",
+        "Expertise adaptée à la diversité du parc immobilier local : terrasses des pavillons traditionnels, dallages des résidences des années 60-70, aménagements extérieurs des constructions récentes.",
+        "Protection rigoureuse des abords : bâchage du mobilier, préservation des jardins et espaces végétalisés, maîtrise des eaux de rinçage vers les écoulements existants.",
+      ],
+      uniqueIntro: `<p><strong>Vaires-sur-Marne</strong>, commune de Seine-et-Marne d'environ 13 000 habitants, s'étire le long de la Marne et du canal de Chelles. Révélée au monde entier lors des <strong>Jeux Olympiques de Paris 2024</strong> — le stade nautique olympique d'Île-de-France y a accueilli les épreuves d'aviron et de canoë-kayak —, la ville conjugue un cadre naturel préservé et un tissu résidentiel à dominante pavillonnaire.</p>
+
+<p class="mt-4">Avec l'<strong>île de loisirs de Vaires-Torcy</strong> (350 hectares partagés entre les deux communes), le <strong>bois de Vaires</strong> classé Natura 2000 et la proximité immédiate de la Marne, Vaires bénéficie d'un environnement exceptionnellement vert et aquatique. Cette situation génère une humidité ambiante favorable au développement des mousses et algues sur les surfaces extérieures.</p>
+
+<p class="mt-4">Le parc immobilier vairisien — <strong>pavillons traditionnels</strong>, <strong>maisons des années 20-30</strong>, <strong>résidences des années 60-70</strong> comme le parc de l'Aulnay, <strong>constructions récentes</strong> — présente des terrasses aux revêtements variés : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun nécessitant un protocole de nettoyage adapté.</p>`,
+      uniqueDeepDive: `<h3>T1: Analyse préalable et préparation du site</h3>
+<p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et clôtures adjacentes sont bâchées. Un balayage préliminaire retire feuilles, aiguilles et débris végétaux accumulés par la proximité des espaces boisés.</p>
+
+<h3>T2: Nettoyage ciblé selon le revêtement</h3>
+<p>Le produit est sélectionné en fonction du support identifié : formule douce pour les dalles anciennes, solution alcaline pour béton et carrelage minéral, traitement spécifique pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations biologiques et les dépôts organiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Application préventive et recommandations</h3>
+<p>Un traitement protecteur est appliqué sur les zones les plus exposées à l'humidité du bord de Marne et des espaces boisés. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement naturel dense de Vaires.</p>`,
+      specificChallenges: [
+        "Pavillons proches de la Marne et du canal de Chelles : humidité permanente favorisant la prolifération rapide des mousses et algues vertes.",
+        "Quartier des Pêcheurs et ZAC des Pêcheurs : zone exposée aux risques d'inondation, terrasses souvent ombragées par la végétation riveraine.",
+        "Résidences du parc de l'Aulnay (immeubles modernistes années 60) : dalles béton parfois fragilisées nécessitant un traitement adapté.",
+        "Pavillons bordant le bois de Vaires : accumulation de débris végétaux, dépôts organiques et encrassement biologique accéléré.",
+        "Constructions récentes avec terrasses en grès cérame : micro-reliefs piégeant les salissures, nécessitant un brossage ciblé.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Ma terrasse reverdit très vite car j'habite près de la Marne, quelle solution proposez-vous ?",
+          answer:
+            "<p>La proximité de la Marne et du canal de Chelles génère une humidité constante propice à la repousse rapide des mousses et algues. Après le nettoyage complet, nous appliquons un traitement préventif renforcé sur les zones les plus exposées. Un balayage régulier des débris végétaux apportés par le vent et une nouvelle application préventive annuelle permettent de maintenir le résultat malgré cet environnement fluvial.</p>",
+        },
+        {
+          question:
+            "Comment traitez-vous les terrasses des pavillons proches du bois de Vaires sans nuire à l'environnement naturel ?",
+          answer:
+            "<p>Le bois de Vaires étant classé Natura 2000, nous sommes particulièrement attentifs à l'impact environnemental de nos interventions. Nous utilisons des produits à faible écotoxicité et maîtrisons rigoureusement les eaux de rinçage pour éviter tout ruissellement vers les espaces naturels. Le nettoyage élimine efficacement les dépôts organiques (feuilles, aiguilles, résidus) tout en préservant l'écosystème environnant.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur les terrasses des résidences du parc de l'Aulnay ?",
+          answer:
+            "<p>Les immeubles modernistes du parc de l'Aulnay, construits dans les années 1960, présentent souvent des terrasses en dalles béton qui peuvent être fragilisées par le temps. Notre protocole adapte la pression de rinçage et utilise des produits compatibles avec ces supports anciens. Une coordination préalable avec le syndic est recommandée pour les parties communes.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple passage haute pression et votre prestation sur une terrasse de pavillon vairisien ?",
+          answer:
+            "<p>Les pavillons de Vaires-sur-Marne — notamment les maisons traditionnelles du centre-ville ou du quartier République — présentent souvent des terrasses en dalles béton ou matériaux d'époque qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit adapté au support, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader la surface ni déchausser les joints.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
 
     {

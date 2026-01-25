@@ -50,7 +50,11 @@ const city: City = {
         "neuilly-sur-marne",
         "fontenay-sous-bois",
         "gagny",
-        "le-raincy"
+        "le-raincy",
+        "nogent-sur-marne",
+        "montreuil",
+        "noisy-le-grand",
+        "gournay-sur-marne"
       ],
 
   landmarks: [
@@ -391,6 +395,66 @@ const city: City = {
       ],
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Neuilly-Plaisance : élimination des mousses, traces noires et salissures extérieures pour redonner aux sols un aspect propre, lumineux et valorisant.",
+  whyUsBullets: [
+    "Intervention dans tous les secteurs de Neuilly-Plaisance : bords de Marne, Centre, Plateau d’Avron, Maltournée, quartiers pavillonnaires et résidentiels.",
+    "Expertise des terrasses de maisons et jardins soignés : sols exposés à l’humidité, à la végétation et aux usages extérieurs fréquents.",
+    "Prestation haut de gamme et minutieuse : protection du mobilier, respect des façades et nettoyage précis pour un rendu esthétique immédiat.",
+  ],
+  uniqueIntro: `<p><strong>Neuilly-Plaisance</strong>, commune résidentielle appréciée de l’est parisien, séduit par son cadre verdoyant et ses quartiers pavillonnaires bien entretenus, notamment le long des <strong>bords de Marne</strong>. Les terrasses y occupent une place centrale dans l’aménagement et la valorisation des extérieurs.</p>
+
+<p class="mt-4">La proximité de l’eau, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, même dans des environnements résidentiels soignés.</p>
+
+<p class="mt-4">À Neuilly-Plaisance, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement demande une méthode spécifique pour obtenir un nettoyage efficace et un rendu visuel harmonieux.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation soignée de l’espace extérieur</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont bâchés afin de garantir une intervention propre et maîtrisée, y compris dans des configurations de terrasses ouvertes sur le jardin.</p>
+
+<h3>T2: Nettoyage approfondi et ciblé du revêtement</h3>
+<p>Le protocole est adapté au matériau : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore visiblement la clarté du sol et l’esthétique générale de la terrasse, renforçant le plaisir d’usage et la valorisation de l’espace extérieur.</p>`,
+  specificChallenges: [
+    "Terrasses proches des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",
+    "Jardins arborés et zones ombragées : dépôts organiques et encrassement accéléré.",
+    "Dalles béton et carrelages extérieurs ternis par le temps : zones foncées et aspect irrégulier.",
+    "Terrasses partiellement couvertes : séchage lent et apparition de biofilms glissants.",
+    "Bois et composite exposés aux intempéries : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Neuilly-Plaisance se salissent-elles malgré un cadre résidentiel soigné ?",
+      answer:
+        "<p>La végétation dense, l’ombre et la proximité de la Marne créent des conditions idéales pour le développement de mousses et de traces noires. Même dans un environnement entretenu, les sols extérieurs s’encrassent progressivement sans nettoyage adapté.</p>",
+    },
+    {
+      question:
+        "Le nettoyage permet-il de redonner de la clarté à une terrasse foncée par le temps ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, d’uniformiser l’aspect du sol et de retrouver une terrasse visuellement plus nette et plus agréable à vivre.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur les terrasses de maisons comme de résidences ?",
+      answer:
+        "<p>Nous intervenons aussi bien sur les terrasses de maisons individuelles que sur celles de résidences et petites copropriétés, avec une organisation adaptée aux contraintes du site.</p>",
+    },
+    {
+      question:
+        "Une terrasse très encrassée peut-elle retrouver un bel aspect sans travaux ?",
+      answer:
+        "<p>Oui. Même très encrassée, une terrasse peut retrouver un aspect nettement plus propre et valorisé grâce à un nettoyage ciblé et méthodique, sans remplacement du revêtement.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
     {
   serviceKey: "nettoyage-appartement-maison",

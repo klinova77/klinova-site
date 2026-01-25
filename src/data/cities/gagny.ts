@@ -49,7 +49,11 @@ nearbyCities: [
         "le-raincy",
         "neuilly-plaisance",
         "gournay-sur-marne",
-        "chelles"
+        "chelles",
+        "livry-gargan",
+        "rosny-sous-bois",
+        "champs-sur-marne",
+        "le-perreux-sur-marne"
       ],
 
   landmarks: [
@@ -394,6 +398,66 @@ answer:
     },
   ],  ctaOverride: "",
 },
+
+{
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Gagny : élimination des mousses, traces noires et salissures incrustées pour redonner aux sols extérieurs un aspect propre, clair et agréable à vivre.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers de Gagny : Centre-ville, Les Abbesses, Le Chénay, Jean-Jaurès, zones pavillonnaires et résidentielles.",
+    "Expertise des terrasses de maisons individuelles : sols exposés à la végétation, à l’humidité et aux usages extérieurs fréquents.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
+  ],
+  uniqueIntro: `<p><strong>Gagny</strong>, commune résidentielle de Seine-Saint-Denis, est reconnue pour ses quartiers pavillonnaires verdoyants et ses nombreux jardins privés. Les terrasses y sont largement utilisées comme espaces de détente et de vie extérieure.</p>
+
+<p class="mt-4">La présence d’arbres, de haies et de zones ombragées favorise toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures s’installent progressivement, en particulier sur les terrasses peu exposées au soleil.</p>
+
+<p class="mt-4">À Gagny, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode adaptée pour obtenir un nettoyage efficace et une remise en état visuellement nette.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et protection de la zone</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, même dans des jardins arborés.</p>
+
+<h3>T2: Nettoyage en profondeur du sol extérieur</h3>
+<p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
+  specificChallenges: [
+    "Terrasses entourées de jardins arborés : dépôts végétaux et mousses persistantes.",
+    "Zones pavillonnaires ombragées : séchage lent et traces noires récurrentes.",
+    "Dalles béton ternies par le temps et l’humidité : aspect foncé et irrégulier.",
+    "Terrasses partiellement couvertes : encrassement accéléré dans les zones peu ventilées.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Gagny se salissent-elles rapidement ?",
+      answer:
+        "<p>La <strong>végétation dense</strong>, l’<strong>humidité</strong> et une exposition parfois limitée au soleil favorisent l’apparition de <strong>mousses, algues et traces noires</strong> sur les sols extérieurs, notamment dans les quartiers pavillonnaires.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il réellement l’aspect d’une terrasse ancienne ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois laissées sans entretien pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de petites copropriétés à Gagny ?",
+      answer:
+        "<p>Oui. Nous intervenons également sur les <strong>terrasses et cours extérieures</strong> de petites copropriétés à Gagny, avec une organisation adaptée aux usages des résidents.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
 
 {
   serviceKey: "nettoyage-appartement-maison",

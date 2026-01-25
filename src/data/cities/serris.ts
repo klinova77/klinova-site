@@ -39,13 +39,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-  "bussy-saint-georges",
-  "champs-sur-marne",
-  "lagny-sur-marne",
-  "meaux",
-  "torcy",
-  "vaires-sur-marne",
-],
+        "bussy-saint-georges",
+        "lagny-sur-marne",
+        "torcy",
+        "vaires-sur-marne",
+        "claye-souilly",
+        "emerainville",
+        "pontault-combault",
+        "champs-sur-marne",
+        "chelles",
+        "meaux"
+      ],
 
   landmarks: [
     "Mairie de Serris",
@@ -387,6 +391,64 @@ const city: City = {
   ],
 
   ctaOverride: "",
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Nettoyage approfondi de votre terrasse selon la nature du revêtement, suppression des mousses et dépôts organiques, et application d'un traitement protecteur adapté aux conditions locales.",
+      whyUsBullets: [
+        "Intervention dans tous les quartiers serrissiens : Centre urbain Val d'Europe, quartier de la Gare, quartier du Parc, quartier du Lac, Pré de Claye, vieux bourg.",
+        "Expertise adaptée aux constructions locales : terrasses des immeubles néo-haussmanniens, dallages des maisons de ville récentes, aménagements des résidences contemporaines.",
+        "Précautions systématiques pour les extérieurs : protection du mobilier de jardin, bâchage des massifs plantés, gestion maîtrisée des eaux de rinçage.",
+      ],
+      uniqueIntro: `<p><strong>Serris</strong>, au cœur du <strong>Val d'Europe</strong> en Seine-et-Marne, incarne le développement réussi d'une ville nouvelle intégrée à <strong>Marne-la-Vallée</strong>. Depuis l'ouverture du centre commercial en 2000 et l'arrivée du RER A en 2001, la commune a connu une croissance spectaculaire, passant de quelques centaines d'habitants à près de 10 000 Serrissiens.</p>
+
+<p class="mt-4">Labellisée <strong>Ville Fleurie</strong> (3 fleurs), Serris bénéficie d'un environnement végétal soigné — parc des Communes, parc du Centre Urbain, lac des Gassets, jardin Andalou — qui génère une humidité propice au développement des mousses et algues sur les surfaces extérieures. Les terrasses des résidences bordant ces espaces verts subissent un encrassement accéléré.</p>
+
+<p class="mt-4">L'architecture caractéristique du Val d'Europe — <strong>immeubles néo-haussmanniens</strong> du centre urbain, <strong>maisons de ville</strong> des nouveaux quartiers, <strong>résidences d'inspiration londonienne</strong> du Pré de Claye — présente des terrasses en <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> qui nécessitent chacune un traitement adapté.</p>`,
+      uniqueDeepDive: `<h3>T1: Diagnostic et sécurisation du chantier</h3>
+<p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou bâchés. Les façades néo-haussmanniennes et menuiseries adjacentes sont protégées des projections. Un balayage préliminaire retire feuilles, pollens et débris végétaux accumulés sur le revêtement.</p>
+
+<h3>T2: Nettoyage adapté au support</h3>
+<p>Le produit est sélectionné selon le matériau identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Traitement préventif et conseils</h3>
+<p>Une protection anti-mousse est appliquée sur les zones les plus exposées à l'humidité des parcs et lacs environnants. Les eaux de rinçage sont orientées vers les points d'écoulement. Des recommandations d'entretien saisonnier sont transmises pour maintenir le résultat face à l'environnement végétal dense de cette ville fleurie.</p>`,
+      specificChallenges: [
+        "Immeubles néo-haussmanniens du centre urbain Val d'Europe : terrasses et balcons avec garde-corps ouvragés, accès parfois contraints par les parties communes.",
+        "Résidences du quartier du Parc : proximité du parc de 11 hectares favorisant l'humidité et la prolifération rapide des mousses.",
+        "Maisons de ville du Pré de Claye : constructions récentes d'inspiration londonienne avec dalles béton ou pierre reconstituée.",
+        "Terrasses bordant le lac des Gassets et le jardin des Quais : humidité permanente accélérant l'encrassement biologique.",
+        "Carrelage grès cérame des programmes neufs : micro-reliefs antidérapants piégeant les salissures et nécessitant un brossage spécifique.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment intervenez-vous sur les terrasses des immeubles néo-haussmanniens du centre urbain Val d'Europe ?",
+          answer:
+            "<p>Les résidences du centre urbain présentent une architecture soignée avec des terrasses et balcons dotés de garde-corps ouvragés. Notre équipe protège systématiquement ces éléments décoratifs avant intervention. Le matériel portable permet d'accéder aux étages via les parties communes, et nous coordonnons si nécessaire avec le syndic pour les interventions en copropriété.</p>",
+        },
+        {
+          question:
+            "Ma terrasse reverdit rapidement car elle borde le parc du Centre Urbain, quelle solution proposez-vous ?",
+          answer:
+            "<p>La proximité des espaces verts serrissiens — parc des Communes, parc du Centre Urbain de 11 hectares, lac des Gassets — génère une humidité constante propice à la repousse des mousses. Après le nettoyage complet, nous appliquons un traitement préventif ciblé. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat malgré cet environnement « ville fleurie ».</p>",
+        },
+        {
+          question:
+            "Intervenez-vous dans le nouveau quartier du Pré de Claye sur les maisons récentes ?",
+          answer:
+            "<p>Le quartier du Pré de Claye, avec ses maisons de ville d'inspiration londonienne et ses résidences récentes, fait partie de notre zone d'intervention. Les terrasses de ces constructions présentent généralement des dalles béton, pierre reconstituée ou bois composite. Nos produits et méthodes sont parfaitement adaptés à ces matériaux contemporains pour un résultat optimal sans risque pour les revêtements neufs.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple passage haute pression et votre prestation sur une terrasse en dalles béton ?",
+          answer:
+            "<p>Les dalles béton des résidences serrissiennes présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté au support, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader la surface ni déchausser les joints.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
 
     {

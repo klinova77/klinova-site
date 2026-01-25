@@ -44,11 +44,15 @@ const city: City = {
 
 nearbyCities: [
         "joinville-le-pont",
+        "champigny-sur-marne",
         "creteil",
         "maisons-alfort",
         "nogent-sur-marne",
         "le-perreux-sur-marne",
-        "fontenay-sous-bois"
+        "villiers-sur-marne",
+        "alfortville",
+        "fontenay-sous-bois",
+        "noisy-le-grand"
       ],
 
 
@@ -391,6 +395,65 @@ nearbyCities: [
         },
       ],
 
+      ctaOverride: "",
+    },
+
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Entretien approfondi de votre terrasse selon la nature du revêtement, retrait des mousses et dépôts accumulés, et application d'une protection adaptée pour préserver durablement l'aspect obtenu.",
+      whyUsBullets: [
+        "Intervention dans les huit quartiers-villages de Saint-Maur : La Varenne, Le Parc, Champignol, Adamville, Le Vieux Saint-Maur, Les Mûriers, La Pie et Saint-Maur-Créteil.",
+        "Savoir-faire adapté au patrimoine architectural local : terrasses en pierre des villas bourgeoises, dallages anciens des maisons de villégiature, revêtements contemporains des constructions récentes.",
+        "Protection rigoureuse des abords : bâchage du mobilier de jardin, préservation des plantations et massifs, maîtrise des écoulements vers le jardin ou la Marne.",
+      ],
+      uniqueIntro: `<p>Saint-Maur-des-Fossés, presqu'île enserrée par la <strong>boucle de la Marne</strong>, offre à ses habitants un cadre résidentiel préservé où les espaces extérieurs occupent une place centrale. Des <strong>villas de villégiature</strong> de La Varenne aux <strong>maisons bourgeoises</strong> du Parc, en passant par les pavillons plus modestes de La Pie, les terrasses reflètent la diversité architecturale de cette commune prisée du Val-de-Marne.</p>
+
+<p class="mt-4">La proximité immédiate de la rivière génère un taux d'humidité élevé qui favorise l'apparition de mousses, algues et lichens sur les surfaces exposées. Les <strong>dalles en pierre naturelle</strong> des propriétés anciennes comme les <strong>carrelages et bétons</strong> des aménagements plus récents subissent cette dégradation progressive, rendant les terrasses glissantes et visuellement altérées.</p>
+
+<p class="mt-4">Chaque matériau requiert une approche sur mesure. Le diagnostic initial identifie le support, évalue son état et détermine le protocole le plus adapté pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>`,
+      uniqueDeepDive: `<h3>T1: Diagnostic et mise en sécurité des abords</h3>
+<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés par bâchage. Les menuiseries extérieures et façades adjacentes sont préservées des projections. Un balayage minutieux élimine feuilles mortes, débris végétaux et terre accumulée avant toute intervention.</p>
+
+<h3>T2: Nettoyage selon le matériau</h3>
+<p>Le produit est sélectionné en fonction du support identifié : solution douce pour la pierre naturelle, formulation alcaline pour béton et carrelage, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les dépôts incrustés. Le rinçage s'effectue à pression calibrée pour respecter les joints et la surface du revêtement.</p>
+
+<h3>T3: Protection et suivi</h3>
+<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité et à l'ombre des arbres. L'évacuation des eaux de rinçage est dirigée vers les points d'écoulement existants. Des préconisations d'entretien saisonnier sont transmises pour maintenir le résultat sur la durée.</p>`,
+      specificChallenges: [
+        "Pierre naturelle des villas bourgeoises de La Varenne et du Parc : matériau noble nécessitant des produits à pH neutre.",
+        "Dallages anciens des maisons de villégiature fin XIXe-début XXe : joints fragiles et patine à préserver.",
+        "Carrelage grès cérame des rénovations contemporaines : encrassement dans les reliefs antidérapants.",
+        "Terrasses bois ou composite en bord de Marne : exposition permanente à l'humidité ambiante.",
+        "Accès parfois contraints dans les propriétés avec jardins arborés et allées étroites.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment entretenez-vous les terrasses en pierre des villas anciennes de Saint-Maur sans altérer leur cachet ?",
+          answer:
+            "<p>La pierre naturelle des propriétés de caractère reçoit un traitement respectueux de sa patine. Un produit à pH neutre décolle les salissures biologiques sans attaquer le matériau. Le brossage manuel préserve les arêtes et le grain de la pierre. Le rinçage à basse pression évite toute infiltration dans les pores du support.</p>",
+        },
+        {
+          question:
+            "Ma terrasse en bord de Marne reverdit très rapidement, existe-t-il une solution durable ?",
+          answer:
+            "<p>L'humidité permanente liée à la proximité de la Marne accélère effectivement le développement des mousses et algues. Le traitement préventif appliqué après nettoyage freine significativement cette repousse. Un entretien régulier par balayage des débris végétaux et une nouvelle application préventive annuelle permettent de maintenir le résultat plus longtemps.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous intervenir sur une terrasse avec un accès difficile par le jardin ?",
+          answer:
+            "<p>Les propriétés saint-mauriennes présentent souvent des configurations avec jardins arborés et passages étroits. Notre équipement portable permet d'intervenir sans véhicule au plus près de la terrasse. Le matériel est acheminé manuellement et les produits sont conditionnés pour un transport aisé jusqu'à la zone de travail.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple lavage haute pression et votre prestation sur une terrasse en grès cérame ?",
+          answer:
+            "<p>Le grès cérame texturé retient les salissures dans ses micro-reliefs antidérapants. Un simple jet haute pression déplace les dépôts sans les éliminer durablement. Notre protocole combine un produit désincrustant adapté, un brossage mécanique ciblé et un rinçage contrôlé qui nettoie en profondeur les aspérités du carrelage.</p>",
+        },
+      ],
       ctaOverride: "",
     },
 

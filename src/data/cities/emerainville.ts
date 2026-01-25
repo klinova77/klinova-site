@@ -45,7 +45,18 @@ const city: City = {
     "Zone d'Activités de la Malnoue",
     "Secteur Gare RER E",
   ],
-  nearbyCities: [],
+  nearbyCities: [
+        "le-plessis-trevise",
+        "pontault-combault",
+        "champs-sur-marne",
+        "noisy-le-grand",
+        "villiers-sur-marne",
+        "torcy",
+        "gournay-sur-marne",
+        "vaires-sur-marne",
+        "champigny-sur-marne",
+        "neuilly-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [
@@ -365,6 +376,66 @@ const city: City = {
 
   ctaOverride: "",
 },
+
+{
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Émerainville : élimination des mousses, traces noires et salissures extérieures pour redonner aux sols un aspect propre, net et agréable à utiliser.",
+  whyUsBullets: [
+    "Intervention dans tous les secteurs d’Émerainville : Centre, Malnoue, résidences récentes, quartiers pavillonnaires et ensembles résidentiels.",
+    "Expertise des terrasses en copropriété et maisons : sols extérieurs exposés à l’humidité, aux espaces verts et aux usages quotidiens.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un résultat immédiatement visible.",
+  ],
+  uniqueIntro: `<p><strong>Émerainville</strong>, commune résidentielle de Seine-et-Marne, se distingue par un habitat récent, de nombreuses copropriétés et des espaces verts omniprésents. Les terrasses y sont très présentes, aussi bien en rez-de-jardin qu’en prolongement des logements collectifs.</p>
+
+<p class="mt-4">La configuration des résidences, la végétation dense et l’exposition parfois limitée au soleil favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les ensembles résidentiels entourés d’espaces paysagers.</p>
+
+<p class="mt-4">À Émerainville, les terrasses sont majoritairement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode adaptée pour un nettoyage efficace et une remise en état visuellement nette.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de l’espace extérieur</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans des résidences aux espaces partagés.</p>
+
+<h3>T2: Nettoyage approfondi du revêtement</h3>
+<p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant une impression de propreté durable.</p>`,
+  specificChallenges: [
+    "Terrasses de copropriétés entourées d’espaces verts : mousses et dépôts organiques fréquents.",
+    "Zones peu exposées au soleil : séchage lent et apparition de traces noires.",
+    "Dalles béton ternies par l’humidité : aspect foncé et irrégulier.",
+    "Terrasses en rez-de-jardin : encrassement lié aux passages et aux projections de terre.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses d’Émerainville s’encrassent-elles rapidement ?",
+      answer:
+        "<p>La présence de nombreux <strong>espaces verts</strong>, l’<strong>humidité</strong> et une exposition parfois limitée au soleil favorisent l’apparition de <strong>mousses, algues et traces noires</strong> sur les sols extérieurs.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en copropriété ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois négligées pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de résidences et petites copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons sur les <strong>terrasses et cours extérieures</strong> de résidences et copropriétés à Émerainville, avec une organisation adaptée aux usages des occupants.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
 
 
   

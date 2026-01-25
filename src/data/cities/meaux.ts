@@ -51,12 +51,17 @@ const city: City = {
 ],
 
   nearbyCities: [
-  "claye-souilly",
-  "lagny-sur-marne",
-  "serris",
-  "vaires-sur-marne",
-  "villeparisis",
-],
+       "serris",
+       "claye-souilly",
+       "lagny-sur-marne",
+       "bussy-saint-georges",
+       "villeparisis",
+       "torcy",
+       "vaires-sur-marne",
+       "chelles",
+       "montfermeil",
+       "champs-sur-marne"
+     ],
 
   landmarks: [
     "Mairie de Meaux",
@@ -386,6 +391,67 @@ const city: City = {
 
       ctaOverride: "",
     },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Nettoyage complet de votre terrasse selon le matériau, élimination des mousses et salissures accumulées, et application d'un traitement préventif pour limiter la repousse.",
+      whyUsBullets: [
+        "Intervention sur les secteurs pavillonnaires de Meaux : République-Gambetta, faubourg Saint-Nicolas, proximité du parc du Pâtis.",
+        "Adaptation du protocole aux matériaux rencontrés : pierre naturelle des maisons bourgeoises, béton des constructions années 60-80, grès cérame des aménagements récents.",
+        "Respect des abords : protection des plantations, mobilier et menuiseries, évacuation maîtrisée des eaux de rinçage.",
+      ],
+      uniqueIntro: `<p>À Meaux, les terrasses des maisons individuelles font face à des conditions particulières. La proximité de la Marne et du <strong>parc du Pâtis</strong>, vaste espace naturel de 150 hectares, génère un taux d'humidité favorable au développement des mousses et algues. Les secteurs résidentiels comme <strong>République-Gambetta</strong> ou le <strong>faubourg Saint-Nicolas</strong> concentrent un habitat varié, des villas bourgeoises aux pavillons plus modestes, avec des terrasses de natures très différentes.</p>
+
+<p class="mt-4">Sur les <strong>dalles en pierre naturelle</strong> des propriétés anciennes du centre ou sur les <strong>revêtements béton</strong> des quartiers construits après-guerre, les dépôts biologiques s'accumulent au fil des saisons. Les joints se verdissent, la surface devient glissante après la pluie, et l'aspect général de l'espace extérieur se dégrade progressivement.</p>
+
+<p class="mt-4">Chaque support nécessite une approche spécifique. L'évaluation préalable détermine la méthode adaptée au matériau, à son état et aux contraintes d'accès propres à chaque configuration.</p>`,
+      uniqueDeepDive: `<h3>T1: État des lieux et préparation</h3>
+<p>Le mobilier extérieur et les jardinières sont mis à l'abri ou protégés par bâchage. Les huisseries et seuils de portes reçoivent une protection contre les projections. Un dégagement des débris, feuilles mortes et résidus végétaux précède tout traitement.</p>
+
+<h3>T2: Décrassage adapté au support</h3>
+<p>Le produit de nettoyage est sélectionné en fonction du matériau identifié : formulation alcaline pour les surfaces minérales, solution neutre pour les bois et composites. L'action mécanique par brossage ou monobrosse décolle les dépôts incrustés. La pression de rinçage est calibrée pour éliminer les résidus sans fragiliser les joints ou le revêtement.</p>
+
+<h3>T3: Traitement préventif et conseils</h3>
+<p>Les zones les plus exposées à l'ombre ou à l'humidité reçoivent un traitement anti-mousse qui ralentit la réapparition des dépôts. L'eau de rinçage est orientée vers les évacuations existantes. Des recommandations d'entretien saisonnier sont transmises pour maintenir le résultat dans la durée.</p>`,
+      specificChallenges: [
+        "Pierre naturelle poreuse des villas anciennes de République-Gambetta : risque de taches si produit inadapté.",
+        "Dalles béton vieillissantes des pavillons années 60-80 : joints fragilisés nécessitant une pression contrôlée.",
+        "Carrelage grès cérame texturé : encrassement dans les micro-reliefs difficile à atteindre.",
+        "Terrasses bois ou composite des rénovations récentes : sensibilité aux produits chlorés et à la haute pression.",
+        "Humidité persistante liée à la proximité de la Marne et des espaces boisés du parc du Pâtis.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment nettoyez-vous une terrasse en pierre naturelle sans risquer de l'abîmer ?",
+          answer:
+            "<p>La pierre naturelle, fréquente sur les propriétés anciennes de Meaux, reçoit un traitement à pH neutre ou légèrement alcalin, jamais acide. Le brossage reste manuel sur les pierres tendres comme le calcaire. Le rinçage s'effectue à basse pression pour préserver la patine et éviter toute infiltration dans les pores du matériau.</p>",
+        },
+        {
+          question:
+            "Ma terrasse béton présente des traces noires le long des murs, est-ce traitable ?",
+          answer:
+            "<p>Ces traces noires correspondent généralement à des coulures de pollution ou à des développements d'algues liés au ruissellement. Un produit désincrustant adapté aux supports minéraux permet de les atténuer significativement. Le traitement préventif appliqué ensuite limite leur réapparition.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un nettoyage haute pression et votre méthode pour le bois composite ?",
+          answer:
+            "<p>La haute pression standard peut marquer durablement le bois composite et détériorer sa finition. Notre intervention privilégie un produit spécifique à pH neutre combiné à un brossage adapté, suivi d'un rinçage à pression très modérée qui préserve l'intégrité des lames et leur teinte d'origine.</p>",
+        },
+        {
+          question:
+            "Combien de temps dure l'effet du traitement anti-mousse sur une terrasse ombragée ?",
+          answer:
+            "<p>Sur les terrasses fortement ombragées, l'efficacité du traitement préventif varie selon l'exposition et les conditions météo. En moyenne, le ralentissement de la repousse se constate sur plusieurs mois. Un entretien régulier, notamment un balayage des débris végétaux, prolonge ce résultat.</p>",
+        },
+      ],
+      ctaOverride: "",
+    },
+
+
+
 
     {
   serviceKey: "nettoyage-appartement-maison",

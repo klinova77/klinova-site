@@ -42,7 +42,11 @@ nearbyCities: [
         "rosny-sous-bois",
         "montfermeil",
         "neuilly-plaisance",
-        "neuilly-sur-marne"
+        "neuilly-sur-marne",
+        "chelles",
+        "gournay-sur-marne",
+        "bobigny",
+        "le-perreux-sur-marne"
       ],
 
 
@@ -377,6 +381,64 @@ nearbyCities: [
         },
       ],
 
+      ctaOverride: "",
+    },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Décrassage soigné de votre terrasse en fonction du support, élimination des dépôts végétaux et traitement préventif pour conserver durablement la propreté obtenue.",
+      whyUsBullets: [
+        "Intervention sur l'ensemble des quartiers raincéens : Plateau, Centre-Mairie, Gare, Nicolas Carnot, Allées de Montfermeil et secteur Thiers.",
+        "Protocole ajusté au patrimoine architectural local : terrasses des meulières Belle Époque, dallages des villas bourgeoises, revêtements des constructions plus récentes.",
+        "Mise en sécurité systématique des abords : bâchage du mobilier extérieur, protection des massifs et plantations, évacuation contrôlée des eaux de rinçage.",
+      ],
+      uniqueIntro: `<p>Le Raincy, ancienne <strong>ville-parc</strong> née du lotissement d'un domaine princier au XIXe siècle, conserve un caractère résidentiel singulier en Seine-Saint-Denis. Des <strong>meulières bourgeoises</strong> du Plateau aux pavillons du quartier de la Gare, les terrasses témoignent de la diversité architecturale de cette commune souvent surnommée le « petit Neuilly du 93 ».</p>
+
+<p class="mt-4">L'abondante végétation qui fait la réputation de la ville — arbres remarquables, jardins arborés, allées plantées héritées de l'ancien parc à l'anglaise — génère des conditions propices au développement des mousses et lichens sur les surfaces extérieures. L'ombre portée des grands arbres et l'humidité retenue par les feuillages accélèrent l'encrassement des <strong>dalles en pierre</strong>, <strong>béton</strong> ou <strong>carrelage</strong>.</p>
+
+<p class="mt-4">Le diagnostic préalable identifie la nature du revêtement et son état pour déterminer le traitement approprié, qu'il s'agisse d'une terrasse ancienne aux joints fragiles ou d'un aménagement contemporain en grès cérame ou bois composite.</p>`,
+      uniqueDeepDive: `<h3>T1: Évaluation et préparation du chantier</h3>
+<p>Mobilier de jardin, bacs à plantes et objets décoratifs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées des éclaboussures. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>
+
+<h3>T2: Décrassage et action mécanique ciblée</h3>
+<p>Le produit de nettoyage est choisi selon le matériau : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. Le brossage mécanique déloge les incrustations. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture du support.</p>
+
+<h3>T3: Traitement préventif et recommandations</h3>
+<p>Une protection anti-mousse est appliquée sur les zones ombragées les plus exposées. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des conseils d'entretien courant sont communiqués pour prolonger l'effet du nettoyage face à la végétation environnante.</p>`,
+      specificChallenges: [
+        "Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : matériaux poreux sensibles aux produits acides.",
+        "Terrasses ombragées par les arbres centenaires des jardins raincéens : prolifération accélérée de mousses et algues vertes.",
+        "Dallages anciens avec joints rocaillés typiques des meulières : interstices fragiles nécessitant un rinçage à basse pression.",
+        "Carrelage grès cérame des aménagements récents : micro-reliefs antidérapants piégeant les salissures.",
+        "Accès via allées privatives parfois étroites dans les propriétés du Plateau et de Nicolas Carnot.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment traitez-vous les terrasses des meulières anciennes au Raincy sans abîmer la pierre ?",
+          answer:
+            "<p>Les meulières raincéennes présentent souvent des terrasses en pierre ou en dalles anciennes avec un jointoiement traditionnel. Nous utilisons un produit à pH neutre qui décolle les salissures biologiques sans attaquer le matériau. Le brossage manuel préserve le rocaillage des joints. Le rinçage à pression réduite évite toute dégradation du support.</p>",
+        },
+        {
+          question:
+            "Ma terrasse est très ombragée par les arbres du jardin et reverdit rapidement, que proposez-vous ?",
+          answer:
+            "<p>L'ombre des grands arbres, caractéristique des jardins du Raincy, favorise effectivement la repousse rapide des mousses. Après le nettoyage, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des feuilles mortes et une nouvelle application annuelle permettent de maintenir le résultat malgré l'environnement végétal.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur les terrasses des propriétés avec accès difficile dans le quartier du Plateau ?",
+          answer:
+            "<p>Les belles propriétés du Plateau présentent parfois des configurations avec allées étroites ou passages sous porche. Notre équipement portable permet d'intervenir sans difficulté. Le matériel est acheminé manuellement et les produits sont conditionnés pour un transport aisé jusqu'à la zone de travail.</p>",
+        },
+        {
+          question:
+            "Quelle est la différence entre un nettoyage haute pression standard et votre prestation sur un carrelage extérieur ?",
+          answer:
+            "<p>Le carrelage grès cérame texturé retient les dépôts dans ses reliefs antidérapants. Un simple jet haute pression déplace les salissures sans les éliminer en profondeur. Notre protocole associe un produit désincrustant adapté, un brossage mécanique sur les zones encrassées et un rinçage à pression calibrée qui nettoie efficacement les aspérités du revêtement.</p>",
+        },
+      ],
       ctaOverride: "",
     },
 

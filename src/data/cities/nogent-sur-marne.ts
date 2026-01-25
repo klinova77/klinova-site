@@ -52,8 +52,12 @@ nearbyCities: [
         "le-perreux-sur-marne",
         "joinville-le-pont",
         "vincennes",
+        "champigny-sur-marne",
         "neuilly-plaisance",
-        "montreuil"
+        "montreuil",
+        "rosny-sous-bois",
+        "saint-maur-des-fosses",
+        "saint-mande"
       ],
 
 
@@ -419,6 +423,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Nogent-sur-Marne : élimination des mousses, traces noires et salissures extérieures pour sublimer les sols et retrouver un espace extérieur net et élégant.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers nogentais : bords de Marne, Beauté Baltard, Centre, Plaisance, Viselets, zones pavillonnaires et résidentielles.",
+    "Expertise des terrasses de standing : sols extérieurs exposés à l’humidité, à la végétation et à un usage régulier.",
+    "Prestation minutieuse et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel haut de gamme.",
+  ],
+  uniqueIntro: `<p><strong>Nogent-sur-Marne</strong>, commune prisée du Val-de-Marne, est reconnue pour son cadre résidentiel de qualité, ses villas, ses maisons de caractère et ses résidences élégantes, notamment le long des <strong>bords de Marne</strong>. Les terrasses y constituent un véritable prolongement de l’espace de vie.</p>
+
+<p class="mt-4">La proximité de la Marne, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Même dans un environnement soigné, ces salissures altèrent rapidement l’esthétique des terrasses.</p>
+
+<p class="mt-4">À Nogent-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau requiert une approche spécifique pour un nettoyage efficace et un rendu visuel harmonieux.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation soignée de la terrasse</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin d’assurer une intervention propre et maîtrisée, y compris sur des terrasses ouvertes sur le jardin ou les berges.</p>
+
+<h3>T2: Nettoyage ciblé et approfondi du revêtement</h3>
+<p>La méthode est choisie selon le sol : solution performante pour dalles béton et carrelages extérieurs, protocole spécifique pour pierre, bois ou composite. Un brossage mécanique précis permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>
+
+<h3>T3: Mise en valeur esthétique et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore sensiblement la clarté du sol et l’aspect général de la terrasse, renforçant le confort d’utilisation et la valorisation de l’espace extérieur.</p>`,
+  specificChallenges: [
+    "Terrasses situées en bord de Marne : humidité constante favorisant mousses et traces verdâtres.",
+    "Jardins arborés et haies denses : dépôts organiques et encrassement accéléré des sols.",
+    "Dalles béton et carrelages extérieurs ternis par le temps : zones foncées et aspect irrégulier.",
+    "Terrasses partiellement couvertes ou orientées nord : séchage lent et surfaces glissantes.",
+    "Bois et composite exposés aux intempéries : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Nogent-sur-Marne se salissent-elles malgré un cadre résidentiel soigné ?",
+      answer:
+        "<p>La <strong>proximité de la Marne</strong>, l’ombre des jardins et l’humidité ambiante favorisent l’apparition de <strong>mousses, algues et traces noires</strong>. Sans nettoyage ciblé, ces salissures s’installent progressivement, même dans les quartiers les plus entretenus.</p>",
+    },
+    {
+      question:
+        "Le nettoyage permet-il de redonner de l’éclat à une terrasse ancienne ou ternie ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’uniformiser l’aspect du sol et de retrouver une terrasse visuellement plus <strong>élégante et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur les terrasses de maisons de standing et de résidences ?",
+      answer:
+        "<p>Oui. Nous intervenons sur les terrasses de <strong>maisons individuelles, villas et résidences</strong>, avec une organisation adaptée aux contraintes et aux attentes de chaque site.</p>",
+    },
+    {
+      question:
+        "Une terrasse très encrassée peut-elle retrouver un bel aspect sans travaux ?",
+      answer:
+        "<p>Oui. Même très encrassée, une terrasse peut retrouver un aspect <strong>nettement plus propre et valorisé</strong> grâce à un nettoyage méthodique, sans remplacement du revêtement.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
     {
   serviceKey: "nettoyage-appartement-maison",

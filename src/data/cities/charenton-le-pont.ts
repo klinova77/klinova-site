@@ -53,10 +53,14 @@ const city: City = {
 nearbyCities: [
         "ivry-sur-seine",
         "saint-mande",
+        "alfortville",
         "maisons-alfort",
         "vincennes",
         "joinville-le-pont",
-        "gentilly"
+        "gentilly",
+        "bagnolet",
+        "creteil",
+        "montreuil"
       ],
 
   landmarks: [

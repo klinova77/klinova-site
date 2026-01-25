@@ -42,12 +42,16 @@ const city: City = {
     "Hector Berlioz",
   ],
   nearbyCities: [
+        "alfortville",
         "creteil",
         "joinville-le-pont",
         "charenton-le-pont",
         "saint-maur-des-fosses",
         "ivry-sur-seine",
-        "saint-mande"
+        "saint-mande",
+        "nogent-sur-marne",
+        "vincennes",
+        "fontenay-sous-bois"
       ],
 
 

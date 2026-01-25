@@ -13,10 +13,14 @@ const city: City = {
 nearbyCities: [
         "vincennes",
         "charenton-le-pont",
+        "bagnolet",
         "montreuil",
         "ivry-sur-seine",
         "fontenay-sous-bois",
-        "joinville-le-pont"
+        "joinville-le-pont",
+        "nogent-sur-marne",
+        "maisons-alfort",
+        "alfortville"
       ],
 
 

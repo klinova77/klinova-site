@@ -60,12 +60,16 @@ const city: City = {
   ],
 
  nearbyCities: [
+        "villiers-sur-marne",
+        "champigny-sur-marne",
         "le-plessis-trevise",
         "champs-sur-marne",
         "gournay-sur-marne",
         "neuilly-sur-marne",
         "le-perreux-sur-marne",
-        "neuilly-plaisance"
+        "emerainville",
+        "neuilly-plaisance",
+        "nogent-sur-marne"
       ],
 
   landmarks: [

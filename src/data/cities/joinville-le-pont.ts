@@ -42,7 +42,11 @@ nearbyCities: [
         "maisons-alfort",
         "fontenay-sous-bois",
         "le-perreux-sur-marne",
-        "vincennes"
+        "vincennes",
+        "champigny-sur-marne",
+        "creteil",
+        "saint-mande",
+        "alfortville"
       ],
 
 
@@ -403,6 +407,69 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Joinville-le-Pont : élimination des mousses, traces noires et salissures urbaines, pour retrouver un sol extérieur propre, net et agréable à vivre en bord de Marne.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers joinvillais : Polangis, Palissy, Vautier, Centre, bords de Marne et secteurs résidentiels.",
+    "Expertise des terrasses urbaines et de bord de rivière : sols exposés à l’humidité, à la végétation et aux dépôts liés à la vie en extérieur.",
+    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
+  ],
+  uniqueIntro: `<p><strong>Joinville-le-Pont</strong>, commune prisée du Val-de-Marne, se distingue par sa situation privilégiée en bord de <strong>Marne</strong> et par un habitat mêlant maisons de ville, pavillons avec jardin et résidences élégantes. Les terrasses y occupent une place centrale dans l’usage quotidien des logements.</p>
+
+<p class="mt-4">La proximité de l’eau, les alignements d’arbres et les jardins privés favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, en particulier dans les quartiers de <strong>Polangis</strong> et le long des quais.</p>
+
+<p class="mt-4">À Joinville-le-Pont, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau demande une méthode spécifique pour un nettoyage efficace, respectueux du support et visuellement valorisant.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et protection des abords</h3>
+<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont bâchés afin de travailler proprement, notamment dans les configurations urbaines où les espaces sont plus contraints.</p>
+
+<h3>T2: Nettoyage en profondeur du revêtement</h3>
+<p>Le traitement est choisi en fonction du sol : solution adaptée pour béton et carrelage, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, le biofilm et les traces liées à l’humidité. Le rinçage est réalisé de manière contrôlée pour un résultat net et homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair et plus uniforme, améliorant immédiatement le confort d’usage et l’esthétique de l’espace extérieur.</p>`,
+  specificChallenges: [
+    "Proximité immédiate de la Marne : humidité récurrente favorisant mousses et traces verdâtres.",
+    "Terrasses urbaines entourées de végétation : dépôts organiques et salissures persistantes.",
+    "Dalles béton et carrelages extérieurs foncés par le temps et la pollution.",
+    "Terrasses partiellement ombragées : zones glissantes et aspect terne après la pluie.",
+    "Bois et composite exposés aux intempéries : encrassement visuel et perte d’éclat.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Joinville-le-Pont se salissent-elles rapidement ?",
+      answer:
+        "<p>La proximité de la Marne, combinée à une végétation dense et à l’humidité ambiante, favorise l’apparition de mousses, d’algues et de traces noires. Sans nettoyage adapté, ces salissures s’installent durablement sur les sols extérieurs.</p>",
+    },
+    {
+      question:
+        "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en bord de Marne ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de supprimer les zones foncées et de retrouver un sol plus homogène. La terrasse redevient plus agréable à utiliser et visuellement valorisée.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur les terrasses de maisons comme de résidences ?",
+      answer:
+        "<p>Nous intervenons aussi bien sur les terrasses de maisons individuelles que sur celles des résidences et petites copropriétés, avec une organisation adaptée aux contraintes de chaque site.</p>",
+    },
+    {
+      question:
+        "Peut-on nettoyer une terrasse très encrassée sans tout refaire ?",
+      answer:
+        "<p>Oui. Même très encrassée, une terrasse peut retrouver un aspect nettement plus propre grâce à un nettoyage ciblé et méthodique, sans travaux lourds ni remplacement du revêtement.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
+
+
 
 
     {

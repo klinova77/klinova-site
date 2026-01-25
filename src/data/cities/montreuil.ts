@@ -48,13 +48,17 @@ const city: City = {
   ],
 
 nearbyCities: [
-  "vincennes",
-  "saint-mandé",
-  "rosny-sous-bois",
-  "fontenay-sous-bois",
-  "bagnolet",
-  "romainville",
-],
+        "bagnolet",
+        "vincennes",
+        "fontenay-sous-bois",
+        "rosny-sous-bois",
+        "saint-mande",
+        "nogent-sur-marne",
+        "neuilly-plaisance",
+        "le-perreux-sur-marne",
+        "bobigny",
+        "pantin"
+      ],
 
   landmarks: [
     "Mairie de Montreuil",
@@ -419,6 +423,67 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+      serviceKey: "terrasses",
+      heroDescription:
+        "Traitement complet de votre terrasse selon le type de revêtement, élimination des mousses, lichens et dépôts urbains, et application d'une protection adaptée à l'environnement de cette grande ville aux portes de Paris.",
+      whyUsBullets: [
+        "Déplacement dans tous les quartiers montreuillois : Bas-Montreuil, Centre-ville, Signac-Murs à Pêches, Bel Air-Grands Pêchers, Jean-Moulin-Beaumonts, Montreau-Le Morillon, La Noue, Branly-Boissière.",
+        "Savoir-faire ajusté au patrimoine architectural local : terrasses des maisons ouvrières en briques, dallages des meulières, aménagements des lofts et ateliers reconvertis, extérieurs des pavillons du Haut-Montreuil.",
+        "Protection rigoureuse des abords : bâchage du mobilier, préservation des jardins partagés et cours végétalisées, maîtrise des eaux de rinçage vers les écoulements existants.",
+      ],
+      uniqueIntro: `<p><strong>Montreuil</strong>, cinquième ville d'Île-de-France avec plus de 110 000 habitants, déploie son tissu urbain sur les coteaux qui dominent Paris. Historiquement ouvrière et horticole — les célèbres <strong>murs à pêches</strong> témoignent encore de ce passé —, la commune connaît depuis les années 1980 une profonde mutation qui a fait du <strong>Bas-Montreuil</strong> un quartier prisé pour ses ateliers reconvertis en lofts et ses maisons de ville réhabilitées.</p>
+
+<p class="mt-4">Avec ses 63 hectares de parcs, jardins et squares — dont le <strong>parc des Beaumonts</strong> (24 ha, site Natura 2000), le <strong>parc Montreau</strong> (15 ha) et les <strong>murs à pêches</strong> (34 ha) —, Montreuil offre un environnement végétal dense qui génère une humidité propice au développement des mousses et algues sur les surfaces extérieures. Les terrasses ombragées par les arbres des cours et jardins subissent un encrassement accéléré.</p>
+
+<p class="mt-4">La grande diversité du bâti montreuillois — <strong>maisons ouvrières en briques</strong>, <strong>meulières</strong>, <strong>pavillons standardisés</strong>, <strong>ateliers convertis</strong> — implique des terrasses aux revêtements variés : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun nécessitant un traitement spécifique.</p>`,
+      uniqueDeepDive: `<h3>T1: Évaluation et préparation du chantier</h3>
+<p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades en briques ou meulière et les menuiseries adjacentes sont bâchées. Un balayage préliminaire retire feuilles, débris végétaux et poussières urbaines accumulés sur le revêtement.</p>
+
+<h3>T2: Nettoyage différencié selon le matériau</h3>
+<p>Le produit est sélectionné en fonction du support identifié : formule douce pour les pierres anciennes et meulières, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations biologiques et les dépôts urbains. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
+
+<h3>T3: Protection et recommandations d'entretien</h3>
+<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des cours et jardins. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal et urbain dense de Montreuil.</p>`,
+      specificChallenges: [
+        "Maisons ouvrières et ateliers du Bas-Montreuil : briques, meulières et matériaux anciens avec joints fragiles nécessitant un traitement à pH contrôlé.",
+        "Cours et jardins partagés ombragés : prolifération accélérée des mousses et algues vertes due à la végétation dense des quartiers.",
+        "Lofts et ateliers reconvertis : terrasses souvent aménagées sur d'anciennes surfaces industrielles, revêtements hétérogènes.",
+        "Pavillons du Haut-Montreuil (Signac, Branly-Boissière, Ramenas) : dalles béton parfois fragilisées par le temps et les cycles gel-dégel.",
+        "Proximité des parcs (Beaumonts, Montreau, murs à pêches) : humidité ambiante favorisant l'encrassement biologique des terrasses riveraines.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment traitez-vous les terrasses des maisons en briques ou meulières du Bas-Montreuil sans altérer ces matériaux anciens ?",
+          answer:
+            "<p>Les constructions du Bas-Montreuil — maisons ouvrières en briques, meulières, anciens ateliers — présentent des matériaux poreux qui nécessitent une approche spécifique. Nous utilisons un produit à pH neutre ou légèrement acide selon le support, qui élimine les salissures biologiques sans attaquer la surface. Le brossage manuel respecte les joints souvent fragiles et le rinçage à pression modérée évite toute dégradation du revêtement d'origine.</p>",
+        },
+        {
+          question:
+            "Ma terrasse reverdit rapidement car elle donne sur une cour végétalisée, quelle solution proposez-vous ?",
+          answer:
+            "<p>Les cours intérieures et jardins partagés montreuillois — héritage du passé horticole de la ville — génèrent une humidité constante propice à la repousse rapide des mousses. Après le nettoyage complet, nous appliquons un traitement préventif ciblé. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat malgré cet environnement ombragé et humide.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur les terrasses des lofts et ateliers reconvertis de Montreuil ?",
+          answer:
+            "<p>Les anciens ateliers et usines du Bas-Montreuil reconvertis en lofts présentent souvent des terrasses aménagées sur d'anciennes surfaces industrielles, avec des revêtements parfois hétérogènes. Notre diagnostic préalable identifie la nature de chaque zone — béton brut, dalles ajoutées, bois composite — et nous adaptons le traitement en conséquence pour un résultat homogène sur l'ensemble de la surface.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple passage haute pression et votre prestation sur une terrasse de pavillon du Haut-Montreuil ?",
+          answer:
+            "<p>Les pavillons du Haut-Montreuil présentent souvent des terrasses en dalles béton qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté au support, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader la surface ni déchausser les joints parfois fragilisés par le temps.</p>",
+        },
+      ],
+      ctaOverride: "",
+    },
+
+
+
 
 
     {

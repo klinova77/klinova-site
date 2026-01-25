@@ -48,12 +48,16 @@ const city: City = {
 
 
 nearbyCities: [
+        "emerainville",
         "le-plessis-trevise",
         "noisy-le-grand",
+        "villiers-sur-marne",
         "champs-sur-marne",
         "torcy",
+        "champigny-sur-marne",
         "bussy-saint-georges",
-        "gournay-sur-marne"
+        "gournay-sur-marne",
+        "vaires-sur-marne"
       ],
 
   landmarks: [
@@ -385,6 +389,65 @@ nearbyCities: [
 
       ctaOverride: "",
     },
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Nettoyage et remise en état de terrasses à Pontault-Combault : élimination des mousses, traces noires et salissures incrustées pour redonner aux sols extérieurs un aspect propre, net et durable.",
+  whyUsBullets: [
+    "Intervention dans tous les secteurs de Pontault-Combault : Centre, Le Bouquet, Les Tourelles, Le Val du Muguet, quartiers pavillonnaires et zones résidentielles.",
+    "Spécialiste des terrasses de maisons individuelles : sols extérieurs fortement sollicités, exposés aux intempéries, à la végétation et aux usages quotidiens.",
+    "Prestation soignée et efficace : protection du mobilier, respect des façades et nettoyage précis pour une amélioration visuelle immédiate.",
+  ],
+  uniqueIntro: `<p><strong>Pontault-Combault</strong>, grande commune résidentielle de Seine-et-Marne, se distingue par un habitat majoritairement pavillonnaire et de nombreux jardins privatifs. Les terrasses y sont largement utilisées comme espaces de vie extérieurs, en toute saison.</p>
+
+<p class="mt-4">Cette utilisation régulière, combinée aux conditions climatiques et à la végétation environnante, entraîne l’apparition progressive de <strong>mousses, algues, traces noires</strong> et autres salissures incrustées. Les sols extérieurs perdent alors rapidement leur aspect d’origine.</p>
+
+<p class="mt-4">À Pontault-Combault, les terrasses sont le plus souvent réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement demande une méthode adaptée pour obtenir un nettoyage efficace et une remise en état visible.</p>`,
+  uniqueDeepDive: `<h3>T1: Préparation et organisation du chantier</h3>
+<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — murs, façades, menuiseries — sont sécurisés afin de garantir une intervention propre et maîtrisée, même sur de grandes surfaces extérieures.</p>
+
+<h3>T2: Nettoyage en profondeur du sol extérieur</h3>
+<p>Le traitement est choisi en fonction du matériau : solution performante pour béton et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour obtenir un sol plus clair et plus homogène.</p>
+
+<h3>T3: Mise en valeur et confort d’usage</h3>
+<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant de la clarté et une impression de propreté durable.</p>`,
+  specificChallenges: [
+    "Terrasses de grande surface : encrassement progressif lié aux usages répétés.",
+    "Zones pavillonnaires arborées : dépôts végétaux et développement de mousses.",
+    "Dalles béton foncées par le temps : aspect terne et zones marquées.",
+    "Terrasses partiellement couvertes : séchage lent et apparition de traces noires.",
+    "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Pourquoi les terrasses de Pontault-Combault s’encrassent-elles aussi vite ?",
+      answer:
+        "<p>L’usage fréquent, l’exposition aux intempéries et la végétation environnante favorisent l’apparition de <strong>mousses, algues et traces noires</strong>. Sans nettoyage adapté, ces salissures s’installent durablement sur les sols extérieurs.</p>",
+    },
+    {
+      question:
+        "Le nettoyage permet-il d’améliorer visiblement l’aspect d’une terrasse ancienne ?",
+      answer:
+        "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+      answer:
+        "<p>Oui. Nous intervenons régulièrement sur des terrasses <strong>fortement encrassées</strong>, parfois laissées sans entretien pendant plusieurs années, avec une méthode adaptée à leur état réel.</p>",
+    },
+    {
+      question:
+        "Nettoyez-vous aussi les terrasses de petites copropriétés ?",
+      answer:
+        "<p>Oui. Nous intervenons également sur les <strong>terrasses et cours extérieures</strong> de petites copropriétés à Pontault-Combault, avec une organisation adaptée aux usages des résidents.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
 
     {
   serviceKey: "nettoyage-appartement-maison",
