@@ -111,13 +111,13 @@ faq: [
       uniqueIntro: `<p>Dans la <strong>ZAC Ivry Confluences</strong>, les open-spaces et salles de réunion accumulent rapidement poussières fines et traces de passage. Les dalles textiles, sollicitées quotidiennement par des dizaines de collaborateurs, perdent leur aspect d'origine en quelques mois. Les zones de circulation intense — entrées, couloirs, espaces café — concentrent l'essentiel de l'encrassement visible.</p>
 <p class="mt-4">Un entretien adapté redonne aux fibres leur tenue et leur couleur. Les <strong>copropriétés années 70-80</strong> du centre-ville présentent souvent des moquettes aiguilletées dans les parties communes, où le piétinement quotidien laisse des sillons grisâtres. Traiter ces surfaces améliore l'image des halls et réduit les réclamations des résidents auprès du syndic.</p>
 <p class="mt-4">L'intervention commence par un diagnostic des supports et des taches. Nous identifions les zones prioritaires, adaptons la méthode au type de fibre, et planifions le passage en tenant compte des flux liés au RER C et aux lignes de métro pour limiter la gêne aux heures de pointe.</p>`,
-      uniqueDeepDive: `<h3>T1: Zones de circulation intense</h3>
+      uniqueDeepDive: `<h3>Zones de circulation intense</h3>
 <p>Les entrées, couloirs et espaces d'accueil reçoivent un traitement prioritaire. Après aspiration, nous appliquons un pré-détachant sur les traces de semelles et les auréoles de café. L'injection-extraction élimine les résidus en profondeur sans détremper le support.</p>
 
-<h3>T2: Espaces de travail et salles de réunion</h3>
+<h3>Espaces de travail et salles de réunion</h3>
 <p>Les dalles textiles sous les bureaux et autour des tables de réunion sont traitées par passes croisées. Nous protégeons les plinthes et les pieds de mobilier avant chaque passage. Le détachage ciblé intervient sur les taches grasses ou anciennes repérées lors du diagnostic.</p>
 
-<h3>T3: Gestion du séchage et remise en service</h3>
+<h3>Gestion du séchage et remise en service</h3>
 <p>L'extraction maximale réduit le temps de séchage à quelques heures selon la ventilation du local. Nous conseillons d'éviter le piétinement pendant deux à quatre heures. Un balisage temporaire peut être posé pour orienter les occupants vers les zones sèches.</p>`,
       specificChallenges: [
         "Open-spaces ZAC Confluences : dalles textiles sollicitées par un flux quotidien important.",
@@ -158,13 +158,13 @@ faq: [
       uniqueIntro: `<p>Les traces noires s'accumulent sur les sols béton des parkings souterrains autour de l'<strong>Hôpital Charles-Foix</strong> et dans les résidences de la ZAC Ivry Confluences. Huile de vidange, graisse de freinage, poussières de pneus : ces dépôts forment une couche grasse qui s'incruste dans le revêtement et rend les rampes glissantes. Les gestionnaires constatent une dégradation visible dès les premiers mois sans entretien régulier.</p>
 <p class="mt-4">Un sol encrassé génère des plaintes de copropriétaires, complique la lecture du marquage au sol et accélère l'usure des revêtements. Dans les constructions récentes avec résine, les taches d'hydrocarbures laissent des auréoles persistantes. Sur béton brut, la porosité du matériau absorbe les salissures en profondeur, rendant le simple balayage inefficace.</p>
 <p class="mt-4">L'accumulation de suie liée au trafic poids lourds sur les quais et le périphérique aggrave l'encrassement des parkings proches de ces axes. Une intervention structurée permet de restaurer l'aspect du sol, de sécuriser les zones de circulation et de fournir un compte-rendu exploitable pour le suivi de la copropriété.</p>`,
-      uniqueDeepDive: `<h3>T1: Sol décrassé et sécurisé</h3>
+      uniqueDeepDive: `<h3>Sol décrassé et sécurisé</h3>
 <p>Le résultat attendu : un revêtement débarrassé des dépôts gras, des rampes antidérapantes et des rigoles dégagées. Les zones critiques — angles morts, pieds de murs, regards d'évacuation — retrouvent un état permettant une circulation sécurisée et un marquage lisible.</p>
 
-<h3>T2: Traitement mécanisé adapté au revêtement</h3>
+<h3>Traitement mécanisé adapté au revêtement</h3>
 <p>Le diagnostic initial identifie le type de sol (béton brut, résine, peinture) et l'état des évacuations. L'autolaveuse associée à un dégraissant professionnel traite les surfaces en passes successives. Sur les rampes inclinées, une haute pression contrôlée complète le lavage mécanisé pour éliminer les incrustations tenaces.</p>
 
-<h3>T3: Coordination accès et gestion des eaux</h3>
+<h3>Coordination accès et gestion des eaux</h3>
 <p>Le balisage sécurise les zones en cours de traitement. La rotation des véhicules s'organise par secteur pour maintenir un accès partiel. Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Un dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention sur demande.</p>`,
       specificChallenges: [
         "Rampes étroites dans les résidences anciennes : manœuvre autolaveuse adaptée.",
@@ -205,14 +205,14 @@ faq: [
       uniqueIntro: `<p>Comment profiter d'un espace extérieur quand les dépôts noirs s'accumulent semaine après semaine ? Entre le boulevard Paul Vaillant-Couturier et les quais, les balcons du centre-ville et de Petit-Ivry reçoivent en continu particules fines et résidus de circulation. Le carrelage se ternit, les joints noircissent, et l'envie de s'installer dehors diminue au fil des mois.</p>
 <p class="mt-4">Sur les balcons en béton brut des immeubles Renaudie ou les loggias vitrées des résidences récentes, le nettoyage régulier change l'usage quotidien. Un sol propre, des garde-corps débarrassés de leur voile gris, des vitres dégagées : l'espace redevient un prolongement du logement, pas une zone qu'on évite. Les voisins du dessous apprécient aussi l'attention portée aux écoulements.</p>
 <p class="mt-4">L'intervention commence par un diagnostic du support et de l'exposition. Produits adaptés, pression contrôlée si nécessaire, protection des plantes et du mobilier : chaque étape tient compte des contraintes liées aux chantiers de la ZAC et à la pollution urbaine ambiante.</p>`,
-      uniqueDeepDive: `<h3>T1: Préparation et protection</h3>
+      uniqueDeepDive: `<h3>Préparation et protection</h3>
 <p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. On retire ensuite les gros dépôts : feuilles mortes, terre accumulée, débris divers.</p>
 
-<h3>T2: Traitement et brossage</h3>
+<h3>Traitement et brossage</h3>
 <p>Un produit adapté au support est appliqué : formulation différente selon qu'il s'agisse de béton brut, de carrelage ou de dalles sur plots. Le brossage manuel ou mécanique décolle les salissures incrustées. Les garde-corps, vitrages et murs mitoyens accessibles sont traités dans la foulée.</p>
 <p class="mt-4">Le rinçage s'effectue à pression contrôlée, en préservant les joints fragiles.</p>
 
-<h3>T3: Gestion des eaux et finalisation</h3>
+<h3>Gestion des eaux et finalisation</h3>
 <p>L'écoulement est maîtrisé pour éviter les coulures chez les voisins du dessous. La façade reste protégée des projections. Après séchage, des conseils d'entretien sont transmis pour espacer les interventions suivantes et maintenir le résultat obtenu.</p>`,
       specificChallenges: [
         "Formes géométriques complexes sur les balcons Renaudie : angles aigus, recoins difficiles d'accès.",
@@ -253,14 +253,14 @@ faq: [
       uniqueIntro: `<p>Après quelques semaines sans intervention, les dépôts s'accumulent sur les garde-corps et le sol du balcon. Aux abords du <strong>Parc des Cormailles</strong> et du <strong>Cimetière Parisien</strong>, la présence importante de pigeons accélère ce phénomène. L'odeur s'installe, le linge étendu absorbe les particules, et l'espace devient inutilisable. Cette situation génère une gêne quotidienne difficile à ignorer.</p>
 <p class="mt-4">Sur les immeubles anciens en briques rouges ou les façades des grands ensembles, les corniches et rebords offrent des surfaces propices aux dépôts répétés. Les fientes attaquent progressivement les matériaux : le béton se dégrade, la peinture s'écaille, les joints s'effritent. Un traitement adapté permet de stopper cette détérioration et de retrouver un balcon utilisable sans risque pour la santé.</p>
 <p class="mt-4">L'intervention commence par un diagnostic visuel pour évaluer l'ampleur des souillures et les zones à protéger. En centre-ville dense, la coordination avec le voisinage limite les nuisances pendant le chantier. Chaque étape suit un protocole précis, de la sécurisation à l'évacuation des déchets contaminés.</p>`,
-      uniqueDeepDive: `<h3>T1: Balcon assaini et désinfecté</h3>
+      uniqueDeepDive: `<h3>Balcon assaini et désinfecté</h3>
 <p>Le résultat visé : un sol propre, des garde-corps débarrassés de toute trace, une odeur neutralisée. La désinfection virucide élimine les agents pathogènes présents dans les fientes séchées.</p>
 
-<h3>T2: Confinement et retrait sécurisé</h3>
+<h3>Confinement et retrait sécurisé</h3>
 <p>L'intervenant porte un équipement complet : masque FFP2, combinaison jetable, gants et lunettes. La zone est bâchée pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins. Les fientes sont humidifiées avant ramassage pour neutraliser les poussières contaminées, puis conditionnées en sacs étanches.</p>
 <p class="mt-4">Le nettoyage couvre le sol, les vitrages et les murs mitoyens si nécessaire.</p>
 
-<h3>T3: Désinfection et évacuation</h3>
+<h3>Désinfection et évacuation</h3>
 <p>Un produit bactéricide homologué est appliqué sur l'ensemble des surfaces avec un temps de contact respecté. Après rinçage, le balcon nécessite une aération avant réutilisation. Les déchets sont évacués dans des sacs étanches. Des solutions de dissuasion peuvent être proposées : pics sur les rebords ou filets de protection.</p>`,
       specificChallenges: [
         "Proximité du Parc des Cormailles : concentration de pigeons et dépôts fréquents sur les balcons alentour.",
@@ -360,13 +360,13 @@ faq: [
 <p class="mt-4">La ville compte de nombreux espaces verts, dont le <strong>parc des Cormailles</strong> (près de 8 hectares, Grand Prix National du Paysage 2007), les jardins partagés et les 250 jardins ouvriers autour du fort d'Ivry. Cette végétation abondante, combinée à la proximité de la Seine, génère une humidité favorable à l'apparition de mousses et algues sur les surfaces extérieures.</p>
 
 <p class="mt-4">La diversité du bâti ivryen — <strong>ensembles brutalistes</strong> aux formes étoilées, <strong>pavillons anciens</strong> du quartier Parmentier, <strong>résidences contemporaines</strong> de la ZAC Ivry Confluences — implique des terrasses aux configurations variées : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun requérant un protocole de nettoyage spécifique.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et mise en sécurité du chantier</h3>
+      uniqueDeepDive: `<h3>Diagnostic et mise en sécurité du chantier</h3>
 <p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades béton brut, garde-corps et menuiseries adjacentes sont bâchés. Un balayage préliminaire élimine feuilles, débris végétaux et poussières accumulés sur le revêtement.</p>
 
-<h3>T2: Nettoyage adapté au support identifié</h3>
+<h3>Nettoyage adapté au support identifié</h3>
 <p>Le produit est choisi selon la nature du revêtement : formule neutre pour les dalles béton des constructions brutalistes, solution adaptée pour carrelage minéral ou pierre, traitement spécifique pour bois et composite. L'action mécanique par brossage ciblé déloge les incrustations biologiques et les dépôts urbains. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Traitement protecteur et conseils personnalisés</h3>
+<h3>Traitement protecteur et conseils personnalisés</h3>
 <p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité ambiante. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement fluvial et végétalisé d'Ivry.</p>`,
       specificChallenges: [
         "Terrasses en cascade des ensembles Renaudie-Gailhoustet : formes triangulaires, béton brut parfois dégradé, accès contraints entre niveaux décalés.",
@@ -417,13 +417,13 @@ faq: [
       uniqueIntro: `<p>Après plusieurs mois d'occupation ou à la suite d'un chantier de rénovation, un appartement accumule des traces que le ménage courant ne suffit pas à éliminer. <strong>Autour de la gare RER C et du centre-ville</strong>, la rotation locative impose des délais serrés entre deux locataires. Les agences et propriétaires doivent remettre le bien en état rapidement, sans compromettre la qualité du rendu final.</p>
 <p class="mt-4">Un logement propre facilite la validation de l'état des lieux et évite les litiges sur le dépôt de garantie. Dans les <strong>T2/T3, studios ou lofts issus de réhabilitations d'anciennes usines</strong>, chaque surface demande une attention particulière : parquet ancien, béton ciré, carrelage, sanitaires. Le résultat visuel conditionne la première impression du futur occupant ou de l'agence mandatée.</p>
 <p class="mt-4">Face aux demandes fréquentes pour états des lieux et ménages fin de chantier, nous organisons chaque intervention selon vos contraintes horaires et d'accès. Diagnostic préalable, coordination avec les artisans si nécessaire, et contrôle qualité avant remise des clés.</p>`,
-      uniqueDeepDive: `<h3>T1: Un logement prêt à être restitué ou occupé</h3>
+      uniqueDeepDive: `<h3>Un logement prêt à être restitué ou occupé</h3>
 <p>L'objectif est un bien propre dans ses moindres recoins : sols sans traces, vitres intérieures nettes, sanitaires désinfectés, placards vidés et essuyés. Pour y parvenir, nous établissons un diagnostic initial qui identifie les zones critiques selon le contexte — fin de chantier, sortie locataire ou sinistre léger.</p>
 
-<h3>T2: Traitement méthodique de chaque pièce</h3>
+<h3>Traitement méthodique de chaque pièce</h3>
 <p>Nous procédons par zones : pièces d'eau d'abord (cuisine, salle de bain, WC), puis pièces de vie. Les plafonds, murs et plinthes sont dépoussiérés avant le lavage des sols, adapté au revêtement. Les résidus de peinture ou d'enduit sont retirés manuellement sur les surfaces fragiles.</p>
 
-<h3>T3: Contrôle et remise en conditions</h3>
+<h3>Contrôle et remise en conditions</h3>
 <p>Avant de quitter le logement, nous vérifions chaque point : interrupteurs, poignées, radiateurs, intérieurs de placards. Une aération complète est assurée. Si vous le souhaitez, nous pouvons coordonner notre passage avec l'agence ou le propriétaire pour la remise des clés.</p>`,
       specificChallenges: [
         "Rotation locative rapide autour de la gare RER C : délais souvent inférieurs à une semaine entre deux locataires.",

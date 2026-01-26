@@ -404,13 +404,13 @@ nearbyCities: [
 <p class="mt-4">Surnommée la « ville aux parcs et jardins » avec ses 155 hectares d'espaces verts, Bussy bénéficie d'un environnement végétal dense — parc du Génitoy, lisière de la forêt de Ferrières, bassins écologiques — qui génère une humidité favorable au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par la végétation abondante subissent un encrassement accéléré.</p>
 
 <p class="mt-4">Le diagnostic initial identifie le type de support — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans altérer le revêtement.</p>`,
-      uniqueDeepDive: `<h3>T1: État des lieux et préparation</h3>
+      uniqueDeepDive: `<h3>État des lieux et préparation</h3>
 <p>Mobilier de jardin, jardinières et équipements extérieurs sont déplacés ou protégés. Les façades et menuiseries adjacentes sont bâchées. Un balayage préliminaire retire les débris végétaux — feuilles, brindilles, pollens — particulièrement abondants dans cette ville-nature.</p>
 
-<h3>T2: Traitement adapté au matériau</h3>
+<h3>Traitement adapté au matériau</h3>
 <p>Le produit est choisi selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Protection et recommandations d'entretien</h3>
+<h3>Protection et recommandations d'entretien</h3>
 <p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des espaces verts environnants. Les eaux de rinçage sont orientées vers les points d'écoulement du jardin. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Bussy.</p>`,
       specificChallenges: [
         "Pavillons contemporains des années 90-2000 : dalles béton ou pierre reconstituée avec joints parfois fragilisés par les cycles gel-dégel seine-et-marnais.",

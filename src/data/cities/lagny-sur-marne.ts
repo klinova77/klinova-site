@@ -424,13 +424,13 @@ const city: City = {
 <p class="mt-4">Les terrasses situées à proximité des <strong>bords de Marne</strong>, dans les quartiers anciens ou en lisière d’espaces végétalisés, sont particulièrement sensibles à l’apparition de <strong>mousses, algues et traces noires</strong>. L’ombre, la rosée matinale et le ruissellement accentuent l’encrassement biologique des sols extérieurs.</p>
 
 <p class="mt-4">Le parc immobilier latignacien est varié : <strong>maisons anciennes du centre-ville</strong>, <strong>pavillons des années 60 à 90</strong>, <strong>résidences contemporaines</strong>. Les terrasses y sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>, chaque matériau nécessitant une méthode de nettoyage spécifique.</p>`,
-  uniqueDeepDive: `<h3>T1: Diagnostic du support et préparation</h3>
+  uniqueDeepDive: `<h3>Diagnostic du support et préparation</h3>
 <p>Avant toute intervention, le revêtement est identifié et son état évalué. Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les zones adjacentes (façades, baies vitrées, garde-corps) sont bâchées, notamment dans les terrasses du centre ancien où les abords sont souvent proches.</p>
 
-<h3>T2: Nettoyage adapté au matériau</h3>
+<h3>Nettoyage adapté au matériau</h3>
 <p>Le protocole est ajusté selon le support : solution alcaline pour dalles béton et carrelages minéraux, produit spécifique pour pierre naturelle ou reconstituée, traitement dédié pour bois et composite. L’action mécanique par brossage contrôlé permet de décoller mousses, biofilm et salissures incrustées. Le rinçage est effectué à pression maîtrisée afin de préserver joints et surfaces.</p>
 
-<h3>T3: Prévention et conseils d’entretien</h3>
+<h3>Prévention et conseils d’entretien</h3>
 <p>Lorsque l’exposition à l’humidité est marquée — notamment près de la Marne — un traitement préventif peut être proposé pour limiter la reformation rapide des mousses. Les eaux de rinçage sont dirigées vers les écoulements existants. Des recommandations simples sont transmises pour prolonger le résultat dans le temps.</p>`,
   specificChallenges: [
     "Terrasses proches des bords de Marne : humidité persistante favorisant la repousse rapide des mousses et algues.",

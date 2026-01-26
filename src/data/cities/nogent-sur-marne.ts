@@ -438,13 +438,13 @@ nearbyCities: [
 <p class="mt-4">La proximité de la Marne, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Même dans un environnement soigné, ces salissures altèrent rapidement l’esthétique des terrasses.</p>
 
 <p class="mt-4">À Nogent-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau requiert une approche spécifique pour un nettoyage efficace et un rendu visuel harmonieux.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation soignée de la terrasse</h3>
+  uniqueDeepDive: `<h3>Préparation soignée de la terrasse</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin d’assurer une intervention propre et maîtrisée, y compris sur des terrasses ouvertes sur le jardin ou les berges.</p>
 
-<h3>T2: Nettoyage ciblé et approfondi du revêtement</h3>
+<h3>Nettoyage ciblé et approfondi du revêtement</h3>
 <p>La méthode est choisie selon le sol : solution performante pour dalles béton et carrelages extérieurs, protocole spécifique pour pierre, bois ou composite. Un brossage mécanique précis permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>
 
-<h3>T3: Mise en valeur esthétique et confort d’usage</h3>
+<h3>Mise en valeur esthétique et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore sensiblement la clarté du sol et l’aspect général de la terrasse, renforçant le confort d’utilisation et la valorisation de l’espace extérieur.</p>`,
   specificChallenges: [
     "Terrasses situées en bord de Marne : humidité constante favorisant mousses et traces verdâtres.",

@@ -106,15 +106,15 @@ faq: [
 <p class="mt-4">Sur les <strong>dalles textiles</strong> et velours ras fréquents dans ces configurations, un détachage régulier préserve la tenue des fibres et l'image professionnelle des locaux. Les copropriétés récentes avenue Laplace présentent des revêtements similaires dans leurs parties communes, où le trafic résidentiel génère des salissures comparables. Un ravivage périodique évite le grisaillement et prolonge la durée de vie du textile.</p>
 
 <p class="mt-4">L'intervention s'organise en tenant compte du <strong>flux tertiaire et de la proximité de l'axe D920</strong>, source de poussières grasses. Diagnostic préalable, protection des plinthes et planification en horaires décalés permettent de limiter la gêne pour les occupants.</p>`,
-      uniqueDeepDive: `<h3>T1: Zones de circulation intense</h3>
+      uniqueDeepDive: `<h3>Zones de circulation intense</h3>
 <p>Les couloirs et accès principaux concentrent l'essentiel des salissures. Après aspiration préalable, ces surfaces reçoivent plusieurs passes d'injection-extraction pour déloger les particules enfoncées dans les fibres.</p>
 <p class="mt-4">Les angles et seuils de portes font l'objet d'un détachage ciblé lorsque des taches de tanin ou de graisse persistent.</p>
 
-<h3>T2: Espaces de travail et salles de réunion</h3>
+<h3>Espaces de travail et salles de réunion</h3>
 <p>Les open-spaces et bureaux cloisonnés présentent des zones de piétinement localisées autour des postes. Le traitement cible ces emplacements sans mouiller excessivement les surfaces adjacentes.</p>
 <p class="mt-4">Les protections sont posées le long des cloisons et du mobilier fixe pour éviter les projections.</p>
 
-<h3>T3: Extraction et temps de séchage</h3>
+<h3>Extraction et temps de séchage</h3>
 <p>L'aspiration finale retire le maximum d'humidité résiduelle. Selon l'épaisseur du textile et la ventilation disponible, le séchage complet intervient généralement sous 4 à 8 heures.</p>
 <p class="mt-4">Une consigne de non-piétinement est transmise pour garantir un rendu homogène à la reprise d'activité.</p>`,
       specificChallenges: [
@@ -164,15 +164,15 @@ faq: [
 <p class="mt-4">Un sol encrassé dégrade l'image de la copropriété ou du site commercial. Les résidents signalent des odeurs persistantes, les gestionnaires reçoivent des plaintes. Sur les parkings anciens comme ceux du <strong>Chaperon Vert</strong>, les rampes étroites et les angles morts concentrent les dépôts les plus résistants. Sans intervention adaptée, le revêtement se détériore et les marquages au sol deviennent illisibles.</p>
 
 <p class="mt-4">Une intervention programmée permet de coordonner le lavage mécanisé avec la rotation des véhicules. Le balisage sécurise les zones traitées pendant que l'autolaveuse progresse par passes successives, en respectant les contraintes d'évacuation propres aux sous-sols à fort trafic.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation du site</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation du site</h3>
 <p>Avant toute intervention, nous identifions le type de revêtement — béton brut, résine ou peinture — et vérifions l'état des évacuations. Un balayage préalable retire les débris grossiers.</p>
 <p class="mt-4">Le balisage est installé pour sécuriser les usagers. Si nécessaire, un zonage permet la rotation des véhicules sans fermeture totale du parking.</p>
 
-<h3>T2: Lavage mécanisé et dégraissage</h3>
+<h3>Lavage mécanisé et dégraissage</h3>
 <p>L'autolaveuse effectue des passes régulières sur l'ensemble de la surface. Un dégraissant adapté traite les zones critiques : rampes d'accès, pieds de murs, rigoles et angles morts où s'accumulent les résidus d'hydrocarbures.</p>
 <p class="mt-4">La pression et les produits sont ajustés selon le support pour préserver l'adhérence des sols et les marquages existants.</p>
 
-<h3>T3: Gestion des eaux et finalisation</h3>
+<h3>Gestion des eaux et finalisation</h3>
 <p>Les eaux de lavage sont récupérées et dirigées vers les évacuations conformes. Aucun rejet sauvage n'est toléré.</p>
 <p class="mt-4">Un dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention. Nous transmettons une recommandation de fréquence adaptée au trafic constaté.</p>`,
       specificChallenges: [
@@ -222,13 +222,13 @@ faq: [
 <p class="mt-4">Retrouver un balcon propre change le quotidien. Sur les balcons filants en béton des immeubles années 60-70 comme sur les loggias récentes avec dalles sur plots, le confort visuel revient dès que les surfaces sont débarrassées de leur couche grisâtre. Les plantes reprennent leur place, le mobilier peut ressortir. L'impression de vivre dans un logement soigné se ressent immédiatement.</p>
 
 <p class="mt-4">Une intervention structurée permet d'obtenir ce résultat sans risque pour les supports ni gêne pour les voisins du dessous. Diagnostic préalable, protection des menuiseries, traitement adapté au revêtement et contrôle de l'évacuation des eaux : chaque étape est pensée pour votre configuration.</p>`,
-      uniqueDeepDive: `<h3>T1: Un sol débarrassé de ses dépôts incrustés</h3>
+      uniqueDeepDive: `<h3>Un sol débarrassé de ses dépôts incrustés</h3>
 <p>Le résultat visé : des dalles ou un béton retrouvant leur teinte d'origine, sans traces noires ni résidus verts. Pour y parvenir, les gros débris sont d'abord retirés manuellement. Un produit adapté au support est ensuite appliqué, suivi d'un brossage ciblé sur les zones encrassées.</p>
 
-<h3>T2: Garde-corps et vitrages sans coulures</h3>
+<h3>Garde-corps et vitrages sans coulures</h3>
 <p>L'objectif est un ensemble homogène, sans démarcation entre sol propre et éléments périphériques ternes. Les barreaux métalliques ou les parois vitrées sont traités avec des solutions non agressives. Le rinçage est contrôlé pour éviter les projections vers les étages inférieurs.</p>
 
-<h3>T3: Un espace prêt à être réutilisé</h3>
+<h3>Un espace prêt à être réutilisé</h3>
 <p>Le balcon doit pouvoir accueillir à nouveau mobilier et plantes rapidement. Le séchage est accéléré si nécessaire. Avant de partir, des conseils d'entretien sont transmis pour espacer les prochaines interventions selon l'exposition de votre balcon à la pollution ou aux feuillages environnants.</p>`,
       specificChallenges: [
         "Pollution noire depuis la D920 et l'A6 formant un voile gras sur les garde-corps.",
@@ -277,13 +277,13 @@ faq: [
 <p class="mt-4">Les supports en béton brut des balcons filants années 60-70 ou les corniches des immeubles anciens du quartier Jules Ferry absorbent l'acidité des fientes. Sans traitement, la peinture s'écaille, le métal rouille, le béton se dégrade. Un assainissement adapté permet de récupérer l'usage du balcon, d'éliminer les agents pathogènes et de stopper la dégradation des matériaux.</p>
 
 <p class="mt-4">L'intervention comprend un diagnostic de l'état des surfaces, la mise en place d'un confinement pour protéger l'intérieur du logement et le voisinage, puis un protocole complet jusqu'à la désinfection finale.</p>`,
-      uniqueDeepDive: `<h3>T1: Balcon assaini et désinfecté</h3>
+      uniqueDeepDive: `<h3>Balcon assaini et désinfecté</h3>
 <p>L'objectif est de restituer un espace propre, sans odeur, avec des surfaces décontaminées. Les agents pathogènes présents dans les fientes sont neutralisés par un produit virucide homologué appliqué après le nettoyage mécanique.</p>
 
-<h3>T2: Confinement et collecte sécurisée</h3>
+<h3>Confinement et collecte sécurisée</h3>
 <p>Avant toute manipulation, la zone est bâchée pour éviter la dispersion des poussières contaminées. L'intervenant porte combinaison jetable, masque FFP2, lunettes et gants. Les fientes sont humidifiées puis collectées dans des sacs étanches. Sol, garde-corps et vitrages sont traités successivement.</p>
 
-<h3>T3: Rinçage et options anti-retour</h3>
+<h3>Rinçage et options anti-retour</h3>
 <p>Après application du désinfectant et respect du temps de contact, un rinçage complet est effectué. Le balcon reste inaccessible le temps du séchage. Si souhaité, des pics anti-pigeons ou un filet de protection peuvent être posés sur les rebords et corniches pour limiter le retour des volatiles.</p>`,
       specificChallenges: [
         "Secteurs arborés proches du Parc du Coteau : nidification fréquente sur balcons exposés.",
@@ -332,15 +332,15 @@ faq: [
 <p class="mt-4">Un entretien régulier change la donne. Un canapé détaché retrouve son aspect d'origine, un tapis ravivé redonne de la clarté à une pièce, un matelas assaini améliore le confort de sommeil. Dans les <strong>immeubles anciens du centre-ville avec escaliers étroits</strong>, ces interventions évitent aussi le remplacement prématuré de mobilier difficile à déplacer.</p>
 
 <p class="mt-4">Notre intervention s'adapte à chaque configuration. Diagnostic textile préalable, choix des produits selon la nature des fibres, extraction contrôlée. Pour les <strong>familles comme pour les locataires en rotation fréquente</strong>, nous organisons le passage en tenant compte des contraintes de stationnement et d'accès propres à Arcueil.</p>`,
-      uniqueDeepDive: `<h3>T1: Textile propre et fibres préservées</h3>
+      uniqueDeepDive: `<h3>Textile propre et fibres préservées</h3>
 <p>Le résultat visé : des couleurs ravivées, des taches éliminées, une odeur neutre. Pour y parvenir, chaque textile fait l'objet d'un diagnostic initial. Type de tissu — coton, velours, synthétique, laine — et nature des salissures orientent le choix de la méthode.</p>
 <p class="mt-4">Un test discret sur zone cachée valide la compatibilité du traitement avec les fibres fragiles.</p>
 
-<h3>T2: Détachage ciblé puis injection-extraction</h3>
+<h3>Détachage ciblé puis injection-extraction</h3>
 <p>Les taches identifiées reçoivent un pré-traitement adapté : enzymatique pour les traces organiques, dégraissant pour les auréoles grasses. L'injection-extraction textile déloge ensuite les résidus en profondeur sans détremper le support.</p>
 <p class="mt-4">La pression et la température sont ajustées selon l'épaisseur et la sensibilité du revêtement.</p>
 
-<h3>T3: Séchage et conseils d'usage</h3>
+<h3>Séchage et conseils d'usage</h3>
 <p>L'extraction maximale réduit le temps de séchage. Selon la saison et l'aération du logement, comptez quelques heures avant de réutiliser le mobilier.</p>
 <p class="mt-4">Nous transmettons des conseils d'entretien pour espacer les interventions suivantes.</p>`,
       specificChallenges: [
@@ -390,13 +390,13 @@ faq: [
 <p class="mt-4">Sur les <strong>carrelages des pavillons</strong> comme sur les <strong>dalles sur plots ou bois composite des attiques récents</strong>, le résultat d'un entretien adapté change l'usage quotidien. Une terrasse propre redevient un prolongement naturel du logement, utilisable sans hésitation pour les repas ou la détente. Les taches grasses de barbecue, les dépôts de feuilles et les lichens incrustés disparaissent.</p>
 
 <p class="mt-4">L'intervention prend en compte le <strong>noircissement lié à la pollution atmosphérique</strong> et les <strong>mousses sur zones ombragées</strong>. Lorsque l'accès matériel passe par l'intérieur du logement, nous organisons le cheminement pour protéger vos sols et limiter toute gêne.</p>`,
-      uniqueDeepDive: `<h3>T1: Dépôts et mousses accumulés</h3>
+      uniqueDeepDive: `<h3>Dépôts et mousses accumulés</h3>
 <p>Les feuilles mortes, la terre et les débris sont retirés manuellement. Le balayage préalable dégage la surface pour évaluer l'état réel du support et repérer les zones où la mousse s'est enracinée dans les joints.</p>
 
-<h3>T2: Encrassement et taches tenaces</h3>
+<h3>Encrassement et taches tenaces</h3>
 <p>Un produit adapté au matériau est appliqué : formulation spécifique pour pierre, bois ou composite. Le brossage mécanique ou manuel déloge les salissures incrustées. La haute pression contrôlée intervient sur les supports qui la tolèrent, en évitant les joints fragiles et les matériaux poreux.</p>
 
-<h3>T3: Retour de la mousse et prévention</h3>
+<h3>Retour de la mousse et prévention</h3>
 <p>Un traitement anti-mousse est appliqué sur les zones exposées à l'humidité et à l'ombre. Les eaux de rinçage sont dirigées vers les points d'écoulement existants. Le mobilier et les plantes, déplacés ou bâchés en début d'intervention, retrouvent leur place une fois le séchage suffisant.</p>`,
       specificChallenges: [
         "Mousses tenaces sur dalles ombragées des pavillons du quartier Kergomard.",
@@ -445,15 +445,15 @@ faq: [
 <p class="mt-4">Un logement correctement préparé évite les litiges lors de l'état des lieux sortant. Sur les <strong>parquets flottants des résidences récentes</strong> comme sur le <strong>carrelage des immeubles anciens</strong>, chaque surface demande un traitement spécifique. Les pièces d'eau concentrent souvent les points de friction : joints noircis, calcaire sur la robinetterie, traces dans les sanitaires.</p>
 
 <p class="mt-4">Les <strong>agences de l'avenue Laplace</strong> et les <strong>bailleurs sociaux comme Opaly</strong> gèrent des volumes importants. Une intervention structurée — diagnostic initial, nettoyage méthodique, contrôle final — permet de respecter les créneaux imposés sans compromettre la qualité du rendu.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Avant toute intervention, nous évaluons l'état du logement : nature des sols, niveau d'encrassement, présence éventuelle de résidus de chantier. Cette étape permet d'adapter le matériel et les produits.</p>
 <p class="mt-4">Les surfaces fragiles sont protégées si nécessaire. En cas de fin de chantier, les gravats et déchets sont évacués avant le nettoyage proprement dit.</p>
 
-<h3>T2: Nettoyage complet par zones</h3>
+<h3>Nettoyage complet par zones</h3>
 <p>Le travail progresse du haut vers le bas : dépoussiérage des plafonds et murs, puis traitement des menuiseries, interrupteurs et radiateurs. Les sols sont aspirés puis lavés selon leur nature.</p>
 <p class="mt-4">Les pièces d'eau reçoivent une attention particulière : détartrage des sanitaires, nettoyage de la faïence et des joints, remise en état des plans de travail en cuisine.</p>
 
-<h3>T3: Finitions et contrôle</h3>
+<h3>Finitions et contrôle</h3>
 <p>Les placards sont nettoyés intérieurement. Les vitres côté intérieur sont traitées. Un contrôle visuel systématique permet de vérifier chaque point avant la remise des clés ou le passage de l'agence.</p>`,
       specificChallenges: [
         "Délais courts entre deux locataires dans les zones à forte rotation près du RER.",

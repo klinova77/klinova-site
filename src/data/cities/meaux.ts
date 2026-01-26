@@ -406,13 +406,13 @@ const city: City = {
 <p class="mt-4">Sur les <strong>dalles en pierre naturelle</strong> des propriétés anciennes du centre ou sur les <strong>revêtements béton</strong> des quartiers construits après-guerre, les dépôts biologiques s'accumulent au fil des saisons. Les joints se verdissent, la surface devient glissante après la pluie, et l'aspect général de l'espace extérieur se dégrade progressivement.</p>
 
 <p class="mt-4">Chaque support nécessite une approche spécifique. L'évaluation préalable détermine la méthode adaptée au matériau, à son état et aux contraintes d'accès propres à chaque configuration.</p>`,
-      uniqueDeepDive: `<h3>T1: État des lieux et préparation</h3>
+      uniqueDeepDive: `<h3>État des lieux et préparation</h3>
 <p>Le mobilier extérieur et les jardinières sont mis à l'abri ou protégés par bâchage. Les huisseries et seuils de portes reçoivent une protection contre les projections. Un dégagement des débris, feuilles mortes et résidus végétaux précède tout traitement.</p>
 
-<h3>T2: Décrassage adapté au support</h3>
+<h3>Décrassage adapté au support</h3>
 <p>Le produit de nettoyage est sélectionné en fonction du matériau identifié : formulation alcaline pour les surfaces minérales, solution neutre pour les bois et composites. L'action mécanique par brossage ou monobrosse décolle les dépôts incrustés. La pression de rinçage est calibrée pour éliminer les résidus sans fragiliser les joints ou le revêtement.</p>
 
-<h3>T3: Traitement préventif et conseils</h3>
+<h3>Traitement préventif et conseils</h3>
 <p>Les zones les plus exposées à l'ombre ou à l'humidité reçoivent un traitement anti-mousse qui ralentit la réapparition des dépôts. L'eau de rinçage est orientée vers les évacuations existantes. Des recommandations d'entretien saisonnier sont transmises pour maintenir le résultat dans la durée.</p>`,
       specificChallenges: [
         "Pierre naturelle poreuse des villas anciennes de République-Gambetta : risque de taches si produit inadapté.",

@@ -419,13 +419,13 @@ nearbyCities: [
 <p class="mt-4">Avec l'<strong>île de loisirs de Vaires-Torcy</strong> (350 hectares partagés entre les deux communes), le <strong>bois de Vaires</strong> classé Natura 2000 et la proximité immédiate de la Marne, Vaires bénéficie d'un environnement exceptionnellement vert et aquatique. Cette situation génère une humidité ambiante favorable au développement des mousses et algues sur les surfaces extérieures.</p>
 
 <p class="mt-4">Le parc immobilier vairisien — <strong>pavillons traditionnels</strong>, <strong>maisons des années 20-30</strong>, <strong>résidences des années 60-70</strong> comme le parc de l'Aulnay, <strong>constructions récentes</strong> — présente des terrasses aux revêtements variés : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun nécessitant un protocole de nettoyage adapté.</p>`,
-      uniqueDeepDive: `<h3>T1: Analyse préalable et préparation du site</h3>
+      uniqueDeepDive: `<h3>Analyse préalable et préparation du site</h3>
 <p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et clôtures adjacentes sont bâchées. Un balayage préliminaire retire feuilles, aiguilles et débris végétaux accumulés par la proximité des espaces boisés.</p>
 
-<h3>T2: Nettoyage ciblé selon le revêtement</h3>
+<h3>Nettoyage ciblé selon le revêtement</h3>
 <p>Le produit est sélectionné en fonction du support identifié : formule douce pour les dalles anciennes, solution alcaline pour béton et carrelage minéral, traitement spécifique pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations biologiques et les dépôts organiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Application préventive et recommandations</h3>
+<h3>Application préventive et recommandations</h3>
 <p>Un traitement protecteur est appliqué sur les zones les plus exposées à l'humidité du bord de Marne et des espaces boisés. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement naturel dense de Vaires.</p>`,
       specificChallenges: [
         "Pavillons proches de la Marne et du canal de Chelles : humidité permanente favorisant la prolifération rapide des mousses et algues vertes.",

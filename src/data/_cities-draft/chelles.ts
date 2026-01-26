@@ -79,13 +79,13 @@ const city: City = {
 <p class="mt-4">Un nettoyage professionnel <strong>redonne aux sols textiles leur aspect d'origine</strong>, améliore l'hygiène perçue et prolonge la durée de vie des moquettes. Pour les bureaux, c'est aussi un signal de professionnalisme auprès des clients et collaborateurs. Pour les commerces comme ceux autour de Terre Ciel, c'est une question de confort client et d'image de marque.</p>
 
 <p class="mt-4">Notre approche repose sur un diagnostic préalable du type de moquette, de la nature des taches et des contraintes d'accès propres à chaque bâtiment — escaliers étroits du centre-ville, halls d'immeubles anciens, ou plateaux ouverts de la ZAE. Nous adaptons le matériel et les horaires pour <strong>minimiser la gêne</strong>.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Avant toute intervention, nous inspectons le type de moquette (bouclée, velours, dalles textiles), identifions les taches (café, tanin, graisses, anciennes) et évaluons les contraintes d'accès spécifiques au site — escaliers étroits, halls sécurisés, zones de stationnement limitées. Nous protégeons les plinthes, bas de murs et mobilier fixe. Un balisage est mis en place si nécessaire dans les parties communes.</p>
 
-<h3>T2: Traitement par zones</h3>
+<h3>Traitement par zones</h3>
 <p><strong>L'injection-extraction</strong> est appliquée zone par zone : bureaux ouverts, couloirs, escaliers, salles de réunion. Les passages intensifs (entrées, circulations) reçoivent plusieurs passes pour éliminer les salissures incrustées. Un détachage ciblé complète le traitement sur les taches persistantes, selon le type de fibre.</p>
 
-<h3>T3: Séchage et finalisation</h3>
+<h3>Séchage et finalisation</h3>
 <p>Après extraction maximale de l'humidité, nous ventilons les espaces et estimons le temps de séchage selon l'épaisseur de la moquette et la ventilation disponible (généralement 4 à 8 heures pour une remise en service rapide).</p>
 <p class="mt-4">Nous communiquons les consignes de non-piétinement et recommandons une fréquence d'entretien adaptée au trafic local.</p>`,
       specificChallenges: [

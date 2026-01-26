@@ -374,13 +374,13 @@ nearbyCities: [
 <p class="mt-4">Dans de nombreux quartiers pavillonnaires, les sols extérieurs subissent l’encrassement progressif lié aux <strong>mousses, algues, traces noires</strong>, dépôts végétaux et passages répétés. Les terrasses peu entretenues perdent rapidement leur aspect d’origine et deviennent visuellement ternes.</p>
 
 <p class="mt-4">À Livry-Gargan, les terrasses sont majoritairement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visible.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et organisation de l’intervention</h3>
+  uniqueDeepDive: `<h3>Préparation et organisation de l’intervention</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — murs, façades, menuiseries — sont sécurisés afin de garantir une intervention propre, même dans des espaces extérieurs contraints.</p>
 
-<h3>T2: Nettoyage approfondi du sol extérieur</h3>
+<h3>Nettoyage approfondi du sol extérieur</h3>
 <p>La méthode est choisie selon le matériau : traitement adapté pour dalles béton et carrelage, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de façon contrôlée pour un sol nettement plus propre et homogène.</p>
 
-<h3>T3: Finition et valorisation de la terrasse</h3>
+<h3>Finition et valorisation de la terrasse</h3>
 <p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées. Le nettoyage améliore visiblement la clarté du sol et le confort d’usage, redonnant à la terrasse une apparence plus nette et plus agréable au quotidien.</p>`,
   specificChallenges: [
     "Terrasses très sollicitées : passages fréquents, mobilier déplacé régulièrement, encrassement accéléré.",

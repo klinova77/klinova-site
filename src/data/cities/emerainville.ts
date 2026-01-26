@@ -118,13 +118,13 @@ const city: City = {
 <p class="mt-4">Au-delà de l'aspect visuel, cette accumulation affecte le confort des occupants. Les dalles textiles et moquettes en velours ras, fréquentes dans les halls d'immeubles et bureaux locaux, retiennent ces dépôts en profondeur. Les taches de café ou de tanin, combinées à cette poussière fine, créent une impression d'usure prématurée. Une remise en état ciblée redonne non seulement l'aspect initial, mais aussi une hygiène améliorée et une meilleure perception de l'espace.</p>
 
 <p class="mt-4">Notre intervention repose sur un diagnostic préalable du type de moquette et des salissures présentes, suivi d'un protocole d'extraction adapté aux contraintes d'accès des halls et escaliers étroits du secteur. Protections des plinthes, balisage des zones en activité, et gestion de l'humidité résiduelle sont intégrés dès la préparation.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation des surfaces</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation des surfaces</h3>
 <p>Avant toute intervention, nous examinons le type de moquette (bouclée, velours, épaisseur) et identifions les zones de fort trafic où la poussière fine s'accumule davantage. Les plinthes, bas de murs et angles des halls sont protégés par des bandes adhésives. Un balisage temporaire signale les zones en cours de traitement, essentiel dans les espaces partagés.</p>
 
-<h3 class="mt-4">T2: Traitement par zones de trafic</h3>
+<h3 class="mt-4">Traitement par zones de trafic</h3>
 <p>L'injection-extraction est appliquée en passes multiples sur les secteurs les plus chargés (entrées, couloirs, zones de circulation). Pour les dalles textiles fines, la pression est modulée afin de ne pas endommager les fibres. Les taches anciennes ou incrustées reçoivent un détachage ciblé avant le passage de l'extracteur. Cette approche par zones garantit une efficacité maximale tout en respectant les délais d'intervention.</p>
 
-<h3 class="mt-4">T3: Gestion de l'humidité et finalisation</h3>
+<h3 class="mt-4">Gestion de l'humidité et finalisation</h3>
 <p>L'extraction maximale de l'eau résiduelle réduit le temps de séchage à 12-24 heures selon la ventilation et l'épaisseur de la moquette. Nous conseillons un non-piétinement pendant cette période. Un dernier passage d'aspiration sèche finalise le travail et redonne du volume aux fibres.</p>`,
       specificChallenges: [
         "Poussière fine persistante liée à la proximité de l'A104 et l'aérodrome, nécessitant un entretien plus fréquent.",
@@ -171,13 +171,13 @@ const city: City = {
 <p class="mt-4">Un parking propre change la perception immédiate. Les revêtements en béton brut ou enrobé retrouvent leur aspect d'origine, les marquages redeviennent lisibles, et la sécurité s'améliore (rampes moins glissantes, visibilité accrue). Pour les syndics et gestionnaires, c'est aussi un signal : l'entretien régulier prévient la dégradation structurelle et prolonge la durée de vie des surfaces.</p>
 
 <p class="mt-4">Klinova intervient avec une approche structurée : diagnostic du revêtement, balisage sécurisé, traitement mécanisé adapté, gestion stricte des eaux de lavage, et recommandations de fréquence. Pas de surprise, pas de gêne prolongée pour les usagers.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Nous évaluons d'abord le type de revêtement (béton brut, résine, peinture), l'état des évacuations (regards, rigoles) et le niveau d'encrassement (huile, graisse, poussière). Ensuite, mise en place du balisage sécurisé et organisation de la rotation des véhicules si nécessaire. Les zones critiques (rampes d'accès, angles morts) sont identifiées pour un traitement ciblé.</p>
 
-<h3 class="mt-4">T2: Traitement mécanisé et dégraissage</h3>
+<h3 class="mt-4">Traitement mécanisé et dégraissage</h3>
 <p>Passage à l'autolaveuse couplée à un dégraissant adapté au revêtement. Les passes mécanisées éliminent les salissures incrustées. Traitement spécifique des zones à forte concentration d'huile (pieds de murs, rigoles). Haute pression contrôlée sur les rampes pour éviter les dégâts tout en retrouvant l'antidérapant.</p>
 
-<h3 class="mt-4">T3: Gestion des eaux et finalisation</h3>
+<h3 class="mt-4">Gestion des eaux et finalisation</h3>
 <p>Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Dépoussiérage aérien des blocs lumineux et tuyauteries si demandé. Conseil sur la fréquence d'entretien selon le trafic (mensuel pour zones très fréquentées, trimestriel pour zones modérées).</p>`,
       specificChallenges: [
         "Taches d'huile anciennes : nécessitent dégraissant puissant et passes multiples pour résultat homogène.",
@@ -225,13 +225,13 @@ const city: City = {
 <p class="mt-4">Un balcon propre change le quotidien. C'est retrouver l'envie de prendre le café dehors, de laisser les enfants jouer sans crainte, de recevoir sans gêne. Sur les supports en béton brut ou carrelage typiques des années 80–90 des immeubles d'Emery, cette remise en état redonne de la valeur à votre bien et prolonge la durée de vie des matériaux. Plus de traces grises, plus de joints verdâtres : juste un espace sain et accueillant.</p>
 
 <p class="mt-4">Notre intervention repose sur un diagnostic précis : identifier le type de salissure (mousse, pollution, dépôts calcaires), adapter la pression et le produit au support, puis protéger les voisins du dessous. Chaque balcon est différent ; nous travaillons en conséquence.</p>`,
-      uniqueDeepDive: `<h3>T1: Résultat visé et préparation</h3>
+      uniqueDeepDive: `<h3>Résultat visé et préparation</h3>
 <p>Un balcon sec, sans mousse, joints clarifiés, sans risque de coulures chez le voisin du dessous. Avant toute intervention, nous bâchons les menuiseries (fenêtres, portes), déplaçons le mobilier et les plantes, et vérifions l'état des joints pour adapter la pression.</p>
 
-<h3 class="mt-4">T2: Traitement adapté au support</h3>
+<h3 class="mt-4">Traitement adapté au support</h3>
 <p>Sur béton brut, nous appliquons un produit anti-mousse doux suivi d'un brossage manuel. Sur carrelage, le nettoyage combine un détergent spécifique et une brosse douce pour préserver les joints. La pression, si nécessaire, reste contrôlée (basse pression) pour éviter l'érosion. Rinçage systématique à l'eau claire, avec gestion des eaux de ruissellement vers les canalisations.</p>
 
-<h3 class="mt-4">T3: Finalisation et conseils</h3>
+<h3 class="mt-4">Finalisation et conseils</h3>
 <p>Séchage naturel ou accéléré selon météo. Nous nettoyons aussi les garde-corps et les vitrages si demandé. Vous recevez des conseils d'entretien : fréquence selon exposition (nord = mousse plus rapide), produits recommandés, gestes simples pour prolonger le résultat.</p>`,
       specificChallenges: [
         "Mousse tenace dans les joints des balcons nord exposés à l'ombrage des arbres de Malnoue.",
@@ -279,13 +279,13 @@ const city: City = {
 <p class="mt-4">Un assainissement professionnel redonne confiance et confort. Le balcon redevient utilisable, les supports retrouvent leur aspect, et surtout, les agents pathogènes sont éliminés. C'est un gain immédiat pour le quotidien et la sérénité du logement, particulièrement important en zone résidentielle où les familles cherchent à profiter de leurs espaces.</p>
 
 <p class="mt-4">Notre intervention suit un protocole strict : confinement, humidification, ramassage sécurisé, désinfection virucide, et mise en place de dissuasion (pics ou filets). Chaque étape est pensée pour protéger l'intérieur du logement et les voisins, tout en garantissant une élimination complète de la contamination.</p>`,
-      uniqueDeepDive: `<h3>T1: Sécurisation et confinement</h3>
+      uniqueDeepDive: `<h3>Sécurisation et confinement</h3>
 <p>Avant toute intervention, nous équipons l'équipe d'EPI complets (masque FFP2, gants, lunettes, combinaison jetable). Le balcon et ses abords sont bâchés pour éviter la dispersion de poussières contaminées vers l'intérieur du logement et les espaces voisins. Cette étape prévient les risques d'inhalation et protège l'environnement immédiat.</p>
 
-<h3 class="mt-4">T2: Humidification, ramassage et nettoyage</h3>
+<h3 class="mt-4">Humidification, ramassage et nettoyage</h3>
 <p>Les fientes séchées sont humidifiées pour neutraliser les particules volatiles avant collecte. Le ramassage s'effectue dans des sacs étanches, éliminant tout risque de projection. Les supports (sol, garde-corps, vitrages, murs mitoyens) sont ensuite nettoyés en profondeur à l'eau et détergent adapté, éliminant résidus et salissures incrustées.</p>
 
-<h3 class="mt-4">T3: Désinfection et prévention</h3>
+<h3 class="mt-4">Désinfection et prévention</h3>
 <p>Un produit virucide et bactéricide homologué est appliqué sur toutes les surfaces, avec temps de contact respecté pour éliminer les agents pathogènes (histoplasmose, cryptococcose). Après rinçage final et aération, nous installons des pics anti-pigeons sur les corniches et rebords pour éviter une réinfestation rapide. L'évacuation des déchets s'effectue en sacs étanches, sécurisée et discrète.</p>`,
       specificChallenges: [
         "Proximité des espaces verts (Parc de la Mairie) crée un habitat favorable aux pigeons et une réinfestation rapide sans prévention.",
@@ -391,13 +391,13 @@ const city: City = {
 <p class="mt-4">La configuration des résidences, la végétation dense et l’exposition parfois limitée au soleil favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les ensembles résidentiels entourés d’espaces paysagers.</p>
 
 <p class="mt-4">À Émerainville, les terrasses sont majoritairement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode adaptée pour un nettoyage efficace et une remise en état visuellement nette.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de l’espace extérieur</h3>
+  uniqueDeepDive: `<h3>Préparation et sécurisation de l’espace extérieur</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans des résidences aux espaces partagés.</p>
 
-<h3>T2: Nettoyage approfondi du revêtement</h3>
+<h3>Nettoyage approfondi du revêtement</h3>
 <p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant une impression de propreté durable.</p>`,
   specificChallenges: [
     "Terrasses de copropriétés entourées d’espaces verts : mousses et dépôts organiques fréquents.",
@@ -454,13 +454,13 @@ const city: City = {
 <p class="mt-4">Un nettoyage structuré change tout. Au-delà de l'aspect visuel, c'est la confiance qui se gagne : un bien propre rassure le futur occupant, facilite la signature du bail, et évite les litiges sur l'état des lieux. Nos interventions couvrent dépoussiérage complet, sols adaptés à chaque revêtement (carrelage, parquet flottant, moquette), pièces d'eau désinfectées, et finitions détaillées (interrupteurs, radiateurs, placards). Chaque étape est pensée pour minimiser les délais sans sacrifier la qualité.</p>
 
 <p class="mt-4">Nous coordonnons avec vos artisans, respectons vos horaires, et livrons un bien prêt à l'occupation. Pas de surprise, pas de reprise : une organisation transparente du diagnostic initial jusqu'à la remise des clés.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et protection</h3>
+      uniqueDeepDive: `<h3>Diagnostic et protection</h3>
 <p>Dès l'arrivée, nous établissons un état des lieux détaillé : type de bien, nature de l'intervention (fin chantier, état des lieux, sinistre), état général (poussière, traces, résidus). Nous identifions les surfaces fragiles (parquet ancien, marbre, joints sensibles) et les protégeons si nécessaire. Cette étape détermine le matériel et les produits à utiliser pour chaque zone.</p>
 
-<h3 class="mt-4">T2: Nettoyage général et pièces d'eau</h3>
+<h3 class="mt-4">Nettoyage général et pièces d'eau</h3>
 <p>Dépoussiérage complet des plafonds, murs, plinthes et radiateurs. Aspiration puis lavage des sols adaptés au revêtement (carrelage, parquet, moquette). Salle de bain : sanitaires, faïence, joints. Cuisine : plans de travail, électroménager, crédence. WC : désinfection complète. Vitres intérieures incluses. Cette phase représente 70 % du travail et garantit une propreté visible.</p>
 
-<h3 class="mt-4">T3: Finitions et contrôle</h3>
+<h3 class="mt-4">Finitions et contrôle</h3>
 <p>Interrupteurs, poignées, radiateurs, placards intérieurs. Enlèvement des traces de peinture ou colle si fin de chantier. Ventilation et aération finale. Contrôle qualité complet avant remise des clés.</p>`,
       specificChallenges: [
         "Délais serrés entre départ locataire et visite suivante : intervention en 24–48h selon urgence.",

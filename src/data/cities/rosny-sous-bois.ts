@@ -420,13 +420,13 @@ const city: City = {
 <p class="mt-4">L’environnement urbain, les retombées végétales et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les zones peu exposées au soleil ou proches des jardins et talus.</p>
 
 <p class="mt-4">À Rosny-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement nette.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et sécurisation des abords</h3>
+  uniqueDeepDive: `<h3>Préparation et sécurisation des abords</h3>
 <p>Le mobilier, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont sécurisés afin de garantir une intervention propre, y compris dans des espaces extérieurs urbains contraints.</p>
 
-<h3>T2: Nettoyage en profondeur du revêtement</h3>
+<h3>Nettoyage en profondeur du revêtement</h3>
 <p>Le traitement est choisi selon le sol : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
   specificChallenges: [
     "Terrasses en environnement urbain : dépôts de pollution et traces noires persistantes.",

@@ -423,13 +423,13 @@ nearbyCities: [
 <p class="mt-4">La proximité de l’eau, les alignements d’arbres et les jardins privés favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, en particulier dans les quartiers de <strong>Polangis</strong> et le long des quais.</p>
 
 <p class="mt-4">À Joinville-le-Pont, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau demande une méthode spécifique pour un nettoyage efficace, respectueux du support et visuellement valorisant.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et protection des abords</h3>
+  uniqueDeepDive: `<h3>Préparation et protection des abords</h3>
 <p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont bâchés afin de travailler proprement, notamment dans les configurations urbaines où les espaces sont plus contraints.</p>
 
-<h3>T2: Nettoyage en profondeur du revêtement</h3>
+<h3>Nettoyage en profondeur du revêtement</h3>
 <p>Le traitement est choisi en fonction du sol : solution adaptée pour béton et carrelage, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, le biofilm et les traces liées à l’humidité. Le rinçage est réalisé de manière contrôlée pour un résultat net et homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair et plus uniforme, améliorant immédiatement le confort d’usage et l’esthétique de l’espace extérieur.</p>`,
   specificChallenges: [
     "Proximité immédiate de la Marne : humidité récurrente favorisant mousses et traces verdâtres.",

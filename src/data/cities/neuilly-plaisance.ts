@@ -411,13 +411,13 @@ const city: City = {
 <p class="mt-4">La proximité de l’eau, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, même dans des environnements résidentiels soignés.</p>
 
 <p class="mt-4">À Neuilly-Plaisance, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement demande une méthode spécifique pour obtenir un nettoyage efficace et un rendu visuel harmonieux.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation soignée de l’espace extérieur</h3>
+  uniqueDeepDive: `<h3>Préparation soignée de l’espace extérieur</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont bâchés afin de garantir une intervention propre et maîtrisée, y compris dans des configurations de terrasses ouvertes sur le jardin.</p>
 
-<h3>T2: Nettoyage approfondi et ciblé du revêtement</h3>
+<h3>Nettoyage approfondi et ciblé du revêtement</h3>
 <p>Le protocole est adapté au matériau : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore visiblement la clarté du sol et l’esthétique générale de la terrasse, renforçant le plaisir d’usage et la valorisation de l’espace extérieur.</p>`,
   specificChallenges: [
     "Terrasses proches des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",

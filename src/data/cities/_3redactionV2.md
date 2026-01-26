@@ -1802,15 +1802,15 @@ OBLIGATOIRE :
 
 FORMAT EXACT À RESPECTER :
 
-T1: [titre court]
+[titre court]
 [paragraphe 1]
 [paragraphe 2 si nécessaire]
 
-T2: [titre court]
+[titre court]
 [paragraphe 1]
 [paragraphe 2 si nécessaire]
 
-T3: [titre court]
+[titre court]
 [paragraphe 1]
 [paragraphe 2 si nécessaire]
 

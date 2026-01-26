@@ -415,13 +415,13 @@ nearbyCities: [
 <p class="mt-4">Dans de nombreux secteurs — notamment <strong>Franceville</strong>, <strong>Le Plateau</strong> ou les abords boisés — les terrasses sont soumises à l’humidité, aux retombées végétales et aux traces de pollution. Résultat : <strong>mousses, algues, traces noires et zones glissantes</strong> s’installent rapidement sur les sols extérieurs.</p>
 
 <p class="mt-4">Le bâti montfermois est majoritairement composé de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque surface demande une approche spécifique pour un nettoyage en profondeur et un rendu visuel durable.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de la zone</h3>
+  uniqueDeepDive: `<h3>Préparation et sécurisation de la zone</h3>
 <p>Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats (murs, façades, menuiseries) sont bâchés afin de travailler proprement, y compris sur les terrasses en pente typiques de Montfermeil.</p>
 
-<h3>T2: Nettoyage en profondeur adapté au sol</h3>
+<h3>Nettoyage en profondeur adapté au sol</h3>
 <p>Le traitement est choisi selon le matériau : solution renforcée pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les traces de ruissellement. Le rinçage est ajusté pour nettoyer en profondeur sans altérer la surface.</p>
 
-<h3>T3: Finition et mise en valeur de la terrasse</h3>
+<h3>Finition et mise en valeur de la terrasse</h3>
 <p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair, plus homogène et nettement plus confortable à l’usage. Des conseils simples sont transmis pour conserver une terrasse propre plus longtemps.</p>`,
   specificChallenges: [
     "Terrasses en pente : ruissellement de l’eau accentuant les traces noires et les zones encrassées.",

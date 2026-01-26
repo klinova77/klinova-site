@@ -436,13 +436,13 @@ nearbyCities: [
 <p class="mt-4">La proximité du fleuve, les alignements d’arbres et les zones ombragées favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont particulièrement visibles sur les terrasses peu exposées au soleil ou proches des berges.</p>
 
 <p class="mt-4">À Neuilly-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement satisfaisante.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et protection de l’environnement</h3>
+  uniqueDeepDive: `<h3>Préparation et protection de l’environnement</h3>
 <p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans les configurations proches de la Marne.</p>
 
-<h3>T2: Nettoyage approfondi du sol extérieur</h3>
+<h3>Nettoyage approfondi du sol extérieur</h3>
 <p>La méthode est adaptée au matériau : solution performante pour béton et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
   specificChallenges: [
     "Terrasses situées près des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",

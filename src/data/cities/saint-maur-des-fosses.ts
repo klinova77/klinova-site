@@ -413,13 +413,13 @@ nearbyCities: [
 <p class="mt-4">La proximité immédiate de la rivière génère un taux d'humidité élevé qui favorise l'apparition de mousses, algues et lichens sur les surfaces exposées. Les <strong>dalles en pierre naturelle</strong> des propriétés anciennes comme les <strong>carrelages et bétons</strong> des aménagements plus récents subissent cette dégradation progressive, rendant les terrasses glissantes et visuellement altérées.</p>
 
 <p class="mt-4">Chaque matériau requiert une approche sur mesure. Le diagnostic initial identifie le support, évalue son état et détermine le protocole le plus adapté pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et mise en sécurité des abords</h3>
+      uniqueDeepDive: `<h3>Diagnostic et mise en sécurité des abords</h3>
 <p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés par bâchage. Les menuiseries extérieures et façades adjacentes sont préservées des projections. Un balayage minutieux élimine feuilles mortes, débris végétaux et terre accumulée avant toute intervention.</p>
 
-<h3>T2: Nettoyage selon le matériau</h3>
+<h3>Nettoyage selon le matériau</h3>
 <p>Le produit est sélectionné en fonction du support identifié : solution douce pour la pierre naturelle, formulation alcaline pour béton et carrelage, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les dépôts incrustés. Le rinçage s'effectue à pression calibrée pour respecter les joints et la surface du revêtement.</p>
 
-<h3>T3: Protection et suivi</h3>
+<h3>Protection et suivi</h3>
 <p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité et à l'ombre des arbres. L'évacuation des eaux de rinçage est dirigée vers les points d'écoulement existants. Des préconisations d'entretien saisonnier sont transmises pour maintenir le résultat sur la durée.</p>`,
       specificChallenges: [
         "Pierre naturelle des villas bourgeoises de La Varenne et du Parc : matériau noble nécessitant des produits à pH neutre.",

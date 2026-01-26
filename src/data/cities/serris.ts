@@ -407,13 +407,13 @@ const city: City = {
 <p class="mt-4">Labellisée <strong>Ville Fleurie</strong> (3 fleurs), Serris bénéficie d'un environnement végétal soigné — parc des Communes, parc du Centre Urbain, lac des Gassets, jardin Andalou — qui génère une humidité propice au développement des mousses et algues sur les surfaces extérieures. Les terrasses des résidences bordant ces espaces verts subissent un encrassement accéléré.</p>
 
 <p class="mt-4">L'architecture caractéristique du Val d'Europe — <strong>immeubles néo-haussmanniens</strong> du centre urbain, <strong>maisons de ville</strong> des nouveaux quartiers, <strong>résidences d'inspiration londonienne</strong> du Pré de Claye — présente des terrasses en <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> qui nécessitent chacune un traitement adapté.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et sécurisation du chantier</h3>
+      uniqueDeepDive: `<h3>Diagnostic et sécurisation du chantier</h3>
 <p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou bâchés. Les façades néo-haussmanniennes et menuiseries adjacentes sont protégées des projections. Un balayage préliminaire retire feuilles, pollens et débris végétaux accumulés sur le revêtement.</p>
 
-<h3>T2: Nettoyage adapté au support</h3>
+<h3>Nettoyage adapté au support</h3>
 <p>Le produit est sélectionné selon le matériau identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Traitement préventif et conseils</h3>
+<h3>Traitement préventif et conseils</h3>
 <p>Une protection anti-mousse est appliquée sur les zones les plus exposées à l'humidité des parcs et lacs environnants. Les eaux de rinçage sont orientées vers les points d'écoulement. Des recommandations d'entretien saisonnier sont transmises pour maintenir le résultat face à l'environnement végétal dense de cette ville fleurie.</p>`,
       specificChallenges: [
         "Immeubles néo-haussmanniens du centre urbain Val d'Europe : terrasses et balcons avec garde-corps ouvragés, accès parfois contraints par les parties communes.",

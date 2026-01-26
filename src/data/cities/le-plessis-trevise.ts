@@ -117,13 +117,13 @@ const city: City = {
       uniqueIntro: `<p>Dans les bureaux administratifs et salles culturelles du centre-ville, les moquettes accumulent rapidement poussière, traces de passage et résidus organiques. Entre le trafic quotidien des usagers, les allées et venues des agents, et les événements ponctuels (réunions, spectacles), les fibres se chargent en salissures visibles et odeurs persistantes. Ce phénomène s'accentue dans les petits collectifs où la circulation concentrée dans les escaliers et couloirs crée des zones d'usure prématurée.</p>
 <p class="mt-4">Un nettoyage régulier transforme l'image des espaces : moquette ravivée, odeurs éliminées, confort retrouvé pour les occupants et visiteurs. Au-delà de l'aspect visuel, l'entretien professionnel prolonge la durée de vie des fibres et maintient l'hygiène des parties communes. Pour les bureaux et salles de réception, c'est un élément clé de l'image professionnelle.</p>
 <p class="mt-4">Notre approche repose sur un diagnostic préalable du type de moquette (dalles, velours, bouclée), de la nature des taches et des contraintes d'accès propres à chaque bâti. Nous adaptons la méthode et le planning pour intervenir avec discrétion, sans perturber l'activité.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Nous commençons par identifier le type de moquette (dalles textiles, velours ras, bouclée) et évaluer l'état des salissures : taches localisées, encrassement général, odeurs. Nous protégeons les plinthes, bas de murs et mobilier fixe. Un balisage temporaire signale les zones en traitement si l'espace reste accessible.</p>
 
-<h3>T2: Injection-extraction par zones</h3>
+<h3>Injection-extraction par zones</h3>
 <p>Le nettoyage s'effectue zone par zone : escaliers et couloirs d'abord (trafic maximal), puis bureaux et salles. Nous injectons une solution détergente adaptée à la fibre, puis extrayons l'humidité et les salissures par aspiration puissante. Les zones très sales reçoivent plusieurs passes pour un résultat optimal.</p>
 
-<h3>T3: Séchage et finalisation</h3>
+<h3>Séchage et finalisation</h3>
 <p>Nous optimisons l'extraction pour réduire le temps de séchage (généralement 4 à 8 heures selon épaisseur et ventilation). Nous conseillons sur la fréquence d'entretien (trimestrielle pour bureaux, semestrielle pour parties communes) et les gestes simples de maintenance quotidienne.</p>`,
       specificChallenges: [
         "Escaliers étroits des petits collectifs : passage du matériel d'extraction limité, nécessite démontage partiel.",
@@ -169,13 +169,13 @@ const city: City = {
       uniqueIntro: `<p>Les parkings du Plessis-Trévise — qu'ils soient souterrains dans les résidences Val Roger ou aériens autour du marché et de la Mairie — accumulent rapidement des traces d'huile, des graviers et des dépôts gris qui ternissent l'image de l'immeuble. Les jours de marché (mercredi et samedi), le trafic intensifie cette salissure, avec des résidus alimentaires et des poussières qui s'incrustent dans les joints et les rigoles.</p>
 <p class="mt-4">Un parking propre rassure les résidents et les visiteurs, améliore la sécurité (meilleure visibilité, moins de glissance) et prolonge la durée de vie du revêtement. Pour les copropriétés et les gestionnaires, c'est aussi un argument de confort auprès des locataires et une réduction des plaintes liées à l'hygiène des parties communes.</p>
 <p class="mt-4">Notre intervention repose sur un diagnostic préalable du revêtement (béton brut, enrobé, résine), un balisage sécurisé pendant les travaux, et une gestion stricte des eaux de lavage — point critique dans les souterrains où les évacuations doivent être respectées. Nous coordonnons les horaires avec les syndics pour minimiser la gêne aux usagers.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation sécurisée</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation sécurisée</h3>
 <p>Le relevé du type de revêtement (béton, enrobé, résine) et de l'état des évacuations (regards, rigoles) détermine la méthode. Nous balisageons les zones avec signalétique claire et, si nécessaire, organisons la rotation des véhicules en accord avec le syndic pour maintenir l'accès.</p>
 
-<h3>T2: Décrassage mécanisé et traitement des taches</h3>
+<h3>Décrassage mécanisé et traitement des taches</h3>
 <p>Autolaveuse combinée à haute pression et dégraissant adapté au revêtement. Les zones critiques (rampes d'accès, pieds de murs, angles morts) reçoivent un traitement renforcé. Les taches d'huile anciennes sont traitées par passes successives pour éviter les résidus.</p>
 
-<h3>T3: Gestion des eaux et finalisation</h3>
+<h3>Gestion des eaux et finalisation</h3>
 <p>Les eaux de lavage sont dirigées vers les évacuations existantes sans débordement. Dépoussiérage aérien des blocs lumineux et tuyauteries si demandé. Rapport d'intervention et recommandations de fréquence (selon trafic : 2 à 4 fois par an pour parkings actifs).</p>`,
       specificChallenges: [
         "Trafic intense les jours de marché (mercredi et samedi) : coordination d'accès et horaires décalés nécessaires.",
@@ -220,13 +220,13 @@ const city: City = {
       uniqueIntro: `<p>Sur les balcons du Val Roger et des secteurs Centre, Avenue Maurice Berteaux, on observe rapidement l'accumulation de dépôts verts, traces grises et salissures incrustées dans les joints. L'exposition aux axes locaux, la proximité des parcs municipaux et l'humidité naturelle du Plateau Briard favorisent la formation de mousses et algues, particulièrement sur les faces nord et est. Ces dégradations s'aggravent d'année en année, rendant l'espace extérieur peu accueillant et glissant par temps humide.</p>
 <p class="mt-4">Un balcon propre change le quotidien : retrouver une surface claire, saine et agréable à utiliser, sans crainte de glissade. Pour les résidents du Val Roger ou des résidences récentes, c'est aussi préserver l'aspect des façades et maintenir la valeur du bien. Un entretien régulier évite que les dépôts ne s'incrustent définitivement dans le béton ou le carrelage.</p>
 <p class="mt-4">Notre intervention repose sur un diagnostic précis du support (béton peint, carrelage, dalles sur plots) et des protections strictes pour les voisins du dessous. Nous adaptons pression, produits et timing selon l'exposition et l'état réel du balcon, en minimisant les gênes sonores et les coulures.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Avant toute intervention, nous évaluons le support (béton, carrelage, dalles, bois composite) et l'état des joints. Nous protégeons les menuiseries (fenêtres, portes) avec des bâches, déplaçons le mobilier et les plantes, et mettons en place des protections anti-coulures pour les balcons du dessous. Cette étape est cruciale en résidentiel dense, où le respect du voisinage prime.</p>
 
-<h3>T2: Enlèvement des dépôts et traitement ciblé</h3>
+<h3>Enlèvement des dépôts et traitement ciblé</h3>
 <p>Nous commençons par enlever les gros débris (feuilles, terre, dépôts secs) à la brosse manuelle. Ensuite, nous appliquons un produit adapté au support et au type de salissure (mousses, algues, traces grasses). Le brossage manuel ou mécanique douce suit, selon la fragilité des joints. Un rinçage contrôlé élimine résidus et produit sans projections chez les voisins.</p>
 
-<h3>T3: Finitions et conseils</h3>
+<h3>Finitions et conseils</h3>
 <p>Après séchage, nous nettoyons les garde-corps et vitrages si nécessaire. Nous vous conseillons sur la fréquence d'entretien selon l'exposition (avenue très passante = 1–2 fois par an) et les gestes simples pour maintenir le résultat.</p>`,
       specificChallenges: [
         "Mousses et dépôts verts tenaces sur expositions nord/est proches des parcs municipaux.",
@@ -272,13 +272,13 @@ const city: City = {
       uniqueIntro: `<p>Comment utiliser sereinement votre balcon quand les fientes de pigeons s'y accumulent ? À Le Plessis-Trévise, les balcons et corniches proches des parcs (Parc de la Mairie, Parc François Mansart) et du marché du centre-ville subissent régulièrement cette contamination. Les pigeons, attirés par les espaces verts et les zones alimentaires, reviennent inlassablement. Le problème ne se limite pas à l'aspect visuel : les fientes contiennent des agents pathogènes (histoplasmose, cryptococcose) qui posent des risques sanitaires réels, surtout pour les enfants et personnes fragiles.</p>
 <p class="mt-4">Au-delà de la gêne et des odeurs tenaces, cette accumulation corrode les supports. Les derniers étages et corniches de petits collectifs et résidences anciennes — pierre, béton, garde-corps métalliques — se dégradent progressivement. L'intervention ne peut donc pas être un simple nettoyage : elle exige confinement, désinfection rigoureuse et élimination sécurisée des déchets contaminés. C'est un enjeu de santé publique autant que de préservation du bâti.</p>
 <p class="mt-4">Notre approche combine enlèvement méthodique, protocole de désinfection homologué et mesures anti-retour (pics, filets) pour retrouver un balcon sain et utilisable. Zones à risque identifiées autour des parcs et marchés, nous adaptons chaque intervention aux contraintes locales et à la sensibilité du voisinage.</p>`,
-      uniqueDeepDive: `<h3>T1: Confinement et protection</h3>
+      uniqueDeepDive: `<h3>Confinement et protection</h3>
 <p>Avant toute action, nous établissons un périmètre sécurisé : bâchage de la zone, protection des intérieurs (fenêtres, portes) et des balcons adjacents. Chaque intervenant porte FFP2, gants, lunettes et combinaison jetable. Cette étape neutralise les risques d'envol de poussières contaminées et protège voisins et occupants.</p>
 
-<h3>T2: Enlèvement et désinfection</h3>
+<h3>Enlèvement et désinfection</h3>
 <p>Après humidification préalable pour éviter la dispersion de particules, nous procédons au ramassage des fientes dans des sacs étanches. Nettoyage complet du sol, garde-corps, vitrages et murs mitoyens. Application d'un produit virucide/bactéricide homologué avec temps de contact respecté, suivi d'un rinçage final. Délai d'aération avant réutilisation : 24h minimum selon conditions météo.</p>
 
-<h3>T3: Prévention et évacuation</h3>
+<h3>Prévention et évacuation</h3>
 <p>Installation de pics anti-pigeons sur corniches et rebords, ou filets de protection si pertinent. Évacuation sécurisée des déchets contaminés en sacs étanches, conformément aux protocoles sanitaires. Reporting d'intervention remis au client.</p>`,
       specificChallenges: [
         "Proximité parcs et marché : réinfestation rapide sans mesures anti-retour durables.",
@@ -385,13 +385,13 @@ const city: City = {
 <p class="mt-4">Les terrasses situées à proximité des zones boisées ou dans des jardins arborés sont particulièrement exposées aux <strong>mousses, algues, lichens</strong> et aux <strong>dépôts organiques</strong>. L’ombre prolongée, la rosée matinale et les feuilles mortes accélèrent l’encrassement des sols extérieurs.</p>
 
 <p class="mt-4">Le parc immobilier du Plessis-Trévise est composé en majorité de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Ces supports nécessitent des méthodes de nettoyage spécifiques afin de préserver leur état tout en éliminant efficacement les salissures.</p>`,
-  uniqueDeepDive: `<h3>T1: Diagnostic et préparation de la terrasse</h3>
+  uniqueDeepDive: `<h3>Diagnostic et préparation de la terrasse</h3>
 <p>Le revêtement est identifié et son état contrôlé avant toute intervention. Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, seuils et menuiseries adjacentes sont bâchés afin d’éviter toute projection, notamment dans les jardins clos.</p>
 
-<h3>T2: Nettoyage ciblé selon le support</h3>
+<h3>Nettoyage ciblé selon le support</h3>
 <p>Le protocole est ajusté au matériau : solution alcaline pour béton et carrelage, produit spécifique pour bois et composite, traitement doux pour supports plus sensibles. Un brossage mécanique contrôlé permet de décoller les mousses et biofilms. Le rinçage est réalisé à pression maîtrisée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Stabilisation du résultat et conseils</h3>
+<h3>Stabilisation du résultat et conseils</h3>
 <p>Sur les terrasses fortement exposées à l’humidité et à l’ombre, un traitement préventif peut être proposé afin de ralentir la réapparition des mousses. Les eaux de rinçage sont orientées vers les écoulements existants. Des recommandations d’entretien simple sont fournies pour prolonger le résultat dans le temps.</p>`,
   specificChallenges: [
     "Proximité du bois Saint-Martin : forte humidité ambiante et retombées végétales favorisant les mousses et lichens.",
@@ -447,13 +447,13 @@ const city: City = {
       uniqueIntro: `<p>Comment assurer qu'un appartement ou une maison soit impeccable avant un état des lieux, ou après des travaux de rénovation ? À Le Plessis-Trévise, les agences immobilières et bailleurs de la région (Avenue Ardouin notamment) font face à des délais serrés pour préparer les biens en rotation locative. Poussières de chantier, traces de peinture, résidus de colle, salissures accumulées : chaque élément compte pour la remise de clés.</p>
 <p class="mt-4">Un logement bien préparé change la première impression et évite les litiges d'état des lieux. Pour les pavillons rénovés comme pour les appartements T3/T4 des résidences (Val Roger, Cité de la Joie), la propreté finale doit être irréprochable. Sols carrelés ou parquet, salle de bain, cuisine, placards intérieurs : chaque pièce doit être traitée selon sa nature et son usage.</p>
 <p class="mt-4">Klinova propose une intervention structurée : diagnostic initial, plan d'action adapté au contexte (fin de chantier, état des lieux, déménagement), protections si nécessaire, et contrôle qualité avant remise des clés. Pas de surprise, une coordination claire avec votre agenda.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
 <p>Avant toute intervention, nous établissons l'état réel du bien : type de salissures (poussière de chantier, traces de peinture, résidus), surfaces fragiles (parquet ancien, carrelage délicat), accès (étages, ascenseur étroit). Nous protégeons les éléments sensibles et planifions l'ordre des pièces pour une efficacité maximale.</p>
 
-<h3>T2: Nettoyage par zones</h3>
+<h3>Nettoyage par zones</h3>
 <p>Dépoussiérage complet des plafonds, murs et plinthes. Sols : aspiration puis lavage adapté au revêtement (carrelage, parquet, moquette). Pièces d'eau : sanitaires, faïence, joints, plans de travail cuisine. Détails critiques : interrupteurs, poignées, radiateurs, traces de peinture ou colle si fin de chantier. Placards intérieurs et finitions.</p>
 
-<h3>T3: Contrôle et remise</h3>
+<h3>Contrôle et remise</h3>
 <p>Vérification complète pièce par pièce. Aération du logement. Remise des clés avec rapport d'intervention si demandé. En cas de point non conforme, reprise immédiate sans surcoût.</p>`,
       specificChallenges: [
         "Délais d'état des lieux souvent comprimés : coordination requise avec agences avenue Ardouin.",

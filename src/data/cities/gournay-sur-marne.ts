@@ -416,13 +416,13 @@ nearbyCities: [
 <p class="mt-4">La proximité immédiate de la rivière et du <strong>parc départemental de la Haute-Île</strong> (65 hectares de zone humide classée Natura 2000) génère un taux d'humidité favorable au développement des mousses, algues et lichens. Les terrasses exposées nord ou ombragées par les arbres des jardins gournaysiens subissent un encrassement accéléré, rendant les surfaces glissantes et altérant leur aspect.</p>
 
 <p class="mt-4">L'évaluation initiale identifie le type de revêtement — <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong> ou <strong>bois composite</strong> — et détermine le protocole le mieux adapté pour retrouver une surface propre sans compromettre l'intégrité du support.</p>`,
-      uniqueDeepDive: `<h3>T1: Reconnaissance du site et préparation</h3>
+      uniqueDeepDive: `<h3>Reconnaissance du site et préparation</h3>
 <p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et plantations adjacentes sont bâchées pour éviter les projections. Un balayage soigneux élimine feuilles, débris végétaux et terre accumulée sur le revêtement.</p>
 
-<h3>T2: Traitement adapté au support</h3>
+<h3>Traitement adapté au support</h3>
 <p>Le produit nettoyant est sélectionné selon le matériau : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre naturelle, traitement spécifique pour bois et composite. L'action mécanique par brossage déloge les incrustations tenaces. Le rinçage s'effectue à pression ajustée pour respecter les joints et la surface.</p>
 
-<h3>T3: Protection et conseils d'entretien</h3>
+<h3>Protection et conseils d'entretien</h3>
 <p>Un traitement préventif anti-mousse est appliqué sur les zones les plus exposées à l'humidité ambiante. L'évacuation des eaux est dirigée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement humide des bords de Marne.</p>`,
       specificChallenges: [
         "Humidité permanente liée à la Marne et au canal de Chelles : prolifération rapide des mousses et algues vertes sur toutes les surfaces.",

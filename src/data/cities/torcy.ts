@@ -407,13 +407,13 @@ nearbyCities: [
 <p class="mt-4">La proximité des <strong>espaces verts</strong>, des cheminements piétons et des zones paysagées favorise l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents sur les terrasses peu exposées au soleil ou proches des plantations.</p>
 
 <p class="mt-4">À Torcy, les terrasses sont majoritairement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement nette.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et organisation de l’intervention</h3>
+  uniqueDeepDive: `<h3>Préparation et organisation de l’intervention</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, y compris dans des résidences aux espaces extérieurs partagés.</p>
 
-<h3>T2: Nettoyage en profondeur du sol extérieur</h3>
+<h3>Nettoyage en profondeur du sol extérieur</h3>
 <p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant une impression de propreté durable.</p>`,
   specificChallenges: [
     "Terrasses proches des espaces verts et massifs paysagers : mousses et dépôts organiques fréquents.",

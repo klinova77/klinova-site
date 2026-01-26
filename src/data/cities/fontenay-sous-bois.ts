@@ -404,13 +404,13 @@ nearbyCities: [
 <p class="mt-4">L’environnement urbain, les <strong>jardins en pente</strong>, les zones arborées et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les quartiers comme <strong>Rigollots</strong> ou le <strong>Plateau</strong>, où l’exposition au soleil peut être irrégulière.</p>
 
 <p class="mt-4">À Fontenay-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour obtenir un nettoyage efficace et une remise en état visuellement nette.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et sécurisation de la terrasse</h3>
+  uniqueDeepDive: `<h3>Préparation et sécurisation de la terrasse</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, y compris dans des configurations urbaines ou en terrain en pente.</p>
 
-<h3>T2: Nettoyage ciblé et approfondi du sol extérieur</h3>
+<h3>Nettoyage ciblé et approfondi du sol extérieur</h3>
 <p>La méthode est adaptée au matériau : solution performante pour dalles béton et carrelages extérieurs, protocole spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>`,
   specificChallenges: [
     "Terrasses urbaines en pente : ruissellement de l’eau accentuant traces noires et encrassement.",

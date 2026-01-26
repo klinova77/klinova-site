@@ -398,13 +398,13 @@ nearbyCities: [
 <p class="mt-4">L'abondante végétation qui fait la réputation de la ville — arbres remarquables, jardins arborés, allées plantées héritées de l'ancien parc à l'anglaise — génère des conditions propices au développement des mousses et lichens sur les surfaces extérieures. L'ombre portée des grands arbres et l'humidité retenue par les feuillages accélèrent l'encrassement des <strong>dalles en pierre</strong>, <strong>béton</strong> ou <strong>carrelage</strong>.</p>
 
 <p class="mt-4">Le diagnostic préalable identifie la nature du revêtement et son état pour déterminer le traitement approprié, qu'il s'agisse d'une terrasse ancienne aux joints fragiles ou d'un aménagement contemporain en grès cérame ou bois composite.</p>`,
-      uniqueDeepDive: `<h3>T1: Évaluation et préparation du chantier</h3>
+      uniqueDeepDive: `<h3>Évaluation et préparation du chantier</h3>
 <p>Mobilier de jardin, bacs à plantes et objets décoratifs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées des éclaboussures. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>
 
-<h3>T2: Décrassage et action mécanique ciblée</h3>
+<h3>Décrassage et action mécanique ciblée</h3>
 <p>Le produit de nettoyage est choisi selon le matériau : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. Le brossage mécanique déloge les incrustations. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture du support.</p>
 
-<h3>T3: Traitement préventif et recommandations</h3>
+<h3>Traitement préventif et recommandations</h3>
 <p>Une protection anti-mousse est appliquée sur les zones ombragées les plus exposées. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des conseils d'entretien courant sont communiqués pour prolonger l'effet du nettoyage face à la végétation environnante.</p>`,
       specificChallenges: [
         "Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : matériaux poreux sensibles aux produits acides.",

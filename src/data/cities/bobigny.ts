@@ -116,13 +116,13 @@ const city: City = {
       uniqueIntro: `<p>Dans la zone administrative autour du <strong>Métro Bobigny - Pablo Picasso</strong>, les moquettes des bureaux et halls d'accueil accumulent rapidement poussières et traces de passage. Le flux quotidien vers les services publics ramène boue, particules fines et résidus qui s'incrustent dans les fibres. Les dalles textiles des couloirs perdent leur aspect d'origine en quelques mois d'utilisation intensive.</p>
 <p class="mt-4">Les <strong>halls administratifs équipés de dalles textiles</strong> et les bureaux avec moquettes velours présentent des besoins différents mais une même exigence : retrouver un rendu propre sans interrompre l'activité. Un entretien régulier préserve l'image professionnelle des lieux et prolonge la durée de vie des revêtements. Les taches de café, les marques de semelles et le grisaillement général disparaissent après un traitement adapté.</p>
 <p class="mt-4">Le <strong>passage piétonnier lié aux services publics</strong> génère une usure concentrée sur les zones de circulation. Une intervention structurée permet d'identifier les secteurs prioritaires, de protéger le mobilier environnant et de planifier le séchage selon les contraintes horaires du site.</p>`,
-      uniqueDeepDive: `<h3>T1: Zones de circulation intensive</h3>
+      uniqueDeepDive: `<h3>Zones de circulation intensive</h3>
 <p>Les couloirs et halls d'entrée concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant le traitement humide. Les passes d'injection-extraction sont multipliées sur ces surfaces à fort trafic pour déloger les résidus incrustés en profondeur.</p>
 
-<h3>T2: Espaces de travail et bureaux</h3>
+<h3>Espaces de travail et bureaux</h3>
 <p>Les dalles textiles sous les postes de travail reçoivent un détachage ciblé sur les zones de roulettes et les taches localisées. La pression d'injection est adaptée à l'épaisseur du revêtement. Les plinthes et bas de cloisons sont protégés pendant l'opération.</p>
 
-<h3>T3: Zones d'attente et accueil</h3>
+<h3>Zones d'attente et accueil</h3>
 <p>Les moquettes velours des espaces visiteurs nécessitent une extraction soignée pour éviter l'auréolage. Le séchage est accéléré par ventilation si les horaires d'ouverture l'imposent. Un temps de non-piétinement de quelques heures garantit un résultat homogène sur l'ensemble de la surface traitée.</p>`,
       specificChallenges: [
         "Dalles textiles des bureaux administratifs encrassées par le passage quotidien des usagers.",
@@ -163,15 +163,15 @@ const city: City = {
       uniqueIntro: `<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière noire sont visibles sur la plupart des sols de parkings à Bobigny. Dans les zones d'activités comme la <strong>ZI des Vignes</strong> ou aux abords du <strong>Canal de l'Ourcq</strong>, le passage régulier de véhicules utilitaires et de poids lourds laisse des marques tenaces sur le béton. Ces salissures s'accumulent rapidement et dégradent l'aspect général des espaces de stationnement.</p>
 <p class="mt-4">Pour les copropriétés et gestionnaires, un sol encrassé renvoie une image négative aux résidents et visiteurs. Les <strong>parkings souterrains sous dalles</strong>, fréquents dans les résidences récentes de Bobigny, concentrent poussières et résidus de carburant faute de ventilation naturelle. Un lavage mécanisé régulier permet de retrouver un sol propre et de limiter les risques de glissance.</p>
 <p class="mt-4">Klinova coordonne chaque intervention avec le syndic ou le gestionnaire : diagnostic préalable du revêtement, planification des créneaux horaires adaptés au <strong>trafic pendulaire des bureaux</strong>, et organisation de la rotation des véhicules pour limiter la gêne.</p>`,
-      uniqueDeepDive: `<h3>T1: Diagnostic et préparation du chantier</h3>
+      uniqueDeepDive: `<h3>Diagnostic et préparation du chantier</h3>
 <p>Avant toute intervention, nous identifions le type de revêtement présent : béton brut, résine ou peinture. L'état des évacuations est contrôlé pour garantir l'écoulement correct des eaux de lavage.</p>
 <p class="mt-4">Un balayage préalable élimine les débris grossiers. Le balisage est installé et la rotation des véhicules organisée avec le gestionnaire pour sécuriser chaque zone traitée.</p>
 
-<h3>T2: Lavage mécanisé et dégraissage</h3>
+<h3>Lavage mécanisé et dégraissage</h3>
 <p>L'autolaveuse effectue plusieurs passes sur l'ensemble de la surface. Un dégraissant adapté au support est appliqué sur les zones critiques : emplacements marqués par l'huile, pieds de murs, angles morts.</p>
 <p class="mt-4">Les rampes d'accès reçoivent un traitement spécifique pour conserver leur adhérence. Les rigoles et regards sont dégagés pour assurer une évacuation conforme.</p>
 
-<h3>T3: Contrôle et recommandations</h3>
+<h3>Contrôle et recommandations</h3>
 <p>Les eaux de lavage sont dirigées vers les réseaux prévus, sans rejet sauvage. Un dépoussiérage des blocs lumineux ou tuyauteries peut être réalisé sur demande.</p>
 <p class="mt-4">Un compte-rendu est transmis au donneur d'ordre avec nos préconisations de fréquence selon le niveau de trafic constaté.</p>`,
       specificChallenges: [
@@ -213,13 +213,13 @@ const city: City = {
       uniqueIntro: `<p>Après quelques saisons, les balcons des grands ensembles comme ceux du quartier Karl Marx ou Paul Eluard accumulent une couche grisâtre tenace. La proximité des axes routiers — notamment l'Avenue Jean Jaurès et la N3 — dépose un film de particules fines qui s'incruste dans les pores du béton. Les joints noircissent, le sol colle sous les pieds, et l'envie de profiter de cet espace diminue progressivement.</p>
 <p class="mt-4">Retrouver un balcon propre change la perception du logement. Les supports en béton brut des constructions années 60-70 ou les dalles sur plots des résidences plus récentes retrouvent leur aspect d'origine. Le garde-corps redevient net, les vitres attenantes laissent passer la lumière sans voile gris. C'est un espace récupéré, utilisable pour une table, des plantes, ou simplement pour prendre l'air.</p>
 <p class="mt-4">L'intervention commence par un diagnostic du support et de l'exposition. Chaque balcon présente des contraintes différentes : étage élevé, voisins en dessous, mobilier à protéger. Un plan d'action adapté permet d'intervenir efficacement sans créer de nuisances.</p>`,
-      uniqueDeepDive: `<h3>T1: Un sol débarrassé des dépôts et un garde-corps net</h3>
+      uniqueDeepDive: `<h3>Un sol débarrassé des dépôts et un garde-corps net</h3>
 <p>Le résultat visé : un balcon où l'on peut marcher pieds nus sans sensation de crasse, avec des surfaces uniformes et des joints éclaircis. Pour y parvenir, le sol est d'abord débarrassé des gros débris — feuilles mortes, terre accumulée, résidus divers. Le garde-corps et les vitrages attenants sont traités dans la foulée.</p>
 
-<h3>T2: Traitement adapté au support</h3>
+<h3>Traitement adapté au support</h3>
 <p>Sur béton brut, un produit désincrustant est appliqué puis brossé mécaniquement pour déloger les particules de pollution. Sur dalles ou carrelage, la pression est ajustée pour préserver les joints. Les plantes et le mobilier sont déplacés ou bâchés avant toute projection d'eau.</p>
 
-<h3>T3: Rinçage contrôlé et protection voisinage</h3>
+<h3>Rinçage contrôlé et protection voisinage</h3>
 <p>L'eau de rinçage est gérée pour éviter les coulures chez les voisins du dessous. Des protections sont posées en périphérie si nécessaire. Le séchage est accéléré par raclage, et des conseils d'entretien sont transmis pour espacer les prochaines interventions.</p>`,
       specificChallenges: [
         "Noircissement accéléré par la pollution des axes N3 et A86 sur les balcons exposés côté rue.",
@@ -260,15 +260,15 @@ const city: City = {
       uniqueIntro: `<p>Les traces blanchâtres et croûtes sèches sont visibles sur de nombreux balcons orientés vers le <strong>Parc de la Bergère</strong> et les alignements d'arbres qui bordent les avenues. Ces dépôts s'accumulent sur les garde-corps, le sol et parfois les vitrages, rendant l'espace inutilisable. L'odeur persiste, le linge ne peut plus sécher dehors, et la gêne vis-à-vis du voisinage s'installe.</p>
 <p class="mt-4">Sur les <strong>corniches et rebords en béton des tours</strong>, les pigeons trouvent des perchoirs idéaux aux derniers étages. Les fientes attaquent progressivement les surfaces, provoquant des taches tenaces et une dégradation des peintures. Au-delà de l'aspect visuel, ces déjections contiennent des agents pathogènes qui justifient un traitement adapté plutôt qu'un simple rinçage.</p>
 <p class="mt-4">Notre intervention structure chaque étape : diagnostic de l'ampleur des dépôts, protection de votre intérieur, collecte sécurisée, désinfection des supports et recommandations pour limiter le retour. Les <strong>zones à risque autour des marchés alimentaires</strong> et des cours intérieures nécessitent une attention particulière que nous intégrons dès la préparation du chantier.</p>`,
-      uniqueDeepDive: `<h3>T1: Sécurisation et confinement</h3>
+      uniqueDeepDive: `<h3>Sécurisation et confinement</h3>
 <p>Les fientes sèches libèrent des particules nocives lorsqu'elles sont déplacées. Nous intervenons équipés de masques FFP2, gants, lunettes et combinaisons jetables. Le balcon est bâché pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins du dessous.</p>
 <p class="mt-4">L'humidification préalable neutralise les poussières avant manipulation.</p>
 
-<h3>T2: Collecte et traitement des supports</h3>
+<h3>Collecte et traitement des supports</h3>
 <p>Les dépôts sont ramassés et conditionnés en sacs étanches. Le sol, les garde-corps, les vitrages et murs mitoyens sont ensuite nettoyés pour éliminer les résidus incrustés.</p>
 <p class="mt-4">Une désinfection virucide et bactéricide est appliquée sur l'ensemble des surfaces, avec respect du temps de contact nécessaire à l'élimination des agents pathogènes.</p>
 
-<h3>T3: Rinçage et prévention</h3>
+<h3>Rinçage et prévention</h3>
 <p>Un rinçage final prépare le balcon à une réutilisation après aération. Nous évacuons les déchets contaminés dans le respect des règles sanitaires.</p>
 <p class="mt-4">Si nécessaire, nous proposons la pose de pics anti-pigeons sur les rebords ou de filets de protection pour limiter les retours.</p>`,
       specificChallenges: [
@@ -310,13 +310,13 @@ const city: City = {
       uniqueIntro: `<p>Comment préserver la propreté d'un canapé familial quand les enfants y passent leurs soirées, que le chat s'y installe chaque matin, et que les taches de café ou de jus s'accumulent au fil des semaines ? Dans les logements du quartier Paul Eluard comme dans les studios proches du campus universitaire, les textiles d'ameublement absorbent tout : poussières, allergènes, odeurs persistantes. Le passage régulier ne suffit plus à masquer l'encrassement.</p>
 <p class="mt-4">Un entretien en profondeur change la donne au quotidien. Les tissus synthétiques courants dans les foyers balbyniens retrouvent leur souplesse, les couleurs se ravivent, et l'air intérieur gagne en fraîcheur. Pour les salles d'attente des cabinets médicaux ou juridiques autour de l'Hôpital Avicenne et du Tribunal, c'est aussi une question d'image : des assises propres rassurent les visiteurs.</p>
 <p class="mt-4">Notre intervention s'adapte à chaque textile et à chaque contrainte d'accès. Diagnostic préalable, test sur zone discrète si nécessaire, puis traitement adapté à l'épaisseur et à la nature du tissu.</p>`,
-      uniqueDeepDive: `<h3>T1: Textile assaini et taches éliminées</h3>
+      uniqueDeepDive: `<h3>Textile assaini et taches éliminées</h3>
 <p>L'objectif est d'extraire les salissures profondes, neutraliser les odeurs et redonner aux fibres leur aspect d'origine. Sur un canapé taché par des traces d'urine animale ou un tapis marqué par des années de passage, le résultat se voit immédiatement : couleurs ravivées, toucher plus souple, odeurs disparues.</p>
 
-<h3>T2: Diagnostic et pré-traitement ciblé</h3>
+<h3>Diagnostic et pré-traitement ciblé</h3>
 <p>Avant toute action, nous identifions le type de tissu (coton, synthétique, velours, similicuir) et la nature des taches. Un détachage enzymatique est appliqué sur les zones critiques. Pour les textiles fragiles, un test discret sur partie cachée garantit l'absence de réaction.</p>
 
-<h3>T3: Injection-extraction et séchage contrôlé</h3>
+<h3>Injection-extraction et séchage contrôlé</h3>
 <p>Le traitement principal utilise la technique d'injection-extraction : solution nettoyante injectée dans les fibres, puis aspirée avec les salissures. La pression et la température sont ajustées selon l'épaisseur du textile. Nous vous indiquons le délai de séchage selon la saison et l'aération disponible.</p>`,
       specificChallenges: [
         "Taches anciennes sur canapés familiaux des grands ensembles : café, jus, traces d'animaux.",
@@ -359,13 +359,13 @@ const city: City = {
       uniqueIntro: `<p>Après plusieurs semaines de travaux ou une succession de locataires, un appartement accumule des traces que le ménage courant ne suffit pas à éliminer. Poussière de plâtre incrustée dans les angles, résidus de colle sur les plinthes, sols ternis par les passages répétés : ces marques persistent et compliquent la remise en état. Dans les secteurs proches du <strong>Stade Henri Wallon</strong> et de la <strong>Cité Karl Marx</strong>, les rotations locatives fréquentes amplifient ce besoin de préparation soignée avant chaque nouvelle occupation.</p>
 <p class="mt-4">Un logement correctement préparé facilite l'état des lieux et évite les litiges. Les biens mixtes de Bobigny — grands ensembles avec lino ou PVC, résidences récentes équipées de parquet flottant et carrelage — demandent des techniques adaptées à chaque revêtement. Le résultat : des surfaces assainies, des pièces d'eau détartrées, des vitres transparentes.</p>
 <p class="mt-4">L'intervention s'organise selon un diagnostic préalable : nature du chantier, état général, délai de restitution. Chaque étape est planifiée pour respecter les contraintes des bailleurs sociaux et des agences qui gèrent une partie importante du parc locatif local.</p>`,
-      uniqueDeepDive: `<h3>T1: Un logement prêt à habiter</h3>
+      uniqueDeepDive: `<h3>Un logement prêt à habiter</h3>
 <p>L'objectif est de restituer un bien propre, sans traces de chantier ni résidus d'occupation précédente. Sols nettoyés selon leur nature, vitres intérieures dégagées, sanitaires détartrés : chaque élément visible est traité pour permettre une remise des clés sans réserve.</p>
 
-<h3>T2: Préparation et nettoyage général</h3>
+<h3>Préparation et nettoyage général</h3>
 <p>Le diagnostic initial identifie les zones critiques : traces de peinture, joints encrassés, placards poussiéreux. L'intervention débute par le dépoussiérage complet des plafonds aux plinthes, suivi de l'aspiration et du lavage des sols adaptés au revêtement. Les pièces d'eau reçoivent un traitement spécifique : faïence, robinetterie, évacuations.</p>
 
-<h3>T3: Finitions et contrôle</h3>
+<h3>Finitions et contrôle</h3>
 <p>Les détails font la différence lors de l'état des lieux : interrupteurs, poignées, radiateurs, intérieurs de placards. Un contrôle final vérifie chaque point avant aération du logement. Le compte-rendu d'intervention peut être transmis au donneur d'ordre si nécessaire.</p>`,
       specificChallenges: [
         "Résidus de chantier fréquents dans les programmes Cœur de Ville en cours de livraison.",

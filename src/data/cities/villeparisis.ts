@@ -421,13 +421,13 @@ const city: City = {
 <p class="mt-4">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boiparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>
 
 <p class="mt-4">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>`,
-      uniqueDeepDive: `<h3>T1: Inspection et mise en protection</h3>
+      uniqueDeepDive: `<h3>Inspection et mise en protection</h3>
 <p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>
 
-<h3>T2: Traitement et action mécanique</h3>
+<h3>Traitement et action mécanique</h3>
 <p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>
 
-<h3>T3: Application préventive et recommandations</h3>
+<h3>Application préventive et recommandations</h3>
 <p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>`,
       specificChallenges: [
         "Dalles béton des pavillons années 80-90 : porosité variable, joints parfois dégradés par les cycles gel-dégel.",

@@ -438,13 +438,13 @@ nearbyCities: [
 <p class="mt-4">Avec ses 63 hectares de parcs, jardins et squares — dont le <strong>parc des Beaumonts</strong> (24 ha, site Natura 2000), le <strong>parc Montreau</strong> (15 ha) et les <strong>murs à pêches</strong> (34 ha) —, Montreuil offre un environnement végétal dense qui génère une humidité propice au développement des mousses et algues sur les surfaces extérieures. Les terrasses ombragées par les arbres des cours et jardins subissent un encrassement accéléré.</p>
 
 <p class="mt-4">La grande diversité du bâti montreuillois — <strong>maisons ouvrières en briques</strong>, <strong>meulières</strong>, <strong>pavillons standardisés</strong>, <strong>ateliers convertis</strong> — implique des terrasses aux revêtements variés : <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>composite</strong>, chacun nécessitant un traitement spécifique.</p>`,
-      uniqueDeepDive: `<h3>T1: Évaluation et préparation du chantier</h3>
+      uniqueDeepDive: `<h3>Évaluation et préparation du chantier</h3>
 <p>Mobilier de terrasse, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades en briques ou meulière et les menuiseries adjacentes sont bâchées. Un balayage préliminaire retire feuilles, débris végétaux et poussières urbaines accumulés sur le revêtement.</p>
 
-<h3>T2: Nettoyage différencié selon le matériau</h3>
+<h3>Nettoyage différencié selon le matériau</h3>
 <p>Le produit est sélectionné en fonction du support identifié : formule douce pour les pierres anciennes et meulières, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations biologiques et les dépôts urbains. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Protection et recommandations d'entretien</h3>
+<h3>Protection et recommandations d'entretien</h3>
 <p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des cours et jardins. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal et urbain dense de Montreuil.</p>`,
       specificChallenges: [
         "Maisons ouvrières et ateliers du Bas-Montreuil : briques, meulières et matériaux anciens avec joints fragiles nécessitant un traitement à pH contrôlé.",

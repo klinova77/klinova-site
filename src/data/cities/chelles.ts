@@ -444,13 +444,13 @@ nearbyCities: [
 <p class="mt-4">Sur les <strong>dalles béton</strong> caractéristiques des pavillons construits dans les années 70-80, ou sur les <strong>terrasses grès cérame et bois composite</strong> des rénovations récentes, cette prolifération rend le sol glissant et visuellement dégradé. L'espace extérieur perd son attrait, les repas dehors deviennent moins fréquents, et la terrasse finit par servir uniquement de passage vers le jardin.</p>
 
 <p class="mt-4">Une intervention adaptée au matériau permet de retrouver une surface saine et praticable. Le diagnostic préalable identifie le type de support, l'étendue des dépôts et les zones à protéger avant tout traitement mécanique ou chimique.</p>`,
-      uniqueDeepDive: `<h3>T1: Préparation et protection</h3>
+      uniqueDeepDive: `<h3>Préparation et protection</h3>
 <p>Le mobilier de jardin, les jardinières et les plantes en pot sont déplacés ou bâchés. Les menuiseries des baies vitrées et portes-fenêtres reçoivent une protection contre les projections. Un balayage élimine les feuilles mortes, la terre accumulée et les débris végétaux avant le traitement.</p>
 
-<h3>T2: Nettoyage et traitement adapté</h3>
+<h3>Nettoyage et traitement adapté</h3>
 <p>Un produit spécifique au support est appliqué : formulation à pH neutre pour le bois composite, solution alcaline désincrustante pour les dalles minérales ou le grès cérame. Le brossage manuel ou mécanique décolle les mousses et lichens installés. La pression de rinçage est ajustée selon la porosité du matériau pour préserver les joints et la surface.</p>
 
-<h3>T3: Finition et prévention</h3>
+<h3>Finition et prévention</h3>
 <p>L'eau de rinçage est dirigée vers les points d'écoulement existants ou vers le jardin. Un traitement anti-mousse préventif est appliqué sur les zones les plus exposées à l'ombre et à l'humidité. Le séchage naturel s'effectue en quelques heures selon les conditions météo, avec des conseils d'entretien saisonnier transmis en fin d'intervention.</p>`,
       specificChallenges: [
         "Dalles béton des pavillons années 70-80 : joints poreux favorisant l'enracinement des mousses.",

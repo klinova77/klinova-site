@@ -429,13 +429,13 @@ specificChallenges: [
 <p class="mt-4">La proximité immédiate de la rivière et des berges aménagées — héritées de l'âge d'or des guinguettes — génère une humidité ambiante propice au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par les arbres des jardins perreuxiens ou exposées nord subissent un encrassement accéléré qui altère leur aspect et les rend glissantes.</p>
 
 <p class="mt-4">Le diagnostic préalable identifie la nature du support — <strong>dalles anciennes</strong>, <strong>béton</strong>, <strong>carrelage grès cérame</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>`,
-      uniqueDeepDive: `<h3>T1: Inspection et sécurisation du chantier</h3>
+      uniqueDeepDive: `<h3>Inspection et sécurisation du chantier</h3>
 <p>Mobilier extérieur, jardinières et éléments décoratifs sont déplacés ou bâchés. Les façades, ferronneries et menuiseries adjacentes sont protégées des projections. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>
 
-<h3>T2: Nettoyage différencié selon le matériau</h3>
+<h3>Nettoyage différencié selon le matériau</h3>
 <p>Le produit est sélectionné en fonction du support identifié : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les incrustations. Le rinçage s'effectue à pression calibrée pour préserver les joints et la texture de surface.</p>
 
-<h3>T3: Traitement préventif et conseils</h3>
+<h3>Traitement préventif et conseils</h3>
 <p>Une protection anti-mousse est appliquée sur les zones les plus exposées à l'humidité des bords de Marne. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement fluvial.</p>`,
       specificChallenges: [
         "Meulières et villas Art Nouveau des bords de Marne : matériaux anciens avec joints fragiles et détails architecturaux à préserver.",

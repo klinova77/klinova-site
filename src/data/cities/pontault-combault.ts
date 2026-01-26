@@ -404,13 +404,13 @@ nearbyCities: [
 <p class="mt-4">Cette utilisation régulière, combinée aux conditions climatiques et à la végétation environnante, entraîne l’apparition progressive de <strong>mousses, algues, traces noires</strong> et autres salissures incrustées. Les sols extérieurs perdent alors rapidement leur aspect d’origine.</p>
 
 <p class="mt-4">À Pontault-Combault, les terrasses sont le plus souvent réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement demande une méthode adaptée pour obtenir un nettoyage efficace et une remise en état visible.</p>`,
-  uniqueDeepDive: `<h3>T1: Préparation et organisation du chantier</h3>
+  uniqueDeepDive: `<h3>Préparation et organisation du chantier</h3>
 <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — murs, façades, menuiseries — sont sécurisés afin de garantir une intervention propre et maîtrisée, même sur de grandes surfaces extérieures.</p>
 
-<h3>T2: Nettoyage en profondeur du sol extérieur</h3>
+<h3>Nettoyage en profondeur du sol extérieur</h3>
 <p>Le traitement est choisi en fonction du matériau : solution performante pour béton et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour obtenir un sol plus clair et plus homogène.</p>
 
-<h3>T3: Mise en valeur et confort d’usage</h3>
+<h3>Mise en valeur et confort d’usage</h3>
 <p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant de la clarté et une impression de propreté durable.</p>`,
   specificChallenges: [
     "Terrasses de grande surface : encrassement progressif lié aux usages répétés.",
