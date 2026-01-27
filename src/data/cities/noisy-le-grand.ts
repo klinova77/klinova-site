@@ -407,6 +407,66 @@ const city: City = {
       ctaOverride: "",
     },
 
+
+    {
+  serviceKey: "terrasses",
+  heroDescription:
+    "Remise en état complète de votre terrasse avec traitement adapté au revêtement, élimination des mousses et dépôts végétaux, et protection préventive contre l'humidité des bords de Marne.",
+  whyUsBullets: [
+    "Intervention dans tous les quartiers noiséens : centre-ville, Richardets, Marnois, Butte Verte, bords de Marne, Yvris.",
+    "Protocole ajusté aux constructions locales : dalles des pavillons, grès cérame des résidences récentes, bois des terrasses contemporaines.",
+    "Précautions rigoureuses pour les abords : bâchage du mobilier, protection des massifs plantés, maîtrise des eaux de rinçage.",
+  ],
+  uniqueIntro: `<p>Dans les quartiers résidentiels de <strong>Noisy-le-Grand</strong>, des Richardets aux abords du Marnois, les terrasses exposées à l'humidité de la Marne et à l'ombre des arbres développent rapidement mousses, algues et lichens. Ce voile verdâtre rend les surfaces glissantes après la pluie et altère l'aspect général du logement, particulièrement visible sur les dalles claires ou les bois naturels.</p>
+<p class="mt-4">Les zones pavillonnaires du centre-ville comme les résidences récentes de l'écoquartier Île de la Marne présentent des revêtements variés — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong>, <strong>bois composite</strong> — qui nécessitent chacun une approche spécifique. Un traitement inadapté peut dégrader les joints, altérer la teinte du bois ou attaquer la surface des pierres poreuses.</p>
+<p class="mt-4">Le diagnostic initial identifie le type de support et son état pour déterminer le protocole approprié : produit alcalin, neutre ou spécifique bois, brossage adapté, rinçage à pression calibrée. L'objectif reste une remise au propre durable sans fragiliser le revêtement.</p>`,
+uniqueDeepDive: `<h3>Préparation et protection des abords</h3>
+<p>Le mobilier de jardin, les jardinières et équipements extérieurs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées. Un balayage préliminaire retire les débris végétaux — feuilles, pollens, brindilles — fréquents dans cette commune bordée par le bois Saint-Martin et les espaces verts des bords de Marne.</p>
+
+<h3>Traitement adapté au matériau</h3>
+<p>Le produit est sélectionné selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
+
+<h3>Finitions et recommandations</h3>
+<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité ambiante. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Noisy-le-Grand.</p>`,
+  
+
+specificChallenges: [
+    "Pavillons du centre-ville et des Richardets : dalles béton ou pierre reconstituée parfois posées depuis 30 ans, joints fragilisés par les cycles gel-dégel.",
+    "Résidences récentes de l'écoquartier Île de la Marne : carrelage grès cérame avec micro-reliefs antidérapants piégeant les salissures.",
+    "Terrasses bordant les espaces verts — parc de la Butte Verte, bords de Marne — où l'ombre et l'humidité accélèrent la prolifération des mousses.",
+    "Maisons du quartier des Yvris proches du <strong>bois Saint-Martin</strong> : apports constants de débris végétaux et conditions propices aux algues.",
+    "Logements en bord de Marne exposés aux remontées d'humidité et aux crues, nécessitant un traitement préventif renforcé.",
+  ],
+  faqAdditions: [
+    {
+      question:
+        "Comment traitez-vous les terrasses en pierre reconstituée des pavillons noiséens sans dégrader les joints ?",
+      answer:
+        "<p>Les dalles en pierre reconstituée des quartiers pavillonnaires — centre-ville, Richardets, Yvris — présentent souvent des joints anciens sensibles à la pression. Nous utilisons un produit à pH contrôlé qui élimine les salissures biologiques sans attaquer le matériau. Le brossage mécanique respecte les joints et le rinçage s'effectue à pression modérée pour éviter tout déchaussement.</p>",
+    },
+    {
+      question:
+        "Ma terrasse reverdit rapidement à cause de la proximité des bords de Marne, quelle solution proposez-vous ?",
+      answer:
+        "<p>La densité des espaces verts noiséens — bois Saint-Martin, parc de la Butte Verte, promenade des bords de Marne — génère une humidité constante propice à la repousse rapide des mousses. Après le nettoyage complet, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat.</p>",
+    },
+    {
+      question:
+        "Intervenez-vous dans l'écoquartier Île de la Marne sur les terrasses des constructions récentes ?",
+      answer:
+        "<p>Les résidences de l'écoquartier présentent généralement des terrasses en carrelage grès cérame ou en bois composite. Nos produits et méthodes sont adaptés à ces matériaux contemporains. Le grès cérame avec ses micro-reliefs antidérapants nécessite un brossage spécifique pour déloger les salissures incrustées, tandis que le bois composite reçoit un traitement neutre qui préserve sa teinte et sa structure.</p>",
+    },
+    {
+      question:
+        "Quelle différence entre un passage au nettoyeur haute pression et votre prestation sur une terrasse en dalle béton ?",
+      answer:
+        "<p>Les dalles béton des pavillons noiséens, souvent posées dans les années 80-90, présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader le support ni déchausser les joints fragilisés par les hivers franciliens.</p>",
+    },
+  ],
+  ctaOverride: "",
+},
+
+
     {
   serviceKey: "nettoyage-appartement-maison",
 
