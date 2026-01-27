@@ -3,9 +3,12 @@
 
 import { DEPARTMENTS } from "~/data/departments";
 import { featuredCities } from "~/data/highlightedCities";
-import type { FeaturedCityKln } from "~/data/highlightedCities";
 
-type CityLink = Pick<FeaturedCityKln, "name" | "slug" | "deptSlug">;
+type CityLink = {
+  name: string;
+  slug: string;
+  deptSlug: string;
+};
 
 type Props = {
   variant?: "default" | "white";
@@ -18,9 +21,7 @@ type Props = {
   serviceSlug?: string | null;
   autoDescription?: boolean;
   deptSeoTextOverride?: Partial<Record<string, string>>;
-
-  // ✅ NEW: permet d’injecter une liste de villes depuis la page appelante
-  cities?: FeaturedCityKln[];
+  cities?: CityLink[] | null; // ✅
 };
 
 const {
@@ -33,8 +34,10 @@ const {
   excludeDeptSlug = null,
   serviceSlug = null,
   deptSeoTextOverride = {},
-  cities = null, // ✅ NEW
+  cities = null,
 } = Astro.props as Props;
+
+const featured: CityLink[] = Array.isArray(cities) ? cities : featuredCities;
 
 // SEO mini-text
 const DEPT_SEO_TEXT: Record<string, string> = {
@@ -78,8 +81,7 @@ const resolvedDescription =
 
 const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
 
-// ✅ Source unique (override via props) : si `cities` est fourni, il prime, sinon fallback
-const featured = (Array.isArray(cities) ? cities : featuredCities) as FeaturedCityKln[];
+
 
 function getTopFeaturedCitiesForDept(deptSlug: string, limit: number) {
   if (limit <= 0) return [];
