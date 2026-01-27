@@ -1268,7 +1268,28 @@ function setLoading(loading) {
 
 <!-- Zones d’intervention -->
 <DepartmentCardsKln
-  variant="white"
+
+variant="white"
+cities={[
+  // 77 — Seine-et-Marne
+  { name: "Chelles", slug: "chelles", deptSlug: "seine-et-marne" },
+  { name: "Meaux", slug: "meaux", deptSlug: "seine-et-marne" },
+  { name: "Bussy-Saint-Georges", slug: "bussy-saint-georges", deptSlug: "seine-et-marne" },
+  { name: "Pontault-Combault", slug: "pontault-combault", deptSlug: "seine-et-marne" },
+
+  // 93 — Seine-Saint-Denis
+  { name: "Gournay-sur-Marne", slug: "gournay-sur-marne", deptSlug: "seine-saint-denis" },
+  { name: "Le Raincy", slug: "le-raincy", deptSlug: "seine-saint-denis" },
+  { name: "Noisy-le-Grand", slug: "noisy-le-grand", deptSlug: "seine-saint-denis" },
+  { name: "Villepinte", slug: "villepinte", deptSlug: "seine-saint-denis" },
+
+  // 94 — Val-de-Marne
+  { name: "Saint-Maur-des-Fossés", slug: "saint-maur-des-fosses", deptSlug: "val-de-marne" },
+  { name: "Le Perreux-sur-Marne", slug: "le-perreux-sur-marne", deptSlug: "val-de-marne" },
+  { name: "Champigny-sur-Marne", slug: "champigny-sur-marne", deptSlug: "val-de-marne" },
+  { name: "Fontenay-sous-Bois", slug: "fontenay-sous-bois", deptSlug: "val-de-marne" },
+]}
+
   showDescription={true}
   onlyCovered={false}
   topCitiesPerDept={4}

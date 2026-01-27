@@ -5,18 +5,22 @@ import { DEPARTMENTS } from "~/data/departments";
 import { featuredCities } from "~/data/highlightedCities";
 import type { FeaturedCityKln } from "~/data/highlightedCities";
 
+type CityLink = Pick<FeaturedCityKln, "name" | "slug" | "deptSlug">;
+
 type Props = {
   variant?: "default" | "white";
   showDescription?: boolean;
-  onlyCovered?: boolean;            // si true : n'affiche que les départements avec >= 1 featured city
-  topCitiesPerDept?: number;        // nb de villes affichées sous chaque département
+  onlyCovered?: boolean;
+  topCitiesPerDept?: number;
   title?: string;
   description?: string;
-  excludeDeptSlug?: string | null;  // utile sur page département : masquer le dept courant
-  serviceSlug?: string | null; // si fourni -> liens ville vers /{dept}/{city}/{serviceSlug}
-  autoDescription?: boolean
-   deptSeoTextOverride?: Partial<Record<string, string>>;
+  excludeDeptSlug?: string | null;
+  serviceSlug?: string | null;
+  autoDescription?: boolean;
+  deptSeoTextOverride?: Partial<Record<string, string>>;
 
+  // ✅ NEW: permet d’injecter une liste de villes depuis la page appelante
+  cities?: FeaturedCityKln[];
 };
 
 const {
@@ -26,12 +30,10 @@ const {
   topCitiesPerDept = 3,
   title = "Klinova intervient dans toute l'Île-de-France",
   description = "",
-
   excludeDeptSlug = null,
   serviceSlug = null,
   deptSeoTextOverride = {},
-
-
+  cities = null, // ✅ NEW
 } = Astro.props as Props;
 
 // SEO mini-text
@@ -74,18 +76,13 @@ const resolvedDescription =
 }
 
 
-
 const sectionBg = variant === "white" ? "bg-white" : "bg-[#FCFCFC]";
 
-// ✅ Source unique : villes “stars” (ordre business déjà imposé par FEATURED_CITY_SLUGS)
-const featured = (Array.isArray(featuredCities) ? featuredCities : []) as FeaturedCityKln[];
-
-
-
+// ✅ Source unique (override via props) : si `cities` est fourni, il prime, sinon fallback
+const featured = (Array.isArray(cities) ? cities : featuredCities) as FeaturedCityKln[];
 
 function getTopFeaturedCitiesForDept(deptSlug: string, limit: number) {
   if (limit <= 0) return [];
-  // ✅ garde l'ordre business (pas de tri alpha)
   return featured.filter((c) => c.deptSlug === deptSlug).slice(0, limit);
 }
 
@@ -96,6 +93,7 @@ function isDeptCovered(deptSlug: string) {
 const departmentsToRender = DEPARTMENTS
   .filter((d) => (excludeDeptSlug ? d.slug !== excludeDeptSlug : true))
   .filter((d) => (onlyCovered ? isDeptCovered(d.slug) : true));
+
 ---
 
 <section class={`py-16 ${sectionBg} border-t border-[#E5E7EB]`}>

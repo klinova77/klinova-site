@@ -20,22 +20,23 @@ export interface FeaturedCityKln {
 export const FEATURED_CITY_SLUGS = [
   // 77 — Seine-et-Marne
   "chelles",
+  "meaux",
   "bussy-saint-georges",
-  "serris",
   "lagny-sur-marne",
 
   // 93 — Seine-Saint-Denis
   "montreuil",
+  "noisy-le-grand",
   "le-raincy",
-  "livry-gargan",
-  "gagny",
+  "villepinte",
 
   // 94 — Val-de-Marne
+  "creteil",
   "vincennes",
   "saint-maur-des-fosses",
-  "charenton-le-pont",
-  "creteil",
+  "ivry-sur-seine",
 ] as const;
+
 
 
 
@@ -64,19 +65,25 @@ export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
  * Mets ici les villes les plus “business” / les plus recherchées.
  */
 export const FOOTER_CITY_SLUGS = [
-  "vincennes",              // Prestige + volume (94)
-  "saint-maur-des-fosses",  // Très haut standing (94)
-  "creteil",                // Hub / volume (94)
-  "charenton-le-pont",      // Densité + CSP+ (94)
+  // 94 — Val-de-Marne (volume + notoriété)
+  "creteil",                 // Hub / volume
+  "ivry-sur-seine",          // Densité + demandes variées
+  "saint-maur-des-fosses",   // Standing + pavillonnaire
+  "vincennes",               // Notoriété + CSP+
 
-  "montreuil",              // Volume majeur (93)
-  "le-raincy",              // Premium (93)
-  "noisy-le-grand",         // Pôle central (93/77)
+  // 93 — Seine-Saint-Denis (volume + mix habitats)
+  "montreuil",               // Volume majeur
+  "noisy-le-grand",          // Très gros volume + mix
+  "pantin",                  // Densité + copro / appart
+  "villepinte",              // Surfaces + pavillons + zones pro
 
-  "chelles",                // Gros volume (77)
-  "bussy-saint-georges",    // Val d'Europe (77)
-  "meaux",                  // Gros volume (77)
+  // 77 — Seine-et-Marne (surfaces + pavillons)
+  "chelles",                 // Base arrière / volume
+  "meaux",                   // Gros volume + grandes surfaces
+  "bussy-saint-georges",     // Ville récente / standing
+  "lagny-sur-marne",         // Bassin Marne-la-Vallée / mix
 ] as const;
+
 
 
 export const footerCities: FeaturedCityKln[] = FOOTER_CITY_SLUGS
