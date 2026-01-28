@@ -526,7 +526,7 @@ nearbyCities: [
     {
       question:
         "Pouvez-vous nettoyer après des travaux dans une meulière (quartier Plaisance) ?",
-      answer: `<p>Oui. Après travaux, la difficulté est la poussière fine (ponçage, plâtre). On procède par étapes : dépoussiérage minutieux (surfaces/menusieries), puis sols, puis finitions. Sur parquet massif, on adapte produits et dosage pour éviter toute trace et protéger le bois.</p>`,
+      answer: "<p>Oui. Après travaux, la difficulté est la poussière fine (ponçage, plâtre). On procède par étapes : dépoussiérage minutieux (surfaces/menuiseries), puis sols, puis finitions. Sur parquet massif, on adapte produits et dosage pour éviter toute trace et protéger le bois.</p>",
     },
     {
       question:

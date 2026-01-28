@@ -72,7 +72,7 @@ nearbyCities: [
     {
       question: "Intervenez-vous rapidement sur le secteur de Torcy ?",
       answer:
-        "<strong>Notre équipe intervient sous 48 heures en semaine</strong> sur Torcy et environs. Pour les urgences, sinistre ou fin de chantier, nous mobilisons nos techniciens dans la journée. La proximité de notre base logistique nous permet cette réactivité."
+        "<strong>Notre équipe intervient rapidement en semaine</strong> sur Torcy et environs. Pour les urgences, sinistre ou fin de chantier, nous mobilisons nos techniciens dans la journée. La proximité de notre base logistique nous permet cette réactivité."
     },
     {
       question: "Comment gérez-vous les accès aux immeubles sécurisés ?",
@@ -82,7 +82,7 @@ nearbyCities: [
     {
       question: "Les déplacements pour devis sont-ils gratuits ?",
       answer:
-        "<strong>Tous nos déplacements pour établir un devis sont gratuits</strong> sur Torcy et la communauté d'agglomération Paris-Vallée de la Marne. Notre technicien évalue précisément les surfaces et contraintes pour un chiffrage exact sans mauvaise surprise."
+        "<strong>Nos déplacements pour établir un devis sont gratuits</strong> sur Torcy et la communauté d'agglomération Paris-Vallée de la Marne. Notre technicien évalue précisément les surfaces et contraintes pour un chiffrage exact sans mauvaise surprise."
     },
     {
       question: "Pouvez-vous intervenir malgré les contraintes de stationnement près de la gare ?",
@@ -493,7 +493,7 @@ nearbyCities: [
     },
     {
       question: "Pouvez-vous faire un nettoyage après travaux (poussières fines) à Torcy ?",
-      answer: `<p>Oui. Après travaux, on procède en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries, puis sols, puis contrôle des rebords et angles. L’objectif est un rendu net et uniforme, sans voile sur les sols ni traces sur les vitres accessibles.</p>`,
+      answer: "<p>Oui. Après travaux, on procède en plusieurs passes pour éviter que la poussière revienne : surfaces/menuiseries, puis sols, puis contrôle des rebords et angles. L’objectif est un rendu net et uniforme, sans voile sur les sols ni traces sur les vitres accessibles.</p>",
     },
     {
       question: "Comment gérez-vous le stationnement près de la gare ou des zones commerciales ?",

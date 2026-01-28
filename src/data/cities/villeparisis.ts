@@ -412,15 +412,11 @@ const city: City = {
       heroDescription:
         "Remise en état complète de votre terrasse selon le revêtement, suppression des dépôts verts et salissures incrustées, et application d'un traitement de protection pour freiner leur réapparition.",
       whyUsBullets: [
-        "Intervention sur l'ensemble des quartiers pavillonnaires de Villeparisis : Vieux-Pays, Boiparisis, secteur du Marché et lotissements résidentiels.",
+        "Intervention sur l'ensemble des quartiers pavillonnaires de Villeparisis : Vieux-Pays, Boisparisis, secteur du Marché et lotissements résidentiels.",
         "Protocole ajusté aux supports rencontrés : béton des pavillons années 80, carrelage extérieur des constructions récentes, bois composite des terrasses rénovées.",
         "Attention portée aux abords : bâchage du mobilier et des végétaux, rinçage dirigé vers les évacuations, respect des espaces verts privatifs.",
       ],
-      uniqueIntro: `<p>À Villeparisis, commune traversée par le <strong>canal de l'Ourcq</strong> et située à proximité du <strong>parc forestier de la Poudrerie</strong>, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>
-
-<p class="mt-4">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boiparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>
-
-<p class="mt-4">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>`,
+      uniqueIntro: "<p>À Villeparisis, commune traversée par le <strong>canal de l'Ourcq</strong> et située à proximité du <strong>parc forestier de la Poudrerie</strong>, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>\n\n<p class=\"mt-4\">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boisparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>\n\n<p class=\"mt-4\">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>",
       uniqueDeepDive: `<h3>Inspection et mise en protection</h3>
 <p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>
 

@@ -8,7 +8,7 @@ const city: City = {
   postalCodes: ["77420"],
 
   customDescription:
-  "Entre la Cité Descartes et les quartiers résidentiels proches des bords de Marne, Champs-sur-Marne combine flux quotidiens, espaces verts et zones d’humidité. Cette configuration accélère l’encrassement des parties communes et des extérieurs, et demande une maintenance régulière, planifiée et traçable pour garder des immeubles propres et accueillants.",
+  "Entre la Cité Descartes et les quartiers résidentiels proches des bords de Marne, Champs-sur-Marne combine flux quotidiens, espaces verts et zones humides. Cette configuration accélère l’encrassement des parties communes et des extérieurs, et demande une maintenance régulière, planifiée et traçable pour garder des immeubles propres et accueillants.",
 
   hubIntro: `<p><strong>Pour les syndics de copropriété et les gestionnaires de patrimoine à Champs-sur-Marne</strong>, la diversité du parc immobilier, allant des résidences étudiantes de la Cité Descartes aux ensembles familiaux du Nesles, impose une stratégie de maintenance immobilière flexible. Klinova agit comme votre partenaire technique de terrain, assurant une propreté constante des parties communes et des extérieurs, adaptée aux pics d'activité liés aux rentrées universitaires ou aux saisons humides.</p>
 <p class="mt-4">Nous garantissons une gestion globale de l'hygiène de vos bâtiments grâce à des processus éprouvés et une communication fluide avec les conseils syndicaux. Notre expertise couvre aussi bien la rénovation des sols de parkings souterrains que l'entretien courant des halls d'entrée, avec un souci constant de traçabilité.</p>
@@ -68,7 +68,7 @@ nearbyCities: [
       question:
         "Êtes-vous en mesure d'intervenir rapidement près de la Cité Descartes pour des remises en état urgentes ?",
       answer:
-        "<p><strong>Oui, notre organisation est calibrée pour ce secteur dynamique.</strong> Que ce soit pour une fin de chantier ou un nettoyage après sinistre dans une résidence proche du Boulevard Newton ou de la gare Noisy-Champs, nous déployons une équipe technique sous 24 à 48 heures pour assurer la continuité de service.</p>",
+        "<p><strong>Oui, notre organisation est calibrée pour ce secteur dynamique.</strong> Que ce soit pour une fin de chantier ou un nettoyage après sinistre dans une résidence proche du Boulevard Newton ou de la gare Noisy-Champs, nous déployons une équipe technique rapidement pour assurer la continuité de service.</p>",
       category: "Interventions",
     },
     {
@@ -179,8 +179,7 @@ nearbyCities: [
         "Coordination avec syndics et gestionnaires pour gérer la rotation des véhicules sans bloquer les accès.",
       ],
 
-      uniqueIntro: `<p>Au sein des grands ensembles résidentiels du Val-Maubuée ou des parcs d'activités de la Cité Descartes, les parkings subissent une sollicitation intense. La proximité de l'autoroute A4 et de la A199 génère un dépôt continu de particules fines qui noircissent les sols et les murs.</p>
-<p class="mt-4">Dans les copropriétés denses comme celles du quartier Pablo Picasso ou du Nesles, les fuites d'huile et les traces de pneumatiques s'accumulent, rendant les surfaces glissantes et les marquages au sol illisibles. <strong>Cet encrassement compromet la sécurité des usagers</strong> (risque de chute, mauvaise visibilité) et nuit à l'esthétique de l'immeuble.</p>`,
+      uniqueIntro: "<p>Au sein des grands ensembles résidentiels du Val-Maubuée ou des parcs d'activités de la Cité Descartes, les parkings subissent une sollicitation intense. La proximité de l'autoroute A4 et de l'A199 génère un dépôt continu de particules fines qui noircissent les sols et les murs.</p>\n<p class=\"mt-4\">Dans les copropriétés denses comme celles du quartier Pablo Picasso ou du Nesles, les fuites d'huile et les traces de pneumatiques s'accumulent, rendant les surfaces glissantes et les marquages au sol illisibles. <strong>Cet encrassement compromet la sécurité des usagers</strong> (risque de chute, mauvaise visibilité) et nuit à l'esthétique de l'immeuble.</p>",
 
       uniqueDeepDive: `<h3>1. Audit complet et préparation</h3>
 <p>Nous évaluons la nature du revêtement, l'état des siphons de sol, la hauteur sous poutre et la ventilation. <strong>Balayage mécanique des allées</strong> pour retirer déchets volatils et sables abrasifs. Organisation par secteurs balisés pour permettre une rotation fluide des véhicules.</p>
@@ -202,7 +201,7 @@ nearbyCities: [
           question:
             "La poussière noire revient-elle rapidement après le nettoyage dans ce secteur ?",
           answer:
-            "<p><strong>La proximité de l'A4 et de la A199 favorise effectivement le dépôt de particules fines.</strong> Cependant, notre nettoyage mécanique extrait la crasse incrustée dans les pores du béton, ce que le balayage seul ne peut faire. Cela retarde considérablement le noircissement visible (6 à 12 mois).</p>",
+            "<p><strong>La proximité de l'A4 et de la A199 favorise effectivement le dépôt de particules fines.</strong> Cependant, notre nettoyage mécanique extrait la crasse incrustée dans les pores du béton, ce que le balayage seul ne peut faire. Cela retarde considérablement le noircissement visible.</p>",
         },
         {
           question:
@@ -281,7 +280,7 @@ nearbyCities: [
           question:
             "Quand puis-je réutiliser ma terrasse après votre départ ?",
           answer:
-            "<p><strong>Le temps de séchage dépend de l'ensoleillement et du vent.</strong> Sur des surfaces non poreuses comme le carrelage, cela peut prendre 1 à 2 heures. Sur du béton ou du bois, comptez 3 à 4 heures. Attendez que le sol soit parfaitement sec avant de remettre les tapis ou le mobilier lourd.</p>",
+            "<p><strong>Le temps de séchage dépend de l'ensoleillement et du vent.</strong> Sur des surfaces non poreuses comme le carrelage, cela peut prendre quelques heures. Sur du béton ou du bois, comptez davantage. Attendez que le sol soit parfaitement sec avant de remettre les tapis ou le mobilier lourd.</p>",
         },
       ],
 
@@ -358,7 +357,7 @@ nearbyCities: [
         "Retrouvez le confort d'un intérieur sain à Champs-sur-Marne grâce à un nettoyage en profondeur de vos canapés et matelas, éliminant taches et allergènes pour le bien-être de toute la famille ou de vos locataires.",
       whyUsBullets: [
         "Disponibilité adaptée aux rythmes des familles du Bois de Grâce et des étudiants du campus Descartes.",
-        "Élimination certifiée des acariens et bactéries grâce à une méthode d'extraction puissante et hygiénique.",
+        "Élimination des acariens et bactéries grâce à une méthode d'extraction puissante et hygiénique.",
         "Intervention soignée avec protection des sols environnants pour un chantier propre dans votre salon.",
       ],
 

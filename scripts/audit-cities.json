@@ -1,0 +1,8 @@
+{
+  "model": "gpt-5.2",
+  "citiesDir": "src/data/cities",
+  "maxFiles": 0,
+  "slugs": [],
+  "slugsJsonPath": "",
+  "rulesText": "Klinova (City) audit. Règles: corrections conservatrices uniquement; ne pas réécrire; pas d'ajout de promesses, chiffres, conditions, nouveaux faits locaux; 1 patch max par champ; uniquement sur champs string; expected doit matcher exactement sinon pas de patch; ne jamais toucher la structure TS."
+}

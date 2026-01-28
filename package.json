@@ -11,7 +11,9 @@
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@fontsource-variable/inter": "^5.2.8",
+    "dotenv": "^17.2.3",
     "free-astro-components": "^1.2.1",
+    "openai": "^6.16.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "resend": "^6.3.0",

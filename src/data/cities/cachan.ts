@@ -76,7 +76,7 @@ const city: City = {
   {
     question: "Proposez-vous des interventions en urgence sur Cachan ?",
     answer:
-      "<p>Oui, selon la nature de la demande et notre planning, nous pouvons intervenir sous <strong>24 à 48 heures</strong>. Dégât des eaux, souillure accidentelle ou remise en état avant visite : nous adaptons le créneau pour répondre aux situations imprévues.</p>",
+      "<p>Oui, selon la nature de la demande et notre planning, nous pouvons intervenir rapidement. Dégât des eaux, souillure accidentelle ou remise en état avant visite : nous adaptons le créneau pour répondre aux situations imprévues.</p>",
   },
   {
     question:

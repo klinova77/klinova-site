@@ -30,7 +30,7 @@ const city: City = {
   citySpecificChallenges: [
     "<strong>Pollution atmosphérique</strong> marquée liée à la proximité du périphérique et des quais de Seine.",
     "Parkings souterrains fréquents dans les résidences récentes, avec <strong>rampes d'accès parfois étroites</strong>.",
-    "Immeubles à <strong>digicodes et badges Vigik</strong>quasi systématiques, coordination gardien nécessaire.",
+    "Immeubles à <strong>digicodes et badges Vigik</strong> quasi systématiques, coordination gardien nécessaire.",
     "Stationnement très contraint au centre-ville et sur le secteur Ivry-Port.",
     "Balcons aux <strong>formes géométriques complexes</strong> sur les bâtiments Renaudie (Étoiles d'Ivry).",
     "Poussières de chantier liées aux livraisons en cours sur la ZAC Confluences."
@@ -75,7 +75,7 @@ faq: [
   },
   {
     question: "Pouvez-vous intervenir rapidement en cas de besoin urgent à Ivry-sur-Seine ?",
-    answer: `<p>Notre équipe intervient régulièrement sur le secteur, ce qui nous permet de réagir <strong>sous 24 à 48 heures selon la nature de la demande</strong>. Pour les urgences sanitaires ou les dégradations importantes, nous priorisons le passage et confirmons le créneau dès validation.</p>`,
+    answer: "<p>Notre équipe intervient régulièrement sur le secteur, ce qui nous permet de réagir <strong>dans un délai de 24 à 48 heures selon la nature de la demande</strong>. Pour les urgences sanitaires ou les dégradations importantes, nous priorisons le passage et confirmons le créneau dès validation.</p>",
   },
   {
     question: "Le stationnement est compliqué près du centre-ville, comment gérez-vous ce point ?",

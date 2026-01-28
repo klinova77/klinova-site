@@ -71,7 +71,7 @@ nearbyCities: [
       question:
         "Intervenez-vous rapidement sur Claye-Souilly et les communes voisines ?",
       answer:
-        "<p><strong>Oui, Claye-Souilly fait partie de notre zone d'intervention habituelle.</strong> Nous programmons les interventions sous 5 à 10 jours ouvrés pour les demandes classiques, et sous 48 à 72 heures en cas d'urgence technique ou de sinistre. Notre proximité avec les axes RN3 et A104 facilite les rotations.</p>",
+        "<p><strong>Oui, Claye-Souilly fait partie de notre zone d'intervention habituelle.</strong> Nous programmons les interventions sous 5 à 10 jours ouvrés pour les demandes classiques, et sous 48 à 72 heures en cas d'urgence technique ou de sinistre, selon disponibilité. Notre proximité avec les axes RN3 et A104 facilite les rotations.</p>",
     },
     {
       question:
@@ -82,7 +82,7 @@ nearbyCities: [
     {
       question: "Le déplacement pour devis est-il gratuit à Claye-Souilly ?",
       answer:
-        "<p><strong>Oui, le déplacement et le devis sont toujours gratuits,</strong> quelle que soit la prestation envisagée. Nous venons sur place pour évaluer les surfaces, repérer les contraintes d'accès et définir le protocole adapté. Cela permet de chiffrer précisément l'intervention sans approximation.</p>",
+        "<p><strong>Oui, le déplacement et le devis sont gratuits,</strong> quelle que soit la prestation envisagée. Nous venons sur place pour évaluer les surfaces, repérer les contraintes d'accès et définir le protocole adapté. Cela permet de chiffrer précisément l'intervention sans approximation.</p>",
     },
     {
       question:
@@ -340,7 +340,7 @@ nearbyCities: [
           question:
             "Les fientes de pigeons peuvent-elles endommager durablement mon balcon si je tarde à faire intervenir un professionnel ?",
           answer:
-            "<p><strong>Oui, les fientes sont acides et attaquent progressivement les matériaux exposés.</strong> Les garde-corps métalliques se corrodent, la peinture s'écaille et les joints se dégradent. Plus le dépôt reste en place longtemps, plus les dégâts sont profonds. Une intervention rapide limite les dommages matériels.</p>",
+            "<p><strong>Oui, les fientes sont acides et attaquent progressivement les matériaux exposés.</strong> Les garde-corps métalliques se corrodent, la peinture s'écaille et les joints se dégradent. Plus le dépôt reste en place longtemps, plus les dégâts sont profonds. Une intervention rapide limite les dommages.</p>",
 },
 {
 question:
@@ -416,9 +416,7 @@ uniqueDeepDive: `<h3>1. Diagnostic et pré-traitement</h3>
     "Organisation efficace malgré les contraintes : accès badges en résidences et circulation dense autour de la N3.",
   ],
 
-  uniqueIntro: `<p>À Claye-Souilly, les demandes de remise en état se concentrent souvent autour des moments charnières : déménagement, logement resté inoccupé, mise en location ou préparation d’un état des lieux. Entre les pavillons de Bois-Fleuri et les résidences plus récentes de Mauperthuis, les matériaux varient, et le rendu attendu est le même : un logement propre, homogène, prêt à être présenté ou réoccupé.</p>
-<p class="mt-4">La commune est aussi marquée par deux réalités très concrètes : la proximité de la N3, qui favorise les dépôts de poussière sur les vitres et les entrées, et un eau souvent calcaire en Seine-et-Marne, qui laisse rapidement des traces dans la salle de bain. Sur les maisons avec véranda ou grandes baies vitrées, comme sur les appartements du centre, la remise en état demande une méthode régulière et des produits compatibles avec chaque surface.</p>
-<p class="mt-4">Pour un <strong>nettoyage appartement maison Claye-Souilly</strong>, Klinova intervient avec une approche claire : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Puis nous déroulons un protocole par zones, en tenant compte des accès (digicodes, badges) et des contraintes de circulation, notamment près du pôle Shopping Promenade et des axes vers Mitry-Claye.</p>`,
+  uniqueIntro: "<p>À Claye-Souilly, les demandes de remise en état se concentrent souvent autour des moments charnières : déménagement, logement resté inoccupé, mise en location ou préparation d’un état des lieux. Entre les pavillons de Bois-Fleuri et les résidences plus récentes de Mauperthuis, les matériaux varient, et le rendu attendu est le même : un logement propre, homogène, prêt à être présenté ou réoccupé.</p>\n<p class=\"mt-4\">La commune est aussi marquée par deux réalités très concrètes : la proximité de la N3, qui favorise les dépôts de poussière sur les vitres et les entrées, et une eau souvent calcaire en Seine-et-Marne, qui laisse rapidement des traces dans la salle de bain. Sur les maisons avec véranda ou grandes baies vitrées, comme sur les appartements du centre, la remise en état demande une méthode régulière et des produits compatibles avec chaque surface.</p>\n<p class=\"mt-4\">Pour un <strong>nettoyage appartement maison Claye-Souilly</strong>, Klinova intervient avec une approche claire : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Puis nous déroulons un protocole par zones, en tenant compte des accès (digicodes, badges) et des contraintes de circulation, notamment près du pôle Shopping Promenade et des axes vers Mitry-Claye.</p>",
 
   uniqueDeepDive: `<h3>Diagnostic et cadrage</h3>
 <p>Nous évaluons l’état réel du logement et ses contraintes : niveau de salissures, pièces prioritaires, revêtements (carrelage, parquet stratifié), vitrages (baies, véranda) et accès. En résidence, nous anticipons les badges/interphones ; en pavillon, nous planifions l’itinéraire d’intervention pour limiter les déplacements et gagner en efficacité.</p>

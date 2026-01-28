@@ -84,7 +84,7 @@ faq: [
       "<p><strong>Oui, systématiquement.</strong> Nous validons d’abord <strong>les surfaces</strong>, <strong>les accès</strong> et <strong>les contraintes</strong> (horaires, parking, parties communes). Le devis est ensuite transmis <strong>rapidement</strong> et <strong>sans engagement</strong>. Pour une copropriété ou un site complexe, une <strong>visite technique</strong> peut être proposée.</p>",
   },
   {
-    question: "Pouvez-vous intervenir en urgence sur Villiers-sur-Marne ?",
+    question: "Pouvez-vous intervenir en urgence à Champigny-sur-Marne ?",
     answer:
       "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un <strong>créneau rapide</strong>. En cas de <strong>dégradation importante</strong> ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir <strong>dans les meilleurs délais</strong>.</p>",
   },

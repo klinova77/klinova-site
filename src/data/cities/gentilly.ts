@@ -299,7 +299,7 @@ const city: City = {
   serviceKey: "canapes-tapis",
 
   heroDescription:
-    "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Gentilly élimine acariens, allergènes et particules urbaines liées au RER B et aux axes A6a/Périphérique, restaurant l'hygiène des intérieurs denses aux portes de Paris.",
+    "Le nettoyage à domicile de canapés, tapis et matelas à Gentilly réduit acariens, allergènes et particules urbaines liées au RER B et aux axes A6a/Périphérique, restaurant l'hygiène des intérieurs denses aux portes de Paris.",
 
   whyUsBullets: [
     "Double réalité gentilléenne : Protocole ajusté aux familles (Chaperon Vert, Gabriel-Péri) comme aux jeunes actifs proches du RER B, avec traitement ciblé des textiles très sollicités et des petites surfaces.",

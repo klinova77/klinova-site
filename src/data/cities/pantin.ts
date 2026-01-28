@@ -61,7 +61,7 @@ const city: City = {
     "Canal de l'Ourcq",
     "Magasins Généraux",
     "Grands Moulins de Pantin",
-    "Centre National de la Danse (CN D)",
+    "Centre National de la Danse (CND)",
     "Gare de Pantin (RER E)",
   ],
 
@@ -253,14 +253,7 @@ faq: [
       uniqueIntro: `<p>Après quelques mois d'accumulation, les fientes de pigeons transforment un balcon en zone inutilisable. <strong>Aux abords du Canal de l'Ourcq et dans la ZAC du Port</strong>, la présence d'eau et de végétation attire une population aviaire importante. Les dépôts s'épaississent, l'odeur s'installe, et l'espace extérieur devient un problème plutôt qu'un agrément.</p>
 <p class="mt-4">Les <strong>corniches et garde-corps des immeubles anciens comme des grands ensembles</strong> offrent des perchoirs idéaux. Le béton se dégrade sous l'acidité des déjections, les joints s'effritent, et les taches deviennent permanentes si rien n'est fait. Au-delà de l'aspect visuel, c'est l'usage quotidien du balcon qui disparaît : impossible d'y étendre du linge ou d'y prendre l'air sans gêne.</p>
 <p class="mt-4">La <strong>proximité du Parc Diderot et des berges</strong> amplifie le phénomène dans certains secteurs. Une intervention structurée permet de traiter le problème à la source : décontamination des surfaces, élimination des agents pathogènes, et recommandations pour limiter le retour des volatiles.</p>`,
-      uniqueDeepDive: `<h3>Surfaces assainies et désinfectées</h3>
-<p>L'objectif est de rendre le balcon réutilisable sans risque. Cela passe par l'élimination complète des fientes, la neutralisation des agents pathogènes présents dans les déjections, et le traitement de tous les supports : sol, garde-corps, vitrages, murs mitoyens si concernés.</p>
-
-<h3>Confinement et protection préalables</h3>
-<p>Avant toute manipulation, la zone est bâchée pour éviter la dispersion des poussières contaminées. L'intérieur du logement est protégé, tout comme les balcons voisins. L'intervenant porte combinaison jetable, masque FFP2, gants et lunettes. Les fientes sont humidifiėes pour neutraliser les particules volatiles avant ramassage.</p>
-
-<h3>Collecte, désinfection et évacuation</h3>
-<p>Les déjections sont collectées et conditionnées en sacs étanches. Un produit virucide et bactéricide homologué est appliqué sur l'ensemble des surfaces avec respect du temps de contact. Après rinçage et aération, le balcon peut être réutilisé. Des dispositifs dissuasifs (pics, filets) peuvent être posés sur demande pour limiter le retour des pigeons.</p>`,
+      uniqueDeepDive: "<h3>Surfaces assainies et désinfectées</h3>\n<p>L'objectif est de rendre le balcon réutilisable sans risque. Cela passe par l'élimination complète des fientes, la neutralisation des agents pathogènes présents dans les déjections, et le traitement de tous les supports : sol, garde-corps, vitrages, murs mitoyens si concernés.</p>\n\n<h3>Confinement et protection préalables</h3>\n<p>Avant toute manipulation, la zone est bâchée pour éviter la dispersion des poussières contaminées. L'intérieur du logement est protégé, tout comme les balcons voisins. L'intervenant porte combinaison jetable, masque FFP2, gants et lunettes. Les fientes sont humidifiées pour neutraliser les particules volatiles avant ramassage.</p>\n\n<h3>Collecte, désinfection et évacuation</h3>\n<p>Les déjections sont collectées et conditionnées en sacs étanches. Un produit virucide et bactéricide homologué est appliqué sur l'ensemble des surfaces avec respect du temps de contact. Après rinçage et aération, le balcon peut être réutilisé. Des dispositifs dissuasifs (pics, filets) peuvent être posés sur demande pour limiter le retour des pigeons.</p>",
       specificChallenges: [
         "Balcons exposés aux berges du Canal : accumulation rapide de fientes liée à la présence d'eau.",
         "Corniches des immeubles anciens du quartier Église offrant des perchoirs permanents aux pigeons.",

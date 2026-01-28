@@ -16,15 +16,7 @@ const city: City = {
     "Au Raincy, la proximité de la gare Le Raincy – Villemomble – Montfermeil et des axes comme l’avenue de la Résistance favorise un encrassement régulier des surfaces communes et des extérieurs. Dans une ville résidentielle et arborée, l’entretien des revêtements, garde-corps et sols est clé pour préserver l’image des immeubles et le confort au quotidien.",
 
   // ✅ hubIntro : 2 <p> + <ul>
-  hubIntro: `
-<p>Le Raincy se distingue par un parc immobilier résidentiel exigeant, où la qualité perçue des parties communes et des extérieurs compte au quotidien. KLINOVA accompagne syndics, conseils syndicaux, gestionnaires et occupants avec une approche rigoureuse, protocolisée et adaptée aux contraintes d’accès et d’occupation.</p>
-<p class="mt-4">Autour de la gare Le Raincy – Villemomble – Montfermeil, avec un stationnement souvent réglementé et des immeubles aux circulations parfois étroites, chaque intervention commence par un diagnostic sur site, un planning clair et un suivi documenté, pour limiter la gêne et sécuriser le résultat.</p>
-<ul>
-  <li><strong>Accessibilité technique :</strong> organisation par zones, gestion des accès (Vigik / gardien), matériel adapté aux circulations étroites, balisage systématique.</li>
-  <li><strong>Réactivité locale :</strong> déplacement gratuit pour devis sous 48h, créneaux coordonnés avec syndic/gardien, intervention d’urgence possible selon contexte.</li>
-  <li><strong>Protocoles documentés :</strong> compte-rendu d’intervention, traçabilité des produits, recommandations d’entretien selon les supports.</li>
-</ul>
-`,
+  hubIntro: "\n<p>Le Raincy se distingue par un parc immobilier résidentiel exigeant, où la qualité perçue des parties communes et des extérieurs compte au quotidien. KLINOVA accompagne syndics, conseils syndicaux, gestionnaires et occupants avec une approche rigoureuse, protocolisée et adaptée aux contraintes d’accès et d’occupation.</p>\n<p class=\"mt-4\">Autour de la gare Le Raincy – Villemomble – Montfermeil, avec un stationnement souvent réglementé et des immeubles aux circulations parfois étroites, chaque intervention commence par un diagnostic sur site, un planning clair et un suivi documenté, pour limiter la gêne et sécuriser le résultat.</p>\n<ul>\n  <li><strong>Accessibilité technique :</strong> organisation par zones, gestion des accès (Vigik / gardien), matériel adapté aux circulations étroites, balisage systématique.</li>\n  <li><strong>Réactivité locale :</strong> déplacement gratuit pour devis, créneaux coordonnés avec syndic/gardien, intervention d’urgence possible selon contexte.</li>\n  <li><strong>Protocoles documentés :</strong> compte-rendu d’intervention, traçabilité des produits, recommandations d’entretien selon les supports.</li>\n</ul>\n",
 
   citySpecificChallenges: [
     "Copropriétés résidentielles et allées arborées : apports de terre végétale, feuilles et dépôts verts sur les zones d’entrée.",

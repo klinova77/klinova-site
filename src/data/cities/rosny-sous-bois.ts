@@ -66,7 +66,7 @@ const city: City = {
     "Westfield Rosny 2",
     "Centre commercial Domus",
     "Parc nature du plateau d’Avron",
-    "Domus",
+    "Centre commercial Domus",
     "Échangeur A86 / A3",
     "Golf de Rosny-sous-Bois.",
   ],

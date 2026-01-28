@@ -69,7 +69,7 @@ nearbyCities: [
     {
       question: "Pouvez-vous intervenir rapidement à Vaires-sur-Marne en cas d'urgence ?",
       answer:
-        "<strong>Oui.</strong> Nous sommes organisés pour répondre sous 24 à 48 h en cas de sinistre ou de fin de chantier. Nos équipes peuvent mobiliser du matériel professionnel en urgence à Vaires-sur-Marne selon les disponibilités."
+        "<strong>Oui.</strong> Nous sommes organisés pour répondre sous 24 à 48 h en cas de sinistre ou de fin de chantier. Nos équipes peuvent mobiliser du matériel professionnel en urgence à Vaires-sur-Marne, selon les disponibilités."
     },
     {
       question: "La gestion des accès Vigik ou des clés est-elle bien encadrée ?",
@@ -170,7 +170,7 @@ nearbyCities: [
         "Un parking propre et bien entretenu à Vaires-sur-Marne rassure les usagers, limite les glissades et valorise immédiatement l'image de l'immeuble ou de l'entreprise.",
       whyUsBullets: [
         "Connaissance du contexte local (D934, ZAC, parkings près de la gare).",
-        "Autolaveuses professionnelles et dégraissants adaptés aux revêtements de sol et taches tenaces.",
+        "Autolaveuses professionnelles et dégraissants adaptés aux revêtements de sol et aux taches tenaces.",
         "Travail par zones, tôt le matin ou en faible affluence pour limiter l'impact.",
         "Remise d'un compte-rendu avec photos avant/après sur demande du syndic ou du gestionnaire."
       ],
@@ -475,9 +475,7 @@ nearbyCities: [
     "Prise en compte du contexte bords de Marne : poussières et terre ramenées, humidité, calcaire — pour un rendu net qui tient dans le temps.",
   ],
 
-  uniqueIntro: `<p>À Vaires-sur-Marne, les demandes de nettoyage sont souvent liées à des situations très concrètes : état des lieux, grand ménage avant remise en location, nettoyage après travaux légers, ou remise en ordre après une période de passages. La commune combine un pavillonnaire dominant (Bois-Lumière, Cour d’Orange) et des secteurs plus “collectifs” près de la gare de Vaires-Torcy (Ligne P), ce qui impose des approches différentes : volumes et vitrages côté maisons, accès Vigik/digicode et stationnement plus contraint côté immeubles.</p>
-<p class="mt-4">Le terrain est aussi marqué par la proximité de la Marne et de l’Île de loisirs / stade nautique : on retrouve plus facilement de la terre fine, du sable et des traces de passage, surtout dans les entrées et sur les sols. Dans les pièces d’eau, l’eau dure du 77 et l’humidité en bord de Marne se voient vite sur les parois, la robinetterie et les joints. Pour obtenir un résultat propre “au premier regard”, il faut donc une intervention structurée, avec un vrai contrôle final.</p>
-<p class="mt-4">L’objectif n’est pas de “faire partout un coup de propre”, mais de remettre le logement à un niveau cohérent : cuisine et salle d’eau traitées sérieusement, sols uniformes sans voile, et finitions propres sur les zones qui trahissent un ménage bâclé (plinthes, bas de portes, interrupteurs, poignées, rebords). C’est particulièrement important quand l’enjeu est un état des lieux ou une relocation rapide.</p>`,
+  uniqueIntro: "<p>À Vaires-sur-Marne, les demandes de nettoyage sont souvent liées à des situations très concrètes : état des lieux, grand ménage avant remise en location, nettoyage après travaux légers, ou remise en ordre après une période de passages. La commune combine un pavillonnaire dominant et des secteurs plus “collectifs” près de la gare de Vaires-Torcy (Ligne P), ce qui impose des approches différentes : volumes et vitrages côté maisons, accès Vigik/digicode et stationnement plus contraint côté immeubles.</p>\n<p class=\"mt-4\">Le terrain est aussi marqué par la proximité de la Marne et de l’Île de loisirs / stade nautique : on retrouve plus facilement de la terre fine, du sable et des traces de passage, surtout dans les entrées et sur les sols. Dans les pièces d’eau, l’eau dure du 77 et l’humidité en bord de Marne se voient vite sur les parois, la robinetterie et les joints. Pour obtenir un résultat propre “au premier regard”, il faut donc une intervention structurée, avec un vrai contrôle final.</p>\n<p class=\"mt-4\">L’objectif n’est pas de “faire partout un coup de propre”, mais de remettre le logement à un niveau cohérent : cuisine et salle d’eau traitées sérieusement, sols uniformes sans voile, et finitions propres sur les zones qui trahissent un ménage bâclé (plinthes, bas de portes, interrupteurs, poignées, rebords). C’est particulièrement important quand l’enjeu est un état des lieux ou une relocation rapide.</p>",
 
   uniqueDeepDive: `<h3>Gare Vaires-Torcy / centre-ville — remise en état pratique et accès à anticiper</h3>
 <p>Autour de la gare (Ligne P) et du centre, les logements en collectif demandent surtout une bonne organisation : badges/digicodes, consignes d’immeuble et stationnement plus serré aux heures pendulaires. On priorise alors les zones à fort impact : cuisine, salle d’eau, sols, puis finitions visibles.</p>

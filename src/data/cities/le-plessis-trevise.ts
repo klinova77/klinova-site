@@ -202,7 +202,7 @@ const city: City = {
         {
           question:
             "Comment gérez-vous les eaux de lavage et l'évacuation en intervention dans un parking souterrain du Plessis-Trévise ?",
-          answer: `<p>Les eaux sont dirigées vers les regards et rigoles existantes. Nous vérifions avant intervention que les évacuations ne sont pas obstruées. En cas de débit important, nous utilisons des bacs de rétention temporaires pour éviter tout débordement. Les eaux sont dirigées vers les regards et rigoles existantes après vérification des évacuations. Si des zones très chargées en hydrocarbures sont présentes, nous adaptons le protocole (pré-traitement, passes supplémentaires) et pouvons mettre en rétention temporaire pour éviter tout débordement. Aucun rejet n’est effectué sur la voirie.</p>`,
+          answer: "<p>Les eaux sont dirigées vers les regards et rigoles existantes. Nous vérifions avant intervention que les évacuations ne sont pas obstruées. En cas de débit important, nous utilisons des bacs de rétention temporaires pour éviter tout débordement. Si des zones très chargées en hydrocarbures sont présentes, nous adaptons le protocole (pré-traitement, passes supplémentaires) et pouvons mettre en rétention temporaire pour éviter tout débordement. Aucun rejet n’est effectué sur la voirie.</p>",
         },
       ],
       ctaOverride: "",
@@ -380,11 +380,7 @@ const city: City = {
     "Approche adaptée aux terrasses de maisons individuelles : dalles béton, carrelage extérieur, bois et composite, fréquemment exposés à l’ombre et à l’humidité.",
     "Protection soignée des abords : bâchage du mobilier, respect des jardins et plantations, rinçage maîtrisé sans projections inutiles.",
   ],
-  uniqueIntro: `<p><strong>Le Plessis-Trévise</strong>, commune résidentielle du Val-de-Marne d’environ 21 000 habitants, se caractérise par un habitat majoritairement pavillonnaire et la proximité immédiate du <strong>bois Saint-Martin</strong>. Cet environnement verdoyant offre un cadre de vie apprécié mais favorise l’humidité sur les surfaces extérieures.</p>
-
-<p class="mt-4">Les terrasses situées à proximité des zones boisées ou dans des jardins arborés sont particulièrement exposées aux <strong>mousses, algues, lichens</strong> et aux <strong>dépôts organiques</strong>. L’ombre prolongée, la rosée matinale et les feuilles mortes accélèrent l’encrassement des sols extérieurs.</p>
-
-<p class="mt-4">Le parc immobilier du Plessis-Trévise est composé en majorité de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Ces supports nécessitent des méthodes de nettoyage spécifiques afin de préserver leur état tout en éliminant efficacement les salissures.</p>`,
+  uniqueIntro: "<p><strong>Le Plessis-Trévise</strong>, commune résidentielle du Val-de-Marne, se caractérise par un habitat majoritairement pavillonnaire et la proximité immédiate du <strong>bois Saint-Martin</strong>. Cet environnement verdoyant offre un cadre de vie apprécié mais favorise l’humidité sur les surfaces extérieures.</p>\n\n<p class=\"mt-4\">Les terrasses situées à proximité des zones boisées ou dans des jardins arborés sont particulièrement exposées aux <strong>mousses, algues, lichens</strong> et aux <strong>dépôts organiques</strong>. L’ombre prolongée, la rosée matinale et les feuilles mortes accélèrent l’encrassement des sols extérieurs.</p>\n\n<p class=\"mt-4\">Le parc immobilier du Plessis-Trévise est composé en majorité de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Ces supports nécessitent des méthodes de nettoyage spécifiques afin de préserver leur état tout en éliminant efficacement les salissures.</p>",
   uniqueDeepDive: `<h3>Diagnostic et préparation de la terrasse</h3>
 <p>Le revêtement est identifié et son état contrôlé avant toute intervention. Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, seuils et menuiseries adjacentes sont bâchés afin d’éviter toute projection, notamment dans les jardins clos.</p>
 

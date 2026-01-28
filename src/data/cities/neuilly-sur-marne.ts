@@ -79,7 +79,7 @@ nearbyCities: [
       question:
         "Quels sont vos délais d'intervention pour un devis ou une urgence à Neuilly-sur-Marne ?",
       answer:
-        "<p><strong>Nous garantissons un déplacement sous 48h pour un devis gratuit,</strong> et une intervention en urgence sous 24h pour les sinistres (inondations, salissures majeures). Nos techniciens sont basés en Île-de-France et connaissent les axes RN 34/RN370 pour limiter les retards liés au trafic.</p>",
+        "<p><strong>Nous proposons un déplacement sous 48h pour un devis gratuit,</strong> et une intervention en urgence sous 24h pour les sinistres (inondations, salissures majeures). Nos techniciens sont basés en Île-de-France et connaissent les axes RN 34/RN370 pour limiter les retards liés au trafic.</p>",
     },
     {
       question:

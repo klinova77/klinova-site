@@ -12,7 +12,7 @@ const city: City = {
   },
 
   customDescription:
-    "Commune du Val-de-Marne de 20 000 habitants desservie par le RER A, Joinville-le-Pont se structure autour des rives de la Marne et du canal. Les quartiers résidentiels comme Polangis et l'habitat collectif du secteur Paris génèrent des besoins réguliers d'entretien des surfaces, accentués par l'humidité fluviale et la proximité de la Nationale 4.",
+    "Commune du Val-de-Marne desservie par le RER A, Joinville-le-Pont se structure autour des rives de la Marne et du canal. Les quartiers résidentiels comme Polangis et l'habitat collectif du secteur Paris génèrent des besoins réguliers d'entretien des surfaces, accentués par l'humidité fluviale et la proximité de la Nationale 4.",
 
   hubIntro:
     '<p>Klinova intervient à Joinville-le-Pont auprès des copropriétés, des particuliers et des gestionnaires immobiliers pour l\'entretien des surfaces et la maintenance des équipements collectifs. Nous connaissons les spécificités locales : l\'humidité des bords de Marne qui favorise les dépôts verts sur les balcons, les flux autour de la gare RER A, et les contraintes d\'accès dans les quartiers pavillonnaires comme Polangis ou l\'Île Fanac.</p>\n' +
@@ -501,7 +501,7 @@ nearbyCities: [
     "Centre-ville et secteur gare : stationnement souvent compliqué, surtout Rue de Paris et autour du RER A.",
     "Zone flux (A4 / Pont de Joinville) : créneaux à choisir pour éviter les bouchons et sécuriser l’accès chantier.",
     "Vitrages fréquents (baies, vérandas) : finition soignée sur vitres accessibles et rebords.",
-    "Quartiers pavillonnaires exigeants (Polangis/Palissy) : discrétion et méthodes non agressives sur parquet/menusieries.",
+    "Quartiers pavillonnaires exigeants (Polangis/Palissy) : discrétion et méthodes non agressives sur parquet/menuiseries.",
   ],
 
   faqAdditions: [

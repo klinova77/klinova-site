@@ -242,7 +242,7 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Le nettoyage risque-t-il d'abîmer le carrelage ou les joints sur un balcony en béton comme on en trouve souvent dans le centre d'Alfortville ?",
+          question: "Q1 : Le nettoyage risque-t-il d'abîmer le carrelage ou les joints sur un balcon en béton comme on en trouve souvent dans le centre d'Alfortville ?",
           answer: `<p>La pression et les produits sont adaptés au support identifié lors du diagnostic. Sur les balcons en béton brut ou carrelés des immeubles anciens du centre-ville, le brossage reste manuel sur les joints fragiles. Le rinçage s'effectue à pression modérée pour éviter toute dégradation des matériaux d'origine.</p>`,
         },
         {
