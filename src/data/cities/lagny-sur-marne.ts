@@ -9,13 +9,8 @@ const city: City = {
   customDescription:
     "À Lagny-sur-Marne, la proximité de la gare de Lagny-Thorigny (ligne P du Transilien) et des axes comme la Francilienne ou la RD 934 génère un trafic constant, impactant la propreté des halls d'immeubles, des parkings souterrains et des balcons. Les copropriétés et résidences près des bords de Marne ou du centre-ville nécessitent un entretien régulier des moquettes, des sols et des espaces extérieurs pour préserver le cadre de vie.",
 
-  hubIntro: `<p>Partenaire de confiance pour la maintenance immobilière à Lagny-sur-Marne, Klinova accompagne les syndics de copropriété et les gestionnaires dans la préservation de leur patrimoine. Nous assurons une gestion globale de l'hygiène, intervenant avec la même rigueur technique sur les bâtisses historiques du centre-ville que sur les résidences récentes des coteaux.</p>
-<p class="mt-4">Notre approche repose sur une proximité opérationnelle forte, garantissant réactivité et suivi personnalisé pour chaque immeuble. Que ce soit pour des prestations récurrentes ou des remises en état après travaux, nous déployons des protocoles d'hygiène stricts et un reporting transparent pour faciliter le travail des conseils syndicaux et des professionnels.</p>
-<ul>
-  <li><strong>Protocoles techniques adaptés</strong> aux contraintes locales, notamment l'humidité des bords de Marne.</li>
-  <li><strong>Gestion autonome des accès</strong> via clés et badges Vigik pour des interventions fluides.</li>
-  <li><strong>Équipes formées</strong> au respect de la tranquillité des résidents et aux normes de sécurité.</li>
-</ul>`,
+  hubIntro:
+    "<p>Partenaire de confiance pour la maintenance immobilière à Lagny-sur-Marne, Klinova accompagne les syndics de copropriété et les gestionnaires dans la préservation de leur patrimoine. Nous assurons une gestion globale de l'hygiène, intervenant avec la même rigueur technique sur les bâtisses historiques du centre-ville que sur les résidences récentes des coteaux.</p>\n<p class=\"mt-4\">Notre approche repose sur une proximité opérationnelle forte, garantissant réactivité et suivi personnalisé pour chaque immeuble. Que ce soit pour des prestations récurrentes ou des remises en état après travaux, nous déployons des protocoles d'hygiène stricts et un reporting transparent pour faciliter le travail des conseils syndicaux et des professionnels.</p>\n<ul>\n  <li><strong>Protocoles techniques adaptés</strong> aux contraintes locales, notamment l'humidité des bords de Marne.</li>\n  <li><strong>Gestion autonome des accès</strong> via clés et badges Vigik pour des interventions fluides.</li>\n  <li><strong>Équipes formées</strong> au respect de la tranquillité des résidents et aux normes de sécurité.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Encrassement accéléré des parkings souterrains et aériens près de la gare de Lagny-Thorigny et des axes routiers (hydrocarbures, poussières fines, traces de pneus).",
@@ -47,18 +42,18 @@ const city: City = {
     "Zone industrielle de la Francilienne",
   ],
 
- nearbyCities: [
-        "torcy",
-        "bussy-saint-georges",
-        "vaires-sur-marne",
-        "serris",
-        "claye-souilly",
-        "chelles",
-        "champs-sur-marne",
-        "emerainville",
-        "gournay-sur-marne",
-        "villeparisis"
-      ],
+  nearbyCities: [
+    "torcy",
+    "bussy-saint-georges",
+    "vaires-sur-marne",
+    "serris",
+    "claye-souilly",
+    "chelles",
+    "champs-sur-marne",
+    "emerainville",
+    "gournay-sur-marne",
+    "villeparisis",
+  ],
 
   landmarks: [
     "Mairie de Lagny-sur-Marne (Hôtel de Ville, ancien cloître de l'abbaye Saint-Pierre)",
@@ -73,7 +68,8 @@ const city: City = {
 
   faq: [
     {
-      question: "Comment se déroule une intervention de nettoyage à Lagny-sur-Marne ?",
+      question:
+        "Comment se déroule une intervention de nettoyage à Lagny-sur-Marne ?",
       answer:
         "<p><strong>À Lagny-sur-Marne, l'intervention commence par l'identification des accès</strong> (ascenseur, stationnement, rampes de parking) et un échange avec le gardien, le syndic ou l'occupant pour valider les zones prioritaires. Nous protégeons les surfaces sensibles, réalisons le nettoyage prévu puis effectuons un tour de contrôle final avec, si besoin, quelques conseils d'entretien adaptés au site.</p>",
     },
@@ -83,15 +79,15 @@ const city: City = {
         "<p><strong>Rien de très contraignant.</strong> Sur les balcons, le fait de déplacer quelques objets facilite le traitement des angles et des évacuations. Pour les moquettes ou tapis, dégager les petits objets au sol est un plus, mais ce n'est pas obligatoire. Dans les parkings, il peut être utile d'anticiper le déplacement de certains véhicules, mais nous restons capables de nous adapter à la configuration réelle le jour J.</p>",
     },
     {
-      question: "Pouvez-vous intervenir en horaires décalés à Lagny-sur-Marne ?",
+      question:
+        "Pouvez-vous intervenir en horaires décalés à Lagny-sur-Marne ?",
       answer:
         "<p><strong>Oui, en complément des créneaux habituels en semaine,</strong> nous pouvons intervenir en horaires décalés ou le samedi pour les parkings, halls ou locaux professionnels lorsque la gêne doit être minimale. Les horaires sont définis avec vous ou le syndic en fonction des contraintes de la résidence ou du site.</p>",
     },
   ],
 
   testimonial: {
-    text:
-      "Klinova a remis en état les moquettes et le parking d'une résidence de Lagny-sur-Marne avec un suivi très clair pour le conseil syndical.",
+    text: "Klinova a remis en état les moquettes et le parking d'une résidence de Lagny-sur-Marne avec un suivi très clair pour le conseil syndical.",
     author: "C. Dupuis",
     role: "Gestionnaire de copropriété",
     building: "Résidence des Hauts de Lagny",
@@ -114,17 +110,11 @@ const city: City = {
         "Reporting photo et écrit détaillé pour le syndic, avec conseils d'entretien post-intervention.",
       ],
 
-      uniqueIntro: `<p>À Lagny-sur-Marne, les moquettes des halls, paliers et cages d'escaliers subissent un encrassement constant : traces de chaussures, poussières fines apportées par la proximité de la gare de Lagny-Thorigny et des axes comme la Francilienne, ainsi que les taches liées aux allers-retours des résidents. Les copropriétés des quartiers du centre-ville ou des Hauts de Lagny, souvent très fréquentées, voient leurs moquettes s'user prématurément, perdant leur aspect d'origine et donnant une impression de négligence. Les fibres ternissent, les bordures s’encrassent et certaines zones deviennent carrément grises malgré l'aspirateur quotidien.</p>
-<p class="mt-4">Pour les syndics et gestionnaires, cela se traduit par des remarques récurrentes des occupants lors des AG et une dégradation de l'image de l'immeuble. Les résidents se plaignent de l'aspect sale, certains locataires potentiels sont même rebutés lors des visites. <strong>Un nettoyage professionnel régulier permet de restaurer l'éclat des moquettes,</strong> d'éliminer les salissures incrustées et de prolonger leur durée de vie, tout en améliorant le cadre de vie des résidents et la valorisation du patrimoine immobilier.</p>`,
+      uniqueIntro:
+        "<p>À Lagny-sur-Marne, les moquettes des halls, paliers et cages d'escaliers subissent un encrassement constant : traces de chaussures, poussières fines apportées par la proximité de la gare de Lagny-Thorigny et des axes comme la Francilienne, ainsi que les taches liées aux allers-retours des résidents. Les copropriétés des quartiers du centre-ville ou des Hauts de Lagny, souvent très fréquentées, voient leurs moquettes s'user prématurément, perdant leur aspect d'origine et donnant une impression de négligence. Les fibres ternissent, les bordures s’encrassent et certaines zones deviennent carrément grises malgré l'aspirateur quotidien.</p>\n<p class=\"mt-4\">Pour les syndics et gestionnaires, cela se traduit par des remarques récurrentes des occupants lors des AG et une dégradation de l'image de l'immeuble. Les résidents se plaignent de l'aspect sale, certains locataires potentiels sont même rebutés lors des visites. <strong>Un nettoyage professionnel régulier permet de restaurer l'éclat des moquettes,</strong> d'éliminer les salissures incrustées et de prolonger leur durée de vie, tout en améliorant le cadre de vie des résidents et la valorisation du patrimoine immobilier.</p>",
 
-      uniqueDeepDive: `<h3>1. État des lieux et identification des contraintes</h3>
-<p>Évaluation sur place de l'état général des moquettes, nature des taches (graisse, boue, traces de chaussures), niveau d'usure et contraintes d'accès (escaliers étroits, ascenseurs, halls donnant sur la rue). <strong>Identification des zones de fort passage,</strong> typiques des immeubles près de la gare ou des axes routiers, où l'encrassement est plus marqué.</p>
-
-<h3>2. Protection, traitement et extraction puissante</h3>
-<p>Protection des plinthes, balisage des zones en cours de traitement et organisation par étage pour limiter la gêne. <strong>Injection-extraction à l'eau adaptée aux moquettes des copropriétés,</strong> avec plusieurs passes sur les zones critiques comme les devants d'ascenseur et les paliers. Le séchage est optimisé par une extraction puissante et une aération contrôlée, pour un retour à la normale en 4 à 6 heures.</p>
-
-<h3>3. Adaptation locale et recommandations</h3>
-<p>Ajustement des protocoles aux spécificités locales : humidité en rez-de-chaussée des immeubles en bord de Marne, moquettes anciennes des résidences des années 70-80. <strong>Fréquence de nettoyage recommandée : tous les 12 à 18 mois</strong> pour les parties communes très sollicitées, afin de maintenir un résultat optimal et éviter le remplacement prématuré.</p>`,
+      uniqueDeepDive:
+        "<h3>1. État des lieux et identification des contraintes</h3>\n<p>Évaluation sur place de l'état général des moquettes, nature des taches (graisse, boue, traces de chaussures), niveau d'usure et contraintes d'accès (escaliers étroits, ascenseurs, halls donnant sur la rue). <strong>Identification des zones de fort passage,</strong> typiques des immeubles près de la gare ou des axes routiers, où l'encrassement est plus marqué.</p>\n\n<h3>2. Protection, traitement et extraction puissante</h3>\n<p>Protection des plinthes, balisage des zones en cours de traitement et organisation par étage pour limiter la gêne. <strong>Injection-extraction à l'eau adaptée aux moquettes des copropriétés,</strong> avec plusieurs passes sur les zones critiques comme les devants d'ascenseur et les paliers. Le séchage est optimisé par une extraction puissante et une aération contrôlée, pour un retour à la normale en 4 à 6 heures.</p>\n\n<h3>3. Adaptation locale et recommandations</h3>\n<p>Ajustement des protocoles aux spécificités locales : humidité en rez-de-chaussée des immeubles en bord de Marne, moquettes anciennes des résidences des années 70-80. <strong>Fréquence de nettoyage recommandée : tous les 12 à 18 mois</strong> pour les parties communes très sollicitées, afin de maintenir un résultat optimal et éviter le remplacement prématuré.</p>",
 
       specificChallenges: [
         "Fort passage dans les halls des copropriétés proches de la gare de Lagny-Thorigny, accélérant l'usure des moquettes.",
@@ -176,17 +166,11 @@ const city: City = {
         "Compte-rendu photo et écrit pour le syndic ou le gestionnaire, avec recommandations d'entretien.",
       ],
 
-      uniqueIntro: `<p>À Lagny-sur-Marne, les parkings souterrains des résidences et les parkings aériens des zones commerciales ou proches de la gare de Lagny-Thorigny subissent un encrassement rapide : poussière noire collante, taches d'huile, marquages effacés et murs salis par les frottements. La proximité de la Francilienne et des axes routiers comme la RD 934 aggrave la situation, avec des dépôts de particules fines et des résidus de pneus qui s'accumulent. Le béton noircit, les siphons se bouchent et l'odeur d'hydrocarbures devient persistante.</p>
-<p class="mt-4">Ces salissures, combinées à un éclairage souvent faible, créent une impression d'insécurité et de négligence, tout en augmentant les risques de glissade sur les rampes. Les résidents se plaignent de salir leurs chaussures et leurs véhicules. <strong>Un nettoyage professionnel complet permet de restaurer la lisibilité des marquages,</strong> d'éliminer les dépôts glissants et de redonner une image propre et rassurante aux usagers, qu'il s'agisse de résidents, de clients ou d'employés.</p>`,
+      uniqueIntro:
+        "<p>À Lagny-sur-Marne, les parkings souterrains des résidences et les parkings aériens des zones commerciales ou proches de la gare de Lagny-Thorigny subissent un encrassement rapide : poussière noire collante, taches d'huile, marquages effacés et murs salis par les frottements. La proximité de la Francilienne et des axes routiers comme la RD 934 aggrave la situation, avec des dépôts de particules fines et des résidus de pneus qui s'accumulent. Le béton noircit, les siphons se bouchent et l'odeur d'hydrocarbures devient persistante.</p>\n<p class=\"mt-4\">Ces salissures, combinées à un éclairage souvent faible, créent une impression d'insécurité et de négligence, tout en augmentant les risques de glissade sur les rampes. Les résidents se plaignent de salir leurs chaussures et leurs véhicules. <strong>Un nettoyage professionnel complet permet de restaurer la lisibilité des marquages,</strong> d'éliminer les dépôts glissants et de redonner une image propre et rassurante aux usagers, qu'il s'agisse de résidents, de clients ou d'employés.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic technique et organisation par zones</h3>
-<p>Évaluation du revêtement (béton, peinture, résine), efficacité des siphons, hauteur sous plafond et accès pour les véhicules de nettoyage. <strong>Identification des zones critiques</strong> : rampes étroites, angles mal ventilés, typiques des parkings souterrains des résidences près du centre-ville ou des Hauts de Lagny. Planification de la rotation des véhicules par zones en coordination avec le syndic.</p>
-
-<h3>2. Balayage, dégraissage et lavage mécanique</h3>
-<p>Balayage mécanique pour éliminer les gros dépôts, suivi d'un dégagement des déchets. <strong>Autolaveuse pour les surfaces larges</strong> et haute pression contrôlée avec dégraissant professionnel pour les taches d'huile tenaces. Les eaux de lavage sont récupérées et évacuées selon la réglementation, sans risque pour les réseaux.</p>
-
-<h3>3. Horaires adaptés et recommandations</h3>
-<p>Interventions tôt le matin ou en journée creuse pour minimiser la gêne. <strong>Décrassage complet recommandé une à deux fois par an</strong> pour les parkings très exposés, comme ceux des zones commerciales ou proches des axes routiers (Francilienne, RD 934), afin de maintenir sécurité et propreté.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic technique et organisation par zones</h3>\n<p>Évaluation du revêtement (béton, peinture, résine), efficacité des siphons, hauteur sous plafond et accès pour les véhicules de nettoyage. <strong>Identification des zones critiques</strong> : rampes étroites, angles mal ventilés, typiques des parkings souterrains des résidences près du centre-ville ou des Hauts de Lagny. Planification de la rotation des véhicules par zones en coordination avec le syndic.</p>\n\n<h3>2. Balayage, dégraissage et lavage mécanique</h3>\n<p>Balayage mécanique pour éliminer les gros dépôts, suivi d'un dégagement des déchets. <strong>Autolaveuse pour les surfaces larges</strong> et haute pression contrôlée avec dégraissant professionnel pour les taches d'huile tenaces. Les eaux de lavage sont récupérées et évacuées selon la réglementation, sans risque pour les réseaux.</p>\n\n<h3>3. Horaires adaptés et recommandations</h3>\n<p>Interventions tôt le matin ou en journée creuse pour minimiser la gêne. <strong>Décrassage complet recommandé une à deux fois par an</strong> pour les parkings très exposés, comme ceux des zones commerciales ou proches des axes routiers (Francilienne, RD 934), afin de maintenir sécurité et propreté.</p>",
 
       specificChallenges: [
         "Poussière noire grasse et résidus de pneus dans les parkings souterrains, liés à la circulation dense sur la Francilienne et la RD 934.",
@@ -238,16 +222,11 @@ const city: City = {
         "Conseils pratiques après intervention pour préserver la propreté et faciliter l'entretien au quotidien.",
       ],
 
-      uniqueIntro: "<p>À Lagny-sur-Marne, les balcons des appartements subissent les dépôts de poussière fine liée à la circulation sur la Francilienne, les feuilles et dépôts verts des arbres des quartiers résidentiels, ainsi que les traces de terre et de graisse après un barbecue ou des jardinières. Les joints noircissent progressivement, les angles s'encrassent et les garde-corps deviennent collants au toucher, rendant l'espace extérieur peu attrayant. Dans les immeubles près des bords de Marne, l'humidité favorise même l'apparition de mousses verdâtres qui rendent les sols glissants.</p>\n<p class=\"mt-4\">Les occupants finissent par délaisser leur balcon, qui devient un simple lieu de stockage plutôt qu'un espace de détente pour prendre le café du matin ou profiter des beaux jours. Vous n'osez plus y inviter des amis, votre mobilier reste bâché et cet espace précieux est gâché. <strong>Un nettoyage professionnel permet de redonner à ces surfaces leur aspect d'origine,</strong> en éliminant les salissures incrustées et en protégeant les matériaux. Ainsi, le balcon redevient un lieu agréable, valorisant le logement et incitant à en profiter pleinement comme un véritable prolongement de votre intérieur.</p>",
+      uniqueIntro:
+        "<p>À Lagny-sur-Marne, les balcons des appartements subissent les dépôts de poussière fine liée à la circulation sur la Francilienne, les feuilles et dépôts verts des arbres des quartiers résidentiels, ainsi que les traces de terre et de graisse après un barbecue ou des jardinières. Les joints noircissent progressivement, les angles s'encrassent et les garde-corps deviennent collants au toucher, rendant l'espace extérieur peu attrayant. Dans les immeubles près des bords de Marne, l'humidité favorise même l'apparition de mousses verdâtres qui rendent les sols glissants.</p>\n<p class=\"mt-4\">Les occupants finissent par délaisser leur balcon, qui devient un simple lieu de stockage plutôt qu'un espace de détente pour prendre le café du matin ou profiter des beaux jours. Vous n'osez plus y inviter des amis, votre mobilier reste bâché et cet espace précieux est gâché. <strong>Un nettoyage professionnel permet de redonner à ces surfaces leur aspect d'origine,</strong> en éliminant les salissures incrustées et en protégeant les matériaux. Ainsi, le balcon redevient un lieu agréable, valorisant le logement et incitant à en profiter pleinement comme un véritable prolongement de votre intérieur.</p>",
 
-      uniqueDeepDive: `<h3>1. Protection des accès et enlèvement des gros dépôts</h3>
-<p>Protection des accès (porte-fenêtre, menuiseries) avec des bâches et rubans adhésifs. <strong>Déplacement ou protection des meubles, plantes et objets présents sur le balcon.</strong> Enlèvement manuel des gros dépôts comme les feuilles, la terre et les résidus de jardinières avant toute phase humide.</p>
-
-<h3>2. Application de produits et brossage méthodique</h3>
-<p>Application d'un produit nettoyant adapté au support (carrelage, béton, bois composite ou dalles). <strong>Brossage méthodique des surfaces</strong> avec attention particulière aux joints, angles et garde-corps, souvent très encrassés. Pression d'eau douce et maîtrisée pour préserver les matériaux et garantir un résultat uniforme.</p>
-
-<h3>3. Rinçage contrôlé et conseils d'entretien</h3>
-<p>Rinçage contrôlé pour éviter les coulures sur la façade ou chez les voisins du dessous. <strong>Séchage en 2 à 4 heures selon l'ensoleillement.</strong> Recommandations pour un entretien simple : balayage régulier, usage de produits adaptés et nettoyage complet annuel au printemps pour conserver un balcon agréable toute l'année.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Protection des accès et enlèvement des gros dépôts</h3>\n<p>Protection des accès (porte-fenêtre, menuiseries) avec des bâches et rubans adhésifs. <strong>Déplacement ou protection des meubles, plantes et objets présents sur le balcon.</strong> Enlèvement manuel des gros dépôts comme les feuilles, la terre et les résidus de jardinières avant toute phase humide.</p>\n\n<h3>2. Application de produits et brossage méthodique</h3>\n<p>Application d'un produit nettoyant adapté au support (carrelage, béton, bois composite ou dalles). <strong>Brossage méthodique des surfaces</strong> avec attention particulière aux joints, angles et garde-corps, souvent très encrassés. Pression d'eau douce et maîtrisée pour préserver les matériaux et garantir un résultat uniforme.</p>\n\n<h3>3. Rinçage contrôlé et conseils d'entretien</h3>\n<p>Rinçage contrôlé pour éviter les coulures sur la façade ou chez les voisins du dessous. <strong>Séchage en 2 à 4 heures selon l'ensoleillement.</strong> Recommandations pour un entretien simple : balayage régulier, usage de produits adaptés et nettoyage complet annuel au printemps pour conserver un balcon agréable toute l'année.</p>",
 
       specificChallenges: [
         "Dépôts de poussière fine et pollution liés à la proximité de la Francilienne et des axes routiers, encrassant rapidement les balcons.",
@@ -299,17 +278,11 @@ const city: City = {
         "Compte-rendu détaillé avec photos et conseils pour limiter les récidives et mettre en place des mesures dissuasives.",
       ],
 
-      uniqueIntro: `<p>À Lagny-sur-Marne, les balcons des étages élevés, les loggias et les cours intérieures des immeubles sont souvent envahis par les fientes de pigeons, attirés par les grands arbres des parcs et les corniches des bâtiments historiques près de l'abbatiale. Ces dépôts, en plus d'être inesthétiques et de dégager des odeurs fortes, peuvent transmettre des maladies et rendent l'espace extérieur totalement inutilisable. Les dalles deviennent glissantes, les garde-corps sont recouverts d'une couche épaisse et l'odeur pénètre même dans le logement.</p>
-<p class="mt-4">Les occupants subissent une gêne quotidienne insupportable, avec parfois des tensions entre voisins ou avec la copropriété, notamment lorsque les fientes s'accumulent sur les garde-corps ou les vitres. Vous n'osez plus ouvrir votre porte-fenêtre, vous craignez pour la santé de vos enfants et vous êtes dégoûté de cet espace qui devrait être agréable. <strong>Un nettoyage professionnel est indispensable</strong> pour éliminer ces salissures en profondeur, désinfecter les surfaces avec des produits virucides adaptés et restaurer un environnement sain. Sans intervention spécialisée, le problème persiste et s'aggrave, compromettant le confort et la sécurité des résidents.</p>`,
+      uniqueIntro:
+        "<p>À Lagny-sur-Marne, les balcons des étages élevés, les loggias et les cours intérieures des immeubles sont souvent envahis par les fientes de pigeons, attirés par les grands arbres des parcs et les corniches des bâtiments historiques près de l'abbatiale. Ces dépôts, en plus d'être inesthétiques et de dégager des odeurs fortes, peuvent transmettre des maladies et rendent l'espace extérieur totalement inutilisable. Les dalles deviennent glissantes, les garde-corps sont recouverts d'une couche épaisse et l'odeur pénètre même dans le logement.</p>\n<p class=\"mt-4\">Les occupants subissent une gêne quotidienne insupportable, avec parfois des tensions entre voisins ou avec la copropriété, notamment lorsque les fientes s'accumulent sur les garde-corps ou les vitres. Vous n'osez plus ouvrir votre porte-fenêtre, vous craignez pour la santé de vos enfants et vous êtes dégoûté de cet espace qui devrait être agréable. <strong>Un nettoyage professionnel est indispensable</strong> pour éliminer ces salissures en profondeur, désinfecter les surfaces avec des produits virucides adaptés et restaurer un environnement sain. Sans intervention spécialisée, le problème persiste et s'aggrave, compromettant le confort et la sécurité des résidents.</p>",
 
-      uniqueDeepDive: `<h3>1. Mise en place des protections sanitaires</h3>
-<p>Nos techniciens portent des combinaisons, gants, masques <strong>FFP3</strong> et lunettes pour éviter tout contact avec les poussières contaminées. <strong>Le balcon est isolé avec des bâches</strong> pour protéger l'intérieur du logement et limiter la dispersion des particules vers les pièces de vie.</p>
-
-<h3>2. Humidification, ramassage et conditionnement</h3>
-<p>Les fientes sèches sont humidifiées avant d'être ramassées manuellement avec des outils dédiés, puis conditionnées dans des sacs étanches prévus pour les déchets contaminés. <strong>Aucun résidu n'est laissé sur place</strong> ni jeté dans les ordures ménagères de la résidence.</p>
-
-<h3>3. Nettoyage, désinfection virucide et aération</h3>
-<p>Nettoyage des surfaces (sol, garde-corps, murs) avec des produits adaptés. <strong>Désinfection avec un virucide et bactéricide homologué,</strong> en respectant scrupuleusement le temps de contact nécessaire (15 à 20 minutes). Rinçage final, puis aération complète pendant 24 heures avant toute réutilisation. Installation possible de picots ou de filets anti-pigeons pour limiter les retours.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Mise en place des protections sanitaires</h3>\n<p>Nos techniciens portent des combinaisons, gants, masques <strong>FFP3</strong> et lunettes pour éviter tout contact avec les poussières contaminées. <strong>Le balcon est isolé avec des bâches</strong> pour protéger l'intérieur du logement et limiter la dispersion des particules vers les pièces de vie.</p>\n\n<h3>2. Humidification, ramassage et conditionnement</h3>\n<p>Les fientes sèches sont humidifiées avant d'être ramassées manuellement avec des outils dédiés, puis conditionnées dans des sacs étanches prévus pour les déchets contaminés. <strong>Aucun résidu n'est laissé sur place</strong> ni jeté dans les ordures ménagères de la résidence.</p>\n\n<h3>3. Nettoyage, désinfection virucide et aération</h3>\n<p>Nettoyage des surfaces (sol, garde-corps, murs) avec des produits adaptés. <strong>Désinfection avec un virucide et bactéricide homologué,</strong> en respectant scrupuleusement le temps de contact nécessaire (15 à 20 minutes). Rinçage final, puis aération complète pendant 24 heures avant toute réutilisation. Installation possible de picots ou de filets anti-pigeons pour limiter les retours.</p>",
 
       specificChallenges: [
         "Balcons des étages élevés et loggias des immeubles proches des parcs ou de la Marne, particulièrement exposés aux fientes de pigeons.",
@@ -361,17 +334,11 @@ const city: City = {
         "Conseils pratiques après intervention pour un entretien durable et efficace des textiles.",
       ],
 
-      uniqueIntro: `<p>À Lagny-sur-Marne, les canapés, tapis et matelas des logements subissent les traces de la vie quotidienne : taches de boissons renversées lors des repas en famille, traces de nourriture ou de graisse, poussière accumulée venue des axes routiers proches, poils d'animaux et parfois des odeurs tenaces qui ne partent pas malgré l'aération. Les familles avec enfants ou animaux domestiques, ainsi que les logements proches de la Francilienne ou des parcs, sont particulièrement exposés à ces salissures. Les tissus s'encrassent progressivement, les couleurs ternissent et certaines taches finissent par paraître indélébiles.</p>
-<p class="mt-4">Même avec un entretien régulier, les textiles s'encrassent en profondeur, abritant acariens et allergènes invisibles mais bien présents, ce qui peut causer des gênes respiratoires ou des allergies. Vous finissez par éviter de vous asseoir sur certaines parties du canapé, vous hésitez à recevoir des invités par gêne de l'aspect taché et vous vous réveillez parfois avec le nez qui coule à cause des acariens. <strong>Un nettoyage professionnel permet d'éliminer ces saletés incrustées,</strong> de désodoriser et d'assainir les textiles en profondeur, redonnant ainsi un cadre de vie plus sain et plus agréable. Cela permet aussi de prolonger la durée de vie des tissus et de retrouver le plaisir de s'installer sur un canapé ou un tapis vraiment propre.</p>`,
+      uniqueIntro:
+        "<p>À Lagny-sur-Marne, les canapés, tapis et matelas des logements subissent les traces de la vie quotidienne : taches de boissons renversées lors des repas en famille, traces de nourriture ou de graisse, poussière accumulée venue des axes routiers proches, poils d'animaux et parfois des odeurs tenaces qui ne partent pas malgré l'aération. Les familles avec enfants ou animaux domestiques, ainsi que les logements proches de la Francilienne ou des parcs, sont particulièrement exposés à ces salissures. Les tissus s'encrassent progressivement, les couleurs ternissent et certaines taches finissent par paraître indélébiles.</p>\n<p class=\"mt-4\">Même avec un entretien régulier, les textiles s'encrassent en profondeur, abritant acariens et allergènes invisibles mais bien présents, ce qui peut causer des gênes respiratoires ou des allergies. Vous finissez par éviter de vous asseoir sur certaines parties du canapé, vous hésitez à recevoir des invités par gêne de l'aspect taché et vous vous réveillez parfois avec le nez qui coule à cause des acariens. <strong>Un nettoyage professionnel permet d'éliminer ces saletés incrustées,</strong> de désodoriser et d'assainir les textiles en profondeur, redonnant ainsi un cadre de vie plus sain et plus agréable. Cela permet aussi de prolonger la durée de vie des tissus et de retrouver le plaisir de s'installer sur un canapé ou un tapis vraiment propre.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic des textiles et pré-traitement ciblé</h3>
-<p>Identification précise des textiles (coton, laine, synthétique, velours, cuir) et des taches selon leur nature (graisse, vin, urine) et leur ancienneté. <strong>Application d'un pré-traitement ciblé sur les zones les plus salies,</strong> en utilisant des produits adaptés à chaque type de fibre et de tache. Pour les textiles délicats ou les matelas, ajustement des méthodes pour éviter tout dommage.</p>
-
-<h3>2. Injection-extraction et élimination en profondeur</h3>
-<p>Nettoyage par injection-extraction à l'eau : technique qui permet d'extraire les saletés en profondeur tout en limitant l'humidité résiduelle. <strong>Plusieurs passes sur les zones critiques</strong> (accoudoirs, assises, passages de tapis) pour un résultat homogène. Élimination simultanée des acariens, poussières et allergènes responsables d'inconfort respiratoire.</p>
-
-<h3>3. Aération optimale et conseils d'entretien</h3>
-<p>Aération optimale pour accélérer le séchage, généralement en 4 à 6 heures selon la ventilation de la pièce. <strong>Adaptation aux contraintes du logement</strong> (espace réduit, accès, nécessité de limiter le bruit). Conseils d'entretien pour préserver la propreté des textiles entre deux nettoyages professionnels : aspiration hebdomadaire, traitement immédiat des taches fraîches.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic des textiles et pré-traitement ciblé</h3>\n<p>Identification précise des textiles (coton, laine, synthétique, velours, cuir) et des taches selon leur nature (graisse, vin, urine) et leur ancienneté. <strong>Application d'un pré-traitement ciblé sur les zones les plus salies,</strong> en utilisant des produits adaptés à chaque type de fibre et de tache. Pour les textiles délicats ou les matelas, ajustement des méthodes pour éviter tout dommage.</p>\n\n<h3>2. Injection-extraction et élimination en profondeur</h3>\n<p>Nettoyage par injection-extraction à l'eau : technique qui permet d'extraire les saletés en profondeur tout en limitant l'humidité résiduelle. <strong>Plusieurs passes sur les zones critiques</strong> (accoudoirs, assises, passages de tapis) pour un résultat homogène. Élimination simultanée des acariens, poussières et allergènes responsables d'inconfort respiratoire.</p>\n\n<h3>3. Aération optimale et conseils d'entretien</h3>\n<p>Aération optimale pour accélérer le séchage, généralement en 4 à 6 heures selon la ventilation de la pièce. <strong>Adaptation aux contraintes du logement</strong> (espace réduit, accès, nécessité de limiter le bruit). Conseils d'entretien pour préserver la propreté des textiles entre deux nettoyages professionnels : aspiration hebdomadaire, traitement immédiat des taches fraîches.</p>",
 
       specificChallenges: [
         "Logements familiaux avec enfants et animaux à Lagny-sur-Marne, où les taches organiques et les acariens s'accumulent rapidement.",
@@ -410,119 +377,108 @@ const city: City = {
     },
 
     {
-  serviceKey: "terrasses",
-  heroDescription:
-    "Nettoyage et entretien de terrasses à Lagny-sur-Marne selon le revêtement et l’exposition, élimination des mousses, traces noires et dépôts organiques, avec des méthodes adaptées au contexte fluvial et au bâti ancien du centre-ville.",
-  whyUsBullets: [
-    "Intervention dans l’ensemble des quartiers latignaciens : Centre ancien, Saint-Laurent, Clemenceau, Les Hauts de Lagny, Orly Parc, ZAC des Hauts de Lagny, bords de Marne.",
-    "Méthodes adaptées au bâti local : terrasses de maisons anciennes du centre historique, pavillons des quartiers résidentiels, dallages et sols extérieurs des résidences récentes.",
-    "Protection rigoureuse des abords : bâchage du mobilier, respect des façades et menuiseries, maîtrise des eaux de rinçage à proximité immédiate de la Marne.",
-  ],
-  uniqueIntro: "<p><strong>Lagny-sur-Marne</strong>, commune historique de Seine-et-Marne, s’organise autour de son centre ancien, de quartiers résidentiels pavillonnaires et de secteurs plus récents. Bordée par la <strong>Marne</strong>, la ville bénéficie d’un cadre agréable mais exposé à une humidité régulière sur les surfaces extérieures.</p>\n\n<p class=\"mt-4\">Les terrasses situées à proximité des <strong>bords de Marne</strong>, dans les quartiers anciens ou en lisière d’espaces végétalisés, sont particulièrement sensibles à l’apparition de <strong>mousses, algues et traces noires</strong>. L’ombre, la rosée matinale et le ruissellement accentuent l’encrassement biologique des sols extérieurs.</p>\n\n<p class=\"mt-4\">Le parc immobilier latignacien est varié : <strong>maisons anciennes du centre-ville</strong>, <strong>pavillons des années 60 à 90</strong>, <strong>résidences contemporaines</strong>. Les terrasses y sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>, chaque matériau nécessitant une méthode de nettoyage spécifique.</p>",
-  uniqueDeepDive: `<h3>Diagnostic du support et préparation</h3>
-<p>Avant toute intervention, le revêtement est identifié et son état évalué. Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les zones adjacentes (façades, baies vitrées, garde-corps) sont bâchées, notamment dans les terrasses du centre ancien où les abords sont souvent proches.</p>
-
-<h3>Nettoyage adapté au matériau</h3>
-<p>Le protocole est ajusté selon le support : solution alcaline pour dalles béton et carrelages minéraux, produit spécifique pour pierre naturelle ou reconstituée, traitement dédié pour bois et composite. L’action mécanique par brossage contrôlé permet de décoller mousses, biofilm et salissures incrustées. Le rinçage est effectué à pression maîtrisée afin de préserver joints et surfaces.</p>
-
-<h3>Prévention et conseils d’entretien</h3>
-<p>Lorsque l’exposition à l’humidité est marquée — notamment près de la Marne — un traitement préventif peut être proposé pour limiter la reformation rapide des mousses. Les eaux de rinçage sont dirigées vers les écoulements existants. Des recommandations simples sont transmises pour prolonger le résultat dans le temps.</p>`,
-  specificChallenges: [
-    "Terrasses proches des bords de Marne : humidité persistante favorisant la repousse rapide des mousses et algues.",
-    "Centre-ville ancien : dalles et pierres parfois anciennes ou fragilisées nécessitant une pression de rinçage adaptée.",
-    "Quartiers pavillonnaires arborés : accumulation de feuilles, tanins végétaux et dépôts organiques sur les sols extérieurs.",
-    "Résidences récentes avec carrelage ou grès cérame : reliefs de surface retenant les salissures et traces noires.",
-    "Terrasses partiellement couvertes ou orientées nord : zones durablement humides et glissantes après la pluie.",
-  ],
-  faqAdditions: [
-    {
-      question:
-        "Ma terrasse verdit rapidement à Lagny-sur-Marne, surtout après l’hiver : est-ce normal ?",
-      answer:
-        "<p>La proximité de la Marne et l’humidité hivernale favorisent naturellement le développement des mousses et algues à Lagny-sur-Marne. Après le nettoyage, un traitement préventif ciblé peut ralentir la repousse. Un entretien régulier et l’évacuation des débris végétaux permettent de conserver une terrasse plus propre plus longtemps.</p>",
+      serviceKey: "terrasses",
+      heroDescription:
+        "Nettoyage et entretien de terrasses à Lagny-sur-Marne selon le revêtement et l’exposition, élimination des mousses, traces noires et dépôts organiques, avec des méthodes adaptées au contexte fluvial et au bâti ancien du centre-ville.",
+      whyUsBullets: [
+        "Intervention dans l’ensemble des quartiers latignaciens : Centre ancien, Saint-Laurent, Clemenceau, Les Hauts de Lagny, Orly Parc, ZAC des Hauts de Lagny, bords de Marne.",
+        "Méthodes adaptées au bâti local : terrasses de maisons anciennes du centre historique, pavillons des quartiers résidentiels, dallages et sols extérieurs des résidences récentes.",
+        "Protection rigoureuse des abords : bâchage du mobilier, respect des façades et menuiseries, maîtrise des eaux de rinçage à proximité immédiate de la Marne.",
+      ],
+      uniqueIntro:
+        '<p><strong>Lagny-sur-Marne</strong>, commune historique de Seine-et-Marne, s’organise autour de son centre ancien, de quartiers résidentiels pavillonnaires et de secteurs plus récents. Bordée par la <strong>Marne</strong>, la ville bénéficie d’un cadre agréable mais exposé à une humidité régulière sur les surfaces extérieures.</p>\n\n<p class="mt-4">Les terrasses situées à proximité des <strong>bords de Marne</strong>, dans les quartiers anciens ou en lisière d’espaces végétalisés, sont particulièrement sensibles à l’apparition de <strong>mousses, algues et traces noires</strong>. L’ombre, la rosée matinale et le ruissellement accentuent l’encrassement biologique des sols extérieurs.</p>\n\n<p class="mt-4">Le parc immobilier latignacien est varié : <strong>maisons anciennes du centre-ville</strong>, <strong>pavillons des années 60 à 90</strong>, <strong>résidences contemporaines</strong>. Les terrasses y sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>, chaque matériau nécessitant une méthode de nettoyage spécifique.</p>',
+      uniqueDeepDive:
+        "<h3>Diagnostic du support et préparation</h3>\n<p>Avant toute intervention, le revêtement est identifié et son état évalué. Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les zones adjacentes (façades, baies vitrées, garde-corps) sont bâchées, notamment dans les terrasses du centre ancien où les abords sont souvent proches.</p>\n\n<h3>Nettoyage adapté au matériau</h3>\n<p>Le protocole est ajusté selon le support : solution alcaline pour dalles béton et carrelages minéraux, produit spécifique pour pierre naturelle ou reconstituée, traitement dédié pour bois et composite. L’action mécanique par brossage contrôlé permet de décoller mousses, biofilm et salissures incrustées. Le rinçage est effectué à pression maîtrisée afin de préserver joints et surfaces.</p>\n\n<h3>Prévention et conseils d’entretien</h3>\n<p>Lorsque l’exposition à l’humidité est marquée — notamment près de la Marne — un traitement préventif peut être proposé pour limiter la reformation rapide des mousses. Les eaux de rinçage sont dirigées vers les écoulements existants. Des recommandations simples sont transmises pour prolonger le résultat dans le temps.</p>",
+      specificChallenges: [
+        "Terrasses proches des bords de Marne : humidité persistante favorisant la repousse rapide des mousses et algues.",
+        "Centre-ville ancien : dalles et pierres parfois anciennes ou fragilisées nécessitant une pression de rinçage adaptée.",
+        "Quartiers pavillonnaires arborés : accumulation de feuilles, tanins végétaux et dépôts organiques sur les sols extérieurs.",
+        "Résidences récentes avec carrelage ou grès cérame : reliefs de surface retenant les salissures et traces noires.",
+        "Terrasses partiellement couvertes ou orientées nord : zones durablement humides et glissantes après la pluie.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Ma terrasse verdit rapidement à Lagny-sur-Marne, surtout après l’hiver : est-ce normal ?",
+          answer:
+            "<p>La proximité de la Marne et l’humidité hivernale favorisent naturellement le développement des mousses et algues à Lagny-sur-Marne. Après le nettoyage, un traitement préventif ciblé peut ralentir la repousse. Un entretien régulier et l’évacuation des débris végétaux permettent de conserver une terrasse plus propre plus longtemps.</p>",
+        },
+        {
+          question:
+            "Nettoyez-vous les terrasses en pierre du centre ancien de Lagny sans les abîmer ?",
+          answer:
+            "<p>Les terrasses en pierre naturelle ou ancienne nécessitent des précautions spécifiques. Nous évitons les produits agressifs et adaptons la pression de rinçage pour préserver la porosité et les joints. Le nettoyage est progressif et respectueux du matériau, notamment dans le centre historique.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un simple nettoyage haute pression et votre intervention ?",
+          answer:
+            "<p>Un passage haute pression standard peut dégrader les joints, marquer la surface ou fragiliser les matériaux anciens. Notre intervention combine un produit adapté au support, un brossage mécanique contrôlé et un rinçage calibré, pour un nettoyage efficace sans détériorer la terrasse.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous aussi pour les terrasses en copropriété à Lagny-sur-Marne ?",
+          answer:
+            "<p>Nous intervenons également sur les terrasses communes et cours extérieures de copropriétés. Une coordination préalable avec le syndic permet d’adapter le planning, de sécuriser les zones et de respecter les contraintes du site.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
+
     {
-      question:
-        "Nettoyez-vous les terrasses en pierre du centre ancien de Lagny sans les abîmer ?",
-      answer:
-        "<p>Les terrasses en pierre naturelle ou ancienne nécessitent des précautions spécifiques. Nous évitons les produits agressifs et adaptons la pression de rinçage pour préserver la porosité et les joints. Le nettoyage est progressif et respectueux du matériau, notamment dans le centre historique.</p>",
+      serviceKey: "nettoyage-appartement-maison",
+
+      heroDescription:
+        "Remise en état d’appartements et de maisons à Lagny-sur-Marne (77400) : avant état des lieux, après travaux ou déménagement, avec une méthode structurée pensée pour le centre historique (accès/escaliers) comme pour les quartiers pavillonnaires des hauteurs.",
+
+      whyUsBullets: [
+        "Ciblage “centre ancien” : intervention adaptée aux rues étroites et immeubles sans ascenseur du cœur médiéval (Place de la Fontaine, autour de l’Abbatiale).",
+        "Gestion des finitions : calcaire marqué (77), cuisines/salles d’eau, et contrôle des détails visibles avant remise des clés.",
+        "Organisation fluide côté gare : prise en compte des accès via le pont depuis Lagny-Thorigny et des créneaux à éviter autour du Pont de Fer aux heures de pointe.",
+      ],
+
+      uniqueIntro:
+        '<p>À Lagny-sur-Marne, une remise en état se joue souvent sur deux réalités très différentes : le centre historique dense — avec ses immeubles anciens, ses escaliers plus étroits et une circulation régulée — et les quartiers résidentiels des coteaux (Heurtebise, Hauts de Lagny) où l’on prépare plutôt une maison avant déménagement ou après travaux. Dans les deux cas, l’objectif est le même : remettre le logement “au propre” de façon nette, sans zones oubliées, pour un usage immédiat ou une restitution sereine.</p>\n<p class="mt-4">Le centre-ville autour de la <strong>Place de la Fontaine</strong> concentre beaucoup de commerces et de passages : on y retrouve plus facilement des traces de poussière fine, des sols sollicités, et des contraintes d’accès (digicode, horaires, stationnement). À l’inverse, les secteurs plus récents comme les Tanneries demandent souvent une attention particulière aux baies vitrées, aux rebords et aux finitions, surtout quand le logement est lumineux et très “visible”.</p>\n<p class="mt-4">Pour un <strong>nettoyage appartement maison Lagny-sur-Marne</strong>, Klinova privilégie un déroulé clair : repérage des surfaces et des matériaux, traitement des pièces “sensibles” (cuisine, salle de bain), puis finitions et contrôle final. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Cela permet d’éviter les incompréhensions, surtout lorsqu’il faut gérer un accès compliqué ou un créneau serré avant un état des lieux.</p>',
+
+      uniqueDeepDive:
+        "<h3>Préparation et accès (centre historique vs quartiers résidentiels)</h3>\n<p>À Lagny, la logistique est une partie du résultat : stationnement plus compliqué en centre-ville, circulation régulée, immeubles sans ascenseur, et affluence le jour du marché Place de la Fontaine. Nous cadrons l’accès (clé, digicode, badge) et l’organisation (étage, volume, présence de meubles) avant de démarrer, pour travailler efficacement sans perdre de temps sur place.</p>\n\n<h3>Remise en état “pièce par pièce” avec focus cuisine et sanitaires</h3>\n<p>Le nettoyage suit une logique simple : dépoussiérage structuré, surfaces et points de contact, puis traitement des sols selon le revêtement (parquet ancien en centre, carrelage en pavillon, lino en collectif). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les zones clés (plans, crédences, façades accessibles selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur 77 (robinetterie, parois, joints). Les vitres accessibles et les rebords sont inclus pour homogénéiser le rendu.</p>\n\n<h3>Finitions, vitrages et contrôle avant remise des clés</h3>\n<p>Nous terminons par les finitions : reprises ponctuelles, contrôle des traces visibles et vérification “à l’œil” des zones qui comptent en état des lieux (cuisine, salle d’eau, plinthes, vitrages accessibles). Une aération est recommandée en fin d’intervention pour retrouver rapidement un logement confortable, particulièrement après un nettoyage complet sur plusieurs pièces.</p>",
+
+      specificChallenges: [
+        "Centre-ville médiéval : rues étroites, stationnement régulé et immeubles sans ascenseur (organisation clé).",
+        "Jour de marché Place de la Fontaine : affluence et accès plus compliqué (choix du créneau).",
+        "Accès gare / pont : flux pendulaires côté Lagny-Thorigny, congestion possible autour du Pont de Fer.",
+        "Quartiers récents (Tanneries) : beaucoup de lumière et de vitrages, finitions plus “exposées”.",
+      ],
+
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous pour un état des lieux sortant à Lagny-sur-Marne (77400) ?",
+          answer:
+            "<p>Oui. C’est un cas très fréquent à Lagny, notamment en centre-ville et dans les quartiers récents. Nous cadrons l’accès (digicode/clé), l’étage et le périmètre attendu, puis nous livrons une remise en état propre et cohérente pour la remise des clés.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous faire un nettoyage après travaux dans l’ancien, au cœur de Lagny ?",
+          answer:
+            "<p>Oui. Dans l’ancien, la priorité est de retirer les poussières fines et les traces visibles sans abîmer les matériaux (parquet, peintures, menuiseries). Nous adaptons les gestes et l’humidité, puis nous finissons par un contrôle des détails avant restitution.</p>",
+        },
+        {
+          question:
+            "Est-ce que vous gérez aussi les vitrages (baies, rebords) dans les logements récents des Tanneries ?",
+          answer:
+            "<p>Oui, sur les vitres accessibles. Les logements récents sont très lumineux : un passage soigné sur vitrages et rebords fait une vraie différence sur le rendu final, surtout avant un état des lieux.</p>",
+        },
+        {
+          question:
+            "Le logement peut-il être utilisé le jour même après votre passage ?",
+          answer:
+            "<p>Dans la majorité des cas, oui. Nous maîtrisons l’humidité résiduelle et conseillons une aération en fin d’intervention pour retrouver rapidement un logement confortable, notamment quand il y a plusieurs pièces et des sols sensibles.</p>",
+        },
+      ],
+
+      ctaOverride: "",
     },
-    {
-      question:
-        "Quelle différence entre un simple nettoyage haute pression et votre intervention ?",
-      answer:
-        "<p>Un passage haute pression standard peut dégrader les joints, marquer la surface ou fragiliser les matériaux anciens. Notre intervention combine un produit adapté au support, un brossage mécanique contrôlé et un rinçage calibré, pour un nettoyage efficace sans détériorer la terrasse.</p>",
-    },
-    {
-      question:
-        "Intervenez-vous aussi pour les terrasses en copropriété à Lagny-sur-Marne ?",
-      answer:
-        "<p>Nous intervenons également sur les terrasses communes et cours extérieures de copropriétés. Une coordination préalable avec le syndic permet d’adapter le planning, de sécuriser les zones et de respecter les contraintes du site.</p>",
-    },
-  ],
-  ctaOverride: "",
-},
-
-
-
-    {
-  serviceKey: "nettoyage-appartement-maison",
-
-  heroDescription:
-    "Remise en état d’appartements et de maisons à Lagny-sur-Marne (77400) : avant état des lieux, après travaux ou déménagement, avec une méthode structurée pensée pour le centre historique (accès/escaliers) comme pour les quartiers pavillonnaires des hauteurs.",
-
-  whyUsBullets: [
-    "Ciblage “centre ancien” : intervention adaptée aux rues étroites et immeubles sans ascenseur du cœur médiéval (Place de la Fontaine, autour de l’Abbatiale).",
-    "Gestion des finitions : calcaire marqué (77), cuisines/salles d’eau, et contrôle des détails visibles avant remise des clés.",
-    "Organisation fluide côté gare : prise en compte des accès via le pont depuis Lagny-Thorigny et des créneaux à éviter autour du Pont de Fer aux heures de pointe.",
-  ],
-
-  uniqueIntro: `<p>À Lagny-sur-Marne, une remise en état se joue souvent sur deux réalités très différentes : le centre historique dense — avec ses immeubles anciens, ses escaliers plus étroits et une circulation régulée — et les quartiers résidentiels des coteaux (Heurtebise, Hauts de Lagny) où l’on prépare plutôt une maison avant déménagement ou après travaux. Dans les deux cas, l’objectif est le même : remettre le logement “au propre” de façon nette, sans zones oubliées, pour un usage immédiat ou une restitution sereine.</p>
-<p class="mt-4">Le centre-ville autour de la <strong>Place de la Fontaine</strong> concentre beaucoup de commerces et de passages : on y retrouve plus facilement des traces de poussière fine, des sols sollicités, et des contraintes d’accès (digicode, horaires, stationnement). À l’inverse, les secteurs plus récents comme les Tanneries demandent souvent une attention particulière aux baies vitrées, aux rebords et aux finitions, surtout quand le logement est lumineux et très “visible”.</p>
-<p class="mt-4">Pour un <strong>nettoyage appartement maison Lagny-sur-Marne</strong>, Klinova privilégie un déroulé clair : repérage des surfaces et des matériaux, traitement des pièces “sensibles” (cuisine, salle de bain), puis finitions et contrôle final. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Cela permet d’éviter les incompréhensions, surtout lorsqu’il faut gérer un accès compliqué ou un créneau serré avant un état des lieux.</p>`,
-
-  uniqueDeepDive: `<h3>Préparation et accès (centre historique vs quartiers résidentiels)</h3>
-<p>À Lagny, la logistique est une partie du résultat : stationnement plus compliqué en centre-ville, circulation régulée, immeubles sans ascenseur, et affluence le jour du marché Place de la Fontaine. Nous cadrons l’accès (clé, digicode, badge) et l’organisation (étage, volume, présence de meubles) avant de démarrer, pour travailler efficacement sans perdre de temps sur place.</p>
-
-<h3>Remise en état “pièce par pièce” avec focus cuisine et sanitaires</h3>
-<p>Le nettoyage suit une logique simple : dépoussiérage structuré, surfaces et points de contact, puis traitement des sols selon le revêtement (parquet ancien en centre, carrelage en pavillon, lino en collectif). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les zones clés (plans, crédences, façades accessibles selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur 77 (robinetterie, parois, joints). Les vitres accessibles et les rebords sont inclus pour homogénéiser le rendu.</p>
-
-<h3>Finitions, vitrages et contrôle avant remise des clés</h3>
-<p>Nous terminons par les finitions : reprises ponctuelles, contrôle des traces visibles et vérification “à l’œil” des zones qui comptent en état des lieux (cuisine, salle d’eau, plinthes, vitrages accessibles). Une aération est recommandée en fin d’intervention pour retrouver rapidement un logement confortable, particulièrement après un nettoyage complet sur plusieurs pièces.</p>`,
-
-  specificChallenges: [
-    "Centre-ville médiéval : rues étroites, stationnement régulé et immeubles sans ascenseur (organisation clé).",
-    "Jour de marché Place de la Fontaine : affluence et accès plus compliqué (choix du créneau).",
-    "Accès gare / pont : flux pendulaires côté Lagny-Thorigny, congestion possible autour du Pont de Fer.",
-    "Quartiers récents (Tanneries) : beaucoup de lumière et de vitrages, finitions plus “exposées”.",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Intervenez-vous pour un état des lieux sortant à Lagny-sur-Marne (77400) ?",
-      answer: `<p>Oui. C’est un cas très fréquent à Lagny, notamment en centre-ville et dans les quartiers récents. Nous cadrons l’accès (digicode/clé), l’étage et le périmètre attendu, puis nous livrons une remise en état propre et cohérente pour la remise des clés.</p>`,
-    },
-    {
-      question:
-        "Pouvez-vous faire un nettoyage après travaux dans l’ancien, au cœur de Lagny ?",
-      answer: `<p>Oui. Dans l’ancien, la priorité est de retirer les poussières fines et les traces visibles sans abîmer les matériaux (parquet, peintures, menuiseries). Nous adaptons les gestes et l’humidité, puis nous finissons par un contrôle des détails avant restitution.</p>`,
-    },
-    {
-      question:
-        "Est-ce que vous gérez aussi les vitrages (baies, rebords) dans les logements récents des Tanneries ?",
-      answer: `<p>Oui, sur les vitres accessibles. Les logements récents sont très lumineux : un passage soigné sur vitrages et rebords fait une vraie différence sur le rendu final, surtout avant un état des lieux.</p>`,
-    },
-    {
-      question:
-        "Le logement peut-il être utilisé le jour même après votre passage ?",
-      answer: `<p>Dans la majorité des cas, oui. Nous maîtrisons l’humidité résiduelle et conseillons une aération en fin d’intervention pour retrouver rapidement un logement confortable, notamment quand il y a plusieurs pièces et des sols sensibles.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-}
-
   ],
 };
 

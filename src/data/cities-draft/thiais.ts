@@ -57,19 +57,19 @@ const city = {
   // faq[].answer : HTML autorisé (sans <h3>)
   faq: [
     {
-      question: "Q1 : Comment organisez-vous vos interventions dans les secteurs à fort trafic comme Belle Épine ou la zone Sénia ?",
+      question: "Comment organisez-vous vos interventions dans les secteurs à fort trafic comme Belle Épine ou la zone Sénia ?",
       answer: `<p>Nous planifions les passages en dehors des <strong>heures de pointe</strong> pour limiter la gêne. Pour les copropriétés proches des axes commerciaux, l'intervention débute tôt le matin ou en soirée. Le balisage et la coordination avec le gardien permettent de sécuriser l'accès sans perturber les résidents.</p>`,
     },
     {
-      question: "Q2 : Quel délai prévoir pour obtenir un devis après une demande ?",
+      question: "Quel délai prévoir pour obtenir un devis après une demande ?",
       answer: `<p>Un premier retour intervient sous 24 à 48 heures. Si une visite technique s'impose — parking souterrain, grande surface vitrée, état dégradé — nous la programmons rapidement. Le devis détaillé précise les <strong>étapes, délais et conditions d'accès</strong> nécessaires à l'intervention.</p>`,
     },
     {
-      question: "Q3 : Le stationnement est compliqué à Thiais, comment gérez-vous l'acheminement du matériel ?",
+      question: "Le stationnement est compliqué à Thiais, comment gérez-vous l'acheminement du matériel ?",
       answer: `<p>Nos équipes repèrent les possibilités de stationnement avant chaque intervention : accès parking résidentiel, zone de livraison ou créneau autorisé. Pour les secteurs saturés comme le centre-ville ou Grignon, nous privilégions des <strong>véhicules compacts</strong> et adaptons les horaires d'arrivée.</p>`,
     },
     {
-      question: "Q4 : Pouvez-vous intervenir en urgence sur une dégradation imprévue ?",
+      question: "Pouvez-vous intervenir en urgence sur une dégradation imprévue ?",
       answer: `<p>Oui, nous traitons les demandes urgentes — fuite ayant souillé un hall, dégât localisé avant visite — avec une <strong>réactivité sous 24 à 72 heures</strong> selon disponibilité. Le syndic ou le particulier reçoit une confirmation rapide et un créneau adapté aux contraintes d'accès.</p>`,
     },
   ],
@@ -113,19 +113,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les halls de la Zone Sénia sont parfois étroits : comment organisez-vous l'accès du matériel pour nettoyer la moquette ?",
+          question: "Les halls de la Zone Sénia sont parfois étroits : comment organisez-vous l'accès du matériel pour nettoyer la moquette ?",
           answer: `<p>Nous utilisons des équipements compacts adaptés aux passages resserrés. Le matériel d'injection-extraction est acheminé par étapes, avec balisage temporaire si nécessaire. La coordination préalable avec le gestionnaire permet de définir les créneaux d'intervention les moins contraignants pour les occupants des bureaux.</p>`,
         },
         {
-          question: "Q2 : Après un nettoyage de moquette dans un local commercial proche de la Zone Sénia, combien de temps avant réutilisation complète ?",
+          question: "Après un nettoyage de moquette dans un local commercial proche de la Zone Sénia, combien de temps avant réutilisation complète ?",
           answer: `<p>Le séchage dépend de l'épaisseur des fibres et de la ventilation du local. En général, comptez deux à quatre heures pour une remise en service. Nous procédons à une extraction maximale de l'humidité et pouvons intervenir en soirée pour que les espaces soient opérationnels dès le lendemain matin.</p>`,
         },
         {
-          question: "Q3 : Pour les bureaux de la Zone Sénia, que privilégier entre injection-extraction et encapsulation pour des taches incrustées ?",
+          question: "Pour les bureaux de la Zone Sénia, que privilégier entre injection-extraction et encapsulation pour des taches incrustées ?",
           answer: `<p>L'injection-extraction reste la méthode la plus efficace sur les salissures profondes : elle injecte une solution nettoyante puis aspire immédiatement les résidus. L'encapsulation convient davantage à un entretien régulier sur des moquettes peu encrassées. Nous adaptons le procédé après diagnostic du revêtement.</p>`,
         },
         {
-          question: "Q4 : Les moquettes épaisses des open-spaces de la Zone Sénia risquent-elles d'être abîmées par certains procédés ?",
+          question: "Les moquettes épaisses des open-spaces de la Zone Sénia risquent-elles d'être abîmées par certains procédés ?",
           answer: `<p>Le diagnostic initial identifie la nature des fibres — bouclées, velours, synthétiques ou naturelles. Nous ajustons la pression d'injection et la température de la solution pour préserver la tenue du revêtement. Les moquettes épaisses supportent bien l'injection-extraction lorsque les réglages sont adaptés à leur structure.</p>`,
         },
       ],
@@ -163,19 +163,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment gérez-vous les eaux de lavage dans les parkings proches du Palais Omnisports pour éviter tout rejet non conforme ?",
+          question: "Comment gérez-vous les eaux de lavage dans les parkings proches du Palais Omnisports pour éviter tout rejet non conforme ?",
           answer: `<p>Les eaux chargées en huile et dégraissant sont dirigées vers les regards existants après vérification de leur état. Nous n'évacuons jamais vers des zones non prévues. Un contrôle visuel des rigoles précède chaque intervention pour adapter le débit de l'autolaveuse aux capacités d'écoulement du site.</p>`,
         },
         {
-          question: "Q2 : Les taches d'huile anciennes sur les rampes du Palais Omnisports partent-elles avec un lavage standard ?",
+          question: "Les taches d'huile anciennes sur les rampes du Palais Omnisports partent-elles avec un lavage standard ?",
           answer: `<p>Les dépôts récents s'éliminent avec le dégraissant habituel. Pour les nappes incrustées depuis plusieurs mois, un décapant spécifique est appliqué avant le passage mécanisé. Nous évaluons l'ancienneté des traces lors du diagnostic pour adapter le protocole et éviter plusieurs interventions inutiles.</p>`,
         },
         {
-          question: "Q3 : Quels créneaux recommandez-vous pour intervenir sur le parking du Palais Omnisports sans gêner les événements ?",
+          question: "Quels créneaux recommandez-vous pour intervenir sur le parking du Palais Omnisports sans gêner les événements ?",
           answer: `<p>Nous privilégions les matinées en semaine ou les lendemains de manifestations sportives, quand le parking se vide. Une coordination préalable avec le gestionnaire permet de caler l'intervention sur un créneau où le flux de véhicules reste faible, limitant ainsi le balisage nécessaire.</p>`,
         },
         {
-          question: "Q4 : Quelle différence de méthode entre le parking souterrain et l'aire aérienne du Palais Omnisports ?",
+          question: "Quelle différence de méthode entre le parking souterrain et l'aire aérienne du Palais Omnisports ?",
           answer: `<p>En souterrain, l'autolaveuse travaille en circuit fermé avec aspiration immédiate pour éviter les flaques résiduelles. À l'extérieur, la haute pression peut compléter le lavage sur les zones très encrassées. La ventilation naturelle accélère le séchage en aérien, alors qu'en sous-sol nous adaptons le débit pour limiter l'humidité persistante.</p>`,
         },
       ],
@@ -210,19 +210,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les balcons du quartier Grignon accumulent dépôts verts : quel protocole pour éliminer mousse et pollutions tenaces ?",
+          question: "Les balcons du quartier Grignon accumulent dépôts verts : quel protocole pour éliminer mousse et pollutions tenaces ?",
           answer: `<p>Nous appliquons un produit désincrustant adapté au béton ou au carrelage, suivi d'un brossage mécanique ciblé sur les zones vertes. Le rinçage à pression modérée évite d'endommager les joints tout en éliminant les résidus. Sur les balcons très exposés de Grignon, ce traitement redonne un aspect net en une seule intervention.</p>`,
         },
         {
-          question: "Q2 : Comment nettoyer un balcon carrelé à Grignon sans abîmer les joints ni décaper les carreaux ?",
+          question: "Comment nettoyer un balcon carrelé à Grignon sans abîmer les joints ni décaper les carreaux ?",
           answer: `<p>Le choix du produit et de la pression dépend de l'état des joints. Sur carrelage ancien, nous privilégions un brossage manuel avec solution douce, puis un rinçage basse pression. Les joints fragilisés sont traités avec précaution pour éviter tout déchaussement. Le résultat reste homogène sans altérer la surface.</p>`,
         },
         {
-          question: "Q3 : Pour les balcons en étage élevé à Grignon, quelles contraintes d'accès devez-vous anticiper ?",
+          question: "Pour les balcons en étage élevé à Grignon, quelles contraintes d'accès devez-vous anticiper ?",
           answer: `<p>Nous vérifions la disponibilité de l'ascenseur pour le matériel et l'accord du syndic si nécessaire. L'intervention est planifiée pour limiter la gêne dans les parties communes. En copropriété, nous informons les voisins concernés par d'éventuelles projections ou bruits ponctuels.</p>`,
         },
         {
-          question: "Q4 : Faut-il adapter la méthode selon balcon ouvert ou loggia fermée dans les résidences de Grignon ?",
+          question: "Faut-il adapter la méthode selon balcon ouvert ou loggia fermée dans les résidences de Grignon ?",
           answer: "<p>Oui. Une loggia fermée retient davantage l'humidité et favorise les moisissures sur les murs latéraux. Nous ajustons le traitement en conséquence : produit anti-mousse renforcé, attention particulière aux angles. Sur balcon ouvert, l'évacuation de l'eau est plus simple mais la pollution atmosphérique souvent plus marquée.</p>",
         },
       ],
@@ -260,19 +260,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Des fientes abondantes sur un balcon proche du Parc de l'Europe : quels risques sanitaires et premières mesures à prendre ?",
+          question: "Des fientes abondantes sur un balcon proche du Parc de l'Europe : quels risques sanitaires et premières mesures à prendre ?",
           answer: `<p>Les fientes de pigeons peuvent contenir des agents pathogènes transmissibles par inhalation de poussières. Évitez de balayer à sec et ne touchez pas les dépôts sans protection. Fermez les fenêtres et contactez un professionnel équipé pour un assainissement sécurisé avec désinfection.</p>`,
         },
         {
-          question: "Q2 : Pour un balcon exposé près du Parc de l'Europe, quels équipements de protection utilisez-vous lors du traitement ?",
+          question: "Pour un balcon exposé près du Parc de l'Europe, quels équipements de protection utilisez-vous lors du traitement ?",
           answer: `<p>L'intervenant porte systématiquement un masque FFP2, des gants étanches, des lunettes de protection et une combinaison jetable. La zone est confinée par bâchage avant toute manipulation. Ces précautions évitent la dispersion des particules contaminées vers l'intérieur ou les logements voisins.</p>`,
         },
         {
-          question: "Q3 : Après nettoyage des fientes sur un balcon à Thiais, quelle méthode de désinfection garantit l'élimination des agents pathogènes ?",
+          question: "Après nettoyage des fientes sur un balcon à Thiais, quelle méthode de désinfection garantit l'élimination des agents pathogènes ?",
           answer: `<p>Un produit virucide et bactéricide homologué est pulvérisé sur l'ensemble des surfaces nettoyées. Le temps de contact recommandé est respecté avant rinçage. Cette étape élimine les micro-organismes résiduels et neutralise les odeurs persistantes liées à la contamination organique.</p>`,
         },
         {
-          question: "Q4 : Comment organisez-vous l'évacuation des déchets après désinfection d'un balcon contaminé par fientes à Thiais ?",
+          question: "Comment organisez-vous l'évacuation des déchets après désinfection d'un balcon contaminé par fientes à Thiais ?",
           answer: `<p>Les fientes collectées et les équipements jetables sont conditionnés dans des sacs étanches fermés hermétiquement. Ces déchets sont évacués par nos soins en fin d'intervention. Aucun résidu contaminé ne reste sur place, et le balcon peut être réutilisé après le délai d'aération indiqué.</p>`,
         },
       ],
@@ -310,19 +310,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Pour un canapé en tissu non déhoussable aux Grands Champs, quelles techniques permettent un nettoyage en profondeur sans abîmer le textile ?",
+          question: "Pour un canapé en tissu non déhoussable aux Grands Champs, quelles techniques permettent un nettoyage en profondeur sans abîmer le textile ?",
           answer: `<p>Nous réalisons d'abord un test sur une zone cachée pour vérifier la tenue des couleurs. L'injection-extraction à basse pression déloge les salissures sans détremper le tissu. La température est ajustée selon la fibre : plus douce sur velours, plus franche sur coton épais. Le textile reste intact et retrouve sa netteté.</p>`,
         },
         {
-          question: "Q2 : Après un nettoyage professionnel du canapé familial, combien de temps faut-il attendre avant de pouvoir s'y asseoir à nouveau ?",
+          question: "Après un nettoyage professionnel du canapé familial, combien de temps faut-il attendre avant de pouvoir s'y asseoir à nouveau ?",
           answer: `<p>Le séchage dépend de l'épaisseur du tissu et de l'aération de la pièce. En général, comptez entre 4 et 8 heures pour un canapé standard. Nous conseillons d'ouvrir les fenêtres ou d'activer la ventilation pour accélérer le processus. Un textile bien extrait sèche plus vite qu'un textile détrempé.</p>`,
         },
         {
-          question: "Q3 : En cas d'urine d'animal incrustée sur un tapis, comment neutraliser les odeurs et récupérer le textile ?",
+          question: "En cas d'urine d'animal incrustée sur un tapis, comment neutraliser les odeurs et récupérer le textile ?",
           answer: `<p>L'urine pénètre en profondeur et laisse des cristaux odorants dans les fibres. Un pré-traitement enzymatique casse ces molécules avant l'extraction. L'injection-extraction retire ensuite les résidus en profondeur. Si la tache est ancienne, plusieurs passages peuvent être nécessaires pour un résultat satisfaisant.</p>`,
         },
         {
-          question: "Q4 : Si l'ascenseur est hors service dans une résidence comme Les Grands Champs, comment s'organise l'intervention pour un canapé à l'étage ?",
+          question: "Si l'ascenseur est hors service dans une résidence comme Les Grands Champs, comment s'organise l'intervention pour un canapé à l'étage ?",
           answer: `<p>Nous montons le matériel par les escaliers si l'accès le permet. Le poids de l'équipement reste gérable pour deux intervenants. En cas d'étage élevé ou d'escalier très étroit, nous évaluons la faisabilité avant le rendez-vous. Aucun frais supplémentaire n'est appliqué sans accord préalable.</p>`,
         },
       ],
@@ -360,19 +360,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Ma terrasse en pierre proche de l'Avenue de Versailles est noircie par la pollution : comment la nettoyer sans abîmer le matériau ?",
+          question: "Ma terrasse en pierre proche de l'Avenue de Versailles est noircie par la pollution : comment la nettoyer sans abîmer le matériau ?",
           answer: `<p>La pierre naturelle exposée au trafic routier accumule des particules fines qui pénètrent en surface. Un nettoyage basse pression associé à un produit désincrustant adapté permet de retirer ce voile sans attaquer la pierre. La pression est ajustée selon la porosité du matériau pour éviter toute dégradation.</p>`,
         },
         {
-          question: "Q2 : Ma terrasse développe de la mousse chaque année malgré les nettoyages : quel traitement pour éviter que ça revienne ?",
+          question: "Ma terrasse développe de la mousse chaque année malgré les nettoyages : quel traitement pour éviter que ça revienne ?",
           answer: `<p>Les zones humides et ombragées favorisent la repousse rapide des mousses et lichens. Après le nettoyage mécanique, un traitement anti-mousse préventif est appliqué. Ce produit ralentit la réapparition des dépôts verts pendant plusieurs mois, selon l'exposition et les conditions climatiques locales.</p>`,
         },
         {
-          question: "Q3 : Faut-il utiliser la haute pression sur une terrasse en dalles très encrassée ou privilégier un nettoyage plus doux ?",
+          question: "Faut-il utiliser la haute pression sur une terrasse en dalles très encrassée ou privilégier un nettoyage plus doux ?",
           answer: `<p>Cela dépend du type de dalles et de leur état. Les dalles béton ou carrelage supportent généralement une pression contrôlée. Les dalles gravillonnées ou les joints fragiles nécessitent une approche plus douce. Le diagnostic initial permet de choisir la méthode adaptée sans risquer d'endommager la surface.</p>`,
         },
         {
-          question: "Q4 : Pour la terrasse d'un restaurant à Thiais Village, comment gérer le mobilier et les plantes pendant l'intervention ?",
+          question: "Pour la terrasse d'un restaurant à Thiais Village, comment gérer le mobilier et les plantes pendant l'intervention ?",
           answer: `<p>Le mobilier est déplacé ou regroupé et bâché pour le protéger des projections. Les jardinières sont écartées de la zone de travail. L'intervention peut être planifiée en dehors des heures d'ouverture pour limiter la gêne. Le mobilier est remis en place une fois le séchage suffisant.</p>`,
         },
       ],
@@ -410,19 +410,19 @@ const city = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Pour un nettoyage fin de chantier dans un appartement proche de la gare Pont de Rungis, quelles différences avec un ménage classique ?",
+          question: "Pour un nettoyage fin de chantier dans un appartement proche de la gare Pont de Rungis, quelles différences avec un ménage classique ?",
           answer: `<p>Le protocole fin de chantier inclut le retrait des voiles de ciment, des projections de peinture et des résidus de colle. Chaque surface est traitée avec des produits adaptés au support. Un ménage classique se limite au dépoussiérage et lavage courant, sans traitement des traces de travaux.</p>`,
         },
         {
-          question: "Q2 : Si l'agence demande une intervention urgente après état des lieux près de la gare, quels sont vos délais réels ?",
+          question: "Si l'agence demande une intervention urgente après état des lieux près de la gare, quels sont vos délais réels ?",
           answer: `<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement et notre planning. Pour les demandes très urgentes liées à une remise de clés imminente, un créneau prioritaire peut être proposé après échange téléphonique avec l'agence ou le propriétaire.</p>`,
         },
         {
-          question: "Q3 : Comment calculez-vous le tarif pour la remise en état d'un appartement T3 ou T4 à Thiais avant état des lieux ?",
+          question: "Comment calculez-vous le tarif pour la remise en état d'un appartement T3 ou T4 à Thiais avant état des lieux ?",
           answer: `<p>Le devis tient compte de la surface, du nombre de pièces, de l'état général et du type d'intervention demandé. Un appartement après travaux nécessite plus de temps qu'un logement simplement libéré. Nous établissons un chiffrage après description précise ou visite rapide si nécessaire.</p>`,
         },
         {
-          question: "Q4 : Après travaux avec traces de peinture ou colle sur les sols, quel niveau de propreté puis-je attendre ?",
+          question: "Après travaux avec traces de peinture ou colle sur les sols, quel niveau de propreté puis-je attendre ?",
           answer: `<p>L'objectif est un logement prêt pour l'état des lieux : sols sans traces visibles, surfaces propres, sanitaires désinfectés. Les résidus de peinture et colle sont retirés avec solvants adaptés. Le résultat dépend de l'état initial, mais nous visons un rendu conforme aux attentes d'une agence ou d'un bailleur.</p>`,
         },
       ],

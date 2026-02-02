@@ -1,4 +1,4 @@
-CITY_CHECK: Villemomble
+
 
 import type { City } from "~/types/geo";
 
@@ -61,19 +61,19 @@ const city: City = {
 
   faq: [
     {
-      question: "Q1 : Comment organisez-vous les interventions dans les secteurs où le stationnement est saturé ?",
+      question: "Comment organisez-vous les interventions dans les secteurs où le stationnement est saturé ?",
       answer: `<p>Autour de la gare et en centre-ville, nous privilégions des <strong>créneaux matinaux</strong> avant le pic de circulation. Le matériel est chargé en véhicule compact, et nous identifions en amont les zones de dépose autorisées. Si besoin, un opérateur reste au véhicule pendant que l'autre intervient.</p>`
     },
     {
-      question: "Q2 : Pouvez-vous intervenir rapidement en cas de dégradation imprévue ?",
+      question: "Pouvez-vous intervenir rapidement en cas de dégradation imprévue ?",
       answer: `<p>Oui. Pour les situations urgentes — souillure accidentelle, dégât des eaux, incident en parking — nous réorganisons le planning sous <strong>24 à 48 heures</strong> selon disponibilité. Un contact direct avec le gestionnaire permet de valider le périmètre avant déplacement.</p>`
     },
     {
-      question: "Q3 : Comment se passe la prise de contact pour un devis à Villemomble ?",
+      question: "Comment se passe la prise de contact pour un devis à Villemomble ?",
       answer: `<p>Un premier échange téléphonique ou par mail permet de cerner le besoin. Si nécessaire, nous programmons une <strong>visite technique</strong> pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit sous quelques jours, sans engagement.</p>`
     },
     {
-      question: "Q4 : Travaillez-vous avec les syndics et bailleurs du secteur ?",
+      question: "Travaillez-vous avec les syndics et bailleurs du secteur ?",
       answer: `<p>Oui, nous collaborons régulièrement avec des syndics et gestionnaires en Seine-Saint-Denis. Nous adaptons nos <strong>modalités de facturation</strong> et de reporting à leurs process internes, et assurons un interlocuteur dédié pour le suivi des interventions récurrentes.</p>`
     }
   ],
@@ -118,19 +118,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment acheminer le matériel dans les cages d'escalier étroites des immeubles du centre-ville de Villemomble ?",
+          question: "Comment acheminer le matériel dans les cages d'escalier étroites des immeubles du centre-ville de Villemomble ?",
           answer: `<p>Nous utilisons des équipements compacts et modulables, transportables par sections dans les passages réduits. Le repérage préalable permet d'identifier les contraintes d'accès et d'organiser l'intervention sans encombrer les circulations ni gêner les résidents aux heures de passage.</p>`
         },
         {
-          question: "Q2 : Quelle méthode privilégier pour les moquettes de bureaux situés près de la gare RER E, injection-extraction ou encapsulation ?",
+          question: "Quelle méthode privilégier pour les moquettes de bureaux situés près de la gare RER E, injection-extraction ou encapsulation ?",
           answer: `<p>L'injection-extraction reste la technique la plus efficace pour extraire les salissures profondes accumulées par le flux quotidien de navetteurs. Elle convient aux fibres denses des espaces professionnels et permet un séchage maîtrisé compatible avec une reprise d'activité rapide.</p>`
         },
         {
-          question: "Q3 : Comment traiter des taches anciennes incrustées sur une moquette d'entrée très fréquentée, comme celles de la Grande Rue ?",
+          question: "Comment traiter des taches anciennes incrustées sur une moquette d'entrée très fréquentée, comme celles de la Grande Rue ?",
           answer: `<p>Un pré-détachage ciblé est appliqué sur les zones marquées avant le traitement général. Les produits utilisés agissent sur les résidus organiques et minéraux sans altérer les fibres. Plusieurs passes d'extraction permettent de réduire significativement les traces, même anciennes.</p>`
         },
         {
-          question: "Q4 : Après intervention sur la moquette d'une salle comme celle du Théâtre Georges Brassens, quel délai avant remise en service ?",
+          question: "Après intervention sur la moquette d'une salle comme celle du Théâtre Georges Brassens, quel délai avant remise en service ?",
           answer: `<p>Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du lieu. En conditions normales, comptez entre quatre et huit heures avant de pouvoir circuler à nouveau. Nous communiquons un créneau précis après évaluation sur place.</p>`
         }
       ],
@@ -173,19 +173,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment gérer les eaux de lavage dans les parkings souterrains des résidences des Marnaudes ?",
+          question: "Comment gérer les eaux de lavage dans les parkings souterrains des résidences des Marnaudes ?",
           answer: `<p>Les eaux chargées en dégraissant sont orientées vers les regards et rigoles existants. Nous vérifions leur état avant intervention pour éviter tout engorgement. Aucun rejet n'est effectué vers l'extérieur ou les parties communes. Le syndic reçoit un compte-rendu précisant les volumes traités et l'état des évacuations.</p>`
         },
         {
-          question: "Q2 : Quels traitements pour enlever les taches d'huile anciennes sur les sols béton des parkings proches de la gare ?",
+          question: "Quels traitements pour enlever les taches d'huile anciennes sur les sols béton des parkings proches de la gare ?",
           answer: `<p>Un dégraissant alcalin est appliqué sur les zones marquées, suivi d'un temps de contact adapté à l'ancienneté des dépôts. L'autolaveuse ou la haute pression déloge ensuite les résidus incrustés. Plusieurs passes peuvent être nécessaires sur les taches les plus tenaces. Le résultat dépend de l'état initial du revêtement.</p>`
         },
         {
-          question: "Q3 : Quels horaires sont recommandés pour les interventions sur le parking du stade Georges Pompidou ?",
+          question: "Quels horaires sont recommandés pour les interventions sur le parking du stade Georges Pompidou ?",
           answer: `<p>Les créneaux en journée hors événements sportifs ou en début de matinée limitent la gêne. Nous consultons le planning d'occupation avec le gestionnaire pour éviter les jours de matchs ou d'entraînements. Les interventions de nuit restent possibles si le parking est éclairé et accessible.</p>`
         },
         {
-          question: "Q4 : Faut-il adapter les méthodes selon parking aérien ou souterrain à Villemomble ?",
+          question: "Faut-il adapter les méthodes selon parking aérien ou souterrain à Villemomble ?",
           answer: `<p>Oui. Les parkings souterrains en béton nécessitent une gestion stricte des eaux et une ventilation suffisante pour le séchage. Les parkings aériens en enrobé supportent mieux la haute pression mais exposent davantage aux salissures atmosphériques. Le diagnostic initial détermine le matériel et les produits adaptés à chaque configuration.</p>`
         }
       ],
@@ -222,19 +222,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quel protocole pour nettoyer sans abîmer les joints de carrelage sur les balcons du Plateau d'Avron ?",
+          question: "Quel protocole pour nettoyer sans abîmer les joints de carrelage sur les balcons du Plateau d'Avron ?",
           answer: `<p>Le carrelage est d'abord testé sur une zone discrète. La pression est réglée pour déloger les salissures sans creuser les joints. Un brossage manuel complète le passage sur les zones fragiles. Le rinçage final est contrôlé pour ne pas saturer les joints d'eau.</p>`
         },
         {
-          question: "Q2 : Comment gérer l'eau et éviter les coulures sur les balcons donnant sur Avenue de Rosny ?",
+          question: "Comment gérer l'eau et éviter les coulures sur les balcons donnant sur Avenue de Rosny ?",
           answer: `<p>Un bâchage est posé en périphérie du balcon avant le rinçage. L'eau est dirigée vers l'évacuation existante ou aspirée au fur et à mesure. Les façades et balcons inférieurs sont surveillés pendant toute l'intervention pour stopper immédiatement en cas de débordement.</p>`
         },
         {
-          question: "Q3 : Comment éliminer dépôts verts et mousses sur balcons exposés au Parc de la Garenne ?",
+          question: "Comment éliminer dépôts verts et mousses sur balcons exposés au Parc de la Garenne ?",
           answer: `<p>Un produit anti-mousse est appliqué et laissé agir avant brossage. Les zones les plus incrustées sont traitées mécaniquement. Le rinçage élimine les résidus sans disperser les spores. Un traitement préventif peut être proposé pour ralentir la réapparition.</p>`
         },
         {
-          question: "Q4 : Pour balcons d'étage en centre-ville avec rue étroite, quelle organisation pour intervenir sans nacelle ?",
+          question: "Pour balcons d'étage en centre-ville avec rue étroite, quelle organisation pour intervenir sans nacelle ?",
           answer: `<p>L'intervention se fait depuis l'intérieur du logement. Le matériel est monté par les parties communes après accord du gardien ou du syndic. Les horaires sont calés pour limiter la gêne dans les escaliers. Aucune occupation de voirie n'est nécessaire.</p>`
         }
       ],
@@ -271,19 +271,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quels risques sanitaires justifient une intervention urgente sur les balcons proches du Parc Jean Mermoz ?",
+          question: "Quels risques sanitaires justifient une intervention urgente sur les balcons proches du Parc Jean Mermoz ?",
           answer: `<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les voies respiratoires. Sur les balcons exposés aux oiseaux du Parc Jean Mermoz, l'accumulation crée un environnement propice à leur prolifération. Une désinfection rapide limite les risques pour les occupants.</p>`
         },
         {
-          question: "Q2 : Quel équipement et protocole appliquez-vous pour traiter les fientes sur les corniches anciennes de la Grande Rue ?",
+          question: "Quel équipement et protocole appliquez-vous pour traiter les fientes sur les corniches anciennes de la Grande Rue ?",
           answer: `<p>L'intervenant porte masque FFP2, gants, lunettes et combinaison jetable. Sur les corniches des immeubles anciens, nous humidifions d'abord pour éviter la dispersion des poussières. Le nettoyage respecte les supports fragiles, suivi d'une désinfection avec produit homologué.</p>`
         },
         {
-          question: "Q3 : Quelle solution de désinfection utilisez-vous sur les balcons donnant sur le Parc de la Garenne ?",
+          question: "Quelle solution de désinfection utilisez-vous sur les balcons donnant sur le Parc de la Garenne ?",
           answer: `<p>Nous appliquons un produit virucide et bactéricide homologué, avec un temps de contact respecté selon les recommandations du fabricant. Cette désinfection élimine les agents pathogènes présents dans les fientes accumulées sur les balcons exposés aux oiseaux du parc.</p>`
         },
         {
-          question: "Q4 : Comment gérez-vous l'évacuation des déchets sur les balcons donnant sur cour intérieure aux Marnaudes ?",
+          question: "Comment gérez-vous l'évacuation des déchets sur les balcons donnant sur cour intérieure aux Marnaudes ?",
           answer: `<p>Les fientes sont collectées et conditionnées en sacs étanches pour éviter toute dispersion. Dans les résidences Les Marnaudes avec cours intérieures, nous organisons le passage par les parties communes en protégeant les zones traversées. L'évacuation se fait de manière sécurisée.</p>`
         }
       ],
@@ -320,19 +320,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment adaptez-vous la méthode de nettoyage selon le textile des canapés dans les pavillons du quartier Les Coquetiers ?",
+          question: "Comment adaptez-vous la méthode de nettoyage selon le textile des canapés dans les pavillons du quartier Les Coquetiers ?",
           answer: `<p>Chaque tissu est testé avant intervention. Un coton résistant supporte une extraction appuyée, tandis qu'un velours ou une fibre fragile nécessite une pression réduite et une température modérée. Cette adaptation préserve les couleurs et la texture d'origine.</p>`
         },
         {
-          question: "Q2 : Après le nettoyage d'un canapé, combien de temps faut-il pour réduire les allergènes dans un salon familial avec enfants et animaux ?",
+          question: "Après le nettoyage d'un canapé, combien de temps faut-il pour réduire les allergènes dans un salon familial avec enfants et animaux ?",
           answer: `<p>L'extraction en profondeur élimine une grande partie des acariens et poils incrustés dès l'intervention. L'amélioration est perceptible immédiatement après séchage complet, généralement sous quelques heures selon la ventilation du logement.</p>`
         },
         {
-          question: "Q3 : Quel est le temps de séchage moyen pour un canapé nettoyé dans un appartement proche de la gare du Raincy-Villemomble ?",
+          question: "Quel est le temps de séchage moyen pour un canapé nettoyé dans un appartement proche de la gare du Raincy-Villemomble ?",
           answer: `<p>Comptez entre 4 et 8 heures selon l'épaisseur du tissu et l'aération disponible. Dans un appartement bien ventilé, le séchage est souvent plus rapide. Nous vous transmettons des consignes précises pour accélérer la remise en service.</p>`
         },
         {
-          question: "Q4 : Comment traitez-vous les taches anciennes sur un tapis laine dans un logement du secteur Grande Rue ?",
+          question: "Comment traitez-vous les taches anciennes sur un tapis laine dans un logement du secteur Grande Rue ?",
           answer: `<p>Les taches incrustées reçoivent un pré-traitement enzymatique adapté à leur nature (café, vin, graisse). La laine étant sensible, la température et le temps de contact sont ajustés. Certaines marques très anciennes peuvent s'atténuer sans disparaître totalement.</p>`
         }
       ],
@@ -369,19 +369,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quel protocole appliquez-vous pour nettoyer une terrasse bois sans abîmer les lames dans les pavillons du Plateau d'Avron ?",
+          question: "Quel protocole appliquez-vous pour nettoyer une terrasse bois sans abîmer les lames dans les pavillons du Plateau d'Avron ?",
           answer: `<p>Le bois reçoit un lavage basse pression avec une buse adaptée, jamais de jet direct à forte intensité. Un produit dégrisant est appliqué si les lames ont grisé. Le sens des fibres est respecté lors du brossage pour éviter l'écaillage, et le séchage complet est attendu avant toute remise en circulation.</p>`
         },
         {
-          question: "Q2 : Comment éliminer mousses et lichens sur les terrasses proches du Parc de la Garenne ?",
+          question: "Comment éliminer mousses et lichens sur les terrasses proches du Parc de la Garenne ?",
           answer: `<p>L'ombre et l'humidité favorisent ces dépôts verts. Un traitement anti-mousse est pulvérisé après le nettoyage mécanique, puis laissé agir plusieurs jours. Ce produit freine la repousse pendant plusieurs mois. Un second passage peut être proposé en fin de saison humide si l'exposition reste défavorable.</p>`
         },
         {
-          question: "Q3 : Haute pression ou lavage doux pour dalles gravillonnées : que préconisez-vous sur les terrasses pavillonnaires ?",
+          question: "Haute pression ou lavage doux pour dalles gravillonnées : que préconisez-vous sur les terrasses pavillonnaires ?",
           answer: `<p>Les dalles gravillonnées perdent leurs granulats sous un jet trop puissant. Nous privilégions une pression modérée combinée à un brossage rotatif. Les joints sont traités séparément si nécessaire. Cette approche préserve l'aspect d'origine tout en éliminant les salissures incrustées entre les reliefs.</p>`
         },
         {
-          question: "Q4 : Quelle est la meilleure saison pour un décrassage complet de terrasse à Villemomble ?",
+          question: "Quelle est la meilleure saison pour un décrassage complet de terrasse à Villemomble ?",
           answer: `<p>Le printemps — entre mars et mai — offre des conditions idéales : températures douces, sol ressuyé après l'hiver, et terrasse prête pour la belle saison. L'automne convient aussi pour éliminer les dépôts de feuilles avant l'humidité hivernale. Nous évitons les périodes de gel ou de fortes pluies.</p>`
         }
       ],
@@ -418,19 +418,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quelle différence entre un ménage standard et un nettoyage fin de chantier dans un pavillon ancien du quartier de l'Époque ?",
+          question: "Quelle différence entre un ménage standard et un nettoyage fin de chantier dans un pavillon ancien du quartier de l'Époque ?",
           answer: `<p>Le ménage fin de chantier inclut l'élimination des résidus de travaux : poussière de plâtre, traces de peinture, colle sur les sols. Les surfaces sont traitées en profondeur, y compris les recoins et les menuiseries, ce qu'un ménage courant ne couvre pas.</p>`
         },
         {
-          question: "Q2 : Quel délai d'intervention pour un nettoyage urgent avant état des lieux près de la Gare du Raincy - Villemomble ?",
+          question: "Quel délai d'intervention pour un nettoyage urgent avant état des lieux près de la Gare du Raincy - Villemomble ?",
           answer: `<p>Selon la disponibilité et la surface du bien, une intervention peut être planifiée sous 24 à 48 heures. Pour les demandes très urgentes, un échange préalable permet d'évaluer la faisabilité et d'ajuster le planning en conséquence.</p>`
         },
         {
-          question: "Q3 : Quel niveau de propreté obtenu pour un appartement T2 ou T3 avant remise des clés en relocation ?",
+          question: "Quel niveau de propreté obtenu pour un appartement T2 ou T3 avant remise des clés en relocation ?",
           answer: `<p>L'objectif est un logement sans traces visibles : sols propres, sanitaires détartrés, vitres intérieures nettoyées, placards essuyés. Le résultat vise à éviter toute retenue sur le dépôt de garantie lors de l'état des lieux de sortie.</p>`
         },
         {
-          question: "Q4 : Quels produits et précautions pour les parquets massifs des maisons meulières à Villemomble ?",
+          question: "Quels produits et précautions pour les parquets massifs des maisons meulières à Villemomble ?",
           answer: `<p>Les parquets anciens sont traités avec des produits à pH neutre et un minimum d'eau pour éviter le gonflement du bois. L'aspiration précède le lavage, et le séchage est contrôlé pour préserver l'état du revêtement.</p>`
         }
       ],

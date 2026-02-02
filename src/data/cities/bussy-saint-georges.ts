@@ -14,14 +14,8 @@ const city: City = {
   customDescription:
     "Intégrée à la ville nouvelle de Marne-la-Vallée, Bussy-Saint-Georges combine une forte densité résidentielle autour de la gare RER A et des zones pavillonnaires comme le Sycomore. L'entretien régulier des moquettes, parkings et balcons y préserve directement la valeur patrimoniale des copropriétés face aux flux des axes A4 et A104.",
 
-  hubIntro: `<p>À Bussy-Saint-Georges, Klinova accompagne syndics, bailleurs et occupants dans une <strong>gestion structurée de la propreté et de la maintenance des immeubles</strong>. Notre approche protocolisée et notre lecture des contraintes locales (accès, stationnement, horaires, circulation) permettent des interventions nettes, maîtrisées et adaptées au rythme des résidences.</p>
-<p class="mt-4">Nous intervenons aussi bien dans les ensembles collectifs proches de la gare RER A que dans les secteurs résidentiels (Sycomore, Vieux Village) et les zones d'activité. <strong>Chaque intervention suit un protocole documenté, avec compte-rendu photographique et recommandations d’entretien</strong>, pour simplifier le suivi côté gestion et sécuriser les décisions en AG.</p>
-<ul>
-  <li><strong>Proximité opérationnelle :</strong> équipes en Île-de-France, réactivité renforcée sur Marne-la-Vallée.</li>
-  <li><strong>Protocoles adaptés :</strong> halls, circulations, balcons et parkings traités selon les supports.</li>
-  <li><strong>Coordination :</strong> intervention par zones, gestion des accès et rotations de véhicules.</li>
-  <li><strong>Suivi qualité :</strong> compte-rendu, photos, recommandations d’entretien après intervention.</li>
-</ul>`,
+  hubIntro:
+    '<p>À Bussy-Saint-Georges, Klinova accompagne syndics, bailleurs et occupants dans une <strong>gestion structurée de la propreté et de la maintenance des immeubles</strong>. Notre approche protocolisée et notre lecture des contraintes locales (accès, stationnement, horaires, circulation) permettent des interventions nettes, maîtrisées et adaptées au rythme des résidences.</p>\n<p class="mt-4">Nous intervenons aussi bien dans les ensembles collectifs proches de la gare RER A que dans les secteurs résidentiels (Sycomore, Vieux Village) et les zones d\'activité. <strong>Chaque intervention suit un protocole documenté, avec compte-rendu photographique et recommandations d’entretien</strong>, pour simplifier le suivi côté gestion et sécuriser les décisions en AG.</p>\n<ul>\n  <li><strong>Proximité opérationnelle :</strong> équipes en Île-de-France, réactivité renforcée sur Marne-la-Vallée.</li>\n  <li><strong>Protocoles adaptés :</strong> halls, circulations, balcons et parkings traités selon les supports.</li>\n  <li><strong>Coordination :</strong> intervention par zones, gestion des accès et rotations de véhicules.</li>\n  <li><strong>Suivi qualité :</strong> compte-rendu, photos, recommandations d’entretien après intervention.</li>\n</ul>',
 
   citySpecificChallenges: [
     "Encrassement rapide des moquettes dans les halls d'immeubles proches de la gare RER A, lié au fort passage et aux particules fines.",
@@ -38,18 +32,18 @@ const city: City = {
     "Clos, Tillet, Génitoy et Golf",
   ],
 
-nearbyCities: [
-        "lagny-sur-marne",
-        "torcy",
-        "serris",
-        "emerainville",
-        "vaires-sur-marne",
-        "pontault-combault",
-        "champs-sur-marne",
-        "le-plessis-trevise",
-        "gournay-sur-marne",
-        "chelles"
-      ],
+  nearbyCities: [
+    "lagny-sur-marne",
+    "torcy",
+    "serris",
+    "emerainville",
+    "vaires-sur-marne",
+    "pontault-combault",
+    "champs-sur-marne",
+    "le-plessis-trevise",
+    "gournay-sur-marne",
+    "chelles",
+  ],
 
   landmarks: [
     "Mairie de Bussy-Saint-Georges",
@@ -110,15 +104,11 @@ nearbyCities: [
         "Organisation en parties communes : balisage, travail par paliers, gêne limitée et accès sécurisés.",
       ],
 
-      uniqueIntro: `<p>À Bussy-Saint-Georges, les moquettes des halls, cages d'escalier et paliers s'encrassent vite : poussières fines, traces de chaussures, taches ponctuelles et fibres qui se ternissent sous le passage. Le résultat se voit immédiatement et donne une impression de laisser-aller, même dans des résidences récentes.</p>
-<p class="mt-4">Les immeubles proches de la gare RER A et des axes A4/A104 sont particulièrement exposés, avec des entrées de boue, d'humidité au rez-de-chaussée et une sollicitation continue. Un nettoyage professionnel structuré permet d'assainir le revêtement, de récupérer un rendu plus uniforme et de prolonger la durée de vie de la moquette.</p>`,
+      uniqueIntro:
+        "<p>À Bussy-Saint-Georges, les moquettes des halls, cages d'escalier et paliers s'encrassent vite : poussières fines, traces de chaussures, taches ponctuelles et fibres qui se ternissent sous le passage. Le résultat se voit immédiatement et donne une impression de laisser-aller, même dans des résidences récentes.</p>\n<p class=\"mt-4\">Les immeubles proches de la gare RER A et des axes A4/A104 sont particulièrement exposés, avec des entrées de boue, d'humidité au rez-de-chaussée et une sollicitation continue. Un nettoyage professionnel structuré permet d'assainir le revêtement, de récupérer un rendu plus uniforme et de prolonger la durée de vie de la moquette.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic technique sur place</h3>
-<p>Nous évaluons la moquette (type de fibre, épaisseur, sens de pose), le niveau d'encrassement et les taches à traiter. Nous repérons les contraintes d'accès (escaliers, ascenseurs étroits, paliers) et la ventilation disponible.</p>
-<h3>2. Préparation et protection des circulations</h3>
-<p>Les zones sont balisées, les angles et plinthes protégés et le travail est organisé par paliers/étages pour maintenir un passage sécurisé. La coordination avec le syndic permet d'informer les occupants et de choisir un créneau qui limite les perturbations.</p>
-<h3>3. Injection-extraction + finitions</h3>
-<p>Pré-traitement des zones marquées, agitation/brossage contrôlé, puis injection-extraction avec aspiration puissante pour retirer l'eau chargée. Les zones de fort trafic (entrées, devant les ascenseurs) reçoivent des passes supplémentaires. En fin d'intervention, une ventilation ciblée est recommandée.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic technique sur place</h3>\n<p>Nous évaluons la moquette (type de fibre, épaisseur, sens de pose), le niveau d'encrassement et les taches à traiter. Nous repérons les contraintes d'accès (escaliers, ascenseurs étroits, paliers) et la ventilation disponible.</p>\n<h3>2. Préparation et protection des circulations</h3>\n<p>Les zones sont balisées, les angles et plinthes protégés et le travail est organisé par paliers/étages pour maintenir un passage sécurisé. La coordination avec le syndic permet d'informer les occupants et de choisir un créneau qui limite les perturbations.</p>\n<h3>3. Injection-extraction + finitions</h3>\n<p>Pré-traitement des zones marquées, agitation/brossage contrôlé, puis injection-extraction avec aspiration puissante pour retirer l'eau chargée. Les zones de fort trafic (entrées, devant les ascenseurs) reçoivent des passes supplémentaires. En fin d'intervention, une ventilation ciblée est recommandée.</p>",
 
       specificChallenges: [
         "Autour de la gare RER A, le passage et les particules fines accélèrent le ternissement des fibres et l'encrassement en surface.",
@@ -171,15 +161,11 @@ nearbyCities: [
         "Organisation par zones : rotation véhicules, horaires cadrés, coordination simple avec le syndic.",
       ],
 
-      uniqueIntro: `<p>À Bussy-Saint-Georges, les parkings souterrains et aériens s'encrassent vite : poussière noire, boues, traces de pneus, taches d'huile, murs marqués par les frottements et marquages au sol qui se ternissent. Combiné à un éclairage parfois limité, l’ensemble donne rapidement une impression de négligence, surtout près de la gare RER A et des axes A4/A104.</p>
-<p class="mt-4">Résidents, employés et visiteurs perçoivent immédiatement la dégradation : inconfort, salissures sur chaussures, risques de glissade sur zones grasses et perte de lisibilité des circulations. Un décrassage structuré remet le parking "au propre" et améliore la perception de sécurité, sans désorganiser l'usage quotidien.</p>`,
+      uniqueIntro:
+        '<p>À Bussy-Saint-Georges, les parkings souterrains et aériens s\'encrassent vite : poussière noire, boues, traces de pneus, taches d\'huile, murs marqués par les frottements et marquages au sol qui se ternissent. Combiné à un éclairage parfois limité, l’ensemble donne rapidement une impression de négligence, surtout près de la gare RER A et des axes A4/A104.</p>\n<p class="mt-4">Résidents, employés et visiteurs perçoivent immédiatement la dégradation : inconfort, salissures sur chaussures, risques de glissade sur zones grasses et perte de lisibilité des circulations. Un décrassage structuré remet le parking "au propre" et améliore la perception de sécurité, sans désorganiser l\'usage quotidien.</p>',
 
-      uniqueDeepDive: `<h3>1. Diagnostic et préparation</h3>
-<p>Nous évaluons le support (béton, peinture, résine), l'état des zones grasses, la lisibilité des marquages, l'évacuation des eaux et les contraintes d'accès (hauteur, rampes, virages, zones étroites). Le parking est découpé en zones avec une signalisation simple pour organiser la rotation des véhicules et limiter la gêne.</p>
-<h3>2. Décrassage mécanique ciblé</h3>
-<p>Pré-dégraissage sur les zones marquées, brossage mécanique, puis lavage à l'autolaveuse. Les taches d'huile et dépôts collants sont traités localement avec un produit adapté. Les rampes et zones de freinage sont travaillées en priorité pour retrouver de l'adhérence.</p>
-<h3>3. Finitions et contrôle</h3>
-<p>Traitement des angles, pieds de murs, virages, zones de passage piéton et emplacements très sollicités. Nous vérifions l'absence de stagnation d'eau et la propreté visuelle globale. En fin d'intervention, nous proposons une fréquence d’entretien réaliste selon le trafic.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic et préparation</h3>\n<p>Nous évaluons le support (béton, peinture, résine), l'état des zones grasses, la lisibilité des marquages, l'évacuation des eaux et les contraintes d'accès (hauteur, rampes, virages, zones étroites). Le parking est découpé en zones avec une signalisation simple pour organiser la rotation des véhicules et limiter la gêne.</p>\n<h3>2. Décrassage mécanique ciblé</h3>\n<p>Pré-dégraissage sur les zones marquées, brossage mécanique, puis lavage à l'autolaveuse. Les taches d'huile et dépôts collants sont traités localement avec un produit adapté. Les rampes et zones de freinage sont travaillées en priorité pour retrouver de l'adhérence.</p>\n<h3>3. Finitions et contrôle</h3>\n<p>Traitement des angles, pieds de murs, virages, zones de passage piéton et emplacements très sollicités. Nous vérifions l'absence de stagnation d'eau et la propreté visuelle globale. En fin d'intervention, nous proposons une fréquence d’entretien réaliste selon le trafic.</p>",
 
       specificChallenges: [
         "Près de la gare RER A et des axes A4/A104, les parkings accumulent particules fines, pneus et poussière noire, difficiles à décrocher sans dégraissage.",
@@ -228,15 +214,11 @@ nearbyCities: [
         "Gestion de l'eau maîtrisée : évacuations, raclettes, finitions pour éviter les coulures.",
       ],
 
-      uniqueIntro: `<p>À Bussy-Saint-Georges, les balcons et terrasses s'encrassent vite : joints qui noircissent, dépôts verts (mousses, feuilles), traces de terre, coulures d'eau et parfois graisses liées à l'usage (barbecue, jardinières). L'espace extérieur perd rapidement en confort et en apparence, alors qu'il devrait rester facile à vivre au quotidien.</p>
-<p class="mt-4">Entre les zones proches des axes A4/A104, les secteurs plus arborés (parc du Génitoy, golf) et les résidences en étage, les salissures varient mais le constat est le même : un nettoyage structuré redonne un aspect net et limite les traces persistantes, sans risque pour les voisins du dessous.</p>`,
+      uniqueIntro:
+        "<p>À Bussy-Saint-Georges, les balcons et terrasses s'encrassent vite : joints qui noircissent, dépôts verts (mousses, feuilles), traces de terre, coulures d'eau et parfois graisses liées à l'usage (barbecue, jardinières). L'espace extérieur perd rapidement en confort et en apparence, alors qu'il devrait rester facile à vivre au quotidien.</p>\n<p class=\"mt-4\">Entre les zones proches des axes A4/A104, les secteurs plus arborés (parc du Génitoy, golf) et les résidences en étage, les salissures varient mais le constat est le même : un nettoyage structuré redonne un aspect net et limite les traces persistantes, sans risque pour les voisins du dessous.</p>",
 
-      uniqueDeepDive: `<h3>1. Préparation et protection</h3>
-<p>Nous protégeons la porte-fenêtre, les murs adjacents et les zones sensibles. Les objets et plantes sont déplacés ou couverts selon la configuration. Les dépôts (feuilles, terre, déchets) sont retirés avant lavage pour préserver les évacuations et éviter les bouchons.</p>
-<h3>2. Nettoyage adapté au support</h3>
-<p>Nous appliquons un produit adapté au revêtement (carrelage, béton, dalles) puis travaillons les zones difficiles : joints, angles, seuils, garde-corps. La pression est contrôlée et utilisée uniquement si nécessaire, pour éviter d'ouvrir les joints ou de fragiliser les supports.</p>
-<h3>3. Gestion de l'eau et finitions</h3>
-<p>La gestion de l'eau est cadrée dès le départ : nous guidons l'écoulement vers les évacuations et réalisons les finitions à la raclette pour éviter les coulures. Le balcon est laissé propre, visuellement net et prêt à être réutilisé dès que la surface est sèche.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Préparation et protection</h3>\n<p>Nous protégeons la porte-fenêtre, les murs adjacents et les zones sensibles. Les objets et plantes sont déplacés ou couverts selon la configuration. Les dépôts (feuilles, terre, déchets) sont retirés avant lavage pour préserver les évacuations et éviter les bouchons.</p>\n<h3>2. Nettoyage adapté au support</h3>\n<p>Nous appliquons un produit adapté au revêtement (carrelage, béton, dalles) puis travaillons les zones difficiles : joints, angles, seuils, garde-corps. La pression est contrôlée et utilisée uniquement si nécessaire, pour éviter d'ouvrir les joints ou de fragiliser les supports.</p>\n<h3>3. Gestion de l'eau et finitions</h3>\n<p>La gestion de l'eau est cadrée dès le départ : nous guidons l'écoulement vers les évacuations et réalisons les finitions à la raclette pour éviter les coulures. Le balcon est laissé propre, visuellement net et prêt à être réutilisé dès que la surface est sèche.</p>",
 
       specificChallenges: [
         "Près des axes A4/A104, les balcons accumulent poussière fine et traces noires qui se fixent dans les joints.",
@@ -287,15 +269,11 @@ nearbyCities: [
         "Intervention organisée : protection du logement, discrétion, évacuation propre des déchets souillés.",
       ],
 
-      uniqueIntro: `<p>À Bussy-Saint-Georges, certaines loggias et balcons peuvent être fortement souillés par les fientes de pigeons : couches épaisses, odeurs persistantes, traces corrosives sur les garde-corps et les murs. Au-delà de l'aspect visuel, cela rend l'espace inutilisable et augmente le risque sanitaire, notamment lorsque les fientes sèchent et se transforment en poussières.</p>
-<p class="mt-4">Dans les secteurs proches des parcs, grands arbres et zones calmes (Vieux Village, Centre-Ville), la présence de pigeons peut s'installer dans le temps. Un nettoyage et une désinfection réalisés avec un protocole strict permettent d'assainir le balcon, de limiter la contamination et de repartir sur une base propre.</p>`,
+      uniqueIntro:
+        "<p>À Bussy-Saint-Georges, certaines loggias et balcons peuvent être fortement souillés par les fientes de pigeons : couches épaisses, odeurs persistantes, traces corrosives sur les garde-corps et les murs. Au-delà de l'aspect visuel, cela rend l'espace inutilisable et augmente le risque sanitaire, notamment lorsque les fientes sèchent et se transforment en poussières.</p>\n<p class=\"mt-4\">Dans les secteurs proches des parcs, grands arbres et zones calmes (Vieux Village, Centre-Ville), la présence de pigeons peut s'installer dans le temps. Un nettoyage et une désinfection réalisés avec un protocole strict permettent d'assainir le balcon, de limiter la contamination et de repartir sur une base propre.</p>",
 
-      uniqueDeepDive: `<h3>1. Protection et sécurisation</h3>
-<p>Nous intervenons avec des EPI complets, dont un masque <strong>FFP3</strong>, et protégeons les zones de passage (intérieur, seuils, murs adjacents). Les surfaces sont humidifiées pour éviter la remise en suspension des poussières et limiter la dispersion.</p>
-<h3>2. Ramassage et nettoyage</h3>
-<p>Les fientes et nids sont retirés manuellement, conditionnés dans des sacs étanches, puis les surfaces (sol, garde-corps, murs) sont nettoyées avec une méthode adaptée. Les zones incrustées sont brossées pour éliminer les résidus et retrouver un support propre.</p>
-<h3>3. Désinfection et finitions</h3>
-<p>Une désinfection avec un désinfectant professionnel est appliquée en respectant le temps de contact, puis nous réalisons un rinçage/essuyage selon le support. Le balcon est laissé propre, sans résidus, et nous vous indiquons un délai de sécurité avant réutilisation.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Protection et sécurisation</h3>\n<p>Nous intervenons avec des EPI complets, dont un masque <strong>FFP3</strong>, et protégeons les zones de passage (intérieur, seuils, murs adjacents). Les surfaces sont humidifiées pour éviter la remise en suspension des poussières et limiter la dispersion.</p>\n<h3>2. Ramassage et nettoyage</h3>\n<p>Les fientes et nids sont retirés manuellement, conditionnés dans des sacs étanches, puis les surfaces (sol, garde-corps, murs) sont nettoyées avec une méthode adaptée. Les zones incrustées sont brossées pour éliminer les résidus et retrouver un support propre.</p>\n<h3>3. Désinfection et finitions</h3>\n<p>Une désinfection avec un désinfectant professionnel est appliquée en respectant le temps de contact, puis nous réalisons un rinçage/essuyage selon le support. Le balcon est laissé propre, sans résidus, et nous vous indiquons un délai de sécurité avant réutilisation.</p>",
 
       specificChallenges: [
         "Dans les secteurs proches des parcs et grands arbres, les fientes et nids peuvent s'accumuler rapidement en étage.",
@@ -346,15 +324,11 @@ nearbyCities: [
         "Organisation simple à domicile : protection des zones sensibles, intervention propre, conseils de séchage.",
       ],
 
-      uniqueIntro: `<p>À Bussy-Saint-Georges, dans les logements familiaux du Sycomore, du Clos ou du Centre-Ville, le canapé est au cœur de la vie quotidienne : goûters des enfants, siestes du chat, soirées entre amis. Résultat ? <strong>Taches de boissons, traces de nourriture, poils d'animaux et poussières s'accumulent dans les fibres</strong>, même avec un aspirateur régulier.</p>
-<p class="mt-4">L'aspect se ternit, les odeurs persistent, et on hésite à inviter. <strong>Un nettoyage en profondeur redonne fraîcheur et confort</strong>, sans avoir à changer de mobilier ni à tout nettoyer soi-même. Vous retrouvez un intérieur accueillant, plus sain et agréable pour toute la famille.</p>`,
+      uniqueIntro:
+        "<p>À Bussy-Saint-Georges, dans les logements familiaux du Sycomore, du Clos ou du Centre-Ville, le canapé est au cœur de la vie quotidienne : goûters des enfants, siestes du chat, soirées entre amis. Résultat ? <strong>Taches de boissons, traces de nourriture, poils d'animaux et poussières s'accumulent dans les fibres</strong>, même avec un aspirateur régulier.</p>\n<p class=\"mt-4\">L'aspect se ternit, les odeurs persistent, et on hésite à inviter. <strong>Un nettoyage en profondeur redonne fraîcheur et confort</strong>, sans avoir à changer de mobilier ni à tout nettoyer soi-même. Vous retrouvez un intérieur accueillant, plus sain et agréable pour toute la famille.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic et préparation</h3>
-<p>Nous identifions la matière (coton, laine, synthétique, velours), les zones fragiles et la nature des taches (graisse, boisson, organique). Les zones sensibles sont protégées, et un pré-traitement ciblé est appliqué là où c'est nécessaire.</p>
-<h3>2. Nettoyage par injection-extraction (ou méthode adaptée)</h3>
-<p>Le nettoyage est réalisé en injectant une solution adaptée dans la fibre, puis en extrayant immédiatement les salissures et l'eau chargée. La pression et le nombre de passes sont ajustés selon le textile pour éviter d'abîmer, tout en obtenant un résultat visuel net et un rinçage propre.</p>
-<h3>3. Extraction maximale et conseils de séchage</h3>
-<p>Nous extrayons un maximum d'eau pour limiter le temps de séchage. Selon la pièce, une aération ou une ventilation simple suffit. Nous vous donnons des consignes claires pour retrouver un textile sec et agréable le plus vite possible.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic et préparation</h3>\n<p>Nous identifions la matière (coton, laine, synthétique, velours), les zones fragiles et la nature des taches (graisse, boisson, organique). Les zones sensibles sont protégées, et un pré-traitement ciblé est appliqué là où c'est nécessaire.</p>\n<h3>2. Nettoyage par injection-extraction (ou méthode adaptée)</h3>\n<p>Le nettoyage est réalisé en injectant une solution adaptée dans la fibre, puis en extrayant immédiatement les salissures et l'eau chargée. La pression et le nombre de passes sont ajustés selon le textile pour éviter d'abîmer, tout en obtenant un résultat visuel net et un rinçage propre.</p>\n<h3>3. Extraction maximale et conseils de séchage</h3>\n<p>Nous extrayons un maximum d'eau pour limiter le temps de séchage. Selon la pièce, une aération ou une ventilation simple suffit. Nous vous donnons des consignes claires pour retrouver un textile sec et agréable le plus vite possible.</p>",
 
       specificChallenges: [
         "Dans les foyers avec enfants et animaux, taches organiques et poils s'incrustent et demandent un pré-traitement ciblé.",
@@ -381,7 +355,8 @@ nearbyCities: [
             "<p><strong>Le temps dépend de l'épaisseur, de la ventilation et de la température.</strong> En général, un canapé sèche plus vite qu'un matelas ou un tapis épais. Nous extrayons un maximum d'eau et vous indiquons la meilleure aération pour accélérer, sans risque d'auréoles.</p>",
         },
         {
-          question: "Que dois-je préparer avant votre intervention à domicile ?",
+          question:
+            "Que dois-je préparer avant votre intervention à domicile ?",
           answer:
             "<p><strong>Il suffit de libérer l'accès à la zone</strong> et de nous signaler les taches prioritaires. Nous protégeons les abords, adaptons la méthode au textile et vous expliquons les étapes. L'intervention est organisée pour rester propre et limiter la gêne pendant le passage.</p>",
         },
@@ -399,19 +374,10 @@ nearbyCities: [
         "Protocole ajusté aux constructions locales : terrasses des pavillons contemporains, dallages des maisons d'architecture briarde, aménagements récents des programmes neufs.",
         "Précautions rigoureuses pour les abords : bâchage du mobilier extérieur, protection des massifs plantés et des espaces végétalisés, maîtrise des eaux de rinçage.",
       ],
-      uniqueIntro: `<p><strong>Bussy-Saint-Georges</strong>, intégrée à la ville nouvelle de <strong>Marne-la-Vallée</strong> depuis 1985, a vu sa population passer de 500 à plus de 27 000 habitants en quatre décennies. Cette croissance s'est accompagnée d'un développement urbain qui mêle aujourd'hui le <strong>vieux village briard</strong> aux <strong>quartiers pavillonnaires contemporains</strong> et à l'<strong>écoquartier du Sycomore</strong>.</p>
-
-<p class="mt-4">Surnommée la « ville aux parcs et jardins » avec ses 155 hectares d'espaces verts, Bussy bénéficie d'un environnement végétal dense — parc du Génitoy, lisière de la forêt de Ferrières, bassins écologiques — qui génère une humidité favorable au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par la végétation abondante subissent un encrassement accéléré.</p>
-
-<p class="mt-4">Le diagnostic initial identifie le type de support — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans altérer le revêtement.</p>`,
-      uniqueDeepDive: `<h3>État des lieux et préparation</h3>
-<p>Mobilier de jardin, jardinières et équipements extérieurs sont déplacés ou protégés. Les façades et menuiseries adjacentes sont bâchées. Un balayage préliminaire retire les débris végétaux — feuilles, brindilles, pollens — particulièrement abondants dans cette ville-nature.</p>
-
-<h3>Traitement adapté au matériau</h3>
-<p>Le produit est choisi selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
-
-<h3>Protection et recommandations d'entretien</h3>
-<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des espaces verts environnants. Les eaux de rinçage sont orientées vers les points d'écoulement du jardin. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Bussy.</p>`,
+      uniqueIntro:
+        "<p><strong>Bussy-Saint-Georges</strong>, intégrée à la ville nouvelle de <strong>Marne-la-Vallée</strong> depuis 1985, a vu sa population passer de 500 à plus de 27 000 habitants en quatre décennies. Cette croissance s'est accompagnée d'un développement urbain qui mêle aujourd'hui le <strong>vieux village briard</strong> aux <strong>quartiers pavillonnaires contemporains</strong> et à l'<strong>écoquartier du Sycomore</strong>.</p>\n\n<p class=\"mt-4\">Surnommée la « ville aux parcs et jardins » avec ses 155 hectares d'espaces verts, Bussy bénéficie d'un environnement végétal dense — parc du Génitoy, lisière de la forêt de Ferrières, bassins écologiques — qui génère une humidité favorable au développement des mousses, algues et lichens sur les surfaces extérieures. Les terrasses ombragées par la végétation abondante subissent un encrassement accéléré.</p>\n\n<p class=\"mt-4\">Le diagnostic initial identifie le type de support — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong> ou <strong>bois composite</strong> — et détermine le traitement approprié pour restaurer l'aspect d'origine sans altérer le revêtement.</p>",
+      uniqueDeepDive:
+        "<h3>État des lieux et préparation</h3>\n<p>Mobilier de jardin, jardinières et équipements extérieurs sont déplacés ou protégés. Les façades et menuiseries adjacentes sont bâchées. Un balayage préliminaire retire les débris végétaux — feuilles, brindilles, pollens — particulièrement abondants dans cette ville-nature.</p>\n\n<h3>Traitement adapté au matériau</h3>\n<p>Le produit est choisi selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>\n\n<h3>Protection et recommandations d'entretien</h3>\n<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité des espaces verts environnants. Les eaux de rinçage sont orientées vers les points d'écoulement du jardin. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Bussy.</p>",
       specificChallenges: [
         "Pavillons contemporains des années 90-2000 : dalles béton ou pierre reconstituée avec joints parfois fragilisés par les cycles gel-dégel seine-et-marnais.",
         "Maisons d'architecture briarde du Vieux Village : matériaux anciens nécessitant un traitement à pH contrôlé pour préserver leur authenticité.",
@@ -448,71 +414,60 @@ nearbyCities: [
       ctaOverride: "",
     },
 
-
     {
-  serviceKey: "nettoyage-appartement-maison",
+      serviceKey: "nettoyage-appartement-maison",
 
-  heroDescription:
-    "Remise en état soignée d’appartements et de maisons avant état des lieux ou remise des clés, avec diagnostic préalable et méthodes adaptées à chaque surface.",
+      heroDescription:
+        "Remise en état soignée d’appartements et de maisons avant état des lieux ou remise des clés, avec diagnostic préalable et méthodes adaptées à chaque surface.",
 
-  whyUsBullets: [
-    "Connaissance des logements locaux : pavillons familiaux et résidences récentes de Bussy-Saint-Georges.",
-    "Traitement cohérent de l’ensemble du logement : sols, cuisines, sanitaires, vitrages accessibles et finitions.",
-    "Organisation fiable pour délais courts : intervention calée sur les contraintes d’état des lieux et de remise des clés.",
-  ],
+      whyUsBullets: [
+        "Connaissance des logements locaux : pavillons familiaux et résidences récentes de Bussy-Saint-Georges.",
+        "Traitement cohérent de l’ensemble du logement : sols, cuisines, sanitaires, vitrages accessibles et finitions.",
+        "Organisation fiable pour délais courts : intervention calée sur les contraintes d’état des lieux et de remise des clés.",
+      ],
 
-  uniqueIntro: `<p>Organiser un <strong>nettoyage appartement maison Bussy-Saint-Georges</strong> intervient souvent à un moment clé : départ d’un locataire, emménagement, ou préparation d’un état des lieux. Dans une ville structurée par le RER A et des quartiers résidentiels comme le Sycomore ou le Golf, les logements connaissent des rotations régulières qui laissent peu de place à l’approximation.</p>
-<p class="mt-4">Sols marqués par l’usage, dépôts de calcaire dans les pièces d’eau, cuisine encrassée, vitrages ternis ou détails oubliés : un logement peut sembler propre à première vue tout en restant insuffisant pour une restitution sans réserve. Pavillons et appartements récents présentent en outre des matériaux variés qui exigent une approche maîtrisée.</p>
-<p class="mt-4">Klinova intervient avec une méthode claire : diagnostic du logement, choix des techniques selon les surfaces, gestion des accès (digicodes, badges) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> L’objectif est de rendre un logement propre, lisible et prêt à être présenté.</p>`,
+      uniqueIntro:
+        '<p>Organiser un <strong>nettoyage appartement maison Bussy-Saint-Georges</strong> intervient souvent à un moment clé : départ d’un locataire, emménagement, ou préparation d’un état des lieux. Dans une ville structurée par le RER A et des quartiers résidentiels comme le Sycomore ou le Golf, les logements connaissent des rotations régulières qui laissent peu de place à l’approximation.</p>\n<p class="mt-4">Sols marqués par l’usage, dépôts de calcaire dans les pièces d’eau, cuisine encrassée, vitrages ternis ou détails oubliés : un logement peut sembler propre à première vue tout en restant insuffisant pour une restitution sans réserve. Pavillons et appartements récents présentent en outre des matériaux variés qui exigent une approche maîtrisée.</p>\n<p class="mt-4">Klinova intervient avec une méthode claire : diagnostic du logement, choix des techniques selon les surfaces, gestion des accès (digicodes, badges) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> L’objectif est de rendre un logement propre, lisible et prêt à être présenté.</p>',
 
-  uniqueDeepDive: `<h3>Diagnostic et préparation</h3>
-<p>Chaque intervention débute par une évaluation précise : type de logement, nature des salissures (usage courant, logement inoccupé, résidus légers après intervention technique), surfaces sensibles et contraintes d’accès propres aux résidences de Bussy-Saint-Georges. Les éléments fragiles sont protégés et l’ordre de traitement est planifié.</p>
+      uniqueDeepDive:
+        "<h3>Diagnostic et préparation</h3>\n<p>Chaque intervention débute par une évaluation précise : type de logement, nature des salissures (usage courant, logement inoccupé, résidus légers après intervention technique), surfaces sensibles et contraintes d’accès propres aux résidences de Bussy-Saint-Georges. Les éléments fragiles sont protégés et l’ordre de traitement est planifié.</p>\n\n<h3>Nettoyage par zones</h3>\n<p>La <strong>remise en état du logement</strong> s’effectue pièce par pièce. Les sols sont nettoyés selon leur revêtement, les plinthes et points de contact sont traités, la cuisine fait l’objet d’un <strong>dégraissage cuisine</strong> ciblé, et la salle de bain d’un <strong>détartrage sanitaires</strong> adapté. Les vitres accessibles et finitions visuelles complètent l’intervention, qu’il s’agisse d’un <strong>nettoyage avant état des lieux</strong> ou d’un <strong>nettoyage après déménagement</strong>.</p>\n\n<h3>Contrôle et restitution</h3>\n<p>Un contrôle visuel est réalisé dans chaque pièce, suivi d’une aération du logement. L’intervention se conclut par une restitution claire, permettant une réoccupation immédiate ou une présentation sereine lors de l’état des lieux.</p>",
 
-<h3>Nettoyage par zones</h3>
-<p>La <strong>remise en état du logement</strong> s’effectue pièce par pièce. Les sols sont nettoyés selon leur revêtement, les plinthes et points de contact sont traités, la cuisine fait l’objet d’un <strong>dégraissage cuisine</strong> ciblé, et la salle de bain d’un <strong>détartrage sanitaires</strong> adapté. Les vitres accessibles et finitions visuelles complètent l’intervention, qu’il s’agisse d’un <strong>nettoyage avant état des lieux</strong> ou d’un <strong>nettoyage après déménagement</strong>.</p>
+      specificChallenges: [
+        "Rotations locatives fréquentes autour de la gare RER A, avec délais d’intervention réduits.",
+        "Présence majoritaire de logements récents aux surfaces sensibles nécessitant des méthodes adaptées.",
+        "Accès sécurisés par badges et digicodes dans la plupart des résidences.",
+        "Exigence élevée sur les finitions visuelles lors des états des lieux sortants.",
+      ],
 
-<h3>Contrôle et restitution</h3>
-<p>Un contrôle visuel est réalisé dans chaque pièce, suivi d’une aération du logement. L’intervention se conclut par une restitution claire, permettant une réoccupation immédiate ou une présentation sereine lors de l’état des lieux.</p>`,
+      faqAdditions: [
+        {
+          question:
+            "Dans quels cas recommandez-vous une remise en état complète plutôt qu’un simple passage de ménage ?",
+          answer:
+            "<p>Une remise en état est pertinente lorsque le logement doit être restitué ou réoccupé rapidement : état des lieux, mise en location, logement resté inoccupé. Elle permet de traiter les zones souvent négligées lors d’un entretien courant, comme les plinthes, points de contact et finitions visibles.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous pour un état des lieux sortant dans les logements proches du RER A ?",
+          answer:
+            "<p>Oui. Les secteurs proches de la gare connaissent des rotations fréquentes. L’intervention est organisée en tenant compte des contraintes d’accès et de stationnement afin de respecter les délais imposés par l’agence ou le propriétaire.</p>",
+        },
+        {
+          question:
+            "Comment adaptez-vous vos méthodes aux parquets et sols récents des résidences de Bussy-Saint-Georges ?",
+          answer:
+            "<p>Lors du diagnostic, chaque sol est identifié. Les parquets sont nettoyés sans excès d’humidité, et les carrelages récents avec des produits compatibles afin de préserver leur aspect et éviter toute trace ou altération.</p>",
+        },
+        {
+          question:
+            "Le logement peut-il être utilisé immédiatement après votre intervention ?",
+          answer:
+            "<p>Dans la majorité des situations, oui. Les méthodes employées limitent l’humidité résiduelle et une aération est prévue en fin d’intervention, permettant une réutilisation rapide du logement.</p>",
+        },
+      ],
 
-  specificChallenges: [
-    "Rotations locatives fréquentes autour de la gare RER A, avec délais d’intervention réduits.",
-    "Présence majoritaire de logements récents aux surfaces sensibles nécessitant des méthodes adaptées.",
-    "Accès sécurisés par badges et digicodes dans la plupart des résidences.",
-    "Exigence élevée sur les finitions visuelles lors des états des lieux sortants.",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Dans quels cas recommandez-vous une remise en état complète plutôt qu’un simple passage de ménage ?",
-      answer: `<p>Une remise en état est pertinente lorsque le logement doit être restitué ou réoccupé rapidement : état des lieux, mise en location, logement resté inoccupé. Elle permet de traiter les zones souvent négligées lors d’un entretien courant, comme les plinthes, points de contact et finitions visibles.</p>`,
+      ctaOverride: "",
     },
-    {
-      question:
-        "Intervenez-vous pour un état des lieux sortant dans les logements proches du RER A ?",
-      answer: `<p>Oui. Les secteurs proches de la gare connaissent des rotations fréquentes. L’intervention est organisée en tenant compte des contraintes d’accès et de stationnement afin de respecter les délais imposés par l’agence ou le propriétaire.</p>`,
-    },
-    {
-      question:
-        "Comment adaptez-vous vos méthodes aux parquets et sols récents des résidences de Bussy-Saint-Georges ?",
-      answer: `<p>Lors du diagnostic, chaque sol est identifié. Les parquets sont nettoyés sans excès d’humidité, et les carrelages récents avec des produits compatibles afin de préserver leur aspect et éviter toute trace ou altération.</p>`,
-    },
-    {
-      question:
-        "Le logement peut-il être utilisé immédiatement après votre intervention ?",
-      answer: `<p>Dans la majorité des situations, oui. Les méthodes employées limitent l’humidité résiduelle et une aération est prévue en fin d’intervention, permettant une réutilisation rapide du logement.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-
-
-
-
-
   ],
 };
 

@@ -19,16 +19,22 @@ const ROOT = process.cwd();
 const TS_CONFIG = path.join(ROOT, "tsconfig.json");
 
 const APPLY_FILE_DEFAULT = path.join(ROOT, "strong-apply.klinova.suggested.json");
-const OUT_REPORT_JSON = path.join(ROOT, "strong-apply.klinova.report.json");
-const OUT_REPORT_MD = path.join(ROOT, "strong-apply.klinova.report.md");
+
+const OUT_DIR = path.join(ROOT, "scripts", ".strong_apply_klinova");
+const OUT_REPORT_JSON = path.join(OUT_DIR, "strong-apply.klinova.report.json");
+const OUT_REPORT_MD = path.join(OUT_DIR, "strong-apply.klinova.report.md");
 
 /* =============================================================================
    HELPERS
 ============================================================================= */
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
 function readJson(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 function writeText(p, s) {
+  ensureDir(path.dirname(p));
   fs.writeFileSync(p, s, "utf8");
 }
 function sha1(s) {
@@ -41,6 +47,51 @@ function getArgValue(name) {
   const idx = process.argv.indexOf(name);
   if (idx === -1) return null;
   return process.argv[idx + 1] ?? null;
+}
+
+/* =============================================================================
+   KLINOVA PATH ALLOWLIST (apply-time safety)
+============================================================================= */
+/**
+ * Allowed (HTML fields + challenge arrays) per your rules:
+ * - hubIntro
+ * - faq[i].answer
+ * - citySpecificChallenges[i]
+ * - services[i].uniqueIntro
+ * - services[i].uniqueDeepDive
+ * - services[i].faqAdditions[k].answer
+ * - services[i].specificChallenges[j] / services[i].serviceChallenges[j]
+ * - testimonial.text (only if used as HTML, but we allow anyway; strong-only safety still applies)
+ *
+ * Disallowed:
+ * - customDescription (plain)
+ * - heroDescription (plain)
+ * - services[i].heroDescription (plain)
+ */
+function isAllowedKlinovaPath(pathStr) {
+  const p = String(pathStr || "").trim();
+  if (!p) return false;
+
+  // explicit blocks
+  if (p === "customDescription") return false;
+  if (p === "heroDescription") return false;
+  if (/^services\[\d+\]\.heroDescription$/.test(p)) return false;
+
+  // allowlist
+  if (p === "hubIntro") return true;
+  if (/^faq\[\d+\]\.answer$/.test(p)) return true;
+  if (/^citySpecificChallenges\[\d+\]$/.test(p)) return true;
+
+  if (/^services\[\d+\]\.uniqueIntro$/.test(p)) return true;
+  if (/^services\[\d+\]\.uniqueDeepDive$/.test(p)) return true;
+
+  if (/^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p)) return true;
+
+  if (/^services\[\d+\]\.(specificChallenges|serviceChallenges)\[\d+\]$/.test(p)) return true;
+
+  if (p === "testimonial.text") return true;
+
+  return false;
 }
 
 /* =============================================================================
@@ -68,6 +119,8 @@ function extractCityObject(sf) {
 function getPropAssignment(objLit, key) {
   const prop = objLit.getProperty(key);
   if (!prop) return null;
+
+  // We only support PropertyAssignment (city: City = { ... })
   return prop.asKind(SyntaxKind.PropertyAssignment);
 }
 
@@ -75,14 +128,31 @@ function getInitializer(pa) {
   return pa ? pa.getInitializer() : null;
 }
 
+function isLiteralNode(node) {
+  if (!node) return false;
+  const k = node.getKind();
+  return k === SyntaxKind.StringLiteral || k === SyntaxKind.NoSubstitutionTemplateLiteral;
+}
+
+function getLiteralTextSafe(node) {
+  // For StringLiteral & NoSubstitutionTemplateLiteral, ts-morph exposes getLiteralText()
+  // If something unexpected happens, fallback safely.
+  try {
+    return node.getLiteralText();
+  } catch {
+    const raw = node.getText(); // includes quotes/backticks
+    // best-effort strip first/last char if they are quotes/backticks
+    if (raw.length >= 2) return raw.slice(1, -1);
+    return raw;
+  }
+}
+
 /**
- * Supports fields stored as:
- * - "..." (StringLiteral)
- * - `...` (NoSubstitutionTemplateLiteral)
- *
  * Returns { node, text } where:
- * - node: the literal node (StringLiteral or NoSubstitutionTemplateLiteral)
- * - text: literalText (no quotes/backticks)
+ * - node is StringLiteral or NoSubstitutionTemplateLiteral for the field at path
+ * - text is literalText (no quotes/backticks)
+ *
+ * Note: TemplateExpression (backticks with ${}) is NOT supported by design → skipped.
  */
 function getStringNodeAtPath(cityObj, pathStr) {
   const tokens = parsePathTokens(pathStr);
@@ -105,27 +175,23 @@ function getStringNodeAtPath(cityObj, pathStr) {
       if (!el) return null;
 
       if (i === tokens.length - 1) {
-        if (
-          el.getKind() !== SyntaxKind.StringLiteral &&
-          el.getKind() !== SyntaxKind.NoSubstitutionTemplateLiteral
-        ) {
-          return null;
-        }
-        return { node: el, text: el.getLiteralText() };
+        if (!isLiteralNode(el)) return null;
+        return { node: el, text: getLiteralTextSafe(el) };
       }
 
       if (el.getKind() === SyntaxKind.ObjectLiteralExpression) {
         cur = el.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
         continue;
       }
+
       return null;
     }
 
     // last token
     if (i === tokens.length - 1) {
-      const k = init.getKind();
-      if (k !== SyntaxKind.StringLiteral && k !== SyntaxKind.NoSubstitutionTemplateLiteral) return null;
-      return { node: init, text: init.getLiteralText() };
+      if (init.getKind() === SyntaxKind.TemplateExpression) return null; // unsupported
+      if (!isLiteralNode(init)) return null;
+      return { node: init, text: getLiteralTextSafe(init) };
     }
 
     // continue
@@ -142,12 +208,18 @@ function getStringNodeAtPath(cityObj, pathStr) {
 function stripStrongTags(s) {
   return String(s ?? "").replace(/<\/?strong>/g, "");
 }
+
 function hasOnlyPlainStrongTags(s) {
   const t = String(s ?? "");
+  // forbid <strong attr="...">
   if (/<strong\s+[^>]*>/i.test(t)) return false;
+
+  // forbid weird spacing tags like < strong >
   if (/<\/?\s*strong\b/i.test(t) && !/<\/?strong>/.test(t)) return false;
+
   return true;
 }
+
 function isStrongOnlyEdit(expected, value) {
   const e = String(expected ?? "");
   const v = String(value ?? "");
@@ -172,9 +244,7 @@ function validateSubstringEdit(expectedFromTs, excerpt, replacement) {
   if (!ex.trim() || !rep.trim()) return { ok: false, reason: "empty_excerpt_or_replacement" };
 
   // excerpt must be plain (no strong)
-  if (ex.includes("<strong>") || ex.includes("</strong>")) {
-    return { ok: false, reason: "excerpt_contains_strong" };
-  }
+  if (ex.includes("<strong>") || ex.includes("</strong>")) return { ok: false, reason: "excerpt_contains_strong" };
 
   // replacement must be excerpt + only strong tags
   if (!hasOnlyPlainStrongTags(rep)) return { ok: false, reason: "replacement_non_plain_strong" };
@@ -197,6 +267,10 @@ function toMd(report) {
   let md = `# Strong apply — Klinova report\n\n`;
   md += `Généré : ${report.generatedAt}\n`;
   md += `Dry-run : ${report.dryRun}\n`;
+  md += `Input : ${report.inputPath}\n`;
+  md += `Only : ${report.onlyCsv || "(none)"}\n`;
+  md += `Limit : ${report.limit || 0}\n\n`;
+
   md += `Total edits (selected) : ${report.totalEdits}\n`;
   md += `Applied : ${report.applied}\n`;
   md += `Would apply : ${report.wouldApply}\n`;
@@ -235,8 +309,13 @@ async function main() {
   const limit = Number(getArgValue("--limit") || 0);
 
   const inPath = getArgValue("--in") || APPLY_FILE_DEFAULT;
-  const onlyCsv = getArgValue("--only") || "";
-  const only = new Set(onlyCsv.split(",").map((s) => s.trim()).filter(Boolean));
+  const onlyCsv = String(getArgValue("--only") || "");
+  const only = new Set(
+    onlyCsv
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean),
+  );
 
   if (!fs.existsSync(inPath)) {
     console.error("Missing", inPath);
@@ -247,7 +326,14 @@ async function main() {
     process.exit(1);
   }
 
-  const apply = readJson(inPath);
+  let apply;
+  try {
+    apply = readJson(inPath);
+  } catch (e) {
+    console.error("Invalid JSON:", inPath);
+    console.error(String(e?.message || e));
+    process.exit(1);
+  }
 
   const edits = Array.isArray(apply?.edits) ? apply.edits : [];
   const selectedAll = limit > 0 ? edits.slice(0, limit) : edits;
@@ -267,7 +353,7 @@ async function main() {
   // group edits by file
   const byFile = new Map();
   for (const e of selected) {
-    const file = String(e.file || "").trim();
+    const file = String(e?.file || "").trim();
     if (!file) continue;
     if (!byFile.has(file)) byFile.set(file, []);
     byFile.get(file).push(e);
@@ -276,6 +362,9 @@ async function main() {
   const report = {
     generatedAt: new Date().toISOString(),
     dryRun,
+    inputPath: inPath,
+    onlyCsv,
+    limit,
     totalEdits: selected.length,
     applied: 0,
     wouldApply: 0,
@@ -291,9 +380,9 @@ async function main() {
     if (!fs.existsSync(abs)) {
       for (const e of fileEdits) {
         fileReport.items.push({
-          path: e?.path || "",
+          path: String(e?.path || ""),
           status: "error",
-          mode: e?.mode || "",
+          mode: String(e?.mode || ""),
           reason: "file_not_found",
         });
         report.errors++;
@@ -304,14 +393,13 @@ async function main() {
 
     let sf;
     try {
-      // Ensure we don't add duplicates if multiple edits hit same file
       sf = project.getSourceFile(abs) ?? project.addSourceFileAtPath(abs);
     } catch (err) {
       for (const e of fileEdits) {
         fileReport.items.push({
-          path: e?.path || "",
+          path: String(e?.path || ""),
           status: "error",
-          mode: e?.mode || "",
+          mode: String(e?.mode || ""),
           reason: "ts_parse_failed",
           note: String(err?.message || err),
         });
@@ -325,9 +413,9 @@ async function main() {
     if (!cityObj) {
       for (const e of fileEdits) {
         fileReport.items.push({
-          path: e?.path || "",
+          path: String(e?.path || ""),
           status: "error",
-          mode: e?.mode || "",
+          mode: String(e?.mode || ""),
           reason: "city_object_not_found",
         });
         report.errors++;
@@ -340,7 +428,7 @@ async function main() {
     for (const e of fileEdits) {
       const pathStr = String(e?.path || "").trim();
       const mode = String(e?.mode || "setField").trim(); // setField | substring
-      const expectedInApply = String(e?.expected ?? "");
+      const expectedInApply = e?.expected != null ? String(e.expected) : "";
 
       if (!pathStr) {
         fileReport.items.push({ path: "", status: "skipped", mode, reason: "empty_path" });
@@ -348,16 +436,23 @@ async function main() {
         continue;
       }
 
+      // Klinova allowlist safety
+      if (!isAllowedKlinovaPath(pathStr)) {
+        fileReport.items.push({ path: pathStr, status: "skipped", mode, reason: "path_not_allowed_klinova" });
+        report.skipped++;
+        continue;
+      }
+
       const target = getStringNodeAtPath(cityObj, pathStr);
       if (!target) {
-        fileReport.items.push({ path: pathStr, status: "skipped", mode, reason: "path_not_resolved" });
+        fileReport.items.push({ path: pathStr, status: "skipped", mode, reason: "path_not_resolved_or_unsupported_literal" });
         report.skipped++;
         continue;
       }
 
       const expectedFromTs = target.text;
 
-      // Safety 1: apply.expected must match TS exactly (strict)
+      // Safety: apply.expected must match TS exactly if provided
       if (expectedInApply && expectedInApply !== expectedFromTs) {
         fileReport.items.push({
           path: pathStr,
@@ -402,9 +497,8 @@ async function main() {
         continue;
       }
 
-      // Apply to node (string literal or backtick literal)
+      // Apply
       if (!dryRun) {
-        // setLiteralValue works on both StringLiteral and NoSubstitutionTemplateLiteral
         target.node.setLiteralValue(newValue);
       }
 
@@ -412,7 +506,7 @@ async function main() {
         path: pathStr,
         status: dryRun ? "would_apply" : "applied",
         mode,
-        reason: dryRun ? "dry_run" : String(e?.reason || "strong patch").slice(0, 160),
+        reason: dryRun ? "dry_run" : String(e?.reason || "strong patch").slice(0, 180),
       });
 
       if (dryRun) report.wouldApply++;

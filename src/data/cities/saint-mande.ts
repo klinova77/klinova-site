@@ -10,34 +10,24 @@ const city: City = {
     code: "94",
     slug: "val-de-marne",
   },
-nearbyCities: [
-        "vincennes",
-        "charenton-le-pont",
-        "bagnolet",
-        "montreuil",
-        "ivry-sur-seine",
-        "fontenay-sous-bois",
-        "joinville-le-pont",
-        "nogent-sur-marne",
-        "maisons-alfort",
-        "alfortville"
-      ],
-
+  nearbyCities: [
+    "vincennes",
+    "charenton-le-pont",
+    "bagnolet",
+    "montreuil",
+    "ivry-sur-seine",
+    "fontenay-sous-bois",
+    "joinville-le-pont",
+    "nogent-sur-marne",
+    "maisons-alfort",
+    "alfortville",
+  ],
 
   customDescription:
     "Commune de très haut standing à la lisière du Bois de Vincennes, Saint-Mandé combine un bâti haussmannien prestigieux et des résidences de luxe des années 1930-1970. La double exposition — pollution du Périphérique à l'ouest, humidité du Bois au sud — impose un entretien rigoureux des surfaces intérieures et extérieures pour préserver la qualité des lieux.",
 
-  hubIntro: `<p>Saint-Mandé réunit un parc immobilier d'exception et des exigences de propreté élevées, portées par des copropriétés avec gardiens et des conseils syndicaux attentifs aux détails. <strong>Klinova répond à ces attentes par des interventions protocolisées</strong>, adaptées aux supports anciens (<strong>parquets</strong>, <strong>pierres de taille</strong>, <strong>moquettes délicates</strong>) et aux contraintes d'accès typiques des immeubles de standing.</p>
-
-<p>Nos équipes connaissent les spécificités locales : <strong>stationnement très restreint</strong>, <strong>parkings souterrains</strong> aux <strong>rampes étroites</strong>, halls de prestige nécessitant <strong>discrétion</strong> et <strong>finitions irréprochables</strong>. Nous déployons un <strong>matériel compact</strong> et des méthodes ajustées à chaque site, avec un <strong>reporting systématique</strong> pour garantir <strong>traçabilité</strong> et <strong>suivi de maintenance</strong>.</p>
-
-<p><strong>Points clés de notre intervention :</strong></p>
-
-<ul>
-  <li><strong>Adaptation aux immeubles de standing</strong> : Protocoles soignés pour <strong>parquets anciens fragiles à l'humidité</strong>, <strong>pierres de taille sensibles aux produits agressifs</strong>, et <strong>moquettes de prestige</strong> nécessitant <strong>extraction maximale</strong> pour un <strong>séchage rapide</strong>.</li>
-  <li><strong>Maîtrise logistique</strong> : Coordination avec les <strong>gardiens</strong> et <strong>conseils syndicaux</strong> pour <strong>accès</strong>, <strong>stationnement temporaire</strong> en <strong>zones bleues/rouges</strong>, et intervention par <strong>véhicules compacts</strong> dans les <strong>parkings souterrains</strong> aux rampes exiguës.</li>
-  <li><strong>Traçabilité complète</strong> : <strong>Compte-rendu d'intervention</strong> remis au syndic avec <strong>photos avant/après</strong>, détail des <strong>produits utilisés</strong> et recommandations de <strong>fréquence</strong> pour maintenir le niveau de propreté attendu dans les copropriétés saint-mandéennes.</li>
-</ul>`,
+  hubIntro:
+    "<p>Saint-Mandé réunit un parc immobilier d'exception et des exigences de propreté élevées, portées par des copropriétés avec gardiens et des conseils syndicaux attentifs aux détails. <strong>Klinova répond à ces attentes par des interventions protocolisées</strong>, adaptées aux supports anciens (<strong>parquets</strong>, <strong>pierres de taille</strong>, <strong>moquettes délicates</strong>) et aux contraintes d'accès typiques des immeubles de standing.</p>\n\n<p>Nos équipes connaissent les spécificités locales : <strong>stationnement très restreint</strong>, <strong>parkings souterrains</strong> aux <strong>rampes étroites</strong>, halls de prestige nécessitant <strong>discrétion</strong> et <strong>finitions irréprochables</strong>. Nous déployons un <strong>matériel compact</strong> et des méthodes ajustées à chaque site, avec un <strong>reporting systématique</strong> pour garantir <strong>traçabilité</strong> et <strong>suivi de maintenance</strong>.</p>\n\n<p><strong>Points clés de notre intervention :</strong></p>\n\n<ul>\n  <li><strong>Adaptation aux immeubles de standing</strong> : Protocoles soignés pour <strong>parquets anciens fragiles à l'humidité</strong>, <strong>pierres de taille sensibles aux produits agressifs</strong>, et <strong>moquettes de prestige</strong> nécessitant <strong>extraction maximale</strong> pour un <strong>séchage rapide</strong>.</li>\n  <li><strong>Maîtrise logistique</strong> : Coordination avec les <strong>gardiens</strong> et <strong>conseils syndicaux</strong> pour <strong>accès</strong>, <strong>stationnement temporaire</strong> en <strong>zones bleues/rouges</strong>, et intervention par <strong>véhicules compacts</strong> dans les <strong>parkings souterrains</strong> aux rampes exiguës.</li>\n  <li><strong>Traçabilité complète</strong> : <strong>Compte-rendu d'intervention</strong> remis au syndic avec <strong>photos avant/après</strong>, détail des <strong>produits utilisés</strong> et recommandations de <strong>fréquence</strong> pour maintenir le niveau de propreté attendu dans les copropriétés saint-mandéennes.</li>\n</ul>",
 
   faq: [
     {
@@ -99,18 +89,11 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage professionnel des moquettes à Saint-Mandé préserve les fibres délicates des immeubles de standing tout en éliminant l'encrassement lié au Périphérique et à l'humidité du Bois.",
 
-      uniqueIntro: `<p>Les moquettes des copropriétés saint-mandéennes subissent une usure particulière. À l'ouest, près de la <strong>Porte de Saint-Mandé</strong>, la pollution du <strong>Périphérique</strong> dépose quotidiennement une <strong>poussière noire grasse</strong> dans les halls et cages d'escalier. Au sud, vers le <strong>Lac</strong> et le <strong>Bois</strong>, l'<strong>humidité</strong> ambiante favorise l'incrustation de particules végétales et le développement de légères odeurs de renfermé dans les zones mal ventilées.</p>
-<p class="mt-4">Les immeubles haussmanniens et les résidences de luxe des années 1930-1970 sont équipés de moquettes de qualité, souvent en <strong>laine</strong> ou en <strong>fibres bouclées épaisses</strong>. Avec le passage quotidien, les seuils d'entrée noircissent, les paliers devant les ascenseurs se ternissent, les zones de fort trafic forment des traînées grises. Les <strong>gardiens</strong> remarquent cette dégradation, les <strong>conseils syndicaux</strong> reçoivent des observations des résidents, et l'image de prestige de l'immeuble se trouve affectée.</p>
-<p class="mt-4">Un nettoyage professionnel rigoureux inverse cette dynamique. Il extrait les salissures incrustées sans saturer les fibres, ravive les couleurs d'origine et maintient la durabilité du revêtement. L'intervention devient un acte de <strong>maintenance préventive</strong>, indispensable pour préserver la valeur patrimoniale des copropriétés saint-mandéennes.</p>`,
+      uniqueIntro:
+        "<p>Les moquettes des copropriétés saint-mandéennes subissent une usure particulière. À l'ouest, près de la <strong>Porte de Saint-Mandé</strong>, la pollution du <strong>Périphérique</strong> dépose quotidiennement une <strong>poussière noire grasse</strong> dans les halls et cages d'escalier. Au sud, vers le <strong>Lac</strong> et le <strong>Bois</strong>, l'<strong>humidité</strong> ambiante favorise l'incrustation de particules végétales et le développement de légères odeurs de renfermé dans les zones mal ventilées.</p>\n<p class=\"mt-4\">Les immeubles haussmanniens et les résidences de luxe des années 1930-1970 sont équipés de moquettes de qualité, souvent en <strong>laine</strong> ou en <strong>fibres bouclées épaisses</strong>. Avec le passage quotidien, les seuils d'entrée noircissent, les paliers devant les ascenseurs se ternissent, les zones de fort trafic forment des traînées grises. Les <strong>gardiens</strong> remarquent cette dégradation, les <strong>conseils syndicaux</strong> reçoivent des observations des résidents, et l'image de prestige de l'immeuble se trouve affectée.</p>\n<p class=\"mt-4\">Un nettoyage professionnel rigoureux inverse cette dynamique. Il extrait les salissures incrustées sans saturer les fibres, ravive les couleurs d'origine et maintient la durabilité du revêtement. L'intervention devient un acte de <strong>maintenance préventive</strong>, indispensable pour préserver la valeur patrimoniale des copropriétés saint-mandéennes.</p>",
 
-      uniqueDeepDive: `<h3>Diagnostic technique des supports</h3>
-<p>Le technicien identifie le type de moquette (laine naturelle, bouclée synthétique, velours ras), teste la résistance des fibres et repère les zones critiques (seuils, devant les ascenseurs, paliers du rez-de-chaussée exposés au flux). Il note les taches spécifiques (boue séchée, traces de chaussures, auréoles d'eau) et évalue les contraintes d'accès : cages d'escalier étroites, halls ouverts sur rue, présence d'un gardien exigeant sur les finitions. Cette analyse détermine la puissance d'injection, le choix du détergent et le nombre de passes nécessaires pour chaque zone.</p>
-
-<h3>Injection-extraction contrôlée et extraction maximale</h3>
-<p>La machine pulvérise un mélange d'eau chaude (60-70°C) et de détergent professionnel au cœur des fibres, délogeant particules grasses et poussières incrustées. L'aspiration immédiate retire l'eau sale avant qu'elle ne sature le support. Sur les moquettes en laine des immeubles anciens, la température et la pression sont réduites pour éviter le feutrage ou la déformation. Les zones de fort trafic reçoivent plusieurs passages successifs pour extraire les salissures les plus tenaces. L'extraction puissante limite l'humidité résiduelle, point critique dans les halls exposés à l'humidité du Bois.</p>
-
-<h3>Séchage accéléré et recommandations de fréquence</h3>
-<p>Le séchage complet intervient sous 6 à 10 heures selon la ventilation naturelle. Le technicien conseille d'aérer les cages d'escalier et de limiter le passage immédiat dans les zones traitées. Pour les copropriétés saint-mandéennes exposées à la pollution du Périphérique, un nettoyage annuel maintient la propreté sans attendre l'encrassement critique. Les résidences bordant le Bois nécessitent une attention particulière aux zones humides (rez-de-chaussée, sous-sols) pour éviter le développement d'odeurs.</p>`,
+      uniqueDeepDive:
+        "<h3>Diagnostic technique des supports</h3>\n<p>Le technicien identifie le type de moquette (laine naturelle, bouclée synthétique, velours ras), teste la résistance des fibres et repère les zones critiques (seuils, devant les ascenseurs, paliers du rez-de-chaussée exposés au flux). Il note les taches spécifiques (boue séchée, traces de chaussures, auréoles d'eau) et évalue les contraintes d'accès : cages d'escalier étroites, halls ouverts sur rue, présence d'un gardien exigeant sur les finitions. Cette analyse détermine la puissance d'injection, le choix du détergent et le nombre de passes nécessaires pour chaque zone.</p>\n\n<h3>Injection-extraction contrôlée et extraction maximale</h3>\n<p>La machine pulvérise un mélange d'eau chaude (60-70°C) et de détergent professionnel au cœur des fibres, délogeant particules grasses et poussières incrustées. L'aspiration immédiate retire l'eau sale avant qu'elle ne sature le support. Sur les moquettes en laine des immeubles anciens, la température et la pression sont réduites pour éviter le feutrage ou la déformation. Les zones de fort trafic reçoivent plusieurs passages successifs pour extraire les salissures les plus tenaces. L'extraction puissante limite l'humidité résiduelle, point critique dans les halls exposés à l'humidité du Bois.</p>\n\n<h3>Séchage accéléré et recommandations de fréquence</h3>\n<p>Le séchage complet intervient sous 6 à 10 heures selon la ventilation naturelle. Le technicien conseille d'aérer les cages d'escalier et de limiter le passage immédiat dans les zones traitées. Pour les copropriétés saint-mandéennes exposées à la pollution du Périphérique, un nettoyage annuel maintient la propreté sans attendre l'encrassement critique. Les résidences bordant le Bois nécessitent une attention particulière aux zones humides (rez-de-chaussée, sous-sols) pour éviter le développement d'odeurs.</p>",
 
       whyUsBullets: [
         "<strong>Connaissance des immeubles de standing saint-mandéens</strong> : Intervention régulière dans les résidences haussmanniennes de l'avenue de Paris et les copropriétés de luxe du quartier du Lac, avec maîtrise des fibres délicates.",
@@ -161,18 +144,11 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage professionnel des parkings saint-mandéens élimine la poussière grasse du Périphérique et les taches d'huile anciennes, tout en gérant les contraintes techniques des rampes étroites et des hauteurs limitées.",
 
-      uniqueIntro: `<p>Les parkings souterrains de Saint-Mandé, souvent construits dans les années 1930-1970, présentent des configurations exigeantes : rampes en colimaçon étroites, hauteur sous plafond réduite, siphons d'époque parfois obstrués. La proximité du Périphérique génère un encrassement rapide, avec une poussière noire grasse qui se dépose sur les sols en béton, noircit les marquages au sol et rend les rampes glissantes.</p>
-<p class="mt-4">Les copropriétaires constatent cette dégradation progressive : taches d'huile qui s'étendent, angles et pieds de poteaux noircis, sensation de saleté permanente malgré le balayage régulier. Les conseils syndicaux reçoivent des demandes d'intervention, mais la coordination semble complexe : comment faire entrer un véhicule d'entretien dans ces rampes étroites ? Comment gérer l'eau de lavage sans saturer des siphons anciens ? Quelle organisation pour limiter la gêne dans des copropriétés où le stationnement est déjà très contraint ?</p>
-<p class="mt-4">Un décrassage technique bien structuré résout ces problématiques. Il restaure la propreté des sols, améliore la visibilité des marquages et réduit les risques de glissade. L'intervention devient un acte de maintenance indispensable pour préserver la sécurité et valoriser le patrimoine immobilier des copropriétés saint-mandéennes.</p>`,
+      uniqueIntro:
+        "<p>Les parkings souterrains de Saint-Mandé, souvent construits dans les années 1930-1970, présentent des configurations exigeantes : rampes en colimaçon étroites, hauteur sous plafond réduite, siphons d'époque parfois obstrués. La proximité du Périphérique génère un encrassement rapide, avec une poussière noire grasse qui se dépose sur les sols en béton, noircit les marquages au sol et rend les rampes glissantes.</p>\n<p class=\"mt-4\">Les copropriétaires constatent cette dégradation progressive : taches d'huile qui s'étendent, angles et pieds de poteaux noircis, sensation de saleté permanente malgré le balayage régulier. Les conseils syndicaux reçoivent des demandes d'intervention, mais la coordination semble complexe : comment faire entrer un véhicule d'entretien dans ces rampes étroites ? Comment gérer l'eau de lavage sans saturer des siphons anciens ? Quelle organisation pour limiter la gêne dans des copropriétés où le stationnement est déjà très contraint ?</p>\n<p class=\"mt-4\">Un décrassage technique bien structuré résout ces problématiques. Il restaure la propreté des sols, améliore la visibilité des marquages et réduit les risques de glissade. L'intervention devient un acte de maintenance indispensable pour préserver la sécurité et valoriser le patrimoine immobilier des copropriétés saint-mandéennes.</p>",
 
-      uniqueDeepDive: `<h3>Diagnostic technique et évaluation des contraintes</h3>
-<p>Le technicien visite le parking pour mesurer la hauteur sous plafond (souvent 1,90 m à 2,10 m dans les parkings anciens), vérifier le diamètre des rampes en colimaçon, tester l'état des siphons et caniveaux, et identifier le type de revêtement (béton brut, peinture époxy, résine). Il repère les zones de fort passage (places visiteurs, rampes d'accès) et les taches d'huile anciennes imprégnées dans le béton poreux. Cette analyse détermine le choix du matériel : autolaveuse compacte pour les espaces confinés, ou haute pression modulable pour les zones plus dégagées.</p>
-
-<h3>Décrassage par autolaveuse compacte et traitement localisé</h3>
-<p>Le balayage mécanique élimine d'abord les débris secs et poussières accumulées. L'autolaveuse compacte brosse ensuite le sol avec un mélange d'eau chaude et de dégraissant professionnel, puis aspire immédiatement les eaux sales. Sur les taches d'huile tenaces, un détergent spécifique est appliqué, laissé en contact plusieurs minutes, puis rincé à la haute pression en mode contrôlé. Les rampes, pieds de poteaux et angles sont nettoyés manuellement avec des brosses adaptées. L'eau de lavage est collectée en continu pour éviter toute saturation des siphons anciens.</p>
-
-<h3>Gestion des évacuations et recommandations de fréquence</h3>
-<p>Les siphons sont vérifiés avant intervention. Si leur capacité est limitée, nous écopons manuellement les excédents et réduisons le débit de rinçage. Les zones sont traitées par rotation pour maintenir l'accès au parking en permanence. Pour les copropriétés saint-mandéennes exposées à la pollution du Périphérique, un décrassage annuel maintient la propreté. Les parkings proches du Bois, moins exposés à la poussière grasse, peuvent espacer les interventions tous les 18 mois.</p>`,
+      uniqueDeepDive:
+        "<h3>Diagnostic technique et évaluation des contraintes</h3>\n<p>Le technicien visite le parking pour mesurer la hauteur sous plafond (souvent 1,90 m à 2,10 m dans les parkings anciens), vérifier le diamètre des rampes en colimaçon, tester l'état des siphons et caniveaux, et identifier le type de revêtement (béton brut, peinture époxy, résine). Il repère les zones de fort passage (places visiteurs, rampes d'accès) et les taches d'huile anciennes imprégnées dans le béton poreux. Cette analyse détermine le choix du matériel : autolaveuse compacte pour les espaces confinés, ou haute pression modulable pour les zones plus dégagées.</p>\n\n<h3>Décrassage par autolaveuse compacte et traitement localisé</h3>\n<p>Le balayage mécanique élimine d'abord les débris secs et poussières accumulées. L'autolaveuse compacte brosse ensuite le sol avec un mélange d'eau chaude et de dégraissant professionnel, puis aspire immédiatement les eaux sales. Sur les taches d'huile tenaces, un détergent spécifique est appliqué, laissé en contact plusieurs minutes, puis rincé à la haute pression en mode contrôlé. Les rampes, pieds de poteaux et angles sont nettoyés manuellement avec des brosses adaptées. L'eau de lavage est collectée en continu pour éviter toute saturation des siphons anciens.</p>\n\n<h3>Gestion des évacuations et recommandations de fréquence</h3>\n<p>Les siphons sont vérifiés avant intervention. Si leur capacité est limitée, nous écopons manuellement les excédents et réduisons le débit de rinçage. Les zones sont traitées par rotation pour maintenir l'accès au parking en permanence. Pour les copropriétés saint-mandéennes exposées à la pollution du Périphérique, un décrassage annuel maintient la propreté. Les parkings proches du Bois, moins exposés à la poussière grasse, peuvent espacer les interventions tous les 18 mois.</p>",
 
       whyUsBullets: [
         "<strong>Maîtrise des parkings anciens saint-mandéens</strong> : Intervention régulière dans les sous-sols des immeubles haussmanniens et résidences de luxe, avec adaptation aux rampes étroites et hauteurs limitées typiques du bâti ancien.",
@@ -223,18 +199,11 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage professionnel d'un balcon à Saint-Mandé redonne un espace extérieur propre et accueillant, libéré des traces de pollution du Périphérique et des dépôts verts du Bois.",
 
-      uniqueIntro: `<p>Les habitants de Saint-Mandé vivent avec un balcon qu'ils finissent par délaisser. Côté Périphérique, vers la Porte de Saint-Mandé, les balcons accumulent une poussière noire grasse qui colle aux dalles et noircit les joints en quelques semaines. Côté Bois, vers le Lac et les quartiers résidentiels, l'humidité favorise l'apparition de mousses, de lichens et de traces vertes tenaces sur les pierres de taille et le carrelage ancien.</p>
-<p class="mt-4">Après une saison, le balcon devient un espace négligé : les joints sont gris foncé, le garde-corps en fer forgé est terni, des auréoles d'eau marquent les dalles. On hésite à y installer une table ou des chaises, on évite d'y recevoir des amis. Les tentatives de nettoyage avec un balai-brosse et un seau donnent des résultats décevants : l'eau sale coule sur la façade, les taches résistent, le sol reste terne.</p>
-<p class="mt-4">Un nettoyage professionnel transforme complètement l'usage du balcon. Les surfaces retrouvent leur couleur d'origine, les joints redeviennent nets, le garde-corps brille. L'espace extérieur redevient un prolongement agréable du logement, utilisable pour prendre un café le matin ou profiter des beaux jours. Cette remise en état valorise aussi le bien en cas de mise en location ou de vente.</p>`,
+      uniqueIntro:
+        "<p>Les habitants de Saint-Mandé vivent avec un balcon qu'ils finissent par délaisser. Côté Périphérique, vers la Porte de Saint-Mandé, les balcons accumulent une poussière noire grasse qui colle aux dalles et noircit les joints en quelques semaines. Côté Bois, vers le Lac et les quartiers résidentiels, l'humidité favorise l'apparition de mousses, de lichens et de traces vertes tenaces sur les pierres de taille et le carrelage ancien.</p>\n<p class=\"mt-4\">Après une saison, le balcon devient un espace négligé : les joints sont gris foncé, le garde-corps en fer forgé est terni, des auréoles d'eau marquent les dalles. On hésite à y installer une table ou des chaises, on évite d'y recevoir des amis. Les tentatives de nettoyage avec un balai-brosse et un seau donnent des résultats décevants : l'eau sale coule sur la façade, les taches résistent, le sol reste terne.</p>\n<p class=\"mt-4\">Un nettoyage professionnel transforme complètement l'usage du balcon. Les surfaces retrouvent leur couleur d'origine, les joints redeviennent nets, le garde-corps brille. L'espace extérieur redevient un prolongement agréable du logement, utilisable pour prendre un café le matin ou profiter des beaux jours. Cette remise en état valorise aussi le bien en cas de mise en location ou de vente.</p>",
 
-      uniqueDeepDive: `<h3>Préparation et protection des accès</h3>
-<p>Le technicien commence par protéger la porte-fenêtre, les menuiseries et les murs intérieurs avec des bâches étanches fixées au ruban adhésif. Les meubles de jardin, plantes en pot et objets décoratifs sont déplacés ou protégés individuellement. Les gros débris (feuilles mortes du Bois, terre séchée des jardinières, poussière accumulée) sont ramassés manuellement et conditionnés dans des sacs. Cette phase évite que les salissures ne se dispersent lors du lavage et garantit la protection de l'intérieur du logement.</p>
-
-<h3>Nettoyage adapté au type de salissure</h3>
-<p>Le technicien applique un produit nettoyant selon le type d'encrassement : dégraissant alcalin pour la pollution noire du Périphérique, traitement anti-mousse pour les dépôts verts côté Bois. Les pierres de taille anciennes des immeubles haussmanniens reçoivent une formule neutre pour préserver leur surface. Les joints sont brossés manuellement pour déloger les salissures incrustées. Les surfaces planes sont ensuite rincées à pression contrôlée, jamais agressive, pour ne pas endommager les joints ou l'étanchéité. Le garde-corps, les vitreries et les murs mitoyens sont lavés à l'éponge ou au chiffon microfibre.</p>
-
-<h3>Gestion de l'eau et conseils d'usage</h3>
-<p>L'eau de rinçage est dirigée vers l'évacuation du balcon à l'aide d'une raclette et de chiffons absorbants, évitant toute coulure sur les façades haussmanniennes ou chez les voisins inférieurs. Le séchage naturel intervient sous 2 à 4 heures selon l'exposition et la ventilation. Le technicien conseille un balayage hebdomadaire, un rinçage léger après les périodes de pollen du Bois et un nettoyage complet annuel pour les balcons exposés au Périphérique, où la pollution s'accumule plus rapidement.</p>`,
+      uniqueDeepDive:
+        "<h3>Préparation et protection des accès</h3>\n<p>Le technicien commence par protéger la porte-fenêtre, les menuiseries et les murs intérieurs avec des bâches étanches fixées au ruban adhésif. Les meubles de jardin, plantes en pot et objets décoratifs sont déplacés ou protégés individuellement. Les gros débris (feuilles mortes du Bois, terre séchée des jardinières, poussière accumulée) sont ramassés manuellement et conditionnés dans des sacs. Cette phase évite que les salissures ne se dispersent lors du lavage et garantit la protection de l'intérieur du logement.</p>\n\n<h3>Nettoyage adapté au type de salissure</h3>\n<p>Le technicien applique un produit nettoyant selon le type d'encrassement : dégraissant alcalin pour la pollution noire du Périphérique, traitement anti-mousse pour les dépôts verts côté Bois. Les pierres de taille anciennes des immeubles haussmanniens reçoivent une formule neutre pour préserver leur surface. Les joints sont brossés manuellement pour déloger les salissures incrustées. Les surfaces planes sont ensuite rincées à pression contrôlée, jamais agressive, pour ne pas endommager les joints ou l'étanchéité. Le garde-corps, les vitreries et les murs mitoyens sont lavés à l'éponge ou au chiffon microfibre.</p>\n\n<h3>Gestion de l'eau et conseils d'usage</h3>\n<p>L'eau de rinçage est dirigée vers l'évacuation du balcon à l'aide d'une raclette et de chiffons absorbants, évitant toute coulure sur les façades haussmanniennes ou chez les voisins inférieurs. Le séchage naturel intervient sous 2 à 4 heures selon l'exposition et la ventilation. Le technicien conseille un balayage hebdomadaire, un rinçage léger après les périodes de pollen du Bois et un nettoyage complet annuel pour les balcons exposés au Périphérique, où la pollution s'accumule plus rapidement.</p>",
 
       whyUsBullets: [
         "<strong>Connaissance des deux expositions saint-mandéennes</strong> : Intervention régulière sur balcons des immeubles de l'avenue de Paris (pollution) et des résidences du quartier du Lac (humidité), avec produits adaptés à chaque contexte.",
@@ -285,18 +254,11 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage et la désinfection professionnels d'un balcon contaminé par des fientes de pigeons à Saint-Mandé éliminent les risques sanitaires selon un protocole strict, restituant un espace extérieur sain et utilisable.",
 
-      uniqueIntro: `<p>Les balcons des immeubles saint-mandéens, particulièrement ceux équipés de corniches en pierre de taille ou de loggias profondes typiques des années 1930-1970, offrent des sites de nidification privilégiés pour les pigeons. La proximité du Bois de Vincennes et du Lac attire ces oiseaux qui colonisent rapidement les balcons tranquilles des étages supérieurs. Les fientes s'accumulent en couches épaisses sur les pierres de taille anciennes, les dalles et les garde-corps en fer forgé.</p>
-<p class="mt-4">Les occupants constatent une dégradation rapide : odeur forte persistante même fenêtres fermées, corrosion visible des supports métalliques, impossibilité d'utiliser le balcon. Les fientes sèches contiennent des agents pathogènes qui se dispersent en poussière lors des courants d'air. Les propriétaires redoutent les risques sanitaires, certains locataires exigent une intervention immédiate, les copropriétés reçoivent des plaintes de voisinage.</p>
-<p class="mt-4">Les tentatives de nettoyage domestique aggravent le problème : balayer à sec disperse les poussières contaminées dans l'air et l'intérieur du logement, rincer sans protection expose aux projections chargées de bactéries. Ce type de contamination nécessite un protocole professionnel rigoureux : équipements de protection individuelle, méthode d'humidification préalable, désinfection homologuée et évacuation sécurisée des déchets. Seule cette approche technique permet de récupérer un balcon propre, désinfecté et utilisable en toute sécurité.</p>`,
+      uniqueIntro:
+        "<p>Les balcons des immeubles saint-mandéens, particulièrement ceux équipés de corniches en pierre de taille ou de loggias profondes typiques des années 1930-1970, offrent des sites de nidification privilégiés pour les pigeons. La proximité du Bois de Vincennes et du Lac attire ces oiseaux qui colonisent rapidement les balcons tranquilles des étages supérieurs. Les fientes s'accumulent en couches épaisses sur les pierres de taille anciennes, les dalles et les garde-corps en fer forgé.</p>\n<p class=\"mt-4\">Les occupants constatent une dégradation rapide : odeur forte persistante même fenêtres fermées, corrosion visible des supports métalliques, impossibilité d'utiliser le balcon. Les fientes sèches contiennent des agents pathogènes qui se dispersent en poussière lors des courants d'air. Les propriétaires redoutent les risques sanitaires, certains locataires exigent une intervention immédiate, les copropriétés reçoivent des plaintes de voisinage.</p>\n<p class=\"mt-4\">Les tentatives de nettoyage domestique aggravent le problème : balayer à sec disperse les poussières contaminées dans l'air et l'intérieur du logement, rincer sans protection expose aux projections chargées de bactéries. Ce type de contamination nécessite un protocole professionnel rigoureux : équipements de protection individuelle, méthode d'humidification préalable, désinfection homologuée et évacuation sécurisée des déchets. Seule cette approche technique permet de récupérer un balcon propre, désinfecté et utilisable en toute sécurité.</p>",
 
-      uniqueDeepDive: `<h3>Équipements de protection et confinement du chantier</h3>
-<p>Le technicien revêt une combinaison jetable intégrale, des gants épais résistants, un masque respiratoire FFP2 filtrant les particules fines et des lunettes de protection étanches. Ces équipements de protection individuelle (EPI) sont obligatoires pour éviter tout contact avec les agents pathogènes présents dans les fientes. Des bâches étanches protègent la porte-fenêtre, les murs intérieurs et le sol du logement, créant un confinement qui empêche la dispersion des poussières contaminées vers l'intérieur. Les fientes sèches sont ensuite humidifiées au pulvérisateur d'eau, technique indispensable pour éviter la mise en suspension de particules infectieuses lors du ramassage.</p>
-
-<h3>Ramassage manuel et nettoyage des supports</h3>
-<p>Les fientes, nids, plumes et débris organiques sont ramassés manuellement à l'aide de pelles, racloirs et brosses rigides, puis conditionnés immédiatement dans des sacs étanches à double paroi prévus pour déchets contaminés. Cette phase s'effectue méthodiquement, zone par zone, pour éviter toute dispersion. Le sol, le garde-corps en fer forgé, les vitreries et les murs mitoyens sont ensuite nettoyés avec un détergent dégraissant pour éliminer la couche organique résiduelle. Les pierres de taille anciennes des balcons haussmanniens reçoivent un traitement adapté pour ne pas altérer leur surface. Une fois les supports rincés, ils sont prêts pour la désinfection.</p>
-
-<h3>Désinfection virucide et conseils post-intervention</h3>
-<p>Un produit désinfectant virucide et bactéricide homologué est appliqué sur l'ensemble du balcon : sol, garde-corps, angles, murs. Le temps de contact réglementaire (10 à 15 minutes selon le produit) est strictement respecté pour garantir la neutralisation des agents pathogènes (salmonelles, cryptocoques, histoplasma). Après rinçage final, le balcon est aéré pendant plusieurs heures et ne doit pas être réutilisé avant 24 heures minimum. Les sacs de déchets contaminés sont évacués en toute sécurité. Le technicien conseille d'inspecter régulièrement les corniches et peut proposer la pose de solutions anti-pigeons (pics, filets) pour prévenir toute recolonisation.</p>`,
+      uniqueDeepDive:
+        "<h3>Équipements de protection et confinement du chantier</h3>\n<p>Le technicien revêt une combinaison jetable intégrale, des gants épais résistants, un masque respiratoire FFP2 filtrant les particules fines et des lunettes de protection étanches. Ces équipements de protection individuelle (EPI) sont obligatoires pour éviter tout contact avec les agents pathogènes présents dans les fientes. Des bâches étanches protègent la porte-fenêtre, les murs intérieurs et le sol du logement, créant un confinement qui empêche la dispersion des poussières contaminées vers l'intérieur. Les fientes sèches sont ensuite humidifiées au pulvérisateur d'eau, technique indispensable pour éviter la mise en suspension de particules infectieuses lors du ramassage.</p>\n\n<h3>Ramassage manuel et nettoyage des supports</h3>\n<p>Les fientes, nids, plumes et débris organiques sont ramassés manuellement à l'aide de pelles, racloirs et brosses rigides, puis conditionnés immédiatement dans des sacs étanches à double paroi prévus pour déchets contaminés. Cette phase s'effectue méthodiquement, zone par zone, pour éviter toute dispersion. Le sol, le garde-corps en fer forgé, les vitreries et les murs mitoyens sont ensuite nettoyés avec un détergent dégraissant pour éliminer la couche organique résiduelle. Les pierres de taille anciennes des balcons haussmanniens reçoivent un traitement adapté pour ne pas altérer leur surface. Une fois les supports rincés, ils sont prêts pour la désinfection.</p>\n\n<h3>Désinfection virucide et conseils post-intervention</h3>\n<p>Un produit désinfectant virucide et bactéricide homologué est appliqué sur l'ensemble du balcon : sol, garde-corps, angles, murs. Le temps de contact réglementaire (10 à 15 minutes selon le produit) est strictement respecté pour garantir la neutralisation des agents pathogènes (salmonelles, cryptocoques, histoplasma). Après rinçage final, le balcon est aéré pendant plusieurs heures et ne doit pas être réutilisé avant 24 heures minimum. Les sacs de déchets contaminés sont évacués en toute sécurité. Le technicien conseille d'inspecter régulièrement les corniches et peut proposer la pose de solutions anti-pigeons (pics, filets) pour prévenir toute recolonisation.</p>",
 
       whyUsBullets: [
         "<strong>Connaissance des immeubles saint-mandéens à risque</strong> : Intervention régulière sur balcons des résidences haussmanniennes et immeubles 1930-1970 dont les corniches en pierre attirent les pigeons venus du Bois et du Lac.",
@@ -347,18 +309,11 @@ nearbyCities: [
       heroDescription:
         "Le nettoyage professionnel à domicile de canapés, tapis et matelas à Saint-Mandé élimine acariens, allergènes et taches incrustées, restaurant l'hygiène et le confort des intérieurs familiaux.",
 
-      uniqueIntro: `<p>Dans les appartements saint-mandéens, canapés et tapis accumulent silencieusement des salissures que les occupants ne perçoivent pas immédiatement. La poussière fine du Périphérique pénètre par les fenêtres et se loge dans les fibres textiles. L'humidité ambiante du Bois favorise le développement d'acariens dans les matelas et coussins. Après quelques années sans nettoyage professionnel, les textiles abritent des populations d'acariens qui se nourrissent de squames humaines et déposent leurs déjections allergisantes.</p>
-<p class="mt-4">Les familles constatent des symptômes sans en identifier la cause : rhinites matinales, éternuements répétés, irritations cutanées inexpliquées, asthme qui s'aggrave. Les enfants développent des réactions allergiques, les personnes sensibles respirent difficilement la nuit. Les taches visibles s'ajoutent au problème : traces de nourriture sur le canapé, auréoles d'urine animale sur le tapis, sueur accumulée dans le matelas. Les tentatives de nettoyage domestique restent superficielles : l'aspirateur n'extrait pas les acariens logés en profondeur, les détachants ménagers laissent des auréoles.</p>
-<p class="mt-4">Un nettoyage professionnel à domicile change radicalement la situation sanitaire. L'injection-extraction à eau chaude tue les acariens, extrait leurs déjections et les allergènes accumulés. Les taches organiques disparaissent, les odeurs s'estompent, les fibres retrouvent leur souplesse. L'intervention devient un acte de prévention sanitaire, particulièrement important pour les foyers avec enfants, personnes allergiques ou animaux de compagnie.</p>`,
+      uniqueIntro:
+        "<p>Dans les appartements saint-mandéens, canapés et tapis accumulent silencieusement des salissures que les occupants ne perçoivent pas immédiatement. La poussière fine du Périphérique pénètre par les fenêtres et se loge dans les fibres textiles. L'humidité ambiante du Bois favorise le développement d'acariens dans les matelas et coussins. Après quelques années sans nettoyage professionnel, les textiles abritent des populations d'acariens qui se nourrissent de squames humaines et déposent leurs déjections allergisantes.</p>\n<p class=\"mt-4\">Les familles constatent des symptômes sans en identifier la cause : rhinites matinales, éternuements répétés, irritations cutanées inexpliquées, asthme qui s'aggrave. Les enfants développent des réactions allergiques, les personnes sensibles respirent difficilement la nuit. Les taches visibles s'ajoutent au problème : traces de nourriture sur le canapé, auréoles d'urine animale sur le tapis, sueur accumulée dans le matelas. Les tentatives de nettoyage domestique restent superficielles : l'aspirateur n'extrait pas les acariens logés en profondeur, les détachants ménagers laissent des auréoles.</p>\n<p class=\"mt-4\">Un nettoyage professionnel à domicile change radicalement la situation sanitaire. L'injection-extraction à eau chaude tue les acariens, extrait leurs déjections et les allergènes accumulés. Les taches organiques disparaissent, les odeurs s'estompent, les fibres retrouvent leur souplesse. L'intervention devient un acte de prévention sanitaire, particulièrement important pour les foyers avec enfants, personnes allergiques ou animaux de compagnie.</p>",
 
-      uniqueDeepDive: `<h3>Diagnostic textile et identification des contaminations</h3>
-<p>Le technicien examine chaque élément à traiter : type de tissu (coton, lin, velours, synthétique, laine), épaisseur des rembourrages, couleur et fragilité. Il repère les taches visibles (boissons renversées, graisse alimentaire, urine animale, sueur) et interroge les occupants sur les problèmes allergiques ou respiratoires rencontrés. Cette analyse permet de sélectionner le produit adapté et d'ajuster la température de l'eau (60-70°C pour tuer les acariens) et la puissance d'aspiration. Les textiles anciens des appartements haussmanniens nécessitent une méthode plus douce pour préserver les fibres délicates.</p>
-
-<h3>Pré-traitement ciblé et injection-extraction à eau chaude</h3>
-<p>Les taches tenaces reçoivent un pré-traitement spécifique : détachant enzymatique pour l'urine et les matières organiques, dégraissant pour les résidus alimentaires, neutralisant d'odeurs pour les zones imprégnées par la transpiration ou les animaux. Après un temps de pose de 5 à 10 minutes, la machine d'injection-extraction pulvérise un mélange d'eau chaude (65-70°C) et de détergent hypoallergénique au cœur des fibres. Cette température élevée tue les acariens adultes, larves et œufs. L'aspiration immédiate retire l'eau sale chargée de particules, d'acariens morts et d'allergènes dissous. Le technicien effectue plusieurs passages sur les zones de fort usage.</p>
-
-<h3>Extraction maximale et conseils de prévention</h3>
-<p>L'extraction puissante limite l'humidité résiduelle dans les rembourrages, point critique pour éviter le développement de moisissures dans les logements saint-mandéens exposés à l'humidité du Bois. Le séchage complet intervient sous 4 à 8 heures selon la ventilation. Le technicien conseille d'aérer la pièce, d'orienter un ventilateur si possible et d'attendre le séchage total avant réutilisation. Pour limiter la recontamination, il recommande un aspirateur hebdomadaire avec filtre HEPA, l'utilisation de housses anti-acariens sur les matelas et un nettoyage professionnel annuel pour les foyers allergiques.</p>`,
+      uniqueDeepDive:
+        "<h3>Diagnostic textile et identification des contaminations</h3>\n<p>Le technicien examine chaque élément à traiter : type de tissu (coton, lin, velours, synthétique, laine), épaisseur des rembourrages, couleur et fragilité. Il repère les taches visibles (boissons renversées, graisse alimentaire, urine animale, sueur) et interroge les occupants sur les problèmes allergiques ou respiratoires rencontrés. Cette analyse permet de sélectionner le produit adapté et d'ajuster la température de l'eau (60-70°C pour tuer les acariens) et la puissance d'aspiration. Les textiles anciens des appartements haussmanniens nécessitent une méthode plus douce pour préserver les fibres délicates.</p>\n\n<h3>Pré-traitement ciblé et injection-extraction à eau chaude</h3>\n<p>Les taches tenaces reçoivent un pré-traitement spécifique : détachant enzymatique pour l'urine et les matières organiques, dégraissant pour les résidus alimentaires, neutralisant d'odeurs pour les zones imprégnées par la transpiration ou les animaux. Après un temps de pose de 5 à 10 minutes, la machine d'injection-extraction pulvérise un mélange d'eau chaude (65-70°C) et de détergent hypoallergénique au cœur des fibres. Cette température élevée tue les acariens adultes, larves et œufs. L'aspiration immédiate retire l'eau sale chargée de particules, d'acariens morts et d'allergènes dissous. Le technicien effectue plusieurs passages sur les zones de fort usage.</p>\n\n<h3>Extraction maximale et conseils de prévention</h3>\n<p>L'extraction puissante limite l'humidité résiduelle dans les rembourrages, point critique pour éviter le développement de moisissures dans les logements saint-mandéens exposés à l'humidité du Bois. Le séchage complet intervient sous 4 à 8 heures selon la ventilation. Le technicien conseille d'aérer la pièce, d'orienter un ventilateur si possible et d'attendre le séchage total avant réutilisation. Pour limiter la recontamination, il recommande un aspirateur hebdomadaire avec filtre HEPA, l'utilisation de housses anti-acariens sur les matelas et un nettoyage professionnel annuel pour les foyers allergiques.</p>",
 
       whyUsBullets: [
         "<strong>Connaissance des problématiques saint-mandéennes</strong> : Intervention régulière dans les appartements familiaux du centre-ville et des quartiers résidentiels, avec maîtrise des contaminations liées à la pollution atmosphérique et à l'humidité du Bois.",
@@ -401,64 +356,61 @@ nearbyCities: [
     },
 
     {
-  serviceKey: "nettoyage-appartement-maison",
+      serviceKey: "nettoyage-appartement-maison",
 
-  heroDescription:
-    "À Saint-Mandé, nettoyage discret et précis dans un bâti dense et exigeant : parquets, pièces d’eau et surfaces sensibles traités avec méthode, en amont d’un état des lieux ou d’une relocation.",
+      heroDescription:
+        "À Saint-Mandé, nettoyage discret et précis dans un bâti dense et exigeant : parquets, pièces d’eau et surfaces sensibles traités avec méthode, en amont d’un état des lieux ou d’une relocation.",
 
-  whyUsBullets: [
-    "Approche “haussmannien” : protection des parquets (point de Hongrie), nettoyage précis des plinthes, moulures basses, portes et interrupteurs pour un rendu haut de gamme.",
-    "Organisation adaptée à Saint-Mandé : accès sécurisés (gardiens, Vigik), rues étroites/sens uniques et stationnement très tendu autour de la Mairie et de l’avenue Gallieni.",
-    "Gestion des salissures typiques : dépôts urbains (axes Gallieni / Avenue de Paris), suie et particules liées au périphérique à proximité, calcaire marqué en pièces d’eau.",
-  ],
+      whyUsBullets: [
+        "Approche “haussmannien” : protection des parquets (point de Hongrie), nettoyage précis des plinthes, moulures basses, portes et interrupteurs pour un rendu haut de gamme.",
+        "Organisation adaptée à Saint-Mandé : accès sécurisés (gardiens, Vigik), rues étroites/sens uniques et stationnement très tendu autour de la Mairie et de l’avenue Gallieni.",
+        "Gestion des salissures typiques : dépôts urbains (axes Gallieni / Avenue de Paris), suie et particules liées au périphérique à proximité, calcaire marqué en pièces d’eau.",
+      ],
 
-  uniqueIntro: `<p>À Saint-Mandé, la demande n’est pas “un ménage standard” : c’est une remise à niveau qui doit être <strong>propre au détail</strong> dans une commune ultra-dense, avec un bâti ancien où les finitions se voient vite. Les appartements haussmanniens et les immeubles des années 30–50 combinent souvent parquets sensibles, entrées en pierre ou marbre, radiateurs et plinthes anciennes : si on néglige ces zones, le logement paraît “à moitié fait” même si le sol brille.</p>
-<p class="mt-4">La logistique est un sujet à part entière. Entre les rues étroites, les sens uniques, les accès par digicode/Vigik et les gardiens, l’intervention doit être préparée : point de dépose, accès confirmé, puis déroulé efficace pour limiter les allers-retours et le bruit. Ici, la discrétion compte autant que le résultat : voisinage proche, cages d’escalier résonnantes et contraintes d’horaires.</p>
-<p class="mt-4">On travaille donc “à la Saint-Mandé” : on démarre par la cuisine et la salle d’eau (gras + calcaire), on enchaîne sur les sols avec protection des parquets, puis on verrouille les détails visibles à l’état des lieux (plinthes, poignées, interrupteurs, traces sur portes). Le but : un rendu net, homogène, sans mauvaise surprise sur les matériaux.</p>`,
+      uniqueIntro:
+        '<p>À Saint-Mandé, la demande n’est pas “un ménage standard” : c’est une remise à niveau qui doit être <strong>propre au détail</strong> dans une commune ultra-dense, avec un bâti ancien où les finitions se voient vite. Les appartements haussmanniens et les immeubles des années 30–50 combinent souvent parquets sensibles, entrées en pierre ou marbre, radiateurs et plinthes anciennes : si on néglige ces zones, le logement paraît “à moitié fait” même si le sol brille.</p>\n<p class="mt-4">La logistique est un sujet à part entière. Entre les rues étroites, les sens uniques, les accès par digicode/Vigik et les gardiens, l’intervention doit être préparée : point de dépose, accès confirmé, puis déroulé efficace pour limiter les allers-retours et le bruit. Ici, la discrétion compte autant que le résultat : voisinage proche, cages d’escalier résonnantes et contraintes d’horaires.</p>\n<p class="mt-4">On travaille donc “à la Saint-Mandé” : on démarre par la cuisine et la salle d’eau (gras + calcaire), on enchaîne sur les sols avec protection des parquets, puis on verrouille les détails visibles à l’état des lieux (plinthes, poignées, interrupteurs, traces sur portes). Le but : un rendu net, homogène, sans mauvaise surprise sur les matériaux.</p>',
 
-  uniqueDeepDive: "<h3>Mairie / Gallieni — densité, stationnement et finitions de centre-ville</h3>\n<p>Autour de la Place Charles Digeon et de l’axe Gallieni, la densité se traduit par une logistique serrée : peu de place, des accès sécurisés et des créneaux à optimiser. On privilégie un plan d’action “pièces d’eau → cuisine → sols → finitions”, avec une attention particulière aux cages d’escalier et au bruit (aspiration, déplacement du matériel).</p>\n\n<h3>Tourelles / lisière Paris 12 — dépôts urbains et vitrages exposés</h3>\n<p>Proche des grands axes et du périphérique, certains logements cumulent particules fines, traces sur vitrages bas et salissures de rebords. On insiste sur les points de contact (poignées, interrupteurs), les plinthes et les surfaces basses, et on vise un rendu sans traces sur les fenêtres accessibles et les balcons filants.</p>\n\n<h3>Bord de Bois / secteurs résidentiels — parquets, matériaux nobles, exigence “sans compromis”</h3>\n<p>Dans les immeubles de standing près du Bois de Vincennes, l’enjeu est la protection : parquets anciens, marbre d’entrée, menuiseries bois. On adapte les produits et les gestes, on évite tout excès d’eau, et on termine par une passe de contrôle (angles, plinthes, encadrements) pour un rendu haut de gamme.</p>",
+      uniqueDeepDive:
+        "<h3>Mairie / Gallieni — densité, stationnement et finitions de centre-ville</h3>\n<p>Autour de la Place Charles Digeon et de l’axe Gallieni, la densité se traduit par une logistique serrée : peu de place, des accès sécurisés et des créneaux à optimiser. On privilégie un plan d’action “pièces d’eau → cuisine → sols → finitions”, avec une attention particulière aux cages d’escalier et au bruit (aspiration, déplacement du matériel).</p>\n\n<h3>Tourelles / lisière Paris 12 — dépôts urbains et vitrages exposés</h3>\n<p>Proche des grands axes et du périphérique, certains logements cumulent particules fines, traces sur vitrages bas et salissures de rebords. On insiste sur les points de contact (poignées, interrupteurs), les plinthes et les surfaces basses, et on vise un rendu sans traces sur les fenêtres accessibles et les balcons filants.</p>\n\n<h3>Bord de Bois / secteurs résidentiels — parquets, matériaux nobles, exigence “sans compromis”</h3>\n<p>Dans les immeubles de standing près du Bois de Vincennes, l’enjeu est la protection : parquets anciens, marbre d’entrée, menuiseries bois. On adapte les produits et les gestes, on évite tout excès d’eau, et on termine par une passe de contrôle (angles, plinthes, encadrements) pour un rendu haut de gamme.</p>",
 
-  specificChallenges: [
-    "Commune très dense : stationnement difficile et rues étroites / sens uniques.",
-    "Accès immeubles : gardiens, digicodes, Vigik et consignes d’immeuble fréquentes.",
-    "Bâti ancien : escaliers sans ascenseur et cages résonnantes (discrétion sonore).",
-    "Matériaux sensibles : parquets anciens, marbre/ pierre d’entrée, menuiseries bois.",
-    "Dépôts urbains : particules/suie à proximité du périphérique et des axes (Avenue de Paris, Gallieni).",
-    "Calcaire en pièces d’eau : traces minérales et joints à reprendre sans agresser les surfaces.",
-  ],
+      specificChallenges: [
+        "Commune très dense : stationnement difficile et rues étroites / sens uniques.",
+        "Accès immeubles : gardiens, digicodes, Vigik et consignes d’immeuble fréquentes.",
+        "Bâti ancien : escaliers sans ascenseur et cages résonnantes (discrétion sonore).",
+        "Matériaux sensibles : parquets anciens, marbre/ pierre d’entrée, menuiseries bois.",
+        "Dépôts urbains : particules/suie à proximité du périphérique et des axes (Avenue de Paris, Gallieni).",
+        "Calcaire en pièces d’eau : traces minérales et joints à reprendre sans agresser les surfaces.",
+      ],
 
-  faqAdditions: [
-    {
-      question:
-        "Faites-vous un nettoyage “état des lieux” à Saint-Mandé (94160) dans l’ancien ?",
-      answer: `<p>Oui. On suit une logique orientée état des lieux : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, poignées, portes). Dans l’ancien, ces détails font la différence sur la perception “propre / pas propre”.</p>`,
+      faqAdditions: [
+        {
+          question:
+            "Faites-vous un nettoyage “état des lieux” à Saint-Mandé (94160) dans l’ancien ?",
+          answer:
+            "<p>Oui. On suit une logique orientée état des lieux : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, poignées, portes). Dans l’ancien, ces détails font la différence sur la perception “propre / pas propre”.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous intervenir après travaux (peinture, ponçage, plâtre) dans un appartement haussmannien ?",
+          answer:
+            "<p>Oui. Après travaux, on travaille en plusieurs passes pour éviter que la poussière fine se redépose : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. On adapte aussi la méthode pour protéger les parquets et les boiseries.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous l’accès (gardiens, digicode) et le stationnement très tendu à Saint-Mandé ?",
+          answer:
+            "<p>On confirme l’accès (Vigik/digicode/gardien) avant le rendez-vous et on définit un point de dépose réaliste. L’intervention est organisée pour limiter les allers-retours et le temps “à vide”, ce qui est essentiel dans une commune aussi dense.</p>",
+        },
+        {
+          question:
+            "Réalisez-vous aussi le nettoyage des vitres et balcons exposés aux dépôts urbains ?",
+          answer:
+            "<p>Oui, sur les parties accessibles. La proximité des grands axes peut marquer vitrages bas et rebords : on vise un rendu sans traces et on insiste sur les zones où la salissure est la plus visible (bas de châssis, garde-corps, rebords).</p>",
+        },
+      ],
+
+      ctaOverride: "",
     },
-    {
-      question:
-        "Pouvez-vous intervenir après travaux (peinture, ponçage, plâtre) dans un appartement haussmannien ?",
-      answer: `<p>Oui. Après travaux, on travaille en plusieurs passes pour éviter que la poussière fine se redépose : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. On adapte aussi la méthode pour protéger les parquets et les boiseries.</p>`,
-    },
-    {
-      question:
-        "Comment gérez-vous l’accès (gardiens, digicode) et le stationnement très tendu à Saint-Mandé ?",
-      answer: `<p>On confirme l’accès (Vigik/digicode/gardien) avant le rendez-vous et on définit un point de dépose réaliste. L’intervention est organisée pour limiter les allers-retours et le temps “à vide”, ce qui est essentiel dans une commune aussi dense.</p>`,
-    },
-    {
-      question:
-        "Réalisez-vous aussi le nettoyage des vitres et balcons exposés aux dépôts urbains ?",
-      answer: `<p>Oui, sur les parties accessibles. La proximité des grands axes peut marquer vitrages bas et rebords : on vise un rendu sans traces et on insiste sur les zones où la salissure est la plus visible (bas de châssis, garde-corps, rebords).</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-
-
-
-
-
   ],
 };
 

@@ -16,7 +16,8 @@ const city: City = {
     "Au Raincy, la proximité de la gare Le Raincy – Villemomble – Montfermeil et des axes comme l’avenue de la Résistance favorise un encrassement régulier des surfaces communes et des extérieurs. Dans une ville résidentielle et arborée, l’entretien des revêtements, garde-corps et sols est clé pour préserver l’image des immeubles et le confort au quotidien.",
 
   // ✅ hubIntro : 2 <p> + <ul>
-  hubIntro: "\n<p>Le Raincy se distingue par un parc immobilier résidentiel exigeant, où la qualité perçue des parties communes et des extérieurs compte au quotidien. KLINOVA accompagne syndics, conseils syndicaux, gestionnaires et occupants avec une approche rigoureuse, protocolisée et adaptée aux contraintes d’accès et d’occupation.</p>\n<p class=\"mt-4\">Autour de la gare Le Raincy – Villemomble – Montfermeil, avec un stationnement souvent réglementé et des immeubles aux circulations parfois étroites, chaque intervention commence par un diagnostic sur site, un planning clair et un suivi documenté, pour limiter la gêne et sécuriser le résultat.</p>\n<ul>\n  <li><strong>Accessibilité technique :</strong> organisation par zones, gestion des accès (Vigik / gardien), matériel adapté aux circulations étroites, balisage systématique.</li>\n  <li><strong>Réactivité locale :</strong> déplacement gratuit pour devis, créneaux coordonnés avec syndic/gardien, intervention d’urgence possible selon contexte.</li>\n  <li><strong>Protocoles documentés :</strong> compte-rendu d’intervention, traçabilité des produits, recommandations d’entretien selon les supports.</li>\n</ul>\n",
+  hubIntro:
+    '\n<p>Le Raincy se distingue par un parc immobilier résidentiel exigeant, où la qualité perçue des parties communes et des extérieurs compte au quotidien. KLINOVA accompagne syndics, conseils syndicaux, gestionnaires et occupants avec une approche rigoureuse, protocolisée et adaptée aux contraintes d’accès et d’occupation.</p>\n<p class="mt-4">Autour de la gare Le Raincy – Villemomble – Montfermeil, avec un stationnement souvent réglementé et des immeubles aux circulations parfois étroites, chaque intervention commence par un diagnostic sur site, un planning clair et un suivi documenté, pour limiter la gêne et sécuriser le résultat.</p>\n<ul>\n  <li><strong>Accessibilité technique :</strong> organisation par zones, gestion des accès (Vigik / gardien), matériel adapté aux circulations étroites, balisage systématique.</li>\n  <li><strong>Réactivité locale :</strong> déplacement gratuit pour devis, créneaux coordonnés avec syndic/gardien, intervention d’urgence possible selon contexte.</li>\n  <li><strong>Protocoles documentés :</strong> compte-rendu d’intervention, traçabilité des produits, recommandations d’entretien selon les supports.</li>\n</ul>\n',
 
   citySpecificChallenges: [
     "Copropriétés résidentielles et allées arborées : apports de terre végétale, feuilles et dépôts verts sur les zones d’entrée.",
@@ -26,21 +27,27 @@ const city: City = {
   ],
 
   // ✅ Quartiers (IRIS INSEE) — 6 au Raincy
-  districts: ["Chatrian", "Hérôld", "Nicolas Carnot", "Thiellement", "Thiers", "Valère Lefebvre"],
+  districts: [
+    "Chatrian",
+    "Hérôld",
+    "Nicolas Carnot",
+    "Thiellement",
+    "Thiers",
+    "Valère Lefebvre",
+  ],
 
-nearbyCities: [
-        "gagny",
-        "livry-gargan",
-        "rosny-sous-bois",
-        "montfermeil",
-        "neuilly-plaisance",
-        "neuilly-sur-marne",
-        "chelles",
-        "gournay-sur-marne",
-        "bobigny",
-        "le-perreux-sur-marne"
-      ],
-
+  nearbyCities: [
+    "gagny",
+    "livry-gargan",
+    "rosny-sous-bois",
+    "montfermeil",
+    "neuilly-plaisance",
+    "neuilly-sur-marne",
+    "chelles",
+    "gournay-sur-marne",
+    "bobigny",
+    "le-perreux-sur-marne",
+  ],
 
   landmarks: [
     "Mairie du Raincy",
@@ -54,24 +61,28 @@ nearbyCities: [
   // ✅ FAQ hub (HTML léger, balises autorisées)
   faq: [
     {
-      question: "Intervenez-vous rapidement au Raincy malgré les contraintes de circulation autour de la gare ?",
+      question:
+        "Intervenez-vous rapidement au Raincy malgré les contraintes de circulation autour de la gare ?",
       answer:
-        `<p><strong>Oui, avec une planification réaliste.</strong> Nous privilégions des créneaux adaptés aux flux autour de la gare Le Raincy – Villemomble – Montfermeil et aux règles de stationnement, avec du matériel compact pour intervenir proprement sans bloquer les circulations.</p>`,
+        "<p><strong>Oui, avec une planification réaliste.</strong> Nous privilégions des créneaux adaptés aux flux autour de la gare Le Raincy – Villemomble – Montfermeil et aux règles de stationnement, avec du matériel compact pour intervenir proprement sans bloquer les circulations.</p>",
     },
     {
-      question: "Comment gérez-vous l’accès aux parties communes sécurisées (badge Vigik, gardien, interphone) ?",
+      question:
+        "Comment gérez-vous l’accès aux parties communes sécurisées (badge Vigik, gardien, interphone) ?",
       answer:
-        `<p><strong>Accès coordonné et sécurisé.</strong> Selon la résidence, l’accès est organisé via Vigik professionnel, gardien ou remise de clés, avec des horaires validés en amont. Les interventions sont balisées et le technicien est identifiable, pour une circulation maîtrisée dans l’immeuble.</p>`,
+        "<p><strong>Accès coordonné et sécurisé.</strong> Selon la résidence, l’accès est organisé via Vigik professionnel, gardien ou remise de clés, avec des horaires validés en amont. Les interventions sont balisées et le technicien est identifiable, pour une circulation maîtrisée dans l’immeuble.</p>",
     },
     {
-      question: "Le déplacement pour établir un devis est-il facturé pour une copropriété située au Raincy ?",
+      question:
+        "Le déplacement pour établir un devis est-il facturé pour une copropriété située au Raincy ?",
       answer:
-        `<p><strong>Non.</strong> Le diagnostic sur site est réalisé sans frais : surfaces, contraintes d’accès, état des supports (textiles, sols, sous-sols, extérieurs) et organisation. Le devis est ensuite transmis sous 48 à 72 heures, sur la base des éléments constatés.</p>`,
+        "<p><strong>Non.</strong> Le diagnostic sur site est réalisé sans frais : surfaces, contraintes d’accès, état des supports (textiles, sols, sous-sols, extérieurs) et organisation. Le devis est ensuite transmis sous 48 à 72 heures, sur la base des éléments constatés.</p>",
     },
     {
-      question: "Pouvez-vous intervenir en urgence après un dégât des eaux ou une zone fortement souillée ?",
+      question:
+        "Pouvez-vous intervenir en urgence après un dégât des eaux ou une zone fortement souillée ?",
       answer:
-        `<p><strong>Oui, selon la situation.</strong> En cas de sinistre ou de souillure accidentelle, nous pouvons mobiliser une équipe sous 24 à 48 heures pour une remise en état, avec un protocole clair (sécurisation, traitement, séchage si nécessaire) et un reporting utile au syndic.</p>`,
+        "<p><strong>Oui, selon la situation.</strong> En cas de sinistre ou de souillure accidentelle, nous pouvons mobiliser une équipe sous 24 à 48 heures pour une remise en état, avec un protocole clair (sécurisation, traitement, séchage si nécessaire) et un reporting utile au syndic.</p>",
     },
   ],
 
@@ -99,16 +110,11 @@ nearbyCities: [
         "Organisation par zones : balisage clair, gêne limitée, compte-rendu utile au syndic.",
       ],
 
-      uniqueIntro: `
-<p>Les moquettes de parties communes se salissent progressivement : poussières fines, traces de passage, zones tassées dans les escaliers, ternissement dans les halls. Au Raincy, la proximité des axes et de la gare accentue les apports de particules et la fréquence de passage, surtout aux entrées.</p>
-<p class="mt-4">Sur une moquette bouclée ou plus épaisse, la salissure s’installe dans la fibre et l’aspiration classique ne suffit plus. Un nettoyage professionnel structuré permet de retrouver une propreté visible, d’assainir la fibre et de prolonger la durée de vie du revêtement, sans perturber les occupants.</p>
-`,
+      uniqueIntro:
+        '\n<p>Les moquettes de parties communes se salissent progressivement : poussières fines, traces de passage, zones tassées dans les escaliers, ternissement dans les halls. Au Raincy, la proximité des axes et de la gare accentue les apports de particules et la fréquence de passage, surtout aux entrées.</p>\n<p class="mt-4">Sur une moquette bouclée ou plus épaisse, la salissure s’installe dans la fibre et l’aspiration classique ne suffit plus. Un nettoyage professionnel structuré permet de retrouver une propreté visible, d’assainir la fibre et de prolonger la durée de vie du revêtement, sans perturber les occupants.</p>\n',
 
-      uniqueDeepDive: `
-<p><strong>1) Diagnostic & préparation :</strong> repérage du type de moquette, des taches et des zones de trafic, puis protections (bas de murs), balisage et organisation par étage/cage pour limiter la gêne.</p>
-<p class="mt-4"><strong>2) Injection-extraction :</strong> produit adapté à la fibre, injection sous pression modérée et aspiration immédiate des salissures. Passes supplémentaires sur paliers, entrées et marches les plus sollicitées.</p>
-<p class="mt-4"><strong>3) Séchage & conseils :</strong> extraction maximale pour réduire l’humidité résiduelle, recommandations d’aération et fréquence (souvent 12–18 mois en zones très passantes).</p>
-`,
+      uniqueDeepDive:
+        '\n<p><strong>1) Diagnostic & préparation :</strong> repérage du type de moquette, des taches et des zones de trafic, puis protections (bas de murs), balisage et organisation par étage/cage pour limiter la gêne.</p>\n<p class="mt-4"><strong>2) Injection-extraction :</strong> produit adapté à la fibre, injection sous pression modérée et aspiration immédiate des salissures. Passes supplémentaires sur paliers, entrées et marches les plus sollicitées.</p>\n<p class="mt-4"><strong>3) Séchage & conseils :</strong> extraction maximale pour réduire l’humidité résiduelle, recommandations d’aération et fréquence (souvent 12–18 mois en zones très passantes).</p>\n',
 
       specificChallenges: [
         "Proximité gare et axes : particules fines et apports de salissures au niveau des entrées et seuils.",
@@ -118,24 +124,27 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Les moquettes proches de la gare nécessitent-elles un entretien plus fréquent ?",
+          question:
+            "Les moquettes proches de la gare nécessitent-elles un entretien plus fréquent ?",
           answer:
-            `<p><strong>Souvent oui.</strong> Les entrées et paliers exposés aux flux (gare/axes) se salissent plus vite. Après diagnostic, on recommande généralement un cycle plus court sur ces zones, tout en gardant un rythme plus espacé sur les étages moins sollicités.</p>`,
+            "<p><strong>Souvent oui.</strong> Les entrées et paliers exposés aux flux (gare/axes) se salissent plus vite. Après diagnostic, on recommande généralement un cycle plus court sur ces zones, tout en gardant un rythme plus espacé sur les étages moins sollicités.</p>",
         },
         {
-          question: "Intervenez-vous aussi dans de petites copropriétés ou chez des particuliers ?",
+          question:
+            "Intervenez-vous aussi dans de petites copropriétés ou chez des particuliers ?",
           answer:
-            `<p><strong>Oui.</strong> Nous intervenons en petites copropriétés comme en résidences plus importantes, et aussi à domicile lorsque la configuration s’y prête. Le protocole est ajusté au volume réel, aux accès et au type de moquette.</p>`,
+            "<p><strong>Oui.</strong> Nous intervenons en petites copropriétés comme en résidences plus importantes, et aussi à domicile lorsque la configuration s’y prête. Le protocole est ajusté au volume réel, aux accès et au type de moquette.</p>",
         },
         {
           question: "La méthode risque-t-elle d’abîmer une moquette ancienne ?",
           answer:
-            `<p><strong>Non, si elle est réglée correctement.</strong> Pression, produit et volume d’eau sont adaptés au support. Un test préalable peut être réalisé sur une zone discrète pour valider la tenue des fibres avant traitement complet.</p>`,
+            "<p><strong>Non, si elle est réglée correctement.</strong> Pression, produit et volume d’eau sont adaptés au support. Un test préalable peut être réalisé sur une zone discrète pour valider la tenue des fibres avant traitement complet.</p>",
         },
         {
-          question: "Les résidents peuvent-ils circuler pendant et après l’intervention ?",
+          question:
+            "Les résidents peuvent-ils circuler pendant et après l’intervention ?",
           answer:
-            `<p><strong>Oui, avec balisage.</strong> Les zones traitées sont sécurisées pendant l’intervention. Après séchage au toucher, la circulation redevient possible. Le syndic reçoit des consignes claires sur les délais et les zones concernées.</p>`,
+            "<p><strong>Oui, avec balisage.</strong> Les zones traitées sont sécurisées pendant l’intervention. Après séchage au toucher, la circulation redevient possible. Le syndic reçoit des consignes claires sur les délais et les zones concernées.</p>",
         },
       ],
 
@@ -156,16 +165,11 @@ nearbyCities: [
         "Gestion de l’eau : récupération/évacuation adaptée au réseau et aux contraintes du site.",
       ],
 
-      uniqueIntro: `
-<p>Dans un parking, l’encrassement s’installe par couches : poussière noire, traces de pneus, taches d’huile et dépôts sur les pieds de murs. Au Raincy, la proximité des axes de circulation accentue ces résidus, surtout aux rampes et zones de manœuvre.</p>
-<p class="mt-4">Quand le sol devient terne et que les marquages perdent en lisibilité, l’impression de confinement augmente et des questions de sécurité apparaissent (glissance, visibilité). Un décrassage complet, bien coordonné, remet le parking au propre sans perturber inutilement les résidents.</p>
-`,
+      uniqueIntro:
+        '\n<p>Dans un parking, l’encrassement s’installe par couches : poussière noire, traces de pneus, taches d’huile et dépôts sur les pieds de murs. Au Raincy, la proximité des axes de circulation accentue ces résidus, surtout aux rampes et zones de manœuvre.</p>\n<p class="mt-4">Quand le sol devient terne et que les marquages perdent en lisibilité, l’impression de confinement augmente et des questions de sécurité apparaissent (glissance, visibilité). Un décrassage complet, bien coordonné, remet le parking au propre sans perturber inutilement les résidents.</p>\n',
 
-      uniqueDeepDive: `
-<p><strong>1) Visite technique :</strong> repérage revêtement (béton/peinture/résine), évacuation des eaux, hauteur sous plafond, rampes et points sensibles. Planning transmis au syndic.</p>
-<p class="mt-4"><strong>2) Nettoyage structuré :</strong> balayage/dégagement, puis autolaveuse (brossage + aspiration). Dégraissage ciblé sur huiles et zones de freinage, traitement manuel des angles et bordures.</p>
-<p class="mt-4"><strong>3) Gestion de l’eau & finitions :</strong> récupération immédiate des eaux sales, évacuation via point conforme. Recommandation de fréquence selon rotation et niveau d’exposition.</p>
-`,
+      uniqueDeepDive:
+        '\n<p><strong>1) Visite technique :</strong> repérage revêtement (béton/peinture/résine), évacuation des eaux, hauteur sous plafond, rampes et points sensibles. Planning transmis au syndic.</p>\n<p class="mt-4"><strong>2) Nettoyage structuré :</strong> balayage/dégagement, puis autolaveuse (brossage + aspiration). Dégraissage ciblé sur huiles et zones de freinage, traitement manuel des angles et bordures.</p>\n<p class="mt-4"><strong>3) Gestion de l’eau & finitions :</strong> récupération immédiate des eaux sales, évacuation via point conforme. Recommandation de fréquence selon rotation et niveau d’exposition.</p>\n',
 
       specificChallenges: [
         "Axes proches : dépôt de particules et résidus gras, encrassement accéléré des rampes.",
@@ -175,24 +179,27 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Pourquoi la poussière de parking devient-elle noire et grasse ?",
+          question:
+            "Pourquoi la poussière de parking devient-elle noire et grasse ?",
           answer:
-            `<p><strong>Parce qu’elle mélange plusieurs résidus.</strong> Les particules de freinage, les micro-projections d’hydrocarbures et les traces de pneus se combinent et forment une couche adhérente, surtout sur les zones de manœuvre et de rampe.</p>`,
+            "<p><strong>Parce qu’elle mélange plusieurs résidus.</strong> Les particules de freinage, les micro-projections d’hydrocarbures et les traces de pneus se combinent et forment une couche adhérente, surtout sur les zones de manœuvre et de rampe.</p>",
         },
         {
           question: "Faut-il vider complètement le parking pour intervenir ?",
           answer:
-            `<p><strong>Non, le travail par zones est souvent possible.</strong> On planifie secteur par secteur avec des consignes de déplacement temporaire. L’objectif est de nettoyer efficacement tout en maintenant un accès raisonnable aux résidents.</p>`,
+            "<p><strong>Non, le travail par zones est souvent possible.</strong> On planifie secteur par secteur avec des consignes de déplacement temporaire. L’objectif est de nettoyer efficacement tout en maintenant un accès raisonnable aux résidents.</p>",
         },
         {
-          question: "Les taches d’huile anciennes peuvent-elles disparaître totalement ?",
+          question:
+            "Les taches d’huile anciennes peuvent-elles disparaître totalement ?",
           answer:
-            `<p><strong>Pas toujours, mais on peut beaucoup améliorer.</strong> Sur béton poreux, une trace ancienne peut rester légère. Le nettoyage supprime la pellicule grasse, améliore l’aspect et réduit le risque de glissance, avec des attentes fixées au diagnostic.</p>`,
+            "<p><strong>Pas toujours, mais on peut beaucoup améliorer.</strong> Sur béton poreux, une trace ancienne peut rester légère. Le nettoyage supprime la pellicule grasse, améliore l’aspect et réduit le risque de glissance, avec des attentes fixées au diagnostic.</p>",
         },
         {
-          question: "Comment gérez-vous les eaux de lavage si l’évacuation est limitée ?",
+          question:
+            "Comment gérez-vous les eaux de lavage si l’évacuation est limitée ?",
           answer:
-            `<p><strong>Par récupération et évacuation contrôlée.</strong> L’autolaveuse aspire l’eau sale immédiatement. Si les siphons sont insuffisants, on privilégie la récupération et une évacuation vers un point conforme identifié lors de la visite.</p>`,
+            "<p><strong>Par récupération et évacuation contrôlée.</strong> L’autolaveuse aspire l’eau sale immédiatement. Si les siphons sont insuffisants, on privilégie la récupération et une évacuation vers un point conforme identifié lors de la visite.</p>",
         },
       ],
 
@@ -213,16 +220,11 @@ nearbyCities: [
         "Gestion de l’eau : prévention des coulures, travail par zones, respect du voisinage.",
       ],
 
-      uniqueIntro: `
-<p>Avec le temps, un balcon finit par se ternir : joints noircis, dépôts verts à l’ombre, poussière qui s’incruste, traces d’eau et salissures qui reviennent vite. Au Raincy, l’environnement arboré et la pollution des axes renforcent ces dépôts, surtout sur les angles et les zones peu exposées au soleil.</p>
-<p class="mt-4">Résultat : l’espace extérieur est moins agréable, on l’utilise moins, on y stocke plutôt qu’on en profite. Une remise en état professionnelle permet de réinvestir le balcon, de retrouver une surface propre et de repartir sur un entretien simple, sans risque pour les supports.</p>
-`,
+      uniqueIntro:
+        '\n<p>Avec le temps, un balcon finit par se ternir : joints noircis, dépôts verts à l’ombre, poussière qui s’incruste, traces d’eau et salissures qui reviennent vite. Au Raincy, l’environnement arboré et la pollution des axes renforcent ces dépôts, surtout sur les angles et les zones peu exposées au soleil.</p>\n<p class="mt-4">Résultat : l’espace extérieur est moins agréable, on l’utilise moins, on y stocke plutôt qu’on en profite. Une remise en état professionnelle permet de réinvestir le balcon, de retrouver une surface propre et de repartir sur un entretien simple, sans risque pour les supports.</p>\n',
 
-      uniqueDeepDive: `
-<p><strong>1) Protection & préparation :</strong> protection de la porte-fenêtre, déplacement/protection des plantes et mobilier, dégrossissage manuel (feuilles, terre, résidus).</p>
-<p class="mt-4"><strong>2) Nettoyage adapté :</strong> application d’un produit compatible support, brossage, traitement ciblé des joints, nettoyage garde-corps/vitreries/murs mitoyens, rinçage à pression douce et contrôlée.</p>
-<p class="mt-4"><strong>3) Gestion de l’eau & séchage :</strong> orientation vers l’évacuation, travail par petites surfaces pour éviter débordements, conseils de séchage et entretien léger régulier.</p>
-`,
+      uniqueDeepDive:
+        '\n<p><strong>1) Protection & préparation :</strong> protection de la porte-fenêtre, déplacement/protection des plantes et mobilier, dégrossissage manuel (feuilles, terre, résidus).</p>\n<p class="mt-4"><strong>2) Nettoyage adapté :</strong> application d’un produit compatible support, brossage, traitement ciblé des joints, nettoyage garde-corps/vitreries/murs mitoyens, rinçage à pression douce et contrôlée.</p>\n<p class="mt-4"><strong>3) Gestion de l’eau & séchage :</strong> orientation vers l’évacuation, travail par petites surfaces pour éviter débordements, conseils de séchage et entretien léger régulier.</p>\n',
 
       specificChallenges: [
         "Dépôts verts et résines végétales : joints et angles plus difficiles à rattraper sans brossage ciblé.",
@@ -232,24 +234,27 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Le nettoyage à la pression risque-t-il d’abîmer le carrelage ou les joints ?",
+          question:
+            "Le nettoyage à la pression risque-t-il d’abîmer le carrelage ou les joints ?",
           answer:
-            `<p><strong>Non, car la pression est contrôlée.</strong> Le résultat vient surtout du produit adapté et du brossage. Le rinçage reste modéré, et les joints fragiles sont traités à la main pour préserver l’intégrité du support.</p>`,
+            "<p><strong>Non, car la pression est contrôlée.</strong> Le résultat vient surtout du produit adapté et du brossage. Le rinçage reste modéré, et les joints fragiles sont traités à la main pour préserver l’intégrité du support.</p>",
         },
         {
-          question: "L’eau peut-elle couler chez les voisins ou le long de la façade ?",
+          question:
+            "L’eau peut-elle couler chez les voisins ou le long de la façade ?",
           answer:
-            `<p><strong>On l’anticipe dès le départ.</strong> On repère l’évacuation, on travaille par petites zones et on tire l’eau vers le bon point. Si nécessaire, raclette et chiffons absorbants complètent pour éviter tout débordement.</p>`,
+            "<p><strong>On l’anticipe dès le départ.</strong> On repère l’évacuation, on travaille par petites zones et on tire l’eau vers le bon point. Si nécessaire, raclette et chiffons absorbants complètent pour éviter tout débordement.</p>",
         },
         {
-          question: "Les produits sont-ils compatibles avec les plantes et les animaux ?",
+          question:
+            "Les produits sont-ils compatibles avec les plantes et les animaux ?",
           answer:
-            `<p><strong>Oui, après rinçage.</strong> Les plantes sont déplacées/protégées, les produits sont choisis pour être compatibles avec un usage domestique, puis rincés soigneusement. Un délai de réutilisation est conseillé selon l’humidité résiduelle.</p>`,
+            "<p><strong>Oui, après rinçage.</strong> Les plantes sont déplacées/protégées, les produits sont choisis pour être compatibles avec un usage domestique, puis rincés soigneusement. Un délai de réutilisation est conseillé selon l’humidité résiduelle.</p>",
         },
         {
           question: "Quand peut-on réutiliser le balcon après l’intervention ?",
           answer:
-            `<p><strong>Dès que c’est sec au toucher.</strong> Le délai dépend de l’exposition et de la ventilation, mais le balcon redevient généralement utilisable le jour même. Le technicien précise un délai réaliste selon le support et la météo.</p>`,
+            "<p><strong>Dès que c’est sec au toucher.</strong> Le délai dépend de l’exposition et de la ventilation, mais le balcon redevient généralement utilisable le jour même. Le technicien précise un délai réaliste selon le support et la météo.</p>",
         },
       ],
 
@@ -271,16 +276,11 @@ nearbyCities: [
       ],
 
       // ✅ Tu as demandé de “reprendre ce point” : on remet exactement tes 2 paragraphes
-      uniqueIntro: `
-<p>Au Raincy, les balcons d’immeubles situés à proximité des allées arborées, du parc du lycée Albert Schweitzer ou de combles non sécurisés sont parfois investis par des pigeons qui y nichent durablement. Avec le temps, leurs fientes s’accumulent et forment une couche compacte de résidus secs, générant des odeurs persistantes et rendant le balcon difficilement utilisable. Cette pollution organique peut également altérer les revêtements (carrelage, peinture, garde-corps) et favoriser la présence d’insectes ou de micro-organismes liés aux poussières de déjection.</p>
-<p class="mt-4">Face à ce type de situation, une intervention amateur est souvent évitée en raison des contraintes sanitaires et du manque d’équipement adapté. Le traitement des balcons fortement souillés nécessite en effet un protocole rigoureux : enlèvement sécurisé des déjections, nettoyage en profondeur, désinfection contrôlée et remise en état des surfaces. Une intervention professionnelle permet de restaurer un balcon sain et fonctionnel, tout en limitant les risques et les nuisances pour les occupants comme pour le voisinage.</p>
-`,
+      uniqueIntro:
+        '\n<p>Au Raincy, les balcons d’immeubles situés à proximité des allées arborées, du parc du lycée Albert Schweitzer ou de combles non sécurisés sont parfois investis par des pigeons qui y nichent durablement. Avec le temps, leurs fientes s’accumulent et forment une couche compacte de résidus secs, générant des odeurs persistantes et rendant le balcon difficilement utilisable. Cette pollution organique peut également altérer les revêtements (carrelage, peinture, garde-corps) et favoriser la présence d’insectes ou de micro-organismes liés aux poussières de déjection.</p>\n<p class="mt-4">Face à ce type de situation, une intervention amateur est souvent évitée en raison des contraintes sanitaires et du manque d’équipement adapté. Le traitement des balcons fortement souillés nécessite en effet un protocole rigoureux : enlèvement sécurisé des déjections, nettoyage en profondeur, désinfection contrôlée et remise en état des surfaces. Une intervention professionnelle permet de restaurer un balcon sain et fonctionnel, tout en limitant les risques et les nuisances pour les occupants comme pour le voisinage.</p>\n',
 
-      uniqueDeepDive: `
-<p><strong>1) Sécurisation :</strong> EPI (combinaison, gants, masque respiratoire adapté, lunettes), protection de l’intérieur par bâches, réduction des projections et poussières.</p>
-<p class="mt-4"><strong>2) Enlèvement & nettoyage :</strong> humidification préalable des fientes sèches, ramassage manuel et conditionnement en sacs étanches, nettoyage des surfaces (sol, garde-corps, murs) avec produit adapté et rinçage contrôlé.</p>
-<p class="mt-4"><strong>3) Désinfection & remise en état :</strong> application d’un désinfectant homologué avec temps de contact respecté, rinçage si nécessaire, aération et délai avant réutilisation. Conseils possibles de dissuasion (pics/filets) selon configuration.</p>
-`,
+      uniqueDeepDive:
+        '\n<p><strong>1) Sécurisation :</strong> EPI (combinaison, gants, masque respiratoire adapté, lunettes), protection de l’intérieur par bâches, réduction des projections et poussières.</p>\n<p class="mt-4"><strong>2) Enlèvement & nettoyage :</strong> humidification préalable des fientes sèches, ramassage manuel et conditionnement en sacs étanches, nettoyage des surfaces (sol, garde-corps, murs) avec produit adapté et rinçage contrôlé.</p>\n<p class="mt-4"><strong>3) Désinfection & remise en état :</strong> application d’un désinfectant homologué avec temps de contact respecté, rinçage si nécessaire, aération et délai avant réutilisation. Conseils possibles de dissuasion (pics/filets) selon configuration.</p>\n',
 
       specificChallenges: [
         "Fientes sèches : risque de poussières, humidification préalable indispensable avant enlèvement.",
@@ -290,24 +290,28 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Faut-il vraiment un professionnel pour nettoyer des fientes importantes ?",
+          question:
+            "Faut-il vraiment un professionnel pour nettoyer des fientes importantes ?",
           answer:
-            `<p><strong>Oui, dès qu’il y a accumulation.</strong> Le risque principal vient des poussières lors du grattage et du manque d’EPI adaptés. Un protocole pro limite la dispersion, sécurise l’enlèvement et inclut une désinfection contrôlée avec un résultat réutilisable.</p>`,
+            "<p><strong>Oui, dès qu’il y a accumulation.</strong> Le risque principal vient des poussières lors du grattage et du manque d’EPI adaptés. Un protocole pro limite la dispersion, sécurise l’enlèvement et inclut une désinfection contrôlée avec un résultat réutilisable.</p>",
         },
         {
-          question: "Après désinfection, est-ce sans danger pour les occupants et les animaux ?",
+          question:
+            "Après désinfection, est-ce sans danger pour les occupants et les animaux ?",
           answer:
-            `<p><strong>Oui, en respectant le protocole.</strong> Les produits sont appliqués avec temps de contact, puis les surfaces sont contrôlées et le balcon est aéré. Le technicien indique un délai réaliste avant réutilisation selon l’humidité et la ventilation.</p>`,
+            "<p><strong>Oui, en respectant le protocole.</strong> Les produits sont appliqués avec temps de contact, puis les surfaces sont contrôlées et le balcon est aéré. Le technicien indique un délai réaliste avant réutilisation selon l’humidité et la ventilation.</p>",
         },
         {
-          question: "Les fientes peuvent-elles abîmer le carrelage ou le garde-corps ?",
+          question:
+            "Les fientes peuvent-elles abîmer le carrelage ou le garde-corps ?",
           answer:
-            `<p><strong>Oui, avec le temps.</strong> Les dépôts peuvent ternir, encrasser les joints et attaquer certaines peintures. Le nettoyage stoppe l’aggravation et remet au propre, mais un support déjà altéré peut nécessiter ensuite une remise en peinture ou une reprise des joints.</p>`,
+            "<p><strong>Oui, avec le temps.</strong> Les dépôts peuvent ternir, encrasser les joints et attaquer certaines peintures. Le nettoyage stoppe l’aggravation et remet au propre, mais un support déjà altéré peut nécessiter ensuite une remise en peinture ou une reprise des joints.</p>",
         },
         {
-          question: "Que faites-vous des déchets récupérés (fientes, nids, débris) ?",
+          question:
+            "Que faites-vous des déchets récupérés (fientes, nids, débris) ?",
           answer:
-            `<p><strong>Ils sont évacués proprement.</strong> Les déchets sont conditionnés en sacs étanches fermés et sortis par nos équipes, sans laisser de résidus sur le balcon ni dans les parties communes.</p>`,
+            "<p><strong>Ils sont évacués proprement.</strong> Les déchets sont conditionnés en sacs étanches fermés et sortis par nos équipes, sans laisser de résidus sur le balcon ni dans les parties communes.</p>",
         },
       ],
 
@@ -328,16 +332,11 @@ nearbyCities: [
         "Intervention à domicile : organisation simple, durée maîtrisée, conseils clairs de séchage.",
       ],
 
-      uniqueIntro: `
-<p>Dans un logement, les textiles concentrent vite la vie quotidienne : canapés sollicités, tapis marqués, matelas exposés à la transpiration et aux poussières. Avec le temps, taches, odeurs et allergènes s’installent, même si l’on aspire régulièrement.</p>
-<p class="mt-4">Un nettoyage professionnel structuré permet d’extraire en profondeur les salissures fixées dans les fibres, d’améliorer l’hygiène ressentie et de retrouver un textile plus net, plus agréable et plus simple à entretenir au quotidien.</p>
-`,
+      uniqueIntro:
+        '\n<p>Dans un logement, les textiles concentrent vite la vie quotidienne : canapés sollicités, tapis marqués, matelas exposés à la transpiration et aux poussières. Avec le temps, taches, odeurs et allergènes s’installent, même si l’on aspire régulièrement.</p>\n<p class="mt-4">Un nettoyage professionnel structuré permet d’extraire en profondeur les salissures fixées dans les fibres, d’améliorer l’hygiène ressentie et de retrouver un textile plus net, plus agréable et plus simple à entretenir au quotidien.</p>\n',
 
-      uniqueDeepDive: `
-<p><strong>1) Diagnostic & pré-traitement :</strong> identification de la fibre (coton, laine, synthétique, velours, cuir) et des taches (graisse, vin, urine). Pré-traitement ciblé selon la nature organique ou grasse.</p>
-<p class="mt-4"><strong>2) Nettoyage par injection-extraction :</strong> injection d’une solution adaptée et aspiration immédiate des salissures. Travail par zones, passes croisées, attention aux contours et zones de contact (accoudoirs, assise, coutures).</p>
-<p class="mt-4"><strong>3) Séchage & consignes :</strong> extraction maximale, aération conseillée, délai réaliste avant réutilisation selon épaisseur. Conseils simples pour limiter la réapparition (aspiration, traitement des taches fraîches).</p>
-`,
+      uniqueDeepDive:
+        '\n<p><strong>1) Diagnostic & pré-traitement :</strong> identification de la fibre (coton, laine, synthétique, velours, cuir) et des taches (graisse, vin, urine). Pré-traitement ciblé selon la nature organique ou grasse.</p>\n<p class="mt-4"><strong>2) Nettoyage par injection-extraction :</strong> injection d’une solution adaptée et aspiration immédiate des salissures. Travail par zones, passes croisées, attention aux contours et zones de contact (accoudoirs, assise, coutures).</p>\n<p class="mt-4"><strong>3) Séchage & consignes :</strong> extraction maximale, aération conseillée, délai réaliste avant réutilisation selon épaisseur. Conseils simples pour limiter la réapparition (aspiration, traitement des taches fraîches).</p>\n',
 
       specificChallenges: [
         "Taches organiques/odeurs : nécessité de pré-traitements enzymatiques et d’une extraction immédiate.",
@@ -385,19 +384,10 @@ nearbyCities: [
         "Protocole ajusté au patrimoine architectural local : terrasses des meulières Belle Époque, dallages des villas bourgeoises, revêtements des constructions plus récentes.",
         "Mise en sécurité systématique des abords : bâchage du mobilier extérieur, protection des massifs et plantations, évacuation contrôlée des eaux de rinçage.",
       ],
-      uniqueIntro: `<p>Le Raincy, ancienne <strong>ville-parc</strong> née du lotissement d'un domaine princier au XIXe siècle, conserve un caractère résidentiel singulier en Seine-Saint-Denis. Des <strong>meulières bourgeoises</strong> du Plateau aux pavillons du quartier de la Gare, les terrasses témoignent de la diversité architecturale de cette commune souvent surnommée le « petit Neuilly du 93 ».</p>
-
-<p class="mt-4">L'abondante végétation qui fait la réputation de la ville — arbres remarquables, jardins arborés, allées plantées héritées de l'ancien parc à l'anglaise — génère des conditions propices au développement des mousses et lichens sur les surfaces extérieures. L'ombre portée des grands arbres et l'humidité retenue par les feuillages accélèrent l'encrassement des <strong>dalles en pierre</strong>, <strong>béton</strong> ou <strong>carrelage</strong>.</p>
-
-<p class="mt-4">Le diagnostic préalable identifie la nature du revêtement et son état pour déterminer le traitement approprié, qu'il s'agisse d'une terrasse ancienne aux joints fragiles ou d'un aménagement contemporain en grès cérame ou bois composite.</p>`,
-      uniqueDeepDive: `<h3>Évaluation et préparation du chantier</h3>
-<p>Mobilier de jardin, bacs à plantes et objets décoratifs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées des éclaboussures. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>
-
-<h3>Décrassage et action mécanique ciblée</h3>
-<p>Le produit de nettoyage est choisi selon le matériau : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. Le brossage mécanique déloge les incrustations. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture du support.</p>
-
-<h3>Traitement préventif et recommandations</h3>
-<p>Une protection anti-mousse est appliquée sur les zones ombragées les plus exposées. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des conseils d'entretien courant sont communiqués pour prolonger l'effet du nettoyage face à la végétation environnante.</p>`,
+      uniqueIntro:
+        "<p>Le Raincy, ancienne <strong>ville-parc</strong> née du lotissement d'un domaine princier au XIXe siècle, conserve un caractère résidentiel singulier en Seine-Saint-Denis. Des <strong>meulières bourgeoises</strong> du Plateau aux pavillons du quartier de la Gare, les terrasses témoignent de la diversité architecturale de cette commune souvent surnommée le « petit Neuilly du 93 ».</p>\n\n<p class=\"mt-4\">L'abondante végétation qui fait la réputation de la ville — arbres remarquables, jardins arborés, allées plantées héritées de l'ancien parc à l'anglaise — génère des conditions propices au développement des mousses et lichens sur les surfaces extérieures. L'ombre portée des grands arbres et l'humidité retenue par les feuillages accélèrent l'encrassement des <strong>dalles en pierre</strong>, <strong>béton</strong> ou <strong>carrelage</strong>.</p>\n\n<p class=\"mt-4\">Le diagnostic préalable identifie la nature du revêtement et son état pour déterminer le traitement approprié, qu'il s'agisse d'une terrasse ancienne aux joints fragiles ou d'un aménagement contemporain en grès cérame ou bois composite.</p>",
+      uniqueDeepDive:
+        "<h3>Évaluation et préparation du chantier</h3>\n<p>Mobilier de jardin, bacs à plantes et objets décoratifs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées des éclaboussures. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>\n\n<h3>Décrassage et action mécanique ciblée</h3>\n<p>Le produit de nettoyage est choisi selon le matériau : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. Le brossage mécanique déloge les incrustations. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture du support.</p>\n\n<h3>Traitement préventif et recommandations</h3>\n<p>Une protection anti-mousse est appliquée sur les zones ombragées les plus exposées. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des conseils d'entretien courant sont communiqués pour prolonger l'effet du nettoyage face à la végétation environnante.</p>",
       specificChallenges: [
         "Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : matériaux poreux sensibles aux produits acides.",
         "Terrasses ombragées par les arbres centenaires des jardins raincéens : prolifération accélérée de mousses et algues vertes.",
@@ -434,69 +424,60 @@ nearbyCities: [
       ctaOverride: "",
     },
 
-
     {
-  serviceKey: "nettoyage-appartement-maison",
+      serviceKey: "nettoyage-appartement-maison",
 
-  heroDescription:
-    "Remise en état avant état des lieux, après travaux ou déménagement, avec une priorité absolue sur la protection des sols (parquet massif, marbre), la discrétion, et des finitions nettes.",
+      heroDescription:
+        "Remise en état avant état des lieux, après travaux ou déménagement, avec une priorité absolue sur la protection des sols (parquet massif, marbre), la discrétion, et des finitions nettes.",
 
-  whyUsBullets: [
-    "Ville-parc et habitat haut de gamme : méthode adaptée aux villas du Plateau et aux résidences de standing (protection sols, finitions).",
-    "Organisation “centre commerçant” : accès et stationnement anticipés autour de l’Avenue de la Résistance et du Rond-Point de la Fontaine.",
-    "Spécial vitrages & détails visibles : baies vitrées de villas, encadrements, traces basses liées au trafic local et aux flux pendulaires.",
-  ],
+      whyUsBullets: [
+        "Ville-parc et habitat haut de gamme : méthode adaptée aux villas du Plateau et aux résidences de standing (protection sols, finitions).",
+        "Organisation “centre commerçant” : accès et stationnement anticipés autour de l’Avenue de la Résistance et du Rond-Point de la Fontaine.",
+        "Spécial vitrages & détails visibles : baies vitrées de villas, encadrements, traces basses liées au trafic local et aux flux pendulaires.",
+      ],
 
-  uniqueIntro: `<p>Au Raincy, le niveau d’exigence est souvent supérieur à la moyenne : villas, demeures de caractère et résidences de standing impliquent un nettoyage <strong>très maîtrisé</strong>, autant sur le résultat que sur la façon de travailler. Entre <strong>l’Avenue de la Résistance</strong> (cœur commerçant) et les rues plus calmes du <strong>Plateau</strong>, on retrouve des matériaux sensibles — parquet massif, carrelage marbré, menuiseries anciennes — où l’excès d’eau, les traces de reprise ou les produits mal adaptés se voient immédiatement.</p>
-<p class="mt-4">Klinova intervient au Raincy pour les remises en état avant état des lieux, après chantier (plâtre/peinture), ou lors d’un déménagement. L’approche reste simple : repérage des surfaces et des contraintes (digicode, gardien, stationnement), traitement des zones à fort impact (cuisine, salle d’eau, sols), puis finitions visibles. Dans une ville marquée par un patrimoine fort comme <strong>Notre-Dame du Raincy</strong>, beaucoup de logements conservent des détails architecturaux et des vitrages qui demandent une attention particulière.</p>
-<p class="mt-4">Le but est un rendu “propre au premier regard” sans abîmer : contrôle des traces sur sols, suppression des dépôts minéraux (calcaire), et reprise des zones de passage. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est d’autant plus utile quand l’accès est contraint (centre-ville) ou quand la discrétion est une attente forte du voisinage (secteurs pavillonnaires).</p>`,
+      uniqueIntro:
+        '<p>Au Raincy, le niveau d’exigence est souvent supérieur à la moyenne : villas, demeures de caractère et résidences de standing impliquent un nettoyage <strong>très maîtrisé</strong>, autant sur le résultat que sur la façon de travailler. Entre <strong>l’Avenue de la Résistance</strong> (cœur commerçant) et les rues plus calmes du <strong>Plateau</strong>, on retrouve des matériaux sensibles — parquet massif, carrelage marbré, menuiseries anciennes — où l’excès d’eau, les traces de reprise ou les produits mal adaptés se voient immédiatement.</p>\n<p class="mt-4">Klinova intervient au Raincy pour les remises en état avant état des lieux, après chantier (plâtre/peinture), ou lors d’un déménagement. L’approche reste simple : repérage des surfaces et des contraintes (digicode, gardien, stationnement), traitement des zones à fort impact (cuisine, salle d’eau, sols), puis finitions visibles. Dans une ville marquée par un patrimoine fort comme <strong>Notre-Dame du Raincy</strong>, beaucoup de logements conservent des détails architecturaux et des vitrages qui demandent une attention particulière.</p>\n<p class="mt-4">Le but est un rendu “propre au premier regard” sans abîmer : contrôle des traces sur sols, suppression des dépôts minéraux (calcaire), et reprise des zones de passage. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> C’est d’autant plus utile quand l’accès est contraint (centre-ville) ou quand la discrétion est une attente forte du voisinage (secteurs pavillonnaires).</p>',
 
-  uniqueDeepDive: `<h3>Protection des sols et gestion du bâti “standing”</h3>
-<p>Au Raincy, la priorité est d’éviter toute dégradation : parquet massif, marbre, menuiseries anciennes, escaliers étroits. Nous adaptons l’humidité, les produits et l’ordre des tâches pour limiter les risques, et nous gardons une logique “protection d’abord” avant d’attaquer les zones techniques. Cette approche est particulièrement adaptée aux villas du Plateau et aux immeubles bourgeois du centre.</p>
+      uniqueDeepDive:
+        "<h3>Protection des sols et gestion du bâti “standing”</h3>\n<p>Au Raincy, la priorité est d’éviter toute dégradation : parquet massif, marbre, menuiseries anciennes, escaliers étroits. Nous adaptons l’humidité, les produits et l’ordre des tâches pour limiter les risques, et nous gardons une logique “protection d’abord” avant d’attaquer les zones techniques. Cette approche est particulièrement adaptée aux villas du Plateau et aux immeubles bourgeois du centre.</p>\n\n<h3>Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>\n<p>La cuisine et la salle de bain concentrent l’essentiel du contrôle en état des lieux. Nous effectuons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur. Les joints de carrelage et zones d’écoulement sont traités avec méthode, en évitant les produits agressifs qui “marquent” les surfaces ou la robinetterie.</p>\n\n<h3>Vitrages, traces de circulation et contrôle final</h3>\n<p>Entre flux pendulaires (RER E) et trafic sur les axes locaux, les vitrages et rebords bas peuvent vite se charger en suie/poussière. Nous terminons par les vitres accessibles, encadrements et poignées, puis un contrôle des points visibles : plinthes, interrupteurs, portes, et sols dans les zones de passage. L’objectif : un rendu homogène, sans reprise apparente, prêt pour une visite ou un état des lieux.</p>",
 
-<h3>Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>
-<p>La cuisine et la salle de bain concentrent l’essentiel du contrôle en état des lieux. Nous effectuons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur. Les joints de carrelage et zones d’écoulement sont traités avec méthode, en évitant les produits agressifs qui “marquent” les surfaces ou la robinetterie.</p>
+      specificChallenges: [
+        "Matériaux sensibles : parquet massif, carrelage marbré, finitions haut de gamme qui demandent une méthode douce et précise.",
+        "Stationnement centre-ville : contraintes autour de l’Avenue de la Résistance et des rues adjacentes, surtout le samedi.",
+        "Relief et logistique : secteurs en pente vers le Plateau, gestion du matériel et des accès en villas sécurisées.",
+        "Exigence de discrétion : voisinage calme, attente forte sur le bruit, la propreté des circulations et la protection des sols.",
+      ],
 
-<h3>Vitrages, traces de circulation et contrôle final</h3>
-<p>Entre flux pendulaires (RER E) et trafic sur les axes locaux, les vitrages et rebords bas peuvent vite se charger en suie/poussière. Nous terminons par les vitres accessibles, encadrements et poignées, puis un contrôle des points visibles : plinthes, interrupteurs, portes, et sols dans les zones de passage. L’objectif : un rendu homogène, sans reprise apparente, prêt pour une visite ou un état des lieux.</p>`,
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous au Raincy pour une remise en état avant état des lieux (93340) ?",
+          answer:
+            "<p>Oui. Nous cadrons le périmètre (pièces, sols, vitrages accessibles) puis nous traitons les zones les plus contrôlées : cuisine, salle d’eau, sols et finitions visibles. Cela convient bien aux résidences de standing et aux maisons du Plateau.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous nettoyer une maison avec parquet massif et surfaces “fragiles” (marbre, boiseries) ?",
+          answer:
+            "<p>Oui. Nous adaptons l’humidité et les produits pour préserver les matériaux, éviter les auréoles et obtenir un rendu net. La protection des sols fait partie du déroulé, surtout sur les parquets et carrelages marbrés.</p>",
+        },
+        {
+          question:
+            "Proposez-vous un nettoyage après travaux (plâtre/peinture) ?",
+          answer:
+            "<p>Oui. Après travaux, l’enjeu est la poussière fine. Nous structurons le dépoussiérage, puis la remise en état des surfaces, et nous finissons par les détails (plinthes, encadrements, vitrages accessibles) pour un rendu propre et stable.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous le stationnement et les accès en centre-ville ?",
+          answer:
+            "<p>Le centre peut être contraint (zones bleues/payant). Nous anticipons le créneau, l’accès (digicode, gardien) et l’organisation du matériel pour limiter la gêne, notamment autour de l’Avenue de la Résistance.</p>",
+        },
+      ],
 
-  specificChallenges: [
-    "Matériaux sensibles : parquet massif, carrelage marbré, finitions haut de gamme qui demandent une méthode douce et précise.",
-    "Stationnement centre-ville : contraintes autour de l’Avenue de la Résistance et des rues adjacentes, surtout le samedi.",
-    "Relief et logistique : secteurs en pente vers le Plateau, gestion du matériel et des accès en villas sécurisées.",
-    "Exigence de discrétion : voisinage calme, attente forte sur le bruit, la propreté des circulations et la protection des sols.",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Intervenez-vous au Raincy pour une remise en état avant état des lieux (93340) ?",
-      answer: `<p>Oui. Nous cadrons le périmètre (pièces, sols, vitrages accessibles) puis nous traitons les zones les plus contrôlées : cuisine, salle d’eau, sols et finitions visibles. Cela convient bien aux résidences de standing et aux maisons du Plateau.</p>`,
+      ctaOverride: "",
     },
-    {
-      question:
-        "Pouvez-vous nettoyer une maison avec parquet massif et surfaces “fragiles” (marbre, boiseries) ?",
-      answer: `<p>Oui. Nous adaptons l’humidité et les produits pour préserver les matériaux, éviter les auréoles et obtenir un rendu net. La protection des sols fait partie du déroulé, surtout sur les parquets et carrelages marbrés.</p>`,
-    },
-    {
-      question: "Proposez-vous un nettoyage après travaux (plâtre/peinture) ?",
-      answer: `<p>Oui. Après travaux, l’enjeu est la poussière fine. Nous structurons le dépoussiérage, puis la remise en état des surfaces, et nous finissons par les détails (plinthes, encadrements, vitrages accessibles) pour un rendu propre et stable.</p>`,
-    },
-    {
-      question:
-        "Comment gérez-vous le stationnement et les accès en centre-ville ?",
-      answer: `<p>Le centre peut être contraint (zones bleues/payant). Nous anticipons le créneau, l’accès (digicode, gardien) et l’organisation du matériel pour limiter la gêne, notamment autour de l’Avenue de la Résistance.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-
-
-
-
   ],
 };
 

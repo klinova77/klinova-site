@@ -61,19 +61,19 @@ const city: City = {
   // faq[].answer : HTML autorisé (sans <h3>)
   faq: [
     {
-      question: "Q1 : Comment organisez-vous vos interventions dans les secteurs où le stationnement est très limité ?",
+      question: "Comment organisez-vous vos interventions dans les secteurs où le stationnement est très limité ?",
       answer: `<p><strong>Nous utilisons des véhicules compacts et planifions les passages en dehors des heures de pointe. À Gentilly, les créneaux matinaux ou en milieu de journée permettent d'éviter la saturation des rues étroites du centre-ville et du quartier du Plateau. Le matériel est préparé pour limiter les allers-retours.</strong></p>`,
     },
     {
-      question: "Q2 : Pouvez-vous intervenir dans des résidences équipées de digicodes et badges ?",
+      question: "Pouvez-vous intervenir dans des résidences équipées de digicodes et badges ?",
       answer: `<p><strong>Oui, nous travaillons régulièrement dans des immeubles sécurisés. Avant la première intervention, nous récupérons les accès nécessaires auprès du syndic ou du gardien. Les badges Vigik et codes sont gérés de manière confidentielle pour garantir la sécurité du site.</strong></p>`,
     },
     {
-      question: "Q3 : Quel délai prévoir pour une première intervention après demande de devis ?",
+      question: "Quel délai prévoir pour une première intervention après demande de devis ?",
       answer: `<p><strong>Après validation du devis, nous programmons généralement l'intervention sous 5 à 10 jours ouvrés selon la disponibilité du site et la nature des travaux. En cas d'urgence signalée, nous étudions un passage plus rapide en fonction de notre planning.</strong></p>`,
     },
     {
-      question: "Q4 : Proposez-vous un suivi écrit après chaque passage ?",
+      question: "Proposez-vous un suivi écrit après chaque passage ?",
       answer: `<p><strong>Un compte-rendu est transmis après intervention, mentionnant les zones traitées, les observations éventuelles et les points à surveiller. Ce document facilite les échanges avec le conseil syndical ou le gestionnaire et permet d'ajuster la fréquence des prestations.</strong></p>`,
     },
   ],
@@ -119,19 +119,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Avec les escaliers étroits des immeubles du centre-ville de Gentilly, comment organisez-vous la montée du matériel pour traiter une moquette ?",
+          question: "Avec les escaliers étroits des immeubles du centre-ville de Gentilly, comment organisez-vous la montée du matériel pour traiter une moquette ?",
           answer: `<p>Le matériel d'injection-extraction se démonte en éléments transportables. Nous montons par étapes, avec protection des marches et des murs. Les flexibles permettent de travailler depuis un palier sans encombrer la cage d'escalier pendant toute l'intervention.</p>`,
         },
         {
-          question: "Q2 : Les taches anciennes dans les parties communes du Chaperon Vert sont-elles récupérables sans remplacer la moquette ?",
+          question: "Les taches anciennes dans les parties communes du Chaperon Vert sont-elles récupérables sans remplacer la moquette ?",
           answer: `<p>La plupart des taches incrustées — café, tanin, traces organiques — s'atténuent fortement avec un détachage ciblé suivi d'une extraction en profondeur. Certaines marques très anciennes peuvent laisser une ombre résiduelle, mais le rendu global s'améliore nettement.</p>`,
         },
         {
-          question: "Q3 : Quelle méthode recommandez-vous pour des dalles textiles en bureaux du Val de Bièvre ?",
+          question: "Quelle méthode recommandez-vous pour des dalles textiles en bureaux du Val de Bièvre ?",
           answer: `<p>L'injection-extraction reste la technique adaptée. La pression et le débit sont ajustés pour éviter tout décollement des joints entre dalles. Les passes se font dans le sens de pose, avec aspiration immédiate pour limiter l'humidité résiduelle.</p>`,
         },
         {
-          question: "Q4 : Combien de temps avant remise en service d'un hall proche de la gare RER Gentilly après nettoyage moquette ?",
+          question: "Combien de temps avant remise en service d'un hall proche de la gare RER Gentilly après nettoyage moquette ?",
           answer: `<p>Avec une extraction poussée, le séchage prend généralement entre trois et six heures selon la ventilation du hall. Nous conseillons de limiter le passage pendant ce délai pour éviter tout transfert de salissures sur les fibres encore humides.</p>`,
         },
       ],
@@ -166,19 +166,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment organisez-vous la rotation des véhicules et le balisage dans le parking du Stade Géo André pendant un événement ?",
+          question: "Comment organisez-vous la rotation des véhicules et le balisage dans le parking du Stade Géo André pendant un événement ?",
           answer: `<p>Nous définissons un zonage précis avec le gestionnaire. Les véhicules sont déplacés par secteurs successifs, avec signalétique visible. L'intervention se cale sur les créneaux hors affluence pour éviter tout blocage des usagers ou des visiteurs du stade.</p>`,
         },
         {
-          question: "Q2 : Comment traitez-vous les taches d'huile anciennes dans un parking souterrain de copropriété à Gentilly ?",
+          question: "Comment traitez-vous les taches d'huile anciennes dans un parking souterrain de copropriété à Gentilly ?",
           answer: `<p>Un dégraissant adapté au revêtement béton est appliqué sur les zones marquées. L'autolaveuse effectue plusieurs passes pour désincruster les résidus. Les taches très anciennes peuvent nécessiter un traitement complémentaire, que nous signalons au syndic avec un devis séparé.</p>`,
         },
         {
-          question: "Q3 : Quelle gestion des eaux de lavage proposez-vous pour un parking en résine proche du Campus Sanofi ?",
+          question: "Quelle gestion des eaux de lavage proposez-vous pour un parking en résine proche du Campus Sanofi ?",
           answer: `<p>Les eaux sont dirigées vers les évacuations existantes après vérification de leur bon fonctionnement. Aucun rejet sauvage n'est effectué. Si les regards sont obstrués, nous procédons à un dégagement préalable pour garantir un écoulement conforme aux normes.</p>`,
         },
         {
-          question: "Q4 : Quels créneaux recommandez-vous pour intervenir sur un parking quand il y a marché ou événement au stade ?",
+          question: "Quels créneaux recommandez-vous pour intervenir sur un parking quand il y a marché ou événement au stade ?",
           answer: `<p>Nous privilégions les créneaux tôt le matin ou en soirée, hors jours de marché et hors événements sportifs. Le planning est validé avec le syndic ou le gestionnaire pour garantir un accès fluide aux résidents et éviter toute perturbation.</p>`,
         },
       ],
@@ -213,19 +213,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Sur les balcons de l'avenue Paul Vaillant-Couturier, quelle méthode utilisez-vous pour retirer la suie sans abîmer le carrelage ?",
+          question: "Sur les balcons de l'avenue Paul Vaillant-Couturier, quelle méthode utilisez-vous pour retirer la suie sans abîmer le carrelage ?",
           answer: `<p>Un dégraissant spécifique aux dépôts gras est appliqué avant le brossage. Le produit dissout la pellicule de suie sans attaquer le carrelage ni les joints. Le rinçage se fait à pression modérée pour éviter toute dégradation du support.</p>`,
         },
         {
-          question: "Q2 : Comment gérez-vous l'évacuation des eaux lors du nettoyage d'un balcon en étage sur une façade étroite ?",
+          question: "Comment gérez-vous l'évacuation des eaux lors du nettoyage d'un balcon en étage sur une façade étroite ?",
           answer: `<p>L'eau de rinçage est dirigée vers l'évacuation existante du balcon. Si celle-ci est insuffisante, nous utilisons des raclettes et serpillières pour limiter les écoulements. Les voisins du dessous sont prévenus si nécessaire pour éviter toute gêne.</p>`,
         },
         {
-          question: "Q3 : Les balcons proches du parc du Coteau accumulent de la mousse, quelle fréquence de traitement conseillez-vous ?",
+          question: "Les balcons proches du parc du Coteau accumulent de la mousse, quelle fréquence de traitement conseillez-vous ?",
           answer: `<p>L'humidité favorise la repousse des mousses en quelques mois. Un passage annuel au printemps suffit généralement. Pour les expositions nord ou très ombragées, un second traitement à l'automne peut s'avérer utile.</p>`,
         },
         {
-          question: "Q4 : Pour un balcon avec joints fragiles à Gentilly, quelles techniques sans haute pression préconisez-vous ?",
+          question: "Pour un balcon avec joints fragiles à Gentilly, quelles techniques sans haute pression préconisez-vous ?",
           answer: `<p>Le brossage manuel avec une brosse souple remplace le jet haute pression. Un produit adapté ramollit les salissures avant le passage de la brosse. Le rinçage s'effectue au tuyau basse pression ou au seau pour préserver l'intégrité des joints.</p>`,
         },
       ],
@@ -263,19 +263,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les fientes accumulées sur les corniches proches du Parc du Coteau présentent-elles un risque sanitaire urgent ?",
+          question: "Les fientes accumulées sur les corniches proches du Parc du Coteau présentent-elles un risque sanitaire urgent ?",
           answer: `<p>Les fientes de pigeons contiennent des agents pathogènes qui se dispersent en séchant. Sur les balcons exposés aux abords du parc, l'accumulation prolongée augmente le risque d'inhalation de particules nocives. Une intervention rapide limite l'exposition et permet de retrouver un espace sain.</p>`,
         },
         {
-          question: "Q2 : Quelle désinfection appliquez-vous après le retrait des fientes sur une loggia à Gentilly ?",
+          question: "Quelle désinfection appliquez-vous après le retrait des fientes sur une loggia à Gentilly ?",
           answer: `<p>Après collecte des déjections, un produit virucide et bactéricide homologué est pulvérisé sur l'ensemble des surfaces : sol, garde-corps, vitrages. Le temps de contact est respecté avant rinçage. Cette étape élimine les agents pathogènes résiduels et sécurise l'espace pour les occupants.</p>`,
         },
         {
-          question: "Q3 : Comment gérez-vous l'évacuation des déchets dans les rues étroites du centre-ville de Gentilly ?",
+          question: "Comment gérez-vous l'évacuation des déchets dans les rues étroites du centre-ville de Gentilly ?",
           answer: `<p>Les fientes et matériaux souillés sont conditionnés en sacs étanches dès le retrait. L'intervenant descend le matériel par les accès disponibles, même contraints. Le véhicule stationne au plus proche pour limiter les manipulations. Aucun déchet ne reste sur place après l'intervention.</p>`,
         },
         {
-          question: "Q4 : Sur les derniers étages des barres du Chaperon Vert, les fientes ont-elles déjà endommagé les supports ?",
+          question: "Sur les derniers étages des barres du Chaperon Vert, les fientes ont-elles déjà endommagé les supports ?",
           answer: `<p>Les fientes acides attaquent progressivement le béton et la peinture des balcons exposés. Sur les étages hauts, l'absence de traitement régulier accélère la dégradation. Un nettoyage suivi d'une désinfection stoppe ce processus et préserve l'état des surfaces pour les années suivantes.</p>`,
         },
       ],
@@ -313,19 +313,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les terrasses situées près de l'Aqueduc de la Vanne développent des mousses persistantes : quel traitement anti-mousse durable proposez-vous ?",
+          question: "Les terrasses situées près de l'Aqueduc de la Vanne développent des mousses persistantes : quel traitement anti-mousse durable proposez-vous ?",
           answer: `<p>Nous appliquons un produit anti-mousse à action prolongée après le nettoyage mécanique. La formulation est choisie selon le support et l'exposition à l'humidité. Ce traitement freine la repousse pendant plusieurs mois et s'adapte aux conditions d'ombrage fréquentes dans ce secteur de Gentilly.</p>`,
         },
         {
-          question: "Q2 : Faut-il un traitement différent pour une terrasse bois comparée à des dalles sur plots dans le quartier du Plateau ?",
+          question: "Faut-il un traitement différent pour une terrasse bois comparée à des dalles sur plots dans le quartier du Plateau ?",
           answer: `<p>Oui, le bois demande un nettoyage basse pression et un produit respectant les fibres, tandis que les dalles sur plots supportent un traitement plus appuyé. Nous adaptons la méthode pour éviter tout grisaillement du bois ou déchaussement des dalles, en tenant compte de l'état initial du support.</p>`,
         },
         {
-          question: "Q3 : Comment gérez-vous le déplacement du mobilier et des plantes pour un nettoyage complet sur une petite terrasse urbaine ?",
+          question: "Comment gérez-vous le déplacement du mobilier et des plantes pour un nettoyage complet sur une petite terrasse urbaine ?",
           answer: `<p>Nous déplaçons les éléments légers et bâchons ceux qui ne peuvent être déplacés. Sur les terrasses de faible superficie, courantes à Gentilly, cette étape est intégrée au temps d'intervention. Les plantes sont protégées des projections et repositionnées une fois le sol sec.</p>`,
         },
         {
-          question: "Q4 : Peut-on utiliser un nettoyeur haute pression sur les margelles et escaliers de terrasse sans abîmer le support ?",
+          question: "Peut-on utiliser un nettoyeur haute pression sur les margelles et escaliers de terrasse sans abîmer le support ?",
           answer: `<p>La haute pression est adaptée à la résistance du matériau. Sur des margelles fragiles ou poreuses, nous privilégions un brossage manuel ou une pression réduite. L'objectif reste d'éliminer les salissures sans creuser les joints ni fragiliser les arêtes des marches.</p>`,
         },
       ],
@@ -361,19 +361,19 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Q1 : Pour un nettoyage fin de chantier dans la Cité Gabriel-Péri, comment traitez-vous les traces de peinture et la poussière de plâtre ?",
+          question: "Pour un nettoyage fin de chantier dans la Cité Gabriel-Péri, comment traitez-vous les traces de peinture et la poussière de plâtre ?",
           answer: `<p>Les projections de peinture sont grattées manuellement sur les surfaces dures, puis essuyées avec un solvant adapté au support. La poussière de plâtre est aspirée en plusieurs passes avant un lavage humide des sols et des plinthes. Les menuiseries et interrupteurs reçoivent un essuyage minutieux pour éliminer tout voile résiduel.</p>`,
         },
         {
-          question: "Q2 : Comment coordonnez-vous l'intervention avec une agence immobilière pour un ménage avant état des lieux à Gentilly ?",
+          question: "Comment coordonnez-vous l'intervention avec une agence immobilière pour un ménage avant état des lieux à Gentilly ?",
           answer: `<p>Nous recueillons les coordonnées du gestionnaire dès la demande de devis. Le créneau d'intervention est validé conjointement, en tenant compte des visites programmées. Un point téléphonique ou par mail confirme l'accès et les éventuelles consignes spécifiques. Le compte-rendu de fin de prestation peut être transmis directement à l'agence.</p>`,
         },
         {
-          question: "Q3 : Quel niveau de propreté livrez-vous pour une remise de clés exigée par un bailleur social à Gentilly ?",
+          question: "Quel niveau de propreté livrez-vous pour une remise de clés exigée par un bailleur social à Gentilly ?",
           answer: `<p>Le logement est restitué sans trace visible : sols lavés, vitres intérieures transparentes, sanitaires détartrés, placards dépoussiérés. Les pièces d'eau sont désinfectées, les interrupteurs et poignées essuyés. Ce niveau de finition répond aux grilles de contrôle habituellement utilisées par les bailleurs sociaux locaux.</p>`,
         },
         {
-          question: "Q4 : Si l'accès se fait par digicode ou gardien, quelles informations faut-il transmettre avant l'intervention ?",
+          question: "Si l'accès se fait par digicode ou gardien, quelles informations faut-il transmettre avant l'intervention ?",
           answer: `<p>Nous avons besoin du code d'entrée, de l'étage et du numéro de porte, ainsi que du nom et des horaires de présence du gardien si un passage par la loge est requis. Ces éléments sont confirmés la veille de l'intervention pour éviter tout retard le jour J.</p>`,
         },
       ],

@@ -1,4 +1,4 @@
-CITY_CHECK: Bagnolet
+
 
 import type { City } from "~/types/geo";
 

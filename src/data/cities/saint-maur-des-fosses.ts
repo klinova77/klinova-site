@@ -16,13 +16,8 @@ const city: City = {
     "Expert du nettoyage à Saint-Maur-des-Fossés (94). Entretien de standing pour pavillons et copropriétés : moquettes, terrasses, parkings et canapés. Protocoles spécialisés meulières et bois exotique. Devis gratuit sous 48h.",
 
   // OPTIMISATION CONVERSION : Mise en avant de l'autorité et de la rassurance immédiate.
-  hubIntro: `<p>Saint-Maur-des-Fossés exige un entretien à la hauteur de son patrimoine immobilier. Dans cette "ville-jardin", la propreté est un marqueur de standing. <strong>Klinova est le partenaire de confiance des propriétaires exigeants, des syndics de La Varenne et des gestionnaires immobiliers</strong>. Nous comprenons que votre bien n'est pas juste un bâtiment, mais un investissement patrimonial.</p>
-<p>Notre expertise locale est technique : nous savons que le <strong>microclimat de la boucle de la Marne</strong> accélère l'apparition de mousses, et que les façades en meulière demandent une délicatesse absolue. Nos équipes naviguent quotidiennement entre les zones bleues et les ponts saturés pour garantir une ponctualité sans faille.</p>
-<ul>
-  <li><strong>Expertise matériaux nobles</strong> : Nettoyage haute précision des pierres meulières (joints fragiles), rénovation des terrasses en Ipe/Teck et traitement des verrières d'atelier.</li>
-  <li><strong>Logistique locale maîtrisée</strong> : Planification tactique pour éviter les bouchons des ponts de Créteil/Chennevières, véhicules compacts pour les impasses privées et respect total de la tranquillité résidentielle.</li>
-  <li><strong>Lutte contre l'encrassement biologique</strong> : Stratégies curatives et préventives contre les lichens fluviaux et les pollens collants printaniers qui étouffent vos extérieurs.</li>
-</ul>`,
+  hubIntro:
+    "<p>Saint-Maur-des-Fossés exige un entretien à la hauteur de son patrimoine immobilier. Dans cette \"ville-jardin\", la propreté est un marqueur de standing. <strong>Klinova est le partenaire de confiance des propriétaires exigeants, des syndics de La Varenne et des gestionnaires immobiliers</strong>. Nous comprenons que votre bien n'est pas juste un bâtiment, mais un investissement patrimonial.</p>\n<p>Notre expertise locale est technique : nous savons que le <strong>microclimat de la boucle de la Marne</strong> accélère l'apparition de mousses, et que les façades en meulière demandent une délicatesse absolue. Nos équipes naviguent quotidiennement entre les zones bleues et les ponts saturés pour garantir une ponctualité sans faille.</p>\n<ul>\n  <li><strong>Expertise matériaux nobles</strong> : Nettoyage haute précision des pierres meulières (joints fragiles), rénovation des terrasses en Ipe/Teck et traitement des verrières d'atelier.</li>\n  <li><strong>Logistique locale maîtrisée</strong> : Planification tactique pour éviter les bouchons des ponts de Créteil/Chennevières, véhicules compacts pour les impasses privées et respect total de la tranquillité résidentielle.</li>\n  <li><strong>Lutte contre l'encrassement biologique</strong> : Stratégies curatives et préventives contre les lichens fluviaux et les pollens collants printaniers qui étouffent vos extérieurs.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Hygrométrie élevée liée à la boucle de la Marne : prolifération rapide de dépôts verts sur les expositions Nord/Est",
@@ -42,19 +37,18 @@ const city: City = {
     "Saint-Maur–Créteil",
   ],
 
-nearbyCities: [
-        "joinville-le-pont",
-        "champigny-sur-marne",
-        "creteil",
-        "maisons-alfort",
-        "nogent-sur-marne",
-        "le-perreux-sur-marne",
-        "villiers-sur-marne",
-        "alfortville",
-        "fontenay-sous-bois",
-        "noisy-le-grand"
-      ],
-
+  nearbyCities: [
+    "joinville-le-pont",
+    "champigny-sur-marne",
+    "creteil",
+    "maisons-alfort",
+    "nogent-sur-marne",
+    "le-perreux-sur-marne",
+    "villiers-sur-marne",
+    "alfortville",
+    "fontenay-sous-bois",
+    "noisy-le-grand",
+  ],
 
   landmarks: [
     "Mairie de Saint-Maur-des-Fossés",
@@ -72,22 +66,25 @@ nearbyCities: [
     {
       question:
         "Intervenez-vous dans toute la presqu'île malgré les difficultés de circulation ?",
-      answer: `<p><strong>Absolument. La logistique est notre métier.</strong> Nous savons que traverser le pont de Créteil à 8h30 est impossible. C'est pourquoi nos plannings sont optimisés : interventions décalées, techniciens sectorisés par quartier (Varenne vs Parc), et connaissance parfaite des raccourcis. Votre localisation n'est jamais un frein, c'est notre terrain de jeu.</p>`,
+      answer:
+        "<p><strong>Absolument. La logistique est notre métier.</strong> Nous savons que traverser le pont de Créteil à 8h30 est impossible. C'est pourquoi nos plannings sont optimisés : interventions décalées, techniciens sectorisés par quartier (Varenne vs Parc), et connaissance parfaite des raccourcis. Votre localisation n'est jamais un frein, c'est notre terrain de jeu.</p>",
     },
     {
       question:
         "Le devis est-il gratuit pour une maison à La Varenne ou au Parc ?",
-      answer: `<p><strong>Oui, déplacement et chiffrage sont 100% offerts.</strong> Que vous soyez avenue du Bac ou boulevard de Créteil, un expert se déplace pour analyser la nature de vos supports (pierre, bois, textile). Ce diagnostic technique est indispensable pour garantir un prix ferme et un résultat parfait, sans surprise.</p>`,
+      answer:
+        "<p><strong>Oui, déplacement et chiffrage sont 100% offerts.</strong> Que vous soyez avenue du Bac ou boulevard de Créteil, un expert se déplace pour analyser la nature de vos supports (pierre, bois, textile). Ce diagnostic technique est indispensable pour garantir un prix ferme et un résultat parfait, sans surprise.</p>",
     },
     {
-      question:
-        "Comment gérez-vous le stationnement (Zones Bleues) ?",
-      answer: `<p><strong>Nous sommes autonomes.</strong> Nos véhicules sont équipés pour des interventions rapides. Pour les chantiers longs (nettoyage complet de terrasse, shampouinage moquette immeuble), nous gérons les autorisations ou nous organisons en "dépose minute" pour le matériel lourd. Vous n'avez pas à vous soucier de notre logistique.</p>`,
+      question: "Comment gérez-vous le stationnement (Zones Bleues) ?",
+      answer:
+        '<p><strong>Nous sommes autonomes.</strong> Nos véhicules sont équipés pour des interventions rapides. Pour les chantiers longs (nettoyage complet de terrasse, shampouinage moquette immeuble), nous gérons les autorisations ou nous organisons en "dépose minute" pour le matériel lourd. Vous n\'avez pas à vous soucier de notre logistique.</p>',
     },
     {
       question:
         "Vos produits sont-ils sûrs pour mes pierres anciennes (Meulière) ?",
-      answer: `<p><strong>C'est notre spécialité.</strong> Saint-Maur regorge de meulières magnifiques mais fragiles. Nous proscrivons le Kärcher violent. Nous utilisons la basse pression, la vapeur ou le nettoyage chimique doux (biodégradable) pour décoller la saleté sans jamais entamer le joint à la chaux ou la patine de la pierre.</p>`,
+      answer:
+        "<p><strong>C'est notre spécialité.</strong> Saint-Maur regorge de meulières magnifiques mais fragiles. Nous proscrivons le Kärcher violent. Nous utilisons la basse pression, la vapeur ou le nettoyage chimique doux (biodégradable) pour décoller la saleté sans jamais entamer le joint à la chaux ou la patine de la pierre.</p>",
     },
   ],
 
@@ -115,51 +112,45 @@ nearbyCities: [
         "Discrétion assurée : Interventions silencieuses et rapides, respectant la tranquillité des résidences de standing du Parc et de La Varenne.",
       ],
 
-      uniqueIntro: `<p>À Saint-Maur, la moquette des parties communes n'est pas seulement sale, elle est "contaminée" par l'environnement extérieur. Au printemps, ce sont les pollens gras des tilleuls ; en automne, la boue des feuilles mortes ; et toute l'année, une humidité latente qui fixe les odeurs. Résultat : <strong>votre entrée perd de sa superbe et votre immeuble semble moins bien entretenu qu'il ne l'est réellement.</strong></p>
-<p class="mt-4">Pour les copropriétaires soucieux de leur patrimoine, changer la moquette tous les 5 ans est un gouffre financier. La solution n'est pas le remplacement, mais la <strong>rénovation par injection-extraction</strong>. En profondeur, nous retirons non seulement la tache visible, mais aussi le "liant" (sucre des sèves, graisses) qui retient la saleté.</p>
-<p class="mt-4"><strong>Le résultat ?</strong> Une fibre redressée, des couleurs ravivées et une odeur de propre qui valorise immédiatement l'entrée de votre résidence, que ce soit un petit collectif d'Adamville ou une résidence de luxe avenue Foch.</p>`,
+      uniqueIntro:
+        "<p>À Saint-Maur, la moquette des parties communes n'est pas seulement sale, elle est \"contaminée\" par l'environnement extérieur. Au printemps, ce sont les pollens gras des tilleuls ; en automne, la boue des feuilles mortes ; et toute l'année, une humidité latente qui fixe les odeurs. Résultat : <strong>votre entrée perd de sa superbe et votre immeuble semble moins bien entretenu qu'il ne l'est réellement.</strong></p>\n<p class=\"mt-4\">Pour les copropriétaires soucieux de leur patrimoine, changer la moquette tous les 5 ans est un gouffre financier. La solution n'est pas le remplacement, mais la <strong>rénovation par injection-extraction</strong>. En profondeur, nous retirons non seulement la tache visible, mais aussi le \"liant\" (sucre des sèves, graisses) qui retient la saleté.</p>\n<p class=\"mt-4\"><strong>Le résultat ?</strong> Une fibre redressée, des couleurs ravivées et une odeur de propre qui valorise immédiatement l'entrée de votre résidence, que ce soit un petit collectif d'Adamville ou une résidence de luxe avenue Foch.</p>",
 
-      uniqueDeepDive: `<h3>1. Audit des fibres et des contraintes</h3>
-<p>Laine vierge dans les immeubles anciens ou synthétique grand passage ? Le technicien adapte la température et le pH. Il repère les "chemins de marche" usés et les zones de stagnation d'humidité (souvent au RDC). À Saint-Maur, nous vérifions systématiquement la présence de tanins (taches brunes) remontés par l'humidité du sous-sol.</p>
-
-<h3>2. La puissance industrielle au service du détail</h3>
-<p class="mt-4">Nos machines injectent une solution active à haute température pour dissoudre les graisses et pollens, puis l'aspirent quasi-instantanément. Ce cycle ultra-rapide est crucial : <strong>il empêche de détremper la sous-couche</strong>, évitant ainsi les moisissures et le décollement, risques majeurs dans notre zone humide.</p>
-
-<h3>3. Finitions "Gant Blanc"</h3>
-<p class="mt-4">Nous ne laissons rien au hasard : les plinthes sont essuyées, les seuils de porte détachés manuellement. Nous laissons souvent une protection temporaire sur les zones de passage intense le temps du séchage complet (8 à 12h). Un rapport photo est envoyé au Conseil Syndical pour valider la qualité de la prestation.</p>`,
+      uniqueDeepDive:
+        '<h3>1. Audit des fibres et des contraintes</h3>\n<p>Laine vierge dans les immeubles anciens ou synthétique grand passage ? Le technicien adapte la température et le pH. Il repère les "chemins de marche" usés et les zones de stagnation d\'humidité (souvent au RDC). À Saint-Maur, nous vérifions systématiquement la présence de tanins (taches brunes) remontés par l\'humidité du sous-sol.</p>\n\n<h3>2. La puissance industrielle au service du détail</h3>\n<p class="mt-4">Nos machines injectent une solution active à haute température pour dissoudre les graisses et pollens, puis l\'aspirent quasi-instantanément. Ce cycle ultra-rapide est crucial : <strong>il empêche de détremper la sous-couche</strong>, évitant ainsi les moisissures et le décollement, risques majeurs dans notre zone humide.</p>\n\n<h3>3. Finitions "Gant Blanc"</h3>\n<p class="mt-4">Nous ne laissons rien au hasard : les plinthes sont essuyées, les seuils de porte détachés manuellement. Nous laissons souvent une protection temporaire sur les zones de passage intense le temps du séchage complet (8 à 12h). Un rapport photo est envoyé au Conseil Syndical pour valider la qualité de la prestation.</p>',
 
       specificChallenges: [
         "Pollens printaniers gluants : Une spécificité locale qui demande une chimie dégraissante particulière avant le shampouinage.",
         "Séchage en milieu humide : La proximité de la Marne impose une puissance d'extraction supérieure pour garantir un sol sec le soir même.",
         "Taches tanniques : Les feuilles mortes automnales laissent des marques brunes tenaces que seul un traitement acide ciblé peut effacer.",
       ],
-      
+
       // ... (FAQ Additions gardées telles quelles, elles sont bonnes)
       faqAdditions: [
-         // ... (Garder l'existant)
-         {
+        // ... (Garder l'existant)
+        {
           question:
             "Les moquettes des immeubles proches de la Marne nécessitent-elles un entretien particulier ?",
           answer:
-            `<p>Oui, l'humidité constante de la presqu'île ralentit le séchage et favorise le développement d'odeurs de moisi si l'extraction n'est pas suffisamment puissante. <strong>Nous adaptons notre protocole</strong> : extraction maximale, aération recommandée sur 12 heures, et conseillons un nettoyage annuel pour les copropriétés riveraines. Les immeubles des bords de Marne, du Vieux Saint-Maur ou de La Pie bénéficient particulièrement de cette attention renforcée.</p>`,
+            "<p>Oui, l'humidité constante de la presqu'île ralentit le séchage et favorise le développement d'odeurs de moisi si l'extraction n'est pas suffisamment puissante. <strong>Nous adaptons notre protocole</strong> : extraction maximale, aération recommandée sur 12 heures, et conseillons un nettoyage annuel pour les copropriétés riveraines. Les immeubles des bords de Marne, du Vieux Saint-Maur ou de La Pie bénéficient particulièrement de cette attention renforcée.</p>",
         },
         {
           question:
             "Intervenez-vous dans les pavillons convertis en petites copropriétés ?",
           answer:
-            `<p>Absolument. Nous travaillons autant dans les immeubles R+3/R+4 de La Varenne que dans les anciennes meulières transformées en 4 à 8 logements. Le diagnostic et la méthode restent identiques, seule la surface varie. Nos véhicules compacts s'adaptent aux rues résidentielles bordées d'arbres et aux branches basses qui caractérisent le tissu urbain saint-maurien.</p>`,
+            "<p>Absolument. Nous travaillons autant dans les immeubles R+3/R+4 de La Varenne que dans les anciennes meulières transformées en 4 à 8 logements. Le diagnostic et la méthode restent identiques, seule la surface varie. Nos véhicules compacts s'adaptent aux rues résidentielles bordées d'arbres et aux branches basses qui caractérisent le tissu urbain saint-maurien.</p>",
         },
         {
-          question: "Les pollens du printemps abîment-ils définitivement les moquettes ?",
+          question:
+            "Les pollens du printemps abîment-ils définitivement les moquettes ?",
           answer:
-            `<p>Les pollens collants des platanes et tilleuls s'incrustent rapidement dans les fibres et peuvent former des taches jaunâtres permanentes s'ils ne sont pas traités dans les premiers mois. <strong>Un nettoyage professionnel au printemps</strong>, juste après la période de pollinisation (avril-mai), extrait ces particules avant qu'elles ne s'oxydent et ne marquent définitivement les fibres. C'est la période idéale pour les copropriétés saint-mauriennes.</p>`,
+            "<p>Les pollens collants des platanes et tilleuls s'incrustent rapidement dans les fibres et peuvent former des taches jaunâtres permanentes s'ils ne sont pas traités dans les premiers mois. <strong>Un nettoyage professionnel au printemps</strong>, juste après la période de pollinisation (avril-mai), extrait ces particules avant qu'elles ne s'oxydent et ne marquent définitivement les fibres. C'est la période idéale pour les copropriétés saint-mauriennes.</p>",
         },
         {
-          question: "Comment organisez-vous l'accès malgré les embouteillages aux ponts ?",
+          question:
+            "Comment organisez-vous l'accès malgré les embouteillages aux ponts ?",
           answer:
-            `<p>Nous planifions chaque intervention en dehors des heures de pointe (avant 8h30 ou après 10h le matin, entre 14h et 16h l'après-midi) pour éviter les goulets d'étranglement aux ponts de Créteil et Chennevières. Nos techniciens repèrent les zones de stationnement temporaire près des quatre gares RER A et coordonnent avec le syndic pour valider l'horaire optimal selon la configuration de l'immeuble.</p>`,
+            "<p>Nous planifions chaque intervention en dehors des heures de pointe (avant 8h30 ou après 10h le matin, entre 14h et 16h l'après-midi) pour éviter les goulets d'étranglement aux ponts de Créteil et Chennevières. Nos techniciens repèrent les zones de stationnement temporaire près des quatre gares RER A et coordonnent avec le syndic pour valider l'horaire optimal selon la configuration de l'immeuble.</p>",
         },
-         
       ],
       ctaOverride: "Demander un devis moquette copropriété",
     },
@@ -178,45 +169,42 @@ nearbyCities: [
         "Nettoyage des évacuations : Débouchage systématique des regards souvent saturés par les feuilles des rues arborées.",
       ],
 
-      uniqueIntro: `<p>Un parking mal entretenu est le premier signal de dévalorisation d'un immeuble. À Saint-Maur, les parkings souffrent de deux maux : l'apport massif de <strong>débris végétaux</strong> (feuilles, bogues) collés aux pneus, et le développement de <strong>mousses glissantes</strong> dû à l'humidité des nappes phréatiques proches. Ce n'est pas juste sale, c'est dangereux (risque de chute) et anxiogène.</p>
-<p class="mt-4">Oubliez le simple coup de balai du gardien qui ne fait que déplacer la poussière. Klinova déploie de véritables <strong>autolaveuses industrielles</strong>. Nous décrassons, nous dégraissons les taches d'huile moteur, et nous aspirons les boues liquides.</p>
-<p class="mt-4"><strong>L'impact est immédiat :</strong> un sol clair, des marquages visibles, une atmosphère saine et une plus-value maintenue pour chaque appartement. C'est une intervention technique qui redonne le sourire aux copropriétaires lors de l'assemblée générale.</p>`,
+      uniqueIntro:
+        "<p>Un parking mal entretenu est le premier signal de dévalorisation d'un immeuble. À Saint-Maur, les parkings souffrent de deux maux : l'apport massif de <strong>débris végétaux</strong> (feuilles, bogues) collés aux pneus, et le développement de <strong>mousses glissantes</strong> dû à l'humidité des nappes phréatiques proches. Ce n'est pas juste sale, c'est dangereux (risque de chute) et anxiogène.</p>\n<p class=\"mt-4\">Oubliez le simple coup de balai du gardien qui ne fait que déplacer la poussière. Klinova déploie de véritables <strong>autolaveuses industrielles</strong>. Nous décrassons, nous dégraissons les taches d'huile moteur, et nous aspirons les boues liquides.</p>\n<p class=\"mt-4\"><strong>L'impact est immédiat :</strong> un sol clair, des marquages visibles, une atmosphère saine et une plus-value maintenue pour chaque appartement. C'est une intervention technique qui redonne le sourire aux copropriétaires lors de l'assemblée générale.</p>",
 
-      uniqueDeepDive: `<h3>1. Préparation et Communication (La clé du succès)</h3>
-<p>Le nettoyage technique est inutile si les voitures sont là. Notre force, c'est l'organisation. Nous définissons avec le syndic un plan de "Chaises Musicales" : zone A le matin, zone B l'après-midi. Nous fournissons les affichages pour le hall. Résultat : 100% de la surface est traitée.</p>
+      uniqueDeepDive:
+        '<h3>1. Préparation et Communication (La clé du succès)</h3>\n<p>Le nettoyage technique est inutile si les voitures sont là. Notre force, c\'est l\'organisation. Nous définissons avec le syndic un plan de "Chaises Musicales" : zone A le matin, zone B l\'après-midi. Nous fournissons les affichages pour le hall. Résultat : 100% de la surface est traitée.</p>\n\n<h3>2. Le process "Double Action"</h3>\n<p class="mt-4">D\'abord, un balayage-aspiration pour retirer les solides (feuilles, mégots, gravats). Ensuite, le lavage haute pression rotatif couplé à une aspiration. Nous insistons particulièrement sur les <strong>rampes d\'accès</strong> (souvent verglacées par la mousse) et les angles morts où s\'accumulent les déchets.</p>\n\n<h3>3. Finitions techniques</h3>\n<p class="mt-4">Nous ne partons pas avant d\'avoir curé les caniveaux et siphons de sol. À Saint-Maur, ces derniers sont souvent obstrués par une "purée" de feuilles décomposées qui risque de provoquer des inondations lors des orages. Nous traitons aussi les taches d\'huile rebelles avec des solvants spécifiques.</p>',
 
-<h3>2. Le process "Double Action"</h3>
-<p class="mt-4">D'abord, un balayage-aspiration pour retirer les solides (feuilles, mégots, gravats). Ensuite, le lavage haute pression rotatif couplé à une aspiration. Nous insistons particulièrement sur les <strong>rampes d'accès</strong> (souvent verglacées par la mousse) et les angles morts où s'accumulent les déchets.</p>
-
-<h3>3. Finitions techniques</h3>
-<p class="mt-4">Nous ne partons pas avant d'avoir curé les caniveaux et siphons de sol. À Saint-Maur, ces derniers sont souvent obstrués par une "purée" de feuilles décomposées qui risque de provoquer des inondations lors des orages. Nous traitons aussi les taches d'huile rebelles avec des solvants spécifiques.</p>`,
-      
       specificChallenges: [
         "Glissance des rampes : L'humidité riveraine rend le béton lisse extrêmement glissant. Nous appliquons des traitements antidérapants si nécessaire.",
         "Saturation des siphons : Les feuilles des platanes finissent toujours dans les regards. Notre curage prévient les dégâts des eaux.",
         "Logistique nominative : Respect absolu des places privatives grâce à une communication rigoureuse en amont.",
       ],
 
-     faqAdditions: [
+      faqAdditions: [
         {
-          question: "Pourquoi les parkings proches des berges développent-ils autant de mousses ?",
+          question:
+            "Pourquoi les parkings proches des berges développent-ils autant de mousses ?",
           answer:
-            `<p>L'humidité constante de la Marne génère un taux d'humidité ambiante élevé dans les parkings souterrains ou en rez-de-jardin. Les sols en béton poreux retiennent cette humidité et favorisent le développement rapide de mousses et lichens, surtout dans les zones mal ventilées ou peu exposées à la lumière. <strong>Nous appliquons un traitement anti-mousse spécifique</strong> avant le nettoyage pour éliminer durablement ces dépôts verts glissants.</p>`,
+            "<p>L'humidité constante de la Marne génère un taux d'humidité ambiante élevé dans les parkings souterrains ou en rez-de-jardin. Les sols en béton poreux retiennent cette humidité et favorisent le développement rapide de mousses et lichens, surtout dans les zones mal ventilées ou peu exposées à la lumière. <strong>Nous appliquons un traitement anti-mousse spécifique</strong> avant le nettoyage pour éliminer durablement ces dépôts verts glissants.</p>",
         },
         {
-          question: "Comment organisez-vous l'intervention sans que je perde mon emplacement attitré ?",
+          question:
+            "Comment organisez-vous l'intervention sans que je perde mon emplacement attitré ?",
           answer:
-            `<p>Nous travaillons par rotation : moitié A le matin, moitié B l'après-midi, ou étage par étage selon la configuration. Vous stationnez temporairement dans la zone non traitée ou sur un emplacement visiteur pendant 2 à 3 heures, puis vous récupérez votre place dès le séchage terminé. Le syndic informe les copropriétaires 72h à l'avance avec un plan précis indiquant les zones et horaires. Cette organisation maintient l'accès au parking en permanence.</p>`,
+            "<p>Nous travaillons par rotation : moitié A le matin, moitié B l'après-midi, ou étage par étage selon la configuration. Vous stationnez temporairement dans la zone non traitée ou sur un emplacement visiteur pendant 2 à 3 heures, puis vous récupérez votre place dès le séchage terminé. Le syndic informe les copropriétaires 72h à l'avance avec un plan précis indiquant les zones et horaires. Cette organisation maintient l'accès au parking en permanence.</p>",
         },
         {
-          question: "Les feuilles mortes des platanes peuvent-elles obstruer les siphons d'évacuation ?",
+          question:
+            "Les feuilles mortes des platanes peuvent-elles obstruer les siphons d'évacuation ?",
           answer:
-            `<p>Oui, c'est un problème fréquent à Saint-Maur en automne. Les feuilles mortes transportées par les pneus se décomposent et forment une boue qui obstrue progressivement les siphons et caniveaux. <strong>Nous effectuons systématiquement un dégagement manuel des évacuations</strong> avant le lavage pour garantir que l'eau s'évacue correctement. Cette vérification préalable évite toute stagnation ou refoulement pendant l'intervention.</p>`,
+            "<p>Oui, c'est un problème fréquent à Saint-Maur en automne. Les feuilles mortes transportées par les pneus se décomposent et forment une boue qui obstrue progressivement les siphons et caniveaux. <strong>Nous effectuons systématiquement un dégagement manuel des évacuations</strong> avant le lavage pour garantir que l'eau s'évacue correctement. Cette vérification préalable évite toute stagnation ou refoulement pendant l'intervention.</p>",
         },
         {
-          question: "Faut-il prévoir un nettoyage plus fréquent pour les parkings saint-mauriens ?",
+          question:
+            "Faut-il prévoir un nettoyage plus fréquent pour les parkings saint-mauriens ?",
           answer:
-            `<p>Cela dépend de l'exposition. Les parkings proches de la Marne ou bordés d'arbres anciens nécessitent souvent un décrassage annuel, voire semestriel pour les zones très humides ou exposées aux chutes massives de feuilles. Les parkings des quartiers plus secs comme Champignol peuvent espacer les interventions tous les 18 mois. Nous adaptons nos recommandations de fréquence selon la configuration de votre copropriété et les observations du premier passage.</p>`,
+            "<p>Cela dépend de l'exposition. Les parkings proches de la Marne ou bordés d'arbres anciens nécessitent souvent un décrassage annuel, voire semestriel pour les zones très humides ou exposées aux chutes massives de feuilles. Les parkings des quartiers plus secs comme Champignol peuvent espacer les interventions tous les 18 mois. Nous adaptons nos recommandations de fréquence selon la configuration de votre copropriété et les observations du premier passage.</p>",
         },
       ],
 
@@ -226,59 +214,57 @@ nearbyCities: [
     // =========================
     // SERVICE 3 – BALCONS
     // =========================
-   {
-  serviceKey: "balcons",
-  heroDescription:
-    "Votre balcon est une vraie pièce en plus : ne le laissez pas ternir. Nettoyage expert des sols (carrelage, pierre, béton) et garde-corps, avec protection des façades, menuiseries et plantations en contrebas.",
-
-  whyUsBullets: [
-    "Spécialiste petits espaces : Travail précis au balai-brosse, pads et microfibres pour nettoyer sans éclaboussures ni projections vers les voisins.",
-    "Douceur sur supports sensibles : Vapeur ou basse pression selon le matériau pour préserver joints, pierres tendres et enduits, sans “arracher” ni creuser.",
-    "Gestion de l'eau maîtrisée : Protection des baies vitrées + récupération/dirigeage des eaux de rinçage pour éviter coulures, infiltrations et salissures de façade.",
-  ],
-
-  uniqueIntro: `<p>Avoir un balcon à Saint-Maur est un privilège. Mais entre la pollution urbaine, les lichens verts qui s'installent l'hiver et les traces noires sur les garde-corps, cet espace devient vite une zone négligée. <strong>Votre sol est terne, les joints sont noircis, et le balcon devient glissant dès qu'il pleut ?</strong></p>
-<p class="mt-4">Attention aux fausses bonnes idées : utiliser un nettoyeur haute pression standard sur un balcon peut projeter de l'eau sale chez les voisins, provoquer des coulures sur la façade et, sur certaines pierres ou joints fragiles, <strong>dégrader les finitions</strong>. Sur un balcon ancien, l'excès d'eau peut aussi favoriser des infiltrations si l'étanchéité est fatiguée.</p>
-<p class="mt-4">Chez Klinova, nous sommes des "rénovateurs de surface". Nous utilisons la chimie douce et l'action mécanique contrôlée, avec une priorité : un résultat net <strong>sans risque</strong> pour les menuiseries, les façades et l'environnement du balcon. Vous récupérez un extérieur propre, sain et esthétique, prêt pour les beaux jours.</p>`,
-
-  uniqueDeepDive: `<h3>1. Le diagnostic "balcon" : support + étanchéité + voisinage</h3>
-<p>On ne traite pas un balcon comme une grande surface au sol. Le technicien identifie le matériau (carrelage, pierre, béton, résine) et l'état des joints. À Saint-Maur, beaucoup de balcons sont anciens ou sur étanchéité sensible : nous limitons l'apport d'eau, adaptons la méthode et sécurisons les points à risque (seuil de baie vitrée, relevés d'étanchéité, évacuations).</p>
-
-<h3>2. Protocole "Sol & Joints" : décrassage précis, sans projections</h3>
-<p class="mt-4">Pour les sols ternis et les joints noircis : application d'un détergent adapté au support (alcalin doux ou neutre selon la pierre), agitation au balai-brosse ou à la brosse manuelle, puis rinçage contrôlé (basse pression ou vapeur selon le cas). L'objectif : décoller les films gras urbains, retirer les dépôts verts et redonner de la clarté au sol sans “creuser” les joints ni saturer le support en eau.</p>
-
-<h3>3. Garde-corps, murs et gestion de l'eau</h3>
-<p class="mt-4">Les garde-corps et murets se salissent autant que le sol : traces noires, coulures, poussières. Nous travaillons à l'éponge/microfibre et produits non agressifs pour préserver peintures, vernis et vitrages. Les baies vitrées et menuiseries sont protégées avant intervention. L'eau de rinçage est dirigée vers l'évacuation (raclette + chiffons absorbants) pour éviter toute coulure sur façade ou débordement vers les voisins. En fin d'intervention, contrôle des évacuations et remise en ordre.</p>`,
-
-  specificChallenges: [
-    "Contraintes de voisinage : Un balcon impose zéro projection et une maîtrise totale des rinçages pour éviter nuisance et salissures chez les voisins.",
-    "Risque infiltration / étanchéité : Sur balcons anciens, on limite l'eau et on privilégie vapeur/basse pression + action mécanique contrôlée.",
-    "Protection des baies vitrées : Nous protégeons systématiquement vos menuiseries avant toute pulvérisation et contrôlons les seuils sensibles.",
-  ],
-
-  faqAdditions: [
     {
-      question:
-        "Le nettoyage à pression risque-t-il d'endommager mon balcon ou de salir mes voisins ?",
-      answer: `<p>Oui, si c'est fait “comme au jardin”. Sur un balcon, nous évitons les hautes pressions et privilégions la vapeur ou la basse pression, après application d'un détergent qui fait le travail. Cela limite les projections et protège les joints, les pierres tendres et les enduits. <strong>Nous effectuons toujours un test sur une zone discrète</strong> et nous mettons en place une gestion de l'eau (raclette, chiffons absorbants, protection des baies vitrées) pour éviter toute nuisance.</p>`,
-    },
-    {
-      question: "Pourquoi mon balcon devient-il glissant et verdit-il vite côté jardin ?",
-      answer: `<p>L'humidité, l'ombre (arbres, exposition nord) et les dépôts organiques favorisent mousses et lichens, surtout près des berges et dans les zones arborées de Saint-Maur. Nous appliquons un traitement curatif pendant le nettoyage, puis pouvons proposer un préventif adapté au support pour ralentir la recolonisation pendant 12 à 18 mois. Un balayage régulier et le maintien des évacuations propres réduisent fortement le retour du vert.</p>`,
-    },
-    {
-      question: "Les produits utilisés présentent-ils un risque pour mes plantations en contrebas ?",
-      answer: `<p>Non, nous utilisons des produits biodégradables adaptés au résidentiel, avec dilution et rinçage contrôlés. Les zones sensibles sont protégées et l'eau de rinçage est dirigée vers l'évacuation pour éviter d'arroser les plantations. Cette précaution est essentielle sur balcon, où tout ruissellement peut tomber sur un jardin, une cour ou un balcon inférieur.</p>`,
-    },
-    {
-      question: "Combien de temps avant de pouvoir réutiliser mon balcon ?",
-      answer: `<p>En général, vous pouvez marcher dessus dès que c'est sec au toucher. Le séchage complet intervient le plus souvent en 2 à 4 heures selon l'exposition et la ventilation. Sur des joints très chargés en eau, comptez plutôt une demi-journée avant de remettre tapis d'extérieur ou mobilier au contact des angles.</p>`,
-    },
-  ],
+      serviceKey: "balcons",
+      heroDescription:
+        "Votre balcon est une vraie pièce en plus : ne le laissez pas ternir. Nettoyage expert des sols (carrelage, pierre, béton) et garde-corps, avec protection des façades, menuiseries et plantations en contrebas.",
 
-  ctaOverride: "Devis nettoyage balcon",
-},
+      whyUsBullets: [
+        "Spécialiste petits espaces : Travail précis au balai-brosse, pads et microfibres pour nettoyer sans éclaboussures ni projections vers les voisins.",
+        "Douceur sur supports sensibles : Vapeur ou basse pression selon le matériau pour préserver joints, pierres tendres et enduits, sans “arracher” ni creuser.",
+        "Gestion de l'eau maîtrisée : Protection des baies vitrées + récupération/dirigeage des eaux de rinçage pour éviter coulures, infiltrations et salissures de façade.",
+      ],
 
+      uniqueIntro:
+        "<p>Avoir un balcon à Saint-Maur est un privilège. Mais entre la pollution urbaine, les lichens verts qui s'installent l'hiver et les traces noires sur les garde-corps, cet espace devient vite une zone négligée. <strong>Votre sol est terne, les joints sont noircis, et le balcon devient glissant dès qu'il pleut ?</strong></p>\n<p class=\"mt-4\">Attention aux fausses bonnes idées : utiliser un nettoyeur haute pression standard sur un balcon peut projeter de l'eau sale chez les voisins, provoquer des coulures sur la façade et, sur certaines pierres ou joints fragiles, <strong>dégrader les finitions</strong>. Sur un balcon ancien, l'excès d'eau peut aussi favoriser des infiltrations si l'étanchéité est fatiguée.</p>\n<p class=\"mt-4\">Chez Klinova, nous sommes des \"rénovateurs de surface\". Nous utilisons la chimie douce et l'action mécanique contrôlée, avec une priorité : un résultat net <strong>sans risque</strong> pour les menuiseries, les façades et l'environnement du balcon. Vous récupérez un extérieur propre, sain et esthétique, prêt pour les beaux jours.</p>",
+
+      uniqueDeepDive:
+        "<h3>1. Le diagnostic \"balcon\" : support + étanchéité + voisinage</h3>\n<p>On ne traite pas un balcon comme une grande surface au sol. Le technicien identifie le matériau (carrelage, pierre, béton, résine) et l'état des joints. À Saint-Maur, beaucoup de balcons sont anciens ou sur étanchéité sensible : nous limitons l'apport d'eau, adaptons la méthode et sécurisons les points à risque (seuil de baie vitrée, relevés d'étanchéité, évacuations).</p>\n\n<h3>2. Protocole \"Sol & Joints\" : décrassage précis, sans projections</h3>\n<p class=\"mt-4\">Pour les sols ternis et les joints noircis : application d'un détergent adapté au support (alcalin doux ou neutre selon la pierre), agitation au balai-brosse ou à la brosse manuelle, puis rinçage contrôlé (basse pression ou vapeur selon le cas). L'objectif : décoller les films gras urbains, retirer les dépôts verts et redonner de la clarté au sol sans “creuser” les joints ni saturer le support en eau.</p>\n\n<h3>3. Garde-corps, murs et gestion de l'eau</h3>\n<p class=\"mt-4\">Les garde-corps et murets se salissent autant que le sol : traces noires, coulures, poussières. Nous travaillons à l'éponge/microfibre et produits non agressifs pour préserver peintures, vernis et vitrages. Les baies vitrées et menuiseries sont protégées avant intervention. L'eau de rinçage est dirigée vers l'évacuation (raclette + chiffons absorbants) pour éviter toute coulure sur façade ou débordement vers les voisins. En fin d'intervention, contrôle des évacuations et remise en ordre.</p>",
+
+      specificChallenges: [
+        "Contraintes de voisinage : Un balcon impose zéro projection et une maîtrise totale des rinçages pour éviter nuisance et salissures chez les voisins.",
+        "Risque infiltration / étanchéité : Sur balcons anciens, on limite l'eau et on privilégie vapeur/basse pression + action mécanique contrôlée.",
+        "Protection des baies vitrées : Nous protégeons systématiquement vos menuiseries avant toute pulvérisation et contrôlons les seuils sensibles.",
+      ],
+
+      faqAdditions: [
+        {
+          question:
+            "Le nettoyage à pression risque-t-il d'endommager mon balcon ou de salir mes voisins ?",
+          answer:
+            "<p>Oui, si c'est fait “comme au jardin”. Sur un balcon, nous évitons les hautes pressions et privilégions la vapeur ou la basse pression, après application d'un détergent qui fait le travail. Cela limite les projections et protège les joints, les pierres tendres et les enduits. <strong>Nous effectuons toujours un test sur une zone discrète</strong> et nous mettons en place une gestion de l'eau (raclette, chiffons absorbants, protection des baies vitrées) pour éviter toute nuisance.</p>",
+        },
+        {
+          question:
+            "Pourquoi mon balcon devient-il glissant et verdit-il vite côté jardin ?",
+          answer:
+            "<p>L'humidité, l'ombre (arbres, exposition nord) et les dépôts organiques favorisent mousses et lichens, surtout près des berges et dans les zones arborées de Saint-Maur. Nous appliquons un traitement curatif pendant le nettoyage, puis pouvons proposer un préventif adapté au support pour ralentir la recolonisation pendant 12 à 18 mois. Un balayage régulier et le maintien des évacuations propres réduisent fortement le retour du vert.</p>",
+        },
+        {
+          question:
+            "Les produits utilisés présentent-ils un risque pour mes plantations en contrebas ?",
+          answer:
+            "<p>Non, nous utilisons des produits biodégradables adaptés au résidentiel, avec dilution et rinçage contrôlés. Les zones sensibles sont protégées et l'eau de rinçage est dirigée vers l'évacuation pour éviter d'arroser les plantations. Cette précaution est essentielle sur balcon, où tout ruissellement peut tomber sur un jardin, une cour ou un balcon inférieur.</p>",
+        },
+        {
+          question: "Combien de temps avant de pouvoir réutiliser mon balcon ?",
+          answer:
+            "<p>En général, vous pouvez marcher dessus dès que c'est sec au toucher. Le séchage complet intervient le plus souvent en 2 à 4 heures selon l'exposition et la ventilation. Sur des joints très chargés en eau, comptez plutôt une demi-journée avant de remettre tapis d'extérieur ou mobilier au contact des angles.</p>",
+        },
+      ],
+
+      ctaOverride: "Devis nettoyage balcon",
+    },
 
     // =========================
     // SERVICE 4 – BALCONS FIENTES
@@ -294,18 +280,11 @@ nearbyCities: [
         "Discrétion absolue : Intervention rapide, sans alerter tout le voisinage, avec évacuation des déchets en sacs hermétiques.",
       ],
 
-      uniqueIntro: `<p>Ce n'est pas juste "sale", c'est <strong>dangereux</strong>. Les fientes de pigeons, très fréquentes à Saint-Maur à cause des nombreux arbres et points d'eau, sont un vecteur de maladies graves (salmonellose, chlamydiose) et d'allergènes puissants. Une fois sèches, elles deviennent poussière et entrent dans vos poumons dès que vous ouvrez la fenêtre.</p>
-<p class="mt-4"><strong>N'essayez surtout pas de nettoyer cela vous-même.</strong> Un coup de balai ou d'aspirateur ne fait que disperser les bactéries dans l'air de votre logement. De plus, l'acidité urique des fientes attaque irréversiblement les gardes-corps en fer forgé et les pierres de façade.</p>
-<p class="mt-4">Klinova intervient en mode "Expert Propreté". Nous récupérons votre balcon. Nous grattons, nous lavons, nous désinfectons chimiquement. Vous retrouvez une surface saine sur laquelle vous pouvez à nouveau marcher sans crainte.</p>`,
+      uniqueIntro:
+        "<p>Ce n'est pas juste \"sale\", c'est <strong>dangereux</strong>. Les fientes de pigeons, très fréquentes à Saint-Maur à cause des nombreux arbres et points d'eau, sont un vecteur de maladies graves (salmonellose, chlamydiose) et d'allergènes puissants. Une fois sèches, elles deviennent poussière et entrent dans vos poumons dès que vous ouvrez la fenêtre.</p>\n<p class=\"mt-4\"><strong>N'essayez surtout pas de nettoyer cela vous-même.</strong> Un coup de balai ou d'aspirateur ne fait que disperser les bactéries dans l'air de votre logement. De plus, l'acidité urique des fientes attaque irréversiblement les gardes-corps en fer forgé et les pierres de façade.</p>\n<p class=\"mt-4\">Klinova intervient en mode \"Expert Propreté\". Nous récupérons votre balcon. Nous grattons, nous lavons, nous désinfectons chimiquement. Vous retrouvez une surface saine sur laquelle vous pouvez à nouveau marcher sans crainte.</p>",
 
-      uniqueDeepDive: `<h3>1. Confinement et Protection (Priorité Santé)</h3>
-<p>Avant de toucher à quoi que ce soit, nous protégeons votre intérieur. Le technicien s'équipe comme pour un chantier amiante : combinaison, gants, masque respiratoire. Nous humidifions la zone pour empêcher les poussières de voler.</p>
-
-<h3>2. Curage et Évacuation</h3>
-<p class="mt-4">Nous retirons manuellement le "gros" (fientes, nids, cadavres parfois). Tout est mis en double ensachage étanche pour être évacué vers une filière de déchets spécialisée. Rien n'est jeté dans votre poubelle domestique.</p>
-
-<h3>3. Désinfection et Remise à neuf</h3>
-<p class="mt-4">Une fois le support nu, nous appliquons un bactéricide/fongicide puissant aux normes hospitalières. Nous nettoyons ensuite le sol et les garde-corps pour retirer les traces acides. Si nécessaire, nous pouvons vous orienter vers des solutions de pics ou filets pour éviter la récidive.</p>`,
+      uniqueDeepDive:
+        '<h3>1. Confinement et Protection (Priorité Santé)</h3>\n<p>Avant de toucher à quoi que ce soit, nous protégeons votre intérieur. Le technicien s\'équipe comme pour un chantier amiante : combinaison, gants, masque respiratoire. Nous humidifions la zone pour empêcher les poussières de voler.</p>\n\n<h3>2. Curage et Évacuation</h3>\n<p class="mt-4">Nous retirons manuellement le "gros" (fientes, nids, cadavres parfois). Tout est mis en double ensachage étanche pour être évacué vers une filière de déchets spécialisée. Rien n\'est jeté dans votre poubelle domestique.</p>\n\n<h3>3. Désinfection et Remise à neuf</h3>\n<p class="mt-4">Une fois le support nu, nous appliquons un bactéricide/fongicide puissant aux normes hospitalières. Nous nettoyons ensuite le sol et les garde-corps pour retirer les traces acides. Si nécessaire, nous pouvons vous orienter vers des solutions de pics ou filets pour éviter la récidive.</p>',
 
       specificChallenges: [
         "Risque inhalatoire : La poussière de fiente sèche est toxique. L'humidification contrôlée est obligatoire.",
@@ -313,27 +292,30 @@ nearbyCities: [
         "Accès difficile : Nous intervenons même sur des balcons encombrés ou difficiles d'accès via les parties communes.",
       ],
 
-       faqAdditions: [
+      faqAdditions: [
         {
           question:
             "Les fientes de pigeons représentent-elles un risque sanitaire réel pour ma famille ?",
           answer:
-            `<p>Oui, les fientes contiennent des bactéries pathogènes (salmonelles), des champignons (cryptocoques, histoplasma) et des parasites pouvant provoquer infections respiratoires graves, mycoses pulmonaires ou troubles gastro-intestinaux. Les poussières de fientes sèches sont particulièrement dangereuses lorsqu'inhalées, surtout pour les enfants, personnes âgées ou immunodéprimées. Un nettoyage domestique sans équipements de protection aggrave considérablement le risque d'exposition. <strong>Seul un protocole professionnel</strong> avec EPI complets, humidification préalable et désinfection virucide garantit l'élimination totale des dangers sanitaires.</p>`,
+            "<p>Oui, les fientes contiennent des bactéries pathogènes (salmonelles), des champignons (cryptocoques, histoplasma) et des parasites pouvant provoquer infections respiratoires graves, mycoses pulmonaires ou troubles gastro-intestinaux. Les poussières de fientes sèches sont particulièrement dangereuses lorsqu'inhalées, surtout pour les enfants, personnes âgées ou immunodéprimées. Un nettoyage domestique sans équipements de protection aggrave considérablement le risque d'exposition. <strong>Seul un protocole professionnel</strong> avec EPI complets, humidification préalable et désinfection virucide garantit l'élimination totale des dangers sanitaires.</p>",
         },
         {
-          question: "Le nettoyage peut-il endommager ma terrasse en Teck ou mes murets en meulière ?",
+          question:
+            "Le nettoyage peut-il endommager ma terrasse en Teck ou mes murets en meulière ?",
           answer:
-            `<p>Non, si le protocole est correctement adapté. Nous ajustons la pression de rinçage selon le support : 30-50 bars maximum pour les bois exotiques, 50-80 bars pour les meulières à joints friables, méthode manuelle pour les pierres naturelles très sensibles. Les produits désinfectants sont sélectionnés pour leur compatibilité avec les supports nobles (pH neutre, pas d'agents chlorés agressifs). Cette précaution technique est indispensable pour préserver la valeur patrimoniale des propriétés saint-mauriennes.</p>`,
+            "<p>Non, si le protocole est correctement adapté. Nous ajustons la pression de rinçage selon le support : 30-50 bars maximum pour les bois exotiques, 50-80 bars pour les meulières à joints friables, méthode manuelle pour les pierres naturelles très sensibles. Les produits désinfectants sont sélectionnés pour leur compatibilité avec les supports nobles (pH neutre, pas d'agents chlorés agressifs). Cette précaution technique est indispensable pour préserver la valeur patrimoniale des propriétés saint-mauriennes.</p>",
         },
         {
-          question: "Les fientes ont-elles déjà causé des dégâts irréversibles sur ma terrasse ?",
+          question:
+            "Les fientes ont-elles déjà causé des dégâts irréversibles sur ma terrasse ?",
           answer:
-            `<p>Cela dépend de l'ancienneté de la contamination. Sur les terrasses en bois exotique, l'acidité des fientes érode la finition et crée des taches brunâtres qui peuvent pénétrer profondément dans les fibres. Sur les meulières, elle déchausse les joints à la chaux et provoque une érosion superficielle de la pierre. Sur les garde-corps métalliques, elle accélère l'oxydation et fragilise la structure. Une intervention rapide limite les dégâts. Les contaminations anciennes (plusieurs mois) peuvent laisser des marques résiduelles, mais le nettoyage professionnel stoppe la dégradation active et préserve le reste du support.</p>`,
+            "<p>Cela dépend de l'ancienneté de la contamination. Sur les terrasses en bois exotique, l'acidité des fientes érode la finition et crée des taches brunâtres qui peuvent pénétrer profondément dans les fibres. Sur les meulières, elle déchausse les joints à la chaux et provoque une érosion superficielle de la pierre. Sur les garde-corps métalliques, elle accélère l'oxydation et fragilise la structure. Une intervention rapide limite les dégâts. Les contaminations anciennes (plusieurs mois) peuvent laisser des marques résiduelles, mais le nettoyage professionnel stoppe la dégradation active et préserve le reste du support.</p>",
         },
         {
-          question: "Comment éviter que les pigeons ne reviennent après le nettoyage ?",
+          question:
+            "Comment éviter que les pigeons ne reviennent après le nettoyage ?",
           answer:
-            `<p>Nous proposons la pose de solutions anti-pigeons adaptées à l'architecture résidentielle de Saint-Maur : pics discrets sur les corniches et avancées de toit, filets transparents pour les loggias, répulsifs visuels pour les garde-corps. Ces dispositifs préservent l'esthétique des pavillons de prestige tout en empêchant durablement la nidification. L'inspection régulière des points d'accès et l'intervention rapide dès les premiers signes de retour limitent également le risque de recolonisation massive et de nouveaux dégâts sur les supports nobles.</p>`,
+            "<p>Nous proposons la pose de solutions anti-pigeons adaptées à l'architecture résidentielle de Saint-Maur : pics discrets sur les corniches et avancées de toit, filets transparents pour les loggias, répulsifs visuels pour les garde-corps. Ces dispositifs préservent l'esthétique des pavillons de prestige tout en empêchant durablement la nidification. L'inspection régulière des points d'accès et l'intervention rapide dès les premiers signes de retour limitent également le risque de recolonisation massive et de nouveaux dégâts sur les supports nobles.</p>",
         },
       ],
       ctaOverride: "Demander une désinfection urgente",
@@ -353,51 +335,47 @@ nearbyCities: [
         "Confort immédiat : Grâce à notre aspiration surpuissante, vos meubles sont secs et réutilisables en quelques heures.",
       ],
 
-      uniqueIntro: `<p>Votre canapé est le centre de votre vie de famille à Saint-Maur. Il voit passer les enfants, les amis, le chien qui rentre du jardin... et les accidents du quotidien. Au-delà des taches visibles qui font "négligé", vos tissus emmagasinent des kilos de poussière, de peaux mortes et d'acariens, surtout avec l'humidité ambiante de notre région.</p>
-<p class="mt-4">Pourtant, jeter un canapé de qualité ou un tapis d'Orient est un gâchis. <strong>Ne changez pas, rénovez !</strong> Pour une fraction du prix du neuf, nous offrons une seconde jeunesse à votre mobilier.</p>
-<p class="mt-4">Notre technique ne se contente pas de "laver en surface". Nous injectons une solution nettoyante au cœur de la fibre et l'extrayons immédiatement. L'eau ressort noire, preuve de l'efficacité. <strong>Les couleurs claquent à nouveau, le volume de l'assise remonte, et l'odeur de frais assainit toute la pièce.</strong></p>`,
+      uniqueIntro:
+        "<p>Votre canapé est le centre de votre vie de famille à Saint-Maur. Il voit passer les enfants, les amis, le chien qui rentre du jardin... et les accidents du quotidien. Au-delà des taches visibles qui font \"négligé\", vos tissus emmagasinent des kilos de poussière, de peaux mortes et d'acariens, surtout avec l'humidité ambiante de notre région.</p>\n<p class=\"mt-4\">Pourtant, jeter un canapé de qualité ou un tapis d'Orient est un gâchis. <strong>Ne changez pas, rénovez !</strong> Pour une fraction du prix du neuf, nous offrons une seconde jeunesse à votre mobilier.</p>\n<p class=\"mt-4\">Notre technique ne se contente pas de \"laver en surface\". Nous injectons une solution nettoyante au cœur de la fibre et l'extrayons immédiatement. L'eau ressort noire, preuve de l'efficacité. <strong>Les couleurs claquent à nouveau, le volume de l'assise remonte, et l'odeur de frais assainit toute la pièce.</strong></p>",
 
-      uniqueDeepDive: `<h3>1. Analyse des fibres</h3>
-<p>Coton, lin, microfibre, velours ou soie ? Chaque tissu a sa tolérance. Nous testons la stabilité des couleurs. À Saint-Maur, nous traitons souvent des pièces de mobilier haut de gamme ou anciens : nous savons adapter notre puissance pour ne pas fragiliser les trames.</p>
-
-<h3>2. Le Shampooing en profondeur</h3>
-<p class="mt-4">Nous appliquons d'abord des détachants ciblés sur les zones critiques (accoudoirs, têtières). Ensuite, la machine entre en action. C'est un lavage "à cœur". Nous insistons jusqu'à ce que l'eau extraite soit claire. C'est la seule garantie d'une hygiène totale.</p>
-
-<h3>3. Séchage et Finition</h3>
-<p class="mt-4">L'ennemi du textile, c'est l'humidité stagnante. Notre matériel industriel possède une dépression d'air bien supérieure aux machines de location. Nous aspirons 90% de l'eau. En aérant bien, votre canapé est sec le soir même, sans risque de moisissure.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Analyse des fibres</h3>\n<p>Coton, lin, microfibre, velours ou soie ? Chaque tissu a sa tolérance. Nous testons la stabilité des couleurs. À Saint-Maur, nous traitons souvent des pièces de mobilier haut de gamme ou anciens : nous savons adapter notre puissance pour ne pas fragiliser les trames.</p>\n\n<h3>2. Le Shampooing en profondeur</h3>\n<p class=\"mt-4\">Nous appliquons d'abord des détachants ciblés sur les zones critiques (accoudoirs, têtières). Ensuite, la machine entre en action. C'est un lavage \"à cœur\". Nous insistons jusqu'à ce que l'eau extraite soit claire. C'est la seule garantie d'une hygiène totale.</p>\n\n<h3>3. Séchage et Finition</h3>\n<p class=\"mt-4\">L'ennemi du textile, c'est l'humidité stagnante. Notre matériel industriel possède une dépression d'air bien supérieure aux machines de location. Nous aspirons 90% de l'eau. En aérant bien, votre canapé est sec le soir même, sans risque de moisissure.</p>",
 
       specificChallenges: [
         "Allergies aux acariens : L'humidité locale favorise leur développement. Notre traitement thermique est la solution radicale.",
-'Taches organiques : Urine de chat, transpiration, nourriture... Nous utilisons des enzymes pour \'manger\' l\'odeur à la source.',
+        "Taches organiques : Urine de chat, transpiration, nourriture... Nous utilisons des enzymes pour 'manger' l'odeur à la source.",
         "Tissus délicats : Respect total des velours et lins fragiles grâce à des buses d'injection spécifiques.",
       ],
 
-       faqAdditions: [
+      faqAdditions: [
         {
-          question: "Le nettoyage élimine-t-il les acariens qui prolifèrent dans l'humidité de Saint-Maur ?",
+          question:
+            "Le nettoyage élimine-t-il les acariens qui prolifèrent dans l'humidité de Saint-Maur ?",
           answer:
-            `<p>Oui, l'injection-extraction à eau chaude (65-70°C) tue les acariens adultes, larves et œufs par choc thermique. Cette température est particulièrement importante à Saint-Maur où l'humidité de la Marne favorise leur prolifération rapide. L'aspiration puissante retire ensuite les acariens morts et leurs déjections allergisantes. Les familles constatent généralement une amélioration des symptômes (rhinites, éternuements, irritations) sous 48 à 72h. Pour maintenir ce résultat dans l'environnement humide de la presqu'île, nous recommandons un nettoyage annuel.</p>`,
+            "<p>Oui, l'injection-extraction à eau chaude (65-70°C) tue les acariens adultes, larves et œufs par choc thermique. Cette température est particulièrement importante à Saint-Maur où l'humidité de la Marne favorise leur prolifération rapide. L'aspiration puissante retire ensuite les acariens morts et leurs déjections allergisantes. Les familles constatent généralement une amélioration des symptômes (rhinites, éternuements, irritations) sous 48 à 72h. Pour maintenir ce résultat dans l'environnement humide de la presqu'île, nous recommandons un nettoyage annuel.</p>",
         },
         {
-          question: "Pouvez-vous traiter les taches de boue et les traces de pattes d'animaux sur mon tapis ?",
+          question:
+            "Pouvez-vous traiter les taches de boue et les traces de pattes d'animaux sur mon tapis ?",
           answer:
-            `<p>Oui, nous utilisons un détachant adapté aux salissures organiques et minérales. La boue transportée depuis les jardins ou les promenades en bords de Marne est d'abord brossée à sec une fois sèche, puis traitée avec un produit spécifique avant l'injection-extraction. Les traces de pattes grasses reçoivent un pré-traitement dégraissant. L'eau chaude et l'aspiration puissante éliminent ensuite les résidus incrustés dans les fibres. Les taches récentes partent complètement, les anciennes s'atténuent fortement.</p>`,
+            "<p>Oui, nous utilisons un détachant adapté aux salissures organiques et minérales. La boue transportée depuis les jardins ou les promenades en bords de Marne est d'abord brossée à sec une fois sèche, puis traitée avec un produit spécifique avant l'injection-extraction. Les traces de pattes grasses reçoivent un pré-traitement dégraissant. L'eau chaude et l'aspiration puissante éliminent ensuite les résidus incrustés dans les fibres. Les taches récentes partent complètement, les anciennes s'atténuent fortement.</p>",
         },
         {
-          question: "Combien de temps avant de pouvoir réutiliser mon canapé dans un environnement humide ?",
+          question:
+            "Combien de temps avant de pouvoir réutiliser mon canapé dans un environnement humide ?",
           answer:
-            `<p>Le séchage complet intervient sous 6 à 10 heures à Saint-Maur, durée supérieure aux zones urbaines sèches en raison de l'humidité ambiante de la Marne. Vous pouvez vous asseoir légèrement sur les accoudoirs dès 3h, mais évitez de vous installer complètement avant séchage total pour ne pas écraser les fibres humides. Aérez la pièce en ouvrant les fenêtres, orientez un ventilateur vers le canapé. Pour un usage en soirée, planifiez l'intervention tôt le matin.</p>`,
+            "<p>Le séchage complet intervient sous 6 à 10 heures à Saint-Maur, durée supérieure aux zones urbaines sèches en raison de l'humidité ambiante de la Marne. Vous pouvez vous asseoir légèrement sur les accoudoirs dès 3h, mais évitez de vous installer complètement avant séchage total pour ne pas écraser les fibres humides. Aérez la pièce en ouvrant les fenêtres, orientez un ventilateur vers le canapé. Pour un usage en soirée, planifiez l'intervention tôt le matin.</p>",
         },
         {
-          question: "Dois-je ranger mes meubles de jardin avant votre intervention ?",
+          question:
+            "Dois-je ranger mes meubles de jardin avant votre intervention ?",
           answer:
-            `<p>Non, concentrez-vous uniquement sur les textiles à traiter : retirez les coussins amovibles du canapé, dégagez les objets posés sur le tapis (magazines, jouets, plantes en pot), et si vous avez des animaux, placez-les dans une autre pièce ou le jardin pendant l'intervention. Les meubles légers seront déplacés par le technicien si nécessaire. Cette simplicité de préparation est appréciée dans les pavillons saint-mauriens où les espaces de vie s'ouvrent souvent sur les jardins et vérandas.</p>`,
+            "<p>Non, concentrez-vous uniquement sur les textiles à traiter : retirez les coussins amovibles du canapé, dégagez les objets posés sur le tapis (magazines, jouets, plantes en pot), et si vous avez des animaux, placez-les dans une autre pièce ou le jardin pendant l'intervention. Les meubles légers seront déplacés par le technicien si nécessaire. Cette simplicité de préparation est appréciée dans les pavillons saint-mauriens où les espaces de vie s'ouvrent souvent sur les jardins et vérandas.</p>",
         },
       ],
 
       ctaOverride: "",
     },
-
 
     {
       serviceKey: "terrasses",
@@ -408,19 +386,10 @@ nearbyCities: [
         "Savoir-faire adapté au patrimoine architectural local : terrasses en pierre des villas bourgeoises, dallages anciens des maisons de villégiature, revêtements contemporains des constructions récentes.",
         "Protection rigoureuse des abords : bâchage du mobilier de jardin, préservation des plantations et massifs, maîtrise des écoulements vers le jardin ou la Marne.",
       ],
-      uniqueIntro: `<p>Saint-Maur-des-Fossés, presqu'île enserrée par la <strong>boucle de la Marne</strong>, offre à ses habitants un cadre résidentiel préservé où les espaces extérieurs occupent une place centrale. Des <strong>villas de villégiature</strong> de La Varenne aux <strong>maisons bourgeoises</strong> du Parc, en passant par les pavillons plus modestes de La Pie, les terrasses reflètent la diversité architecturale de cette commune prisée du Val-de-Marne.</p>
-
-<p class="mt-4">La proximité immédiate de la rivière génère un taux d'humidité élevé qui favorise l'apparition de mousses, algues et lichens sur les surfaces exposées. Les <strong>dalles en pierre naturelle</strong> des propriétés anciennes comme les <strong>carrelages et bétons</strong> des aménagements plus récents subissent cette dégradation progressive, rendant les terrasses glissantes et visuellement altérées.</p>
-
-<p class="mt-4">Chaque matériau requiert une approche sur mesure. Le diagnostic initial identifie le support, évalue son état et détermine le protocole le plus adapté pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>`,
-      uniqueDeepDive: `<h3>Diagnostic et mise en sécurité des abords</h3>
-<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés par bâchage. Les menuiseries extérieures et façades adjacentes sont préservées des projections. Un balayage minutieux élimine feuilles mortes, débris végétaux et terre accumulée avant toute intervention.</p>
-
-<h3>Nettoyage selon le matériau</h3>
-<p>Le produit est sélectionné en fonction du support identifié : solution douce pour la pierre naturelle, formulation alcaline pour béton et carrelage, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les dépôts incrustés. Le rinçage s'effectue à pression calibrée pour respecter les joints et la surface du revêtement.</p>
-
-<h3>Protection et suivi</h3>
-<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité et à l'ombre des arbres. L'évacuation des eaux de rinçage est dirigée vers les points d'écoulement existants. Des préconisations d'entretien saisonnier sont transmises pour maintenir le résultat sur la durée.</p>`,
+      uniqueIntro:
+        "<p>Saint-Maur-des-Fossés, presqu'île enserrée par la <strong>boucle de la Marne</strong>, offre à ses habitants un cadre résidentiel préservé où les espaces extérieurs occupent une place centrale. Des <strong>villas de villégiature</strong> de La Varenne aux <strong>maisons bourgeoises</strong> du Parc, en passant par les pavillons plus modestes de La Pie, les terrasses reflètent la diversité architecturale de cette commune prisée du Val-de-Marne.</p>\n\n<p class=\"mt-4\">La proximité immédiate de la rivière génère un taux d'humidité élevé qui favorise l'apparition de mousses, algues et lichens sur les surfaces exposées. Les <strong>dalles en pierre naturelle</strong> des propriétés anciennes comme les <strong>carrelages et bétons</strong> des aménagements plus récents subissent cette dégradation progressive, rendant les terrasses glissantes et visuellement altérées.</p>\n\n<p class=\"mt-4\">Chaque matériau requiert une approche sur mesure. Le diagnostic initial identifie le support, évalue son état et détermine le protocole le plus adapté pour restaurer l'aspect d'origine sans compromettre l'intégrité du revêtement.</p>",
+      uniqueDeepDive:
+        "<h3>Diagnostic et mise en sécurité des abords</h3>\n<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés par bâchage. Les menuiseries extérieures et façades adjacentes sont préservées des projections. Un balayage minutieux élimine feuilles mortes, débris végétaux et terre accumulée avant toute intervention.</p>\n\n<h3>Nettoyage selon le matériau</h3>\n<p>Le produit est sélectionné en fonction du support identifié : solution douce pour la pierre naturelle, formulation alcaline pour béton et carrelage, traitement neutre pour bois et composite. L'action mécanique par brossage adapté déloge les dépôts incrustés. Le rinçage s'effectue à pression calibrée pour respecter les joints et la surface du revêtement.</p>\n\n<h3>Protection et suivi</h3>\n<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité et à l'ombre des arbres. L'évacuation des eaux de rinçage est dirigée vers les points d'écoulement existants. Des préconisations d'entretien saisonnier sont transmises pour maintenir le résultat sur la durée.</p>",
       specificChallenges: [
         "Pierre naturelle des villas bourgeoises de La Varenne et du Parc : matériau noble nécessitant des produits à pH neutre.",
         "Dallages anciens des maisons de villégiature fin XIXe-début XXe : joints fragiles et patine à préserver.",
@@ -458,67 +427,61 @@ nearbyCities: [
     },
 
     {
-  serviceKey: "nettoyage-appartement-maison",
+      serviceKey: "nettoyage-appartement-maison",
 
-  heroDescription:
-    "À Saint-Maur-des-Fossés, approche haut de gamme pour villas, meulières et appartements : protection des matériaux, finitions soignées et rendu homogène, notamment avant vente ou déménagement.",
+      heroDescription:
+        "À Saint-Maur-des-Fossés, approche haut de gamme pour villas, meulières et appartements : protection des matériaux, finitions soignées et rendu homogène, notamment avant vente ou déménagement.",
 
-  whyUsBullets: [
-    "Méthode adaptée aux villas/meulières et appartements de standing : protection des parquets, nettoyage précis des plinthes, huisseries bois, radiateurs et points de contact.",
-    "Gestion des “vraies” salissures locales : traces de boue fine ramenée des bords de Marne, dépôts urbains sur vitrages bas près des axes (Avenue Foch / République), calcaire marqué en pièces d’eau.",
-    "Organisation efficace dans une ville à 4 gares RER A : accès gardien/Vigik, stationnement tendu (Adamville / La Varenne), intervention discrète en immeubles et rues étroites (Vieux Saint-Maur).",
-  ],
+      whyUsBullets: [
+        "Méthode adaptée aux villas/meulières et appartements de standing : protection des parquets, nettoyage précis des plinthes, huisseries bois, radiateurs et points de contact.",
+        "Gestion des “vraies” salissures locales : traces de boue fine ramenée des bords de Marne, dépôts urbains sur vitrages bas près des axes (Avenue Foch / République), calcaire marqué en pièces d’eau.",
+        "Organisation efficace dans une ville à 4 gares RER A : accès gardien/Vigik, stationnement tendu (Adamville / La Varenne), intervention discrète en immeubles et rues étroites (Vieux Saint-Maur).",
+      ],
 
-  uniqueIntro: `<p>À Saint-Maur-des-Fossés, la remise en état se joue souvent sur deux réalités très différentes : d’un côté les <strong>appartements autour des gares RER A</strong> (rotation, états des lieux), de l’autre les maisons et villas (La Varenne, La Pie, Le Parc) où l’on attend un rendu “propre au détail”. La ville est enveloppée par la Marne : sur les entrées et les sols, on retrouve régulièrement une boue fine et des traces de passage après les promenades des bords de Marne.</p>
-<p class="mt-4">Le terrain impose aussi une vraie organisation. Entre les marchés (Adamville et La Varenne), les rues plus étroites du Vieux Saint-Maur, les sens uniques, et la densité autour des gares, l’intervention doit être planifiée : dépose du matériel, accès digicode/Vigik, puis déroulé sans allers-retours inutiles. Ici, la discrétion compte : voisinage proche, cages d’escalier, gardiens et règlements d’immeuble.</p>
-<p class="mt-4">On vise donc un résultat homogène : cuisine et salle d’eau (gras + calcaire), pièces de vie, puis finitions visibles (plinthes, interrupteurs, poignées, portes, traces sur vitrages accessibles). Sur les maisons, on ajoute la gestion des volumes (escaliers, véranda, baies, pièces techniques) pour que l’ensemble paraisse réellement “remis à niveau”.</p>`,
+      uniqueIntro:
+        '<p>À Saint-Maur-des-Fossés, la remise en état se joue souvent sur deux réalités très différentes : d’un côté les <strong>appartements autour des gares RER A</strong> (rotation, états des lieux), de l’autre les maisons et villas (La Varenne, La Pie, Le Parc) où l’on attend un rendu “propre au détail”. La ville est enveloppée par la Marne : sur les entrées et les sols, on retrouve régulièrement une boue fine et des traces de passage après les promenades des bords de Marne.</p>\n<p class="mt-4">Le terrain impose aussi une vraie organisation. Entre les marchés (Adamville et La Varenne), les rues plus étroites du Vieux Saint-Maur, les sens uniques, et la densité autour des gares, l’intervention doit être planifiée : dépose du matériel, accès digicode/Vigik, puis déroulé sans allers-retours inutiles. Ici, la discrétion compte : voisinage proche, cages d’escalier, gardiens et règlements d’immeuble.</p>\n<p class="mt-4">On vise donc un résultat homogène : cuisine et salle d’eau (gras + calcaire), pièces de vie, puis finitions visibles (plinthes, interrupteurs, poignées, portes, traces sur vitrages accessibles). Sur les maisons, on ajoute la gestion des volumes (escaliers, véranda, baies, pièces techniques) pour que l’ensemble paraisse réellement “remis à niveau”.</p>',
 
-  uniqueDeepDive: `<h3>Adamville / centre — états des lieux, accès et détails “qui se voient”</h3>
-<p>Autour d’Adamville et du centre, les interventions sont souvent liées à un état des lieux : logement vidé, timing serré, stationnement compliqué les jours de marché. On procède par zones (pièces d’eau → cuisine → sols → finitions) avec un contrôle final des points de contact et des plinthes, qui font la différence sur la perception “prêt à rendre”.</p>
+      uniqueDeepDive:
+        "<h3>Adamville / centre — états des lieux, accès et détails “qui se voient”</h3>\n<p>Autour d’Adamville et du centre, les interventions sont souvent liées à un état des lieux : logement vidé, timing serré, stationnement compliqué les jours de marché. On procède par zones (pièces d’eau → cuisine → sols → finitions) avec un contrôle final des points de contact et des plinthes, qui font la différence sur la perception “prêt à rendre”.</p>\n\n<h3>La Varenne Saint-Hilaire — villas, vérandas et vitrages exigeants</h3>\n<p>À La Varenne, on rencontre fréquemment des maisons avec parquet massif, marbre/carrelage ancien, et de grandes surfaces vitrées (vérandas, baies sur jardin). L’enjeu est double : protéger les matériaux (éviter l’excès d’eau sur parquet, gestes propres sur boiseries) et obtenir un rendu net sur les vitres accessibles et les rebords, sans traces.</p>\n\n<h3>Vieux Saint-Maur / bords de Marne — logistique étroite et traces de promenade</h3>\n<p>Dans le Vieux Saint-Maur et près des promenades (Promenade des Anglais, quais), on gère souvent des entrées marquées par les allées-venues : terre, boue fine, traces sur carrelage ou parquet d’entrée. Les rues étroites et l’ancien imposent une intervention compacte : matériel limité, passages protégés, et une finition soignée sur les bas de portes, plinthes et escaliers.</p>",
 
-<h3>La Varenne Saint-Hilaire — villas, vérandas et vitrages exigeants</h3>
-<p>À La Varenne, on rencontre fréquemment des maisons avec parquet massif, marbre/carrelage ancien, et de grandes surfaces vitrées (vérandas, baies sur jardin). L’enjeu est double : protéger les matériaux (éviter l’excès d’eau sur parquet, gestes propres sur boiseries) et obtenir un rendu net sur les vitres accessibles et les rebords, sans traces.</p>
+      specificChallenges: [
+        "Boucle de la Marne : boue fine et traces de passage fréquentes sur entrées et sols.",
+        "4 gares RER A : flux pendulaire, rotation locative et contraintes de timing (états des lieux).",
+        "Stationnement très tendu (Adamville / La Varenne), surtout les jours de marché.",
+        "Rues étroites et sens uniques (Vieux Saint-Maur / bords de Marne) : dépose matériel à anticiper.",
+        "Accès sécurisés : digicodes, Vigik et gardiens fréquents en résidences de standing.",
+        "Matériaux sensibles : parquet massif, marbre/carrelage ancien, boiseries et huisseries à préserver.",
+      ],
 
-<h3>Vieux Saint-Maur / bords de Marne — logistique étroite et traces de promenade</h3>
-<p>Dans le Vieux Saint-Maur et près des promenades (Promenade des Anglais, quais), on gère souvent des entrées marquées par les allées-venues : terre, boue fine, traces sur carrelage ou parquet d’entrée. Les rues étroites et l’ancien imposent une intervention compacte : matériel limité, passages protégés, et une finition soignée sur les bas de portes, plinthes et escaliers.</p>`,
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous pour un nettoyage d’état des lieux à Saint-Maur-des-Fossés (94100 / 94210) ?",
+          answer:
+            "<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, poignées, portes). C’est particulièrement utile autour des gares RER A où les sorties de location sont fréquentes.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous faire un nettoyage après travaux (peinture, ponçage, plâtre) dans une maison à La Varenne ?",
+          answer:
+            "<p>Oui. Après travaux, on travaille en plusieurs passes pour limiter la redéposition de poussière fine : surfaces et menuiseries, puis sols, puis contrôle final des rebords, plinthes et zones de passage. On adapte aussi la méthode pour protéger les parquets et les boiseries.</p>",
+        },
+        {
+          question:
+            "Est-ce que vous prenez en charge les vitrages (baies, vérandas) et les traces liées aux bords de Marne ?",
+          answer:
+            "<p>Oui, sur les parties accessibles. Sur Saint-Maur, on traite souvent les entrées marquées par la boue fine et les rebords/vitrages bas. L’objectif est un rendu net, sans traces, en respectant les supports (bois, joints, pierre).</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous le stationnement et l’accès en résidence (Vigik / gardien) ?",
+          answer:
+            "<p>On confirme l’accès (digicode/Vigik/gardien) en amont et on définit un point de dépose réaliste, surtout à Adamville et La Varenne. L’intervention est ensuite organisée pour limiter les allers-retours et réduire la gêne (bruit, passages).</p>",
+        },
+      ],
 
-  specificChallenges: [
-    "Boucle de la Marne : boue fine et traces de passage fréquentes sur entrées et sols.",
-    "4 gares RER A : flux pendulaire, rotation locative et contraintes de timing (états des lieux).",
-    "Stationnement très tendu (Adamville / La Varenne), surtout les jours de marché.",
-    "Rues étroites et sens uniques (Vieux Saint-Maur / bords de Marne) : dépose matériel à anticiper.",
-    "Accès sécurisés : digicodes, Vigik et gardiens fréquents en résidences de standing.",
-    "Matériaux sensibles : parquet massif, marbre/carrelage ancien, boiseries et huisseries à préserver.",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Intervenez-vous pour un nettoyage d’état des lieux à Saint-Maur-des-Fossés (94100 / 94210) ?",
-      answer: `<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau (dégraissage + calcaire), sols, puis finitions visibles (plinthes, interrupteurs, poignées, portes). C’est particulièrement utile autour des gares RER A où les sorties de location sont fréquentes.</p>`,
+      ctaOverride: "",
     },
-    {
-      question:
-        "Pouvez-vous faire un nettoyage après travaux (peinture, ponçage, plâtre) dans une maison à La Varenne ?",
-      answer: `<p>Oui. Après travaux, on travaille en plusieurs passes pour limiter la redéposition de poussière fine : surfaces et menuiseries, puis sols, puis contrôle final des rebords, plinthes et zones de passage. On adapte aussi la méthode pour protéger les parquets et les boiseries.</p>`,
-    },
-    {
-      question:
-        "Est-ce que vous prenez en charge les vitrages (baies, vérandas) et les traces liées aux bords de Marne ?",
-      answer: `<p>Oui, sur les parties accessibles. Sur Saint-Maur, on traite souvent les entrées marquées par la boue fine et les rebords/vitrages bas. L’objectif est un rendu net, sans traces, en respectant les supports (bois, joints, pierre).</p>`,
-    },
-    {
-      question:
-        "Comment gérez-vous le stationnement et l’accès en résidence (Vigik / gardien) ?",
-      answer: `<p>On confirme l’accès (digicode/Vigik/gardien) en amont et on définit un point de dépose réaliste, surtout à Adamville et La Varenne. L’intervention est ensuite organisée pour limiter les allers-retours et réduire la gêne (bruit, passages).</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-    
   ],
 };
 
