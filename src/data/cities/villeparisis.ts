@@ -1,5 +1,3 @@
-
-
 import type { City } from "~/types/geo";
 
 const city: City = {
@@ -16,13 +14,8 @@ const city: City = {
   customDescription:
     "Traversée par l'axe majeur de la RN3 et bordée par le Canal de l'Ourcq, Villeparisis combine zones pavillonnaires denses et activité commerciale soutenue. Ce dynamisme génère un besoin constant en entretien technique : moquettes de halls, parkings autour de la gare et balcons exposés aux particules routières.",
 
-  hubIntro: `<p>Pour les gestionnaires de copropriétés et les entreprises implantées à Villeparisis, la maintenance immobilière exige une réactivité forte face aux contraintes urbaines locales, notamment la poussière liée au trafic routier et l'humidité des zones proches du canal. Klinova intervient comme partenaire technique de proximité, en coordination avec votre syndic de copropriété.</p>
-<p class="mt-4">Notre approche repose sur une gestion globale des surfaces, du parking au dernier étage. Nous déployons des protocoles d'hygiène stricts adaptés à la typologie des bâtiments de Villeparisis, des secteurs en rénovation aux zones pavillonnaires, pour préserver l'image et la valeur d'un immeuble sur la durée.</p>
-<ul>
-  <li><strong>Partenariat syndic rigoureux :</strong> gestion autonome des accès et communication fluide avec le conseil syndical.</li>
-  <li><strong>Maintenance immobilière technique :</strong> traitement spécialisé des sols, textiles et surfaces extérieures.</li>
-  <li><strong>Protocole et traçabilité :</strong> suivi d'intervention structuré pour maintenir une qualité constante dans le temps.</li>
-</ul>`,
+  hubIntro:
+    "<p>Pour les gestionnaires de copropriétés et les entreprises implantées à Villeparisis, la maintenance immobilière exige une réactivité forte face aux contraintes urbaines locales, notamment la poussière liée au trafic routier et l'humidité des zones proches du canal. Klinova intervient comme partenaire technique de proximité, en coordination avec votre syndic de copropriété.</p>\n<p class=\"mt-4\">Notre approche repose sur une gestion globale des surfaces, du parking au dernier étage. Nous déployons des protocoles d'hygiène stricts adaptés à la typologie des bâtiments de Villeparisis, des secteurs en rénovation aux zones pavillonnaires, pour préserver l'image et la valeur d'un immeuble sur la durée.</p>\n<ul>\n  <li><strong>Partenariat syndic rigoureux :</strong> gestion autonome des accès et communication fluide avec le conseil syndical.</li>\n  <li><strong>Maintenance immobilière technique :</strong> traitement spécialisé des sols, textiles et surfaces extérieures.</li>\n  <li><strong>Protocole et traçabilité :</strong> suivi d'intervention structuré pour maintenir une qualité constante dans le temps.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Encrassement noir des façades et balcons lié aux particules fines du trafic dense de la RN3.",
@@ -43,17 +36,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-        "claye-souilly",
-        "montfermeil",
-        "villepinte",
-        "chelles",
-        "livry-gargan",
-        "vaires-sur-marne",
-        "gagny",
-        "le-raincy",
-        "gournay-sur-marne",
-        "lagny-sur-marne"
-      ],
+    "claye-souilly",
+    "montfermeil",
+    "villepinte",
+    "chelles",
+    "livry-gargan",
+    "vaires-sur-marne",
+    "gagny",
+    "le-raincy",
+    "gournay-sur-marne",
+    "lagny-sur-marne",
+  ],
 
   landmarks: [
     "Mairie de Villeparisis",
@@ -117,17 +110,11 @@ const city: City = {
         "Rapport technique transmis au gestionnaire pour alimenter le suivi du carnet d'entretien.",
       ],
 
-      uniqueIntro: `<p>Les immeubles situés à proximité d'axes passants comme la RN3 ou autour de la gare de Villeparisis - Mitry-le-Neuf subissent un apport constant de polluants extérieurs. Dans les parties communes, les moquettes accumulent poussières fines, hydrocarbures et résidus de terre, créant des chemins de marche grisâtres visibles dès le premier regard. Les fibres ternissent, les joints noircissent et certaines zones deviennent presque noires malgré l'aspirateur quotidien.</p>
-<p class="mt-4">Cet encrassement particulaire ne dégrade pas seulement l'esthétique : il accélère l'abrasion mécanique des fibres à chaque passage et retient allergènes et bactéries. Pour un gestionnaire d'immeuble ou un conseil syndical, laisser ces revêtements s'encrasser revient à accepter une dévalorisation du bâti et une insatisfaction croissante des résidents. <strong>Une maintenance technique curative, réalisée avec un équipement industriel,</strong> reste indispensable pour extraire ces polluants au cœur de la trame, limiter l'usure prématurée et valoriser l'image de la copropriété sans engager le coût d'un remplacement total des revêtements.</p>`,
+      uniqueIntro:
+        "<p>Les immeubles situés à proximité d'axes passants comme la RN3 ou autour de la gare de Villeparisis - Mitry-le-Neuf subissent un apport constant de polluants extérieurs. Dans les parties communes, les moquettes accumulent poussières fines, hydrocarbures et résidus de terre, créant des chemins de marche grisâtres visibles dès le premier regard. Les fibres ternissent, les joints noircissent et certaines zones deviennent presque noires malgré l'aspirateur quotidien.</p>\n<p class=\"mt-4\">Cet encrassement particulaire ne dégrade pas seulement l'esthétique : il accélère l'abrasion mécanique des fibres à chaque passage et retient allergènes et bactéries. Pour un gestionnaire d'immeuble ou un conseil syndical, laisser ces revêtements s'encrasser revient à accepter une dévalorisation du bâti et une insatisfaction croissante des résidents. <strong>Une maintenance technique curative, réalisée avec un équipement industriel,</strong> reste indispensable pour extraire ces polluants au cœur de la trame, limiter l'usure prématurée et valoriser l'image de la copropriété sans engager le coût d'un remplacement total des revêtements.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic technique et protection des zones</h3>
-<p>Identification précise des fibres (synthétique, laine, dalles de moquette) afin de définir la chimie et la température de chauffe adaptées. <strong>Protection systématique des plinthes et des parties basses des murs,</strong> puis balisage de la zone d'intervention. Dans les résidences du Vieux-Pays comme dans les constructions récentes de Boisparisis, adaptation de la logistique aux accès parfois étroits et aux escaliers sans ascenseur.</p>
-
-<h3>2. Injection-extraction en passes croisées</h3>
-<p>Le traitement s'effectue par injection-extraction à haute performance : une solution nettoyante est propulsée sous pression pour décoller les salissures, puis immédiatement aspirée par une turbine puissante. <strong>Insistance sur les zones de piétinement intense</strong> (devant les ascenseurs, paliers intermédiaires) avec des passes croisées pour un résultat homogène.</p>
-
-<h3>3. Maîtrise de l'humidité et préconisations</h3>
-<p>La maîtrise de l'humidité résiduelle est centrale pour garantir un séchage rapide (généralement 4 à 6 heures) et éviter toute odeur, notamment dans les immeubles proches du Canal de l'Ourcq où l'hygrométrie peut être plus élevée. <strong>Fréquence recommandée : 12 à 18 mois</strong> pour maintenir ce niveau de résultat et prolonger la durée de vie des revêtements.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic technique et protection des zones</h3>\n<p>Identification précise des fibres (synthétique, laine, dalles de moquette) afin de définir la chimie et la température de chauffe adaptées. <strong>Protection systématique des plinthes et des parties basses des murs,</strong> puis balisage de la zone d'intervention. Dans les résidences du Vieux-Pays comme dans les constructions récentes de Boisparisis, adaptation de la logistique aux accès parfois étroits et aux escaliers sans ascenseur.</p>\n\n<h3>2. Injection-extraction en passes croisées</h3>\n<p>Le traitement s'effectue par injection-extraction à haute performance : une solution nettoyante est propulsée sous pression pour décoller les salissures, puis immédiatement aspirée par une turbine puissante. <strong>Insistance sur les zones de piétinement intense</strong> (devant les ascenseurs, paliers intermédiaires) avec des passes croisées pour un résultat homogène.</p>\n\n<h3>3. Maîtrise de l'humidité et préconisations</h3>\n<p>La maîtrise de l'humidité résiduelle est centrale pour garantir un séchage rapide (généralement 4 à 6 heures) et éviter toute odeur, notamment dans les immeubles proches du Canal de l'Ourcq où l'hygrométrie peut être plus élevée. <strong>Fréquence recommandée : 12 à 18 mois</strong> pour maintenir ce niveau de résultat et prolonger la durée de vie des revêtements.</p>",
 
       specificChallenges: [
         "Les poussières liées aux travaux ponctuels (ravalement, cages d'escalier, voirie) s'incrustent profondément dans les fibres.",
@@ -155,7 +142,8 @@ const city: City = {
             "<p><strong>Non, car le diagnostic initial inclut un contrôle de la stabilité des couleurs</strong> et de la nature de la fibre. Nous utilisons des solutions au pH maîtrisé, spécifiquement formulées pour nettoyer sans agresser la teinture ni la colle des dalles ou des lés. L'objectif est d'obtenir un résultat net tout en respectant l'intégrité du revêtement.</p>",
         },
         {
-          question: "Comment sont informés les résidents avant l'intervention technique ?",
+          question:
+            "Comment sont informés les résidents avant l'intervention technique ?",
           answer:
             "<p><strong>La communication fait partie du protocole.</strong> Nous fournissons des avis de passage à afficher dans les halls (ou via le syndic) avec la date, la durée estimée et les consignes de circulation pendant le séchage. L'objectif est d'assurer la sécurité de tous et de permettre aux techniciens de travailler efficacement.</p>",
         },
@@ -180,17 +168,11 @@ const city: City = {
         "Suivi technique précis : évacuations, finitions, zones sensibles et remise en service progressive.",
       ],
 
-      uniqueIntro: `<p>Dans les résidences à forte densité situées près de la gare RER ou le long de l'axe RN3, la gestion des parkings est un défi logistique permanent. La rotation quotidienne des véhicules pendulaires génère une accumulation rapide de poussières de freinage et de résidus d'hydrocarbures, rendant les sols glissants et la signalétique illisible. Le béton noircit progressivement, les rampes deviennent dangereuses par temps humide et l'odeur d'hydrocarbures devient persistante.</p>
-<p class="mt-4">Pour un gestionnaire d'immeuble, cette dégradation crée un sentiment d'insécurité et complique l'entretien courant. Les résidents se plaignent de salir leurs chaussures, certains craignent de glisser sur les rampes. Au-delà de l'aspect esthétique, il s'agit de maintenir la fonctionnalité des lieux. <strong>Une remise en état professionnelle, rigoureusement coordonnée pour limiter la gêne des occupants,</strong> permet de rétablir la luminosité et la sécurité des circulations, valorisant ainsi la gestion globale de l'immeuble et restaurant la confiance des copropriétaires.</p>`,
+      uniqueIntro:
+        "<p>Dans les résidences à forte densité situées près de la gare RER ou le long de l'axe RN3, la gestion des parkings est un défi logistique permanent. La rotation quotidienne des véhicules pendulaires génère une accumulation rapide de poussières de freinage et de résidus d'hydrocarbures, rendant les sols glissants et la signalétique illisible. Le béton noircit progressivement, les rampes deviennent dangereuses par temps humide et l'odeur d'hydrocarbures devient persistante.</p>\n<p class=\"mt-4\">Pour un gestionnaire d'immeuble, cette dégradation crée un sentiment d'insécurité et complique l'entretien courant. Les résidents se plaignent de salir leurs chaussures, certains craignent de glisser sur les rampes. Au-delà de l'aspect esthétique, il s'agit de maintenir la fonctionnalité des lieux. <strong>Une remise en état professionnelle, rigoureusement coordonnée pour limiter la gêne des occupants,</strong> permet de rétablir la luminosité et la sécurité des circulations, valorisant ainsi la gestion globale de l'immeuble et restaurant la confiance des copropriétaires.</p>",
 
-      uniqueDeepDive: `<h3>1. Préparation et organisation logistique</h3>
-<p>Visite technique pour valider les accès (hauteur, rampes), le type de sol (béton, résine) et le bon fonctionnement des évacuations. <strong>En amont, définition avec le conseil syndical ou le gardien</strong> d'un plan de communication clair pour organiser la libération des emplacements, souvent par zones successives afin de maintenir une capacité de stationnement. Sécurisation du périmètre et dépoussiérage mécanique complet avant tout lavage.</p>
-
-<h3>2. Lavage mécanique et dégraissage ciblé</h3>
-<p>Autolaveuse industrielle couplée si nécessaire à une haute pression maîtrisée sur les zones très encrassées. <strong>Application de dégraissants professionnels</strong> tout en gérant strictement la récupération des eaux usées, pour éviter la saturation des pompes de relevage. Attention particulière aux rampes d'accès, pieds de murs et angles souvent négligés.</p>
-
-<h3>3. Séchage et réouverture progressive</h3>
-<p>Une fois le sol séché et les marquages ravivés, la zone est rouverte aux résidents. <strong>Pour éviter un nouvel encrassement critique,</strong> nous préconisons une intervention annuelle ou semestrielle planifiée au budget. Compte-rendu transmis au gestionnaire avec zones traitées et recommandations d'entretien courant.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Préparation et organisation logistique</h3>\n<p>Visite technique pour valider les accès (hauteur, rampes), le type de sol (béton, résine) et le bon fonctionnement des évacuations. <strong>En amont, définition avec le conseil syndical ou le gardien</strong> d'un plan de communication clair pour organiser la libération des emplacements, souvent par zones successives afin de maintenir une capacité de stationnement. Sécurisation du périmètre et dépoussiérage mécanique complet avant tout lavage.</p>\n\n<h3>2. Lavage mécanique et dégraissage ciblé</h3>\n<p>Autolaveuse industrielle couplée si nécessaire à une haute pression maîtrisée sur les zones très encrassées. <strong>Application de dégraissants professionnels</strong> tout en gérant strictement la récupération des eaux usées, pour éviter la saturation des pompes de relevage. Attention particulière aux rampes d'accès, pieds de murs et angles souvent négligés.</p>\n\n<h3>3. Séchage et réouverture progressive</h3>\n<p>Une fois le sol séché et les marquages ravivés, la zone est rouverte aux résidents. <strong>Pour éviter un nouvel encrassement critique,</strong> nous préconisons une intervention annuelle ou semestrielle planifiée au budget. Compte-rendu transmis au gestionnaire avec zones traitées et recommandations d'entretien courant.</p>",
 
       specificChallenges: [
         "Rotation intense des véhicules pendulaires (proximité RER B) : phasage strict pour traiter sans libérer totalement les plateaux.",
@@ -200,12 +182,14 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "La poussière noire typique du secteur routier revient-elle vite ?",
+          question:
+            "La poussière noire typique du secteur routier revient-elle vite ?",
           answer:
             "<p><strong>Cette poussière fine, liée au trafic dense autour de Villeparisis, est inévitable.</strong> Cependant, notre intervention mécanique de fond élimine la couche grasse qui la fixe au sol. Avec un décrassage annuel planifié, vous maintenez un niveau de propreté acceptable et évitez que le sol ne redevienne noir et glissant en quelques semaines.</p>",
         },
         {
-          question: "Est-il obligatoire de vider entièrement le parking pour nettoyer ?",
+          question:
+            "Est-il obligatoire de vider entièrement le parking pour nettoyer ?",
           answer:
             "<p><strong>Non, nous savons que le stationnement est tendu à Villeparisis.</strong> Nous privilégions une organisation par demi-plateaux ou par zones. Nous coordonnons cela avec vous pour que les résidents puissent déplacer leurs véhicules en interne, sans devoir se garer dans la rue, tout en gardant une zone de travail sécurisée.</p>",
         },
@@ -240,17 +224,11 @@ const city: City = {
         "Finitions soignées incluant garde-corps, rails et vitres accessibles depuis le balcon.",
       ],
 
-      uniqueIntro: `<p>Avoir un balcon ou une terrasse à Villeparisis, que ce soit au Bois Fleuri ou dans le secteur du Vieux-Pays, devrait être un plaisir. Pourtant, la réalité est souvent différente : au sortir de l'hiver, le sol devient grisâtre, les joints se noircissent sous l'effet de la pollution routière de la RN3, et des dépôts verts glissants apparaissent dans les zones à l'ombre. Les dalles sont ternes, les garde-corps collants et l'aspect général décourage toute envie de s'installer dehors.</p>
-<p class="mt-4">Face à ces salissures tenaces, l'envie de profiter de cet espace disparaît. Vous finissez par ne plus ouvrir les volets, le balcon devient un débarras pour les vélos et les cartons, et la poussière urbaine combinée aux résidus de jardinières donne une impression de saleté permanente difficile à rattraper seul. <strong>Une remise en état professionnelle transforme alors ce balcon délaissé</strong> en une véritable pièce extérieure, saine et accueillante pour les repas d'été ou les moments de détente, redonnant une vraie valeur d'usage à ces mètres carrés précieux.</p>`,
+      uniqueIntro:
+        "<p>Avoir un balcon ou une terrasse à Villeparisis, que ce soit au Bois Fleuri ou dans le secteur du Vieux-Pays, devrait être un plaisir. Pourtant, la réalité est souvent différente : au sortir de l'hiver, le sol devient grisâtre, les joints se noircissent sous l'effet de la pollution routière de la RN3, et des dépôts verts glissants apparaissent dans les zones à l'ombre. Les dalles sont ternes, les garde-corps collants et l'aspect général décourage toute envie de s'installer dehors.</p>\n<p class=\"mt-4\">Face à ces salissures tenaces, l'envie de profiter de cet espace disparaît. Vous finissez par ne plus ouvrir les volets, le balcon devient un débarras pour les vélos et les cartons, et la poussière urbaine combinée aux résidus de jardinières donne une impression de saleté permanente difficile à rattraper seul. <strong>Une remise en état professionnelle transforme alors ce balcon délaissé</strong> en une véritable pièce extérieure, saine et accueillante pour les repas d'été ou les moments de détente, redonnant une vraie valeur d'usage à ces mètres carrés précieux.</p>",
 
-      uniqueDeepDive: `<h3>1. Protection et dégagement manuel</h3>
-<p>Protection du passage dans le logement (bâches devant la porte-fenêtre), puis déplacement avec précaution du mobilier de jardin et des plantes. <strong>Avant tout lavage, retrait manuel des feuilles mortes,</strong> de la terre accumulée et des résidus pour travailler sur une surface dégagée et éviter de boucher les évacuations.</p>
-
-<h3>2. Application de produit et brossage méthodique</h3>
-<p>Nettoyant doux choisi selon le support (carrelage, béton, bois), puis <strong>brossage soigné des zones encrassées,</strong> plinthes et angles compris. Attention particulière portée aux joints et aux garde-corps souvent négligés mais très visibles.</p>
-
-<h3>3. Rinçage maîtrisé et finitions</h3>
-<p>Rinçage à pression maîtrisée, suffisante pour décoller les salissures sans abîmer les joints ni projeter d'eau sur les vitrages. En copropriété, respect absolu du voisinage : <strong>l'eau est guidée à la raclette vers les évacuations</strong> et, lorsque celles-ci sont absentes ou sensibles, aspirée au fur et à mesure. Essuyage des garde-corps et des surfaces verticales pour un résultat impeccable. Séchage naturel en 1 à 3 heures selon l'exposition.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Protection et dégagement manuel</h3>\n<p>Protection du passage dans le logement (bâches devant la porte-fenêtre), puis déplacement avec précaution du mobilier de jardin et des plantes. <strong>Avant tout lavage, retrait manuel des feuilles mortes,</strong> de la terre accumulée et des résidus pour travailler sur une surface dégagée et éviter de boucher les évacuations.</p>\n\n<h3>2. Application de produit et brossage méthodique</h3>\n<p>Nettoyant doux choisi selon le support (carrelage, béton, bois), puis <strong>brossage soigné des zones encrassées,</strong> plinthes et angles compris. Attention particulière portée aux joints et aux garde-corps souvent négligés mais très visibles.</p>\n\n<h3>3. Rinçage maîtrisé et finitions</h3>\n<p>Rinçage à pression maîtrisée, suffisante pour décoller les salissures sans abîmer les joints ni projeter d'eau sur les vitrages. En copropriété, respect absolu du voisinage : <strong>l'eau est guidée à la raclette vers les évacuations</strong> et, lorsque celles-ci sont absentes ou sensibles, aspirée au fur et à mesure. Essuyage des garde-corps et des surfaces verticales pour un résultat impeccable. Séchage naturel en 1 à 3 heures selon l'exposition.</p>",
 
       specificChallenges: [
         "Proximité de la RN3 : dépôt régulier de pollution noire et grasse sur sols, garde-corps et mobilier extérieur.",
@@ -272,12 +250,14 @@ const city: City = {
             "<p><strong>C'est une priorité absolue lors de nos interventions en copropriété.</strong> Nous n'inondons jamais un balcon. L'eau est guidée vers les évacuations existantes à l'aide de raclettes et, en l'absence d'écoulement fiable, aspirée au fur et à mesure avec du matériel professionnel. Cette organisation évite toute coulure sur la façade ou chez les voisins.</p>",
         },
         {
-          question: "Vos produits de nettoyage sont-ils dangereux pour mes jardinières ou mes animaux ?",
+          question:
+            "Vos produits de nettoyage sont-ils dangereux pour mes jardinières ou mes animaux ?",
           answer:
             "<p><strong>Non, les plantes sont déplacées ou protégées avant l'intervention,</strong> et les produits utilisés sont rincés abondamment après nettoyage. Ils ne restent pas en contact avec la terre des pots. Une fois le sol rincé et sec, l'environnement est neutre pour les végétaux et sans danger pour les animaux de compagnie.</p>",
         },
         {
-          question: "Quand pourrai-je remettre ma table et mes chaises sur le balcon ?",
+          question:
+            "Quand pourrai-je remettre ma table et mes chaises sur le balcon ?",
           answer:
             "<p><strong>Le séchage est généralement rapide.</strong> Sur une terrasse carrelée bien exposée, comptez une à deux heures par temps sec. Sur un support plus poreux, comme le béton ou le bois, le délai peut être un peu plus long. Nous vous conseillons simplement d'attendre que le sol soit sec au toucher avant de réinstaller le mobilier.</p>",
         },
@@ -302,17 +282,11 @@ const city: City = {
         "Prévention : conseils sur les dispositifs d'éloignement adaptés à la configuration de votre balcon.",
       ],
 
-      uniqueIntro: `<p>La présence de pigeons est une réalité à Villeparisis, accentuée par les espaces verts comme le Parc Honoré de Balzac ou les abords du Canal de l'Ourcq. Lorsqu'ils colonisent un balcon ou une loggia, la situation dépasse le simple désagrément visuel : l'accumulation de fientes crée un foyer bactériologique actif, les dalles deviennent glissantes et corrodées, et une odeur nauséabonde envahit le logement. Les déjections acides attaquent les revêtements, tandis que l'ouverture des fenêtres devient difficile.</p>
-<p class="mt-4">Le risque sanitaire est réel : les fientes sèches se transforment en poussières fines chargées d'agents pathogènes, inhalables par les occupants. Vous n'osez plus utiliser cet espace, vous craignez pour la santé de vos enfants et vous subissez parfois des réclamations du voisinage. Laisser la situation s'aggraver expose le logement à une contamination durable et alimente les conflits avec le voisinage en raison des nuisances. <strong>Seule une décontamination chimique et mécanique permet de stopper ce cycle d'insalubrité</strong> et de retrouver un balcon propre, sain et utilisable en toute sécurité pour toute la famille.</p>`,
+      uniqueIntro:
+        "<p>La présence de pigeons est une réalité à Villeparisis, accentuée par les espaces verts comme le Parc Honoré de Balzac ou les abords du Canal de l'Ourcq. Lorsqu'ils colonisent un balcon ou une loggia, la situation dépasse le simple désagrément visuel : l'accumulation de fientes crée un foyer bactériologique actif, les dalles deviennent glissantes et corrodées, et une odeur nauséabonde envahit le logement. Les déjections acides attaquent les revêtements, tandis que l'ouverture des fenêtres devient difficile.</p>\n<p class=\"mt-4\">Le risque sanitaire est réel : les fientes sèches se transforment en poussières fines chargées d'agents pathogènes, inhalables par les occupants. Vous n'osez plus utiliser cet espace, vous craignez pour la santé de vos enfants et vous subissez parfois des réclamations du voisinage. Laisser la situation s'aggraver expose le logement à une contamination durable et alimente les conflits avec le voisinage en raison des nuisances. <strong>Seule une décontamination chimique et mécanique permet de stopper ce cycle d'insalubrité</strong> et de retrouver un balcon propre, sain et utilisable en toute sécurité pour toute la famille.</p>",
 
-      uniqueDeepDive: `<h3>1. Confinement et équipement de protection</h3>
-<p>Procédure de sécurité biologique stricte, indispensable pour protéger la santé des occupants et du technicien. La zone est confinée et notre intervenant s'équipe d'EPI complets (combinaison étanche, gants, masque <strong>FFP2</strong>). <strong>Humidification préalable des fientes sèches</strong> : cette étape critique empêche la volatilisation de poussières contaminées.</p>
-
-<h3>2. Grattage et conditionnement hermétique</h3>
-<p>Grattage manuel et évacuation des nids et débris dans des sacs hermétiques scellés, conditionnés pour une évacuation adaptée. <strong>Nettoyage des sols, murs et garde-corps</strong> avec des détergents professionnels pour éliminer les résidus organiques incrustés.</p>
-
-<h3>3. Désinfection virucide et ventilation</h3>
-<p>Application d'un virucide/bactéricide homologué, en respectant scrupuleusement le temps de contact (15 à 20 minutes) pour neutraliser les germes. <strong>Rinçage maîtrisé pour ne pas souiller la façade,</strong> puis ventilation des lieux. Délai de réutilisation : généralement 24 heures après séchage complet. Installation possible de solutions dissuasives (picots, fils) pour limiter les retours.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Confinement et équipement de protection</h3>\n<p>Procédure de sécurité biologique stricte, indispensable pour protéger la santé des occupants et du technicien. La zone est confinée et notre intervenant s'équipe d'EPI complets (combinaison étanche, gants, masque <strong>FFP2</strong>). <strong>Humidification préalable des fientes sèches</strong> : cette étape critique empêche la volatilisation de poussières contaminées.</p>\n\n<h3>2. Grattage et conditionnement hermétique</h3>\n<p>Grattage manuel et évacuation des nids et débris dans des sacs hermétiques scellés, conditionnés pour une évacuation adaptée. <strong>Nettoyage des sols, murs et garde-corps</strong> avec des détergents professionnels pour éliminer les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et ventilation</h3>\n<p>Application d'un virucide/bactéricide homologué, en respectant scrupuleusement le temps de contact (15 à 20 minutes) pour neutraliser les germes. <strong>Rinçage maîtrisé pour ne pas souiller la façade,</strong> puis ventilation des lieux. Délai de réutilisation : généralement 24 heures après séchage complet. Installation possible de solutions dissuasives (picots, fils) pour limiter les retours.</p>",
 
       specificChallenges: [
         "Proximité des espaces verts (Parc Balzac, Canal) : recolonisation rapide si aucune mesure dissuasive n'est prise.",
@@ -322,17 +296,20 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "Quels sont les risques si je nettoie moi-même sans protection ?",
+          question:
+            "Quels sont les risques si je nettoie moi-même sans protection ?",
           answer:
             "<p><strong>Manipuler des fientes sèches sans masque FFP2</strong> vous expose à l'inhalation de poussières contenant des bactéries ou champignons responsables de maladies comme l'ornithose ou la salmonellose. De plus, un nettoyage domestique disperse souvent les contaminants au lieu de les éliminer. L'intervention professionnelle est une mesure de sécurité sanitaire.</p>",
         },
         {
-          question: "Les produits utilisés sont-ils dangereux pour mes animaux de compagnie ?",
+          question:
+            "Les produits utilisés sont-ils dangereux pour mes animaux de compagnie ?",
           answer:
             "<p><strong>Les produits biocides sont puissants lors de l'application</strong> pour détruire les germes. Cependant, après le rinçage complet et la phase de séchage, les surfaces deviennent inertes et sûres. Nous vous indiquerons précisément quand vous pourrez laisser sortir vos animaux sur le balcon sans aucun risque.</p>",
         },
         {
-          question: "Les fientes ont-elles endommagé mon balcon de façon irréversible ?",
+          question:
+            "Les fientes ont-elles endommagé mon balcon de façon irréversible ?",
           answer:
             "<p><strong>L'acide urique contenu dans les fientes est très corrosif.</strong> S'il est resté longtemps en contact avec du béton ou de la pierre, il peut avoir créé des micro-fissures ou des taches mates indélébiles. Notre intervention assainit et nettoie, mais ne peut pas toujours réparer l'érosion chimique du matériau.</p>",
         },
@@ -362,17 +339,11 @@ const city: City = {
         "Conseils simples et concrets pour entretenir les textiles entre deux nettoyages professionnels.",
       ],
 
-      uniqueIntro: `<p>Dans les maisons familiales de Boisparisis ou les appartements du centre-ville, le canapé est souvent le véritable QG du foyer. Entre les enfants qui prennent le goûter devant la télévision, le chat qui rentre du jardin avec ses pattes sales et les soirées entre amis, les textiles sont mis à rude épreuve. Au-delà des taches accidentelles de café ou de chocolat, la poussière du quotidien finit par s'incruster et ternir les tissus progressivement.</p>
-<p class="mt-4">On finit par ne plus voir que cela : accoudoirs grisâtres, odeur de renfermé qui persiste malgré les bougies parfumées, impression que le ménage n'est jamais vraiment terminé. Vous évitez de vous asseoir sur certaines zones tachées, vous hésitez à recevoir par gêne de l'aspect négligé. Pour les personnes sensibles, les acariens peuvent aussi devenir une source d'inconfort respiratoire quotidien. <strong>Faire appel à un professionnel pour désencrasser vos canapés ou vos tapis,</strong> c'est la méthode la plus efficace pour retrouver un mobilier propre, frais et agréable à vivre, sans avoir à le remplacer prématurément et en prolongeant sa durée de vie de plusieurs années.</p>`,
+      uniqueIntro:
+        "<p>Dans les maisons familiales de Boisparisis ou les appartements du centre-ville, le canapé est souvent le véritable QG du foyer. Entre les enfants qui prennent le goûter devant la télévision, le chat qui rentre du jardin avec ses pattes sales et les soirées entre amis, les textiles sont mis à rude épreuve. Au-delà des taches accidentelles de café ou de chocolat, la poussière du quotidien finit par s'incruster et ternir les tissus progressivement.</p>\n<p class=\"mt-4\">On finit par ne plus voir que cela : accoudoirs grisâtres, odeur de renfermé qui persiste malgré les bougies parfumées, impression que le ménage n'est jamais vraiment terminé. Vous évitez de vous asseoir sur certaines zones tachées, vous hésitez à recevoir par gêne de l'aspect négligé. Pour les personnes sensibles, les acariens peuvent aussi devenir une source d'inconfort respiratoire quotidien. <strong>Faire appel à un professionnel pour désencrasser vos canapés ou vos tapis,</strong> c'est la méthode la plus efficace pour retrouver un mobilier propre, frais et agréable à vivre, sans avoir à le remplacer prématurément et en prolongeant sa durée de vie de plusieurs années.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic des textiles et pré-traitement ciblé</h3>
-<p>Identification précise de la matière de votre canapé, tapis ou matelas (coton, velours, synthétique, cuir). Cette étape est essentielle pour adapter la méthode aux fibres, qu'elles soient résistantes ou plus délicates. <strong>Protection des sols autour,</strong> puis application d'un pré-traitement ciblé sur les taches visibles (zones de frottement, accidents du quotidien).</p>
-
-<h3>2. Injection-extraction professionnelle</h3>
-<p>Nettoyage par injection-extraction : la machine injecte de l'eau propre et un détergent adapté au cœur des fibres et l'aspire immédiatement avec les salissures, acariens et leurs déjections. <strong>Nous veillons à ne pas détremper les textiles</strong> afin de favoriser un séchage rapide et d'éviter tout risque de moisissure dans les rembourrages.</p>
-
-<h3>3. Séchage et conseils d'entretien</h3>
-<p>Avant de quitter les lieux, nous vous donnons des conseils simples d'aération pour accélérer le séchage et vous permettre de réutiliser vos assises le plus rapidement possible, souvent en fin de journée. <strong>Conseils d'entretien régulier</strong> : aspiration hebdomadaire, traitement immédiat des taches, protection des zones fragiles pour prolonger le résultat entre deux interventions professionnelles.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic des textiles et pré-traitement ciblé</h3>\n<p>Identification précise de la matière de votre canapé, tapis ou matelas (coton, velours, synthétique, cuir). Cette étape est essentielle pour adapter la méthode aux fibres, qu'elles soient résistantes ou plus délicates. <strong>Protection des sols autour,</strong> puis application d'un pré-traitement ciblé sur les taches visibles (zones de frottement, accidents du quotidien).</p>\n\n<h3>2. Injection-extraction professionnelle</h3>\n<p>Nettoyage par injection-extraction : la machine injecte de l'eau propre et un détergent adapté au cœur des fibres et l'aspire immédiatement avec les salissures, acariens et leurs déjections. <strong>Nous veillons à ne pas détremper les textiles</strong> afin de favoriser un séchage rapide et d'éviter tout risque de moisissure dans les rembourrages.</p>\n\n<h3>3. Séchage et conseils d'entretien</h3>\n<p>Avant de quitter les lieux, nous vous donnons des conseils simples d'aération pour accélérer le séchage et vous permettre de réutiliser vos assises le plus rapidement possible, souvent en fin de journée. <strong>Conseils d'entretien régulier</strong> : aspiration hebdomadaire, traitement immédiat des taches, protection des zones fragiles pour prolonger le résultat entre deux interventions professionnelles.</p>",
 
       specificChallenges: [
         "Poussière de chantier du quartier Vieux-Pays qui s'infiltre et grise rapidement les canapés en tissu clair.",
@@ -382,12 +353,14 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "Est-ce que le nettoyage est efficace pour les allergies aux acariens ?",
+          question:
+            "Est-ce que le nettoyage est efficace pour les allergies aux acariens ?",
           answer:
             "<p><strong>Oui, c'est généralement très efficace.</strong> L'aspirateur domestique n'agit qu'en surface, alors que notre méthode permet d'extraire en profondeur la poussière et les résidus liés aux acariens présents dans les matelas et les canapés. De nombreuses personnes sensibles constatent une amélioration du confort après l'intervention.</p>",
         },
         {
-          question: "Mon chat a uriné sur le canapé, l'odeur peut-elle vraiment disparaître ?",
+          question:
+            "Mon chat a uriné sur le canapé, l'odeur peut-elle vraiment disparaître ?",
           answer:
             "<p><strong>Nous utilisons des produits spécifiques qui agissent sur les bactéries responsables des odeurs,</strong> plutôt que de masquer le problème. Si l'urine n'a pas traversé toute la mousse jusqu'à la structure, les résultats sont généralement très satisfaisants. Une intervention rapide reste toutefois déterminante pour limiter les traces durables.</p>",
         },
@@ -416,15 +389,10 @@ const city: City = {
         "Protocole ajusté aux supports rencontrés : béton des pavillons années 80, carrelage extérieur des constructions récentes, bois composite des terrasses rénovées.",
         "Attention portée aux abords : bâchage du mobilier et des végétaux, rinçage dirigé vers les évacuations, respect des espaces verts privatifs.",
       ],
-      uniqueIntro: "<p>À Villeparisis, commune traversée par le <strong>canal de l'Ourcq</strong> et située à proximité du <strong>parc forestier de la Poudrerie</strong>, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>\n\n<p class=\"mt-4\">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boisparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>\n\n<p class=\"mt-4\">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>",
-      uniqueDeepDive: `<h3>Inspection et mise en protection</h3>
-<p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>
-
-<h3>Traitement et action mécanique</h3>
-<p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>
-
-<h3>Application préventive et recommandations</h3>
-<p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>`,
+      uniqueIntro:
+        "<p>À Villeparisis, commune traversée par le <strong>canal de l'Ourcq</strong> et située à proximité du <strong>parc forestier de la Poudrerie</strong>, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>\n\n<p class=\"mt-4\">Dans les secteurs pavillonnaires comme le <strong>Vieux-Pays</strong>, <strong>Boisparisis</strong> ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les <strong>carrelages grès cérame</strong> des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>\n\n<p class=\"mt-4\">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>",
+      uniqueDeepDive:
+        "<h3>Inspection et mise en protection</h3>\n<p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>\n\n<h3>Traitement et action mécanique</h3>\n<p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>\n\n<h3>Application préventive et recommandations</h3>\n<p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>",
       specificChallenges: [
         "Dalles béton des pavillons années 80-90 : porosité variable, joints parfois dégradés par les cycles gel-dégel.",
         "Carrelage grès cérame texturé : salissures incrustées dans les micro-reliefs nécessitant un brossage appuyé.",
@@ -461,67 +429,62 @@ const city: City = {
       ctaOverride: "",
     },
 
-
-
-
-
-
     {
-  serviceKey: "nettoyage-appartement-maison",
+      serviceKey: "nettoyage-appartement-maison",
 
-  heroDescription:
-    "À Villeparisis, intervention équilibrée entre pavillons et collectifs : sols, cuisines et salles de bain remis en état, avec prise en compte des accès et du stationnement local.",
+      heroDescription:
+        "À Villeparisis, intervention équilibrée entre pavillons et collectifs : sols, cuisines et salles de bain remis en état, avec prise en compte des accès et du stationnement local.",
 
-  whyUsBullets: [
-    "Approche “état des lieux” : pièces d’eau et cuisine traitées en priorité, sols uniformes, puis finitions visibles (plinthes, poignées, interrupteurs).",
-    "Gestion terrain Villeparisis : créneaux pensés pour le secteur gare et les jours de marché, afin de limiter les pertes de temps liées au stationnement.",
-    "Prise en compte des contraintes locales : calcaire (77), poussières de voirie (RN3/A104) et vitrages marqués sur les maisons et rez-de-chaussée.",
-  ],
+      whyUsBullets: [
+        "Approche “état des lieux” : pièces d’eau et cuisine traitées en priorité, sols uniformes, puis finitions visibles (plinthes, poignées, interrupteurs).",
+        "Gestion terrain Villeparisis : créneaux pensés pour le secteur gare et les jours de marché, afin de limiter les pertes de temps liées au stationnement.",
+        "Prise en compte des contraintes locales : calcaire (77), poussières de voirie (RN3/A104) et vitrages marqués sur les maisons et rez-de-chaussée.",
+      ],
 
-  uniqueIntro: `<p>À Villeparisis, les demandes de nettoyage “appartement/maison” reviennent souvent dans trois scénarios : une remise en état avant état des lieux, un grand ménage après déménagement, ou un nettoyage après travaux légers. Le profil de la commune est contrasté : Vieux-Pays et rues plus resserrées d’un côté, secteurs en collectif plus dense comme La Plaine et Renouveau de l’autre, et un pavillonnaire très étendu à Bois-Fleuri. Cette diversité oblige à raisonner en organisation et en méthode, pas uniquement en “surface”.</p>
-<p class="mt-4">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>
-<p class="mt-4">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>`,
+      uniqueIntro:
+        '<p>À Villeparisis, les demandes de nettoyage “appartement/maison” reviennent souvent dans trois scénarios : une remise en état avant état des lieux, un grand ménage après déménagement, ou un nettoyage après travaux légers. Le profil de la commune est contrasté : Vieux-Pays et rues plus resserrées d’un côté, secteurs en collectif plus dense comme La Plaine et Renouveau de l’autre, et un pavillonnaire très étendu à Bois-Fleuri. Cette diversité oblige à raisonner en organisation et en méthode, pas uniquement en “surface”.</p>\n<p class="mt-4">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>\n<p class="mt-4">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>',
 
-  uniqueDeepDive: `<h3>Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>
-<p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : badge/digicode, stationnement plus serré, et interventions à caler sur des créneaux fluides. On vise un rendu homogène : sols sans traces, cuisine et salle d’eau traitées sérieusement, et contrôle des points qui se voient tout de suite (plinthes, bas de portes, poignées).</p>
+      uniqueDeepDive:
+        "<h3>Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>\n<p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : badge/digicode, stationnement plus serré, et interventions à caler sur des créneaux fluides. On vise un rendu homogène : sols sans traces, cuisine et salle d’eau traitées sérieusement, et contrôle des points qui se voient tout de suite (plinthes, bas de portes, poignées).</p>\n\n<h3>Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>\n<p>Le centre historique impose souvent des accès plus étroits et des escaliers qui ralentissent les allers-retours. On travaille alors de façon séquencée : dépoussiérage complet, dégraissage cuisine, salle d’eau et traitements calcaire, puis sols et finitions. Le but : éviter les reprises et les “manques” typiques des logements anciens (rebords, radiateurs, encadrements).</p>\n\n<h3>Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>\n<p>En pavillonnaire, la difficulté est l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite. On recherche l’uniformité : poussière extraite des angles, sols nets sans voile, et pièces d’eau propres sur la durée. Les abords RN3/A104 rendent aussi les traces plus visibles sur les fenêtres et surfaces proches de l’extérieur.</p>",
 
-<h3>Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>
-<p>Le centre historique impose souvent des accès plus étroits et des escaliers qui ralentissent les allers-retours. On travaille alors de façon séquencée : dépoussiérage complet, dégraissage cuisine, salle d’eau et traitements calcaire, puis sols et finitions. Le but : éviter les reprises et les “manques” typiques des logements anciens (rebords, radiateurs, encadrements).</p>
+      specificChallenges: [
+        "Secteur gare Villeparisis–Mitry (RER B) : stationnement plus tendu et accès immeubles à anticiper (digicode/badge).",
+        "RN3 / A104 : poussières de voirie et traces de pollution sur vitrages bas, rebords et balcons.",
+        "Calcaire (77) : robinetterie, parois et joints qui marquent vite si le traitement n’est pas cadré.",
+        "Vieux-Pays : rues plus étroites et escaliers qui compliquent la logistique et imposent une intervention bien séquencée.",
+        "Bois-Fleuri : volumes pavillonnaires, Velux/escaliers, finitions à homogénéiser sur plusieurs niveaux.",
+        "Collectifs denses (La Plaine / Renouveau) : circulation du matériel et contrôle final indispensables pour un rendu “état des lieux”.",
+      ],
 
-<h3>Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>
-<p>En pavillonnaire, la difficulté est l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite. On recherche l’uniformité : poussière extraite des angles, sols nets sans voile, et pièces d’eau propres sur la durée. Les abords RN3/A104 rendent aussi les traces plus visibles sur les fenêtres et surfaces proches de l’extérieur.</p>`,
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous pour un nettoyage d’état des lieux à Villeparisis (77270) ?",
+          answer:
+            "<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau en priorité, sols ensuite, puis finitions (plinthes, poignées, interrupteurs, bas de portes). L’objectif est un rendu net et uniforme, sans traces au sol ni dépôts visibles sur les points sensibles.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous faire un nettoyage après travaux (poussières fines) ?",
+          answer:
+            "<p>Oui. Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries d’abord, sols ensuite, puis contrôle des rebords, angles et pièces d’eau. Cela évite le “voile” sur les sols et les reprises visibles.</p>",
+        },
+        {
+          question:
+            "Est-ce que vous gérez aussi les vitrages (baies, Velux) en pavillon ?",
+          answer:
+            "<p>Oui, surtout à Bois-Fleuri où c’est fréquent. Les vitrages accessibles peuvent être intégrés à la prestation, avec une méthode qui limite les traces et laisse un rendu propre et régulier.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous les contraintes autour de la gare RER B ?",
+          answer:
+            "<p>On privilégie des créneaux plus fluides quand c’est possible, et on organise l’intervention pour limiter les allers-retours. L’idée est de sécuriser le déchargement et de garder du temps utile pour la qualité du nettoyage.</p>",
+        },
+      ],
 
-  specificChallenges: [
-    "Secteur gare Villeparisis–Mitry (RER B) : stationnement plus tendu et accès immeubles à anticiper (digicode/badge).",
-    "RN3 / A104 : poussières de voirie et traces de pollution sur vitrages bas, rebords et balcons.",
-    "Calcaire (77) : robinetterie, parois et joints qui marquent vite si le traitement n’est pas cadré.",
-    "Vieux-Pays : rues plus étroites et escaliers qui compliquent la logistique et imposent une intervention bien séquencée.",
-    "Bois-Fleuri : volumes pavillonnaires, Velux/escaliers, finitions à homogénéiser sur plusieurs niveaux.",
-    "Collectifs denses (La Plaine / Renouveau) : circulation du matériel et contrôle final indispensables pour un rendu “état des lieux”.",
-  ],
-
-  faqAdditions: [
-    {
-      question: "Intervenez-vous pour un nettoyage d’état des lieux à Villeparisis (77270) ?",
-      answer: `<p>Oui. On suit une logique “état des lieux” : cuisine et salle d’eau en priorité, sols ensuite, puis finitions (plinthes, poignées, interrupteurs, bas de portes). L’objectif est un rendu net et uniforme, sans traces au sol ni dépôts visibles sur les points sensibles.</p>`,
+      ctaOverride: "",
     },
-    {
-      question: "Pouvez-vous faire un nettoyage après travaux (poussières fines) ?",
-      answer: `<p>Oui. Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries d’abord, sols ensuite, puis contrôle des rebords, angles et pièces d’eau. Cela évite le “voile” sur les sols et les reprises visibles.</p>`,
-    },
-    {
-      question: "Est-ce que vous gérez aussi les vitrages (baies, Velux) en pavillon ?",
-      answer: `<p>Oui, surtout à Bois-Fleuri où c’est fréquent. Les vitrages accessibles peuvent être intégrés à la prestation, avec une méthode qui limite les traces et laisse un rendu propre et régulier.</p>`,
-    },
-    {
-      question: "Comment gérez-vous les contraintes autour de la gare RER B ?",
-      answer: `<p>On privilégie des créneaux plus fluides quand c’est possible, et on organise l’intervention pour limiter les allers-retours. L’idée est de sécuriser le déchargement et de garder du temps utile pour la qualité du nettoyage.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
   ],
 };
 

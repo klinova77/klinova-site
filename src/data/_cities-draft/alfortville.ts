@@ -68,20 +68,20 @@ const city: City = {
 faq: [
   {
     question:
-      "Q1 : Comment organisez-vous les interventions dans les rues étroites du centre d'Alfortville ?",
+      "Comment organisez-vous les interventions dans les rues étroites du centre d'Alfortville ?",
     answer: `<p>Nous repérons les <strong>créneaux de stationnement autorisé</strong> et privilégions les <strong>horaires creux</strong>. Pour les secteurs proches du marché, nous évitons les <strong>jours de forte affluence</strong>. Le matériel est adapté pour limiter les allers-retours depuis le véhicule.</p>`,
   },
   {
     question:
-      "Q2 : Pouvez-vous intervenir rapidement en cas de dégradation imprévue dans un hall ?",
+      "Pouvez-vous intervenir rapidement en cas de dégradation imprévue dans un hall ?",
     answer: `<p>Oui, nous proposons des <strong>interventions ponctuelles</strong> sous <strong>24 à 48 heures</strong> selon disponibilité. Le syndic ou le gardien nous transmet les accès, et nous confirmons le créneau par retour. Un <strong>compte-rendu</strong> peut être fourni après passage.</p>`,
   },
   {
-    question: "Q3 : Comment se passe la coordination avec les gardiens des résidences ?",
+    question: "Comment se passe la coordination avec les gardiens des résidences ?",
     answer: `<p>Nous prenons contact <strong>en amont</strong> pour récupérer <strong>badges</strong> et consignes spécifiques. Le gardien est informé du <strong>planning</strong> prévu. En cas d'imprévu (panne ascenseur, travaux), il nous alerte pour <strong>adapter l'intervention</strong> sans gêner les résidents.</p>`,
   },
   {
-    question: "Q4 : Proposez-vous un devis avant intervention à Alfortville ?",
+    question: "Proposez-vous un devis avant intervention à Alfortville ?",
     answer: `<p>Oui, chaque demande fait l'objet d'un <strong>devis</strong> après échange sur les surfaces, la fréquence souhaitée et les contraintes d'accès. Le devis est transmis sous <strong>48 heures</strong>, sans engagement. Un <strong>passage sur site</strong> peut être organisé si nécessaire.</p>`,
   },
 ],
@@ -129,19 +129,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les cages d'escalier étroites du centre-ville d'Alfortville empêchent le passage d'une shampouineuse classique : comment procédez-vous ?",
+          question: "Les cages d'escalier étroites du centre-ville d'Alfortville empêchent le passage d'une shampouineuse classique : comment procédez-vous ?",
           answer: `<p>Nous utilisons un matériel compact adapté aux passages réduits. L'appareil d'injection-extraction portable permet de traiter les marches et paliers sans forcer l'accès. Les protections sont posées sur les murs avant intervention pour éviter les traces.</p>`,
         },
         {
-          question: "Q2 : Faut-il privilégier shampouineuse ou injection-extraction pour les moquettes des bureaux de la ZAC Val-de-Seine ?",
+          question: "Faut-il privilégier shampouineuse ou injection-extraction pour les moquettes des bureaux de la ZAC Val-de-Seine ?",
           answer: `<p>L'injection-extraction convient mieux aux dalles textiles des espaces tertiaires. Cette méthode extrait les résidus en profondeur sans laisser d'excès d'humidité. Le séchage est plus rapide qu'avec un shampooing classique, ce qui facilite la reprise d'activité.</p>`,
         },
         {
-          question: "Q3 : Comment enlever des taches incrustées sur la moquette des halls anciens de la rue Paul Vaillant Couturier ?",
+          question: "Comment enlever des taches incrustées sur la moquette des halls anciens de la rue Paul Vaillant Couturier ?",
           answer: `<p>Un pré-traitement ciblé est appliqué sur chaque tache avant le passage général. Les produits sont choisis selon la nature de la salissure (tanin, graisse, boue séchée). Plusieurs passes d'extraction permettent de déloger les résidus sans abîmer les fibres.</p>`,
         },
         {
-          question: "Q4 : Quel est le temps de séchage estimé après traitement d'une moquette d'hôtel proche de Chinagora ?",
+          question: "Quel est le temps de séchage estimé après traitement d'une moquette d'hôtel proche de Chinagora ?",
           answer: `<p>Le séchage varie de trois à six heures selon l'épaisseur du revêtement et la ventilation du local. L'extraction maximale de l'humidité en fin d'intervention réduit ce délai. Une consigne de non-piétinement est donnée pour les premières heures.</p>`,
         },
       ],
@@ -182,19 +182,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment gérez-vous les eaux de lavage dans un parking souterrain à Alfortville ?",
+          question: "Comment gérez-vous les eaux de lavage dans un parking souterrain à Alfortville ?",
           answer: `<p>Les eaux chargées en huile et dégraissant sont dirigées vers les regards et rigoles existants. Nous vérifions leur bon écoulement avant intervention pour éviter toute stagnation. Aucun rejet sauvage n'est effectué, conformément aux règles en vigueur pour les copropriétés du Val-de-Marne.</p>`,
         },
         {
-          question: "Q2 : Comment traitez-vous les taches d'huile anciennes sur une rampe d'accès rue Étienne Dolet ?",
+          question: "Comment traitez-vous les taches d'huile anciennes sur une rampe d'accès rue Étienne Dolet ?",
           answer: `<p>Un dégraissant adapté est appliqué sur les zones marquées avant le passage de l'autolaveuse. Les taches incrustées nécessitent parfois plusieurs passes. Le traitement préserve l'adhérence du revêtement pour limiter les risques de glissade sur les rampes inclinées.</p>`,
         },
         {
-          question: "Q3 : Quelles précautions prenez-vous pour les rampes glissantes des parkings du centre ancien ?",
+          question: "Quelles précautions prenez-vous pour les rampes glissantes des parkings du centre ancien ?",
           answer: `<p>Le lavage haute pression est réglé pour ne pas altérer la surface antidérapante. Nous évitons les produits qui laissent un film glissant après séchage. Si le revêtement est trop lisse, nous signalons au syndic la nécessité d'un traitement complémentaire.</p>`,
         },
         {
-          question: "Q4 : Quels horaires recommandez-vous pour intervenir près du marché rue de Rome ?",
+          question: "Quels horaires recommandez-vous pour intervenir près du marché rue de Rome ?",
           answer: `<p>Les jours de marché, l'accès aux parkings proches est compliqué par la circulation et le stationnement. Nous privilégions les interventions en début de semaine ou en soirée pour éviter les créneaux de forte affluence et faciliter le balisage des zones traitées.</p>`,
         },
       ],
@@ -237,19 +237,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Le nettoyage risque-t-il d'abîmer le carrelage ou les joints sur un balcony en béton comme on en trouve souvent dans le centre d'Alfortville ?",
+          question: "Le nettoyage risque-t-il d'abîmer le carrelage ou les joints sur un balcony en béton comme on en trouve souvent dans le centre d'Alfortville ?",
           answer: `<p>La pression et les produits sont adaptés au support identifié lors du diagnostic. Sur les balcons en béton brut ou carrelés des immeubles anciens du centre-ville, le brossage reste manuel sur les joints fragiles. Le rinçage s'effectue à pression modérée pour éviter toute dégradation des matériaux d'origine.</p>`,
         },
         {
-          question: "Q2 : Comment gérez-vous l'évacuation de l'eau depuis un balcon donnant sur un axe passant comme la rue Paul Vaillant Couturier ?",
+          question: "Comment gérez-vous l'évacuation de l'eau depuis un balcon donnant sur un axe passant comme la rue Paul Vaillant Couturier ?",
           answer: `<p>L'eau est raclée et canalisée vers les évacuations existantes du balcon. Des bâches protègent les garde-corps côté rue pour éviter les projections. En cas de balcon sans évacuation, l'eau est aspirée ou épongée progressivement. Les voisins du dessous et la façade restent préservés de toute coulure.</p>`,
         },
         {
-          question: "Q3 : Les dépôts verts et mousses qui apparaissent sur les balcons proches de la Place François Mitterrand peuvent-ils être éliminés durablement ?",
+          question: "Les dépôts verts et mousses qui apparaissent sur les balcons proches de la Place François Mitterrand peuvent-ils être éliminés durablement ?",
           answer: `<p>Ces dépôts sont retirés par brossage et traitement adapté. L'humidité locale favorise leur retour, mais un entretien régulier limite la recolonisation. Nous pouvons recommander une fréquence d'intervention selon l'exposition et l'environnement immédiat de votre balcon pour maintenir un résultat satisfaisant.</p>`,
         },
         {
-          question: "Q4 : Peut-on intervenir sans haute pression sur une loggia du centre-ville si les joints sont fragiles ?",
+          question: "Peut-on intervenir sans haute pression sur une loggia du centre-ville si les joints sont fragiles ?",
           answer: `<p>Oui, l'intervention peut se faire entièrement en brossage manuel avec rinçage doux. Cette méthode convient aux loggias fermées où la projection d'eau doit rester limitée. Le temps de travail est légèrement plus long, mais le résultat reste équivalent sur les salissures courantes sans risque pour les joints anciens.</p>`,
         },
       ],
@@ -292,19 +292,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les fientes accumulées sur les corniches des immeubles anciens du centre-ville présentent-elles un risque sanitaire justifiant une intervention rapide ?",
+          question: "Les fientes accumulées sur les corniches des immeubles anciens du centre-ville présentent-elles un risque sanitaire justifiant une intervention rapide ?",
           answer: `<p>Les déjections de pigeons contiennent des agents pathogènes qui peuvent affecter les voies respiratoires. Sur les corniches exposées du centre d'Alfortville, l'accumulation crée un environnement propice à leur développement. Une intervention permet d'éliminer ce risque et de stopper la dégradation des supports.</p>`,
         },
         {
-          question: "Q2 : Quel protocole et quels équipements utilisez-vous pour traiter une loggia infestée près du Parc de l'Ile au Cointre ?",
+          question: "Quel protocole et quels équipements utilisez-vous pour traiter une loggia infestée près du Parc de l'Ile au Cointre ?",
           answer: `<p>L'intervenant porte masque FFP2, lunettes, gants et combinaison jetable. La zone est confinée par bâchage avant humidification des fientes. Après retrait mécanique et conditionnement étanche, un produit virucide homologué est appliqué sur toutes les surfaces avec respect du temps de contact requis.</p>`,
         },
         {
-          question: "Q3 : La désinfection est-elle systématique après le retrait des fientes sur un balcon à Alfortville ?",
+          question: "La désinfection est-elle systématique après le retrait des fientes sur un balcon à Alfortville ?",
           answer: `<p>Oui, chaque intervention inclut une phase de désinfection obligatoire. Le produit utilisé élimine bactéries et virus présents dans les résidus organiques. Cette étape garantit que l'espace redevient sain et utilisable sans risque pour les occupants du logement.</p>`,
         },
         {
-          question: "Q4 : Comment gérez-vous l'évacuation des déchets contaminés depuis une cour intérieure ou un balcon difficile d'accès ?",
+          question: "Comment gérez-vous l'évacuation des déchets contaminés depuis une cour intérieure ou un balcon difficile d'accès ?",
           answer: `<p>Les fientes et résidus sont conditionnés dans des sacs étanches dès leur collecte. L'évacuation s'effectue de manière autonome par nos équipes, sans laisser de déchets sur place. Dans les configurations avec accès restreint, nous adaptons notre logistique pour limiter les passages dans les parties communes.</p>`,
         },
       ],
@@ -347,19 +347,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Le nettoyage professionnel élimine-t-il efficacement acariens et allergènes d'un canapé dans un appartement proche de la Rue Paul Vaillant Couturier ?",
+          question: "Le nettoyage professionnel élimine-t-il efficacement acariens et allergènes d'un canapé dans un appartement proche de la Rue Paul Vaillant Couturier ?",
           answer: `<p>L'injection-extraction atteint les fibres en profondeur et déloge les acariens, poussières et allergènes que l'aspirateur classique ne capte pas. Dans les appartements familiaux d'Alfortville où le mobilier est sollicité quotidiennement, cette méthode améliore sensiblement la qualité de l'air intérieur et le confort des occupants sensibles.</p>`,
         },
         {
-          question: "Q2 : Comment traitez-vous les odeurs d'urine d'animaux sur un canapé dans un logement familial d'Alfortville ?",
+          question: "Comment traitez-vous les odeurs d'urine d'animaux sur un canapé dans un logement familial d'Alfortville ?",
           answer: `<p>Nous appliquons un pré-traitement enzymatique qui décompose les composés organiques responsables des odeurs. L'extraction retire ensuite les résidus en profondeur. Cette approche neutralise les effluves persistants plutôt que de les masquer, même sur des taches anciennes incrustées dans les fibres du tissu.</p>`,
         },
         {
-          question: "Q3 : Quelles méthodes privilégiez-vous selon le textile pour un canapé d'appartement sur l'axe central d'Alfortville ?",
+          question: "Quelles méthodes privilégiez-vous selon le textile pour un canapé d'appartement sur l'axe central d'Alfortville ?",
           answer: `<p>Chaque tissu reçoit un traitement adapté : pression réduite et température modérée pour le velours ou la laine, nettoyage spécifique pour le cuir. Un test préalable sur zone cachée valide la compatibilité. Cette précaution évite toute décoloration ou déformation du revêtement.</p>`,
         },
         {
-          question: "Q4 : Comment préparer mon logement si les escaliers étroits du centre-ville compliquent l'accès ?",
+          question: "Comment préparer mon logement si les escaliers étroits du centre-ville compliquent l'accès ?",
           answer: `<p>Nous intervenons directement sur place sans déplacer le mobilier hors du logement. Dégagez simplement l'espace autour du canapé ou du tapis pour faciliter notre travail. Prévoyez un accès libre depuis l'entrée et signalez-nous tout digicode ou contrainte de stationnement lors de la prise de rendez-vous.</p>`,
         },
       ],
@@ -396,19 +396,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quels risques pour les dalles sur plots des terrasses d'attiques dans la ZAC Val-de-Seine lors d'un décapage ?",
+          question: "Quels risques pour les dalles sur plots des terrasses d'attiques dans la ZAC Val-de-Seine lors d'un décapage ?",
           answer: `<p>Les dalles sur plots sont nettoyées sans pression excessive pour préserver leur stabilité. Nous utilisons un brossage mécanique et des produits non agressifs qui éliminent les dépôts sans fragiliser les joints ni déplacer les éléments. Le rinçage est contrôlé pour éviter toute infiltration sous les plots.</p>`,
         },
         {
-          question: "Q2 : Comment éliminer mousses et lichens qui noircissent les terrasses exposées au bord de Seine, quai Blanqui ?",
+          question: "Comment éliminer mousses et lichens qui noircissent les terrasses exposées au bord de Seine, quai Blanqui ?",
           answer: `<p>Un traitement en deux temps est appliqué : d'abord un produit qui décolle les dépôts verts incrustés, puis un brossage adapté au revêtement. L'humidité ambiante favorisant leur retour, nous appliquons ensuite un anti-mousse préventif qui ralentit la réapparition pendant plusieurs mois.</p>`,
         },
         {
-          question: "Q3 : Quel produit anti-mousse utilisez-vous pour protéger les dalles sur plots des terrasses exposées au quai Blanqui ?",
+          question: "Quel produit anti-mousse utilisez-vous pour protéger les dalles sur plots des terrasses exposées au quai Blanqui ?",
           answer: `<p>Nous appliquons un traitement filmogène adapté aux supports poreux et aux environnements humides. Ce produit crée une barrière qui limite l'accroche des spores de mousse et des lichens, prolongeant la propreté de la terrasse même en exposition défavorable près des cours d'eau.</p>`,
         },
         {
-          question: "Q4 : Quelle est la meilleure saison pour effectuer un nettoyage en profondeur d'une terrasse exposée au bord de Seine à Alfortville ?",
+          question: "Quelle est la meilleure saison pour effectuer un nettoyage en profondeur d'une terrasse exposée au bord de Seine à Alfortville ?",
           answer: `<p>Le printemps et le début d'automne sont les périodes les plus adaptées. Après l'hiver, les dépôts accumulés sont visibles et le traitement anti-mousse appliqué protège la surface pour la belle saison. À l'automne, l'intervention prépare la terrasse avant les mois humides.</p>`,
         },
       ],
@@ -450,19 +450,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quelle est votre réactivité pour une remise en état urgente avant état des lieux près de la gare Maisons-Alfort - Alfortville ?",
+          question: "Quelle est votre réactivité pour une remise en état urgente avant état des lieux près de la gare Maisons-Alfort - Alfortville ?",
           answer: `<p>Nous intervenons sous 24 à 48 heures selon la surface et la disponibilité. Pour les logements proches de la gare, nous organisons la récupération des clés en amont avec l'agence ou le propriétaire afin de respecter le créneau imposé par l'état des lieux.</p>`,
         },
         {
-          question: "Q2 : Quelle différence entre un nettoyage standard et une intervention fin de chantier dans le quartier Chantereine ?",
+          question: "Quelle différence entre un nettoyage standard et une intervention fin de chantier dans le quartier Chantereine ?",
           answer: `<p>Un ménage fin de chantier inclut l'évacuation des résidus, le dépoussiérage complet des surfaces verticales et le retrait des traces de peinture ou d'enduit. Le protocole standard se concentre sur les sols, sanitaires et vitres sans cette phase préparatoire liée aux travaux.</p>`,
         },
         {
-          question: "Q3 : Intervenez-vous après un dégât des eaux dans un appartement rue Paul Vaillant Couturier ?",
+          question: "Intervenez-vous après un dégât des eaux dans un appartement rue Paul Vaillant Couturier ?",
           answer: `<p>Oui, nous traitons les logements touchés par l'humidité : aspiration des résidus, nettoyage des surfaces atteintes, traitement des traces de moisissure si elles sont superficielles. Pour les dégâts structurels, nous vous orientons vers un spécialiste avant notre passage.</p>`,
         },
         {
-          question: "Q4 : Comment établissez-vous le tarif pour un T2 ou T3 typique d'Alfortville ?",
+          question: "Comment établissez-vous le tarif pour un T2 ou T3 typique d'Alfortville ?",
           answer: `<p>Le tarif dépend de la surface, de l'état initial et du type d'intervention (standard, fin de chantier, post-sinistre). Nous réalisons un diagnostic rapide, sur place ou par photos, pour vous transmettre un devis adapté sans surprise à la facturation.</p>`,
         },
       ],

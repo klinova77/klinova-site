@@ -57,19 +57,19 @@ const city: City = {
   // faq[].answer : HTML autorisé (sans <h3>)
 faq: [
   {
-    question: "Q1 : Comment organisez-vous vos interventions avec les contraintes de stationnement à Pantin ?",
+    question: "Comment organisez-vous vos interventions avec les contraintes de stationnement à Pantin ?",
     answer: `<p>Le stationnement peut être contraint selon les secteurs. Nous anticipons en repérant les solutions à proximité (parkings publics, accès de service, zones de dépose) et en planifiant des créneaux adaptés. Pour les interventions longues, nous coordonnons avec le gardien ou le gestionnaire afin de sécuriser un <strong>accès véhicule ponctuel</strong> pour le déchargement.</p>`,
   },
   {
-    question: "Q2 : Intervenez-vous dans les immeubles avec badge ou digicode ?",
+    question: "Intervenez-vous dans les immeubles avec badge ou digicode ?",
     answer: `<p>Oui, c'est fréquent à Pantin, notamment dans les résidences récentes et les copropriétés réhabilitées. Nous récupérons les <strong>accès</strong> en amont auprès du syndic ou du gardien. Pour les bureaux sécurisés, nous nous adaptons aux protocoles d'entrée en vigueur.</p>`,
   },
   {
-    question: "Q3 : Quel délai pour une intervention urgente sur la commune ?",
+    question: "Quel délai pour une intervention urgente sur la commune ?",
     answer: `<p>Selon la nature de la demande et notre planning, nous pouvons intervenir sous <strong>24 à 48 heures</strong> pour les situations prioritaires. Un premier échange permet d'évaluer le contexte et de confirmer la disponibilité d'une équipe sur le secteur.</p>`,
   },
   {
-    question: "Q4 : Proposez-vous un suivi régulier pour les copropriétés ou entreprises ?",
+    question: "Proposez-vous un suivi régulier pour les copropriétés ou entreprises ?",
     answer: `<p>Nous mettons en place des contrats d'entretien avec une fréquence adaptée : hebdomadaire, mensuelle ou trimestrielle selon les besoins. Un <strong>reporting</strong> peut être transmis au syndic ou au responsable des services généraux pour assurer le suivi des prestations réalisées.</p>`,
   },
 ],
@@ -116,19 +116,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les halls des Grands Moulins présentent des escaliers étroits : comment acheminez-vous le matériel de nettoyage sur site ?",
+          question: "Les halls des Grands Moulins présentent des escaliers étroits : comment acheminez-vous le matériel de nettoyage sur site ?",
           answer: `<p>Nous utilisons des équipements compacts et modulables, transportables par escalier sans difficulté. Le repérage préalable permet d'identifier les accès les plus pratiques. Si un monte-charge existe, nous coordonnons avec le gestionnaire pour optimiser les allers-retours et limiter l'encombrement des parties communes.</p>`,
         },
         {
-          question: "Q2 : Après un shampouinage en profondeur, combien de temps faut-il avant de réutiliser une moquette de bureau proche de l'avenue Jean Lolive ?",
+          question: "Après un shampouinage en profondeur, combien de temps faut-il avant de réutiliser une moquette de bureau proche de l'avenue Jean Lolive ?",
           answer: `<p>Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du local. En général, comptez 4 à 8 heures pour une remise en service. Nous conseillons d'intervenir en fin de journée afin que les moquettes soient praticables dès le lendemain matin, sans résidu d'humidité.</p>`,
         },
         {
-          question: "Q3 : Quelle méthode recommandez-vous pour les moquettes épaisses des open-spaces afin d'éviter l'affaissement des fibres ?",
+          question: "Quelle méthode recommandez-vous pour les moquettes épaisses des open-spaces afin d'éviter l'affaissement des fibres ?",
           answer: `<p>L'injection-extraction reste la technique la plus adaptée : elle nettoie en profondeur sans saturer le support. Nous ajustons la pression et le débit selon la densité des fibres. Un brossage doux en fin d'intervention redresse les poils et préserve l'aspect d'origine du revêtement.</p>`,
         },
         {
-          question: "Q4 : Avec le stationnement limité autour des Grands Moulins, comment organisez-vous la livraison et la collecte du matériel ?",
+          question: "Avec le stationnement limité autour des Grands Moulins, comment organisez-vous la livraison et la collecte du matériel ?",
           answer: `<p>Nous repérons les emplacements de dépose-minute ou les accès de service avant l'intervention. Le matériel est déchargé rapidement puis le véhicule stationné en zone autorisée. Cette organisation évite les contraventions et garantit une présence discrète sur site pendant toute la durée du chantier.</p>`,
         },
       ],
@@ -165,19 +165,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment organisez-vous la rotation des véhicules dans un parking le long de l'avenue Jean Lolive ?",
+          question: "Comment organisez-vous la rotation des véhicules dans un parking le long de l'avenue Jean Lolive ?",
           answer: `<p>Nous définissons un zonage par secteur avec le gestionnaire. Les véhicules sont déplacés progressivement vers les zones déjà traitées. Un balisage clair guide les usagers et évite toute confusion pendant l'intervention. La circulation reste possible sur les parties non concernées.</p>`,
         },
         {
-          question: "Q2 : Quelle solution technique utilisez-vous pour évacuer les eaux de lavage dans un parking souterrain de résidence récente ?",
+          question: "Quelle solution technique utilisez-vous pour évacuer les eaux de lavage dans un parking souterrain de résidence récente ?",
           answer: `<p>Les eaux chargées sont dirigées vers les regards existants après vérification de leur bon fonctionnement. Si nécessaire, nous aspirons les effluents pour éviter tout débordement. Aucun rejet n'est effectué vers la voirie ou les espaces communs extérieurs.</p>`,
         },
         {
-          question: "Q3 : Comment traitez-vous les rampes glissantes pour garantir l'adhérence après le lavage ?",
+          question: "Comment traitez-vous les rampes glissantes pour garantir l'adhérence après le lavage ?",
           answer: `<p>Nous appliquons un dégraissant adapté qui élimine les résidus huileux sans laisser de film glissant. Un rinçage soigné complète le traitement. Sur les revêtements peints ou résine, la pression est ajustée pour préserver l'état de surface antidérapant.</p>`,
         },
         {
-          question: "Q4 : Quels créneaux privilégiez-vous pour intervenir dans les parkings publics Hoche ou Église ?",
+          question: "Quels créneaux privilégiez-vous pour intervenir dans les parkings publics Hoche ou Église ?",
           answer: `<p>Les interventions sont programmées en dehors des heures de pointe, généralement tôt le matin ou en soirée. Nous évitons les jours de marché et les périodes d'affluence commerciale. Le planning est validé avec le gestionnaire pour minimiser l'impact sur les usagers.</p>`,
         },
       ],
@@ -212,19 +212,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Comment nettoyer un balcon en béton très encrassé près de la Place Olympe de Gouges sans abîmer les joints ?",
+          question: "Comment nettoyer un balcon en béton très encrassé près de la Place Olympe de Gouges sans abîmer les joints ?",
           answer: `<p>Nous appliquons un produit désincrustant adapté au béton, suivi d'un brossage mécanique doux. Les joints sont traités séparément avec une brosse fine pour retirer mousses et noircissures sans creuser la matière. Le rinçage à pression modérée évite toute dégradation.</p>`,
         },
         {
-          question: "Q2 : Les balcons proches du Parc Diderot présentent mousse et taches vertes : quelle méthode utilisez-vous ?",
+          question: "Les balcons proches du Parc Diderot présentent mousse et taches vertes : quelle méthode utilisez-vous ?",
           answer: `<p>La végétation environnante favorise ces dépôts organiques. Nous utilisons un traitement anti-mousse appliqué avant brossage, qui décolle les couches vertes sans recourir à une pression excessive. Le résultat est visible dès le séchage, et l'effet dure plusieurs mois.</p>`,
         },
         {
-          question: "Q3 : Quelle différence de traitement entre une loggia et un balcon ouvert dans le secteur Mairie-Hoche ?",
+          question: "Quelle différence de traitement entre une loggia et un balcon ouvert dans le secteur Mairie-Hoche ?",
           answer: `<p>Une loggia semi-fermée retient davantage l'humidité et les poussières. Le rinçage y est plus délicat car l'évacuation naturelle est limitée. Nous adaptons le volume d'eau et utilisons une aspiration si nécessaire pour éviter les flaques résiduelles.</p>`,
         },
         {
-          question: "Q4 : En cas d'accès difficile en étage élevé, comment organisez-vous l'intervention pour limiter la gêne ?",
+          question: "En cas d'accès difficile en étage élevé, comment organisez-vous l'intervention pour limiter la gêne ?",
           answer: `<p>Nous convenons d'un créneau avec vous et, si besoin, prévenons le gardien ou le syndic. Le matériel est monté en une seule fois. L'intervention reste concentrée sur quelques heures pour réduire les allers-retours dans les parties communes.</p>`,
         },
       ],
@@ -259,19 +259,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Les fientes accumulées sur un balcon proche du Canal de l'Ourcq présentent-elles un risque sanitaire réel ?",
+          question: "Les fientes accumulées sur un balcon proche du Canal de l'Ourcq présentent-elles un risque sanitaire réel ?",
           answer: `<p>Les déjections de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les voies respiratoires en cas d'inhalation de poussières sèches. Sur les balcons exposés aux berges, l'accumulation est souvent plus rapide. Une décontamination avec désinfection élimine ces risques et permet de réutiliser l'espace en sécurité.</p>`,
         },
         {
-          question: "Q2 : Quel équipement utilisez-vous pour traiter un balcon très souillé dans les immeubles béton des Courtillières ?",
+          question: "Quel équipement utilisez-vous pour traiter un balcon très souillé dans les immeubles béton des Courtillières ?",
           answer: `<p>L'intervenant porte une combinaison jetable, un masque FFP2, des gants et des lunettes de protection. Les fientes sont humidifiées avant manipulation pour éviter l'envol de particules. Le sol béton et les garde-corps sont ensuite traités avec un produit virucide homologué, appliqué avec temps de contact respecté avant rinçage.</p>`,
         },
         {
-          question: "Q3 : Quel traitement garantit une désinfection efficace sur les balcons proches du Parc Diderot ?",
+          question: "Quel traitement garantit une désinfection efficace sur les balcons proches du Parc Diderot ?",
           answer: `<p>Nous appliquons un produit à la fois virucide et bactéricide, homologué pour l'élimination des agents pathogènes présents dans les fientes. Le temps de contact est respecté sur toutes les surfaces (sol, garde-corps, vitrages). Ce traitement neutralise les risques sanitaires et prépare le support pour une éventuelle pose de dispositifs anti-retour.</p>`,
         },
         {
-          question: "Q4 : Qui prend en charge l'évacuation des déchets contaminés après nettoyage en copropriété à Quatre-Chemins ?",
+          question: "Qui prend en charge l'évacuation des déchets contaminés après nettoyage en copropriété à Quatre-Chemins ?",
           answer: `<p>Klinova assure l'évacuation complète des déchets. Les fientes collectées sont conditionnées dans des sacs étanches et retirées du site par nos équipes. En copropriété, nous coordonnons l'intervention pour limiter la gêne : bâchage des zones mitoyennes, passage discret dans les parties communes, et enlèvement le jour même.</p>`,
         },
       ],
@@ -306,19 +306,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Un nettoyage complet élimine-t-il les allergènes et acariens sur un canapé tissu utilisé quotidiennement par une famille à Pantin ?",
+          question: "Un nettoyage complet élimine-t-il les allergènes et acariens sur un canapé tissu utilisé quotidiennement par une famille à Pantin ?",
           answer: `<p>L'injection-extraction déloge les acariens et résidus allergènes piégés dans les fibres. Le résultat améliore sensiblement la qualité de l'air intérieur, particulièrement appréciable dans les salons familiaux des quartiers résidentiels autour de l'Église Saint-Germain où le canapé est sollicité chaque jour.</p>`,
         },
         {
-          question: "Q2 : Pour des taches d'urine anciennes sur tapis dans un logement proche du Parc Diderot, quelle prise en charge assure un retrait efficace des odeurs ?",
+          question: "Pour des taches d'urine anciennes sur tapis dans un logement proche du Parc Diderot, quelle prise en charge assure un retrait efficace des odeurs ?",
           answer: `<p>Un pré-traitement enzymatique cible les composés organiques responsables de l'odeur. L'extraction en profondeur retire ensuite les résidus incrustés. Sur des taches anciennes, plusieurs passages peuvent être nécessaires pour neutraliser complètement les effluves persistants.</p>`,
         },
         {
-          question: "Q3 : Comment traitez-vous un canapé non déhoussable en tissu sans détremper la mousse intérieure dans un appartement ancien du quartier Quatre-Chemins ?",
+          question: "Comment traitez-vous un canapé non déhoussable en tissu sans détremper la mousse intérieure dans un appartement ancien du quartier Quatre-Chemins ?",
           answer: `<p>La quantité d'eau injectée est calibrée pour pénétrer la fibre sans saturer la mousse. L'aspiration immédiate limite l'humidité résiduelle. Le séchage complet intervient généralement sous quelques heures avec une aération correcte du logement.</p>`,
         },
         {
-          question: "Q4 : En zone rouge avec stationnement limité autour de l'Église, quel matériel privilégiez-vous pour une intervention canapé à domicile ?",
+          question: "En zone rouge avec stationnement limité autour de l'Église, quel matériel privilégiez-vous pour une intervention canapé à domicile ?",
           answer: `<p>Nous utilisons un équipement compact et portable, transportable en étage sans encombrement excessif. Le véhicule peut stationner brièvement le temps du déchargement. Cette organisation permet d'intervenir efficacement malgré les contraintes de stationnement en centre-ville de Pantin.</p>`,
         },
       ],
@@ -353,19 +353,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : Quelle méthode utilisez-vous pour les terrasses en bois composite près du Canal sans risquer de décoloration ?",
+          question: "Quelle méthode utilisez-vous pour les terrasses en bois composite près du Canal sans risquer de décoloration ?",
           answer: `<p>Le bois composite demande une pression modérée et un produit au pH neutre. Nous évitons le jet direct sur les rainures pour ne pas soulever les fibres. Le brossage doux complète le rinçage. Cette approche préserve l'aspect d'origine tout en éliminant les dépôts verts installés par l'humidité des berges.</p>`,
         },
         {
-          question: "Q2 : Comment traitez-vous les mousses et lichens tenaces sur une terrasse exposée à l'humidité du Canal de l'Ourcq ?",
+          question: "Comment traitez-vous les mousses et lichens tenaces sur une terrasse exposée à l'humidité du Canal de l'Ourcq ?",
           answer: `<p>Un produit anti-mousse est appliqué avant le nettoyage pour décoller les végétaux incrustés. Le brossage mécanique retire la couche superficielle. Un rinçage contrôlé évacue les résidus. Sur les surfaces très colonisées, un second passage peut être nécessaire. Un traitement préventif limite la réapparition pendant plusieurs mois.</p>`,
         },
         {
-          question: "Q3 : Proposez-vous un traitement anti-mousse durable pour les dalles béton autour de la Place de la Pointe ?",
+          question: "Proposez-vous un traitement anti-mousse durable pour les dalles béton autour de la Place de la Pointe ?",
           answer: `<p>Après le nettoyage, un produit filmogène peut être appliqué sur les dalles béton pour freiner la repousse. L'efficacité dépend de l'exposition : les zones ombragées nécessitent un renouvellement plus fréquent. Ce traitement n'altère pas l'aspect du béton et reste compatible avec un usage piéton immédiat après séchage.</p>`,
         },
         {
-          question: "Q4 : Faut-il éviter la haute pression sur toutes les terrasses en bois composite à Pantin ?",
+          question: "Faut-il éviter la haute pression sur toutes les terrasses en bois composite à Pantin ?",
           answer: `<p>La haute pression n'est pas interdite mais doit être maîtrisée : distance de buse adaptée, angle oblique, pression réduite. Sur les composites de qualité courante, un nettoyage basse pression combiné au brossage donne un résultat équivalent sans risque. Nous évaluons l'état du support avant de choisir la méthode.</p>`,
         },
       ],
@@ -403,19 +403,19 @@ faq: [
       ],
       faqAdditions: [
         {
-          question: "Q1 : En cas d'urgence pour un état des lieux près de la station Hoche, sous quel délai pouvez-vous intervenir ?",
+          question: "En cas d'urgence pour un état des lieux près de la station Hoche, sous quel délai pouvez-vous intervenir ?",
           answer: `<p>Nous organisons des interventions sous 24 à 48 heures selon la taille du logement et la disponibilité. Pour les demandes urgentes dans le secteur Hoche ou Mairie, nous ajustons le planning pour respecter la date de remise de clés convenue avec l'agence ou le propriétaire.</p>`,
         },
         {
-          question: "Q2 : Quel protocole appliquez-vous pour un nettoyage fin de chantier avec poussières fines et résidus de plâtre dans les ZAC ?",
+          question: "Quel protocole appliquez-vous pour un nettoyage fin de chantier avec poussières fines et résidus de plâtre dans les ZAC ?",
           answer: `<p>L'intervention commence par un dépoussiérage complet des surfaces hautes vers le sol, puis une aspiration avec filtration adaptée aux particules fines. Les traces d'enduit ou de peinture sont traitées manuellement avant le lavage final des sols et des vitres intérieures.</p>`,
         },
         {
-          question: "Q3 : Quel niveau de propreté livrez-vous pour garantir la validation d'un état des lieux par une agence immobilière ?",
+          question: "Quel niveau de propreté livrez-vous pour garantir la validation d'un état des lieux par une agence immobilière ?",
           answer: `<p>Nous visons un rendu permettant la validation sans réserve : sols sans traces, vitres propres, sanitaires désinfectés, placards vidés et nettoyés. Un contrôle final vérifie chaque point avant votre passage avec l'agence ou le bailleur.</p>`,
         },
         {
-          question: "Q4 : Comment coordonnez-vous l'intervention avec les artisans en cas de travaux encore en cours dans un appartement pantinois ?",
+          question: "Comment coordonnez-vous l'intervention avec les artisans en cas de travaux encore en cours dans un appartement pantinois ?",
           answer: `<p>Nous échangeons directement avec le chef de chantier ou le maître d'œuvre pour caler notre passage après les dernières finitions. Si des retouches sont prévues, nous adaptons notre intervention pour éviter de repasser sur des zones déjà nettoyées.</p>`,
         },
       ],

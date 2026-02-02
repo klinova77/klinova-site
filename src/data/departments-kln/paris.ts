@@ -53,82 +53,85 @@ export const paris: DepartmentKln = {
   sections: [
     {
       id: "contexte",
-    title: "Nettoyage professionnel à Paris : exigences et savoir-faire",
-  image: "/images/75-immeubles-parisiens.webp", // URL conservée
-  imageAlt: "Vue de façades d'immeubles anciens dans un quartier dense de Paris",
-  imageCaption:
-    "Patrimoine parisien : l'entretien des immeubles anciens exige une maîtrise des accès complexes et des matériaux d'époque.",
+      title: "Nettoyage professionnel à Paris : exigences et savoir-faire",
+      image: "/images/75-immeubles-parisiens.webp", // URL conservée
+      imageAlt: "Vue de façades d'immeubles anciens dans un quartier dense de Paris",
+      imageCaption:
+        "Patrimoine parisien : l'entretien des immeubles anciens exige une maîtrise des accès complexes et des matériaux d'époque.",
 
-      html: `
-        <p>
-          Paris présente des défis spécifiques en matière de nettoyage professionnel. Les immeubles 
-          haussmanniens et les copropriétés de standing imposent des exigences esthétiques élevées : 
-          moquettes d'époque dans les parties communes, escaliers parfois classés au patrimoine, 
-          halls d'entrée qui représentent le standing de l'immeuble. Dans ce contexte, la propreté 
-          devient un marqueur d'image direct pour les résidents comme pour les visiteurs.
-        </p>
-        <p class="mt-4">
-          Sur les <strong>moquettes de parties communes</strong>, l'encrassement est rapide. Les 
-          poussières fines urbaines, les traces de circulation intense (résidents, livraisons multiples 
-          quotidiennes, visiteurs) et les taches localisées aux points de passage (entrée, boîtes aux 
-          lettres, ascenseur, paliers) s'accumulent rapidement. Sans un protocole rigoureux, le rendu 
-          se dégrade et l'image de prestige en pâtit.
-        </p>
-        <p class="mt-4">
-          Notre approche parisienne intègre les contraintes logistiques spécifiques de la capitale. 
-          Le stationnement en zone de livraison impose des créneaux stricts avec un risque de PV rapide. 
-          L'accès aux immeubles nécessite souvent de gérer des codes d'entrée, des interphones, des 
-          ascenseurs étroits ou absents. Les horaires doivent être coordonnés avec le syndic ou le 
-          gardien pour préserver la circulation dans l'immeuble. Notre protocole combine efficacité 
-          technique et discrétion opérationnelle pour obtenir un résultat impeccable sans perturber 
-          le quotidien de la copropriété.
-        </p>
-        <p class="mt-4">
-          À <strong>domicile</strong>, nous appliquons la même exigence pour le nettoyage de canapés, 
-          tapis et matelas : diagnostic précis, nettoyage contrôlé, finitions soignées et respect du 
-          mobilier et des surfaces environnantes. Sur les <strong>balcons et terrasses</strong>, nous 
-          portons une attention particulière aux surfaces nobles (pierre, bois, carrelage haut de gamme) 
-          et aux vues dégagées qui nécessitent un rendu parfait.
-        </p>
-      `,
+      html:
+        "\n" +
+        "        <p>\n" +
+        "          Paris présente des défis spécifiques en matière de nettoyage professionnel. Les immeubles \n" +
+        "          haussmanniens et les copropriétés de standing imposent des exigences esthétiques élevées : \n" +
+        "          moquettes d'époque dans les parties communes, escaliers parfois classés au patrimoine, \n" +
+        "          halls d'entrée qui représentent le standing de l'immeuble. Dans ce contexte, la propreté \n" +
+        "          devient un marqueur d'image direct pour les résidents comme pour les visiteurs.\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          Sur les <strong>moquettes de parties communes</strong>, l'encrassement est rapide. Les \n" +
+        "          poussières fines urbaines, les traces de circulation intense (résidents, livraisons multiples \n" +
+        "          quotidiennes, visiteurs) et les taches localisées aux points de passage (entrée, boîtes aux \n" +
+        "          lettres, ascenseur, paliers) s'accumulent rapidement. Sans un protocole rigoureux, le rendu \n" +
+        "          se dégrade et l'image de prestige en pâtit.\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          Notre approche parisienne intègre les contraintes logistiques spécifiques de la capitale. \n" +
+        "          Le stationnement en zone de livraison impose des créneaux stricts avec un risque de PV rapide. \n" +
+        "          L'accès aux immeubles nécessite souvent de gérer des codes d'entrée, des interphones, des \n" +
+        "          ascenseurs étroits ou absents. Les horaires doivent être coordonnés avec le syndic ou le \n" +
+        "          gardien pour préserver la circulation dans l'immeuble. Notre protocole combine efficacité \n" +
+        "          technique et discrétion opérationnelle pour obtenir un résultat impeccable sans perturber \n" +
+        "          le quotidien de la copropriété.\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          À <strong>domicile</strong>, nous appliquons la même exigence pour le nettoyage de canapés, \n" +
+        "          tapis et matelas : diagnostic précis, nettoyage contrôlé, finitions soignées et respect du \n" +
+        "          mobilier et des surfaces environnantes. Sur les <strong>balcons et terrasses</strong>, nous \n" +
+        "          portons une attention particulière aux surfaces nobles (pierre, bois, carrelage haut de gamme) \n" +
+        "          et aux vues dégagées qui nécessitent un rendu parfait.\n" +
+        "        </p>\n" +
+        "      ",
+
     },
     {
       id: "process",
       title: "Notre protocole d'intervention à Paris : rigueur et adaptation",
-      html: `
-        <p>
-          Chaque prestation parisienne commence par un diagnostic approfondi qui tient compte des 
-          spécificités locales. Nous analysons d'abord les <strong>parties communes</strong> : type 
-          de moquette (d'époque, velours, bouclée), niveau d'encrassement, zones prioritaires (entrée, 
-          ascenseur, paliers, escaliers) et éventuels éléments classés ou fragiles.
-        </p>
-        <p class="mt-4">
-          La <strong>logistique parisienne</strong> fait l'objet d'une attention particulière : nous 
-          identifions les zones de livraison disponibles et leur durée autorisée, nous organisons l'accès 
-          à l'immeuble (codes, étages, ascenseur), nous coordonnons les horaires avec le gardien ou le 
-          syndic et nous planifions l'intervention pour éviter les heures de pointe (8h-9h30 et 18h-19h30).
-        </p>
-        <p class="mt-4">
-          Pour les <strong>textiles à domicile</strong>, nous examinons la nature du tissu (matières 
-          nobles, textiles délicats), repérons les zones de frottement et identifions les taches, 
-          auréoles ou odeurs éventuelles. Sur les <strong>surfaces extérieures</strong> (balcons, 
-          terrasses), nous évaluons les matériaux (pierre naturelle, bois, carrelage premium), l'état 
-          d'encrassement et les contraintes d'accès à l'eau.
-        </p>
-        <p class="mt-4">
-          Le protocole de nettoyage est ensuite déployé avec méthode. Nous adaptons l'action mécanique 
-          aux matériaux : brossage doux pour les textiles nobles, injection-extraction contrôlée si 
-          pertinent. Nous sélectionnons les produits selon les supports et leurs sensibilités, effectuons 
-          un rinçage ou une neutralisation minutieux, puis terminons par des finitions irréprochables 
-          (bordures, plinthes, angles, seuils, éléments décoratifs).
-        </p>
-        <p class="mt-4">
-          L'objectif parisien est d'obtenir un résultat impeccable et homogène, à la hauteur du standing 
-          de l'immeuble, tout en minimisant les nuisances sonores et visuelles pour les résidents. En fin 
-          d'intervention, nous effectuons un contrôle qualité systématique, validons le résultat avec vous 
-          et vous transmettons des recommandations d'entretien pour préserver le résultat dans le temps.
-        </p>
-      `,
+      html:
+        "\n" +
+        "        <p>\n" +
+        "          Chaque prestation parisienne commence par un diagnostic approfondi qui tient compte des \n" +
+        "          spécificités locales. Nous analysons d'abord les <strong>parties communes</strong> : type \n" +
+        "          de moquette (d'époque, velours, bouclée), niveau d'encrassement, zones prioritaires (entrée, \n" +
+        "          ascenseur, paliers, escaliers) et éventuels éléments classés ou fragiles.\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          La <strong>logistique parisienne</strong> fait l'objet d'une attention particulière : nous \n" +
+        "          identifions les zones de livraison disponibles et leur durée autorisée, nous organisons l'accès \n" +
+        "          à l'immeuble (codes, étages, ascenseur), nous coordonnons les horaires avec le gardien ou le \n" +
+        "          syndic et nous planifions l'intervention pour éviter les heures de pointe (8h-9h30 et 18h-19h30).\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          Pour les <strong>textiles à domicile</strong>, nous examinons la nature du tissu (matières \n" +
+        "          nobles, textiles délicats), repérons les zones de frottement et identifions les taches, \n" +
+        "          auréoles ou odeurs éventuelles. Sur les <strong>surfaces extérieures</strong> (balcons, \n" +
+        "          terrasses), nous évaluons les matériaux (pierre naturelle, bois, carrelage premium), l'état \n" +
+        "          d'encrassement et les contraintes d'accès à l'eau.\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          Le protocole de nettoyage est ensuite déployé avec méthode. Nous adaptons l'action mécanique \n" +
+        "          aux matériaux : brossage doux pour les textiles nobles, injection-extraction contrôlée si \n" +
+        "          pertinent. Nous sélectionnons les produits selon les supports et leurs sensibilités, effectuons \n" +
+        "          un rinçage ou une neutralisation minutieux, puis terminons par des finitions irréprochables \n" +
+        "          (bordures, plinthes, angles, seuils, éléments décoratifs).\n" +
+        "        </p>\n" +
+        "        <p class=\"mt-4\">\n" +
+        "          L'objectif parisien est d'obtenir un résultat impeccable et homogène, à la hauteur du standing \n" +
+        "          de l'immeuble, tout en minimisant les nuisances sonores et visuelles pour les résidents. En fin \n" +
+        "          d'intervention, nous effectuons un contrôle qualité systématique, validons le résultat avec vous \n" +
+        "          et vous transmettons des recommandations d'entretien pour préserver le résultat dans le temps.\n" +
+        "        </p>\n" +
+        "      ",
     },
   ],
 
@@ -187,9 +190,7 @@ export const paris: DepartmentKln = {
   // =========================
   // Liens internes (arrondissements stratégiques)
   // =========================
-  internalLinks: [
-
-  ],
+  internalLinks: [],
 
   // =========================
   // SEO (title/description optimisés)

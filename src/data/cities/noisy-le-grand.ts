@@ -14,14 +14,8 @@ const city: City = {
   customDescription:
     "Desservie par trois gares RER (A et E) et traversée par l'autoroute A4, Noisy-le-Grand concentre de nombreux défis d'entretien. Entre immeubles anciens, copropriétés denses et zones pavillonnaires bordant la Marne, la propreté des parkings, moquettes de halls et balcons reste un enjeu constant.",
 
-  hubIntro: `<p>Acteur spécialisé de la propreté et de la maintenance courante à <strong>Noisy-le-Grand</strong>, Klinova accompagne les syndics de copropriété, bailleurs et entreprises dans la gestion quotidienne de leurs immeubles. Nos équipes interviennent régulièrement autour de Mont-d'Est, des Richardets, d'Yvris ou du centre-ville, avec une organisation pensée pour limiter les nuisances et sécuriser les accès.</p>
-<p class="mt-4">Au-delà du simple « coup de propre », nous mettons en place des protocoles planifiés qui s'intègrent à la vie de la copropriété : planning annuel, reporting après chaque passage, coordination avec les gardiens et conseils syndicaux. L'objectif est de préserver la valeur du patrimoine tout en améliorant concrètement le confort des occupants.</p>
-<ul>
-  <li><strong>Interventions protocolisées :</strong> moquettes, parkings, balcons, textiles d'ameublement.</li>
-  <li><strong>Techniciens formés</strong> aux accès sécurisés (badges Vigik, codes, parkings souterrains).</li>
-  <li><strong>Créneaux adaptés</strong> aux contraintes locales : tôt le matin, en journée ou en période creuse.</li>
-  <li><strong>Reporting synthétique</strong> et photos sur demande pour les gestionnaires à distance.</li>
-</ul>`,
+  hubIntro:
+    "<p>Acteur spécialisé de la propreté et de la maintenance courante à <strong>Noisy-le-Grand</strong>, Klinova accompagne les syndics de copropriété, bailleurs et entreprises dans la gestion quotidienne de leurs immeubles. Nos équipes interviennent régulièrement autour de Mont-d'Est, des Richardets, d'Yvris ou du centre-ville, avec une organisation pensée pour limiter les nuisances et sécuriser les accès.</p>\n<p class=\"mt-4\">Au-delà du simple « coup de propre », nous mettons en place des protocoles planifiés qui s'intègrent à la vie de la copropriété : planning annuel, reporting après chaque passage, coordination avec les gardiens et conseils syndicaux. L'objectif est de préserver la valeur du patrimoine tout en améliorant concrètement le confort des occupants.</p>\n<ul>\n  <li><strong>Interventions protocolisées :</strong> moquettes, parkings, balcons, textiles d'ameublement.</li>\n  <li><strong>Techniciens formés</strong> aux accès sécurisés (badges Vigik, codes, parkings souterrains).</li>\n  <li><strong>Créneaux adaptés</strong> aux contraintes locales : tôt le matin, en journée ou en période creuse.</li>\n  <li><strong>Reporting synthétique</strong> et photos sur demande pour les gestionnaires à distance.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Moquettes de halls très fréquentées autour des gares RER (Mont d'Est, Noisy–Champs).",
@@ -59,18 +53,18 @@ const city: City = {
     "Bas Heurts",
   ],
 
- nearbyCities: [
-        "villiers-sur-marne",
-        "champigny-sur-marne",
-        "le-plessis-trevise",
-        "champs-sur-marne",
-        "gournay-sur-marne",
-        "neuilly-sur-marne",
-        "le-perreux-sur-marne",
-        "emerainville",
-        "neuilly-plaisance",
-        "nogent-sur-marne"
-      ],
+  nearbyCities: [
+    "villiers-sur-marne",
+    "champigny-sur-marne",
+    "le-plessis-trevise",
+    "champs-sur-marne",
+    "gournay-sur-marne",
+    "neuilly-sur-marne",
+    "le-perreux-sur-marne",
+    "emerainville",
+    "neuilly-plaisance",
+    "nogent-sur-marne",
+  ],
 
   landmarks: [
     "Mairie de Noisy-le-Grand",
@@ -90,7 +84,8 @@ const city: City = {
         "<strong>Oui.</strong> Nos équipes couvrent régulièrement Noisy-le-Grand. Un rendez-vous peut être fixé sous 48 à 72 h selon la zone (Mont d'Est, Yvris, Richardets, etc.).",
     },
     {
-      question: "Est-ce que vous gérez les accès sécurisés comme les badges Vigik ?",
+      question:
+        "Est-ce que vous gérez les accès sécurisés comme les badges Vigik ?",
       answer:
         "<strong>Bien sûr.</strong> Nos techniciens sont formés à la gestion des Vigik, codes d'accès et interphones. Une procédure stricte garantit la sécurité des lieux.",
     },
@@ -100,7 +95,8 @@ const city: City = {
         "<strong>Non.</strong> Le déplacement est toujours gratuit, même pour une simple évaluation. Nos devis sont réalisés sur site, sans engagement.",
     },
     {
-      question: "Comment gérez-vous les contraintes locales (stationnement ou horaires) ?",
+      question:
+        "Comment gérez-vous les contraintes locales (stationnement ou horaires) ?",
       answer:
         "Nous adaptons nos interventions aux contraintes de chaque copropriété : <strong>stationnement limité, horaires tôt le matin, créneaux hors présence des occupants.</strong>",
     },
@@ -130,17 +126,11 @@ const city: City = {
         "Compte-rendu d'intervention disponible sur demande avec photos et remarques techniques.",
       ],
 
-      uniqueIntro: `<p>À Noisy-le-Grand, les moquettes sont encore présentes dans de nombreux halls d'entrée, cages d'escalier et couloirs, notamment dans les résidences construites entre les années 1970 et 2000. Ces zones sont soumises à un <strong>passage intensif</strong> : résidents, livreurs, visiteurs. Résultat : taches incrustées, ternissement général, poussières accumulées dans les angles. Dans les immeubles les plus exposés (proximité des gares, rues passantes), l'effet est rapide.</p>
-<p class="mt-4">Ce manque d'entretien donne une impression d'abandon, même quand le reste de l'immeuble est bien tenu. Pour les résidents, c'est inconfortable ; pour les gestionnaires, difficile à justifier. Un <strong>nettoyage professionnel méthodique</strong>, adapté à la configuration du bâtiment, permet de restaurer un aspect net et accueillant en quelques heures seulement.</p>`,
+      uniqueIntro:
+        "<p>À Noisy-le-Grand, les moquettes sont encore présentes dans de nombreux halls d'entrée, cages d'escalier et couloirs, notamment dans les résidences construites entre les années 1970 et 2000. Ces zones sont soumises à un <strong>passage intensif</strong> : résidents, livreurs, visiteurs. Résultat : taches incrustées, ternissement général, poussières accumulées dans les angles. Dans les immeubles les plus exposés (proximité des gares, rues passantes), l'effet est rapide.</p>\n<p class=\"mt-4\">Ce manque d'entretien donne une impression d'abandon, même quand le reste de l'immeuble est bien tenu. Pour les résidents, c'est inconfortable ; pour les gestionnaires, difficile à justifier. Un <strong>nettoyage professionnel méthodique</strong>, adapté à la configuration du bâtiment, permet de restaurer un aspect net et accueillant en quelques heures seulement.</p>",
 
-      uniqueDeepDive: `<h3>Diagnostic et préparation sur mesure</h3>
-<p>Avant toute intervention, un diagnostic est réalisé sur place : type de moquette, niveau d'encrassement, présence de taches spécifiques (graisse, boisson, humidité), accessibilité, ascenseurs, horaires d'accès. À Noisy-le-Grand, certains halls sont ouverts sur rue, exposés aux poussières extérieures ; d'autres sont étroits, avec des accès contraints. Klinova adapte le protocole en fonction de ces données.</p>
-
-<h3>Nettoyage par injection-extraction en profondeur</h3>
-<p class="mt-4">Les zones sont protégées : bas de murs, pieds de portes, balisage pour éviter toute gêne aux occupants. Le nettoyage s'effectue par <strong>injection–extraction à l'eau</strong>, avec une solution adaptée au type de fibre. Nos techniciens insistent sur les marches, les paliers de cage d'escalier et les bords de plinthes, souvent oubliés mais très marqués. Les zones de fort passage (proximité de l'ascenseur, entrée principale) reçoivent plusieurs passes.</p>
-
-<h3>Séchage rapide et conseils d'entretien</h3>
-<p class="mt-4">L'extraction puissante limite le temps de séchage, tout en évacuant un maximum de salissures. Une aération est recommandée pendant quelques heures après l'intervention. En copropriété, un <strong>nettoyage annuel ou semestriel</strong> est conseillé pour maintenir l'image globale de l'immeuble et prolonger la durée de vie des revêtements textiles.</p>`,
+      uniqueDeepDive:
+        "<h3>Diagnostic et préparation sur mesure</h3>\n<p>Avant toute intervention, un diagnostic est réalisé sur place : type de moquette, niveau d'encrassement, présence de taches spécifiques (graisse, boisson, humidité), accessibilité, ascenseurs, horaires d'accès. À Noisy-le-Grand, certains halls sont ouverts sur rue, exposés aux poussières extérieures ; d'autres sont étroits, avec des accès contraints. Klinova adapte le protocole en fonction de ces données.</p>\n\n<h3>Nettoyage par injection-extraction en profondeur</h3>\n<p class=\"mt-4\">Les zones sont protégées : bas de murs, pieds de portes, balisage pour éviter toute gêne aux occupants. Le nettoyage s'effectue par <strong>injection–extraction à l'eau</strong>, avec une solution adaptée au type de fibre. Nos techniciens insistent sur les marches, les paliers de cage d'escalier et les bords de plinthes, souvent oubliés mais très marqués. Les zones de fort passage (proximité de l'ascenseur, entrée principale) reçoivent plusieurs passes.</p>\n\n<h3>Séchage rapide et conseils d'entretien</h3>\n<p class=\"mt-4\">L'extraction puissante limite le temps de séchage, tout en évacuant un maximum de salissures. Une aération est recommandée pendant quelques heures après l'intervention. En copropriété, un <strong>nettoyage annuel ou semestriel</strong> est conseillé pour maintenir l'image globale de l'immeuble et prolonger la durée de vie des revêtements textiles.</p>",
 
       specificChallenges: [
         "Moquettes très sollicitées dans les halls proches de la gare de Noisy–Mont d'Est.",
@@ -189,17 +179,11 @@ const city: City = {
         "Compte-rendu disponible sur demande pour syndics ou gestionnaires.",
       ],
 
-      uniqueIntro: `<p>À Noisy-le-Grand, les parkings souterrains sous les résidences ou en pied d'immeuble sont soumis à un <strong>encrassement rapide</strong>. Entre les remontées d'humidité, les poussières fines liées à l'autoroute A4 toute proche et les traces laissées par les véhicules, les sols se salissent vite. Les taches d'huile, les poussières grasses ou les salissures en pied de murs donnent rapidement une impression de négligé.</p>
-<p class="mt-4">Dans certaines zones comme Mont d'Est ou les Richardets, le trafic quotidien lié aux gares, commerces ou entreprises renforce cette usure. Sans nettoyage structuré, les usagers se plaignent de glissades, de traces persistantes ou d'un manque d'hygiène. Un <strong>décrassage professionnel</strong>, planifié et maîtrisé, permet de sécuriser les circulations, de redonner de la lisibilité au marquage et d'améliorer l'image de l'ensemble immobilier.</p>`,
+      uniqueIntro:
+        "<p>À Noisy-le-Grand, les parkings souterrains sous les résidences ou en pied d'immeuble sont soumis à un <strong>encrassement rapide</strong>. Entre les remontées d'humidité, les poussières fines liées à l'autoroute A4 toute proche et les traces laissées par les véhicules, les sols se salissent vite. Les taches d'huile, les poussières grasses ou les salissures en pied de murs donnent rapidement une impression de négligé.</p>\n<p class=\"mt-4\">Dans certaines zones comme Mont d'Est ou les Richardets, le trafic quotidien lié aux gares, commerces ou entreprises renforce cette usure. Sans nettoyage structuré, les usagers se plaignent de glissades, de traces persistantes ou d'un manque d'hygiène. Un <strong>décrassage professionnel</strong>, planifié et maîtrisé, permet de sécuriser les circulations, de redonner de la lisibilité au marquage et d'améliorer l'image de l'ensemble immobilier.</p>",
 
-      uniqueDeepDive: `<h3>Diagnostic technique et préparation du site</h3>
-<p>Chaque intervention débute par un <strong>diagnostic technique précis</strong> : type de revêtement (béton brut, résine, peinture), état des pentes et des siphons, accès pour le matériel, hauteur sous plafond. À Noisy-le-Grand, certains parkings présentent des rampes étroites ou des niveaux complexes, que nous intégrons dès le départ dans l'organisation pour éviter tout blocage.</p>
-
-<h3>Décrassage en profondeur et dégraissage ciblé</h3>
-<p class="mt-4">La première phase consiste à dégager la zone, signaler clairement l'intervention et réaliser un <strong>balayage mécanique ou manuel</strong> des déchets (feuilles, papiers, sable). Le nettoyage est ensuite effectué à l'<strong>autolaveuse</strong>, ou en haute pression avec un dégraissant adapté pour les taches d'huile anciennes. Nous traitons systématiquement les pieds de murs, les angles et les rampes d'accès. Les eaux usées sont récupérées ou orientées vers les évacuations existantes, en conformité avec la réglementation.</p>
-
-<h3>Organisation par zones et entretien programmé</h3>
-<p class="mt-4">Lorsque le parking est trop grand pour être vidé, l'intervention est découpée par zones, avec rotation des véhicules et créneaux définis en amont. Les créneaux matinaux sont souvent privilégiés pour limiter les gênes. Pour les copropriétés les plus exposées (forte circulation ou résidus fréquents), un <strong>entretien programmé tous les 6 à 12 mois</strong> est recommandé pour conserver un niveau de propreté constant et rassurant pour les usagers.</p>`,
+      uniqueDeepDive:
+        "<h3>Diagnostic technique et préparation du site</h3>\n<p>Chaque intervention débute par un <strong>diagnostic technique précis</strong> : type de revêtement (béton brut, résine, peinture), état des pentes et des siphons, accès pour le matériel, hauteur sous plafond. À Noisy-le-Grand, certains parkings présentent des rampes étroites ou des niveaux complexes, que nous intégrons dès le départ dans l'organisation pour éviter tout blocage.</p>\n\n<h3>Décrassage en profondeur et dégraissage ciblé</h3>\n<p class=\"mt-4\">La première phase consiste à dégager la zone, signaler clairement l'intervention et réaliser un <strong>balayage mécanique ou manuel</strong> des déchets (feuilles, papiers, sable). Le nettoyage est ensuite effectué à l'<strong>autolaveuse</strong>, ou en haute pression avec un dégraissant adapté pour les taches d'huile anciennes. Nous traitons systématiquement les pieds de murs, les angles et les rampes d'accès. Les eaux usées sont récupérées ou orientées vers les évacuations existantes, en conformité avec la réglementation.</p>\n\n<h3>Organisation par zones et entretien programmé</h3>\n<p class=\"mt-4\">Lorsque le parking est trop grand pour être vidé, l'intervention est découpée par zones, avec rotation des véhicules et créneaux définis en amont. Les créneaux matinaux sont souvent privilégiés pour limiter les gênes. Pour les copropriétés les plus exposées (forte circulation ou résidus fréquents), un <strong>entretien programmé tous les 6 à 12 mois</strong> est recommandé pour conserver un niveau de propreté constant et rassurant pour les usagers.</p>",
 
       specificChallenges: [
         "Proximité de l'A4 et du centre commercial : dépôts fréquents de poussières grasses dans les parkings souterrains.",
@@ -210,17 +194,20 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "Pourquoi les parkings de Noisy-le-Grand s'encrassent-ils aussi vite ?",
+          question:
+            "Pourquoi les parkings de Noisy-le-Grand s'encrassent-ils aussi vite ?",
           answer:
             "La ville est traversée par l'A4 et compte plusieurs gares très fréquentées. Ces axes amènent beaucoup de circulation, donc de <strong>poussières noires, résidus de plaquettes, huiles, sable.</strong> Sans nettoyage structuré, les revêtements s'encrassent rapidement et donnent une impression de saleté persistante, même avec un balayage régulier.",
         },
         {
-          question: "Est-ce qu'il faut vider tout le parking pour pouvoir nettoyer ?",
+          question:
+            "Est-ce qu'il faut vider tout le parking pour pouvoir nettoyer ?",
           answer:
             "<strong>Pas forcément.</strong> Dans la majorité des cas, nous organisons une rotation par zones : les copropriétaires déplacent leurs véhicules d'une partie à l'autre. Cela permet de nettoyer sans immobiliser tout le parking. Si besoin, nous intervenons tôt le matin ou en journée creuse pour limiter les désagréments.",
         },
         {
-          question: "Est-ce que vous arrivez à enlever toutes les taches d'huile ?",
+          question:
+            "Est-ce que vous arrivez à enlever toutes les taches d'huile ?",
           answer:
             "Les taches récentes partent bien avec nos produits dégraissants. Pour les taches anciennes ou incrustées dans du béton poreux, une <strong>atténuation est possible mais sans garantie d'effacement total.</strong> Nous expliquons toujours en amont ce qu'on peut attendre comme résultat selon l'état du sol.",
         },
@@ -247,17 +234,11 @@ const city: City = {
         "Photos avant/après sur demande pour les propriétaires bailleurs ou à distance.",
       ],
 
-      uniqueIntro: `<p>Dans de nombreuses résidences de <strong>Noisy-le-Grand</strong>, les balcons sont peu utilisés faute d'entretien. Poussière noire, dépôts verts sur les dalles, joints noircis, traces de terre ou de pots renversés s'accumulent au fil du temps. L'humidité, les particules fines venues de l'A4 et les feuillages du Bois Saint-Martin renforcent cette sensation de saleté permanente.</p>
-<p class="mt-4">Progressivement, le balcon devient un débarras ou un espace dont on se détourne, alors qu'il pourrait être un vrai prolongement du logement. Un <strong>nettoyage professionnel en profondeur</strong> permet de retrouver un sol propre, des gardes-corps nets, et de réinvestir pleinement cet espace extérieur, sans effort ni risque pour les matériaux.</p>`,
+      uniqueIntro:
+        "<p>Dans de nombreuses résidences de <strong>Noisy-le-Grand</strong>, les balcons sont peu utilisés faute d'entretien. Poussière noire, dépôts verts sur les dalles, joints noircis, traces de terre ou de pots renversés s'accumulent au fil du temps. L'humidité, les particules fines venues de l'A4 et les feuillages du Bois Saint-Martin renforcent cette sensation de saleté permanente.</p>\n<p class=\"mt-4\">Progressivement, le balcon devient un débarras ou un espace dont on se détourne, alors qu'il pourrait être un vrai prolongement du logement. Un <strong>nettoyage professionnel en profondeur</strong> permet de retrouver un sol propre, des gardes-corps nets, et de réinvestir pleinement cet espace extérieur, sans effort ni risque pour les matériaux.</p>",
 
-      uniqueDeepDive: `<h3>Protection des accès et préparation de la zone</h3>
-<p>Chaque intervention commence par la <strong>protection de la zone intérieure</strong> : bâche devant la porte-fenêtre, ruban sur les menuiseries, protection des prises ou éclairages si besoin. Les meubles, pots et jardinières sont déplacés ou bâchés selon leur poids et leur fragilité. Tous les dépôts sont d'abord évacués manuellement : feuilles, terre sèche, poussières accumulées, résidus de fumée ou de barbecue.</p>
-
-<h3>Nettoyage adapté aux supports et traitement complet</h3>
-<p class="mt-4">Le nettoyage se fait ensuite avec un produit spécifique au support (carrelage, dalle béton, bois composite). Un <strong>brossage manuel ou mécanique</strong> est réalisé, avec une attention particulière portée aux joints, aux recoins, aux garde-corps et au pied des murs mitoyens. La pression est ajustée pour éviter d'abîmer les matériaux. L'eau est tirée vers l'extérieur ou récupérée, afin d'éviter toute coulure chez les voisins du dessous.</p>
-
-<h3>Séchage et conseils d'entretien régulier</h3>
-<p class="mt-4">Après l'intervention, un séchage naturel est suffisant en quelques heures, selon l'ensoleillement. Nous recommandons ensuite un simple <strong>balayage régulier</strong> et un nettoyage doux tous les deux à trois mois pour maintenir le résultat et conserver un balcon agréable au quotidien.</p>`,
+      uniqueDeepDive:
+        "<h3>Protection des accès et préparation de la zone</h3>\n<p>Chaque intervention commence par la <strong>protection de la zone intérieure</strong> : bâche devant la porte-fenêtre, ruban sur les menuiseries, protection des prises ou éclairages si besoin. Les meubles, pots et jardinières sont déplacés ou bâchés selon leur poids et leur fragilité. Tous les dépôts sont d'abord évacués manuellement : feuilles, terre sèche, poussières accumulées, résidus de fumée ou de barbecue.</p>\n\n<h3>Nettoyage adapté aux supports et traitement complet</h3>\n<p class=\"mt-4\">Le nettoyage se fait ensuite avec un produit spécifique au support (carrelage, dalle béton, bois composite). Un <strong>brossage manuel ou mécanique</strong> est réalisé, avec une attention particulière portée aux joints, aux recoins, aux garde-corps et au pied des murs mitoyens. La pression est ajustée pour éviter d'abîmer les matériaux. L'eau est tirée vers l'extérieur ou récupérée, afin d'éviter toute coulure chez les voisins du dessous.</p>\n\n<h3>Séchage et conseils d'entretien régulier</h3>\n<p class=\"mt-4\">Après l'intervention, un séchage naturel est suffisant en quelques heures, selon l'ensoleillement. Nous recommandons ensuite un simple <strong>balayage régulier</strong> et un nettoyage doux tous les deux à trois mois pour maintenir le résultat et conserver un balcon agréable au quotidien.</p>",
 
       specificChallenges: [
         "Poussières grasses fréquentes côté A4 et autour de la gare de Noisy–Mont d'Est.",
@@ -268,22 +249,26 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "Est-ce que le nettoyage peut endommager les carrelages ou les joints ?",
+          question:
+            "Est-ce que le nettoyage peut endommager les carrelages ou les joints ?",
           answer:
             "<strong>Non</strong>, nous utilisons des produits professionnels non corrosifs et une pression contrôlée. Le matériel est adapté aux balcons résidentiels. Les joints sont nettoyés mais jamais agressés. S'il y a une fragilité visible (joints très anciens ou décollés), nous adaptons la méthode pour préserver la structure.",
         },
         {
-          question: "Que se passe-t-il si l'eau coule chez le voisin du dessous ?",
+          question:
+            "Que se passe-t-il si l'eau coule chez le voisin du dessous ?",
           answer:
             "C'est justement pour éviter ça que nous tirons systématiquement l'eau vers les évacuations ou utilisons des raclettes manuelles. Lorsqu'il n'y a pas d'évacuation prévue, nous <strong>limitons la quantité d'eau et la récupérons si besoin.</strong> Le but est de ne laisser aucune coulure visible ni aucune gêne.",
         },
         {
-          question: "Est-ce que vos produits sont dangereux pour les plantes ou les animaux ?",
+          question:
+            "Est-ce que vos produits sont dangereux pour les plantes ou les animaux ?",
           answer:
             "<strong>Non</strong>, nous utilisons des nettoyants neutres ou biodégradables compatibles avec les espaces résidentiels. En cas de doute, les plantes sont bâchées ou déplacées temporairement. Une fois le balcon rincé, il peut être réutilisé sans danger pour les animaux de compagnie ou les enfants.",
         },
         {
-          question: "Combien de temps faut-il avant de pouvoir réutiliser son balcon ?",
+          question:
+            "Combien de temps faut-il avant de pouvoir réutiliser son balcon ?",
           answer:
             "En général, le balcon est sec et praticable en <strong>1 à 3 heures</strong> selon l'exposition. En été ou par temps sec, l'eau s'évapore rapidement. En période plus fraîche ou à l'ombre, il suffit de patienter un peu plus. Nous vous indiquons toujours la durée à prévoir à la fin de l'intervention.",
         },
@@ -305,17 +290,11 @@ const city: City = {
         "Compte-rendu et photos avant/après possibles sur demande du client ou du syndic.",
       ],
 
-      uniqueIntro: `<p>Dans plusieurs quartiers de <strong>Noisy-le-Grand</strong>, notamment à proximité du parc de la Butte Verte ou autour de la gare RER, les pigeons prolifèrent sur les toitures, corniches ou combles ouverts. Résultat : des balcons entiers se retrouvent recouverts de fientes, parfois sur plusieurs semaines. L'odeur devient forte, l'espace inutilisable, et le <strong>risque sanitaire</strong> inquiète les occupants. Les tensions avec les voisins ou la copropriété sont fréquentes lorsque rien n'est fait.</p>
-<p class="mt-4">Dans ce contexte, une simple serpillière ne suffit pas. Seule une <strong>intervention professionnelle, sécurisée et respectueuse du voisinage</strong> permet de rendre le balcon à nouveau sain, propre et utilisable, tout en éliminant les sources de contamination.</p>`,
+      uniqueIntro:
+        "<p>Dans plusieurs quartiers de <strong>Noisy-le-Grand</strong>, notamment à proximité du parc de la Butte Verte ou autour de la gare RER, les pigeons prolifèrent sur les toitures, corniches ou combles ouverts. Résultat : des balcons entiers se retrouvent recouverts de fientes, parfois sur plusieurs semaines. L'odeur devient forte, l'espace inutilisable, et le <strong>risque sanitaire</strong> inquiète les occupants. Les tensions avec les voisins ou la copropriété sont fréquentes lorsque rien n'est fait.</p>\n<p class=\"mt-4\">Dans ce contexte, une simple serpillière ne suffit pas. Seule une <strong>intervention professionnelle, sécurisée et respectueuse du voisinage</strong> permet de rendre le balcon à nouveau sain, propre et utilisable, tout en éliminant les sources de contamination.</p>",
 
-      uniqueDeepDive: `<h3>Équipement complet et mise en sécurité sanitaire</h3>
-<p>Nos techniciens interviennent avec un <strong>protocole strict</strong> et un équipement complet : combinaison, gants nitrile, masque à filtres, chaussures étanches. Le sol est protégé à l'intérieur du logement, les accès sécurisés. Le premier geste consiste à humidifier les fientes afin d'éviter leur dispersion sous forme de poussière infectieuse. Les déjections, nids éventuels, plumes ou détritus sont ramassés à la main, puis conditionnés dans des sacs à déchets adaptés, fermés hermétiquement.</p>
-
-<h3>Nettoyage et désinfection virucide homologuée</h3>
-<p class="mt-4">Les surfaces sont ensuite nettoyées : sol, plinthes, garde-corps, murs latéraux. Nous appliquons un <strong>désinfectant virucide et bactéricide</strong> conforme à la norme EN 14476, avec respect strict du temps de contact. Enfin, nous évacuons tous les déchets et la zone est aérée. Le balcon peut être réutilisé en toute sécurité après séchage complet, généralement sous 2 à 4 heures.</p>
-
-<h3>Conseils de prévention et solutions anti-pigeons</h3>
-<p class="mt-4">Si besoin, nous conseillons des solutions anti-intrusion simples pour limiter le retour des pigeons : pose de pics, filets ou autres systèmes dissuasifs adaptés à la configuration du balcon.</p>`,
+      uniqueDeepDive:
+        '<h3>Équipement complet et mise en sécurité sanitaire</h3>\n<p>Nos techniciens interviennent avec un <strong>protocole strict</strong> et un équipement complet : combinaison, gants nitrile, masque à filtres, chaussures étanches. Le sol est protégé à l\'intérieur du logement, les accès sécurisés. Le premier geste consiste à humidifier les fientes afin d\'éviter leur dispersion sous forme de poussière infectieuse. Les déjections, nids éventuels, plumes ou détritus sont ramassés à la main, puis conditionnés dans des sacs à déchets adaptés, fermés hermétiquement.</p>\n\n<h3>Nettoyage et désinfection virucide homologuée</h3>\n<p class="mt-4">Les surfaces sont ensuite nettoyées : sol, plinthes, garde-corps, murs latéraux. Nous appliquons un <strong>désinfectant virucide et bactéricide</strong> conforme à la norme EN 14476, avec respect strict du temps de contact. Enfin, nous évacuons tous les déchets et la zone est aérée. Le balcon peut être réutilisé en toute sécurité après séchage complet, généralement sous 2 à 4 heures.</p>\n\n<h3>Conseils de prévention et solutions anti-pigeons</h3>\n<p class="mt-4">Si besoin, nous conseillons des solutions anti-intrusion simples pour limiter le retour des pigeons : pose de pics, filets ou autres systèmes dissuasifs adaptés à la configuration du balcon.</p>',
 
       specificChallenges: [
         "Certains quartiers de Noisy-le-Grand sont plus exposés aux pigeons à cause des parcs et grands arbres.",
@@ -326,7 +305,8 @@ const city: City = {
 
       faqAdditions: [
         {
-          question: "Est-ce dangereux de laisser les fientes trop longtemps sans nettoyage ?",
+          question:
+            "Est-ce dangereux de laisser les fientes trop longtemps sans nettoyage ?",
           answer:
             "<strong>Oui.</strong> Les fientes de pigeons peuvent contenir des agents pathogènes (bactéries, champignons) dangereux pour la santé, notamment par inhalation. Une exposition prolongée augmente les risques pour les personnes fragiles (enfants, personnes âgées, immunodéprimés). Un nettoyage professionnel permet de traiter ces risques en toute sécurité.",
         },
@@ -336,7 +316,8 @@ const city: City = {
             "<strong>Oui.</strong> Nous utilisons des désinfectants professionnels conformes aux normes sanitaires en vigueur. Une fois les surfaces sèches et aérées, il n'y a aucun risque pour les habitants, les enfants ou les animaux domestiques. Nous vous informons toujours du <strong>délai de réutilisation conseillé</strong> à la fin de l'intervention.",
         },
         {
-          question: "Est-ce que le nettoyage peut abîmer les murs ou le sol du balcon ?",
+          question:
+            "Est-ce que le nettoyage peut abîmer les murs ou le sol du balcon ?",
           answer:
             "<strong>Non.</strong> Nous adaptons notre méthode aux matériaux : béton, carrelage, métal, peinture. Si les supports sont déjà altérés par l'acidité des fientes, nous nettoyons sans aggraver les dégâts. En cas de fragilité importante, nous vous alertons avant intervention.",
         },
@@ -363,17 +344,11 @@ const city: City = {
         "Possibilité de compte-rendu ou de passage récurrent sur demande (professionnels ou familles sensibles).",
       ],
 
-      uniqueIntro: `<p>Dans les logements de <strong>Noisy-le-Grand</strong>, les textiles d'ameublement sont soumis à rude épreuve : enfants qui jouent, animaux de compagnie, passages fréquents. Résultat : les canapés s'imprègnent de taches de nourriture ou de boisson, les tapis captent la poussière ambiante, et les matelas deviennent peu à peu un refuge pour les acariens. Les odeurs s'installent, les tissus ternissent, et même en nettoyant régulièrement, une sensation d'inconfort ou de saleté peut persister.</p>
-<p class="mt-4">Au-delà de l'apparence, c'est aussi une question d'<strong>hygiène et de qualité de vie.</strong> Un nettoyage professionnel permet de retirer les taches incrustées, les allergènes et les salissures invisibles, pour retrouver un intérieur plus sain et agréable à vivre.</p>`,
+      uniqueIntro:
+        "<p>Dans les logements de <strong>Noisy-le-Grand</strong>, les textiles d'ameublement sont soumis à rude épreuve : enfants qui jouent, animaux de compagnie, passages fréquents. Résultat : les canapés s'imprègnent de taches de nourriture ou de boisson, les tapis captent la poussière ambiante, et les matelas deviennent peu à peu un refuge pour les acariens. Les odeurs s'installent, les tissus ternissent, et même en nettoyant régulièrement, une sensation d'inconfort ou de saleté peut persister.</p>\n<p class=\"mt-4\">Au-delà de l'apparence, c'est aussi une question d'<strong>hygiène et de qualité de vie.</strong> Un nettoyage professionnel permet de retirer les taches incrustées, les allergènes et les salissures invisibles, pour retrouver un intérieur plus sain et agréable à vivre.</p>",
 
-      uniqueDeepDive: `<h3>Inspection et prétraitement ciblé des taches</h3>
-<p>Nous intervenons à domicile sur rendez-vous, avec un matériel adapté et une <strong>méthode rigoureuse</strong>. Après une inspection des textiles (nature, tissage, état), nous ciblons les taches les plus marquées à l'aide de prétraitements spécifiques : urine, graisses, taches alimentaires. Chaque produit est choisi en fonction du textile, sans agressivité inutile.</p>
-
-<h3>Nettoyage en profondeur par injection-extraction</h3>
-<p class="mt-4">Le nettoyage se fait ensuite par <strong>injection-extraction ou à la mousse sèche</strong> selon le support, afin de décoller les salissures en profondeur tout en respectant les fibres. Nous accordons une attention particulière au séchage. Nous conseillons une bonne aération de la pièce et, si nécessaire, nous déplaçons certains objets pour garantir une évaporation optimale. Nous intervenons en limitant les nuisances (bruit, humidité) et en respectant les contraintes du logement.</p>
-
-<h3>Conseils d'entretien pour un résultat durable</h3>
-<p class="mt-4">En fin d'intervention, nous vous donnons des <strong>conseils simples d'entretien</strong> pour préserver les résultats dans la durée : aspiration régulière, taches à traiter rapidement, protection des zones sensibles les plus exposées aux accidents du quotidien.</p>`,
+      uniqueDeepDive:
+        "<h3>Inspection et prétraitement ciblé des taches</h3>\n<p>Nous intervenons à domicile sur rendez-vous, avec un matériel adapté et une <strong>méthode rigoureuse</strong>. Après une inspection des textiles (nature, tissage, état), nous ciblons les taches les plus marquées à l'aide de prétraitements spécifiques : urine, graisses, taches alimentaires. Chaque produit est choisi en fonction du textile, sans agressivité inutile.</p>\n\n<h3>Nettoyage en profondeur par injection-extraction</h3>\n<p class=\"mt-4\">Le nettoyage se fait ensuite par <strong>injection-extraction ou à la mousse sèche</strong> selon le support, afin de décoller les salissures en profondeur tout en respectant les fibres. Nous accordons une attention particulière au séchage. Nous conseillons une bonne aération de la pièce et, si nécessaire, nous déplaçons certains objets pour garantir une évaporation optimale. Nous intervenons en limitant les nuisances (bruit, humidité) et en respectant les contraintes du logement.</p>\n\n<h3>Conseils d'entretien pour un résultat durable</h3>\n<p class=\"mt-4\">En fin d'intervention, nous vous donnons des <strong>conseils simples d'entretien</strong> pour préserver les résultats dans la durée : aspiration régulière, taches à traiter rapidement, protection des zones sensibles les plus exposées aux accidents du quotidien.</p>",
 
       specificChallenges: [
         "À Noisy-le-Grand, de nombreux foyers accueillent enfants et animaux : les tissus sont vite sollicités.",
@@ -389,12 +364,14 @@ const city: City = {
             "<strong>Oui.</strong> Le nettoyage par injection-extraction ou mousse sèche permet d'éliminer une grande partie des allergènes, acariens et poussières incrustées. Nous utilisons des produits adaptés aux textiles et sans résidus nocifs. Le résultat est un textile plus sain, particulièrement utile pour les <strong>personnes allergiques ou les enfants sensibles.</strong>",
         },
         {
-          question: "Pouvez-vous traiter les taches d'urine ou les mauvaises odeurs ?",
+          question:
+            "Pouvez-vous traiter les taches d'urine ou les mauvaises odeurs ?",
           answer:
             "<strong>Oui.</strong> Nous appliquons un prétraitement spécifique sur les zones concernées, puis procédons à un nettoyage profond. Cela permet d'éliminer les taches organiques et de réduire fortement les odeurs. Dans les cas plus anciens ou imprégnés, un deuxième passage peut être conseillé pour un résultat optimal.",
         },
         {
-          question: "Combien de temps faut-il pour que les tissus sèchent complètement ?",
+          question:
+            "Combien de temps faut-il pour que les tissus sèchent complètement ?",
           answer:
             "Cela dépend du textile, de l'humidité ambiante et de l'aération. En général, un canapé ou un matelas met entre <strong>4 et 8 heures</strong> à sécher. Nous vous indiquons les précautions à prendre pour faciliter le séchage et éviter toute gêne dans votre quotidien.",
         },
@@ -407,128 +384,112 @@ const city: City = {
       ctaOverride: "",
     },
 
-
     {
-  serviceKey: "terrasses",
-  heroDescription:
-    "Remise en état complète de votre terrasse avec traitement adapté au revêtement, élimination des mousses et dépôts végétaux, et protection préventive contre l'humidité des bords de Marne.",
-  whyUsBullets: [
-    "Intervention dans tous les quartiers noiséens : centre-ville, Richardets, Marnois, Butte Verte, bords de Marne, Yvris.",
-    "Protocole ajusté aux constructions locales : dalles des pavillons, grès cérame des résidences récentes, bois des terrasses contemporaines.",
-    "Précautions rigoureuses pour les abords : bâchage du mobilier, protection des massifs plantés, maîtrise des eaux de rinçage.",
-  ],
-  uniqueIntro: `<p>Dans les quartiers résidentiels de <strong>Noisy-le-Grand</strong>, des Richardets aux abords du Marnois, les terrasses exposées à l'humidité de la Marne et à l'ombre des arbres développent rapidement mousses, algues et lichens. Ce voile verdâtre rend les surfaces glissantes après la pluie et altère l'aspect général du logement, particulièrement visible sur les dalles claires ou les bois naturels.</p>
-<p class="mt-4">Les zones pavillonnaires du centre-ville comme les résidences récentes de l'écoquartier Île de la Marne présentent des revêtements variés — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong>, <strong>bois composite</strong> — qui nécessitent chacun une approche spécifique. Un traitement inadapté peut dégrader les joints, altérer la teinte du bois ou attaquer la surface des pierres poreuses.</p>
-<p class="mt-4">Le diagnostic initial identifie le type de support et son état pour déterminer le protocole approprié : produit alcalin, neutre ou spécifique bois, brossage adapté, rinçage à pression calibrée. L'objectif reste une remise au propre durable sans fragiliser le revêtement.</p>`,
-uniqueDeepDive: `<h3>Préparation et protection des abords</h3>
-<p>Le mobilier de jardin, les jardinières et équipements extérieurs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées. Un balayage préliminaire retire les débris végétaux — feuilles, pollens, brindilles — fréquents dans cette commune bordée par le bois Saint-Martin et les espaces verts des bords de Marne.</p>
+      serviceKey: "terrasses",
+      heroDescription:
+        "Remise en état complète de votre terrasse avec traitement adapté au revêtement, élimination des mousses et dépôts végétaux, et protection préventive contre l'humidité des bords de Marne.",
+      whyUsBullets: [
+        "Intervention dans tous les quartiers noiséens : centre-ville, Richardets, Marnois, Butte Verte, bords de Marne, Yvris.",
+        "Protocole ajusté aux constructions locales : dalles des pavillons, grès cérame des résidences récentes, bois des terrasses contemporaines.",
+        "Précautions rigoureuses pour les abords : bâchage du mobilier, protection des massifs plantés, maîtrise des eaux de rinçage.",
+      ],
+      uniqueIntro:
+        "<p>Dans les quartiers résidentiels de <strong>Noisy-le-Grand</strong>, des Richardets aux abords du Marnois, les terrasses exposées à l'humidité de la Marne et à l'ombre des arbres développent rapidement mousses, algues et lichens. Ce voile verdâtre rend les surfaces glissantes après la pluie et altère l'aspect général du logement, particulièrement visible sur les dalles claires ou les bois naturels.</p>\n<p class=\"mt-4\">Les zones pavillonnaires du centre-ville comme les résidences récentes de l'écoquartier Île de la Marne présentent des revêtements variés — <strong>dalles béton</strong>, <strong>carrelage grès cérame</strong>, <strong>pierre reconstituée</strong>, <strong>bois composite</strong> — qui nécessitent chacun une approche spécifique. Un traitement inadapté peut dégrader les joints, altérer la teinte du bois ou attaquer la surface des pierres poreuses.</p>\n<p class=\"mt-4\">Le diagnostic initial identifie le type de support et son état pour déterminer le protocole approprié : produit alcalin, neutre ou spécifique bois, brossage adapté, rinçage à pression calibrée. L'objectif reste une remise au propre durable sans fragiliser le revêtement.</p>",
+      uniqueDeepDive:
+        "<h3>Préparation et protection des abords</h3>\n<p>Le mobilier de jardin, les jardinières et équipements extérieurs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées. Un balayage préliminaire retire les débris végétaux — feuilles, pollens, brindilles — fréquents dans cette commune bordée par le bois Saint-Martin et les espaces verts des bords de Marne.</p>\n\n<h3>Traitement adapté au matériau</h3>\n<p>Le produit est sélectionné selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>\n\n<h3>Finitions et recommandations</h3>\n<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité ambiante. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Noisy-le-Grand.</p>",
 
-<h3>Traitement adapté au matériau</h3>
-<p>Le produit est sélectionné selon le support identifié : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre reconstituée et bois composite. L'action mécanique par brossage approprié déloge les incrustations biologiques. Le rinçage s'effectue à pression ajustée pour préserver les joints et la texture de surface.</p>
-
-<h3>Finitions et recommandations</h3>
-<p>Un traitement préventif est appliqué sur les zones les plus exposées à l'humidité ambiante. Les eaux de rinçage sont orientées vers les points d'écoulement existants. Des conseils d'entretien saisonnier sont transmis pour maintenir le résultat face à l'environnement végétal dense de Noisy-le-Grand.</p>`,
-  
-
-specificChallenges: [
-    "Pavillons du centre-ville et des Richardets : dalles béton ou pierre reconstituée parfois posées depuis 30 ans, joints fragilisés par les cycles gel-dégel.",
-    "Résidences récentes de l'écoquartier Île de la Marne : carrelage grès cérame avec micro-reliefs antidérapants piégeant les salissures.",
-    "Terrasses bordant les espaces verts — parc de la Butte Verte, bords de Marne — où l'ombre et l'humidité accélèrent la prolifération des mousses.",
-    "Maisons du quartier des Yvris proches du <strong>bois Saint-Martin</strong> : apports constants de débris végétaux et conditions propices aux algues.",
-    "Logements en bord de Marne exposés aux remontées d'humidité et aux crues, nécessitant un traitement préventif renforcé.",
-  ],
-  faqAdditions: [
-    {
-      question:
-        "Comment traitez-vous les terrasses en pierre reconstituée des pavillons noiséens sans dégrader les joints ?",
-      answer:
-        "<p>Les dalles en pierre reconstituée des quartiers pavillonnaires — centre-ville, Richardets, Yvris — présentent souvent des joints anciens sensibles à la pression. Nous utilisons un produit à pH contrôlé qui élimine les salissures biologiques sans attaquer le matériau. Le brossage mécanique respecte les joints et le rinçage s'effectue à pression modérée pour éviter tout déchaussement.</p>",
+      specificChallenges: [
+        "Pavillons du centre-ville et des Richardets : dalles béton ou pierre reconstituée parfois posées depuis 30 ans, joints fragilisés par les cycles gel-dégel.",
+        "Résidences récentes de l'écoquartier Île de la Marne : carrelage grès cérame avec micro-reliefs antidérapants piégeant les salissures.",
+        "Terrasses bordant les espaces verts — parc de la Butte Verte, bords de Marne — où l'ombre et l'humidité accélèrent la prolifération des mousses.",
+        "Maisons du quartier des Yvris proches du <strong>bois Saint-Martin</strong> : apports constants de débris végétaux et conditions propices aux algues.",
+        "Logements en bord de Marne exposés aux remontées d'humidité et aux crues, nécessitant un traitement préventif renforcé.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Comment traitez-vous les terrasses en pierre reconstituée des pavillons noiséens sans dégrader les joints ?",
+          answer:
+            "<p>Les dalles en pierre reconstituée des quartiers pavillonnaires — centre-ville, Richardets, Yvris — présentent souvent des joints anciens sensibles à la pression. Nous utilisons un produit à pH contrôlé qui élimine les salissures biologiques sans attaquer le matériau. Le brossage mécanique respecte les joints et le rinçage s'effectue à pression modérée pour éviter tout déchaussement.</p>",
+        },
+        {
+          question:
+            "Ma terrasse reverdit rapidement à cause de la proximité des bords de Marne, quelle solution proposez-vous ?",
+          answer:
+            "<p>La densité des espaces verts noiséens — bois Saint-Martin, parc de la Butte Verte, promenade des bords de Marne — génère une humidité constante propice à la repousse rapide des mousses. Après le nettoyage complet, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous dans l'écoquartier Île de la Marne sur les terrasses des constructions récentes ?",
+          answer:
+            "<p>Les résidences de l'écoquartier présentent généralement des terrasses en carrelage grès cérame ou en bois composite. Nos produits et méthodes sont adaptés à ces matériaux contemporains. Le grès cérame avec ses micro-reliefs antidérapants nécessite un brossage spécifique pour déloger les salissures incrustées, tandis que le bois composite reçoit un traitement neutre qui préserve sa teinte et sa structure.</p>",
+        },
+        {
+          question:
+            "Quelle différence entre un passage au nettoyeur haute pression et votre prestation sur une terrasse en dalle béton ?",
+          answer:
+            "<p>Les dalles béton des pavillons noiséens, souvent posées dans les années 80-90, présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader le support ni déchausser les joints fragilisés par les hivers franciliens.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
+
     {
-      question:
-        "Ma terrasse reverdit rapidement à cause de la proximité des bords de Marne, quelle solution proposez-vous ?",
-      answer:
-        "<p>La densité des espaces verts noiséens — bois Saint-Martin, parc de la Butte Verte, promenade des bords de Marne — génère une humidité constante propice à la repousse rapide des mousses. Après le nettoyage complet, nous appliquons un traitement préventif sur les zones concernées. Un balayage régulier des débris végétaux et une nouvelle application annuelle permettent de maintenir le résultat.</p>",
+      serviceKey: "nettoyage-appartement-maison",
+
+      heroDescription:
+        "À Noisy-le-Grand, nettoyage structuré pour logements récents ou collectifs denses : remise en état rapide après déménagement, travaux ou rotation locative, avec attention portée aux sols et cuisines.",
+
+      whyUsBullets: [
+        "Approche “multi-typologies” : mêmes standards de finitions pour un appartement à Mont d’Est, une résidence du Pavé Neuf ou un pavillon aux Richardets/Yvris.",
+        "Logistique maîtrisée en zone dense : stationnement/parkings souterrains, créneaux à éviter autour des gares et du centre commercial, accès par badges et gardiens.",
+        "Gestion des salissures locales : poussières de chantier (Noisy-Champs / Maille Horizon), suie et dépôts sur vitrages/balcons (A4), piétinement fort lié aux flux RER A/RER E.",
+      ],
+
+      uniqueIntro:
+        '<p>Noisy-le-Grand, c’est une ville où le service “nettoyage appartement/maison” doit être <strong>calibré au quartier</strong>. Entre Mont d’Est (bureaux, dalles, flux), les grands ensembles et architectures post-modernes (Pavé Neuf, Abraxas, Arènes de Picasso), et les zones pavillonnaires plus calmes (Richardets, Yvris), on n’a ni les mêmes accès, ni les mêmes contraintes, ni les mêmes attentes.</p>\n<p class="mt-4">Dans les secteurs proches des gares RER A (Mont d’Est, Noisy-Champs) et du centre commercial, la difficulté est souvent l’organisation : arrivées, badges, gardiens, parkings souterrains, et <strong>horaires sensibles</strong> (pics pendulaires). Côté salissures, on retrouve du piétinement marqué, de la poussière ferroviaire, et — autour de Noisy-Champs — des poussières fines liées aux travaux et aux aménagements.</p>\n<p class="mt-4">À l’inverse, sur les bords de Marne et dans les quartiers pavillonnaires, on intervient davantage sur des volumes plus grands et des finitions “maison” : vitres, cuisines, salles d’eau, et sols à préserver. La signature de Noisy, c’est aussi ses bâtiments iconiques : <strong>Abraxas</strong> et les <strong>Arènes de Picasso</strong> demandent parfois une approche spécifique sur les vitrages et les communs, avec un rendu net sans traces, même sur des surfaces plus complexes.</p>',
+
+      uniqueDeepDive:
+        "<h3>Mont d’Est — fin de bail, rotation et contraintes de flux</h3>\n<p>Autour des gares RER A et des zones tertiaires, les demandes typiques sont la remise en état rapide (sortie locataire, remise en location) et le nettoyage ponctuel “niveau état des lieux”. L’enjeu est surtout l’efficacité : accès par badge/Vigik, créneaux à éviter, et parfois passage par parking souterrain. On déroule en séquence : cuisine/salle d’eau, surfaces, sols, puis finitions visibles.</p>\n\n<h3>Pavé Neuf / Abraxas / Picasso — résidences denses et vitrages atypiques</h3>\n<p>Dans ces ensembles, l’accès (digicodes, gardiens) et les circulations peuvent être plus structurants que la surface elle-même. On adapte l’intervention au logement et au bâtiment : poussière dans les entrées, traces sur vitres, et contraintes de stationnement. Sur certains logements, les vitrages/baies et les matériaux demandent un contrôle rigoureux pour éviter les reprises et obtenir un rendu homogène.</p>\n\n<h3>Richardets / Yvris / Bords de Marne — maisons, volumes et “rendu premium”</h3>\n<p>Les quartiers pavillonnaires et les bords de Marne amènent d’autres profils : grands ménages, après-travaux, nettoyage avant emménagement. Ici, on priorise la protection des sols, la gestion du calcaire en salle d’eau, et la clarté des vitres. La gare RER E des Yvris apporte aussi des allers-retours quotidiens : l’entrée et les zones de passage sont souvent les plus marquées.</p>",
+
+      specificChallenges: [
+        "Flux très élevés autour des gares RER A (Mont d’Est / Noisy-Champs) : créneaux pendulaires à éviter et accès parfois contraints.",
+        "Accès résidences : badges/Vigik/interphones et gardiens fréquents dans les grands ensembles et résidences denses.",
+        "Poussières fines de chantiers et aménagements (Noisy-Champs / Maille Horizon / GPE) : besoin d’un dépoussiérage en plusieurs passes.",
+        "Pollution et dépôts sur vitrages/balcons à proximité de l’A4 et des axes internes (Mont d’Est).",
+        "Vitrages et configurations atypiques (Abraxas / Picasso) : risque de reprises visibles si méthode inadaptée.",
+        "Stationnement variable : souvent compliqué en zone tertiaire et centre, plus simple en pavillonnaire (Richardets/Yvris).",
+      ],
+
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous à Noisy-le-Grand (93160) pour un nettoyage “état des lieux” près des gares RER ?",
+          answer:
+            "<p>Oui. On vise un rendu propre et lisible : cuisine/salle d’eau (dégraissage + calcaire), sols, vitres accessibles, puis finitions (plinthes, poignées, interrupteurs). À Noisy, on anticipe surtout l’accès (badge/gardien) et le stationnement autour des gares RER A.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous nettoyer après travaux dans le secteur Noisy-Champs / Maille Horizon ?",
+          answer:
+            "<p>Oui. Après travaux, la difficulté principale est la poussière fine (plâtre, coupe, ponçage) qui se redépose. On procède par étapes : dépoussiérage minutieux (surfaces/menusieries), puis sols, puis contrôle final des zones sensibles (rebords, prises, plinthes).</p>",
+        },
+        {
+          question:
+            "Faites-vous les vitres dans des résidences comme Abraxas ou les Arènes de Picasso ?",
+          answer:
+            "<p>Oui, sur les vitrages accessibles du logement. On travaille pour éviter les reprises (traces à contre-jour) et obtenir un rendu homogène. L’accès en résidence (Vigik/gardien) est vérifié en amont pour ne pas perdre de temps sur place.</p>",
+        },
+        {
+          question:
+            "Comment gérez-vous la logistique quand le stationnement est compliqué à Mont d’Est ?",
+          answer:
+            "<p>On planifie l’arrivée (créneau, point de déchargement, parking souterrain si nécessaire) et on optimise l’ordre des tâches pour limiter les allers-retours. C’est souvent ce qui permet de tenir des délais réalistes en zone tertiaire dense.</p>",
+        },
+      ],
+
+      ctaOverride: "",
     },
-    {
-      question:
-        "Intervenez-vous dans l'écoquartier Île de la Marne sur les terrasses des constructions récentes ?",
-      answer:
-        "<p>Les résidences de l'écoquartier présentent généralement des terrasses en carrelage grès cérame ou en bois composite. Nos produits et méthodes sont adaptés à ces matériaux contemporains. Le grès cérame avec ses micro-reliefs antidérapants nécessite un brossage spécifique pour déloger les salissures incrustées, tandis que le bois composite reçoit un traitement neutre qui préserve sa teinte et sa structure.</p>",
-    },
-    {
-      question:
-        "Quelle différence entre un passage au nettoyeur haute pression et votre prestation sur une terrasse en dalle béton ?",
-      answer:
-        "<p>Les dalles béton des pavillons noiséens, souvent posées dans les années 80-90, présentent une porosité et des joints qui ne supportent pas un jet haute pression standard. Notre protocole associe un produit alcalin adapté, un brossage mécanique ciblé et un rinçage à pression calibrée qui nettoie en profondeur sans dégrader le support ni déchausser les joints fragilisés par les hivers franciliens.</p>",
-    },
-  ],
-  ctaOverride: "",
-},
-
-
-    {
-  serviceKey: "nettoyage-appartement-maison",
-
-  heroDescription:
-    "À Noisy-le-Grand, nettoyage structuré pour logements récents ou collectifs denses : remise en état rapide après déménagement, travaux ou rotation locative, avec attention portée aux sols et cuisines.",
-
-  whyUsBullets: [
-    "Approche “multi-typologies” : mêmes standards de finitions pour un appartement à Mont d’Est, une résidence du Pavé Neuf ou un pavillon aux Richardets/Yvris.",
-    "Logistique maîtrisée en zone dense : stationnement/parkings souterrains, créneaux à éviter autour des gares et du centre commercial, accès par badges et gardiens.",
-    "Gestion des salissures locales : poussières de chantier (Noisy-Champs / Maille Horizon), suie et dépôts sur vitrages/balcons (A4), piétinement fort lié aux flux RER A/RER E.",
-  ],
-
-  uniqueIntro: `<p>Noisy-le-Grand, c’est une ville où le service “nettoyage appartement/maison” doit être <strong>calibré au quartier</strong>. Entre Mont d’Est (bureaux, dalles, flux), les grands ensembles et architectures post-modernes (Pavé Neuf, Abraxas, Arènes de Picasso), et les zones pavillonnaires plus calmes (Richardets, Yvris), on n’a ni les mêmes accès, ni les mêmes contraintes, ni les mêmes attentes.</p>
-<p class="mt-4">Dans les secteurs proches des gares RER A (Mont d’Est, Noisy-Champs) et du centre commercial, la difficulté est souvent l’organisation : arrivées, badges, gardiens, parkings souterrains, et <strong>horaires sensibles</strong> (pics pendulaires). Côté salissures, on retrouve du piétinement marqué, de la poussière ferroviaire, et — autour de Noisy-Champs — des poussières fines liées aux travaux et aux aménagements.</p>
-<p class="mt-4">À l’inverse, sur les bords de Marne et dans les quartiers pavillonnaires, on intervient davantage sur des volumes plus grands et des finitions “maison” : vitres, cuisines, salles d’eau, et sols à préserver. La signature de Noisy, c’est aussi ses bâtiments iconiques : <strong>Abraxas</strong> et les <strong>Arènes de Picasso</strong> demandent parfois une approche spécifique sur les vitrages et les communs, avec un rendu net sans traces, même sur des surfaces plus complexes.</p>`,
-
-  uniqueDeepDive: `<h3>Mont d’Est — fin de bail, rotation et contraintes de flux</h3>
-<p>Autour des gares RER A et des zones tertiaires, les demandes typiques sont la remise en état rapide (sortie locataire, remise en location) et le nettoyage ponctuel “niveau état des lieux”. L’enjeu est surtout l’efficacité : accès par badge/Vigik, créneaux à éviter, et parfois passage par parking souterrain. On déroule en séquence : cuisine/salle d’eau, surfaces, sols, puis finitions visibles.</p>
-
-<h3>Pavé Neuf / Abraxas / Picasso — résidences denses et vitrages atypiques</h3>
-<p>Dans ces ensembles, l’accès (digicodes, gardiens) et les circulations peuvent être plus structurants que la surface elle-même. On adapte l’intervention au logement et au bâtiment : poussière dans les entrées, traces sur vitres, et contraintes de stationnement. Sur certains logements, les vitrages/baies et les matériaux demandent un contrôle rigoureux pour éviter les reprises et obtenir un rendu homogène.</p>
-
-<h3>Richardets / Yvris / Bords de Marne — maisons, volumes et “rendu premium”</h3>
-<p>Les quartiers pavillonnaires et les bords de Marne amènent d’autres profils : grands ménages, après-travaux, nettoyage avant emménagement. Ici, on priorise la protection des sols, la gestion du calcaire en salle d’eau, et la clarté des vitres. La gare RER E des Yvris apporte aussi des allers-retours quotidiens : l’entrée et les zones de passage sont souvent les plus marquées.</p>`,
-
-  specificChallenges: [
-    "Flux très élevés autour des gares RER A (Mont d’Est / Noisy-Champs) : créneaux pendulaires à éviter et accès parfois contraints.",
-    "Accès résidences : badges/Vigik/interphones et gardiens fréquents dans les grands ensembles et résidences denses.",
-    "Poussières fines de chantiers et aménagements (Noisy-Champs / Maille Horizon / GPE) : besoin d’un dépoussiérage en plusieurs passes.",
-    "Pollution et dépôts sur vitrages/balcons à proximité de l’A4 et des axes internes (Mont d’Est).",
-    "Vitrages et configurations atypiques (Abraxas / Picasso) : risque de reprises visibles si méthode inadaptée.",
-    "Stationnement variable : souvent compliqué en zone tertiaire et centre, plus simple en pavillonnaire (Richardets/Yvris).",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Intervenez-vous à Noisy-le-Grand (93160) pour un nettoyage “état des lieux” près des gares RER ?",
-      answer: `<p>Oui. On vise un rendu propre et lisible : cuisine/salle d’eau (dégraissage + calcaire), sols, vitres accessibles, puis finitions (plinthes, poignées, interrupteurs). À Noisy, on anticipe surtout l’accès (badge/gardien) et le stationnement autour des gares RER A.</p>`,
-    },
-    {
-      question:
-        "Pouvez-vous nettoyer après travaux dans le secteur Noisy-Champs / Maille Horizon ?",
-      answer: `<p>Oui. Après travaux, la difficulté principale est la poussière fine (plâtre, coupe, ponçage) qui se redépose. On procède par étapes : dépoussiérage minutieux (surfaces/menusieries), puis sols, puis contrôle final des zones sensibles (rebords, prises, plinthes).</p>`,
-    },
-    {
-      question:
-        "Faites-vous les vitres dans des résidences comme Abraxas ou les Arènes de Picasso ?",
-      answer: `<p>Oui, sur les vitrages accessibles du logement. On travaille pour éviter les reprises (traces à contre-jour) et obtenir un rendu homogène. L’accès en résidence (Vigik/gardien) est vérifié en amont pour ne pas perdre de temps sur place.</p>`,
-    },
-    {
-      question:
-        "Comment gérez-vous la logistique quand le stationnement est compliqué à Mont d’Est ?",
-      answer: `<p>On planifie l’arrivée (créneau, point de déchargement, parking souterrain si nécessaire) et on optimise l’ordre des tâches pour limiter les allers-retours. C’est souvent ce qui permet de tenir des délais réalistes en zone tertiaire dense.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-
   ],
 };
 

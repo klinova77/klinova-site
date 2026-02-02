@@ -15,17 +15,17 @@ const city: City = {
     "Commune du Val-de-Marne desservie par le RER A, Joinville-le-Pont se structure autour des rives de la Marne et du canal. Les quartiers résidentiels comme Polangis et l'habitat collectif du secteur Paris génèrent des besoins réguliers d'entretien des surfaces, accentués par l'humidité fluviale et la proximité de la Nationale 4.",
 
   hubIntro:
-    '<p>Klinova intervient à Joinville-le-Pont auprès des copropriétés, des particuliers et des gestionnaires immobiliers pour l\'entretien des surfaces et la maintenance des équipements collectifs. Nous connaissons les spécificités locales : l\'humidité des bords de Marne qui favorise les dépôts verts sur les balcons, les flux autour de la gare RER A, et les contraintes d\'accès dans les quartiers pavillonnaires comme Polangis ou l\'Île Fanac.</p>\n' +
-    '\n' +
-    '<p>Nos équipes adaptent leurs méthodes aux différentes typologies de bâti, des immeubles collectifs de Vautier-Leclerc aux maisons des bords de Marne, en passant par les copropriétés de l\'axe rue de Paris. Chaque intervention est organisée en fonction des contraintes de stationnement autour de la N4 et de l\'Avenue des Canadiens, et documentée par un compte-rendu détaillé transmis au syndic ou au propriétaire.</p>\n' +
-    '\n' +
-    '<ul>\n' +
-    '  <li><strong>Domaines d\'intervention à Joinville-le-Pont :</strong></li>\n' +
-    '  <li><strong>Entretien des surfaces textiles en copropriété</strong> : nettoyage des moquettes dans les halls, escaliers et paliers des immeubles du quartier Paris et de Vautier-Leclerc, avec machines d\'injection-extraction adaptées aux volumes de passage quotidiens et aux contraintes d\'accès.</li>\n' +
-    '  <li><strong>Décrassage des parkings souterrains</strong> : traitement des sols béton et résine, élimination des taches d\'hydrocarbures et remise en lisibilité des marquages dans les parkings des copropriétés du quartier Paris et de Vautier-Leclerc, avec gestion rigoureuse des eaux de lavage.</li>\n' +
-    '  <li><strong>Remise en état des balcons et terrasses</strong> : nettoyage professionnel pour les particuliers de Polangis, des bords de Marne et de l\'Île Fanac, avec traitement adapté aux dépôts verts liés à l\'humidité fluviale et maîtrise de l\'écoulement des eaux.</li>\n' +
-    '  <li><strong>Rafraîchissement des textiles domestiques</strong> : intervention à domicile pour canapés, tapis et matelas dans les quartiers résidentiels, avec protocoles d\'injection-extraction et conseils d\'entretien adaptés aux familles.</li>\n' +
-    '</ul>',
+    "<p>Klinova intervient à Joinville-le-Pont auprès des copropriétés, des particuliers et des gestionnaires immobiliers pour l'entretien des surfaces et la maintenance des équipements collectifs. Nous connaissons les spécificités locales : l'humidité des bords de Marne qui favorise les dépôts verts sur les balcons, les flux autour de la gare RER A, et les contraintes d'accès dans les quartiers pavillonnaires comme Polangis ou l'Île Fanac.</p>\n" +
+    "\n" +
+    "<p>Nos équipes adaptent leurs méthodes aux différentes typologies de bâti, des immeubles collectifs de Vautier-Leclerc aux maisons des bords de Marne, en passant par les copropriétés de l'axe rue de Paris. Chaque intervention est organisée en fonction des contraintes de stationnement autour de la N4 et de l'Avenue des Canadiens, et documentée par un compte-rendu détaillé transmis au syndic ou au propriétaire.</p>\n" +
+    "\n" +
+    "<ul>\n" +
+    "  <li><strong>Domaines d'intervention à Joinville-le-Pont :</strong></li>\n" +
+    "  <li><strong>Entretien des surfaces textiles en copropriété</strong> : nettoyage des moquettes dans les halls, escaliers et paliers des immeubles du quartier Paris et de Vautier-Leclerc, avec machines d'injection-extraction adaptées aux volumes de passage quotidiens et aux contraintes d'accès.</li>\n" +
+    "  <li><strong>Décrassage des parkings souterrains</strong> : traitement des sols béton et résine, élimination des taches d'hydrocarbures et remise en lisibilité des marquages dans les parkings des copropriétés du quartier Paris et de Vautier-Leclerc, avec gestion rigoureuse des eaux de lavage.</li>\n" +
+    "  <li><strong>Remise en état des balcons et terrasses</strong> : nettoyage professionnel pour les particuliers de Polangis, des bords de Marne et de l'Île Fanac, avec traitement adapté aux dépôts verts liés à l'humidité fluviale et maîtrise de l'écoulement des eaux.</li>\n" +
+    "  <li><strong>Rafraîchissement des textiles domestiques</strong> : intervention à domicile pour canapés, tapis et matelas dans les quartiers résidentiels, avec protocoles d'injection-extraction et conseils d'entretien adaptés aux familles.</li>\n" +
+    "</ul>",
 
   citySpecificChallenges: [
     "Humidité persistante et dépôts verts sur les balcons et terrasses des quartiers Polangis, Marne et Île Fanac en raison de la proximité immédiate des bords de Marne et du canal, générant mousses et traces verdâtres sur les supports poreux.",
@@ -34,21 +34,28 @@ const city: City = {
     "Contraintes de circulation et de stationnement autour de la gare RER A et de l'Avenue des Canadiens imposant une planification précise des interventions pour limiter la gêne et optimiser les temps d'accès.",
   ],
 
-  districts: ["Polangis", "Palissy", "Île Fanac", "Marne", "Paris", "Vautier-Leclerc", "Europe"],
-  
-nearbyCities: [
-        "nogent-sur-marne",
-        "saint-maur-des-fosses",
-        "maisons-alfort",
-        "fontenay-sous-bois",
-        "le-perreux-sur-marne",
-        "vincennes",
-        "champigny-sur-marne",
-        "creteil",
-        "saint-mande",
-        "alfortville"
-      ],
+  districts: [
+    "Polangis",
+    "Palissy",
+    "Île Fanac",
+    "Marne",
+    "Paris",
+    "Vautier-Leclerc",
+    "Europe",
+  ],
 
+  nearbyCities: [
+    "nogent-sur-marne",
+    "saint-maur-des-fosses",
+    "maisons-alfort",
+    "fontenay-sous-bois",
+    "le-perreux-sur-marne",
+    "vincennes",
+    "champigny-sur-marne",
+    "creteil",
+    "saint-mande",
+    "alfortville",
+  ],
 
   landmarks: [
     "Mairie de Joinville-le-Pont",
@@ -64,20 +71,23 @@ nearbyCities: [
       question:
         "Comment gérez-vous les interventions dans les secteurs où l'accès est difficile, comme autour de la gare RER A ou le long de l'Avenue des Canadiens ?",
       answer:
-        '<p>Les abords de la gare RER A de Joinville-le-Pont et l\'axe de la Nationale 4 (Avenue des Canadiens) présentent des <strong>contraintes de stationnement</strong> et de <strong>circulation dense</strong> aux heures de pointe. Nous planifions nos interventions en tenant compte de ces paramètres : passages matinaux avant 8h ou en milieu de journée après le pic de flux, repérage préalable des zones de déchargement et validation des accès avec le syndic ou le propriétaire. Pour les quartiers pavillonnaires comme Polangis ou l\'Île Fanac, nous adaptons notre matériel aux contraintes d\'accès spécifiques.</p>',
+        "<p>Les abords de la gare RER A de Joinville-le-Pont et l'axe de la Nationale 4 (Avenue des Canadiens) présentent des <strong>contraintes de stationnement</strong> et de <strong>circulation dense</strong> aux heures de pointe. Nous planifions nos interventions en tenant compte de ces paramètres : passages matinaux avant 8h ou en milieu de journée après le pic de flux, repérage préalable des zones de déchargement et validation des accès avec le syndic ou le propriétaire. Pour les quartiers pavillonnaires comme Polangis ou l'Île Fanac, nous adaptons notre matériel aux contraintes d'accès spécifiques.</p>",
     },
     {
-      question: "Vous déplacez-vous gratuitement pour établir un devis à Joinville-le-Pont ?",
+      question:
+        "Vous déplacez-vous gratuitement pour établir un devis à Joinville-le-Pont ?",
       answer:
         "<p>Oui. Nous nous déplaçons <strong>sans frais</strong> dans tous les quartiers de Joinville-le-Pont, de Polangis au quartier Europe, pour établir un diagnostic précis. Cette visite permet d'évaluer la surface à traiter, le type de revêtement, les contraintes d'accès (badges, digicodes, accès pavillonnaire) et les éventuelles spécificités techniques liées à l'humidité des bords de Marne. Vous recevez ensuite une <strong>proposition détaillée</strong>, sans engagement, tenant compte de la configuration réelle du site.</p>",
     },
     {
-      question: "Intervenez-vous rapidement en cas d'urgence (sinistre, fin de chantier) ?",
+      question:
+        "Intervenez-vous rapidement en cas d'urgence (sinistre, fin de chantier) ?",
       answer:
         "<p>Oui. Nous mobilisons nos équipes pour des <strong>interventions urgentes</strong> à Joinville-le-Pont, notamment après un dégât des eaux, une pollution accidentelle ou une livraison de chantier nécessitant une remise en état rapide. Nous établissons un diagnostic par téléphone, confirmons la faisabilité technique et planifions le passage sous 24 à 48 heures selon disponibilité. Le matériel déployé (autolaveuse, injection-extraction, haute pression) est adapté à la nature de l'urgence et aux surfaces concernées.</p>",
     },
     {
-      question: "Proposez-vous des contrats d'entretien régulier pour les copropriétés ?",
+      question:
+        "Proposez-vous des contrats d'entretien régulier pour les copropriétés ?",
       answer:
         "<p>Oui. Nous mettons en place des <strong>contrats d'entretien annuels</strong> pour les syndics et gestionnaires souhaitant planifier les interventions de manière préventive (nettoyage de moquettes tous les 12 à 18 mois, décrassage de parkings semestriel ou annuel). Chaque passage fait l'objet d'un <strong>compte-rendu écrit</strong> transmis au syndic, détaillant les surfaces traitées, les produits utilisés et les éventuelles observations techniques. Cette approche facilite la gestion budgétaire et évite l'accumulation de salissures.</p>",
     },
@@ -108,9 +118,9 @@ nearbyCities: [
 
       uniqueIntro:
         "<p>Dans les halls des immeubles du quartier Paris ou des copropriétés de Vautier-Leclerc, les moquettes accumulent jour après jour les traces du passage : semelles boueuses après la pluie, poussières fines remontées depuis l'Avenue des Canadiens, marques grises devant les ascenseurs et les boîtes aux lettres. Les résidents qui empruntent quotidiennement le RER A à la gare de Joinville-le-Pont ramènent avec eux un flux de salissures qui s'incruste progressivement dans les fibres.</p>\n" +
-        '\n' +
-        '<p class="mt-4">Au bout de quelques mois, les moquettes perdent leur éclat d\'origine. Les zones de passage deviennent ternes, les taches résistent à l\'aspirateur, et une impression générale de négligence s\'installe malgré les efforts du gardien ou du personnel d\'entretien. Les copropriétaires posent des questions lors des assemblées générales, les visiteurs remarquent immédiatement l\'état des parties communes, et le syndic cherche des solutions pour éviter un remplacement prématuré qui pèserait lourdement sur le budget.</p>\n' +
-        '\n' +
+        "\n" +
+        "<p class=\"mt-4\">Au bout de quelques mois, les moquettes perdent leur éclat d'origine. Les zones de passage deviennent ternes, les taches résistent à l'aspirateur, et une impression générale de négligence s'installe malgré les efforts du gardien ou du personnel d'entretien. Les copropriétaires posent des questions lors des assemblées générales, les visiteurs remarquent immédiatement l'état des parties communes, et le syndic cherche des solutions pour éviter un remplacement prématuré qui pèserait lourdement sur le budget.</p>\n" +
+        "\n" +
         '<p class="mt-4">Un nettoyage professionnel par injection-extraction élimine les salissures incrustées, ravive les couleurs et redonne aux halls et escaliers un aspect accueillant qui rassure les occupants et valorise le patrimoine immobilier.</p>',
 
       uniqueDeepDive:
@@ -131,7 +141,8 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Les moquettes des copropriétés proches de la gare RER A nécessitent-elles un entretien plus fréquent ?",
+          question:
+            "Les moquettes des copropriétés proches de la gare RER A nécessitent-elles un entretien plus fréquent ?",
           answer:
             "<p>Les copropriétés situées à proximité immédiate de la gare RER A de Joinville-le-Pont subissent effectivement un flux piéton quotidien important qui accélère l'encrassement des halls et des paliers. Nous recommandons généralement un nettoyage tous les 12 mois au lieu de 18 pour ces immeubles, et nous adaptons le nombre de passes d'extraction sur les zones de passage intense pour compenser cette usure accrue.</p>",
         },
@@ -148,7 +159,8 @@ nearbyCities: [
             "<p>La circulation peut généralement reprendre dans les 2 à 4 heures selon la ventilation naturelle des halls et l'humidité ambiante. Nous balisons les zones traitées pendant le séchage et communiquons les délais précis au gardien ou au syndic. Dans les immeubles bien ventilés du quartier Paris ou de Vautier-Leclerc, le séchage est souvent plus rapide grâce aux courants d'air naturels.</p>",
         },
         {
-          question: "Utilisez-vous des produits qui pourraient gêner les résidents allergiques ou sensibles aux odeurs ?",
+          question:
+            "Utilisez-vous des produits qui pourraient gêner les résidents allergiques ou sensibles aux odeurs ?",
           answer:
             "<p>Nous utilisons des produits nettoyants professionnels à faible émission de composés organiques volatils, conçus pour les espaces collectifs fréquentés. Après rinçage complet par extraction, les résidus chimiques sont évacués avec l'eau sale. Une légère odeur neutre peut persister pendant quelques heures, le temps du séchage complet, mais elle disparaît naturellement avec la ventilation sans nécessiter d'aération forcée prolongée.</p>",
         },
@@ -172,9 +184,9 @@ nearbyCities: [
 
       uniqueIntro:
         "<p>Les traces d'huile, les dépôts noirâtres et les murs salis s'accumulent dans les parkings souterrains du quartier Paris ou de Vautier-Leclerc, sous l'effet du va-et-vient quotidien des véhicules et des poussières venues de la Nationale 4 et de l'Avenue des Canadiens. La rotation autour de la gare RER A accentue la fréquence de passage et accélère l'encrassement des zones d'entrée, des rampes et des places proches des circulations principales.</p>\n" +
-        '\n' +
-        '<p class="mt-4">Les tentatives de nettoyage avec des moyens domestiques déplacent temporairement la crasse sans traiter l\'encrassement en profondeur. Les taches d\'hydrocarbures résistent, les sols deviennent glissants par temps humide, et la lisibilité des marquages se dégrade, ce qui alimente les remarques en assemblée générale et les inquiétudes sur la sécurité des circulations.</p>\n' +
-        '\n' +
+        "\n" +
+        "<p class=\"mt-4\">Les tentatives de nettoyage avec des moyens domestiques déplacent temporairement la crasse sans traiter l'encrassement en profondeur. Les taches d'hydrocarbures résistent, les sols deviennent glissants par temps humide, et la lisibilité des marquages se dégrade, ce qui alimente les remarques en assemblée générale et les inquiétudes sur la sécurité des circulations.</p>\n" +
+        "\n" +
         '<p class="mt-4">Un décrassage structuré par autolaveuse et haute pression contrôlée élimine les dépôts incrustés, ravive les revêtements et rétablit un environnement propre et rassurant pour les usagers.</p>',
 
       uniqueDeepDive:
@@ -195,7 +207,8 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Comment organisez-vous le nettoyage pour que les résidents puissent continuer à stationner ?",
+          question:
+            "Comment organisez-vous le nettoyage pour que les résidents puissent continuer à stationner ?",
           answer:
             "<p>Nous travaillons par zones successives : pendant que nous traitons le fond du parking, les résidents peuvent stationner près de l'entrée, puis nous inversons. Pour les petits parkings (moins de 30 places), il est parfois plus simple d'organiser une rotation complète en une seule matinée. Nous validons l'organisation la plus adaptée avec le syndic lors de la visite préalable et communiquons le planning aux résidents par affichage dans les parties communes.</p>",
         },
@@ -206,7 +219,8 @@ nearbyCities: [
             "<p>Oui. La proximité de la Nationale 4 et de la gare génère des poussières routières et un flux de véhicules quotidien qui accélère l'encrassement. Nous adaptons les produits dégraissants et recommandons généralement une fréquence d'entretien légèrement plus élevée (tous les 6 à 12 mois au lieu d'une fois par an) pour éviter que les salissures ne s'incrustent durablement dans les pores du béton.</p>",
         },
         {
-          question: "Les taches d'huile très anciennes peuvent-elles être complètement éliminées ?",
+          question:
+            "Les taches d'huile très anciennes peuvent-elles être complètement éliminées ?",
           answer:
             "<p>Les taches anciennes très incrustées dans le béton poreux peuvent laisser une trace résiduelle malgré le dégraissant professionnel et la haute pression. Nous obtenons généralement une amélioration nette (80 à 90 % d'élimination visuelle), mais ne garantissons pas une disparition totale si l'huile a pénétré profondément. L'objectif est de retrouver un sol propre, non glissant et visuellement acceptable pour les copropriétaires.</p>",
         },
@@ -236,9 +250,9 @@ nearbyCities: [
 
       uniqueIntro:
         "<p>Après un hiver humide au bord de la Marne, le balcon de la maison de Polangis ou de la résidence du quartier Marne devient une zone délaissée : dépôts verts dans les angles, joints noircis, traces de pluie séchée, feuilles accumulées le long du garde-corps. L'humidité fluviale favorise le développement de mousses sur les dalles exposées à l'ombre, et la terre remontée des berges se mélange aux pollens pour former une croûte grisâtre difficile à éliminer.</p>\n" +
-        '\n' +
+        "\n" +
         '<p class="mt-4">Les tentatives de nettoyage au seau et à la brosse donnent un résultat provisoire, mais les joints restent gris, les taches tenaces résistent, et l\'eau coule parfois chez le voisin du dessous ou le long de la façade, créant des tensions dans la copropriété ou avec le voisinage pavillonnaire.</p>\n' +
-        '\n' +
+        "\n" +
         '<p class="mt-4">Une intervention professionnelle élimine les salissures incrustées, ravive les supports et rend l\'espace de nouveau utilisable.</p>',
 
       uniqueDeepDive:
@@ -265,17 +279,20 @@ nearbyCities: [
             "<p>Oui. L'humidité fluviale et l'ombre favorisent le développement de mousses et de dépôts verts sur les supports poreux. Nous utilisons un produit anti-mousse adapté, laissé agir suffisamment longtemps pour décoller les dépôts, puis rincé à pression modérée. Les balcons exposés au nord dans les quartiers Polangis ou Marne peuvent nécessiter un traitement deux fois par an (printemps et automne) pour éviter les réaccumulations rapides.</p>",
         },
         {
-          question: "Comment évitez-vous que l'eau de rinçage ne coule chez mes voisins ou le long de la façade ?",
+          question:
+            "Comment évitez-vous que l'eau de rinçage ne coule chez mes voisins ou le long de la façade ?",
           answer:
             "<p>Nous dirigeons systématiquement l'eau vers l'évacuation du balcon à l'aide de raclettes et de chiffons absorbants. Si le balcon n'a pas d'évacuation fonctionnelle ou si la pente est mal orientée, nous récupérons l'eau manuellement pour éviter tout écoulement.</p>",
         },
         {
-          question: "Les produits utilisés sont-ils compatibles avec mes plantes installées sur le balcon ?",
+          question:
+            "Les produits utilisés sont-ils compatibles avec mes plantes installées sur le balcon ?",
           answer:
             "<p>Nous utilisons des produits nettoyants et anti-mousses biodégradables, sans danger après rinçage complet. Les plantes sont déplacées temporairement ou protégées pendant le traitement. Après séchage, le balcon est réutilisable.</p>",
         },
         {
-          question: "Combien de temps dois-je attendre avant de réinstaller mes meubles et de profiter du balcon ?",
+          question:
+            "Combien de temps dois-je attendre avant de réinstaller mes meubles et de profiter du balcon ?",
           answer:
             "<p>Le séchage complet prend entre 2 et 6 heures selon l'ensoleillement, la ventilation et la porosité du revêtement. Vous pouvez généralement réinstaller votre mobilier et utiliser le balcon le jour même de l'intervention.</p>",
         },
@@ -299,9 +316,9 @@ nearbyCities: [
 
       uniqueIntro:
         "<p>Les fientes s'accumulent jour après jour sur le balcon : couches séchées qui blanchissent les dalles, nids dissimulés derrière le garde-corps, odeur âcre qui pénètre dans le logement dès qu'on entrouvre la fenêtre. La présence de volatiles près du canal, des quais de la Marne ou des toits des immeubles collectifs devient vite une nuisance chronique que l'occupant n'ose pas toujours évoquer avec le syndic par peur du jugement.</p>\n" +
-        '\n' +
-        '<p class="mt-4">Si rien n\'est fait, les conséquences s\'aggravent. Les fientes contiennent des agents pathogènes (bactéries, champignons, parasites) qui se dispersent en poussière fine lorsqu\'elles sèchent. Un simple balayage à sec aggrave la situation en libérant ces particules contaminées dans l\'air. L\'odeur imprègne les textiles intérieurs (rideaux, canapé), les supports métalliques du garde-corps commencent à rouiller sous l\'effet acide des fientes, et le balcon devient une zone interdite qui pèse sur le confort quotidien et la valeur du logement.</p>\n' +
-        '\n' +
+        "\n" +
+        "<p class=\"mt-4\">Si rien n'est fait, les conséquences s'aggravent. Les fientes contiennent des agents pathogènes (bactéries, champignons, parasites) qui se dispersent en poussière fine lorsqu'elles sèchent. Un simple balayage à sec aggrave la situation en libérant ces particules contaminées dans l'air. L'odeur imprègne les textiles intérieurs (rideaux, canapé), les supports métalliques du garde-corps commencent à rouiller sous l'effet acide des fientes, et le balcon devient une zone interdite qui pèse sur le confort quotidien et la valeur du logement.</p>\n" +
+        "\n" +
         '<p class="mt-4">Un traitement professionnel sécurisé avec équipements de protection individuelle et désinfection virucide élimine les fientes, neutralise les agents pathogènes et permet de retrouver un balcon utilisable sans risque pour la santé des occupants.</p>',
 
       uniqueDeepDive:
@@ -322,22 +339,26 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Les fientes de pigeons représentent-elles vraiment un danger sanitaire justifiant une intervention professionnelle ?",
+          question:
+            "Les fientes de pigeons représentent-elles vraiment un danger sanitaire justifiant une intervention professionnelle ?",
           answer:
             "<p>Oui. Les fientes contiennent des bactéries, des champignons et des parasites susceptibles de provoquer infections respiratoires, allergies sévères et maladies digestives. Le simple fait de balayer à sec disperse ces agents pathogènes en poussière fine inhalable. Un nettoyage professionnel avec désinfection virucide est indispensable pour neutraliser ces risques sanitaires.</p>",
         },
         {
-          question: "Comment gérez-vous l'évacuation des fientes et des nids récupérés ?",
+          question:
+            "Comment gérez-vous l'évacuation des fientes et des nids récupérés ?",
           answer:
             "<p>Les déchets contaminés sont conditionnés dans des sacs étanches résistants à double paroi et évacués immédiatement par nos équipes à l'issue de l'intervention. Nous ne les déposons jamais dans les locaux poubelles de la copropriété pour éviter toute contamination des espaces communs. Cette évacuation sécurisée est incluse dans notre prestation.</p>",
         },
         {
-          question: "Le nettoyage peut-il endommager mon balcon (peinture du garde-corps, revêtement de sol) ?",
+          question:
+            "Le nettoyage peut-il endommager mon balcon (peinture du garde-corps, revêtement de sol) ?",
           answer:
             "<p>Les fientes acides peuvent avoir déjà corrodé certaines surfaces (peinture écaillée du garde-corps métallique, rouille, altération des enduits). Nous signalons ces dégradations préexistantes avant traitement. Le nettoyage lui-même, réalisé à pression modérée avec des produits adaptés, n'aggrave pas l'état des supports.</p>",
         },
         {
-          question: "Les produits désinfectants utilisés sont-ils dangereux pour mes enfants ou mes animaux domestiques après séchage ?",
+          question:
+            "Les produits désinfectants utilisés sont-ils dangereux pour mes enfants ou mes animaux domestiques après séchage ?",
           answer:
             "<p>Les produits virucides et bactéricides sont appliqués selon les dosages réglementaires et rincés après le temps de contact nécessaire. Après séchage complet (24 heures recommandées), le balcon est totalement sûr pour tous les occupants, y compris enfants et animaux domestiques.</p>",
         },
@@ -361,9 +382,9 @@ nearbyCities: [
 
       uniqueIntro:
         "<p>Dans les logements de Joinville-le-Pont, le canapé, le tapis et le matelas accumulent les traces du quotidien : poussières, miettes, taches, poils d'animaux, et parfois des odeurs tenaces liées à l'humidité. Les textiles retiennent aussi les pollens venus des bords de Marne et de la végétation environnante, ce qui peut accentuer les gênes respiratoires et les allergies.</p>\n" +
-        '\n' +
+        "\n" +
         '<p class="mt-4">Les aspirations régulières éliminent les saletés visibles, mais ne suffisent pas à extraire les allergènes et les résidus incrustés en profondeur dans les fibres. Les produits ménagers classiques déplacent temporairement les salissures sans traiter réellement le problème, et les odeurs reviennent dès que l\'humidité augmente.</p>\n' +
-        '\n' +
+        "\n" +
         '<p class="mt-4">Un nettoyage professionnel par injection-extraction élimine les salissures en profondeur, neutralise les odeurs et améliore significativement le confort d\'usage des textiles.</p>',
 
       uniqueDeepDive:
@@ -384,22 +405,26 @@ nearbyCities: [
 
       faqAdditions: [
         {
-          question: "Le nettoyage par injection-extraction élimine-t-il vraiment les acariens responsables des allergies ?",
+          question:
+            "Le nettoyage par injection-extraction élimine-t-il vraiment les acariens responsables des allergies ?",
           answer:
             "<p>L'injection d'eau chauffée et l'aspiration puissante éliminent une grande partie des acariens, des déjections et des allergènes présents dans les fibres. Le rinçage complet évacue les résidus organiques. Ce nettoyage réduit significativement les irritations respiratoires, mais ne remplace pas un entretien régulier par aspiration et aération.</p>",
         },
         {
-          question: "Les odeurs tenaces (urine d'animal, humidité) peuvent-elles être totalement neutralisées ?",
+          question:
+            "Les odeurs tenaces (urine d'animal, humidité) peuvent-elles être totalement neutralisées ?",
           answer:
             "<p>Les odeurs récentes partent généralement très bien avec un détachant adapté. Les odeurs anciennes très incrustées peuvent laisser une trace résiduelle légère selon la profondeur de pénétration. L'extraction complète des résidus organiques et le rinçage neutralisent la majorité des odeurs. Dans les cas extrêmes, une seconde intervention ciblée peut être nécessaire.</p>",
         },
         {
-          question: "Combien de temps faut-il attendre avant de réutiliser les textiles nettoyés ?",
+          question:
+            "Combien de temps faut-il attendre avant de réutiliser les textiles nettoyés ?",
           answer:
             "<p>Le séchage prend généralement entre 4 et 8 heures selon la ventilation et l'humidité ambiante. Nous recommandons d'attendre 6 heures minimum avant de s'asseoir sur le canapé ou de marcher sur le tapis. Pour un matelas, il est préférable d'attendre une nuit complète avant de remettre les draps et de dormir dessus.</p>",
         },
         {
-          question: "Que dois-je préparer avant votre arrivée pour le nettoyage à domicile ?",
+          question:
+            "Que dois-je préparer avant votre arrivée pour le nettoyage à domicile ?",
           answer:
             "<p>Dégagez l'accès au canapé, roulez ou déplacez les petits tapis, retirez draps et protège-matelas. Si vous avez des animaux domestiques, isolez-les temporairement. Nous nous occupons du reste : protection des sols si nécessaire, aspiration préalable, pré-traitement des taches, nettoyage complet et conseils post-intervention.</p>",
         },
@@ -408,132 +433,109 @@ nearbyCities: [
       ctaOverride: "",
     },
 
-
     {
-  serviceKey: "terrasses",
-  heroDescription:
-    "Nettoyage et remise en état de terrasses à Joinville-le-Pont : élimination des mousses, traces noires et salissures urbaines, pour retrouver un sol extérieur propre, net et agréable à vivre en bord de Marne.",
-  whyUsBullets: [
-    "Intervention dans tous les quartiers joinvillais : Polangis, Palissy, Vautier, Centre, bords de Marne et secteurs résidentiels.",
-    "Expertise des terrasses urbaines et de bord de rivière : sols exposés à l’humidité, à la végétation et aux dépôts liés à la vie en extérieur.",
-    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
-  ],
-  uniqueIntro: `<p><strong>Joinville-le-Pont</strong>, commune prisée du Val-de-Marne, se distingue par sa situation privilégiée en bord de <strong>Marne</strong> et par un habitat mêlant maisons de ville, pavillons avec jardin et résidences élégantes. Les terrasses y occupent une place centrale dans l’usage quotidien des logements.</p>
-
-<p class="mt-4">La proximité de l’eau, les alignements d’arbres et les jardins privés favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, en particulier dans les quartiers de <strong>Polangis</strong> et le long des quais.</p>
-
-<p class="mt-4">À Joinville-le-Pont, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau demande une méthode spécifique pour un nettoyage efficace, respectueux du support et visuellement valorisant.</p>`,
-  uniqueDeepDive: `<h3>Préparation et protection des abords</h3>
-<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont bâchés afin de travailler proprement, notamment dans les configurations urbaines où les espaces sont plus contraints.</p>
-
-<h3>Nettoyage en profondeur du revêtement</h3>
-<p>Le traitement est choisi en fonction du sol : solution adaptée pour béton et carrelage, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, le biofilm et les traces liées à l’humidité. Le rinçage est réalisé de manière contrôlée pour un résultat net et homogène.</p>
-
-<h3>Mise en valeur et confort d’usage</h3>
-<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair et plus uniforme, améliorant immédiatement le confort d’usage et l’esthétique de l’espace extérieur.</p>`,
-  specificChallenges: [
-    "Proximité immédiate de la Marne : humidité récurrente favorisant mousses et traces verdâtres.",
-    "Terrasses urbaines entourées de végétation : dépôts organiques et salissures persistantes.",
-    "Dalles béton et carrelages extérieurs foncés par le temps et la pollution.",
-    "Terrasses partiellement ombragées : zones glissantes et aspect terne après la pluie.",
-    "Bois et composite exposés aux intempéries : encrassement visuel et perte d’éclat.",
-  ],
-  faqAdditions: [
-    {
-      question:
-        "Pourquoi les terrasses de Joinville-le-Pont se salissent-elles rapidement ?",
-      answer:
-        "<p>La proximité de la Marne, combinée à une végétation dense et à l’humidité ambiante, favorise l’apparition de mousses, d’algues et de traces noires. Sans nettoyage adapté, ces salissures s’installent durablement sur les sols extérieurs.</p>",
+      serviceKey: "terrasses",
+      heroDescription:
+        "Nettoyage et remise en état de terrasses à Joinville-le-Pont : élimination des mousses, traces noires et salissures urbaines, pour retrouver un sol extérieur propre, net et agréable à vivre en bord de Marne.",
+      whyUsBullets: [
+        "Intervention dans tous les quartiers joinvillais : Polangis, Palissy, Vautier, Centre, bords de Marne et secteurs résidentiels.",
+        "Expertise des terrasses urbaines et de bord de rivière : sols exposés à l’humidité, à la végétation et aux dépôts liés à la vie en extérieur.",
+        "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
+      ],
+      uniqueIntro:
+        '<p><strong>Joinville-le-Pont</strong>, commune prisée du Val-de-Marne, se distingue par sa situation privilégiée en bord de <strong>Marne</strong> et par un habitat mêlant maisons de ville, pavillons avec jardin et résidences élégantes. Les terrasses y occupent une place centrale dans l’usage quotidien des logements.</p>\n\n<p class="mt-4">La proximité de l’eau, les alignements d’arbres et les jardins privés favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, en particulier dans les quartiers de <strong>Polangis</strong> et le long des quais.</p>\n\n<p class="mt-4">À Joinville-le-Pont, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque matériau demande une méthode spécifique pour un nettoyage efficace, respectueux du support et visuellement valorisant.</p>',
+      uniqueDeepDive:
+        "<h3>Préparation et protection des abords</h3>\n<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont bâchés afin de travailler proprement, notamment dans les configurations urbaines où les espaces sont plus contraints.</p>\n\n<h3>Nettoyage en profondeur du revêtement</h3>\n<p>Le traitement est choisi en fonction du sol : solution adaptée pour béton et carrelage, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, le biofilm et les traces liées à l’humidité. Le rinçage est réalisé de manière contrôlée pour un résultat net et homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair et plus uniforme, améliorant immédiatement le confort d’usage et l’esthétique de l’espace extérieur.</p>",
+      specificChallenges: [
+        "Proximité immédiate de la Marne : humidité récurrente favorisant mousses et traces verdâtres.",
+        "Terrasses urbaines entourées de végétation : dépôts organiques et salissures persistantes.",
+        "Dalles béton et carrelages extérieurs foncés par le temps et la pollution.",
+        "Terrasses partiellement ombragées : zones glissantes et aspect terne après la pluie.",
+        "Bois et composite exposés aux intempéries : encrassement visuel et perte d’éclat.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Pourquoi les terrasses de Joinville-le-Pont se salissent-elles rapidement ?",
+          answer:
+            "<p>La proximité de la Marne, combinée à une végétation dense et à l’humidité ambiante, favorise l’apparition de mousses, d’algues et de traces noires. Sans nettoyage adapté, ces salissures s’installent durablement sur les sols extérieurs.</p>",
+        },
+        {
+          question:
+            "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en bord de Marne ?",
+          answer:
+            "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de supprimer les zones foncées et de retrouver un sol plus homogène. La terrasse redevient plus agréable à utiliser et visuellement valorisée.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur les terrasses de maisons comme de résidences ?",
+          answer:
+            "<p>Nous intervenons aussi bien sur les terrasses de maisons individuelles que sur celles des résidences et petites copropriétés, avec une organisation adaptée aux contraintes de chaque site.</p>",
+        },
+        {
+          question:
+            "Peut-on nettoyer une terrasse très encrassée sans tout refaire ?",
+          answer:
+            "<p>Oui. Même très encrassée, une terrasse peut retrouver un aspect nettement plus propre grâce à un nettoyage ciblé et méthodique, sans travaux lourds ni remplacement du revêtement.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
+
     {
-      question:
-        "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en bord de Marne ?",
-      answer:
-        "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de supprimer les zones foncées et de retrouver un sol plus homogène. La terrasse redevient plus agréable à utiliser et visuellement valorisée.</p>",
+      serviceKey: "nettoyage-appartement-maison",
+
+      heroDescription:
+        "Remise en état d’appartements et de maisons à Joinville-le-Pont, avant remise des clés ou après travaux, avec une méthode structurée et une attention particulière aux vitrages (baies, vérandas) et aux finitions.",
+
+      whyUsBullets: [
+        "Connaissance des contraintes locales : centre-ville dense (Rue de Paris) et stationnement tendu autour du RER A Joinville-le-Pont.",
+        "Intervention adaptée aux pavillons de Polangis/Palissy : parquet chêne, pièces lumineuses, vérandas et baies vitrées.",
+        "Organisation efficace en zone flux (A4 / Pont de Joinville) : créneaux optimisés, accès digicodes/badges et contrôle final.",
+      ],
+
+      uniqueIntro:
+        '<p>À Joinville-le-Pont, la demande de remise en état est souvent liée à des transitions rapides : état des lieux à caler autour du centre-ville, rénovation d’un appartement près de la gare RER A, ou maison à préparer dans les quartiers de Polangis et Palissy. Entre les flux du Pont de Joinville, l’accès à l’A4 et la vie des bords de Marne, le besoin est simple : un logement propre, net, prêt à être utilisé ou restitué.</p>\n<p class="mt-4">Les configurations varient beaucoup : parquet chêne et menuiseries soignées dans les villas, petites cages d’escalier dans l’ancien, résidences plus récentes vers les Hauts-de-Joinville. On rencontre aussi des vitrages plus exigeants (baies, vérandas, garde-corps vitrés) et une salissure urbaine plus marquée côté axes routiers. Chaque intervention doit donc être ajustée, sans méthode “copiée-collée”.</p>\n<p class="mt-4">Pour un <strong>nettoyage appartement maison Joinville-le-Pont</strong>, Klinova travaille avec un cadre clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> On valide les surfaces, l’accès (digicode, badge, clés) et la logistique (stationnement, étage), puis on déroule une remise en état par zones, avec finitions et contrôle visuel avant restitution.</p>',
+
+      uniqueDeepDive:
+        "<h3>Cadrage, accès et repérage des surfaces</h3>\n<p>Nous identifions le contexte (logement vide, déménagement, avant remise des clés, remise en état du logement après travaux légers) et les matériaux : parquet, carrelage, terre cuite, peintures récentes, vitrages (baies, vérandas). À Joinville, le point clé est souvent la logistique : stationnement en centre-ville, rues en sens unique vers les bords de Marne, et saturation possible autour du Pont de Joinville selon l’horaire.</p>\n\n<h3>Nettoyage méthodique, pièce par pièce</h3>\n<p>Nous commençons par un dépoussiérage structuré (surfaces, plinthes, menuiseries), puis les sols sont traités selon le revêtement, avec une humidité maîtrisée sur parquet. La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour homogénéiser le rendu. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à nettoyer.</p>\n\n<h3>Finitions, vitres et contrôle de restitution</h3>\n<p>Nous terminons par les finitions : vérification des traces sur vitrages accessibles, reprise des détails visibles et contrôle final pièce par pièce. Une aération est conseillée en fin d’intervention pour accélérer le confort d’usage. Le but est un rendu propre et lisible pour un état des lieux ou une remise des clés, conformément au périmètre défini.</p>",
+
+      specificChallenges: [
+        "Centre-ville et secteur gare : stationnement souvent compliqué, surtout Rue de Paris et autour du RER A.",
+        "Zone flux (A4 / Pont de Joinville) : créneaux à choisir pour éviter les bouchons et sécuriser l’accès chantier.",
+        "Vitrages fréquents (baies, vérandas) : finition soignée sur vitres accessibles et rebords.",
+        "Quartiers pavillonnaires exigeants (Polangis/Palissy) : discrétion et méthodes non agressives sur parquet/menuiseries.",
+      ],
+
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous pour un état des lieux sortant près de la gare RER A Joinville-le-Pont ?",
+          answer:
+            "<p>Oui. Le secteur gare est très demandé, avec des délais parfois serrés. Nous planifions l’intervention en fonction du stationnement et des accès (digicode, badge, clés) pour livrer un logement propre et cohérent le jour de l’état des lieux.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous gérer une remise en état dans une maison à Polangis avec parquet et grandes baies vitrées ?",
+          answer:
+            "<p>Oui. Nous adaptons les techniques au parquet (humidification maîtrisée, produits compatibles) et nous incluons un passage soigné sur les vitres accessibles et les rebords. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>",
+        },
+        {
+          question:
+            "Faites-vous du nettoyage après travaux à Joinville-le-Pont ?",
+          answer:
+            "<p>Oui, lorsque l’objectif est une remise en état du logement : poussières fines, traces visibles et finitions avant remise des clés. On ajuste les produits et les gestes à chaque surface pour éviter les marques, notamment sur les sols et les sanitaires.</p>",
+        },
+        {
+          question:
+            "Le logement peut-il être utilisé le jour même après votre passage ?",
+          answer:
+            "<p>Dans la majorité des cas, oui. Nous limitons l’humidité résiduelle et recommandons une aération en fin d’intervention pour retrouver rapidement un logement confortable, surtout lorsque des sols sensibles (parquet) sont présents.</p>",
+        },
+      ],
+
+      ctaOverride: "",
     },
-    {
-      question:
-        "Intervenez-vous sur les terrasses de maisons comme de résidences ?",
-      answer:
-        "<p>Nous intervenons aussi bien sur les terrasses de maisons individuelles que sur celles des résidences et petites copropriétés, avec une organisation adaptée aux contraintes de chaque site.</p>",
-    },
-    {
-      question:
-        "Peut-on nettoyer une terrasse très encrassée sans tout refaire ?",
-      answer:
-        "<p>Oui. Même très encrassée, une terrasse peut retrouver un aspect nettement plus propre grâce à un nettoyage ciblé et méthodique, sans travaux lourds ni remplacement du revêtement.</p>",
-    },
-  ],
-  ctaOverride: "",
-},
-
-
-
-
-
-
-    {
-  serviceKey: "nettoyage-appartement-maison",
-
-  heroDescription:
-    "Remise en état d’appartements et de maisons à Joinville-le-Pont, avant remise des clés ou après travaux, avec une méthode structurée et une attention particulière aux vitrages (baies, vérandas) et aux finitions.",
-
-  whyUsBullets: [
-    "Connaissance des contraintes locales : centre-ville dense (Rue de Paris) et stationnement tendu autour du RER A Joinville-le-Pont.",
-    "Intervention adaptée aux pavillons de Polangis/Palissy : parquet chêne, pièces lumineuses, vérandas et baies vitrées.",
-    "Organisation efficace en zone flux (A4 / Pont de Joinville) : créneaux optimisés, accès digicodes/badges et contrôle final.",
-  ],
-
-  uniqueIntro: `<p>À Joinville-le-Pont, la demande de remise en état est souvent liée à des transitions rapides : état des lieux à caler autour du centre-ville, rénovation d’un appartement près de la gare RER A, ou maison à préparer dans les quartiers de Polangis et Palissy. Entre les flux du Pont de Joinville, l’accès à l’A4 et la vie des bords de Marne, le besoin est simple : un logement propre, net, prêt à être utilisé ou restitué.</p>
-<p class="mt-4">Les configurations varient beaucoup : parquet chêne et menuiseries soignées dans les villas, petites cages d’escalier dans l’ancien, résidences plus récentes vers les Hauts-de-Joinville. On rencontre aussi des vitrages plus exigeants (baies, vérandas, garde-corps vitrés) et une salissure urbaine plus marquée côté axes routiers. Chaque intervention doit donc être ajustée, sans méthode “copiée-collée”.</p>
-<p class="mt-4">Pour un <strong>nettoyage appartement maison Joinville-le-Pont</strong>, Klinova travaille avec un cadre clair : <strong>le périmètre de l’intervention est toujours défini avant l’intervention.</strong> On valide les surfaces, l’accès (digicode, badge, clés) et la logistique (stationnement, étage), puis on déroule une remise en état par zones, avec finitions et contrôle visuel avant restitution.</p>`,
-
-  uniqueDeepDive: `<h3>Cadrage, accès et repérage des surfaces</h3>
-<p>Nous identifions le contexte (logement vide, déménagement, avant remise des clés, remise en état du logement après travaux légers) et les matériaux : parquet, carrelage, terre cuite, peintures récentes, vitrages (baies, vérandas). À Joinville, le point clé est souvent la logistique : stationnement en centre-ville, rues en sens unique vers les bords de Marne, et saturation possible autour du Pont de Joinville selon l’horaire.</p>
-
-<h3>Nettoyage méthodique, pièce par pièce</h3>
-<p>Nous commençons par un dépoussiérage structuré (surfaces, plinthes, menuiseries), puis les sols sont traités selon le revêtement, avec une humidité maîtrisée sur parquet. La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé sur les éléments accessibles (plans, crédences, façades selon l’état). La salle de bain et les sanitaires sont traités avec un <strong>détartrage sanitaires</strong> adapté (robinetterie, parois, joints). Les points de contact (poignées, interrupteurs) et les vitres accessibles sont inclus pour homogénéiser le rendu. <strong>Débarras léger si nécessaire</strong>, uniquement pour libérer les zones à nettoyer.</p>
-
-<h3>Finitions, vitres et contrôle de restitution</h3>
-<p>Nous terminons par les finitions : vérification des traces sur vitrages accessibles, reprise des détails visibles et contrôle final pièce par pièce. Une aération est conseillée en fin d’intervention pour accélérer le confort d’usage. Le but est un rendu propre et lisible pour un état des lieux ou une remise des clés, conformément au périmètre défini.</p>`,
-
-  specificChallenges: [
-    "Centre-ville et secteur gare : stationnement souvent compliqué, surtout Rue de Paris et autour du RER A.",
-    "Zone flux (A4 / Pont de Joinville) : créneaux à choisir pour éviter les bouchons et sécuriser l’accès chantier.",
-    "Vitrages fréquents (baies, vérandas) : finition soignée sur vitres accessibles et rebords.",
-    "Quartiers pavillonnaires exigeants (Polangis/Palissy) : discrétion et méthodes non agressives sur parquet/menuiseries.",
-  ],
-
-  faqAdditions: [
-    {
-      question:
-        "Intervenez-vous pour un état des lieux sortant près de la gare RER A Joinville-le-Pont ?",
-      answer: `<p>Oui. Le secteur gare est très demandé, avec des délais parfois serrés. Nous planifions l’intervention en fonction du stationnement et des accès (digicode, badge, clés) pour livrer un logement propre et cohérent le jour de l’état des lieux.</p>`,
-    },
-    {
-      question:
-        "Pouvez-vous gérer une remise en état dans une maison à Polangis avec parquet et grandes baies vitrées ?",
-      answer: `<p>Oui. Nous adaptons les techniques au parquet (humidification maîtrisée, produits compatibles) et nous incluons un passage soigné sur les vitres accessibles et les rebords. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>`,
-    },
-    {
-      question:
-        "Faites-vous du nettoyage après travaux à Joinville-le-Pont ?",
-      answer: `<p>Oui, lorsque l’objectif est une remise en état du logement : poussières fines, traces visibles et finitions avant remise des clés. On ajuste les produits et les gestes à chaque surface pour éviter les marques, notamment sur les sols et les sanitaires.</p>`,
-    },
-    {
-      question:
-        "Le logement peut-il être utilisé le jour même après votre passage ?",
-      answer: `<p>Dans la majorité des cas, oui. Nous limitons l’humidité résiduelle et recommandons une aération en fin d’intervention pour retrouver rapidement un logement confortable, surtout lorsque des sols sensibles (parquet) sont présents.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-}
-
-
-
-
-
   ],
 };
 

@@ -61,22 +61,22 @@ const city: City = {
   faq: [
     {
       question:
-        "Q1 : Vous intervenez à Émerainville même si mon immeuble est proche de la gare RER E ?",
+        "Vous intervenez à Émerainville même si mon immeuble est proche de la gare RER E ?",
       answer: `<p><strong>Oui, c'est un secteur où nous intervenons régulièrement. Les stationnements y sont saturés et les horaires sensibles (matin/soir), mais nous gérons ces contraintes : déplacement en dehors des pics, coordination avec le syndic, balisage discret. Nous avons l'habitude des immeubles récents avec digicodes et des parkings souterrains étroits.</strong></p>`,
     },
     {
       question:
-        "Q2 : Combien de temps faut-il pour obtenir un devis de nettoyage parking à Émerainville ?",
+        "Combien de temps faut-il pour obtenir un devis de nettoyage parking à Émerainville ?",
       answer: `<p><strong>Un devis simple (surface, type de revêtement, état général) se fait en 2-3 jours après visite terrain. Pour les parkings souterrains avec accès restreint, nous coordonnons avec le syndic au préalable. Pas de frais de déplacement pour la visite, tarification transparente sans surprise.</strong></p>`,
     },
     {
       question:
-        "Q3 : Mon balcon donne sur le Parc de la Mairie et accumule des fientes de pigeons. Que proposez-vous ?",
+        "Mon balcon donne sur le Parc de la Mairie et accumule des fientes de pigeons. Que proposez-vous ?",
       answer: `<p><strong>Nous nettoyons et désinfectons les balcons exposés aux arbres (Parc, Étang de Malnoue). Protocole : confinement de la zone, EPI adaptés, évacuation sécurisée des déchets. Résultat : balcon assaini, sans risque sanitaire. Intervention rapide selon urgence, suivi possible si nidification récurrente.</strong></p>`,
     },
     {
       question:
-        "Q4 : Vous faites le nettoyage fin de chantier pour les pavillons neufs de Malnoue ?",
+        "Vous faites le nettoyage fin de chantier pour les pavillons neufs de Malnoue ?",
       answer: `<p><strong>Oui, c'est un service courant pour nous. Nettoyage complet après travaux : poussière de plâtre, traces de peinture, sols. Nous adaptons à la configuration des pavillons (escaliers, étages, terrasses). Délai court possible, coordination avec le maître d'ouvrage. Devis sur photos ou visite.</strong></p>`,
     },
   ],
@@ -124,22 +124,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Dans les escaliers étroits du Bourg historique, comment organisez-vous le passage du matériel pour le nettoyage de moquette ?",
+            "Dans les escaliers étroits du Bourg historique, comment organisez-vous le passage du matériel pour le nettoyage de moquette ?",
           answer: `<p>Nous utilisons un matériel compact et modulaire adapté aux cages d'escalier resserrées. L'extracteur est positionné au rez-de-chaussée ou à l'étage, avec des tuyaux flexibles qui remontent les étages. Un agent dédié gère la circulation et le balisage pour minimiser la gêne. Cette organisation permet de traiter efficacement sans endommager les murs ni les rampes.</p>`,
         },
         {
           question:
-            "Q2 : Avec la poussière fine provenant de l'A104 et l'aérodrome, combien de temps avant que la moquette retrouve un aspect propre et sans odeur ?",
+            "Avec la poussière fine provenant de l'A104 et l'aérodrome, combien de temps avant que la moquette retrouve un aspect propre et sans odeur ?",
           answer: `<p>Le résultat visuel est immédiat après séchage (12-24 heures selon ventilation). Les odeurs de poussière incrustée disparaissent généralement dans les 48 heures. Nous recommandons un entretien tous les 3-4 mois pour les zones à fort trafic de la ZA Malnoue, afin de prévenir la réaccumulation de particules fines et maintenir l'aspect initial.</p>`,
         },
         {
           question:
-            "Q3 : Pour les halls de la ZA Malnoue, comment protégez-vous plinthes et angles lors d'un nettoyage intensif ?",
+            "Pour les halls de la ZA Malnoue, comment protégez-vous plinthes et angles lors d'un nettoyage intensif ?",
           answer: `<p>Avant intervention, nous appliquons des bandes adhésives de protection sur les plinthes et les angles. L'extracteur est utilisé avec une buse adaptée qui évite le contact direct avec les bas de murs. Après séchage, les protections sont retirées sans laisser de résidu. Cette méthode préserve la peinture et les finitions des éléments adjacents.</p>`,
         },
         {
           question:
-            "Q4 : Comment choisissez-vous la méthode (shampouinage vs extraction vapeur) selon l'épaisseur et le type de moquette en bureaux locaux ?",
+            "Comment choisissez-vous la méthode (shampouinage vs extraction vapeur) selon l'épaisseur et le type de moquette en bureaux locaux ?",
           answer: `<p>Pour les dalles textiles fines et velours ras des bureaux, nous privilégions l'injection-extraction à pression modulée, moins agressive que la vapeur. Les moquettes épaisses et bouclées tolèrent mieux une pression plus élevée. Un test préalable sur une zone discrète confirme la compatibilité. Cette approche différenciée garantit un résultat optimal sans risque d'abîmer les fibres.</p>`,
         },
       ],
@@ -178,22 +178,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Avec le flux important de navetteurs autour de la gare d'Émerainville - Pontault-Combault, comment organisez-vous l'intervention sans bloquer les accès ?",
+            "Avec le flux important de navetteurs autour de la gare d'Émerainville - Pontault-Combault, comment organisez-vous l'intervention sans bloquer les accès ?",
           answer: `<p>Nous proposons des créneaux en fin d'après-midi ou en début de soirée, après le pic de départs. Pour les parkings souterrains résidentiels, intervention de nuit ou très tôt le matin. Balisage clair et signalétique temporaire permettent aux usagers de circuler en toute sécurité. Coordination préalable avec le syndic ou gestionnaire pour identifier les zones à traiter par phases si nécessaire.</p>`,
         },
         {
           question:
-            "Q2 : Les taches d'huile sur le Boulevard Olof Palme sont très anciennes. Pouvez-vous les enlever complètement ?",
+            "Les taches d'huile sur le Boulevard Olof Palme sont très anciennes. Pouvez-vous les enlever complètement ?",
           answer: `<p>Les taches anciennes demandent un traitement spécifique : dégraissant professionnel appliqué en prétraitement, puis passes multiples à l'autolaveuse. Selon la profondeur d'imprégnation, un résultat quasi-total est possible. Si taches très profondes (années d'accumulation), nous conseillons un décapage léger ou ponçage localisé. Diagnostic sur place détermine la meilleure approche.</p>`,
         },
         {
           question:
-            "Q3 : Quel protocole appliquez-vous pour les eaux de lavage en parkings aériens proches des commerces ?",
+            "Quel protocole appliquez-vous pour les eaux de lavage en parkings aériens proches des commerces ?",
           answer: `<p>Les eaux sont dirigées vers les rigoles existantes et évacuations officielles, jamais rejet direct au sol. Nous vérifions avant intervention la conformité des évacuations. Filtre temporaire possible si zone sensible. Respect strict des normes locales de gestion des eaux usées. Rapport d'intervention fourni au syndic ou gestionnaire.</p>`,
         },
         {
           question:
-            "Q4 : À quelle fréquence faut-il nettoyer un parking très utilisé par les usagers RER ?",
+            "À quelle fréquence faut-il nettoyer un parking très utilisé par les usagers RER ?",
           answer: `<p>Parking très fréquenté (>200 véhicules/jour) : entretien mensuel recommandé pour maintenir l'aspect et prévenir accumulation d'huile. Zones modérées (50-150 véhicules/jour) : nettoyage trimestriel suffisant. Parkings aériens commerces : fréquence ajustée selon météo (pluies, poussière saisonnière). Nous proposons un plan d'entretien adapté après diagnostic initial.</p>`,
         },
       ],
@@ -232,22 +232,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Quel produit et quelle méthode recommandez-vous pour nettoyer un balcon carrelé typique des immeubles d'Emery sans abîmer les joints ?",
+            "Quel produit et quelle méthode recommandez-vous pour nettoyer un balcon carrelé typique des immeubles d'Emery sans abîmer les joints ?",
           answer: `<p>Sur carrelage années 80–90, nous utilisons un détergent doux adapté aux joints poreux, appliqué au pinceau ou pulvérisateur. Le brossage est manuel pour préserver l'intégrité des joints. Si les joints sont très encrassés, une pression basse (&lt; 100 bar) peut être utilisée, mais jamais directement sur les joints. Rinçage abondant à l'eau claire. Aucun produit agressif n'est nécessaire.</p>`,
         },
         {
           question:
-            "Q2 : Comment éliminez-vous la mousse et les dépôts verts sur balcons exposés à l'ombrage et aux feuilles à Malnoue ?",
+            "Comment éliminez-vous la mousse et les dépôts verts sur balcons exposés à l'ombrage et aux feuilles à Malnoue ?",
           answer: `<p>La mousse prospère à l'ombre et l'humidité. Nous appliquons d'abord un anti-mousse spécifique (non toxique pour l'environnement) qui tue les spores, puis brossons doucement après 15–20 minutes. Les feuilles et débris sont enlevés manuellement avant traitement. Un rinçage final élimine les résidus. Pour les balcons très ombragés, nous recommandons un traitement annuel en automne.</p>`,
         },
         {
           question:
-            "Q3 : Quelle différence de traitement appliquez-vous entre un balcon en béton brut et un balcon carrelé dans la commune ?",
+            "Quelle différence de traitement appliquez-vous entre un balcon en béton brut et un balcon carrelé dans la commune ?",
           answer: `<p>Le béton brut est poreux et absorbe la pollution ; il nécessite un produit pénétrant et un brossage plus vigoureux. Le carrelage, moins poreux, se nettoie plus rapidement mais les joints demandent de l'attention. Sur béton, nous utilisons une brosse dure ; sur carrelage, une brosse douce. La pression, si elle est utilisée, est plus basse sur carrelage pour ne pas endommager les joints.</p>`,
         },
         {
           question:
-            "Q4 : Faut-il nettoyer un balcon exposé plein sud plus souvent qu'un balcon au nord dans les quartiers d'Émerainville ?",
+            "Faut-il nettoyer un balcon exposé plein sud plus souvent qu'un balcon au nord dans les quartiers d'Émerainville ?",
           answer: `<p>Oui, mais pour des raisons différentes. Un balcon sud accumule poussière et pollution (suie A104) plus visiblement ; un balcon nord développe mousse et dépôts verts. Un balcon sud peut nécessiter un nettoyage annuel ou bisannuel ; un balcon nord, un traitement anti-mousse chaque automne. Nous vous proposons un calendrier adapté lors de la première intervention.</p>`,
         },
       ],
@@ -285,22 +285,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Les corniches de l'Église Saint-Éloi sont souillées par des fientes : quels risques sanitaires engendre une intervention tardive ?",
+            "Les corniches de l'Église Saint-Éloi sont souillées par des fientes : quels risques sanitaires engendre une intervention tardive ?",
           answer: `<p>Les fientes de pigeons contiennent des champignons pathogènes (histoplasmose, cryptococcose) qui se concentrent en couches épaisses. Plus l'intervention est retardée, plus les spores se multiplient et s'incrustent dans les supports poreux. Une exposition prolongée augmente le risque d'inhalation, particulièrement pour les enfants et personnes immunodéprimées. Un assainissement rapide limite ces risques et prévient la dégradation des matériaux.</p>`,
         },
         {
           question:
-            "Q2 : Quel protocole EPI et quelle désinfection appliquez-vous pour un balcon contaminé par fientes près du Parc de la Mairie ?",
+            "Quel protocole EPI et quelle désinfection appliquez-vous pour un balcon contaminé par fientes près du Parc de la Mairie ?",
           answer: `<p>Nous utilisons un équipement complet : masque FFP2, gants nitrile, lunettes de protection, combinaison jetable. Le balcon est bâché pour confiner les poussières. Après humidification et ramassage en sacs étanches, nous appliquons un produit virucide et bactéricide homologué avec temps de contact respecté. Cette approche élimine les agents pathogènes tout en protégeant votre logement et vos voisins.</p>`,
         },
         {
           question:
-            "Q3 : Quels produits garantissent une désinfection efficace des fientes sur supports poreux de loggias en centre-ville ?",
+            "Quels produits garantissent une désinfection efficace des fientes sur supports poreux de loggias en centre-ville ?",
           answer: `<p>Nous utilisons des désinfectants homologués (virucides et bactéricides) adaptés aux surfaces poreuses (béton, pierre). Ces produits pénètrent les micro-fissures où les spores se logent, garantissant une élimination complète. Le temps de contact est respecté selon les recommandations du fabricant. Cette méthode prévient les rechutes et assure une hygiène durable sur vos supports.</p>`,
         },
         {
           question:
-            "Q4 : Après nettoyage et désinfection d'un balcon, comment gérez-vous l'évacuation des déchets contaminés en zone résidentielle ?",
+            "Après nettoyage et désinfection d'un balcon, comment gérez-vous l'évacuation des déchets contaminés en zone résidentielle ?",
           answer: `<p>Les fientes et résidus sont collectés dans des sacs étanches dès le ramassage, évitant toute dispersion. L'évacuation s'effectue discrètement, sans passage par les parties communes du logement. Les sacs sont traités selon les normes de gestion des déchets contaminés. Cette organisation minimise la gêne pour vous et vos voisins, tout en respectant les protocoles sanitaires.</p>`,
         },
       ],
@@ -308,7 +308,7 @@ const city: City = {
     },
 
 
-    // CITY_CHECK: Émerainville
+    : Émerainville
 
 {
   serviceKey: "canapes-tapis",
@@ -399,22 +399,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment nettoyez-vous une terrasse en bois sans l'abîmer, notamment dans les pavillons de Malnoue exposés à l'humidité ?",
+            "Comment nettoyez-vous une terrasse en bois sans l'abîmer, notamment dans les pavillons de Malnoue exposés à l'humidité ?",
           answer: `<p>Le bois composite ou naturel demande une approche douce. Nous évitons la haute pression directe qui creuse les fibres. À la place, brossage manuel associé à un produit spécifique bois, suivi d'un rinçage contrôlé. Pour les terrasses proches de l'Étang de Malnoue, très humides, nous proposons un traitement hydrofuge préventif après nettoyage.</p>`,
         },
         {
           question:
-            "Q2 : Quelle différence faites-vous entre nettoyage d'une terrasse en pierre et une en carrelage à Émerainville ?",
+            "Quelle différence faites-vous entre nettoyage d'une terrasse en pierre et une en carrelage à Émerainville ?",
           answer: `<p>La pierre naturelle est poreuse et fragile aux joints : nettoyage doux, brossage manuel, produit adapté. Le carrelage supporte mieux la haute pression, idéale pour enlever graisses et dépôts tenaces. Dans les deux cas, nous protégeons les plantations et gérons l'eau d'évacuation. Le traitement anti-mousse s'adapte aussi : plus agressif sur carrelage, préventif sur pierre.</p>`,
         },
         {
           question:
-            "Q3 : Face à mousse et lichens persistants près de l'Étang de Malnoue, existe-t-il une solution durable ?",
+            "Face à mousse et lichens persistants près de l'Étang de Malnoue, existe-t-il une solution durable ?",
           answer: `<p>Oui, mais elle demande régularité. Après nettoyage initial, un traitement anti-mousse préventif ralentit la réapparition. Nous recommandons un entretien annuel avant l'automne (feuilles, humidité). Pour les terrasses très ombragées, un traitement tous les 18 mois suffit souvent. L'exposition et la proximité de l'eau influencent la fréquence.</p>`,
         },
         {
           question:
-            "Q4 : Utilisez-vous la haute pression sur toutes les terrasses, ou adaptez-vous selon le matériau ?",
+            "Utilisez-vous la haute pression sur toutes les terrasses, ou adaptez-vous selon le matériau ?",
           answer: `<p>Nous adaptons strictement. Haute pression efficace sur béton brut et carrelage robuste. Sur bois, pierre tendre ou joints usés, nous préférons brossage + produit + rinçage doux. Cette sélectivité préserve votre terrasse et garantit un résultat durable sans dégâts cachés. Nous expliquons toujours le choix avant d'intervenir.</p>`,
         },
       ],
@@ -453,22 +453,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Pour un pavillon en fin de chantier au Clos d'Emery, que comprend votre nettoyage technique (poussières, traces peinture, débris) ?",
+            "Pour un pavillon en fin de chantier au Clos d'Emery, que comprend votre nettoyage technique (poussières, traces peinture, débris) ?",
           answer: `<p>Nous couvrons dépoussiérage complet (plafonds, murs, plinthes), enlèvement des traces de peinture et colle, aspiration puis lavage des sols adaptés au revêtement, nettoyage des vitres intérieures, et évacuation des déchets/gravats. Chaque surface est traitée selon son matériau pour éviter dégradation. Délai : 1–2 jours selon surface.</p>`,
         },
         {
           question:
-            "Q2 : Après un dégât des eaux dans un appartement proche de la gare, quelles opérations techniques et de séchage réalisez-vous ?",
+            "Après un dégât des eaux dans un appartement proche de la gare, quelles opérations techniques et de séchage réalisez-vous ?",
           answer: `<p>Nous nettoyons et désinfectons les zones affectées, assurons une ventilation complète pour éviter moisissures, et traitons les résidus d'humidité. Si moisissures légères présentes, nous les éliminons. Pour dégâts importants, nous coordonnons avec spécialistes sinistre. Intervention rapide : 24–48h après appel.</p>`,
         },
         {
           question:
-            "Q3 : Quel est votre mode de tarification pour un nettoyage état des lieux d'un T2 proche du RER Émerainville - Pontault-Combault ?",
+            "Quel est votre mode de tarification pour un nettoyage état des lieux d'un T2 proche du RER Émerainville - Pontault-Combault ?",
           answer: `<p>Nous proposons tarification au forfait selon surface et nature de l'intervention (état des lieux standard vs fin de chantier). Devis gratuit sur visite ou photos. Pas de surprise : le prix inclut dépoussiérage, sols, pièces d'eau, finitions. Délai de remise en état : 24–48h selon urgence et accès au bien.</p>`,
         },
         {
           question:
-            "Q4 : Comment coordonnez-vous votre intervention de nettoyage avec artisans et agences immobilières autour de la gare ?",
+            "Comment coordonnez-vous votre intervention de nettoyage avec artisans et agences immobilières autour de la gare ?",
           answer: `<p>Nous nous adaptons à votre calendrier : horaires décalés si artisans encore présents, respect des accès (digicode, clés, gardien). Communication directe avec agence ou propriétaire avant/après intervention. Reporting photo disponible si demandé. Pas de gêne pour voisins ou autres intervenants.</p>`,
         },
       ],

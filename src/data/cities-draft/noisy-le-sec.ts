@@ -58,22 +58,22 @@ const city: City = {
   faq: [
     {
       question:
-        "Q1 : Comment organisez-vous une première intervention dans une copropriété de Noisy-le-Sec ?",
+        "Comment organisez-vous une première intervention dans une copropriété de Noisy-le-Sec ?",
       answer: `<p>Nous commençons par un échange avec le syndic ou le conseil syndical pour identifier les accès (badges, gardien, horaires sensibles). Un passage sur site permet de <strong>repérer les contraintes</strong> : stationnement, étages, état des sols. Le devis détaille ensuite les prestations, délais et modalités de coordination.</p>`,
     },
     {
       question:
-        "Q2 : Intervenez-vous aussi pour les entreprises de la Z.I. du Parc ?",
+        "Intervenez-vous aussi pour les entreprises de la Z.I. du Parc ?",
       answer: `<p>Oui, nous travaillons avec des locaux professionnels : bureaux, entrepôts, ateliers. L'intervention peut inclure le <strong>nettoyage des sols</strong>, des sanitaires ou des parkings. Nous adaptons les horaires pour ne pas perturber l'activité, avec un planning validé en amont.</p>`,
     },
     {
       question:
-        "Q3 : Que faire en cas de besoin urgent, par exemple après un dégât des eaux ?",
+        "Que faire en cas de besoin urgent, par exemple après un dégât des eaux ?",
       answer: `<p>Contactez-nous par téléphone pour décrire la situation. Selon la disponibilité, une équipe peut intervenir <strong>sous 24 à 48 heures</strong>. Nous évaluons sur place l'ampleur des travaux nécessaires : aspiration, séchage, remise en état des surfaces touchées.</p>`,
     },
     {
       question:
-        "Q4 : Le stationnement est compliqué en centre-ville, comment gérez-vous cela ?",
+        "Le stationnement est compliqué en centre-ville, comment gérez-vous cela ?",
       answer: `<p>Nous anticipons ce point dès la préparation : <strong>repérage des zones de dépose</strong>, demande d'autorisation temporaire si nécessaire, intervention en véhicule utilitaire compact. Dans les quartiers denses comme la rue Jean Jaurès, nous privilégions les créneaux matinaux moins encombrés.</p>`,
     },
   ],
@@ -118,22 +118,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Avec les escaliers étroits des immeubles du centre-ville, comment organisez-vous le transport du matériel ?",
+            "Avec les escaliers étroits des immeubles du centre-ville, comment organisez-vous le transport du matériel ?",
           answer: `<p>Nous utilisons des équipements compacts et modulables, conçus pour passer dans les cages d'escalier réduites. Le flexible d'injection-extraction se déploie depuis le palier ou le hall, ce qui évite de monter l'ensemble de la machine à chaque étage. Un repérage préalable permet d'anticiper les passages délicats.</p>`,
         },
         {
           question:
-            "Q2 : Pour les bureaux de la Z.I. du Parc, quelles méthodes comparez-vous selon le type de moquette ?",
+            "Pour les bureaux de la Z.I. du Parc, quelles méthodes comparez-vous selon le type de moquette ?",
           answer: `<p>L'injection-extraction convient aux dalles textiles classiques et aux velours ras, car elle retire efficacement les salissures profondes. Pour les fibres fragiles ou les supports peu épais, un nettoyage basse humidité limite le risque de déformation. Le choix dépend du diagnostic réalisé avant chaque intervention.</p>`,
         },
         {
           question:
-            "Q3 : Comment traitez-vous des taches anciennes sur les moquettes des halls de la Boissière ?",
+            "Comment traitez-vous des taches anciennes sur les moquettes des halls de la Boissière ?",
           answer: `<p>Les taches incrustées reçoivent un détachant ciblé avant le passage de la machine. Plusieurs passes d'extraction sont effectuées sur les zones marquées pour déloger les résidus en profondeur. Certaines traces très anciennes peuvent s'atténuer sans disparaître totalement, selon la nature du textile et du produit à l'origine de la tache.</p>`,
         },
         {
           question:
-            "Q4 : Après une représentation au Théâtre des Bergeries, quel délai prévoir avant de réutiliser la salle ?",
+            "Après une représentation au Théâtre des Bergeries, quel délai prévoir avant de réutiliser la salle ?",
           answer: `<p>Le temps de séchage varie selon l'épaisseur de la moquette et la ventilation du lieu. En conditions normales, comptez entre quatre et huit heures pour un textile standard. Nous programmons l'intervention en fin de soirée ou de nuit afin que la salle soit praticable dès le lendemain matin.</p>`,
         },
       ],
@@ -169,22 +169,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment gérez-vous la récupération des eaux de lavage dans les parkings souterrains à Noisy-le-Sec ?",
+            "Comment gérez-vous la récupération des eaux de lavage dans les parkings souterrains à Noisy-le-Sec ?",
           answer: `<p>Les eaux chargées sont aspirées au fur et à mesure par l'autolaveuse ou dirigées vers les regards existants. Nous vérifions au préalable l'état des évacuations pour éviter tout refoulement. Aucun rejet n'est effectué vers la voirie ou les espaces communs extérieurs.</p>`,
         },
         {
           question:
-            "Q2 : Quelle différence de méthode entre un parking souterrain et un parking aérien rue Jean Jaurès ?",
+            "Quelle différence de méthode entre un parking souterrain et un parking aérien rue Jean Jaurès ?",
           answer: `<p>En souterrain, le béton brut nécessite un dégraissant renforcé et une gestion stricte des eaux. En aérien, l'enrobé supporte mieux la haute pression et le rinçage s'évacue naturellement. Le balisage reste identique pour sécuriser les usagers pendant l'intervention.</p>`,
         },
         {
           question:
-            "Q3 : Comment traitez-vous les taches d'huile anciennes sur les sols béton des copropriétés ?",
+            "Comment traitez-vous les taches d'huile anciennes sur les sols béton des copropriétés ?",
           answer: `<p>Un dégraissant alcalin est appliqué en pré-traitement sur les zones marquées. Après un temps de contact adapté, l'autolaveuse ou la haute pression décolle les résidus incrustés. Plusieurs passes peuvent être nécessaires selon l'ancienneté des dépôts.</p>`,
         },
         {
           question:
-            "Q4 : Quels horaires d'intervention proposez-vous pour limiter la gêne près de la gare RER ?",
+            "Quels horaires d'intervention proposez-vous pour limiter la gêne près de la gare RER ?",
           answer: `<p>Nous privilégions les créneaux en journée creuse ou en soirée, après les retours domicile. Le planning est validé avec le syndic pour éviter les heures de pointe matin et soir. Un balisage clair permet aux résidents de circuler en toute sécurité.</p>`,
         },
       ],
@@ -222,22 +222,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Sur les dalles sur plots installées dans les résidences récentes de la ZAC Ourcq, comment évitez-vous de décaler les éléments pendant le nettoyage ?",
+            "Sur les dalles sur plots installées dans les résidences récentes de la ZAC Ourcq, comment évitez-vous de décaler les éléments pendant le nettoyage ?",
           answer: `<p>La pression est réduite et orientée parallèlement aux dalles, jamais perpendiculairement aux joints. Le brossage manuel complète l'action sur les zones fragiles. Cette méthode préserve l'alignement des plots tout en éliminant les dépôts accumulés entre les éléments.</p>`,
         },
         {
           question:
-            "Q2 : Comment traitez-vous la mousse tenace sur les balcons exposés au nord, fréquents sur les barres anciennes ?",
+            "Comment traitez-vous la mousse tenace sur les balcons exposés au nord, fréquents sur les barres anciennes ?",
           answer: `<p>Un produit désincrustant adapté aux surfaces minérales est appliqué avant brossage. Le temps de pose permet de ramollir la mousse sans recourir à une pression excessive. Le rinçage contrôlé évacue les résidus sans projections vers les façades voisines.</p>`,
         },
         {
           question:
-            "Q3 : Comment protégez-vous les façades et évitez-vous les coulures qui gênent les voisins dans les immeubles du centre-ville ?",
+            "Comment protégez-vous les façades et évitez-vous les coulures qui gênent les voisins dans les immeubles du centre-ville ?",
           answer: `<p>Le rinçage s'effectue par sections, avec une orientation vers l'évacuation du balcon. Des bâches peuvent être posées en contrebas si nécessaire. Nous vérifions l'absence de linge étendu et prévenons les occupants concernés avant de commencer.</p>`,
         },
         {
           question:
-            "Q4 : Pour les balcons situés en étage élevé dans les tours de la Boissière, quelles solutions d'accès proposez-vous ?",
+            "Pour les balcons situés en étage élevé dans les tours de la Boissière, quelles solutions d'accès proposez-vous ?",
           answer: `<p>L'intervention se fait depuis l'intérieur du logement, sans nacelle ni échafaudage. Le matériel est acheminé par l'ascenseur ou les escaliers. Les protections sont renforcées pour éviter toute projection vers l'extérieur depuis ces hauteurs.</p>`,
         },
       ],
@@ -276,22 +276,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Les fientes accumulées sur mon balcon donnant sur le Square Stephenson représentent-elles un risque sanitaire réel ?",
+            "Les fientes accumulées sur mon balcon donnant sur le Square Stephenson représentent-elles un risque sanitaire réel ?",
           answer: `<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les voies respiratoires lorsqu'elles sèchent et se dispersent en poussière. Sur un balcon exposé aux espaces verts, l'accumulation est souvent rapide. Une décontamination professionnelle élimine ces risques et permet de réutiliser l'espace sereinement.</p>`,
         },
         {
           question:
-            "Q2 : Quel équipement de protection et quel protocole appliquez-vous pour traiter les fientes sur les rebords anciens du centre-ville ?",
+            "Quel équipement de protection et quel protocole appliquez-vous pour traiter les fientes sur les rebords anciens du centre-ville ?",
           answer: `<p>L'intervenant porte masque FFP2, combinaison jetable, gants et lunettes. Sur les rebords du bâti ancien, le confinement est adapté pour protéger les moulures et éviter les projections. L'humidification préalable neutralise les poussières avant collecte. La désinfection utilise un produit virucide homologué avec temps de contact respecté.</p>`,
         },
         {
           question:
-            "Q3 : Après désinfection des fientes sur une loggia en centre-ville, combien de temps faut-il attendre avant de réutiliser l'espace ?",
+            "Après désinfection des fientes sur une loggia en centre-ville, combien de temps faut-il attendre avant de réutiliser l'espace ?",
           answer: `<p>Le délai dépend de la ventilation et des conditions météo. En général, comptez deux à quatre heures après le rinçage final pour que les surfaces sèchent et que les produits désinfectants aient terminé leur action. L'intervenant vous précise le délai exact selon la configuration de votre loggia.</p>`,
         },
         {
           question:
-            "Q4 : Comment procédez-vous à l'évacuation des déchets contaminés après un assainissement en immeuble collectif ?",
+            "Comment procédez-vous à l'évacuation des déchets contaminés après un assainissement en immeuble collectif ?",
           answer: `<p>Les fientes et résidus sont conditionnés dans des sacs étanches dès la collecte. L'évacuation s'effectue de manière discrète, en évitant les parties communes aux heures de passage. Les déchets sont emportés par nos soins pour ne laisser aucune trace ni odeur dans les espaces partagés de la copropriété.</p>`,
         },
       ],
@@ -330,22 +330,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Pour un canapé tissu non déhoussable dans un appartement familial près de la Place des Découvertes, quelle méthode utilisez-vous ?",
+            "Pour un canapé tissu non déhoussable dans un appartement familial près de la Place des Découvertes, quelle méthode utilisez-vous ?",
           answer: `<p>Nous procédons par injection-extraction textile après un diagnostic du tissu. Cette technique projette une solution nettoyante dans les fibres puis aspire immédiatement l'eau sale. La pression est adaptée aux textiles fragiles pour éviter toute déformation ou auréole résiduelle.</p>`,
         },
         {
           question:
-            "Q2 : Le nettoyage professionnel élimine-t-il les acariens et allergènes présents dans les tapis des logements familiaux ?",
+            "Le nettoyage professionnel élimine-t-il les acariens et allergènes présents dans les tapis des logements familiaux ?",
           answer: `<p>L'extraction en profondeur déloge les acariens, poussières et résidus organiques piégés dans les fibres. Combinée à un pré-traitement adapté, cette méthode réduit significativement la charge allergène du textile et améliore la qualité de l'air intérieur pour les occupants sensibles.</p>`,
         },
         {
           question:
-            "Q3 : Quel est le temps de séchage pour un canapé shampouiné dans un appartement proche de la gare par temps humide ?",
+            "Quel est le temps de séchage pour un canapé shampouiné dans un appartement proche de la gare par temps humide ?",
           answer: `<p>Comptez entre quatre et huit heures selon l'épaisseur du tissu et la ventilation du logement. Nous recommandons d'ouvrir les fenêtres ou d'utiliser un ventilateur pour accélérer le séchage. En période humide, prévoir la partie haute de cette fourchette.</p>`,
         },
         {
           question:
-            "Q4 : Pour des taches d'urine anciennes sur un tapis en résidence, vaut-il mieux un détachage local ou un nettoyage complet ?",
+            "Pour des taches d'urine anciennes sur un tapis en résidence, vaut-il mieux un détachage local ou un nettoyage complet ?",
           answer: `<p>Les taches d'urine anciennes nécessitent généralement un pré-traitement enzymatique ciblé suivi d'un nettoyage complet. Le détachage seul risque de créer des auréoles si le reste du tapis n'est pas traité. L'intervention globale garantit un rendu homogène sans démarcation visible.</p>`,
         },
       ],
@@ -381,22 +381,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment éliminez-vous les mousses et lichens sur les terrasses pavillonnaires du Merlan sans abîmer les dalles ?",
+            "Comment éliminez-vous les mousses et lichens sur les terrasses pavillonnaires du Merlan sans abîmer les dalles ?",
           answer: `<p>Nous appliquons un traitement anti-mousse adapté au type de dalle, suivi d'un brossage mécanique qui décolle les végétaux sans attaquer le revêtement. La haute pression n'est utilisée qu'en complément, à distance et puissance contrôlées, pour préserver les joints et la surface.</p>`,
         },
         {
           question:
-            "Q2 : Sur pierre naturelle ou bois composite, quelle technique privilégiez-vous pour nettoyer sans altérer le support ?",
+            "Sur pierre naturelle ou bois composite, quelle technique privilégiez-vous pour nettoyer sans altérer le support ?",
           answer: `<p>Chaque matériau reçoit un produit formulé pour sa porosité et sa sensibilité. Le bois composite supporte mal les pressions élevées : nous travaillons en basse pression avec rinçage doux. La pierre naturelle bénéficie d'un traitement spécifique qui respecte sa texture tout en éliminant les salissures incrustées.</p>`,
         },
         {
           question:
-            "Q3 : Peut-on utiliser le nettoyeur haute pression près des margelles et escaliers sans risque d'éclatement des joints ?",
+            "Peut-on utiliser le nettoyeur haute pression près des margelles et escaliers sans risque d'éclatement des joints ?",
           answer: `<p>Oui, à condition d'adapter la distance et l'angle du jet. Nous évitons les passages directs sur les joints fragilisés et privilégions un brossage manuel sur ces zones sensibles. Si des fissures sont visibles, nous vous le signalons avant intervention pour éviter toute aggravation.</p>`,
         },
         {
           question:
-            "Q4 : Quel traitement anti-mousse recommandez-vous pour une terrasse souvent humide en Île-de-France ?",
+            "Quel traitement anti-mousse recommandez-vous pour une terrasse souvent humide en Île-de-France ?",
           answer: `<p>Un produit préventif à action prolongée, appliqué après le nettoyage complet, ralentit la repousse pendant plusieurs mois. Son efficacité dépend de l'exposition et du drainage existant. Nous conseillons un passage annuel, idéalement au printemps ou à l'automne, pour maintenir le résultat.</p>`,
         },
       ],
@@ -432,22 +432,22 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Pour un ménage de fin de chantier dans la ZAC Plaine de l'Ourcq, quelles tâches techniques sont incluses ?",
+            "Pour un ménage de fin de chantier dans la ZAC Plaine de l'Ourcq, quelles tâches techniques sont incluses ?",
           answer: `<p>L'intervention couvre le retrait des poussières de plâtre sur toutes les surfaces, le nettoyage des traces de peinture sur menuiseries et sols, le lavage des vitres intérieures et le récurage complet des sanitaires. Les placards sont essuyés, les interrupteurs et poignées dégraissés.</p>`,
         },
         {
           question:
-            "Q2 : Comment coordonnez-vous les interventions avec les agences pour une remise en état avant état des lieux à Léo Lagrange ?",
+            "Comment coordonnez-vous les interventions avec les agences pour une remise en état avant état des lieux à Léo Lagrange ?",
           answer: `<p>Nous calons le créneau directement avec l'agence ou le gestionnaire pour intervenir après le départ du locataire et avant la visite. L'accès est organisé via le gardien ou par récupération des clés. Un compte-rendu peut être transmis si nécessaire.</p>`,
         },
         {
           question:
-            "Q3 : Comment calculez-vous le coût d'un nettoyage complet selon la surface et l'urgence, notamment proche de la gare RER ?",
+            "Comment calculez-vous le coût d'un nettoyage complet selon la surface et l'urgence, notamment proche de la gare RER ?",
           answer: `<p>Le devis tient compte de la superficie, du type de bien (appartement ou pavillon), de l'état initial et du délai demandé. Une intervention sous 48 heures reste possible selon notre planning, avec ajustement si contraintes d'accès particulières.</p>`,
         },
         {
           question:
-            "Q4 : Quel est votre délai d'intervention pour un nettoyage suite à déménagement dans un pavillon de Noisy-le-Sec ?",
+            "Quel est votre délai d'intervention pour un nettoyage suite à déménagement dans un pavillon de Noisy-le-Sec ?",
           answer: `<p>En fonction de la disponibilité, nous pouvons intervenir sous trois à cinq jours ouvrés. Pour les situations urgentes liées à une vente ou une succession, un créneau prioritaire peut être proposé après échange sur les contraintes d'accès au bien.</p>`,
         },
       ],

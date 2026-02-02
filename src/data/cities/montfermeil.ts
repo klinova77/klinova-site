@@ -15,14 +15,8 @@ const city: City = {
   customDescription:
     "Située à la lisière de la forêt de Bondy, Montfermeil connaît une mutation profonde. La densification urbaine autour du tracé du Tram T4 et la rénovation du Plateau ont multiplié les résidences modernes. Ces nouveaux ensembles immobiliers nécessitent un entretien technique rigoureux pour conserver leur standing face à l'usure quotidienne.",
 
-  hubIntro: `<p>À Montfermeil, la propreté des parties communes dépend autant de la méthode que de l'organisation : accès en pente, résidences hétérogènes, et circulation quotidienne autour du tram T4. Klinova accompagne les syndics, gestionnaires et entreprises avec une approche de maintenance immobilière structurée, pensée pour préserver l'image et le confort des occupants.</p>
-<p class="mt-4">Notre priorité : intervenir sans perturber la vie de l'immeuble. Nous cadrons les accès (badges, horaires, zones de travail), protégeons les abords sensibles et appliquons des protocoles adaptés aux moquettes, sols techniques, parkings et extérieurs. Le suivi reste clair, factuel, et orienté "tenue dans le temps".</p>
-<ul>
-  <li><strong>Coordination simple :</strong> accès, créneaux, information des résidents, zones prioritaires, en lien avec syndic, gardien ou conseil syndical.</li>
-  <li><strong>Protocoles éprouvés :</strong> injection-extraction, autolaveuse, dégraissage ciblé, gestion de l'eau et finitions soignées.</li>
-  <li><strong>Adaptation au bâti local :</strong> immeubles collectifs, grandes résidences, habitat pavillonnaire et copropriétés plus anciennes.</li>
-  <li><strong>Compte-rendu utile :</strong> points traités, contraintes rencontrées, recommandations d'entretien pour stabiliser la propreté.</li>
-</ul>`,
+  hubIntro:
+    "<p>À Montfermeil, la propreté des parties communes dépend autant de la méthode que de l'organisation : accès en pente, résidences hétérogènes, et circulation quotidienne autour du tram T4. Klinova accompagne les syndics, gestionnaires et entreprises avec une approche de maintenance immobilière structurée, pensée pour préserver l'image et le confort des occupants.</p>\n<p class=\"mt-4\">Notre priorité : intervenir sans perturber la vie de l'immeuble. Nous cadrons les accès (badges, horaires, zones de travail), protégeons les abords sensibles et appliquons des protocoles adaptés aux moquettes, sols techniques, parkings et extérieurs. Le suivi reste clair, factuel, et orienté \"tenue dans le temps\".</p>\n<ul>\n  <li><strong>Coordination simple :</strong> accès, créneaux, information des résidents, zones prioritaires, en lien avec syndic, gardien ou conseil syndical.</li>\n  <li><strong>Protocoles éprouvés :</strong> injection-extraction, autolaveuse, dégraissage ciblé, gestion de l'eau et finitions soignées.</li>\n  <li><strong>Adaptation au bâti local :</strong> immeubles collectifs, grandes résidences, habitat pavillonnaire et copropriétés plus anciennes.</li>\n  <li><strong>Compte-rendu utile :</strong> points traités, contraintes rencontrées, recommandations d'entretien pour stabiliser la propreté.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Dépôts verts et mousses sur balcons liés aux zones boisées (forêt de Bondy) et aux expositions ombragées.",
@@ -33,18 +27,18 @@ const city: City = {
 
   districts: ["Centre-ville", "Les Coudreaux", "Les Bosquets", "Franceville"],
 
-nearbyCities: [
-        "gagny",
-        "chelles",
-        "livry-gargan",
-        "le-raincy",
-        "neuilly-sur-marne",
-        "gournay-sur-marne",
-        "neuilly-plaisance",
-        "vaires-sur-marne",
-        "champs-sur-marne",
-        "villeparisis"
-      ],
+  nearbyCities: [
+    "gagny",
+    "chelles",
+    "livry-gargan",
+    "le-raincy",
+    "neuilly-sur-marne",
+    "gournay-sur-marne",
+    "neuilly-plaisance",
+    "vaires-sur-marne",
+    "champs-sur-marne",
+    "villeparisis",
+  ],
 
   landmarks: [
     "Mairie de Montfermeil",
@@ -106,17 +100,11 @@ nearbyCities: [
         "Compte-rendu utile au gestionnaire : zones traitées, observations, recommandations de fréquence.",
       ],
 
-      uniqueIntro: `<p>Dans les copropriétés de Montfermeil, notamment les résidences récentes construites le long de l'avenue Jean Jaurès ou près de l'Hôpital, les moquettes des parties communes sont soumises à rude épreuve. L'augmentation du trafic piétonnier entre les stations de transport et les logements favorise l'apport constant de poussières extérieures et de salissures dans les halls d'entrée. Les fibres ternissent rapidement, les joints noircissent et certaines zones deviennent carrément grises malgré l'aspirateur quotidien.</p>
-<p class="mt-4">Cet encrassement, aggravé par la proximité des zones boisées et les chantiers en cours, transforme les fibres textiles en pièges à allergènes. Les couloirs donnent une fausse impression de vétusté qui nuit à l'image de la résidence. Les conseils syndicaux reçoivent des remarques lors des AG, certains résidents se plaignent de l'aspect négligé et les locataires potentiels sont parfois rebutés lors des visites. <strong>Un nettoyage professionnel par injection-extraction permet de désincruster ces zones de fort passage</strong> et de redonner leur éclat aux parties communes, tout en prolongeant la durée de vie des revêtements et en valorisant le patrimoine immobilier.</p>`,
+      uniqueIntro:
+        "<p>Dans les copropriétés de Montfermeil, notamment les résidences récentes construites le long de l'avenue Jean Jaurès ou près de l'Hôpital, les moquettes des parties communes sont soumises à rude épreuve. L'augmentation du trafic piétonnier entre les stations de transport et les logements favorise l'apport constant de poussières extérieures et de salissures dans les halls d'entrée. Les fibres ternissent rapidement, les joints noircissent et certaines zones deviennent carrément grises malgré l'aspirateur quotidien.</p>\n<p class=\"mt-4\">Cet encrassement, aggravé par la proximité des zones boisées et les chantiers en cours, transforme les fibres textiles en pièges à allergènes. Les couloirs donnent une fausse impression de vétusté qui nuit à l'image de la résidence. Les conseils syndicaux reçoivent des remarques lors des AG, certains résidents se plaignent de l'aspect négligé et les locataires potentiels sont parfois rebutés lors des visites. <strong>Un nettoyage professionnel par injection-extraction permet de désincruster ces zones de fort passage</strong> et de redonner leur éclat aux parties communes, tout en prolongeant la durée de vie des revêtements et en valorisant le patrimoine immobilier.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic et organisation par tronçons</h3>
-<p>Évaluation sur place : type de moquette (bouclé, velours, aiguilleté), zones de fort trafic (devant les ascenseurs, boîtes aux lettres, entrées), nature des taches et contraintes d'accès (cages étroites, paliers, angles). <strong>Protection des bas de murs et des points sensibles,</strong> puis organisation du chantier par tronçons pour garder des circulations praticables pendant l'intervention.</p>
-
-<h3>2. Injection-extraction en passes croisées</h3>
-<p>Le cœur de la méthode repose sur l'injection-extraction : une solution nettoyante est injectée au plus près des fibres, puis immédiatement aspirée avec les salissures dissoutes. <strong>Sur les zones très marquées,</strong> nous passons en croisé pour homogénéiser le rendu et éliminer les traces tenaces de chaussures et de boue.</p>
-
-<h3>3. Optimisation du séchage et conseils</h3>
-<p>Extraction maximale de l'eau pour limiter l'humidité résiduelle, aération contrôlée et séchage généralement en 4 à 6 heures selon la ventilation. <strong>Fréquence d'entretien recommandée : tous les 12 à 18 mois</strong> selon l'usage, pour maintenir un résultat optimal et éviter le remplacement prématuré des revêtements.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic et organisation par tronçons</h3>\n<p>Évaluation sur place : type de moquette (bouclé, velours, aiguilleté), zones de fort trafic (devant les ascenseurs, boîtes aux lettres, entrées), nature des taches et contraintes d'accès (cages étroites, paliers, angles). <strong>Protection des bas de murs et des points sensibles,</strong> puis organisation du chantier par tronçons pour garder des circulations praticables pendant l'intervention.</p>\n\n<h3>2. Injection-extraction en passes croisées</h3>\n<p>Le cœur de la méthode repose sur l'injection-extraction : une solution nettoyante est injectée au plus près des fibres, puis immédiatement aspirée avec les salissures dissoutes. <strong>Sur les zones très marquées,</strong> nous passons en croisé pour homogénéiser le rendu et éliminer les traces tenaces de chaussures et de boue.</p>\n\n<h3>3. Optimisation du séchage et conseils</h3>\n<p>Extraction maximale de l'eau pour limiter l'humidité résiduelle, aération contrôlée et séchage généralement en 4 à 6 heures selon la ventilation. <strong>Fréquence d'entretien recommandée : tous les 12 à 18 mois</strong> selon l'usage, pour maintenir un résultat optimal et éviter le remplacement prématuré des revêtements.</p>",
 
       specificChallenges: [
         "L'humidité naturelle liée à la proximité de la forêt de Bondy favorise les odeurs de renfermé dans les moquettes des rez-de-chaussée insuffisamment ventilés.",
@@ -167,17 +155,11 @@ nearbyCities: [
         "Contrôle des évacuations : gestion de l'eau et finitions pour laisser un sol propre et stable.",
       ],
 
-      uniqueIntro: `<p>Les parkings de copropriété à Montfermeil s'encrassent rapidement : poussière noire collante issue du trafic routier et des chantiers urbains, traces de pneumatiques, auréoles d'huile persistantes et murs marqués par les frottements répétés. Avec le temps, l'espace devient plus sombre, l'éclairage semble moins efficace et les marquages perdent en lisibilité, ce qui dégrade le confort et la sensation de sécurité des résidents. Les rampes d'accès deviennent glissantes, particulièrement par temps humide.</p>
-<p class="mt-4">Un simple balayage ne suffit pas à retirer les graisses incrustées dans la porosité du béton ou les résidus collants sur les pentes. Les copropriétaires se plaignent de salir leurs chaussures, certains craignent même de glisser. <strong>Un décrassage professionnel, organisé et contrôlé, permet de remettre le sol "au propre",</strong> d'améliorer l'adhérence sur les rampes, de restaurer la lisibilité des marquages et de revaloriser l'image globale de la résidence, sans bloquer inutilement l'usage du parking pendant plusieurs jours.</p>`,
+      uniqueIntro:
+        "<p>Les parkings de copropriété à Montfermeil s'encrassent rapidement : poussière noire collante issue du trafic routier et des chantiers urbains, traces de pneumatiques, auréoles d'huile persistantes et murs marqués par les frottements répétés. Avec le temps, l'espace devient plus sombre, l'éclairage semble moins efficace et les marquages perdent en lisibilité, ce qui dégrade le confort et la sensation de sécurité des résidents. Les rampes d'accès deviennent glissantes, particulièrement par temps humide.</p>\n<p class=\"mt-4\">Un simple balayage ne suffit pas à retirer les graisses incrustées dans la porosité du béton ou les résidus collants sur les pentes. Les copropriétaires se plaignent de salir leurs chaussures, certains craignent même de glisser. <strong>Un décrassage professionnel, organisé et contrôlé, permet de remettre le sol \"au propre\",</strong> d'améliorer l'adhérence sur les rampes, de restaurer la lisibilité des marquages et de revaloriser l'image globale de la résidence, sans bloquer inutilement l'usage du parking pendant plusieurs jours.</p>",
 
-      uniqueDeepDive: `<h3>1. Visite technique et organisation par zones</h3>
-<p>Évaluation du site : nature du sol (béton, peinture, résine), état des marquages, configuration des accès et rampes, points d'eau et évacuations disponibles. <strong>Préparation incluant un dépoussiérage complet,</strong> l'enlèvement des déchets volumineux et un balisage clair des zones de travail. Lorsque nécessaire, le chantier est organisé par zones pour coordonner une rotation simple des véhicules avec le syndic.</p>
-
-<h3>2. Autolaveuse et traitement haute pression ciblé</h3>
-<p>Nettoyage principal à l'autolaveuse (brossage mécanique + aspiration immédiate des eaux sales) pour les surfaces larges. <strong>Traitement haute pression ciblé</strong> sur les zones très grasses (taches d'huile, virages, pieds de colonnes) avec application de dégraissants professionnels adaptés. Temps de contact respecté pour dissoudre les résidus huileux incrustés.</p>
-
-<h3>3. Gestion des eaux et recommandations</h3>
-<p>Maîtrise stricte de la gestion des eaux de lavage : récupération via l'autolaveuse et évacuation conforme selon les équipements du site (évacuations, séparateurs si présents et fonctionnels). <strong>Insistance finale sur rampes, angles et pieds de murs.</strong> Fréquence recommandée : 1 à 2 décrassages annuels sur sites exposés aux chantiers et au trafic du T4, pour maintenir sécurité et propreté.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Visite technique et organisation par zones</h3>\n<p>Évaluation du site : nature du sol (béton, peinture, résine), état des marquages, configuration des accès et rampes, points d'eau et évacuations disponibles. <strong>Préparation incluant un dépoussiérage complet,</strong> l'enlèvement des déchets volumineux et un balisage clair des zones de travail. Lorsque nécessaire, le chantier est organisé par zones pour coordonner une rotation simple des véhicules avec le syndic.</p>\n\n<h3>2. Autolaveuse et traitement haute pression ciblé</h3>\n<p>Nettoyage principal à l'autolaveuse (brossage mécanique + aspiration immédiate des eaux sales) pour les surfaces larges. <strong>Traitement haute pression ciblé</strong> sur les zones très grasses (taches d'huile, virages, pieds de colonnes) avec application de dégraissants professionnels adaptés. Temps de contact respecté pour dissoudre les résidus huileux incrustés.</p>\n\n<h3>3. Gestion des eaux et recommandations</h3>\n<p>Maîtrise stricte de la gestion des eaux de lavage : récupération via l'autolaveuse et évacuation conforme selon les équipements du site (évacuations, séparateurs si présents et fonctionnels). <strong>Insistance finale sur rampes, angles et pieds de murs.</strong> Fréquence recommandée : 1 à 2 décrassages annuels sur sites exposés aux chantiers et au trafic du T4, pour maintenir sécurité et propreté.</p>",
 
       specificChallenges: [
         "Rampes en déclivité : besoin d'un décrassage rigoureux pour conserver adhérence et sécurité, notamment en hiver.",
@@ -193,8 +175,7 @@ nearbyCities: [
             "<p><strong>Un décrassage complet élimine la poussière accumulée</strong> et réduit fortement sa volatilité. Ensuite, elle revient progressivement (pneus, freins, circulation), mais à un rythme bien plus lent si un entretien régulier évite la formation d'une couche grasse et glissante.</p>",
         },
         {
-          question:
-            "Faut-il vider totalement le parking pour intervenir ?",
+          question: "Faut-il vider totalement le parking pour intervenir ?",
           answer:
             "<p><strong>Ce n'est pas obligatoire.</strong> Nous pouvons travailler par zones ou par demi-niveaux. La rotation des véhicules est cadrée à l'avance avec le syndic ou un référent, pour libérer progressivement les emplacements.</p>",
         },
@@ -205,8 +186,7 @@ nearbyCities: [
             "<p><strong>Nous obtenons d'excellents résultats sur les taches récentes.</strong> Sur des taches anciennes très imprégnées dans un béton brut, une auréole peut rester. En revanche, la surface est assainie : elle n'est plus grasse ni glissante.</p>",
         },
         {
-          question:
-            "Que faites-vous des eaux de lavage ?",
+          question: "Que faites-vous des eaux de lavage ?",
           answer:
             "<p><strong>Nous travaillons avec récupération et évacuation conforme</strong> selon les équipements du site (évacuations, séparateurs si présents et fonctionnels), ou avec récupération si nécessaire. Les eaux chargées ne sont pas rejetées sans contrôle.</p>",
         },
@@ -228,17 +208,11 @@ nearbyCities: [
         "Finitions soignées : rails, angles, garde-corps, vitres accessibles et points de reprise visibles.",
       ],
 
-      uniqueIntro: `<p>À Montfermeil, les balcons s'encrassent progressivement sous l'effet des mousses dans les zones ombragées proches de la forêt de Bondy, des dépôts de pollution atmosphérique, des traces d'eau calcaire et des résidus laissés par les jardinières ou les barbecues d'été. Les dalles ternissent, les joints noircissent et les garde-corps deviennent collants au toucher. Au fil des mois, cet extérieur qui devrait être un véritable atout de votre logement devient moins agréable et finit par servir de zone de stockage plutôt que d'espace de détente.</p>
-<p class="mt-4">Vous finissez par ne plus y sortir prendre votre café du matin, votre mobilier reste bâché toute l'année et vous renoncez à profiter de ces précieux mètres carrés extérieurs. Les enfants n'osent plus y jouer par peur de se salir les genoux. Quand vous recevez des amis, vous évitez d'ouvrir la porte-fenêtre par gêne de l'aspect sale. <strong>Une remise en état professionnelle permet de décaper sans agresser le support,</strong> de retrouver un sol propre et des finitions nettes, et surtout de réutiliser l'espace au quotidien comme un véritable prolongement de votre intérieur. L'intervention est pensée pour être propre, maîtrisée et respectueuse du voisinage en immeuble collectif.</p>`,
+      uniqueIntro:
+        "<p>À Montfermeil, les balcons s'encrassent progressivement sous l'effet des mousses dans les zones ombragées proches de la forêt de Bondy, des dépôts de pollution atmosphérique, des traces d'eau calcaire et des résidus laissés par les jardinières ou les barbecues d'été. Les dalles ternissent, les joints noircissent et les garde-corps deviennent collants au toucher. Au fil des mois, cet extérieur qui devrait être un véritable atout de votre logement devient moins agréable et finit par servir de zone de stockage plutôt que d'espace de détente.</p>\n<p class=\"mt-4\">Vous finissez par ne plus y sortir prendre votre café du matin, votre mobilier reste bâché toute l'année et vous renoncez à profiter de ces précieux mètres carrés extérieurs. Les enfants n'osent plus y jouer par peur de se salir les genoux. Quand vous recevez des amis, vous évitez d'ouvrir la porte-fenêtre par gêne de l'aspect sale. <strong>Une remise en état professionnelle permet de décaper sans agresser le support,</strong> de retrouver un sol propre et des finitions nettes, et surtout de réutiliser l'espace au quotidien comme un véritable prolongement de votre intérieur. L'intervention est pensée pour être propre, maîtrisée et respectueuse du voisinage en immeuble collectif.</p>",
 
-      uniqueDeepDive: `<h3>1. Protection et enlèvement des gros dépôts</h3>
-<p>Protection soigneuse des menuiseries (porte-fenêtre, baies vitrées) et des abords pour éviter toute infiltration. <strong>Retrait manuel des dépôts volumineux</strong> (feuilles mortes, terre des jardinières, déchets divers) pour éviter d'étaler la saleté lors du rinçage et limiter le risque de bouchage des évacuations.</p>
-
-<h3>2. Application de produits et brossage ciblé</h3>
-<p>Application d'un produit nettoyant adapté au support (carrelage, dalle béton, bois composite, pierre) avec temps de contact approprié. <strong>Brossage méthodique des zones marquées</strong> (joints encrassés, angles, seuils de porte) pour décoller les mousses, lichens et traces tenaces. Si nécessaire, utilisation d'une pression douce et contrôlée, jamais agressive pour les joints fragiles.</p>
-
-<h3>3. Rinçage maîtrisé et finitions</h3>
-<p>La gestion de l'eau est centrale : raclage systématique, contrôle du flux vers l'évacuation du balcon, et aspiration à eau si l'évacuation est douteuse ou bouchée, afin d'éviter toute coulure chez le voisin du dessous ou sur la façade. <strong>Séchage naturel en quelques heures</strong> selon l'exposition et la ventilation. Finitions soignées sur les garde-corps, vitres et rails pour un résultat impeccable.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Protection et enlèvement des gros dépôts</h3>\n<p>Protection soigneuse des menuiseries (porte-fenêtre, baies vitrées) et des abords pour éviter toute infiltration. <strong>Retrait manuel des dépôts volumineux</strong> (feuilles mortes, terre des jardinières, déchets divers) pour éviter d'étaler la saleté lors du rinçage et limiter le risque de bouchage des évacuations.</p>\n\n<h3>2. Application de produits et brossage ciblé</h3>\n<p>Application d'un produit nettoyant adapté au support (carrelage, dalle béton, bois composite, pierre) avec temps de contact approprié. <strong>Brossage méthodique des zones marquées</strong> (joints encrassés, angles, seuils de porte) pour décoller les mousses, lichens et traces tenaces. Si nécessaire, utilisation d'une pression douce et contrôlée, jamais agressive pour les joints fragiles.</p>\n\n<h3>3. Rinçage maîtrisé et finitions</h3>\n<p>La gestion de l'eau est centrale : raclage systématique, contrôle du flux vers l'évacuation du balcon, et aspiration à eau si l'évacuation est douteuse ou bouchée, afin d'éviter toute coulure chez le voisin du dessous ou sur la façade. <strong>Séchage naturel en quelques heures</strong> selon l'exposition et la ventilation. Finitions soignées sur les garde-corps, vitres et rails pour un résultat impeccable.</p>",
 
       specificChallenges: [
         "Dépôts verts rapides sur balcons ombragés : mousses et lichens favorisés par proximité des zones boisées.",
@@ -266,8 +240,7 @@ nearbyCities: [
             "<p><strong>Nous protégeons ou déplaçons les plantes</strong> et rinçons correctement les surfaces. Si vous avez des animaux sensibles ou des plantations fragiles, nous adaptons la méthode pour rester efficace sans sur-dosage de produits.</p>",
         },
         {
-          question:
-            "Combien de temps faut-il pour que le balcon sèche ?",
+          question: "Combien de temps faut-il pour que le balcon sèche ?",
           answer:
             "<p><strong>Cela dépend de la météo, de l'exposition et du support.</strong> Sur carrelage, le séchage est souvent rapide par temps sec ; sur supports plus poreux, cela prend un peu plus de temps. Dans tous les cas, nous limitons l'eau résiduelle par raclage et, si besoin, aspiration.</p>",
         },
@@ -290,17 +263,11 @@ nearbyCities: [
         "Maîtrise stricte des eaux de rinçage pour éviter contamination des balcons inférieurs et de la façade.",
       ],
 
-      uniqueIntro: `<p>La présence de pigeons est une réalité à Montfermeil, favorisée par la proximité de la forêt de Bondy et les nombreux toits des zones pavillonnaires comme Franceville qui offrent des lieux de nidification idéaux. Lorsqu'un balcon est colonisé, la situation devient vite invivable : accumulation de fientes acides qui ternissent et corrodent les matériaux, odeurs persistantes et écœurantes qui pénètrent dans le logement, et surtout risques sanitaires réels liés aux poussières séchées qui se dispersent au moindre courant d'air.</p>
-<p class="mt-4">Cet encrassement massif rend l'espace extérieur totalement inutilisable et peut créer des tensions de voisinage dues aux nuisances olfactives ou visuelles. Vous n'osez plus ouvrir votre porte-fenêtre, vous craignez pour la santé de vos enfants et vous subissez parfois des réclamations du conseil syndical. Au-delà du simple nettoyage cosmétique, il s'agit d'une véritable décontamination qui nécessite un équipement de protection spécifique pour éviter toute inhalation de particules nocives. <strong>Une intervention professionnelle permet d'obtenir un résultat sûr,</strong> sans disperser les contaminants dans l'air ou chez les voisins, et de retrouver un balcon propre, sain et réutilisable en toute sécurité pour toute la famille.</p>`,
+      uniqueIntro:
+        "<p>La présence de pigeons est une réalité à Montfermeil, favorisée par la proximité de la forêt de Bondy et les nombreux toits des zones pavillonnaires comme Franceville qui offrent des lieux de nidification idéaux. Lorsqu'un balcon est colonisé, la situation devient vite invivable : accumulation de fientes acides qui ternissent et corrodent les matériaux, odeurs persistantes et écœurantes qui pénètrent dans le logement, et surtout risques sanitaires réels liés aux poussières séchées qui se dispersent au moindre courant d'air.</p>\n<p class=\"mt-4\">Cet encrassement massif rend l'espace extérieur totalement inutilisable et peut créer des tensions de voisinage dues aux nuisances olfactives ou visuelles. Vous n'osez plus ouvrir votre porte-fenêtre, vous craignez pour la santé de vos enfants et vous subissez parfois des réclamations du conseil syndical. Au-delà du simple nettoyage cosmétique, il s'agit d'une véritable décontamination qui nécessite un équipement de protection spécifique pour éviter toute inhalation de particules nocives. <strong>Une intervention professionnelle permet d'obtenir un résultat sûr,</strong> sans disperser les contaminants dans l'air ou chez les voisins, et de retrouver un balcon propre, sain et réutilisable en toute sécurité pour toute la famille.</p>",
 
-      uniqueDeepDive: `<h3>1. Confinement et protection sanitaire</h3>
-<p>Le technicien s'équipe d'une combinaison étanche, de gants épais, d'un masque respiratoire <strong>FFP3</strong> et de lunettes avant de confiner la zone de travail pour protéger votre intérieur. <strong>Installation de bâches de protection</strong> devant la porte-fenêtre pour isoler le balcon et limiter la dispersion des particules vers les pièces de vie.</p>
-
-<h3>2. Humidification, grattage et conditionnement</h3>
-<p>Humidification contrôlée des fientes sèches pour empêcher les poussières contaminées de se disperser dans l'air. <strong>Grattage manuel méthodique</strong> et enlèvement des nids et déchets organiques, immédiatement conditionnés dans des sacs hermétiques prévus pour les déchets biologiques dangereux. Aucun résidu n'est laissé sur place ni jeté dans les poubelles de la résidence.</p>
-
-<h3>3. Nettoyage, désinfection virucide et aération</h3>
-<p>Nettoyage des surfaces (sol, garde-corps, appuis de fenêtre, murs mitoyens) avec des détergents adaptés qui dissolvent les résidus organiques incrustés. <strong>Application d'un produit désinfectant virucide et bactéricide homologué,</strong> en respectant scrupuleusement le temps de contact nécessaire (15 à 20 minutes) pour neutraliser tous les germes pathogènes. Rinçage final maîtrisé, puis aération complète pendant 24 heures avant toute réutilisation. Installation possible de picots ou de filets anti-pigeons pour limiter les retours et préserver durablement la salubrité.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Confinement et protection sanitaire</h3>\n<p>Le technicien s'équipe d'une combinaison étanche, de gants épais, d'un masque respiratoire <strong>FFP3</strong> et de lunettes avant de confiner la zone de travail pour protéger votre intérieur. <strong>Installation de bâches de protection</strong> devant la porte-fenêtre pour isoler le balcon et limiter la dispersion des particules vers les pièces de vie.</p>\n\n<h3>2. Humidification, grattage et conditionnement</h3>\n<p>Humidification contrôlée des fientes sèches pour empêcher les poussières contaminées de se disperser dans l'air. <strong>Grattage manuel méthodique</strong> et enlèvement des nids et déchets organiques, immédiatement conditionnés dans des sacs hermétiques prévus pour les déchets biologiques dangereux. Aucun résidu n'est laissé sur place ni jeté dans les poubelles de la résidence.</p>\n\n<h3>3. Nettoyage, désinfection virucide et aération</h3>\n<p>Nettoyage des surfaces (sol, garde-corps, appuis de fenêtre, murs mitoyens) avec des détergents adaptés qui dissolvent les résidus organiques incrustés. <strong>Application d'un produit désinfectant virucide et bactéricide homologué,</strong> en respectant scrupuleusement le temps de contact nécessaire (15 à 20 minutes) pour neutraliser tous les germes pathogènes. Rinçage final maîtrisé, puis aération complète pendant 24 heures avant toute réutilisation. Installation possible de picots ou de filets anti-pigeons pour limiter les retours et préserver durablement la salubrité.</p>",
 
       specificChallenges: [
         "Nidification sous toitures en zone pavillonnaire (Franceville, Les Coudreaux) : les fientes tombent directement sur les balcons des étages inférieurs.",
@@ -353,16 +320,11 @@ nearbyCities: [
         "Conseils d'entretien personnalisés : gestes simples pour prolonger la propreté selon votre mode de vie.",
       ],
 
-      uniqueIntro: "<p>Dans les zones pavillonnaires comme Franceville ou dans les appartements du Plateau à Montfermeil, les textiles d'ameublement sont au cœur de la vie familiale. Canapés, tapis et matelas subissent quotidiennement les sollicitations des enfants qui jouent, des animaux de compagnie qui rentrent du jardin après une promenade dans la forêt de Bondy, et des repas pris sur le pouce devant la télévision. Les taches visibles de café renversé, de feutre, de nourriture grasse ou d'urine d'animaux s'accumulent progressivement.</p>\n<p class=\"mt-4\">Au-delà de ces salissures apparentes, c'est la pollution invisible qui pose le plus problème : poussières fines venues des chantiers urbains et du trafic du T4, allergènes et acariens qui s'incrustent progressivement dans les fibres malgré l'aspirateur hebdomadaire. Cette accumulation ternit les couleurs, fixe les odeurs tenaces et peut gêner les personnes sensibles, particulièrement les enfants asthmatiques. Vous finissez par éviter de vous asseoir sur certaines parties du canapé, vous hésitez à recevoir des invités par gêne de l'aspect taché et vous vous réveillez parfois avec le nez qui coule à cause des acariens. <strong>L'aspirateur domestique ne permet pas d'extraire ce qui est logé au cœur de la mousse.</strong> Une intervention professionnelle par injection-extraction permet d’assainir en profondeur vos assises et literies, leur redonnant confort et propreté sans avoir à remplacer le mobilier, avec des résultats visibles et durables.</p>",
+      uniqueIntro:
+        "<p>Dans les zones pavillonnaires comme Franceville ou dans les appartements du Plateau à Montfermeil, les textiles d'ameublement sont au cœur de la vie familiale. Canapés, tapis et matelas subissent quotidiennement les sollicitations des enfants qui jouent, des animaux de compagnie qui rentrent du jardin après une promenade dans la forêt de Bondy, et des repas pris sur le pouce devant la télévision. Les taches visibles de café renversé, de feutre, de nourriture grasse ou d'urine d'animaux s'accumulent progressivement.</p>\n<p class=\"mt-4\">Au-delà de ces salissures apparentes, c'est la pollution invisible qui pose le plus problème : poussières fines venues des chantiers urbains et du trafic du T4, allergènes et acariens qui s'incrustent progressivement dans les fibres malgré l'aspirateur hebdomadaire. Cette accumulation ternit les couleurs, fixe les odeurs tenaces et peut gêner les personnes sensibles, particulièrement les enfants asthmatiques. Vous finissez par éviter de vous asseoir sur certaines parties du canapé, vous hésitez à recevoir des invités par gêne de l'aspect taché et vous vous réveillez parfois avec le nez qui coule à cause des acariens. <strong>L'aspirateur domestique ne permet pas d'extraire ce qui est logé au cœur de la mousse.</strong> Une intervention professionnelle par injection-extraction permet d’assainir en profondeur vos assises et literies, leur redonnant confort et propreté sans avoir à remplacer le mobilier, avec des résultats visibles et durables.</p>",
 
-      uniqueDeepDive: `<h3>1. Diagnostic des textiles et pré-traitement</h3>
-<p>Diagnostic précis des fibres (coton, velours, lin, synthétique, cuir) afin d'adapter la température, la pression et la chimie de nettoyage pour respecter la structure du textile. <strong>Protection soigneuse des sols</strong> (parquet, carrelage) et des abords avant d'appliquer un pré-traitement détachant ciblé sur les zones les plus sollicitées : accoudoirs usés, assises tachées, traces alimentaires ou zones de frottement intensif.</p>
-
-<h3>2. Injection-extraction professionnelle</h3>
-<p>Le nettoyage s'effectue par injection-extraction : une solution nettoyante est injectée au cœur du textile puis aspirée sous vide avec les salissures dissoutes, les acariens et leurs déjections. <strong>Ce procédé lave la fibre en profondeur</strong> tout en maîtrisant strictement l'humidité, sans détremper la structure du canapé ou du matelas. Plusieurs passes sur les zones critiques pour un résultat homogène.</p>
-
-<h3>3. Aspiration de finition et conseils de séchage</h3>
-<p>Aspiration de finition pour redresser les fibres et donner un aspect uniforme au textile. <strong>Conseils personnalisés sur la ventilation de la pièce</strong> afin d'optimiser le séchage (ouverture des fenêtres, chauffage modéré si nécessaire). Séchage généralement en 4 à 8 heures selon l'épaisseur du textile et l'aération du logement. Recommandations d'entretien régulier pour prolonger le résultat.</p>`,
+      uniqueDeepDive:
+        "<h3>1. Diagnostic des textiles et pré-traitement</h3>\n<p>Diagnostic précis des fibres (coton, velours, lin, synthétique, cuir) afin d'adapter la température, la pression et la chimie de nettoyage pour respecter la structure du textile. <strong>Protection soigneuse des sols</strong> (parquet, carrelage) et des abords avant d'appliquer un pré-traitement détachant ciblé sur les zones les plus sollicitées : accoudoirs usés, assises tachées, traces alimentaires ou zones de frottement intensif.</p>\n\n<h3>2. Injection-extraction professionnelle</h3>\n<p>Le nettoyage s'effectue par injection-extraction : une solution nettoyante est injectée au cœur du textile puis aspirée sous vide avec les salissures dissoutes, les acariens et leurs déjections. <strong>Ce procédé lave la fibre en profondeur</strong> tout en maîtrisant strictement l'humidité, sans détremper la structure du canapé ou du matelas. Plusieurs passes sur les zones critiques pour un résultat homogène.</p>\n\n<h3>3. Aspiration de finition et conseils de séchage</h3>\n<p>Aspiration de finition pour redresser les fibres et donner un aspect uniforme au textile. <strong>Conseils personnalisés sur la ventilation de la pièce</strong> afin d'optimiser le séchage (ouverture des fenêtres, chauffage modéré si nécessaire). Séchage généralement en 4 à 8 heures selon l'épaisseur du textile et l'aération du logement. Recommandations d'entretien régulier pour prolonger le résultat.</p>",
 
       specificChallenges: [
         "Proximité de la forêt de Bondy : apports saisonniers importants de pollens et d'allergènes qui se fixent durablement dans les tissus (canapés, tapis, rideaux).",
@@ -390,8 +352,7 @@ nearbyCities: [
             "<p><strong>Nous extrayons environ 90 % de l'eau utilisée,</strong> mais le textile reste légèrement humide au toucher. Le séchage complet prend en général entre 4 et 8 heures selon la ventilation, la température et l'épaisseur du tissu. Une bonne aération permet d'accélérer le processus.</p>",
         },
         {
-          question:
-            "Que dois-je préparer avant votre venue ?",
+          question: "Que dois-je préparer avant votre venue ?",
           answer:
             "<p><strong>Il suffit de dégager l'espace autour du meuble à nettoyer</strong> pour faciliter l'intervention. Si des objets fragiles sont à proximité, mettez-les de côté. Nous nous chargeons de protéger les sols et, si nécessaire, de déplacer légèrement le mobilier.</p>",
         },
@@ -401,126 +362,110 @@ nearbyCities: [
     },
 
     {
-  serviceKey: "terrasses",
-  heroDescription:
-    "Nettoyage et remise en état de terrasses à Montfermeil : élimination des mousses, traces noires et salissures incrustées, avec une méthode efficace adaptée aux terrains en pente et aux quartiers pavillonnaires arborés.",
-  whyUsBullets: [
-    "Intervention sur l’ensemble de Montfermeil : Franceville, Les Oiseaux, Les Bosquets, Le Plateau, centre-ville, zones pavillonnaires et résidentielles.",
-    "Maîtrise des contraintes locales : terrasses en pente, sols extérieurs exposés aux ruissellements, surfaces fortement encrassées par la végétation.",
-    "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour retrouver une terrasse nette et agréable.",
-  ],
-  uniqueIntro: `<p><strong>Montfermeil</strong>, commune résidentielle de Seine-Saint-Denis située en hauteur à l’est de Paris, se distingue par son relief marqué et ses quartiers pavillonnaires verdoyants. Cette configuration entraîne un ruissellement fréquent de l’eau et une exposition importante des terrasses aux salissures extérieures.</p>
-
-<p class="mt-4">Dans de nombreux secteurs — notamment <strong>Franceville</strong>, <strong>Le Plateau</strong> ou les abords boisés — les terrasses sont soumises à l’humidité, aux retombées végétales et aux traces de pollution. Résultat : <strong>mousses, algues, traces noires et zones glissantes</strong> s’installent rapidement sur les sols extérieurs.</p>
-
-<p class="mt-4">Le bâti montfermois est majoritairement composé de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque surface demande une approche spécifique pour un nettoyage en profondeur et un rendu visuel durable.</p>`,
-  uniqueDeepDive: `<h3>Préparation et sécurisation de la zone</h3>
-<p>Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats (murs, façades, menuiseries) sont bâchés afin de travailler proprement, y compris sur les terrasses en pente typiques de Montfermeil.</p>
-
-<h3>Nettoyage en profondeur adapté au sol</h3>
-<p>Le traitement est choisi selon le matériau : solution renforcée pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les traces de ruissellement. Le rinçage est ajusté pour nettoyer en profondeur sans altérer la surface.</p>
-
-<h3>Finition et mise en valeur de la terrasse</h3>
-<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair, plus homogène et nettement plus confortable à l’usage. Des conseils simples sont transmis pour conserver une terrasse propre plus longtemps.</p>`,
-  specificChallenges: [
-    "Terrasses en pente : ruissellement de l’eau accentuant les traces noires et les zones encrassées.",
-    "Quartiers arborés : dépôts végétaux, feuilles et mousses favorisant l’encrassement rapide.",
-    "Dalles béton très sollicitées : porosité marquée retenant les salissures et l’humidité.",
-    "Terrasses partiellement couvertes : séchage lent et développement de surfaces glissantes.",
-    "Bois et composite exposés plein air : ternissement visuel et salissures incrustées.",
-  ],
-  faqAdditions: [
-    {
-      question:
-        "Pourquoi ma terrasse s’encrasse-t-elle aussi vite à Montfermeil ?",
-      answer:
-        "<p>Le relief de Montfermeil favorise le ruissellement de l’eau, combiné à une végétation dense dans de nombreux quartiers. Cette combinaison accélère l’apparition de mousses, d’algues et de traces noires sur les terrasses, en particulier sur les dalles béton et carrelages extérieurs.</p>",
+      serviceKey: "terrasses",
+      heroDescription:
+        "Nettoyage et remise en état de terrasses à Montfermeil : élimination des mousses, traces noires et salissures incrustées, avec une méthode efficace adaptée aux terrains en pente et aux quartiers pavillonnaires arborés.",
+      whyUsBullets: [
+        "Intervention sur l’ensemble de Montfermeil : Franceville, Les Oiseaux, Les Bosquets, Le Plateau, centre-ville, zones pavillonnaires et résidentielles.",
+        "Maîtrise des contraintes locales : terrasses en pente, sols extérieurs exposés aux ruissellements, surfaces fortement encrassées par la végétation.",
+        "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour retrouver une terrasse nette et agréable.",
+      ],
+      uniqueIntro:
+        '<p><strong>Montfermeil</strong>, commune résidentielle de Seine-Saint-Denis située en hauteur à l’est de Paris, se distingue par son relief marqué et ses quartiers pavillonnaires verdoyants. Cette configuration entraîne un ruissellement fréquent de l’eau et une exposition importante des terrasses aux salissures extérieures.</p>\n\n<p class="mt-4">Dans de nombreux secteurs — notamment <strong>Franceville</strong>, <strong>Le Plateau</strong> ou les abords boisés — les terrasses sont soumises à l’humidité, aux retombées végétales et aux traces de pollution. Résultat : <strong>mousses, algues, traces noires et zones glissantes</strong> s’installent rapidement sur les sols extérieurs.</p>\n\n<p class="mt-4">Le bâti montfermois est majoritairement composé de <strong>maisons individuelles</strong> avec terrasses en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque surface demande une approche spécifique pour un nettoyage en profondeur et un rendu visuel durable.</p>',
+      uniqueDeepDive:
+        "<h3>Préparation et sécurisation de la zone</h3>\n<p>Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats (murs, façades, menuiseries) sont bâchés afin de travailler proprement, y compris sur les terrasses en pente typiques de Montfermeil.</p>\n\n<h3>Nettoyage en profondeur adapté au sol</h3>\n<p>Le traitement est choisi selon le matériau : solution renforcée pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les traces de ruissellement. Le rinçage est ajusté pour nettoyer en profondeur sans altérer la surface.</p>\n\n<h3>Finition et mise en valeur de la terrasse</h3>\n<p>Une attention particulière est portée aux zones de passage et aux parties les plus exposées à l’humidité. Le nettoyage redonne à la terrasse un aspect plus clair, plus homogène et nettement plus confortable à l’usage. Des conseils simples sont transmis pour conserver une terrasse propre plus longtemps.</p>",
+      specificChallenges: [
+        "Terrasses en pente : ruissellement de l’eau accentuant les traces noires et les zones encrassées.",
+        "Quartiers arborés : dépôts végétaux, feuilles et mousses favorisant l’encrassement rapide.",
+        "Dalles béton très sollicitées : porosité marquée retenant les salissures et l’humidité.",
+        "Terrasses partiellement couvertes : séchage lent et développement de surfaces glissantes.",
+        "Bois et composite exposés plein air : ternissement visuel et salissures incrustées.",
+      ],
+      faqAdditions: [
+        {
+          question:
+            "Pourquoi ma terrasse s’encrasse-t-elle aussi vite à Montfermeil ?",
+          answer:
+            "<p>Le relief de Montfermeil favorise le ruissellement de l’eau, combiné à une végétation dense dans de nombreux quartiers. Cette combinaison accélère l’apparition de mousses, d’algues et de traces noires sur les terrasses, en particulier sur les dalles béton et carrelages extérieurs.</p>",
+        },
+        {
+          question:
+            "Votre nettoyage améliore-t-il vraiment l’aspect visuel de la terrasse ?",
+          answer:
+            "<p>Oui. Le nettoyage en profondeur permet d’éclaircir les surfaces, d’uniformiser l’aspect du sol et de supprimer les zones sombres ou verdies. La terrasse retrouve un rendu plus propre et plus valorisant pour l’usage quotidien ou la réception.</p>",
+        },
+        {
+          question:
+            "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
+          answer:
+            "<p>Nous intervenons régulièrement sur des terrasses fortement encrassées, parfois laissées sans entretien depuis plusieurs années. La méthode est adaptée à l’état réel du support pour obtenir un résultat visible et durable.</p>",
+        },
+        {
+          question:
+            "Nettoyez-vous aussi les terrasses de petites copropriétés à Montfermeil ?",
+          answer:
+            "<p>Oui, nous intervenons également sur les terrasses et cours extérieures de copropriétés à taille résidentielle, avec une organisation adaptée aux contraintes du site et aux usages des occupants.</p>",
+        },
+      ],
+      ctaOverride: "",
     },
+
     {
-      question:
-        "Votre nettoyage améliore-t-il vraiment l’aspect visuel de la terrasse ?",
-      answer:
-        "<p>Oui. Le nettoyage en profondeur permet d’éclaircir les surfaces, d’uniformiser l’aspect du sol et de supprimer les zones sombres ou verdies. La terrasse retrouve un rendu plus propre et plus valorisant pour l’usage quotidien ou la réception.</p>",
+      serviceKey: "nettoyage-appartement-maison",
+
+      heroDescription:
+        "Fin de bail, remise en état après travaux, grand ménage ou logement très encrassé. Intervention pensée pour une ville à deux facettes : pavillonnaire étendu (Franceville / Les Coudreaux) et secteurs collectifs en transformation (Les Bosquets).",
+
+      whyUsBullets: [
+        "Approche “terrain” adaptée à Montfermeil : pentes, rues résidentielles calmes, et accès plus contraints autour du GHI (stationnement, rotations, horaires).",
+        "Remise en état orientée résultat : cuisine/SDB (calcaire), sols et finitions visibles (portes, plinthes, poignées, interrupteurs) pour sécuriser un état des lieux.",
+        "Capacité à gérer des cas très différents : pavillons avec étages et vérandas, appartements en collectif avec badges, et chantiers de rénovation (Bosquets).",
+      ],
+
+      uniqueIntro:
+        '<p>À Montfermeil, un nettoyage “appartement/maison” doit intégrer la géographie et les usages. La commune alterne des quartiers pavillonnaires vastes comme <strong>Franceville</strong> et <strong>Les Coudreaux</strong>, et des zones collectives en mutation autour des <strong>Bosquets</strong>. Ajoute à cela un relief marqué : ce n’est pas rare qu’une intervention soit simple à l’intérieur… mais plus délicate côté accès, portage et stationnement.</p>\n<p class="mt-4">Le second moteur local, c’est le <strong>GHI Le Raincy–Montfermeil</strong> et le terminus du <strong>Tram T4</strong> : on voit davantage de demandes “pragmatiques” (rotation de logements de soignants, états des lieux rapides, remises en état avant relocation) avec des horaires sensibles. Dans ces cas-là, la qualité se joue sur une méthode claire : cadrer le périmètre, traiter en priorité ce qui se voit et se contrôle, puis verrouiller les finitions.</p>\n<p class="mt-4">Enfin, Montfermeil a un vrai ADN “ville-parc” autour de l’<strong>Arboretum</strong> et du <strong>Château des Cèdres</strong>. Concrètement, cela se traduit souvent par des maisons avec jardins, terrasses et vitrages plus exposés (pollen, poussière, traces extérieures). Le bon niveau de prestation consiste à livrer un rendu net, sans bruit inutile, et en protégeant les sols (parquet, carrelage) dans des quartiers où le voisinage est attentif.</p>',
+
+      uniqueDeepDive:
+        "<h3>Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3>\n<p>Dans les pavillons, la difficulté est rarement “une pièce”, mais l’enchaînement : entrée, escalier, couloirs, puis cuisine et salles d’eau où le calcaire se voit très vite. Les vérandas, baies vitrées et Velux reviennent souvent : on adapte le périmètre pour obtenir un résultat cohérent, surtout avant visite ou mise en location.</p>\n\n<h3>Secteurs collectifs (Bosquets / Centre) — accès, badges et séquence de nettoyage</h3>\n<p>En collectif, le rythme est dicté par les accès (digicode, badge, ascenseur) et la circulation. On travaille en séquence “de l’arrière vers la sortie” pour garder les sols propres jusqu’au dernier passage. En fin de bail, on priorise les zones contrôlées : cuisine, salle d’eau, sols, puis finitions (plinthes, portes, interrupteurs).</p>\n\n<h3>Pôle Hôpital / Tram T4 — demandes réactives et contraintes de stationnement</h3>\n<p>Autour du GHI et des stations T4, la demande est plus “calée” sur des horaires : relèves, créneaux serrés, logements de rotation. L’enjeu ici, c’est l’anticipation : arrivée, déchargement, ordre d’intervention. Cette organisation évite les pertes de temps et garantit un rendu propre même quand la logistique est tendue.</p>",
+
+      specificChallenges: [
+        "Relief marqué : portage et accès à prévoir (pentes, rues résidentielles), surtout avec matériel et consommables.",
+        "Secteur Hôpital : stationnement difficile et horaires sensibles (relèves), nécessité d’une organisation stricte.",
+        "Ville mixte : pavillons (vérandas/baies/escaliers) vs collectifs (badges, ascenseurs, circulation).",
+        "Rénovations et transformations : demandes après travaux plus fréquentes (poussières fines, traces sur menuiseries).",
+        "Eau calcaire : salles d’eau et robinetteries qui marquent vite, particulièrement en logements de rotation.",
+        "Quartiers calmes : exigence de discrétion et protection des sols (parquet/carrelage) dans le pavillonnaire.",
+      ],
+
+      faqAdditions: [
+        {
+          question:
+            "Intervenez-vous à Montfermeil (93370) pour un nettoyage avant état des lieux ?",
+          answer:
+            "<p>Oui. On vise un rendu “contrôlable” : cuisine, salle d’eau, sols et finitions visibles (plinthes, portes, interrupteurs). À Montfermeil, on anticipe aussi l’accès (pentes, stationnement) pour tenir le créneau sans bâcler la finition.</p>",
+        },
+        {
+          question:
+            "Pouvez-vous faire un nettoyage après travaux (poussière de plâtre/peinture) ?",
+          answer:
+            "<p>Oui. Après travaux, l’essentiel est de traiter la poussière fine et les traces sur menuiseries, plinthes et sols, puis d’enchaîner avec un nettoyage complet des points de contact. C’est particulièrement utile sur des rénovations de maisons et sur des appartements en remise en état.</p>",
+        },
+        {
+          question:
+            "Le logement est proche de l’Hôpital : est-ce que ça change l’organisation ?",
+          answer:
+            "<p>Souvent, oui. Le stationnement et les horaires peuvent être plus contraints. Nous cadrons l’arrivée et le déchargement, puis nous travaillons en séquence pour sécuriser le résultat sans multiplier les allers-retours.</p>",
+        },
+        {
+          question:
+            "Nettoyez-vous aussi les vitrages (véranda, baies, Velux) ?",
+          answer:
+            "<p>Sur demande, oui pour les vitrages accessibles et leurs encadrements. À Montfermeil, c’est fréquent dans le pavillonnaire (Franceville/Les Coudreaux) et cela améliore nettement le rendu, surtout avant une visite ou une vente.</p>",
+        },
+      ],
+
+      ctaOverride: "",
     },
-    {
-      question:
-        "Intervenez-vous sur des terrasses très encrassées ou peu entretenues ?",
-      answer:
-        "<p>Nous intervenons régulièrement sur des terrasses fortement encrassées, parfois laissées sans entretien depuis plusieurs années. La méthode est adaptée à l’état réel du support pour obtenir un résultat visible et durable.</p>",
-    },
-    {
-      question:
-        "Nettoyez-vous aussi les terrasses de petites copropriétés à Montfermeil ?",
-      answer:
-        "<p>Oui, nous intervenons également sur les terrasses et cours extérieures de copropriétés à taille résidentielle, avec une organisation adaptée aux contraintes du site et aux usages des occupants.</p>",
-    },
-  ],
-  ctaOverride: "",
-},
-
-
-
-    {
-  serviceKey: "nettoyage-appartement-maison",
-
-  heroDescription:
-    "Fin de bail, remise en état après travaux, grand ménage ou logement très encrassé. Intervention pensée pour une ville à deux facettes : pavillonnaire étendu (Franceville / Les Coudreaux) et secteurs collectifs en transformation (Les Bosquets).",
-
-  whyUsBullets: [
-    "Approche “terrain” adaptée à Montfermeil : pentes, rues résidentielles calmes, et accès plus contraints autour du GHI (stationnement, rotations, horaires).",
-    "Remise en état orientée résultat : cuisine/SDB (calcaire), sols et finitions visibles (portes, plinthes, poignées, interrupteurs) pour sécuriser un état des lieux.",
-    "Capacité à gérer des cas très différents : pavillons avec étages et vérandas, appartements en collectif avec badges, et chantiers de rénovation (Bosquets).",
-  ],
-
-  uniqueIntro: `<p>À Montfermeil, un nettoyage “appartement/maison” doit intégrer la géographie et les usages. La commune alterne des quartiers pavillonnaires vastes comme <strong>Franceville</strong> et <strong>Les Coudreaux</strong>, et des zones collectives en mutation autour des <strong>Bosquets</strong>. Ajoute à cela un relief marqué : ce n’est pas rare qu’une intervention soit simple à l’intérieur… mais plus délicate côté accès, portage et stationnement.</p>
-<p class="mt-4">Le second moteur local, c’est le <strong>GHI Le Raincy–Montfermeil</strong> et le terminus du <strong>Tram T4</strong> : on voit davantage de demandes “pragmatiques” (rotation de logements de soignants, états des lieux rapides, remises en état avant relocation) avec des horaires sensibles. Dans ces cas-là, la qualité se joue sur une méthode claire : cadrer le périmètre, traiter en priorité ce qui se voit et se contrôle, puis verrouiller les finitions.</p>
-<p class="mt-4">Enfin, Montfermeil a un vrai ADN “ville-parc” autour de l’<strong>Arboretum</strong> et du <strong>Château des Cèdres</strong>. Concrètement, cela se traduit souvent par des maisons avec jardins, terrasses et vitrages plus exposés (pollen, poussière, traces extérieures). Le bon niveau de prestation consiste à livrer un rendu net, sans bruit inutile, et en protégeant les sols (parquet, carrelage) dans des quartiers où le voisinage est attentif.</p>`,
-
-  uniqueDeepDive: `<h3>Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3>
-<p>Dans les pavillons, la difficulté est rarement “une pièce”, mais l’enchaînement : entrée, escalier, couloirs, puis cuisine et salles d’eau où le calcaire se voit très vite. Les vérandas, baies vitrées et Velux reviennent souvent : on adapte le périmètre pour obtenir un résultat cohérent, surtout avant visite ou mise en location.</p>
-
-<h3>Secteurs collectifs (Bosquets / Centre) — accès, badges et séquence de nettoyage</h3>
-<p>En collectif, le rythme est dicté par les accès (digicode, badge, ascenseur) et la circulation. On travaille en séquence “de l’arrière vers la sortie” pour garder les sols propres jusqu’au dernier passage. En fin de bail, on priorise les zones contrôlées : cuisine, salle d’eau, sols, puis finitions (plinthes, portes, interrupteurs).</p>
-
-<h3>Pôle Hôpital / Tram T4 — demandes réactives et contraintes de stationnement</h3>
-<p>Autour du GHI et des stations T4, la demande est plus “calée” sur des horaires : relèves, créneaux serrés, logements de rotation. L’enjeu ici, c’est l’anticipation : arrivée, déchargement, ordre d’intervention. Cette organisation évite les pertes de temps et garantit un rendu propre même quand la logistique est tendue.</p>`,
-
-  specificChallenges: [
-    "Relief marqué : portage et accès à prévoir (pentes, rues résidentielles), surtout avec matériel et consommables.",
-    "Secteur Hôpital : stationnement difficile et horaires sensibles (relèves), nécessité d’une organisation stricte.",
-    "Ville mixte : pavillons (vérandas/baies/escaliers) vs collectifs (badges, ascenseurs, circulation).",
-    "Rénovations et transformations : demandes après travaux plus fréquentes (poussières fines, traces sur menuiseries).",
-    "Eau calcaire : salles d’eau et robinetteries qui marquent vite, particulièrement en logements de rotation.",
-    "Quartiers calmes : exigence de discrétion et protection des sols (parquet/carrelage) dans le pavillonnaire.",
-  ],
-
-  faqAdditions: [
-    {
-      question: "Intervenez-vous à Montfermeil (93370) pour un nettoyage avant état des lieux ?",
-      answer: `<p>Oui. On vise un rendu “contrôlable” : cuisine, salle d’eau, sols et finitions visibles (plinthes, portes, interrupteurs). À Montfermeil, on anticipe aussi l’accès (pentes, stationnement) pour tenir le créneau sans bâcler la finition.</p>`,
-    },
-    {
-      question: "Pouvez-vous faire un nettoyage après travaux (poussière de plâtre/peinture) ?",
-      answer: `<p>Oui. Après travaux, l’essentiel est de traiter la poussière fine et les traces sur menuiseries, plinthes et sols, puis d’enchaîner avec un nettoyage complet des points de contact. C’est particulièrement utile sur des rénovations de maisons et sur des appartements en remise en état.</p>`,
-    },
-    {
-      question: "Le logement est proche de l’Hôpital : est-ce que ça change l’organisation ?",
-      answer: `<p>Souvent, oui. Le stationnement et les horaires peuvent être plus contraints. Nous cadrons l’arrivée et le déchargement, puis nous travaillons en séquence pour sécuriser le résultat sans multiplier les allers-retours.</p>`,
-    },
-    {
-      question: "Nettoyez-vous aussi les vitrages (véranda, baies, Velux) ?",
-      answer: `<p>Sur demande, oui pour les vitrages accessibles et leurs encadrements. À Montfermeil, c’est fréquent dans le pavillonnaire (Franceville/Les Coudreaux) et cela améliore nettement le rendu, surtout avant une visite ou une vente.</p>`,
-    },
-  ],
-
-  ctaOverride: "",
-},
-
-
-    
-
-
-    
   ],
 };
 

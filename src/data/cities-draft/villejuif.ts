@@ -63,23 +63,23 @@ const city: City = {
   faq: [
     {
       question:
-        "Q1 : Comment organisez-vous les interventions dans les secteurs où le stationnement est difficile ?",
+        "Comment organisez-vous les interventions dans les secteurs où le stationnement est difficile ?",
       answer:
         "<p>Nous repérons les contraintes en amont : zones bleues, proximité des métros, jours de marché. Nos équipes adaptent leurs <strong>horaires d'arrivée</strong> et utilisent des véhicules adaptés. À Villejuif, le stationnement autour des stations Léo Lagrange ou Louis Aragon nécessite souvent un passage tôt le matin.</p>",
     },
     {
       question:
-        "Q2 : Pouvez-vous intervenir dans des résidences avec gardien ou système de badges ?",
+        "Pouvez-vous intervenir dans des résidences avec gardien ou système de badges ?",
       answer:
         "<p>Oui, c'est courant dans les copropriétés de Villejuif. Nous récupérons les <strong>badges Vigik</strong> ou coordonnons directement avec le gardien pour accéder aux parties communes, caves ou parkings souterrains. Le syndic reste informé du planning prévu.</p>",
     },
     {
-      question: "Q3 : Quel délai pour obtenir un devis après une demande ?",
+      question: "Quel délai pour obtenir un devis après une demande ?",
       answer:
         "<p>Nous répondons généralement sous 24 à 48 heures. Pour les demandes concernant des <strong>copropriétés ou locaux professionnels</strong>, un passage sur site peut être proposé afin d'évaluer les surfaces, l'état des sols et les contraintes d'accès spécifiques.</p>",
     },
     {
-      question: "Q4 : Proposez-vous un suivi ou un reporting après intervention ?",
+      question: "Proposez-vous un suivi ou un reporting après intervention ?",
       answer:
         "<p>Oui, principalement pour les gestionnaires et syndics. Nous pouvons fournir un <strong>compte-rendu d'intervention</strong> avec photos avant/après si demandé. Cela facilite le suivi pour les copropriétés ou les bailleurs qui gèrent plusieurs lots à Villejuif.</p>",
     },
@@ -126,25 +126,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Dans les immeubles du centre-ville aux escaliers étroits, comment transportez-vous le matériel de nettoyage ?",
+            "Dans les immeubles du centre-ville aux escaliers étroits, comment transportez-vous le matériel de nettoyage ?",
           answer:
             "<p>Le matériel d'injection-extraction se compose d'éléments modulables, transportables à la main dans les cages d'escalier sans ascenseur. Les flexibles et la cuve se montent sur place. Les protections de sol sont posées avant chaque passage pour éviter les traces sur les marches.</p>",
         },
         {
           question:
-            "Q2 : Les halls du quartier des Lozaits présentent des taches anciennes sur moquette. Quelles techniques utilisez-vous ?",
+            "Les halls du quartier des Lozaits présentent des taches anciennes sur moquette. Quelles techniques utilisez-vous ?",
           answer:
             "<p>Les taches incrustées depuis plusieurs mois reçoivent un pré-traitement avec un détachant adapté à leur nature — tanin, graisse ou terre. Après un temps de pose, l'injection-extraction retire la salissure en profondeur. Plusieurs passes sont effectuées sur les zones les plus marquées.</p>",
         },
         {
           question:
-            "Q3 : Comment adaptez-vous la méthode selon le type de moquette dans les bureaux proches des hôpitaux ?",
+            "Comment adaptez-vous la méthode selon le type de moquette dans les bureaux proches des hôpitaux ?",
           answer:
             "<p>Le diagnostic préalable identifie la structure des fibres : bouclées, velours ras ou épaisses. La pression d'injection et le débit d'extraction sont ajustés pour éviter toute détérioration. Les dalles textiles collées reçoivent un traitement différent des moquettes tendues sur thibaude.</p>",
         },
         {
           question:
-            "Q4 : Avec le stationnement difficile autour du métro Louis Aragon, comment organisez-vous la livraison du matériel ?",
+            "Avec le stationnement difficile autour du métro Louis Aragon, comment organisez-vous la livraison du matériel ?",
           answer:
             "<p>Le créneau d'intervention est fixé en amont avec le gardien ou le gestionnaire pour identifier un point de dépose temporaire. Le matériel est déchargé rapidement, puis le véhicule stationné sur un emplacement autorisé à proximité. Cette organisation évite les allers-retours et limite la gêne.</p>",
         },
@@ -181,25 +181,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Sur les parkings souterrains des résidences années 70-80 à Villejuif, comment traitez-vous les taches d'huile fortement incrustées ?",
+            "Sur les parkings souterrains des résidences années 70-80 à Villejuif, comment traitez-vous les taches d'huile fortement incrustées ?",
           answer:
             "<p>Nous appliquons un dégraissant adapté au béton brut avant le passage de l'autolaveuse. Le produit agit plusieurs minutes pour décoller les résidus huileux. Les passes mécaniques extraient ensuite les salissures ramollies. Sur les taches anciennes, un second traitement localisé peut être nécessaire pour obtenir un résultat satisfaisant.</p>",
         },
         {
           question:
-            "Q2 : À la ZAC Campus Grand Parc, quelles méthodes employez-vous pour gérer les eaux de lavage des parkings ?",
+            "À la ZAC Campus Grand Parc, quelles méthodes employez-vous pour gérer les eaux de lavage des parkings ?",
           answer:
             "<p>Les eaux sont canalisées vers les regards et rigoles existants. Nous vérifions au préalable l'état des évacuations pour éviter tout engorgement. Aucun rejet sauvage n'est effectué : les eaux chargées restent dans le circuit prévu. Cette gestion respecte les exigences des copropriétés et des gestionnaires de la zone.</p>",
         },
         {
           question:
-            "Q3 : Quelles différences de méthode appliquez-vous entre parkings souterrains et aériens près des établissements de santé ?",
+            "Quelles différences de méthode appliquez-vous entre parkings souterrains et aériens près des établissements de santé ?",
           answer:
             "<p>En souterrain, l'éclairage limité impose un diagnostic visuel minutieux et un dépoussiérage des blocs lumineux. En aérien, les intempéries génèrent davantage de dépôts organiques. Le choix de pression et de produits s'adapte au revêtement : béton poreux ou enrobé lisse. La ventilation diffère aussi, ce qui influence le temps de séchage.</p>",
         },
         {
           question:
-            "Q4 : Pour les parkings hospitaliers très fréquentés à Villejuif, proposez-vous des plages horaires spécifiques ?",
+            "Pour les parkings hospitaliers très fréquentés à Villejuif, proposez-vous des plages horaires spécifiques ?",
           answer:
             "<p>Nous intervenons en horaires décalés : tôt le matin, en soirée ou le week-end selon les flux de visiteurs. La coordination avec le gestionnaire permet de définir les créneaux les moins contraignants. Un balisage clair sécurise les zones en cours de traitement pendant que le reste du parking reste accessible.</p>",
         },
@@ -236,25 +236,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment nettoyer un balcon en béton fortement noirci par la pollution le long de l'Avenue de Paris sans abîmer les joints ?",
+            "Comment nettoyer un balcon en béton fortement noirci par la pollution le long de l'Avenue de Paris sans abîmer les joints ?",
           answer:
             "<p>Le béton encrassé par les suies de circulation nécessite un produit désincrustant appliqué avant brossage. Les joints sont traités avec une pression réduite pour éviter leur effritement. Le rinçage est orienté vers le point d'évacuation, sans stagnation prolongée sur les zones fragiles.</p>",
         },
         {
           question:
-            "Q2 : Sur des balcons mitoyens, comment gérez-vous l'eau de lavage pour éviter les coulures chez le voisin du dessous ?",
+            "Sur des balcons mitoyens, comment gérez-vous l'eau de lavage pour éviter les coulures chez le voisin du dessous ?",
           answer:
             "<p>Des bâches de protection sont installées en périphérie avant le début du nettoyage. L'eau est dirigée vers le point d'évacuation du balcon, avec aspiration si nécessaire. Le débit est contrôlé pour limiter les projections latérales et verticales tout au long de l'intervention.</p>",
         },
         {
           question:
-            "Q3 : Quelles techniques préconisez-vous pour éliminer dépôts verts et mousses sur balcons ombragés sans détériorer le support ?",
+            "Quelles techniques préconisez-vous pour éliminer dépôts verts et mousses sur balcons ombragés sans détériorer le support ?",
           answer:
             "<p>Les mousses sont d'abord décollées mécaniquement à la brosse dure. Un traitement adapté est ensuite appliqué pour freiner la repousse. Le rinçage reste modéré pour ne pas fragiliser les joints ni disperser les résidus vers les zones voisines.</p>",
         },
         {
           question:
-            "Q4 : Dans les copropriétés anciennes de Villejuif, quelles alternatives à la haute pression utilisez-vous pour nettoyer un balcon carrelé ?",
+            "Dans les copropriétés anciennes de Villejuif, quelles alternatives à la haute pression utilisez-vous pour nettoyer un balcon carrelé ?",
           answer:
             "<p>Le brossage manuel combiné à un produit dégraissant remplace efficacement la haute pression sur les carrelages fragiles. Cette méthode préserve les joints et limite le bruit. Le séchage est accéléré par essuyage pour permettre une utilisation rapide du balcon.</p>",
         },
@@ -291,25 +291,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Face à des fientes abondantes sur un balcon donnant sur le Parc des Hautes-Bruyères, quelle intervention proposez-vous en urgence ?",
+            "Face à des fientes abondantes sur un balcon donnant sur le Parc des Hautes-Bruyères, quelle intervention proposez-vous en urgence ?",
           answer:
             "<p>Nous intervenons rapidement avec un protocole complet : confinement de la zone, port d'EPI, humidification des dépôts pour éviter la dispersion, puis ramassage et désinfection. L'objectif est de rendre le balcon utilisable sous 24 à 48 heures selon l'ampleur des dépôts.</p>",
         },
         {
           question:
-            "Q2 : Quels équipements de protection et quel protocole suivez-vous pour le nettoyage d'un balcon souillé par les pigeons ?",
+            "Quels équipements de protection et quel protocole suivez-vous pour le nettoyage d'un balcon souillé par les pigeons ?",
           answer:
             "<p>L'intervenant porte un masque FFP2, une combinaison jetable, des gants et des lunettes. La zone est bâchée, les fientes humidifiées avant manipulation. Ce protocole limite les risques d'inhalation de particules contaminées et protège également l'intérieur du logement.</p>",
         },
         {
           question:
-            "Q3 : Quels produits désinfectants utilisez-vous pour traiter des fientes sur des rebords en béton à Villejuif ?",
+            "Quels produits désinfectants utilisez-vous pour traiter des fientes sur des rebords en béton à Villejuif ?",
           answer:
             "<p>Nous appliquons un désinfectant virucide et bactéricide homologué, adapté aux supports minéraux. Le temps de contact est respecté avant rinçage. Ce traitement élimine les agents pathogènes tout en préservant l'intégrité du béton ou de la pierre.</p>",
         },
         {
           question:
-            "Q4 : Comment organisez-vous la collecte et l'évacuation des déchets contaminés après un assainissement en copropriété ?",
+            "Comment organisez-vous la collecte et l'évacuation des déchets contaminés après un assainissement en copropriété ?",
           answer:
             "<p>Les fientes et résidus sont conditionnés dans des sacs étanches fermés sur place. L'évacuation se fait en fin d'intervention pour limiter les nuisances dans les parties communes. Nous adaptons les horaires si la copropriété impose des créneaux spécifiques.</p>",
         },
@@ -346,25 +346,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment éliminez-vous acariens et allergènes d'un canapé tissu dans un appartement familial du quartier Lebon-Lamartine ?",
+            "Comment éliminez-vous acariens et allergènes d'un canapé tissu dans un appartement familial du quartier Lebon-Lamartine ?",
           answer:
             "<p>L'injection-extraction atteint les fibres en profondeur, là où se logent acariens et poussières. L'aspiration puissante retire ces particules avec l'eau de rinçage. Dans les logements familiaux du secteur, où les enfants passent du temps sur le canapé, cette méthode améliore sensiblement la qualité de l'air intérieur après séchage complet.</p>",
         },
         {
           question:
-            "Q2 : En cas d'urine et odeurs persistantes sur un canapé en location meublée, quelles méthodes neutralisent efficacement l'odeur ?",
+            "En cas d'urine et odeurs persistantes sur un canapé en location meublée, quelles méthodes neutralisent efficacement l'odeur ?",
           answer:
             "<p>Un détachant enzymatique décompose les composés organiques responsables de l'odeur avant extraction. Le traitement pénètre jusqu'au rembourrage si nécessaire. Pour les locations étudiantes avec animaux, cette approche évite que l'odeur ne réapparaisse après quelques jours, même sur des taches anciennes.</p>",
         },
         {
           question:
-            "Q3 : Pour un canapé non déhoussable, quelles techniques employez-vous pour un détachage en profondeur sans détériorer le tissu ?",
+            "Pour un canapé non déhoussable, quelles techniques employez-vous pour un détachage en profondeur sans détériorer le tissu ?",
           answer:
             "<p>Un test préalable sur zone discrète vérifie la réaction du textile. La pression et la température sont ajustées selon la fibre — velours, coton ou synthétique. L'extraction contrôlée retire les salissures sans gorger le rembourrage, préservant la tenue et les couleurs du revêtement.</p>",
         },
         {
           question:
-            "Q4 : Comment se déroule la préparation du logement et la gestion d'accès pour intervenir dans un immeuble sans ascenseur ?",
+            "Comment se déroule la préparation du logement et la gestion d'accès pour intervenir dans un immeuble sans ascenseur ?",
           answer:
             "<p>Le matériel est conçu pour être transporté à la main dans les escaliers étroits. Côté préparation, il suffit de dégager l'espace autour du mobilier à traiter. L'intervention reste concentrée sur une demi-journée maximum, avec consignes de séchage adaptées à la ventilation disponible dans votre appartement.</p>",
         },
@@ -404,25 +404,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Comment évaluez-vous le risque d'endommagement sur les terrasses en bois ou dalles des immeubles récents à Villejuif ?",
+            "Comment évaluez-vous le risque d'endommagement sur les terrasses en bois ou dalles des immeubles récents à Villejuif ?",
           answer:
             "<p>Avant toute intervention, nous identifions le type de support : bois composite, dalles sur plots ou carrelage. Chaque matériau réagit différemment à la pression et aux produits. Cette vérification permet d'adapter la méthode pour obtenir un résultat propre sans altérer la surface ni les joints.</p>",
         },
         {
           question:
-            "Q2 : Quelles techniques utilisez-vous pour éliminer mousses et lichens sur les terrasses pavillonnaires des quartiers ombragés ?",
+            "Quelles techniques utilisez-vous pour éliminer mousses et lichens sur les terrasses pavillonnaires des quartiers ombragés ?",
           answer:
             "<p>Les dépôts verts sont d'abord ramollis avec un produit adapté, puis éliminés par brossage. Sur les dalles gravillonnées fréquentes dans les pavillons, nous évitons la haute pression directe. Un traitement préventif peut être appliqué pour ralentir la réapparition des mousses selon l'exposition de la terrasse.</p>",
         },
         {
           question:
-            "Q3 : Quel traitement anti-mousse recommandez-vous pour les dalles gravillonnées courantes dans les constructions villejuifoises ?",
+            "Quel traitement anti-mousse recommandez-vous pour les dalles gravillonnées courantes dans les constructions villejuifoises ?",
           answer:
             "<p>Nous utilisons un produit biocide compatible avec les revêtements poreux. Il agit en profondeur sans dégrader les gravillons ni modifier leur teinte. L'application se fait après le nettoyage principal, sur surface sèche, pour une efficacité prolongée sur plusieurs mois selon les conditions météo.</p>",
         },
         {
           question:
-            "Q4 : Comment organisez-vous le déplacement du mobilier et des plantes lors du nettoyage d'une terrasse de pavillon ?",
+            "Comment organisez-vous le déplacement du mobilier et des plantes lors du nettoyage d'une terrasse de pavillon ?",
           answer:
             "<p>Le mobilier léger est déplacé en début d'intervention. Les jardinières lourdes ou fragiles sont bâchées sur place. Nous vérifions les points d'écoulement pour diriger l'eau sans noyer les plantations. Le mobilier est repositionné une fois la surface suffisamment sèche pour éviter les traces.</p>",
         },
@@ -461,25 +461,25 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Q1 : Quel délai d'intervention proposez-vous pour un ménage d'état des lieux dans le quartier des Lozaits entre deux locataires ?",
+            "Quel délai d'intervention proposez-vous pour un ménage d'état des lieux dans le quartier des Lozaits entre deux locataires ?",
           answer:
             "<p>Nous intervenons généralement sous 48 à 72 heures, parfois moins selon la disponibilité. La rotation locative importante dans ce secteur nous a habitués à caler des créneaux serrés en coordination directe avec les agences ou les propriétaires.</p>",
         },
         {
           question:
-            "Q2 : Quelle différence de protocole appliquez-vous entre un ménage standard et un nettoyage fin de chantier sur la ZAC Campus Grand Parc ?",
+            "Quelle différence de protocole appliquez-vous entre un ménage standard et un nettoyage fin de chantier sur la ZAC Campus Grand Parc ?",
           answer:
             "<p>Un ménage standard porte sur les surfaces courantes et les équipements. En fin de chantier, nous ajoutons l'évacuation des gravats légers, le retrait des films de protection, le décapage des traces de peinture ou d'enduit et un dépoussiérage renforcé des menuiseries.</p>",
         },
         {
           question:
-            "Q3 : Après un dégât des eaux dans un appartement ancien, quelles opérations réalisez-vous pour assainir les sols ?",
+            "Après un dégât des eaux dans un appartement ancien, quelles opérations réalisez-vous pour assainir les sols ?",
           answer:
             "<p>Nous commençons par aspirer l'eau résiduelle, puis nous traitons les zones humides avec des produits adaptés au support. Les plinthes et bas de murs sont nettoyés pour limiter le développement de moisissures. Un temps de séchage et une aération complètent l'intervention.</p>",
         },
         {
           question:
-            "Q4 : Comment coordonnez-vous l'intervention avec l'agence immobilière et les artisans pour une remise en état avant visite d'acheteurs ?",
+            "Comment coordonnez-vous l'intervention avec l'agence immobilière et les artisans pour une remise en état avant visite d'acheteurs ?",
           answer:
             "<p>Nous échangeons directement avec l'agence pour fixer un créneau compatible avec la fin des travaux. Si des artisans sont encore présents, nous adaptons notre passage pour intervenir après leur départ et garantir un logement prêt à être visité.</p>",
         },

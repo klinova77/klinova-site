@@ -1,4 +1,4 @@
-CITY_CHECK: Ivry-sur-Seine
+
 import type { City } from "~/types/geo";
 
 const city: City = {
