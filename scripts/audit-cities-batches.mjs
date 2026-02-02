@@ -457,7 +457,8 @@ Objectif : proposer des CORRECTIONS SÛRES sous forme de PATCHES "setField" (cha
 Interdiction : ne propose JAMAIS de remplacement partiel (substring) et ne réécris pas tout.
 
 Principe central (anti-travers) :
-- Tu ne proposes un patch QUE s'il y a une erreur claire, une incohérence, une faute, une répétition manifeste, un problème de typographie, ou un risque évident (SEO/qualité).
+- Tu ne proposes un patch QUE s'il y a une erreur claire, une erreur factuelle, une incohérence, une faute, une répétition manifeste, un problème de typographie, ou un risque évident (SEO/qualité).
+- une erreur de formatage en TS évidente
 - Si c'est une préférence de style : PAS DE PATCH.
 
 Ce que tu n'as PAS le droit d'introduire :
@@ -769,7 +770,7 @@ async function submitBatch() {
   const cfg = readJson(CONFIG_PATH);
 
   // ✅ ton correctif : default = src/data/cities
-  const citiesDirRaw = cfg.citiesDir || "src/data/cities";
+  const citiesDirRaw = cfg.citiesDir || "src/data/cities-draft";
   const citiesDir = safeJoinUnderRoot(citiesDirRaw);
 
   const model = cfg.model || "gpt-5.2";
@@ -884,7 +885,7 @@ async function collectBatch() {
   const cfg = readJson(CONFIG_PATH);
 
   // ✅ ton correctif : default = src/data/cities
-  const citiesDirRaw = cfg.citiesDir || "src/data/cities";
+  const citiesDirRaw = cfg.citiesDir || "src/data/cities-draft";
   const citiesDir = safeJoinUnderRoot(citiesDirRaw);
 
   if (!fs.existsSync(citiesDir)) {

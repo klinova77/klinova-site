@@ -1,25 +1,96 @@
 {
-  "at": "2026-01-28T20:26:21.038Z",
+  "at": "2026-02-02T22:08:14.341Z",
   "dryRun": false,
   "ignoreExpected": false,
   "maxEditsPerFile": 50,
-  "inputApplyFile": "scripts/.audit_out/audit-apply.suggested.json",
+  "inputApplyFile": "audit-apply.suggested.json",
   "logs": [
     {
-      "file": "src/data/cities/alfortville.ts",
+      "file": "src/data/cities-draft/bagneux.ts",
       "status": "ok",
-      "applied": 1,
+      "applied": 2,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[2].faqAdditions[0].question",
+          "path": "services[3].whyUsBullets[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].faqAdditions[2].question",
           "mode": "setField",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities/cachan.ts",
+      "file": "src/data/cities-draft/bondy.ts",
+      "status": "ok",
+      "applied": 2,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[6].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/chevilly-la-rue.ts",
+      "status": "ok",
+      "applied": 3,
+      "skipped": 1,
+      "perEdit": [
+        {
+          "path": "customDescription",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "citySpecificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "faq[2].answer",
+          "mode": "setField",
+          "status": "skipped",
+          "reason": "no_change"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/choisy-le-roi.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 1,
+      "perEdit": [
+        {
+          "path": "services[3].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "skipped",
+          "reason": "no_change"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/noisiel.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
@@ -32,49 +103,37 @@
       ]
     },
     {
-      "file": "src/data/cities/champigny-sur-marne.ts",
+      "file": "src/data/cities-draft/noisy-le-sec.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "faq[2].question",
+          "path": "services[1].heroDescription",
           "mode": "setField",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities/champs-sur-marne.ts",
+      "file": "src/data/cities-draft/orly.ts",
       "status": "ok",
-      "applied": 6,
+      "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "faq[0].answer",
+          "path": "services[3].uniqueIntro",
           "mode": "setField",
           "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].whyUsBullets[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "customDescription",
-          "mode": "setField",
-          "status": "applied"
-        },
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/romainville.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 0,
+      "perEdit": [
         {
           "path": "services[1].uniqueIntro",
           "mode": "setField",
@@ -83,511 +142,42 @@
       ]
     },
     {
-      "file": "src/data/cities/charenton-le-pont.ts",
+      "file": "src/data/cities-draft/thiais.ts",
       "status": "ok",
-      "applied": 2,
+      "applied": 1,
       "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[2].faqAdditions[3].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/vitry-sur-seine.ts",
+      "status": "ok",
+      "applied": 3,
+      "skipped": 1,
       "perEdit": [
         {
           "path": "faq[2].answer",
           "mode": "setField",
-          "status": "applied"
+          "status": "skipped",
+          "reason": "no_change"
         },
-        {
-          "path": "services[3].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/chelles.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/claye-souilly.ts",
-      "status": "ok",
-      "applied": 4,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/creteil.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/emerainville.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/gentilly.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
         {
           "path": "services[4].heroDescription",
           "mode": "setField",
           "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/gournay-sur-marne.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[2].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/ivry-sur-seine.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "citySpecificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/joinville-le-pont.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "customDescription",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].specificChallenges[3]",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/lagny-sur-marne.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[2].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/le-perreux-sur-marne.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/le-plessis-trevise.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/le-raincy.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "hubIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/livry-gargan.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/maison-alfort.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[5].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/meaux.ts",
-      "status": "ok",
-      "applied": 5,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "customDescription",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].whyUsBullets[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/montfermeil.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[4].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].heroDescription",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/montreuil.ts",
-      "status": "ok",
-      "applied": 4,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/montrouge.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[4].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/neuilly-plaisance.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[6].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/neuilly-sur-marne.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/nogent-sur-marne.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[6].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/pantin.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[3].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "landmarks[4]",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/pontault-combault.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/rosny-sous-bois.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "landmarks[6]",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/saint-mande.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[5].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/saint-maur-des-fosses.ts",
-      "status": "ok",
-      "applied": 0,
-      "skipped": 1,
-      "perEdit": [
-        {
-          "path": "services[4].specificChallenges[1]",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/torcy.ts",
-      "status": "ok",
-      "applied": 3,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[2].answer",
-          "mode": "setField",
-          "status": "applied"
         },
         {
           "path": "services[6].faqAdditions[1].answer",
           "mode": "setField",
           "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/vaires-sur-marne.ts",
-      "status": "ok",
-      "applied": 3,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[6].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
         },
         {
-          "path": "services[1].whyUsBullets[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities/villeparisis.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[5].whyUsBullets[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
+          "path": "services[2].whyUsBullets[0]",
           "mode": "setField",
           "status": "applied"
         }

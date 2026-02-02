@@ -1,6 +1,10 @@
 // scripts/audit-cities-apply.mjs
 // ============================================================================
 // APPLY — MODE A / AUTO SAFE (Klinova City)
+
+  // Usage:
+  //   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --dry-run
+  //   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --write
 //
 // Applique automatiquement uniquement :
 //  1) setField (expected optionnel) ✅

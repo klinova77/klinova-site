@@ -1,270 +1,46 @@
 # Audit — Synthèse (HIGH / MEDIUM)
 
-Généré : 2026-01-28T19:44:51.107Z
-Total items HIGH/MEDIUM : 132
+Généré : 2026-02-02T21:58:09.743Z
+Total items HIGH/MEDIUM : 20
 
-- **HIGH** — alfortville — orthographe — `services[2].faqAdditions[0].question`
-  - Correction d'une faute d'orthographe (anglicisme involontaire) : « balcony » → « balcon ».
-- **HIGH** — arcueil — legal — `services[3].heroDescription`
-  - Le terme « virucide » est une allégation technique/réglementaire sensible ; correction minimale pour réduire le risque sans changer le sens global.
-- **HIGH** — arcueil — legal — `services[3].whyUsBullets[1]`
-  - « Désinfection virucide validée » est une formulation à risque (allégation) ; suppression du terme sensible en conservant l’idée de désinfection.
-- **HIGH** — arcueil — legal — `services[3].uniqueDeepDive`
-  - Remplacement minimal de « produit virucide homologué » par « désinfectant homologué » pour éviter une allégation virucide spécifique.
-- **HIGH** — arcueil — legal — `services[3].faqAdditions[0].answer`
-  - Suppression de l’allégation « désinfection virucide » (risque réglementaire) en conservant le message.
-- **HIGH** — arcueil — legal — `services[3].faqAdditions[1].answer`
-  - Retrait des mentions « virucide et bactéricide » (allégations sensibles) tout en gardant l’information sur l’usage d’un désinfectant homologué.
-- **HIGH** — bagnolet — legal — `services[3].whyUsBullets[1]`
-  - Le terme « virucide » est une allégation technique/réglementaire potentiellement sensible ; correction minimale en supprimant la mention.
-- **HIGH** — bobigny — consistency — `citySpecificChallenges`
+- **HIGH** — bagneux — orthographe — `services[3].whyUsBullets[0]`
+  - Faute d’orthographe : « proximity » → « proximité ».
+- **HIGH** — bagneux — orthographe — `services[3].faqAdditions[2].question`
+  - Mot en anglais : « balcony » → « balcon ».
+- **HIGH** — bondy — legal — `services[6].faqAdditions[2].answer`
+  - Retire une promesse commerciale potentiellement engageante (« sans frais supplémentaires ») tout en conservant le sens.
+- **HIGH** — bondy — orthographe — `services[5].faqAdditions[0].answer`
+  - Correction d'une faute (« mortite » → « mortier »).
+- **HIGH** — chevilly-la-rue — factual_suspect — `customDescription`
+  - Référence au métro ligne 14 potentiellement inexacte ; correction minimale en supprimant l’élément factuel incertain.
+- **HIGH** — chevilly-la-rue — factual_suspect — `hubIntro`
+  - Référence au métro 14 potentiellement inexacte ; suppression minimale pour éviter une erreur factuelle.
+- **HIGH** — chevilly-la-rue — factual_suspect — `citySpecificChallenges[2]`
+  - Référence au métro 14 potentiellement inexacte ; remplacement par un repère déjà présent dans la page (tram T7) sans changer l’idée.
+- **HIGH** — chevilly-la-rue — factual_suspect — `faq[2].answer`
+  - Aucun changement : patch non émis.
+- **HIGH** — choisy-le-roi — factual_suspect — `services[3].uniqueIntro`
+  - Incohérence interne : le texte cite « Parc de la Mairie » alors que les repères/landmarks et autres champs mentionnent « Parc des Gondoles ».
+- **HIGH** — noisiel — legal — `faq[1].answer`
+  - Retire une promesse de délai chiffré (24 à 48 heures) potentiellement risquée/trompeuse tout en conservant le sens.
+- **HIGH** — noisy-le-sec — orthographe — `services[1].heroDescription`
+  - Faute d’orthographe : « treatment » → « traitement ».
+- **HIGH** — orly — consistency — `text`
   - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — bobigny — consistency — `citySpecificChallenges`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — bobigny — consistency — `citySpecificChallenges`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — bobigny — consistency — `citySpecificChallenges`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — bobigny — consistency — `citySpecificChallenges`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — bussy-saint-georges — factual_suspect — `services[5].whyUsBullets`
-  - Suppression d’un toponyme potentiellement inexact (« Violennes ») et d’une formulation trop spécifique (« architecture briarde ») sans changer le sens global.
-- **HIGH** — cachan — legal — `faq[1].answer`
-  - Retire une promesse de délai chiffré potentiellement trompeuse tout en conservant le sens.
-- **HIGH** — champigny-sur-marne — factual_suspect — `districts`
-  - « Musselburgh » semble être un ajout erroné/non local dans la liste des quartiers ; suppression pour éviter une incohérence factuelle.
-- **HIGH** — champigny-sur-marne — consistency — `faq[2].question`
-  - La FAQ d'une page Champigny-sur-Marne ne doit pas cibler une autre ville ; correction de cohérence locale sans changer l'intention.
-- **HIGH** — champs-sur-marne — legal — `faq[0].answer`
-  - Réduit une promesse de délai chiffré potentiellement risquée (engagement de temps) sans changer le sens global.
-- **HIGH** — champs-sur-marne — legal — `services[1].faqAdditions[0].answer`
-  - Supprime une promesse chiffrée de durée (6 à 12 mois) difficile à garantir et potentiellement trompeuse.
-- **HIGH** — champs-sur-marne — legal — `services[4].whyUsBullets[1]`
-  - Le terme « certifiée » implique une certification non démontrée (risque légal/qualité).
-- **HIGH** — champs-sur-marne — legal — `services[2].faqAdditions[3].answer`
-  - Évite des délais chiffrés trop engageants et variables selon conditions réelles.
-- **HIGH** — champs-sur-marne — legal — `services[4].faqAdditions[2].answer`
-  - Atténue des superlatifs et une promesse de résultat/santé trop catégorique (risque légal) tout en conservant l’idée.
-- **HIGH** — charenton-le-pont — legal — `faq[2].answer`
-  - Suppression d’un délai chiffré potentiellement engageant (promesse) tout en conservant le sens.
-- **HIGH** — chelles — legal — `faq[0].answer`
-  - Atténue une promesse de délai trop catégorique (risque de non-conformité) sans changer le sens global.
-- **HIGH** — claye-souilly — legal — `faq[0].answer`
-  - Ajout minimal pour éviter une promesse de délai absolue potentiellement trompeuse.
-- **HIGH** — claye-souilly — legal — `faq[2].answer`
-  - Suppression de l'absolu « toujours » pour limiter le risque de promesse commerciale trop catégorique.
-- **HIGH** — claye-souilly — orthographe — `services[5].uniqueIntro`
-  - Correction grammaticale : « un eau » → « une eau ».
-- **HIGH** — creteil — legal — `faq[0].answer`
-  - Formulation plus correcte en français (« dans un délai de ») sans changer le sens ni la promesse.
-- **HIGH** — fontenay-sous-bois — consistency — `customDescription`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-- **HIGH** — gagny — orthographe — `testimonial.text`
-  - Correction d’un verbe incorrect (« ravoir ») en français courant.
-- **HIGH** — gentilly — factual_suspect — `services[4].heroDescription`
-  - "Élimine" est une promesse absolue potentiellement trompeuse ; correction minimale en "réduit" sans changer le sens global.
-- **HIGH** — gournay-sur-marne — orthographe — `services[2].uniqueIntro`
-  - Suppression d’un mot manquant/erroné (« et ») qui casse la phrase.
-- **HIGH** — index — consistency — `city`
-  - Impossible de parser l'objet city (ts-morph).
-- **HIGH** — ivry-sur-seine — consistency — `citySpecificChallenges[2]`
-  - Espace manquant après la balise </strong>.
-- **HIGH** — ivry-sur-seine — legal — `faq[1].answer`
-  - Formulation « sous 24 à 48 heures » maladroite/ambiguë ; correction minimale sans changer le sens.
-- **HIGH** — joinville-le-pont — factual_suspect — `customDescription`
-  - Suppression d’un chiffre d’habitants potentiellement inexact (risque factuel) sans changer le sens global.
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `hubIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `answer`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — joinville-le-pont — consistency — `uniqueIntro`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — lagny-sur-marne — orthographe — `services[2].uniqueIntro`
-  - Correction d'une faute de syntaxe (« les balcons et des appartements »).
-- **HIGH** — lagny-sur-marne — factual_suspect — `services[5].uniqueIntro`
-  - Suppression d'un chiffre potentiellement inexact (population) pour éviter un risque factuel.
-- **HIGH** — le-perreux-sur-marne — factual_suspect — `services[5].heroDescription`
-  - Le terme « durable » peut être interprété comme une promesse de résultat dans le temps ; correction minimale en conservant le sens.
-- **HIGH** — le-perreux-sur-marne — factual_suspect — `services[5].uniqueIntro`
-  - Correction typographique sûre : apostrophe courbe dans « l’Est » (cohérence avec le reste du contenu).
-- **HIGH** — le-plessis-trevise — seo — `services[5].uniqueIntro`
-  - Suppression d’un chiffre d’habitants non sourcé (risque d’inexactitude/SEO local) sans changer le sens du texte.
-- **HIGH** — le-raincy — legal — `hubIntro`
-  - Suppression d’un délai chiffré (« sous 48h ») potentiellement engageant/trompeur si non garanti.
-- **HIGH** — livry-gargan — seo — `faq[1].answer`
-  - Suppression d’un délai chiffré (« sous 48 heures ») pouvant être une promesse non maîtrisée et risquée en conversion/qualité.
-- **HIGH** — maisons-alfort — consistency — `services[5].uniqueDeepDive`
-  - Correction d’une faute de conjugaison (« adaptions » → « adaptons »).
-- **HIGH** — meaux — factual_suspect — `customDescription`
-  - Suppression d’un chiffre d’habitants potentiellement daté/susceptible d’être inexact, sans changer le sens.
-- **HIGH** — meaux — legal — `faq[1].answer`
-  - Formulation plus neutre et moins ambiguë que « restent gratuits » (risque d’interprétation), sans modifier le fond.
-- **HIGH** — meaux — factual_suspect — `services[5].whyUsBullets[0]`
-  - Suppression de micro-localisations potentiellement inexactes/non vérifiables, tout en conservant l’idée générale.
-- **HIGH** — meaux — factual_suspect — `services[5].uniqueIntro`
-  - Retrait d’un chiffre (150 hectares) et de secteurs nommés potentiellement discutables, pour éviter des faits locaux non sûrs.
-- **HIGH** — meaux — factual_suspect — `services[5].specificChallenges[0]`
-  - Suppression d’une micro-localisation potentiellement inexacte/non vérifiable, sans changer le sens.
-- **HIGH** — meaux — factual_suspect — `services[6].uniqueIntro`
-  - Cohérence typographique : « ligne P » en minuscule (usage courant) sans changement de sens.
-- **HIGH** — montfermeil — consistency — `services[4].uniqueIntro`
-  - Répétition manifeste « literies et literies » à corriger sans changer le sens.
-- **HIGH** — montfermeil — legal — `services[3].heroDescription`
-  - Évite une promesse absolue (« élimine totalement », « immédiatement ») potentiellement trompeuse, correction minimale.
-- **HIGH** — montreuil — consistency — `services[0].uniqueIntro`
-  - Accord : « copropriétés montreuilloises » (pluriel) au lieu de « montreuilloise ».
-- **HIGH** — montreuil — consistency — `services[0].uniqueDeepDive`
-  - Accord : « copropriétés montreuilloises » (pluriel) au lieu de « montreuilloise ».
-- **HIGH** — montreuil — consistency — `services[0].faqAdditions[1].answer`
-  - Accord : « impasses montreuilloises » (pluriel) au lieu de « montreuilloise ».
-- **HIGH** — montreuil — factual_suspect — `services[5].uniqueIntro`
-  - Suppression d'affirmations chiffrées et de classement (« cinquième ville… », « plus de 110 000 habitants ») à risque d'inexactitude et non nécessaires au propos.
-- **HIGH** — montrouge — orthographe — `services[4].uniqueDeepDive`
-  - Correction d’une faute d’orthographe en français (« treatment » → « traitement »).
-- **HIGH** — neuilly-plaisance — seo — `services[5].whyUsBullets[0]`
-  - Suppression d’un toponyme potentiellement inexact/non présent ailleurs dans le fichier, pour éviter un risque factuel local.
-- **HIGH** — neuilly-sur-marne — legal — `faq[0].answer`
-  - Évite une promesse de délai formulée comme une garantie, potentiellement risquée si non tenue.
-- **HIGH** — nogent-sur-marne — orthographe — `services[6].faqAdditions[1].answer`
-  - Correction d’une faute d’orthographe (« menusieries » → « menuiseries »).
-- **HIGH** — noisy-le-grand — orthographe — `services[7].faqAdditions[1].answer`
-  - Correction d’une faute d’orthographe (« menusieries » → « menuiseries »).
-- **HIGH** — pantin — orthographe — `services[3].uniqueDeepDive`
-  - Correction d’une faute d’orthographe/encodage ("humidifiėes" → "humidifiées").
-- **HIGH** — pontault-combault — legal — `faq[1].answer`
-  - Supprime une promesse de délai précis (« sous 48h ») potentiellement trompeuse/engageante.
-- **HIGH** — pontault-combault — legal — `services[0].faqAdditions[1].answer`
-  - Retire un chiffre non sourcé (« plus de 50% ») qui peut être inexact et risqué.
-- **HIGH** — rosny-sous-bois — consistency — `services[5].whyUsBullets`
-  - Suppression de quartiers non présents ailleurs dans le fichier (cohérence interne, évite l’ajout de faits locaux non corroborés).
-- **HIGH** — saint-maur-des-fosses — consistency — `services[4].specificChallenges[1]`
-  - Corrige une incohérence de format (guillemet/apostrophes et échappements) qui introduit un artefact de code dans un champ texte.
-- **HIGH** — saint-maur-des-fosses — consistency — `specificChallenges`
-  - String avec guillemets simples détectée (préférence: guillemets doubles).
-- **HIGH** — serris — factual_suspect — `services[5].uniqueIntro`
-  - Suppression de dates et chiffres locaux potentiellement inexacts/non sourcés (risque factuel) sans changer le sens global.
-- **HIGH** — torcy — legal — `faq[0].answer`
-  - Réduit une promesse de délai chiffrée potentiellement risquée/trompeuse tout en conservant le sens.
-- **HIGH** — torcy — legal — `faq[2].answer`
-  - Évite l'absolu « Tous » (promesse trop générale) sans changer le message.
-- **HIGH** — vaires-sur-marne — factual_suspect — `services[5].uniqueIntro`
-  - Suppression de chiffres/affirmations factuelles spécifiques (population, superficie) pour réduire le risque d’inexactitude sans changer le sens global.
-- **HIGH** — vaires-sur-marne — factual_suspect — `services[6].uniqueIntro`
-  - Retrait de mentions de quartiers/secteurs spécifiques non présents ailleurs et potentiellement discutables, sans modifier le message.
-- **HIGH** — villeparisis — consistency — `services[5].whyUsBullets[0]`
-  - Correction d’une coquille sur le nom du quartier (cohérence avec les autres occurrences).
-- **HIGH** — villeparisis — consistency — `services[5].uniqueIntro`
-  - Correction d’une coquille répétée sur le nom du quartier (cohérence interne).
-- **MEDIUM** — cachan — orthographe — `uniqueDeepDive`
-  - Ajout minimal d’articles pour corriger une énumération bancale (grammaire).
-- **MEDIUM** — champs-sur-marne — orthographe — `customDescription`
-  - Correction d’expression : « zones d’humidité » est maladroit ; « zones humides » est la formulation correcte.
-- **MEDIUM** — champs-sur-marne — orthographe — `services[1].uniqueIntro`
-  - Correction typographique : « de la A199 » → « de l’A199 ».
-- **MEDIUM** — charenton-le-pont — orthographe — `services[3].uniqueDeepDive`
-  - Correction d’accord : « les surfaces » (pluriel) au lieu de « les surface ».
-- **MEDIUM** — claye-souilly — consistency — `services[3].faqAdditions[2].answer`
-  - Évite la répétition « dommages matériels » (déjà implicite) sans changer le sens.
-- **MEDIUM** — creteil — orthographe — `services[5].uniqueIntro`
-  - Remplacement des guillemets typographiques anglais par des guillemets français, plus correct en typographie FR.
-- **MEDIUM** — emerainville — orthographe — `services[0].uniqueIntro`
-  - Accord correct : « une aspiration » (nom féminin), au lieu de « un aspiration ».
-- **MEDIUM** — joinville-le-pont — orthographe — `services[6].specificChallenges[3]`
-  - Correction d’une faute d’orthographe (menuiseries).
-- **MEDIUM** — joinville-le-pont — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — joinville-le-pont — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — joinville-le-pont — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — joinville-le-pont — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — joinville-le-pont — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — le-perreux-sur-marne — consistency — `districts`
-  - Normalisation sûre : majuscules et suppression d’espaces superflus pour un libellé de quartier (cohérence avec « Pont de Bry » ailleurs).
-- **MEDIUM** — le-plessis-trevise — consistency — `services[1].faqAdditions[3].answer`
-  - Suppression d’une répétition mot à mot pour améliorer la lisibilité sans modifier le contenu.
-- **MEDIUM** — livry-gargan — consistency — `services[6].uniqueIntro`
-  - Harmonisation typographique avec le reste de la page (Avenue Aristide-Briand) pour cohérence SEO/qualité.
-- **MEDIUM** — neuilly-plaisance — consistency — `services[6].uniqueIntro`
-  - Harmonisation avec le reste du fichier (N34) et correction de l’accent dans « Côteaux » (cohérent avec « Parc des Côteaux d’Avron » ailleurs).
-- **MEDIUM** — pantin — orthographe — `landmarks[4]`
-  - Sigle mal typographié (espacement incorrect) : forme usuelle "CND".
-- **MEDIUM** — rosny-sous-bois — orthographe — `landmarks[6]`
-  - Évite la répétition/ambiguïté avec l’entrée déjà présente et harmonise l’intitulé.
-- **MEDIUM** — rosny-sous-bois — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — rosny-sous-bois — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — rosny-sous-bois — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — rosny-sous-bois — style — `hubIntro`
-  - Double espace détecté.
-- **MEDIUM** — saint-mande — orthographe — `services[5].uniqueDeepDive`
-  - Correction d’un nom de quartier : cohérence avec la liste des districts (« Quartier des Tourelles »).
-- **MEDIUM** — torcy — orthographe — `services[6].faqAdditions[1].answer`
-  - Correction d’une faute d’orthographe (« menusieries » → « menuiseries »).
-- **MEDIUM** — vaires-sur-marne — consistency — `services[1].whyUsBullets[1]`
-  - Correction grammaticale (ajout de la préposition) pour une phrase correcte.
-- **MEDIUM** — vaires-sur-marne — orthographe — `faq[0].answer`
-  - Ajout d’une virgule pour améliorer la lisibilité sans changer le sens.
+- **HIGH** — vitry-sur-seine — legal — `faq[2].answer`
+  - Délai chiffré potentiellement engageant/commercialement risqué sur une page locale ; à neutraliser (patch à appliquer avec une reformulation non chiffrée).
+- **HIGH** — vitry-sur-seine — legal — `services[4].heroDescription`
+  - Promesse de délai chiffré (24 à 48 heures) potentiellement engageante ; à rendre non chiffrée sans changer le sens.
+- **HIGH** — vitry-sur-seine — legal — `services[6].faqAdditions[1].answer`
+  - Délai chiffré (48 à 72 heures) potentiellement engageant ; à neutraliser de façon conservatrice.
+- **MEDIUM** — choisy-le-roi — orthographe — `services[0].uniqueIntro`
+  - Accord : « sollicitées » doit s'accorder avec « zones d'attente ».
+- **MEDIUM** — orly — legal — `services[3].uniqueIntro`
+  - Évite l'affirmation potentiellement trompeuse « obligatoire » (risque légal) sans changer le sens opérationnel.
+- **MEDIUM** — romainville — consistency — `services[1].uniqueIntro`
+  - Évite la répétition proche « proches » et améliore la fluidité sans changer le sens.
+- **MEDIUM** — thiais — orthographe — `services[2].faqAdditions[3].answer`
+  - Faute d’orthographe : « treatment » → « traitement ».
+- **MEDIUM** — vitry-sur-seine — orthographe — `services[2].whyUsBullets[0]`
+  - Faute d’orthographe : « vitrots » → « vitriots ».
 
