@@ -13,10 +13,10 @@ const city: City = {
     "<p><strong>Pour les syndics de copropriété et les gestionnaires de patrimoine à Champs-sur-Marne</strong>, la diversité du parc immobilier, allant des résidences étudiantes de la Cité Descartes aux ensembles familiaux du Nesles, impose une stratégie de maintenance immobilière flexible. Klinova agit comme votre partenaire technique de terrain, assurant une propreté constante des parties communes et des extérieurs, adaptée aux pics d'activité liés aux rentrées universitaires ou aux saisons humides.</p>\n<p class=\"mt-4\">Nous garantissons une gestion globale de l'hygiène de vos bâtiments grâce à des processus éprouvés et une communication fluide avec les conseils syndicaux. Notre expertise couvre aussi bien la rénovation des sols de parkings souterrains que l'entretien courant des halls d'entrée, avec un souci constant de traçabilité.</p>\n<ul>\n  <li><strong>Mise en œuvre de protocoles de nettoyage intensif</strong> pour les zones à fort turn-over (résidences étudiantes, locatif).</li>\n  <li><strong>Gestion sécurisée des accès</strong> (badges Vigik, clés) pour fluidifier les interventions dans les grandes copropriétés.</li>\n  <li><strong>Reporting systématique après intervention</strong> pour assurer le suivi technique auprès des gestionnaires.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Encrassement rapide des moquettes et sols des halls d'entrée dans les zones à forte densité étudiante (Cité Descartes) dû aux déménagements fréquents et au trafic piéton intense.",
+    "Encrassement rapide des moquettes et sols des halls d'entrée dans les <strong>zones à forte densité étudiante</strong> (Cité Descartes) dû aux déménagements fréquents et au trafic piéton intense.",
     "Prolifération de mousses et dépôts verts sur les balcons et façades des résidences situées à proximité immédiate des zones boisées (Bois de Grâce) et des plans d'eau.",
-    "Accumulation de poussières et de résidus urbains dans les parkings souterrains des grands ensembles construits dans les années 70-80 (Le Nesles, Pablo Picasso), nécessitant un dégraissage mécanique puissant.",
-    "Gestion de l'humidité remontante dans les parties basses des immeubles proches des bords de Marne et des étangs, favorisant les odeurs de renfermé dans les parties communes.",
+    "Accumulation de poussières et de résidus urbains dans les <strong>parkings souterrains des grands ensembles</strong> construits dans les années 70-80 (Le Nesles, Pablo Picasso), nécessitant un dégraissage mécanique puissant.",
+    "Gestion de l'humidité remontante dans les <strong>parties basses des immeubles</strong> proches des bords de Marne et des étangs, favorisant les odeurs de renfermé dans les parties communes.",
   ],
 
   department: {
@@ -114,9 +114,9 @@ const city: City = {
         "<h3>1. Diagnostic technique sur place</h3>\n<p>Nous évaluons la composition de la fibre (souvent synthétique dans les constructions des années 80) et repérons les zones critiques. <strong>Protection systématique des plinthes et bas de portes</strong> pour éviter toute dégradation par l'humidité.</p>\n\n<h3>2. Injection-extraction à haute pression</h3>\n<p>Une solution détergente est injectée pour dissoudre les salissures, puis immédiatement aspirée. Nous insistons sur les zones de piétinement intense (sorties d'ascenseurs, entrées d'immeubles) en multipliant les passes pour redresser la fibre. <strong>Logistique adaptée aux longs linéaires</strong> de couloirs dans les résidences type Pyramides.</p>\n\n<h3>3. Séchage optimisé et recommandations</h3>\n<p>L'aspiration puissante laisse une humidité résiduelle minime. Le séchage est facilité par une ventilation naturelle lorsque c'est possible. <strong>Fréquence recommandée : 12 à 18 mois</strong> pour les copropriétés à fort trafic, à ajuster selon l'intensité des emménagements.</p>",
 
       specificChallenges: [
-        "Le fort turnover dans les résidences étudiantes de la Cité Descartes entraîne des taches fréquentes (alimentaires, boissons) et des traces de valises nécessitant un détachage ciblé.",
-        "La proximité des zones boisées favorise l'apport de terre et d'humus dans les halls, incrustant les fibres des tapis d'entrée.",
-        "Les longs couloirs des immeubles des années 70-80 (quartier Pablo Picasso) exigent une logistique spécifique pour l'alimentation en eau et l'électricité sur de grandes distances.",
+        "Le fort turnover dans les résidences étudiantes de la Cité Descartes entraîne des taches fréquentes (alimentaires, boissons) et des <strong>traces de valises</strong> nécessitant un détachage ciblé.",
+        "La proximité des zones boisées favorise l'apport de <strong>terre et d'humus dans les halls</strong>, incrustant les fibres des tapis d'entrée.",
+        "Les longs couloirs des immeubles des années 70-80 (quartier Pablo Picasso) exigent une <strong>logistique spécifique</strong> pour l'alimentation en eau et l'électricité sur de grandes distances.",
       ],
 
       faqAdditions: [
@@ -169,9 +169,9 @@ const city: City = {
         "<h3>1. Audit complet et préparation</h3>\n<p>Nous évaluons la nature du revêtement, l'état des siphons de sol, la hauteur sous poutre et la ventilation. <strong>Balayage mécanique des allées</strong> pour retirer déchets volatils et sables abrasifs. Organisation par secteurs balisés pour permettre une rotation fluide des véhicules.</p>\n\n<h3>2. Décrassage mécanique intensif</h3>\n<p>Nettoyage avec autolaveuses industrielles qui brossent le sol avec une solution dégraissante et aspirent instantanément les résidus. Les zones critiques comme les rampes d'accès sont traitées à la haute pression eau chaude pour un décapage ciblé. <strong>Attention particulière aux angles et piliers.</strong></p>\n\n<h3>3. Gestion stricte des effluents</h3>\n<p>Les eaux de lavage chargées d'hydrocarbures sont récupérées par nos machines et ne sont jamais rejetées dans le réseau pluvial, conformément aux réglementations environnementales. <strong>Fréquence recommandée : 1 à 2 passages annuels</strong> pour garantir la pérennité des installations.</p>",
 
       specificChallenges: [
-        "La densité de circulation autour du campus Descartes et des axes autoroutiers accélère le dépôt de suies grasses sur les sols et les murs.",
-        "Les parkings des résidences des années 70-80 présentent souvent des bétons bruts devenus poreux qui absorbent les huiles, nécessitant un traitement de fond.",
-        "La gestion de la ventilation et de l'éclairage dans les niveaux inférieurs profonds est cruciale pour assurer un séchage efficace et la sécurité des équipes.",
+        "La densité de circulation autour du campus Descartes et des axes autoroutiers accélère le dépôt de <strong>suies grasses</strong> sur les sols et les murs.",
+        "Les parkings des résidences des années 70-80 présentent souvent des <strong>bétons bruts devenus poreux</strong> qui absorbent les huiles, nécessitant un traitement de fond.",
+        "La gestion de la ventilation et de l'éclairage dans les <strong>niveaux inférieurs profonds</strong> est cruciale pour assurer un séchage efficace et la sécurité des équipes.",
       ],
 
       faqAdditions: [
@@ -224,9 +224,9 @@ const city: City = {
         "<h3>1. Mise en sécurité et préparation</h3>\n<p>Nous protégeons soigneusement les baies vitrées, les menuiseries et les zones de passage avec des bâches étanches. Nous déplaçons ou couvrons le mobilier et les végétaux pour éviter toute projection. <strong>Retrait manuel des amas de feuilles, terre et débris</strong> accumulés dans les angles et les gouttières.</p>\n\n<h3>2. Décapage et nettoyage des surfaces</h3>\n<p>Application d'un détergent professionnel adapté au matériau (béton, carrelage, bois) pour dissoudre les salissures organiques et atmosphériques. Brossage mécanique suivi d'un rinçage à la haute pression contrôlée. <strong>Buses spécifiques pour nettoyer efficacement</strong> sans agresser les joints ni fragiliser les supports anciens.</p>\n\n<h3>3. Maîtrise de l'eau et finitions</h3>\n<p>Nous canalisons les flux vers les évacuations à l'aide de raclettes et utilisons un aspirateur à eau industriel si nécessaire pour prévenir tout écoulement chez les voisins du dessous ou sur la façade. <strong>Essuyage des garde-corps et des vitres.</strong> Nous vous donnons les consignes pour le séchage optimal.</p>",
 
       specificChallenges: [
-        "La proximité immédiate des zones boisées favorise une accumulation rapide de feuilles et de mousses nécessitant un traitement fongicide.",
-        "Les balcons des immeubles construits dans les années 80 (quartier des Pyramides) présentent parfois des bétons devenus poreux qui absorbent la pollution.",
-        "L'évacuation des eaux sur les loggias fermées ou mal drainées impose l'usage systématique d'aspirateurs à liquides pour éviter les débordements.",
+        "La proximité immédiate des zones boisées favorise une <strong>accumulation rapide de feuilles et de mousses</strong> nécessitant un traitement fongicide.",
+        "Les balcons des immeubles construits dans les années 80 (quartier des Pyramides) présentent parfois des <strong>bétons devenus poreux</strong> qui absorbent la pollution.",
+        "L'évacuation des eaux sur les <strong>loggias fermées ou mal drainées</strong> impose l'usage systématique d'aspirateurs à liquides pour éviter les débordements.",
       ],
 
       faqAdditions: [
@@ -275,12 +275,12 @@ const city: City = {
         "<p>Avec près de 50 % de son territoire couvert d'espaces verts et boisés, comme le Parc du Château, Champs-sur-Marne offre un cadre idéal... pour les pigeons. Ces volatiles trouvent refuge sur les corniches et balcons des immeubles, notamment dans les quartiers denses comme le Nesles ou les résidences du Bois de Grâce.</p>\n<p class=\"mt-4\">L'accumulation rapide de fientes transforme les loggias en zones insalubres : l'odeur devient insupportable, le sol glissant, et l'aspect visuel repoussant condamne l'accès à l'extérieur. <strong>Au-delà de la gêne olfactive, cette situation pose un grave problème de santé publique.</strong> Les déjections séchées se transforment en poussières volatiles chargées de bactéries et de champignons, risquant de contaminer l'air intérieur du logement.</p>",
 
       uniqueDeepDive:
-        "<h3>1. Protection et mise en sécurité</h3>\n<p>Nos techniciens interviennent équipés de combinaisons intégrales, de gants et de masques respiratoires <strong>FFP2</strong> pour se protéger des agents pathogènes. Nous confinons la zone de travail pour éviter toute propagation de contaminants vers l'intérieur de l'appartement. <strong>Humidification préalable des fientes</strong> pour empêcher la formation de poussières nocives.</p>\n\n<h3>2. Ramassage et nettoyage technique</h3>\n<p>Grattage manuel et évacuation des déjections et nids dans des sacs hermétiques à double épaisseur, destinés aux déchets à risques. Nettoyage technique des sols, garde-corps et murs à l'aide de détergents professionnels pour éliminer les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et finitions</h3>\n<p>Pulvérisation d'un produit virucide et bactéricide homologué, avec un temps de pose strict pour assurer la destruction des germes. Rinçage des surfaces à l'eau claire en contrôlant les écoulements. <strong>Les déchets sont évacués par nos soins en toute sécurité.</strong> Nous recommandons d'aérer l'espace pendant 24 heures avant de le réinvestir.</p>",
+        "<h3>1. Protection et mise en sécurité</h3>\n<p>Nos techniciens interviennent équipés de combinaisons intégrales, de gants et de masques respiratoires FFP2 pour se protéger des agents pathogènes. Nous confinons la zone de travail pour éviter toute propagation de contaminants vers l'intérieur de l'appartement. <strong>Humidification préalable des fientes</strong> pour empêcher la formation de poussières nocives.</p>\n\n<h3>2. Ramassage et nettoyage technique</h3>\n<p>Grattage manuel et évacuation des déjections et nids dans des sacs hermétiques à double épaisseur, destinés aux déchets à risques. Nettoyage technique des sols, garde-corps et murs à l'aide de détergents professionnels pour éliminer les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et finitions</h3>\n<p>Pulvérisation d'un produit virucide et bactéricide homologué, avec un temps de pose strict pour assurer la destruction des germes. Rinçage des surfaces à l'eau claire en contrôlant les écoulements. <strong>Les déchets sont évacués par nos soins en toute sécurité.</strong> Nous recommandons d'aérer l'espace pendant 24 heures avant de le réinvestir.</p>",
 
       specificChallenges: [
-        "La forte présence de végétation autour des résidences du Luzard et du Bois de Grâce favorise une recolonisation rapide nécessitant une désinfection profonde.",
-        "L'acidité des fientes accumulées attaque le béton des balcons des Pyramides (quartier du Nesles), demandant un nettoyage précautionneux.",
-        "L'évacuation des déchets depuis les étages élevés sans ascenseur impose un conditionnement ultra-sécurisé pour traverser les parties communes.",
+        "La forte présence de végétation autour des résidences du Luzard et du Bois de Grâce favorise une <strong>recolonisation rapide</strong> nécessitant une désinfection profonde.",
+        "L'acidité des fientes accumulées attaque le <strong>béton des balcons</strong> des Pyramides (quartier du Nesles), demandant un nettoyage précautionneux.",
+        "L'évacuation des déchets depuis les <strong>étages élevés sans ascenseur</strong> impose un conditionnement ultra-sécurisé pour traverser les parties communes.",
       ],
 
       faqAdditions: [
@@ -332,9 +332,9 @@ const city: City = {
         "<h3>1. Inspection et pré-traitement ciblé</h3>\n<p>Notre technicien identifie la composition des fibres (coton, microfibre, velours) et la nature des taches (café, graisse, sébum). Cette étape détermine le choix des produits et la température de l'eau pour éviter tout risque de décoloration. <strong>Application d'un pré-traitement détachant</strong> sur les zones les plus souillées (accoudoirs, assises) pour dissoudre la crasse.</p>\n\n<h3>2. Injection-extraction en profondeur</h3>\n<p>Notre machine propulse une solution nettoyante au cœur du rembourrage et l'aspire immédiatement, emportant avec elle les saletés et les allergènes. Nous modulons notre technique en fonction de la fragilité du support, réduisant la pression pour les tapis anciens ou les tissus délicats. <strong>L'extraction de l'eau est maximisée</strong> pour laisser le mobilier le moins humide possible.</p>\n\n<h3>3. Séchage et conseils d'entretien</h3>\n<p>Nous vous donnons des consignes précises pour la ventilation de la pièce afin d'assurer un séchage complet rapide, un point essentiel dans les appartements parfois difficiles à aérer en hiver. <strong>Conseils pratiques</strong> pour traiter les taches accidentelles futures sans fixer la saleté.</p>",
 
       specificChallenges: [
-        "La forte densité de population étudiante implique souvent le nettoyage de mobilier très sollicité ou récupéré, nécessitant une désinfection renforcée.",
-        "L'humidité ambiante proche des étangs et de la Marne peut compliquer le séchage dans les logements en rez-de-chaussée, imposant une aspiration rigoureuse.",
-        "Le traitement des taches organiques (urine, nourriture) sur les matelas demande l'usage de produits enzymatiques spécifiques pour détruire les odeurs.",
+        "La forte densité de population étudiante implique souvent le nettoyage de <strong>mobilier très sollicité ou récupéré</strong>, nécessitant une désinfection renforcée.",
+        "L'humidité ambiante proche des étangs et de la Marne peut compliquer le séchage dans les <strong>logements en rez-de-chaussée</strong>, imposant une aspiration rigoureuse.",
+        "Le traitement des taches organiques (urine, nourriture) sur les matelas demande l'usage de <strong>produits enzymatiques spécifiques</strong> pour détruire les odeurs.",
       ],
 
       faqAdditions: [
@@ -383,13 +383,13 @@ const city: City = {
         '<p>Quand il faut rendre un logement propre et “lisible” pour un état des lieux, la différence se joue souvent sur les détails : cuisine, sanitaires, plinthes, vitres accessibles, points de contact. À Champs-sur-Marne, les transitions sont fréquentes, notamment autour du campus de la Cité Descartes et du secteur Noisy-Champs, où les rotations peuvent se concentrer sur des délais courts.</p>\n<p class="mt-4">Selon le type de bien, les contraintes ne sont pas les mêmes : pavillons du Bois de Grâce avec pièces multiples, collectifs des Deux Parcs, ou logements récents proches du pôle universitaire. Entre sols carrelés, lino/PVC dans certains logements étudiants, ou parquets plus récents, chaque surface demande une méthode maîtrisée pour éviter traces, sur-humidification ou finitions inégales.</p>\n<p class="mt-4">Klinova intervient avec une approche structurée : repérage des priorités, protocole par zones, gestion des accès (interphones, badges, Vigik) et contrôle final avant restitution. <strong>Le périmètre de l’intervention est toujours défini avant l’intervention.</strong> Objectif : un logement prêt à être occupé ou présenté sereinement.</p>',
 
       uniqueDeepDive:
-        "<h3>Diagnostic et préparation</h3>\n<p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les contraintes pratiques sont intégrées dès le départ : accès Vigik en résidences, stationnement plus difficile autour de la gare Noisy-Champs et du campus, et ordre d’intervention optimisé pièce par pièce.</p>\n\n<h3>Nettoyage par zones</h3>\n<p>La <strong>remise en état du logement</strong> se fait de manière méthodique. Sols et plinthes sont traités selon le revêtement (carrelage, parquet, lino/PVC). La cuisine reçoit un <strong>dégraissage cuisine</strong> ciblé des surfaces accessibles (plans, façades, crédences selon état). Salle de bain et sanitaires : <strong>détartrage sanitaires</strong> adapté, traitement des joints et points de contact (poignées, interrupteurs). Les vitres accessibles et les finitions visuelles complètent l’intervention, notamment pour un <strong>nettoyage avant état des lieux</strong> ou un <strong>nettoyage après déménagement</strong>.</p>\n\n<h3>Contrôle et restitution</h3>\n<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de rendre un résultat cohérent, sans zones “oubliées”, pour une restitution claire le jour de l’état des lieux ou une réoccupation rapide.</p>",
+        "<h3>Diagnostic et préparation</h3>\n<p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les contraintes pratiques sont intégrées dès le départ : accès Vigik en résidences, stationnement plus difficile autour de la gare Noisy-Champs et du campus, et ordre d’intervention optimisé pièce par pièce.</p>\n\n<h3>Nettoyage par zones</h3>\n<p>La remise en état du logement se fait de manière méthodique. Sols et plinthes sont traités selon le revêtement (carrelage, parquet, lino/PVC). La cuisine reçoit un dégraissage cuisine ciblé des surfaces accessibles (plans, façades, crédences selon état). Salle de bain et sanitaires : détartrage sanitaires adapté, traitement des joints et points de contact (poignées, interrupteurs). Les vitres accessibles et les finitions visuelles complètent l’intervention, notamment pour un nettoyage avant état des lieux ou un nettoyage après déménagement.</p>\n\n<h3>Contrôle et restitution</h3>\n<p>Nous terminons par un contrôle visuel pièce par pièce, puis une aération du logement. L’objectif est de rendre un résultat cohérent, sans zones “oubliées”, pour une restitution claire le jour de l’état des lieux ou une réoccupation rapide.</p>",
 
       specificChallenges: [
-        "Rotations concentrées autour de la Cité Descartes (fin d’année universitaire), avec délais souvent serrés.",
-        "Stationnement et accès plus contraints dans le secteur gare Noisy-Champs et boulevard Newton.",
-        "Accès fréquents via interphones, badges et Vigik, surtout en résidences et logements étudiants.",
-        "Diversité de revêtements (carrelage, lino/PVC, parquet) exigeant une adaptation stricte des méthodes.",
+        "Rotations concentrées autour de la Cité Descartes (fin d’année universitaire), avec <strong>délais souvent serrés</strong>.",
+        "Stationnement et accès plus contraints dans le <strong>secteur gare Noisy-Champs</strong> et boulevard Newton.",
+        "Accès fréquents via <strong>interphones, badges et Vigik</strong>, surtout en résidences et logements étudiants.",
+        "Diversité de revêtements (carrelage, lino/PVC, parquet) exigeant une <strong>adaptation stricte des méthodes</strong>.",
       ],
 
       faqAdditions: [
@@ -403,19 +403,19 @@ const city: City = {
           question:
             "Intervenez-vous pour un état des lieux dans le secteur Noisy-Champs, malgré les contraintes de stationnement ?",
           answer:
-            "<p>Oui. Nous intégrons ces contraintes dès la préparation : créneau adapté, consignes d’accès, et organisation du matériel pour limiter les allers-retours. Autour de la gare Noisy-Champs et du boulevard Newton, l’anticipation évite les retards et sécurise la restitution le jour prévu.</p>",
+            "<p><strong>Oui. Nous intégrons ces contraintes dès la préparation :</strong> créneau adapté, consignes d’accès, et organisation du matériel pour limiter les allers-retours. Autour de la gare Noisy-Champs et du boulevard Newton, l’anticipation évite les retards et sécurise la restitution le jour prévu.</p>",
         },
         {
           question:
             "Comment adaptez-vous l’intervention aux logements étudiants et résidences récentes de la Cité Descartes ?",
           answer:
-            "<p>Nous privilégions une méthode efficace et propre : traitement des sols lino/PVC ou parquet, dégraissage de cuisine sur les zones accessibles, et finitions visuelles pour un rendu homogène. Les accès Vigik/badges sont gérés en amont pour éviter toute perte de temps le jour de l’intervention.</p>",
+            "<p><strong>Nous privilégions une méthode efficace et propre :</strong> traitement des sols lino/PVC ou parquet, dégraissage de cuisine sur les zones accessibles, et finitions visuelles pour un rendu homogène. Les accès Vigik/badges sont gérés en amont pour éviter toute perte de temps le jour de l’intervention.</p>",
         },
         {
           question:
             "Le logement peut-il être utilisé immédiatement après votre passage ?",
           answer:
-            "<p>Dans la plupart des cas, oui. Nous limitons l’humidité résiduelle et prévoyons une aération en fin d’intervention. Cela permet de réoccuper le logement ou de le présenter rapidement, tout en conservant un rendu propre sur les sols et les pièces d’eau.</p>",
+            "<p><strong>Dans la plupart des cas, oui.</strong> Nous limitons l’humidité résiduelle et prévoyons une aération en fin d’intervention. Cela permet de réoccuper le logement ou de le présenter rapidement, tout en conservant un rendu propre sur les sols et les pièces d’eau.</p>",
         },
       ],
 

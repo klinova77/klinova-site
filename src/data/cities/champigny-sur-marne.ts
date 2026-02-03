@@ -18,7 +18,7 @@ const city: City = {
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // Format : 2 <p> then <ul>
   hubIntro:
-    "<p>Sur les hauteurs du Plateau et le long des boucles de la Marne, Champigny-sur-Marne présente des configurations variées qui demandent une connaissance fine du terrain. Klinova s'appuie sur cette proximité pour coordonner ses interventions avec réactivité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings en sous-sol, balcons exposés aux intempéries : chaque prestation s'organise selon les accès, les horaires acceptables et les attentes du donneur d'ordre. Un interlocuteur dédié assure le suivi et transmet un compte-rendu si nécessaire.</p>\n<ul>\n  <li><strong>Planification selon vos contraintes :</strong> Horaires décalés possibles pour limiter la gêne des occupants, coordination avec gardiens ou gestionnaires avant chaque passage.</li>\n  <li><strong>Matériel adapté au site :</strong> Équipements dimensionnés selon la surface et la configuration — sous-sols étroits, escaliers sans ascenseur, accès par badge.</li>\n  <li><strong>Suivi transparent :</strong> Reporting disponible sur demande, photos avant/après transmises au gestionnaire pour les interventions ponctuelles ou récurrentes.</li>\n</ul>",
+    "<p>Sur les hauteurs du Plateau et le long des boucles de la Marne, Champigny-sur-Marne présente des configurations variées qui demandent une <strong>connaissance fine du terrain</strong>. Klinova s'appuie sur cette proximité pour coordonner ses interventions avec réactivité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings en sous-sol, balcons exposés aux intempéries : chaque prestation s'organise selon les accès, les horaires acceptables et les attentes du donneur d'ordre. Un interlocuteur dédié assure le suivi et transmet un compte-rendu si nécessaire.</p>\n<ul>\n  <li><strong>Planification selon vos contraintes :</strong> Horaires décalés possibles pour limiter la gêne des occupants, coordination avec gardiens ou gestionnaires avant chaque passage.</li>\n  <li><strong>Matériel adapté au site :</strong> Équipements dimensionnés selon la surface et la configuration — sous-sols étroits, escaliers sans ascenseur, accès par badge.</li>\n  <li><strong>Suivi transparent :</strong> Reporting disponible sur demande, photos avant/après transmises au gestionnaire pour les interventions ponctuelles ou récurrentes.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -72,23 +72,23 @@ const city: City = {
       question:
         "Comment organisez-vous vos interventions dans les quartiers où le stationnement est compliqué ?",
       answer:
-        "<p><strong>Autour de la gare et en centre-ville</strong>, nous repérons à l’avance les zones de dépose et les créneaux possibles. <strong>Le matériel est préparé</strong> pour limiter les allers-retours. Si besoin, nous proposons un passage <strong>tôt le matin</strong> ou <strong>en fin de journée</strong> pour éviter les périodes de saturation.</p>",
+        "<p><strong>Autour de la gare et en centre-ville</strong>, nous repérons à l’avance les zones de dépose et les créneaux possibles. Le matériel est préparé pour limiter les allers-retours. Si besoin, nous proposons un passage tôt le matin ou en fin de journée pour éviter les périodes de saturation.</p>",
     },
     {
       question: "Proposez-vous un devis avant intervention ?",
       answer:
-        "<p><strong>Oui, systématiquement.</strong> Nous validons d’abord <strong>les surfaces</strong>, <strong>les accès</strong> et <strong>les contraintes</strong> (horaires, parking, parties communes). Le devis est ensuite transmis <strong>rapidement</strong> et <strong>sans engagement</strong>. Pour une copropriété ou un site complexe, une <strong>visite technique</strong> peut être proposée.</p>",
+        "<p><strong>Oui, systématiquement.</strong> Nous validons d’abord les surfaces, les accès et les contraintes (horaires, parking, parties communes). Le devis est ensuite transmis rapidement et sans engagement. Pour une copropriété ou un site complexe, une visite technique peut être proposée.</p>",
     },
     {
       question: "Pouvez-vous intervenir en urgence à Champigny-sur-Marne ?",
       answer:
-        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un <strong>créneau rapide</strong>. En cas de <strong>dégradation importante</strong> ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir <strong>dans les meilleurs délais</strong>.</p>",
+        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau rapide. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir dans les meilleurs délais.</p>",
     },
     {
       question:
         "Comment se passe la coordination avec un syndic ou un gestionnaire de site ?",
       answer:
-        "<p><strong>Un interlocuteur unique</strong> suit le dossier. Avant intervention, nous calons <strong>les accès</strong> (digicode, clés, gardien), <strong>les horaires</strong> et le besoin de <strong>balisage</strong>. Après passage, un <strong>compte-rendu</strong> peut être transmis sur demande, notamment pour les résidences des <strong>Hautes Noues</strong> et du <strong>secteur gare</strong>.</p>",
+        "<p><strong>Un interlocuteur unique</strong> suit le dossier. Avant intervention, nous calons les accès (digicode, clés, gardien), les horaires et le besoin de balisage. Après passage, un compte-rendu peut être transmis sur demande, notamment pour les résidences des Hautes Noues et du secteur gare.</p>",
     },
   ],
 
@@ -113,15 +113,15 @@ const city: City = {
         "Interventions planifiées en horaires décalés pour limiter la gêne dans les copropriétés et locaux professionnels.",
       ],
       uniqueIntro:
-        "<p>Après quelques années d'usage, les moquettes des pavillons du quartier Cœuilly ou des bureaux installés sur la Zone Industrielle du Plateau finissent par accumuler des traces que l'aspirateur ne déloge plus. Café renversé dans un open space, passages répétés dans un couloir de copropriété, poussières fines ramenées depuis les axes routiers proches : les fibres se ternissent et retiennent des résidus tenaces.</p>\n<p class=\"mt-4\">Un revêtement textile encrassé modifie l'atmosphère d'un lieu. Dans les immeubles collectifs des années 70-80, les halls moquettés perdent leur aspect d'origine et peuvent générer des remarques de copropriétaires. À domicile, un salon dont le sol paraît grisâtre donne une impression de négligence malgré un entretien régulier. Redonner de la fraîcheur aux fibres change la perception immédiate de l'espace.</p>\n<p class=\"mt-4\">Une intervention structurée permet d'adapter le traitement au type de moquette et aux contraintes d'accès. Que ce soit dans un escalier étroit ou un plateau de bureaux, le diagnostic préalable oriente le choix des passes et la gestion du séchage.</p>",
+        "<p>Après quelques années d'usage, les moquettes des pavillons du quartier Cœuilly ou des bureaux installés sur la Zone Industrielle du Plateau finissent par accumuler des traces que l'aspirateur ne déloge plus. Café renversé dans un open space, passages répétés dans un couloir de copropriété, poussières fines ramenées depuis les axes routiers proches : <strong>les fibres se ternissent</strong> et retiennent des résidus tenaces.</p>\n<p class=\"mt-4\">Un revêtement textile encrassé modifie l'atmosphère d'un lieu. Dans les immeubles collectifs des années 70-80, les halls moquettés perdent leur aspect d'origine et peuvent générer des remarques de copropriétaires. À domicile, un salon dont le sol paraît grisâtre donne une impression de négligence malgré un entretien régulier. Redonner de la fraîcheur aux fibres change la perception immédiate de l'espace.</p>\n<p class=\"mt-4\">Une intervention structurée permet d'adapter le traitement au type de moquette et aux contraintes d'accès. Que ce soit dans un escalier étroit ou un plateau de bureaux, le diagnostic préalable oriente le choix des passes et la gestion du séchage.</p>",
       uniqueDeepDive:
-        "<h3>Diagnostic et préparation</h3>\n<p>Avant toute action, nous identifions la nature de la moquette : bouclée, velours, épaisse ou fine. Les taches sont repérées selon leur origine — tanin, graisse, traces anciennes — pour adapter le pré-traitement.</p>\n<p class=\"mt-4\">Les plinthes et bas de murs sont protégés. Dans les parties communes, un balisage signale l'intervention aux résidents. Une aspiration préalable retire les particules libres.</p>\n\n<h3>Traitement par injection-extraction</h3>\n<p>La machine injecte une solution adaptée dans les fibres puis aspire immédiatement l'eau chargée de salissures. Les zones de fort passage reçoivent plusieurs passes pour déloger les résidus incrustés.</p>\n<p class=\"mt-4\">Un détachage ciblé complète le travail sur les marques persistantes, notamment les auréoles de café ou les traces grasses.</p>\n\n<h3>Séchage et remise en service</h3>\n<p>L'extraction maximale limite l'humidité résiduelle. Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du local — généralement quelques heures en conditions normales.</p>\n<p class=\"mt-4\">Des consignes de non-piétinement sont transmises pour préserver le résultat. La fréquence d'entretien recommandée dépend de l'intensité d'usage.</p>",
+        "<h3>Diagnostic et préparation</h3>\n<p>Avant toute action, nous identifions la nature de la moquette : bouclée, velours, épaisse ou fine. Les taches sont repérées selon leur origine — tanin, graisse, traces anciennes — pour adapter le pré-traitement.</p>\n<p class=\"mt-4\">Les plinthes et bas de murs sont protégés. Dans les parties communes, un balisage signale l'intervention aux résidents. <strong>Une aspiration préalable</strong> retire les particules libres.</p>\n\n<h3>Traitement par injection-extraction</h3>\n<p>La machine injecte une solution adaptée dans les fibres puis aspire immédiatement l'eau chargée de salissures. <strong>Les zones de fort passage</strong> reçoivent plusieurs passes pour déloger les résidus incrustés.</p>\n<p class=\"mt-4\">Un détachage ciblé complète le travail sur les marques persistantes, notamment les auréoles de café ou les traces grasses.</p>\n\n<h3>Séchage et remise en service</h3>\n<p>L'extraction maximale limite l'humidité résiduelle. Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du local — généralement quelques heures en conditions normales.</p>\n<p class=\"mt-4\">Des <strong>consignes de non-piétinement</strong> sont transmises pour préserver le résultat. La fréquence d'entretien recommandée dépend de l'intensité d'usage.</p>",
       specificChallenges: [
-        "Halls moquettés des années 70-80 avec fibres compactées par des décennies de passage.",
-        "Bureaux de la ZI du Plateau où les dalles textiles accumulent poussières et traces de semelles.",
+        "Halls moquettés des années 70-80 avec <strong>fibres compactées</strong> par des décennies de passage.",
+        "Bureaux de la ZI du Plateau où <strong>les dalles textiles accumulent</strong> poussières et traces de semelles.",
         "Stationnement contraint en centre-ville nécessitant une organisation logistique anticipée.",
-        "Pavillons de Cœuilly avec escaliers intérieurs moquettés et accès parfois étroits.",
-        "Séchage à adapter selon la ventilation variable des locaux, du sous-sol au dernier étage.",
+        "Pavillons de Cœuilly avec <strong>escaliers intérieurs moquettés</strong> et accès parfois étroits.",
+        "Séchage à adapter selon <strong>la ventilation variable</strong> des locaux, du sous-sol au dernier étage.",
       ],
       faqAdditions: [
         {
@@ -336,7 +336,7 @@ const city: City = {
           question:
             "Faut-il préparer le logement avant votre passage dans le quartier des Boullereaux ?",
           answer:
-            "<p>Dégagez l'accès autour du canapé ou du tapis concerné pour faciliter notre travail. Retirez les coussins amovibles et les objets posés sur les surfaces à traiter. Si le stationnement est difficile près de la gare RER E, prévenez-nous pour que nous anticipions le temps de déchargement du matériel.</p>",
+            "<p><strong>Dégagez l'accès</strong> autour du canapé ou du tapis concerné pour faciliter notre travail. Retirez les coussins amovibles et les objets posés sur les surfaces à traiter. Si le stationnement est difficile près de la gare RER E, prévenez-nous pour que nous anticipions le temps de déchargement du matériel.</p>",
         },
         {
           question:

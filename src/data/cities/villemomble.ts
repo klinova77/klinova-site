@@ -15,7 +15,7 @@ const city: City = {
     "Klinova intervient à Villemomble pour l'entretien des parties communes, des parkings et des espaces extérieurs. Entre la gare RER E et les quartiers pavillonnaires des Coquetiers, une équipe locale adaptée aux contraintei résidentiel.",
 
   hubIntro:
-    "<p>Desservie par le RER E et le Tram T4, au pied du Plateau d'Avron, Villemomble associe tissu pavillonnaire dense et résidences collectives. Klinova y assure un accompagnement régulier, calibré sur les rythmes de la commune et les attentes des gestionnaires locaux.</p>\n\n<p>Propreté des halls, entretien des sous-sols, remise en état des extérieurs : chaque intervention s'organise en fonction des accès, des horaires sensibles et des contraintes de stationnement propres à chaque secteur.</p>\n\n<ul>\n  <li><strong>Coordination terrain :</strong> Planification adaptée aux créneaux calmes, en lien avec syndics et gardiens pour limiter la gêne aux résidents.</li>\n  <li><strong>Matériel ajusté :</strong> Équipements dimensionnés pour les escaliers étroits des pavillons comme pour les parkings souterrains des résidences.</li>\n  <li><strong>Suivi structuré :</strong> Reporting disponible sur demande, points réguliers avec les donneurs d'ordre pour ajuster les fréquences.</li>\n</ul>",
+    "<p>Desservie par le RER E et le Tram T4, au pied du Plateau d'Avron, Villemomble associe tissu pavillonnaire dense et résidences collectives. Klinova y assure un accompagnement régulier, calibré sur les rythmes de la commune et les attentes des gestionnaires locaux.</p>\n\n<p><strong>Propreté des halls, entretien des sous-sols</strong>, remise en état des extérieurs : chaque intervention s'organise en fonction des accès, des horaires sensibles et des contraintes de stationnement propres à chaque secteur.</p>\n\n<ul>\n  <li><strong>Coordination terrain :</strong> Planification adaptée aux créneaux calmes, en lien avec syndics et gardiens pour limiter la gêne aux résidents.</li>\n  <li><strong>Matériel ajusté :</strong> Équipements dimensionnés pour les escaliers étroits des pavillons comme pour les parkings souterrains des résidences.</li>\n  <li><strong>Suivi structuré :</strong> Reporting disponible sur demande, points réguliers avec les donneurs d'ordre pour ajuster les fréquences.</li>\n</ul>",
 
   citySpecificChallenges: [
     "<strong>Stationnement contraint</strong> autour de la gare RER E et du centre-ville, nécessitant des créneaux décalés.",
@@ -62,7 +62,7 @@ const city: City = {
       question:
         "Comment organisez-vous les interventions dans les secteurs où le stationnement est saturé ?",
       answer:
-        "<p>Autour de la gare et en centre-ville, nous privilégions des <strong>créneaux matinaux</strong> avant le pic de circulation. Le matériel est chargé en véhicule compact, et nous identifions en amont les zones de dépose autorisées. Si besoin, un opérateur reste au véhicule pendant que l'autre intervient.</p>",
+        "<p><strong>Autour de la gare et en centre-ville</strong>, nous privilégions des créneaux matinaux avant le pic de circulation. Le matériel est chargé en véhicule compact, et nous identifions en amont les zones de dépose autorisées. Si besoin, un opérateur reste au véhicule pendant que l'autre intervient.</p>",
     },
     {
       question:
@@ -74,7 +74,7 @@ const city: City = {
       question:
         "Comment se passe la prise de contact pour un devis à Villemomble ?",
       answer:
-        "<p>Un premier échange téléphonique ou par mail permet de cerner le besoin. Si nécessaire, nous programmons une <strong>visite technique</strong> pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit sous quelques jours, sans engagement.</p>",
+        "<p><strong>Un premier échange téléphonique ou par mail</strong> permet de cerner le besoin. Si nécessaire, nous programmons une visite technique pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit sous quelques jours, sans engagement.</p>",
     },
     {
       question: "Travaillez-vous avec les syndics et bailleurs du secteur ?",
@@ -104,15 +104,15 @@ const city: City = {
         "Interventions planifiées en dehors des heures de forte affluence pour limiter la gêne des occupants et usagers.",
       ],
       uniqueIntro:
-        "<p>Dans le secteur du <strong>centre-ville et de l'Avenue du Raincy</strong>, les moquettes des cabinets libéraux et des halls d'entrée accumulent rapidement poussières fines et traces de passage. Les allées et venues quotidiennes déposent des résidus que l'aspiration seule ne suffit pas à déloger. Les fibres se ternissent, les zones de circulation se marquent, et l'aspect général se dégrade en quelques mois seulement.</p>\n\n<p class=\"mt-4\">Dans les <strong>parties communes d'immeubles anciens et de petits collectifs</strong>, le revêtement textile subit une usure accélérée. Les escaliers étroits concentrent le piétinement sur des surfaces réduites. Un entretien adapté redonne de la tenue aux fibres, améliore le confort visuel et limite les plaintes des occupants concernant l'hygiène des espaces partagés.</p>\n\n<p class=\"mt-4\">Le <strong>flux piéton lié à la gare RER E</strong> ramène quotidiennement poussières extérieures et particules fines dans les halls proches. Une intervention structurée, avec diagnostic préalable et protections adaptées, permet de traiter efficacement ces revêtements sans perturber l'activité des lieux.</p>",
+        "<p>Dans le secteur du <strong>centre-ville et de l'Avenue du Raincy</strong>, les moquettes des cabinets libéraux et des halls d'entrée accumulent rapidement poussières fines et traces de passage. Les allées et venues quotidiennes déposent des résidus que l'aspiration seule ne suffit pas à déloger. Les fibres se ternissent, les zones de circulation se marquent, et l'aspect général se dégrade en quelques mois seulement.</p>\n\n<p class=\"mt-4\">Dans les <strong>parties communes d'immeubles anciens et de petits collectifs</strong>, le revêtement textile subit une usure accélérée. Les escaliers étroits concentrent le piétinement sur des surfaces réduites. Un entretien adapté redonne de la tenue aux fibres, améliore le confort visuel et limite les plaintes des occupants concernant l'hygiène des espaces partagés.</p>\n\n<p class=\"mt-4\">Le flux piéton lié à la gare RER E ramène quotidiennement poussières extérieures et particules fines dans les halls proches. Une intervention structurée, avec diagnostic préalable et protections adaptées, permet de traiter efficacement ces revêtements sans perturber l'activité des lieux.</p>",
       uniqueDeepDive:
-        "<h3>Zones de passage intensif</h3>\n<p>Les entrées et couloirs concentrent l'essentiel des salissures. Après aspiration préalable, le traitement par injection-extraction cible ces surfaces en priorité. Plusieurs passes successives délogent les particules incrustées dans les fibres bouclées ou velours.</p>\n\n<h3>Surfaces périphériques et angles</h3>\n<p>Les abords de plinthes et les recoins accumulent poussières et résidus moins visibles. Un détachage ciblé traite les taches localisées avant le passage général. Les protections installées sur les bas de murs évitent les projections.</p>\n\n<h3>Séchage et remise en circulation</h3>\n<p>L'extraction maximale de l'humidité réduit le temps de séchage à quelques heures selon l'épaisseur du revêtement et la ventilation du local. Des consignes de non-piétinement temporaire sont communiquées pour préserver le résultat. La fréquence d'entretien recommandée dépend du niveau de passage constaté.</p>",
+        "<h3>Zones de passage intensif</h3>\n<p>Les entrées et couloirs concentrent l'essentiel des salissures. Après aspiration préalable, le traitement par injection-extraction cible ces surfaces en priorité. Plusieurs passes successives délogent les particules incrustées dans les fibres bouclées ou velours.</p>\n\n<h3>Surfaces périphériques et angles</h3>\n<p>Les abords de plinthes et les recoins accumulent poussières et résidus moins visibles. Un détachage ciblé traite les taches localisées avant le passage général. Les protections installées sur les bas de murs évitent les projections.</p>\n\n<h3>Séchage et remise en circulation</h3>\n<p><strong>L'extraction maximale de l'humidité</strong> réduit le temps de séchage à quelques heures selon l'épaisseur du revêtement et la ventilation du local. Des consignes de non-piétinement temporaire sont communiquées pour préserver le résultat. La fréquence d'entretien recommandée dépend du niveau de passage constaté.</p>",
       specificChallenges: [
-        "Halls d'immeubles anciens avec escaliers étroits compliquant l'acheminement du matériel.",
-        "Moquettes de bureaux et cabinets soumises à un piétinement quotidien intense près de la gare.",
-        "Revêtements textiles des parties communes marqués par les poussières ramenées des axes passants.",
+        "Halls d'immeubles anciens avec <strong>escaliers étroits</strong> compliquant l'acheminement du matériel.",
+        "Moquettes de bureaux et cabinets soumises à un <strong>piétinement quotidien intense</strong> près de la gare.",
+        "Revêtements textiles des parties communes marqués par les <strong>poussières ramenées des axes passants</strong>.",
         "Stationnement difficile en centre-ville nécessitant une organisation logistique anticipée.",
-        "Fibres ternies par l'accumulation de résidus que l'aspiration régulière ne suffit pas à éliminer.",
+        "Fibres ternies par <strong>l'accumulation de résidus</strong> que l'aspiration régulière ne suffit pas à éliminer.",
       ],
       faqAdditions: [
         {
@@ -137,7 +137,7 @@ const city: City = {
           question:
             "Après intervention sur la moquette d'une salle comme celle du Théâtre Georges Brassens, quel délai avant remise en service ?",
           answer:
-            "<p>Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du lieu. En conditions normales, comptez entre quatre et huit heures avant de pouvoir circuler à nouveau. Nous communiquons un créneau précis après évaluation sur place.</p>",
+            "<p><strong>Le temps de séchage varie selon l'épaisseur du revêtement</strong> et la ventilation du lieu. En conditions normales, comptez entre quatre et huit heures avant de pouvoir circuler à nouveau. Nous communiquons un créneau précis après évaluation sur place.</p>",
         },
       ],
       ctaOverride: "",

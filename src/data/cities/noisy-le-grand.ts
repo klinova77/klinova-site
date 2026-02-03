@@ -18,10 +18,10 @@ const city: City = {
     "<p>Acteur spécialisé de la propreté et de la maintenance courante à <strong>Noisy-le-Grand</strong>, Klinova accompagne les syndics de copropriété, bailleurs et entreprises dans la gestion quotidienne de leurs immeubles. Nos équipes interviennent régulièrement autour de Mont-d'Est, des Richardets, d'Yvris ou du centre-ville, avec une organisation pensée pour limiter les nuisances et sécuriser les accès.</p>\n<p class=\"mt-4\">Au-delà du simple « coup de propre », nous mettons en place des protocoles planifiés qui s'intègrent à la vie de la copropriété : planning annuel, reporting après chaque passage, coordination avec les gardiens et conseils syndicaux. L'objectif est de préserver la valeur du patrimoine tout en améliorant concrètement le confort des occupants.</p>\n<ul>\n  <li><strong>Interventions protocolisées :</strong> moquettes, parkings, balcons, textiles d'ameublement.</li>\n  <li><strong>Techniciens formés</strong> aux accès sécurisés (badges Vigik, codes, parkings souterrains).</li>\n  <li><strong>Créneaux adaptés</strong> aux contraintes locales : tôt le matin, en journée ou en période creuse.</li>\n  <li><strong>Reporting synthétique</strong> et photos sur demande pour les gestionnaires à distance.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Moquettes de halls très fréquentées autour des gares RER (Mont d'Est, Noisy–Champs).",
-    "Fientes sur balcons exposés côté Marne ou zones boisées (Yvris, Richardets).",
-    "Encrassement des parkings souterrains à cause des résidus d'hydrocarbures et poussières urbaines.",
-    "Débordement végétal et mousses sur terrasses dans les quartiers pavillonnaires du sud.",
+    "<strong>Moquettes de halls très fréquentées</strong> autour des gares RER (Mont d'Est, Noisy–Champs).",
+    "<strong>Fientes sur balcons exposés</strong> côté Marne ou zones boisées (Yvris, Richardets).",
+    "<strong>Encrassement des parkings souterrains</strong> à cause des résidus d'hydrocarbures et poussières urbaines.",
+    "<strong>Débordement végétal et mousses</strong> sur terrasses dans les quartiers pavillonnaires du sud.",
   ],
 
   districts: [
@@ -133,7 +133,7 @@ const city: City = {
         "<h3>Diagnostic et préparation sur mesure</h3>\n<p>Avant toute intervention, un diagnostic est réalisé sur place : type de moquette, niveau d'encrassement, présence de taches spécifiques (graisse, boisson, humidité), accessibilité, ascenseurs, horaires d'accès. À Noisy-le-Grand, certains halls sont ouverts sur rue, exposés aux poussières extérieures ; d'autres sont étroits, avec des accès contraints. Klinova adapte le protocole en fonction de ces données.</p>\n\n<h3>Nettoyage par injection-extraction en profondeur</h3>\n<p class=\"mt-4\">Les zones sont protégées : bas de murs, pieds de portes, balisage pour éviter toute gêne aux occupants. Le nettoyage s'effectue par <strong>injection–extraction à l'eau</strong>, avec une solution adaptée au type de fibre. Nos techniciens insistent sur les marches, les paliers de cage d'escalier et les bords de plinthes, souvent oubliés mais très marqués. Les zones de fort passage (proximité de l'ascenseur, entrée principale) reçoivent plusieurs passes.</p>\n\n<h3>Séchage rapide et conseils d'entretien</h3>\n<p class=\"mt-4\">L'extraction puissante limite le temps de séchage, tout en évacuant un maximum de salissures. Une aération est recommandée pendant quelques heures après l'intervention. En copropriété, un <strong>nettoyage annuel ou semestriel</strong> est conseillé pour maintenir l'image globale de l'immeuble et prolonger la durée de vie des revêtements textiles.</p>",
 
       specificChallenges: [
-        "Moquettes très sollicitées dans les halls proches de la gare de Noisy–Mont d'Est.",
+        "<strong>Moquettes très sollicitées</strong> dans les halls proches de la gare de Noisy–Mont d'Est.",
         "Présence d'humidité résiduelle en rez-de-chaussée dans les bâtiments anciens.",
         "Difficultés d'accès dans certains bâtiments sans ascenseur (quartiers pavillonnaires ou mixtes).",
       ],

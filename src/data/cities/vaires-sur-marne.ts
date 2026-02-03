@@ -18,10 +18,10 @@ const city: City = {
     "<p>Pour les syndics de copropriété et les gestionnaires de patrimoine à Vaires-sur-Marne, la préservation des immeubles face à l'humidité des bords de Marne et à l'activité urbaine est un enjeu technique quotidien. Klinova se positionne comme votre partenaire de maintenance immobilière, assurant une gestion globale de la propreté, des parkings souterrains aux parties communes, en passant par les extérieurs privatifs.</p>\n<p class=\"mt-4\">Nous intervenons avec une rigueur opérationnelle adaptée aux spécificités locales, garantissant un reporting précis après chaque prestation. Notre structure nous permet de répondre aux exigences des conseils syndicaux avec des solutions éprouvées pour l'hygiène et la rénovation des surfaces.</p>\n<ul>\n  <li><strong>Mise en place de protocoles stricts</strong> contre les encrassements récurrents (mousses, hydrocarbures, fientes).</li>\n  <li><strong>Interventions planifiées ou ponctuelles</strong>, selon les contraintes horaires des résidences.</li>\n  <li><strong>Équipe formée</strong> pour les milieux résidentiels et zones sensibles (hall, cage, balcon, parking).</li>\n  <li><strong>Suivi administratif clair</strong>, devis rapide et reporting après prestation.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Mousses et dépôts verts fréquents sur les balcons exposés aux bords de Marne.",
-    "Particules fines et poussières ferroviaires autour de la gare de Vaires-Torcy.",
+    "<strong>Mousses et dépôts verts fréquents</strong> sur les balcons exposés aux bords de Marne.",
+    "<strong>Particules fines et poussières ferroviaires</strong> autour de la gare de Vaires-Torcy.",
     "Parkings souterrains avec humidité persistante et zones mal ventilées.",
-    "Fort passage dans les halls des résidences proches de la D934 et des écoles.",
+    "<strong>Fort passage dans les halls</strong> des résidences proches de la D934 et des écoles.",
   ],
 
   districts: [

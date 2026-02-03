@@ -12,10 +12,10 @@ const city: City = {
     "<p>En tant que gestionnaire immobilier ou syndic de copropriété à Neuilly-sur-Marne, vous recherchez un partenaire de propreté capable de garantir l'hygiène et la valorisation de votre patrimoine. KLINOVA apporte une expertise technique éprouvée dans la maintenance immobilière, assurant des interventions ponctuelles ou régulières. Notre objectif est de maintenir un niveau de propreté irréprochable dans les parties communes, les parkings et les logements de la ville.</p>\n<p class=\"mt-4\">Notre approche repose sur un partenariat transparent avec les syndics de copropriété et les entreprises de Neuilly-sur-Marne. Nous garantissons une mise en œuvre rigoureuse de chaque prestation, de l'état des lieux initial au rapport de fin de chantier, assurant ainsi une gestion globale et simplifiée de vos besoins en propreté spécialisée.</p>\n<ul>\n  <li><strong>Protocoles d'hygiène certifiés :</strong> méthodes d'injection-extraction, désinfection virucide et équipements professionnels pour une propreté en profondeur et durable, notamment dans les zones à forte densité d'habitation.</li>\n  <li><strong>Maîtrise des accès sécurisés :</strong> gestion sécurisée des clés, badges (Vigik) et codes d'accès, avec une communication claire et rapide auprès des gardiens ou du conseil syndical.</li>\n  <li><strong>Intervention adaptée au contexte local :</strong> organisation des équipes pour minimiser l'impact des travaux (bruit, circulation) sur les zones résidentielles denses et à proximité des grands axes de Neuilly-sur-Marne.</li>\n  <li><strong>Reporting transparent :</strong> comptes rendus illustrés et recommandations d'entretien pour les syndics et gestionnaires.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Encrassement rapide des halls et moquettes par les particules fines et la boue en provenance des axes (RN 34) et des zones de fort passage (proximité RER).",
-    "Fort dépôt d'hydrocarbures, de suie et d'huiles sur les sols en béton des parkings souterrains des grands ensembles résidentiels (par exemple Les 24-Arpents), exigeant l'usage d'autolaveuses performantes.",
-    "Risque sanitaire élevé sur les balcons exposés aux fientes de pigeons, particulièrement dans les immeubles proches de la Marne et des zones arborées (Haute-Île, Croissant-Vert), nécessitant une désinfection virucide.",
-    "Contraintes logistiques pour l'installation d'équipements lourds dans les rues denses et les immeubles anciens du centre-ville (rue Marx Dormoy, rue du Jeu-de-Paume).",
+    "<strong>Encrassement rapide des halls et moquettes</strong> par les particules fines et la boue en provenance des axes (RN 34) et des zones de fort passage (proximité RER).",
+    "Fort dépôt d'hydrocarbures, de suie et d'huiles sur les <strong>sols en béton des parkings souterrains</strong> des grands ensembles résidentiels (par exemple Les 24-Arpents), exigeant l'usage d'autolaveuses performantes.",
+    "<strong>Risque sanitaire élevé sur les balcons</strong> exposés aux fientes de pigeons, particulièrement dans les immeubles proches de la Marne et des zones arborées (Haute-Île, Croissant-Vert), nécessitant une désinfection virucide.",
+    "Contraintes logistiques pour l'installation d'<strong>équipements lourds dans les rues denses</strong> et les immeubles anciens du centre-ville (rue Marx Dormoy, rue du Jeu-de-Paume).",
   ],
 
   department: {
@@ -124,10 +124,10 @@ const city: City = {
         "<h3>1. Diagnostic et préparation</h3>\n<p>Examen du type de moquette (aiguilletée, velours, dalles), évaluation du niveau d'encrassement général, identification des taches (graisse, café, urine) et prise en compte des contraintes d'accès (ascenseur, escaliers, halls donnant sur rue). <strong>Balisage systématique de la zone d'intervention,</strong> protection des bas de murs, plinthes et angles avec des bâches, organisation par cage d'escalier ou par étage pour minimiser la gêne.</p>\n\n<h3>2. Injection-extraction professionnelle</h3>\n<p>Application d'une solution nettoyante professionnelle adaptée à la fibre. <strong>Le matériel injecte une eau chaude et un produit détergent,</strong> puis aspire immédiatement l'eau sale en profondeur. Plusieurs passes sur les zones les plus sollicitées (halls de copropriétés, abords d'ascenseurs, boîtes aux lettres) pour un résultat homogène.</p>\n\n<h3>3. Extraction et séchage optimisé</h3>\n<p>Extraction maximisée pour laisser la moquette la moins humide possible, aération des espaces et indication d'un délai typique de séchage de 2 à 5 heures avant rétablissement complet des circulations. <strong>Adaptation des horaires pour les halls très fréquentés</strong> (centre commercial du Baobab, centre-ville). Recommandations de fréquence : tous les 12 à 18 mois pour les résidences très fréquentées.</p>",
 
       specificChallenges: [
-        "Gestion de l'entrée permanente de salissures dans les halls situés à proximité des grands axes routiers (RN 34) ou des arrêts de bus.",
-        "Nécessité de séchage rapide dans les immeubles de forte densité près du centre-ville pour ne pas bloquer les résidents.",
+        "Gestion de l'<strong>entrée permanente de salissures dans les halls</strong> situés à proximité des grands axes routiers (RN 34) ou des arrêts de bus.",
+        "Nécessité de <strong>séchage rapide dans les immeubles de forte densité</strong> près du centre-ville pour ne pas bloquer les résidents.",
         "Traitement spécifique des taches organiques (boissons, graisses) et des résidus tenaces fréquents dans les parties communes.",
-        "Organisation des interventions dans des cages d'escalier parfois étroites ou uniques, imposant un phasage précis.",
+        "Organisation des interventions dans des <strong>cages d'escalier parfois étroites</strong> ou uniques, imposant un phasage précis.",
       ],
 
       faqAdditions: [
@@ -181,7 +181,7 @@ const city: City = {
 
       specificChallenges: [
         "Gestion du volume d'eaux sales et de la présence d'hydrocarbures, imposant parfois une filière de traitement spécifique.",
-        "Nettoyage des rampes très encrassées par les résidus de freinage et les graisses, sans abîmer le revêtement.",
+        "Nettoyage des <strong>rampes très encrassées</strong> par les résidus de freinage et les graisses, sans abîmer le revêtement.",
         "Organisation du travail en zones occupées, avec rotation des véhicules et interventions en horaires décalés si nécessaire.",
         "Forte présence de poussières fines liée à la proximité des grands axes (RN 34), s'incrustant dans les bétons non peints.",
       ],
@@ -236,8 +236,8 @@ const city: City = {
         "<h3>1. Protection et enlèvement des dépôts</h3>\n<p>Protection de votre porte-fenêtre, des menuiseries et des murs mitoyens avec des bâches et des rubans adhésifs. <strong>Déplacement ou protection des meubles, des plantes et des objets fragiles</strong> avant d'enlever manuellement les gros dépôts (feuilles mortes, terre, résidus de jardinières).</p>\n\n<h3>2. Application de produits et brossage méthodique</h3>\n<p>Application d'un produit nettoyant adapté au support (carrelage, béton, bois composite ou dalles). <strong>Brossage méthodique des surfaces</strong> en insistant sur les joints, les angles et les garde-corps souvent négligés. Pour les sols très encrassés, utilisation d'une pression contrôlée, jamais agressive pour les joints.</p>\n\n<h3>3. Rinçage maîtrisé et conseils</h3>\n<p>L'eau est dirigée vers les évacuations pour éviter les coulures chez les voisins du dessous. À Neuilly-sur-Marne, nous adaptons nos méthodes aux balcons des résidences anciennes comme aux terrasses des immeubles récents. <strong>Séchage de 2 à 4 heures avant de réutiliser l'espace.</strong> Conseils pour un entretien simple : balayage régulier, produits doux, nettoyage complet annuel au printemps.</p>",
 
       specificChallenges: [
-        "Balcons proches des axes RN 34/RN370 ou du parc de la Haute-Île accumulant poussière fine et dépôts verts, nécessitant un nettoyage plus fréquent.",
-        "Joints très encrassés et garde-corps en métal ou en verre demandant des produits spécifiques et un brossage minutieux.",
+        "Balcons proches des axes RN 34/RN370 ou du parc de la Haute-Île <strong>accumulant poussière fine et dépôts verts</strong>, nécessitant un nettoyage plus fréquent.",
+        "<strong>Joints très encrassés et garde-corps</strong> en métal ou en verre demandant des produits spécifiques et un brossage minutieux.",
         "Gestion de l'eau cruciale pour éviter les coulures sur les façades ou chez les voisins du dessous.",
         "Créneaux d'intervention à adapter aux horaires de présence des résidents et aux règles de copropriété.",
       ],
@@ -289,13 +289,13 @@ const city: City = {
         "<p>À Neuilly-sur-Marne, les balcons et loggias exposés aux pigeons se retrouvent rapidement recouverts de fientes, générant des odeurs persistantes et écœurantes, des risques sanitaires importants et une impossibilité totale d'utiliser l'espace extérieur. Les dalles deviennent glissantes, les garde-corps sont recouverts d'une couche épaisse et l'odeur pénètre même dans le logement. Les occupants subissent cette nuisance au quotidien, avec des tensions possibles avec les voisins ou la copropriété, surtout dans les quartiers proches des parcs comme la Haute-Île ou des immeubles à corniches propices aux nids.</p>\n<p class=\"mt-4\">Les fientes sèches, en plus d'être inesthétiques et repoussantes, peuvent transmettre des maladies graves et corroder les supports (peinture, béton, métal). La présence importante de pigeons dans la ville, attirés par les arbres du parc du Croissant-Vert et les toits plats, aggrave le problème. Vous n'osez plus ouvrir votre porte-fenêtre, vous craignez pour la santé de vos enfants et vous subissez parfois des réclamations du conseil syndical. <strong>Un nettoyage et une désinfection professionnels sont indispensables</strong> pour éliminer les risques sanitaires, restaurer l'hygiène avec des produits virucides adaptés et retrouver un balcon sain et utilisable en toute sécurité pour toute la famille.</p>",
 
       uniqueDeepDive:
-        "<h3>1. Mise en sécurité et confinement</h3>\n<p>Mise en place d'équipements de protection individuelle (combinaison, gants, masque <strong>FFP3</strong>, lunettes) et confinement de la zone avec des bâches pour éviter toute dispersion de poussières contaminées vers l'intérieur du logement. <strong>Humidification des fientes sèches</strong> pour limiter les particules en suspension et éviter la dispersion dans l'air.</p>\n\n<h3>2. Ramassage et nettoyage des surfaces</h3>\n<p>Ramassage manuel des déjections et des nids avec des outils dédiés, conditionnés dans des sacs étanches spécialement prévus pour les déchets contaminés. <strong>Nettoyage des surfaces</strong> (sol, garde-corps, appuis de fenêtre, murs) avec un produit détergent adapté qui dissout les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et aération</h3>\n<p>Désinfection complète à l'aide d'un virucide/bactéricide homologué, avec respect strict du temps de contact (15 à 20 minutes) pour une efficacité maximale contre tous les agents pathogènes. <strong>Rinçage des surfaces et aération du balcon.</strong> À Neuilly-sur-Marne, nous recommandons un délai de 24 heures avant réutilisation. Installation possible de solutions de dissuasion (picots, fils tendus) pour limiter les retours de pigeons.</p>",
+        "<h3>1. Mise en sécurité et confinement</h3>\n<p>Mise en place d'équipements de protection individuelle (combinaison, gants, masque FFP3, lunettes) et confinement de la zone avec des bâches pour éviter toute dispersion de poussières contaminées vers l'intérieur du logement. <strong>Humidification des fientes sèches</strong> pour limiter les particules en suspension et éviter la dispersion dans l'air.</p>\n\n<h3>2. Ramassage et nettoyage des surfaces</h3>\n<p>Ramassage manuel des déjections et des nids avec des outils dédiés, conditionnés dans des sacs étanches spécialement prévus pour les déchets contaminés. <strong>Nettoyage des surfaces</strong> (sol, garde-corps, appuis de fenêtre, murs) avec un produit détergent adapté qui dissout les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et aération</h3>\n<p>Désinfection complète à l'aide d'un virucide/bactéricide homologué, avec respect strict du temps de contact (15 à 20 minutes) pour une efficacité maximale contre tous les agents pathogènes. <strong>Rinçage des surfaces et aération du balcon.</strong> À Neuilly-sur-Marne, nous recommandons un délai de 24 heures avant réutilisation. Installation possible de solutions de dissuasion (picots, fils tendus) pour limiter les retours de pigeons.</p>",
 
       specificChallenges: [
-        "Balcons situés près du parc de la Haute-Île ou des grands arbres particulièrement exposés aux fientes de pigeons.",
-        "Fientes sèches et nids en hauteur nécessitant un accès sécurisé et une manipulation prudente pour éviter les poussières contaminées.",
-        "Supports corrodés (peinture écaillée, béton poreux) demandant un traitement spécifique pour éviter d'aggraver les dégâts.",
-        "Évacuation des déchets contaminés gérée par nos équipes, afin de garantir un haut niveau de sécurité sanitaire.",
+        "Balcons situés près du parc de la Haute-Île ou des grands arbres <strong>particulièrement exposés aux fientes de pigeons</strong>.",
+        "<strong>Fientes sèches et nids en hauteur</strong> nécessitant un accès sécurisé et une manipulation prudente pour éviter les poussières contaminées.",
+        "<strong>Supports corrodés</strong> (peinture écaillée, béton poreux) demandant un traitement spécifique pour éviter d'aggraver les dégâts.",
+        "Évacuation des <strong>déchets contaminés</strong> gérée par nos équipes, afin de garantir un haut niveau de sécurité sanitaire.",
       ],
 
       faqAdditions: [
@@ -350,7 +350,7 @@ const city: City = {
       specificChallenges: [
         "Logements avec enfants ou animaux à Neuilly-sur-Marne nécessitant un nettoyage régulier pour éliminer poils, taches et acariens.",
         "Taches organiques (urine, nourriture) et odeurs tenaces demandant des produits spécifiques et un temps de pose adapté.",
-        "Pièces peu ventilées ou humides prolongeant le séchage, nécessitant une attention particulière pour éviter les moisissures.",
+        "Pièces peu ventilées ou humides <strong>prolongeant le séchage</strong>, nécessitant une attention particulière pour éviter les moisissures.",
         "Tissus fragiles (velours, soie) ou épais (tapis à poils longs) exigeant un nettoyage délicat pour un résultat optimal.",
       ],
 

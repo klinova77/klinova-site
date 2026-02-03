@@ -9,14 +9,14 @@ const city: City = {
     "Ville majeure de Seine-et-Marne, Chelles bénéficie d'une desserte RER E et d'un important axe routier comme la RN34. L'activité commerciale et résidentielle génère des besoins constants en entretien : nettoyage des moquettes d'immeubles, des parkings souterrains et des balcons exposés aux intempéries, essentiels pour la valeur patrimoniale.",
 
   hubIntro:
-    "<p>À Chelles, la maintenance immobilière requiert un partenaire de proximité fiable et réactif. Klinova s'impose comme un intervenant rigoureux pour les syndics de copropriété et gestionnaires, assurant une propreté durable des parties communes et espaces privés grâce à des méthodes éprouvées.</p>\n<p class=\"mt-4\">Notre partenariat repose sur une gestion globale et protocolée, avec un reporting systématique pour une traçabilité complète des interventions. Nous nous adaptons aux exigences spécifiques de chaque résidence et bâtiment professionnel à Chelles.</p>\n<ul>\n  <li><strong>Maintenance préventive et curative des surfaces</strong> (sols durs, moquettes, revêtements) pour maintenir l'hygiène et la sécurité des circulations.</li>\n  <li><strong>Nettoyage technique des parkings souterrains et des cages d'escalier,</strong> confrontés à l'encrassement et aux dépôts divers.</li>\n  <li><strong>Entretien régulier des balcons, loggias et façades légères,</strong> soumis aux aléas climatiques et aux pollutions environnementales.</li>\n  <li><strong>Protocole d'intervention flexible pour les urgences</strong> (dégâts des eaux) et les chantiers de fin de travaux, en coordination avec les syndics.</li>\n</ul>",
+    "<p>À Chelles, la maintenance immobilière requiert <strong>un partenaire de proximité</strong> fiable et réactif. Klinova s'impose comme un intervenant rigoureux pour les syndics de copropriété et gestionnaires, assurant une propreté durable des parties communes et espaces privés grâce à des méthodes éprouvées.</p>\n<p class=\"mt-4\">Notre partenariat repose sur une gestion globale et protocolée, avec un reporting systématique pour une traçabilité complète des interventions. Nous nous adaptons aux exigences spécifiques de chaque résidence et bâtiment professionnel à Chelles.</p>\n<ul>\n  <li><strong>Maintenance préventive et curative des surfaces</strong> (sols durs, moquettes, revêtements) pour maintenir l'hygiène et la sécurité des circulations.</li>\n  <li><strong>Nettoyage technique des parkings souterrains et des cages d'escalier,</strong> confrontés à l'encrassement et aux dépôts divers.</li>\n  <li><strong>Entretien régulier des balcons, loggias et façades légères,</strong> soumis aux aléas climatiques et aux pollutions environnementales.</li>\n  <li><strong>Protocole d'intervention flexible pour les urgences</strong> (dégâts des eaux) et les chantiers de fin de travaux, en coordination avec les syndics.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Encrassement accru des façades et balcons dû au trafic de la RN34 et de la RN3, associé aux intempéries.",
-    "Développement de mousses et dépôts verts sur les sols des terrasses et parkings aériens, favorisé par la proximité du canal et de la Marne.",
-    "Fort passage dans les halls d'entrée des résidences près de la gare RER E, nécessitant un entretien très fréquent des moquettes et sols.",
-    "Salissures tenaces (hydrocarbures, poussières de frein) dans les parkings souterrains des ensembles immobiliers récents.",
-    "Remontées d'humidité et odeurs de renfermé dans les rez-de-chaussée des quartiers Bords de Marne et Abbesses, accentuées lors des épisodes de crues hivernales.",
+    "<strong>Encrassement accru des façades et balcons</strong> dû au trafic de la RN34 et de la RN3, associé aux intempéries.",
+    "<strong>Développement de mousses et dépôts verts</strong> sur les sols des terrasses et parkings aériens, favorisé par la proximité du canal et de la Marne.",
+    "<strong>Fort passage dans les halls d'entrée</strong> des résidences près de la gare RER E, nécessitant un entretien très fréquent des moquettes et sols.",
+    "<strong>Salissures tenaces (hydrocarbures, poussières de frein)</strong> dans les parkings souterrains des ensembles immobiliers récents.",
+    "<strong>Remontées d'humidité et odeurs de renfermé</strong> dans les rez-de-chaussée des quartiers Bords de Marne et Abbesses, accentuées lors des épisodes de crues hivernales.",
   ],
 
   department: {
@@ -135,10 +135,10 @@ const city: City = {
         "<h3>1. Diagnostic et préparation sur mesure</h3>\n<p>Nous évaluons l'état des moquettes et les types de salissures (boues, taches organiques, traces grasses). Nous identifions les zones de fort trafic, souvent situées près des entrées et des ascenseurs. <strong>Protection des surfaces adjacentes, balisage sécurisé</strong> et organisation du chantier en concertation avec le syndic pour minimiser la gêne.</p>\n\n<h3>2. Injection-extraction à l'eau chaude</h3>\n<p>Cette technique permet d'extraire en profondeur les salissures sans détremper le support. Nous portons une attention particulière aux marches d'escalier, aux bordures et aux zones de pivotement devant les portes. <strong>Passages multiples sur les zones critiques</strong> pour un résultat optimal.</p>\n\n<h3>3. Séchage rapide et recommandations</h3>\n<p>Le séchage est accéléré par une ventilation appropriée, permettant une remise en service des espaces sous quelques heures. <strong>Fréquence recommandée : 12 à 18 mois</strong> dans les zones de passage intensif, comme celles des immeubles proches de la gare RER E.</p>",
 
       specificChallenges: [
-        "Encroûtement des fibres par les poussières fines et résidus d'hydrocarbures issus du trafic routier dense (RN34, RN3).",
-        "Humidité et boues régulières dans les halls d'entrée des résidences, nécessitant un nettoyage fréquent pour éviter les moisissures.",
-        "Usure accentuée des moquettes sur les marches d'escalier des cages étroites, difficiles d'accès pour le matériel standard.",
-        "Taches tenaces (chewing-gums, traces de canettes) dans les halls des immeubles à forte rotation locative près du centre commercial.",
+        "<strong>Encroûtement des fibres</strong> par les poussières fines et résidus d'hydrocarbures issus du trafic routier dense (RN34, RN3).",
+        "<strong>Humidité et boues régulières</strong> dans les halls d'entrée des résidences, nécessitant un nettoyage fréquent pour éviter les moisissures.",
+        "<strong>Usure accentuée des moquettes sur les marches</strong> d'escalier des cages étroites, difficiles d'accès pour le matériel standard.",
+        "<strong>Taches tenaces (chewing-gums, traces de canettes)</strong> dans les halls des immeubles à forte rotation locative près du centre commercial.",
       ],
 
       faqAdditions: [
@@ -191,10 +191,10 @@ const city: City = {
         "<h3>1. Diagnostic du parking et préparation</h3>\n<p>Évaluation du revêtement (béton brut, peinture epoxy), état du réseau d'évacuation des eaux, hauteur sous plafond et configuration des accès. <strong>Balayage mécanique des gros débris, signalisation appropriée</strong> et organisation par zones pour gérer la rotation des véhicules sans vider l'intégralité du parking.</p>\n\n<h3>2. Nettoyage mécanique combiné</h3>\n<p>Utilisation d'une autolaveuse industrielle pour les grandes surfaces et nettoyage haute pression contrôlé pour les angles, piliers et zones très encrassées. <strong>Application de dégraissants professionnels</strong> sur les taches d'huile persistantes pour un traitement en profondeur.</p>\n\n<h3>3. Gestion des eaux et finitions</h3>\n<p>La gestion des eaux de lavage est primordiale, notamment dans les parkings anciens où les siphons sont souvent inefficaces. <strong>Utilisation de pompes d'évacuation et de bacs de rétention</strong> si nécessaire. Interventions privilégiées en début de semaine ou tôt le matin pour limiter la gêne.</p>",
 
       specificChallenges: [
-        "Poussière noire abrasive et tenace, mélange de particules fines issues du trafic routier dense et des résidus de pneus.",
-        "Taches d'huile et de carburant fréquentes dans les places de stationnement attitrées des parkings de copropriétés résidentielles.",
+        "<strong>Poussière noire abrasive et tenace</strong>, mélange de particules fines issues du trafic routier dense et des résidus de pneus.",
+        "<strong>Taches d'huile et de carburant fréquentes</strong> dans les places de stationnement attitrées des parkings de copropriétés résidentielles.",
         "Configuration avec rampes d'accès en pente prononcée et virages serrés, compliquant le passage des machines dans les parkings souterrains anciens.",
-        "Gestion complexe des eaux usées dans les ouvrages où les pentes et les siphons sont mal dimensionnés, nécessitant un pompage.",
+        "<strong>Gestion complexe des eaux usées</strong> dans les ouvrages où les pentes et les siphons sont mal dimensionnés, nécessitant un pompage.",
       ],
 
       faqAdditions: [
@@ -247,9 +247,9 @@ const city: City = {
         "<h3>1. Évaluation et protection</h3>\n<p>Évaluation des surfaces (carrelage, béton, bois composite) et état des lieux des salissures. <strong>Protection systématique de la porte-fenêtre</strong> et déplacement ou bâchage des meubles et plantations. Retrait manuel des gros débris (feuilles, terre, déchets).</p>\n\n<h3>2. Nettoyage adapté au support</h3>\n<p>Traitement des surfaces avec des nettoyeurs haute pression à basse pression ou des méthodes manuelles adaptées pour ne pas endommager les joints ou le revêtement. <strong>Soin particulier aux joints de carrelage,</strong> souvent noircis par les moisissures et les dépôts. Les garde-corps (verre, aluminium, acier) sont nettoyés séparément.</p>\n\n<h3>3. Gestion de l'eau et finitions</h3>\n<p>Nous dirigeons systématiquement le ruissellement vers l'évacuation prévue et utilisons des techniques d'absorption pour éviter toute coulure chez le voisin du dessous ou sur la façade. <strong>Accélération du séchage après rinçage.</strong> Conseils d'entretien simple : balayage régulier et nettoyage complet tous les 12 à 24 mois selon l'exposition.</p>",
 
       specificChallenges: [
-        "Dépôts noirs gras et tenaces sur les garde-corps et sols, provenant des particules fines du trafic routier.",
+        "<strong>Dépôts noirs gras et tenaces</strong> sur les garde-corps et sols, provenant des particules fines du trafic routier.",
         "Développement rapide de mousses et micro-algues vertes sur les joints et surfaces ombragées, dû à l'humidité ambiante.",
-        "Nettoyage délicat des loggias fermées, où les salissures sont mêlées à des poussières domestiques, nécessitant une méthode sèche/humide.",
+        "<strong>Nettoyage délicat des loggias fermées</strong>, où les salissures sont mêlées à des poussières domestiques, nécessitant une méthode sèche/humide.",
         "Impératif de maîtriser l'écoulement de l'eau pour prévenir les conflits de voisinage dans les immeubles collectifs.",
       ],
 
@@ -300,7 +300,7 @@ const city: City = {
         "<p>À Chelles, la présence de nombreux espaces verts et de grands arbres offre un habitat propice aux pigeons, dont les colonies souillent massivement les balcons et loggias. L'accumulation de fientes crée une situation insalubre : odeurs persistantes, surfaces impraticables et risques sanitaires réels. Pour les résidents, cet espace devient une source de gêne permanente et de conflits potentiels au sein de la copropriété.</p>\n<p class=\"mt-4\">Vous n'osez plus ouvrir votre porte-fenêtre, l'odeur est insupportable et vous craignez pour votre santé et celle de vos enfants. La simple tentative de nettoyage est insuffisante et dangereuse sans protections adaptées. <strong>Seul un traitement professionnel complet</strong> —ramassage des déchets, nettoyage en profondeur et désinfection certifiée— permet de restaurer un environnement sain et de retrouver l'usage de votre balcon en toute sécurité.</p>",
 
       uniqueDeepDive:
-        "<h3>1. Mise en sécurité et protection</h3>\n<p>Nos techniciens équipés d'EPI (combinaison, masque <strong>FFP2</strong>, gants, lunettes) installent des bâches de protection. <strong>Humidification des déchets secs</strong> pour éviter la dispersion de poussières potentiellement pathogènes.</p>\n\n<h3>2. Ramassage et nettoyage technique</h3>\n<p>Les fientes et les débris de nids sont ramassés manuellement, conditionnés dans des sacs étanches et évacués par nos soins. Nettoyage avec des détergents spécifiques et techniques adaptées au support (carrelage, béton, métal) pour décrocher les salissures incrustées.</p>\n\n<h3>3. Désinfection virucide complète</h3>\n<p>Désinfection minutieuse à l'aide de produits virucides et bactéricides agréés, en respectant scrupuleusement leur temps de contact pour une efficacité maximale. <strong>Gestion stricte des eaux usées</strong> pour ne pas contaminer les canalisations communes. Aération prolongée du logement conseillée après notre passage.</p>",
+        "<h3>1. Mise en sécurité et protection</h3>\n<p>Nos techniciens équipés d'EPI (combinaison, masque FFP2, gants, lunettes) installent des bâches de protection. <strong>Humidification des déchets secs</strong> pour éviter la dispersion de poussières potentiellement pathogènes.</p>\n\n<h3>2. Ramassage et nettoyage technique</h3>\n<p>Les fientes et les débris de nids sont ramassés manuellement, conditionnés dans des sacs étanches et évacués par nos soins. Nettoyage avec des détergents spécifiques et techniques adaptées au support (carrelage, béton, métal) pour décrocher les salissures incrustées.</p>\n\n<h3>3. Désinfection virucide complète</h3>\n<p>Désinfection minutieuse à l'aide de produits virucides et bactéricides agréés, en respectant scrupuleusement leur temps de contact pour une efficacité maximale. <strong>Gestion stricte des eaux usées</strong> pour ne pas contaminer les canalisations communes. Aération prolongée du logement conseillée après notre passage.</p>",
 
       specificChallenges: [
         "Problématique accrue dans les quartiers arborés et sur les immeubles offrant des corniches ou des recoins abrités.",
@@ -359,7 +359,7 @@ const city: City = {
         "Présence importante d'acariens et de poussières domestiques aggravée par une humidité relative élevée.",
         "Taches complexes mélangeant terre des jardins ou balcons, graisses alimentaires et résidus organiques liées à la vie de famille.",
         "Nettoyage délicat des tissus d'ameublement clairs ou des tapis anciens, nécessitant une méthode douce.",
-        "Séchage parfois ralenti dans les pièces peu ensoleillées ou les logements moins ventilés, nécessitant des conseils adaptés.",
+        "<strong>Séchage parfois ralenti</strong> dans les pièces peu ensoleillées ou les logements moins ventilés, nécessitant des conseils adaptés.",
       ],
 
       faqAdditions: [
@@ -405,15 +405,15 @@ const city: City = {
         "Protection systématique du mobilier et des plantations, gestion de l'évacuation d'eau vers le jardin ou les points d'écoulement existants.",
       ],
       uniqueIntro:
-        "<p>Dans les <strong>quartiers pavillonnaires des Coudreaux et de Chantereine</strong>, les terrasses subissent une dégradation progressive liée à l'environnement végétal dense. L'ombre portée par les arbres des jardins, combinée à l'humidité persistante propre à cette zone proche du bois des Coudreaux et des bords de Marne, favorise l'apparition de mousses et de lichens sur les surfaces exposées. Ces dépôts verdâtres s'installent d'abord dans les joints, puis colonisent progressivement l'ensemble du revêtement.</p>\n\n<p class=\"mt-4\">Sur les <strong>dalles béton</strong> caractéristiques des pavillons construits dans les années 70-80, ou sur les <strong>terrasses grès cérame et bois composite</strong> des rénovations récentes, cette prolifération rend le sol glissant et visuellement dégradé. L'espace extérieur perd son attrait, les repas dehors deviennent moins fréquents, et la terrasse finit par servir uniquement de passage vers le jardin.</p>\n\n<p class=\"mt-4\">Une intervention adaptée au matériau permet de retrouver une surface saine et praticable. Le diagnostic préalable identifie le type de support, l'étendue des dépôts et les zones à protéger avant tout traitement mécanique ou chimique.</p>",
+        "<p>Dans les <strong>quartiers pavillonnaires des Coudreaux et de Chantereine</strong>, les terrasses subissent une dégradation progressive liée à l'environnement végétal dense. L'ombre portée par les arbres des jardins, combinée à l'humidité persistante propre à cette zone proche du bois des Coudreaux et des bords de Marne, favorise l'apparition de mousses et de lichens sur les surfaces exposées. Ces dépôts verdâtres s'installent d'abord dans les joints, puis colonisent progressivement l'ensemble du revêtement.</p>\n\n<p class=\"mt-4\">Sur les dalles béton caractéristiques des pavillons construits dans les années 70-80, ou sur les <strong>terrasses grès cérame et bois composite</strong> des rénovations récentes, cette prolifération rend le sol glissant et visuellement dégradé. L'espace extérieur perd son attrait, les repas dehors deviennent moins fréquents, et la terrasse finit par servir uniquement de passage vers le jardin.</p>\n\n<p class=\"mt-4\">Une intervention adaptée au matériau permet de retrouver une surface saine et praticable. Le diagnostic préalable identifie le type de support, l'étendue des dépôts et les zones à protéger avant tout traitement mécanique ou chimique.</p>",
       uniqueDeepDive:
         "<h3>Préparation et protection</h3>\n<p>Le mobilier de jardin, les jardinières et les plantes en pot sont déplacés ou bâchés. Les menuiseries des baies vitrées et portes-fenêtres reçoivent une protection contre les projections. Un balayage élimine les feuilles mortes, la terre accumulée et les débris végétaux avant le traitement.</p>\n\n<h3>Nettoyage et traitement adapté</h3>\n<p>Un produit spécifique au support est appliqué : formulation à pH neutre pour le bois composite, solution alcaline désincrustante pour les dalles minérales ou le grès cérame. Le brossage manuel ou mécanique décolle les mousses et lichens installés. La pression de rinçage est ajustée selon la porosité du matériau pour préserver les joints et la surface.</p>\n\n<h3>Finition et prévention</h3>\n<p>L'eau de rinçage est dirigée vers les points d'écoulement existants ou vers le jardin. Un traitement anti-mousse préventif est appliqué sur les zones les plus exposées à l'ombre et à l'humidité. Le séchage naturel s'effectue en quelques heures selon les conditions météo, avec des conseils d'entretien saisonnier transmis en fin d'intervention.</p>",
       specificChallenges: [
-        "Dalles béton des pavillons années 70-80 : joints poreux favorisant l'enracinement des mousses.",
-        "Terrasses bois composite sensibles à la pression excessive et aux produits chlorés ou acides.",
-        "Carrelage grès cérame avec relief : encrassement dans les micro-aspérités difficile à déloger.",
-        "Zones ombragées par les arbres des jardins arborés des Coudreaux et Chantereine : humidité persistante.",
-        "Accès par l'intérieur de la maison pour certaines terrasses arrière de pavillons mitoyens.",
+        "Dalles béton des pavillons années 70-80 : <strong>joints poreux</strong> favorisant l'enracinement des mousses.",
+        "Terrasses bois composite <strong>sensibles à la pression excessive</strong> et aux produits chlorés ou acides.",
+        "Carrelage grès cérame avec relief : <strong>encrassement dans les micro-aspérités</strong> difficile à déloger.",
+        "Zones ombragées par les arbres des jardins arborés des Coudreaux et Chantereine : <strong>humidité persistante</strong>.",
+        "<strong>Accès par l'intérieur de la maison</strong> pour certaines terrasses arrière de pavillons mitoyens.",
       ],
       faqAdditions: [
         {
@@ -465,8 +465,8 @@ const city: City = {
 
       specificChallenges: [
         "Écart de perception entre “ménage” et “remise en état” : nécessité de cadrer un périmètre clair et un niveau de finition attendu.",
-        "Graisses et dépôts incrustés en cuisine (crédence, hotte, zones autour des plaques) demandant un décrassage ciblé.",
-        "Calcaire et traces tenaces dans les sanitaires, nécessitant une méthode progressive pour éviter d’endommager les surfaces.",
+        "<strong>Graisses et dépôts incrustés en cuisine</strong> (crédence, hotte, zones autour des plaques) demandant un décrassage ciblé.",
+        "<strong>Calcaire et traces tenaces dans les sanitaires</strong>, nécessitant une méthode progressive pour éviter d’endommager les surfaces.",
         "Gestion du temps : prioriser les zones à fort impact (hygiène + visuel) pour livrer un résultat homogène.",
       ],
 

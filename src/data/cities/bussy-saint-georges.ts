@@ -18,10 +18,10 @@ const city: City = {
     '<p>À Bussy-Saint-Georges, Klinova accompagne syndics, bailleurs et occupants dans une <strong>gestion structurée de la propreté et de la maintenance des immeubles</strong>. Notre approche protocolisée et notre lecture des contraintes locales (accès, stationnement, horaires, circulation) permettent des interventions nettes, maîtrisées et adaptées au rythme des résidences.</p>\n<p class="mt-4">Nous intervenons aussi bien dans les ensembles collectifs proches de la gare RER A que dans les secteurs résidentiels (Sycomore, Vieux Village) et les zones d\'activité. <strong>Chaque intervention suit un protocole documenté, avec compte-rendu photographique et recommandations d’entretien</strong>, pour simplifier le suivi côté gestion et sécuriser les décisions en AG.</p>\n<ul>\n  <li><strong>Proximité opérationnelle :</strong> équipes en Île-de-France, réactivité renforcée sur Marne-la-Vallée.</li>\n  <li><strong>Protocoles adaptés :</strong> halls, circulations, balcons et parkings traités selon les supports.</li>\n  <li><strong>Coordination :</strong> intervention par zones, gestion des accès et rotations de véhicules.</li>\n  <li><strong>Suivi qualité :</strong> compte-rendu, photos, recommandations d’entretien après intervention.</li>\n</ul>',
 
   citySpecificChallenges: [
-    "Encrassement rapide des moquettes dans les halls d'immeubles proches de la gare RER A, lié au fort passage et aux particules fines.",
-    "Accumulation de fientes de pigeons sur les balcons et terrasses, notamment dans les quartiers du Sycomore et du Vieux Village.",
-    "Traces d'hydrocarbures et dépôts de boues dans les parkings souterrains, aggravés par l'humidité et le trafic.",
-    "Dépôts verts et salissures organiques sur les balcons exposés aux espaces verts (parc du Génitoy, secteur du golf).",
+    "<strong>Encrassement rapide des moquettes</strong> dans les halls d'immeubles proches de la gare RER A, lié au fort passage et aux particules fines.",
+    "<strong>Accumulation de fientes de pigeons</strong> sur les balcons et terrasses, notamment dans les quartiers du Sycomore et du Vieux Village.",
+    "<strong>Traces d'hydrocarbures et dépôts de boues</strong> dans les parkings souterrains, aggravés par l'humidité et le trafic.",
+    "<strong>Dépôts verts et salissures organiques</strong> sur les balcons exposés aux espaces verts (parc du Génitoy, secteur du golf).",
   ],
 
   districts: [
@@ -105,16 +105,16 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>À Bussy-Saint-Georges, les moquettes des halls, cages d'escalier et paliers s'encrassent vite : poussières fines, traces de chaussures, taches ponctuelles et fibres qui se ternissent sous le passage. Le résultat se voit immédiatement et donne une impression de laisser-aller, même dans des résidences récentes.</p>\n<p class=\"mt-4\">Les immeubles proches de la gare RER A et des axes A4/A104 sont particulièrement exposés, avec des entrées de boue, d'humidité au rez-de-chaussée et une sollicitation continue. Un nettoyage professionnel structuré permet d'assainir le revêtement, de récupérer un rendu plus uniforme et de prolonger la durée de vie de la moquette.</p>",
+        "<p>À Bussy-Saint-Georges, <strong>les moquettes des halls, cages d'escalier et paliers</strong> s'encrassent vite : poussières fines, traces de chaussures, taches ponctuelles et fibres qui se ternissent sous le passage. Le résultat se voit immédiatement et donne une impression de laisser-aller, même dans des résidences récentes.</p>\n<p class=\"mt-4\">Les immeubles proches de la gare RER A et des axes A4/A104 sont particulièrement exposés, avec des entrées de boue, d'humidité au rez-de-chaussée et une sollicitation continue. Un nettoyage professionnel structuré permet d'assainir le revêtement, de récupérer un rendu plus uniforme et de prolonger la durée de vie de la moquette.</p>",
 
       uniqueDeepDive:
         "<h3>1. Diagnostic technique sur place</h3>\n<p>Nous évaluons la moquette (type de fibre, épaisseur, sens de pose), le niveau d'encrassement et les taches à traiter. Nous repérons les contraintes d'accès (escaliers, ascenseurs étroits, paliers) et la ventilation disponible.</p>\n<h3>2. Préparation et protection des circulations</h3>\n<p>Les zones sont balisées, les angles et plinthes protégés et le travail est organisé par paliers/étages pour maintenir un passage sécurisé. La coordination avec le syndic permet d'informer les occupants et de choisir un créneau qui limite les perturbations.</p>\n<h3>3. Injection-extraction + finitions</h3>\n<p>Pré-traitement des zones marquées, agitation/brossage contrôlé, puis injection-extraction avec aspiration puissante pour retirer l'eau chargée. Les zones de fort trafic (entrées, devant les ascenseurs) reçoivent des passes supplémentaires. En fin d'intervention, une ventilation ciblée est recommandée.</p>",
 
       specificChallenges: [
-        "Autour de la gare RER A, le passage et les particules fines accélèrent le ternissement des fibres et l'encrassement en surface.",
-        "En rez-de-chaussée, l'humidité et les entrées de boue imposent une extraction rigoureuse pour éviter les résidus d'eau.",
-        "Dans les escaliers étroits, l'organisation par paliers et la gestion du balisage conditionnent la qualité et la sécurité.",
-        "Dans les résidences avec accès jardin, des dépôts terreux et organiques s'incrustent plus vite dans les zones d'entrée.",
+        "Autour de la gare RER A, <strong>le passage et les particules fines</strong> accélèrent le ternissement des fibres et l'encrassement en surface.",
+        "En rez-de-chaussée, <strong>l'humidité et les entrées de boue</strong> imposent une extraction rigoureuse pour éviter les résidus d'eau.",
+        "Dans les escaliers étroits, <strong>l'organisation par paliers et la gestion du balisage</strong> conditionnent la qualité et la sécurité.",
+        "Dans les résidences avec accès jardin, <strong>des dépôts terreux et organiques</strong> s'incrustent plus vite dans les zones d'entrée.",
       ],
 
       faqAdditions: [
@@ -162,15 +162,15 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>À Bussy-Saint-Georges, les parkings souterrains et aériens s\'encrassent vite : poussière noire, boues, traces de pneus, taches d\'huile, murs marqués par les frottements et marquages au sol qui se ternissent. Combiné à un éclairage parfois limité, l’ensemble donne rapidement une impression de négligence, surtout près de la gare RER A et des axes A4/A104.</p>\n<p class="mt-4">Résidents, employés et visiteurs perçoivent immédiatement la dégradation : inconfort, salissures sur chaussures, risques de glissade sur zones grasses et perte de lisibilité des circulations. Un décrassage structuré remet le parking "au propre" et améliore la perception de sécurité, sans désorganiser l\'usage quotidien.</p>',
+        "<p>À Bussy-Saint-Georges, <strong>les parkings souterrains et aériens s'encrassent vite</strong> : poussière noire, boues, traces de pneus, taches d'huile, murs marqués par les frottements et marquages au sol qui se ternissent. Combiné à un éclairage parfois limité, l’ensemble donne rapidement une impression de négligence, surtout près de la gare RER A et des axes A4/A104.</p>\n<p class=\"mt-4\">Résidents, employés et visiteurs perçoivent immédiatement la dégradation : inconfort, salissures sur chaussures, risques de glissade sur zones grasses et perte de lisibilité des circulations. Un décrassage structuré remet le parking \"au propre\" et améliore la perception de sécurité, sans désorganiser l'usage quotidien.</p>",
 
       uniqueDeepDive:
         "<h3>1. Diagnostic et préparation</h3>\n<p>Nous évaluons le support (béton, peinture, résine), l'état des zones grasses, la lisibilité des marquages, l'évacuation des eaux et les contraintes d'accès (hauteur, rampes, virages, zones étroites). Le parking est découpé en zones avec une signalisation simple pour organiser la rotation des véhicules et limiter la gêne.</p>\n<h3>2. Décrassage mécanique ciblé</h3>\n<p>Pré-dégraissage sur les zones marquées, brossage mécanique, puis lavage à l'autolaveuse. Les taches d'huile et dépôts collants sont traités localement avec un produit adapté. Les rampes et zones de freinage sont travaillées en priorité pour retrouver de l'adhérence.</p>\n<h3>3. Finitions et contrôle</h3>\n<p>Traitement des angles, pieds de murs, virages, zones de passage piéton et emplacements très sollicités. Nous vérifions l'absence de stagnation d'eau et la propreté visuelle globale. En fin d'intervention, nous proposons une fréquence d’entretien réaliste selon le trafic.</p>",
 
       specificChallenges: [
-        "Près de la gare RER A et des axes A4/A104, les parkings accumulent particules fines, pneus et poussière noire, difficiles à décrocher sans dégraissage.",
-        "Les rampes étroites, virages et bas plafonds imposent un matériel compact et une organisation par zones pour garder l'accès aux usagers.",
-        "Sur certains parkings, l'évacuation est limitée : la gestion des eaux et des zones de stagnation devient un point clé de la qualité.",
+        "Près de la gare RER A et des axes A4/A104, <strong><strong>les parkings accumulent particules fines, pneus et poussière noire</strong></strong>, difficiles à décrocher sans dégraissage.",
+        "<strong>Les rampes étroites, virages et bas plafonds</strong> imposent un matériel compact et une organisation par zones pour garder l'accès aux usagers.",
+        "Sur certains parkings, <strong>l'évacuation est limitée</strong> : la gestion des eaux et des zones de stagnation devient un point clé de la qualité.",
       ],
 
       faqAdditions: [
@@ -215,15 +215,15 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>À Bussy-Saint-Georges, les balcons et terrasses s'encrassent vite : joints qui noircissent, dépôts verts (mousses, feuilles), traces de terre, coulures d'eau et parfois graisses liées à l'usage (barbecue, jardinières). L'espace extérieur perd rapidement en confort et en apparence, alors qu'il devrait rester facile à vivre au quotidien.</p>\n<p class=\"mt-4\">Entre les zones proches des axes A4/A104, les secteurs plus arborés (parc du Génitoy, golf) et les résidences en étage, les salissures varient mais le constat est le même : un nettoyage structuré redonne un aspect net et limite les traces persistantes, sans risque pour les voisins du dessous.</p>",
+        "<p>À Bussy-Saint-Georges, <strong>les balcons et terrasses s'encrassent vite</strong> : joints qui noircissent, dépôts verts (mousses, feuilles), traces de terre, coulures d'eau et parfois graisses liées à l'usage (barbecue, jardinières). L'espace extérieur perd rapidement en confort et en apparence, alors qu'il devrait rester facile à vivre au quotidien.</p>\n<p class=\"mt-4\">Entre les zones proches des axes A4/A104, les secteurs plus arborés (parc du Génitoy, golf) et les résidences en étage, les salissures varient mais le constat est le même : un nettoyage structuré redonne un aspect net et limite les traces persistantes, sans risque pour les voisins du dessous.</p>",
 
       uniqueDeepDive:
         "<h3>1. Préparation et protection</h3>\n<p>Nous protégeons la porte-fenêtre, les murs adjacents et les zones sensibles. Les objets et plantes sont déplacés ou couverts selon la configuration. Les dépôts (feuilles, terre, déchets) sont retirés avant lavage pour préserver les évacuations et éviter les bouchons.</p>\n<h3>2. Nettoyage adapté au support</h3>\n<p>Nous appliquons un produit adapté au revêtement (carrelage, béton, dalles) puis travaillons les zones difficiles : joints, angles, seuils, garde-corps. La pression est contrôlée et utilisée uniquement si nécessaire, pour éviter d'ouvrir les joints ou de fragiliser les supports.</p>\n<h3>3. Gestion de l'eau et finitions</h3>\n<p>La gestion de l'eau est cadrée dès le départ : nous guidons l'écoulement vers les évacuations et réalisons les finitions à la raclette pour éviter les coulures. Le balcon est laissé propre, visuellement net et prêt à être réutilisé dès que la surface est sèche.</p>",
 
       specificChallenges: [
-        "Près des axes A4/A104, les balcons accumulent poussière fine et traces noires qui se fixent dans les joints.",
-        "Dans les secteurs arborés (Génitoy, golf), dépôts verts et salissures organiques reviennent vite sans nettoyage adapté.",
-        "En immeuble, la gestion de l'eau est un point sensible : finitions et écoulement doivent éviter toute coulure chez les voisins.",
+        "Près des axes A4/A104, <strong>les balcons accumulent poussière fine et traces noires</strong> qui se fixent dans les joints.",
+        "Dans les secteurs arborés (Génitoy, golf), <strong>dépôts verts et salissures organiques</strong> reviennent vite sans nettoyage adapté.",
+        "En immeuble, <strong>la gestion de l'eau est un point sensible</strong> : finitions et écoulement doivent éviter toute coulure chez les voisins.",
       ],
 
       faqAdditions: [
@@ -270,14 +270,14 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>À Bussy-Saint-Georges, certaines loggias et balcons peuvent être fortement souillés par les fientes de pigeons : couches épaisses, odeurs persistantes, traces corrosives sur les garde-corps et les murs. Au-delà de l'aspect visuel, cela rend l'espace inutilisable et augmente le risque sanitaire, notamment lorsque les fientes sèchent et se transforment en poussières.</p>\n<p class=\"mt-4\">Dans les secteurs proches des parcs, grands arbres et zones calmes (Vieux Village, Centre-Ville), la présence de pigeons peut s'installer dans le temps. Un nettoyage et une désinfection réalisés avec un protocole strict permettent d'assainir le balcon, de limiter la contamination et de repartir sur une base propre.</p>",
+        "<p>À Bussy-Saint-Georges, <strong>certaines loggias et balcons</strong> peuvent être fortement souillés par les fientes de pigeons : couches épaisses, odeurs persistantes, traces corrosives sur les garde-corps et les murs. Au-delà de l'aspect visuel, cela rend l'espace inutilisable et augmente le risque sanitaire, notamment lorsque les fientes sèchent et se transforment en poussières.</p>\n<p class=\"mt-4\">Dans les secteurs proches des parcs, grands arbres et zones calmes (Vieux Village, Centre-Ville), la présence de pigeons peut s'installer dans le temps. Un nettoyage et une désinfection réalisés avec un protocole strict permettent d'assainir le balcon, de limiter la contamination et de repartir sur une base propre.</p>",
 
       uniqueDeepDive:
         "<h3>1. Protection et sécurisation</h3>\n<p>Nous intervenons avec des EPI complets, dont un masque <strong>FFP3</strong>, et protégeons les zones de passage (intérieur, seuils, murs adjacents). Les surfaces sont humidifiées pour éviter la remise en suspension des poussières et limiter la dispersion.</p>\n<h3>2. Ramassage et nettoyage</h3>\n<p>Les fientes et nids sont retirés manuellement, conditionnés dans des sacs étanches, puis les surfaces (sol, garde-corps, murs) sont nettoyées avec une méthode adaptée. Les zones incrustées sont brossées pour éliminer les résidus et retrouver un support propre.</p>\n<h3>3. Désinfection et finitions</h3>\n<p>Une désinfection avec un désinfectant professionnel est appliquée en respectant le temps de contact, puis nous réalisons un rinçage/essuyage selon le support. Le balcon est laissé propre, sans résidus, et nous vous indiquons un délai de sécurité avant réutilisation.</p>",
 
       specificChallenges: [
-        "Dans les secteurs proches des parcs et grands arbres, les fientes et nids peuvent s'accumuler rapidement en étage.",
-        "Les fientes sèches génèrent des poussières : l'humidification et la protection respiratoire FFP3 sont indispensables.",
+        "Dans les secteurs proches des parcs et grands arbres, <strong>les fientes et nids</strong> peuvent s'accumuler rapidement en étage.",
+        "Les fientes sèches génèrent des poussières : <strong>l'humidification et la protection respiratoire FFP3</strong> sont indispensables.",
         "Les supports (métal, peinture, joints) peuvent être attaqués : le nettoyage doit enlever les résidus corrosifs sans aggraver l'état.",
       ],
 

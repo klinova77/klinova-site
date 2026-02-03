@@ -17,7 +17,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé
   hubIntro:
-    "<p>Desservie par le RER E et par la gare du Grand Paris Express « Villiers – Champigny – Bry » (ligne 15), aux portes de la ZAC des Boutareines, Villiers-sur-Marne concentre des typologies de bâti variées. Klinova y assure un accompagnement régulier, avec une organisation calibrée sur les contraintes locales.</p>\n\n<p>Halls, sous-sols, extérieurs : chaque intervention s'appuie sur un diagnostic préalable et un suivi terrain. Reporting disponible pour les gestionnaires, coordination simplifiée pour les copropriétés comme pour les entreprises.</p>\n\n<ul>\n  <li><strong>Connaissance du terrain :</strong> Interventions régulières entre le centre-ville, les Hautes Noues et le secteur gare, avec adaptation aux accès et aux horaires sensibles.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés selon les surfaces, des parkings souterrains aux halls d'entrée des résidences récentes.</li>\n  <li><strong>Coordination fluide :</strong> Échanges directs avec syndics, gardiens ou responsables de site pour limiter la gêne et respecter les plannings.</li>\n</ul>",
+    "<p>Desservie par le RER E et par la gare du Grand Paris Express « Villiers – Champigny – Bry » (ligne 15), aux portes de la ZAC des Boutareines, Villiers-sur-Marne concentre des typologies de bâti variées. Klinova y assure un accompagnement régulier, avec une organisation calibrée sur les contraintes locales.</p>\n\n<p>Halls, sous-sols, extérieurs : chaque intervention s'appuie sur un <strong>diagnostic préalable</strong> et un suivi terrain. Reporting disponible pour les gestionnaires, coordination simplifiée pour les copropriétés comme pour les entreprises.</p>\n\n<ul>\n  <li><strong>Connaissance du terrain :</strong> Interventions régulières entre le centre-ville, les Hautes Noues et le secteur gare, avec adaptation aux accès et aux horaires sensibles.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés selon les surfaces, des parkings souterrains aux halls d'entrée des résidences récentes.</li>\n  <li><strong>Coordination fluide :</strong> Échanges directs avec syndics, gardiens ou responsables de site pour limiter la gêne et respecter les plannings.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -67,23 +67,23 @@ const city: City = {
       question:
         "Comment organisez-vous vos interventions dans les quartiers où le stationnement est compliqué ?",
       answer:
-        "<p><strong>Autour de la gare et en centre-ville</strong>, nous repérons à l’avance les zones de dépose et les créneaux possibles. <strong>Le matériel est préparé</strong> pour limiter les allers-retours. Si besoin, nous proposons un passage <strong>tôt le matin</strong> ou <strong>en fin de journée</strong> pour éviter les périodes de saturation.</p>",
+        "<p><strong>Autour de la gare et en centre-ville</strong>, nous repérons à l’avance les zones de dépose et les créneaux possibles. Le matériel est préparé pour limiter les allers-retours. Si besoin, nous proposons un passage tôt le matin ou en fin de journée pour éviter les périodes de saturation.</p>",
     },
     {
       question: "Proposez-vous un devis avant intervention ?",
       answer:
-        "<p><strong>Oui, systématiquement.</strong> Nous validons d’abord <strong>les surfaces</strong>, <strong>les accès</strong> et <strong>les contraintes</strong> (horaires, parking, parties communes). Le devis est ensuite transmis <strong>rapidement</strong> et <strong>sans engagement</strong>. Pour une copropriété ou un site complexe, une <strong>visite technique</strong> peut être proposée.</p>",
+        "<p><strong>Oui, systématiquement.</strong> Nous validons d’abord les surfaces, les accès et les contraintes (horaires, parking, parties communes). Le devis est ensuite transmis rapidement et sans engagement. Pour une copropriété ou un site complexe, une visite technique peut être proposée.</p>",
     },
     {
       question: "Pouvez-vous intervenir en urgence sur Villiers-sur-Marne ?",
       answer:
-        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un <strong>créneau rapide</strong>. En cas de <strong>dégradation importante</strong> ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir <strong>dans les meilleurs délais</strong>.</p>",
+        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau rapide. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir dans les meilleurs délais.</p>",
     },
     {
       question:
         "Comment se passe la coordination avec un syndic ou un gestionnaire de site ?",
       answer:
-        "<p><strong>Un interlocuteur unique</strong> suit le dossier. Avant intervention, nous calons <strong>les accès</strong> (digicode, clés, gardien), <strong>les horaires</strong> et le besoin de <strong>balisage</strong>. Après passage, un <strong>compte-rendu</strong> peut être transmis sur demande, notamment pour les résidences des <strong>Hautes Noues</strong> et du <strong>secteur gare</strong>.</p>",
+        "<p><strong>Un interlocuteur unique</strong> suit le dossier. Avant intervention, nous calons les accès (digicode, clés, gardien), les horaires et le besoin de balisage. Après passage, un compte-rendu peut être transmis sur demande, notamment pour les résidences des Hautes Noues et du secteur gare.</p>",
     },
   ],
 
@@ -108,15 +108,15 @@ const city: City = {
         "Interventions planifiées en dehors des créneaux d'occupation pour limiter la gêne et accélérer la remise en service.",
       ],
       uniqueIntro:
-        "<p>Dans le secteur de l'<strong>Espace Jean-Moulin</strong> et des locaux tertiaires du centre-ville, les moquettes accumulent poussières et traces de passage bien avant que l'encrassement devienne visible. Les fibres retiennent particules fines, résidus de semelles et taches de boissons renversées lors d'événements ou de réunions. Sans traitement adapté, le textile se ternit et les odeurs s'installent durablement dans la trame.</p>\n\n<p class=\"mt-4\">Sur les <strong>dalles textiles des salles municipales</strong> comme dans les bureaux équipés de velours ras, un entretien en profondeur redonne du relief aux fibres et supprime les auréoles incrustées. Les occupants retrouvent un sol propre, sans sensation collante sous les pieds, et l'aspect général du local s'améliore nettement dès la fin de l'intervention.</p>\n\n<p class=\"mt-4\">Face au <strong>fort trafic événementiel</strong> que connaît le centre-ville, nous adaptons notre intervention aux créneaux disponibles. Diagnostic préalable du support, protection des plinthes et mobilier, puis traitement par injection-extraction : chaque étape est planifiée pour limiter l'immobilisation de vos espaces.</p>",
+        "<p>Dans le secteur de l'<strong>Espace Jean-Moulin</strong> et des locaux tertiaires du centre-ville, les moquettes accumulent poussières et traces de passage bien avant que l'encrassement devienne visible. Les fibres retiennent particules fines, résidus de semelles et taches de boissons renversées lors d'événements ou de réunions. Sans traitement adapté, le textile se ternit et les odeurs s'installent durablement dans la trame.</p>\n\n<p class=\"mt-4\">Sur les dalles textiles des salles municipales comme dans les bureaux équipés de velours ras, un entretien en profondeur redonne du relief aux fibres et supprime les auréoles incrustées. Les occupants retrouvent un sol propre, sans sensation collante sous les pieds, et l'aspect général du local s'améliore nettement dès la fin de l'intervention.</p>\n\n<p class=\"mt-4\">Face au <strong>fort trafic événementiel</strong> que connaît le centre-ville, nous adaptons notre intervention aux créneaux disponibles. Diagnostic préalable du support, protection des plinthes et mobilier, puis traitement par injection-extraction : chaque étape est planifiée pour limiter l'immobilisation de vos espaces.</p>",
       uniqueDeepDive:
-        "<h3>Fibres assainies et taches éliminées</h3>\n<p>L'objectif est d'obtenir une moquette débarrassée des salissures profondes, avec des fibres redressées et un rendu homogène. Les zones de passage intensif retrouvent leur aspect d'origine, sans auréoles ni résidus collants.</p>\n\n<h3>Injection-extraction et détachage ciblé</h3>\n<p>Après aspiration préalable des particules libres, nous appliquons une solution adaptée au type de fibre. La machine injecte le produit puis aspire immédiatement l'eau chargée de salissures. Les taches tenaces reçoivent un traitement localisé avant le passage général.</p>\n\n<h3>Diagnostic et préparation du chantier</h3>\n<p>Avant toute intervention, nous identifions la nature du textile : bouclée, velours, épaisse ou fine. Les plinthes et bas de murs sont protégés. En salle municipale ou bureau, le mobilier léger est déplacé et un balisage temporaire signale la zone en cours de séchage. Le temps d'immobilisation estimé vous est communiqué dès le départ.</p>",
+        "<h3>Fibres assainies et taches éliminées</h3>\n<p>L'objectif est d'obtenir une moquette débarrassée des salissures profondes, avec des fibres redressées et un rendu homogène. Les zones de passage intensif retrouvent leur aspect d'origine, sans auréoles ni résidus collants.</p>\n\n<h3>Injection-extraction et détachage ciblé</h3>\n<p>Après aspiration préalable des particules libres, nous appliquons une solution adaptée au type de fibre. La machine injecte le produit puis aspire immédiatement l'eau chargée de salissures. Les taches tenaces reçoivent un traitement localisé avant le passage général.</p>\n\n<h3>Diagnostic et préparation du chantier</h3>\n<p>Avant toute intervention, nous identifions la <strong>nature du textile</strong> : bouclée, velours, épaisse ou fine. Les plinthes et bas de murs sont protégés. En salle municipale ou bureau, le mobilier léger est déplacé et un balisage temporaire signale la zone en cours de séchage. Le temps d'immobilisation estimé vous est communiqué dès le départ.</p>",
       specificChallenges: [
-        "Dalles textiles en salles municipales soumises à un piétinement intense lors d'événements.",
-        "Moquettes velours ras dans les bureaux tertiaires du centre-ville, sensibles aux traces de roulettes.",
-        "Escaliers étroits dans les immeubles anciens compliquant l'acheminement du matériel.",
-        "Stationnement limité près de la gare imposant une logistique adaptée pour les interventions.",
-        "Poussières urbaines liées au trafic sur les axes structurants qui s'incrustent rapidement dans les fibres.",
+        "<strong>Dalles textiles en salles municipales</strong> soumises à un piétinement intense lors d'événements.",
+        "<strong>Moquettes velours ras</strong> dans les bureaux tertiaires du centre-ville, sensibles aux traces de roulettes.",
+        "<strong>Escaliers étroits</strong> dans les immeubles anciens compliquant l'acheminement du matériel.",
+        "<strong>Stationnement limité près de la gare</strong> imposant une logistique adaptée pour les interventions.",
+        "<strong>Poussières urbaines liées au trafic</strong> sur les axes structurants qui s'incrustent rapidement dans les fibres.",
       ],
       faqAdditions: [
         {

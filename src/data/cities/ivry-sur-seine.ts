@@ -18,16 +18,16 @@ const city: City = {
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // Pattern : 2 <p> then <ul>
   hubIntro:
-    "<p>Au cœur de la ZAC Confluences et à deux pas de la gare RER C, Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre équipe connaît les contraintes d'accès et de stationnement propres à cette commune dense, limitrophe de Paris.</p>\n<p class=\"mt-4\">Nous assurons le nettoyage des parties communes, l'entretien des parkings et la remise en état des espaces extérieurs. Chaque intervention fait l'objet d'une coordination préalable pour limiter la gêne et respecter les horaires convenus.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise de contact avec gardiens ou gestionnaires avant chaque passage, adaptation aux créneaux disponibles selon l'activité du bâtiment.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés pour les accès étroits des immeubles anciens comme pour les parkings souterrains des résidences récentes.</li>\n  <li>Suivi des interventions : Compte-rendu transmis après chaque passage, possibilité de reporting régulier pour les gestionnaires qui le souhaitent.</li>\n</ul>",
+    "<p>Au cœur de la ZAC Confluences et à deux pas de la gare RER C, Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre équipe connaît les contraintes d'accès et de stationnement propres à cette commune dense, limitrophe de Paris.</p>\n<p class=\"mt-4\">Nous assurons le nettoyage des parties communes, l'entretien des parkings et la remise en état des espaces extérieurs. Chaque intervention fait l'objet d'une <strong>coordination préalable</strong> pour limiter la gêne et respecter les horaires convenus.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise de contact avec gardiens ou gestionnaires avant chaque passage, adaptation aux créneaux disponibles selon l'activité du bâtiment.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés pour les accès étroits des immeubles anciens comme pour les parkings souterrains des résidences récentes.</li>\n  <li><strong>Suivi des interventions :</strong> Compte-rendu transmis après chaque passage, possibilité de reporting régulier pour les gestionnaires qui le souhaitent.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Pollution atmosphérique</strong> marquée liée à la proximité du périphérique et des quais de Seine.",
     "Parkings souterrains fréquents dans les résidences récentes, avec <strong>rampes d'accès parfois étroites</strong>.",
     "Immeubles à <strong>digicodes et badges Vigik</strong> quasi systématiques, coordination gardien nécessaire.",
-    "Stationnement très contraint au centre-ville et sur le secteur Ivry-Port.",
+    "<strong>Stationnement très contraint</strong> au centre-ville et sur le secteur Ivry-Port.",
     "Balcons aux <strong>formes géométriques complexes</strong> sur les bâtiments Renaudie (Étoiles d'Ivry).",
-    "Poussières de chantier liées aux livraisons en cours sur la ZAC Confluences.",
+    "<strong>Poussières de chantier</strong> liées aux livraisons en cours sur la ZAC Confluences.",
   ],
 
   // Texte brut uniquement
@@ -111,13 +111,13 @@ const city: City = {
       uniqueIntro:
         "<p>Dans la <strong>ZAC Ivry Confluences</strong>, les open-spaces et salles de réunion accumulent rapidement poussières fines et traces de passage. Les dalles textiles, sollicitées quotidiennement par des dizaines de collaborateurs, perdent leur aspect d'origine en quelques mois. Les zones de circulation intense — entrées, couloirs, espaces café — concentrent l'essentiel de l'encrassement visible.</p>\n<p class=\"mt-4\">Un entretien adapté redonne aux fibres leur tenue et leur couleur. Les <strong>copropriétés années 70-80</strong> du centre-ville présentent souvent des moquettes aiguilletées dans les parties communes, où le piétinement quotidien laisse des sillons grisâtres. Traiter ces surfaces améliore l'image des halls et réduit les réclamations des résidents auprès du syndic.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic des supports et des taches. Nous identifions les zones prioritaires, adaptons la méthode au type de fibre, et planifions le passage en tenant compte des flux liés au RER C et aux lignes de métro pour limiter la gêne aux heures de pointe.</p>",
       uniqueDeepDive:
-        "<h3>Zones de circulation intense</h3>\n<p>Les entrées, couloirs et espaces d'accueil reçoivent un traitement prioritaire. Après aspiration, nous appliquons un pré-détachant sur les traces de semelles et les auréoles de café. L'injection-extraction élimine les résidus en profondeur sans détremper le support.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les dalles textiles sous les bureaux et autour des tables de réunion sont traitées par passes croisées. Nous protégeons les plinthes et les pieds de mobilier avant chaque passage. Le détachage ciblé intervient sur les taches grasses ou anciennes repérées lors du diagnostic.</p>\n\n<h3>Gestion du séchage et remise en service</h3>\n<p>L'extraction maximale réduit le temps de séchage à quelques heures selon la ventilation du local. Nous conseillons d'éviter le piétinement pendant deux à quatre heures. Un balisage temporaire peut être posé pour orienter les occupants vers les zones sèches.</p>",
+        "<h3>Zones de circulation intense</h3>\n<p>Les entrées, couloirs et espaces d'accueil reçoivent un traitement prioritaire. Après aspiration, nous appliquons un pré-détachant sur les traces de semelles et les auréoles de café. L'injection-extraction élimine les résidus en profondeur sans détremper le support.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les dalles textiles sous les bureaux et autour des tables de réunion sont traitées par <strong>passes croisées</strong>. Nous protégeons les plinthes et les pieds de mobilier avant chaque passage. Le détachage ciblé intervient sur les taches grasses ou anciennes repérées lors du diagnostic.</p>\n\n<h3>Gestion du séchage et remise en service</h3>\n<p>L'extraction maximale réduit le temps de séchage à quelques heures selon la ventilation du local. Nous conseillons d'éviter le piétinement pendant deux à quatre heures. Un balisage temporaire peut être posé pour <strong>orienter les occupants</strong> vers les zones sèches.</p>",
       specificChallenges: [
         "Open-spaces ZAC Confluences : dalles textiles sollicitées par un flux quotidien important.",
-        "Parties communes années 70-80 : moquettes aiguilletées marquées par des décennies de passage.",
-        "Stationnement tendu à proximité des bureaux, coordination nécessaire pour le matériel.",
+        "Parties communes années 70-80 : <strong>moquettes aiguilletées</strong> marquées par des décennies de passage.",
+        "<strong>Stationnement tendu</strong> à proximité des bureaux, coordination nécessaire pour le matériel.",
         "Horaires d'intervention à caler entre les arrivées RER et les réunions du matin.",
-        "Taches de café et traces de semelles fréquentes dans les espaces de pause.",
+        "<strong>Taches de café</strong> et traces de semelles fréquentes dans les espaces de pause.",
       ],
       faqAdditions: [
         {

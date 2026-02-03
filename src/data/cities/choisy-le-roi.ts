@@ -18,7 +18,7 @@ const city: City = {
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // Format : <p>...</p> <p class="mt-4">...</p> <ul>...</ul>
   hubIntro:
-    "<p>Au carrefour du RER C et du Tram T9, Choisy-le-Roi concentre des flux quotidiens importants sur ses deux rives. Klinova accompagne syndics, gestionnaires et occupants dans la gestion régulière de la propreté, avec une organisation pensée pour ce territoire en mutation.</p>\n<p class=\"mt-4\">Parties communes, sous-sols, balcons ou espaces extérieurs : chaque intervention s'adapte au bâti concerné. Reporting disponible sur demande, planification ajustée aux contraintes d'accès et aux horaires de la copropriété ou du site.</p>\n<ul>\n  <li><strong>Coordination locale :</strong> Prise en compte des jours de marché, des livraisons en zone Port et des accès restreints près de la gare pour limiter les blocages.</li>\n  <li><strong>Adaptation au bâti :</strong> Résidences récentes avec parkings souterrains, immeubles anciens du centre, pavillons rive droite — chaque configuration a son protocole.</li>\n  <li>Suivi et transparence : Compte-rendu d'intervention transmis aux gestionnaires, photos avant/après disponibles selon le contrat établi.</li>\n</ul>",
+    "<p>Au carrefour du RER C et du Tram T9, Choisy-le-Roi concentre des flux quotidiens importants sur ses deux rives. Klinova accompagne syndics, gestionnaires et occupants dans la gestion régulière de la propreté, avec une <strong>organisation pensée pour ce territoire</strong> en mutation.</p>\n<p class=\"mt-4\">Parties communes, sous-sols, balcons ou espaces extérieurs : chaque intervention s'adapte au bâti concerné. Reporting disponible sur demande, planification ajustée aux contraintes d'accès et aux horaires de la copropriété ou du site.</p>\n<ul>\n  <li><strong>Coordination locale :</strong> Prise en compte des jours de marché, des livraisons en zone Port et des accès restreints près de la gare pour limiter les blocages.</li>\n  <li><strong>Adaptation au bâti :</strong> Résidences récentes avec parkings souterrains, immeubles anciens du centre, pavillons rive droite — chaque configuration a son protocole.</li>\n  <li><strong>Suivi et transparence :</strong> Compte-rendu d'intervention transmis aux gestionnaires, photos avant/après disponibles selon le contrat établi.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -113,11 +113,11 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Zones de circulation intensive</h3>\n<p>Les couloirs et halls d'entrée concentrent l'essentiel des salissures. Après diagnostic du type de fibre, une aspiration préalable retire les particules libres. Le traitement par injection-extraction cible ensuite les zones de passage où l'encrassement est le plus marqué.</p>\n\n<h3>Surfaces intermédiaires et paliers</h3>\n<p>Les espaces de transition reçoivent un détachage ciblé sur les taches identifiées. Les passes successives permettent d'extraire les résidus incrustés sans saturer le support. Les plinthes et bas de murs sont protégés pendant toute l'opération.</p>\n\n<h3>Zones périphériques et finitions</h3>\n<p>Les angles, dessous de mobilier et recoins font l'objet d'un traitement complémentaire. L'extraction maximale de l'humidité réduit le temps de séchage. Selon l'épaisseur du revêtement et la ventilation disponible, comptez entre 4 et 8 heures avant piétinement normal.</p>",
       specificChallenges: [
-        "Dalles textiles des halls récents : encrassement rapide malgré l'aspect neuf.",
-        "Velours ras des copropriétés années 70 : fibres compactées retenant poussières et odeurs.",
-        "Accès aux cages d'escalier étroites du centre nécessitant du matériel compact.",
-        "Stationnement contraint près de la gare imposant une logistique anticipée.",
-        "Coordination avec syndics et gestionnaires pour intervenir sans perturber les résidents.",
+        "Dalles textiles des halls récents : <strong>encrassement rapide</strong> malgré l'aspect neuf.",
+        "Velours ras des copropriétés années 70 : <strong>fibres compactées</strong> retenant poussières et odeurs.",
+        "Accès aux cages d'escalier étroites du centre nécessitant <strong>du matériel compact</strong>.",
+        "Stationnement contraint près de la gare imposant <strong>une logistique anticipée</strong>.",
+        "Coordination avec syndics et gestionnaires pour <strong>intervenir sans perturber les résidents</strong>.",
       ],
       faqAdditions: [
         {

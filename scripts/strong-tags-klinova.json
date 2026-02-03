@@ -1,0 +1,13 @@
+{
+  "citiesDir": "src/data/cities",
+  "model": "gpt-5.2",
+  "rulesText": "Klinova — strong tagging uniquement pour améliorer la scannabilité, sans ton marketing.",
+  "slugs": [],
+  "slugsJsonPath": "",
+  "maxFiles": 0,
+  "forbiddenStrong": [
+    "devis gratuit",
+    "100%",
+    "garanti"
+  ]
+}

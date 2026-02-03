@@ -9,13 +9,13 @@ const city: City = {
     "Entre les coteaux pavillonnaires de l'Époque et les grandes copropriétés de l'est de la ville, Gagny présente une diversité de surfaces à entretenir. La proximité des carrières et des nombreux espaces boisés (Arboretum, Bois de l'Étoile) accentue l'exposition des immeubles aux poussières de terre, aux mousses et à l'humidité, exigeant une maintenance technique régulière.",
 
   hubIntro:
-    "<p>Gagny se distingue par une topographie vallonnée et une mixité urbaine forte, alternant zones pavillonnaires calmes (Maison Blanche, Franceville) et ensembles collectifs denses (Jean Moulin, les Peupliers). Pour les syndics et gestionnaires, cela implique de gérer des problématiques variées : l'humidité des sous-sols en pied de coteau, l'encrassement des halls par la végétation environnante ou l'entretien des parkings vieillissants.</p>\n<p class=\"mt-4\">Klinova intervient comme un partenaire de proximité, capable d'adapter ses protocoles à cette réalité locale. Nous déployons des solutions techniques pour rénover les sols encrassés, assainir les moquettes des parties communes et sécuriser les accès véhicules, tout en respectant la tranquillité des zones résidentielles.</p>\n<ul>\n  <li><strong>Maîtrise des terrains en pente :</strong> gestion logistique adaptée pour les résidences situées sur les coteaux ou disposant de rampes de parking difficiles.</li>\n  <li><strong>Traitements anti-mousse et humidité :</strong> expertise spécifique pour les balcons et terrasses exposés au nord ou proches des étangs.</li>\n  <li><strong>Suivi rigoureux :</strong> rapports d'intervention avec photos pour justifier les prestations auprès des copropriétaires exigeants.</li>\n</ul>",
+    "<p>Gagny se distingue par une topographie vallonnée et une mixité urbaine forte, alternant zones pavillonnaires calmes (Maison Blanche, Franceville) et ensembles collectifs denses (Jean Moulin, les Peupliers). Pour les syndics et gestionnaires, cela implique de gérer <strong>des problématiques variées</strong> : l'humidité des sous-sols en pied de coteau, l'encrassement des halls par la végétation environnante ou l'entretien des parkings vieillissants.</p>\n<p class=\"mt-4\">Klinova intervient comme un partenaire de proximité, capable d'adapter ses protocoles à cette réalité locale. Nous déployons des solutions techniques pour rénover les sols encrassés, assainir les moquettes des parties communes et sécuriser les accès véhicules, tout en respectant la tranquillité des zones résidentielles.</p>\n<ul>\n  <li><strong>Maîtrise des terrains en pente :</strong> gestion logistique adaptée pour les résidences situées sur les coteaux ou disposant de rampes de parking difficiles.</li>\n  <li><strong>Traitements anti-mousse et humidité :</strong> expertise spécifique pour les balcons et terrasses exposés au nord ou proches des étangs.</li>\n  <li><strong>Suivi rigoureux :</strong> rapports d'intervention avec photos pour justifier les prestations auprès des copropriétaires exigeants.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Apport constant de débris végétaux et de terre dans les halls d'entrée dû à la proximité immédiate des grands parcs (Courbet, Arboretum, Bois de l'Étoile).",
-    "Gestion de l'humidité remontante dans les parkings semi-enterrés ou les caves, fréquente dans les quartiers situés en bas des coteaux (proche canal).",
-    "Encrassement spécifique des façades et balcons des résidences des années 70/80 (Jean Moulin, Carette) par la pollution atmosphérique et les lichens.",
-    "Accessibilité parfois complexe pour les engins de nettoyage dans les petites rues pavillonnaires du quartier des Abbesses ou de Franceville.",
+    "Apport constant de <strong>débris végétaux et de terre</strong> dans les halls d'entrée dû à la proximité immédiate des grands parcs (Courbet, Arboretum, Bois de l'Étoile).",
+    "Gestion de <strong>l'humidité remontante</strong> dans les parkings semi-enterrés ou les caves, fréquente dans les quartiers situés en bas des coteaux (proche canal).",
+    "Encrassement spécifique des façades et balcons des résidences des années 70/80 (Jean Moulin, Carette) par la <strong>pollution atmosphérique et les lichens</strong>.",
+    "Accessibilité parfois complexe pour les engins de nettoyage dans les <strong>petites rues pavillonnaires</strong> du quartier des Abbesses ou de Franceville.",
   ],
 
   department: {
@@ -120,9 +120,9 @@ const city: City = {
         "<h3>1. Analyse technique et protection</h3>\n<p>Identification de la fibre (bouclé, velours, aiguilleté) pour adapter la pression et la température de l'eau. <strong>Protection soigneuse des bas de murs et des portes palières.</strong> Les taches tenaces (chewing-gum, café, traces de semelles) font l'objet d'un pré-traitement manuel avec des agents détachants spécifiques selon leur nature.</p>\n\n<h3>2. Nettoyage par injection-extraction</h3>\n<p>La machine propulse une solution nettoyante au cœur de la moquette et l'aspire instantanément avec les salissures. Cette méthode permet de rincer la fibre sans détremper la sous-couche. <strong>À Gagny, où l'humidité peut être un facteur,</strong> nous veillons particulièrement à l'aspiration finale pour garantir un séchage rapide (4 à 6 heures selon ventilation) et éviter toute odeur d'humidité.</p>\n\n<h3>3. Contrôle final et recommandations</h3>\n<p>Vérification de l'homogénéité du résultat et de la bonne répartition du séchage. Les zones de fort passage sont inspectées visuellement pour s'assurer de l'élimination complète des traces. <strong>Fréquence recommandée : nettoyage professionnel tous les 12 à 18 mois</strong> pour les halls et couloirs à fort trafic, notamment dans les résidences proches des gares.</p>",
 
       specificChallenges: [
-        "Halls d'entrée souvent carrelés mais tapis d'escaliers et couloirs en moquette nécessitant une transition de nettoyage propre.",
-        "Remontée de taches anciennes sur les dalles textiles des bureaux ou copropriétés tertiaires.",
-        "Nécessité de traiter de grands linéaires de couloirs dans les ensembles collectifs sans bloquer la circulation des résidents.",
+        "Halls d'entrée souvent carrelés mais <strong>tapis d'escaliers et couloirs en moquette</strong> nécessitant une transition de nettoyage propre.",
+        "<strong>Remontée de taches anciennes</strong> sur les dalles textiles des bureaux ou copropriétés tertiaires.",
+        "Nécessité de traiter <strong>de grands linéaires de couloirs</strong> dans les ensembles collectifs sans bloquer la circulation des résidents.",
       ],
 
       faqAdditions: [
@@ -177,9 +177,9 @@ const city: City = {
         "<h3>1. Dépoussiérage et traitement préalable</h3>\n<p>Balayage mécanique complet pour retirer les gros déchets, graviers et feuilles. <strong>Application ciblée de dégraissant professionnel</strong> sur les taches d'huile incrustées avec temps de contact adapté (10 à 15 minutes) pour dissoudre les résidus huileux en profondeur.</p>\n\n<h3>2. Lavage mécanique des surfaces</h3>\n<p>Traitement des sols à l'aide d'autolaveuses portées ou accompagnées selon la surface, qui brossent et aspirent simultanément. Les rampes d'accès, souvent critiques en hiver ou par temps de pluie, sont décapées à la haute pression pour restaurer leur adhérence. <strong>Les zones de stationnement fréquent</strong> et les virages reçoivent plusieurs passes pour un résultat homogène.</p>\n\n<h3>3. Gestion des eaux et finitions</h3>\n<p>La gestion des eaux de lavage est stricte : récupération via l'autolaveuse et évacuation dans les réseaux appropriés, un point crucial pour les copropriétés soucieuses de l'environnement. <strong>Contrôle final de la propreté</strong> et vérification de l'absence de flaques résiduelles. Fréquence recommandée : 1 à 2 décrassages annuels selon le trafic et l'exposition à l'humidité.</p>",
 
       specificChallenges: [
-        "Parkings sur plusieurs niveaux avec rampes hélicoïdales nécessitant des machines maniables.",
-        "Sols en béton brut très poreux dans les résidences anciennes, retenant les taches d'huile en profondeur.",
-        "Ventilation parfois insuffisante dans les boxes fermés, demandant une gestion rigoureuse des poussières lors du balayage.",
+        "Parkings sur plusieurs niveaux avec <strong>rampes hélicoïdales</strong> nécessitant des machines maniables.",
+        "Sols en <strong>béton brut très poreux</strong> dans les résidences anciennes, retenant les taches d'huile en profondeur.",
+        "<strong>Ventilation parfois insuffisante</strong> dans les boxes fermés, demandant une gestion rigoureuse des poussières lors du balayage.",
       ],
 
       faqAdditions: [
@@ -233,9 +233,9 @@ const city: City = {
         "<h3>1. Préparation et sécurisation</h3>\n<p>Protection de votre intérieur (baies vitrées, seuils) et déplacement du mobilier et des plantes. <strong>Retrait manuel des débris accumulés</strong> (feuilles mortes, terre, déchets végétaux). Inspection de l'évacuation du balcon pour adapter le débit d'eau et éviter tout débordement.</p>\n\n<h3>2. Application et décapage</h3>\n<p>Application d'un nettoyant professionnel adapté au support (fongicide pour les mousses, dégraissant pour les traces de barbecue). Le nettoyage s'effectue par action mécanique (brossage) ou haute pression maîtrisée, pour ne pas dégrader les joints de carrelage ni rendre le béton poreux. <strong>Les garde-corps (verre, aluminium, acier) sont traités séparément</strong> avec des produits spécifiques non abrasifs.</p>\n\n<h3>3. Rinçage maîtrisé et finitions</h3>\n<p>Le rinçage est orienté systématiquement vers l'évacuation du balcon. Nous utilisons des aspirateurs à eau ou des systèmes de barrage (raclettes, chiffons absorbants) pour canaliser les flux, évitant ainsi les coulures disgracieuses sur la façade ou chez les voisins du dessous. <strong>Les vitres et garde-corps sont essuyés en fin de chantier.</strong> Séchage naturel en quelques heures selon exposition et ventilation.</p>",
 
       specificChallenges: [
-        "Balcons 'casquette' ou loggias nécessitant une vigilance accrue sur les évacuations d'eau.",
-        "Forte présence de lichens incrustés sur les bétons gravillonnés des années 70.",
-        "Nécessité de protéger les plantes et aménagements personnels des résidents durant l'intervention.",
+        "Balcons 'casquette' ou loggias nécessitant une <strong>vigilance accrue sur les évacuations d'eau</strong>.",
+        "Forte présence de <strong>lichens incrustés</strong> sur les bétons gravillonnés des années 70.",
+        "Nécessité de <strong>protéger les plantes et aménagements personnels</strong> des résidents durant l'intervention.",
       ],
 
       faqAdditions: [

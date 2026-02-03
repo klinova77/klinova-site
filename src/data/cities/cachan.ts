@@ -101,15 +101,15 @@ const city: City = {
         "Interventions planifiées en dehors des heures de cours ou d'activité pour limiter la gêne des occupants.",
       ],
       uniqueIntro:
-        "<p>Dans les locaux du <strong>Campus Cachan</strong>, les salles de cours et bureaux administratifs accumulent rapidement poussières et traces de passage. Les dalles textiles supportent un trafic quotidien intense, et les fibres retiennent particules fines et résidus de semelles. Sans entretien régulier, le grisaillement s'installe et les taches de café ou d'encre deviennent difficiles à éliminer.</p>\n<p class=\"mt-4\">Un détachage ciblé redonne aux sols textiles leur aspect d'origine. Dans les <strong>immeubles anciens du centre-ville</strong> ou les petits collectifs avec halls ouverts, les moquettes retrouvent une tenue visuelle correcte. Les occupants constatent la différence dès le séchage terminé : couleurs ravivées, odeurs de renfermé dissipées, confort de marche restauré.</p>\n<p class=\"mt-4\">La <strong>pollution provenant de l'ex-N20</strong> et le flux d'étudiants génèrent un encrassement récurrent. Une intervention structurée permet d'adapter le traitement selon l'épaisseur des fibres, la nature des taches et les contraintes d'accès propres à chaque site.</p>",
+        "<p>Dans les locaux du <strong>Campus Cachan</strong>, les salles de cours et bureaux administratifs accumulent rapidement poussières et traces de passage. Les dalles textiles supportent un trafic quotidien intense, et les fibres retiennent particules fines et résidus de semelles. Sans entretien régulier, le grisaillement s'installe et les taches de café ou d'encre deviennent difficiles à éliminer.</p>\n<p class=\"mt-4\">Un détachage ciblé redonne aux sols textiles leur aspect d'origine. Dans les <strong>immeubles anciens du centre-ville</strong> ou les petits collectifs avec halls ouverts, les moquettes retrouvent une tenue visuelle correcte. Les occupants constatent la différence dès le séchage terminé : couleurs ravivées, odeurs de renfermé dissipées, confort de marche restauré.</p>\n<p class=\"mt-4\">La pollution provenant de l'ex-N20 et le flux d'étudiants génèrent un encrassement récurrent. Une intervention structurée permet d'adapter le traitement selon l'épaisseur des fibres, la nature des taches et les contraintes d'accès propres à chaque site.</p>",
       uniqueDeepDive:
         "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection du produit nettoyant. Les passes d'extraction se multiplient sur ces surfaces très sollicitées.</p>\n\n<h3>Surfaces de travail et espaces cloisonnés</h3>\n<p>Bureaux, salles de réunion et open spaces reçoivent un traitement adapté à leur usage. Les plinthes et bas de murs sont protégés. Le détachage cible les auréoles de café, traces de stylo ou résidus alimentaires selon leur ancienneté.</p>\n\n<h3>Finitions et gestion du séchage</h3>\n<p>L'extraction maximale limite le temps d'humidité résiduelle. Selon l'épaisseur de la moquette et la ventilation du local, le séchage complet intervient sous 4 à 8 heures. Une consigne de non-piétinement est transmise pour préserver le résultat obtenu.</p>",
       specificChallenges: [
-        "Dalles textiles des salles de cours : trafic étudiant quotidien et taches répétées.",
-        "Moquettes velours des pavillons du Coteau : fibres délicates nécessitant une pression contrôlée.",
-        "Halls ouverts des petits collectifs : encrassement rapide par les passages fréquents.",
-        "Poussières fines liées à la circulation sur l'avenue Aristide Briand infiltrant les locaux.",
-        "Escaliers étroits dans certains immeubles anciens : acheminement du matériel à adapter.",
+        "<strong>Dalles textiles des salles de cours</strong> : trafic étudiant quotidien et taches répétées.",
+        "<strong>Moquettes velours des pavillons du Coteau</strong> : fibres délicates nécessitant une pression contrôlée.",
+        "<strong>Halls ouverts des petits collectifs</strong> : encrassement rapide par les passages fréquents.",
+        "<strong>Poussières fines liées à la circulation</strong> sur l'avenue Aristide Briand infiltrant les locaux.",
+        "<strong>Escaliers étroits dans certains immeubles anciens</strong> : acheminement du matériel à adapter.",
       ],
       faqAdditions: [
         {
@@ -153,11 +153,11 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Sol décrassé, circulation fluide</h3>\n<p>Le résultat visé : un revêtement débarrassé des dépôts gras, des traces de pneus et de la poussière accumulée. Les marquages au sol redeviennent lisibles, les zones de circulation se distinguent nettement des emplacements.</p>\n\n<h3>Autolaveuse et traitement ciblé</h3>\n<p>Le passage mécanisé combine aspiration et injection de solution dégraissante. Sur béton brut, la pression s'adapte pour déloger les salissures incrustées sans dégrader la surface. Les rampes d'accès reçoivent un traitement antidérapant renforcé. Angles morts, pieds de murs et rigoles font l'objet de passes manuelles complémentaires.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage chargées en résidus sont récupérées et évacuées selon les normes en vigueur. Aucun rejet vers les évacuations pluviales. Le dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention sur demande. Un compte-rendu avec photos documente l'état avant/après pour le syndic.</p>",
       specificChallenges: [
-        "Poussière de chantier du Grand Paris Express infiltrée dans les parkings souterrains du centre.",
-        "Sols béton poreux des résidences années 70-80 à La Plaine nécessitant un décapage adapté.",
+        "<strong>Poussière de chantier du Grand Paris Express</strong> infiltrée dans les parkings souterrains du centre.",
+        "<strong>Sols béton poreux des résidences années 70-80</strong> à La Plaine nécessitant un décapage adapté.",
         "Rampes d'accès pentues sur le Coteau demandant un traitement antidérapant renforcé.",
         "Coordination avec les heures de pointe RER B pour limiter la gêne aux usagers.",
-        "Gestion stricte des eaux usées dans les parkings proches des zones piétonnes du Marché Carnot.",
+        "<strong>Gestion stricte des eaux usées</strong> dans les parkings proches des zones piétonnes du Marché Carnot.",
       ],
       faqAdditions: [
         {

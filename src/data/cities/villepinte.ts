@@ -17,13 +17,13 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   hubIntro:
-    "<p>Siège du Parc des Expositions Paris Nord et du Parc d'Affaires Paris Nord 2, Villepinte concentre des besoins variés en propreté. Klinova accompagne syndics, gestionnaires et entreprises avec une présence terrain régulière et une coordination adaptée aux pics d'activité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, espaces extérieurs : chaque intervention suit un protocole défini et un suivi documenté. L'organisation s'ajuste aux contraintes d'accès, aux horaires sensibles et aux exigences de discrétion propres aux sites tertiaires comme résidentiels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes positionnées pour couvrir rapidement les quartiers du Parc de la Noue aux zones d'activités de l'Avenue des Nations.</li>\n  <li><strong>Coordination accès :</strong> Gestion des badges, digicodes et créneaux horaires en lien direct avec gardiens et gestionnaires de sites.</li>\n  <li><strong>Suivi documenté :</strong> Reporting disponible après chaque passage, traçabilité des interventions pour les copropriétés et entreprises.</li>\n</ul>",
+    "<p>Siège du Parc des Expositions Paris Nord et du Parc d'Affaires Paris Nord 2, Villepinte concentre des besoins variés en propreté. Klinova accompagne syndics, gestionnaires et entreprises avec une <strong>présence terrain régulière</strong> et une coordination adaptée aux pics d'activité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, espaces extérieurs : chaque intervention suit un protocole défini et un suivi documenté. L'organisation s'ajuste aux <strong>contraintes d'accès</strong>, aux horaires sensibles et aux exigences de discrétion propres aux sites tertiaires comme résidentiels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes positionnées pour couvrir rapidement les quartiers du Parc de la Noue aux zones d'activités de l'Avenue des Nations.</li>\n  <li><strong>Coordination accès :</strong> Gestion des badges, digicodes et créneaux horaires en lien direct avec gardiens et gestionnaires de sites.</li>\n  <li><strong>Suivi documenté :</strong> Reporting disponible après chaque passage, traçabilité des interventions pour les copropriétés et entreprises.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Flux visiteurs massifs</strong> lors des salons : halls et parkings sollicités en continu.",
     "Poussières noires et suies sur les façades exposées à <strong>l'A104</strong>.",
-    "Parkings souterrains des résidences récentes : taches d'huile et traces de pneus fréquentes.",
+    "Parkings souterrains des résidences récentes : <strong>taches d'huile et traces de pneus</strong> fréquentes.",
     "Accès sécurisés à <strong>Paris Nord 2</strong> : badges et horaires stricts à coordonner.",
     "Quartiers pavillonnaires du Clos Montceleux : stationnement limité, voirie étroite.",
     "Proximité du <strong>Parc du Sausset</strong> : dépôts organiques sur balcons et terrasses.",
@@ -66,24 +66,24 @@ const city: City = {
       question:
         "Comment organisez-vous les interventions lors des grands salons au Parc des Expositions ?",
       answer:
-        "<p><strong>Anticipation des pics</strong> : nous planifions les passages en amont des périodes de salons et ajustons les horaires pour éviter les créneaux saturés. <strong>Accès coordonnés</strong> avec le gestionnaire (badges, zones de dépose, consignes). Objectif : <strong>continuité de service</strong> sans perturber l’activité du site.</p>",
+        "<p><strong>Anticipation des pics</strong> : nous planifions les passages en amont des périodes de salons et ajustons les horaires pour éviter les créneaux saturés. Accès coordonnés avec le gestionnaire (badges, zones de dépose, consignes). Objectif : continuité de service sans perturber l’activité du site.</p>",
     },
     {
       question: "Proposez-vous un devis avant intervention à Villepinte ?",
       answer:
-        "<p><strong>Oui, systématiquement.</strong> Nous cadrons la demande (surface, zones, niveau d’encrassement, accès) puis envoyons un <strong>devis clair</strong> avec périmètre et modalités. Pour les sites techniques (parking, grande copro, tertiaire), une <strong>visite</strong> peut être proposée si nécessaire.</p>",
+        "<p><strong>Oui, systématiquement.</strong> Nous cadrons la demande (surface, zones, niveau d’encrassement, accès) puis envoyons un devis clair avec périmètre et modalités. Pour les sites techniques (parking, grande copro, tertiaire), une visite peut être proposée si nécessaire.</p>",
     },
     {
       question:
         "Comment gérez-vous le stationnement dans les quartiers denses comme le Vieux Pays ?",
       answer:
-        "<p><strong>Repérage et logistique légère</strong> : nous anticipons les zones autorisées et venons avec un chargement optimisé pour limiter les allers-retours. Si le secteur est tendu, nous privilégions <strong>les créneaux matinaux</strong> ou une <strong>dépose courte</strong> (si autorisée) pour décharger vite et libérer la voie.</p>",
+        "<p><strong>Repérage et logistique légère</strong> : nous anticipons les zones autorisées et venons avec un chargement optimisé pour limiter les allers-retours. Si le secteur est tendu, nous privilégions les créneaux matinaux ou une dépose courte (si autorisée) pour décharger vite et libérer la voie.</p>",
     },
     {
       question:
         "Pouvez-vous intervenir en urgence sur une copropriété à Villepinte ?",
       answer:
-        "<p><strong>Oui, selon disponibilité.</strong> Un premier échange permet de qualifier la situation (zone concernée, risques, accès) et de proposer un <strong>créneau rapide</strong>. En copropriété, on se coordonne avec le syndic/gestionnaire pour <strong>sécuriser l’accès</strong> et intervenir sans désorganiser les résidents.</p>",
+        "<p><strong>Oui, selon disponibilité.</strong> Un premier échange permet de qualifier la situation (zone concernée, risques, accès) et de proposer un créneau rapide. En copropriété, on se coordonne avec le syndic/gestionnaire pour sécuriser l’accès et intervenir sans désorganiser les résidents.</p>",
     },
   ],
 
@@ -103,13 +103,13 @@ const city: City = {
       uniqueIntro:
         "<p>Les traces grises le long des circulations, les auréoles de café près des postes de travail, les fibres écrasées aux entrées : ces marques s'accumulent vite sur les dalles textiles des bureaux situés autour du <strong>Parc d'Affaires Paris Nord 2</strong>. Le passage quotidien des collaborateurs et visiteurs imprime dans les fibres une couche de poussière et de résidus qui ternit l'aspect général des espaces.</p>\n<p class=\"mt-4\">Un revêtement textile encrassé modifie la perception d'un hall ou d'une salle de réunion. Les hôtels proches de la gare RER Parc des Expositions, soumis à des rotations de clientèle soutenues, constatent le même phénomène sur leurs moquettes velours. Redonner de la netteté aux fibres améliore l'image perçue par les clients et limite les remarques des occupants.</p>\n<p class=\"mt-4\">Une intervention structurée commence par l'identification du type de textile et la localisation des zones les plus sollicitées. Nous adaptons ensuite le matériel aux contraintes d'accès, notamment dans les immeubles récents équipés de badges, pour limiter la gêne pendant les heures d'activité.</p>",
       uniqueDeepDive:
-        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et halls d'entrée concentrent l'essentiel du piétinement. Nous commençons par une aspiration approfondie pour retirer les particules libres, puis appliquons l'injection-extraction sur ces surfaces à fort passage. Les fibres compactées retrouvent du gonflant après plusieurs passes croisées.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les dalles textiles sous les bureaux et autour des tables de réunion reçoivent un traitement adapté à leur densité. Le détachage ciblé précède l'extraction lorsque des taches de tanin ou de gras sont repérées. Les plinthes et pieds de mobilier sont protégés avant chaque passage.</p>\n\n<h3>Seuils et jonctions</h3>\n<p>Les transitions entre moquette et sol dur accumulent souvent des résidus piégés. Nous insistons sur ces bordures pour éviter un contraste visible après séchage. L'extraction finale retire le maximum d'humidité ; le temps de séchage varie selon l'épaisseur du textile et la ventilation disponible.</p>",
+        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et halls d'entrée concentrent l'essentiel du piétinement. Nous commençons par une <strong>aspiration approfondie</strong> pour retirer les particules libres, puis appliquons l'injection-extraction sur ces surfaces à fort passage. Les fibres compactées retrouvent du gonflant après plusieurs passes croisées.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les dalles textiles sous les bureaux et autour des tables de réunion reçoivent un traitement adapté à leur densité. Le <strong>détachage ciblé</strong> précède l'extraction lorsque des taches de tanin ou de gras sont repérées. Les plinthes et pieds de mobilier sont protégés avant chaque passage.</p>\n\n<h3>Seuils et jonctions</h3>\n<p>Les transitions entre moquette et sol dur accumulent souvent des résidus piégés. Nous insistons sur ces bordures pour éviter un contraste visible après séchage. L'<strong>extraction finale</strong> retire le maximum d'humidité ; le temps de séchage varie selon l'épaisseur du textile et la ventilation disponible.</p>",
       specificChallenges: [
-        "Dalles textiles des open spaces Paris Nord 2 marquées par le passage quotidien.",
-        "Moquettes velours des halls d'hôtels proches du Parc des Expositions soumises à des flux visiteurs variables.",
-        "Accès par badge et horaires décalés imposés par les gestionnaires de sites tertiaires.",
-        "Taches de café et résidus alimentaires fréquents dans les espaces de pause.",
-        "Temps de séchage à anticiper pour éviter toute gêne lors de la reprise d'activité.",
+        "Dalles textiles des open spaces Paris Nord 2 <strong>marquées par le passage quotidien</strong>.",
+        "Moquettes velours des halls d'hôtels proches du Parc des Expositions <strong>soumises à des flux visiteurs variables</strong>.",
+        "<strong>Accès par badge</strong> et horaires décalés imposés par les gestionnaires de sites tertiaires.",
+        "<strong>Taches de café</strong> et résidus alimentaires fréquents dans les espaces de pause.",
+        "<strong>Temps de séchage à anticiper</strong> pour éviter toute gêne lors de la reprise d'activité.",
       ],
       faqAdditions: [
         {

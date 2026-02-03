@@ -21,14 +21,14 @@ const city: City = {
   // - puis une liste à puces <ul><li>...</li></ul>
   // - HTML autorisé : <p>, <p class=\"mt-4\">, <ul>, <li>, <strong>, <br>
   hubIntro:
-    "<p>Au pied des tours Mercuriales et du terminus Gallieni, Bagnolet concentre bureaux, commerces et logements sur un territoire compact. Klinova s'y positionne comme partenaire terrain pour les gestionnaires et occupants confrontés à des besoins réguliers de propreté.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions selon les contraintes d'accès propres à chaque site : horaires décalés pour les immeubles de bureaux, créneaux adaptés aux copropriétés résidentielles. Un interlocuteur unique assure le suivi et transmet les comptes-rendus si nécessaire.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, déplacements rapides vers Bagnolet. Prise en charge possible sous 48 à 72 heures selon disponibilité.</li>\n  <li><strong>Coordination sur mesure :</strong> Échange préalable avec syndic, gardien ou gestionnaire pour caler les créneaux et éviter toute gêne aux occupants ou usagers.</li>\n  <li><strong>Méthodes adaptées au bâti :</strong> Matériel dimensionné selon la configuration — parkings souterrains des grands ensembles, halls d'immeubles anciens ou espaces extérieurs.</li>\n</ul>",
+    "<p>Au pied des tours Mercuriales et du terminus Gallieni, Bagnolet concentre bureaux, commerces et logements sur un territoire compact. Klinova s'y positionne comme partenaire terrain pour les gestionnaires et occupants confrontés à des besoins réguliers de propreté.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions selon les <strong>contraintes d'accès propres à chaque site</strong> : horaires décalés pour les immeubles de bureaux, créneaux adaptés aux copropriétés résidentielles. Un interlocuteur unique assure le suivi et transmet les comptes-rendus si nécessaire.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, déplacements rapides vers Bagnolet. Prise en charge possible sous 48 à 72 heures selon disponibilité.</li>\n  <li><strong>Coordination sur mesure :</strong> Échange préalable avec syndic, gardien ou gestionnaire pour caler les créneaux et éviter toute gêne aux occupants ou usagers.</li>\n  <li><strong>Méthodes adaptées au bâti :</strong> Matériel dimensionné selon la configuration — parkings souterrains des grands ensembles, halls d'immeubles anciens ou espaces extérieurs.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Parkings souterrains</strong> des grands ensembles souvent vastes, avec rampes hélicoïdales et ventilation limitée.",
     "Pollution atmosphérique marquée à proximité de l'<strong>échangeur A3</strong> : dépôts noirs sur balcons et façades.",
     "Accès aux tours de bureaux soumis à <strong>contrôle sécurité</strong> et horaires restreints.",
-    "Stationnement très contraint dans l'ensemble de la commune, zones bleues étendues.",
+    "<strong>Stationnement très contraint</strong> dans l'ensemble de la commune, zones bleues étendues.",
     "Halls et parties communes des résidences années 70 avec <strong>escaliers étroits</strong> et revêtements d'origine.",
   ],
 
@@ -123,11 +123,11 @@ const city: City = {
         "<h3>Zones de fort passage</h3>\n<p>Les allées principales et entrées concentrent l'essentiel de l'encrassement. Après aspiration préalable, le traitement par injection-extraction s'effectue en passes croisées sur ces surfaces. Les fibres compactées par le piétinement reçoivent un détachage ciblé si nécessaire.</p>\n\n<h3>Espaces intermédiaires et angles</h3>\n<p>Les zones de circulation secondaire et les raccords avec le mobilier fixe accumulent poussières et résidus moins visibles. Le nettoyage couvre ces surfaces en adaptant la pression d'injection selon l'épaisseur du revêtement. Les plinthes et bas de murs sont protégés pendant l'opération.</p>\n\n<h3>Séchage et remise en service</h3>\n<p>L'extraction maximale de l'humidité réduit le temps de séchage à quelques heures selon la ventilation disponible. Un balisage temporaire limite le piétinement immédiat. Les consignes de non-circulation sont transmises pour garantir un résultat homogène sur l'ensemble de la surface traitée.</p>",
       // texte brut (strip <strong> tags from specificChallenges)
       specificChallenges: [
-        "Dalles textiles en zones commerciales : taches alimentaires et traces de semelles concentrées aux entrées.",
-        "Moquettes bouclées en halls de bureaux : grisaillement rapide sur les axes de circulation.",
-        "Accès monte-charges et horaires décalés : coordination nécessaire avec la sécurité des tours.",
-        "Stationnement véhicule utilitaire : zones de livraison à réserver pour déchargement du matériel.",
-        "Séchage en espace clos : ventilation à anticiper pour éviter l'humidité résiduelle.",
+        "<strong>Dalles textiles en zones commerciales</strong> : taches alimentaires et traces de semelles concentrées aux entrées.",
+        "<strong>Moquettes bouclées en halls de bureaux</strong> : grisaillement rapide sur les axes de circulation.",
+        "<strong>Accès monte-charges</strong> et horaires décalés : coordination nécessaire avec la sécurité des tours.",
+        "<strong>Stationnement véhicule utilitaire</strong> : zones de livraison à réserver pour déchargement du matériel.",
+        "<strong>Séchage en espace clos</strong> : ventilation à anticiper pour éviter l'humidité résiduelle.",
       ],
       // faqAdditions: HTML answers allowed
       faqAdditions: [

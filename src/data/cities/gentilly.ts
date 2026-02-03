@@ -117,11 +117,11 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Zones de passage intensif</h3>\n<p>Les halls d'entrée et couloirs concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection. Les passes d'extraction se multiplient sur ces surfaces pour déloger les résidus compactés dans les fibres.</p>\n\n<h3>Surfaces intermédiaires et angles</h3>\n<p>Les paliers d'étage et jonctions avec les escaliers reçoivent un traitement ciblé. Les plinthes et bas de murs sont protégés avant intervention. Le détachage ponctuel s'applique sur les marques localisées — café, tanin, traces grasses.</p>\n\n<h3>Gestion de l'humidité résiduelle</h3>\n<p>L'extraction maximale limite le temps de séchage. Selon l'épaisseur du velours et la ventilation naturelle, le délai varie de quelques heures à une demi-journée. Les consignes de non-piétinement sont transmises pour éviter tout transfert de salissures pendant la phase de séchage.</p>",
       specificChallenges: [
-        "Halls du Chaperon Vert : trafic dense et moquettes anciennes nécessitant passes multiples.",
+        "Halls du Chaperon Vert : <strong>trafic dense</strong> et moquettes anciennes nécessitant passes multiples.",
         "Dalles textiles en bureaux du Val de Bièvre : extraction sans décollement des joints.",
-        "Escaliers étroits du centre-ville : montée du matériel par étapes avec protection des marches.",
-        "Stationnement contraint à Gentilly : véhicule léger et créneaux horaires adaptés.",
-        "Séchage à surveiller dans les halls peu ventilés des immeubles années 60-70.",
+        "Escaliers étroits du centre-ville : <strong>montée du matériel par étapes</strong> avec protection des marches.",
+        "Stationnement contraint à Gentilly : <strong>véhicule léger</strong> et créneaux horaires adaptés.",
+        "Séchage à surveiller dans les <strong>halls peu ventilés</strong> des immeubles années 60-70.",
       ],
       faqAdditions: [
         {

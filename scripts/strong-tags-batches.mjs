@@ -16,16 +16,16 @@
 // - citySpecificChallenges[i]
 // - services[i].uniqueIntro
 // - services[i].uniqueDeepDive (max 1 <strong> par section <h3>)
-// - services[i].specificChallenges[j]
+// - services[i].specificChallenges[j]   (ou serviceChallenges si tu l'utilises)
 // - services[i].faqAdditions[j].answer
 //
 // Règles clés :
 // - hubIntro : max 1 <strong> par <li> + hors <li> max 2 pairs
 // - faq[].answer & services[].faqAdditions[].answer : EXACTEMENT 1 <strong> au début du 1er <p>
-// - citySpecificChallenges[i] : max 1 <strong>
-// - services[i].specificChallenges[j] : max 1 <strong>
-// - services[i].uniqueIntro : max 2 <strong>
-// - services[i].uniqueDeepDive : max 1 <strong> par bloc <h3>
+// - citySpecificChallenges[i] : max 1 <strong> (et MIN 1 si assez long)
+// - services[i].specificChallenges[j] : max 1 <strong> (et MIN 1 si assez long)
+// - services[i].uniqueIntro : max 2 <strong> (et MIN 1 si assez long)
+// - services[i].uniqueDeepDive : max 1 <strong> par bloc <h3> (et MIN 1 si bloc assez long)
 //
 // ----------------------------------------------------------------------------
 
@@ -127,7 +127,7 @@ function uniqLowerTrim(arr) {
 }
 
 /* =============================================================================
-   TS-MORPH READ
+   TS-MORPH READ (static strings)
 ============================================================================= */
 function parsePathTokens(pathStr) {
   const tokens = [];
@@ -153,6 +153,42 @@ function extractCityObject(sf) {
   const cityVar = sf.getVariableDeclaration("city");
   if (!cityVar) return null;
   return cityVar.getInitializerIfKind(SyntaxKind.ObjectLiteralExpression);
+}
+
+/**
+ * Lit une string "statique" si possible :
+ * - "..." (StringLiteral)
+ * - `...` (NoSubstitutionTemplateLiteral)
+ * - ParenthesizedExpression
+ * - "a" + "b" + ... (BinaryExpression +) si les deux côtés sont statiques
+ *
+ * NOTE : on refuse TemplateExpression (`...${}`) car non déterministe/unsafe
+ */
+function getStaticStringValue(node) {
+  if (!node) return null;
+
+  const s1 = node.asKind(SyntaxKind.StringLiteral);
+  if (s1) return s1.getLiteralText();
+
+  const s2 = node.asKind(SyntaxKind.NoSubstitutionTemplateLiteral);
+  if (s2) return s2.getLiteralText();
+
+  const te = node.asKind(SyntaxKind.TemplateExpression);
+  if (te) return null;
+
+  const par = node.asKind(SyntaxKind.ParenthesizedExpression);
+  if (par) return getStaticStringValue(par.getExpression());
+
+  const bin = node.asKind(SyntaxKind.BinaryExpression);
+  if (bin && bin.getOperatorToken().getText() === "+") {
+    const left = getStaticStringValue(bin.getLeft());
+    if (left == null) return null;
+    const right = getStaticStringValue(bin.getRight());
+    if (right == null) return null;
+    return left + right;
+  }
+
+  return null;
 }
 
 /**
@@ -186,7 +222,7 @@ function getStringAtPath(cityObj, pathStr) {
       if (!el) return null;
 
       if (i === tokens.length - 1) {
-        return el.getKind() === SyntaxKind.StringLiteral ? el.getLiteralText() : null;
+        return getStaticStringValue(el);
       }
 
       if (el.getKind() === SyntaxKind.ObjectLiteralExpression) {
@@ -198,7 +234,7 @@ function getStringAtPath(cityObj, pathStr) {
 
     // last token (no index)
     if (i === tokens.length - 1) {
-      return init.getKind() === SyntaxKind.StringLiteral ? init.getLiteralText() : null;
+      return getStaticStringValue(init);
     }
 
     // continue traversal
@@ -246,14 +282,9 @@ function stripStrongTags(s) {
 function hasOnlyPlainStrongTags(s) {
   const t = String(s ?? "");
 
-  // Reject any opening tag that's not exactly "<strong>"
-  // - catches: <strong >, <strong/>, <strong class="x">, <strong\n>, etc.
   if (/<strong(?!>)/i.test(t)) return false;
-
-  // Reject any closing tag that's not exactly "</strong>"
   if (/<\/strong(?!>)/i.test(t)) return false;
 
-  // Reject spaced variants explicitly (extra safety)
   if (/<\s+strong>/i.test(t)) return false;
   if (/<strong\s+>/i.test(t)) return false;
   if (/<\/\s+strong>/i.test(t)) return false;
@@ -329,7 +360,12 @@ function isAllowedStrongPathStrict(pathStr) {
   if (/^services\[\d+\]\.uniqueIntro$/.test(p)) return true;
   if (/^services\[\d+\]\.uniqueDeepDive$/.test(p)) return true;
 
-  if (/^services\[\d+\]\.specificChallenges\[\d+\]$/.test(p)) return true;
+
+
+// APRÈS
+if (/^services\[\d+\]\.specificChallenges\[\d+\]$/.test(p)) return true;
+
+
   if (/^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p)) return true;
 
   return false;
@@ -342,21 +378,15 @@ function isAllowedStrongPathStrict(pathStr) {
 function maxPairsForPath(pathStr) {
   const p = String(pathStr ?? "");
 
-  // hubIntro : per-li validation
   if (p === "hubIntro") return 999;
 
-  // FAQ answers (ville + services) : EXACTEMENT 1 (et au début)
   if (/^faq\[\d+\]\.answer$/.test(p)) return 1;
   if (/^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p)) return 1;
 
-  // Challenges : max 1 par item
   if (/^citySpecificChallenges\[\d+\]$/.test(p)) return 1;
   if (/^services\[\d+\]\.specificChallenges\[\d+\]$/.test(p)) return 1;
-
-  // uniqueIntro
   if (/^services\[\d+\]\.uniqueIntro$/.test(p)) return 2;
 
-  // uniqueDeepDive : per-h3 validation
   if (/^services\[\d+\]\.uniqueDeepDive$/.test(p)) return 999;
 
   return 2;
@@ -366,7 +396,6 @@ function maxPairsForPath(pathStr) {
  * Word limits inside <strong>
  */
 function strongWordLimitsForPath(pathStr) {
-  // Tu peux spécialiser si besoin, mais on garde volontairement simple
   const p = String(pathStr ?? "");
   if (p === "hubIntro") return { min: 2, max: 10 };
   if (/^faq\[\d+\]\.answer$/.test(p)) return { min: 2, max: 10 };
@@ -398,7 +427,6 @@ function validateStrongWordLimits(pathStr, html) {
  * (Tu peux compléter via scripts/strong-tags-klinova.json : forbiddenStrong)
  */
 const FORBIDDEN_STRONG_KLINOVA = [
-  // === Prix / gratuité / promos
   "devis gratuit",
   "devis offerts",
   "déplacement gratuit",
@@ -410,8 +438,6 @@ const FORBIDDEN_STRONG_KLINOVA = [
   "remise",
   "réduction",
   "%",
-
-  // === Délais / urgence / disponibilité (promesses)
   "sous 24h",
   "sous 48h",
   "sous 72h",
@@ -427,8 +453,6 @@ const FORBIDDEN_STRONG_KLINOVA = [
   "immédiat",
   "dans la journée",
   "sans délai",
-
-  // === Garanties / engagement de résultat
   "garantie",
   "satisfait ou remboursé",
   "résultat garanti",
@@ -436,8 +460,6 @@ const FORBIDDEN_STRONG_KLINOVA = [
   "zéro trace",
   "sans trace",
   "comme neuf",
-
-  // === Claims marketing
   "meilleur",
   "n°1",
   "numéro 1",
@@ -448,8 +470,6 @@ const FORBIDDEN_STRONG_KLINOVA = [
   "professionnel",
   "haut de gamme",
   "premium",
-
-  // === Réglementaire / conformité / certifications
   "conforme",
   "conformité",
   "norme",
@@ -461,15 +481,11 @@ const FORBIDDEN_STRONG_KLINOVA = [
   "assurance",
   "rc pro",
   "agréé",
-
-  // === Sur-promesses sensibles
   "désinfectant",
   "élimine",
   "élimination",
   "tue",
   "éradique",
-
-  // === Paiement / conditions
   "paiement",
   "acompte",
   "facture",
@@ -543,17 +559,6 @@ function validatePerH3Max1(html) {
   }
   return true;
 }
-function getMaxPairsInAnyH3(html) {
-  const s = String(html ?? "");
-  const parts = s.split(/(?=<h3>)/g);
-  let max = 0;
-  for (const part of parts) {
-    if (!part.trim()) continue;
-    const pairs = countStrongPairs(part);
-    if (pairs > max) max = pairs;
-  }
-  return max;
-}
 
 function isStrongOnlyEdit(expected, value) {
   const e = String(expected ?? "");
@@ -625,12 +630,10 @@ function validateHybridPatch({ pathStr, expectedFromTs, patch, forbiddenList }) 
     if (!excerpt || !replacement) return { ok: false, why: "empty_excerpt_or_replacement" };
     if (value) return { ok: false, why: "substring_has_value" };
 
-    // excerpt must not include strong tags
     if (excerpt.includes("<strong>") || excerpt.includes("</strong>")) {
       return { ok: false, why: "excerpt_contains_strong" };
     }
 
-    // replacement must be excerpt with only strong insertions
     if (stripStrongTags(replacement) !== excerpt) {
       return { ok: false, why: "replacement_not_excerpt_plus_strong" };
     }
@@ -653,7 +656,214 @@ function validateHybridPatch({ pathStr, expectedFromTs, patch, forbiddenList }) 
 }
 
 /* =============================================================================
-   OVERLIMIT / VIOLATION SCAN (TS actuel)
+   COVERAGE TARGETS (minima conservateurs, avec seuils)
+============================================================================= */
+const MIN_WORDS_FOR_MIN1 = {
+  hubIntroLi: 10,              // si un <li> est très court, on n'oblige pas
+  hubIntroNonLi: 18,
+  uniqueIntro: 22,
+  challengeItem: 10,
+  deepDiveBlock: 45,           // bloc <h3> assez long => 1 strong
+};
+
+function splitHubIntroLiBlocks(html) {
+  const s = String(html ?? "");
+  const liRe = /<li>([\s\S]*?)<\/li>/g;
+  const liBlocks = [];
+  let m;
+  while ((m = liRe.exec(s))) liBlocks.push(m[0]);
+  const nonLi = s.replace(liRe, "");
+  return { liBlocks, nonLi };
+}
+
+function splitDeepDiveBlocksByH3(html) {
+  const s = String(html ?? "");
+  // bloc 0 = avant 1er <h3>, ensuite chaque <h3>...jusqu'au prochain <h3>
+  return s.split(/(?=<h3>)/g).filter((p) => p.trim().length > 0);
+}
+
+function computeCoverageTargets(cityObj) {
+  const targets = [];
+
+  // hubIntro
+  const hub = getStringAtPath(cityObj, "hubIntro");
+  if (typeof hub === "string" && hub.trim()) {
+    const { liBlocks, nonLi } = splitHubIntroLiBlocks(hub);
+
+    liBlocks.forEach((liHtml, idx) => {
+      const wc = countWords(liHtml);
+      const pairs = countStrongPairs(liHtml);
+      if (wc >= MIN_WORDS_FOR_MIN1.hubIntroLi && pairs === 0) {
+        targets.push({
+          path: "hubIntro",
+          kind: "hubIntro_li_missing",
+          detail: `li[${idx}] has 0 strong; words=${wc}; must add 1 inside this <li> (max1/li)`,
+        });
+      }
+    });
+
+    const nonLiWc = countWords(nonLi);
+    const nonLiPairs = countStrongPairs(nonLi);
+    if (nonLiWc >= MIN_WORDS_FOR_MIN1.hubIntroNonLi && nonLiPairs === 0) {
+      targets.push({
+        path: "hubIntro",
+        kind: "hubIntro_nonli_missing",
+        detail: `non-<li> text has 0 strong; words=${nonLiWc}; may add 1 (max2 outside li)`,
+      });
+    }
+  }
+
+  // faq[i].answer
+  const faqArr = getArrayAtPath(cityObj, "faq");
+  if (faqArr) {
+    faqArr.getElements().forEach((el, i) => {
+      if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+      const ans = getStringAtPath(cityObj, `faq[${i}].answer`);
+      if (typeof ans !== "string" || !ans.trim()) return;
+      // strict: exactly 1 at beginning => if not valid => target
+      if (!validateFaqExactlyOneStrongAtBeginning(ans)) {
+        targets.push({
+          path: `faq[${i}].answer`,
+          kind: "faq_fix_required",
+          detail: "FAQ answer must have EXACTLY 1 <strong> at the start of first <p>",
+        });
+      }
+    });
+  }
+
+  // citySpecificChallenges[i]
+  const cscArr = getArrayAtPath(cityObj, "citySpecificChallenges");
+  if (cscArr) {
+    cscArr.getElements().forEach((el, i) => {
+      const txt = getStaticStringValue(el);
+      if (typeof txt !== "string" || !txt.trim()) return;
+      const wc = countWords(txt);
+      const pairs = countStrongPairs(txt);
+      // cap=1, min=1 if long enough
+      if (pairs > 1) {
+        targets.push({ path: `citySpecificChallenges[${i}]`, kind: "challenge_overcap", detail: "max 1 strong" });
+      } else if (wc >= MIN_WORDS_FOR_MIN1.challengeItem && pairs === 0) {
+        targets.push({
+          path: `citySpecificChallenges[${i}]`,
+          kind: "challenge_missing",
+          detail: `0 strong; words=${wc}; add 1 (max1)`,
+        });
+      }
+    });
+  }
+
+  // services
+  const servicesArr = getArrayAtPath(cityObj, "services");
+  if (servicesArr) {
+    servicesArr.getElements().forEach((el, si) => {
+      if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+      const serviceObj = el.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
+
+      // uniqueIntro
+      const ui = getStringAtPath(serviceObj, "uniqueIntro");
+      if (typeof ui === "string" && ui.trim()) {
+        const wc = countWords(ui);
+        const pairs = countStrongPairs(ui);
+        if (pairs > 2) {
+          targets.push({ path: `services[${si}].uniqueIntro`, kind: "uniqueIntro_overcap", detail: "max 2 strong" });
+        } else if (wc >= MIN_WORDS_FOR_MIN1.uniqueIntro && pairs === 0) {
+          targets.push({
+            path: `services[${si}].uniqueIntro`,
+            kind: "uniqueIntro_missing",
+            detail: `0 strong; words=${wc}; add 1 (max2)`,
+          });
+        }
+      }
+
+      // uniqueDeepDive blocks
+      const dd = getStringAtPath(serviceObj, "uniqueDeepDive");
+      if (typeof dd === "string" && dd.trim()) {
+        const blocks = splitDeepDiveBlocksByH3(dd);
+        blocks.forEach((b, bi) => {
+          const wc = countWords(b);
+          const pairs = countStrongPairs(b);
+          if (pairs > 1) {
+            targets.push({
+              path: `services[${si}].uniqueDeepDive`,
+              kind: "deepDive_block_overcap",
+              detail: `block[${bi}] has ${pairs} strong pairs; max 1 per <h3> block`,
+            });
+          } else if (wc >= MIN_WORDS_FOR_MIN1.deepDiveBlock && pairs === 0) {
+            targets.push({
+              path: `services[${si}].uniqueDeepDive`,
+              kind: "deepDive_block_missing",
+              detail: `block[${bi}] has 0 strong; words=${wc}; add 1 in this block (max1)`,
+            });
+          }
+        });
+      }
+
+      // specificChallenges OR serviceChallenges
+// APRÈS (fixe et strict)
+const scArr = getArrayAtPath(serviceObj, "specificChallenges");
+if (scArr) {
+  scArr.getElements().forEach((sel, sci) => {
+    const txt = getStaticStringValue(sel);
+    if (typeof txt !== "string" || !txt.trim()) return;
+
+    const wc = countWords(txt);
+    const pairs = countStrongPairs(txt);
+
+    if (pairs > 1) {
+      targets.push({
+        path: `services[${si}].specificChallenges[${sci}]`,
+        kind: "serviceChallenge_overcap",
+        detail: "max 1 strong",
+      });
+    } else if (wc >= MIN_WORDS_FOR_MIN1.challengeItem && pairs === 0) {
+      targets.push({
+        path: `services[${si}].specificChallenges[${sci}]`,
+        kind: "serviceChallenge_missing",
+        detail: `0 strong; words=${wc}; add 1 (max1)`,
+      });
+    }
+  });
+}
+
+
+      // faqAdditions[j].answer strict
+      const faqAddArr = getArrayAtPath(serviceObj, "faqAdditions");
+      if (faqAddArr) {
+        faqAddArr.getElements().forEach((fel, fi) => {
+          if (fel.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+          const ans = getStringAtPath(serviceObj, `faqAdditions[${fi}].answer`);
+          if (typeof ans !== "string" || !ans.trim()) return;
+          if (!validateFaqExactlyOneStrongAtBeginning(ans)) {
+            targets.push({
+              path: `services[${si}].faqAdditions[${fi}].answer`,
+              kind: "serviceFaq_fix_required",
+              detail: "Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>",
+            });
+          }
+        });
+      }
+    });
+  }
+
+  // merge by path (keep details)
+  const byPath = new Map();
+  for (const t of targets) {
+    const arr = byPath.get(t.path) || [];
+    arr.push(t);
+    byPath.set(t.path, arr);
+  }
+  const out = [];
+  for (const [p, arr] of byPath.entries()) {
+    out.push({
+      path: p,
+      issues: arr.map((x) => ({ kind: x.kind, detail: x.detail })),
+    });
+  }
+  return out;
+}
+
+/* =============================================================================
+   PATH EXPANSION (scan / report)
 ============================================================================= */
 const OVERCHECK_BASES = ["hubIntro", "faq", "citySpecificChallenges", "services"];
 
@@ -678,7 +888,8 @@ function expandPaths(cityObj, basePath) {
     const arr = getArrayAtPath(cityObj, "citySpecificChallenges");
     if (!arr) return out;
     arr.getElements().forEach((el, idx) => {
-      if (el.getKind() === SyntaxKind.StringLiteral) out.push(`citySpecificChallenges[${idx}]`);
+      const v = getStaticStringValue(el);
+      if (typeof v === "string") out.push(`citySpecificChallenges[${idx}]`);
     });
     return out;
   }
@@ -694,12 +905,15 @@ function expandPaths(cityObj, basePath) {
       out.push(`services[${si}].uniqueIntro`);
       out.push(`services[${si}].uniqueDeepDive`);
 
-      const scArr = getArrayAtPath(serviceObj, "specificChallenges");
-      if (scArr) {
-        scArr.getElements().forEach((sel, sci) => {
-          if (sel.getKind() === SyntaxKind.StringLiteral) out.push(`services[${si}].specificChallenges[${sci}]`);
-        });
-      }
+// APRÈS
+const scArr = getArrayAtPath(serviceObj, "specificChallenges");
+if (scArr) {
+  scArr.getElements().forEach((sel, sci) => {
+    const v = getStaticStringValue(sel);
+    if (typeof v === "string") out.push(`services[${si}].specificChallenges[${sci}]`);
+  });
+}
+
 
       const faqArr = getArrayAtPath(serviceObj, "faqAdditions");
       if (faqArr) {
@@ -716,7 +930,7 @@ function expandPaths(cityObj, basePath) {
 }
 
 /* =============================================================================
-   LLM SCHEMA + PROMPT (HYBRID)
+   LLM SCHEMA + PROMPT (HYBRID + coverage targets)
 ============================================================================= */
 function buildHybridPatchSchema() {
   return {
@@ -749,23 +963,31 @@ function buildHybridPatchSchema() {
   };
 }
 
-function buildResponsesBodyStrongHybrid({ model, fileRel, fileContent, rulesText, forbiddenStrong = [] }) {
+function buildResponsesBodyStrongHybrid({
+  model,
+  fileRel,
+  fileContent,
+  rulesText,
+  forbiddenStrong = [],
+  coverageTargets = [],
+}) {
   const schema = buildHybridPatchSchema();
 
   const system = `
 Tu es un correcteur "STRONG HYBRID" pour des fichiers TypeScript City (Klinova).
 
-Objectif :
-- Améliorer la scannabilité en ajoutant/retirant/déplaçant UNIQUEMENT des balises <strong>...</strong>
+OBJECTIF PRINCIPAL
+- Rendre la page plus scannable en ajoutant/retirant/déplaçant UNIQUEMENT des balises <strong>...</strong>
 - SANS modifier aucun caractère du texte hors balises <strong> et </strong>
+- PRIORITÉ ABSOLUE : corriger les "Coverage Targets" ci-dessous (manques/minima), sans dépasser les caps.
 
-INTERDICTIONS ABSOLUES :
+INTERDICTIONS ABSOLUES
 - Ne modifie AUCUN caractère du texte en dehors des balises <strong> et </strong>.
 - Ne touche à AUCUNE autre balise HTML (<p>, <h3>, <ul>, <li>, <br>, classes...).
 - N'ajoute aucun mot, ne change aucune ponctuation, aucun espace.
 - Pas de nouvelles promesses, pas de réécriture.
 
-CHAMPS AUTORISÉS (uniquement) :
+CHAMPS AUTORISÉS (uniquement)
 - hubIntro
 - faq[i].answer
 - citySpecificChallenges[i]
@@ -774,28 +996,35 @@ CHAMPS AUTORISÉS (uniquement) :
 - services[i].specificChallenges[j]
 - services[i].faqAdditions[j].answer
 
-RÈGLES / LIMITES :
-- hubIntro : max 1 <strong> par <li> (évite d’en mettre dans les <p> hors liste)
+RÈGLES / LIMITES
+- hubIntro : max 1 <strong> par <li> + hors <li> max 2 pairs
 - faq[i].answer : EXACTEMENT 1 <strong>, placé AU DÉBUT du premier <p>
 - services[i].faqAdditions[j].answer : EXACTEMENT 1 <strong>, placé AU DÉBUT du premier <p>
-- citySpecificChallenges[i] : max 1 <strong>
-- services[i].specificChallenges[j] : max 1 <strong>
-- services[i].uniqueIntro : max 2 <strong>
-- services[i].uniqueDeepDive : max 1 <strong> par section <h3>
+- citySpecificChallenges[i] : max 1 <strong> (si long => ajouter 1 si manque)
+- services[i].specificChallenges[j] : max 1 <strong> ...
+- services[i].uniqueIntro : max 2 <strong> (si long => ajouter 1 si manque)
+- services[i].uniqueDeepDive : max 1 <strong> par bloc <h3> (si bloc long => ajouter 1 si manque)
 
-RÈGLES DE SCANNABILITÉ :
-- Segment court (2 à 10 mots), concret, terrain, non marketing.
+SCANNABILITÉ / QUALITÉ
+- Segment <strong> court (2 à 10 mots), concret, terrain, non marketing.
 - Jamais deux <strong> collés, jamais une phrase entière en <strong>.
-- Si un champ est déjà OK : ne propose rien.
+- Ne jamais mettre en <strong> : prix, délais, urgence, garanties, “premium”, certifications, etc. (liste interdite fournie).
+- Si un champ est déjà conforme ET pas dans les coverage targets : ne propose rien.
 
-Interdictions dans <strong> (liste fournie) :
+Interdictions dans <strong> (liste) :
 ${(forbiddenStrong || []).map((s) => `- "${s}"`).join("\n")}
 
-HYBRID OUTPUT (JSON strict) :
+COVERAGE TARGETS (à corriger en priorité)
+- Chaque item ci-dessous indique un champ à corriger, et pourquoi.
+- Si tu ne peux pas corriger SANS violer les règles, tu peux laisser le champ inchangé (mais c'est rare).
+${JSON.stringify(coverageTargets, null, 2)}
+
+HYBRID OUTPUT (JSON strict)
 Chaque patch DOIT inclure TOUTES les clés : path, op, expected, value, excerpt, replacement, reason
 
-Règles de remplissage :
+Règles de remplissage
 - expected : COPIE EXACTE du champ tel qu'il est dans le TS (source ci-dessous)
+- 1 patch maximum par champ.
 - Si op="setField" :
   - value = expected avec uniquement ajout/retrait/déplacement de <strong>...</strong>
   - excerpt = "" ; replacement = ""
@@ -803,8 +1032,8 @@ Règles de remplissage :
   - excerpt = extrait EXACT (8 à 14 mots) présent dans expected (sans <strong>)
   - replacement = EXACTEMENT excerpt mais avec insertion de <strong>...</strong>
   - value = ""
-- 1 patch maximum par champ.
 - Si tu n'es pas 100% sûr de expected (copie exacte) : ne propose PAS de patch.
+- Corrige en premier les paths listés dans coverage targets.
 
 SORTIE : Retourne UNIQUEMENT un JSON { "patches": [...] }.
 `.trim();
@@ -848,6 +1077,17 @@ function toReportMarkdown(report) {
   for (const f of report.files) {
     md += `## ${f.slug}\n\n`;
 
+    md += `### Coverage targets (manques/minima)\n\n`;
+    if (f.coverageTargets?.length) {
+      for (const t of f.coverageTargets) {
+        md += `- \`${t.path}\`\n`;
+        for (const it of t.issues || []) md += `  - ${it.kind}: ${it.detail}\n`;
+      }
+      md += `\n`;
+    } else {
+      md += `✅ Aucun manque détecté\n\n`;
+    }
+
     md += `### Violations / Overlimit (TS actuel)\n\n`;
     if (f.violations?.length) {
       for (const o of f.violations) md += `- \`${o.path}\` — ${o.details}\n`;
@@ -887,6 +1127,10 @@ async function submitBatch() {
   }
   if (!fs.existsSync(CONFIG_PATH)) {
     console.error("Missing config:", CONFIG_PATH);
+    process.exit(1);
+  }
+  if (!fs.existsSync(TS_CONFIG)) {
+    console.error("Missing tsconfig:", TS_CONFIG);
     process.exit(1);
   }
 
@@ -932,11 +1176,23 @@ async function submitBatch() {
 
   ensureDir(OUT_DIR);
 
+  // Parse TS once to compute coverage targets per file (so the prompt is “directif”)
+  const project = new Project({ tsConfigFilePath: TS_CONFIG });
+
   const lines = [];
   for (const fp of files) {
     const fileRel = path.relative(ROOT, fp).replace(/\\/g, "/");
     const fileId = path.basename(fp, ".ts");
     const fileContent = fs.readFileSync(fp, "utf8");
+
+    let coverageTargets = [];
+    try {
+      const sf = project.getSourceFile(fp) ?? project.addSourceFileAtPath(fp);
+      const cityObj = extractCityObject(sf);
+      if (cityObj) coverageTargets = computeCoverageTargets(cityObj);
+    } catch {
+      coverageTargets = [];
+    }
 
     const body = buildResponsesBodyStrongHybrid({
       model,
@@ -944,6 +1200,7 @@ async function submitBatch() {
       fileContent,
       rulesText,
       forbiddenStrong,
+      coverageTargets,
     });
 
     lines.push(
@@ -1011,6 +1268,10 @@ async function collectBatch() {
   }
   if (!fs.existsSync(CONFIG_PATH)) {
     console.error("Missing config:", CONFIG_PATH);
+    process.exit(1);
+  }
+  if (!fs.existsSync(TS_CONFIG)) {
+    console.error("Missing tsconfig:", TS_CONFIG);
     process.exit(1);
   }
 
@@ -1144,12 +1405,15 @@ async function collectBatch() {
     }
 
     if (!cityObj) {
-      report.files.push({ file: fileRel, slug, patches: [], violations: [] });
+      report.files.push({ file: fileRel, slug, patches: [], violations: [], coverageTargets: [] });
       continue;
     }
 
     const slugFromTs = getStringAtPath(cityObj, "slug");
     if (slugFromTs) slug = slugFromTs;
+
+    // Coverage targets (computed from current TS)
+    const coverageTargets = computeCoverageTargets(cityObj);
 
     // 1) Scan TS actuel: violations (uniquement sur champs autorisés)
     const violations = [];
@@ -1161,23 +1425,12 @@ async function collectBatch() {
         const val = getStringAtPath(cityObj, p);
         if (typeof val !== "string") continue;
 
-        // On ne scanne que les champs qui contiennent strong OU qui sont soumis à règles strictes (FAQ)
+        // scan strong if present OR strict rules (faq)
         const needsStrict = /^faq\[\d+\]\.answer$/.test(p) || /^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p);
         if (!val.includes("<strong>") && !needsStrict) continue;
 
-        // Cas uniqueDeepDive : détail max in any block
-        if (/^services\[\d+\]\.uniqueDeepDive$/.test(p) && val.includes("<strong>")) {
-          if (!validatePerH3Max1(val)) {
-            const maxInAny = getMaxPairsInAnyH3(val);
-            violations.push({ path: p, details: `uniqueDeepDive: max pairs dans un bloc <h3> = ${maxInAny} (limit=1)` });
-            continue;
-          }
-        }
-
         const vr = validateFieldByRules(p, val, forbiddenStrong);
-        if (!vr.ok) {
-          violations.push({ path: p, details: vr.why });
-        }
+        if (!vr.ok) violations.push({ path: p, details: vr.why });
       }
     }
 
@@ -1234,8 +1487,8 @@ async function collectBatch() {
       }
     }
 
-    report.files.push({ file: fileRel, slug, patches: kept, violations });
-    console.log(`[strong-klinova] ${slug} -> kept=${kept.length}, violations=${violations.length}`);
+    report.files.push({ file: fileRel, slug, patches: kept, violations, coverageTargets });
+    console.log(`[strong-klinova] ${slug} -> kept=${kept.length}, targets=${coverageTargets.length}, violations=${violations.length}`);
   }
 
   writeText(OUT_REPORT_JSON, JSON.stringify(report, null, 2));

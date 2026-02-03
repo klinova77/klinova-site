@@ -30,10 +30,10 @@ const city: City = {
   // - HTML autorisé
 
   citySpecificChallenges: [
-    "Phrase 1: Encrassement rapide des circulations : poussières fines liées aux axes A3/A86, entrées ouvertes, va-et-vient quotidien.",
-    "Phrase 2: Sous-sols et parkings : hydrocarbures, poussière noire, traces pneus, zones rampes et angles difficiles.",
-    "Phrase 3: Abords et espaces extérieurs : dépôts verts saisonniers près des parcs/squares, boues par temps humide, salissures de façade en rez-de-chaussée.",
-    "Phrase 4: Sites à forte fréquentation : marquages et finitions qui se dégradent vite sans entretien structuré (entrées, couloirs, zones communes).",
+    "Phrase 1: Encrassement rapide des circulations : <strong>poussières fines liées aux axes A3/A86</strong>, entrées ouvertes, va-et-vient quotidien.",
+    "Phrase 2: Sous-sols et parkings : <strong>hydrocarbures, poussière noire, traces pneus</strong>, zones rampes et angles difficiles.",
+    "Phrase 3: Abords et espaces extérieurs : <strong>dépôts verts saisonniers près des parcs/squares</strong>, boues par temps humide, salissures de façade en rez-de-chaussée.",
+    "Phrase 4: Sites à forte fréquentation : <strong>marquages et finitions qui se dégradent vite</strong> sans entretien structuré (entrées, couloirs, zones communes).",
   ],
 
   districts: [
@@ -134,10 +134,10 @@ const city: City = {
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Le flux piéton autour de la gare de Rosny-sous-Bois charge vite les moquettes en particules fines et traces humides.",
-        "Dans les cages d’escalier étroites des immeubles anciens, la protection des angles et nez de marche devient déterminante.",
-        "Certaines moquettes en rez-de-chaussée marquent plus : poussière de rue, humidité, séchage à surveiller.",
-        "En bureaux, l’enjeu est aussi olfactif : fibre encrassée, air “fermé”, besoin d’une extraction réellement efficace.",
+        "Le flux piéton autour de la gare de Rosny-sous-Bois charge vite les moquettes en <strong>particules fines et traces humides</strong>.",
+        "Dans les cages d’escalier étroites des immeubles anciens, la <strong>protection des angles et nez de marche</strong> devient déterminante.",
+        "Certaines moquettes en rez-de-chaussée marquent plus : <strong>poussière de rue, humidité, séchage à surveiller</strong>.",
+        "En bureaux, l’enjeu est aussi olfactif : <strong>fibre encrassée, air “fermé”</strong>, besoin d’une extraction réellement efficace.",
       ],
 
       faqAdditions: [
@@ -145,19 +145,19 @@ const city: City = {
           question:
             "Dans les immeubles du Centre-ville – Beauséjour, la moquette d’escalier noircit vite : c’est lié à quoi ?",
           answer:
-            "<p>Souvent à un mélange <strong>poussière de rue + humidité</strong> : entrées ouvertes, passage répété, chaussures mouillées. La fibre se charge surtout sur les premières marches et aux paliers. Un diagnostic rapide permet d’adapter les passes et d’éviter que l’encrassement reste “collé” au fond de la moquette.</p>",
+            "<p><strong>Souvent à un mélange poussière de rue + humidité :</strong> entrées ouvertes, passage répété, chaussures mouillées. La fibre se charge surtout sur les premières marches et aux paliers. Un diagnostic rapide permet d’adapter les passes et d’éviter que l’encrassement reste “collé” au fond de la moquette.</p>",
         },
         {
           question:
             "Intervenez-vous aussi dans des bureaux ou des hôtels, pas uniquement en copropriété ?",
           answer:
-            "<p>Oui. On traite la moquette là où elle est utilisée : <strong>bureaux</strong>, locaux d’accueil, circulations, chambres, mais aussi <strong>logements</strong> chez les particuliers. Les contraintes changent (horaires, accès, discrétion, maintien de l’activité), donc on adapte l’organisation et la progression par zones.</p>",
+            "<p><strong>Oui. On traite la moquette là où elle est utilisée :</strong> bureaux, locaux d’accueil, circulations, chambres, mais aussi logements chez les particuliers. Les contraintes changent (horaires, accès, discrétion, maintien de l’activité), donc on adapte l’organisation et la progression par zones.</p>",
         },
         {
           question:
             "L’injection–extraction risque-t-elle d’abîmer une moquette déjà fatiguée ?",
           answer:
-            "<p>La méthode est maîtrisée si elle est <strong>ajustée</strong> : pression, température, nombre de passes, et extraction. Sur une moquette ancienne, on teste une zone, on limite la saturation en eau et on privilégie l’aspiration immédiate. L’objectif est de nettoyer sans déformer la fibre.</p>",
+            "<p><strong>La méthode est maîtrisée si elle est ajustée :</strong> pression, température, nombre de passes, et extraction. Sur une moquette ancienne, on teste une zone, on limite la saturation en eau et on privilégie l’aspiration immédiate. L’objectif est de nettoyer sans déformer la fibre.</p>",
         },
         {
           question:
@@ -189,30 +189,30 @@ const city: City = {
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        "<h3>1) Préparation logistique.</h3>\n<p>Visite de diagnostic : revêtement (béton, résine, peinture), état des marquages, évacuation des eaux, rampes, hauteur sous plafond. Puis plan de passage : zones, signalisation, circulation piétonne, rotation éventuelle des véhicules.</p>\n\n<h3>2) Mise en sécurité & nettoyage par zones.</h3>\n<p>Balayage mécanique ou manuel, dégagement des déchets, puis autolaveuse (brossage + aspiration). Sur les zones grasses, renfort par haute pression contrôlée (souvent eau chaude) avec dégraissant professionnel, en gardant une progression qui laisse toujours des accès fonctionnels.</p>\n\n<h3>3) Gestion de l’eau & finitions.</h3>\n<p>Récupération/aspiration des eaux de lavage et évacuation dans le réseau adapté. Traitement attentif des angles, pieds de murs, rampes, zones de braquage. Recommandation : 1 à 2 opérations complètes/an selon le trafic et l’exposition aux axes routiers.</p>",
+        "<h3>1) Préparation logistique.</h3>\n<p>Visite de diagnostic : revêtement (béton, résine, peinture), état des marquages, évacuation des eaux, rampes, hauteur sous plafond. Puis plan de passage : zones, signalisation, circulation piétonne, rotation éventuelle des véhicules.</p>\n\n<h3>2) Mise en sécurité & nettoyage par zones.</h3>\n<p>Balayage mécanique ou manuel, dégagement des déchets, puis autolaveuse (brossage + aspiration). Sur les zones grasses, renfort par haute pression contrôlée (souvent eau chaude) avec dégraissant professionnel, en gardant une progression qui laisse toujours des accès fonctionnels.</p>\n\n<h3>3) Gestion de l’eau & finitions.</h3>\n<p><strong>Récupération/aspiration des eaux de lavage</strong> et évacuation dans le réseau adapté. Traitement attentif des angles, pieds de murs, rampes, zones de braquage. Recommandation : 1 à 2 opérations complètes/an selon le trafic et l’exposition aux axes routiers.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Autour de Rosny 2 et Domus, la rotation véhicule accélère les dépôts gras et la poussière noire.",
-        "Les rampes et zones de braquage concentrent l’encrassement : besoin d’un traitement renforcé et régulier.",
-        "Certains sous-sols ont une évacuation d’eau peu tolérante : la récupération/aspiration doit être strictement maîtrisée.",
-        "La réussite dépend aussi de la coordination : circulation, zones neutralisées, sécurité piétons et véhicules.",
+        "Autour de Rosny 2 et Domus, la rotation véhicule accélère <strong>les dépôts gras et la poussière noire</strong>.",
+        "Les rampes et zones de braquage concentrent l’encrassement : <strong>besoin d’un traitement renforcé et régulier</strong>.",
+        "Certains sous-sols ont une évacuation d’eau peu tolérante : <strong>la récupération/aspiration doit être strictement maîtrisée</strong>.",
+        "La réussite dépend aussi de la coordination : <strong>circulation, zones neutralisées, sécurité piétons et véhicules</strong>.",
       ],
       faqAdditions: [
         {
           question:
             "Le parking prend une “poussière noire” tenace près des sorties vers les grands axes : vous traitez ça comment ?",
           answer:
-            "<p>Ce type d’encrassement mélange particules fines et film gras. On commence par un <strong>diagnostic</strong> du revêtement, puis on combine autolaveuse (brossage + aspiration) et renfort dégraissant sur les zones critiques. L’objectif est d’éviter l’effet “étalé” et de retrouver une surface moins glissante.</p>",
+            "<p><strong>Ce type d’encrassement mélange particules fines et film gras.</strong> On commence par un diagnostic du revêtement, puis on combine autolaveuse (brossage + aspiration) et renfort dégraissant sur les zones critiques. L’objectif est d’éviter l’effet “étalé” et de retrouver une surface moins glissante.</p>",
         },
         {
           question:
             "Faut-il vider tout le parking, ou pouvez-vous travailler par zones autour de Rosny 2/Domus ?",
           answer:
-            "<p>On privilégie un <strong>phasage par zones</strong> quand c’est possible : cela limite la gêne et évite un blocage total. On définit un plan (zones A/B/C), une signalisation claire, et une coordination simple avec le gestionnaire. Selon la configuration, une rotation partielle suffit.</p>",
+            "<p><strong>On privilégie un phasage par zones quand c’est possible :</strong> cela limite la gêne et évite un blocage total. On définit un plan (zones A/B/C), une signalisation claire, et une coordination simple avec le gestionnaire. Selon la configuration, une rotation partielle suffit.</p>",
         },
         {
           question:
@@ -224,7 +224,7 @@ const city: City = {
           question:
             "Comment gérez-vous les eaux de lavage dans un parking souterrain (réseau, évacuation) ?",
           answer:
-            "<p>C’est un point clé. On organise l’opération pour <strong>récupérer</strong> les eaux (autolaveuse aspirante, zones maîtrisées), puis on évacue dans le réseau adapté selon la configuration constatée au diagnostic. On évite les “coulées” et on sécurise les pentes et rampes pendant l’action.</p>",
+            "<p><strong>C’est un point clé.</strong> On organise l’opération pour récupérer les eaux (autolaveuse aspirante, zones maîtrisées), puis on évacue dans le réseau adapté selon la configuration constatée au diagnostic. On évite les “coulées” et on sécurise les pentes et rampes pendant l’action.</p>",
         },
       ],
       ctaOverride: "",

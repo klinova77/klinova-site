@@ -16,13 +16,13 @@ const city: City = {
     "Située à la lisière de la forêt de Bondy, Montfermeil connaît une mutation profonde. La densification urbaine autour du tracé du Tram T4 et la rénovation du Plateau ont multiplié les résidences modernes. Ces nouveaux ensembles immobiliers nécessitent un entretien technique rigoureux pour conserver leur standing face à l'usure quotidienne.",
 
   hubIntro:
-    "<p>À Montfermeil, la propreté des parties communes dépend autant de la méthode que de l'organisation : accès en pente, résidences hétérogènes, et circulation quotidienne autour du tram T4. Klinova accompagne les syndics, gestionnaires et entreprises avec une approche de maintenance immobilière structurée, pensée pour préserver l'image et le confort des occupants.</p>\n<p class=\"mt-4\">Notre priorité : intervenir sans perturber la vie de l'immeuble. Nous cadrons les accès (badges, horaires, zones de travail), protégeons les abords sensibles et appliquons des protocoles adaptés aux moquettes, sols techniques, parkings et extérieurs. Le suivi reste clair, factuel, et orienté \"tenue dans le temps\".</p>\n<ul>\n  <li><strong>Coordination simple :</strong> accès, créneaux, information des résidents, zones prioritaires, en lien avec syndic, gardien ou conseil syndical.</li>\n  <li><strong>Protocoles éprouvés :</strong> injection-extraction, autolaveuse, dégraissage ciblé, gestion de l'eau et finitions soignées.</li>\n  <li><strong>Adaptation au bâti local :</strong> immeubles collectifs, grandes résidences, habitat pavillonnaire et copropriétés plus anciennes.</li>\n  <li><strong>Compte-rendu utile :</strong> points traités, contraintes rencontrées, recommandations d'entretien pour stabiliser la propreté.</li>\n</ul>",
+    "<p>À Montfermeil, la propreté des parties communes dépend autant de la méthode que de l'organisation : <strong>accès en pente, résidences hétérogènes</strong>, et circulation quotidienne autour du tram T4. Klinova accompagne les syndics, gestionnaires et entreprises avec une approche de maintenance immobilière structurée, pensée pour préserver l'image et le confort des occupants.</p>\n<p class=\"mt-4\">Notre priorité : intervenir sans perturber la vie de l'immeuble. Nous cadrons les accès (badges, horaires, zones de travail), protégeons les abords sensibles et appliquons des protocoles adaptés aux moquettes, sols techniques, parkings et extérieurs. Le suivi reste clair, factuel, et orienté \"tenue dans le temps\".</p>\n<ul>\n  <li><strong>Coordination simple :</strong> accès, créneaux, information des résidents, zones prioritaires, en lien avec syndic, gardien ou conseil syndical.</li>\n  <li><strong>Protocoles éprouvés :</strong> injection-extraction, autolaveuse, dégraissage ciblé, gestion de l'eau et finitions soignées.</li>\n  <li><strong>Adaptation au bâti local :</strong> immeubles collectifs, grandes résidences, habitat pavillonnaire et copropriétés plus anciennes.</li>\n  <li><strong>Compte-rendu utile :</strong> points traités, contraintes rencontrées, recommandations d'entretien pour stabiliser la propreté.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Dépôts verts et mousses sur balcons liés aux zones boisées (forêt de Bondy) et aux expositions ombragées.",
-    "Encrassement accéléré des halls d'entrée par le trafic piétonnier vers les stations T4 et les commerces du centre.",
-    "Accès en forte déclivité et rues étroites : logistique à anticiper pour matériel et évacuation des déchets.",
-    "Zones à fort trafic piétonnier (arrêts du T4, commerces) : salissures rapides aux entrées et dans les circulations.",
+    "<strong>Dépôts verts et mousses sur balcons</strong> liés aux zones boisées (forêt de Bondy) et aux expositions ombragées.",
+    "<strong>Encrassement accéléré des halls d'entrée</strong> par le trafic piétonnier vers les stations T4 et les commerces du centre.",
+    "<strong>Accès en forte déclivité et rues étroites</strong> : logistique à anticiper pour matériel et évacuation des déchets.",
+    "<strong>Zones à fort trafic piétonnier</strong> (arrêts du T4, commerces) : salissures rapides aux entrées et dans les circulations.",
   ],
 
   districts: ["Centre-ville", "Les Coudreaux", "Les Bosquets", "Franceville"],
@@ -107,9 +107,9 @@ const city: City = {
         "<h3>1. Diagnostic et organisation par tronçons</h3>\n<p>Évaluation sur place : type de moquette (bouclé, velours, aiguilleté), zones de fort trafic (devant les ascenseurs, boîtes aux lettres, entrées), nature des taches et contraintes d'accès (cages étroites, paliers, angles). <strong>Protection des bas de murs et des points sensibles,</strong> puis organisation du chantier par tronçons pour garder des circulations praticables pendant l'intervention.</p>\n\n<h3>2. Injection-extraction en passes croisées</h3>\n<p>Le cœur de la méthode repose sur l'injection-extraction : une solution nettoyante est injectée au plus près des fibres, puis immédiatement aspirée avec les salissures dissoutes. <strong>Sur les zones très marquées,</strong> nous passons en croisé pour homogénéiser le rendu et éliminer les traces tenaces de chaussures et de boue.</p>\n\n<h3>3. Optimisation du séchage et conseils</h3>\n<p>Extraction maximale de l'eau pour limiter l'humidité résiduelle, aération contrôlée et séchage généralement en 4 à 6 heures selon la ventilation. <strong>Fréquence d'entretien recommandée : tous les 12 à 18 mois</strong> selon l'usage, pour maintenir un résultat optimal et éviter le remplacement prématuré des revêtements.</p>",
 
       specificChallenges: [
-        "L'humidité naturelle liée à la proximité de la forêt de Bondy favorise les odeurs de renfermé dans les moquettes des rez-de-chaussée insuffisamment ventilés.",
-        "Les poussières fines issues des chantiers de rénovation urbaine (secteur des Bosquets) s'incrustent profondément dans les fibres, rendant le nettoyage de surface inefficace.",
-        "Les accès complexes de certaines bâtisses anciennes du centre historique imposent l'utilisation de matériel portatif et une organisation spécifique dans les escaliers étroits.",
+        "L'humidité naturelle liée à la proximité de la forêt de Bondy favorise <strong>les odeurs de renfermé</strong> dans les moquettes des rez-de-chaussée insuffisamment ventilés.",
+        "Les poussières fines issues des chantiers de rénovation urbaine (secteur des Bosquets) <strong>s'incrustent profondément dans les fibres</strong>, rendant le nettoyage de surface inefficace.",
+        "Les accès complexes de certaines bâtisses anciennes du centre historique imposent <strong>l'utilisation de matériel portatif</strong> et une organisation spécifique dans les escaliers étroits.",
       ],
 
       faqAdditions: [
@@ -162,9 +162,9 @@ const city: City = {
         "<h3>1. Visite technique et organisation par zones</h3>\n<p>Évaluation du site : nature du sol (béton, peinture, résine), état des marquages, configuration des accès et rampes, points d'eau et évacuations disponibles. <strong>Préparation incluant un dépoussiérage complet,</strong> l'enlèvement des déchets volumineux et un balisage clair des zones de travail. Lorsque nécessaire, le chantier est organisé par zones pour coordonner une rotation simple des véhicules avec le syndic.</p>\n\n<h3>2. Autolaveuse et traitement haute pression ciblé</h3>\n<p>Nettoyage principal à l'autolaveuse (brossage mécanique + aspiration immédiate des eaux sales) pour les surfaces larges. <strong>Traitement haute pression ciblé</strong> sur les zones très grasses (taches d'huile, virages, pieds de colonnes) avec application de dégraissants professionnels adaptés. Temps de contact respecté pour dissoudre les résidus huileux incrustés.</p>\n\n<h3>3. Gestion des eaux et recommandations</h3>\n<p>Maîtrise stricte de la gestion des eaux de lavage : récupération via l'autolaveuse et évacuation conforme selon les équipements du site (évacuations, séparateurs si présents et fonctionnels). <strong>Insistance finale sur rampes, angles et pieds de murs.</strong> Fréquence recommandée : 1 à 2 décrassages annuels sur sites exposés aux chantiers et au trafic du T4, pour maintenir sécurité et propreté.</p>",
 
       specificChallenges: [
-        "Rampes en déclivité : besoin d'un décrassage rigoureux pour conserver adhérence et sécurité, notamment en hiver.",
-        "Sous-sols anciens peu ventilés : poussières fines qui se redéposent vite, nécessité d'une aspiration efficace.",
-        "Taches d'huile anciennes sur béton poreux : traitement localisé intensif, résultat net sans promettre l'effacement parfait.",
+        "Rampes en déclivité : besoin d'un décrassage rigoureux pour conserver <strong>adhérence et sécurité</strong>, notamment en hiver.",
+        "Sous-sols anciens peu ventilés : <strong>poussières fines qui se redéposent vite</strong>, nécessité d'une aspiration efficace.",
+        "Taches d'huile anciennes sur béton poreux : <strong>traitement localisé intensif</strong>, résultat net sans promettre l'effacement parfait.",
       ],
 
       faqAdditions: [
@@ -215,9 +215,9 @@ const city: City = {
         "<h3>1. Protection et enlèvement des gros dépôts</h3>\n<p>Protection soigneuse des menuiseries (porte-fenêtre, baies vitrées) et des abords pour éviter toute infiltration. <strong>Retrait manuel des dépôts volumineux</strong> (feuilles mortes, terre des jardinières, déchets divers) pour éviter d'étaler la saleté lors du rinçage et limiter le risque de bouchage des évacuations.</p>\n\n<h3>2. Application de produits et brossage ciblé</h3>\n<p>Application d'un produit nettoyant adapté au support (carrelage, dalle béton, bois composite, pierre) avec temps de contact approprié. <strong>Brossage méthodique des zones marquées</strong> (joints encrassés, angles, seuils de porte) pour décoller les mousses, lichens et traces tenaces. Si nécessaire, utilisation d'une pression douce et contrôlée, jamais agressive pour les joints fragiles.</p>\n\n<h3>3. Rinçage maîtrisé et finitions</h3>\n<p>La gestion de l'eau est centrale : raclage systématique, contrôle du flux vers l'évacuation du balcon, et aspiration à eau si l'évacuation est douteuse ou bouchée, afin d'éviter toute coulure chez le voisin du dessous ou sur la façade. <strong>Séchage naturel en quelques heures</strong> selon l'exposition et la ventilation. Finitions soignées sur les garde-corps, vitres et rails pour un résultat impeccable.</p>",
 
       specificChallenges: [
-        "Dépôts verts rapides sur balcons ombragés : mousses et lichens favorisés par proximité des zones boisées.",
-        "Poussières fines de chantiers : voile tenace sur carrelages et dalles, surtout sur balcons exposées.",
-        "Évacuations parfois inefficaces : nécessité d'aspirer l'eau de lavage pour éviter coulures et infiltrations.",
+        "<strong>Dépôts verts rapides sur balcons ombragés</strong> : mousses et lichens favorisés par proximité des zones boisées.",
+        "Poussières fines de chantiers : <strong>voile tenace sur carrelages et dalles</strong>, surtout sur balcons exposées.",
+        "Évacuations parfois inefficaces : nécessité d'<strong>aspirer l'eau de lavage</strong> pour éviter coulures et infiltrations.",
       ],
 
       faqAdditions: [

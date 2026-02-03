@@ -15,13 +15,13 @@ const city: City = {
     "Commune pavillonnaire de Seine-Saint-Denis située au carrefour de Chelles, Noisy-le-Grand et Neuilly-sur-Marne, Gournay-sur-Marne bénéficie de la proximité des axes D104 et RN34 ainsi que de la gare RER E Chelles-Gournay. Le tissu local, composé majoritairement de maisons individuelles et de petites copropriétés, nécessite un entretien régulier des surfaces communes et privatives pour préserver un cadre de vie calme et résidentiel.",
 
   hubIntro:
-    "<p>Située entre Chelles et Neuilly-sur-Marne, Gournay-sur-Marne présente des besoins d'entretien spécifiques liés à son caractère résidentiel et à la proximité immédiate de la Marne. Klinova accompagne les syndics, gestionnaires et propriétaires dans la maintenance immobilière, avec des interventions adaptées aux typologies locales.</p>\n<p class=\"mt-4\">Notre approche repose sur une organisation rigoureuse, une bonne connaissance du secteur et des méthodes éprouvées pour assurer une propreté durable des parties communes, parkings, balcons et espaces intérieurs. Chaque intervention est cadrée en amont et suivie d'un compte-rendu clair à destination du gestionnaire.</p>\n<ul>\n  <li><strong>Organisation adaptée :</strong> prise en compte des contraintes d'accès, de stationnement et des horaires en zone résidentielle.</li>\n  <li><strong>Protocoles ajustés :</strong> méthodes adaptées aux maisons, petites copropriétés et résidences collectives.</li>\n  <li><strong>Suivi clair :</strong> reporting factuel après intervention, avec photos avant/après si demandé.</li>\n  <li><strong>Réactivité locale :</strong> interventions planifiées efficacement sur Gournay-sur-Marne et les communes voisines.</li>\n</ul>",
+    "<p>Située entre Chelles et Neuilly-sur-Marne, Gournay-sur-Marne présente des besoins d'entretien spécifiques liés à son caractère résidentiel et à la proximité immédiate de la Marne. Klinova accompagne les syndics, gestionnaires et propriétaires dans la maintenance immobilière, avec des interventions adaptées aux typologies locales.</p>\n<p class=\"mt-4\">Notre approche repose sur une <strong>organisation rigoureuse</strong>, une bonne connaissance du secteur et des méthodes éprouvées pour assurer une propreté durable des parties communes, parkings, balcons et espaces intérieurs. Chaque intervention est cadrée en amont et suivie d'un compte-rendu clair à destination du gestionnaire.</p>\n<ul>\n  <li><strong>Organisation adaptée :</strong> prise en compte des contraintes d'accès, de stationnement et des horaires en zone résidentielle.</li>\n  <li><strong>Protocoles ajustés :</strong> méthodes adaptées aux maisons, petites copropriétés et résidences collectives.</li>\n  <li><strong>Suivi clair :</strong> reporting factuel après intervention, avec photos avant/après si demandé.</li>\n  <li><strong>Réactivité locale :</strong> interventions planifiées efficacement sur Gournay-sur-Marne et les communes voisines.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Humidité et dépôts verts sur balcons et terrasses liés à la proximité de la Marne.",
-    "Encrassement des halls et entrées par les résidus terreux provenant des jardins privatifs.",
+    "<strong>Humidité et dépôts verts</strong> sur balcons et terrasses liés à la proximité de la Marne.",
+    "<strong>Encrassement des halls et entrées</strong> par les résidus terreux provenant des jardins privatifs.",
     "Salissures spécifiques dans les parkings dues aux flux réguliers vers les axes D104 et RN34.",
-    "Présence de fientes sur balcons et toitures donnant sur des zones arborées ou espaces verts.",
+    "<strong>Présence de fientes</strong> sur balcons et toitures donnant sur des zones arborées ou espaces verts.",
   ],
 
   districts: [
@@ -113,9 +113,9 @@ const city: City = {
 
       specificChallenges: [
         "Humidité ambiante liée à la proximité de la Marne, pouvant ralentir le séchage des moquettes en rez-de-chaussée si l'extraction n'est pas correctement maîtrisée.",
-        "Encrassement accéléré des halls donnant directement sur des axes de circulation, avec apports fréquents de boue, sable et poussières urbaines.",
+        "<strong>Encrassement accéléré des halls</strong> donnant directement sur des axes de circulation, avec apports fréquents de boue, sable et poussières urbaines.",
         "Présence de moquettes anciennes ou fragilisées nécessitant des réglages précis et un test préalable pour préserver fibres et colles.",
-        "Apports saisonniers de pollens, poussières fines et résidus terreux issus des jardins et espaces verts environnants.",
+        "<strong>Apports saisonniers de pollens</strong>, poussières fines et résidus terreux issus des jardins et espaces verts environnants.",
       ],
 
       faqAdditions: [
@@ -171,10 +171,10 @@ const city: City = {
         "<h3>1. Analyse technique et organisation par zones</h3>\n<p>Évaluation du revêtement (béton brut, peinture, résine), état des marquages, fonctionnement des évacuations et contraintes d'accès propres aux parkings de Gournay-sur-Marne. <strong>Le chantier est ensuite organisé par zones successives</strong> afin de maintenir un accès véhicules minimal, en coordination avec le syndic et après information des résidents.</p>\n\n<h3>2. Décrassage mécanique et traitement des taches</h3>\n<p>Balayage préalable pour retirer les gros déchets, graviers et feuilles. Application ciblée de dégraissant professionnel sur les taches d'hydrocarbures anciennes avec temps de contact adapté (10 à 15 minutes) pour dissoudre les résidus huileux. <strong>L'autolaveuse professionnelle combine ensuite brossage mécanique et aspiration immédiate</strong> pour un nettoyage homogène et maîtrisé.</p>\n\n<h3>3. Finitions haute pression et gestion des eaux</h3>\n<p>Les zones fortement encrassées (rampes d'accès, pieds de murs, virages) reçoivent si nécessaire un passage haute pression contrôlé pour restaurer l'adhérence. <strong>L'évacuation des eaux de lavage est strictement encadrée</strong> : récupération via l'autolaveuse et direction vers les réseaux appropriés. Contrôle final de la propreté et vérification de l'absence de flaques résiduelles. Fréquence recommandée : 1 à 2 décrassages annuels selon le trafic et l'exposition à l'humidité.</p>",
 
       specificChallenges: [
-        "Encrassement accéléré des parkings donnant sur l'avenue du Maréchal Joffre par dépôts de particules fines issues de la circulation.",
+        "<strong>Encrassement accéléré des parkings</strong> donnant sur l'avenue du Maréchal Joffre par dépôts de particules fines issues de la circulation.",
         "Taches d'hydrocarbures anciennes sur béton poreux nécessitant des traitements dégraissants ciblés et un temps de contact adapté.",
-        "Évacuations d'eau parfois limitées dans certains parkings résidentiels, imposant une gestion rigoureuse des eaux de lavage.",
-        "Hauteur sous plafond réduite dans les parkings de copropriété, nécessitant l'usage d'équipements compacts et maîtrisés.",
+        "<strong>Évacuations d'eau parfois limitées</strong> dans certains parkings résidentiels, imposant une gestion rigoureuse des eaux de lavage.",
+        "<strong>Hauteur sous plafond réduite</strong> dans les parkings de copropriété, nécessitant l'usage d'équipements compacts et maîtrisés.",
       ],
 
       faqAdditions: [
@@ -229,10 +229,10 @@ const city: City = {
         "<h3>1. Préparation et protection des accès</h3>\n<p>Protection soigneuse des menuiseries, seuils et accès intérieurs pour éviter toute infiltration. <strong>Les meubles, plantes et objets présents sur le balcon sont déplacés ou protégés</strong> afin de libérer les surfaces à traiter. Les dépôts importants (feuilles, terre, résidus divers) sont retirés manuellement avant toute phase humide, pour éviter d'étaler la saleté ou d'obstruer les évacuations.</p>\n\n<h3>2. Application et action mécanique ciblée</h3>\n<p>Application de produits professionnels adaptés au support (fongicides pour les mousses, dégraissants pour les traces de barbecue), associés à un brossage ciblé des joints, angles et zones encrassées. <strong>Si nécessaire, une pression modérée et contrôlée est utilisée,</strong> toujours en privilégiant la préservation des joints et des revêtements. Les garde-corps (verre, aluminium, acier) sont traités séparément avec des produits non abrasifs.</p>\n\n<h3>3. Maîtrise de l'eau et finitions</h3>\n<p>La gestion de l'eau est centrale : raclage systématique, orientation du flux vers l'évacuation et, si besoin, récupération ponctuelle afin d'éviter toute coulure sur les façades ou les balcons inférieurs. <strong>Après séchage (généralement en quelques heures selon l'exposition),</strong> le balcon est rendu propre, sain et immédiatement réutilisable. Les vitres et garde-corps sont essuyés pour une finition impeccable. Recommandation : nettoyage annuel au printemps pour conserver un balcon agréable toute l'année.</p>",
 
       specificChallenges: [
-        "Dépôts de poussières fines et résidus extérieurs qui ternissent rapidement les surfaces exposées.",
-        "Développement de mousses et d'algues favorisé par l'humidité, notamment dans les zones ombragées proche de la Marne.",
-        "Gestion délicate de l'eau en immeuble collectif pour éviter coulures et nuisances pour le voisinage.",
-        "Accès parfois restreints nécessitant un matériel compact et une organisation précise.",
+        "<strong>Dépôts de poussières fines</strong> et résidus extérieurs qui ternissent rapidement les surfaces exposées.",
+        "<strong>Développement de mousses et d'algues</strong> favorisé par l'humidité, notamment dans les zones ombragées proche de la Marne.",
+        "<strong>Gestion délicate de l'eau</strong> en immeuble collectif pour éviter coulures et nuisances pour le voisinage.",
+        "<strong>Accès parfois restreints</strong> nécessitant un matériel compact et une organisation précise.",
       ],
 
       faqAdditions: [
@@ -290,7 +290,7 @@ const city: City = {
       specificChallenges: [
         "Proximité d'espaces verts et des bords de Marne : présence d'oiseaux plus régulière et salissures qui s'installent sur la durée.",
         "Fientes très sèches : poussières de fientes de volatiles à maîtriser par humidification contrôlée et collecte progressive.",
-        "Supports poreux (béton brut, joints, seuils) : nettoyage plus délicat pour désincruster sans abîmer le support.",
+        "<strong>Supports poreux (béton brut, joints, seuils)</strong> : nettoyage plus délicat pour désincruster sans abîmer le support.",
         "Contrainte de voisinage en immeuble : écoulements à contrôler strictement pour éviter coulures sur façade et balcons inférieurs.",
       ],
 
@@ -347,7 +347,7 @@ const city: City = {
       specificChallenges: [
         "Humidité résiduelle dans certains logements proches des bords de Marne ou en rez-de-jardin, ralentissant le séchage des textiles épais.",
         "Présence fréquente d'animaux domestiques : poils incrustés, odeurs spécifiques et taches organiques nécessitant un pré-traitement adapté.",
-        "Textiles volumineux (canapés profonds, matelas épais) demandant une extraction maximale pour limiter l'humidité résiduelle.",
+        "<strong>Textiles volumineux (canapés profonds, matelas épais)</strong> demandant une extraction maximale pour limiter l'humidité résiduelle.",
         "Pièces de vie ou logements anciens peu ventilés : nécessité d'adapter la méthode et de conseiller une aération renforcée après intervention.",
       ],
 
@@ -392,7 +392,7 @@ const city: City = {
       uniqueIntro:
         "<p>Gournay-sur-Marne, plus petite commune de Seine-Saint-Denis avec ses 1,68 km², conserve un caractère de <strong>village résidentiel</strong> prisé aux portes de la Seine-et-Marne. Cette enclave verdoyante, bordée par la <strong>Marne</strong> et le <strong>canal de Chelles</strong>, abrite un parc immobilier majoritairement pavillonnaire où les terrasses constituent un prolongement naturel de l'habitat.</p>\n\n<p class=\"mt-4\">La proximité immédiate de la rivière et du <strong>parc départemental de la Haute-Île</strong> (65 hectares de zone humide classée Natura 2000) génère un taux d'humidité favorable au développement des mousses, algues et lichens. Les terrasses exposées nord ou ombragées par les arbres des jardins gournaysiens subissent un encrassement accéléré, rendant les surfaces glissantes et altérant leur aspect.</p>\n\n<p class=\"mt-4\">L'évaluation initiale identifie le type de revêtement — <strong>dalles béton</strong>, <strong>carrelage</strong>, <strong>pierre</strong> ou <strong>bois composite</strong> — et détermine le protocole le mieux adapté pour retrouver une surface propre sans compromettre l'intégrité du support.</p>",
       uniqueDeepDive:
-        "<h3>Reconnaissance du site et préparation</h3>\n<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et plantations adjacentes sont bâchées pour éviter les projections. Un balayage soigneux élimine feuilles, débris végétaux et terre accumulée sur le revêtement.</p>\n\n<h3>Traitement adapté au support</h3>\n<p>Le produit nettoyant est sélectionné selon le matériau : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre naturelle, traitement spécifique pour bois et composite. L'action mécanique par brossage déloge les incrustations tenaces. Le rinçage s'effectue à pression ajustée pour respecter les joints et la surface.</p>\n\n<h3>Protection et conseils d'entretien</h3>\n<p>Un traitement préventif anti-mousse est appliqué sur les zones les plus exposées à l'humidité ambiante. L'évacuation des eaux est dirigée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement humide des bords de Marne.</p>",
+        "<h3>Reconnaissance du site et préparation</h3>\n<p>Mobilier de jardin, jardinières et éléments décoratifs sont déplacés ou protégés. Les façades, menuiseries et plantations adjacentes sont bâchées pour éviter les projections. Un <strong>balayage soigneux élimine feuilles</strong>, débris végétaux et terre accumulée sur le revêtement.</p>\n\n<h3>Traitement adapté au support</h3>\n<p>Le produit nettoyant est sélectionné selon le matériau : formule alcaline pour béton et carrelage minéral, solution neutre pour pierre naturelle, traitement spécifique pour bois et composite. <strong>L'action mécanique par brossage</strong> déloge les incrustations tenaces. Le rinçage s'effectue à pression ajustée pour respecter les joints et la surface.</p>\n\n<h3>Protection et conseils d'entretien</h3>\n<p>Un <strong>traitement préventif anti-mousse</strong> est appliqué sur les zones les plus exposées à l'humidité ambiante. L'évacuation des eaux est dirigée vers les points d'écoulement du jardin. Des recommandations d'entretien saisonnier sont transmises pour prolonger le résultat face à l'environnement humide des bords de Marne.</p>",
       specificChallenges: [
         "Humidité permanente liée à la Marne et au canal de Chelles : prolifération rapide des mousses et algues vertes sur toutes les surfaces.",
         "Pavillons traditionnels avec terrasses en dalles béton années 60-80 : joints fragilisés par les cycles gel-dégel.",

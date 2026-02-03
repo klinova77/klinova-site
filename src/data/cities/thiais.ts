@@ -17,16 +17,16 @@ const city = {
   // - 2 paragraphes <p>...</p>
   // - puis une liste à puces <ul><li>...</li></ul>
   hubIntro:
-    "<p>À proximité immédiate de Belle Épine et de l'aéroport d'Orly, Thiais concentre des flux importants qui sollicitent fortement les espaces communs. Klinova accompagne syndics, gestionnaires et occupants avec une organisation calibrée pour ce territoire.</p>\n<p class=\"mt-4\">Nos interventions couvrent la propreté des halls, le décrassage des parkings souterrains et l'entretien des extérieurs. Chaque prestation s'adapte aux contraintes horaires et d'accès, avec un suivi clair transmis aux donneurs d'ordre.</p>\n<ul>\n  <li><strong>Coordination locale :</strong> Planification tenant compte des pics de circulation A86/N7 et des horaires sensibles des résidences du quartier Grignon.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés pour les grandes surfaces comme pour les cages d'escalier étroites des copropriétés anciennes.</li>\n  <li>Reporting structuré : Compte-rendu d'intervention transmis au syndic ou gestionnaire, photos avant/après sur demande.</li>\n</ul>",
+    "<p>À proximité immédiate de Belle Épine et de l'aéroport d'Orly, Thiais concentre des flux importants qui sollicitent fortement les espaces communs. Klinova accompagne syndics, gestionnaires et occupants avec une <strong>organisation calibrée</strong> pour ce territoire.</p>\n<p class=\"mt-4\">Nos interventions couvrent la propreté des halls, le décrassage des parkings souterrains et l'entretien des extérieurs. Chaque prestation s'adapte aux contraintes horaires et d'accès, avec un suivi clair transmis aux donneurs d'ordre.</p>\n<ul>\n  <li><strong>Coordination locale :</strong> Planification tenant compte des pics de circulation A86/N7 et des horaires sensibles des résidences du quartier Grignon.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés pour les grandes surfaces comme pour les cages d'escalier étroites des copropriétés anciennes.</li>\n  <li><strong>Reporting structuré :</strong> Compte-rendu d'intervention transmis au syndic ou gestionnaire, photos avant/après sur demande.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Pollution routière A86/N7</strong> : dépôts noirs sur balcons et façades, nettoyage régulier nécessaire.",
-    "Parkings souterrains des résidences Grignon : béton brut encrassé par le trafic quotidien.",
+    "Parkings souterrains des résidences Grignon : <strong>béton brut encrassé</strong> par le trafic quotidien.",
     "<strong>Flux piétons Belle Épine</strong> : halls d'entrée des copropriétés voisines sollicités en permanence.",
-    "Accès digicodes et badges fréquents : coordination préalable indispensable avec gardiens ou syndics.",
+    "Accès digicodes et badges fréquents : <strong>coordination préalable indispensable</strong> avec gardiens ou syndics.",
     "Stationnement saturé en centre-ville : intervention planifiée tôt le matin ou en soirée.",
-    "Proximité Parc de l'Europe : fientes et débris végétaux sur balcons des derniers étages.",
+    "Proximité Parc de l'Europe : <strong>fientes et débris végétaux</strong> sur balcons des derniers étages.",
   ],
 
   // Texte brut uniquement
@@ -111,13 +111,13 @@ const city = {
       uniqueIntro:
         "<p>Dans la <strong>Zone d'activité Sénia</strong>, les bureaux et locaux tertiaires accueillent un flux constant de collaborateurs et visiteurs. Les dalles textiles des couloirs et les velours ras des salles de réunion accumulent poussières fines, traces de semelles et résidus de boissons. Sans entretien adapté, ces fibres perdent leur tenue et ternissent l'image des espaces professionnels.</p>\n<p class=\"mt-4\">Les parties communes des petits collectifs et halls d'entrée subissent le même encrassement progressif. Les moquettes bouclées ou velours des escaliers retiennent les particules transportées depuis l'extérieur. Un détachage régulier préserve l'aspect soigné des lieux et limite l'usure prématurée des revêtements.</p>\n<p class=\"mt-4\">Le trafic piéton intense généré par les commerces environnants et la proximité aéroportuaire accélère l'encrassement. Une intervention structurée — diagnostic des fibres, protection des plinthes, extraction en profondeur — permet de retrouver des surfaces propres sans perturber l'activité des occupants.</p>",
       uniqueDeepDive:
-        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et halls d'accueil concentrent l'essentiel des passages. Nous identifions d'abord le type de moquette — dalles textiles, velours ras ou bouclé — puis appliquons plusieurs passes d'injection-extraction sur ces surfaces très sollicitées. Les bas de murs et plinthes sont protégés avant traitement.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les open-spaces et salles de réunion présentent souvent des taches localisées : café, tanin, traces grasses. Un détachage ciblé précède le nettoyage général. L'aspiration préalable retire les particules sèches avant l'injection de solution nettoyante.</p>\n\n<h3>Finitions et gestion du séchage</h3>\n<p>Après extraction maximale de l'humidité, nous vérifions l'homogénéité du rendu sur l'ensemble des surfaces traitées. Le temps de séchage varie selon l'épaisseur des fibres et la ventilation des locaux — généralement deux à quatre heures pour une remise en service rapide. Des consignes de non-piétinement temporaire sont transmises.</p>",
+        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et halls d'accueil concentrent l'essentiel des passages. Nous identifions d'abord le type de moquette — dalles textiles, velours ras ou bouclé — puis appliquons plusieurs passes d'injection-extraction sur ces <strong>surfaces très sollicitées</strong>. Les bas de murs et plinthes sont protégés avant traitement.</p>\n\n<h3>Espaces de travail et salles de réunion</h3>\n<p>Les open-spaces et salles de réunion présentent souvent des taches localisées : café, tanin, traces grasses. Un détachage ciblé précède le nettoyage général. L'aspiration préalable retire les particules sèches avant l'injection de solution nettoyante.</p>\n\n<h3>Finitions et gestion du séchage</h3>\n<p>Après extraction maximale de l'humidité, nous vérifions l'homogénéité du rendu sur l'ensemble des surfaces traitées. Le temps de séchage varie selon l'épaisseur des fibres et la ventilation des locaux — généralement deux à quatre heures pour une remise en service rapide. Des consignes de <strong>non-piétinement temporaire</strong> sont transmises.</p>",
       specificChallenges: [
-        "Dalles textiles des bureaux Sénia encrassées par le passage quotidien des collaborateurs.",
+        "Dalles textiles des bureaux Sénia <strong>encrassées par le passage</strong> quotidien des collaborateurs.",
         "Velours ras des salles de réunion marqué par taches de café et traces de semelles.",
-        "Halls d'entrée exposés aux poussières fines liées au trafic routier A86 et N7.",
-        "Escaliers étroits des petits collectifs nécessitant un matériel compact et maniable.",
-        "Temps de séchage à maîtriser pour une reprise d'activité sous quelques heures.",
+        "Halls d'entrée exposés aux <strong>poussières fines</strong> liées au trafic routier A86 et N7.",
+        "Escaliers étroits des petits collectifs nécessitant un <strong>matériel compact</strong> et maniable.",
+        "Temps de séchage à maîtriser pour une <strong>reprise d'activité</strong> sous quelques heures.",
       ],
       faqAdditions: [
         {

@@ -22,12 +22,12 @@ const city: City = {
   // - HTML autorisé
 
   citySpecificChallenges: [
-    "Stationnement souvent contraint près du RER A et en centre-ville (zones réglementées).",
-    "Présence de pentes et d’accès parfois difficiles vers le Plateau d’Avron.",
-    "Poussières fines et salissures plus grasses à proximité de la N34.",
-    "Humidité vers les bords de Marne : dépôts verts qui reviennent plus vite en extérieur.",
-    "Sous-sols et parkings profonds dans certaines résidences récentes : logistique à cadrer.",
-    "Bâti ancien par endroits : escaliers et passages étroits à prendre en compte.",
+    "<strong>Stationnement souvent contraint</strong> près du RER A et en centre-ville (zones réglementées).",
+    "Présence de <strong>pentes et d’accès parfois difficiles</strong> vers le Plateau d’Avron.",
+    "<strong>Poussières fines et salissures plus grasses</strong> à proximité de la N34.",
+    "Humidité vers les bords de Marne : <strong>dépôts verts qui reviennent plus vite</strong> en extérieur.",
+    "Sous-sols et parkings profonds dans certaines résidences récentes : <strong>logistique à cadrer</strong>.",
+    "Bâti ancien par endroits : <strong>escaliers et passages étroits</strong> à prendre en compte.",
   ],
 
   districts: [
@@ -112,24 +112,24 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>Quand une moquette commence à ternir, ce n’est pas “juste de la poussière” : les zones de passage se chargent en particules fines, les taches s’incrustent (café, tanins, gras), et les odeurs peuvent rester dans la fibre. À Neuilly-Plaisance, on le voit souvent dans les halls et couloirs des immeubles proches du centre, mais aussi dans les bureaux le long de l’<strong>Avenue du Maréchal Foch</strong> où le trafic est continu. Dans certains immeubles anciens, les <strong>escaliers étroits</strong> et les paliers compliquent le passage du matériel : il faut une approche organisée, pas un “coup de shampouineuse” improvisé.</p>\n<p class="mt-4">Klinova intervient avec une logique d’entretien et de détachage adaptée : injection-extraction pour un nettoyage profond, ou encapsulation/bonnet quand l’objectif est une remise en service plus rapide selon contexte. On traite les zones les plus sollicitées en priorité, et on adapte le séchage pour que les accès restent praticables, notamment autour des flux quotidiens liés au <strong>RER A</strong>. L’objectif : un rendu visuel propre, une fibre assainie, et des usages qui reprennent sans surprise.</p>',
+        "<p>Quand une moquette commence à ternir, ce n’est pas “juste de la poussière” : les zones de passage se chargent en particules fines, les taches s’incrustent (café, tanins, gras), et les odeurs peuvent rester dans la fibre. À Neuilly-Plaisance, on le voit souvent dans les halls et couloirs des immeubles proches du centre, mais aussi dans les bureaux le long de l’Avenue du Maréchal Foch où le trafic est continu. Dans certains immeubles anciens, les <strong>escaliers étroits</strong> et les paliers compliquent le passage du matériel : il faut une approche organisée, pas un “coup de shampouineuse” improvisé.</p>\n<p class=\"mt-4\">Klinova intervient avec une logique d’entretien et de détachage adaptée : injection-extraction pour un nettoyage profond, ou encapsulation/bonnet quand l’objectif est une remise en service plus rapide selon contexte. On traite les zones les plus sollicitées en priorité, et on adapte le séchage pour que les accès restent praticables, notamment autour des flux quotidiens liés au <strong>RER A</strong>. L’objectif : un rendu visuel propre, une fibre assainie, et des usages qui reprennent sans surprise.</p>",
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        '<p>1) <strong>Diagnostic & protections.</strong> On identifie le type de moquette (fine/épaisse, bouclée, velours), les taches (café, gras, tanins) et les zones de trafic. Protections des bas de murs, balisage si circulation, et plan de passage adapté aux cages d’escalier et paliers.</p>\n<p class="mt-4">2) <strong>Nettoyage profond / basse humidité.</strong> Selon le contexte, injection-extraction (pré-traitement + passes renforcées sur zones de passage, aspiration eau sale) ou encapsulation/bonnet pour limiter l’humidité et accélérer la remise en service selon l’aération et l’épaisseur.</p>\n<p class="mt-4">3) <strong>Gestion humidité, séchage & conseils.</strong> Extraction maximale, contrôle des zones sensibles, et consignes d’aération. On valide l’état final et on conseille une fréquence réaliste selon usage (copropriété, bureaux, ou domicile).</p>',
+        "<p>1) <strong>Diagnostic & protections.</strong> On identifie le type de moquette (fine/épaisse, bouclée, velours), les taches (café, gras, tanins) et les zones de trafic. Protections des bas de murs, balisage si circulation, et plan de passage adapté aux cages d’escalier et paliers.</p>\n<p class=\"mt-4\">2) Nettoyage profond / basse humidité. Selon le contexte, injection-extraction (pré-traitement + passes renforcées sur zones de passage, aspiration eau sale) ou encapsulation/bonnet pour limiter l’humidité et accélérer la remise en service selon l’aération et l’épaisseur.</p>\n<p class=\"mt-4\">3) Gestion humidité, séchage & conseils. Extraction maximale, contrôle des zones sensibles, et consignes d’aération. On valide l’état final et on conseille une fréquence réaliste selon usage (copropriété, bureaux, ou domicile).</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Trafic soutenu sur l’Avenue du Maréchal Foch : zones de passage vite ternies.",
+        "Trafic soutenu sur l’Avenue du Maréchal Foch : <strong>zones de passage vite ternies</strong>.",
         "Immeubles anciens : escaliers étroits et paliers compliquent la logistique.",
-        "Flux liés au RER A : besoin de séchage maîtrisé pour garder les accès praticables.",
-        "Taches café/tanins et salissures grasses : détachage ciblé avant extraction.",
-        "Moquettes épaisses ou bouclées : méthode à ajuster pour éviter sur-humidification.",
+        "Flux liés au RER A : <strong>besoin de séchage maîtrisé</strong> pour garder les accès praticables.",
+        "Taches café/tanins et salissures grasses : <strong>détachage ciblé avant extraction</strong>.",
+        "Moquettes épaisses ou bouclées : <strong>méthode à ajuster</strong> pour éviter sur-humidification.",
         "Odeurs persistantes : désodorisation des fibres selon état et ventilation.",
       ],
 

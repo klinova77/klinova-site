@@ -1,0 +1,11622 @@
+# Strong tagger — Klinova report
+
+Généré : 2026-02-03T16:56:33.649Z
+Total fichiers : 58
+
+## alfortville
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=74; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=151; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajouter 1 <strong> dans le texte hors <li> (actuellement 0), segment court et concret, sans dépasser le cap (max 2 hors <li>).
+  - excerpt: `Nos équipes assurent la propreté des halls, escaliers, parkings souterrains`
+  - replacement: `<strong>Nos équipes assurent la propreté</strong> des halls, escaliers, parkings souterrains`
+- `services[0].uniqueIntro` — op=setField — uniqueIntro surcapé (3 <strong>), réduction à 2 en retirant le <strong> sur un segment non essentiel, tout en gardant des repères concrets.
+  - value: `<p>Dans les bureaux de la <strong>ZAC Val-de-Seine</strong>, les dalles textiles des open spaces et couloirs accumulent poussières fines et traces de passage en quelques semaines. Les halls d'immeubles récents du secteur subissent le même p`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre le point scannable, segment concret 4 mots.
+  - value: `<strong>Dalles textiles des open spaces</strong> encrassées par le passage quotidien des salariés.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur un élément terrain, segment court.
+  - value: `Halls d'immeubles récents avec <strong>velours ras marqué</strong> aux zones de trafic.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) pour mettre en avant la contrainte d’accès.
+  - value: `<strong>Escaliers étroits du centre-ville</strong> compliquant l'accès du matériel d'extraction.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur une contrainte opérationnelle, segment 3 mots.
+  - value: `<strong>Séchage à coordonner</strong> avec les horaires d'activité des bureaux et hôtels.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur une contrainte locale récurrente.
+  - value: `<strong>Stationnement difficile</strong> pour le véhicule d'intervention dans les rues étroites.`
+
+## arcueil
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=75; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(6>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(5>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — hubIntro: ajouter 1 <strong> hors <li> (max 2) pour améliorer la scanabilité sans toucher aux <li> déjà conformes.
+  - excerpt: `Notre organisation couvre la propreté des communs, l'entretien des sols techniques`
+  - replacement: `Notre organisation couvre <strong>la propreté des communs</strong>, l'entretien des sols techniques`
+- `citySpecificChallenges[4]` — op=setField — citySpecificChallenges: ajouter 1 <strong> (max 1) sur le point terrain principal.
+  - value: `<strong>Stationnement contraint en zone verte</strong>, saturation aux heures de pointe RER.`
+- `services[0].uniqueIntro` — op=setField — uniqueIntro: surcap (max 2). Retirer le 3e <strong> en gardant 2 repères concrets.
+  - value: `<p>Dans le secteur tertiaire autour du <strong>Siège Orange</strong> et des immeubles de bureaux de la Vache Noire, les moquettes subissent un passage quotidien soutenu. Les fibres accumulent poussières fines, traces de semelles et résidus `
+- `services[0].specificChallenges[2]` — op=setField — specificChallenges: ajouter 1 <strong> (max 1) sur le support concerné.
+  - value: `<strong>Dalles textiles collées</strong> dans les bureaux récents : séchage rapide exigé pour reprise d'activité.`
+
+## bagneux
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=77; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=144; add 1 (max2)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=169; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> (max 2) sur un point terrain concret pour rendre l’intro plus scannable.
+  - value: `<p>Les traces de passage se concentrent aux mêmes endroits : entrées de bureaux, couloirs d'accueil, zones de circulation intensive. Au Théâtre Victor Hugo et dans les locaux culturels du centre-ville, les fibres textiles captent <strong>po`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre le challenge scannable.
+  - value: `Moquettes des équipements publics soumises à un <strong>passage intensif</strong> après chaque événement.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur un facteur terrain concret.
+  - value: `Dalles textiles des bureaux d'O'Mathurins exposées aux <strong>poussières de chantier</strong> environnantes.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Escaliers étroits du centre ancien</strong> compliquant l'acheminement du matériel d'extraction.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur un point opérationnel (sans mention de délai chiffré).
+  - value: `Velours ras des halls de résidences récentes nécessitant un <strong>séchage rapide</strong> pour limiter la gêne.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur la nature de la salissure.
+  - value: `Taches de tanin et café <strong>incrustées</strong> dans les espaces d'accueil à fort trafic.`
+
+## bagnolet
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=76; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=157; add 1 (max2)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), segment court et concret, sans toucher aux <li> déjà conformes.
+  - excerpt: `contraintes d'accès propres à chaque site : horaires décalés`
+  - replacement: `<strong>contraintes d'accès propres à chaque site</strong> : horaires décalés`
+- `citySpecificChallenges[3]` — op=setField — Ajoute 1 <strong> (max1) sur un point terrain, pour rendre l’item scannable.
+  - value: `<strong>Stationnement très contraint</strong> dans l'ensemble de la commune, zones bleues étendues.`
+- `services[0].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max1) sur l’élément terrain principal.
+  - value: `<strong>Dalles textiles en zones commerciales</strong> : taches alimentaires et traces de semelles concentrées aux entrées.`
+- `services[0].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max1) pour scannabilité.
+  - value: `<strong>Moquettes bouclées en halls de bureaux</strong> : grisaillement rapide sur les axes de circulation.`
+- `services[0].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max1) en évitant de mettre en avant les horaires/délais.
+  - value: `<strong>Accès monte-charges</strong> et horaires décalés : coordination nécessaire avec la sécurité des tours.`
+- `services[0].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max1) sur la contrainte logistique.
+  - value: `<strong>Stationnement véhicule utilitaire</strong> : zones de livraison à réserver pour déchargement du matériel.`
+- `services[0].specificChallenges[4]` — op=setField — Ajoute 1 <strong> (max1) sur la contrainte terrain.
+  - value: `<strong>Séchage en espace clos</strong> : ventilation à anticiper pour éviter l'humidité résiduelle.`
+
+## bobigny
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=85; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(4>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajout d’1 <strong> hors <li> (max 2) pour rendre le 1er paragraphe plus scannable, sans toucher au texte hors balises.
+  - excerpt: `Klinova accompagne syndics, gestionnaires et occupants dans la gestion quotidienne`
+  - replacement: `Klinova accompagne <strong>syndics, gestionnaires et occupants</strong> dans la gestion quotidienne`
+- `services[0].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (suppression d’un <strong> excédentaire) sans modifier le texte.
+  - value: `<p>Dans la zone administrative autour du <strong>Métro Bobigny - Pablo Picasso</strong>, les moquettes des bureaux et halls d'accueil accumulent rapidement poussières et traces de passage. Le flux quotidien vers les services publics ramène `
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour améliorer la scanabilité des trois sections longues.
+  - value: `<h3>Zones de circulation intensive</h3> <p>Les couloirs et halls d'entrée concentrent l'essentiel des salissures. <strong>L'aspiration préalable retire les particules libres</strong> avant le traitement humide. Les passes d'injection-extrac`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre l’item scannable.
+  - value: `<strong>Poussières de chantier</strong> du quartier Cœur de Ville qui s'infiltrent dans les halls.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le point terrain principal.
+  - value: `<strong>Contraintes horaires strictes</strong> imposant des interventions en dehors des heures d'ouverture au public.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur le sujet concret.
+  - value: `<strong>Moquettes velours des salles d'attente</strong> marquées par les taches de café et traces de semelles.`
+- `services[1].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (suppression de 2 <strong> excédentaires) sans modifier le texte.
+  - value: `<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière noire sont visibles sur la plupart des sols de parkings à Bobigny. Dans les zones d'activités comme la <strong>ZI des Vignes</strong> ou aux abords du Canal de l'Ourc`
+- `services[1].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour améliorer la scanabilité des trois sections longues.
+  - value: `<h3>Diagnostic et préparation du chantier</h3> <p>Avant toute intervention, nous identifions le type de revêtement présent : béton brut, résine ou peinture. <strong>L'état des évacuations est contrôlé</strong> pour garantir l'écoulement cor`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le point terrain principal.
+  - value: `<strong>Taches d'huile récurrentes</strong> sur les sols béton des parkings en zone d'activités.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) pour mise en avant de la contrainte.
+  - value: `<strong>Rampes d'accès étroites</strong> nécessitant un traitement antidérapant après lavage.`
+- `services[1].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur le sujet opérationnel.
+  - value: `<strong>Gestion des eaux de lavage</strong> conforme aux réseaux d'évacuation existants.`
+- `services[2].uniqueIntro` — op=substring — Ajout d’1 <strong> (max 2) dans un uniqueIntro long, sur un segment concret et terrain.
+  - excerpt: `Les joints noircissent, le sol colle sous les pieds`
+  - replacement: `<strong>Les joints noircissent, le sol colle sous les pieds</strong>`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le fait terrain principal.
+  - value: `<strong>Noircissement accéléré</strong> par la pollution des axes N3 et A86 sur les balcons exposés côté rue.`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte support.
+  - value: `<strong>Béton brut poreux</strong> des barres années 60-70 nécessitant un traitement désincrustant adapté.`
+- `services[2].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Étages élevés dans les tours</strong> imposant une logistique d'accès et de gestion du matériel.`
+- `services[3].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (suppression d’un <strong> excédentaire) sans modifier le texte.
+  - value: `<p>Les traces blanchâtres et croûtes sèches sont visibles sur de nombreux balcons orientés vers le <strong>Parc de la Bergère</strong> et les alignements d'arbres qui bordent les avenues. Ces dépôts s'accumulent sur les garde-corps, le sol `
+- `services[3].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le fait principal.
+  - value: `<strong>Accumulation rapide</strong> près des alignements d'arbres et du Parc de la Bergère.`
+- `services[3].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le risque opérationnel.
+  - value: `<strong>Risque de dispersion</strong> vers les voisins du dessous dans les immeubles denses.`
+- `services[3].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’impact concret.
+  - value: `<strong>Dégradation des peintures</strong> et supports par l'acidité des fientes non traitées.`
+- `services[3].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur le contexte terrain.
+  - value: `<strong>Présence accrue d'oiseaux</strong> autour des marchés alimentaires du quartier.`
+- `services[4].uniqueIntro` — op=substring — Ajout d’1 <strong> (max 2) dans un uniqueIntro long, sur un segment concret et non marketing.
+  - excerpt: `les textiles d'ameublement absorbent tout : poussières, allergènes, odeurs persistantes`
+  - replacement: `<strong>les textiles d'ameublement absorbent tout</strong> : poussières, allergènes, odeurs persistantes`
+- `services[4].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème principal.
+  - value: `<strong>Taches anciennes</strong> sur canapés familiaux des grands ensembles : café, jus, traces d'animaux.`
+- `services[4].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte matière.
+  - value: `<strong>Textiles synthétiques sensibles</strong> nécessitant un réglage précis de température et pression.`
+- `services[4].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur le contexte d’usage.
+  - value: `<strong>Salles d'attente médicales</strong> exigeant une remise en service rapide entre deux journées.`
+- `services[5].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème terrain.
+  - value: `<strong>Résidus de chantier</strong> fréquents dans les programmes Cœur de Ville en cours de livraison.`
+- `services[5].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte support.
+  - value: `<strong>Sols mixtes</strong> (lino, carrelage, parquet) nécessitant des techniques de lavage différenciées.`
+- `services[5].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le contexte terrain.
+  - value: `<strong>Rotations locatives rapides</strong> autour du campus universitaire et du métro Pablo Picasso.`
+
+## bondy
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=80; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=159; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajout d’un <strong> hors <li> (max 2) pour améliorer la scanabilité du texte introductif, sans toucher aux <li> déjà conformes.
+  - excerpt: `Notre approche repose sur une organisation claire : planification des passages,`
+  - replacement: `<strong>Notre approche repose sur une organisation claire</strong> : planification des passages,`
+
+## bussy-saint-georges
+
+### Coverage targets (manques/minima)
+
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_overcap: max 1 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 5 strong pairs; max 1 per <h3> block
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].specificChallenges[0]` — pairs_over_cap(2>1)
+- `services[2].faqAdditions[0].answer` — word_limits
+- `services[2].faqAdditions[3].answer` — word_limits
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[5].uniqueIntro` — pairs_over_cap(9>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+✅ Aucun patch
+
+## cachan
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=71; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=171; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — word_limits
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].uniqueIntro` — op=setField — Correction overcap : passage de 3 à 2 <strong> (max 2) en retirant un <strong> non indispensable, sans modifier le texte.
+  - value: `<p>Dans les locaux du <strong>Campus Cachan</strong>, les salles de cours et bureaux administratifs accumulent rapidement poussières et traces de passage. Les dalles textiles supportent un trafic quotidien intense, et les fibres retiennent `
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’élément le plus informatif pour scan rapide.
+  - value: `<strong>Dalles textiles des salles de cours</strong> : trafic étudiant quotidien et taches répétées.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le contexte terrain.
+  - value: `<strong>Moquettes velours des pavillons du Coteau</strong> : fibres délicates nécessitant une pression contrôlée.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre l’item scannable.
+  - value: `<strong>Halls ouverts des petits collectifs</strong> : encrassement rapide par les passages fréquents.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur le facteur d’encrassement.
+  - value: `<strong>Poussières fines liées à la circulation</strong> sur l'avenue Aristide Briand infiltrant les locaux.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Escaliers étroits dans certains immeubles anciens</strong> : acheminement du matériel à adapter.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur la cause principale.
+  - value: `<strong>Poussière de chantier du Grand Paris Express</strong> infiltrée dans les parkings souterrains du centre.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le type de support.
+  - value: `<strong>Sols béton poreux des résidences années 70-80</strong> à La Plaine nécessitant un décapage adapté.`
+- `services[1].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte clé.
+  - value: `<strong>Gestion stricte des eaux usées</strong> dans les parkings proches des zones piétonnes du Marché Carnot.`
+
+## champigny-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=76; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=188; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `citySpecificChallenges[0]` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajouter 1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2 hors <li>) et en mettant en avant un élément terrain scannable.
+  - value: `<p>Sur les hauteurs du Plateau et le long des boucles de la Marne, Champigny-sur-Marne présente des configurations variées qui demandent une <strong>connaissance fine du terrain</strong>. Klinova s'appuie sur cette proximité pour coordonner`
+- `services[0].uniqueIntro` — op=setField — uniqueIntro long avec 0 <strong> : ajout d’un segment court et concret (effet visible sur les fibres) en respectant max 2.
+  - value: `<p>Après quelques années d'usage, les moquettes des pavillons du quartier Cœuilly ou des bureaux installés sur la Zone Industrielle du Plateau finissent par accumuler des traces que l'aspirateur ne déloge plus. Café renversé dans un open sp`
+- `services[0].uniqueDeepDive` — op=setField — Chaque bloc <h3> était sans <strong> : ajout d’1 segment court par bloc (max 1) pour rendre les étapes scannables sans toucher au texte.
+  - value: `<h3>Diagnostic et préparation</h3> <p>Avant toute action, nous identifions la nature de la moquette : bouclée, velours, épaisse ou fine. Les taches sont repérées selon leur origine — tanin, graisse, traces anciennes — pour adapter le pré-tr`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur un point terrain clair pour améliorer la scanabilité.
+  - value: `Halls moquettés des années 70-80 avec <strong>fibres compactées</strong> par des décennies de passage.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le mécanisme d’encrassement, segment court et concret.
+  - value: `Bureaux de la ZI du Plateau où <strong>les dalles textiles accumulent</strong> poussières et traces de semelles.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur une contrainte d’accès typique.
+  - value: `Pavillons de Cœuilly avec <strong>escaliers intérieurs moquettés</strong> et accès parfois étroits.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur un facteur opérationnel clé (ventilation) sans mention interdite.
+  - value: `Séchage à adapter selon <strong>la ventilation variable</strong> des locaux, du sous-sol au dernier étage.`
+
+## champs-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 5 strong pairs; max 1 per <h3> block
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `services[0].faqAdditions[1].answer` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[2].uniqueIntro` — word_limits
+- `services[2].faqAdditions[2].answer` — forbidden_strong
+- `services[2].faqAdditions[3].answer` — word_limits
+- `services[3].uniqueIntro` — word_limits
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — word_limits
+- `services[3].faqAdditions[1].answer` — forbidden_strong
+- `services[3].faqAdditions[2].answer` — word_limits
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — word_limits
+- `services[4].faqAdditions[1].answer` — word_limits
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[5].uniqueIntro` — word_limits
+- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’un seul segment <strong> court et concret pour rendre le challenge scannable (max 1), sans toucher au texte hors balises.
+  - value: `Encrassement rapide des moquettes et sols des halls d'entrée dans les <strong>zones à forte densité étudiante</strong> (Cité Descartes) dû aux déménagements fréquents et au trafic piéton intense.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur le contexte opérationnel clé, sans modifier le texte.
+  - value: `Accumulation de poussières et de résidus urbains dans les <strong>parkings souterrains des grands ensembles</strong> construits dans les années 70-80 (Le Nesles, Pablo Picasso), nécessitant un dégraissage mécanique puissant.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’un <strong> unique (max 1) sur la zone concernée pour une lecture plus rapide.
+  - value: `Gestion de l'humidité remontante dans les <strong>parties basses des immeubles</strong> proches des bords de Marne et des étangs, favorisant les odeurs de renfermé dans les parties communes.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur un irritant terrain concret, pour scannabilité.
+  - value: `Le fort turnover dans les résidences étudiantes de la Cité Descartes entraîne des taches fréquentes (alimentaires, boissons) et des <strong>traces de valises</strong> nécessitant un détachage ciblé.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur la matière apportée et la zone, segment court et concret.
+  - value: `La proximité des zones boisées favorise l'apport de <strong>terre et d'humus dans les halls</strong>, incrustant les fibres des tapis d'entrée.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur le point opérationnel central, sans surligner une phrase entière.
+  - value: `Les longs couloirs des immeubles des années 70-80 (quartier Pablo Picasso) exigent une <strong>logistique spécifique</strong> pour l'alimentation en eau et l'électricité sur de grandes distances.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur le type de salissure, concret et scannable.
+  - value: `La densité de circulation autour du campus Descartes et des axes autoroutiers accélère le dépôt de <strong>suies grasses</strong> sur les sols et les murs.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur la contrainte matière, utile à la lecture rapide.
+  - value: `Les parkings des résidences des années 70-80 présentent souvent des <strong>bétons bruts devenus poreux</strong> qui absorbent les huiles, nécessitant un traitement de fond.`
+- `services[1].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur la zone à risque, segment court.
+  - value: `La gestion de la ventilation et de l'éclairage dans les <strong>niveaux inférieurs profonds</strong> est cruciale pour assurer un séchage efficace et la sécurité des équipes.`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur le phénomène terrain, sans termes interdits.
+  - value: `La proximité immédiate des zones boisées favorise une <strong>accumulation rapide de feuilles et de mousses</strong> nécessitant un traitement fongicide.`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur la contrainte support, scannable.
+  - value: `Les balcons des immeubles construits dans les années 80 (quartier des Pyramides) présentent parfois des <strong>bétons devenus poreux</strong> qui absorbent la pollution.`
+- `services[2].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur la configuration problématique, segment court.
+  - value: `L'évacuation des eaux sur les <strong>loggias fermées ou mal drainées</strong> impose l'usage systématique d'aspirateurs à liquides pour éviter les débordements.`
+- `services[3].uniqueDeepDive` — op=setField — Bloc[0] dépassait le cap (2 <strong>). Suppression du <strong> autour de “FFP2” pour revenir à max 1 <strong> par bloc <h3>, sans modifier le texte hors balises.
+  - value: `<h3>1. Protection et mise en sécurité</h3> <p>Nos techniciens interviennent équipés de combinaisons intégrales, de gants et de masques respiratoires FFP2 pour se protéger des agents pathogènes. Nous confinons la zone de travail pour éviter `
+- `services[3].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur le problème récurrent terrain, segment court.
+  - value: `La forte présence de végétation autour des résidences du Luzard et du Bois de Grâce favorise une <strong>recolonisation rapide</strong> nécessitant une désinfection profonde.`
+- `services[3].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur l’élément impacté, concret et scannable.
+  - value: `L'acidité des fientes accumulées attaque le <strong>béton des balcons</strong> des Pyramides (quartier du Nesles), demandant un nettoyage précautionneux.`
+- `services[3].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur la contrainte logistique, segment court.
+  - value: `L'évacuation des déchets depuis les <strong>étages élevés sans ascenseur</strong> impose un conditionnement ultra-sécurisé pour traverser les parties communes.`
+- `services[4].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur le cas terrain typique, sans surligner une phrase entière.
+  - value: `La forte densité de population étudiante implique souvent le nettoyage de <strong>mobilier très sollicité ou récupéré</strong>, nécessitant une désinfection renforcée.`
+- `services[4].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur la configuration logement, segment court.
+  - value: `L'humidité ambiante proche des étangs et de la Marne peut compliquer le séchage dans les <strong>logements en rez-de-chaussée</strong>, imposant une aspiration rigoureuse.`
+- `services[4].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur le levier technique, concret et scannable.
+  - value: `Le traitement des taches organiques (urine, nourriture) sur les matelas demande l'usage de <strong>produits enzymatiques spécifiques</strong> pour détruire les odeurs.`
+- `services[5].uniqueDeepDive` — op=setField — Bloc[0] manquait de <strong> (ajout impossible sans modifier le texte hors balises car déjà long) et bloc[1] dépassait largement le cap. Correction prioritaire: suppression des <strong> excédentaires dans le bloc “Nettoy
+  - value: `<h3>Diagnostic et préparation</h3> <p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les cont`
+- `services[5].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur la contrainte terrain, segment court.
+  - value: `Rotations concentrées autour de la Cité Descartes (fin d’année universitaire), avec <strong>délais souvent serrés</strong>.`
+- `services[5].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur la zone de contrainte, scannable.
+  - value: `Stationnement et accès plus contraints dans le <strong>secteur gare Noisy-Champs</strong> et boulevard Newton.`
+- `services[5].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur le point logistique clé.
+  - value: `Accès fréquents via <strong>interphones, badges et Vigik</strong>, surtout en résidences et logements étudiants.`
+- `services[5].specificChallenges[3]` — op=setField — Ajout d’un <strong> unique (max 1) sur l’enjeu méthode, segment court.
+  - value: `Diversité de revêtements (carrelage, lino/PVC, parquet) exigeant une <strong>adaptation stricte des méthodes</strong>.`
+- `services[5].faqAdditions[1].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>, segment court et opérationnel.
+  - value: `<p><strong>Oui. Nous intégrons ces contraintes dès la préparation :</strong> créneau adapté, consignes d’accès, et organisation du matériel pour limiter les allers-retours. Autour de la gare Noisy-Champs et du boulevard Newton, l’anticipati`
+- `services[5].faqAdditions[2].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>, sans modifier le texte hors balises.
+  - value: `<p><strong>Nous privilégions une méthode efficace et propre :</strong> traitement des sols lino/PVC ou parquet, dégraissage de cuisine sur les zones accessibles, et finitions visuelles pour un rendu homogène. Les accès Vigik/badges sont gér`
+- `services[5].faqAdditions[3].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>, segment court et neutre.
+  - value: `<p><strong>Dans la plupart des cas, oui.</strong> Nous limitons l’humidité résiduelle et prévoyons une aération en fin d’intervention. Cela permet de réoccuper le logement ou de le présenter rapidement, tout en conservant un rendu propre su`
+
+## charenton-le-pont
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=30; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=27; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=26; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=284; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=119; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=44; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=276; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=124; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=40; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=303; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=100; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=134; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=126; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=336; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=122; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=141; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=144; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=365; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=138; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueDeepDive` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — word_limits
+- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout de 1 segment <strong> court et concret (max1) pour améliorer la scanabilité du challenge, sans termes interdits.
+  - value: `Pollution atmosphérique intense de l'A4 et du Périphérique générant <strong>dépôts noirs gras</strong> sur vitrages, balcons et façades claires en pierre de taille, particulièrement dans les secteurs Valmy et Bourg-du-Pont`
+- `citySpecificChallenges[1]` — op=setField — Ajout de 1 <strong> (max1) sur un élément terrain facilement scannable.
+  - value: `Humidité fluviale de la Seine et de la Marne favorisant <strong>mousses et lichens</strong> sur murets et terrasses en rez-de-jardin, particulièrement dans le quartier Conflans et Les Carrières`
+- `citySpecificChallenges[2]` — op=setField — Ajout de 1 <strong> (max1) sur la contrainte principale, sans modifier le texte hors balises.
+  - value: `Saturation routière aux accès principaux (Porte de Charenton, Pont de Charenton) et <strong>stationnement extrêmement tendu</strong> imposant une planification logistique rigoureuse et l'utilisation de parkings souterrains`
+- `citySpecificChallenges[3]` — op=setField — Ajout de 1 <strong> (max1) sur une contrainte opérationnelle claire.
+  - value: `Verticalité des immeubles de grande hauteur (R+8 et plus) nécessitant <strong>gestion des flux par ascenseurs</strong> et protocoles adaptés aux halls à fort passage dans cette commune à très forte densité`
+- `services[0].uniqueIntro` — op=substring — Ajout de 1 <strong> (max2) dans un passage très concret et scannable, sans toucher au reste du texte.
+  - excerpt: `Les particules noires grasses transportées par les semelles s'incrustent profondément`
+  - replacement: `Les <strong>particules noires grasses</strong> transportées par les semelles s'incrustent profondément`
+- `services[0].uniqueDeepDive` — op=substring — Le bloc <h3> 3 est long et n'avait aucun <strong> : ajout de 1 segment (max1 par bloc) sans termes interdits.
+  - excerpt: `Le séchage complet intervient sous 6 à 10 heures selon la ventilation`
+  - replacement: `Le <strong>séchage complet</strong> intervient sous 6 à 10 heures selon la ventilation`
+- `services[0].specificChallenges[0]` — op=setField — Ajout de 1 <strong> (max1) sur le point terrain clé.
+  - value: `Pollution noire grasse de l'A4 et du Périphérique : Les immeubles des secteurs Valmy, Bourg-du-Pont et proches de la Porte de Charenton accumulent <strong>des particules atmosphériques tenaces</strong> nécessitant un détergent dégraissant r`
+- `services[0].specificChallenges[1]` — op=setField — Ajout de 1 <strong> (max1) sur la cause opérationnelle.
+  - value: `Humidité fluviale de la Seine et de la Marne : La confluence des deux rivières génère <strong>une hygrométrie élevée</strong> qui ralentit le séchage et aggrave l'incrustation des salissures, exigeant une extraction maximale particulièremen`
+
+## chelles
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=75; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — word_limits
+- `services[1].uniqueIntro` — word_limits
+- `services[1].uniqueDeepDive` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[2].faqAdditions[1].answer` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].faqAdditions[1].answer` — word_limits
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].uniqueDeepDive` — word_limits
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — word_limits
+- `services[6].faqAdditions[3].answer` — word_limits
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’un <strong> hors <li> (max 2) pour rendre l’intro plus scannable, en mettant en avant un élément terrain et concret sans toucher au texte.
+  - value: `<p>À Chelles, la maintenance immobilière requiert <strong>un partenaire de proximité</strong> fiable et réactif. Klinova s'impose comme un intervenant rigoureux pour les syndics de copropriété et gestionnaires, assurant une propreté durable`
+- `citySpecificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le fait terrain principal pour scan rapide.
+  - value: `<strong>Encrassement accru des façades et balcons</strong> dû au trafic de la RN34 et de la RN3, associé aux intempéries.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur le phénomène principal, formulation courte et concrète.
+  - value: `<strong>Développement de mousses et dépôts verts</strong> sur les sols des terrasses et parkings aériens, favorisé par la proximité du canal et de la Marne.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) pour mettre en avant la cause opérationnelle.
+  - value: `<strong>Fort passage dans les halls d'entrée</strong> des résidences près de la gare RER E, nécessitant un entretien très fréquent des moquettes et sols.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur le type de salissures, très scannable.
+  - value: `<strong>Salissures tenaces (hydrocarbures, poussières de frein)</strong> dans les parkings souterrains des ensembles immobiliers récents.`
+- `citySpecificChallenges[4]` — op=setField — Ajout d’un seul <strong> (max 1) sur le problème terrain principal.
+  - value: `<strong>Remontées d'humidité et odeurs de renfermé</strong> dans les rez-de-chaussée des quartiers Bords de Marne et Abbesses, accentuées lors des épisodes de crues hivernales.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’effet concret observé sur site.
+  - value: `<strong>Encroûtement des fibres</strong> par les poussières fines et résidus d'hydrocarbures issus du trafic routier dense (RN34, RN3).`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte terrain.
+  - value: `<strong>Humidité et boues régulières</strong> dans les halls d'entrée des résidences, nécessitant un nettoyage fréquent pour éviter les moisissures.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur la zone problématique.
+  - value: `<strong>Usure accentuée des moquettes sur les marches</strong> d'escalier des cages étroites, difficiles d'accès pour le matériel standard.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur les salissures typiques.
+  - value: `<strong>Taches tenaces (chewing-gums, traces de canettes)</strong> dans les halls des immeubles à forte rotation locative près du centre commercial.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le problème principal.
+  - value: `<strong>Poussière noire abrasive et tenace</strong>, mélange de particules fines issues du trafic routier dense et des résidus de pneus.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la salissure la plus parlante.
+  - value: `<strong>Taches d'huile et de carburant fréquentes</strong> dans les places de stationnement attitrées des parkings de copropriétés résidentielles.`
+- `services[1].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur la difficulté opérationnelle.
+  - value: `<strong>Gestion complexe des eaux usées</strong> dans les ouvrages où les pentes et les siphons sont mal dimensionnés, nécessitant un pompage.`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le symptôme visible.
+  - value: `<strong>Dépôts noirs gras et tenaces</strong> sur les garde-corps et sols, provenant des particules fines du trafic routier.`
+- `services[2].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le contexte d’intervention.
+  - value: `<strong>Nettoyage délicat des loggias fermées</strong>, où les salissures sont mêlées à des poussières domestiques, nécessitant une méthode sèche/humide.`
+- `services[4].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte terrain.
+  - value: `<strong>Séchage parfois ralenti</strong> dans les pièces peu ensoleillées ou les logements moins ventilés, nécessitant des conseils adaptés.`
+- `services[5].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur la cause technique.
+  - value: `Dalles béton des pavillons années 70-80 : <strong>joints poreux</strong> favorisant l'enracinement des mousses.`
+- `services[5].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte d’intervention.
+  - value: `Terrasses bois composite <strong>sensibles à la pression excessive</strong> et aux produits chlorés ou acides.`
+- `services[5].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le point de blocage.
+  - value: `Carrelage grès cérame avec relief : <strong>encrassement dans les micro-aspérités</strong> difficile à déloger.`
+- `services[5].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur le facteur aggravant.
+  - value: `Zones ombragées par les arbres des jardins arborés des Coudreaux et Chantereine : <strong>humidité persistante</strong>.`
+- `services[5].specificChallenges[4]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Accès par l'intérieur de la maison</strong> pour certaines terrasses arrière de pavillons mitoyens.`
+- `services[6].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la zone critique.
+  - value: `<strong>Graisses et dépôts incrustés en cuisine</strong> (crédence, hotte, zones autour des plaques) demandant un décrassage ciblé.`
+- `services[6].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le problème terrain.
+  - value: `<strong>Calcaire et traces tenaces dans les sanitaires</strong>, nécessitant une méthode progressive pour éviter d’endommager les surfaces.`
+
+## chevilly-larue
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=70; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=149; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=68; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’un <strong> hors <li> (max 2) pour rendre le 1er paragraphe plus scannable, sans toucher au texte ni dépasser les caps.
+  - value: `<p>Au cœur du pôle d'Orly-Rungis, desservie par le tram T7, Chevilly-Larue combine zones d'activités et quartiers résidentiels. Klinova accompagne gestionnaires et occupants avec une organisation pensée pour <strong>ce territoire en mouveme`
+- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> (max 2) sur un point terrain concret pour améliorer la scanabilité du bloc long.
+  - value: `<p>Dans la zone d'activités La Cerisaie, les dalles textiles des bureaux accumulent rapidement poussières fines et traces de passage. Le trafic quotidien des collaborateurs, combiné aux particules transportées depuis l'extérieur, ternit les`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le fait terrain principal.
+  - value: `<strong>Poussière noire grasse</strong> liée au trafic routier A6 et aux flux camions du MIN Rungis.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’élément technique concret.
+  - value: `Halls moquettés des années 70-80 avec <strong>fibres velours ras</strong> sensibles à l'écrasement.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’usage.
+  - value: `Dalles textiles des bureaux Cerisaie soumises à un <strong>passage quotidien intense</strong>.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte logistique.
+  - value: `<strong>Stationnement contraint</strong> aux abords du Tram T7 pour le déchargement du matériel.`
+
+## choisy-le-roi
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=17; must add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=74; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=163; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=64; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (max 2) pour la scanabilité, et ajout d’1 <strong> dans le 3e <li> (li[2]) qui en manquait (max 1/li).
+  - value: `<p>Au carrefour du RER C et du Tram T9, Choisy-le-Roi concentre des flux quotidiens importants sur ses deux rives. Klinova accompagne syndics, gestionnaires et occupants dans la gestion régulière de la propreté, avec une <strong>organisatio`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre le point scannable.
+  - value: `Dalles textiles des halls récents : <strong>encrassement rapide</strong> malgré l'aspect neuf.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur un élément concret.
+  - value: `Velours ras des copropriétés années 70 : <strong>fibres compactées</strong> retenant poussières et odeurs.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte terrain.
+  - value: `Accès aux cages d'escalier étroites du centre nécessitant <strong>du matériel compact</strong>.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu opérationnel.
+  - value: `Stationnement contraint près de la gare imposant <strong>une logistique anticipée</strong>.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur l’objectif terrain.
+  - value: `Coordination avec syndics et gestionnaires pour <strong>intervenir sans perturber les résidents</strong>.`
+
+## claye-souilly
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=87; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=25; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — forbidden_strong
+- `services[0].uniqueDeepDive` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — word_limits
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[1].faqAdditions[1].answer` — word_limits
+- `services[1].faqAdditions[2].answer` — word_limits
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[0].answer` — word_limits
+- `services[2].faqAdditions[3].answer` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — word_limits
+- `services[3].faqAdditions[1].answer` — word_limits
+- `services[3].faqAdditions[2].answer` — word_limits
+- `services[3].faqAdditions[3].answer` — word_limits
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — word_limits
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[4].faqAdditions[3].answer` — word_limits
+- `services[5].uniqueIntro` — word_limits
+- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’un <strong> hors <li> (max 2) pour rendre le texte d’intro plus scannable, en mettant en avant un élément opérationnel concret sans toucher au reste.
+  - value: `<p>Pour garantir la propreté des résidences et locaux professionnels à Claye-Souilly, Klinova accompagne syndics et gestionnaires dans l'entretien courant et ponctuel. Nous assurons un suivi rigoureux avec un protocole adapté à chaque conte`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le symptôme terrain le plus parlant, segment court.
+  - value: `<strong>Dépôts verts et mousses sur les balcons</strong> des résidences pavillonnaires de Voisins et Souilly en raison de la proximité de la Beuvronne et du canal de l'Ourcq.`
+- `services[3].uniqueDeepDive` — op=setField — Bloc <h3>1 surcapé (2 <strong>). Suppression du <strong> autour de “FFP3” pour respecter max 1 <strong> par bloc, en conservant un focus opérationnel utile.
+  - value: `<h3>1. Protection et mise en sécurité</h3> <p>Mise en place des équipements de protection individuelle obligatoires : combinaison jetable, gants épais, masque respiratoire de type FFP3 et lunettes de protection. Installation de bâches de pr`
+- `services[5].faqAdditions[1].answer` — op=setField — Conformité service FAQ : EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>En logement récent,</strong> on porte une attention particulière aux finitions (parquet stratifié, surfaces modernes, baies vitrées) et aux accès (badge/interphone). En pavillon, le volume et les vitrages (véranda, grandes ouvert`
+- `services[5].faqAdditions[2].answer` — op=setField — Conformité service FAQ : EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Nous utilisons un détartrage adapté aux matériaux</strong> (robinetterie, parois, joints) et nous rinçons correctement pour limiter les résidus. Nous pouvons aussi laisser des conseils simples d’aération et d’essuyage sur les zon`
+- `services[5].faqAdditions[3].answer` — op=setField — Conformité service FAQ : EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Oui, sur les vitrages accessibles.</strong> C’est fréquent à Claye-Souilly, notamment sur les pavillons avec véranda ou grandes baies. Nous intégrons cette partie au périmètre défini avant intervention pour garantir un rendu prop`
+
+## creteil
+
+### Coverage targets (manques/minima)
+
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=34; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=32; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 3 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — hubIntro_li_cap
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(8>2)
+- `services[0].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(7>2)
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(4>2)
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — word_limits
+- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur un segment concret et terrain.
+  - value: `Encrassement accéléré des halls et parkings autour des stations de métro ligne 8 (Créteil-Préfecture, Créteil-Université, Créteil-L'Échat, Créteil-Pointe du Lac) et de la gare RER D Créteil-Pompadour en raison des <strong>flux piétons quoti`
+- `citySpecificChallenges[1]` — op=setField — City challenge: ajouter 1 <strong> (max1) au début pour scanabilité.
+  - value: `<strong>Particules fines et poussières urbaines</strong> générées par l'A86 et l'échangeur Pompadour, impactant les balcons, vitres et surfaces extérieures des résidences situées en proximité des grands axes.`
+- `citySpecificChallenges[2]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur un point terrain.
+  - value: `Accumulation de <strong>feuilles et boues</strong> sur les balcons et terrasses des quartiers Halage, bords de Marne et Front de Lac en raison de la végétation dense et de la proximité du lac.`
+- `citySpecificChallenges[3]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur une contrainte opérationnelle.
+  - value: `Parties communes étendues dans les tours et grands ensembles de Mont-Mesly nécessitant une <strong>coordination précise avec les bailleurs</strong> et syndics pour limiter la gêne des résidents lors des interventions.`
+- `services[0].uniqueIntro` — op=setField — UniqueIntro service 0: réduire à max 2 <strong> en conservant des segments concrets; suppression des autres <strong>.
+  - value: `<p>Les traces de pas s'accumulent dans les halls vitrés de la Préfecture, les paliers des tours de Mont-Mesly et les escaliers des résidences du Centre ancien. Le passage quotidien des habitants empruntant le métro ligne 8 ou le RER D marqu`
+- `services[0].uniqueDeepDive` — op=setField — UniqueDeepDive service 0: ramener chaque bloc <h3> à max 1 <strong>; suppression de <strong>l'injection d'eau chaude</strong>, <strong>délais de séchage</strong>, <strong>12 à 18 mois</strong>.
+  - value: `<h3>Analyse technique préalable</h3> <p>Le technicien examine la nature de la moquette (bouclée, velours, synthétique, laine), repère les zones de <strong>fort trafic</strong> (entrées de halls, paliers d'ascenseurs, marches d'escalier) et `
+- `services[0].specificChallenges[0]` — op=setField — Service challenge: ajouter 1 <strong> (max1) sur l’effet terrain.
+  - value: `Les flux piétons massifs autour des stations de métro ligne 8 (Créteil-Préfecture, Créteil-Université) génèrent un <strong>encrassement rapide des moquettes</strong> de halls et d'escaliers.`
+- `services[0].specificChallenges[1]` — op=setField — Service challenge: ajouter 1 <strong> (max1) sur la contrainte.
+  - value: `Les marches d'escalier dans les immeubles anciens du Centre ancien présentent des <strong>usures localisées</strong> nécessitant un traitement ciblé et plusieurs passes.`
+
+## emerainville
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=104; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=204; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=182; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=154; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=186; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=146; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=149; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=165; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=189; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=82; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=72; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=93; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=195; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=143; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — word_limits
+- `faq[1].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `faq[3].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(7>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) pour rendre le challenge scannable.
+  - excerpt: `Dépôts de suie réguliers sur façades et terrasses`
+  - replacement: `<strong>Dépôts de suie réguliers</strong> sur façades et terrasses`
+- `citySpecificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le point le plus concret.
+  - excerpt: `Taches d'huile fréquentes dans les parkings`
+  - replacement: `<strong>Taches d'huile fréquentes</strong> dans les parkings`
+- `citySpecificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) pour améliorer la lecture rapide.
+  - excerpt: `Mousse et humidité sur balcons nord`
+  - replacement: `<strong>Mousse et humidité</strong> sur balcons nord`
+- `citySpecificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le risque terrain.
+  - excerpt: `Fientes de pigeons concentrées autour du Parc de la Mairie`
+  - replacement: `<strong>Fientes de pigeons concentrées</strong> autour du Parc de la Mairie`
+- `citySpecificChallenges[4]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la contrainte d’accès.
+  - excerpt: `Accès restreint aux immeubles (digicodes, badges Vigik)`
+  - replacement: `<strong>Accès restreint aux immeubles</strong> (digicodes, badges Vigik)`
+- `services[0].uniqueIntro` — op=substring — Ajout d’un <strong> court (max 2) sur un fait terrain clé, sans termes interdits.
+  - excerpt: `les moquettes accumulent rapidement une fine poussière grise`
+  - replacement: `les moquettes accumulent rapidement <strong>une fine poussière grise</strong>`
+- `services[0].uniqueDeepDive` — op=substring — Ajout d’un <strong> dans le bloc <h3> 1 (max 1 par bloc) pour améliorer la scanabilité sur l’étape clé.
+  - excerpt: `identifions les zones de fort trafic`
+  - replacement: `identifions <strong>les zones de fort trafic</strong>`
+- `services[0].specificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le problème principal.
+  - excerpt: `Poussière fine persistante`
+  - replacement: `<strong>Poussière fine persistante</strong>`
+- `services[0].specificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la contrainte terrain.
+  - excerpt: `Escaliers étroits du Bourg historique`
+  - replacement: `<strong>Escaliers étroits du Bourg historique</strong>`
+- `services[0].specificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la diversité des supports.
+  - excerpt: `Moquettes variées (velours ras, bouclée, dalles textiles)`
+  - replacement: `<strong>Moquettes variées (velours ras, bouclée, dalles textiles)</strong>`
+- `services[0].specificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le point le plus actionnable.
+  - excerpt: `Taches anciennes incrustées`
+  - replacement: `<strong>Taches anciennes incrustées</strong>`
+- `services[1].uniqueIntro` — op=substring — Ajout d’un <strong> court et concret (max 2) sur un symptôme terrain visible.
+  - excerpt: `taches tenaces, marquages au sol effacés, rigoles encrassées`
+  - replacement: `taches tenaces, <strong>marquages au sol effacés</strong>, rigoles encrassées`
+- `services[1].uniqueDeepDive` — op=substring — Ajout d’un <strong> dans le bloc <h3> 1 (max 1) sur un point de contrôle terrain.
+  - excerpt: `l'état des évacuations (regards, rigoles)`
+  - replacement: `<strong>l'état des évacuations</strong> (regards, rigoles)`
+- `services[1].specificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le problème principal.
+  - excerpt: `Taches d'huile anciennes`
+  - replacement: `<strong>Taches d'huile anciennes</strong>`
+- `services[1].specificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la cause locale.
+  - excerpt: `Dépôts de suie (A104 proche)`
+  - replacement: `<strong>Dépôts de suie (A104 proche)</strong>`
+- `services[1].specificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la zone à risque.
+  - excerpt: `Rampes inclinées striées`
+  - replacement: `<strong>Rampes inclinées striées</strong>`
+- `services[1].specificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la contrainte opérationnelle.
+  - excerpt: `Gestion eaux en parkings aériens`
+  - replacement: `<strong>Gestion eaux en parkings aériens</strong>`
+- `services[1].specificChallenges[4]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le contexte d’usage.
+  - excerpt: `Flux pendulaire gare RER`
+  - replacement: `<strong>Flux pendulaire gare RER</strong>`
+- `services[2].uniqueIntro` — op=substring — Ajout d’un <strong> court et concret (max 2) sur le symptôme principal.
+  - excerpt: `la mousse s'incruste dans les joints`
+  - replacement: `la <strong>mousse s'incruste dans les joints</strong>`
+- `services[2].uniqueDeepDive` — op=substring — Ajout d’un <strong> dans le bloc <h3> 1 (max 1) sur une contrainte terrain.
+  - excerpt: `sans risque de coulures chez le voisin du dessous`
+  - replacement: `sans risque de <strong>coulures chez le voisin du dessous</strong>`
+- `services[2].specificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le problème principal.
+  - excerpt: `Mousse tenace dans les joints`
+  - replacement: `<strong>Mousse tenace dans les joints</strong>`
+- `services[2].specificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la cause locale.
+  - excerpt: `Pollution routière (suie A104) incrustée`
+  - replacement: `<strong>Pollution routière (suie A104) incrustée</strong>`
+- `services[2].specificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la contrainte opérationnelle.
+  - excerpt: `Gestion critique de l'eau`
+  - replacement: `<strong>Gestion critique de l'eau</strong>`
+- `services[2].specificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur le risque support.
+  - excerpt: `Joints fragiles sur immeubles anciens du Bourg`
+  - replacement: `<strong>Joints fragiles sur immeubles anciens du Bourg</strong>`
+- `services[2].specificChallenges[4]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la contrainte d’accès.
+  - excerpt: `Accès étages élevés (R+4)`
+  - replacement: `<strong>Accès étages élevés (R+4)</strong>`
+- `services[3].uniqueIntro` — op=substring — Ajout d’un <strong> court et concret (max 2) sur le fait terrain principal.
+  - excerpt: `accumulent progressivement des fientes de pigeons`
+  - replacement: `accumulent progressivement <strong>des fientes de pigeons</strong>`
+- `services[3].uniqueDeepDive` — op=substring — Ajout d’un <strong> dans le bloc <h3> 1 (max 1) sur l’action clé de confinement.
+  - excerpt: `Le balcon et ses abords sont bâchés`
+  - replacement: `<strong>Le balcon et ses abords</strong> sont bâchés`
+- `services[3].specificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la cause locale.
+  - excerpt: `Proximité des espaces verts (Parc de la Mairie)`
+  - replacement: `<strong>Proximité des espaces verts</strong> (Parc de la Mairie)`
+- `services[3].specificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la difficulté support.
+  - excerpt: `Supports poreux en pierre ou béton`
+  - replacement: `<strong>Supports poreux en pierre ou béton</strong>`
+- `services[3].specificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur l’enjeu principal.
+  - excerpt: `Risques sanitaires réels (histoplasmose, cryptococcose)`
+  - replacement: `<strong>Risques sanitaires réels</strong> (histoplasmose, cryptococcose)`
+- `services[3].specificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur la mesure clé.
+  - excerpt: `Confinement indispensable`
+  - replacement: `<strong>Confinement indispensable</strong>`
+
+## fontenay-sous-bois
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=139; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=27; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=23; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=134; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=137; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=285; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=131; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=143; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=125; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=351; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=112; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=123; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=130; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=356; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=120; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=142; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=148; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=427; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=163; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=157; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=166; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=42; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=41; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=40; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `services[0].uniqueIntro` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(10>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajout d’un repère scannable dans le texte hors <li> (0 strong), en restant court et concret, sans dépasser le cap (max 2 hors <li>).
+  - excerpt: `Fontenay-sous-Bois présente un parc immobilier diversifié nécessitant des protocoles différenciés`
+  - replacement: `Fontenay-sous-Bois présente un <strong>parc immobilier diversifié</strong> nécessitant des protocoles différenciés`
+- `citySpecificChallenges[0]` — op=substring — Ajout du seul <strong> autorisé (max 1) pour rendre le défi immédiatement scannable.
+  - excerpt: `Végétation du Bois de Vincennes générant pollens collants, sève des platanes`
+  - replacement: `<strong>Végétation du Bois de Vincennes</strong> générant pollens collants, sève des platanes`
+- `citySpecificChallenges[1]` — op=substring — Ajout du seul <strong> autorisé (max 1) sur l’élément terrain principal.
+  - excerpt: `Pollution atmosphérique de l'A86 et du pôle RER Val de Fontenay`
+  - replacement: `<strong>Pollution atmosphérique de l'A86</strong> et du pôle RER Val de Fontenay`
+- `citySpecificChallenges[2]` — op=substring — Ajout du seul <strong> autorisé (max 1) pour mettre en avant la contrainte d’accès.
+  - excerpt: `Fracture urbaine A86/voies ferrées imposant des temps de trajet variables`
+  - replacement: `<strong>Fracture urbaine A86/voies ferrées</strong> imposant des temps de trajet variables`
+- `citySpecificChallenges[3]` — op=substring — Ajout du seul <strong> autorisé (max 1) pour résumer le défi en 2 mots concrets.
+  - excerpt: `Matériaux contrastés nécessitant double expertise : meulières et pierres anciennes`
+  - replacement: `<strong>Matériaux contrastés</strong> nécessitant double expertise : meulières et pierres anciennes`
+- `services[0].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) sur l’intitulé terrain du défi.
+  - excerpt: `Dépôts végétaux massifs du Bois de Vincennes`
+  - replacement: `<strong>Dépôts végétaux massifs du Bois de Vincennes</strong>`
+- `services[0].specificChallenges[1]` — op=substring — Ajout d’1 <strong> (max 1) sur la contrainte principale.
+  - excerpt: `Pollution noire grasse de l'A86`
+  - replacement: `<strong>Pollution noire grasse de l'A86</strong>`
+- `services[0].specificChallenges[2]` — op=substring — Ajout d’1 <strong> (max 1) sur le facteur terrain déterminant.
+  - excerpt: `Humidité élevée dans le quartier des Voisins du Bois`
+  - replacement: `<strong>Humidité élevée dans le quartier des Voisins du Bois</strong>`
+
+## gagny
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=106; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=27; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=23; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=22; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[1].answer` — word_limits
+- `services[0].uniqueDeepDive` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — word_limits
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[1].uniqueDeepDive` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[1].faqAdditions[2].answer` — forbidden_strong
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[1].answer` — word_limits
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — word_limits
+- `services[3].faqAdditions[1].answer` — word_limits
+- `services[3].faqAdditions[3].answer` — word_limits
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[0].answer` — word_limits
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[5].uniqueIntro` — pairs_over_cap(7>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0) pour améliorer la scanabilité, en restant sous le cap (max 2 hors <li>). Segment court et concret.
+  - excerpt: `cela implique de gérer des problématiques variées : l'humidité des sous-sols`
+  - replacement: `cela implique de gérer <strong>des problématiques variées</strong> : l'humidité des sous-sols`
+- `citySpecificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur le point terrain le plus saillant pour rendre l’item scannable.
+  - excerpt: `débris végétaux et de terre dans les halls d'entrée`
+  - replacement: `<strong>débris végétaux et de terre</strong> dans les halls d'entrée`
+- `citySpecificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur la contrainte principale, formulation courte et concrète.
+  - excerpt: `l'humidité remontante dans les parkings semi-enterrés`
+  - replacement: `<strong>l'humidité remontante</strong> dans les parkings semi-enterrés`
+- `citySpecificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur la cause terrain de l’encrassement, pour lecture rapide.
+  - excerpt: `pollution atmosphérique et les lichens`
+  - replacement: `<strong>pollution atmosphérique et les lichens</strong>`
+- `citySpecificChallenges[3]` — op=substring — Ajoute 1 <strong> (max 1) sur la contrainte logistique la plus parlante.
+  - excerpt: `les petites rues pavillonnaires du quartier des Abbesses`
+  - replacement: `les <strong>petites rues pavillonnaires</strong> du quartier des Abbesses`
+- `services[0].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur l’élément opérationnel clé (transition de supports) pour scanabilité.
+  - excerpt: `tapis d'escaliers et couloirs en moquette`
+  - replacement: `<strong>tapis d'escaliers et couloirs en moquette</strong>`
+- `services[0].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur le problème terrain principal, segment court.
+  - excerpt: `Remontée de taches anciennes`
+  - replacement: `<strong>Remontée de taches anciennes</strong>`
+- `services[0].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur la contrainte de volume, utile à la lecture.
+  - excerpt: `de grands linéaires de couloirs`
+  - replacement: `<strong>de grands linéaires de couloirs</strong>`
+- `services[1].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur la configuration la plus contraignante.
+  - excerpt: `rampes hélicoïdales`
+  - replacement: `<strong>rampes hélicoïdales</strong>`
+- `services[1].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur la cause technique des taches incrustées.
+  - excerpt: `béton brut très poreux`
+  - replacement: `<strong>béton brut très poreux</strong>`
+- `services[1].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur le risque opérationnel principal.
+  - excerpt: `Ventilation parfois insuffisante`
+  - replacement: `<strong>Ventilation parfois insuffisante</strong>`
+- `services[2].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur le point terrain le plus critique.
+  - excerpt: `vigilance accrue sur les évacuations d'eau`
+  - replacement: `<strong>vigilance accrue sur les évacuations d'eau</strong>`
+- `services[2].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur la salissure typique, segment court.
+  - excerpt: `lichens incrustés`
+  - replacement: `<strong>lichens incrustés</strong>`
+- `services[2].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur la contrainte de protection, très concrète.
+  - excerpt: `protéger les plantes et aménagements personnels`
+  - replacement: `<strong>protéger les plantes et aménagements personnels</strong>`
+
+## gentilly
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=18; must add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=82; may add 1 (max2 outside li)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=153; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=223; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=92; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=82; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — word_limits
+- `faq[1].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `faq[3].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].specificChallenges[0]` — op=setField — Coverage: service specificChallenges[0] had 0 strong; added 1 (max1).
+  - value: `Halls du Chaperon Vert : <strong>trafic dense</strong> et moquettes anciennes nécessitant passes multiples.`
+- `services[0].specificChallenges[2]` — op=setField — Coverage: service specificChallenges[2] had 0 strong; added 1 (max1).
+  - value: `Escaliers étroits du centre-ville : <strong>montée du matériel par étapes</strong> avec protection des marches.`
+- `services[0].specificChallenges[3]` — op=setField — Coverage: service specificChallenges[3] had 0 strong; added 1 (max1).
+  - value: `Stationnement contraint à Gentilly : <strong>véhicule léger</strong> et créneaux horaires adaptés.`
+- `services[0].specificChallenges[4]` — op=setField — Coverage: service specificChallenges[4] had 0 strong; added 1 (max1).
+  - value: `Séchage à surveiller dans les <strong>halls peu ventilés</strong> des immeubles années 60-70.`
+
+## gournay-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=88; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — word_limits
+- `faq[1].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `services[0].uniqueIntro` — forbidden_strong
+- `services[0].uniqueDeepDive` — word_limits
+- `services[0].faqAdditions[0].answer` — word_limits
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[0].faqAdditions[3].answer` — word_limits
+- `services[1].uniqueIntro` — forbidden_strong
+- `services[1].uniqueDeepDive` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[2].uniqueIntro` — word_limits
+- `services[2].uniqueDeepDive` — word_limits
+- `services[2].faqAdditions[0].answer` — word_limits
+- `services[2].faqAdditions[1].answer` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].faqAdditions[0].answer` — word_limits
+- `services[3].faqAdditions[2].answer` — word_limits
+- `services[4].uniqueIntro` — word_limits
+- `services[4].uniqueDeepDive` — word_limits
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[5].uniqueIntro` — pairs_over_cap(8>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajouter 1 <strong> dans le texte hors <li> (actuellement 0) pour améliorer la scanabilité, en restant sous le cap (max 2 hors <li>).
+  - excerpt: `Notre approche repose sur une organisation rigoureuse, une bonne connaissance`
+  - replacement: `Notre approche repose sur une <strong>organisation rigoureuse</strong>, une bonne connaissance`
+- `citySpecificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur un segment court et concret pour rendre l’item scannable.
+  - value: `<strong>Humidité et dépôts verts</strong> sur balcons et terrasses liés à la proximité de la Marne.`
+- `citySpecificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) sur le point terrain principal de l’item.
+  - value: `<strong>Encrassement des halls et entrées</strong> par les résidus terreux provenant des jardins privatifs.`
+- `citySpecificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur le fait concret le plus scannable.
+  - value: `<strong>Présence de fientes</strong> sur balcons et toitures donnant sur des zones arborées ou espaces verts.`
+- `services[0].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) pour faciliter la lecture en liste.
+  - value: `<strong>Encrassement accéléré des halls</strong> donnant directement sur des axes de circulation, avec apports fréquents de boue, sable et poussières urbaines.`
+- `services[0].specificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur l’élément déclencheur.
+  - value: `<strong>Apports saisonniers de pollens</strong>, poussières fines et résidus terreux issus des jardins et espaces verts environnants.`
+- `services[1].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur le problème principal.
+  - value: `<strong>Encrassement accéléré des parkings</strong> donnant sur l'avenue du Maréchal Joffre par dépôts de particules fines issues de la circulation.`
+- `services[1].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte de site.
+  - value: `<strong>Évacuations d'eau parfois limitées</strong> dans certains parkings résidentiels, imposant une gestion rigoureuse des eaux de lavage.`
+- `services[1].specificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte physique.
+  - value: `<strong>Hauteur sous plafond réduite</strong> dans les parkings de copropriété, nécessitant l'usage d'équipements compacts et maîtrisés.`
+- `services[2].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur la source de salissures.
+  - value: `<strong>Dépôts de poussières fines</strong> et résidus extérieurs qui ternissent rapidement les surfaces exposées.`
+- `services[2].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) sur le phénomène terrain.
+  - value: `<strong>Développement de mousses et d'algues</strong> favorisé par l'humidité, notamment dans les zones ombragées proche de la Marne.`
+- `services[2].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte opérationnelle.
+  - value: `<strong>Gestion délicate de l'eau</strong> en immeuble collectif pour éviter coulures et nuisances pour le voisinage.`
+- `services[2].specificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Accès parfois restreints</strong> nécessitant un matériel compact et une organisation précise.`
+- `services[3].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur le type de support.
+  - value: `<strong>Supports poreux (béton brut, joints, seuils)</strong> : nettoyage plus délicat pour désincruster sans abîmer le support.`
+- `services[4].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur le type de textile.
+  - value: `<strong>Textiles volumineux (canapés profonds, matelas épais)</strong> demandant une extraction maximale pour limiter l'humidité résiduelle.`
+- `services[5].uniqueIntro` — op=setField — Réduire le nombre de <strong> à 0 pour respecter le cap uniqueIntro (max 2) sans modifier le texte hors balises.
+  - value: `<p>Gournay-sur-Marne, plus petite commune de Seine-Saint-Denis avec ses 1,68 km², conserve un caractère de village résidentiel prisé aux portes de la Seine-et-Marne. Cette enclave verdoyante, bordée par la Marne et le canal de Chelles, abri`
+- `services[6].uniqueDeepDive` — op=setField — Réduire les blocs <h3>2 et <h3>3 à 0 <strong> pour respecter max 1 par bloc, mais ce patch ne rajoute pas le <strong> manquant au bloc[0] et enlève trop. À rejeter.
+  - value: `<h3>Cadrage et repérage du logement</h3> <p>Nous commençons par identifier le contexte (logement vide, avant état des lieux, remise en état du logement après période d’inoccupation) et les matériaux : parquet, carrelage, terre cuite, vitrag`
+
+## index
+
+### Coverage targets (manques/minima)
+
+✅ Aucun manque détecté
+
+### Violations / Overlimit (TS actuel)
+
+✅ Aucun problème détecté
+
+### Patches proposés (kept)
+
+✅ Aucun patch
+
+## ivry-sur-seine
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=18; must add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=83; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=10; add 1 (max1)
+- `citySpecificChallenges[5]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=259; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=94; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=78; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(11>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (max 2) sur un segment concret, et ajout d’1 <strong> dans le 3e <li> (li[2]) qui en manquait (max 1/li), sans modifier le texte hors balises.
+  - value: `<p>Au cœur de la ZAC Confluences et à deux pas de la gare RER C, Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre équipe connaît les contraintes d'accès et de stationnement propres à ce`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur un point terrain pour améliorer la scanabilité.
+  - value: `<strong>Stationnement très contraint</strong> au centre-ville et sur le secteur Ivry-Port.`
+- `citySpecificChallenges[5]` — op=setField — Ajout d’1 <strong> (max 1) sur un segment court et concret.
+  - value: `<strong>Poussières de chantier</strong> liées aux livraisons en cours sur la ZAC Confluences.`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans chacun des blocs h3 manquants (block[1] et block[2]), en respectant max 1 <strong> par section <h3>.
+  - value: `<h3>Zones de circulation intense</h3> <p>Les entrées, couloirs et espaces d'accueil reçoivent un traitement prioritaire. Après aspiration, nous appliquons un pré-détachant sur les traces de semelles et les auréoles de café. L'injection-extr`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’élément matériel clé.
+  - value: `Parties communes années 70-80 : <strong>moquettes aiguilletées</strong> marquées par des décennies de passage.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur une contrainte terrain.
+  - value: `<strong>Stationnement tendu</strong> à proximité des bureaux, coordination nécessaire pour le matériel.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur un type de salissure concret.
+  - value: `<strong>Taches de café</strong> et traces de semelles fréquentes dans les espaces de pause.`
+
+## joinville-le-pont
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=130; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=39; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=29; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=39; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=180; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=83; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=75; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=154; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=81; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=78; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=144; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=71; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=188; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=126; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=69; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
+  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(9>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — word_limits
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+✅ Aucun patch
+
+## lagny-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=102; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=23; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=25; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=23; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `citySpecificChallenges[5]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[2].answer` — forbidden_strong
+- `services[0].uniqueIntro` — word_limits
+- `services[0].faqAdditions[2].answer` — word_limits
+- `services[1].uniqueIntro` — word_limits
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[1].faqAdditions[2].answer` — forbidden_strong
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — word_limits
+- `services[2].uniqueDeepDive` — word_limits
+- `services[2].faqAdditions[3].answer` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[2].answer` — word_limits
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].uniqueDeepDive` — word_limits
+- `services[4].faqAdditions[0].answer` — word_limits
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (autorisé, max 2) pour rendre le texte d’intro plus scannable, sans toucher aux <li> déjà conformes.
+  - value: `<p>Partenaire de confiance pour la maintenance immobilière à Lagny-sur-Marne, Klinova accompagne les syndics de copropriété et les gestionnaires dans la préservation de leur patrimoine. Nous assurons une <strong>gestion globale de l'hygiène`
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour mettre en avant le problème terrain principal.
+  - value: `<strong>Encrassement accéléré des parkings</strong> souterrains et aériens près de la gare de Lagny-Thorigny et des axes routiers (hydrocarbures, poussières fines, traces de pneus).`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) pour améliorer la lecture en liste.
+  - value: `<strong>Usure prématurée des moquettes</strong> et sols dans les halls à fort passage (gare, centre-ville, résidences proches de la Francilienne).`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) pour faire ressortir le risque/souci principal.
+  - value: `<strong>Accumulation de fientes de pigeons</strong> sur les balcons, garde-corps et appuis de fenêtres, notamment dans le centre ancien et près de l'abbatiale.`
+- `citySpecificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) pour une lecture rapide du point logistique.
+  - value: `<strong>Contraintes d'accès logistique</strong> pour les engins de nettoyage dans les ruelles étroites, zones piétonnes et parkings aux rampes pentues.`
+- `citySpecificChallenges[5]` — op=setField — Ajout d’1 <strong> (max 1) sur un enjeu opérationnel concret.
+  - value: `<strong>Gestion fine des eaux de lavage</strong> (parkings, balcons) pour respecter les réseaux existants et l'environnement en bord de Marne.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre la liste plus scannable.
+  - value: `<strong>Fort passage dans les halls</strong> des copropriétés proches de la gare de Lagny-Thorigny, accélérant l'usure des moquettes.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte locale.
+  - value: `<strong>Humidité en rez-de-chaussée</strong> pour les immeubles en bord de Marne, favorisant les taches tenaces.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème le plus visible.
+  - value: `<strong>Poussière noire grasse</strong> et résidus de pneus dans les parkings souterrains, liés à la circulation dense sur la Francilienne et la RD 934.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) pour lecture rapide.
+  - value: `<strong>Taches d'huile persistantes</strong> et marquages effacés dans les parkings aériens des zones commerciales ou près de la gare.`
+- `services[1].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `<strong>Rampes étroites et bas plafonds</strong> dans les parkings anciens, compliquant l'accès des machines.`
+- `services[1].faqAdditions[3].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Nous récupérons les eaux avec l’autolaveuse</strong> et organisons l’évacuation selon les points disponibles sur site (siphons, regards, zones prévues), afin d’éviter tout écoulement incontrôlé et tout encrassement des réseaux. A`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le symptôme principal.
+  - value: `<strong>Dépôts de poussière fine</strong> et pollution liés à la proximité de la Francilienne et des axes routiers, encrassant rapidement les balcons.`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) pour scannabilité.
+  - value: `<strong>Joints noircis et dépôts verts</strong> tenaces sur les balcons exposés aux arbres ou aux jardinières, nécessitant des produits spécifiques.`
+- `services[3].uniqueDeepDive` — op=setField — Conformité uniqueDeepDive: bloc <h3>1 avait 2 <strong>; suppression de <strong>FFP3</strong> pour revenir à max 1 par bloc. Bloc <h3>3: suppression du <strong>…</strong> car termes interdits ("Désinfection", "virucide") 
+  - value: `<h3>1. Mise en place des protections sanitaires</h3> <p>Nos techniciens portent des combinaisons, gants, masques FFP3 et lunettes pour éviter tout contact avec les poussières contaminées. <strong>Le balcon est isolé avec des bâches</strong>`
+- `services[3].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’étape clé.
+  - value: `<strong>Évacuation des déchets contaminés</strong>, dans le respect des normes sanitaires et environnementales.`
+- `services[4].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte de séchage.
+  - value: `<strong>Pièces peu ventilées</strong> ou humides, ralentissant le séchage et exigeant une gestion rigoureuse de l'aération.`
+- `services[4].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur le symptôme terrain.
+  - value: `<strong>Odeurs tenaces</strong> liées aux animaux ou à l'humidité, nécessitant des traitements spécifiques pour une élimination durable.`
+- `services[5].faqAdditions[0].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>La proximité de la Marne et l’humidité hivernale</strong> favorisent naturellement le développement des mousses et algues à Lagny-sur-Marne. Après le nettoyage, un traitement préventif ciblé peut ralentir la repousse. Un entretie`
+- `services[5].faqAdditions[1].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Les terrasses en pierre naturelle ou ancienne</strong> nécessitent des précautions spécifiques. Nous évitons les produits agressifs et adaptons la pression de rinçage pour préserver la porosité et les joints. Le nettoyage est pro`
+- `services[5].faqAdditions[2].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Un passage haute pression standard peut dégrader les joints</strong>, marquer la surface ou fragiliser les matériaux anciens. Notre intervention combine un produit adapté au support, un brossage mécanique contrôlé et un rinçage c`
+- `services[6].uniqueIntro` — op=setField — uniqueIntro overcap: réduction à 2 <strong> en retirant celui sur la requête SEO, et en gardant un segment court et utile sur le cadrage du périmètre.
+  - value: `<p>À Lagny-sur-Marne, une remise en état se joue souvent sur deux réalités très différentes : le centre historique dense — avec ses immeubles anciens, ses escaliers plus étroits et une circulation régulée — et les quartiers résidentiels des`
+- `services[6].faqAdditions[2].answer` — op=setField — Mise en conformité: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Oui, sur les vitres accessibles.</strong> Les logements récents sont très lumineux : un passage soigné sur vitrages et rebords fait une vraie différence sur le rendu final, surtout avant un état des lieux.</p>`
+
+## le-perreux-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=65; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[1].answer` — word_limits
+- `faq[3].answer` — forbidden_strong
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) pour rendre le point scannable, en mettant en avant la contrainte terrain principale.
+  - value: `<strong>Zones bleues étendues en centre-ville</strong> : stationnement à sécuriser en amont, surtout près de la gare.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur l’élément opérationnel clé (accès) sans toucher au reste du texte.
+  - value: `<strong>Digicodes et badges fréquents</strong> : accès à cadrer pour éviter les blocages le jour J.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) pour faire ressortir la contrainte de configuration (profondeur) et améliorer la lecture.
+  - value: `<strong>Sous-sols parfois profonds</strong> : traitement par zones avec attention aux rampes et aux angles.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) pour mettre en avant le facteur local déterminant (humidité) de façon scannable.
+  - value: `<strong>Proximité de la Marne</strong> : humidité et dépôts verts à intégrer dans le choix des méthodes.`
+- `services[0].uniqueIntro` — op=setField — UniqueIntro overcap (max 2) : suppression d’un <strong> pour revenir à 2 occurrences, en conservant les segments les plus utiles à la lecture (secteur + contrainte d’accès).
+  - value: `<p>Au Perreux-sur-Marne, les halls d’entrée standing du Centre-Ville et leurs tapis d’escalier finissent vite par marquer : zones de passage ternies, taches de boisson, poussière qui s’incruste dans les fibres. Dans le même temps, côté <str`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) sur le problème terrain concret pour lecture rapide.
+  - value: `Dans le Centre-Ville, les <strong>tapis d’escalier se ternissent vite</strong> sur les marches centrales.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur la contrainte d’accès/configuration.
+  - value: `Les <strong>escaliers étroits</strong> imposent de limiter l’encombrement et de protéger les bas de murs.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) sur le duo de problèmes récurrents, segment court et concret.
+  - value: `Les <strong>taches grasses et odeurs persistantes</strong> demandent un pré-traitement propre, pas une solution “miracle”.`
+
+## le-plessis-trevise
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[0] has 0 strong; words=24; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[1] has 0 strong; words=16; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[2] has 0 strong; words=17; must add 1 inside this <li> (max1/li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[5]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=171; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=173; add 1 (max2)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=186; add 1 (max2)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=73; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=76; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=167; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) sur un segment concret terrain pour améliorer la scanabilité.
+  - value: `Résidences denses (Val Roger, Cité de la Joie) : <strong>parkings souterrains, digicodes</strong>, gestion syndic.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur un point opérationnel récurrent.
+  - value: `Ville très verte : proximité Bois Saint-Martin, parcs (Mairie, Mansart), <strong>feuilles/mousse sur balcons</strong> et terrasses.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) sur le facteur de salissure principal.
+  - value: `Axes routiers (Avenue du Général Leclerc, D4, D111) : <strong>pollution fine, dépôts noirs</strong> sur façades et balcons exposés.`
+- `citySpecificChallenges[4]` — op=setField — Ajout d’1 <strong> (max1) sur la contrainte locale la plus critique.
+  - value: `Population résidentielle sensible : <strong>vigilance sur nuisances sonores</strong>, horaires discrets, protection voisins.`
+- `citySpecificChallenges[5]` — op=setField — Ajout d’1 <strong> (max1) sur les contraintes d’accès et d’environnement.
+  - value: `Pavillons anciens (cité-jardin) : <strong>accès latéraux, jardins</strong>, terrasses bois/pierre nécessitant démoussage régulier.`
+- `services[0].uniqueIntro` — op=substring — Ajout d’1 <strong> (max2) dans un intro long, segment court et concret, sans toucher au reste.
+  - excerpt: `les moquettes accumulent rapidement poussière, traces de passage et résidus organiques.`
+  - replacement: `les moquettes accumulent rapidement <strong>poussière, traces de passage</strong> et résidus organiques.`
+- `services[0].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3> Diagnostic et préparation (max1/bloc), segment terrain.
+  - excerpt: `Nous protégeons les plinthes, bas de murs et mobilier fixe.`
+  - replacement: `Nous protégeons <strong>les plinthes, bas de murs</strong> et mobilier fixe.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) sans mettre en avant week-end/urgence; focus coordination.
+  - value: `Horaires d'intervention : bureaux fermés le soir/weekend, <strong>coordination avec gardiens</strong> et clés d'accès obligatoire.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) sur le risque technique.
+  - value: `Moquettes dalles en résidences récentes : <strong>risque de décollement</strong> si humidité excessive, extraction maximale requise.`
+
+## le-raincy
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=88; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=18; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=93; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=82; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=98; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=73; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[2].answer` — word_limits
+- `services[0].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(5>2)
+- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur un segment terrain et concret pour rendre l’item scannable.
+  - value: `Copropriétés résidentielles et allées arborées : <strong>apports de terre végétale</strong>, feuilles et dépôts verts sur les zones d’entrée.`
+- `citySpecificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) sur le facteur principal d’encrassement.
+  - value: `Proximité gare et axes routiers : <strong>particules fines et salissures de passage</strong> dans les circulations communes.`
+- `citySpecificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur le symptôme le plus visible.
+  - value: `Extérieurs exposés (garde-corps, dalles, joints) : <strong>noircissement progressif</strong>, mousses et résines végétales selon ombrage.`
+- `citySpecificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte support la plus structurante.
+  - value: `Sous-sols et parkings anciens : <strong>béton poreux</strong>, traces d’hydrocarbures, ventilation parfois limitée et zones de manœuvre marquées.`
+- `services[1].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur la cause principale d’encrassement.
+  - value: `Axes proches : <strong>dépôt de particules et résidus gras</strong>, encrassement accéléré des rampes.`
+- `services[1].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur l’organisation terrain.
+  - value: `Organisation résidents : <strong>travail par secteurs</strong> pour limiter les déplacements et maintenir l’accessibilité.`
+- `services[2].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) sur le point de vigilance principal.
+  - value: `Balcons superposés : <strong>gestion stricte de l’eau</strong> pour éviter coulures chez les voisins du dessous.`
+- `services[3].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur le risque terrain principal.
+  - value: `Fientes sèches : <strong>risque de poussières</strong>, humidification préalable indispensable avant enlèvement.`
+- `services[3].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte de voisinage.
+  - value: `Voisinage : <strong>dispersion à éviter</strong>, travail propre, protection et gestion stricte des écoulements.`
+- `services[4].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte la plus fréquente.
+  - value: `Séchage : <strong>pièces peu ventilées</strong> ou textiles épais, consignes strictes d’aération après intervention.`
+- `services[5].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte support.
+  - value: `Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : <strong>matériaux poreux</strong> sensibles aux produits acides.`
+- `services[5].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur le point de fragilité.
+  - value: `Dallages anciens avec joints rocaillés typiques des meulières : <strong>interstices fragiles</strong> nécessitant un rinçage à basse pression.`
+- `services[5].specificChallenges[3]` — op=setField — Ajouter 1 <strong> (max 1) sur la cause d’encrassement.
+  - value: `Carrelage grès cérame des aménagements récents : <strong>micro-reliefs antidérapants</strong> piégeant les salissures.`
+- `services[6].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1) sur les supports les plus sensibles.
+  - value: `Matériaux sensibles : <strong>parquet massif, carrelage marbré</strong>, finitions haut de gamme qui demandent une méthode douce et précise.`
+- `services[6].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1) sur la zone concrète de contrainte.
+  - value: `Stationnement centre-ville : <strong>contraintes autour de l’Avenue de la Résistance</strong> et des rues adjacentes, surtout le samedi.`
+- `services[6].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1) sur la contrainte terrain.
+  - value: `Relief et logistique : <strong>secteurs en pente vers le Plateau</strong>, gestion du matériel et des accès en villas sécurisées.`
+
+## livry-gargan
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=95; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 6 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 5 strong pairs; max 1 per <h3> block
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 5 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 5 strong pairs; max 1 per <h3> block
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=69; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `services[0].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].faqAdditions[3].answer` — forbidden_strong
+- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(5>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout de 2 segments <strong> hors <li> (cap max 2) pour rendre l’intro plus scannable sur les enjeux terrain (propreté des communs, traçabilité).
+  - value: `<p>Dans une commune résidentielle comme Livry-Gargan, l'image des copropriétés dépend directement de <strong>la propreté des espaces partagés</strong> et des extérieurs. KLINOVA se positionne comme le partenaire technique des syndics et ges`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur le symptôme concret.
+  - value: `<strong>Poussières fines et noircissement</strong> des circulations dans les copropriétés denses du secteur Gargan.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la contrainte matière.
+  - value: `Sols de parkings anciens <strong>souvent poreux</strong> nécessitant un dégraissage en profondeur.`
+- `services[0].uniqueDeepDive` — op=setField — Réduction à 1 seul <strong> sur le bloc (cap max 1 par section) en retirant les balises <strong> des deux autres paragraphes sans changer le texte.
+  - value: `<p><strong>Diagnostic fibre et taches :</strong> Nos techniciens identifient la nature de la moquette (bouclée, velours, aiguilletée) et le type de salissures. Ce repérage permet d'ajuster la chimie et la pression pour ne pas détremper les `
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la contrainte d’accès.
+  - value: `<strong>Escaliers étroits sans ascenseur</strong> dans le centre-ville nécessitant un matériel portatif et maniable.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la fragilité support.
+  - value: `Moquettes anciennes <strong>parfois fragiles</strong> demandant un dosage précis de l'eau pour éviter le décollement.`
+- `services[1].uniqueDeepDive` — op=setField — Bloc surcapé : conservation d’un seul <strong> (cap max 1) en retirant les autres balises <strong> sans modifier le texte.
+  - value: `<p><strong>Audit et Planification :</strong> Nous validons le type de revêtement (béton, résine), l'emplacement des évacuations et les contraintes de hauteur. En lien avec le gestionnaire, nous définissons un plan de rotation des véhicules `
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur le point dur de nettoyage.
+  - value: `<strong>Taches d'huile incrustées</strong> dans le béton poreux des résidences des années 70-80 (secteur Poudrerie).`
+- `services[2].uniqueDeepDive` — op=setField — Bloc surcapé : réduction à 1 seul <strong> (cap max 1) en retirant les autres balises <strong> sans changer le texte.
+  - value: `<p><strong>Préparation et protection :</strong> Nous commençons par protéger votre intérieur en bâchant la porte-fenêtre. Vos jardinières et votre mobilier sont déplacés soigneusement pour dégager l'espace. Nous retirons manuellement les fe`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur le type de salissure.
+  - value: `<strong>Encrassement gras et noir</strong> des garde-corps et sols dû au trafic dense sur les axes Chanzy et RN3.`
+- `services[3].uniqueDeepDive` — op=setField — Bloc surcapé : conservation d’un seul <strong> (cap max 1) en retirant les autres balises <strong> sans modifier le texte.
+  - value: `<p><strong>Confinement et Protection :</strong> La priorité est d'éviter la contamination croisée. Notre technicien s'équipe d'une combinaison intégrale et d'un masque respiratoire haute filtration (FFP2/FFP3). Nous installons des protectio`
+- `services[4].uniqueDeepDive` — op=setField — Bloc surcapé : réduction à 1 seul <strong> (cap max 1) en retirant les autres balises <strong> sans changer le texte.
+  - value: `<p><strong>Repérage des taches :</strong> À notre arrivée, nous faisons le tour avec vous. Nous identifions la matière (tissu, velours, microfibre) et traitons manuellement les taches tenaces (feutre, café, graisse) avec des détachants spéc`
+- `services[4].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la cause fréquente.
+  - value: `Matelas <strong>tachés par la transpiration</strong> ou l'humidité dans les chambres mal ventilées.`
+- `services[5].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc[1] (cap max 1 par <h3>) sur un point terrain concret, sans toucher aux autres blocs.
+  - value: `<h3>Préparation et organisation de l’intervention</h3> <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — murs, façades, menuiseries — sont sécurisés afin de garantir une intervention propr`
+- `services[5].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur l’usage intensif.
+  - value: `Terrasses très sollicitées : <strong>passages fréquents</strong>, mobilier déplacé régulièrement, encrassement accéléré.`
+- `services[6].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (cap max 1) pour rendre chaque section scannable sur des points terrain concrets.
+  - value: `<h3>RN3 et poussières urbaines — vitrages, rebords et entrées</h3> <p>Sur les logements proches de l’Avenue Aristide Briand, les salissures reviennent vite sur les vitres, appuis et encadrements. Nous traitons ces zones en fin de prestation`
+- `services[6].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur le marqueur local.
+  - value: `RN3 : <strong>suie/pellicule grasse</strong> sur vitrages et façades basses, nécessitant une vraie reprise des encadrements et rebords.`
+- `services[6].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la contrainte d’organisation.
+  - value: `Mix pavillons / collectifs : <strong>organisation différente</strong> (étages/escaliers vs digicodes/gardiens) pour éviter les allers-retours inutiles.`
+- `services[6].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la difficulté terrain.
+  - value: `Stationnement variable : <strong>compliqué en centre</strong> et le long de la RN3, plus simple en pavillonnaire avec accès privés.`
+- `services[6].specificChallenges[3]` — op=setField — Ajout d’un <strong> unique (cap max 1) sur la contrainte d’accès.
+  - value: `Zones denses (Danton/Gargan) : <strong>accès badges</strong>, circulation en parties communes, et finitions indispensables pour un rendu homogène.`
+
+## maisons-alfort
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=104; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=34; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=38; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=34; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=196; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=83; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=25; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=169; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=87; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=76; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=159; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=102; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=164; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=78; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=88; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=200; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=86; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=67; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(4>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) sur l’effet terrain principal.
+  - value: `Les moquettes des halls situés près des stations métro ligne 8 (École Vétérinaire, Stade, Les Juilliottes) subissent <strong>un encrassement accéléré</strong> lié aux flux piétons quotidiens massifs.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur le levier technique concret.
+  - value: `Les particules fines générées par la proximité des axes A4 et A86 s'incrustent dans les fibres et nécessitent <strong>une extraction puissante</strong> pour un résultat durable.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) pour faciliter le scan.
+  - value: `Les marches d'escalier dans les immeubles anciens du Centre-ville et d'Alfort présentent <strong>des usures localisées</strong> demandant un traitement ciblé et plusieurs passes successives.`
+
+## meaux
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[0] has 0 strong; words=32; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[1] has 0 strong; words=39; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[2] has 0 strong; words=37; must add 1 inside this <li> (max1/li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=27; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=25; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=345; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=155; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=146; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=134; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=373; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=146; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=154; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=144; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=40; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=41; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=390; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=108; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=148; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=155; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=41; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=425; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=133; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=169; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=173; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=42; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=411; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=140; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=155; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=182; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=42; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `faq[0].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `faq[3].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(5>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) pour faire ressortir le facteur terrain principal.
+  - value: `<strong>Forte concentration de pigeons</strong> dans le centre ancien (secteur cathédrale et marché) entraînant salissures importantes sur balcons, rebords de fenêtres et façades du bâti historique`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu logistique clé.
+  - value: `<strong>Contraintes d'accès du centre médiéval</strong> avec rues très étroites, parfois piétonnes ou à accès limité, imposant portage de matériel et organisation fine dans le Site Patrimonial Remarquable`
+- `services[0].uniqueIntro` — op=substring — Ajout d’1 <strong> (max 2) sur un point terrain récurrent, sans modifier le texte hors balises.
+  - excerpt: `accumulent quotidiennement des poussières minérales de chantiers : particules fines`
+  - replacement: `accumulent quotidiennement des <strong>poussières minérales de chantiers</strong> : particules fines`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) sur des repères opérationnels, pour rendre chaque étape scannable.
+  - value: `<h3>1. Diagnostic différencié selon le secteur et l'exposition</h3> <p>Le technicien examine l'état de la moquette (fibres synthétiques robustes des copropriétés rénovées de Beauval, tapis d'escalier des immeubles anciens du centre historiq`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’intitulé terrain du challenge.
+  - value: `<strong>Poussières de chantiers des rénovations urbaines</strong> : Les copropriétés des quartiers Beauval, Dunant et La Pierre Collinet accumulent des particules minérales (béton, ciment, plâtre) générant des dépôts blanchâtres tenaces néc`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le facteur local principal.
+  - value: `<strong>Humidité fluviale de la Marne</strong> : Les résidences de la Corniche et des quartiers sud près du Parc du Pâtis subissent une hygrométrie élevée qui ralentit le séchage et aggrave l'incrustation des salissures, exigeant une extrac`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu logistique.
+  - value: `<strong>Contraintes d'accès du centre historique</strong> : Les immeubles du secteur cathédrale situés dans les rues étroites, parfois piétonnes ou à accès limité du Site Patrimonial Remarquable, nécessitent du matériel portable et une orga`
+
+## montfermeil
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=98; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=16; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[1].answer` — word_limits
+- `services[0].uniqueIntro` — word_limits
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[1].uniqueIntro` — word_limits
+- `services[1].faqAdditions[0].answer` — forbidden_strong
+- `services[1].faqAdditions[3].answer` — forbidden_strong
+- `services[2].uniqueIntro` — word_limits
+- `services[2].faqAdditions[3].answer` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[1].answer` — forbidden_strong
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[2].answer` — forbidden_strong
+- `services[4].faqAdditions[3].answer` — word_limits
+- `services[5].uniqueIntro` — pairs_over_cap(10>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(7>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’un seul segment <strong> hors <li> (max 2) pour rendre le contexte local immédiatement scannable, sans toucher aux <li> déjà conformes.
+  - value: `<p>À Montfermeil, la propreté des parties communes dépend autant de la méthode que de l'organisation : <strong>accès en pente, résidences hétérogènes</strong>, et circulation quotidienne autour du tram T4. Klinova accompagne les syndics, ge`
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le fait terrain le plus saillant pour scanabilité.
+  - value: `<strong>Dépôts verts et mousses sur balcons</strong> liés aux zones boisées (forêt de Bondy) et aux expositions ombragées.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème principal, formulation courte et concrète.
+  - value: `<strong>Encrassement accéléré des halls d'entrée</strong> par le trafic piétonnier vers les stations T4 et les commerces du centre.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès, très scannable.
+  - value: `<strong>Accès en forte déclivité et rues étroites</strong> : logistique à anticiper pour matériel et évacuation des déchets.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la cause terrain, sans surligner une phrase entière.
+  - value: `<strong>Zones à fort trafic piétonnier</strong> (arrêts du T4, commerces) : salissures rapides aux entrées et dans les circulations.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’effet concret ressenti par les occupants.
+  - value: `L'humidité naturelle liée à la proximité de la forêt de Bondy favorise <strong>les odeurs de renfermé</strong> dans les moquettes des rez-de-chaussée insuffisamment ventilés.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le mécanisme terrain qui explique le problème.
+  - value: `Les poussières fines issues des chantiers de rénovation urbaine (secteur des Bosquets) <strong>s'incrustent profondément dans les fibres</strong>, rendant le nettoyage de surface inefficace.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte opérationnelle clé.
+  - value: `Les accès complexes de certaines bâtisses anciennes du centre historique imposent <strong>l'utilisation de matériel portatif</strong> et une organisation spécifique dans les escaliers étroits.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu concret d’usage.
+  - value: `Rampes en déclivité : besoin d'un décrassage rigoureux pour conserver <strong>adhérence et sécurité</strong>, notamment en hiver.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le phénomène terrain récurrent.
+  - value: `Sous-sols anciens peu ventilés : <strong>poussières fines qui se redéposent vite</strong>, nécessité d'une aspiration efficace.`
+- `services[1].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur l’action nécessaire, sans promesse excessive.
+  - value: `Taches d'huile anciennes sur béton poreux : <strong>traitement localisé intensif</strong>, résultat net sans promettre l'effacement parfait.`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème principal, court et concret.
+  - value: `<strong>Dépôts verts rapides sur balcons ombragés</strong> : mousses et lichens favorisés par proximité des zones boisées.`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’effet visible.
+  - value: `Poussières fines de chantiers : <strong>voile tenace sur carrelages et dalles</strong>, surtout sur balcons exposées.`
+- `services[2].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le geste technique clé.
+  - value: `Évacuations parfois inefficaces : nécessité d'<strong>aspirer l'eau de lavage</strong> pour éviter coulures et infiltrations.`
+
+## montreuil
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[0] has 0 strong; words=39; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[1] has 0 strong; words=31; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[2] has 0 strong; words=28; must add 1 inside this <li> (max1/li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=26; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=22; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=234; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=99; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=102; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=87; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=210; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=112; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=113; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=101; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=249; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=91; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=100; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=108; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=241; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=122; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=109; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=116; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=254; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=100; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=126; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=74; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=69; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(15>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(8>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur une contrainte opérationnelle claire.
+  - value: `Accès complexes dans les anciennes cours et impasses du Bas-Montreuil avec <strong>portails étroits</strong> nécessitant du matériel portable et une planification logistique fine`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’élément actionnable, sans mention de délais/urgence.
+  - value: `Stationnement très difficile dans les secteurs centraux et Bas-Montreuil imposant <strong>coordination avec syndics</strong> et interventions en heures creuses pour limiter la gêne`
+- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> (max 2) sur un symptôme concret pour rendre l’intro scannable.
+  - value: `<p>Les copropriétés de Montreuil subissent un encrassement rapide de leurs moquettes, phénomène que beaucoup de résidents finissent par considérer comme normal. La pollution du Périphérique dépose une poussière noire grasse dans les halls d`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’effet terrain le plus parlant.
+  - value: `Pollution noire du Périphérique : Les immeubles proches de la Porte de Montreuil et des grands axes accumulent une poussière grasse chargée d'hydrocarbures qui <strong>noircit les seuils</strong> et nécessite un détergent dégraissant renfor`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte technique.
+  - value: `Poussières fines de chantier : Les nombreuses rénovations et surélévations en cours à Montreuil génèrent des particules de plâtre et ciment qui <strong>pénètrent profondément dans les fibres</strong> et exigent plusieurs passes d'extraction`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur un point d’accès concret.
+  - value: `Accès complexes dans le Bas-Montreuil : Les anciennes cours d'ateliers transformées en copropriétés présentent <strong>des portails étroits</strong> et des distances importantes entre le véhicule et les parties communes, nécessitant du maté`
+- `services[0].faqAdditions[1].answer` — op=setField — Mise en conformité : 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Absolument. Nous utilisons du matériel portable</strong> spécialement conçu pour ces configurations : machines d'injection-extraction transportables, tuyaux de 50 mètres pour atteindre les étages ou les cours intérieures. Nos tec`
+- `services[0].faqAdditions[2].answer` — op=setField — Mise en conformité : 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Les particules de plâtre et de ciment sont abrasives</strong> et peuvent user prématurément les fibres si elles ne sont pas extraites régulièrement. Elles s'incrustent profondément et forment une couche dure qui ternit l'aspect g`
+
+## montrouge
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=77; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=71; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(4>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+✅ Aucun patch
+
+## neuilly-plaisance
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[5]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 5 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 4 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[2].answer` — word_limits
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(4>2)
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(8>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(6>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 segment <strong> court et concret (max 1) pour rendre le challenge scannable, sans toucher au texte hors balises.
+  - value: `<strong>Stationnement souvent contraint</strong> près du RER A et en centre-ville (zones réglementées).`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le point terrain principal pour améliorer la lecture en liste.
+  - value: `Présence de <strong>pentes et d’accès parfois difficiles</strong> vers le Plateau d’Avron.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le phénomène observé, segment court et non marketing.
+  - value: `<strong>Poussières fines et salissures plus grasses</strong> à proximité de la N34.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la conséquence opérationnelle, sans modifier le texte.
+  - value: `Humidité vers les bords de Marne : <strong>dépôts verts qui reviennent plus vite</strong> en extérieur.`
+- `citySpecificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu chantier, segment 3 mots, très scannable.
+  - value: `Sous-sols et parkings profonds dans certaines résidences récentes : <strong>logistique à cadrer</strong>.`
+- `citySpecificChallenges[5]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte physique principale.
+  - value: `Bâti ancien par endroits : <strong>escaliers et passages étroits</strong> à prendre en compte.`
+- `services[0].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro en retirant le <strong> autour d’un repère de lieu, tout en conservant les autres segments utiles à la scanabilité.
+  - value: `<p>Quand une moquette commence à ternir, ce n’est pas “juste de la poussière” : les zones de passage se chargent en particules fines, les taches s’incrustent (café, tanins, gras), et les odeurs peuvent rester dans la fibre. À Neuilly-Plaisa`
+- `services[0].uniqueDeepDive` — op=setField — Mise en conformité 'max 1 <strong> par bloc' en ne gardant qu’un seul <strong> sur le premier item, sans modifier le texte hors balises.
+  - value: `<p>1) <strong>Diagnostic & protections.</strong> On identifie le type de moquette (fine/épaisse, bouclée, velours), les taches (café, gras, tanins) et les zones de trafic. Protections des bas de murs, balisage si circulation, et plan de pas`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’impact terrain pour améliorer la scanabilité.
+  - value: `Trafic soutenu sur l’Avenue du Maréchal Foch : <strong>zones de passage vite ternies</strong>.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte opérationnelle principale.
+  - value: `Flux liés au RER A : <strong>besoin de séchage maîtrisé</strong> pour garder les accès praticables.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’étape clé, segment court et concret.
+  - value: `Taches café/tanins et salissures grasses : <strong>détachage ciblé avant extraction</strong>.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur l’enjeu de réglage méthode.
+  - value: `Moquettes épaisses ou bouclées : <strong>méthode à ajuster</strong> pour éviter sur-humidification.`
+
+## neuilly-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=118; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=27; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=31; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=29; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=71; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=79; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — forbidden_strong
+- `services[1].uniqueDeepDive` — word_limits
+- `services[1].faqAdditions[0].answer` — forbidden_strong
+- `services[1].faqAdditions[2].answer` — word_limits
+- `services[1].faqAdditions[3].answer` — word_limits
+- `services[2].uniqueIntro` — word_limits
+- `services[2].uniqueDeepDive` — word_limits
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[1].answer` — forbidden_strong
+- `services[3].faqAdditions[2].answer` — word_limits
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[0].answer` — word_limits
+- `services[5].uniqueIntro` — pairs_over_cap(8>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(9>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le fait terrain principal pour rendre l’item scannable.
+  - value: `<strong>Encrassement rapide des halls et moquettes</strong> par les particules fines et la boue en provenance des axes (RN 34) et des zones de fort passage (proximité RER).`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la zone concernée, formulation concrète et non marketing.
+  - value: `Fort dépôt d'hydrocarbures, de suie et d'huiles sur les <strong>sols en béton des parkings souterrains</strong> des grands ensembles résidentiels (par exemple Les 24-Arpents), exigeant l'usage d'autolaveuses performantes.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le risque terrain principal pour faciliter la lecture.
+  - value: `<strong>Risque sanitaire élevé sur les balcons</strong> exposés aux fientes de pigeons, particulièrement dans les immeubles proches de la Marne et des zones arborées (Haute-Île, Croissant-Vert), nécessitant une désinfection virucide.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte opérationnelle la plus parlante.
+  - value: `Contraintes logistiques pour l'installation d'<strong>équipements lourds dans les rues denses</strong> et les immeubles anciens du centre-ville (rue Marx Dormoy, rue du Jeu-de-Paume).`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le problème terrain récurrent.
+  - value: `Gestion de l'<strong>entrée permanente de salissures dans les halls</strong> situés à proximité des grands axes routiers (RN 34) ou des arrêts de bus.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte d’usage.
+  - value: `Nécessité de <strong>séchage rapide dans les immeubles de forte densité</strong> près du centre-ville pour ne pas bloquer les résidents.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte d’accès.
+  - value: `Organisation des interventions dans des <strong>cages d'escalier parfois étroites</strong> ou uniques, imposant un phasage précis.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la zone la plus critique.
+  - value: `Nettoyage des <strong>rampes très encrassées</strong> par les résidus de freinage et les graisses, sans abîmer le revêtement.`
+- `services[2].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’accumulation typique.
+  - value: `Balcons proches des axes RN 34/RN370 ou du parc de la Haute-Île <strong>accumulant poussière fine et dépôts verts</strong>, nécessitant un nettoyage plus fréquent.`
+- `services[2].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur les éléments à traiter.
+  - value: `<strong>Joints très encrassés et garde-corps</strong> en métal ou en verre demandant des produits spécifiques et un brossage minutieux.`
+- `services[3].uniqueDeepDive` — op=setField — Bloc <h3>1 dépassait le cap (2 <strong>). Suppression du <strong> sur “FFP3” pour revenir à max 1 <strong> par bloc, sans modifier le texte hors balises.
+  - value: `<h3>1. Mise en sécurité et confinement</h3> <p>Mise en place d'équipements de protection individuelle (combinaison, gants, masque FFP3, lunettes) et confinement de la zone avec des bâches pour éviter toute dispersion de poussières contaminé`
+- `services[3].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’exposition terrain.
+  - value: `Balcons situés près du parc de la Haute-Île ou des grands arbres <strong>particulièrement exposés aux fientes de pigeons</strong>.`
+- `services[3].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la situation à risque.
+  - value: `<strong>Fientes sèches et nids en hauteur</strong> nécessitant un accès sécurisé et une manipulation prudente pour éviter les poussières contaminées.`
+- `services[3].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’état du support.
+  - value: `<strong>Supports corrodés</strong> (peinture écaillée, béton poreux) demandant un traitement spécifique pour éviter d'aggraver les dégâts.`
+- `services[3].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’élément opérationnel.
+  - value: `Évacuation des <strong>déchets contaminés</strong> gérée par nos équipes, afin de garantir un haut niveau de sécurité sanitaire.`
+- `services[4].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte de séchage.
+  - value: `Pièces peu ventilées ou humides <strong>prolongeant le séchage</strong>, nécessitant une attention particulière pour éviter les moisissures.`
+
+## nogent-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=32; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=26; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=25; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=119; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=41; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=249; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=109; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=258; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=132; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=112; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=120; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=141; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=40; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=302; add 1 (max2)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=42; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=76; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=70; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `faq[2].answer` — word_limits
+- `services[0].uniqueDeepDive` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueDeepDive` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(8>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(7>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=substring — Ajout d’1 segment <strong> court et concret (max1) pour rendre le challenge scannable, sans toucher au texte hors balises.
+  - excerpt: `Humidité constante de la Marne générant développement massif de lichens blancs`
+  - replacement: `<strong>Humidité constante de la Marne</strong> générant développement massif de lichens blancs`
+- `citySpecificChallenges[1]` — op=substring — Ajout d’1 <strong> (max1) sur l’élément terrain principal pour améliorer la scanabilité.
+  - excerpt: `Pollution végétale du Bois de Vincennes produisant pollens printaniers collants`
+  - replacement: `<strong>Pollution végétale du Bois de Vincennes</strong> produisant pollens printaniers collants`
+- `citySpecificChallenges[3]` — op=substring — Ajout d’1 <strong> (max1) sur le sujet principal du challenge, améliore la lecture en liste.
+  - excerpt: `Matériaux patrimoniaux fragiles (meulières, joints à la chaux, corniches Art Déco, ferronneries d'art)`
+  - replacement: `<strong>Matériaux patrimoniaux fragiles</strong> (meulières, joints à la chaux, corniches Art Déco, ferronneries d'art)`
+- `services[0].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max1) sur la cause terrain principale du challenge.
+  - excerpt: `Humidité constante de la Marne : Les copropriétés des bords de l'eau`
+  - replacement: `<strong>Humidité constante de la Marne</strong> : Les copropriétés des bords de l'eau`
+- `services[0].specificChallenges[1]` — op=substring — Ajout d’1 <strong> (max1) pour rendre le point immédiatement repérable.
+  - excerpt: `Pollens et sève collants du Bois de Vincennes : Les résidences du Plateau`
+  - replacement: `<strong>Pollens et sève collants du Bois de Vincennes</strong> : Les résidences du Plateau`
+- `services[0].specificChallenges[2]` — op=substring — Ajout d’1 <strong> (max1) sur la contrainte d’accès, segment court et concret.
+  - excerpt: `Accès difficiles aux propriétés des berges : Les impasses privées étroites`
+  - replacement: `<strong>Accès difficiles aux propriétés des berges</strong> : Les impasses privées étroites`
+- `services[1].uniqueIntro` — op=substring — Ajout d’1 <strong> (max2) sur la cause terrain principale, améliore la scanabilité d’un intro long.
+  - excerpt: `L'hygrométrie élevée génère un développement rapide de mousses vertes`
+  - replacement: `<strong>L'hygrométrie élevée</strong> génère un développement rapide de mousses vertes`
+- `services[1].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3> 3 (max1) pour rendre le point opérationnel clé repérable.
+  - excerpt: `L'extraction puissante limite l'eau résiduelle, mais le séchage reste plus long`
+  - replacement: `<strong>L'extraction puissante limite l'eau résiduelle</strong>, mais le séchage reste plus long`
+- `services[1].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max1) sur le phénomène principal pour scanabilité.
+  - excerpt: `Développement biologique massif lié à l'humidité : Les parkings des bords de Marne`
+  - replacement: `<strong>Développement biologique massif</strong> lié à l'humidité : Les parkings des bords de Marne`
+- `services[1].specificChallenges[1]` — op=substring — Ajout d’1 <strong> (max1) sur la contrainte matière.
+  - excerpt: `Béton poreux saturé d'humidité : Les sols des parkings anciens`
+  - replacement: `<strong>Béton poreux saturé d'humidité</strong> : Les sols des parkings anciens`
+- `services[1].specificChallenges[2]` — op=substring — Ajout d’1 <strong> (max1) sur le point de blocage terrain.
+  - excerpt: `Siphons obstrués par dépôts organiques : L'humidité favorise l'accumulation`
+  - replacement: `<strong>Siphons obstrués par dépôts organiques</strong> : L'humidité favorise l'accumulation`
+
+## noisiel
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=75; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=173; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=175; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=165; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2) et avec un segment court et concret.
+  - excerpt: `Noisiel présente des configurations variées qui demandent une lecture terrain précise.`
+  - replacement: `Noisiel présente des configurations variées qui demandent une <strong>lecture terrain précise</strong>.`
+- `faq[0].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>. Déplace le focus sur un segment terrain, sans ajouter de texte.
+  - value: `<p><strong>Les immeubles sur dalle</strong> nécessitent un portage du matériel depuis les zones de stationnement autorisées. Nous repérons les accès en amont et adaptons l'équipement pour limiter les allers-retours. Le planning tient compte`
+- `faq[1].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>. Retire un terme interdit en <strong> ("immédiate").
+  - value: `<p><strong>Selon la nature de la demande</strong> et notre planning, une intervention rapide peut être organisée. Pour les situations nécessitant une réactivité immédiate (dégât des eaux, souillure importante), nous évaluons la faisabilité `
+- `faq[2].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>, en gardant un segment court et local.
+  - value: `<p><strong>Dans la Cité Menier notamment</strong>, les rues étroites et le patrimoine protégé limitent les possibilités. Nous identifions les emplacements autorisés avant chaque intervention et prévoyons le temps de portage nécessaire. Les `
+- `faq[3].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>. Évite de mettre "devis" en <strong>.
+  - value: `<p><strong>Oui, chaque demande</strong> fait l'objet d'un devis détaillé après échange sur la surface, le type de prestation et les contraintes d'accès. Pour les copropriétés ou les interventions récurrentes, nous pouvons proposer un cadre `
+- `citySpecificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1) sur un élément terrain court pour améliorer la scanabilité.
+  - value: `Loggias béton exposées à la pollution de l'A4 : <strong>dépôts gris récurrents</strong>.`
+- `services[0].uniqueIntro` — op=setField — Réduit à max 2 <strong> (overcap) en retirant un <strong> sur un segment moins utile à la scanabilité.
+  - value: `<p>Dans le secteur de la <strong>Cité Menier</strong>, les moquettes des locaux patrimoniaux et des maisons ouvrières accumulent poussières et traces de passage au fil des mois. Les fibres retiennent les particules fines, les résidus de sem`
+- `services[0].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> manquant (max 1 par bloc) avec un segment court et concret.
+  - excerpt: `Les moquettes épaisses ou velours demandent une extraction renforcée pour limiter`
+  - replacement: `Les <strong>moquettes épaisses ou velours</strong> demandent une extraction renforcée pour limiter`
+- `services[0].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1) sur un point terrain scannable.
+  - value: `Moquettes velours ras des résidences années 80 : <strong>fibres denses</strong> retenant poussières et allergènes.`
+- `services[0].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1) sur la contrainte logistique principale.
+  - value: `Accès piéton uniquement sur certaines dalles du Luzard : <strong>portage du matériel</strong> nécessaire.`
+- `services[0].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1) sur une contrainte terrain.
+  - value: `Escaliers étroits dans les maisons ouvrières de la Cité Menier : <strong>manœuvre limitée</strong>.`
+- `services[0].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1) sur l'élément opérationnel clé.
+  - value: `Bureaux de la ZA de la Mare Blanche : <strong>horaires d'intervention contraints</strong> par l'activité.`
+- `services[0].specificChallenges[4]` — op=setField — Ajoute 1 <strong> (max 1) sur le point technique concret.
+  - value: `Taches anciennes incrustées dans les parties communes : <strong>traitement renforcé</strong> requis.`
+- `services[0].faqAdditions[0].answer` — op=setField — Conformité Service FAQ: exactement 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Le matériel est sélectionné</strong> en fonction des passages disponibles. Pour les maisons ouvrières aux cages réduites, nous utilisons des équipements compacts et prévoyons un temps de mise en place adapté. La coordination avec`
+- `services[0].faqAdditions[1].answer` — op=setField — Conformité Service FAQ: exactement 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Le séchage varie selon l'épaisseur</strong> du revêtement et la ventilation des locaux. Sur des dalles textiles standard, comptez généralement quatre à six heures avant une circulation légère. Nous précisons les consignes de remi`
+- `services[0].faqAdditions[2].answer` — op=setField — Conformité Service FAQ: exactement 1 <strong> au début du premier <p>.
+  - value: `<p><strong>L'injection-extraction reste la technique</strong> de référence pour ces fibres denses. Elle permet d'atteindre la base du velours sans l'écraser. Sur les taches tenaces, un prétraitement localisé précède le passage de la machine`
+- `services[0].faqAdditions[3].answer` — op=setField — Conformité Service FAQ: exactement 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Un diagnostic visuel et tactile</strong> détermine la densité des fibres avant intervention. Les moquettes épaisses reçoivent plusieurs passes d'extraction pour éviter toute humidité résiduelle. Les revêtements fins sont traités `
+
+## noisy-le-grand
+
+### Coverage targets (manques/minima)
+
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=24; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=74; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=69; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — forbidden_strong
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].uniqueDeepDive` — forbidden_strong
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(4>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout de 1 <strong> (max 1) pour améliorer la scanabilité sur un défi terrain.
+  - value: `<strong>Moquettes de halls très fréquentées</strong> autour des gares RER (Mont d'Est, Noisy–Champs).`
+- `citySpecificChallenges[1]` — op=setField — Ajout de 1 <strong> (max 1) sur l’élément le plus concret.
+  - value: `<strong>Fientes sur balcons exposés</strong> côté Marne ou zones boisées (Yvris, Richardets).`
+- `citySpecificChallenges[2]` — op=setField — Ajout de 1 <strong> (max 1) pour rendre le point scannable.
+  - value: `<strong>Encrassement des parkings souterrains</strong> à cause des résidus d'hydrocarbures et poussières urbaines.`
+- `citySpecificChallenges[3]` — op=setField — Ajout de 1 <strong> (max 1) sur le problème principal.
+  - value: `<strong>Débordement végétal et mousses</strong> sur terrasses dans les quartiers pavillonnaires du sud.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout de 1 <strong> (max 1) sur le point terrain le plus lisible.
+  - value: `<strong>Moquettes très sollicitées</strong> dans les halls proches de la gare de Noisy–Mont d'Est.`
+
+## noisy-le-sec
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=77; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=179; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajout d’un <strong> hors <li> (max 2) pour améliorer la scanabilité du texte d’intro, sans toucher au reste.
+  - excerpt: `Noisy-le-Sec concentre des typologies variées qui demandent un suivi régulier.`
+  - replacement: `Noisy-le-Sec concentre des <strong>typologies variées</strong> qui demandent un suivi régulier.`
+- `services[0].uniqueIntro` — op=setField — UniqueIntro surcap (max 2 <strong>) : suppression d’un <strong> excédentaire en conservant les deux repères les plus concrets.
+  - value: `<p>Dans les locaux de la <strong>Z.I. du Parc</strong>, les dalles textiles des open spaces et couloirs accumulent poussières fines, traces de semelles et résidus de café au fil des semaines. Le passage répété des équipes crée des zones de `
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour rendre chaque section scannable, en restant sur des éléments terrain et non marketing.
+  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs, halls d'entrée et espaces de passage concentrent l'essentiel des salissures. Nous identifions la nature du textile — bouclé, velours ras ou dalle modulaire — puis appliquons un <strong>`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le point de contrainte principal pour scanabilité.
+  - value: `Dalles textiles des bureaux de la Z.I. du Parc soumises à un <strong>passage quotidien soutenu</strong>.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès.
+  - value: `Moquettes aiguilletées des escaliers anciens du centre-ville, souvent <strong>étroits et difficiles d'accès</strong>.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le problème le plus concret.
+  - value: `Taches de café et <strong>traces de semelles incrustées</strong> dans les zones de trafic des open spaces.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) pour mettre en avant la contrainte récurrente.
+  - value: `Halls de copropriétés rénovés nécessitant un <strong>entretien régulier</strong> pour conserver leur aspect soigné.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte logistique.
+  - value: `Stationnement du véhicule d'intervention <strong>compliqué en centre-ville</strong> aux heures de pointe.`
+
+## orly
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=68; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=68; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(4>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajouter 1 <strong> dans le texte hors <li> (actuellement 0), sans dépasser le max (2) et en gardant un segment court et concret.
+  - excerpt: `Orly concentre des besoins variés en propreté : halls d'immeubles collectifs, parkings`
+  - replacement: `Orly concentre des <strong>besoins variés en propreté</strong> : halls d'immeubles collectifs, parkings`
+- `services[0].uniqueIntro` — op=setField — Réduire à max 2 <strong> (actuellement 4) en retirant des emphases non indispensables tout en gardant des repères terrain.
+  - value: `<p>Dans les locaux de la <strong>Zone Senia</strong>, les moquettes des bureaux et espaces de circulation accumulent rapidement poussières fines et traces de boue. Le trafic logistique environnant ramène des particules grasses qui s'incrust`
+- `services[0].specificChallenges[0]` — op=setField — Ajout 1 <strong> (max1) sur un segment concret et court.
+  - value: `<strong>Boue et poussières grasses</strong> ramenées par le trafic camions de la Zone Senia.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout 1 <strong> (max1) sur une contrainte d'exploitation.
+  - value: `Moquettes velours ras des hôtels à traiter <strong>entre deux rotations de chambres</strong>.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout 1 <strong> (max1) sur le facteur d'encrassement.
+  - value: `Halls de copropriétés proches de la gare Orly Ville <strong>avec passages fréquents</strong>.`
+
+## pantin
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=83; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=157; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(4>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — hubIntro: ajouter 1 <strong> hors <li> (max 2) pour améliorer la scanabilité du texte non-listé, sans toucher au reste.
+  - excerpt: `Une présence terrain qui s'adapte aux contraintes d'accès et`
+  - replacement: `Une <strong>présence terrain</strong> qui s'adapte aux contraintes d'accès et`
+- `services[0].uniqueIntro` — op=setField — services[0].uniqueIntro: overcap (3 <strong>), réduction à 2 en retirant le <strong> du 3e paragraphe, sans changer le texte.
+  - value: `<p>Dans le secteur des <strong>Grands Moulins de Pantin</strong>, les moquettes des sièges sociaux et bureaux tertiaires accumulent poussières fines et traces de passage au fil des semaines. Les fibres textiles retiennent particules, résidu`
+- `services[0].specificChallenges[0]` — op=setField — services[0].specificChallenges[0]: ajout de 1 <strong> (max1) sur un segment concret et court.
+  - value: `<strong>Suies et poussières urbaines</strong> pénétrant par les entrées des bureaux proches de la N3.`
+- `services[0].specificChallenges[1]` — op=setField — services[0].specificChallenges[1]: ajout de 1 <strong> (max1) pour rendre l'item scannable.
+  - value: `<strong>Dalles textiles en open-space</strong> nécessitant une extraction puissante sans détremper le support.`
+- `services[0].specificChallenges[3]` — op=setField — services[0].specificChallenges[3]: ajout de 1 <strong> (max1) sur le risque principal.
+  - value: `Moquettes velours des salles de réunion <strong>sensibles aux auréoles</strong> si séchage mal maîtrisé.`
+- `services[0].specificChallenges[4]` — op=setField — services[0].specificChallenges[4]: ajout de 1 <strong> (max1) sur la contrainte opérationnelle.
+  - value: `<strong>Horaires d'intervention à caler</strong> avec les équipes de sécurité et services généraux.`
+
+## pontault-combault
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=30; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=28; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=325; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=151; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=126; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=312; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=150; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=138; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=136; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=338; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=107; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=137; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=145; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=428; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=140; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=157; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=161; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=357; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=157; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=136; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=167; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `faq[3].answer` — word_limits
+- `services[0].uniqueDeepDive` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(7>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[1]` — op=setField — Ajout de 1 <strong> (max1) sur un segment court et factuel pour améliorer la lecture rapide du challenge.
+  - value: `Végétation de la Forêt de Notre-Dame produisant <strong>pollens massifs au printemps</strong> et verdissement rapide des toitures et murets par mousses favorisées par l'ombre et l'humidité forestière`
+- `citySpecificChallenges[2]` — op=setField — Ajout de 1 <strong> (max1) pour mettre en avant la contrainte opérationnelle principale (distances) de façon scannable.
+  - value: `Étalement urbain important créant <strong>des distances d'intervention longues</strong> entre le Bouquet (Nord) et la Grenouillère (Sud), avec la Francilienne formant une barrière physique`
+- `services[0].specificChallenges[0]` — op=substring — Ajout de 1 <strong> (max1) sur un segment concret et court pour améliorer la scannabilité du challenge service.
+  - excerpt: `formant des dépôts grisâtres tenaces nécessitant un dégraissant renforcé`
+  - replacement: `formant <strong>des dépôts grisâtres tenaces</strong> nécessitant un dégraissant renforcé`
+- `services[0].specificChallenges[2]` — op=substring — Ajout de 1 <strong> (max1) sur la contrainte principale, sans termes interdits.
+  - excerpt: `générant des dépôts de poussière supplémentaires qui s'agglomèrent avec l'humidité`
+  - replacement: `générant <strong>des dépôts de poussière supplémentaires</strong> qui s'agglomèrent avec l'humidité`
+
+## romainville
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=69; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=70; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=178; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — hubIntro: ajouter 1 <strong> dans le texte hors <li> (actuellement 0), segment court et concret, sans dépasser le cap (max 2 hors <li>).
+  - excerpt: `Notre organisation repose sur une coordination terrain précise : planification des passages,`
+  - replacement: `Notre organisation repose sur une <strong>coordination terrain précise</strong> : planification des passages,`
+- `services[0].uniqueDeepDive` — op=substring — uniqueDeepDive services[0]: bloc <h3> 'Injection-extraction et détachage ciblé' sans <strong>; ajout d'1 segment court (max 1 par bloc).
+  - excerpt: `Le diagnostic identifie d'abord le type de moquette (bouclée, velours, épaisse`
+  - replacement: `<strong>Le diagnostic identifie d'abord le type de moquette</strong> (bouclée, velours, épaisse`
+- `services[0].specificChallenges[0]` — op=substring — services[0].specificChallenges: ajouter 1 <strong> (max1) sur le point clé terrain.
+  - excerpt: `Moquettes de bureaux soumises à un passage quotidien intense`
+  - replacement: `<strong>Moquettes de bureaux soumises à un passage quotidien intense</strong>`
+- `services[0].specificChallenges[1]` — op=substring — services[0].specificChallenges: ajouter 1 <strong> (max1), segment concret.
+  - excerpt: `Taches de café et traces de semelles incrustées`
+  - replacement: `<strong>Taches de café et traces de semelles incrustées</strong>`
+- `services[0].specificChallenges[2]` — op=substring — services[0].specificChallenges: ajouter 1 <strong> (max1) sur la contrainte support.
+  - excerpt: `Halls de copropriétés récentes avec fibres épaisses`
+  - replacement: `<strong>Halls de copropriétés récentes avec fibres épaisses</strong>`
+- `services[0].specificChallenges[3]` — op=substring — services[0].specificChallenges: ajouter 1 <strong> (max1), focus accès terrain.
+  - excerpt: `Accès sécurisés (badges, digicodes) imposant une coordination préalable`
+  - replacement: `<strong>Accès sécurisés (badges, digicodes)</strong> imposant une coordination préalable`
+- `services[0].specificChallenges[4]` — op=substring — services[0].specificChallenges: ajouter 1 <strong> (max1) sans mention de prix/délais interdits (pas de 24/48/72h).
+  - excerpt: `Délai de séchage à anticiper`
+  - replacement: `<strong>Délai de séchage à anticiper</strong>`
+- `services[1].uniqueDeepDive` — op=substring — uniqueDeepDive services[1]: bloc <h3> 'Rigoles et évacuations' sans <strong>; ajout d'1 segment court (max 1 par bloc).
+  - excerpt: `Les rigoles collectrices et regards sont curés pour garantir un écoulement correct.`
+  - replacement: `<strong>Les rigoles collectrices et regards sont curés</strong> pour garantir un écoulement correct.`
+- `services[1].specificChallenges[0]` — op=substring — services[1].specificChallenges: ajouter 1 <strong> (max1) sur le support.
+  - excerpt: `Sols résine des constructions récentes nécessitant une pression contrôlée`
+  - replacement: `<strong>Sols résine des constructions récentes</strong> nécessitant une pression contrôlée`
+- `services[1].specificChallenges[1]` — op=substring — services[1].specificChallenges: ajouter 1 <strong> (max1), contrainte terrain.
+  - excerpt: `Rampes d'accès inclinées où l'adhérence doit être préservée`
+  - replacement: `<strong>Rampes d'accès inclinées</strong> où l'adhérence doit être préservée`
+- `services[1].specificChallenges[2]` — op=substring — services[1].specificChallenges: ajouter 1 <strong> (max1), logistique.
+  - excerpt: `Rotation des véhicules à organiser avec le syndic`
+  - replacement: `<strong>Rotation des véhicules à organiser avec le syndic</strong>`
+- `services[1].specificChallenges[4]` — op=substring — services[1].specificChallenges: ajouter 1 <strong> (max1), contrainte planning sans termes interdits.
+  - excerpt: `Créneaux d'intervention adaptés au flux commercial du Paddock`
+  - replacement: `<strong>Créneaux d'intervention adaptés au flux commercial du Paddock</strong>`
+- `services[2].uniqueDeepDive` — op=substring — uniqueDeepDive services[2]: bloc <h3> 'Encrassement incrusté selon le support' sans <strong>; ajout d'1 segment (max 1 par bloc).
+  - excerpt: `Sur dalles sur plots, un brossage doux préserve les joints`
+  - replacement: `<strong>Sur dalles sur plots, un brossage doux</strong> préserve les joints`
+- `services[2].specificChallenges[0]` — op=substring — services[2].specificChallenges: ajouter 1 <strong> (max1), concret.
+  - excerpt: `Pollution routière : dépôts noirs liés à l'A3`
+  - replacement: `<strong>Pollution routière : dépôts noirs liés à l'A3</strong>`
+- `services[2].specificChallenges[1]` — op=substring — services[2].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Dalles sur plots : joints sensibles nécessitant une pression contrôlée`
+  - replacement: `<strong>Dalles sur plots : joints sensibles</strong> nécessitant une pression contrôlée`
+- `services[2].specificChallenges[2]` — op=substring — services[2].specificChallenges: ajouter 1 <strong> (max1), logistique.
+  - excerpt: `Étages élevés : accès parfois complexe en copropriété`
+  - replacement: `<strong>Étages élevés : accès parfois complexe</strong> en copropriété`
+- `services[2].specificChallenges[3]` — op=substring — services[2].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Voisins du dessous : gestion stricte des écoulements`
+  - replacement: `<strong>Voisins du dessous : gestion stricte des écoulements</strong>`
+- `services[3].uniqueDeepDive` — op=substring — uniqueDeepDive services[3]: bloc <h3> 'Traitement des supports et prévention' sans <strong>; ajout d'1 segment (max 1 par bloc).
+  - excerpt: `Après collecte, chaque surface reçoit un produit virucide homologué`
+  - replacement: `<strong>Après collecte, chaque surface reçoit un produit virucide homologué</strong>`
+- `services[3].specificChallenges[0]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Balcons des étages élevés exposés aux retombées aviaires régulières`
+  - replacement: `<strong>Balcons des étages élevés exposés aux retombées aviaires régulières</strong>`
+- `services[3].specificChallenges[1]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Corniches d'immeubles anciens du centre-ville`
+  - replacement: `<strong>Corniches d'immeubles anciens du centre-ville</strong>`
+- `services[3].specificChallenges[2]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Toits plats des constructions ZAC`
+  - replacement: `<strong>Toits plats des constructions ZAC</strong>`
+- `services[3].specificChallenges[3]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Copropriétés denses nécessitant une coordination stricte`
+  - replacement: `<strong>Copropriétés denses nécessitant une coordination stricte</strong>`
+- `services[3].specificChallenges[4]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Béton et garde-corps métalliques attaqués par l'acidité des fientes`
+  - replacement: `<strong>Béton et garde-corps métalliques attaqués par l'acidité des fientes</strong>`
+- `services[4].uniqueIntro` — op=substring — services[4].uniqueIntro: 0 <strong> pour un texte long; ajout d'1 segment court (max2).
+  - excerpt: `Les textiles absorbent poussières, allergènes et odeurs au fil des mois,`
+  - replacement: `Les textiles absorbent <strong>poussières, allergènes et odeurs</strong> au fil des mois,`
+- `services[4].uniqueDeepDive` — op=substring — uniqueDeepDive services[4]: bloc <h3> 'Injection-extraction et séchage maîtrisé' sans <strong>; ajout d'1 segment (max 1 par bloc).
+  - excerpt: `Le traitement principal combine injection d'une solution adaptée et extraction immédiate`
+  - replacement: `<strong>Le traitement principal combine injection d'une solution adaptée</strong> et extraction immédiate`
+- `services[4].specificChallenges[0]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Taches d'urine animaux fréquentes`
+  - replacement: `<strong>Taches d'urine animaux fréquentes</strong>`
+- `services[4].specificChallenges[1]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Textiles non déhoussables`
+  - replacement: `<strong>Textiles non déhoussables</strong>`
+- `services[4].specificChallenges[2]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Stationnement difficile en centre-ville`
+  - replacement: `<strong>Stationnement difficile en centre-ville</strong>`
+- `services[4].specificChallenges[3]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Accumulation d'allergènes dans les canapés`
+  - replacement: `<strong>Accumulation d'allergènes dans les canapés</strong>`
+- `services[4].specificChallenges[4]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max1) sans mettre 'Délais serrés' en avant (terme délai).
+  - excerpt: `fauteuils de cabinets médicaux liés au pôle santé local`
+  - replacement: `<strong>fauteuils de cabinets médicaux liés au pôle santé local</strong>`
+- `services[5].uniqueDeepDive` — op=substring — uniqueDeepDive services[5]: bloc <h3> 'Traitement et nettoyage' sans <strong>; ajout d'1 segment (max 1 par bloc).
+  - excerpt: `Un produit adapté au support est appliqué : formulation spécifique pour pierre,`
+  - replacement: `<strong>Un produit adapté au support est appliqué</strong> : formulation spécifique pour pierre,`
+- `services[5].specificChallenges[0]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Mousse persistante sur les terrasses ombragées`
+  - replacement: `<strong>Mousse persistante sur les terrasses ombragées</strong>`
+- `services[5].specificChallenges[1]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Supports variés à traiter différemment`
+  - replacement: `<strong>Supports variés à traiter différemment</strong>`
+- `services[5].specificChallenges[2]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Accès fréquent depuis le salon`
+  - replacement: `<strong>Accès fréquent depuis le salon</strong>`
+- `services[5].specificChallenges[3]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Feuillage abondant à proximité de la Corniche des Forts`
+  - replacement: `<strong>Feuillage abondant à proximité de la Corniche des Forts</strong>`
+- `services[5].specificChallenges[4]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Terrasses en attique sur les programmes neufs`
+  - replacement: `<strong>Terrasses en attique sur les programmes neufs</strong>`
+- `services[6].uniqueIntro` — op=substring — services[6].uniqueIntro: 0 <strong> pour un texte long; ajout d'1 segment court (max2).
+  - excerpt: `Poussière de plâtre sur les plinthes, traces de colle au sol,`
+  - replacement: `<strong>Poussière de plâtre sur les plinthes</strong>, traces de colle au sol,`
+- `services[6].uniqueDeepDive` — op=substring — uniqueDeepDive services[6]: bloc <h3> 'Nettoyage pièce par pièce' sans <strong>; ajout d'1 segment (max 1 par bloc).
+  - excerpt: `Le dépoussiérage commence par les hauteurs — plafonds, luminaires, plinthes —`
+  - replacement: `<strong>Le dépoussiérage commence par les hauteurs</strong> — plafonds, luminaires, plinthes —`
+- `services[6].specificChallenges[0]` — op=substring — services[6].specificChallenges: ajouter 1 <strong> (max1) sans mettre 'délais courts' en avant.
+  - excerpt: `Livraisons continues en ZAC de l'Horloge`
+  - replacement: `<strong>Livraisons continues en ZAC de l'Horloge</strong>`
+- `services[6].specificChallenges[1]` — op=substring — services[6].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Rotation locative soutenue près du métro Romainville-Carnot`
+  - replacement: `<strong>Rotation locative soutenue près du métro Romainville-Carnot</strong>`
+- `services[6].specificChallenges[3]` — op=substring — services[6].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Mix de revêtements dans un même logement`
+  - replacement: `<strong>Mix de revêtements dans un même logement</strong>`
+- `services[6].specificChallenges[4]` — op=substring — services[6].specificChallenges: ajouter 1 <strong> (max1).
+  - excerpt: `Coordination avec artisans ou agences`
+  - replacement: `<strong>Coordination avec artisans ou agences</strong>`
+
+## rosny-sous-bois
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=22; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — hubIntro_li_cap
+- `faq[0].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `faq[3].answer` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueDeepDive` — forbidden_strong
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(7>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 segment <strong> court et concret (max 1) pour rendre le challenge scannable, sans toucher au texte hors balises.
+  - value: `Phrase 1: Encrassement rapide des circulations : <strong>poussières fines liées aux axes A3/A86</strong>, entrées ouvertes, va-et-vient quotidien.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la liste de salissures typiques, segment court et terrain.
+  - value: `Phrase 2: Sous-sols et parkings : <strong>hydrocarbures, poussière noire, traces pneus</strong>, zones rampes et angles difficiles.`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur un point concret et localisable, améliore la lecture en liste.
+  - value: `Phrase 3: Abords et espaces extérieurs : <strong>dépôts verts saisonniers près des parcs/squares</strong>, boues par temps humide, salissures de façade en rez-de-chaussée.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur l’irritant principal, segment court et non marketing.
+  - value: `Phrase 4: Sites à forte fréquentation : <strong>marquages et finitions qui se dégradent vite</strong> sans entretien structuré (entrées, couloirs, zones communes).`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le duo de salissures terrain, améliore la scanabilité.
+  - value: `Le flux piéton autour de la gare de Rosny-sous-Bois charge vite les moquettes en <strong>particules fines et traces humides</strong>.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur un point opérationnel concret.
+  - value: `Dans les cages d’escalier étroites des immeubles anciens, la <strong>protection des angles et nez de marche</strong> devient déterminante.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la triade de contraintes terrain.
+  - value: `Certaines moquettes en rez-de-chaussée marquent plus : <strong>poussière de rue, humidité, séchage à surveiller</strong>.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur les symptômes concrets, segment court.
+  - value: `En bureaux, l’enjeu est aussi olfactif : <strong>fibre encrassée, air “fermé”</strong>, besoin d’une extraction réellement efficace.`
+- `services[0].faqAdditions[0].answer` — op=setField — Conformité règle FAQ service: EXACTEMENT 1 <strong> au début du premier <p>. Déplacement du <strong> existant sans modifier le texte hors balises.
+  - value: `<p><strong>Souvent à un mélange poussière de rue + humidité :</strong> entrées ouvertes, passage répété, chaussures mouillées. La fibre se charge surtout sur les premières marches et aux paliers. Un diagnostic rapide permet d’adapter les pa`
+- `services[0].faqAdditions[1].answer` — op=setField — Conformité: 1 seul <strong> au début du premier <p>; suppression des autres <strong> sans changer le texte.
+  - value: `<p><strong>Oui. On traite la moquette là où elle est utilisée :</strong> bureaux, locaux d’accueil, circulations, chambres, mais aussi logements chez les particuliers. Les contraintes changent (horaires, accès, discrétion, maintien de l’act`
+- `services[0].faqAdditions[2].answer` — op=setField — Conformité: placement du seul <strong> au début du premier <p>, retrait du <strong> interne.
+  - value: `<p><strong>La méthode est maîtrisée si elle est ajustée :</strong> pression, température, nombre de passes, et extraction. Sur une moquette ancienne, on teste une zone, on limite la saturation en eau et on privilégie l’aspiration immédiate.`
+- `services[1].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3>3</h3> (block[2]) qui en manquait, en respectant max 1 <strong> par section <h3>.
+  - excerpt: `Récupération/aspiration des eaux de lavage et évacuation dans le réseau adapté.`
+  - replacement: `<strong>Récupération/aspiration des eaux de lavage</strong> et évacuation dans le réseau adapté.`
+- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur les salissures typiques, segment court.
+  - value: `Autour de Rosny 2 et Domus, la rotation véhicule accélère <strong>les dépôts gras et la poussière noire</strong>.`
+- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’exigence opérationnelle.
+  - value: `Les rampes et zones de braquage concentrent l’encrassement : <strong>besoin d’un traitement renforcé et régulier</strong>.`
+- `services[1].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte clé du site.
+  - value: `Certains sous-sols ont une évacuation d’eau peu tolérante : <strong>la récupération/aspiration doit être strictement maîtrisée</strong>.`
+- `services[1].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur les points de coordination terrain.
+  - value: `La réussite dépend aussi de la coordination : <strong>circulation, zones neutralisées, sécurité piétons et véhicules</strong>.`
+- `services[1].faqAdditions[0].answer` — op=setField — Conformité: EXACTEMENT 1 <strong> au début du premier <p>; retrait du <strong> interne.
+  - value: `<p><strong>Ce type d’encrassement mélange particules fines et film gras.</strong> On commence par un diagnostic du revêtement, puis on combine autolaveuse (brossage + aspiration) et renfort dégraissant sur les zones critiques. L’objectif es`
+- `services[1].faqAdditions[1].answer` — op=setField — Conformité: 1 seul <strong> au début du premier <p>; déplacement du focus sans changer le texte.
+  - value: `<p><strong>On privilégie un phasage par zones quand c’est possible :</strong> cela limite la gêne et évite un blocage total. On définit un plan (zones A/B/C), une signalisation claire, et une coordination simple avec le gestionnaire. Selon `
+- `services[1].faqAdditions[3].answer` — op=setField — Conformité: 1 seul <strong> au début du premier <p>; suppression du <strong> interne.
+  - value: `<p><strong>C’est un point clé.</strong> On organise l’opération pour récupérer les eaux (autolaveuse aspirante, zones maîtrisées), puis on évacue dans le réseau adapté selon la configuration constatée au diagnostic. On évite les “coulées” e`
+
+## saint-mande
+
+### Coverage targets (manques/minima)
+
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=24; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=92; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=99; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=79; add 1 in this block (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=181; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=99; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=96; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=78; add 1 in this block (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=204; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=83; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=96; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=90; add 1 in this block (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=203; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=103; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=106; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=100; add 1 in this block (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=214; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=93; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=109; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=96; add 1 in this block (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — hubIntro_li_cap
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `faq[0].answer` — op=setField — FAQ: conserver EXACTEMENT 1 <strong> au début du premier <p> et retirer tous les autres <strong> du paragraphe, sans modifier le texte hors balises.
+  - value: `<p><strong>Oui, nous planifions chaque intervention</strong> en tenant compte des zones bleues et rouges. Nos techniciens repèrent les créneaux de stationnement temporaire (dépose minute, emplacements livraison) et coordonnent avec le gardi`
+- `faq[1].answer` — op=setField — FAQ: mettre EXACTEMENT 1 <strong> au début du premier <p>; suppression des autres <strong> (y compris '48h' interdit en <strong>).
+  - value: `<p><strong>Oui, le diagnostic sur site</strong> et le chiffrage sont gratuits, que l'immeuble soit situé près du Lac, de l'avenue de Paris ou dans les quartiers résidentiels bordant le Bois. Le technicien évalue les surfaces, identifie les `
+- `faq[2].answer` — op=setField — FAQ: conformité EXACTEMENT 1 <strong> au début du premier <p>; retrait des autres <strong> (dont '72h' interdit en <strong>).
+  - value: `<p><strong>Nous coordonnons systématiquement avec le gardien</strong> et le conseil syndical pour valider horaires, accès et organisation. Les résidents sont informés 72h à l'avance, les zones traitées sont balisées discrètement, et les fin`
+- `citySpecificChallenges[0]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur un segment court et terrain.
+  - value: `<strong>Double exposition contrastée</strong> : pollution noire grasse du Périphérique à l'ouest, humidité et mousses du Bois de Vincennes au sud nécessitant des protocoles différenciés`
+- `citySpecificChallenges[1]` — op=setField — City challenge: ajouter 1 <strong> (max1) pour améliorer la scanabilité.
+  - value: `<strong>Stationnement très difficile</strong> et rues à sens unique étroites imposant une planification fine et des véhicules compacts pour chaque intervention`
+- `citySpecificChallenges[2]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur l'élément le plus concret.
+  - value: `<strong>Parkings souterrains anciens</strong> aux rampes étroites et hauteur limitée exigeant du matériel adapté et une progression méthodique`
+- `citySpecificChallenges[3]` — op=setField — City challenge: ajouter 1 <strong> (max1) sur un segment court, non marketing.
+  - value: `<strong>Exigences élevées des copropriétés</strong> de standing avec gardiens et conseils syndicaux attentifs aux finitions et à la discrétion des interventions`
+- `services[0].uniqueDeepDive` — op=setField — UniqueDeepDive service 0: ajouter 1 <strong> par bloc <h3> (max1) sur des segments courts et concrets.
+  - value: `<h3>Diagnostic technique des supports</h3> <p>Le technicien identifie le type de moquette (laine naturelle, bouclée synthétique, velours ras), teste la résistance des fibres et repère les zones critiques (seuils, devant les ascenseurs, pali`
+- `services[1].uniqueIntro` — op=setField — UniqueIntro service 1: ajouter 1 <strong> (max2) sur un point technique saillant, sans termes interdits.
+  - value: `<p>Les parkings souterrains de Saint-Mandé, souvent construits dans les années 1930-1970, présentent des configurations exigeantes : <strong>rampes en colimaçon étroites</strong>, hauteur sous plafond réduite, siphons d'époque parfois obstr`
+- `services[1].uniqueDeepDive` — op=setField — UniqueDeepDive service 1: ajouter 1 <strong> par bloc <h3> (max1) sur des segments opérationnels.
+  - value: `<h3>Diagnostic technique et évaluation des contraintes</h3> <p>Le technicien visite le parking pour mesurer la hauteur sous plafond (souvent 1,90 m à 2,10 m dans les parkings anciens), vérifier le diamètre des rampes en colimaçon, tester l'`
+- `services[3].uniqueIntro` — op=setField — UniqueIntro service 3: ajouter 1 <strong> (max2) sur un constat terrain, sans termes interdits.
+  - value: `<p>Les balcons des immeubles saint-mandéens, particulièrement ceux équipés de corniches en pierre de taille ou de loggias profondes typiques des années 1930-1970, offrent des sites de nidification privilégiés pour les pigeons. La proximité `
+- `services[5].specificChallenges[0]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur le point le plus scannable.
+  - value: `Commune très dense : <strong>stationnement difficile</strong> et rues étroites / sens uniques.`
+- `services[5].specificChallenges[1]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur une contrainte terrain.
+  - value: `Accès immeubles : <strong>gardiens, digicodes, Vigik</strong> et consignes d’immeuble fréquentes.`
+- `services[5].specificChallenges[2]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur un obstacle concret.
+  - value: `Bâti ancien : <strong>escaliers sans ascenseur</strong> et cages résonnantes (discrétion sonore).`
+- `services[5].specificChallenges[3]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur le matériau le plus courant.
+  - value: `Matériaux sensibles : <strong>parquets anciens</strong>, marbre/ pierre d’entrée, menuiseries bois.`
+- `services[5].specificChallenges[4]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur un type de salissure.
+  - value: `Dépôts urbains : <strong>particules/suie</strong> à proximité du périphérique et des axes (Avenue de Paris, Gallieni).`
+- `services[5].specificChallenges[5]` — op=setField — Service specificChallenges: ajouter 1 <strong> (max1) sur un symptôme concret.
+  - value: `Calcaire en pièces d’eau : <strong>traces minérales</strong> et joints à reprendre sans agresser les surfaces.`
+
+## saint-maur-des-fosses
+
+### Coverage targets (manques/minima)
+
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=18; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=76; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=81; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=68; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — word_limits
+- `faq[1].answer` — forbidden_strong
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(4>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Coverage target: add 1 <strong> (max1) to improve scanability; short, concrete terrain segment.
+  - value: `Hygrométrie élevée liée à la boucle de la Marne : <strong>prolifération rapide de dépôts verts</strong> sur les expositions Nord/Est`
+- `citySpecificChallenges[1]` — op=setField — Coverage target: add 1 <strong> (max1); highlights a specific local cause without marketing terms.
+  - value: `Pollution végétale intense : <strong>pollens gluants des tilleuls</strong> au printemps et saturation des évacuations par les feuilles en automne`
+- `citySpecificChallenges[2]` — op=setField — Coverage target: add 1 <strong> (max1); focuses on a concrete on-the-ground constraint.
+  - value: `Accessibilité contrainte (Presqu'île) : nécessité d'une logistique anticipant <strong>les flux pendulaires des ponts</strong>`
+- `citySpecificChallenges[3]` — op=setField — Coverage target: add 1 <strong> (max1); emphasizes a precise material risk.
+  - value: `Fragilité du bâti ancien : interdiction de la haute pression agressive sur <strong>les joints de meulière</strong> et les parements historiques`
+- `services[0].uniqueIntro` — op=setField — Coverage target: uniqueIntro overcap (max 2). Removed the long first <strong> segment to keep only 2 and avoid bolding a full sentence.
+  - value: `<p>À Saint-Maur, la moquette des parties communes n'est pas seulement sale, elle est "contaminée" par l'environnement extérieur. Au printemps, ce sont les pollens gras des tilleuls ; en automne, la boue des feuilles mortes ; et toute l'anné`
+- `services[0].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> (max1); highlights the key operational requirement without forbidden terms.
+  - value: `Séchage en milieu humide : La proximité de la Marne impose <strong>une puissance d'extraction supérieure</strong> pour garantir un sol sec le soir même.`
+- `services[0].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> (max1); concrete technique element.
+  - value: `Taches tanniques : Les feuilles mortes automnales laissent des marques brunes tenaces que seul <strong>un traitement acide ciblé</strong> peut effacer.`
+
+## serris
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[0] has 0 strong; words=29; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[1] has 0 strong; words=31; must add 1 inside this <li> (max1/li)
+  - hubIntro_li_missing: li[2] has 0 strong; words=36; must add 1 inside this <li> (max1/li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=31; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=21; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=18; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=226; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=116; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=117; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=106; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=244; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=125; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=119; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=108; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=38; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=266; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=111; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=130; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=118; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=278; add 1 (max2)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=125; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=132; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=142; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=32; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=42; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=267; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=118; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=118; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=39; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=69; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — word_limits
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(11>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — forbidden_strong
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’1 <strong> dans chaque <li> (max 1/li) pour rendre les 3 points immédiatement scannables, sans toucher au texte hors balises.
+  - value: `<p>Serris présente un parc immobilier récent et exigeant, avec des copropriétés de haut standing, des résidences de services et des appart-hôtels nécessitant des protocoles adaptés aux standards hôteliers. <strong>Klinova intervient en part`
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur un segment court et terrain pour faciliter le scan.
+  - value: `<strong>Flux piétons massifs</strong> liés à Disneyland Paris et au RER A Val d'Europe générant une usure accélérée des moquettes et sols des halls d'immeubles, particulièrement près de la gare`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte principale, sans inclure d’éléments interdits.
+  - value: `<strong>Parkings souterrains à hauteur limitée</strong> stricte (1m90) imposant des véhicules utilitaires compacts et une planification logistique précise pour accéder aux résidences`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur le facteur d’encrassement le plus concret.
+  - value: `<strong>Poussières de construction</strong> des secteurs en développement encrassant rapidement les surfaces extérieures et les parkings des résidences récentes`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’accès, segment court et opérationnel.
+  - value: `<strong>Résidences sécurisées à codes, badges</strong> et barrières automatiques nécessitant une coordination parfaite avec syndics et conciergeries pour chaque intervention`
+- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> (max 2) sur un détail d’encrassement concret pour améliorer la lecture sans ton marketing.
+  - value: `<p>Les copropriétés serrisiennes subissent un encrassement particulier lié à leur environnement touristique exceptionnel. Les immeubles proches de la gare RER A Val d'Europe et du centre commercial accueillent quotidiennement des flux piéto`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) sur des zones/points d’attention concrets, sans modifier le texte hors balises.
+  - value: `<h3>1. Diagnostic technique adapté aux flux intenses</h3> <p>Le technicien identifie le type de moquette (fibres synthétiques haute résistance typiques des immeubles récents, bouclées épaisses pour zones de fort trafic), évalue le niveau d'`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur le fait terrain le plus utile au scan.
+  - value: `Usure accélérée par les flux touristiques : Les immeubles proches de la gare Val d'Europe et du centre commercial subissent un <strong>passage piéton quotidien intense</strong> avec valises et bagages, accélérant l'encrassement et nécessita`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte d’encrassement la plus concrète.
+  - value: `Poussières de chantiers de développement : Les secteurs en extension de Serris-Sud génèrent des <strong>particules fines qui pénètrent les halls</strong> d'immeubles et s'incrustent dans les fibres, exigeant un détergent adapté et plusieurs`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur l’exigence opérationnelle, sans inclure de termes interdits.
+  - value: `Contraintes logistiques des parkings souterrains : Les hauteurs limitées strictes (1m90) imposent des <strong>véhicules compacts et une planification précise</strong>, tandis que les accès sécurisés nécessitent une coordination parfaite ave`
+
+## thiais
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=15; must add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=72; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `citySpecificChallenges[4]`
+  - challenge_missing: 0 strong; words=12; add 1 (max1)
+- `citySpecificChallenges[5]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (non-<li> manquant) et ajout d’1 <strong> dans le 3e <li> (li[2] manquant), en respectant les caps (max 2 hors <li>, max 1 par <li>). Segments courts et concrets.
+  - value: `<p>À proximité immédiate de Belle Épine et de l'aéroport d'Orly, Thiais concentre des flux importants qui sollicitent fortement les espaces communs. Klinova accompagne syndics, gestionnaires et occupants avec une <strong>organisation calibr`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur un segment terrain et concret.
+  - value: `Parkings souterrains des résidences Grignon : <strong>béton brut encrassé</strong> par le trafic quotidien.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) pour rendre l’item scannable.
+  - value: `Accès digicodes et badges fréquents : <strong>coordination préalable indispensable</strong> avec gardiens ou syndics.`
+- `citySpecificChallenges[5]` — op=setField — Ajout d’1 <strong> (max1) sur un point terrain.
+  - value: `Proximité Parc de l'Europe : <strong>fientes et débris végétaux</strong> sur balcons des derniers étages.`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3> 1 et d’1 <strong> dans le bloc <h3> 3, en respectant max 1 <strong> par bloc <h3>.
+  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et halls d'accueil concentrent l'essentiel des passages. Nous identifions d'abord le type de moquette — dalles textiles, velours ras ou bouclé — puis appliquons plusieurs passes d'inject`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) sur un segment concret.
+  - value: `Dalles textiles des bureaux Sénia <strong>encrassées par le passage</strong> quotidien des collaborateurs.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) sur un élément concret.
+  - value: `Halls d'entrée exposés aux <strong>poussières fines</strong> liées au trafic routier A86 et N7.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) sur contrainte terrain.
+  - value: `Escaliers étroits des petits collectifs nécessitant un <strong>matériel compact</strong> et maniable.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max1) sans mettre le délai en avant.
+  - value: `Temps de séchage à maîtriser pour une <strong>reprise d'activité</strong> sous quelques heures.`
+
+## torcy
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=83; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=16; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=16; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=102; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=81; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=22; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=26; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=70; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=23; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=196; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(8>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc <h3> manquant (max 1 par bloc) sur une action terrain concrète, sans toucher aux autres blocs déjà conformes.
+  - value: `<h3>Diagnostic approfondi et préparation sur mesure</h3> <p>Notre intervention débute par un diagnostic approfondi de l'état des moquettes : type de fibres, niveau d'encrassement, identification des taches spécifiques et évaluation des cont`
+- `services[1].uniqueDeepDive` — op=substring — Ajouter 1 <strong> dans le premier bloc <h3> (max 1) sur une action terrain concrète, sans modifier le reste du champ.
+  - excerpt: `La préparation inclut un balayage mécanique des débris, le dégagement`
+  - replacement: `La préparation inclut un <strong>balayage mécanique des débris</strong>, le dégagement`
+
+## vaires-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=102; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=11; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=20; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=230; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `hubIntro` — forbidden_strong
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — forbidden_strong
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — forbidden_strong
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — forbidden_strong
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(13>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) pour rendre le point scannable, segment court et concret.
+  - value: `<strong>Mousses et dépôts verts fréquents</strong> sur les balcons exposés aux bords de Marne.`
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur l’élément le plus informatif.
+  - value: `<strong>Particules fines et poussières ferroviaires</strong> autour de la gare de Vaires-Torcy.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) pour améliorer la lecture en liste.
+  - value: `<strong>Fort passage dans les halls</strong> des résidences proches de la D934 et des écoles.`
+
+## villejuif
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=70; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=67; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=167; add 1 (max2)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=181; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(4>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `citySpecificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur un point terrain pour améliorer la scanabilité.
+  - value: `Grands ensembles des Lozaits et Lebon-Lamartine : <strong>halls à fort passage</strong>, sols encrassés rapidement.`
+- `citySpecificChallenges[3]` — op=setField — Ajout d’1 <strong> (max1) sur un symptôme visible et fréquent.
+  - value: `Pollution N7 et A6 : <strong>dépôts noirs sur balcons</strong> et façades des quartiers ouest.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max1) sur le symptôme principal.
+  - value: `Halls à fort passage près du terminus métro : <strong>fibres écrasées</strong> et traces grises concentrées sur les premiers mètres.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max1) sur la contrainte technique.
+  - value: `Moquettes des années 70-90 dans les copropriétés : <strong>supports parfois fragiles</strong> nécessitant un réglage de pression adapté.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1) sur l’action terrain.
+  - value: `Taches anciennes incrustées depuis plusieurs mois : <strong>détachage ciblé</strong> indispensable avant extraction.`
+
+## villemomble
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=73; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(4>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), segment court et concret, sans dépasser le cap (max 2 hors <li>).
+  - excerpt: `Propreté des halls, entretien des sous-sols, remise en état des extérieurs`
+  - replacement: `<strong>Propreté des halls, entretien des sous-sols</strong>, remise en état des extérieurs`
+- `faq[0].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>; suppression du <strong> interne et déplacement sur un segment terrain (localisation).
+  - value: `<p><strong>Autour de la gare et en centre-ville</strong>, nous privilégions des créneaux matinaux avant le pic de circulation. Le matériel est chargé en véhicule compact, et nous identifions en amont les zones de dépose autorisées. Si besoi`
+- `faq[2].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>; déplace le focus sur l'étape initiale, retire le <strong> interne.
+  - value: `<p><strong>Un premier échange téléphonique ou par mail</strong> permet de cerner le besoin. Si nécessaire, nous programmons une visite technique pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit sous q`
+- `services[0].uniqueIntro` — op=setField — Respect du cap uniqueIntro (max 2 <strong>): suppression du 3e <strong> tout en conservant 2 repères terrain.
+  - value: `<p>Dans le secteur du <strong>centre-ville et de l'Avenue du Raincy</strong>, les moquettes des cabinets libéraux et des halls d'entrée accumulent rapidement poussières fines et traces de passage. Les allées et venues quotidiennes déposent `
+- `services[0].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> manquant (max 1), segment technique et concret, sans mention de délai en <strong>.
+  - excerpt: `L'extraction maximale de l'humidité réduit le temps de séchage`
+  - replacement: `<strong>L'extraction maximale de l'humidité</strong> réduit le temps de séchage`
+- `services[0].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1) sur un point terrain scannable.
+  - value: `Halls d'immeubles anciens avec <strong>escaliers étroits</strong> compliquant l'acheminement du matériel.`
+- `services[0].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1) sur la contrainte d'usage.
+  - value: `Moquettes de bureaux et cabinets soumises à un <strong>piétinement quotidien intense</strong> près de la gare.`
+- `services[0].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1) sur la cause terrain, segment court.
+  - value: `Revêtements textiles des parties communes marqués par les <strong>poussières ramenées des axes passants</strong>.`
+- `services[0].specificChallenges[4]` — op=setField — Ajoute 1 <strong> (max 1) sur le mécanisme d'encrassement.
+  - value: `Fibres ternies par <strong>l'accumulation de résidus</strong> que l'aspiration régulière ne suffit pas à éliminer.`
+- `services[0].faqAdditions[3].answer` — op=setField — Conformité service FAQ: exactement 1 <strong> au début du premier <p>, évite de mettre un délai en <strong>.
+  - value: `<p><strong>Le temps de séchage varie selon l'épaisseur du revêtement</strong> et la ventilation du lieu. En conditions normales, comptez entre quatre et huit heures avant de pouvoir circuler à nouveau. Nous communiquons un créneau précis ap`
+
+## villeparisis
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=101; may add 1 (max2 outside li)
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=16; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=20; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=18; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=21; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=216; add 1 (max2)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=66; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[1].answer` — word_limits
+- `faq[2].answer` — word_limits
+- `faq[3].answer` — word_limits
+- `services[0].faqAdditions[1].answer` — word_limits
+- `services[0].faqAdditions[2].answer` — word_limits
+- `services[1].uniqueIntro` — word_limits
+- `services[1].uniqueDeepDive` — forbidden_strong
+- `services[1].faqAdditions[0].answer` — word_limits
+- `services[1].faqAdditions[2].answer` — word_limits
+- `services[2].uniqueIntro` — forbidden_strong
+- `services[2].faqAdditions[0].answer` — word_limits
+- `services[2].faqAdditions[1].answer` — word_limits
+- `services[3].uniqueIntro` — word_limits
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[4].uniqueIntro` — word_limits
+- `services[4].faqAdditions[1].answer` — word_limits
+- `services[4].faqAdditions[2].answer` — word_limits
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’un <strong> unique (max 1) sur l’élément le plus scannable.
+  - value: `<strong>Cages d'escalier étroites</strong> dans certains immeubles : matériel portatif nécessaire pour contremarches, angles et paliers.`
+- `services[3].uniqueDeepDive` — op=setField — Bloc <h3>1 surcapé (2 <strong>). Suppression du <strong> sur “FFP2” pour revenir à max 1 <strong> par bloc, sans toucher au texte hors balises.
+  - value: `<h3>1. Confinement et équipement de protection</h3> <p>Procédure de sécurité biologique stricte, indispensable pour protéger la santé des occupants et du technicien. La zone est confinée et notre intervenant s'équipe d'EPI complets (combina`
+- `services[3].specificChallenges[1]` — op=setField — Ajout d’un <strong> unique (max 1) sur un segment concret.
+  - value: `<strong>Acidité des fientes</strong> attaquant la porosité du béton sur certains balcons, nécessitant un nettoyage approfondi.`
+- `services[4].specificChallenges[0]` — op=setField — Ajout d’un <strong> unique (max 1) sur la contrainte terrain.
+  - value: `<strong>Poussière de chantier</strong> du quartier Vieux-Pays qui s'infiltre et grise rapidement les canapés en tissu clair.`
+- `services[6].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (0→1) pour respecter la règle max 1 par section et améliorer la lecture au scan.
+  - value: `<h3>Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3> <p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : <strong>badge/digicode, stationnement plus serré</strong>, et interventio`
+
+## villepinte
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=80; may add 1 (max2 outside li)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=71; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=62; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=setField — Ajout de 2 segments <strong> hors <li> (max 2) pour rendre les 2 paragraphes scannables, sans toucher au texte hors balises.
+  - value: `<p>Siège du Parc des Expositions Paris Nord et du Parc d'Affaires Paris Nord 2, Villepinte concentre des besoins variés en propreté. Klinova accompagne syndics, gestionnaires et entreprises avec une <strong>présence terrain régulière</stron`
+- `citySpecificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur le point terrain le plus saillant pour améliorer la scanabilité.
+  - value: `Parkings souterrains des résidences récentes : <strong>taches d'huile et traces de pneus</strong> fréquentes.`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) sur des actions concrètes, pour répondre aux 3 manques de couverture.
+  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et halls d'entrée concentrent l'essentiel du piétinement. Nous commençons par une <strong>aspiration approfondie</strong> pour retirer les particules libres, puis appliquons l'injection-`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’un seul <strong> (max 1) sur le problème terrain principal.
+  - value: `Dalles textiles des open spaces Paris Nord 2 <strong>marquées par le passage quotidien</strong>.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte d’usage.
+  - value: `Moquettes velours des halls d'hôtels proches du Parc des Expositions <strong>soumises à des flux visiteurs variables</strong>.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’un seul <strong> (max 1) sur l’élément le plus scannable.
+  - value: `<strong>Accès par badge</strong> et horaires décalés imposés par les gestionnaires de sites tertiaires.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’un seul <strong> (max 1) sur le type de salissure.
+  - value: `<strong>Taches de café</strong> et résidus alimentaires fréquents dans les espaces de pause.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’un seul <strong> (max 1) sur la contrainte opérationnelle, sans mention de délais chiffrés.
+  - value: `<strong>Temps de séchage à anticiper</strong> pour éviter toute gêne lors de la reprise d'activité.`
+
+## villiers-sur-marne
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=75; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(5>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajout d’1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2) et en mettant en avant un élément terrain scannable.
+  - excerpt: `chaque intervention s'appuie sur un diagnostic préalable et un suivi terrain.`
+  - replacement: `chaque intervention s'appuie sur un <strong>diagnostic préalable</strong> et un suivi terrain.`
+- `services[0].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (était à 3) en retirant un balisage non indispensable, sans modifier le texte.
+  - value: `<p>Dans le secteur de l'<strong>Espace Jean-Moulin</strong> et des locaux tertiaires du centre-ville, les moquettes accumulent poussières et traces de passage bien avant que l'encrassement devienne visible. Les fibres retiennent particules `
+- `services[0].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3> 'Diagnostic et préparation du chantier' (block[2]) qui en manquait, en respectant max 1 <strong> par bloc.
+  - excerpt: `nous identifions la nature du textile : bouclée, velours, épaisse ou fine.`
+  - replacement: `nous identifions la <strong>nature du textile</strong> : bouclée, velours, épaisse ou fine.`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) pour rendre le challenge plus scannable avec un segment concret.
+  - value: `<strong>Dalles textiles en salles municipales</strong> soumises à un piétinement intense lors d'événements.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’élément terrain principal.
+  - value: `<strong>Moquettes velours ras</strong> dans les bureaux tertiaires du centre-ville, sensibles aux traces de roulettes.`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) pour mettre en avant la contrainte d’accès.
+  - value: `<strong>Escaliers étroits</strong> dans les immeubles anciens compliquant l'acheminement du matériel.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1) sur la contrainte opérationnelle.
+  - value: `<strong>Stationnement limité près de la gare</strong> imposant une logistique adaptée pour les interventions.`
+- `services[0].specificChallenges[4]` — op=setField — Ajout d’1 <strong> (max 1) sur la cause terrain des salissures.
+  - value: `<strong>Poussières urbaines liées au trafic</strong> sur les axes structurants qui s'incrustent rapidement dans les fibres.`
+
+## vincennes
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=87; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[0]`
+  - challenge_missing: 0 strong; words=22; add 1 (max1)
+- `citySpecificChallenges[1]`
+  - challenge_missing: 0 strong; words=19; add 1 (max1)
+- `citySpecificChallenges[2]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=67; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=37; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=28; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=89; add 1 in this block (max1)
+  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=36; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[1].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=30; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=92; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=82; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=34; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=29; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[3].uniqueDeepDive`
+  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=33; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=27; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=85; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=31; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=35; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=209; add 1 (max2)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=70; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=73; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=18; add 1 (max1)
+- `services[5].specificChallenges[5]`
+  - serviceChallenge_missing: 0 strong; words=19; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].uniqueIntro` — pairs_over_cap(5>2)
+- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Ajoute 1 <strong> hors <li> (max 2) pour rendre le 2e paragraphe plus scannable, sans toucher au texte.
+  - excerpt: `Nos équipes connaissent les spécificités locales : rues étroites, stationnement limité, halls de prestige`
+  - replacement: `Nos équipes connaissent les spécificités locales : <strong>rues étroites, stationnement limité</strong>, halls de prestige`
+- `faq[0].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>, suppression des autres <strong> (dont délai).
+  - value: `<p><strong>Oui, nous planifions les interventions</strong> en tenant compte des créneaux de circulation fluide (matinée tôt ou après-midi). Nos équipes connaissent les accès depuis le RER A et le métro ligne 1, ainsi que les zones de statio`
+- `faq[2].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>, suppression des autres <strong>.
+  - value: `<p><strong>Nous utilisons des véhicules compacts</strong> et planifions chaque intervention en repérant les emplacements de livraison ou les zones de dépose minute. Pour les opérations longues (parking souterrain, décrassage complet de hall`
+- `faq[3].answer` — op=setField — Conformité FAQ: exactement 1 <strong> au début du premier <p>, suppression des autres <strong>.
+  - value: `<p><strong>Oui, nous établissons un calendrier annuel ou semestriel</strong> avec le conseil syndical. Chaque passage fait l'objet d'un compte-rendu avec photos et observations (usure, taches récurrentes, recommandations). Ce suivi permet d`
+- `citySpecificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur un segment concret pour améliorer la scanabilité.
+  - excerpt: `en raison du flux piéton intense lié au RER A`
+  - replacement: `en raison du <strong>flux piéton intense</strong> lié au RER A`
+- `citySpecificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte opérationnelle claire.
+  - excerpt: `Stationnement très tendu et rues étroites dans le centre-ville`
+  - replacement: `<strong>Stationnement très tendu</strong> et rues étroites dans le centre-ville`
+- `citySpecificChallenges[3]` — op=substring — Ajoute 1 <strong> (max 1) sur l'exigence de méthode, sans promesse.
+  - excerpt: `nécessitant des protocoles soignés et un séchage maîtrisé`
+  - replacement: `nécessitant des <strong>protocoles soignés</strong> et un séchage maîtrisé`
+- `services[0].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte technique.
+  - excerpt: `exigent une pression modérée et un réglage précis`
+  - replacement: `exigent une <strong>pression modérée</strong> et un réglage précis`
+- `services[0].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur une cause fréquente de séchage lent.
+  - excerpt: `Les halls ouverts sur rue ou les sous-sols mal ventilés`
+  - replacement: `Les halls ouverts sur rue ou les <strong>sous-sols mal ventilés</strong>`
+- `services[0].faqAdditions[2].answer` — op=setField — Conformité Service FAQ: exactement 1 <strong> au début du premier <p>, suppression des autres <strong>.
+  - value: `<p><strong>Non, si elle est correctement réglée.</strong> Nous ajustons la pression et la température selon le type de fibres (laine, synthétique, bouclé). L'extraction puissante limite l'humidité résiduelle, évitant la déformation ou le ré`
+
+## vitry-sur-seine
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=82; may add 1 (max2 outside li)
+- `faq[0].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[1].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[2].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `faq[3].answer`
+  - faq_fix_required: FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `citySpecificChallenges[3]`
+  - challenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[0].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[0].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[2].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=17; add 1 (max1)
+- `services[2].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=12; add 1 (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[3].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=16; add 1 (max1)
+- `services[4].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_missing: 0 strong; words=13; add 1 (max1)
+- `services[5].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=11; add 1 (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[5].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_missing: 0 strong; words=14; add 1 (max1)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_missing: 0 strong; words=15; add 1 (max1)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_missing: 0 strong; words=10; add 1 (max1)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[2].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_fix_required: Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>
+
+### Violations / Overlimit (TS actuel)
+
+- `faq[0].answer` — faq_exactly_one_strong_beginning
+- `faq[1].answer` — faq_exactly_one_strong_beginning
+- `faq[2].answer` — faq_exactly_one_strong_beginning
+- `faq[3].answer` — faq_exactly_one_strong_beginning
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[0].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[1].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[2].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[3].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[4].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[5].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].faqAdditions[0].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[1].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[2].answer` — faq_exactly_one_strong_beginning
+- `services[6].faqAdditions[3].answer` — faq_exactly_one_strong_beginning
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — hubIntro: ajouter 1 <strong> dans le texte hors <li> (actuellement 0), segment court et concret, sans dépasser le max (2) hors listes.
+  - excerpt: `Chaque intervention fait l'objet d'une coordination préalable avec le gestionnaire`
+  - replacement: `<strong>Chaque intervention fait l'objet d'une coordination préalable</strong> avec le gestionnaire`
+- `faq[0].answer` — op=setField — FAQ: imposer EXACTEMENT 1 <strong> au début du premier <p> ; déplacement du <strong> existant vers le début et suppression de l'autre.
+  - value: `<p><strong>En centre-ville ou près de la gare de Vitry-sur-Seine</strong>, nous repérons les possibilités de stationnement avant le premier passage. Nos équipes arrivent avec un véhicule adapté et planifient les créneaux en dehors des heure`
+- `faq[1].answer` — op=setField — FAQ: EXACTEMENT 1 <strong> au début du premier <p> ; déplacement du <strong> existant vers le début.
+  - value: `<p><strong>Oui, c'est une situation fréquente à Vitry-sur-Seine.</strong> Nous récupérons les codes d'accès ou badges Vigik en amont et coordonnons avec le gardien si nécessaire. Les horaires d'intervention sont définis pour respecter les r`
+- `faq[2].answer` — op=setField — FAQ: EXACTEMENT 1 <strong> au début du premier <p> ; retirer le <strong> sur un délai (interdit) et le replacer sur un segment neutre.
+  - value: `<p><strong>Après validation du devis</strong>, nous pouvons généralement intervenir sous 5 à 10 jours ouvrés selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la possibilité d'un passag`
+- `faq[3].answer` — op=setField — FAQ: EXACTEMENT 1 <strong> au début du premier <p> ; déplacement du <strong> existant vers le début.
+  - value: `<p><strong>Les secteurs en mutation génèrent des poussières et salissures spécifiques.</strong> Nous adaptons la fréquence et les méthodes selon l'avancement des travaux environnants. La coordination avec le gestionnaire permet d'ajuster le`
+- `citySpecificChallenges[3]` — op=setField — citySpecificChallenges: ajouter 1 <strong> (max1) sur un segment terrain et scannable.
+  - value: `<strong>Balcons exposés aux retombées de pollution</strong> sur les axes comme l'avenue Rouget de Lisle.`
+- `services[0].uniqueIntro` — op=setField — services[0].uniqueIntro: réduire à max 2 <strong> en retirant le 3e, tout en gardant des repères concrets.
+  - value: `<p>Les traces grises sur les zones de passage, les auréoles près des entrées, les fibres ternies le long des couloirs : ces marques apparaissent rapidement dans les bureaux et halls situés près de la <strong>Gare des Ardoines</strong>. La p`
+- `services[0].specificChallenges[0]` — op=setField — services[0].specificChallenges: ajouter 1 <strong> (max1) pour rendre l'item scannable.
+  - value: `<strong>Poussières de chantier liées aux travaux</strong> du Grand Paris Express et de la ZAC Les Ardoines.`
+- `services[1].uniqueIntro` — op=substring — services[1].uniqueIntro: ajouter 1 <strong> (max2) sur une contrainte terrain, sans toucher au reste.
+  - excerpt: `Les traces s'accumulent sur le béton, les rampes deviennent glissantes`
+  - replacement: `<strong>Les traces s'accumulent sur le béton</strong>, les rampes deviennent glissantes`
+- `services[2].uniqueIntro` — op=setField — services[2].uniqueIntro: réduire à max 2 <strong> en retirant le 3e.
+  - value: `<p>Dans les résidences de la <strong>ZAC Les Ardoines</strong> comme dans les immeubles du Port-à-l'Anglais, les balcons accumulent rapidement poussières fines et dépôts noirâtres. Les particules issues des chantiers voisins se mêlent aux r`
+- `services[2].specificChallenges[0]` — op=setField — services[2].specificChallenges: ajouter 1 <strong> (max1).
+  - value: `<strong>Poussière de chantier omniprésente</strong> autour de la ZAC Les Ardoines, déposée en continu sur les surfaces.`
+- `services[2].faqAdditions[0].answer` — op=setField — Service FAQ: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Le béton brut reste sensible aux pressions trop fortes.</strong> Nous privilégions un brossage manuel associé à un produit désincrustant doux. Le rinçage s'effectue à basse pression pour ne pas creuser la surface ni déchausser le`
+- `services[2].faqAdditions[1].answer` — op=setField — Service FAQ: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>L'humidité et l'ombre partielle favorisent ces dépôts verts.</strong> Nous appliquons un traitement anti-mousse avant le brossage, puis rinçons abondamment. Sur les supports poreux, un passage supplémentaire permet d'extraire les`
+- `services[2].faqAdditions[2].answer` — op=setField — Service FAQ: EXACTEMENT 1 <strong> au début du premier <p>.
+  - value: `<p><strong>Le carrelage ancien présente souvent des joints fragiles</strong> : nous évitons toute pression excessive et travaillons manuellement autour des zones sensibles. Les dalles sur plots, plus stables, supportent un rinçage plus appu`
+- `services[4].specificChallenges[1]` — op=setField — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - value: `<strong>Canapés non déhoussables</strong> dans le parc social, où seule l'injection-extraction atteint les fibres en profondeur.`
+- `services[4].specificChallenges[3]` — op=setField — services[4].specificChallenges: ajouter 1 <strong> (max1).
+  - value: `<strong>Paliers étroits</strong> compliquant le déplacement de l'équipement jusqu'au logement.`
+- `services[5].specificChallenges[3]` — op=setField — services[5].specificChallenges: ajouter 1 <strong> (max1).
+  - value: `<strong>Joints de carrelage noircis</strong> par l'humidité persistante en zone ombragée.`
+- `services[6].specificChallenges[0]` — op=setField — services[6].specificChallenges: ajouter 1 <strong> (max1).
+  - value: `<strong>Poussières de chantier persistantes</strong> dans les appartements livrés près de la ZAC Les Ardoines.`
+- `services[6].faqAdditions[1].answer` — op=setField — Service FAQ: EXACTEMENT 1 <strong> au début du premier <p> ; éviter de mettre en avant des délais précis.
+  - value: `<p><strong>Selon la surface et l'état du logement</strong>, l'intervention peut être planifiée dans des délais courts. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée per`
+

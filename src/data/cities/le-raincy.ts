@@ -20,10 +20,10 @@ const city: City = {
     '\n<p>Le Raincy se distingue par un parc immobilier résidentiel exigeant, où la qualité perçue des parties communes et des extérieurs compte au quotidien. KLINOVA accompagne syndics, conseils syndicaux, gestionnaires et occupants avec une approche rigoureuse, protocolisée et adaptée aux contraintes d’accès et d’occupation.</p>\n<p class="mt-4">Autour de la gare Le Raincy – Villemomble – Montfermeil, avec un stationnement souvent réglementé et des immeubles aux circulations parfois étroites, chaque intervention commence par un diagnostic sur site, un planning clair et un suivi documenté, pour limiter la gêne et sécuriser le résultat.</p>\n<ul>\n  <li><strong>Accessibilité technique :</strong> organisation par zones, gestion des accès (Vigik / gardien), matériel adapté aux circulations étroites, balisage systématique.</li>\n  <li><strong>Réactivité locale :</strong> déplacement gratuit pour devis, créneaux coordonnés avec syndic/gardien, intervention d’urgence possible selon contexte.</li>\n  <li><strong>Protocoles documentés :</strong> compte-rendu d’intervention, traçabilité des produits, recommandations d’entretien selon les supports.</li>\n</ul>\n',
 
   citySpecificChallenges: [
-    "Copropriétés résidentielles et allées arborées : apports de terre végétale, feuilles et dépôts verts sur les zones d’entrée.",
-    "Proximité gare et axes routiers : particules fines et salissures de passage dans les circulations communes.",
-    "Extérieurs exposés (garde-corps, dalles, joints) : noircissement progressif, mousses et résines végétales selon ombrage.",
-    "Sous-sols et parkings anciens : béton poreux, traces d’hydrocarbures, ventilation parfois limitée et zones de manœuvre marquées.",
+    "Copropriétés résidentielles et allées arborées : <strong>apports de terre végétale</strong>, feuilles et dépôts verts sur les zones d’entrée.",
+    "Proximité gare et axes routiers : <strong>particules fines et salissures de passage</strong> dans les circulations communes.",
+    "Extérieurs exposés (garde-corps, dalles, joints) : <strong>noircissement progressif</strong>, mousses et résines végétales selon ombrage.",
+    "Sous-sols et parkings anciens : <strong>béton poreux</strong>, traces d’hydrocarbures, ventilation parfois limitée et zones de manœuvre marquées.",
   ],
 
   // ✅ Quartiers (IRIS INSEE) — 6 au Raincy
@@ -118,8 +118,8 @@ const city: City = {
 
       specificChallenges: [
         "Proximité gare et axes : particules fines et apports de salissures au niveau des entrées et seuils.",
-        "Circulations étroites : organisation par zones et travail propre pour éviter d’encombrer les passages.",
-        "Moquettes bouclées/épaisses : passes d’extraction supplémentaires pour retrouver la texture sans saturer le support.",
+        "<strong>Circulations étroites :</strong> organisation par zones et travail propre pour éviter d’encombrer les passages.",
+        "<strong>Moquettes bouclées/épaisses :</strong> passes d’extraction supplémentaires pour retrouver la texture sans saturer le support.",
       ],
 
       faqAdditions: [
@@ -172,9 +172,9 @@ const city: City = {
         '\n<p><strong>1) Visite technique :</strong> repérage revêtement (béton/peinture/résine), évacuation des eaux, hauteur sous plafond, rampes et points sensibles. Planning transmis au syndic.</p>\n<p class="mt-4"><strong>2) Nettoyage structuré :</strong> balayage/dégagement, puis autolaveuse (brossage + aspiration). Dégraissage ciblé sur huiles et zones de freinage, traitement manuel des angles et bordures.</p>\n<p class="mt-4"><strong>3) Gestion de l’eau & finitions :</strong> récupération immédiate des eaux sales, évacuation via point conforme. Recommandation de fréquence selon rotation et niveau d’exposition.</p>\n',
 
       specificChallenges: [
-        "Axes proches : dépôt de particules et résidus gras, encrassement accéléré des rampes.",
+        "Axes proches : <strong>dépôt de particules et résidus gras</strong>, encrassement accéléré des rampes.",
         "Sous-sols anciens : béton poreux, taches d’huile incrustées, évacuation parfois limitée.",
-        "Organisation résidents : travail par secteurs pour limiter les déplacements et maintenir l’accessibilité.",
+        "Organisation résidents : <strong>travail par secteurs</strong> pour limiter les déplacements et maintenir l’accessibilité.",
       ],
 
       faqAdditions: [
@@ -228,8 +228,8 @@ const city: City = {
 
       specificChallenges: [
         "Dépôts verts et résines végétales : joints et angles plus difficiles à rattraper sans brossage ciblé.",
-        "Balcons superposés : gestion stricte de l’eau pour éviter coulures chez les voisins du dessous.",
-        "Supports hétérogènes : carrelage/dalles/garde-corps à traiter sans abîmer joints et finitions.",
+        "Balcons superposés : <strong>gestion stricte de l’eau</strong> pour éviter coulures chez les voisins du dessous.",
+        "<strong>Supports hétérogènes :</strong> carrelage/dalles/garde-corps à traiter sans abîmer joints et finitions.",
       ],
 
       faqAdditions: [
@@ -277,15 +277,15 @@ const city: City = {
 
       // ✅ Tu as demandé de “reprendre ce point” : on remet exactement tes 2 paragraphes
       uniqueIntro:
-        '\n<p>Au Raincy, les balcons d’immeubles situés à proximité des allées arborées, du parc du lycée Albert Schweitzer ou de combles non sécurisés sont parfois investis par des pigeons qui y nichent durablement. Avec le temps, leurs fientes s’accumulent et forment une couche compacte de résidus secs, générant des odeurs persistantes et rendant le balcon difficilement utilisable. Cette pollution organique peut également altérer les revêtements (carrelage, peinture, garde-corps) et favoriser la présence d’insectes ou de micro-organismes liés aux poussières de déjection.</p>\n<p class="mt-4">Face à ce type de situation, une intervention amateur est souvent évitée en raison des contraintes sanitaires et du manque d’équipement adapté. Le traitement des balcons fortement souillés nécessite en effet un protocole rigoureux : enlèvement sécurisé des déjections, nettoyage en profondeur, désinfection contrôlée et remise en état des surfaces. Une intervention professionnelle permet de restaurer un balcon sain et fonctionnel, tout en limitant les risques et les nuisances pour les occupants comme pour le voisinage.</p>\n',
+        "\n<p>Au Raincy, les balcons d’immeubles situés à proximité des allées arborées, du parc du lycée Albert Schweitzer ou de combles non sécurisés sont parfois investis par des pigeons qui y nichent durablement. Avec le temps, leurs fientes s’accumulent et forment <strong>une couche compacte de résidus secs</strong>, générant des odeurs persistantes et rendant le balcon difficilement utilisable. Cette pollution organique peut également altérer les revêtements (carrelage, peinture, garde-corps) et favoriser la présence d’insectes ou de micro-organismes liés aux poussières de déjection.</p>\n<p class=\"mt-4\">Face à ce type de situation, une intervention amateur est souvent évitée en raison des contraintes sanitaires et du manque d’équipement adapté. Le traitement des balcons fortement souillés nécessite en effet <strong>un protocole rigoureux</strong> : enlèvement sécurisé des déjections, nettoyage en profondeur, désinfection contrôlée et remise en état des surfaces. Une intervention professionnelle permet de restaurer un balcon sain et fonctionnel, tout en limitant les risques et les nuisances pour les occupants comme pour le voisinage.</p>\n",
 
       uniqueDeepDive:
         '\n<p><strong>1) Sécurisation :</strong> EPI (combinaison, gants, masque respiratoire adapté, lunettes), protection de l’intérieur par bâches, réduction des projections et poussières.</p>\n<p class="mt-4"><strong>2) Enlèvement & nettoyage :</strong> humidification préalable des fientes sèches, ramassage manuel et conditionnement en sacs étanches, nettoyage des surfaces (sol, garde-corps, murs) avec produit adapté et rinçage contrôlé.</p>\n<p class="mt-4"><strong>3) Désinfection & remise en état :</strong> application d’un désinfectant homologué avec temps de contact respecté, rinçage si nécessaire, aération et délai avant réutilisation. Conseils possibles de dissuasion (pics/filets) selon configuration.</p>\n',
 
       specificChallenges: [
-        "Fientes sèches : risque de poussières, humidification préalable indispensable avant enlèvement.",
+        "Fientes sèches : <strong>risque de poussières</strong>, humidification préalable indispensable avant enlèvement.",
         "Supports dégradés : joints et peintures pouvant être altérés, nettoyage sans agresser davantage.",
-        "Voisinage : dispersion à éviter, travail propre, protection et gestion stricte des écoulements.",
+        "Voisinage : <strong>dispersion à éviter</strong>, travail propre, protection et gestion stricte des écoulements.",
       ],
 
       faqAdditions: [
@@ -341,7 +341,7 @@ const city: City = {
       specificChallenges: [
         "Taches organiques/odeurs : nécessité de pré-traitements enzymatiques et d’une extraction immédiate.",
         "Textiles fragiles (velours/laine) : réglages doux, tests localisés, contrôle de l’humidité.",
-        "Séchage : pièces peu ventilées ou textiles épais, consignes strictes d’aération après intervention.",
+        "Séchage : <strong>pièces peu ventilées</strong> ou textiles épais, consignes strictes d’aération après intervention.",
       ],
 
       // ✅ Tu as fourni cette FAQ : je la remets telle quelle (sans modifier le fond)
@@ -389,10 +389,10 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Évaluation et préparation du chantier</h3>\n<p>Mobilier de jardin, bacs à plantes et objets décoratifs sont déplacés ou bâchés. Les façades et menuiseries adjacentes sont protégées des éclaboussures. Un balayage préliminaire retire feuilles mortes, brindilles et débris organiques accumulés sur le revêtement.</p>\n\n<h3>Décrassage et action mécanique ciblée</h3>\n<p>Le produit de nettoyage est choisi selon le matériau : formule douce pour la pierre des meulières anciennes, solution alcaline pour béton et carrelage minéral, traitement neutre pour bois et composite. Le brossage mécanique déloge les incrustations. Le rinçage s'effectue à pression modérée pour préserver les joints et la texture du support.</p>\n\n<h3>Traitement préventif et recommandations</h3>\n<p>Une protection anti-mousse est appliquée sur les zones ombragées les plus exposées. L'évacuation des eaux est orientée vers les points d'écoulement du jardin. Des conseils d'entretien courant sont communiqués pour prolonger l'effet du nettoyage face à la végétation environnante.</p>",
       specificChallenges: [
-        "Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : matériaux poreux sensibles aux produits acides.",
+        "Pierre et meulière des demeures bourgeoises fin XIXe-début XXe : <strong>matériaux poreux</strong> sensibles aux produits acides.",
         "Terrasses ombragées par les arbres centenaires des jardins raincéens : prolifération accélérée de mousses et algues vertes.",
-        "Dallages anciens avec joints rocaillés typiques des meulières : interstices fragiles nécessitant un rinçage à basse pression.",
-        "Carrelage grès cérame des aménagements récents : micro-reliefs antidérapants piégeant les salissures.",
+        "Dallages anciens avec joints rocaillés typiques des meulières : <strong>interstices fragiles</strong> nécessitant un rinçage à basse pression.",
+        "Carrelage grès cérame des aménagements récents : <strong>micro-reliefs antidérapants</strong> piégeant les salissures.",
         "Accès via allées privatives parfois étroites dans les propriétés du Plateau et de Nicolas Carnot.",
       ],
       faqAdditions: [
@@ -443,9 +443,9 @@ const city: City = {
         "<h3>Protection des sols et gestion du bâti “standing”</h3>\n<p>Au Raincy, la priorité est d’éviter toute dégradation : parquet massif, marbre, menuiseries anciennes, escaliers étroits. Nous adaptons l’humidité, les produits et l’ordre des tâches pour limiter les risques, et nous gardons une logique “protection d’abord” avant d’attaquer les zones techniques. Cette approche est particulièrement adaptée aux villas du Plateau et aux immeubles bourgeois du centre.</p>\n\n<h3>Cuisine / salle d’eau : calcaire, joints et finitions nettes</h3>\n<p>La cuisine et la salle de bain concentrent l’essentiel du contrôle en état des lieux. Nous effectuons un <strong>dégraissage cuisine</strong> ciblé (plans, crédences, façades accessibles selon l’état) et un <strong>détartrage sanitaires</strong> adapté au calcaire du secteur. Les joints de carrelage et zones d’écoulement sont traités avec méthode, en évitant les produits agressifs qui “marquent” les surfaces ou la robinetterie.</p>\n\n<h3>Vitrages, traces de circulation et contrôle final</h3>\n<p>Entre flux pendulaires (RER E) et trafic sur les axes locaux, les vitrages et rebords bas peuvent vite se charger en suie/poussière. Nous terminons par les vitres accessibles, encadrements et poignées, puis un contrôle des points visibles : plinthes, interrupteurs, portes, et sols dans les zones de passage. L’objectif : un rendu homogène, sans reprise apparente, prêt pour une visite ou un état des lieux.</p>",
 
       specificChallenges: [
-        "Matériaux sensibles : parquet massif, carrelage marbré, finitions haut de gamme qui demandent une méthode douce et précise.",
-        "Stationnement centre-ville : contraintes autour de l’Avenue de la Résistance et des rues adjacentes, surtout le samedi.",
-        "Relief et logistique : secteurs en pente vers le Plateau, gestion du matériel et des accès en villas sécurisées.",
+        "Matériaux sensibles : <strong>parquet massif, carrelage marbré</strong>, finitions haut de gamme qui demandent une méthode douce et précise.",
+        "Stationnement centre-ville : <strong>contraintes autour de l’Avenue de la Résistance</strong> et des rues adjacentes, surtout le samedi.",
+        "Relief et logistique : <strong>secteurs en pente vers le Plateau</strong>, gestion du matériel et des accès en villas sécurisées.",
         "Exigence de discrétion : voisinage calme, attente forte sur le bruit, la propreté des circulations et la protection des sols.",
       ],
 

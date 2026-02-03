@@ -22,9 +22,9 @@ const city: City = {
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Stationnement tendu</strong> autour des métros et du pôle hospitalier, accès véhicule à anticiper.",
-    "Grands ensembles des Lozaits et Lebon-Lamartine : halls à fort passage, sols encrassés rapidement.",
+    "Grands ensembles des Lozaits et Lebon-Lamartine : <strong>halls à fort passage</strong>, sols encrassés rapidement.",
     "Résidences récentes ZAC Campus Grand Parc : parkings souterrains neufs, revêtements résine à entretenir.",
-    "Pollution N7 et A6 : dépôts noirs sur balcons et façades des quartiers ouest.",
+    "Pollution N7 et A6 : <strong>dépôts noirs sur balcons</strong> et façades des quartiers ouest.",
     "Présence de <strong>gardiens et badges Vigik</strong> fréquente, coordination nécessaire pour chaque accès.",
   ],
 
@@ -109,9 +109,9 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Fibres assainies et taches éliminées</h3>\n<p>L'objectif est d'obtenir une moquette débarrassée des salissures incrustées, avec des fibres redressées et un rendu homogène. Les zones de passage intensif retrouvent leur aspect d'origine, sans auréoles ni traces grises persistantes.</p>\n\n<h3>Diagnostic et préparation du support</h3>\n<p>Avant toute intervention, le type de moquette est identifié : bouclée, velours, épaisse ou fine. Les taches sont repérées selon leur nature — tanin, graisses, traces anciennes. Les plinthes et bas de murs reçoivent une protection. Une aspiration préalable retire les particules libres.</p>\n\n<h3>Injection-extraction et gestion du séchage</h3>\n<p>Le traitement repose sur la méthode injection-extraction : une solution nettoyante pénètre les fibres, puis l'eau chargée de salissures est aspirée immédiatement. Les zones de trafic reçoivent plusieurs passes. Le détachage ciblé complète l'intervention sur les marques résistantes. L'extraction maximale réduit le temps de séchage, généralement estimé entre 4 et 8 heures selon l'épaisseur et la ventilation du local.</p>",
       specificChallenges: [
-        "Halls à fort passage près du terminus métro : fibres écrasées et traces grises concentrées sur les premiers mètres.",
-        "Moquettes des années 70-90 dans les copropriétés : supports parfois fragiles nécessitant un réglage de pression adapté.",
-        "Taches anciennes incrustées depuis plusieurs mois : détachage ciblé indispensable avant extraction.",
+        "Halls à fort passage près du terminus métro : <strong>fibres écrasées</strong> et traces grises concentrées sur les premiers mètres.",
+        "Moquettes des années 70-90 dans les copropriétés : <strong>supports parfois fragiles</strong> nécessitant un réglage de pression adapté.",
+        "Taches anciennes incrustées depuis plusieurs mois : <strong>détachage ciblé</strong> indispensable avant extraction.",
         "Stationnement limité en centre-ville : organisation du chargement et déchargement du matériel à anticiper.",
         "Contraintes horaires autour des établissements de santé : interventions planifiées hors pics de fréquentation.",
       ],

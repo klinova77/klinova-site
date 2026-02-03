@@ -17,14 +17,14 @@ const city: City = {
 
   // hubIntro : HTML autorisé
   hubIntro:
-    "<p>Au cœur du Grand Paris, entre la Seine, le RER C et le parc des Lilas, Vitry-sur-Seine concentre des configurations variées : grands ensembles, pavillons du Plateau, résidences neuves. Klinova s'organise pour répondre à cette diversité avec des équipes formées aux spécificités locales.</p>\n<p class=\"mt-4\">Nous assurons l'entretien régulier ou ponctuel des immeubles, parkings et logements. Chaque intervention fait l'objet d'une coordination préalable avec le gestionnaire ou l'occupant, pour limiter les perturbations et garantir un suivi clair des prestations réalisées.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des accès par badge, des horaires de gardiennage et des contraintes de stationnement en centre-ville ou près des gares RER.</li>\n  <li><strong>Adaptation au bâti :</strong> Protocoles ajustés selon l'époque de construction, la configuration des halls et la présence de sous-sols techniques ou de parkings en étages.</li>\n  <li><strong>Suivi des interventions :</strong> Compte-rendu transmis après chaque passage, avec possibilité de reporting mensuel pour les gestionnaires qui le souhaitent.</li>\n</ul>",
+    "<p>Au cœur du Grand Paris, entre la Seine, le RER C et le parc des Lilas, Vitry-sur-Seine concentre des configurations variées : grands ensembles, pavillons du Plateau, résidences neuves. Klinova s'organise pour répondre à cette diversité avec des équipes formées aux spécificités locales.</p>\n<p class=\"mt-4\">Nous assurons l'entretien régulier ou ponctuel des immeubles, parkings et logements. <strong>Chaque intervention fait l'objet d'une coordination préalable</strong> avec le gestionnaire ou l'occupant, pour limiter les perturbations et garantir un suivi clair des prestations réalisées.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des accès par badge, des horaires de gardiennage et des contraintes de stationnement en centre-ville ou près des gares RER.</li>\n  <li><strong>Adaptation au bâti :</strong> Protocoles ajustés selon l'époque de construction, la configuration des halls et la présence de sous-sols techniques ou de parkings en étages.</li>\n  <li><strong>Suivi des interventions :</strong> Compte-rendu transmis après chaque passage, avec possibilité de reporting mensuel pour les gestionnaires qui le souhaitent.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "<strong>Halls d'immeubles</strong> à fort passage près des arrêts du tramway T9 et des gares RER.",
     "Parkings souterrains anciens avec <strong>rampes étroites</strong> et ventilation limitée dans les grands ensembles.",
     "Poussière de chantier persistante sur les façades et balcons <strong>proches de la ZAC Les Ardoines</strong>.",
-    "Balcons exposés aux retombées de pollution sur les axes comme l'avenue Rouget de Lisle.",
+    "<strong>Balcons exposés aux retombées de pollution</strong> sur les axes comme l'avenue Rouget de Lisle.",
     "Accès contraints par <strong>digicodes et badges Vigik</strong> dans la majorité des résidences récentes.",
     "Stationnement compliqué en centre-ville, notamment les jours de marché.",
   ],
@@ -70,25 +70,25 @@ const city: City = {
       question:
         "Comment organisez-vous vos interventions dans les quartiers où le stationnement est difficile ?",
       answer:
-        "<p>En centre-ville ou près de la gare de Vitry-sur-Seine, nous repérons les possibilités de stationnement avant le premier passage. Nos équipes arrivent avec un véhicule adapté et <strong>planifient les créneaux</strong> en dehors des heures de marché ou de forte affluence pour limiter les contraintes logistiques.</p>",
+        "<p><strong>En centre-ville ou près de la gare de Vitry-sur-Seine</strong>, nous repérons les possibilités de stationnement avant le premier passage. Nos équipes arrivent avec un véhicule adapté et planifient les créneaux en dehors des heures de marché ou de forte affluence pour limiter les contraintes logistiques.</p>",
     },
     {
       question:
         "Pouvez-vous intervenir dans des résidences avec digicode et gardien ?",
       answer:
-        "<p>Oui, c'est une situation fréquente à Vitry-sur-Seine. Nous récupérons les <strong>codes d'accès ou badges Vigik</strong> en amont et coordonnons avec le gardien si nécessaire. Les horaires d'intervention sont définis pour respecter les règles de la copropriété et éviter toute gêne pour les résidents.</p>",
+        "<p><strong>Oui, c'est une situation fréquente à Vitry-sur-Seine.</strong> Nous récupérons les codes d'accès ou badges Vigik en amont et coordonnons avec le gardien si nécessaire. Les horaires d'intervention sont définis pour respecter les règles de la copropriété et éviter toute gêne pour les résidents.</p>",
     },
     {
       question:
         "Quel délai prévoir pour une première intervention sur un immeuble ou un parking ?",
       answer:
-        "<p>Après validation du devis, nous pouvons généralement intervenir <strong>sous 5 à 10 jours ouvrés</strong> selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la possibilité d'un passage plus rapide en fonction de notre planning.</p>",
+        "<p><strong>Après validation du devis</strong>, nous pouvons généralement intervenir sous 5 à 10 jours ouvrés selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la possibilité d'un passage plus rapide en fonction de notre planning.</p>",
     },
     {
       question:
         "Comment gérez-vous les interventions dans les zones en chantier comme les Ardoines ?",
       answer:
-        "<p>Les secteurs en mutation génèrent des <strong>poussières et salissures spécifiques</strong>. Nous adaptons la fréquence et les méthodes selon l'avancement des travaux environnants. La coordination avec le gestionnaire permet d'ajuster le planning si les conditions d'accès évoluent.</p>",
+        "<p><strong>Les secteurs en mutation génèrent des poussières et salissures spécifiques.</strong> Nous adaptons la fréquence et les méthodes selon l'avancement des travaux environnants. La coordination avec le gestionnaire permet d'ajuster le planning si les conditions d'accès évoluent.</p>",
     },
   ],
 
@@ -113,11 +113,11 @@ const city: City = {
         "Interventions planifiées hors heures de bureau ou en horaires décalés pour limiter la gêne des occupants.",
       ],
       uniqueIntro:
-        "<p>Les traces grises sur les zones de passage, les auréoles près des entrées, les fibres ternies le long des couloirs : ces marques apparaissent rapidement dans les bureaux et halls situés près de la <strong>Gare des Ardoines</strong>. La poussière fine générée par les chantiers environnants s'accumule sur les surfaces textiles, tandis que le piétinement quotidien enfonce les particules dans la trame des moquettes.</p>\n<p class=\"mt-4\">Sur les <strong>dalles textiles des open spaces récents</strong> comme sur les moquettes aiguilletées des parties communes, l'encrassement modifie l'aspect général des espaces. Les fibres perdent leur tenue, les couleurs s'uniformisent vers le gris, et l'impression de propreté s'efface même après un aspirateur régulier. Pour les copropriétés et les locaux professionnels, cette dégradation visuelle affecte l'image perçue par les visiteurs et les occupants.</p>\n<p class=\"mt-4\">Une intervention structurée permet de traiter ces surfaces en profondeur. Le diagnostic préalable identifie le type de fibre et la nature des taches, avant un protocole adapté aux <strong>contraintes d'accès et aux horaires d'activité</strong> des locaux concernés.</p>",
+        "<p>Les traces grises sur les zones de passage, les auréoles près des entrées, les fibres ternies le long des couloirs : ces marques apparaissent rapidement dans les bureaux et halls situés près de la <strong>Gare des Ardoines</strong>. La poussière fine générée par les chantiers environnants s'accumule sur les surfaces textiles, tandis que le piétinement quotidien enfonce les particules dans la trame des moquettes.</p>\n<p class=\"mt-4\">Sur les <strong>dalles textiles des open spaces récents</strong> comme sur les moquettes aiguilletées des parties communes, l'encrassement modifie l'aspect général des espaces. Les fibres perdent leur tenue, les couleurs s'uniformisent vers le gris, et l'impression de propreté s'efface même après un aspirateur régulier. Pour les copropriétés et les locaux professionnels, cette dégradation visuelle affecte l'image perçue par les visiteurs et les occupants.</p>\n<p class=\"mt-4\">Une intervention structurée permet de traiter ces surfaces en profondeur. Le diagnostic préalable identifie le type de fibre et la nature des taches, avant un protocole adapté aux contraintes d'accès et aux horaires d'activité des locaux concernés.</p>",
       uniqueDeepDive:
         "<h3>Fibres ravivées et taches éliminées</h3>\n<p>L'objectif est de retrouver une moquette aux couleurs homogènes, débarrassée des auréoles et des zones grisées. Les fibres retrouvent leur souplesse d'origine, les passages intensifs ne se distinguent plus du reste de la surface.</p>\n\n<h3>Injection-extraction et détachage ciblé</h3>\n<p>Après aspiration préalable, la solution nettoyante est injectée sous pression contrôlée dans la fibre. L'extraction immédiate retire l'eau chargée de salissures. Sur les taches tenaces — café, tanin, résidus gras — un pré-traitement localisé décolle les pigments avant le passage général.</p>\n<p class=\"mt-4\">Les plinthes et bas de murs sont protégés. Le mobilier accessible est déplacé ou bâché selon la configuration.</p>\n\n<h3>Gestion de l'humidité résiduelle</h3>\n<p>L'extraction maximale limite le temps de séchage à quelques heures selon l'épaisseur du revêtement et la ventilation disponible. Les consignes de non-piétinement sont transmises pour éviter les reprises de salissures pendant cette phase. Un conseil de fréquence d'entretien est fourni en fin d'intervention.</p>",
       specificChallenges: [
-        "Poussières de chantier liées aux travaux du Grand Paris Express et de la ZAC Les Ardoines.",
+        "<strong>Poussières de chantier liées aux travaux</strong> du Grand Paris Express et de la ZAC Les Ardoines.",
         "Dalles textiles en open space nécessitant une extraction sans détrempage des joints.",
         "Halls d'immeubles à fort passage quotidien vers les transports RER C.",
         "Accès contraints dans les cages d'escalier étroites des immeubles anciens du centre.",
@@ -161,7 +161,7 @@ const city: City = {
         "Coordination directe avec syndics et gestionnaires pour organiser la rotation des véhicules et limiter la fermeture des accès.",
       ],
       uniqueIntro:
-        "<p>Comment maintenir un parking propre et sécurisé quand le trafic quotidien y dépose huile, graisse et poussières noires ? Le long de l'Avenue Rouget de Lisle et dans les secteurs proches des zones d'activités, les sols subissent un encrassement accéléré lié aux véhicules utilitaires et aux flux vers l'A86. Les traces s'accumulent sur le béton, les rampes deviennent glissantes, les rigoles se bouchent.</p>\n<p class=\"mt-4\">Un lavage mécanisé régulier redonne aux copropriétés et aux gestionnaires un espace fonctionnel. Les revêtements béton brut des sous-sols anciens ou les enrobés des parkings aériens retrouvent leur aspect d'origine. Les résidences du Plateau comme les immeubles récents de la ZAC bénéficient d'un sol dégraissé, de rampes antidérapantes et d'évacuations dégagées.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic ou le gestionnaire : diagnostic préalable, zonage des places, rotation des véhicules si nécessaire. Un compte-rendu permet de suivre l'état du parking et d'ajuster la fréquence selon l'usage réel.</p>",
+        "<p>Comment maintenir un parking propre et sécurisé quand le trafic quotidien y dépose huile, graisse et poussières noires ? Le long de l'Avenue Rouget de Lisle et dans les secteurs proches des zones d'activités, les sols subissent un encrassement accéléré lié aux véhicules utilitaires et aux flux vers l'A86. <strong>Les traces s'accumulent sur le béton</strong>, les rampes deviennent glissantes, les rigoles se bouchent.</p>\n<p class=\"mt-4\">Un lavage mécanisé régulier redonne aux copropriétés et aux gestionnaires un espace fonctionnel. Les revêtements béton brut des sous-sols anciens ou les enrobés des parkings aériens retrouvent leur aspect d'origine. Les résidences du Plateau comme les immeubles récents de la ZAC bénéficient d'un sol dégraissé, de rampes antidérapantes et d'évacuations dégagées.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic ou le gestionnaire : diagnostic préalable, zonage des places, rotation des véhicules si nécessaire. Un compte-rendu permet de suivre l'état du parking et d'ajuster la fréquence selon l'usage réel.</p>",
       uniqueDeepDive:
         "<h3>Diagnostic et préparation du site</h3>\n<p>Le technicien identifie le type de revêtement, l'état des regards et rigoles, ainsi que le niveau d'encrassement. Un balayage préalable élimine les débris grossiers.</p>\n<p class=\"mt-4\">Le balisage est mis en place pour sécuriser les zones de passage. Si des véhicules occupent les emplacements, une rotation par secteur est organisée avec le gestionnaire.</p>\n\n<h3>Traitement mécanisé et dégraissage</h3>\n<p>L'autolaveuse ou la haute pression associée à un dégraissant adapté traite les surfaces en passes successives. Les zones critiques reçoivent une attention particulière : rampes d'accès, angles morts, pieds de murs.</p>\n<p class=\"mt-4\">Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Les rigoles sont dégagées pour rétablir un écoulement correct.</p>\n\n<h3>Finalisation et recommandations</h3>\n<p>Un dépoussiérage des blocs lumineux ou tuyauteries peut compléter l'intervention si demandé. Le compte-rendu transmis au syndic inclut des préconisations sur la fréquence adaptée au trafic constaté.</p>",
       specificChallenges: [
@@ -209,11 +209,11 @@ const city: City = {
         "Organisation pensée pour limiter les nuisances aux voisins du dessous et respecter les horaires de la copropriété.",
       ],
       uniqueIntro:
-        "<p>Dans les résidences de la <strong>ZAC Les Ardoines</strong> comme dans les immeubles du Port-à-l'Anglais, les balcons accumulent rapidement poussières fines et dépôts noirâtres. Les particules issues des chantiers voisins se mêlent aux résidus de pollution routière. Résultat : un sol qui colle sous les pieds, des garde-corps ternis, et cette impression de ne jamais pouvoir profiter pleinement de l'espace extérieur.</p>\n<p class=\"mt-4\">Sur les <strong>dalles béton brut des années 60-70</strong> ou les carrelages plus récents posés sur plots, la saleté s'incruste différemment. Les joints poreux retiennent l'humidité, favorisant l'apparition de traces verdâtres. Les vitres de loggia perdent leur transparence. Le mobilier de jardin, même rangé, finit par se couvrir d'un voile grisâtre qui décourage toute envie de s'installer dehors.</p>\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un balcon utilisable. Diagnostic du support, protection des menuiseries, rinçage contrôlé : chaque étape tient compte des <strong>contraintes liées aux axes passants</strong> comme l'A86 ou la D152, et de la végétation environnante qui dépose pollens et feuilles mortes.</p>",
+        "<p>Dans les résidences de la <strong>ZAC Les Ardoines</strong> comme dans les immeubles du Port-à-l'Anglais, les balcons accumulent rapidement poussières fines et dépôts noirâtres. Les particules issues des chantiers voisins se mêlent aux résidus de pollution routière. Résultat : un sol qui colle sous les pieds, des garde-corps ternis, et cette impression de ne jamais pouvoir profiter pleinement de l'espace extérieur.</p>\n<p class=\"mt-4\">Sur les <strong>dalles béton brut des années 60-70</strong> ou les carrelages plus récents posés sur plots, la saleté s'incruste différemment. Les joints poreux retiennent l'humidité, favorisant l'apparition de traces verdâtres. Les vitres de loggia perdent leur transparence. Le mobilier de jardin, même rangé, finit par se couvrir d'un voile grisâtre qui décourage toute envie de s'installer dehors.</p>\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un balcon utilisable. Diagnostic du support, protection des menuiseries, rinçage contrôlé : chaque étape tient compte des contraintes liées aux axes passants comme l'A86 ou la D152, et de la végétation environnante qui dépose pollens et feuilles mortes.</p>",
       uniqueDeepDive:
         "<h3>Sol et joints</h3>\n<p>Le revêtement est d'abord débarrassé des gros débris : feuilles, terre accumulée, résidus divers. Un produit adapté au support traite ensuite les salissures incrustées. Sur béton brut, le brossage reste manuel pour préserver la surface. Sur carrelage, une action mécanique douce décolle les dépôts sans fragiliser les joints.</p>\n\n<h3>Garde-corps et vitrages</h3>\n<p>Les barreaux métalliques ou les panneaux vitrés reçoivent un nettoyage spécifique. Les traces de pollution et coulures anciennes disparaissent progressivement. Les murs mitoyens accessibles sont également traités pour uniformiser le rendu visuel de l'ensemble.</p>\n\n<h3>Rinçage et protection voisinage</h3>\n<p>L'eau de rinçage est contrôlée pour éviter les écoulements chez les occupants du dessous. Des protections temporaires limitent les projections sur la façade. Le séchage naturel s'effectue en quelques heures selon l'exposition. Avant de partir, nous vérifions l'état général et partageons quelques conseils pour espacer les prochaines interventions.</p>",
       specificChallenges: [
-        "Poussière de chantier omniprésente autour de la ZAC Les Ardoines, déposée en continu sur les surfaces.",
+        "<strong>Poussière de chantier omniprésente</strong> autour de la ZAC Les Ardoines, déposée en continu sur les surfaces.",
         "Joints poreux sur béton brut années 70 retenant humidité et favorisant les traces vertes.",
         "Balcons en étage élevé dans les tours du centre nécessitant une gestion rigoureuse des écoulements.",
         "Pollution routière des axes D152 et A86 laissant un film gras difficile à éliminer sans produit adapté.",
@@ -224,19 +224,19 @@ const city: City = {
           question:
             "Sur un balcon en béton brut dans les résidences des Ardoines, comment évitez-vous d'abîmer la dalle pendant le nettoyage ?",
           answer:
-            "<p>Le béton brut reste sensible aux pressions trop fortes. Nous privilégions un brossage manuel associé à un produit désincrustant doux. Le rinçage s'effectue à basse pression pour ne pas creuser la surface ni déchausser les éventuels joints de dilatation présents sur ces constructions récentes.</p>",
+            "<p><strong>Le béton brut reste sensible aux pressions trop fortes.</strong> Nous privilégions un brossage manuel associé à un produit désincrustant doux. Le rinçage s'effectue à basse pression pour ne pas creuser la surface ni déchausser les éventuels joints de dilatation présents sur ces constructions récentes.</p>",
         },
         {
           question:
             "Comment traitez-vous la mousse qui s'installe sur les balcons exposés côté Parc des Lilas ?",
           answer:
-            "<p>L'humidité et l'ombre partielle favorisent ces dépôts verts. Nous appliquons un traitement anti-mousse avant le brossage, puis rinçons abondamment. Sur les supports poreux, un passage supplémentaire permet d'extraire les résidus incrustés dans les micro-cavités du béton ou du carrelage ancien.</p>",
+            "<p><strong>L'humidité et l'ombre partielle favorisent ces dépôts verts.</strong> Nous appliquons un traitement anti-mousse avant le brossage, puis rinçons abondamment. Sur les supports poreux, un passage supplémentaire permet d'extraire les résidus incrustés dans les micro-cavités du béton ou du carrelage ancien.</p>",
         },
         {
           question:
             "Quelle différence de méthode entre un carrelage ancien et des dalles sur plots dans les immeubles neufs ?",
           answer:
-            "<p>Le carrelage ancien présente souvent des joints fragiles : nous évitons toute pression excessive et travaillons manuellement autour des zones sensibles. Les dalles sur plots, plus stables, supportent un rinçage plus appuyé. Dans les deux cas, le produit utilisé est adapté au matériau pour ne pas ternir la surface.</p>",
+            "<p><strong>Le carrelage ancien présente souvent des joints fragiles</strong> : nous évitons toute pression excessive et travaillons manuellement autour des zones sensibles. Les dalles sur plots, plus stables, supportent un rinçage plus appuyé. Dans les deux cas, le produit utilisé est adapté au matériau pour ne pas ternir la surface.</p>",
         },
         {
           question:
@@ -310,9 +310,9 @@ const city: City = {
         "<h3>Identifier les taches et la nature du tissu</h3>\n<p>Chaque textile réagit différemment : un velours côtelé ne supporte pas la même pression qu'un coton épais. Nous repérons d'abord les zones marquées — café renversé, auréoles d'urine, traces de graisse — puis testons un coin discret pour vérifier la tenue des couleurs.</p>\n\n<h3>Traiter les salissures tenaces avant le lavage complet</h3>\n<p>Les taches anciennes ou organiques nécessitent un pré-traitement ciblé. Un détachant enzymatique neutralise les résidus d'urine ou de nourriture avant l'injection-extraction. Cette étape évite de fixer définitivement une marque en la diluant trop vite.</p>\n\n<h3>Extraire l'eau et guider le séchage</h3>\n<p>L'injection-extraction retire la quasi-totalité de l'humidité. Nous conseillons ensuite sur l'aération : fenêtre entrouverte, ventilateur d'appoint si besoin. Selon l'épaisseur du tissu et la météo, le canapé ou le tapis redevient utilisable sous 12 à 24 heures. Nous indiquons aussi la fréquence d'entretien adaptée à l'usage du foyer.</p>",
       specificChallenges: [
         "Taches d'urine animale fréquentes dans les pavillons du Plateau, nécessitant un traitement enzymatique.",
-        "Canapés non déhoussables dans le parc social, où seule l'injection-extraction atteint les fibres en profondeur.",
+        "<strong>Canapés non déhoussables</strong> dans le parc social, où seule l'injection-extraction atteint les fibres en profondeur.",
         "Ascenseurs parfois hors service dans les tours, imposant une montée manuelle du matériel.",
-        "Paliers étroits compliquant le déplacement de l'équipement jusqu'au logement.",
+        "<strong>Paliers étroits</strong> compliquant le déplacement de l'équipement jusqu'au logement.",
         "Temps de séchage variable selon l'aération et la saison, à anticiper avant l'intervention.",
       ],
       faqAdditions: [
@@ -360,7 +360,7 @@ const city: City = {
         "Mousse tenace sur dalles peu exposées au soleil dans les jardins du Plateau.",
         "Terrasses en bois composite sensibles à la pression excessive et aux produits agressifs.",
         "Accès souvent limité par le passage intérieur ou un portillon étroit côté jardin.",
-        "Joints de carrelage noircis par l'humidité persistante en zone ombragée.",
+        "<strong>Joints de carrelage noircis</strong> par l'humidité persistante en zone ombragée.",
         "Mobilier et plantations à déplacer ou protéger avant toute intervention.",
       ],
       faqAdditions: [
@@ -405,7 +405,7 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Un logement prêt à la remise</h3>\n<p>Le résultat attendu : des sols propres sur toute la surface, des vitres intérieures transparentes, des sanitaires détartrés et des placards dépoussiérés. L'ensemble permet une restitution sans réserve lors de l'état des lieux.</p>\n\n<h3>Traitement pièce par pièce</h3>\n<p>La cuisine fait l'objet d'un dégraissage des plans de travail, crédence et électroménager. La salle de bain reçoit un détartrage complet des faïences, joints et robinetterie. Les pièces de vie sont dépoussiérées du plafond aux plinthes, puis les sols aspirés et lavés selon leur nature.</p>\n\n<h3>Finitions et contrôle</h3>\n<p>Les interrupteurs, poignées et radiateurs sont essuyés. Les traces de peinture ou d'enduit résiduelles sont traitées si le contexte est une fin de chantier. Un passage final vérifie chaque zone avant aération du logement et transmission du compte-rendu au donneur d'ordre.</p>",
       specificChallenges: [
-        "Poussières de chantier persistantes dans les appartements livrés près de la ZAC Les Ardoines.",
+        "<strong>Poussières de chantier persistantes</strong> dans les appartements livrés près de la ZAC Les Ardoines.",
         "Délais serrés entre fin de travaux et état des lieux dans le parc locatif dense.",
         "Stationnement difficile en centre-ville pour le matériel d'intervention.",
         "Sols PVC et lino fréquents nécessitant des produits non agressifs.",
@@ -422,7 +422,7 @@ const city: City = {
           question:
             "Quel est votre délai d'intervention pour une remise en état avant état des lieux dans le secteur de la Mairie ?",
           answer:
-            "<p>Selon la surface et l'état du logement, l'intervention peut être planifiée dans des délais courts. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée permet de respecter l'échéance convenue avec l'agence ou le propriétaire.</p>",
+            "<p><strong>Selon la surface et l'état du logement</strong>, l'intervention peut être planifiée dans des délais courts. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée permet de respecter l'échéance convenue avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

@@ -17,14 +17,14 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   hubIntro:
-    "<p>Ville nouvelle sur le RER A, abritant la cité historique Menier, Noisiel présente des configurations variées qui demandent une lecture terrain précise. Klinova s'appuie sur cette connaissance locale pour coordonner les interventions avec les syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Propreté des halls, entretien des parkings en sous-sol, remise en état des balcons ou terrasses : chaque prestation s'organise en tenant compte des accès, des horaires adaptés et du suivi attendu par les donneurs d'ordre.</p>\n<ul>\n  <li><strong>Coordination avec les gestionnaires :</strong> Planification concertée pour limiter la gêne dans les résidences denses du Luzard et respecter les contraintes d'accès badge ou digicode.</li>\n  <li><strong>Adaptation au bâti :</strong> Matériel dimensionné selon les configurations, des parkings souterrains aux cours intérieures de la Cité Menier.</li>\n  <li><strong>Suivi et reporting :</strong> Compte-rendu d'intervention disponible pour les syndics et gestionnaires qui souhaitent tracer les prestations réalisées.</li>\n</ul>",
+    "<p>Ville nouvelle sur le RER A, abritant la cité historique Menier, Noisiel présente des configurations variées qui demandent une <strong>lecture terrain précise</strong>. Klinova s'appuie sur cette connaissance locale pour coordonner les interventions avec les syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Propreté des halls, entretien des parkings en sous-sol, remise en état des balcons ou terrasses : chaque prestation s'organise en tenant compte des accès, des horaires adaptés et du suivi attendu par les donneurs d'ordre.</p>\n<ul>\n  <li><strong>Coordination avec les gestionnaires :</strong> Planification concertée pour limiter la gêne dans les résidences denses du Luzard et respecter les contraintes d'accès badge ou digicode.</li>\n  <li><strong>Adaptation au bâti :</strong> Matériel dimensionné selon les configurations, des parkings souterrains aux cours intérieures de la Cité Menier.</li>\n  <li><strong>Suivi et reporting :</strong> Compte-rendu d'intervention disponible pour les syndics et gestionnaires qui souhaitent tracer les prestations réalisées.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
     "Parkings souterrains des années 70-80 au Luzard : <strong>béton encrassé</strong> et ventilation limitée.",
     "Accès piéton uniquement sur certaines dalles : portage matériel obligatoire.",
     "Ruelles étroites de la Cité Menier : <strong>stationnement contraint</strong> et sens uniques.",
-    "Loggias béton exposées à la pollution de l'A4 : dépôts gris récurrents.",
+    "Loggias béton exposées à la pollution de l'A4 : <strong>dépôts gris récurrents</strong>.",
     "Résidences sécurisées avec badges Vigik : coordination préalable indispensable.",
     "Proximité du Parc de Noisiel : <strong>feuilles mortes et mousses</strong> sur terrasses ombragées.",
   ],
@@ -67,23 +67,23 @@ const city: City = {
       question:
         "Comment organisez-vous les interventions dans les résidences avec accès sur dalle au Luzard ?",
       answer:
-        "<p>Les immeubles sur dalle nécessitent un <strong>portage du matériel</strong> depuis les zones de stationnement autorisées. Nous repérons les accès en amont et adaptons l'équipement pour limiter les allers-retours. Le planning tient compte des horaires de moindre passage dans les parties communes.</p>",
+        "<p><strong>Les immeubles sur dalle</strong> nécessitent un portage du matériel depuis les zones de stationnement autorisées. Nous repérons les accès en amont et adaptons l'équipement pour limiter les allers-retours. Le planning tient compte des horaires de moindre passage dans les parties communes.</p>",
     },
     {
       question: "Intervenez-vous en urgence sur Noisiel ?",
       answer:
-        "<p>Selon la nature de la demande et notre planning, une intervention rapide peut être organisée. Pour les situations nécessitant une <strong>réactivité immédiate</strong> (dégât des eaux, souillure importante), nous évaluons la faisabilité dès le premier contact téléphonique.</p>",
+        "<p><strong>Selon la nature de la demande</strong> et notre planning, une intervention rapide peut être organisée. Pour les situations nécessitant une réactivité immédiate (dégât des eaux, souillure importante), nous évaluons la faisabilité dès le premier contact téléphonique.</p>",
     },
     {
       question:
         "Le stationnement est compliqué dans certains quartiers, comment gérez-vous cela ?",
       answer:
-        "<p>Dans la Cité Menier notamment, les rues étroites et le patrimoine protégé limitent les possibilités. Nous identifions les <strong>emplacements autorisés</strong> avant chaque intervention et prévoyons le temps de portage nécessaire. Les jours de marché au Luzard, nous décalons les horaires si besoin.</p>",
+        "<p><strong>Dans la Cité Menier notamment</strong>, les rues étroites et le patrimoine protégé limitent les possibilités. Nous identifions les emplacements autorisés avant chaque intervention et prévoyons le temps de portage nécessaire. Les jours de marché au Luzard, nous décalons les horaires si besoin.</p>",
     },
     {
       question: "Proposez-vous un devis avant intervention ?",
       answer:
-        "<p>Oui, chaque demande fait l'objet d'un <strong>devis détaillé</strong> après échange sur la surface, le type de prestation et les contraintes d'accès. Pour les copropriétés ou les interventions récurrentes, nous pouvons proposer un cadre contractuel adapté aux besoins du gestionnaire.</p>",
+        "<p><strong>Oui, chaque demande</strong> fait l'objet d'un devis détaillé après échange sur la surface, le type de prestation et les contraintes d'accès. Pour les copropriétés ou les interventions récurrentes, nous pouvons proposer un cadre contractuel adapté aux besoins du gestionnaire.</p>",
     },
   ],
 
@@ -108,40 +108,40 @@ const city: City = {
         "Interventions planifiées en horaires décalés pour les bureaux, avec coordination préalable pour les accès sécurisés.",
       ],
       uniqueIntro:
-        "<p>Dans le secteur de la <strong>Cité Menier</strong>, les moquettes des locaux patrimoniaux et des maisons ouvrières accumulent poussières et traces de passage au fil des mois. Les fibres retiennent les particules fines, les résidus de semelles et les taches anciennes qui ternissent progressivement l'aspect général des sols textiles.</p>\n<p class=\"mt-4\">Un entretien adapté redonne aux <strong>dalles textiles et velours ras</strong> des résidences années 70-80 leur aspect d'origine. Les couloirs retrouvent une apparence soignée, les odeurs de renfermé disparaissent, et les occupants constatent un confort visuel immédiat dans les parties communes comme dans les espaces privatifs.</p>\n<p class=\"mt-4\">L'intervention s'organise en tenant compte des contraintes horaires propres aux <strong>bureaux de la ZA de la Mare Blanche</strong> et aux salles de la Ferme du Buisson. Un diagnostic préalable identifie les zones de trafic intense, la nature des fibres et les taches à traiter en priorité avant le passage du matériel d'injection-extraction.</p>",
+        "<p>Dans le secteur de la <strong>Cité Menier</strong>, les moquettes des locaux patrimoniaux et des maisons ouvrières accumulent poussières et traces de passage au fil des mois. Les fibres retiennent les particules fines, les résidus de semelles et les taches anciennes qui ternissent progressivement l'aspect général des sols textiles.</p>\n<p class=\"mt-4\">Un entretien adapté redonne aux <strong>dalles textiles et velours ras</strong> des résidences années 70-80 leur aspect d'origine. Les couloirs retrouvent une apparence soignée, les odeurs de renfermé disparaissent, et les occupants constatent un confort visuel immédiat dans les parties communes comme dans les espaces privatifs.</p>\n<p class=\"mt-4\">L'intervention s'organise en tenant compte des contraintes horaires propres aux bureaux de la ZA de la Mare Blanche et aux salles de la Ferme du Buisson. Un diagnostic préalable identifie les zones de trafic intense, la nature des fibres et les taches à traiter en priorité avant le passage du matériel d'injection-extraction.</p>",
       uniqueDeepDive:
-        "<h3>Zones de circulation principale</h3>\n<p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant l'application du produit de traitement. Les plinthes et bas de murs reçoivent une protection pour éviter les projections.</p>\n\n<h3>Surfaces à trafic modéré</h3>\n<p>Les bureaux individuels et salles de réunion nécessitent un détachage ciblé sur les zones de fauteuils et passages fréquents. L'injection-extraction s'effectue en passes croisées pour atteindre la base des fibres sans saturer le support.</p>\n\n<h3>Espaces sensibles et finitions</h3>\n<p>Les moquettes épaisses ou velours demandent une extraction renforcée pour limiter le temps de séchage. La ventilation naturelle ou assistée accélère le retour à un taux d'humidité normal. Les consignes de non-piétinement sont communiquées selon l'épaisseur du revêtement traité.</p>",
+        "<h3>Zones de circulation principale</h3>\n<p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant l'application du produit de traitement. Les plinthes et bas de murs reçoivent une protection pour éviter les projections.</p>\n\n<h3>Surfaces à trafic modéré</h3>\n<p>Les bureaux individuels et salles de réunion nécessitent un détachage ciblé sur les zones de fauteuils et passages fréquents. L'injection-extraction s'effectue en passes croisées pour atteindre la base des fibres sans saturer le support.</p>\n\n<h3>Espaces sensibles et finitions</h3>\n<p>Les <strong>moquettes épaisses ou velours</strong> demandent une extraction renforcée pour limiter le temps de séchage. La ventilation naturelle ou assistée accélère le retour à un taux d'humidité normal. Les consignes de non-piétinement sont communiquées selon l'épaisseur du revêtement traité.</p>",
       specificChallenges: [
-        "Moquettes velours ras des résidences années 80 : fibres denses retenant poussières et allergènes.",
-        "Accès piéton uniquement sur certaines dalles du Luzard : portage du matériel nécessaire.",
-        "Escaliers étroits dans les maisons ouvrières de la Cité Menier : manœuvre limitée.",
-        "Bureaux de la ZA de la Mare Blanche : horaires d'intervention contraints par l'activité.",
-        "Taches anciennes incrustées dans les parties communes : traitement renforcé requis.",
+        "Moquettes velours ras des résidences années 80 : <strong>fibres denses</strong> retenant poussières et allergènes.",
+        "Accès piéton uniquement sur certaines dalles du Luzard : <strong>portage du matériel</strong> nécessaire.",
+        "Escaliers étroits dans les maisons ouvrières de la Cité Menier : <strong>manœuvre limitée</strong>.",
+        "Bureaux de la ZA de la Mare Blanche : <strong>horaires d'intervention contraints</strong> par l'activité.",
+        "Taches anciennes incrustées dans les parties communes : <strong>traitement renforcé</strong> requis.",
       ],
       faqAdditions: [
         {
           question:
             "Les escaliers étroits de la Cité Menier compliquent l'accès : comment organisez-vous l'intervention ?",
           answer:
-            "<p>Le matériel est sélectionné en fonction des passages disponibles. Pour les maisons ouvrières aux cages réduites, nous utilisons des équipements compacts et prévoyons un temps de mise en place adapté. La coordination avec les occupants permet de dégager les accès avant notre arrivée.</p>",
+            "<p><strong>Le matériel est sélectionné</strong> en fonction des passages disponibles. Pour les maisons ouvrières aux cages réduites, nous utilisons des équipements compacts et prévoyons un temps de mise en place adapté. La coordination avec les occupants permet de dégager les accès avant notre arrivée.</p>",
         },
         {
           question:
             "Après un nettoyage dans les bureaux de la ZA de la Mare Blanche, quel délai avant de remarcher sur la moquette ?",
           answer:
-            "<p>Le séchage varie selon l'épaisseur du revêtement et la ventilation des locaux. Sur des dalles textiles standard, comptez généralement quatre à six heures avant une circulation légère. Nous précisons les consignes de remise en service à la fin de chaque intervention.</p>",
+            "<p><strong>Le séchage varie selon l'épaisseur</strong> du revêtement et la ventilation des locaux. Sur des dalles textiles standard, comptez généralement quatre à six heures avant une circulation légère. Nous précisons les consignes de remise en service à la fin de chaque intervention.</p>",
         },
         {
           question:
             "Quelle méthode privilégiez-vous pour les moquettes velours ras typiques des résidences années 80 de Noisiel ?",
           answer:
-            "<p>L'injection-extraction reste la technique de référence pour ces fibres denses. Elle permet d'atteindre la base du velours sans l'écraser. Sur les taches tenaces, un prétraitement localisé précède le passage de la machine pour améliorer le résultat final.</p>",
+            "<p><strong>L'injection-extraction reste la technique</strong> de référence pour ces fibres denses. Elle permet d'atteindre la base du velours sans l'écraser. Sur les taches tenaces, un prétraitement localisé précède le passage de la machine pour améliorer le résultat final.</p>",
         },
         {
           question:
             "Comment adaptez-vous le traitement selon l'épaisseur des moquettes dans les salles de la Ferme du Buisson ?",
           answer:
-            "<p>Un diagnostic visuel et tactile détermine la densité des fibres avant intervention. Les moquettes épaisses reçoivent plusieurs passes d'extraction pour éviter toute humidité résiduelle. Les revêtements fins sont traités avec une pression ajustée pour préserver leur structure.</p>",
+            "<p><strong>Un diagnostic visuel et tactile</strong> détermine la densité des fibres avant intervention. Les moquettes épaisses reçoivent plusieurs passes d'extraction pour éviter toute humidité résiduelle. Les revêtements fins sont traités avec une pression ajustée pour préserver leur structure.</p>",
         },
       ],
       ctaOverride: "",
