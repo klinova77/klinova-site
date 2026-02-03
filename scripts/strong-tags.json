@@ -1,9 +1,0 @@
-{
-  "citiesDir": "src/data/cities",
-  "model": "gpt-5.2",
-  "rulesText": "KLINOVA — STRONG HYBRID: lisibilité, scanabilité, pas de style template, segments courts et concrets.",
-  "maxFiles": 0,
-  "slugs": [],
-  "slugsJsonPath": "",
-  "forbiddenStrong": []
-}
