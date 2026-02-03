@@ -38,17 +38,17 @@ const city: City = {
     "Grange-Ory",
   ],
   nearbyCities: [
-    "arcueil",
-    "gentilly",
-    "montrouge",
-    "ivry-sur-seine",
-    "charenton-le-pont",
-    "alfortville",
-    "maisons-alfort",
-    "saint-mande",
-    "creteil",
-    "vincennes",
-  ],
+        "arcueil",
+        "bagneux",
+        "villejuif",
+        "gentilly",
+        "chevilly-larue",
+        "montrouge",
+        "vitry-sur-seine",
+        "ivry-sur-seine",
+        "thiais",
+        "charenton-le-pont"
+      ],
 
   // Texte brut uniquement
   landmarks: [

@@ -38,17 +38,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "torcy",
-    "chelles",
-    "champs-sur-marne",
-    "gournay-sur-marne",
-    "lagny-sur-marne",
-    "montfermeil",
-    "emerainville",
-    "gagny",
-    "neuilly-sur-marne",
-    "noisy-le-grand",
-  ],
+        "torcy",
+        "noisiel",
+        "chelles",
+        "champs-sur-marne",
+        "gournay-sur-marne",
+        "lagny-sur-marne",
+        "montfermeil",
+        "emerainville",
+        "gagny",
+        "neuilly-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Vaires-sur-Marne",

@@ -39,17 +39,17 @@ const city: City = {
     "Sept Arpents - Stalingrad",
   ],
   nearbyCities: [
-    "bobigny",
-    "bagnolet",
-    "montreuil",
-    "vincennes",
-    "rosny-sous-bois",
-    "saint-mande",
-    "fontenay-sous-bois",
-    "le-raincy",
-    "neuilly-plaisance",
-    "charenton-le-pont",
-  ],
+        "bobigny",
+        "bagnolet",
+        "montreuil",
+        "vincennes",
+        "rosny-sous-bois",
+        "saint-mande",
+        "fontenay-sous-bois",
+        "le-raincy",
+        "neuilly-plaisance",
+        "charenton-le-pont"
+      ],
 
   // Texte brut uniquement
   landmarks: [

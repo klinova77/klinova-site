@@ -34,17 +34,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "bussy-saint-georges",
-    "lagny-sur-marne",
-    "torcy",
-    "vaires-sur-marne",
-    "claye-souilly",
-    "emerainville",
-    "pontault-combault",
-    "champs-sur-marne",
-    "chelles",
-    "meaux",
-  ],
+        "bussy-saint-georges",
+        "lagny-sur-marne",
+        "torcy",
+        "vaires-sur-marne",
+        "noisiel",
+        "claye-souilly",
+        "emerainville",
+        "pontault-combault",
+        "champs-sur-marne",
+        "chelles"
+      ],
 
   landmarks: [
     "Mairie de Serris",

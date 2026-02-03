@@ -38,7 +38,18 @@ const city = {
     "Les Grands Champs",
     "Zone Sénia",
   ],
-  nearbyCities: [],
+  nearbyCities: [
+        "choisy-le-roi",
+        "orly",
+        "chevilly-larue",
+        "vitry-sur-seine",
+        "villejuif",
+        "alfortville",
+        "cachan",
+        "creteil",
+        "ivry-sur-seine",
+        "maisons-alfort"
+      ],
 
   // Texte brut uniquement
   landmarks: [

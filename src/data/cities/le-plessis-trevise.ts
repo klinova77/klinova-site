@@ -43,17 +43,17 @@ const city: City = {
     "Saint-Pierre",
   ],
   nearbyCities: [
-    "emerainville",
-    "villiers-sur-marne",
-    "noisy-le-grand",
-    "pontault-combault",
-    "champigny-sur-marne",
-    "champs-sur-marne",
-    "gournay-sur-marne",
-    "saint-maur-des-fosses",
-    "le-perreux-sur-marne",
-    "neuilly-sur-marne",
-  ],
+        "emerainville",
+        "villiers-sur-marne",
+        "noisy-le-grand",
+        "pontault-combault",
+        "champigny-sur-marne",
+        "champs-sur-marne",
+        "noisiel",
+        "gournay-sur-marne",
+        "saint-maur-des-fosses",
+        "le-perreux-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [

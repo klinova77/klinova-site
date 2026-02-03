@@ -40,17 +40,17 @@ const city: City = {
     "Louis-Bertrand",
   ],
   nearbyCities: [
-    "charenton-le-pont",
-    "alfortville",
-    "gentilly",
-    "saint-mande",
-    "maisons-alfort",
-    "arcueil",
-    "cachan",
-    "montrouge",
-    "vincennes",
-    "creteil",
-  ],
+        "charenton-le-pont",
+        "vitry-sur-seine",
+        "villejuif",
+        "alfortville",
+        "gentilly",
+        "saint-mande",
+        "maisons-alfort",
+        "arcueil",
+        "cachan",
+        "montrouge"
+      ],
 
   // Texte brut uniquement
   landmarks: [

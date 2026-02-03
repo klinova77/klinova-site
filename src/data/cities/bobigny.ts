@@ -44,17 +44,17 @@ const city: City = {
     "La Ferme",
   ],
   nearbyCities: [
-    "pantin",
-    "bagnolet",
-    "montreuil",
-    "rosny-sous-bois",
-    "le-raincy",
-    "vincennes",
-    "fontenay-sous-bois",
-    "livry-gargan",
-    "neuilly-plaisance",
-    "saint-mande",
-  ],
+        "noisy-le-sec",
+        "romainville",
+        "pantin",
+        "bondy",
+        "bagnolet",
+        "montreuil",
+        "rosny-sous-bois",
+        "villemomble",
+        "le-raincy",
+        "vincennes"
+      ],
 
   // Texte brut uniquement
   landmarks: [

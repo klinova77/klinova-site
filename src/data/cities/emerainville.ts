@@ -39,17 +39,17 @@ const city: City = {
     "Secteur Gare RER E",
   ],
   nearbyCities: [
-    "le-plessis-trevise",
-    "pontault-combault",
-    "champs-sur-marne",
-    "noisy-le-grand",
-    "villiers-sur-marne",
-    "torcy",
-    "gournay-sur-marne",
-    "vaires-sur-marne",
-    "champigny-sur-marne",
-    "neuilly-sur-marne",
-  ],
+        "le-plessis-trevise",
+        "noisiel",
+        "pontault-combault",
+        "champs-sur-marne",
+        "noisy-le-grand",
+        "villiers-sur-marne",
+        "torcy",
+        "gournay-sur-marne",
+        "vaires-sur-marne",
+        "champigny-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [

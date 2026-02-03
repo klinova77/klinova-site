@@ -40,17 +40,17 @@ const city: City = {
     "Quartier des Fleurs",
   ],
   nearbyCities: [
-    "maisons-alfort",
-    "creteil",
-    "ivry-sur-seine",
-    "charenton-le-pont",
-    "joinville-le-pont",
-    "saint-mande",
-    "saint-maur-des-fosses",
-    "vincennes",
-    "gentilly",
-    "nogent-sur-marne",
-  ],
+        "maisons-alfort",
+        "vitry-sur-seine",
+        "creteil",
+        "ivry-sur-seine",
+        "charenton-le-pont",
+        "choisy-le-roi",
+        "joinville-le-pont",
+        "villejuif",
+        "thiais",
+        "saint-mande"
+      ],
 
   // Texte brut uniquement
   landmarks: [

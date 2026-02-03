@@ -39,17 +39,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "villeparisis",
-    "lagny-sur-marne",
-    "vaires-sur-marne",
-    "chelles",
-    "montfermeil",
-    "torcy",
-    "livry-gargan",
-    "villepinte",
-    "gournay-sur-marne",
-    "gagny",
-  ],
+        "villeparisis",
+        "lagny-sur-marne",
+        "vaires-sur-marne",
+        "chelles",
+        "montfermeil",
+        "torcy",
+        "livry-gargan",
+        "villepinte",
+        "noisiel",
+        "gournay-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Claye-Souilly",

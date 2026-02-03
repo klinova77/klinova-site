@@ -39,17 +39,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "vaires-sur-marne",
-    "champs-sur-marne",
-    "lagny-sur-marne",
-    "emerainville",
-    "chelles",
-    "gournay-sur-marne",
-    "bussy-saint-georges",
-    "noisy-le-grand",
-    "le-plessis-trevise",
-    "pontault-combault",
-  ],
+        "vaires-sur-marne",
+        "noisiel",
+        "champs-sur-marne",
+        "lagny-sur-marne",
+        "emerainville",
+        "chelles",
+        "gournay-sur-marne",
+        "bussy-saint-georges",
+        "noisy-le-grand",
+        "le-plessis-trevise"
+      ],
 
   landmarks: [
     "Mairie de Torcy",

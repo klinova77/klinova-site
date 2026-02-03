@@ -43,17 +43,17 @@ const city: City = {
     "La Capsulerie",
   ],
   nearbyCities: [
-    "montreuil",
-    "vincennes",
-    "saint-mande",
-    "pantin",
-    "fontenay-sous-bois",
-    "rosny-sous-bois",
-    "bobigny",
-    "charenton-le-pont",
-    "nogent-sur-marne",
-    "joinville-le-pont",
-  ],
+        "montreuil",
+        "romainville",
+        "vincennes",
+        "saint-mande",
+        "noisy-le-sec",
+        "pantin",
+        "fontenay-sous-bois",
+        "rosny-sous-bois",
+        "bobigny",
+        "charenton-le-pont"
+      ],
 
   // Texte brut uniquement
   landmarks: [

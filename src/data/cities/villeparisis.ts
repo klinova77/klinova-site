@@ -36,17 +36,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "claye-souilly",
-    "montfermeil",
-    "villepinte",
-    "chelles",
-    "livry-gargan",
-    "vaires-sur-marne",
-    "gagny",
-    "le-raincy",
-    "gournay-sur-marne",
-    "lagny-sur-marne",
-  ],
+        "claye-souilly",
+        "montfermeil",
+        "villepinte",
+        "chelles",
+        "livry-gargan",
+        "vaires-sur-marne",
+        "gagny",
+        "le-raincy",
+        "gournay-sur-marne",
+        "lagny-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Villeparisis",

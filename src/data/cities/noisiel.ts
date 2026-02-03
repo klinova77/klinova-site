@@ -39,12 +39,17 @@ const city: City = {
     "Le Potager",
   ],
   nearbyCities: [
-    "Champs-sur-Marne",
-    "Torcy",
-    "Lognes",
-    "Vaires-sur-Marne",
-    "Chelles",
-  ],
+        "champs-sur-marne",
+        "torcy",
+        "vaires-sur-marne",
+        "emerainville",
+        "gournay-sur-marne",
+        "chelles",
+        "noisy-le-grand",
+        "le-plessis-trevise",
+        "villiers-sur-marne",
+        "neuilly-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [

@@ -43,17 +43,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "torcy",
-    "bussy-saint-georges",
-    "vaires-sur-marne",
-    "serris",
-    "claye-souilly",
-    "chelles",
-    "champs-sur-marne",
-    "emerainville",
-    "gournay-sur-marne",
-    "villeparisis",
-  ],
+        "torcy",
+        "bussy-saint-georges",
+        "vaires-sur-marne",
+        "serris",
+        "noisiel",
+        "claye-souilly",
+        "chelles",
+        "champs-sur-marne",
+        "emerainville",
+        "gournay-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Lagny-sur-Marne (Hôtel de Ville, ancien cloître de l'abbaye Saint-Pierre)",

@@ -38,17 +38,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "joinville-le-pont",
-    "champigny-sur-marne",
-    "creteil",
-    "maisons-alfort",
-    "nogent-sur-marne",
-    "le-perreux-sur-marne",
-    "villiers-sur-marne",
-    "alfortville",
-    "fontenay-sous-bois",
-    "noisy-le-grand",
-  ],
+        "joinville-le-pont",
+        "champigny-sur-marne",
+        "creteil",
+        "maisons-alfort",
+        "nogent-sur-marne",
+        "le-perreux-sur-marne",
+        "villiers-sur-marne",
+        "alfortville",
+        "fontenay-sous-bois",
+        "noisy-le-grand"
+      ],
 
   landmarks: [
     "Mairie de Saint-Maur-des-Fossés",

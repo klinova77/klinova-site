@@ -46,17 +46,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "nogent-sur-marne",
-    "montreuil",
-    "le-perreux-sur-marne",
-    "vincennes",
-    "rosny-sous-bois",
-    "neuilly-plaisance",
-    "joinville-le-pont",
-    "bagnolet",
-    "saint-mande",
-    "champigny-sur-marne",
-  ],
+        "nogent-sur-marne",
+        "montreuil",
+        "le-perreux-sur-marne",
+        "vincennes",
+        "rosny-sous-bois",
+        "neuilly-plaisance",
+        "joinville-le-pont",
+        "bagnolet",
+        "saint-mande",
+        "romainville"
+      ],
 
   landmarks: [
     "Mairie de Fontenay-sous-Bois",

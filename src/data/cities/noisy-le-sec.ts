@@ -39,7 +39,18 @@ const city: City = {
     "Haut-Goulet",
   ],
 
-  nearbyCities: [],
+  nearbyCities: [
+        "romainville",
+        "bobigny",
+        "bondy",
+        "rosny-sous-bois",
+        "montreuil",
+        "bagnolet",
+        "pantin",
+        "villemomble",
+        "le-raincy",
+        "fontenay-sous-bois"
+      ],
 
   landmarks: [
     "Mairie de Noisy-le-Sec",

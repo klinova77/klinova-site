@@ -39,17 +39,17 @@ const city: City = {
     "Cité du Chaperon Vert",
   ],
   nearbyCities: [
-    "gentilly",
-    "cachan",
-    "montrouge",
-    "ivry-sur-seine",
-    "charenton-le-pont",
-    "alfortville",
-    "saint-mande",
-    "maisons-alfort",
-    "vincennes",
-    "creteil",
-  ],
+        "gentilly",
+        "cachan",
+        "montrouge",
+        "bagneux",
+        "villejuif",
+        "ivry-sur-seine",
+        "chevilly-larue",
+        "vitry-sur-seine",
+        "charenton-le-pont",
+        "thiais"
+      ],
 
   // Texte brut uniquement
   landmarks: [

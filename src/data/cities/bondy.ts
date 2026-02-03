@@ -43,15 +43,17 @@ const city: City = {
     "Quartier du Canal / Rives de l'Ourcq",
   ],
   nearbyCities: [
-    "Les Pavillons-sous-Bois",
-    "Noisy-le-Sec",
-    "Villemomble",
-    "Rosny-sous-Bois",
-    "Bobigny",
-    "Drancy",
-    "Le Blanc-Mesnil",
-    "Aulnay-sous-Bois",
-  ],
+        "noisy-le-sec",
+        "villemomble",
+        "le-raincy",
+        "bobigny",
+        "rosny-sous-bois",
+        "romainville",
+        "livry-gargan",
+        "neuilly-plaisance",
+        "gagny",
+        "montreuil"
+      ],
 
   // Texte brut uniquement
   landmarks: [

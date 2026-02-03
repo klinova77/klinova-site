@@ -45,17 +45,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "nogent-sur-marne",
-    "saint-maur-des-fosses",
-    "maisons-alfort",
-    "fontenay-sous-bois",
-    "le-perreux-sur-marne",
-    "vincennes",
-    "champigny-sur-marne",
-    "creteil",
-    "saint-mande",
-    "alfortville",
-  ],
+        "nogent-sur-marne",
+        "saint-maur-des-fosses",
+        "maisons-alfort",
+        "fontenay-sous-bois",
+        "le-perreux-sur-marne",
+        "vincennes",
+        "champigny-sur-marne",
+        "creteil",
+        "saint-mande",
+        "alfortville"
+      ],
 
   landmarks: [
     "Mairie de Joinville-le-Pont",

@@ -38,17 +38,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "neuilly-sur-marne",
-    "montfermeil",
-    "le-raincy",
-    "neuilly-plaisance",
-    "gournay-sur-marne",
-    "chelles",
-    "livry-gargan",
-    "rosny-sous-bois",
-    "champs-sur-marne",
-    "le-perreux-sur-marne",
-  ],
+        "neuilly-sur-marne",
+        "montfermeil",
+        "le-raincy",
+        "villemomble",
+        "neuilly-plaisance",
+        "gournay-sur-marne",
+        "chelles",
+        "livry-gargan",
+        "rosny-sous-bois",
+        "bondy"
+      ],
 
   landmarks: [
     "Hôtel de Ville (Place Foch)",

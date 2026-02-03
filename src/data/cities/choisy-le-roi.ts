@@ -41,14 +41,17 @@ const city: City = {
     "Quartier du Roi",
   ],
   nearbyCities: [
-    "Thiais",
-    "Vitry-sur-Seine",
-    "Alfortville",
-    "Créteil",
-    "Villeneuve-Saint-Georges",
-    "Orly",
-    "Valenton",
-  ],
+        "thiais",
+        "orly",
+        "creteil",
+        "vitry-sur-seine",
+        "alfortville",
+        "maisons-alfort",
+        "villejuif",
+        "ivry-sur-seine",
+        "saint-maur-des-fosses",
+        "charenton-le-pont"
+      ],
 
   // Texte brut uniquement
   landmarks: [

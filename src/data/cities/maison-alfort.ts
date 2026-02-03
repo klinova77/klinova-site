@@ -34,17 +34,17 @@ const city: City = {
     "Hector Berlioz",
   ],
   nearbyCities: [
-    "alfortville",
-    "creteil",
-    "joinville-le-pont",
-    "charenton-le-pont",
-    "saint-maur-des-fosses",
-    "ivry-sur-seine",
-    "saint-mande",
-    "nogent-sur-marne",
-    "vincennes",
-    "fontenay-sous-bois",
-  ],
+        "alfortville",
+        "creteil",
+        "joinville-le-pont",
+        "charenton-le-pont",
+        "vitry-sur-seine",
+        "saint-maur-des-fosses",
+        "ivry-sur-seine",
+        "choisy-le-roi",
+        "saint-mande",
+        "nogent-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Maisons-Alfort",

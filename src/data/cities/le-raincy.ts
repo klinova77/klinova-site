@@ -37,17 +37,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "gagny",
-    "livry-gargan",
-    "rosny-sous-bois",
-    "montfermeil",
-    "neuilly-plaisance",
-    "neuilly-sur-marne",
-    "chelles",
-    "gournay-sur-marne",
-    "bobigny",
-    "le-perreux-sur-marne",
-  ],
+        "villemomble",
+        "gagny",
+        "bondy",
+        "livry-gargan",
+        "rosny-sous-bois",
+        "montfermeil",
+        "neuilly-plaisance",
+        "neuilly-sur-marne",
+        "noisy-le-sec",
+        "chelles"
+      ],
 
   landmarks: [
     "Mairie du Raincy",

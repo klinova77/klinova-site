@@ -44,17 +44,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "ivry-sur-seine",
-    "saint-mande",
-    "alfortville",
-    "maisons-alfort",
-    "vincennes",
-    "joinville-le-pont",
-    "gentilly",
-    "bagnolet",
-    "creteil",
-    "montreuil",
-  ],
+        "ivry-sur-seine",
+        "saint-mande",
+        "alfortville",
+        "maisons-alfort",
+        "vincennes",
+        "vitry-sur-seine",
+        "villejuif",
+        "joinville-le-pont",
+        "gentilly",
+        "bagnolet"
+      ],
 
   landmarks: [
     "Mairie de Charenton-le-Pont",

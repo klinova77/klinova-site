@@ -36,17 +36,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "le-raincy",
-    "montfermeil",
-    "gagny",
-    "villepinte",
-    "chelles",
-    "neuilly-sur-marne",
-    "rosny-sous-bois",
-    "neuilly-plaisance",
-    "villeparisis",
-    "bobigny",
-  ],
+        "le-raincy",
+        "montfermeil",
+        "bondy",
+        "gagny",
+        "villemomble",
+        "villepinte",
+        "chelles",
+        "neuilly-sur-marne",
+        "rosny-sous-bois",
+        "neuilly-plaisance"
+      ],
   landmarks: [
     "Mairie de Livry-Gargan",
     "Parc Lefèvre",

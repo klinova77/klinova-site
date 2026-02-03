@@ -42,17 +42,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "emerainville",
-    "le-plessis-trevise",
-    "noisy-le-grand",
-    "villiers-sur-marne",
-    "champs-sur-marne",
-    "torcy",
-    "champigny-sur-marne",
-    "bussy-saint-georges",
-    "gournay-sur-marne",
-    "vaires-sur-marne",
-  ],
+        "emerainville",
+        "le-plessis-trevise",
+        "noisiel",
+        "noisy-le-grand",
+        "villiers-sur-marne",
+        "champs-sur-marne",
+        "torcy",
+        "champigny-sur-marne",
+        "bussy-saint-georges",
+        "gournay-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Pontault-Combault",

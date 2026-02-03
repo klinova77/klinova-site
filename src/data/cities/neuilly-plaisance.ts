@@ -39,17 +39,17 @@ const city: City = {
     "Voie Lambert",
   ],
   nearbyCities: [
-    "rosny-sous-bois",
-    "le-perreux-sur-marne",
-    "neuilly-sur-marne",
-    "fontenay-sous-bois",
-    "gagny",
-    "le-raincy",
-    "nogent-sur-marne",
-    "montreuil",
-    "noisy-le-grand",
-    "gournay-sur-marne",
-  ],
+        "rosny-sous-bois",
+        "le-perreux-sur-marne",
+        "neuilly-sur-marne",
+        "villemomble",
+        "fontenay-sous-bois",
+        "gagny",
+        "le-raincy",
+        "nogent-sur-marne",
+        "montreuil",
+        "bondy"
+      ],
 
   landmarks: [
     "Mairie de Neuilly-Plaisance",

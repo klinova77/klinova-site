@@ -35,7 +35,18 @@ const city: City = {
     "Les Marnaudes - La Fosse aux Bergers",
   ],
 
-  nearbyCities: ["Le Raincy", "Rosny-sous-Bois", "Montfermeil", "Gagny"],
+  nearbyCities: [
+        "le-raincy",
+        "rosny-sous-bois",
+        "neuilly-plaisance",
+        "bondy",
+        "gagny",
+        "neuilly-sur-marne",
+        "noisy-le-sec",
+        "livry-gargan",
+        "montfermeil",
+        "fontenay-sous-bois"
+      ],
 
   landmarks: [
     "Mairie de Villemomble",

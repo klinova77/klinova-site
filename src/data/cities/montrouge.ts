@@ -43,17 +43,17 @@ const city: City = {
     "Plein Sud",
   ],
   nearbyCities: [
-    "arcueil",
-    "gentilly",
-    "cachan",
-    "ivry-sur-seine",
-    "charenton-le-pont",
-    "alfortville",
-    "saint-mande",
-    "maisons-alfort",
-    "vincennes",
-    "bagnolet",
-  ],
+        "arcueil",
+        "gentilly",
+        "bagneux",
+        "cachan",
+        "villejuif",
+        "ivry-sur-seine",
+        "vitry-sur-seine",
+        "charenton-le-pont",
+        "alfortville",
+        "thiais"
+      ],
 
   // Texte brut uniquement
   landmarks: [

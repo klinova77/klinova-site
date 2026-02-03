@@ -28,17 +28,17 @@ const city: City = {
   districts: ["Centre-ville", "Les Coudreaux", "Les Bosquets", "Franceville"],
 
   nearbyCities: [
-    "gagny",
-    "chelles",
-    "livry-gargan",
-    "le-raincy",
-    "neuilly-sur-marne",
-    "gournay-sur-marne",
-    "neuilly-plaisance",
-    "vaires-sur-marne",
-    "champs-sur-marne",
-    "villeparisis",
-  ],
+        "gagny",
+        "chelles",
+        "livry-gargan",
+        "le-raincy",
+        "neuilly-sur-marne",
+        "gournay-sur-marne",
+        "villemomble",
+        "neuilly-plaisance",
+        "vaires-sur-marne",
+        "champs-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Montfermeil",

@@ -35,17 +35,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "saint-mande",
-    "montreuil",
-    "bagnolet",
-    "fontenay-sous-bois",
-    "nogent-sur-marne",
-    "charenton-le-pont",
-    "joinville-le-pont",
-    "rosny-sous-bois",
-    "le-perreux-sur-marne",
-    "maisons-alfort",
-  ],
+        "saint-mande",
+        "montreuil",
+        "bagnolet",
+        "fontenay-sous-bois",
+        "nogent-sur-marne",
+        "charenton-le-pont",
+        "joinville-le-pont",
+        "rosny-sous-bois",
+        "le-perreux-sur-marne",
+        "maisons-alfort"
+      ],
 
   landmarks: [
     "Mairie de Vincennes",

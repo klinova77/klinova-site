@@ -36,17 +36,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "gournay-sur-marne",
-    "noisy-le-grand",
-    "emerainville",
-    "vaires-sur-marne",
-    "torcy",
-    "chelles",
-    "villiers-sur-marne",
-    "neuilly-sur-marne",
-    "le-plessis-trevise",
-    "gagny",
-  ],
+        "noisiel",
+        "gournay-sur-marne",
+        "noisy-le-grand",
+        "emerainville",
+        "vaires-sur-marne",
+        "torcy",
+        "chelles",
+        "villiers-sur-marne",
+        "neuilly-sur-marne",
+        "le-plessis-trevise"
+      ],
 
   landmarks: [
     "Mairie de Champs-sur-Marne",

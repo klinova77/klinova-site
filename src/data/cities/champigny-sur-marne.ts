@@ -44,17 +44,17 @@ const city: City = {
     "Village Parisien",
   ],
   nearbyCities: [
-    "villiers-sur-marne",
-    "saint-maur-des-fosses",
-    "noisy-le-grand",
-    "le-perreux-sur-marne",
-    "nogent-sur-marne",
-    "joinville-le-pont",
-    "le-plessis-trevise",
-    "fontenay-sous-bois",
-    "neuilly-plaisance",
-    "neuilly-sur-marne",
-  ],
+        "villiers-sur-marne",
+        "saint-maur-des-fosses",
+        "noisy-le-grand",
+        "le-perreux-sur-marne",
+        "nogent-sur-marne",
+        "joinville-le-pont",
+        "le-plessis-trevise",
+        "fontenay-sous-bois",
+        "neuilly-plaisance",
+        "neuilly-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [

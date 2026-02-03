@@ -42,17 +42,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "fontenay-sous-bois",
-    "le-perreux-sur-marne",
-    "joinville-le-pont",
-    "vincennes",
-    "champigny-sur-marne",
-    "neuilly-plaisance",
-    "montreuil",
-    "rosny-sous-bois",
-    "saint-maur-des-fosses",
-    "saint-mande",
-  ],
+        "fontenay-sous-bois",
+        "le-perreux-sur-marne",
+        "joinville-le-pont",
+        "vincennes",
+        "champigny-sur-marne",
+        "neuilly-plaisance",
+        "montreuil",
+        "rosny-sous-bois",
+        "saint-maur-des-fosses",
+        "saint-mande"
+      ],
 
   landmarks: [
     "Mairie de Nogent-sur-Marne",

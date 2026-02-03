@@ -46,17 +46,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "serris",
-    "claye-souilly",
-    "lagny-sur-marne",
-    "bussy-saint-georges",
-    "villeparisis",
-    "torcy",
-    "vaires-sur-marne",
-    "chelles",
-    "montfermeil",
-    "champs-sur-marne",
-  ],
+        "serris",
+        "claye-souilly",
+        "lagny-sur-marne",
+        "bussy-saint-georges",
+        "villeparisis",
+        "torcy",
+        "vaires-sur-marne",
+        "chelles",
+        "noisiel",
+        "montfermeil"
+      ],
 
   landmarks: [
     "Mairie de Meaux",

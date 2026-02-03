@@ -40,17 +40,17 @@ const city: City = {
     "Les Ponceaux",
   ],
   nearbyCities: [
-    "noisy-le-grand",
-    "champigny-sur-marne",
-    "le-plessis-trevise",
-    "le-perreux-sur-marne",
-    "champs-sur-marne",
-    "neuilly-sur-marne",
-    "gournay-sur-marne",
-    "emerainville",
-    "neuilly-plaisance",
-    "nogent-sur-marne",
-  ],
+        "noisy-le-grand",
+        "champigny-sur-marne",
+        "le-plessis-trevise",
+        "le-perreux-sur-marne",
+        "champs-sur-marne",
+        "neuilly-sur-marne",
+        "gournay-sur-marne",
+        "emerainville",
+        "neuilly-plaisance",
+        "nogent-sur-marne"
+      ],
 
   // Texte brut uniquement
   landmarks: [

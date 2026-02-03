@@ -11,17 +11,17 @@ const city: City = {
     slug: "val-de-marne",
   },
   nearbyCities: [
-    "vincennes",
-    "charenton-le-pont",
-    "bagnolet",
-    "montreuil",
-    "ivry-sur-seine",
-    "fontenay-sous-bois",
-    "joinville-le-pont",
-    "nogent-sur-marne",
-    "maisons-alfort",
-    "alfortville",
-  ],
+        "vincennes",
+        "charenton-le-pont",
+        "bagnolet",
+        "montreuil",
+        "ivry-sur-seine",
+        "fontenay-sous-bois",
+        "joinville-le-pont",
+        "nogent-sur-marne",
+        "maisons-alfort",
+        "alfortville"
+      ],
 
   customDescription:
     "Commune de très haut standing à la lisière du Bois de Vincennes, Saint-Mandé combine un bâti haussmannien prestigieux et des résidences de luxe des années 1930-1970. La double exposition — pollution du Périphérique à l'ouest, humidité du Bois au sud — impose un entretien rigoureux des surfaces intérieures et extérieures pour préserver la qualité des lieux.",

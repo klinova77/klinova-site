@@ -1,8 +1,8 @@
 import type { City } from "~/types/geo";
 
 const city: City = {
-  name: "Chevilly-la-Rue",
-  slug: "chevilly-la-rue",
+  name: "Chevilly-Larue",
+  slug: "chevilly-larue",
   postalCodes: ["94550"],
 
   department: {
@@ -13,12 +13,12 @@ const city: City = {
 
   // customDescription : STRICTEMENT SANS BALISES (texte brut)
   customDescription:
-    "Klinova intervient à Chevilly-la-Rue pour l'entretien des parties communes, parkings et espaces extérieurs. Proche du tram T7, notre équipe connaît les contraintes locales et adapte chaque intervention au bâti de la commune.",
+    "Klinova intervient à Chevilly-Larue pour l'entretien des parties communes, parkings et espaces extérieurs. Proche du tram T7, notre équipe connaît les contraintes locales et adapte chaque intervention au bâti de la commune.",
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // format : 2 <p> then <ul>
   hubIntro:
-    "<p>Au cœur du pôle d'Orly-Rungis, desservie par le tram T7, Chevilly-la-Rue combine zones d'activités et quartiers résidentiels. Klinova accompagne gestionnaires et occupants avec une organisation pensée pour ce territoire en mouvement.</p>\n\n<p class=\"mt-4\">Nos équipes assurent la propreté des halls, le décrassage des sous-sols et l'entretien des espaces extérieurs. Chaque intervention fait l'objet d'un suivi clair, avec reporting disponible pour les donneurs d'ordre qui le souhaitent.</p>\n\n<ul>\n  <li><strong>Coordination locale :</strong> Planification adaptée aux contraintes de stationnement près de la station Chevilly-Larue et aux horaires des résidences des Sorbiers.</li>\n  <li><strong>Matériel adapté au terrain :</strong> Autolaveuses pour parkings souterrains, injection-extraction pour halls moquettés, nettoyeurs haute pression pour extérieurs.</li>\n  <li><strong>Interlocuteur unique :</strong> Un référent dédié assure le lien entre vos attentes et nos techniciens, du devis à la réception des travaux.</li>\n</ul>",
+    "<p>Au cœur du pôle d'Orly-Rungis, desservie par le tram T7, Chevilly-Larue combine zones d'activités et quartiers résidentiels. Klinova accompagne gestionnaires et occupants avec une organisation pensée pour ce territoire en mouvement.</p>\n\n<p class=\"mt-4\">Nos équipes assurent la propreté des halls, le décrassage des sous-sols et l'entretien des espaces extérieurs. Chaque intervention fait l'objet d'un suivi clair, avec reporting disponible pour les donneurs d'ordre qui le souhaitent.</p>\n\n<ul>\n  <li><strong>Coordination locale :</strong> Planification adaptée aux contraintes de stationnement près de la station Chevilly-Larue et aux horaires des résidences des Sorbiers.</li>\n  <li><strong>Matériel adapté au terrain :</strong> Autolaveuses pour parkings souterrains, injection-extraction pour halls moquettés, nettoyeurs haute pression pour extérieurs.</li>\n  <li><strong>Interlocuteur unique :</strong> Un référent dédié assure le lien entre vos attentes et nos techniciens, du devis à la réception des travaux.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -41,17 +41,21 @@ const city: City = {
 
   // Voisins / villes proches (texte brut)
   nearbyCities: [
-    "L'Haÿ-les-Roses",
-    "Thiais",
-    "Rungis",
-    "Villejuif",
-    "Vitry-sur-Seine",
-    "Fresnes",
-  ],
+        "thiais",
+        "villejuif",
+        "cachan",
+        "vitry-sur-seine",
+        "arcueil",
+        "bagneux",
+        "orly",
+        "gentilly",
+        "choisy-le-roi",
+        "ivry-sur-seine"
+      ],
 
   // Texte brut uniquement
   landmarks: [
-    "Mairie de Chevilly-la-Rue",
+    "Mairie de Chevilly-Larue",
     "Station Métro Chevilly-Larue",
     "Parc Départemental Petit-le-Roy",
     "Zone d'Activités La Cerisaie",
@@ -69,7 +73,7 @@ const city: City = {
     },
     {
       question:
-        "Proposez-vous un devis gratuit pour les copropriétés de Chevilly-la-Rue ?",
+        "Proposez-vous un devis gratuit pour les copropriétés de Chevilly-Larue ?",
       answer:
         "<p>Oui. Nous effectuons une <strong>visite technique préalable</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le devis détaillé est transmis sous 48 heures, sans engagement. Nous intervenons aussi bien dans les grands ensembles que dans les petites copropriétés.</p>",
     },
@@ -256,7 +260,7 @@ const city: City = {
       heroDescription:
         "Assainissement complet de votre balcon souillé par les fientes de pigeons, avec désinfection des supports et évacuation sécurisée des déchets contaminés.",
       whyUsBullets: [
-        "Connaissance des zones sensibles à Chevilly-la-Rue, notamment les résidences proches des espaces verts et parcs.",
+        "Connaissance des zones sensibles à Chevilly-Larue, notamment les résidences proches des espaces verts et parcs.",
         "Protocole complet avec EPI adaptés, confinement rigoureux et désinfection par produits homologués.",
         "Évacuation des déchets en sacs étanches et coordination discrète pour limiter la gêne en copropriété.",
       ],
@@ -354,7 +358,7 @@ const city: City = {
       heroDescription:
         "Traitement complet de votre terrasse avec adaptation au support — carrelage, dalles ou bois — pour éliminer mousses, dépôts verts et taches tenaces, et retrouver un espace extérieur propre et utilisable.",
       whyUsBullets: [
-        "Connaissance des terrasses pavillonnaires de Chevilly-la-Rue, exposées à l'humidité hivernale et aux dépôts verts récurrents.",
+        "Connaissance des terrasses pavillonnaires de Chevilly-Larue, exposées à l'humidité hivernale et aux dépôts verts récurrents.",
         "Maîtrise des techniques adaptées à chaque support : pression contrôlée sur pierre, nettoyage doux sur bois, traitement anti-mousse durable.",
         "Organisation soignée avec protection du mobilier, gestion de l'écoulement et accès par jardin sans passage intérieur si possible.",
       ],
@@ -439,7 +443,7 @@ const city: City = {
         },
         {
           question:
-            "Que comprend le prix d'un nettoyage état des lieux pour un T3-type dans Chevilly-la-Rue ?",
+            "Que comprend le prix d'un nettoyage état des lieux pour un T3-type dans Chevilly-Larue ?",
           answer:
             "<p>Le devis dépend de la surface, de l'état initial et des prestations demandées : nettoyage complet, vitres intérieures, intérieur électroménager. Pour un T3 standard, comptez une intervention de 3 à 5 heures. Nous établissons un chiffrage précis après description du logement.</p>",
         },

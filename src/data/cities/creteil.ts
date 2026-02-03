@@ -54,17 +54,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "maisons-alfort",
-    "alfortville",
-    "saint-maur-des-fosses",
-    "joinville-le-pont",
-    "charenton-le-pont",
-    "ivry-sur-seine",
-    "champigny-sur-marne",
-    "nogent-sur-marne",
-    "saint-mande",
-    "vincennes",
-  ],
+        "maisons-alfort",
+        "alfortville",
+        "choisy-le-roi",
+        "saint-maur-des-fosses",
+        "joinville-le-pont",
+        "vitry-sur-seine",
+        "thiais",
+        "charenton-le-pont",
+        "ivry-sur-seine",
+        "orly"
+      ],
 
   landmarks: [
     "Mairie de Créteil",

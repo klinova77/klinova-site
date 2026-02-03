@@ -33,17 +33,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "champs-sur-marne",
-    "neuilly-sur-marne",
-    "chelles",
-    "gagny",
-    "noisy-le-grand",
-    "montfermeil",
-    "villiers-sur-marne",
-    "vaires-sur-marne",
-    "neuilly-plaisance",
-    "emerainville",
-  ],
+        "champs-sur-marne",
+        "neuilly-sur-marne",
+        "chelles",
+        "gagny",
+        "noisy-le-grand",
+        "noisiel",
+        "montfermeil",
+        "villiers-sur-marne",
+        "vaires-sur-marne",
+        "neuilly-plaisance"
+      ],
 
   landmarks: [
     "Mairie de Gournay-sur-Marne",

@@ -42,12 +42,17 @@ const city: City = {
     "Vitry-Sud / Ardoines",
   ],
   nearbyCities: [
-    "Ivry-sur-Seine",
-    "Choisy-le-Roi",
-    "Thiais",
-    "Alfortville",
-    "Paris",
-  ],
+        "alfortville",
+        "villejuif",
+        "ivry-sur-seine",
+        "thiais",
+        "choisy-le-roi",
+        "maisons-alfort",
+        "charenton-le-pont",
+        "chevilly-larue",
+        "creteil",
+        "gentilly"
+      ],
 
   // Texte brut uniquement
   landmarks: [

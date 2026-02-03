@@ -26,17 +26,17 @@ const city: City = {
   },
 
   nearbyCities: [
-    "montfermeil",
-    "gournay-sur-marne",
-    "vaires-sur-marne",
-    "gagny",
-    "champs-sur-marne",
-    "neuilly-sur-marne",
-    "torcy",
-    "le-raincy",
-    "livry-gargan",
-    "noisy-le-grand",
-  ],
+        "montfermeil",
+        "gournay-sur-marne",
+        "vaires-sur-marne",
+        "gagny",
+        "champs-sur-marne",
+        "neuilly-sur-marne",
+        "noisiel",
+        "torcy",
+        "le-raincy",
+        "livry-gargan"
+      ],
   districts: [
     "Bords de Marne",
 

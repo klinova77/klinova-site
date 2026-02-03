@@ -39,7 +39,18 @@ const city: City = {
     "Victor Hugo (ZAC)",
     "Les Coutures",
   ],
-  nearbyCities: [],
+  nearbyCities: [
+        "cachan",
+        "arcueil",
+        "montrouge",
+        "gentilly",
+        "villejuif",
+        "chevilly-larue",
+        "ivry-sur-seine",
+        "vitry-sur-seine",
+        "thiais",
+        "charenton-le-pont"
+      ],
 
   // Texte brut uniquement
   landmarks: [

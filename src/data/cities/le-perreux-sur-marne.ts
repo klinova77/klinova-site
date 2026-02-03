@@ -38,17 +38,17 @@ const city: City = {
     "Les Parclairs",
   ],
   nearbyCities: [
-    "nogent-sur-marne",
-    "neuilly-plaisance",
-    "fontenay-sous-bois",
-    "champigny-sur-marne",
-    "neuilly-sur-marne",
-    "villiers-sur-marne",
-    "rosny-sous-bois",
-    "joinville-le-pont",
-    "noisy-le-grand",
-    "montreuil",
-  ],
+        "nogent-sur-marne",
+        "neuilly-plaisance",
+        "fontenay-sous-bois",
+        "champigny-sur-marne",
+        "neuilly-sur-marne",
+        "villiers-sur-marne",
+        "rosny-sous-bois",
+        "joinville-le-pont",
+        "noisy-le-grand",
+        "montreuil"
+      ],
 
   landmarks: [
     "Mairie du Perreux-sur-Marne",

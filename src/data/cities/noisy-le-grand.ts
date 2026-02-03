@@ -54,17 +54,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "villiers-sur-marne",
-    "champigny-sur-marne",
-    "le-plessis-trevise",
-    "champs-sur-marne",
-    "gournay-sur-marne",
-    "neuilly-sur-marne",
-    "le-perreux-sur-marne",
-    "emerainville",
-    "neuilly-plaisance",
-    "nogent-sur-marne",
-  ],
+        "villiers-sur-marne",
+        "champigny-sur-marne",
+        "le-plessis-trevise",
+        "champs-sur-marne",
+        "gournay-sur-marne",
+        "neuilly-sur-marne",
+        "le-perreux-sur-marne",
+        "emerainville",
+        "noisiel",
+        "neuilly-plaisance"
+      ],
 
   landmarks: [
     "Mairie de Noisy-le-Grand",

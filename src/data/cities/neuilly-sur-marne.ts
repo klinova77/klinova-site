@@ -25,17 +25,17 @@ const city: City = {
   },
 
   nearbyCities: [
-    "gagny",
-    "neuilly-plaisance",
-    "gournay-sur-marne",
-    "le-perreux-sur-marne",
-    "noisy-le-grand",
-    "le-raincy",
-    "villiers-sur-marne",
-    "montfermeil",
-    "rosny-sous-bois",
-    "champs-sur-marne",
-  ],
+        "gagny",
+        "neuilly-plaisance",
+        "gournay-sur-marne",
+        "villemomble",
+        "le-perreux-sur-marne",
+        "noisy-le-grand",
+        "le-raincy",
+        "villiers-sur-marne",
+        "montfermeil",
+        "rosny-sous-bois"
+      ],
 
   districts: [
     "Centre-ville",

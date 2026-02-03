@@ -43,17 +43,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "bagnolet",
-    "vincennes",
-    "fontenay-sous-bois",
-    "rosny-sous-bois",
-    "saint-mande",
-    "nogent-sur-marne",
-    "neuilly-plaisance",
-    "le-perreux-sur-marne",
-    "bobigny",
-    "pantin",
-  ],
+        "bagnolet",
+        "vincennes",
+        "fontenay-sous-bois",
+        "romainville",
+        "rosny-sous-bois",
+        "noisy-le-sec",
+        "saint-mande",
+        "nogent-sur-marne",
+        "neuilly-plaisance",
+        "le-perreux-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Montreuil",

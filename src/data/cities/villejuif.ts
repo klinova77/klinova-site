@@ -38,13 +38,17 @@ const city: City = {
     "Campus Grand Parc / IGR",
   ],
   nearbyCities: [
-    "Le Kremlin-Bicêtre",
-    "Ivry-sur-Seine",
-    "Vitry-sur-Seine",
-    "L'Haÿ-les-Roses",
-    "Cachan",
-    "Arcueil",
-  ],
+        "cachan",
+        "arcueil",
+        "gentilly",
+        "vitry-sur-seine",
+        "ivry-sur-seine",
+        "chevilly-larue",
+        "bagneux",
+        "montrouge",
+        "thiais",
+        "alfortville"
+      ],
 
   landmarks: [
     "Mairie de Villejuif",

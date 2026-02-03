@@ -43,11 +43,17 @@ const city: City = {
     "Quartier Calmette",
   ],
   nearbyCities: [
-    "Thiais",
-    "Choisy-le-Roi",
-    "Villeneuve-le-Roi",
-    "Paray-Vieille-Poste",
-  ],
+        "thiais",
+        "choisy-le-roi",
+        "vitry-sur-seine",
+        "creteil",
+        "alfortville",
+        "villejuif",
+        "maisons-alfort",
+        "cachan",
+        "ivry-sur-seine",
+        "arcueil"
+      ],
 
   // Texte brut uniquement
   landmarks: [

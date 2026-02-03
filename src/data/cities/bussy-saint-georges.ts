@@ -33,17 +33,17 @@ const city: City = {
   ],
 
   nearbyCities: [
-    "lagny-sur-marne",
-    "torcy",
-    "serris",
-    "emerainville",
-    "vaires-sur-marne",
-    "pontault-combault",
-    "champs-sur-marne",
-    "le-plessis-trevise",
-    "gournay-sur-marne",
-    "chelles",
-  ],
+        "lagny-sur-marne",
+        "torcy",
+        "serris",
+        "noisiel",
+        "emerainville",
+        "vaires-sur-marne",
+        "pontault-combault",
+        "champs-sur-marne",
+        "le-plessis-trevise",
+        "gournay-sur-marne"
+      ],
 
   landmarks: [
     "Mairie de Bussy-Saint-Georges",

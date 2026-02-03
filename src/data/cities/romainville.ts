@@ -41,7 +41,18 @@ const city: City = {
     "Youri Gagarine",
     "ZAC de l'Horloge",
   ],
-  nearbyCities: ["Montreuil", "Pantin", "Bagnolet", "Noisy-le-Sec", "Bobigny"],
+  nearbyCities: [
+        "noisy-le-sec",
+        "bagnolet",
+        "montreuil",
+        "bobigny",
+        "pantin",
+        "rosny-sous-bois",
+        "bondy",
+        "vincennes",
+        "fontenay-sous-bois",
+        "saint-mande"
+      ],
 
   // Texte brut uniquement
   landmarks: [
