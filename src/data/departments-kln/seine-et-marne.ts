@@ -7,172 +7,189 @@ export const seineEtMarne: DepartmentKln = {
     code: "77",
   },
 
-
-
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel en Seine-et-Marne (77)",
+  heroTitle: "Nettoyage professionnel en Seine-et-Marne (77)",
   heroKicker: "Interventions Nord-77 & Sud-77 • Devis sous 24h",
+
   heroDescription:
-    "Klinova intervient partout en Seine-et-Marne avec une organisation par secteurs géographiques pour garantir réactivité et disponibilité. Du Val d'Europe aux zones pavillonnaires de Brie, nous adaptons nos protocoles de nettoyage aux spécificités de chaque site : résidences récentes, copropriétés anciennes, pavillons individuels.",
+    "Plus grand département d'Île-de-France, la Seine-et-Marne demande une organisation rigoureuse. Klinova couvre tout le 77 grâce à des tournées structurées Nord/Sud : moquettes de copropriété, canapés et tapis à domicile, parkings souterrains, terrasses encrassées. Des résidences récentes du Val d'Europe aux pavillons de Brie, nous adaptons nos méthodes à chaque configuration — avec des délais maîtrisés malgré les distances.",
 
   // =========================
   // Images
   // =========================
   images: {
     items: [
-      
-     {
-  src: "/images/77-seine-et-marne-rue-pavillonnaire.webp",
-  alt: "Quartier résidentiel pavillonnaire en Seine-et-Marne, zone d'intervention Klinova",
-  width: 1200,
-  height: 800,
-  caption:
-    "Zones pavillonnaires du 77 : des solutions de nettoyage flexibles pour les maisons individuelles et résidences de grande couronne.",
-
+      {
+        src: "/images/77-seine-et-marne-rue-pavillonnaire.webp",
+        alt: "Quartier résidentiel pavillonnaire en Seine-et-Marne avec maisons individuelles et jardins",
+        width: 1200,
+        height: 800,
+        caption:
+          "Zones pavillonnaires du 77 : nettoyage à domicile de canapés, tapis et terrasses, sans contrainte de syndic.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en expertise)
   // =========================
   challenges: {
-    title: "Contraintes d'intervention en Seine-et-Marne",
+    title: "Ce qui rend le 77 unique pour nos interventions",
     items: [
-      "Organisation géographique Nord-77 / Sud-77 pour optimiser délais et disponibilité sur un département de 5 915 km²",
-      "Typologie mixte (pavillons, résidences collectives, copropriétés) nécessitant adaptation des méthodes selon configurations",
-      "Parkings souterrains avec contraintes techniques : ventilation limitée, zones humides, accès restreints, évacuation des eaux",
-      "Textiles d'ameublement fortement sollicités en zones résidentielles : taches organiques, odeurs animales, usure prématurée",
-      "Balcons et terrasses exposés aux intempéries : mousses, coulures, fientes, salissures atmosphériques selon exposition",
+      "Plus grand département IDF (5 915 km²) que nous couvrons grâce à une organisation en tournées Nord-77 et Sud-77",
+      "Résidences récentes (Val d'Europe, Bussy-Saint-Georges) avec matériaux modernes et copropriétés bien équipées",
+      "Vastes zones pavillonnaires où nous intervenons directement chez vous — canapés, tapis, matelas, terrasses",
+      "Pôles urbains (Meaux, Melun, Chelles) avec des copropriétés à fort trafic et des parkings souterrains à entretenir",
+      "Parkings souterrains : dépôts noirs, traces de pneus, zones humides — protocole mécanisé et gestion rigoureuse de l'eau",
+      "Terrasses et balcons exposés aux intempéries et à la végétation environnante : mousses, feuilles, salissures atmosphériques",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-      title: "Nettoyage professionnel en Seine-et-Marne : enjeux et spécificités",
+      title: "Le 77, un territoire à part en Île-de-France",
       image: "/images/77-seine-et-marne-residence-copropriete.webp",
-      imageAlt: "Résidence collective moderne en Seine-et-Marne avec espaces extérieurs aménagés",
+      imageAlt: "Résidence collective moderne en Seine-et-Marne avec espaces verts et parking",
       imageCaption:
-        "Copropriétés Seine-et-Marne : gestion des parties communes et coordination syndic.",
+        "Copropriétés seine-et-marnaises : des ensembles souvent récents, avec des parties communes spacieuses à maintenir.",
       html: `
         <p>
-          La <strong>Seine-et-Marne</strong> présente une configuration territoriale hétérogène : 
-          pôles urbains denses (Chelles, Meaux, Melun), zones pavillonnaires étendues, 
-          et secteurs résidentiels récents (Val d'Europe, Bussy-Saint-Georges). Cette diversité 
-          se traduit par des problématiques de nettoyage distinctes selon le type d'habitat.
+          La <strong>Seine-et-Marne</strong> n'est pas un département comme les autres en 
+          Île-de-France. C'est le plus vaste — 5 915 km², soit la moitié de la superficie 
+          régionale — et le plus contrasté : pôles urbains denses autour de Meaux, Melun ou 
+          Chelles, résidences récentes du Val d'Europe et de Bussy-Saint-Georges, vastes 
+          zones pavillonnaires dans la Brie et le Gâtinais.
         </p>
         <p class="mt-4">
-          En <strong>résidence collective</strong>, les enjeux portent sur la pérennité des 
-          interventions : moquettes de parties communes soumises à fort trafic, parkings souterrains 
-          avec traces de pneus et poussières abrasives, coordination avec syndics et gardiens pour 
-          planification optimale. Le protocole privilégie <strong>méthode reproductible</strong> 
-          et <strong>tenue dans le temps</strong>.
+          Cette géographie particulière nous a conduits à structurer notre couverture en 
+          deux grands secteurs. Le <strong>Nord-77</strong> — Meaux, Chelles, Lagny-sur-Marne, 
+          Torcy, Bussy-Saint-Georges, Val d'Europe — concentre des résidences collectives 
+          récentes avec des parties communes spacieuses et bien équipées. Le <strong>Sud-77</strong> 
+          — Melun, Savigny-le-Temple, Pontault-Combault, Sénart — mêle copropriétés urbaines 
+          et habitat pavillonnaire étendu.
         </p>
         <p class="mt-4">
-          En <strong>habitat pavillonnaire</strong>, la priorité est la qualité du rendu final : 
-          nettoyage de canapés et tapis à domicile (détachage précis, rinçage complet), 
-          décrassage de terrasses et balcons (finitions soignées, protection des évacuations). 
-          L'objectif : un résultat impeccable sur surfaces très visibles.
+          En <strong>copropriété</strong>, les enjeux portent sur la durabilité du nettoyage. 
+          Les halls et circulations subissent un trafic quotidien important ; les parkings 
+          souterrains accumulent poussières et traces de pneus. Il faut des protocoles qui 
+          tiennent dans le temps, pas des interventions cosmétiques. En <strong>pavillon</strong>, 
+          la demande est différente : nettoyage de canapés et tapis à domicile, remise en état 
+          de terrasses envahies par les mousses ou noircies par la pollution. L'avantage ? 
+          Pas de contrainte de syndic, des créneaux souples, et un accès direct à votre domicile.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Protocole d'intervention Klinova en Seine-et-Marne",
+      title: "Notre méthode, adaptée aux distances du 77",
       html: `
         <p>
-          Chaque chantier débute par un <strong>diagnostic terrain</strong> systématique : 
-          analyse du type de support (textile, dalle, béton, carrelage), évaluation du niveau 
-          d'encrassement, identification des contraintes logistiques (accès, eau, évacuation, 
-          horaires imposés). En copropriété, nous intégrons les flux de circulation et le risque 
-          de re-salissure rapide.
+          Intervenir en Seine-et-Marne, c'est d'abord maîtriser la logistique. Nous organisons 
+          nos tournées par secteur géographique pour vous proposer des créneaux réalistes sans 
+          surcoût de déplacement. Quand vous nous contactez, nous identifions votre commune et 
+          nous vous proposons un rendez-vous cohérent avec nos prochains passages dans votre zone.
         </p>
         <p class="mt-4">
-          Le <strong>protocole technique</strong> est adapté à chaque situation :
+          Chaque intervention commence par un <strong>diagnostic sur place</strong>. En 
+          copropriété, nous identifions les zones à fort trafic, le type de moquette ou de 
+          revêtement, le niveau d'encrassement et les contraintes (badges, horaires, syndic). 
+          En pavillon, nous évaluons les textiles à traiter (composition, état, taches), les 
+          surfaces extérieures (matériau de la terrasse, présence de mousses, exposition) et 
+          l'accès à l'eau.
         </p>
-        <ul class="mt-3 space-y-2 text-[#475569]">
-          <li class="flex items-start gap-3">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
-            <span><strong>Textiles</strong> : pré-aspiration, détachage ciblé, injection-extraction contrôlée, rinçage sans résidu, séchage maîtrisé</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
-            <span><strong>Parties communes</strong> : organisation par zones, signalisation, protection des abords, passes méthodiques, finitions bordures et angles</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#3F8D65] mt-2 flex-shrink-0"></span>
-            <span><strong>Parkings</strong> : gestion eau et évacuation, sécurité glissance, traitement poussières fines, respect zones techniques</span>
-          </li>
-        </ul>
         <p class="mt-4">
-          En fin d'intervention : <strong>contrôle visuel systématique</strong>, validation 
-          avec le client ou le gestionnaire, et recommandations d'entretien pour prolonger 
-          le résultat (fréquences optimales, points sensibles, protections éventuelles).
+          Le <strong>protocole de nettoyage</strong> s'adapte ensuite à chaque situation. Sur 
+          les moquettes de parties communes, nous privilégions une méthode à rendement maîtrisé : 
+          aspiration préalable, traitement mécanique zone par zone, rinçage sans résidu, séchage 
+          contrôlé. Sur les textiles à domicile (canapés, tapis, matelas), nous procédons avec 
+          plus de finesse : détachage manuel des zones critiques, extraction douce, protection 
+          du mobilier environnant.
+        </p>
+        <p class="mt-4">
+          Pour les <strong>terrasses et balcons</strong>, nous adaptons la pression et les 
+          produits au matériau (bois, pierre, composite, carrelage). L'objectif est un décrassage 
+          efficace sans risque pour les surfaces. Pour les <strong>parkings souterrains</strong>, 
+          nous gérons l'évacuation de l'eau, traitons les traces de pneus et sécurisons les 
+          zones potentiellement glissantes.
+        </p>
+        <p class="mt-4">
+          À la fin de chaque prestation, nous faisons le point avec vous. Si un détail mérite 
+          un second passage, nous le traitons sur place. Nous vous laissons également des 
+          recommandations d'entretien pour prolonger le résultat.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "Couverture Seine-et-Marne organisée en tournées <strong>Nord-77</strong> (Meaux, Chelles, Lagny, Val d'Europe) et <strong>Sud-77</strong> (Melun, Pontault-Combault, Savigny-le-Temple). Coordination anticipée des contraintes logistiques : accès résidence, badges, ascenseurs, stationnement, créneaux horaires. Temps de séchage et ventilation intégrés dès la planification pour garantir un résultat optimal.",
+    "La Seine-et-Marne est vaste, mais notre organisation en tournées Nord-77 et Sud-77 nous permet de vous proposer des créneaux réalistes. Nous anticipons les contraintes propres à chaque site : badges et coordination syndic pour les copropriétés, accès jardin et point d'eau pour les pavillons. Cette préparation en amont garantit une intervention fluide et un timing respecté, quelle que soit votre commune.",
 
   // =========================
-  // FAQ optimisée SEO + conversion
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
       question: "Quelles villes de Seine-et-Marne couvrez-vous ?",
       answer:
-        "Klinova intervient sur l'ensemble du département (77). Nos principaux secteurs incluent Meaux, Chelles, Melun, Pontault-Combault, Bussy-Saint-Georges, Serris, Lagny-sur-Marne, Savigny-le-Temple, ainsi que toutes les communes environnantes. Organisation par secteurs Nord-77 et Sud-77 pour optimiser délais et disponibilité.",
+        "Tout le département. Nos interventions les plus fréquentes ont lieu à Meaux, Chelles, Melun, Pontault-Combault, Bussy-Saint-Georges, Serris (Val d'Europe), Lagny-sur-Marne, Savigny-le-Temple, Torcy et Sénart. Notre organisation en secteurs Nord-77 et Sud-77 nous permet de couvrir aussi les communes plus éloignées avec des délais cohérents.",
     },
     {
-      question: "Quel délai de séchage pour une moquette nettoyée par injection-extraction ?",
+      question: "Comment gérez-vous les distances dans un département aussi vaste ?",
       answer:
-        "Le séchage dépend de plusieurs facteurs : épaisseur de la moquette, température ambiante, ventilation, taux d'humidité. En conditions standards, le séchage complet s'étale sur 6 à 12 heures. Notre méthode limite l'eau résiduelle (extraction poussée, passes contrôlées) et nous vous fournissons des consignes de ventilation précises.",
+        "Nous structurons nos tournées par zones géographiques. Quand vous nous contactez, nous identifions votre secteur et nous vous proposons un créneau cohérent avec nos prochains passages. Cette organisation nous permet de maintenir des délais raisonnables sans surcoût de déplacement.",
     },
     {
-      question: "Pouvez-vous traiter les odeurs tenaces sur canapés et matelas ?",
+      question: "Quel est le délai de séchage après un nettoyage de moquette ?",
       answer:
-        "Oui, dans la majorité des cas. L'efficacité dépend de la nature de l'odeur (animaux, tabac, humidité) et de sa profondeur dans les mousses. Notre protocole combine détachage ciblé, extraction en profondeur, rinçage complet et désodorisation adaptée. Diagnostic préalable systématique pour définir la méthode optimale.",
+        "En conditions normales, comptez 6 à 12 heures selon l'épaisseur de la moquette et la ventilation du lieu. Notre méthode limite l'eau résiduelle (extraction poussée, passes contrôlées) pour accélérer le séchage. Nous vous donnons des consignes précises de ventilation à la fin de l'intervention.",
     },
     {
-      question: "Comment organisez-vous le nettoyage des parties communes en copropriété ?",
+      question: "Pouvez-vous traiter les odeurs sur canapés et matelas ?",
       answer:
-        "Intervention planifiée avec le syndic ou le gardien : définition des zones (halls, paliers, couloirs, escaliers), ordre de passage logique pour limiter gêne résidents, signalisation claire, protection zones sensibles. Objectif : résultat homogène, finitions soignées (bordures, angles), circulation maintenue dans la mesure du possible.",
+        "Dans la plupart des cas, oui. L'efficacité dépend de la nature de l'odeur (animaux, tabac, humidité) et de sa profondeur dans les mousses. Notre protocole combine extraction en profondeur, rinçage complet et désodorisation adaptée. Un diagnostic préalable nous permet de vous dire ce qui est réalisable.",
     },
     {
-      question: "Intervenez-vous dans les parkings souterrains de copropriété ?",
+      question: "Comment se passe le nettoyage des parties communes en copropriété ?",
       answer:
-        "Oui. Les parkings nécessitent un protocole spécifique : gestion eau et évacuation, traitement poussières fines et traces de pneus, sécurisation (glissance, signalisation), respect des zones techniques et contraintes de ventilation. Méthode adaptée à la surface, au niveau d'encrassement et à la configuration du site.",
+        "Nous coordonnons avec le syndic ou le gardien pour définir les zones à traiter (halls, paliers, couloirs, escaliers), l'ordre de passage et les horaires. L'objectif : un résultat homogène avec des finitions soignées (bordures, angles), tout en maintenant la circulation dans l'immeuble autant que possible.",
     },
     {
-      question: "Quelle préparation avant votre intervention ?",
+      question: "Intervenez-vous dans les parkings souterrains ?",
       answer:
-        "Selon la prestation : dégager les accès, libérer les surfaces à traiter (déplacer meubles légers pour textiles), prévoir un accès eau/électricité si nécessaire, communiquer contraintes logistiques (badges, horaires, stationnement). Nous vous transmettons une checklist simple lors de la confirmation du rendez-vous.",
+        "Oui, c'est une prestation courante en copropriété. Nous traitons les zones de circulation, les places de stationnement et les rampes d'accès. Le protocole inclut la gestion de l'eau et de l'évacuation, le traitement des traces de pneus et la sécurisation des zones potentiellement glissantes.",
+    },
+    {
+      question: "Quelle préparation avant votre venue ?",
+      answer:
+        "Cela dépend de la prestation. Pour les textiles à domicile : dégagez les accès et, si possible, déplacez les meubles légers autour du canapé ou du tapis. Pour les terrasses : retirez pots et mobilier de jardin. Nous vous envoyons une checklist simple lors de la confirmation du rendez-vous.",
+    },
+    {
+      question: "Combien coûte un nettoyage de moquette en Seine-et-Marne ?",
+      answer:
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
     },
   ],
 
   // =========================
-  // Liens internes (villes principales)
+  // Liens internes (villes principales par secteur)
   // =========================
-
-
+ 
 
   // =========================
-  // SEO (title/description optimisés)
+  // SEO (title/description optimisés pour CTR)
   // =========================
   seo: {
-    title: "Nettoyage Professionnel Seine-et-Marne (77) | Entreprise Klinova",
+    title: "Nettoyage Moquettes, Canapés & Terrasses en Seine-et-Marne (77) | Klinova",
     description:
-      "Entreprise de nettoyage Seine-et-Marne : moquettes copropriété, canapés & tapis domicile, parkings, balcons. Intervention Nord-77 / Sud-77. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
+      "Entreprise de nettoyage en Seine-et-Marne : moquettes copropriété, canapés et tapis à domicile, parkings, terrasses. Meaux, Melun, Chelles, Val d'Europe. Devis 24h. ☎ 06 76 73 86 61",
   },
 };
