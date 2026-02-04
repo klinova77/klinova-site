@@ -19,9 +19,9 @@ const city: City = {
 
   citySpecificChallenges: [
     "Encrassement noir des façades et balcons lié aux particules fines du trafic dense de la RN3.",
-    "Développement accéléré de mousses et lichens sur les terrasses dans les secteurs plus humides proches du Canal de l'Ourcq.",
+    "<strong>Développement accéléré de mousses et lichens</strong> sur les terrasses dans les secteurs plus humides proches du Canal de l'Ourcq.",
     "Poussières de chantier dans les secteurs en rénovation du Vieux-Pays qui s'incrustent dans les moquettes d'entrée.",
-    "Sols de parkings souterrains marqués par les hydrocarbures et la gomme dans les résidences à forte rotation pendulaire autour des gares.",
+    "Sols de parkings souterrains marqués par <strong>les hydrocarbures et la gomme</strong> dans les résidences à forte rotation pendulaire autour des gares.",
   ],
 
   districts: [
@@ -176,7 +176,7 @@ const city: City = {
 
       specificChallenges: [
         "Rotation intense des véhicules pendulaires (proximité RER B) : phasage strict pour traiter sans libérer totalement les plateaux.",
-        "Pollution atmosphérique liée à la RN3 : dépôt constant de particules grasses noires sur sols, murs et zones d'éclairage.",
+        "Pollution atmosphérique liée à la RN3 : <strong>dépôt constant de particules grasses noires</strong> sur sols, murs et zones d'éclairage.",
         "Dans certains parkings plus anciens : ventilation limitée, gestion rigoureuse du séchage et des circulations pendant l'intervention.",
       ],
 
@@ -232,7 +232,7 @@ const city: City = {
 
       specificChallenges: [
         "Proximité de la RN3 : dépôt régulier de pollution noire et grasse sur sols, garde-corps et mobilier extérieur.",
-        "Humidité liée au Canal de l'Ourcq favorisant le retour des mousses sur balcons exposées au nord ou ombragées.",
+        "Humidité liée au Canal de l'Ourcq favorisant <strong>le retour des mousses</strong> sur balcons exposées au nord ou ombragées.",
         "Dans le quartier rénové du Vieux-Pays, évacuations parfois sensibles nécessitant une aspiration systématique des eaux de lavage.",
       ],
 
@@ -392,13 +392,13 @@ const city: City = {
       uniqueIntro:
         "<p>À Villeparisis, commune traversée par le canal de l'Ourcq et située à proximité du parc forestier de la Poudrerie, les terrasses des maisons individuelles subissent des conditions propices à l'encrassement. L'humidité ambiante liée à la présence d'eau et d'espaces boisés favorise le développement de mousses, algues et traces verdâtres sur les revêtements extérieurs.</p>\n\n<p class=\"mt-4\">Dans les secteurs pavillonnaires comme le Vieux-Pays, Boisparisis ou les lotissements proches du centre, les terrasses présentent des matériaux variés selon l'époque de construction. Les <strong>dalles béton</strong> des pavillons édifiés dans les années 80-90 côtoient les carrelages grès cérame des aménagements plus récents, chacun avec ses contraintes spécifiques de nettoyage.</p>\n\n<p class=\"mt-4\">L'examen préalable du support détermine la méthode appropriée : type de produit, intensité du brossage et pression de rinçage sont calibrés pour obtenir un résultat optimal sans fragiliser le revêtement ni ses joints.</p>",
       uniqueDeepDive:
-        "<h3>Inspection et mise en protection</h3>\n<p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire feuilles, terre et débris accumulés avant toute application de produit.</p>\n\n<h3>Traitement et action mécanique</h3>\n<p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>\n\n<h3>Application préventive et recommandations</h3>\n<p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>",
+        "<h3>Inspection et mise en protection</h3>\n<p>Salon de jardin, bacs à plantes et objets décoratifs sont écartés ou recouverts. Les seuils de baies vitrées et les façades adjacentes reçoivent une protection pour éviter les projections. Un balayage soigné retire <strong>feuilles, terre et débris accumulés</strong> avant toute application de produit.</p>\n\n<h3>Traitement et action mécanique</h3>\n<p>Le produit nettoyant est choisi en fonction du matériau : solution alcaline pour béton et carrelage minéral, formule neutre pour bois et composite. Un brossage manuel ou mécanisé déloge les dépôts biologiques installés dans les pores et les joints. Le rinçage intervient à pression maîtrisée pour évacuer les résidus sans endommager la surface.</p>\n\n<h3>Application préventive et recommandations</h3>\n<p>Les zones les plus sujettes à l'humidité ou à l'ombre reçoivent un traitement anti-mousse qui freine la recolonisation. L'eau est évacuée vers les points de drainage existants ou le jardin. Des conseils d'entretien courant sont communiqués pour prolonger le résultat obtenu.</p>",
       specificChallenges: [
         "Dalles béton des pavillons années 80-90 : porosité variable, joints parfois dégradés par les cycles gel-dégel.",
         "Carrelage grès cérame texturé : salissures incrustées dans les micro-reliefs nécessitant un brossage appuyé.",
         "Terrasses bois ou composite des rénovations récentes : sensibilité aux détergents agressifs et à la haute pression.",
-        "Proximité du canal de l'Ourcq et du parc de la Poudrerie : humidité persistante accélérant le développement des mousses.",
-        "Terrasses de plain-pied avec accès direct au jardin : gestion de l'écoulement pour éviter le ruissellement vers les plantations.",
+        "Proximité du canal de l'Ourcq et du parc de la Poudrerie : <strong>humidité persistante</strong> accélérant le développement des mousses.",
+        "Terrasses de plain-pied avec accès direct au jardin : <strong>gestion de l'écoulement</strong> pour éviter le ruissellement vers les plantations.",
       ],
       faqAdditions: [
         {
@@ -423,7 +423,7 @@ const city: City = {
           question:
             "Combien de temps faut-il attendre avant de remettre le mobilier sur la terrasse après le nettoyage ?",
           answer:
-            "<p>Le temps de séchage varie selon le matériau et les conditions météo. En général, quelques heures suffisent pour un carrelage ou du béton par temps sec. Pour le bois composite, une demi-journée permet d'éviter toute marque. Nous vous indiquons le délai précis en fin d'intervention.</p>",
+            "<p><strong>Le temps de séchage varie selon le matériau</strong> et les conditions météo. En général, quelques heures suffisent pour un carrelage ou du béton par temps sec. Pour le bois composite, une demi-journée permet d'éviter toute marque. Nous vous indiquons le délai précis en fin d'intervention.</p>",
         },
       ],
       ctaOverride: "",
@@ -442,18 +442,18 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>À Villeparisis, les demandes de nettoyage “appartement/maison” reviennent souvent dans trois scénarios : une remise en état avant état des lieux, un grand ménage après déménagement, ou un nettoyage après travaux légers. Le profil de la commune est contrasté : Vieux-Pays et rues plus resserrées d’un côté, secteurs en collectif plus dense comme La Plaine et Renouveau de l’autre, et un pavillonnaire très étendu à Bois-Fleuri. Cette diversité oblige à raisonner en organisation et en méthode, pas uniquement en “surface”.</p>\n<p class="mt-4">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>\n<p class="mt-4">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>',
+        "<p>À Villeparisis, les demandes de nettoyage “appartement/maison” reviennent souvent dans trois scénarios : une remise en état avant état des lieux, un grand ménage après déménagement, ou un nettoyage après travaux légers. Le profil de la commune est contrasté : Vieux-Pays et rues plus resserrées d’un côté, secteurs en collectif plus dense comme La Plaine et Renouveau de l’autre, et un pavillonnaire très étendu à Bois-Fleuri. Cette diversité oblige à raisonner en <strong>organisation et en méthode</strong>, pas uniquement en “surface”.</p>\n<p class=\"mt-4\">Le pôle gare Villeparisis–Mitry (RER B) et les axes routiers proches (RN3, A104) créent un environnement où les salissures reviennent vite sur certains points : vitrages bas, rebords, balcons et entrées. Sur les maisons, on retrouve aussi des configurations typiques : Velux, escaliers, couloirs, et parfois vérandas ou grandes baies qui rendent les traces immédiatement visibles. En collectif, l’accès (digicode/badge) et la circulation du matériel comptent autant que le nettoyage lui-même.</p>\n<p class=\"mt-4\">L’objectif de l’intervention est d’obtenir un résultat net et “cohérent” : pas de zones oubliées, pas de voile sur les sols, et des pièces d’eau réellement propres (robinetterie, parois, joints) sans abîmer les surfaces. C’est ce qui fait la différence entre un logement juste “rangé” et un logement prêt pour un état des lieux, une vente ou une relocation.</p>",
 
       uniqueDeepDive:
         "<h3>Gare RER B / Mail de l’Ourcq — accès, rotations et finitions visibles</h3>\n<p>Dans le secteur gare et les résidences récentes, on anticipe surtout la logistique : <strong>badge/digicode, stationnement plus serré</strong>, et interventions à caler sur des créneaux fluides. On vise un rendu homogène : sols sans traces, cuisine et salle d’eau traitées sérieusement, et contrôle des points qui se voient tout de suite (plinthes, bas de portes, poignées).</p>\n\n<h3>Vieux-Pays — bâti plus ancien et circulation plus contrainte</h3>\n<p>Le centre historique impose souvent des accès plus étroits et des escaliers qui ralentissent les allers-retours. On travaille alors de façon séquencée : <strong>dépoussiérage complet, dégraissage cuisine</strong>, salle d’eau et traitements calcaire, puis sols et finitions. Le but : éviter les reprises et les “manques” typiques des logements anciens (rebords, radiateurs, encadrements).</p>\n\n<h3>Bois-Fleuri — pavillons, volumes et vitrages marqués par la voirie</h3>\n<p>En pavillonnaire, la difficulté est l’étendue : plusieurs pièces, parfois plusieurs niveaux, et des vitrages qui marquent vite. On recherche l’uniformité : <strong>poussière extraite des angles</strong>, sols nets sans voile, et pièces d’eau propres sur la durée. Les abords RN3/A104 rendent aussi les traces plus visibles sur les fenêtres et surfaces proches de l’extérieur.</p>",
 
       specificChallenges: [
-        "Secteur gare Villeparisis–Mitry (RER B) : stationnement plus tendu et accès immeubles à anticiper (digicode/badge).",
+        "Secteur gare Villeparisis–Mitry (RER B) : <strong>stationnement plus tendu</strong> et accès immeubles à anticiper (digicode/badge).",
         "RN3 / A104 : poussières de voirie et traces de pollution sur vitrages bas, rebords et balcons.",
-        "Calcaire (77) : robinetterie, parois et joints qui marquent vite si le traitement n’est pas cadré.",
+        "Calcaire (77) : <strong>robinetterie, parois et joints qui marquent vite</strong> si le traitement n’est pas cadré.",
         "Vieux-Pays : rues plus étroites et escaliers qui compliquent la logistique et imposent une intervention bien séquencée.",
         "Bois-Fleuri : volumes pavillonnaires, Velux/escaliers, finitions à homogénéiser sur plusieurs niveaux.",
-        "Collectifs denses (La Plaine / Renouveau) : circulation du matériel et contrôle final indispensables pour un rendu “état des lieux”.",
+        "Collectifs denses (La Plaine / Renouveau) : <strong>circulation du matériel et contrôle final</strong> indispensables pour un rendu “état des lieux”.",
       ],
 
       faqAdditions: [
@@ -467,7 +467,7 @@ const city: City = {
           question:
             "Pouvez-vous faire un nettoyage après travaux (poussières fines) ?",
           answer:
-            "<p>Oui. Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne : surfaces/menusieries d’abord, sols ensuite, puis contrôle des rebords, angles et pièces d’eau. Cela évite le “voile” sur les sols et les reprises visibles.</p>",
+            "<p>Oui. Après travaux, on intervient en <strong>plusieurs passes</strong> pour éviter que la poussière revienne : surfaces/menusieries d’abord, sols ensuite, puis contrôle des rebords, angles et pièces d’eau. Cela évite le “voile” sur les sols et les reprises visibles.</p>",
         },
         {
           question:

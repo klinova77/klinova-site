@@ -138,13 +138,13 @@ const city: City = {
           question:
             "Près du RER A, combien de temps faut-il prévoir avant de réutiliser un couloir moquetté ?",
           answer:
-            "<p>Le séchage dépend de l’épaisseur, de la ventilation et de la méthode. En zone très passante (accès RER), on privilégie une extraction puissante et, si pertinent, une approche basse humidité. L’objectif est de retrouver un passage praticable rapidement, sans promettre un délai identique dans tous les bâtiments.</p>",
+            "<p>Le séchage dépend de l’épaisseur, de la ventilation et de la méthode. En zone très passante (accès RER), on privilégie <strong>une extraction puissante</strong> et, si pertinent, une approche basse humidité. L’objectif est de retrouver un passage praticable rapidement, sans promettre un délai identique dans tous les bâtiments.</p>",
         },
         {
           question:
             "Dans les immeubles proches du centre, à quelle fréquence faut-il entretenir les moquettes de hall ?",
           answer:
-            "<p>Quand l’entrée est sollicitée quotidiennement, un entretien régulier évite l’encrassement profond. On ajuste selon la salissure réelle : zones d’entrée, paliers, angles. Autour des axes et commerces, la poussière fine se fixe plus vite : une fréquence plus rapprochée peut être utile pour garder un rendu constant.</p>",
+            "<p>Quand l’entrée est sollicitée quotidiennement, un entretien régulier évite <strong>l’encrassement profond</strong>. On ajuste selon la salissure réelle : zones d’entrée, paliers, angles. Autour des axes et commerces, la poussière fine se fixe plus vite : une fréquence plus rapprochée peut être utile pour garder un rendu constant.</p>",
         },
         {
           question:
@@ -176,21 +176,21 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>Un parking qui s’encrasse finit par cumuler plusieurs problèmes : poussière noire grasse, traces d’huile, zones glissantes sur les rampes, et pieds de murs marqués. Sur Neuilly-Plaisance, ces situations se renforcent souvent au contact des axes comme la <strong>N34</strong>, où les particules se déposent plus vite et noircissent les circulations. Dans des ensembles comme les parkings souterrains de la <strong>ZAC des Renardières</strong>, la profondeur des sous-sols et les accès contrôlés imposent une organisation millimétrée : sans zonage, on gêne les usagers et on perd du temps.</p>\n<p class="mt-4">Klinova réalise le <strong>nettoyage parking Neuilly-Plaisance</strong> avec une logique B2B : diagnostic du revêtement (béton, résine, peinture), plan de circulation, balisage, puis lavage mécanisé à l’autolaveuse et dégraissages ciblés sur les zones critiques. On vise un rendu plus propre et plus lisible, en limitant les reprises, et en gardant une traçabilité simple pour les gestionnaires qui le demandent.</p>',
+        "<p>Un parking qui s’encrasse finit par cumuler plusieurs problèmes : poussière noire grasse, traces d’huile, zones glissantes sur les rampes, et pieds de murs marqués. Sur Neuilly-Plaisance, ces situations se renforcent souvent au contact des axes comme la <strong>N34</strong>, où les particules se déposent plus vite et noircissent les circulations. Dans des ensembles comme les parkings souterrains de la <strong>ZAC des Renardières</strong>, la profondeur des sous-sols et les accès contrôlés imposent une organisation millimétrée : sans zonage, on gêne les usagers et on perd du temps.</p>\n<p class=\"mt-4\">Klinova réalise le nettoyage parking Neuilly-Plaisance avec une logique B2B : diagnostic du revêtement (béton, résine, peinture), plan de circulation, balisage, puis lavage mécanisé à l’autolaveuse et dégraissages ciblés sur les zones critiques. On vise un rendu plus propre et plus lisible, en limitant les reprises, et en gardant une traçabilité simple pour les gestionnaires qui le demandent.</p>",
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        '<p><strong>Objectif visé :</strong> un sol décrassé, plus lisible, avec zones critiques traitées et remise en circulation progressive. On commence par le diagnostic (revêtement, pentes, évacuations) et un balayage préparatoire.</p>\n<p class="mt-4"><strong>Méthode :</strong> zonage du parking et <strong>balisage sécurisé</strong>, organisation de la rotation des véhicules si nécessaire. Lavage à l’<strong>autolaveuse</strong> (brossage + aspiration simultanés) et, selon l’état, haute pression contrôlée + dégraissant professionnel sur taches d’huile/essence, rampes, angles, rigoles.</p>\n<p class="mt-4"><strong>Contrôles & eaux de lavage :</strong> gestion stricte des eaux (collecte/évacuation selon configuration), finitions sur pieds de murs et zones d’accès. On clôture par une vérification des zones glissantes et des recommandations de fréquence selon trafic.</p>',
+        "<p><strong>Objectif visé :</strong> un sol décrassé, plus lisible, avec zones critiques traitées et remise en circulation progressive. On commence par le diagnostic (revêtement, pentes, évacuations) et un balayage préparatoire.</p>\n<p class=\"mt-4\">Méthode : zonage du parking et balisage sécurisé, organisation de la rotation des véhicules si nécessaire. Lavage à l’autolaveuse (brossage + aspiration simultanés) et, selon l’état, haute pression contrôlée + dégraissant professionnel sur taches d’huile/essence, rampes, angles, rigoles.</p>\n<p class=\"mt-4\">Contrôles & eaux de lavage : gestion stricte des eaux (collecte/évacuation selon configuration), finitions sur pieds de murs et zones d’accès. On clôture par une vérification des zones glissantes et des recommandations de fréquence selon trafic.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Poussière noire plus marquée près de la N34 : encrassement rapide des circulations.",
-        "Parkings profonds : logistique et temps de séchage à cadrer par zones.",
+        "Poussière noire plus marquée près de la N34 : <strong>encrassement rapide des circulations</strong>.",
+        "Parkings profonds : <strong>logistique et temps de séchage</strong> à cadrer par zones.",
         "Rampes et zones inclinées : risque de glissance, traitement méthodique obligatoire.",
         "Traces d’huile anciennes : dégraissage ciblé avant lavage mécanisé.",
         "Accès contrôlés : coordination badges/digicodes pour éviter les ruptures de chantier.",
@@ -213,13 +213,13 @@ const city: City = {
           question:
             "Y a-t-il une différence de méthode entre un parking souterrain et un parking aérien dans le secteur N34 ?",
           answer:
-            "<p>Oui, surtout sur la gestion des eaux, l’aération et le séchage. En souterrain, on privilégie le lavage mécanisé à l’autolaveuse et des dégraissages ciblés, avec une organisation par zones. En aérien, la haute pression contrôlée peut être plus simple selon les évacuations et la configuration.</p>",
+            "<p>Oui, surtout sur <strong>la gestion des eaux</strong>, l’aération et le séchage. En souterrain, on privilégie le lavage mécanisé à l’autolaveuse et des dégraissages ciblés, avec une organisation par zones. En aérien, la haute pression contrôlée peut être plus simple selon les évacuations et la configuration.</p>",
         },
         {
           question:
             "Le nettoyage parking Neuilly-Plaisance nécessite-t-il une fermeture totale ?",
           answer:
-            "<p>Pas forcément. Quand le plan de circulation le permet, on travaille par secteurs avec des fermetures partielles et une remise en service progressive. En revanche, sur certaines rampes ou zones critiques, une neutralisation temporaire est nécessaire pour traiter correctement et laisser le sol reprendre une adhérence normale.</p>",
+            "<p>Pas forcément. Quand le plan de circulation le permet, on travaille par secteurs avec <strong>des fermetures partielles</strong> et une remise en service progressive. En revanche, sur certaines rampes ou zones critiques, une neutralisation temporaire est nécessaire pour traiter correctement et laisser le sol reprendre une adhérence normale.</p>",
         },
       ],
       ctaOverride: "",
@@ -245,7 +245,7 @@ const city: City = {
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        '<p><strong>Zone 1 — Préparation & protections.</strong> Protection des menuiseries, bâchage si nécessaire, mise à l’abri du mobilier et des plantes. Retrait des gros dépôts (terre, feuilles) et repérage des zones fragiles (joints, angles, supports sensibles).</p>\n<p class="mt-4"><strong>Zone 2 — Sols & joints.</strong> Application d’un produit adapté (carrelage, béton, dalles sur plots), brossage contrôlé et rinçage. Pression ajustée si haute pression utilisée, sinon brossage renforcé en manuel pour préserver les joints.</p>\n<p class="mt-4"><strong>Zone 3 — Garde-corps & finitions.</strong> Traitement des coulures, nettoyage des murs mitoyens si concernés, puis gestion de l’eau anti-coulures (récupération, rinçage maîtrisé). Séchage et conseils d’entretien selon l’exposition et l’humidité locale.</p>',
+        "<p><strong>Zone 1 — Préparation & protections.</strong> Protection des menuiseries, bâchage si nécessaire, mise à l’abri du mobilier et des plantes. Retrait des gros dépôts (terre, feuilles) et repérage des zones fragiles (joints, angles, supports sensibles).</p>\n<p class=\"mt-4\">Zone 2 — Sols & joints. Application d’un produit adapté (carrelage, béton, dalles sur plots), brossage contrôlé et rinçage. Pression ajustée si haute pression utilisée, sinon brossage renforcé en manuel pour préserver les joints.</p>\n<p class=\"mt-4\">Zone 3 — Garde-corps & finitions. Traitement des coulures, nettoyage des murs mitoyens si concernés, puis gestion de l’eau anti-coulures (récupération, rinçage maîtrisé). Séchage et conseils d’entretien selon l’exposition et l’humidité locale.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
@@ -276,7 +276,7 @@ const city: City = {
           question:
             "Dans un immeuble ancien avec accès étroit, comment intervenez-vous sans compliquer la circulation ?",
           answer:
-            "<p>On prépare un passage compact et on limite le matériel au strict nécessaire, avec une intervention par zones. Dans les accès étroits, la gestion de l’eau et du rinçage est essentielle : on protège, on contrôle les écoulements et on laisse un séchage compatible avec le retour à l’usage du balcon.</p>",
+            "<p>On prépare <strong>un passage compact</strong> et on limite le matériel au strict nécessaire, avec une intervention par zones. Dans les accès étroits, la gestion de l’eau et du rinçage est essentielle : on protège, on contrôle les écoulements et on laisse un séchage compatible avec le retour à l’usage du balcon.</p>",
         },
       ],
       ctaOverride: "",
@@ -296,21 +296,21 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>On reconnaît tout de suite un balcon touché par les pigeons : fientes accumulées, odeur tenace, traces qui “mordent” le support, et une appréhension à rouvrir la porte-fenêtre. À Neuilly-Plaisance, certaines zones proches du <strong>Parc des Côteaux d’Avron</strong> concentrent davantage de présence d’oiseaux, et les points d’appui en hauteur aggravent le phénomène. Sur des immeubles avec corniches et rebords, comme sur le secteur de la <strong>Voie Lambert</strong>, les dépôts peuvent se fixer durablement si rien n’est fait.</p>\n<p class="mt-4">La priorité n’est pas seulement de “retirer” : il faut éviter la dispersion de poussières, protéger l’intérieur et le voisinage, puis <strong>désinfecter</strong> correctement. Klinova intervient avec EPI, confinement, humidification préalable, évacuation en sacs étanches, nettoyage des supports et finitions (garde-corps, murs mitoyens si concernés). Le <strong>nettoyage fientes pigeons Neuilly-Plaisance</strong> vise un balcon de nouveau utilisable, avec un assainissement sérieux et un rendu cohérent avec l’état du support.</p>',
+        "<p>On reconnaît tout de suite un balcon touché par les pigeons : fientes accumulées, odeur tenace, traces qui “mordent” le support, et une appréhension à rouvrir la porte-fenêtre. À Neuilly-Plaisance, certaines zones proches du <strong>Parc des Côteaux d’Avron</strong> concentrent davantage de présence d’oiseaux, et les points d’appui en hauteur aggravent le phénomène. Sur des immeubles avec corniches et rebords, comme sur le secteur de la <strong>Voie Lambert</strong>, les dépôts peuvent se fixer durablement si rien n’est fait.</p>\n<p class=\"mt-4\">La priorité n’est pas seulement de “retirer” : il faut éviter la dispersion de poussières, protéger l’intérieur et le voisinage, puis désinfecter correctement. Klinova intervient avec EPI, confinement, humidification préalable, évacuation en sacs étanches, nettoyage des supports et finitions (garde-corps, murs mitoyens si concernés). Le nettoyage fientes pigeons Neuilly-Plaisance vise un balcon de nouveau utilisable, avec un assainissement sérieux et un rendu cohérent avec l’état du support.</p>",
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        '<p><strong>Problème : dispersion & risques.</strong> Mise en place des EPI (FFP2 minimum, gants, lunettes, combinaison) et <strong>confinement</strong> de la zone (bâchage, protections) pour éviter la propagation vers l’intérieur et les voisins.</p>\n<p class="mt-4"><strong>Solution : retrait + nettoyage maîtrisé.</strong> Humidification préalable pour neutraliser les poussières, ramassage et conditionnement en sacs étanches. Nettoyage des supports (sol, rebords, angles) et des éléments associés (garde-corps, surfaces verticales) avec une action mécanique contrôlée.</p>\n<p class="mt-4"><strong>Final : désinfection & remise en usage.</strong> Application d’un désinfectant virucide/bactéricide avec temps de contact, rinçage si nécessaire, aération et consignes avant réutilisation. Optionnel : recommandations de dissuasion (pics/filets) selon configuration.</p>',
+        "<p><strong>Problème : dispersion & risques.</strong> Mise en place des EPI (FFP2 minimum, gants, lunettes, combinaison) et confinement de la zone (bâchage, protections) pour éviter la propagation vers l’intérieur et les voisins.</p>\n<p class=\"mt-4\">Solution : retrait + nettoyage maîtrisé. Humidification préalable pour neutraliser les poussières, ramassage et conditionnement en sacs étanches. Nettoyage des supports (sol, rebords, angles) et des éléments associés (garde-corps, surfaces verticales) avec une action mécanique contrôlée.</p>\n<p class=\"mt-4\">Final : désinfection & remise en usage. Application d’un désinfectant virucide/bactéricide avec temps de contact, rinçage si nécessaire, aération et consignes avant réutilisation. Optionnel : recommandations de dissuasion (pics/filets) selon configuration.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Secteurs proches du Parc des Côteaux d’Avron : retours possibles sans prévention.",
-        "Corniches et rebords (ex. Voie Lambert) : dépôts fixés et accès délicat.",
+        "Secteurs proches du Parc des Côteaux d’Avron : <strong>retours possibles sans prévention</strong>.",
+        "Corniches et rebords (ex. Voie Lambert) : <strong>dépôts fixés et accès délicat</strong>.",
         "Humidité : odeurs plus persistantes et supports plus sensibles.",
         "Confinement nécessaire : éviter la dispersion vers l’intérieur et le voisinage.",
         "Désinfection : respect du temps de contact pour un assainissement sérieux.",
@@ -333,13 +333,13 @@ const city: City = {
           question:
             "Près des bords plus humides, comment traitez-vous les odeurs et les traces sur le support ?",
           answer:
-            "<p>Après le retrait et le nettoyage, la désinfection est indispensable. Elle aide à neutraliser une partie des odeurs et à assainir les surfaces. Sur les supports poreux, certaines traces peuvent rester visibles selon l’ancienneté : on vise une propreté obtenue cohérente avec l’état initial, avec finitions sur rebords et garde-corps.</p>",
+            "<p>Après le retrait et le nettoyage, <strong>la désinfection est indispensable</strong>. Elle aide à neutraliser une partie des odeurs et à assainir les surfaces. Sur les supports poreux, certaines traces peuvent rester visibles selon l’ancienneté : on vise une propreté obtenue cohérente avec l’état initial, avec finitions sur rebords et garde-corps.</p>",
         },
         {
           question:
             "Si le balcon est inutilisable, sous quels délais peut-on retrouver un usage normal près du Parc des Côteaux d’Avron ?",
           answer:
-            "<p>On peut souvent rétablir un usage rapidement, mais le délai dépend de la quantité de dépôts, du support et de l’aération. Le plus important est de respecter la phase de désinfection (temps de contact) puis l’aération. On donne des consignes simples pour revenir à un usage confortable sans précipiter les étapes.</p>",
+            "<p>On peut souvent rétablir un usage rapidement, mais le délai dépend de la quantité de dépôts, du support et de l’aération. Le plus important est de respecter <strong>la phase de désinfection</strong> (temps de contact) puis l’aération. On donne des consignes simples pour revenir à un usage confortable sans précipiter les étapes.</p>",
         },
       ],
       ctaOverride: "",
@@ -365,15 +365,15 @@ const city: City = {
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        '<p>1) <strong>Diagnostic textile & taches.</strong> Identification du tissu (coton, synthétique, velours, laine) et des risques (dégorgement, fragilité), repérage des taches (café, vin, encre, sébum, urine) et des odeurs.</p>\n<p class="mt-4">2) <strong>Pré-traitement ciblé.</strong> Détachage enzymatique ou adapté selon la nature de la tache, travail localisé avant le nettoyage complet, pour éviter d’étaler la salissure et améliorer le rendu final.</p>\n<p class="mt-4">3) <strong>Injection-extraction & séchage.</strong> Nettoyage profond par injection-extraction, aspiration maximale et contrôle des zones sensibles. Consignes simples de séchage (aération, usage progressif) et recommandations de fréquence selon vie de famille et présence d’animaux.</p>',
+        "<p><strong>1) Diagnostic textile & taches.</strong> Identification du tissu (coton, synthétique, velours, laine) et des risques (dégorgement, fragilité), repérage des taches (café, vin, encre, sébum, urine) et des odeurs.</p>\n<p class=\"mt-4\">2) Pré-traitement ciblé. Détachage enzymatique ou adapté selon la nature de la tache, travail localisé avant le nettoyage complet, pour éviter d’étaler la salissure et améliorer le rendu final.</p>\n<p class=\"mt-4\">3) Injection-extraction & séchage. Nettoyage profond par injection-extraction, aspiration maximale et contrôle des zones sensibles. Consignes simples de séchage (aération, usage progressif) et recommandations de fréquence selon vie de famille et présence d’animaux.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Vie de famille à Bel-Air : taches récurrentes et poussières incrustées dans les fibres.",
-        "Autour de l’Avenue du Maréchal Joffre : tapis d’entrée vite marqués par les passages.",
+        "Vie de famille à Bel-Air : <strong>taches récurrentes</strong> et poussières incrustées dans les fibres.",
+        "Autour de l’Avenue du Maréchal Joffre : <strong>tapis d’entrée vite marqués</strong> par les passages.",
         "Acariens/allergènes : besoin d’un nettoyage profond et d’une aspiration efficace.",
         "Odeurs (animaux, cuisine) : neutralisation selon textile et état d’imprégnation.",
         "Taches anciennes (café, encre, gras) : pré-traitement indispensable avant extraction.",
@@ -384,7 +384,7 @@ const city: City = {
           question:
             "Dans un logement familial à Bel-Air, le nettoyage aide-t-il vraiment sur les allergènes et acariens ?",
           answer:
-            "<p>Oui, surtout quand on réalise un nettoyage profond avec aspiration puissante. L’injection-extraction retire une partie importante des poussières et salissures incrustées qui nourrissent les allergènes. On complète avec des consignes de séchage et, selon le contexte (enfants, asthme), on adapte la méthode pour un usage plus confortable.</p>",
+            "<p>Oui, surtout quand on réalise <strong>un nettoyage profond</strong> avec aspiration puissante. L’injection-extraction retire une partie importante des poussières et salissures incrustées qui nourrissent les allergènes. On complète avec des consignes de séchage et, selon le contexte (enfants, asthme), on adapte la méthode pour un usage plus confortable.</p>",
         },
         {
           question:
@@ -402,7 +402,7 @@ const city: City = {
           question:
             "Avec des rues en pente vers Avron, comment organisez-vous l’intervention et le séchage sans gêner l’accès ?",
           answer:
-            "<p>On vient avec un dispositif compact et on sécurise l’installation dès l’arrivée. Sur place, on limite les allers-retours, on protège les zones de passage, puis on donne des consignes d’aération simples. Le temps de remise en usage dépend du textile et de l’épaisseur, mais on vise toujours un séchage maîtrisé.</p>",
+            "<p>On vient avec <strong>un dispositif compact</strong> et on sécurise l’installation dès l’arrivée. Sur place, on limite les allers-retours, on protège les zones de passage, puis on donne des consignes d’aération simples. Le temps de remise en usage dépend du textile et de l’épaisseur, mais on vise toujours un séchage maîtrisé.</p>",
         },
       ],
       ctaOverride: "",
@@ -418,13 +418,13 @@ const city: City = {
         "Prestation haut de gamme et minutieuse : protection du mobilier, respect des façades et nettoyage précis pour un rendu esthétique immédiat.",
       ],
       uniqueIntro:
-        '<p><strong>Neuilly-Plaisance</strong>, commune résidentielle appréciée de l’est parisien, séduit par son cadre verdoyant et ses quartiers pavillonnaires bien entretenus, notamment le long des <strong>bords de Marne</strong>. Les terrasses y occupent une place centrale dans l’aménagement et la valorisation des extérieurs.</p>\n\n<p class="mt-4">La proximité de l’eau, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, même dans des environnements résidentiels soignés.</p>\n\n<p class="mt-4">À Neuilly-Plaisance, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre naturelle ou reconstituée</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement demande une méthode spécifique pour obtenir un nettoyage efficace et un rendu visuel harmonieux.</p>',
+        "<p><strong>Neuilly-Plaisance</strong>, commune résidentielle appréciée de l’est parisien, séduit par son cadre verdoyant et ses quartiers pavillonnaires bien entretenus, notamment le long des bords de Marne. Les terrasses y occupent une place centrale dans l’aménagement et la valorisation des extérieurs.</p>\n\n<p class=\"mt-4\">La proximité de l’eau, les jardins arborés et les zones ombragées favorisent toutefois l’apparition de mousses, algues, traces noires et dépôts organiques sur les sols extérieurs. Ces salissures ternissent rapidement l’aspect des terrasses, même dans des environnements résidentiels soignés.</p>\n\n<p class=\"mt-4\">À Neuilly-Plaisance, les terrasses sont réalisées en dalles béton, carrelage extérieur, pierre naturelle ou reconstituée, bois ou bois composite. Chaque revêtement demande une méthode spécifique pour obtenir un nettoyage efficace et un rendu visuel harmonieux.</p>",
       uniqueDeepDive:
-        "<h3>Préparation soignée de l’espace extérieur</h3>\n<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont bâchés afin de garantir une intervention propre et maîtrisée, y compris dans des configurations de terrasses ouvertes sur le jardin.</p>\n\n<h3>Nettoyage approfondi et ciblé du revêtement</h3>\n<p>Le protocole est adapté au matériau : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore visiblement la clarté du sol et l’esthétique générale de la terrasse, renforçant le plaisir d’usage et la valorisation de l’espace extérieur.</p>",
+        "<h3>Préparation soignée de l’espace extérieur</h3>\n<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — <strong>façades, garde-corps, menuiseries</strong> — sont bâchés afin de garantir une intervention propre et maîtrisée, y compris dans des configurations de terrasses ouvertes sur le jardin.</p>\n\n<h3>Nettoyage approfondi et ciblé du revêtement</h3>\n<p>Le protocole est adapté au matériau : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. <strong>Un brossage mécanique efficace</strong> permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de façon contrôlée pour un résultat net et homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore visiblement <strong>la clarté du sol</strong> et l’esthétique générale de la terrasse, renforçant le plaisir d’usage et la valorisation de l’espace extérieur.</p>",
       specificChallenges: [
-        "Terrasses proches des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",
+        "Terrasses proches des bords de Marne : <strong>humidité régulière</strong> favorisant mousses et traces verdâtres.",
         "Jardins arborés et zones ombragées : dépôts organiques et encrassement accéléré.",
-        "Dalles béton et carrelages extérieurs ternis par le temps : zones foncées et aspect irrégulier.",
+        "Dalles béton et carrelages extérieurs ternis par le temps : <strong>zones foncées et aspect irrégulier</strong>.",
         "Terrasses partiellement couvertes : séchage lent et apparition de biofilms glissants.",
         "Bois et composite exposés aux intempéries : perte d’éclat et salissures incrustées.",
       ],
@@ -433,7 +433,7 @@ const city: City = {
           question:
             "Pourquoi les terrasses de Neuilly-Plaisance se salissent-elles malgré un cadre résidentiel soigné ?",
           answer:
-            "<p>La végétation dense, l’ombre et la proximité de la Marne créent des conditions idéales pour le développement de mousses et de traces noires. Même dans un environnement entretenu, les sols extérieurs s’encrassent progressivement sans nettoyage adapté.</p>",
+            "<p>La végétation dense, l’ombre et <strong>la proximité de la Marne</strong> créent des conditions idéales pour le développement de mousses et de traces noires. Même dans un environnement entretenu, les sols extérieurs s’encrassent progressivement sans nettoyage adapté.</p>",
         },
         {
           question:
@@ -470,15 +470,15 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>Neuilly-Plaisance est une commune résidentielle qui se vit en deux niveaux : d’un côté le <strong>secteur Gare RER A</strong> et le centre-ville, plus denses et plus “rythmés”, de l’autre les hauteurs du <strong>Plateau d’Avron</strong>, avec des pavillons et des rues qui demandent une logistique plus physique (pentes, escaliers, accès jardins). Pour un nettoyage d’appartement ou de maison, on ne travaille pas pareil selon la typologie du logement et l’accès.</p>\n<p class="mt-4">La contrainte la plus fréquente, c’est l’orga : <strong>stationnement compliqué</strong> autour de la gare et du centre, sens uniques, et circulation plus chargée sur la <strong>N34 (boulevard Gallieni)</strong>. Ici, un bon résultat commence par un plan simple : arrivée/déchargement cadrés, puis enchaînement “zones sèches → zones humides” pour éviter de re-salir en sortie.</p>\n<p class="mt-4">Enfin, la ville a ses marqueurs : le <strong>Parc des Côteaux d’Avron</strong> (terre/poussières ramenées sur les entrées) et la <strong>Voie de l’Est</strong>, promenade linéaire qui traverse des quartiers résidentiels. Résultat : beaucoup de demandes tournent autour du grand ménage, des fins de bail proches RER, et des remises en état après travaux dans les pavillons du Plateau.</p>',
+        "<p>Neuilly-Plaisance est une commune résidentielle qui se vit en deux niveaux : d’un côté le <strong>secteur Gare RER A</strong> et le centre-ville, plus denses et plus “rythmés”, de l’autre les hauteurs du <strong>Plateau d’Avron</strong>, avec des pavillons et des rues qui demandent une logistique plus physique (pentes, escaliers, accès jardins). Pour un nettoyage d’appartement ou de maison, on ne travaille pas pareil selon la typologie du logement et l’accès.</p>\n<p class=\"mt-4\">La contrainte la plus fréquente, c’est l’orga : stationnement compliqué autour de la gare et du centre, sens uniques, et circulation plus chargée sur la N34 (boulevard Gallieni). Ici, un bon résultat commence par un plan simple : arrivée/déchargement cadrés, puis enchaînement “zones sèches → zones humides” pour éviter de re-salir en sortie.</p>\n<p class=\"mt-4\">Enfin, la ville a ses marqueurs : le Parc des Côteaux d’Avron (terre/poussières ramenées sur les entrées) et la Voie de l’Est, promenade linéaire qui traverse des quartiers résidentiels. Résultat : beaucoup de demandes tournent autour du grand ménage, des fins de bail proches RER, et des remises en état après travaux dans les pavillons du Plateau.</p>",
 
       uniqueDeepDive:
         "<h3>Secteur Gare RER A — rotations et contraintes de stationnement</h3>\n<p>Autour de la gare, les demandes sont souvent liées aux états des lieux, aux déménagements et aux remises en état rapides. On priorise ce qui “se voit” et ce qui “se contrôle” : cuisine et salle d’eau, sols, vitres accessibles, puis les finitions. La clé à Neuilly-Plaisance, c’est d’anticiper l’accès (badges, interphones) et le stationnement plus tendu dès le matin.</p>\n\n<h3>Centre-ville / RN34 — salissures urbaines et circulation</h3>\n<p>Le centre et les axes comme le boulevard Gallieni concentrent davantage de poussière de voirie et de traces sur vitrages bas (trafic, pollution). On adapte la séquence pour éviter le voile : dépoussiérage minutieux, dégraissage ciblé, puis lavage des sols avec contrôle de séchage. Les créneaux sont choisis pour éviter les heures de pointe et limiter les allers-retours.</p>\n\n<h3>Plateau d’Avron — pavillons, parquets et volumes à étage</h3>\n<p>Sur le Plateau, les logements sont plus grands, compartimentés, parfois avec véranda, chambre mansardée ou escalier. Ici, la priorité est la protection des sols (parquet chêne), le traitement des poussières après travaux, et une finition régulière pièce par pièce. Le relief joue sur la logistique : on vient avec une organisation claire pour que le portage matériel ne “mange” pas le temps de finition.</p>",
 
       specificChallenges: [
         "Relief marqué : pentes vers le Plateau d’Avron, portage matériel et accès jardins plus exigeants.",
-        "Stationnement tendu autour de la gare RER A et du centre (zone bleue, saturation dès le matin).",
-        "Axes très circulés (RN34 / A86 à proximité) : vitrages et balcons plus marqués par la pollution.",
+        "Stationnement tendu autour de la gare RER A et du centre (<strong>zone bleue</strong>, saturation dès le matin).",
+        "Axes très circulés (RN34 / A86 à proximité) : <strong>vitrages et balcons plus marqués</strong> par la pollution.",
         "Accès immeubles : interphones, digicodes et badges fréquents, parfois gardiens en collectif.",
         "Rues étroites et sens uniques au centre : temps d’approche et déchargement à sécuriser.",
         "Terre/poussières liées aux espaces verts (Coteaux d’Avron) : entrées et sols plus vite re-salies.",
@@ -489,13 +489,13 @@ const city: City = {
           question:
             "Intervenez-vous à Neuilly-Plaisance (93360) pour un nettoyage de fin de bail / état des lieux ?",
           answer:
-            "<p>Oui. Nous cadrons le périmètre pour viser un rendu net et vérifiable : cuisine, salle d’eau, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs). À Neuilly-Plaisance, on anticipe surtout l’accès (badges) et le stationnement, notamment près de la gare.</p>",
+            "<p>Oui. Nous cadrons le périmètre pour viser <strong>un rendu net et vérifiable</strong> : cuisine, salle d’eau, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs). À Neuilly-Plaisance, on anticipe surtout l’accès (badges) et le stationnement, notamment près de la gare.</p>",
         },
         {
           question:
             "Pouvez-vous intervenir dans un pavillon du Plateau d’Avron (étages, parquet, véranda) ?",
           answer:
-            "<p>Oui. Les pavillons demandent une organisation par zones (étage → RDC) et une protection renforcée des sols, surtout sur parquet. Nous adaptons aussi le portage matériel au relief et aux accès (escaliers, jardin, véranda) pour garder du temps sur la finition.</p>",
+            "<p>Oui. Les pavillons demandent <strong>une organisation par zones</strong> (étage → RDC) et une protection renforcée des sols, surtout sur parquet. Nous adaptons aussi le portage matériel au relief et aux accès (escaliers, jardin, véranda) pour garder du temps sur la finition.</p>",
         },
         {
           question:

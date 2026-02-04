@@ -126,7 +126,7 @@ const city: City = {
           question:
             "Les cages d'escalier du centre-ville de Romainville sont souvent étroites : comment organisez-vous le passage du matériel ?",
           answer:
-            "<p>Nous utilisons des équipements compacts et modulables, transportables à la main dans les escaliers sans ascenseur. Le repérage préalable permet d'identifier les contraintes d'accès et de prévoir le matériel adapté. Les protections sont posées sur les marches pour éviter tout frottement lors du déplacement.</p>",
+            "<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, transportables à la main dans les escaliers sans ascenseur. Le repérage préalable permet d'identifier les contraintes d'accès et de prévoir le matériel adapté. Les protections sont posées sur les marches pour éviter tout frottement lors du déplacement.</p>",
         },
         {
           question:
@@ -144,7 +144,7 @@ const city: City = {
           question:
             "Comment adaptez-vous la méthode selon l'épaisseur de moquette en parties communes des résidences récentes ?",
           answer:
-            "<p>Le diagnostic initial identifie le type de fibre (bouclée, velours ras ou épais). Pour les moquettes épaisses, nous augmentons le temps d'extraction afin de retirer l'humidité en profondeur. Les dalles textiles fines reçoivent un passage plus rapide avec pression réduite pour éviter toute déformation.</p>",
+            "<p>Le diagnostic initial identifie le <strong>type de fibre</strong> (bouclée, velours ras ou épais). Pour les moquettes épaisses, nous augmentons le temps d'extraction afin de retirer l'humidité en profondeur. Les dalles textiles fines reçoivent un passage plus rapide avec pression réduite pour éviter toute déformation.</p>",
         },
       ],
       ctaOverride: "",
@@ -160,7 +160,7 @@ const city: City = {
         "Coordination avec syndics et gestionnaires pour balisage sécurisé et rotation des véhicules sans blocage prolongé.",
       ],
       uniqueIntro:
-        "<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière marquent progressivement les sols des parkings souterrains de la <strong>ZAC de l'Horloge</strong> et des résidences récentes de Romainville. Ces salissures s'accumulent dans les zones de circulation, autour des rampes et le long des rigoles d'évacuation, rendant les surfaces glissantes et dégradant l'aspect général des espaces communs.</p>\n<p class=\"mt-4\">Un lavage mécanisé régulier permet de retrouver des sols propres et sécurisés. Les revêtements varient selon l'âge des constructions : <strong>béton brut dans les parkings anciens, résine dans les ouvrages récents</strong>. Chaque support nécessite un réglage adapté de la pression et du produit dégraissant pour éviter toute détérioration.</p>\n<p class=\"mt-4\">L'intervention intègre un balisage préalable, une coordination avec le syndic ou le gestionnaire pour organiser la rotation des véhicules, et une gestion rigoureuse des eaux de lavage. Le <strong>trafic lié aux zones commerciales à proximité</strong> impose des créneaux horaires précis pour limiter la gêne aux usagers.</p>",
+        "<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière marquent progressivement les sols des parkings souterrains de la <strong>ZAC de l'Horloge</strong> et des résidences récentes de Romainville. Ces salissures s'accumulent dans les zones de circulation, autour des rampes et le long des rigoles d'évacuation, rendant les surfaces glissantes et dégradant l'aspect général des espaces communs.</p>\n<p class=\"mt-4\">Un lavage mécanisé régulier permet de retrouver des sols propres et sécurisés. Les revêtements varient selon l'âge des constructions : béton brut dans les parkings anciens, résine dans les ouvrages récents. Chaque support nécessite un réglage adapté de la pression et du produit dégraissant pour éviter toute détérioration.</p>\n<p class=\"mt-4\">L'intervention intègre un balisage préalable, une coordination avec le syndic ou le gestionnaire pour organiser la rotation des véhicules, et une gestion rigoureuse des eaux de lavage. Le <strong>trafic lié aux zones commerciales à proximité</strong> impose des créneaux horaires précis pour limiter la gêne aux usagers.</p>",
       uniqueDeepDive:
         "<h3>Zones de circulation et places de stationnement</h3>\n<p>Après un balayage préalable des graviers et débris, l'autolaveuse effectue plusieurs passes sur les allées principales et les emplacements. Le dégraissant est dosé selon le niveau d'encrassement constaté lors du diagnostic initial.</p>\n\n<h3>Rampes d'accès et angles critiques</h3>\n<p>Les rampes inclinées reçoivent un traitement spécifique pour préserver l'adhérence du revêtement. Les angles morts, pieds de murs et recoins difficiles d'accès sont traités manuellement à la brosse rotative ou au nettoyeur haute pression.</p>\n\n<h3>Rigoles et évacuations</h3>\n<p><strong>Les rigoles collectrices et regards sont curés</strong> pour garantir un écoulement correct. Les eaux de lavage chargées en huile et détergent sont dirigées vers les points d'évacuation conformes, sans rejet sauvage. Un contrôle visuel final vérifie l'état des surfaces et permet d'établir une recommandation de fréquence d'entretien adaptée au trafic du parking.</p>",
       specificChallenges: [
@@ -187,13 +187,13 @@ const city: City = {
           question:
             "Avec le flux commercial du Paddock, quels horaires d'intervention et quel balisage proposez-vous pour limiter la gêne ?",
           answer:
-            "<p>Les interventions sont programmées en début de matinée ou en soirée, hors pics d'affluence. Un balisage signalétique délimite les zones en cours de lavage. La rotation par secteur permet de maintenir une partie des places accessibles pendant toute la durée du chantier.</p>",
+            "<p>Les interventions sont programmées en début de matinée ou en soirée, hors pics d'affluence. <strong>Un balisage signalétique</strong> délimite les zones en cours de lavage. La rotation par secteur permet de maintenir une partie des places accessibles pendant toute la durée du chantier.</p>",
         },
         {
           question:
             "Quelles différences techniques appliquez-vous entre un parking souterrain et un parking aérien récent à Romainville ?",
           answer:
-            "<p>En souterrain, la ventilation réduite impose un séchage plus long et une gestion stricte des eaux. En aérien, l'évacuation naturelle simplifie le rinçage mais l'exposition aux intempéries génère davantage de dépôts organiques. Le réglage de pression et le choix du produit s'adaptent à chaque configuration.</p>",
+            "<p>En souterrain, la ventilation réduite impose un séchage plus long et une <strong>gestion stricte des eaux</strong>. En aérien, l'évacuation naturelle simplifie le rinçage mais l'exposition aux intempéries génère davantage de dépôts organiques. Le réglage de pression et le choix du produit s'adaptent à chaque configuration.</p>",
         },
       ],
       ctaOverride: "",
@@ -224,7 +224,7 @@ const city: City = {
           question:
             "Comment nettoyer sans endommager les dalles sur plots des balcons de la ZAC de l'Horloge ?",
           answer:
-            "<p>Les dalles sur plots des résidences récentes de Romainville présentent des joints ouverts sensibles à la haute pression. Nous utilisons un brossage doux combiné à un rinçage à pression modérée, orienté pour éviter l'infiltration d'eau sous les dalles. Le résultat est propre sans fragiliser le système de pose.</p>",
+            "<p>Les dalles sur plots des résidences récentes de Romainville présentent des <strong>joints ouverts sensibles</strong> à la haute pression. Nous utilisons un brossage doux combiné à un rinçage à pression modérée, orienté pour éviter l'infiltration d'eau sous les dalles. Le résultat est propre sans fragiliser le système de pose.</p>",
         },
         {
           question:
@@ -242,7 +242,7 @@ const city: City = {
           question:
             "En cas d'accès difficile à l'étage élevé en copropriété centre-ville, comment s'organise l'intervention ?",
           answer:
-            "<p>Dans les immeubles anciens du centre de Romainville, les escaliers étroits et l'absence d'ascenseur compliquent le transport du matériel. Nous prévoyons un équipement léger et modulable. La coordination avec le gardien ou le syndic permet de réserver l'accès et d'éviter toute gêne pour les autres occupants.</p>",
+            "<p>Dans les immeubles anciens du centre de Romainville, les <strong>escaliers étroits</strong> et l'absence d'ascenseur compliquent le transport du matériel. Nous prévoyons un équipement léger et modulable. La coordination avec le gardien ou le syndic permet de réserver l'accès et d'éviter toute gêne pour les autres occupants.</p>",
         },
       ],
       ctaOverride: "",
@@ -273,7 +273,7 @@ const city: City = {
           question:
             "Les balcons proches de la Corniche des Forts sont couverts de fientes : quels risques sanitaires réels et quel délai pour une intervention ?",
           answer:
-            "<p>Les fientes de pigeons peuvent contenir des agents pathogènes transmissibles par inhalation de poussières sèches. Sur les secteurs exposés comme les abords de la Corniche des Forts, nous intervenons généralement sous 48 à 72 heures selon la charge de travail. Le port d'EPI et le confinement de la zone limitent tout risque pendant le traitement.</p>",
+            "<p>Les fientes de pigeons peuvent contenir des <strong>agents pathogènes transmissibles</strong> par inhalation de poussières sèches. Sur les secteurs exposés comme les abords de la Corniche des Forts, nous intervenons généralement sous 48 à 72 heures selon la charge de travail. Le port d'EPI et le confinement de la zone limitent tout risque pendant le traitement.</p>",
         },
         {
           question:
@@ -285,7 +285,7 @@ const city: City = {
           question:
             "Dans une copropriété Cité Marcel Cachin, comment organisez-vous l'enlèvement des déchets et la coordination avec les voisins ?",
           answer:
-            "<p>Avant l'intervention, nous informons les occupants des balcons adjacents pour qu'ils rentrent leur linge et ferment leurs fenêtres. La zone est bâchée pour éviter toute projection. Les déchets sont conditionnés en sacs étanches et évacués directement, sans transit par les parties communes. Le gardien est prévenu si nécessaire.</p>",
+            "<p>Avant l'intervention, nous informons les occupants des balcons adjacents pour qu'ils rentrent leur linge et ferment leurs fenêtres. <strong>La zone est bâchée</strong> pour éviter toute projection. Les déchets sont conditionnés en sacs étanches et évacués directement, sans transit par les parties communes. Le gardien est prévenu si nécessaire.</p>",
         },
         {
           question:
@@ -322,13 +322,13 @@ const city: City = {
           question:
             "Pour les familles du quartier Bas-Pays, quel impact concret du nettoyage canapé sur la réduction des acariens et des allergènes ?",
           answer:
-            "<p>L'extraction en profondeur retire une grande partie des acariens, poussières et squames accumulés dans les fibres. Les personnes sensibles constatent souvent une amélioration du confort respiratoire dans les jours suivant l'intervention. Un entretien régulier, tous les 12 à 18 mois selon l'usage familial, prolonge cet effet.</p>",
+            "<p>L'extraction en profondeur retire une grande partie des <strong>acariens, poussières et squames</strong> accumulés dans les fibres. Les personnes sensibles constatent souvent une amélioration du confort respiratoire dans les jours suivant l'intervention. Un entretien régulier, tous les 12 à 18 mois selon l'usage familial, prolonge cet effet.</p>",
         },
         {
           question:
             "Comment traitez-vous des taches d'urine anciennes sur un canapé tissu avec des odeurs persistantes liées aux animaux domestiques ?",
           answer:
-            "<p>Un pré-traitement enzymatique cible les composés organiques responsables des odeurs. L'injection-extraction déloge ensuite les résidus incrustés en profondeur. Sur les taches anciennes, plusieurs passages peuvent être nécessaires. Le résultat dépend de l'ancienneté et de la nature du textile, mais l'amélioration est généralement nette dès le séchage.</p>",
+            "<p>Un <strong>pré-traitement enzymatique</strong> cible les composés organiques responsables des odeurs. L'injection-extraction déloge ensuite les résidus incrustés en profondeur. Sur les taches anciennes, plusieurs passages peuvent être nécessaires. Le résultat dépend de l'ancienneté et de la nature du textile, mais l'amélioration est généralement nette dès le séchage.</p>",
         },
         {
           question:
@@ -383,13 +383,13 @@ const city: City = {
           question:
             "Quel traitement anti-mousse proposez-vous pour des dalles anciennes afin d'obtenir un effet durable à Romainville ?",
           answer:
-            "<p>Après le nettoyage, nous appliquons un produit filmogène qui pénètre les pores de la dalle. Ce traitement limite la réapparition des mousses pendant une à deux saisons selon l'exposition. Il convient aux dalles béton ou pierre naturelle courantes sur les pavillons.</p>",
+            "<p>Après le nettoyage, nous appliquons un <strong>produit filmogène</strong> qui pénètre les pores de la dalle. Ce traitement limite la réapparition des mousses pendant une à deux saisons selon l'exposition. Il convient aux dalles béton ou pierre naturelle courantes sur les pavillons.</p>",
         },
         {
           question:
             "Avant un nettoyage haute pression sur une terrasse de maison, comment protégez-vous le mobilier et les plantes ?",
           answer:
-            "<p>Le mobilier léger est déplacé hors de la zone de travail. Les jardinières et plantations sont bâchées ou éloignées. Les baies vitrées et seuils reçoivent une protection pour éviter les projections. Tout est remis en place une fois la surface sèche.</p>",
+            "<p>Le mobilier léger est déplacé hors de la zone de travail. Les jardinières et plantations sont bâchées ou éloignées. <strong>Les baies vitrées et seuils</strong> reçoivent une protection pour éviter les projections. Tout est remis en place une fois la surface sèche.</p>",
         },
       ],
       ctaOverride: "",

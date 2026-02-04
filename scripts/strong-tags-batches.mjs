@@ -16,17 +16,21 @@
 // - citySpecificChallenges[i]
 // - services[i].uniqueIntro
 // - services[i].uniqueDeepDive (max 1 <strong> par section <h3>)
-// - services[i].specificChallenges[j]   (ou serviceChallenges si tu l'utilises)
+// - services[i].specificChallenges[j]
 // - services[i].faqAdditions[j].answer
 //
-// Règles clés :
+// Règles clés (NEW):
 // - hubIntro : max 1 <strong> par <li> + hors <li> max 2 pairs
-// - faq[].answer & services[].faqAdditions[].answer : EXACTEMENT 1 <strong> au début du 1er <p>
-// - citySpecificChallenges[i] : max 1 <strong> (et MIN 1 si assez long)
-// - services[i].specificChallenges[j] : max 1 <strong> (et MIN 1 si assez long)
+// - FAQ (faq[].answer & services[].faqAdditions[].answer) :
+//     - max 1 <strong> par answer
+//     - si <strong> présent : il doit être dans le 1er <p> (où tu veux), et aucun <strong> après le 1er <p>
+//     - couverture : au moins ~35% des answers doivent avoir 1 <strong> (sélection non mécanique)
+// - citySpecificChallenges[i] : max 1 <strong> par item
+//     - couverture : min global (adaptatif) sur le champ (pas 1 par item)
+// - services[i].specificChallenges[j] : max 1 <strong> par item
+//     - couverture : min global (adaptatif) sur le champ (pas 1 par item)
 // - services[i].uniqueIntro : max 2 <strong> (et MIN 1 si assez long)
 // - services[i].uniqueDeepDive : max 1 <strong> par bloc <h3> (et MIN 1 si bloc assez long)
-//
 // ----------------------------------------------------------------------------
 
 import "dotenv/config";
@@ -44,9 +48,6 @@ function getArgValue(name) {
   if (idx === -1) return null;
   return process.argv[idx + 1] ?? null;
 }
-function hasArg(name) {
-  return process.argv.includes(name);
-}
 
 /* =============================================================================
    PATHS
@@ -54,6 +55,7 @@ function hasArg(name) {
 const ROOT = process.cwd();
 
 function safeJoinUnderRoot(p) {
+  if (!p) return p;
   return path.isAbsolute(p) ? p : path.join(ROOT, p);
 }
 
@@ -214,16 +216,13 @@ function getStringAtPath(cityObj, pathStr) {
     const init = getInitializer(pa);
     if (!init) return null;
 
-    // array access
     if (t.index != null) {
       if (init.getKind() !== SyntaxKind.ArrayLiteralExpression) return null;
       const arr = init.asKindOrThrow(SyntaxKind.ArrayLiteralExpression);
       const el = arr.getElements()[t.index];
       if (!el) return null;
 
-      if (i === tokens.length - 1) {
-        return getStaticStringValue(el);
-      }
+      if (i === tokens.length - 1) return getStaticStringValue(el);
 
       if (el.getKind() === SyntaxKind.ObjectLiteralExpression) {
         cur = el.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
@@ -232,12 +231,8 @@ function getStringAtPath(cityObj, pathStr) {
       return null;
     }
 
-    // last token (no index)
-    if (i === tokens.length - 1) {
-      return getStaticStringValue(init);
-    }
+    if (i === tokens.length - 1) return getStaticStringValue(init);
 
-    // continue traversal
     if (init.getKind() !== SyntaxKind.ObjectLiteralExpression) return null;
     cur = init.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
   }
@@ -359,13 +354,7 @@ function isAllowedStrongPathStrict(pathStr) {
 
   if (/^services\[\d+\]\.uniqueIntro$/.test(p)) return true;
   if (/^services\[\d+\]\.uniqueDeepDive$/.test(p)) return true;
-
-
-
-// APRÈS
-if (/^services\[\d+\]\.specificChallenges\[\d+\]$/.test(p)) return true;
-
-
+  if (/^services\[\d+\]\.specificChallenges\[\d+\]$/.test(p)) return true;
   if (/^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p)) return true;
 
   return false;
@@ -514,36 +503,58 @@ function validateHubIntroPerLi(hubIntroHtml) {
   const s = String(hubIntroHtml ?? "");
   if (!s) return true;
 
-  const liRe = /<li>([\s\S]*?)<\/li>/g;
+  const liReScan = /<li>([\s\S]*?)<\/li>/g;
   let m;
-
-  while ((m = liRe.exec(s))) {
+  while ((m = liReScan.exec(s))) {
     const liBlock = m[0];
     if (countStrongPairs(liBlock) > 1) return false;
   }
 
-  const withoutLi = s.replace(liRe, "");
+  const liReReplace = /<li>[\s\S]*?<\/li>/g;
+  const withoutLi = s.replace(liReReplace, "");
   if (countStrongPairs(withoutLi) > 2) return false;
 
   return true;
 }
 
 /**
- * faq*.answer & faqAdditions*.answer :
- * - EXACTEMENT 1 <strong>
- * - placé au début du premier <p>
+ * FAQ rule (NEW):
+ * - max 1 <strong> au total
+ * - si <strong> présent : il doit être dans le PREMIER <p> (où tu veux)
+ * - et aucun <strong> après le 1er <p>
  */
-function validateFaqExactlyOneStrongAtBeginning(answerHtml) {
+function getFirstPBlock(html) {
+  const s = String(html ?? "").trim();
+  const m = s.match(/^<p>[\s\S]*?<\/p>/i);
+  return m ? m[0] : null;
+}
+
+function validateFaqMax1StrongAndIfPresentInFirstP(answerHtml) {
   const s = String(answerHtml ?? "").trim();
   if (!s) return false;
 
-  if (countStrongPairs(s) !== 1) return false;
-  if (!/^<p>\s*<strong>/i.test(s)) return false;
+  const totalPairs = countStrongPairs(s);
+  if (totalPairs > 1) return false;
 
-  const idxClose = s.indexOf("</strong>");
-  if (idxClose === -1) return false;
+  if (totalPairs === 0) return true;
+
+  const firstP = getFirstPBlock(s);
+  if (!firstP) return false;
+
+  if (countStrongPairs(firstP) !== 1) return false;
+
+  const rest = s.slice(firstP.length);
+  if (countStrongPairs(rest) !== 0) return false;
 
   return true;
+}
+
+function hasOneStrongInFirstP(answerHtml) {
+  const s = String(answerHtml ?? "").trim();
+  if (!s) return false;
+  const firstP = getFirstPBlock(s);
+  if (!firstP) return false;
+  return countStrongPairs(s) === 1 && countStrongPairs(firstP) === 1;
 }
 
 /**
@@ -589,16 +600,17 @@ function validateFieldByRules(pathStr, html, forbiddenList) {
     /^faq\[\d+\]\.answer$/.test(pathStr) ||
     /^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(pathStr)
   ) {
-    if (!validateFaqExactlyOneStrongAtBeginning(html))
-      return { ok: false, why: "faq_exactly_one_strong_beginning" };
+    if (!validateFaqMax1StrongAndIfPresentInFirstP(html)) return { ok: false, why: "faq_rule_violation" };
   } else {
     const pairs = countStrongPairs(html);
     const cap = maxPairsForPath(pathStr);
     if (pairs > cap) return { ok: false, why: `pairs_over_cap(${pairs}>${cap})` };
   }
 
-  if (!validateStrongWordLimits(pathStr, html)) return { ok: false, why: "word_limits" };
-  if (!validateForbiddenStrongSegments(html, forbiddenList)) return { ok: false, why: "forbidden_strong" };
+  if (countStrongPairs(html) > 0) {
+    if (!validateStrongWordLimits(pathStr, html)) return { ok: false, why: "word_limits" };
+    if (!validateForbiddenStrongSegments(html, forbiddenList)) return { ok: false, why: "forbidden_strong" };
+  }
 
   return { ok: true };
 }
@@ -630,21 +642,15 @@ function validateHybridPatch({ pathStr, expectedFromTs, patch, forbiddenList }) 
     if (!excerpt || !replacement) return { ok: false, why: "empty_excerpt_or_replacement" };
     if (value) return { ok: false, why: "substring_has_value" };
 
-    if (excerpt.includes("<strong>") || excerpt.includes("</strong>")) {
-      return { ok: false, why: "excerpt_contains_strong" };
-    }
+    if (excerpt.includes("<strong>") || excerpt.includes("</strong>")) return { ok: false, why: "excerpt_contains_strong" };
 
-    if (stripStrongTags(replacement) !== excerpt) {
-      return { ok: false, why: "replacement_not_excerpt_plus_strong" };
-    }
+    if (stripStrongTags(replacement) !== excerpt) return { ok: false, why: "replacement_not_excerpt_plus_strong" };
     if (!hasOnlyPlainStrongTags(replacement)) return { ok: false, why: "replacement_non_plain_strong" };
 
     const r = replaceOnce(expectedFromTs, excerpt, replacement);
     if (!r.ok) return { ok: false, why: r.count === 2 ? "excerpt_ambiguous_twice" : "excerpt_not_found" };
 
-    if (stripStrongTags(r.out) !== stripStrongTags(expectedFromTs)) {
-      return { ok: false, why: "substring_changed_text" };
-    }
+    if (stripStrongTags(r.out) !== stripStrongTags(expectedFromTs)) return { ok: false, why: "substring_changed_text" };
 
     const vr = validateFieldByRules(pathStr, r.out, forbiddenList);
     if (!vr.ok) return vr;
@@ -656,15 +662,18 @@ function validateHybridPatch({ pathStr, expectedFromTs, patch, forbiddenList }) 
 }
 
 /* =============================================================================
-   COVERAGE TARGETS (minima conservateurs, avec seuils)
+   COVERAGE TARGETS (NEW: field-level minima)
 ============================================================================= */
-const MIN_WORDS_FOR_MIN1 = {
-  hubIntroLi: 10,              // si un <li> est très court, on n'oblige pas
+const MIN_WORDS = {
+  hubIntroLi: 10,
   hubIntroNonLi: 18,
   uniqueIntro: 22,
-  challengeItem: 10,
-  deepDiveBlock: 45,           // bloc <h3> assez long => 1 strong
+  listItem: 10,        // citySpecificChallenges / specificChallenges eligible threshold
+  deepDiveBlock: 45,
+  faqAnswer: 24,       // answer eligible threshold for adding strong
 };
+
+const FAQ_COVERAGE_RATIO = 0.35;
 
 function splitHubIntroLiBlocks(html) {
   const s = String(html ?? "");
@@ -672,20 +681,40 @@ function splitHubIntroLiBlocks(html) {
   const liBlocks = [];
   let m;
   while ((m = liRe.exec(s))) liBlocks.push(m[0]);
-  const nonLi = s.replace(liRe, "");
+
+  const nonLi = s.replace(/<li>[\s\S]*?<\/li>/g, "");
   return { liBlocks, nonLi };
 }
 
 function splitDeepDiveBlocksByH3(html) {
   const s = String(html ?? "");
-  // bloc 0 = avant 1er <h3>, ensuite chaque <h3>...jusqu'au prochain <h3>
   return s.split(/(?=<h3>)/g).filter((p) => p.trim().length > 0);
+}
+
+// min(4, floor(n/2)), with n=3 => 1, n>=4 => at least 2; n<=2 => 0
+function computeMinCoverageForList(n) {
+  if (n <= 2) return 0;
+  if (n === 3) return 1;
+  return Math.min(4, Math.floor(n / 2));
+}
+
+// ceil(n * ratio)
+function computeMinCoverageForFaq(n, ratio = FAQ_COVERAGE_RATIO) {
+  if (n <= 0) return 0;
+  return Math.ceil(n * ratio);
+}
+
+// pick candidates (0 strong) by longest-first until missing
+function pickCoverageCandidates(candidates, missing) {
+  if (missing <= 0) return [];
+  const sorted = [...candidates].sort((a, b) => (b.words || 0) - (a.words || 0));
+  return sorted.slice(0, missing);
 }
 
 function computeCoverageTargets(cityObj) {
   const targets = [];
 
-  // hubIntro
+  // hubIntro — item-level (kept)
   const hub = getStringAtPath(cityObj, "hubIntro");
   if (typeof hub === "string" && hub.trim()) {
     const { liBlocks, nonLi } = splitHubIntroLiBlocks(hub);
@@ -693,18 +722,30 @@ function computeCoverageTargets(cityObj) {
     liBlocks.forEach((liHtml, idx) => {
       const wc = countWords(liHtml);
       const pairs = countStrongPairs(liHtml);
-      if (wc >= MIN_WORDS_FOR_MIN1.hubIntroLi && pairs === 0) {
+      if (pairs > 1) {
+        targets.push({
+          path: "hubIntro",
+          kind: "hubIntro_li_overcap",
+          detail: `li[${idx}] has ${pairs} strong pairs; max 1 per <li>`,
+        });
+      } else if (wc >= MIN_WORDS.hubIntroLi && pairs === 0) {
         targets.push({
           path: "hubIntro",
           kind: "hubIntro_li_missing",
-          detail: `li[${idx}] has 0 strong; words=${wc}; must add 1 inside this <li> (max1/li)`,
+          detail: `li[${idx}] has 0 strong; words=${wc}; add 1 inside this <li> (max1/li)`,
         });
       }
     });
 
     const nonLiWc = countWords(nonLi);
     const nonLiPairs = countStrongPairs(nonLi);
-    if (nonLiWc >= MIN_WORDS_FOR_MIN1.hubIntroNonLi && nonLiPairs === 0) {
+    if (nonLiPairs > 2) {
+      targets.push({
+        path: "hubIntro",
+        kind: "hubIntro_nonli_overcap",
+        detail: `non-<li> text has ${nonLiPairs} strong pairs; max 2 outside <li>`,
+      });
+    } else if (nonLiWc >= MIN_WORDS.hubIntroNonLi && nonLiPairs === 0) {
       targets.push({
         path: "hubIntro",
         kind: "hubIntro_nonli_missing",
@@ -713,136 +754,313 @@ function computeCoverageTargets(cityObj) {
     }
   }
 
-  // faq[i].answer
-  const faqArr = getArrayAtPath(cityObj, "faq");
-  if (faqArr) {
-    faqArr.getElements().forEach((el, i) => {
-      if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
-      const ans = getStringAtPath(cityObj, `faq[${i}].answer`);
-      if (typeof ans !== "string" || !ans.trim()) return;
-      // strict: exactly 1 at beginning => if not valid => target
-      if (!validateFaqExactlyOneStrongAtBeginning(ans)) {
-        targets.push({
+  // FAQ — field-level coverage + per-answer validity if any <strong> exists
+  {
+    const faqArr = getArrayAtPath(cityObj, "faq");
+    if (faqArr) {
+      const answers = [];
+      faqArr.getElements().forEach((el, i) => {
+        if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+        const ans = getStringAtPath(cityObj, `faq[${i}].answer`);
+        if (typeof ans !== "string" || !ans.trim()) return;
+
+        // validate rule if strong present OR if total >1
+        const pairs = countStrongPairs(ans);
+        const isEligible = countWords(getFirstPBlock(ans) || ans) >= MIN_WORDS.faqAnswer;
+
+        if (pairs > 0 || pairs > 1) {
+          if (!validateFaqMax1StrongAndIfPresentInFirstP(ans)) {
+            targets.push({
+              path: `faq[${i}].answer`,
+              kind: "faq_format_fix",
+              detail: "max 1 <strong>; if present, must be inside first <p> and none after first <p>",
+            });
+          }
+        }
+
+        answers.push({
+          idx: i,
           path: `faq[${i}].answer`,
-          kind: "faq_fix_required",
-          detail: "FAQ answer must have EXACTLY 1 <strong> at the start of first <p>",
+          html: ans,
+          pairs,
+          hasOneInFirstP: hasOneStrongInFirstP(ans),
+          eligible: isEligible,
+          words: countWords(getFirstPBlock(ans) || ans),
         });
-      }
-    });
-  }
+      });
 
-  // citySpecificChallenges[i]
-  const cscArr = getArrayAtPath(cityObj, "citySpecificChallenges");
-  if (cscArr) {
-    cscArr.getElements().forEach((el, i) => {
-      const txt = getStaticStringValue(el);
-      if (typeof txt !== "string" || !txt.trim()) return;
-      const wc = countWords(txt);
-      const pairs = countStrongPairs(txt);
-      // cap=1, min=1 if long enough
-      if (pairs > 1) {
-        targets.push({ path: `citySpecificChallenges[${i}]`, kind: "challenge_overcap", detail: "max 1 strong" });
-      } else if (wc >= MIN_WORDS_FOR_MIN1.challengeItem && pairs === 0) {
-        targets.push({
-          path: `citySpecificChallenges[${i}]`,
-          kind: "challenge_missing",
-          detail: `0 strong; words=${wc}; add 1 (max1)`,
-        });
-      }
-    });
-  }
+      const totalCount = answers.length;
+      const minNeeded = computeMinCoverageForFaq(totalCount, FAQ_COVERAGE_RATIO);
 
-  // services
-  const servicesArr = getArrayAtPath(cityObj, "services");
-  if (servicesArr) {
-    servicesArr.getElements().forEach((el, si) => {
-      if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
-      const serviceObj = el.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
+      const validWithStrong = answers.filter((a) => a.hasOneInFirstP).length;
 
-      // uniqueIntro
-      const ui = getStringAtPath(serviceObj, "uniqueIntro");
-      if (typeof ui === "string" && ui.trim()) {
-        const wc = countWords(ui);
-        const pairs = countStrongPairs(ui);
-        if (pairs > 2) {
-          targets.push({ path: `services[${si}].uniqueIntro`, kind: "uniqueIntro_overcap", detail: "max 2 strong" });
-        } else if (wc >= MIN_WORDS_FOR_MIN1.uniqueIntro && pairs === 0) {
+      const missing = Math.max(0, minNeeded - validWithStrong);
+
+      if (missing > 0) {
+        const candidates = answers
+          .filter((a) => a.pairs === 0 && a.eligible)
+          .map((a) => ({ path: a.path, words: a.words, idx: a.idx }));
+
+        const picked = pickCoverageCandidates(candidates, missing);
+
+        for (const c of picked) {
           targets.push({
-            path: `services[${si}].uniqueIntro`,
-            kind: "uniqueIntro_missing",
-            detail: `0 strong; words=${wc}; add 1 (max2)`,
+            path: c.path,
+            kind: "faq_coverage_add",
+            detail: `Add 1 <strong> inside first <p> (coverage: need ${minNeeded}, have ${validWithStrong})`,
+          });
+        }
+
+        // if not enough eligible candidates, mention once (global info) — attach to first faq if exists
+        if (picked.length < missing && totalCount > 0) {
+          targets.push({
+            path: `faq[0].answer`,
+            kind: "faq_coverage_note",
+            detail: `Coverage shortfall: need +${missing}, only ${picked.length} eligible answers without <strong> (others too short / not patchable without forcing)`,
           });
         }
       }
+    }
+  }
 
-      // uniqueDeepDive blocks
-      const dd = getStringAtPath(serviceObj, "uniqueDeepDive");
-      if (typeof dd === "string" && dd.trim()) {
-        const blocks = splitDeepDiveBlocksByH3(dd);
-        blocks.forEach((b, bi) => {
-          const wc = countWords(b);
-          const pairs = countStrongPairs(b);
-          if (pairs > 1) {
+  // citySpecificChallenges — field-level coverage + overcap enforcement
+  {
+    const cscArr = getArrayAtPath(cityObj, "citySpecificChallenges");
+    if (cscArr) {
+      const items = [];
+      cscArr.getElements().forEach((el, i) => {
+        const txt = getStaticStringValue(el);
+        if (typeof txt !== "string" || !txt.trim()) return;
+
+        const wc = countWords(txt);
+        const pairs = countStrongPairs(txt);
+        const eligible = wc >= MIN_WORDS.listItem;
+
+        if (pairs > 1) {
+          targets.push({
+            path: `citySpecificChallenges[${i}]`,
+            kind: "challenge_overcap",
+            detail: `max 1 strong (found ${pairs})`,
+          });
+        }
+
+        items.push({
+          idx: i,
+          path: `citySpecificChallenges[${i}]`,
+          words: wc,
+          pairs,
+          eligible,
+        });
+      });
+
+      const eligibleCount = items.filter((x) => x.eligible).length;
+      const minNeeded = computeMinCoverageForList(eligibleCount);
+      const have = items.filter((x) => x.eligible && x.pairs === 1).length;
+
+      const missing = Math.max(0, minNeeded - have);
+      if (missing > 0) {
+        const candidates = items.filter((x) => x.eligible && x.pairs === 0).map((x) => ({ path: x.path, words: x.words }));
+        const picked = pickCoverageCandidates(candidates, missing);
+
+        for (const c of picked) {
+          targets.push({
+            path: c.path,
+            kind: "challenge_coverage_add",
+            detail: `Add 1 <strong> (coverage: need ${minNeeded}, have ${have}; eligibleItems=${eligibleCount})`,
+          });
+        }
+
+        if (picked.length < missing && items.length > 0) {
+          targets.push({
+            path: `citySpecificChallenges[0]`,
+            kind: "challenge_coverage_note",
+            detail: `Coverage shortfall: need +${missing}, only ${picked.length} eligible items without <strong> (others too short / already have strong)`,
+          });
+        }
+      }
+    }
+  }
+
+  // services
+  {
+    const servicesArr = getArrayAtPath(cityObj, "services");
+    if (servicesArr) {
+      servicesArr.getElements().forEach((el, si) => {
+        if (el.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+        const serviceObj = el.asKindOrThrow(SyntaxKind.ObjectLiteralExpression);
+
+        // uniqueIntro (kept min1 if long)
+        const ui = getStringAtPath(serviceObj, "uniqueIntro");
+        if (typeof ui === "string" && ui.trim()) {
+          const wc = countWords(ui);
+          const pairs = countStrongPairs(ui);
+          if (pairs > 2) {
             targets.push({
-              path: `services[${si}].uniqueDeepDive`,
-              kind: "deepDive_block_overcap",
-              detail: `block[${bi}] has ${pairs} strong pairs; max 1 per <h3> block`,
+              path: `services[${si}].uniqueIntro`,
+              kind: "uniqueIntro_overcap",
+              detail: `max 2 strong (found ${pairs})`,
             });
-          } else if (wc >= MIN_WORDS_FOR_MIN1.deepDiveBlock && pairs === 0) {
+          } else if (wc >= MIN_WORDS.uniqueIntro && pairs === 0) {
             targets.push({
-              path: `services[${si}].uniqueDeepDive`,
-              kind: "deepDive_block_missing",
-              detail: `block[${bi}] has 0 strong; words=${wc}; add 1 in this block (max1)`,
+              path: `services[${si}].uniqueIntro`,
+              kind: "uniqueIntro_missing",
+              detail: `0 strong; words=${wc}; add 1 (max2)`,
             });
           }
-        });
-      }
+        }
 
-      // specificChallenges OR serviceChallenges
-// APRÈS (fixe et strict)
-const scArr = getArrayAtPath(serviceObj, "specificChallenges");
-if (scArr) {
-  scArr.getElements().forEach((sel, sci) => {
-    const txt = getStaticStringValue(sel);
-    if (typeof txt !== "string" || !txt.trim()) return;
+        // uniqueDeepDive blocks (kept min1 per long block)
+        const dd = getStringAtPath(serviceObj, "uniqueDeepDive");
+        if (typeof dd === "string" && dd.trim()) {
+          const blocks = splitDeepDiveBlocksByH3(dd);
+          blocks.forEach((b, bi) => {
+            const wc = countWords(b);
+            const pairs = countStrongPairs(b);
+            if (pairs > 1) {
+              targets.push({
+                path: `services[${si}].uniqueDeepDive`,
+                kind: "deepDive_block_overcap",
+                detail: `block[${bi}] has ${pairs} strong pairs; max 1 per <h3> block`,
+              });
+            } else if (wc >= MIN_WORDS.deepDiveBlock && pairs === 0) {
+              targets.push({
+                path: `services[${si}].uniqueDeepDive`,
+                kind: "deepDive_block_missing",
+                detail: `block[${bi}] has 0 strong; words=${wc}; add 1 in this block (max1)`,
+              });
+            }
+          });
+        }
 
-    const wc = countWords(txt);
-    const pairs = countStrongPairs(txt);
+        // specificChallenges — field-level coverage
+        {
+          const scArr = getArrayAtPath(serviceObj, "specificChallenges");
+          if (scArr) {
+            const items = [];
+            scArr.getElements().forEach((sel, sci) => {
+              const txt = getStaticStringValue(sel);
+              if (typeof txt !== "string" || !txt.trim()) return;
 
-    if (pairs > 1) {
-      targets.push({
-        path: `services[${si}].specificChallenges[${sci}]`,
-        kind: "serviceChallenge_overcap",
-        detail: "max 1 strong",
-      });
-    } else if (wc >= MIN_WORDS_FOR_MIN1.challengeItem && pairs === 0) {
-      targets.push({
-        path: `services[${si}].specificChallenges[${sci}]`,
-        kind: "serviceChallenge_missing",
-        detail: `0 strong; words=${wc}; add 1 (max1)`,
+              const wc = countWords(txt);
+              const pairs = countStrongPairs(txt);
+              const eligible = wc >= MIN_WORDS.listItem;
+
+              if (pairs > 1) {
+                targets.push({
+                  path: `services[${si}].specificChallenges[${sci}]`,
+                  kind: "serviceChallenge_overcap",
+                  detail: `max 1 strong (found ${pairs})`,
+                });
+              }
+
+              items.push({
+                idx: sci,
+                path: `services[${si}].specificChallenges[${sci}]`,
+                words: wc,
+                pairs,
+                eligible,
+              });
+            });
+
+            const eligibleCount = items.filter((x) => x.eligible).length;
+            const minNeeded = computeMinCoverageForList(eligibleCount);
+            const have = items.filter((x) => x.eligible && x.pairs === 1).length;
+
+            const missing = Math.max(0, minNeeded - have);
+            if (missing > 0) {
+              const candidates = items
+                .filter((x) => x.eligible && x.pairs === 0)
+                .map((x) => ({ path: x.path, words: x.words }));
+
+              const picked = pickCoverageCandidates(candidates, missing);
+
+              for (const c of picked) {
+                targets.push({
+                  path: c.path,
+                  kind: "serviceChallenge_coverage_add",
+                  detail: `Add 1 <strong> (coverage: need ${minNeeded}, have ${have}; eligibleItems=${eligibleCount})`,
+                });
+              }
+
+              if (picked.length < missing && items.length > 0) {
+                targets.push({
+                  path: `services[${si}].specificChallenges[0]`,
+                  kind: "serviceChallenge_coverage_note",
+                  detail: `Coverage shortfall: need +${missing}, only ${picked.length} eligible items without <strong>`,
+                });
+              }
+            }
+          }
+        }
+
+        // faqAdditions — field-level coverage + per-answer validity
+        {
+          const faqAddArr = getArrayAtPath(serviceObj, "faqAdditions");
+          if (faqAddArr) {
+            const answers = [];
+
+            faqAddArr.getElements().forEach((fel, fi) => {
+              if (fel.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
+              const ans = getStringAtPath(serviceObj, `faqAdditions[${fi}].answer`);
+              if (typeof ans !== "string" || !ans.trim()) return;
+
+              const pairs = countStrongPairs(ans);
+              const isEligible = countWords(getFirstPBlock(ans) || ans) >= MIN_WORDS.faqAnswer;
+
+              if (pairs > 0 || pairs > 1) {
+                if (!validateFaqMax1StrongAndIfPresentInFirstP(ans)) {
+                  targets.push({
+                    path: `services[${si}].faqAdditions[${fi}].answer`,
+                    kind: "serviceFaq_format_fix",
+                    detail: "max 1 <strong>; if present, must be inside first <p> and none after first <p>",
+                  });
+                }
+              }
+
+              answers.push({
+                idx: fi,
+                path: `services[${si}].faqAdditions[${fi}].answer`,
+                html: ans,
+                pairs,
+                hasOneInFirstP: hasOneStrongInFirstP(ans),
+                eligible: isEligible,
+                words: countWords(getFirstPBlock(ans) || ans),
+              });
+            });
+
+            const totalCount = answers.length;
+            const minNeeded = computeMinCoverageForFaq(totalCount, FAQ_COVERAGE_RATIO);
+            const have = answers.filter((a) => a.hasOneInFirstP).length;
+
+            const missing = Math.max(0, minNeeded - have);
+
+            if (missing > 0) {
+              const candidates = answers
+                .filter((a) => a.pairs === 0 && a.eligible)
+                .map((a) => ({ path: a.path, words: a.words, idx: a.idx }));
+
+              const picked = pickCoverageCandidates(candidates, missing);
+
+              for (const c of picked) {
+                targets.push({
+                  path: c.path,
+                  kind: "serviceFaq_coverage_add",
+                  detail: `Add 1 <strong> inside first <p> (coverage: need ${minNeeded}, have ${have})`,
+                });
+              }
+
+              if (picked.length < missing && totalCount > 0) {
+                targets.push({
+                  path: `services[${si}].faqAdditions[0].answer`,
+                  kind: "serviceFaq_coverage_note",
+                  detail: `Coverage shortfall: need +${missing}, only ${picked.length} eligible answers without <strong>`,
+                });
+              }
+            }
+          }
+        }
       });
     }
-  });
-}
-
-
-      // faqAdditions[j].answer strict
-      const faqAddArr = getArrayAtPath(serviceObj, "faqAdditions");
-      if (faqAddArr) {
-        faqAddArr.getElements().forEach((fel, fi) => {
-          if (fel.getKind() !== SyntaxKind.ObjectLiteralExpression) return;
-          const ans = getStringAtPath(serviceObj, `faqAdditions[${fi}].answer`);
-          if (typeof ans !== "string" || !ans.trim()) return;
-          if (!validateFaqExactlyOneStrongAtBeginning(ans)) {
-            targets.push({
-              path: `services[${si}].faqAdditions[${fi}].answer`,
-              kind: "serviceFaq_fix_required",
-              detail: "Service FAQ answer must have EXACTLY 1 <strong> at the start of first <p>",
-            });
-          }
-        });
-      }
-    });
   }
 
   // merge by path (keep details)
@@ -905,20 +1123,20 @@ function expandPaths(cityObj, basePath) {
       out.push(`services[${si}].uniqueIntro`);
       out.push(`services[${si}].uniqueDeepDive`);
 
-// APRÈS
-const scArr = getArrayAtPath(serviceObj, "specificChallenges");
-if (scArr) {
-  scArr.getElements().forEach((sel, sci) => {
-    const v = getStaticStringValue(sel);
-    if (typeof v === "string") out.push(`services[${si}].specificChallenges[${sci}]`);
-  });
-}
-
+      const scArr = getArrayAtPath(serviceObj, "specificChallenges");
+      if (scArr) {
+        scArr.getElements().forEach((sel, sci) => {
+          const v = getStaticStringValue(sel);
+          if (typeof v === "string") out.push(`services[${si}].specificChallenges[${sci}]`);
+        });
+      }
 
       const faqArr = getArrayAtPath(serviceObj, "faqAdditions");
       if (faqArr) {
         faqArr.getElements().forEach((fel, fi) => {
-          if (fel.getKind() === SyntaxKind.ObjectLiteralExpression) out.push(`services[${si}].faqAdditions[${fi}].answer`);
+          if (fel.getKind() === SyntaxKind.ObjectLiteralExpression) {
+            out.push(`services[${si}].faqAdditions[${fi}].answer`);
+          }
         });
       }
     });
@@ -963,14 +1181,7 @@ function buildHybridPatchSchema() {
   };
 }
 
-function buildResponsesBodyStrongHybrid({
-  model,
-  fileRel,
-  fileContent,
-  rulesText,
-  forbiddenStrong = [],
-  coverageTargets = [],
-}) {
+function buildResponsesBodyStrongHybrid({ model, fileRel, fileContent, rulesText, forbiddenStrong = [], coverageTargets = [] }) {
   const schema = buildHybridPatchSchema();
 
   const system = `
@@ -992,31 +1203,30 @@ CHAMPS AUTORISÉS (uniquement)
 - faq[i].answer
 - citySpecificChallenges[i]
 - services[i].uniqueIntro
-- services[i].uniqueDeepDive (max 1 <strong> par section <h3>)
+- services[i].uniqueDeepDive
 - services[i].specificChallenges[j]
 - services[i].faqAdditions[j].answer
 
 RÈGLES / LIMITES
 - hubIntro : max 1 <strong> par <li> + hors <li> max 2 pairs
-- faq[i].answer : EXACTEMENT 1 <strong>, placé AU DÉBUT du premier <p>
-- services[i].faqAdditions[j].answer : EXACTEMENT 1 <strong>, placé AU DÉBUT du premier <p>
-- citySpecificChallenges[i] : max 1 <strong> (si long => ajouter 1 si manque)
-- services[i].specificChallenges[j] : max 1 <strong> ...
-- services[i].uniqueIntro : max 2 <strong> (si long => ajouter 1 si manque)
-- services[i].uniqueDeepDive : max 1 <strong> par bloc <h3> (si bloc long => ajouter 1 si manque)
+- FAQ (faq[i].answer et services[i].faqAdditions[j].answer) :
+  - max 1 <strong> par answer
+  - si <strong> présent : il doit être dans le 1er <p> (où tu veux), et aucun <strong> après le 1er <p>
+- citySpecificChallenges[i] : max 1 <strong> par item (pas 1 obligatoire par item)
+- services[i].specificChallenges[j] : max 1 <strong> par item (pas 1 obligatoire par item)
+- services[i].uniqueIntro : max 2 <strong>
+- services[i].uniqueDeepDive : max 1 <strong> par bloc <h3>
 
 SCANNABILITÉ / QUALITÉ
 - Segment <strong> court (2 à 10 mots), concret, terrain, non marketing.
 - Jamais deux <strong> collés, jamais une phrase entière en <strong>.
 - Ne jamais mettre en <strong> : prix, délais, urgence, garanties, “premium”, certifications, etc. (liste interdite fournie).
-- Si un champ est déjà conforme ET pas dans les coverage targets : ne propose rien.
+- Ne propose un patch QUE si nécessaire pour les coverage targets ou pour corriger une violation.
 
 Interdictions dans <strong> (liste) :
 ${(forbiddenStrong || []).map((s) => `- "${s}"`).join("\n")}
 
 COVERAGE TARGETS (à corriger en priorité)
-- Chaque item ci-dessous indique un champ à corriger, et pourquoi.
-- Si tu ne peux pas corriger SANS violer les règles, tu peux laisser le champ inchangé (mais c'est rare).
 ${JSON.stringify(coverageTargets, null, 2)}
 
 HYBRID OUTPUT (JSON strict)
@@ -1176,7 +1386,7 @@ async function submitBatch() {
 
   ensureDir(OUT_DIR);
 
-  // Parse TS once to compute coverage targets per file (so the prompt is “directif”)
+  // Parse TS once to compute coverage targets per file (prompt directif)
   const project = new Project({ tsConfigFilePath: TS_CONFIG });
 
   const lines = [];
@@ -1288,8 +1498,7 @@ async function collectBatch() {
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-  const batchId =
-    getArgValue("--batch") || (fs.existsSync(OUT_BATCH_META) ? readJson(OUT_BATCH_META).batch_id : null);
+  const batchId = getArgValue("--batch") || (fs.existsSync(OUT_BATCH_META) ? readJson(OUT_BATCH_META).batch_id : null);
 
   if (!batchId) {
     console.error("Missing --batch and no meta file");
@@ -1425,9 +1634,10 @@ async function collectBatch() {
         const val = getStringAtPath(cityObj, p);
         if (typeof val !== "string") continue;
 
-        // scan strong if present OR strict rules (faq)
-        const needsStrict = /^faq\[\d+\]\.answer$/.test(p) || /^services\[\d+\]\.faqAdditions\[\d+\]\.answer$/.test(p);
-        if (!val.includes("<strong>") && !needsStrict) continue;
+        // check only if strong exists OR for hubIntro/deepDive where overcap might exist
+        // (for FAQ with 0 strong it's OK; for others with 0 it's OK; coverage handled elsewhere)
+        const hasStrong = val.includes("<strong>");
+        if (!hasStrong) continue;
 
         const vr = validateFieldByRules(p, val, forbiddenStrong);
         if (!vr.ok) violations.push({ path: p, details: vr.why });
@@ -1448,7 +1658,13 @@ async function collectBatch() {
       const expectedFromTs = getStringAtPath(cityObj, pathStr);
       if (typeof expectedFromTs !== "string") continue;
 
-      const verdict = validateHybridPatch({ pathStr, expectedFromTs, patch: p, forbiddenList: forbiddenStrong });
+      const verdict = validateHybridPatch({
+        pathStr,
+        expectedFromTs,
+        patch: p,
+        forbiddenList: forbiddenStrong,
+      });
+
       if (!verdict.ok) continue;
 
       seenPath.add(pathStr);
@@ -1488,7 +1704,9 @@ async function collectBatch() {
     }
 
     report.files.push({ file: fileRel, slug, patches: kept, violations, coverageTargets });
-    console.log(`[strong-klinova] ${slug} -> kept=${kept.length}, targets=${coverageTargets.length}, violations=${violations.length}`);
+    console.log(
+      `[strong-klinova] ${slug} -> kept=${kept.length}, targets=${coverageTargets.length}, violations=${violations.length}`
+    );
   }
 
   writeText(OUT_REPORT_JSON, JSON.stringify(report, null, 2));

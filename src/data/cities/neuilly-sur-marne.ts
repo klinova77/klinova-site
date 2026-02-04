@@ -183,7 +183,7 @@ const city: City = {
         "Gestion du volume d'eaux sales et de la présence d'hydrocarbures, imposant parfois une filière de traitement spécifique.",
         "Nettoyage des <strong>rampes très encrassées</strong> par les résidus de freinage et les graisses, sans abîmer le revêtement.",
         "Organisation du travail en zones occupées, avec rotation des véhicules et interventions en horaires décalés si nécessaire.",
-        "Forte présence de poussières fines liée à la proximité des grands axes (RN 34), s'incrustant dans les bétons non peints.",
+        "<strong>Forte présence de poussières fines</strong> liée à la proximité des grands axes (RN 34), s'incrustant dans les bétons non peints.",
       ],
 
       faqAdditions: [
@@ -351,7 +351,7 @@ const city: City = {
         "Logements avec enfants ou animaux à Neuilly-sur-Marne nécessitant un nettoyage régulier pour éliminer poils, taches et acariens.",
         "Taches organiques (urine, nourriture) et odeurs tenaces demandant des produits spécifiques et un temps de pose adapté.",
         "Pièces peu ventilées ou humides <strong>prolongeant le séchage</strong>, nécessitant une attention particulière pour éviter les moisissures.",
-        "Tissus fragiles (velours, soie) ou épais (tapis à poils longs) exigeant un nettoyage délicat pour un résultat optimal.",
+        "<strong><strong>Tissus fragiles (velours, soie) ou épais (tapis à poils longs)</strong></strong> exigeant un nettoyage délicat pour un résultat optimal.",
       ],
 
       faqAdditions: [
@@ -392,13 +392,13 @@ const city: City = {
         "Prestation soignée et valorisante : protection du mobilier, respect des façades et nettoyage précis pour un rendu visuel immédiatement perceptible.",
       ],
       uniqueIntro:
-        '<p><strong>Neuilly-sur-Marne</strong>, commune de Seine-Saint-Denis bordée par la <strong>Marne</strong>, présente un habitat varié mêlant maisons individuelles, résidences et quartiers pavillonnaires. Les terrasses y sont très présentes, aussi bien dans les jardins privés que dans les ensembles résidentiels.</p>\n\n<p class="mt-4">La proximité du fleuve, les alignements d’arbres et les zones ombragées favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont particulièrement visibles sur les terrasses peu exposées au soleil ou proches des berges.</p>\n\n<p class="mt-4">À Neuilly-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement satisfaisante.</p>',
+        "<p><strong>Neuilly-sur-Marne</strong>, commune de Seine-Saint-Denis bordée par la Marne, présente un habitat varié mêlant maisons individuelles, résidences et quartiers pavillonnaires. Les terrasses y sont très présentes, aussi bien dans les jardins privés que dans les ensembles résidentiels.</p>\n\n<p class=\"mt-4\">La proximité du fleuve, les alignements d’arbres et les zones ombragées favorisent l’apparition de mousses, algues, traces noires et salissures incrustées sur les sols extérieurs. Ces phénomènes sont particulièrement visibles sur les terrasses peu exposées au soleil ou proches des berges.</p>\n\n<p class=\"mt-4\">À Neuilly-sur-Marne, les terrasses sont réalisées en <strong>dalles béton</strong>, carrelage extérieur, pierre, bois ou bois composite. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement satisfaisante.</p>",
       uniqueDeepDive:
-        "<h3>Préparation et protection de l’environnement</h3>\n<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans les configurations proches de la Marne.</p>\n\n<h3>Nettoyage approfondi du sol extérieur</h3>\n<p>La méthode est adaptée au matériau : solution performante pour béton et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>",
+        "<h3>Préparation et protection de l’environnement</h3>\n<p>Le mobilier de terrasse, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, notamment dans les configurations proches de la Marne.</p>\n\n<h3>Nettoyage approfondi du sol extérieur</h3>\n<p>La méthode est adaptée au matériau : <strong>solution performante pour béton</strong> et carrelage extérieur, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées à l’humidité. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>",
       specificChallenges: [
-        "Terrasses situées près des bords de Marne : humidité régulière favorisant mousses et traces verdâtres.",
+        "<strong>Terrasses situées près des bords de Marne</strong> : humidité régulière favorisant mousses et traces verdâtres.",
         "Zones arborées et jardins privatifs : dépôts végétaux et encrassement biologique rapide.",
-        "Dalles béton et carrelages extérieurs ternis par le temps et la pollution.",
+        "<strong>Dalles béton et carrelages extérieurs ternis</strong> par le temps et la pollution.",
         "Terrasses partiellement ombragées : séchage lent et apparition de surfaces glissantes.",
         "Bois et composite exposés aux intempéries : perte d’éclat et salissures incrustées.",
       ],
@@ -407,13 +407,13 @@ const city: City = {
           question:
             "Pourquoi les terrasses de Neuilly-sur-Marne s’encrassent-elles rapidement ?",
           answer:
-            "<p>La <strong>proximité de la Marne</strong>, combinée à l’humidité et à la végétation environnante, favorise l’apparition de <strong>mousses, algues et traces noires</strong>. Ces salissures s’installent progressivement sur les sols extérieurs si aucun nettoyage adapté n’est réalisé.</p>",
+            "<p>La proximité de la Marne, combinée à l’humidité et à la végétation environnante, favorise l’apparition de <strong>mousses, algues et traces noires</strong>. Ces salissures s’installent progressivement sur les sols extérieurs si aucun nettoyage adapté n’est réalisé.</p>",
         },
         {
           question:
             "Le nettoyage améliore-t-il réellement l’aspect visuel d’une terrasse ?",
           answer:
-            "<p>Oui. Un nettoyage en profondeur permet de <strong>clarifier les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+            "<p>Oui. Un nettoyage en profondeur permet de <strong>clarifier les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>",
         },
         {
           question:
@@ -444,17 +444,17 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>Neuilly-sur-Marne a une configuration particulière : <strong>aucune gare ferroviaire dans la commune</strong>, mais une ville très connectée par les bus et les grands axes, avec une colonne vertébrale routière (la <strong>RN34</strong>) et une vie locale structurée autour du centre et des bords de Marne. Pour un nettoyage d’appartement ou de maison, l’enjeu n’est pas seulement le résultat : c’est aussi la <strong>logistique</strong> (arrivée, stationnement, accès immeuble) et le bon ordre d’exécution.</p>\n<p class="mt-4">La ville se lit en contraste. D’un côté, le <strong>centre ancien</strong> et certains secteurs proches de la Marne : rues plus étroites, accès parfois plus délicats, et une humidité qui marque davantage cuisines, salles d’eau et bas de vitrages. De l’autre, la <strong>ZAC Maison Blanche</strong>, avec du neuf livré par phases : rotation locative, finitions à sécuriser, et surtout une réalité très concrète — <strong>poussières de chantier</strong> (plâtre/terre) qui reviennent vite si on ne nettoie pas dans le bon sens.</p>\n<p class="mt-4">Enfin, Neuilly-sur-Marne a ses repères : le <strong>Parc de la Haute-Île</strong> et le <strong>canal de Chelles</strong> structurent des zones résidentielles, tandis que l’emprise de <strong>Ville-Évrard</strong> et l’écoquartier modifient les flux. Résultat : les demandes typiques tournent autour des fins de bail, des remises en état de pavillons (Primevères / 24 Arpents) et des “après travaux” dans la dynamique Maison Blanche.</p>',
+        "<p>Neuilly-sur-Marne a une configuration particulière : <strong>aucune gare ferroviaire dans la commune</strong>, mais une ville très connectée par les bus et les grands axes, avec une colonne vertébrale routière (la RN34) et une vie locale structurée autour du centre et des bords de Marne. Pour un nettoyage d’appartement ou de maison, l’enjeu n’est pas seulement le résultat : c’est aussi la logistique (arrivée, stationnement, accès immeuble) et le bon ordre d’exécution.</p>\n<p class=\"mt-4\">La ville se lit en contraste. D’un côté, le centre ancien et certains secteurs proches de la Marne : rues plus étroites, accès parfois plus délicats, et une humidité qui marque davantage cuisines, salles d’eau et bas de vitrages. De l’autre, la <strong>ZAC Maison Blanche</strong>, avec du neuf livré par phases : rotation locative, finitions à sécuriser, et surtout une réalité très concrète — poussières de chantier (plâtre/terre) qui reviennent vite si on ne nettoie pas dans le bon sens.</p>\n<p class=\"mt-4\">Enfin, Neuilly-sur-Marne a ses repères : le Parc de la Haute-Île et le canal de Chelles structurent des zones résidentielles, tandis que l’emprise de Ville-Évrard et l’écoquartier modifient les flux. Résultat : les demandes typiques tournent autour des fins de bail, des remises en état de pavillons (Primevères / 24 Arpents) et des “après travaux” dans la dynamique Maison Blanche.</p>",
 
       uniqueDeepDive:
-        "<h3>ZAC Maison Blanche — neuf, retombées de chantier et états des lieux</h3>\n<p>Sur Maison Blanche, la contrainte n°1 est la poussière fine (plâtre, découpe, va-et-vient de chantier) qui se redépose vite. On privilégie une séquence “anti-retombées” : dépoussiérage minutieux des hauteurs et surfaces planes, nettoyage des menuiseries, puis sols, avant de verrouiller la finition. C’est particulièrement adapté aux états des lieux et aux entrées/sorties rapides de locataires dans le neuf.</p>\n\n<h3>Centre-ville / Place Stalingrad — accès plus serrés et stationnement</h3>\n<p>Le centre concentre davantage de circulation, de stationnement contraint et d’accès par badges/digicodes. L’objectif est d’aller droit au rendu : cuisine/salle d’eau, sols, vitres accessibles, puis détails visibles. On organise aussi l’arrivée pour éviter les fenêtres horaires les plus chargées sur la RN34 et en zone bleue.</p>\n\n<h3>Bords de Marne / canal — humidité, terrasses et surfaces vitrées</h3>\n<p>Près de l’eau, l’humidité marque plus vite certains points : traces minérales, joints, et parfois une sensation de “film” sur les vitrages bas. On adapte les produits et le temps de contact, et on traite les zones de passage (entrée, pièces de vie) en priorité. Dans les pavillons, on sécurise aussi la protection des sols et l’enchaînement des pièces à l’étage pour ne pas re-salir en sortie.</p>",
+        "<h3>ZAC Maison Blanche — neuf, retombées de chantier et états des lieux</h3>\n<p>Sur Maison Blanche, la contrainte n°1 est <strong>la poussière fine</strong> (plâtre, découpe, va-et-vient de chantier) qui se redépose vite. On privilégie une séquence “anti-retombées” : dépoussiérage minutieux des hauteurs et surfaces planes, nettoyage des menuiseries, puis sols, avant de verrouiller la finition. C’est particulièrement adapté aux états des lieux et aux entrées/sorties rapides de locataires dans le neuf.</p>\n\n<h3>Centre-ville / Place Stalingrad — accès plus serrés et stationnement</h3>\n<p>Le centre concentre davantage de circulation, de stationnement contraint et d’accès par badges/digicodes. L’objectif est d’aller droit au rendu : cuisine/salle d’eau, sols, vitres accessibles, puis détails visibles. On organise aussi l’arrivée pour éviter les fenêtres horaires les plus chargées sur la RN34 et en zone bleue.</p>\n\n<h3>Bords de Marne / canal — humidité, terrasses et surfaces vitrées</h3>\n<p>Près de l’eau, l’humidité marque plus vite certains points : traces minérales, joints, et parfois une sensation de “film” sur les vitrages bas. On adapte les produits et le temps de contact, et on traite les zones de passage (entrée, pièces de vie) en priorité. Dans les pavillons, on sécurise aussi la protection des sols et l’enchaînement des pièces à l’étage pour ne pas re-salir en sortie.</p>",
 
       specificChallenges: [
-        "Absence de gare intra-muros : organisation des trajets et des créneaux calée sur les axes et bus, pas sur un pôle ferroviaire local.",
-        "Chantier ZAC Maison Blanche : poussières fines (plâtre/terre) et retombées rapides sur les résidences déjà livrées.",
+        "<strong>Absence de gare intra-muros</strong> : organisation des trajets et des créneaux calée sur les axes et bus, pas sur un pôle ferroviaire local.",
+        "<strong>Chantier ZAC Maison Blanche : poussières fines</strong> (plâtre/terre) et retombées rapides sur les résidences déjà livrées.",
         "RN34 très circulée : suie/pollution sur vitrages et balcons, surtout en bord d’axe.",
         "Centre-ville : stationnement plus difficile (zone bleue) et accès parfois serrés selon les rues.",
-        "Bords de Marne : accès camions plus contraints dans certaines rues, et humidité qui marque cuisines/SDB et bas de vitrages.",
+        "<strong>Bords de Marne : accès camions plus contraints</strong> dans certaines rues, et humidité qui marque cuisines/SDB et bas de vitrages.",
         "Badges/digicodes et gardiens fréquents en collectif (Fauvettes / Maison Blanche) : accès à anticiper.",
       ],
 
@@ -469,7 +469,7 @@ const city: City = {
           question:
             "Faites-vous des nettoyages après travaux dans la ZAC Maison Blanche ?",
           answer:
-            "<p>Oui. Dans le neuf, on traite d’abord la poussière fine (plâtre, découpes, retombées), puis on enchaîne menuiseries, surfaces et sols avant la finition. C’est la meilleure façon d’éviter l’effet “ça re-poussière tout de suite”, fréquent quand le quartier est encore en phase de chantier.</p>",
+            "<p>Oui. Dans le neuf, on traite d’abord <strong>la poussière fine</strong> (plâtre, découpes, retombées), puis on enchaîne menuiseries, surfaces et sols avant la finition. C’est la meilleure façon d’éviter l’effet “ça re-poussière tout de suite”, fréquent quand le quartier est encore en phase de chantier.</p>",
         },
         {
           question:
@@ -481,7 +481,7 @@ const city: City = {
           question:
             "Pouvez-vous intervenir sur une maison côté bords de Marne (humidité, terrasses, vitrages) ?",
           answer:
-            "<p>Oui. On adapte la méthode aux zones sensibles : dépôts minéraux et humidité en cuisines/salles d’eau, vitrages bas plus marqués, et protection des sols dans les pièces de vie. Pour les accès plus étroits, on prévoit le matériel en conséquence.</p>",
+            "<p>Oui. On adapte la méthode aux zones sensibles : <strong>dépôts minéraux et humidité</strong> en cuisines/salles d’eau, vitrages bas plus marqués, et protection des sols dans les pièces de vie. Pour les accès plus étroits, on prévoit le matériel en conséquence.</p>",
         },
       ],
 

@@ -304,8 +304,8 @@ const city: City = {
 
       specificChallenges: [
         "Problématique accrue dans les quartiers arborés et sur les immeubles offrant des corniches ou des recoins abrités.",
-        "Nettoyage délicat des fientes sèches devenues poussiéreuses, générant un aérosol contaminant nécessitant une humidification préalable et des EPI stricts.",
-        "Corrosion active des garde-corps en métal et dégradation des joints de carrelage provoquées par l'acidité des déjections accumulées.",
+        "Nettoyage délicat des fientes sèches devenues poussiéreuses, générant <strong>un aérosol contaminant</strong> nécessitant une humidification préalable et des EPI stricts.",
+        "Corrosion active des garde-corps en métal et <strong>dégradation des joints de carrelage</strong> provoquées par l'acidité des déjections accumulées.",
         "Gestion réglementaire stricte de l'évacuation des déchets biologiques, nécessitant un circuit d'élimination spécifique.",
       ],
 
@@ -357,7 +357,7 @@ const city: City = {
         "<h3>1. Diagnostic et pré-traitement</h3>\n<p>Diagnostic précis du textile (coton, laine, synthétique, cuir) et identification des types de taches (graisse, protéine, tanin). <strong>Application manuelle de produits de prétraitement</strong> adaptés sur les souillures tenaces comme le vin, le café ou les traces organiques.</p>\n<h3>2. Injection-extraction professionnelle</h3>\n<p>Nettoyage principal grâce à une machine à injection-extraction à eau chaude. Cette méthode injecte une solution nettoyante et l'extrait immédiatement avec les salissures, sans détremper le rembourrage. <strong>Matériel compact conçu pour les interventions à domicile,</strong> s'adaptant aux contraintes d'accès des appartements ou des pavillons de Chelles.</p>\n<h3>3. Séchage optimisé et conseils</h3>\n<p>Le séchage est accéléré par notre procédé, mais nous vous donnons des conseils pour l'optimiser (aération, chauffage modéré). <strong>Pour un entretien durable, nettoyage professionnel tous les 12 à 18 mois</strong> pour les canapés très utilisés et dépoussiérage régulier des tapis.</p>",
       specificChallenges: [
         "Présence importante d'acariens et de poussières domestiques aggravée par une humidité relative élevée.",
-        "Taches complexes mélangeant terre des jardins ou balcons, graisses alimentaires et résidus organiques liées à la vie de famille.",
+        "Taches complexes mélangeant <strong>terre des jardins ou balcons</strong>, graisses alimentaires et résidus organiques liées à la vie de famille.",
         "Nettoyage délicat des tissus d'ameublement clairs ou des tapis anciens, nécessitant une méthode douce.",
         "<strong>Séchage parfois ralenti</strong> dans les pièces peu ensoleillées ou les logements moins ventilés, nécessitant des conseils adaptés.",
       ],

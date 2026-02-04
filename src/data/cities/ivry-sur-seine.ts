@@ -124,7 +124,7 @@ const city: City = {
           question:
             "Les cages d'escalier étroites du centre-ville d'Ivry compliquent-elles la montée du matériel ?",
           answer:
-            "<p>Nous utilisons des injecteurs-extracteurs compacts, conçus pour passer dans les escaliers de moins d'un mètre de large. Le flexible permet de traiter plusieurs paliers depuis un seul point de stationnement de la machine, sans bloquer la circulation des résidents.</p>",
+            "<p>Nous utilisons des <strong>injecteurs-extracteurs compacts</strong>, conçus pour passer dans les escaliers de moins d'un mètre de large. Le flexible permet de traiter plusieurs paliers depuis un seul point de stationnement de la machine, sans bloquer la circulation des résidents.</p>",
         },
         {
           question:
@@ -160,12 +160,12 @@ const city: City = {
       uniqueIntro:
         "<p>Les traces noires s'accumulent sur les sols béton des parkings souterrains autour de l'<strong>Hôpital Charles-Foix</strong> et dans les résidences de la ZAC Ivry Confluences. Huile de vidange, graisse de freinage, poussières de pneus : ces dépôts forment une couche grasse qui s'incruste dans le revêtement et rend les rampes glissantes. Les gestionnaires constatent une dégradation visible dès les premiers mois sans entretien régulier.</p>\n<p class=\"mt-4\">Un sol encrassé génère des plaintes de copropriétaires, complique la lecture du marquage au sol et accélère l'usure des revêtements. Dans les constructions récentes avec résine, les taches d'hydrocarbures laissent des auréoles persistantes. Sur béton brut, la porosité du matériau absorbe les salissures en profondeur, rendant le simple balayage inefficace.</p>\n<p class=\"mt-4\">L'accumulation de suie liée au trafic poids lourds sur les quais et le périphérique aggrave l'encrassement des parkings proches de ces axes. Une intervention structurée permet de restaurer l'aspect du sol, de sécuriser les zones de circulation et de fournir un compte-rendu exploitable pour le suivi de la copropriété.</p>",
       uniqueDeepDive:
-        "<h3>Sol décrassé et sécurisé</h3>\n<p>Le résultat attendu : un revêtement débarrassé des dépôts gras, des rampes antidérapantes et des rigoles dégagées. Les zones critiques — angles morts, pieds de murs, regards d'évacuation — retrouvent un état permettant une circulation sécurisée et un marquage lisible.</p>\n\n<h3>Traitement mécanisé adapté au revêtement</h3>\n<p>Le diagnostic initial identifie le type de sol (béton brut, résine, peinture) et l'état des évacuations. L'autolaveuse associée à un dégraissant professionnel traite les surfaces en passes successives. Sur les rampes inclinées, une haute pression contrôlée complète le lavage mécanisé pour éliminer les incrustations tenaces.</p>\n\n<h3>Coordination accès et gestion des eaux</h3>\n<p>Le balisage sécurise les zones en cours de traitement. La rotation des véhicules s'organise par secteur pour maintenir un accès partiel. Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Un dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention sur demande.</p>",
+        "<h3>Sol décrassé et sécurisé</h3>\n<p>Le résultat attendu : un revêtement débarrassé des dépôts gras, des rampes antidérapantes et des rigoles dégagées. Les zones critiques — angles morts, pieds de murs, regards d'évacuation — retrouvent un état permettant une circulation sécurisée et un marquage lisible.</p>\n\n<h3>Traitement mécanisé adapté au revêtement</h3>\n<p>Le diagnostic initial identifie le type de sol (béton brut, résine, peinture) et l'état des évacuations. L'autolaveuse associée à un dégraissant professionnel traite les surfaces en <strong>passes successives</strong>. Sur les rampes inclinées, une haute pression contrôlée complète le lavage mécanisé pour éliminer les incrustations tenaces.</p>\n\n<h3>Coordination accès et gestion des eaux</h3>\n<p>Le balisage sécurise les zones en cours de traitement. La rotation des véhicules s'organise par secteur pour maintenir un accès partiel. Les eaux de lavage sont dirigées vers les évacuations existantes, sans <strong>rejet sauvage</strong>. Un dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention sur demande.</p>",
       specificChallenges: [
         "Rampes étroites dans les résidences anciennes : manœuvre autolaveuse adaptée.",
         "Dépôts d'hydrocarbures incrustés sur béton brut poreux nécessitant un dégraissage renforcé.",
         "Coordination avec les copropriétaires pour organiser la rotation des véhicules par secteur.",
-        "Gestion stricte des eaux de lavage vers les regards existants, sans rejet sur voirie.",
+        "Gestion stricte des eaux de lavage vers les <strong>regards existants</strong>, sans rejet sur voirie.",
         "Stationnement camionnette difficile : intervention planifiée en créneau faible affluence.",
       ],
       faqAdditions: [
@@ -173,7 +173,7 @@ const city: City = {
           question:
             "Comment éliminez-vous les taches d'huile anciennes sur les sols béton des rampes souterraines des Étoiles d'Ivry ?",
           answer:
-            "<p>Les taches d'huile incrustées sur béton brut nécessitent un dégraissant alcalin appliqué avant le passage de l'autolaveuse. Sur les rampes des Étoiles, la porosité du revêtement impose parfois deux passes successives. Le résultat dépend de l'ancienneté des dépôts, mais l'aspect général s'améliore nettement.</p>",
+            "<p>Les taches d'huile incrustées sur béton brut nécessitent un <strong>dégraissant alcalin</strong> appliqué avant le passage de l'autolaveuse. Sur les rampes des Étoiles, la porosité du revêtement impose parfois deux passes successives. Le résultat dépend de l'ancienneté des dépôts, mais l'aspect général s'améliore nettement.</p>",
         },
         {
           question:
@@ -207,22 +207,22 @@ const city: City = {
         "Organisation anti-coulures systématique et créneaux compatibles avec la vie en immeuble dense.",
       ],
       uniqueIntro:
-        "<p>Comment profiter d'un espace extérieur quand les dépôts noirs s'accumulent semaine après semaine ? Entre le boulevard Paul Vaillant-Couturier et les quais, les balcons du centre-ville et de Petit-Ivry reçoivent en continu particules fines et résidus de circulation. Le carrelage se ternit, les joints noircissent, et l'envie de s'installer dehors diminue au fil des mois.</p>\n<p class=\"mt-4\">Sur les balcons en béton brut des immeubles Renaudie ou les loggias vitrées des résidences récentes, le nettoyage régulier change l'usage quotidien. Un sol propre, des garde-corps débarrassés de leur voile gris, des vitres dégagées : l'espace redevient un prolongement du logement, pas une zone qu'on évite. Les voisins du dessous apprécient aussi l'attention portée aux écoulements.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic du support et de l'exposition. Produits adaptés, pression contrôlée si nécessaire, protection des plantes et du mobilier : chaque étape tient compte des contraintes liées aux chantiers de la ZAC et à la pollution urbaine ambiante.</p>",
+        "<p>Comment profiter d'un espace extérieur quand les dépôts noirs s'accumulent semaine après semaine ? Entre le boulevard Paul Vaillant-Couturier et les quais, les balcons du centre-ville et de Petit-Ivry reçoivent en continu particules fines et résidus de circulation. Le carrelage se ternit, les joints noircissent, et l'envie de s'installer dehors diminue au fil des mois.</p>\n<p class=\"mt-4\">Sur les balcons en béton brut des immeubles Renaudie ou les loggias vitrées des résidences récentes, le nettoyage régulier change l'usage quotidien. Un sol propre, des garde-corps débarrassés de leur voile gris, des vitres dégagées : l'espace redevient un prolongement du logement, pas une zone qu'on évite. Les voisins du dessous apprécient aussi l'attention portée aux <strong>écoulements</strong>.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic du support et de l'exposition. Produits adaptés, pression contrôlée si nécessaire, protection des plantes et du mobilier : chaque étape tient compte des contraintes liées aux chantiers de la ZAC et à la pollution urbaine ambiante.</p>",
       uniqueDeepDive:
-        "<h3>Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. On retire ensuite les gros dépôts : feuilles mortes, terre accumulée, débris divers.</p>\n\n<h3>Traitement et brossage</h3>\n<p>Un produit adapté au support est appliqué : formulation différente selon qu'il s'agisse de béton brut, de carrelage ou de dalles sur plots. Le brossage manuel ou mécanique décolle les salissures incrustées. Les garde-corps, vitrages et murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à pression contrôlée, en préservant les joints fragiles.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>L'écoulement est maîtrisé pour éviter les coulures chez les voisins du dessous. La façade reste protégée des projections. Après séchage, des conseils d'entretien sont transmis pour espacer les interventions suivantes et maintenir le résultat obtenu.</p>",
+        "<h3>Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. On retire ensuite les gros dépôts : feuilles mortes, terre accumulée, débris divers.</p>\n\n<h3>Traitement et brossage</h3>\n<p>Un produit adapté au support est appliqué : formulation différente selon qu'il s'agisse de béton brut, de carrelage ou de dalles sur plots. Le <strong>brossage manuel ou mécanique</strong> décolle les salissures incrustées. Les garde-corps, vitrages et murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à pression contrôlée, en préservant les joints fragiles.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>L'écoulement est maîtrisé pour éviter les coulures chez les voisins du dessous. La façade reste protégée des projections. Après séchage, des conseils d'entretien sont transmis pour espacer les interventions suivantes et maintenir le résultat obtenu.</p>",
       specificChallenges: [
         "Formes géométriques complexes sur les balcons Renaudie : angles aigus, recoins difficiles d'accès.",
         "Noircissement accéléré par la proximité du périphérique et des axes à fort trafic.",
-        "Joints de carrelage fragilisés par les variations thermiques et l'humidité de la Seine.",
+        "Joints de carrelage <strong>fragilisés</strong> par les variations thermiques et l'humidité de la Seine.",
         "Gestion des écoulements délicate dans les immeubles à étages multiples.",
-        "Dépôts de poussières de chantier liés aux travaux en cours sur la ZAC Confluences.",
+        "Dépôts de <strong>poussières de chantier</strong> liés aux travaux en cours sur la ZAC Confluences.",
       ],
       faqAdditions: [
         {
           question:
             "Pour les balcons en béton des Étoiles d'Ivry, quelle méthode évite d'abîmer le support lors du nettoyage ?",
           answer:
-            "<p>Le béton brut des constructions Renaudie supporte mal la haute pression directe. On privilégie un brossage mécanique avec produit alcalin, suivi d'un rinçage à pression modérée. Les arêtes vives et les angles sont traités manuellement pour ne pas éroder la surface ni déloger les joints d'étanchéité.</p>",
+            "<p>Le béton brut des constructions Renaudie supporte mal la haute pression directe. On privilégie un <strong>brossage mécanique</strong> avec produit alcalin, suivi d'un rinçage à pression modérée. Les arêtes vives et les angles sont traités manuellement pour ne pas éroder la surface ni déloger les joints d'étanchéité.</p>",
         },
         {
           question:
@@ -240,7 +240,7 @@ const city: City = {
           question:
             "Faut-il éviter la haute pression sur les loggias vitrées des résidences récentes à Ivry ?",
           answer:
-            "<p>Sur une loggia fermée, la haute pression risque de projeter de l'eau sur les menuiseries et à l'intérieur. On utilise plutôt un nettoyage manuel ou basse pression, avec raclette pour les vitrages. Le sol est traité au balai-brosse et rincé de façon contrôlée vers l'évacuation.</p>",
+            "<p>Sur une loggia fermée, la haute pression risque de projeter de l'eau sur les menuiseries et à l'intérieur. On utilise plutôt un <strong>nettoyage manuel</strong> ou basse pression, avec raclette pour les vitrages. Le sol est traité au balai-brosse et rincé de façon contrôlée vers l'évacuation.</p>",
         },
       ],
       ctaOverride: "",
@@ -258,10 +258,10 @@ const city: City = {
       uniqueIntro:
         "<p>Après quelques semaines sans intervention, les dépôts s'accumulent sur les garde-corps et le sol du balcon. Aux abords du <strong>Parc des Cormailles</strong> et du <strong>Cimetière Parisien</strong>, la présence importante de pigeons accélère ce phénomène. L'odeur s'installe, le linge étendu absorbe les particules, et l'espace devient inutilisable. Cette situation génère une gêne quotidienne difficile à ignorer.</p>\n<p class=\"mt-4\">Sur les immeubles anciens en briques rouges ou les façades des grands ensembles, les corniches et rebords offrent des surfaces propices aux dépôts répétés. Les fientes attaquent progressivement les matériaux : le béton se dégrade, la peinture s'écaille, les joints s'effritent. Un traitement adapté permet de stopper cette détérioration et de retrouver un balcon utilisable sans risque pour la santé.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic visuel pour évaluer l'ampleur des souillures et les zones à protéger. En centre-ville dense, la coordination avec le voisinage limite les nuisances pendant le chantier. Chaque étape suit un protocole précis, de la sécurisation à l'évacuation des déchets contaminés.</p>",
       uniqueDeepDive:
-        "<h3>Balcon assaini et désinfecté</h3>\n<p>Le résultat visé : un sol propre, des garde-corps débarrassés de toute trace, une odeur neutralisée. La désinfection virucide élimine les agents pathogènes présents dans les fientes séchées.</p>\n\n<h3>Confinement et retrait sécurisé</h3>\n<p>L'intervenant porte un équipement complet : masque FFP2, combinaison jetable, gants et lunettes. La zone est bâchée pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins. Les fientes sont humidifiées avant ramassage pour neutraliser les poussières contaminées, puis conditionnées en sacs étanches.</p>\n<p class=\"mt-4\">Le nettoyage couvre le sol, les vitrages et les murs mitoyens si nécessaire.</p>\n\n<h3>Désinfection et évacuation</h3>\n<p>Un produit bactéricide homologué est appliqué sur l'ensemble des surfaces avec un temps de contact respecté. Après rinçage, le balcon nécessite une aération avant réutilisation. Les déchets sont évacués dans des sacs étanches. Des solutions de dissuasion peuvent être proposées : pics sur les rebords ou filets de protection.</p>",
+        "<h3>Balcon assaini et désinfecté</h3>\n<p>Le résultat visé : un sol propre, des garde-corps débarrassés de toute trace, une odeur neutralisée. La désinfection virucide élimine les agents pathogènes présents dans les fientes séchées.</p>\n\n<h3>Confinement et retrait sécurisé</h3>\n<p>L'intervenant porte un équipement complet : masque FFP2, combinaison jetable, gants et lunettes. La zone est bâchée pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins. Les fientes sont humidifiées avant ramassage pour neutraliser les poussières contaminées, puis conditionnées en <strong>sacs étanches</strong>.</p>\n<p class=\"mt-4\">Le nettoyage couvre le sol, les vitrages et les murs mitoyens si nécessaire.</p>\n\n<h3>Désinfection et évacuation</h3>\n<p>Un produit bactéricide homologué est appliqué sur l'ensemble des surfaces avec un temps de contact respecté. Après rinçage, le balcon nécessite une aération avant réutilisation. Les déchets sont évacués dans des <strong>sacs étanches</strong>. Des solutions de dissuasion peuvent être proposées : pics sur les rebords ou filets de protection.</p>",
       specificChallenges: [
-        "Proximité du Parc des Cormailles : concentration de pigeons et dépôts fréquents sur les balcons alentour.",
-        "Corniches en briques anciennes offrant des rebords propices à l'installation des oiseaux.",
+        "Proximité du Parc des Cormailles : <strong>concentration de pigeons</strong> et dépôts fréquents sur les balcons alentour.",
+        "Corniches en briques anciennes offrant des <strong>rebords propices</strong> à l'installation des oiseaux.",
         "Densité urbaine du centre-ville nécessitant une coordination avec le voisinage pendant l'intervention.",
         "Fientes acides attaquant le béton des balcons dans les résidences années 70-80.",
         "Évacuation des déchets contaminés en sacs étanches, stationnement contraint à proximité.",
@@ -283,7 +283,7 @@ const city: City = {
           question:
             "Comment organisez-vous l'évacuation des déchets contaminés après nettoyage de fientes en centre-ville dense ?",
           answer:
-            "<p>Les fientes et résidus sont conditionnés dans des sacs étanches dès le ramassage. En centre-ville, nous stationnons au plus près pour limiter les manipulations. L'évacuation se fait en fin d'intervention, sans stockage sur place. Le bâchage protège les parties communes pendant le transport.</p>",
+            "<p>Les fientes et résidus sont conditionnés dans des <strong>sacs étanches</strong> dès le ramassage. En centre-ville, nous stationnons au plus près pour limiter les manipulations. L'évacuation se fait en fin d'intervention, sans stockage sur place. Le bâchage protège les parties communes pendant le transport.</p>",
         },
         {
           question:

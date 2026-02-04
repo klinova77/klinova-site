@@ -70,7 +70,7 @@ const city: City = {
     {
       question: "Quel délai pour une première intervention à Bagnolet ?",
       answer:
-        "<p>Nous pouvons généralement intervenir sous <strong>48 à 72 heures</strong> après validation du devis. Pour les demandes <strong>urgentes</strong> (souillure importante, incident), un créneau prioritaire peut être proposé selon la charge en cours. Contactez-nous pour évaluer la faisabilité.</p>",
+        "<p>Nous pouvons généralement intervenir sous 48 à 72 heures après validation du devis. Pour les demandes urgentes (souillure importante, incident), un créneau prioritaire peut être proposé selon la charge en cours. Contactez-nous pour évaluer la faisabilité.</p>",
     },
     {
       question:
@@ -120,7 +120,7 @@ const city: City = {
         "<p>Les traces de passage répété sont visibles sur les dalles textiles des boutiques et espaces d'accueil du <strong>Centre Commercial Bel Est</strong>. Zones de caisse, allées principales, entrées : les fibres accumulent poussières fines, résidus alimentaires et marques de semelles. Ce grisaillement progressif altère l'aspect général sans qu'un simple aspirateur suffise à restaurer la netteté d'origine.</p>\n<p class=\"mt-4\">Dans les <strong>bâtiments tertiaires et commerces</strong> de Bagnolet, les moquettes bouclées ou velours ras subissent un encrassement accéléré par le trafic piéton dense. Les halls des tours, couloirs de bureaux et salles d'attente présentent souvent des zones de circulation marquées, contrastant avec les parties moins fréquentées. Un entretien adapté redonne une homogénéité visuelle et prolonge la durée de vie du revêtement.</p>\n<p class=\"mt-4\">L'intervention s'organise autour d'un diagnostic préalable : nature des fibres, ancienneté des taches, contraintes d'accès. Le traitement par injection-extraction cible les salissures en profondeur, tandis que la gestion du séchage permet une reprise d'activité sans délai excessif.</p>",
       // HTML autorisé (<h3> + <p>...)
       uniqueDeepDive:
-        "<h3>Zones de fort passage</h3>\n<p>Les allées principales et entrées concentrent l'essentiel de l'encrassement. Après aspiration préalable, le traitement par injection-extraction s'effectue en passes croisées sur ces surfaces. Les fibres compactées par le piétinement reçoivent un détachage ciblé si nécessaire.</p>\n\n<h3>Espaces intermédiaires et angles</h3>\n<p>Les zones de circulation secondaire et les raccords avec le mobilier fixe accumulent poussières et résidus moins visibles. Le nettoyage couvre ces surfaces en adaptant la pression d'injection selon l'épaisseur du revêtement. Les plinthes et bas de murs sont protégés pendant l'opération.</p>\n\n<h3>Séchage et remise en service</h3>\n<p>L'extraction maximale de l'humidité réduit le temps de séchage à quelques heures selon la ventilation disponible. Un balisage temporaire limite le piétinement immédiat. Les consignes de non-circulation sont transmises pour garantir un résultat homogène sur l'ensemble de la surface traitée.</p>",
+        "<h3>Zones de fort passage</h3>\n<p>Les allées principales et entrées concentrent l'essentiel de l'encrassement. Après aspiration préalable, le traitement par injection-extraction s'effectue en passes croisées sur ces surfaces. Les fibres compactées par le piétinement reçoivent un détachage ciblé si nécessaire.</p>\n\n<h3>Espaces intermédiaires et angles</h3>\n<p>Les zones de circulation secondaire et les raccords avec le mobilier fixe accumulent <strong>poussières et résidus moins visibles</strong>. Le nettoyage couvre ces surfaces en adaptant la pression d'injection selon l'épaisseur du revêtement. Les plinthes et bas de murs sont protégés pendant l'opération.</p>\n\n<h3>Séchage et remise en service</h3>\n<p>L'extraction maximale de l'humidité réduit le temps de séchage à quelques heures selon la ventilation disponible. Un <strong>balisage temporaire limite le piétinement</strong> immédiat. Les consignes de non-circulation sont transmises pour garantir un résultat homogène sur l'ensemble de la surface traitée.</p>",
       // texte brut (strip <strong> tags from specificChallenges)
       specificChallenges: [
         "<strong>Dalles textiles en zones commerciales</strong> : taches alimentaires et traces de semelles concentrées aux entrées.",
@@ -153,7 +153,7 @@ const city: City = {
           question:
             "Comment adaptez-vous la méthode selon l'épaisseur et le type de moquette dans les halls d'immeubles récents à Bagnolet ?",
           answer:
-            "<p>Le diagnostic préalable identifie la structure du revêtement : moquette fine collée, dalles amovibles ou velours épais. La pression d'injection et le débit d'extraction sont ajustés pour éviter de détremper les fibres ou de décoller les supports. Les moquettes épaisses nécessitent des passes supplémentaires et un temps de séchage allongé.</p>",
+            "<p>Le diagnostic préalable identifie la <strong>structure du revêtement</strong> : moquette fine collée, dalles amovibles ou velours épais. La pression d'injection et le débit d'extraction sont ajustés pour éviter de détremper les fibres ou de décoller les supports. Les moquettes épaisses nécessitent des passes supplémentaires et un temps de séchage allongé.</p>",
         },
       ],
       ctaOverride: "",
@@ -169,14 +169,14 @@ const city: City = {
         "Coordination avec syndics et gestionnaires : balisage, rotation véhicules par zone, créneaux hors pointe pour limiter la gêne.",
       ],
       uniqueIntro:
-        "<p>Dans les parkings situés à proximité de l'échangeur A3, les dépôts de suie grasse et de poussière noire s'accumulent rapidement sur les sols. Les rampes d'accès, les allées de circulation et les pieds de murs concentrent des résidus d'hydrocarbures que le passage quotidien des véhicules étale sans jamais éliminer. Cette couche tenace dégrade l'aspect général et complique l'entretien courant.</p>\n<p class=\"mt-4\">Les parkings souterrains des grands ensembles et centres commerciaux présentent des configurations spécifiques : rampes hélicoïdales, box fermés, regards d'évacuation parfois obstrués. Un lavage régulier permet de maintenir des conditions de circulation correctes, de limiter les risques de glissade et de préserver l'image des résidences auprès des copropriétaires et visiteurs.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic ou le gestionnaire. Balisage des zones, rotation des véhicules par secteur, créneaux adaptés aux flux : chaque étape vise à réduire la gêne tout en garantissant un résultat visible dès la fin du chantier.</p>",
+        "<p>Dans les parkings situés à proximité de l'échangeur A3, les dépôts de suie grasse et de poussière noire s'accumulent rapidement sur les sols. Les rampes d'accès, les allées de circulation et les pieds de murs concentrent des résidus d'hydrocarbures que le passage quotidien des véhicules étale sans jamais éliminer. Cette couche tenace dégrade l'aspect général et complique l'entretien courant.</p>\n<p class=\"mt-4\">Les parkings souterrains des grands ensembles et centres commerciaux présentent des configurations spécifiques : <strong>rampes hélicoïdales, box fermés</strong>, regards d'évacuation parfois obstrués. Un lavage régulier permet de maintenir des conditions de circulation correctes, de limiter les risques de glissade et de préserver l'image des résidences auprès des copropriétaires et visiteurs.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic ou le gestionnaire. Balisage des zones, rotation des véhicules par secteur, créneaux adaptés aux flux : chaque étape vise à réduire la gêne tout en garantissant un résultat visible dès la fin du chantier.</p>",
       uniqueDeepDive:
         "<h3>Sol décrassé et circulation sécurisée</h3>\n<p>Le résultat attendu : un revêtement débarrassé des traces d'huile, de la poussière incrustée et des dépôts noirâtres. Les rampes retrouvent leur adhérence, les allées leur clarté. L'ensemble du parking gagne en lisibilité et en propreté.</p>\n\n<h3>Autolaveuse et traitement ciblé</h3>\n<p>Le passage mécanisé couvre les grandes surfaces en béton ou résine. Un dégraissant adapté traite les zones critiques : emplacements marqués par des fuites, angles morts, rigoles. La haute pression intervient sur les rampes inclinées pour éliminer les résidus tenaces sans endommager le revêtement.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Les regards sont vérifiés avant et après intervention. Un dépoussiérage des blocs lumineux ou tuyauteries peut compléter le chantier si demandé. Le compte-rendu transmis au gestionnaire précise les zones traitées et la fréquence recommandée.</p>",
       specificChallenges: [
-        "Dépôts de suie liés à la proximité de l'A3 : encrassement rapide des sols et rampes.",
+        "<strong>Dépôts de suie liés à la proximité de l'A3</strong> : encrassement rapide des sols et rampes.",
         "Rampes hélicoïdales dans les tours : traitement antidérapant indispensable après lavage.",
         "Parkings souterrains anciens avec évacuations parfois obstruées : vérification préalable nécessaire.",
-        "Rotation des véhicules à organiser avec le syndic pour libérer les zones par secteur.",
+        "<strong>Rotation des véhicules à organiser avec le syndic</strong> pour libérer les zones par secteur.",
         "Horaires d'intervention à caler hors flux matin/soir vers Gallieni.",
       ],
       faqAdditions: [
@@ -190,7 +190,7 @@ const city: City = {
           question:
             "Quelles techniques utilisez-vous pour des taches d'huile anciennes dans les parkings souterrains des grandes résidences ?",
           answer:
-            "<p>Un dégraissant professionnel est appliqué sur les zones marquées, suivi d'un passage mécanisé à l'autolaveuse. Pour les taches incrustées depuis plusieurs mois, une action prolongée et un rinçage haute pression permettent d'atténuer significativement les traces sans garantir une disparition totale.</p>",
+            "<p>Un dégraissant professionnel est appliqué sur les zones marquées, suivi d'un passage mécanisé à l'autolaveuse. Pour les taches incrustées depuis plusieurs mois, <strong>une action prolongée et un rinçage haute pression</strong> permettent d'atténuer significativement les traces sans garantir une disparition totale.</p>",
         },
         {
           question:
@@ -202,7 +202,7 @@ const city: City = {
           question:
             "Quelle différence de méthode entre un parking souterrain des tours et un parking aérien du Centre Bel Est ?",
           answer:
-            "<p>En souterrain, l'autolaveuse domine pour gérer les poussières fines et l'humidité résiduelle. En aérien, la haute pression s'impose davantage pour éliminer les salissures exposées aux intempéries. Le revêtement — béton brut, résine ou enrobé — détermine aussi le réglage de pression et le choix du détergent.</p>",
+            "<p>En souterrain, <strong>l'autolaveuse domine</strong> pour gérer les poussières fines et l'humidité résiduelle. En aérien, la haute pression s'impose davantage pour éliminer les salissures exposées aux intempéries. Le revêtement — béton brut, résine ou enrobé — détermine aussi le réglage de pression et le choix du détergent.</p>",
         },
       ],
       ctaOverride: "",
@@ -218,13 +218,13 @@ const city: City = {
         "Protection systématique des voisins du dessous, gestion de l'eau maîtrisée, intervention discrète en journée.",
       ],
       uniqueIntro:
-        "<p>Après quelques saisons, les balcons des secteurs résidentiels proches du Château de l'Étang accumulent une couche grisâtre difficile à déloger. Les dépôts verts s'incrustent dans les joints, la poussière noire se fixe sur les garde-corps, et l'espace extérieur perd son attrait. On repousse le moment d'y installer une table ou des plantes, faute d'un sol vraiment propre.</p>\n<p class=\"mt-4\">Sur les supports majoritairement carrelage ou béton des balcons filants et loggias récentes, cette accumulation devient tenace. Le rinçage au jet classique ne suffit plus, l'eau ruisselle sans emporter les salissures incrustées. Le balcon reste terne, les joints gardent leurs traces verdâtres, et l'envie de profiter de cet espace s'estompe au fil des mois.</p>\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un sol net et des surfaces agréables. Nous adaptons le traitement à chaque matériau, en tenant compte de l'exposition à la pollution urbaine liée aux échangeurs proches et en prévoyant une gestion rigoureuse de l'eau pour protéger vos voisins du dessous.</p>",
+        "<p>Après quelques saisons, les balcons des secteurs résidentiels proches du Château de l'Étang accumulent une couche grisâtre difficile à déloger. Les dépôts verts s'incrustent dans les joints, la poussière noire se fixe sur les garde-corps, et l'espace extérieur perd son attrait. On repousse le moment d'y installer une table ou des plantes, faute d'un sol vraiment propre.</p>\n<p class=\"mt-4\">Sur les supports majoritairement carrelage ou béton des balcons filants et loggias récentes, cette accumulation devient tenace. Le rinçage au jet classique ne suffit plus, l'eau ruisselle sans emporter les salissures incrustées. Le balcon reste terne, les joints gardent leurs traces verdâtres, et l'envie de profiter de cet espace s'estompe au fil des mois.</p>\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un sol net et des surfaces agréables. Nous adaptons le traitement à chaque matériau, en tenant compte de l'exposition à la pollution urbaine liée aux échangeurs proches et en prévoyant une <strong>gestion rigoureuse de l'eau</strong> pour protéger vos voisins du dessous.</p>",
       uniqueDeepDive:
         "<h3>Préparation et protection</h3>\n<p>Nous déplaçons le mobilier et les plantes vers un coin abrité ou les bâchons sur place. Les menuiseries, fenêtres et seuils de porte reçoivent une protection pour éviter les projections. Un dispositif anti-coulures est installé en périphérie du balcon avant tout apport d'eau.</p>\n\n<h3>Traitement des surfaces</h3>\n<p>Les gros dépôts, feuilles et débris sont retirés manuellement. Un produit adapté au support est appliqué sur le carrelage ou le béton, puis brossé pour décoller les salissures incrustées. Les garde-corps, vitrages et murs mitoyens accessibles sont traités dans la foulée. Le rinçage s'effectue à pression contrôlée, dosée selon l'état des joints.</p>\n\n<h3>Finalisation et conseils</h3>\n<p>L'eau résiduelle est raclée vers les évacuations, le sol sèche rapidement. Nous vérifions l'absence de traces sur les surfaces traitées et vous transmettons quelques recommandations pour espacer les prochaines interventions selon l'exposition de votre balcon.</p>",
       specificChallenges: [
-        "Dépôts noirs liés à la proximité des axes routiers, fixés sur garde-corps et sols.",
+        "<strong>Dépôts noirs liés à la proximité des axes routiers</strong>, fixés sur garde-corps et sols.",
         "Joints de carrelage envahis par des traces verdâtres tenaces après l'hiver.",
-        "Gestion de l'eau délicate sur balcons en étage pour éviter les coulures chez les voisins.",
+        "<strong>Gestion de l'eau délicate sur balcons en étage</strong> pour éviter les coulures chez les voisins.",
         "Loggias fermées où l'humidité stagne et favorise l'encrassement accéléré.",
         "Mobilier et plantes à déplacer ou protéger avant toute intervention.",
       ],
@@ -239,13 +239,13 @@ const city: City = {
           question:
             "Quelle méthode utilisez-vous pour nettoyer carrelage et joints sur les balcons récents du Plateau ?",
           answer:
-            "<p>Un produit adapté au grès cérame ou au carrelage standard est appliqué, suivi d'un brossage ciblé sur les joints. Le rinçage s'effectue à pression modérée pour ne pas déchausser les joints neufs. Cette approche préserve l'étanchéité tout en éliminant les salissures incrustées.</p>",
+            "<p>Un produit adapté au grès cérame ou au carrelage standard est appliqué, suivi d'un <strong>brossage ciblé sur les joints</strong>. Le rinçage s'effectue à pression modérée pour ne pas déchausser les joints neufs. Cette approche préserve l'étanchéité tout en éliminant les salissures incrustées.</p>",
         },
         {
           question:
             "Les balcons exposés à l'A3 noircissent vite : quel entretien limite cet encrassement ?",
           answer:
-            "<p>La pollution routière dépose une couche grasse qui s'accumule rapidement. Un traitement régulier, une à deux fois par an, empêche les dépôts de s'incruster durablement. Nous utilisons un dégraissant doux qui retire le film noir sans agresser les surfaces ni les joints.</p>",
+            "<p>La pollution routière dépose une couche grasse qui s'accumule rapidement. Un <strong>traitement régulier</strong>, une à deux fois par an, empêche les dépôts de s'incruster durablement. Nous utilisons un dégraissant doux qui retire le film noir sans agresser les surfaces ni les joints.</p>",
         },
         {
           question:
@@ -267,14 +267,14 @@ const city: City = {
         "Organisation discrète, protection du voisinage pendant le traitement et évacuation sécurisée des déchets souillés.",
       ],
       uniqueIntro:
-        "<p>Les traces blanchâtres et les dépôts croûtés sur le sol, les garde-corps ou les rebords de fenêtres signalent une présence régulière de pigeons. Dans le quartier des Coutures, où les corniches et appuis de façades offrent des perchoirs accessibles, ces accumulations deviennent vite problématiques. L'odeur s'installe, le balcon reste inutilisé, et le nettoyage classique ne suffit plus à éliminer ce qui s'est incrusté.</p>\n<p class=\"mt-4\">Au-delà de l'aspect visuel, les fientes attaquent progressivement les matériaux. Sur les immeubles anciens de Bagnolet, les appuis en pierre, les joints et les peintures subissent une dégradation accélérée par l'acidité des déjections. Un traitement adapté permet de retrouver un espace extérieur sain, sans résidus ni odeurs persistantes, et de préserver l'état des supports.</p>\n<p class=\"mt-4\">L'intervention combine ramassage sécurisé, désinfection des surfaces et rinçage complet. La proximité du parc Jean-Moulin - Les Guilands favorise la présence d'oiseaux dans certains secteurs : un diagnostic préalable permet d'évaluer l'ampleur du dépôt et de proposer des solutions de dissuasion adaptées.</p>",
+        "<p>Les traces blanchâtres et les dépôts croûtés sur le sol, les garde-corps ou les rebords de fenêtres signalent une présence régulière de pigeons. Dans le quartier des Coutures, où les corniches et appuis de façades offrent des perchoirs accessibles, ces accumulations deviennent vite problématiques. L'odeur s'installe, le balcon reste inutilisé, et le nettoyage classique ne suffit plus à éliminer ce qui s'est incrusté.</p>\n<p class=\"mt-4\">Au-delà de l'aspect visuel, les fientes attaquent progressivement les matériaux. Sur les immeubles anciens de Bagnolet, les appuis en pierre, les joints et les peintures subissent une <strong>dégradation accélérée par l'acidité</strong> des déjections. Un traitement adapté permet de retrouver un espace extérieur sain, sans résidus ni odeurs persistantes, et de préserver l'état des supports.</p>\n<p class=\"mt-4\">L'intervention combine ramassage sécurisé, désinfection des surfaces et rinçage complet. La proximité du parc Jean-Moulin - Les Guilands favorise la présence d'oiseaux dans certains secteurs : un diagnostic préalable permet d'évaluer l'ampleur du dépôt et de proposer des solutions de dissuasion adaptées.</p>",
       uniqueDeepDive:
-        "<h3>Sécurisation et confinement</h3>\n<p>L'intervenant porte un équipement de protection complet : masque FFP2, gants, lunettes et combinaison jetable. La zone est bâchée pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins.</p>\n<p class=\"mt-4\">Les fientes sèches sont humidifiées avant manipulation pour neutraliser les poussières potentiellement contaminées.</p>\n\n<h3>Collecte et désinfection</h3>\n<p>Le ramassage s'effectue manuellement, avec conditionnement en sacs étanches. Le sol du balcon, le garde-corps, les vitrages et les murs mitoyens sont ensuite traités.</p>\n<p class=\"mt-4\">Un produit virucide et bactéricide homologué est appliqué sur l'ensemble des surfaces. Le temps de contact est respecté pour garantir l'élimination des agents pathogènes.</p>\n\n<h3>Rinçage et prévention</h3>\n<p>Un rinçage final permet d'évacuer les résidus de produit. Le balcon reste inaccessible le temps de l'aération complète.</p>\n<p class=\"mt-4\">Si nécessaire, des dispositifs anti-retour sont proposés : pics sur les rebords, filets de protection ou gel répulsif selon la configuration. Les déchets sont évacués en sacs étanches.</p>",
+        "<h3>Sécurisation et confinement</h3>\n<p>L'intervenant porte un équipement de protection complet : <strong>masque FFP2, gants, lunettes</strong> et combinaison jetable. La zone est bâchée pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins.</p>\n<p class=\"mt-4\">Les fientes sèches sont humidifiées avant manipulation pour neutraliser les poussières potentiellement contaminées.</p>\n\n<h3>Collecte et désinfection</h3>\n<p>Le ramassage s'effectue manuellement, avec conditionnement en sacs étanches. Le sol du balcon, le garde-corps, les vitrages et les murs mitoyens sont ensuite traités.</p>\n<p class=\"mt-4\">Un produit virucide et bactéricide homologué est appliqué sur l'ensemble des surfaces. Le temps de contact est respecté pour garantir l'élimination des agents pathogènes.</p>\n\n<h3>Rinçage et prévention</h3>\n<p>Un rinçage final permet d'évacuer les résidus de produit. Le balcon reste inaccessible le temps de l'aération complète.</p>\n<p class=\"mt-4\">Si nécessaire, des <strong>dispositifs anti-retour</strong> sont proposés : pics sur les rebords, filets de protection ou gel répulsif selon la configuration. Les déchets sont évacués en sacs étanches.</p>",
       specificChallenges: [
         "Corniches anciennes dans le quartier des Coutures offrant des perchoirs réguliers aux pigeons.",
         "Accumulations importantes sur balcons en étage, nécessitant un confinement rigoureux avant intervention.",
-        "Dégradation des appuis en pierre et des joints par l'acidité des fientes non traitées.",
-        "Proximité du parc Jean-Moulin - Les Guilands favorisant la présence d'oiseaux sur certains immeubles.",
+        "<strong>Dégradation des appuis en pierre et des joints</strong> par l'acidité des fientes non traitées.",
+        "<strong>Proximité du parc Jean-Moulin - Les Guilands</strong> favorisant la présence d'oiseaux sur certains immeubles.",
         "Évacuation des déchets contaminés depuis les étages sans gêne pour les occupants ni le voisinage.",
       ],
       faqAdditions: [
@@ -288,7 +288,7 @@ const city: City = {
           question:
             "Quelle efficacité attendre d'une désinfection après enlèvement des fientes sur les corniches et appuis anciens ?",
           answer:
-            "<p>Le produit virucide et bactéricide utilisé élimine les agents pathogènes présents sur les surfaces traitées. Sur les matériaux poreux comme la pierre ou les joints anciens, le temps de contact est adapté pour garantir une action en profondeur. Le résultat dépend aussi de l'état initial : certaines taches anciennes peuvent laisser des marques résiduelles.</p>",
+            "<p>Le produit virucide et bactéricide utilisé élimine les agents pathogènes présents sur les surfaces traitées. Sur les matériaux poreux comme la pierre ou les joints anciens, <strong>le temps de contact est adapté</strong> pour garantir une action en profondeur. Le résultat dépend aussi de l'état initial : certaines taches anciennes peuvent laisser des marques résiduelles.</p>",
         },
         {
           question:
@@ -300,7 +300,7 @@ const city: City = {
           question:
             "Quelles dégradations observe-t-on sur les appuis en pierre après des contaminations répétées par les fientes ?",
           answer:
-            "<p>L'acidité des déjections attaque progressivement la surface des matériaux poreux. Sur les appuis en pierre et les joints, cela se traduit par des taches persistantes, une érosion superficielle et parfois un écaillage. Un traitement régulier limite ces dégâts ; les supports très abîmés peuvent nécessiter une reprise par un professionnel du bâtiment.</p>",
+            "<p>L'acidité des déjections attaque progressivement la surface des matériaux poreux. Sur les appuis en pierre et les joints, cela se traduit par des <strong>taches persistantes, une érosion superficielle</strong> et parfois un écaillage. Un traitement régulier limite ces dégâts ; les supports très abîmés peuvent nécessiter une reprise par un professionnel du bâtiment.</p>",
         },
       ],
       ctaOverride: "",

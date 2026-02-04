@@ -10,10 +10,10 @@ export const essonne: DepartmentKln = {
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel en Essonne (91)",
-  heroKicker: "Évry, Massy, Palaiseau, Corbeil • Devis sous 24h",
+  heroTitle: "Nettoyage professionnel en Essonne (91)",
+  heroKicker: "Évry • Massy • Plateau de Saclay • Devis sous 24h",
   heroDescription:
-    "Klinova intervient dans toute l'Essonne pour le nettoyage de moquettes (copropriétés, bureaux), canapés, tapis et matelas à domicile, balcons, terrasses et parkings. Du plateau de Saclay aux villes nouvelles, nous adaptons nos interventions aux spécificités de chaque territoire : zones d'activité tertiaire, quartiers résidentiels récents, secteurs pavillonnaires étendus.",
+    "Des villes nouvelles aux zones pavillonnaires, Klinova intervient dans toute l'Essonne pour redonner un coup d'éclat à vos espaces : moquettes de copropriété, canapés et tapis à domicile, terrasses encrassées, parkings souterrains. Notre organisation par secteurs géographiques garantit des délais courts et des créneaux adaptés, que vous soyez syndic à Évry, particulier à Brétigny ou facility manager sur le plateau de Saclay.",
 
   // =========================
   // Images
@@ -22,162 +22,169 @@ export const essonne: DepartmentKln = {
     items: [
       {
         src: "/images/91-essonne-quartier-moderne.webp",
-        alt: "Vue d'une ville nouvelle en Essonne avec immeubles modernes et espaces verts",
+        alt: "Résidence moderne en Essonne avec parties communes et espaces verts entretenus",
         width: 1200,
         height: 800,
         caption:
-          "Villes nouvelles d'Essonne : des ensembles résidentiels modernes nécessitant un entretien régulier des parties communes.",
+          "Copropriétés essonniennes : halls lumineux, moquettes techniques et espaces collectifs à maintenir impeccables.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en atouts)
   // =========================
   challenges: {
-    title: "Spécificités d'intervention en Essonne (91)",
+    title: "Ce qui rend l'Essonne unique pour nos interventions",
     items: [
-      "Département contrasté combinant villes nouvelles (Évry-Courcouronnes, Massy), zones d'activité tertiaire (plateau de Saclay, Courtabœuf) et secteurs pavillonnaires étendus",
-      "Copropriétés récentes avec matériaux modernes nécessitant des protocoles adaptés pour préserver l'état d'origine",
-      "Zones d'activité économique avec bureaux et espaces tertiaires demandant des interventions hors horaires de travail et une coordination facility management",
-      "Habitat pavillonnaire dominant dans plusieurs secteurs, impliquant des interventions individuelles avec accès jardins, allées privées et stationnement résidentiel",
-      "Balcons et terrasses en zones péri-urbaines exposés à la fois à la pollution urbaine et aux salissures végétales (pollens, feuilles, mousses)",
-      "Distances importantes entre interventions nécessitant une organisation géographique par secteurs pour optimiser les tournées",
+      "Villes nouvelles (Évry-Courcouronnes, Massy) avec des copropriétés récentes et des matériaux modernes que nous savons traiter sans risque",
+      "Plateau de Saclay et zone de Courtabœuf : interventions hors horaires de bureau, coordination facility management, séchage express pour réouverture le lendemain",
+      "Vastes zones pavillonnaires où nous intervenons directement chez vous pour canapés, tapis, matelas et terrasses — sans contrainte de syndic",
+      "Balcons et terrasses exposés à la pollution urbaine ET aux salissures végétales : nous adaptons le protocole (haute pression, brossage, traitement anti-mousse)",
+      "Territoire étendu que nous couvrons grâce à une organisation par tournées géographiques : Nord-91, Centre-91, Sud-91, Ouest-91",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-      title: "Essonne : un territoire aux multiples visages",
+      title: "L'Essonne, un département aux mille visages",
       image: "/images/91-essonne-zone-pavillonaire.webp",
-      imageAlt: "Quartier moderne en Essonne avec espaces résidentiels et commerciaux",
+      imageAlt: "Quartier pavillonnaire en Essonne avec maisons individuelles et jardins",
       imageCaption:
-        "Ensembles résidentiels essonniens : des configurations variées demandant des approches différenciées.",
+        "Du pavillon individuel à la résidence collective : chaque configuration appelle une méthode de nettoyage spécifique.",
       html: `
         <p>
-          L'<strong>Essonne</strong> se caractérise par une grande diversité de situations. Les villes 
-          nouvelles comme Évry-Courcouronnes ou Massy concentrent des ensembles résidentiels modernes 
-          avec des parties communes récentes. Le plateau de Saclay et la zone d'activité de Courtabœuf 
-          regroupent des bureaux et des espaces tertiaires. Au sud et à l'ouest du département, l'habitat 
-          pavillonnaire domine largement, avec des maisons individuelles, des jardins et des terrasses.
+          L'<strong>Essonne</strong> mêle des réalités très différentes. À Massy ou Palaiseau, vous 
+          trouverez des copropriétés récentes aux halls soignés et aux moquettes techniques. Sur le 
+          plateau de Saclay, des espaces tertiaires accueillent chercheurs et entreprises qui exigent 
+          une propreté irréprochable. Plus au sud, vers Étampes ou Brétigny, l'habitat pavillonnaire 
+          domine — avec des demandes centrées sur les textiles d'intérieur et les terrasses.
         </p>
         <p class="mt-4">
-          Cette diversité se traduit par des besoins de nettoyage très différents. Dans les copropriétés 
-          récentes, l'enjeu est de préserver les matériaux modernes (moquettes techniques, sols composites) 
-          et de maintenir l'image des résidences. Dans les zones tertiaires, il faut gérer les contraintes 
-          horaires (interventions en soirée ou le week-end) et les volumes importants. Dans l'habitat 
-          pavillonnaire, la demande porte davantage sur les textiles à domicile (canapés, tapis, matelas) 
-          et les surfaces extérieures (terrasses, allées, balcons).
+          Cette diversité, nous la connaissons bien. Elle nous oblige à adapter nos protocoles, nos 
+          horaires et notre matériel à chaque situation. C'est aussi ce qui rend notre métier intéressant : 
+          traiter une moquette de hall d'immeuble n'a rien à voir avec nettoyer un canapé en lin dans 
+          un pavillon, et encore moins avec décaper une terrasse en pierre reconstituée envahie de mousse.
         </p>
         <p class="mt-4">
-          Pour couvrir efficacement ce territoire étendu, nous organisons nos interventions par grands 
-          secteurs : Nord-Essonne (Massy, Palaiseau, Orsay), Centre-Essonne (Évry, Corbeil-Essonnes, 
-          Grigny), Sud-Essonne (Étampes, La Ferté-Alais) et Ouest-Essonne (Arpajon, Montlhéry). Cette 
-          organisation nous permet de vous proposer des créneaux cohérents et de limiter les temps de 
-          déplacement.
+          Pour vous répondre efficacement, nous avons structuré notre couverture en quatre secteurs : 
+          <strong>Nord-Essonne</strong> (Massy, Palaiseau, Orsay, Verrières-le-Buisson), <strong>Centre-Essonne</strong> 
+          (Évry-Courcouronnes, Corbeil, Grigny, Ris-Orangis), <strong>Sud-Essonne</strong> (Étampes, 
+          Dourdan, La Ferté-Alais) et <strong>Ouest-Essonne</strong> (Arpajon, Montlhéry, Longjumeau). 
+          Quand vous nous contactez, nous vous proposons un créneau cohérent avec nos tournées en cours.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Une méthode adaptée à chaque contexte",
+      title: "Notre méthode, du diagnostic à la finition",
       html: `
         <p>
-          Avant chaque intervention, nous évaluons trois dimensions. D'abord, le <strong>type de site</strong> : 
-          s'agit-il d'une copropriété récente avec des matériaux sensibles, d'un pavillon avec des textiles 
-          et des surfaces extérieures, ou d'un espace tertiaire avec des contraintes horaires spécifiques ? 
-          Ensuite, le <strong>niveau de sollicitation</strong> : un hall d'immeuble très fréquenté ne se 
-          traite pas comme un salon de maison individuelle. Enfin, les <strong>contraintes pratiques</strong> : 
-          accès, stationnement, eau, électricité, horaires possibles.
+          Chaque intervention démarre par une évaluation rapide mais précise. Nous identifions d'abord 
+          le <strong>type de site</strong> : copropriété avec syndic, pavillon individuel ou espace 
+          professionnel ? Ensuite, nous évaluons le <strong>niveau d'encrassement</strong> : simple 
+          entretien courant ou remise en état après plusieurs années sans nettoyage ? Enfin, nous 
+          anticipons les <strong>contraintes pratiques</strong> : accès badge, stationnement, point 
+          d'eau, horaires imposés.
         </p>
         <p class="mt-4">
-          Pour les <strong>copropriétés et bureaux</strong>, l'intervention suit une logique de zones. 
-          Nous démarrons par les espaces à fort impact visuel (halls d'entrée, zones d'accueil), poursuivons 
-          par les circulations (couloirs, paliers) et terminons par les espaces techniques (locaux, parkings). 
-          Chaque zone fait l'objet d'un traitement complet : aspiration ou balayage préalable, nettoyage 
-          mécanique adapté au support, rinçage si nécessaire, puis finitions sur tous les détails (bordures, 
-          angles, jonctions).
+          <strong>En copropriété ou en bureau</strong>, nous procédons par zones. Le hall et l'accueil 
+          sont traités en priorité — c'est l'image de l'immeuble. Viennent ensuite les couloirs et 
+          paliers, puis les espaces secondaires (locaux techniques, parkings si inclus). Sur chaque 
+          zone, le protocole reste le même : aspiration ou balayage, nettoyage mécanique adapté au 
+          support, rinçage si nécessaire, finitions soignées sur les bordures et les angles.
         </p>
         <p class="mt-4">
-          Pour les <strong>interventions à domicile</strong>, nous privilégions la précision. Un canapé 
-          ou un tapis demande une analyse textile préalable (composition, solidité des couleurs, sensibilité 
-          à l'eau), un test sur zone discrète si nécessaire, puis un traitement progressif : détachage manuel 
-          des zones problématiques, nettoyage global maîtrisé, extraction sans excès d'eau, séchage contrôlé. 
-          Pour les terrasses et balcons, nous adaptons la méthode au matériau (bois, pierre, composite, 
-          carrelage) et à l'état d'encrassement.
+          <strong>À domicile</strong>, nous privilégions la prudence. Avant de traiter un canapé ou 
+          un tapis, nous analysons la composition textile, testons une zone discrète, puis avançons 
+          progressivement : détachage manuel des zones critiques, nettoyage global sans excès d'eau, 
+          extraction soignée, séchage contrôlé. Pour les terrasses, nous adaptons la pression et les 
+          produits au matériau (bois, pierre, composite, carrelage) — pas question d'abîmer une surface 
+          en voulant la nettoyer.
         </p>
         <p class="mt-4">
-          Chaque prestation se termine par une vérification visuelle avec vous, et nous vous remettons 
-          systématiquement quelques conseils d'entretien pour préserver le résultat obtenu.
+          À la fin de chaque prestation, nous faisons le tour avec vous pour valider le résultat. 
+          Si un détail vous échappe ou si une zone mérite un second passage, nous le faisons sur 
+          place. Nous vous laissons également quelques conseils d'entretien pour prolonger le bénéfice 
+          de notre intervention.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "L'Essonne étant un département étendu, nous planifions nos interventions par grands secteurs géographiques pour optimiser nos déplacements et vous garantir des créneaux réalistes. Selon la nature de la prestation (copropriété, pavillon, bureau), nous anticipons les spécificités : badges et horaires pour les immeubles, accès jardins et allées pour les pavillons, coordination facility pour les espaces tertiaires. Cette organisation préalable nous permet d'arriver avec le bon matériel et de respecter le timing annoncé.",
+    "L'Essonne est vaste, mais notre organisation par tournées géographiques nous permet de vous proposer des créneaux réalistes sans surcoût de déplacement. Selon votre type de prestation, nous anticipons les spécificités : coordination avec le syndic pour les copropriétés, accès jardin et point d'eau pour les pavillons, horaires décalés pour les bureaux. Cette préparation en amont vous garantit une intervention fluide et un timing respecté.",
 
   // =========================
-  // FAQ optimisée SEO + conversion + style naturel + anti-duplicate
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
-      question: "Quelles sont les principales villes de l'Essonne où vous travaillez ?",
+      question: "Dans quelles villes de l'Essonne intervenez-vous ?",
       answer:
-        "Nous travaillons sur l'ensemble du département. Nos interventions les plus fréquentes se situent à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Sainte-Geneviève-des-Bois, Viry-Châtillon, Grigny, Athis-Mons, Brétigny-sur-Orge, Étampes et leurs environs. Que vous soyez en ville nouvelle, en zone pavillonnaire ou sur le plateau de Saclay, nous organisons nos tournées pour vous proposer un créneau cohérent.",
+        "Nous couvrons l'ensemble du département. Nos interventions les plus fréquentes ont lieu à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Sainte-Geneviève-des-Bois, Viry-Châtillon, Grigny, Athis-Mons, Brétigny-sur-Orge et Étampes. Nos tournées par secteur (Nord, Centre, Sud, Ouest) nous permettent de desservir aussi les communes plus petites avec des délais cohérents.",
     },
     {
-      question: "Travaillez-vous aussi dans les bureaux et espaces d'activité du plateau de Saclay ?",
+      question: "Intervenez-vous dans les bureaux du plateau de Saclay ?",
       answer:
-        "Nous réalisons effectivement des prestations dans les zones d'activité tertiaire, notamment sur le plateau de Saclay et à Courtabœuf. Pour ne pas perturber l'activité des entreprises, nous intervenons généralement en soirée ou le week-end. Nous coordonnons avec les responsables de site ou le facility management pour gérer les accès, respecter les consignes de sécurité et assurer une remise en état rapide des espaces (séchage accéléré des moquettes pour une réouverture le lendemain matin).",
+        "Oui, nous réalisons régulièrement des prestations sur le plateau de Saclay et dans la zone de Courtabœuf. Pour ne pas perturber l'activité, nous intervenons en soirée ou le week-end. Nous nous coordonnons avec le facility management pour les accès, les consignes de sécurité et le séchage accéléré des moquettes — l'objectif étant une réouverture normale le lendemain matin.",
     },
     {
-      question: "Comment gérez-vous les interventions dans l'habitat pavillonnaire ?",
+      question: "Comment se passe une intervention dans un pavillon ?",
       answer:
-        "Dans les pavillons, la logistique est différente de celle des copropriétés. Nous confirmons en amont l'accès au jardin ou à l'allée, le stationnement à proximité, et la configuration intérieure si nous intervenons sur des textiles. Pour les canapés et tapis, nous protégeons systématiquement les sols et les meubles environnants. Pour les terrasses et balcons, nous vérifions l'accès à un point d'eau extérieur ou nous organisons l'acheminement depuis l'intérieur. L'avantage du pavillon est que vous n'avez pas de contraintes de syndic ou d'horaires collectifs : nous fixons ensemble le créneau qui vous convient.",
+        "C'est plus simple qu'en copropriété : pas de syndic, pas de contrainte horaire collective. Nous fixons ensemble le créneau qui vous arrange. Avant notre venue, nous confirmons l'accès (jardin, allée, stationnement) et le point d'eau disponible. Sur place, nous protégeons vos sols et meubles, puis nous traitons les textiles ou surfaces concernés avec le même niveau d'exigence qu'en immeuble.",
     },
     {
-      question: "Vos délais d'intervention sont-ils les mêmes partout dans le département ?",
+      question: "Quel est votre délai d'intervention en Essonne ?",
       answer:
-        "Les délais peuvent légèrement varier selon votre secteur géographique et nos tournées en cours. En règle générale, nous vous envoyons un devis sous 24h et planifions l'intervention entre 3 et 7 jours. Pour les secteurs plus éloignés (sud ou ouest du département), nous regroupons parfois les interventions sur une même journée ou demi-journée, ce qui peut décaler un peu le planning. Dans tous les cas, nous vous communiquons un créneau précis dès la validation du devis.",
+        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon votre secteur et nos tournées en cours. Pour les zones plus éloignées (sud ou ouest du département), nous regroupons parfois plusieurs interventions sur une même journée, ce qui peut légèrement décaler le planning — mais nous vous communiquons toujours un créneau précis dès validation.",
     },
     {
-      question: "Quelles différences entre le nettoyage d'une moquette en copropriété et celui d'un tapis à domicile ?",
+  question: "Y a-t-il des frais de déplacement en Essonne ?",
+  answer:
+    "En pratique, non : notre organisation par tournées géographiques nous permet de proposer des créneaux cohérents sans surcoût de déplacement. Lors de la prise de contact, nous calons simplement l’intervention sur le secteur concerné (Nord, Centre, Sud, Ouest) pour optimiser la logistique.",
+},
+
+    {
+      question: "Quelle différence entre le nettoyage d'une moquette de copropriété et d'un tapis à domicile ?",
       answer:
-        "La moquette en copropriété est généralement de type technique (bouclée, résistante au trafic), fixée au sol, et soumise à un passage quotidien important. Le nettoyage vise alors la durabilité : on privilégie une méthode qui tient dans le temps, avec un séchage maîtrisé pour ne pas gêner la circulation. Le tapis à domicile, lui, est souvent de facture plus fine (laine, soie, synthétique délicat), non fixé, et exposé à des salissures ponctuelles (renversements, taches alimentaires, poils d'animaux). Le traitement est alors plus précis, plus doux, avec un test préalable et un rinçage très soigné pour éviter les auréoles.",
+        "La moquette de copropriété est technique, fixée au sol, conçue pour résister au passage intensif. Nous privilégions une méthode durable avec séchage maîtrisé pour ne pas gêner la circulation. Le tapis à domicile est souvent plus délicat (laine, soie, fibres fines), exposé à des salissures ponctuelles. Le traitement est alors plus minutieux : test préalable, détachage ciblé, rinçage soigné pour éviter les auréoles.",
     },
     {
-      question: "Proposez-vous des contrats d'entretien régulier pour les copropriétés ?",
+      question: "Proposez-vous des contrats d'entretien pour les copropriétés ?",
       answer:
-        "Tout à fait. Pour les copropriétés qui souhaitent maintenir un niveau de propreté constant, nous mettons en place des contrats récurrents (trimestriel, semestriel, annuel). Cela permet de bénéficier de tarifs dégressifs, d'une planification anticipée et d'un suivi régulier. Nous établissons un calendrier avec le syndic, adaptons le protocole si nécessaire selon les retours, et intervenons aux mêmes créneaux pour ne pas perturber la vie de la copropriété. Ce type de contrat convient aussi aux bureaux et espaces tertiaires.",
+        "Oui. Pour les copropriétés qui souhaitent maintenir un niveau de propreté constant, nous proposons des contrats récurrents (trimestriel, semestriel ou annuel). Cela inclut un calendrier prédéfini avec le syndic, des tarifs dégressifs et un suivi régulier. Ce type de contrat convient aussi aux entreprises et aux espaces tertiaires.",
     },
     {
-      question: "Comment préparer une intervention de nettoyage de terrasse ou de balcon ?",
+      question: "Comment préparer le nettoyage d'une terrasse ou d'un balcon ?",
       answer:
-        "L'idéal est de dégager la terrasse ou le balcon (meubles de jardin, pots, objets divers) pour que nous puissions traiter toute la surface. Si vous avez un point d'eau extérieur, indiquez-le nous à l'avance. Sinon, nous utiliserons l'eau via l'intérieur du logement. Pensez aussi à vérifier que les voisins du dessous (si vous êtes en appartement) ne seront pas gênés par l'écoulement d'eau. Nous vous donnons toutes ces consignes au moment de la prise de rendez-vous pour que tout se passe bien le jour J.",
+        "L'idéal est de dégager la surface (meubles, pots, objets) pour que nous puissions traiter l'ensemble. Si vous avez un point d'eau extérieur, signalez-le nous à l'avance. En appartement, pensez à prévenir vos voisins du dessous pour l'écoulement d'eau. Nous vous donnons toutes ces consignes lors de la prise de rendez-vous pour que le jour J se passe sans accroc.",
+    },
+    {
+      question: "Combien coûte un nettoyage de moquette en Essonne ?",
+      answer:
+        "Le tarif dépend de la surface, du niveau d'encrassement et du type de moquette. Pour une copropriété, comptez généralement entre 2 et 4 € HT/m² selon le volume et la fréquence. Pour un devis précis, envoyez-nous quelques photos et la superficie approximative — nous vous répondons sous 24 heures.",
     },
   ],
 
   // =========================
   // Liens internes (villes principales par secteur)
   // =========================
-  internalLinks: [
-   
-  ],
+
 
   // =========================
-  // SEO (title/description optimisés)
+  // SEO (title/description optimisés pour CTR)
   // =========================
   seo: {
-    title: "Nettoyage Professionnel Essonne (91) | Klinova",
+    title: "Nettoyage Moquettes, Canapés & Terrasses en Essonne (91) | Klinova",
     description:
-      "Entreprise de nettoyage en Essonne : moquettes copropriété, canapés et tapis domicile, parkings, terrasses. Intervention Évry, Massy, Palaiseau, Corbeil. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
+      "Entreprise de nettoyage en Essonne : moquettes copropriété, canapés et tapis à domicile, terrasses, parkings. Évry, Massy, Palaiseau, Saclay. Devis gratuit 24h. ☎ 06 76 73 86 61",
   },
 };

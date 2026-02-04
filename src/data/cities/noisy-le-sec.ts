@@ -123,7 +123,7 @@ const city: City = {
           question:
             "Avec les escaliers étroits des immeubles du centre-ville, comment organisez-vous le transport du matériel ?",
           answer:
-            "<p>Nous utilisons des équipements compacts et modulables, conçus pour passer dans les cages d'escalier réduites. Le flexible d'injection-extraction se déploie depuis le palier ou le hall, ce qui évite de monter l'ensemble de la machine à chaque étage. Un repérage préalable permet d'anticiper les passages délicats.</p>",
+            "<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, conçus pour passer dans les cages d'escalier réduites. Le flexible d'injection-extraction se déploie depuis le palier ou le hall, ce qui évite de monter l'ensemble de la machine à chaque étage. Un repérage préalable permet d'anticiper les passages délicats.</p>",
         },
         {
           question:
@@ -135,7 +135,7 @@ const city: City = {
           question:
             "Comment traitez-vous des taches anciennes sur les moquettes des halls de la Boissière ?",
           answer:
-            "<p>Les taches incrustées reçoivent un détachant ciblé avant le passage de la machine. Plusieurs passes d'extraction sont effectuées sur les zones marquées pour déloger les résidus en profondeur. Certaines traces très anciennes peuvent s'atténuer sans disparaître totalement, selon la nature du textile et du produit à l'origine de la tache.</p>",
+            "<p>Les taches incrustées reçoivent un <strong>détachant ciblé</strong> avant le passage de la machine. Plusieurs passes d'extraction sont effectuées sur les zones marquées pour déloger les résidus en profondeur. Certaines traces très anciennes peuvent s'atténuer sans disparaître totalement, selon la nature du textile et du produit à l'origine de la tache.</p>",
         },
         {
           question:

@@ -164,18 +164,7 @@ export const seineEtMarne: DepartmentKln = {
   // =========================
   // Liens internes (villes principales)
   // =========================
-  internalLinks: [
- 
 
-  // Seine-et-Marne (77)
-  { label: "Chelles", href: "/zones-d-intervention/seine-et-marne/chelles" },
-  { label: "Meaux", href: "/zones-d-intervention/seine-et-marne/meaux" },
-  { label: "Bussy-Saint-Georges", href: "/zones-d-intervention/seine-et-marne/bussy-saint-georges" },
-  { label: "Lagny-sur-Marne", href: "/zones-d-intervention/seine-et-marne/lagny-sur-marne" },
-  { label: "Torcy", href: "/zones-d-intervention/seine-et-marne/torcy" },
-  { label: "Serris", href: "/zones-d-intervention/seine-et-marne/serris" },
-],
-  
 
 
   // =========================

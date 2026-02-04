@@ -12,6 +12,7 @@ import type { DepartmentKln } from "~/types/department-klinova";
 
 import DepartmentCardsKln from "~/components/local/DepartmentCardsKln.astro";
 
+import { featuredCities } from "~/data/highlightedCities";
 
 
 
@@ -80,13 +81,43 @@ const departmentCities = (cities ?? [])
   .sort((a: any, b: any) => (a?.name ?? "").localeCompare(b?.name ?? ""));
 
 // Top 3 pour micro-precision (comme SP)
-const topCitiesList = departmentCities.slice(0, 3);
+
+// Top 3 "business/SEO" du département (via featuredCities) — fallback sur l'ordre actuel
+const featuredForDept = (featuredCities ?? [])
+  .filter((c) => c.deptSlug === department.slug)
+  .slice(0, 3);
+
+const topCitiesList = featuredForDept.length
+  ? featuredForDept
+      .map((fc) => (departmentCities as City[]).find((c) => c.slug === fc.slug))
+      .filter(Boolean) as City[]
+  : (departmentCities as City[]).slice(0, 3);
+
 const topCitiesString = topCitiesList.map((c: City) => c.name).join(", ");
-const geoPrecision = topCitiesString ? `(${topCitiesString} et alentours)` : `sur l'ensemble du département`;
+const geoPrecision = topCitiesString
+  ? `(${topCitiesString} et alentours)`
+  : `sur l'ensemble du département`;
+
 
 // ✅ deptContent data-driven (peut être null)
 const deptContent =
   (DEPARTMENTS_KLN as Record<string, DepartmentKln | undefined>)[departmentSlug] ?? null;
+
+  // Fallback internalLinks : si non fournis dans deptContent, on utilise les villes featured du département
+const featuredQuickLinks = (featuredCities ?? [])
+  .filter((c) => c.deptSlug === department.slug)
+  .slice(0, 5)
+  .map((c) => ({
+    label: c.name,
+    href: `/zones-d-intervention/${department.slug}/${c.slug}`,
+  }));
+
+const internalLinks =
+  deptContent?.internalLinks && deptContent.internalLinks.length >= 3
+    ? deptContent.internalLinks
+    : featuredQuickLinks;
+
+
 
 // Sections helpers (comme SP)
 const sections = Array.isArray(deptContent?.sections) ? deptContent!.sections! : [];
@@ -101,8 +132,16 @@ const kickerParts = (deptContent?.heroKicker ?? "")
   .map((s) => s.trim())
   .filter(Boolean);
 
-const kickerZone = kickerParts[0] ?? "";
-const kickerDelay = kickerParts[1] ?? "";
+// On repère la partie "délai" (ex: Devis sous 24h / Réponse 2h / Intervention 48h)
+const delayRegex = /\b(devis|réponse|rdv|intervention|sous)\b/i;
+
+const kickerDelay = kickerParts.find((p) => delayRegex.test(p)) ?? "";
+
+// Tout le reste = zone (ex: villes/secteurs)
+const kickerZone = kickerParts
+  .filter((p) => p !== kickerDelay)
+  .join(" • ");
+
 
 // SEO : data si dispo sinon fallback actuel
 const title =
@@ -284,7 +323,8 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
             </section>
 
             <!--Quick links (optionnel) -->
-            {deptContent?.internalLinks && deptContent.internalLinks.length >= 3 ? (
+            {internalLinks && internalLinks.length >= 3 ? (
+
               <div class="border-b border-neutral-200 bg-[#FCFCFC] py-4">
                 <div class="container-responsive">
                   <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-center md:text-left">
@@ -293,7 +333,8 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
                     </span>
 
                     <div class="flex flex-wrap justify-center gap-2">
-                      {deptContent.internalLinks.slice(0, 5).map((l) => (
+                      {internalLinks.slice(0, 5).map((l) => (
+
                         <a
                           href={l.href}
                           class="inline-flex items-center px-3 py-1 rounded-full bg-white border border-neutral-200 shadow-sm text-xs font-semibold text-neutral-700 hover:border-[#3F8D65]/40 hover:text-[#3F8D65] hover:shadow-md transition-all duration-200"
@@ -315,55 +356,92 @@ const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
             ) : null}
 
             <!--Services (on garde tes 4 cards) -->
-           <section class="bg-white py-12">
+<section class="bg-white py-12">
   <div class="container-responsive">
     <div class="max-w-4xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/nettoyage-appartement-maison" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
-          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage d'appartement &amp; maison</h2>
-          <p class="text-sm text-[#475569] leading-relaxed">
-            Nettoyage complet avant/après déménagement : cuisine, sanitaires, sols, vitres, remise au propre rapide et soignée.
-          </p>
-        </a>
-
-        <a href="/nettoyage-canapes-tapis-matelas" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
-          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de canapés, tapis &amp; matelas</h2>
-          <p class="text-sm text-[#475569] leading-relaxed">
-            Nettoyage à domicile des canapés, tapis et matelas : taches, odeurs d'animaux, auréoles, désodorisation en profondeur.
-          </p>
-        </a>
-
-        <a href="/nettoyage-balcons" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
-          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de balcons</h2>
-          <p class="text-sm text-[#475569] leading-relaxed">
-            Décrassage de balcons encrassés : sols noircis, joints ternis, traces de pollution, garde-corps et murets.
-          </p>
-        </a>
-
-        <a href="/nettoyage-balcons-fientes-pigeons" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
-          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Balcons très sales &amp; fientes de pigeons</h2>
-          <p class="text-sm text-[#475569] leading-relaxed">
-            Remise en état des balcons fortement souillés : fientes, dépôts incrustés, désinfection ciblée et protocole sécurisé.
-          </p>
-        </a>
-
-        <a href="/nettoyage-moquettes" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1) Moquettes -->
+        <a
+          href="/nettoyage-moquettes"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
           <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de moquettes</h2>
           <p class="text-sm text-[#475569] leading-relaxed">
             Halls, paliers, couloirs ou bureaux : décrassage en profondeur des moquettes de copropriété et de locaux professionnels.
           </p>
         </a>
 
-        <a href="/nettoyage-parkings" class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition">
+        <!-- 2) Parkings -->
+        <a
+          href="/nettoyage-parkings"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
           <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de parkings souterrains</h2>
           <p class="text-sm text-[#475569] leading-relaxed">
             Nettoyage mécanisé et décrassage en profondeur des parkings souterrains et aériens de copropriété ou d'entreprises.
+          </p>
+        </a>
+
+        <!-- 3) Appartement & maison -->
+        <a
+          href="/nettoyage-appartement-maison"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
+          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage d'appartement &amp; maison</h2>
+          <p class="text-sm text-[#475569] leading-relaxed">
+            Nettoyage complet avant/après déménagement : cuisine, sanitaires, sols, vitres, remise au propre rapide et soignée.
+          </p>
+        </a>
+
+        <!-- 4) Balcons -->
+        <a
+          href="/nettoyage-balcons"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
+          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de balcons</h2>
+          <p class="text-sm text-[#475569] leading-relaxed">
+            Décrassage de balcons encrassés : sols noircis, joints ternis, traces de pollution, garde-corps et murets.
+          </p>
+        </a>
+
+        <!-- 5) Terrasses -->
+        <a
+          href="/nettoyage-terrasses"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
+          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de terrasses</h2>
+          <p class="text-sm text-[#475569] leading-relaxed">
+            Terrasses en bois, pierre ou carrelage : nettoyage adapté au support, décrassage, joints ternis, traces de mousse et de pollution.
+          </p>
+        </a>
+
+        <!-- 6) Balcons fientes -->
+        <a
+          href="/nettoyage-balcons-fientes-pigeons"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
+          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Balcons très sales &amp; fientes de pigeons</h2>
+          <p class="text-sm text-[#475569] leading-relaxed">
+            Remise en état des balcons fortement souillés : fientes, dépôts incrustés, désinfection ciblée et protocole sécurisé.
+          </p>
+        </a>
+
+        <!-- 7) Canapés / tapis / matelas -->
+        <a
+          href="/nettoyage-canapes-tapis-matelas"
+          class="block p-5 rounded-xl border border-[#E5E7EB] bg-[#FCFCFC] hover:border-[#3F8D65]/50 hover:shadow-sm transition"
+        >
+          <h2 class="text-lg font-semibold text-[#1E2939] mb-2">Nettoyage de canapés, tapis &amp; matelas</h2>
+          <p class="text-sm text-[#475569] leading-relaxed">
+            Nettoyage à domicile des canapés, tapis et matelas : taches, odeurs d'animaux, auréoles, désodorisation en profondeur.
           </p>
         </a>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
             <!--Contexte / Process (HTML data-driven) -->

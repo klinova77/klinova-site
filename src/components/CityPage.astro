@@ -1531,7 +1531,8 @@ const photos = cityNote?.photos ?? [];
                   {specificChallenges.map((item) => (
                     <div class="flex items-start gap-3 p-3 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]/50">
                       <div class="w-2 h-2 bg-[#3F8D65] rounded-full mt-2 flex-shrink-0"></div>
-                      <span class="text-[#475569] leading-relaxed">{item}</span>
+                      <span class="text-[#475569] leading-relaxed" set:html={item}></span>
+
                     </div>
                   ))}
                 </div>

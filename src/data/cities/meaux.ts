@@ -138,7 +138,7 @@ const city: City = {
           question:
             "Les moquettes des immeubles proches des chantiers de rénovation nécessitent-elles un entretien plus fréquent ?",
           answer:
-            "<p>Oui, les poussières minérales de chantiers (béton, ciment, plâtre) générées par les programmes de rénovation urbaine de Beauval, Dunant et La Pierre Collinet se déposent quotidiennement dans les halls et cages d'escalier. Ces particules fines s'incrustent rapidement dans les fibres et forment une couche blanchâtre tenace que l'aspirateur domestique ne peut éliminer. Nous recommandons un nettoyage trimestriel pendant les phases actives de travaux pour maintenir l'aspect soigné des copropriétés récemment rénovées, puis un rythme annuel une fois les chantiers terminés dans le quartier.</p>",
+            "<p>Oui, les poussières minérales de chantiers (béton, ciment, plâtre) générées par les programmes de rénovation urbaine de Beauval, Dunant et La Pierre Collinet se déposent quotidiennement dans les halls et cages d'escalier. Ces particules fines s'incrustent rapidement dans les fibres et forment une <strong>couche blanchâtre tenace</strong> que l'aspirateur domestique ne peut éliminer. Nous recommandons un nettoyage trimestriel pendant les phases actives de travaux pour maintenir l'aspect soigné des copropriétés récemment rénovées, puis un rythme annuel une fois les chantiers terminés dans le quartier.</p>",
         },
         {
           question:
@@ -156,7 +156,7 @@ const city: City = {
           question:
             "Comment organisez-vous les interventions malgré les ponts sur la Marne et les chantiers ?",
           answer:
-            "<p>Nous planifions chaque intervention en tenant compte des points de congestion récurrents aux ponts du Marché et de la République qui scindent la ville. Les horaires sont ajustés pour éviter les heures de pointe. Pour les quartiers en rénovation urbaine (Beauval, Dunant, La Pierre Collinet) où les accès évoluent régulièrement, nous effectuons une visite préalable pour valider les itinéraires et coordonner avec les gestionnaires de chantiers. Cette organisation adaptative est indispensable dans la commune la plus peuplée de Seine-et-Marne avec ses contraintes structurelles multiples.</p>",
+            "<p>Nous planifions chaque intervention en tenant compte des points de congestion récurrents aux ponts du Marché et de la République qui scindent la ville. Les horaires sont ajustés pour éviter les heures de pointe. Pour les quartiers en rénovation urbaine (Beauval, Dunant, La Pierre Collinet) où les accès évoluent régulièrement, nous effectuons une <strong>visite préalable</strong> pour valider les itinéraires et coordonner avec les gestionnaires de chantiers. Cette organisation adaptative est indispensable dans la commune la plus peuplée de Seine-et-Marne avec ses contraintes structurelles multiples.</p>",
         },
       ],
 

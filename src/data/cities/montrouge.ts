@@ -21,7 +21,7 @@ const city: City = {
   // - puis une liste à puces <ul><li>...</li></ul>
   // - HTML autorisé : <p>, <p class="mt-4">, <ul>, <li>, <strong>, <br>
   hubIntro:
-    "<p>Montrouge concentre sur un territoire restreint une densité exceptionnelle de logements et de bureaux. Klinova s'y positionne comme partenaire terrain, capable de coordonner des interventions régulières ou ponctuelles sans perturber le quotidien des occupants ni l'activité des entreprises.</p>\n<p class=\"mt-4\">Notre approche repose sur une planification rigoureuse et une connaissance des contraintes locales : accès sécurisés, stationnement limité, horaires décalés. Chaque prestation fait l'objet d'un suivi clair, avec reporting disponible pour les gestionnaires qui le souhaitent.</p>\n<ul>\n  <li><strong>Coordination accès :</strong> Badges Vigik, contact gardiens, créneaux validés en amont pour éviter les allers-retours inutiles et garantir l'accès aux parties communes ou parkings.</li>\n  <li><strong>Intervention discrète :</strong> Horaires adaptés aux contraintes des résidences et bureaux, matériel silencieux privilégié en journée, balisage systématique des zones traitées.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention transmis aux syndics ou gestionnaires, photos avant/après sur demande, interlocuteur unique pour le suivi des prestations.</li>\n</ul>",
+    "<p>Montrouge concentre sur un territoire restreint une densité exceptionnelle de logements et de bureaux. Klinova s'y positionne comme partenaire terrain, capable de coordonner des interventions régulières ou ponctuelles sans perturber le quotidien des occupants ni l'activité des entreprises.</p>\n<p class=\"mt-4\">Notre approche repose sur une <strong>planification rigoureuse</strong> et une connaissance des contraintes locales : accès sécurisés, stationnement limité, horaires décalés. Chaque prestation fait l'objet d'un suivi clair, avec reporting disponible pour les gestionnaires qui le souhaitent.</p>\n<ul>\n  <li><strong>Coordination accès :</strong> Badges Vigik, contact gardiens, créneaux validés en amont pour éviter les allers-retours inutiles et garantir l'accès aux parties communes ou parkings.</li>\n  <li><strong>Intervention discrète :</strong> Horaires adaptés aux contraintes des résidences et bureaux, matériel silencieux privilégié en journée, balisage systématique des zones traitées.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention transmis aux syndics ou gestionnaires, photos avant/après sur demande, interlocuteur unique pour le suivi des prestations.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -117,8 +117,8 @@ const city: City = {
         '<h3>Diagnostic et préparation</h3>\n<p>Identification du type de moquette : bouclée, velours, épaisse ou fine. Repérage des taches spécifiques (café, tanin, graisses) et des zones de fort passage. Installation des protections sur les plinthes, bas de murs et pieds de mobilier.</p>\n<p class="mt-4">Aspiration préalable pour éliminer les particules libres avant le traitement humide.</p>\n\n<h3>Traitement par injection-extraction</h3>\n<p>Application de la solution nettoyante adaptée au support, puis extraction immédiate par aspiration puissante. Les zones de trafic reçoivent plusieurs passes pour déloger les salissures incrustées en profondeur.</p>\n<p class="mt-4">Détachage ciblé sur les marques anciennes identifiées lors du diagnostic.</p>\n\n<h3>Gestion du séchage</h3>\n<p>Extraction maximale de l\'humidité résiduelle pour réduire le temps de séchage. Selon l\'épaisseur de la moquette et la ventilation des locaux, comptez entre 4 et 8 heures avant circulation normale.</p>\n<p class="mt-4">Consignes de non-piétinement transmises, avec recommandation de fréquence d\'entretien selon l\'intensité d\'usage.</p>',
       specificChallenges: [
         "Dalles textiles des open spaces : passages répétés et poussière urbaine incrustée.",
-        "Moquettes des parties communes années 70-90 : fibres compactées par le trafic quotidien.",
-        "Accès aux locaux tertiaires soumis à badge et PC sécurité : coordination préalable indispensable.",
+        "Moquettes des parties communes années 70-90 : <strong>fibres compactées</strong> par le trafic quotidien.",
+        "Accès aux locaux tertiaires soumis à badge et PC sécurité : <strong>coordination préalable</strong> indispensable.",
         "Séchage à maîtriser pour remise en service rapide des espaces de travail.",
         "Stationnement matériel contraint : intervention organisée avec les parkings souterrains disponibles.",
       ],
@@ -133,13 +133,13 @@ const city: City = {
           question:
             "Les taches anciennes sur les moquettes des copropriétés Ferry-Buffalo peuvent-elles être atténuées ?",
           answer:
-            "<p>Les marques incrustées depuis plusieurs années répondent au détachage ciblé, avec des résultats variables selon l'ancienneté et la nature de la tache. Nous évaluons le potentiel de récupération lors du diagnostic et vous informons des limites prévisibles.</p>",
+            "<p>Les marques incrustées depuis plusieurs années répondent au <strong>détachage ciblé</strong>, avec des résultats variables selon l'ancienneté et la nature de la tache. Nous évaluons le potentiel de récupération lors du diagnostic et vous informons des limites prévisibles.</p>",
         },
         {
           question:
             "Quel délai avant de pouvoir remarcher sur la moquette après votre passage ?",
           answer:
-            "<p>Le temps de séchage dépend de l'épaisseur du textile et de la ventilation des locaux. Comptez généralement entre 4 et 8 heures. Nous maximisons l'extraction pour réduire ce délai et vous transmettons les consignes adaptées à votre configuration.</p>",
+            "<p>Le temps de séchage dépend de l'épaisseur du textile et de la <strong>ventilation des locaux</strong>. Comptez généralement entre 4 et 8 heures. Nous maximisons l'extraction pour réduire ce délai et vous transmettons les consignes adaptées à votre configuration.</p>",
         },
         {
           question:
@@ -163,12 +163,12 @@ const city: City = {
       uniqueIntro:
         "<p>Les traces noires s'accumulent sur les sols des parkings souterrains du <strong>quartier Ferry-Buffalo</strong>, là où le trafic quotidien dépose huile, graisse et poussières urbaines. Dans les résidences construites entre les années 60 et 80, les revêtements béton brut absorbent ces salissures jusqu'à former un film gras difficile à éliminer sans équipement adapté.</p>\n<p class=\"mt-4\">Un sol de parking encrassé génère des remontées de plaintes en assemblée générale : odeurs persistantes, aspect négligé, glissance sur les rampes d'accès. Le dégraissage régulier permet de maintenir un niveau de propreté acceptable et de préserver la durabilité du revêtement, notamment dans les copropriétés où le stationnement souterrain reste la seule option face à la saturation de la voirie.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic ou le gestionnaire pour définir les créneaux adaptés, le balisage des zones et la rotation éventuelle des véhicules. Un compte-rendu avec photos documente l'état avant et après traitement.</p>",
       uniqueDeepDive:
-        "<h3>Diagnostic et préparation</h3>\n<p>Avant toute intervention, nous identifions le type de revêtement présent : béton brut, résine ou peinture. L'état des évacuations est vérifié pour garantir l'écoulement correct des eaux de lavage. Un balayage préalable élimine les débris grossiers, puis la signalétique de balisage est mise en place pour sécuriser les accès.</p>\n\n<h3>Traitement mécanisé</h3>\n<p>L'autolaveuse effectue plusieurs passes sur les allées de circulation. Un dégraissant adapté au support est appliqué sur les zones critiques : emplacements marqués par des fuites d'huile, pieds de murs, angles morts et rigoles. Les rampes d'accès reçoivent un traitement spécifique pour conserver leur adhérence.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage sont dirigées vers les évacuations existantes dans le respect des contraintes réglementaires. Un dépoussiérage des blocs lumineux et tuyauteries apparentes peut compléter l'intervention si demandé. Une recommandation de fréquence est transmise au gestionnaire selon le niveau de trafic constaté.</p>",
+        "<h3>Diagnostic et préparation</h3>\n<p>Avant toute intervention, nous identifions le type de revêtement présent : béton brut, résine ou peinture. <strong>L'état des évacuations est vérifié</strong> pour garantir l'écoulement correct des eaux de lavage. Un balayage préalable élimine les débris grossiers, puis la signalétique de balisage est mise en place pour sécuriser les accès.</p>\n\n<h3>Traitement mécanisé</h3>\n<p>L'autolaveuse effectue plusieurs passes sur les allées de circulation. Un dégraissant adapté au support est appliqué sur les zones critiques : emplacements marqués par des fuites d'huile, pieds de murs, angles morts et rigoles. <strong>Les rampes d'accès reçoivent un traitement spécifique</strong> pour conserver leur adhérence.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage sont dirigées vers les évacuations existantes dans le respect des contraintes réglementaires. Un dépoussiérage des blocs lumineux et tuyauteries apparentes peut compléter l'intervention si demandé. <strong>Une recommandation de fréquence est transmise</strong> au gestionnaire selon le niveau de trafic constaté.</p>",
       specificChallenges: [
         "Rampes hélicoïdales étroites dans les résidences denses : manœuvre autolaveuse adaptée.",
-        "Revêtements béton brut des années 70 nécessitant un dégraissage en profondeur.",
+        "Revêtements béton brut des années 70 nécessitant un <strong>dégraissage en profondeur</strong>.",
         "Stationnement de surface saturé : intervention à planifier pour limiter les blocages.",
-        "Rigoles et regards parfois obstrués par des dépôts anciens à dégager avant lavage.",
+        "Rigoles et regards parfois <strong>obstrués par des dépôts anciens</strong> à dégager avant lavage.",
         "Coordination avec gardiens ou PC sécurité pour accès badges et balisage.",
       ],
       faqAdditions: [
@@ -182,7 +182,7 @@ const city: City = {
           question:
             "Comment organisez-vous le balisage et la sécurité des usagers pendant le nettoyage ?",
           answer:
-            "<p>Une signalétique visible est installée aux entrées et sorties du parking avant le démarrage. Les zones en cours de traitement sont délimitées pour éviter tout passage. Si le parking dessert un immeuble à forte rotation, nous procédons par secteurs successifs pour maintenir un accès partiel.</p>",
+            "<p>Une <strong>signalétique visible</strong> est installée aux entrées et sorties du parking avant le démarrage. Les zones en cours de traitement sont délimitées pour éviter tout passage. Si le parking dessert un immeuble à forte rotation, nous procédons par secteurs successifs pour maintenir un accès partiel.</p>",
         },
         {
           question:
@@ -210,14 +210,14 @@ const city: City = {
         "Protection systématique du voisinage : bâches, raclage dirigé et contrôle visuel avant départ pour éviter toute coulure.",
       ],
       uniqueIntro:
-        "<p>Les traces noires sur le carrelage, les joints verdis par l'humidité, la fine pellicule grasse qui recouvre le garde-corps : sur les balcons donnant sur l'avenue de la République ou les résidences bordant les Allées Jean Jaurès, ces marques s'accumulent mois après mois. Le trafic dense de la N20 toute proche dépose une poussière chargée de particules qui adhère aux surfaces et résiste au simple jet d'eau.</p>\n<p class=\"mt-4\">Un balcon encrassé, c'est un espace qu'on délaisse. Les plantes restent à l'intérieur, le mobilier prend la poussière, et l'envie de profiter des beaux jours s'estompe. Dans les immeubles années 60-80 de Montrouge, où les balcons en béton brut ou carrelés sont courants, le noircissement devient visible en quelques saisons seulement. Retrouver une surface propre change l'usage quotidien de cet espace.</p>\n<p class=\"mt-4\">Notre intervention commence par un diagnostic du support et de l'exposition. Nous identifions les zones sensibles, protégeons vos menuiseries et plantes, puis adaptons la méthode au revêtement pour un résultat durable sans risque pour les joints.</p>",
+        "<p>Les traces noires sur le carrelage, les <strong>joints verdis par l'humidité</strong>, la fine pellicule grasse qui recouvre le garde-corps : sur les balcons donnant sur l'avenue de la République ou les résidences bordant les Allées Jean Jaurès, ces marques s'accumulent mois après mois. Le trafic dense de la N20 toute proche dépose une poussière chargée de particules qui adhère aux surfaces et résiste au simple jet d'eau.</p>\n<p class=\"mt-4\">Un balcon encrassé, c'est un espace qu'on délaisse. Les plantes restent à l'intérieur, le mobilier prend la poussière, et l'envie de profiter des beaux jours s'estompe. Dans les immeubles années 60-80 de Montrouge, où les balcons en béton brut ou carrelés sont courants, le noircissement devient visible en quelques saisons seulement. Retrouver une surface propre change l'usage quotidien de cet espace.</p>\n<p class=\"mt-4\">Notre intervention commence par un diagnostic du support et de l'exposition. Nous identifions les zones sensibles, protégeons vos menuiseries et plantes, puis adaptons la méthode au revêtement pour un résultat durable sans risque pour les joints.</p>",
       uniqueDeepDive:
-        "<h3>Préparation et protection</h3>\n<p>Nous déplaçons le mobilier et bâchons les plantes. Les menuiseries, fenêtres et seuils sont protégés avec un film adhésif. Les gros débris — feuilles mortes, terre accumulée, résidus divers — sont retirés manuellement avant tout traitement humide.</p>\n\n<h3>Traitement et brossage</h3>\n<p>Un produit adapté au support est appliqué : formule douce pour carrelage et joints fragiles, dégraissant pour béton brut. Le brossage mécanique ou manuel déloge les dépôts verts et les traces grasses. Le garde-corps et les murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à pression contrôlée, suffisante pour évacuer les résidus sans fragiliser les joints ni projeter d'eau chez les voisins du dessous.</p>\n\n<h3>Finalisation</h3>\n<p>L'eau résiduelle est raclée vers les évacuations. Nous vérifions l'absence de coulures sur la façade et le balcon inférieur. Avant de partir, nous repositionnons votre mobilier et vous transmettons quelques conseils d'entretien pour espacer les prochaines interventions.</p>",
+        "<h3>Préparation et protection</h3>\n<p>Nous déplaçons le mobilier et bâchons les plantes. Les menuiseries, fenêtres et seuils sont protégés avec un film adhésif. Les gros débris — feuilles mortes, terre accumulée, résidus divers — sont retirés manuellement avant tout traitement humide.</p>\n\n<h3>Traitement et brossage</h3>\n<p>Un produit adapté au support est appliqué : formule douce pour carrelage et joints fragiles, dégraissant pour béton brut. <strong>Le brossage mécanique ou manuel</strong> déloge les dépôts verts et les traces grasses. Le garde-corps et les murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à pression contrôlée, suffisante pour évacuer les résidus sans fragiliser les joints ni projeter d'eau chez les voisins du dessous.</p>\n\n<h3>Finalisation</h3>\n<p>L'eau résiduelle est raclée vers les évacuations. Nous vérifions l'absence de coulures sur la façade et le balcon inférieur. Avant de partir, nous repositionnons votre mobilier et vous transmettons quelques conseils d'entretien pour espacer les prochaines interventions.</p>",
       specificChallenges: [
-        "Balcons exposés à la pollution de la N20 : dépôts noirs tenaces sur garde-corps et sols.",
+        "Balcons exposés à la pollution de la N20 : <strong>dépôts noirs tenaces</strong> sur garde-corps et sols.",
         "Immeubles années 60-80 avec joints de carrelage poreux nécessitant une pression maîtrisée.",
         "Étages élevés fréquents : intervention sans accès extérieur, uniquement depuis l'appartement.",
-        "Densité urbaine forte : gestion stricte des eaux pour préserver les voisins du dessous.",
+        "Densité urbaine forte : <strong>gestion stricte des eaux</strong> pour préserver les voisins du dessous.",
         "Loggias des résidences récentes : surfaces vitrées à protéger pendant le traitement.",
       ],
       faqAdditions: [
@@ -225,7 +225,7 @@ const city: City = {
           question:
             "Comment évitez-vous les coulures chez mes voisins du dessous dans les résidences denses de Montrouge ?",
           answer:
-            "<p>Nous posons des bâches de rétention sur les bords du balcon et raclons l'eau vers vos évacuations. Avant de quitter les lieux, nous vérifions visuellement l'étage inférieur et la façade pour nous assurer qu'aucune trace n'a été projetée.</p>",
+            "<p>Nous posons des <strong>bâches de rétention</strong> sur les bords du balcon et raclons l'eau vers vos évacuations. Avant de quitter les lieux, nous vérifions visuellement l'étage inférieur et la façade pour nous assurer qu'aucune trace n'a été projetée.</p>",
         },
         {
           question:
@@ -237,7 +237,7 @@ const city: City = {
           question:
             "Mon balcon est en béton brut avec des dalles sur plots : adaptez-vous la méthode ?",
           answer:
-            "<p>Oui. Le béton brut supporte un brossage plus appuyé et un rinçage à pression modérée. Les dalles sur plots sont soulevées si nécessaire pour nettoyer en dessous, puis repositionnées. Chaque support reçoit un traitement spécifique.</p>",
+            "<p>Oui. Le béton brut supporte un brossage plus appuyé et un rinçage à pression modérée. <strong>Les dalles sur plots sont soulevées</strong> si nécessaire pour nettoyer en dessous, puis repositionnées. Chaque support reçoit un traitement spécifique.</p>",
         },
         {
           question:
@@ -263,7 +263,7 @@ const city: City = {
       uniqueDeepDive:
         '<h3>Sécurisation et confinement</h3>\n<p>L\'intervenant porte un équipement de protection complet : masque FFP2, gants, lunettes et combinaison jetable. La zone est bâchée pour éviter toute dispersion vers l\'intérieur du logement ou chez les voisins du dessous.</p>\n<p class="mt-4">Les fientes sèches sont humidifiées avant manipulation pour neutraliser les poussières potentiellement contaminées.</p>\n\n<h3>Collecte et nettoyage des supports</h3>\n<p>Les dépôts sont ramassés et conditionnés dans des sacs étanches. Le sol du balcon, le garde-corps, les vitrages et les éventuels murs mitoyens sont nettoyés méthodiquement.</p>\n<p class="mt-4">Un produit désinfectant virucide et bactéricide est appliqué sur l\'ensemble des surfaces, avec un temps de contact respecté pour éliminer les agents pathogènes.</p>\n\n<h3>Rinçage et recommandations</h3>\n<p>Un rinçage final prépare le balcon à une réutilisation rapide. Les déchets sont évacués de manière sécurisée.</p>\n<p class="mt-4">Si votre configuration le justifie, des solutions de dissuasion sont proposées : pics sur les rebords, filets de protection ou gel répulsif pour limiter le risque de réinfestation.</p>',
       specificChallenges: [
-        "Balcons sous toits dans le Vieux Montrouge : niches à pigeons fréquentes.",
+        "Balcons sous toits dans le Vieux Montrouge : <strong>niches à pigeons fréquentes</strong>.",
         "Proximité du Marché Victor Hugo : attractivité alimentaire pour les oiseaux.",
         "Immeubles en brique avec corniches : accumulation de fientes sur les rebords.",
         "Cours intérieures calmes : zones de nidification discrètes.",
@@ -312,10 +312,10 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Diagnostic et pré-traitement</h3>\n<p>Avant toute intervention, le textile est examiné : coton, velours, synthétique ou laine réagissent différemment. Un test discret sur une zone cachée valide la compatibilité du traitement. Les taches identifiées (café, urine, graisse) reçoivent un détachage ciblé avec des produits enzymatiques si nécessaire.</p>\n\n<h3>Nettoyage par injection-extraction</h3>\n<p>La méthode injecte une solution adaptée au cœur des fibres, puis aspire immédiatement l'eau chargée de salissures. La pression et la température sont ajustées selon la fragilité du tissu. Cette technique déloge les résidus incrustés sans détremper excessivement le textile.</p>\n\n<h3>Extraction renforcée et consignes de séchage</h3>\n<p>Plusieurs passages d'extraction retirent le maximum d'humidité. Le temps de séchage varie selon l'épaisseur : comptez 4 à 8 heures pour un canapé standard, davantage pour un matelas épais. Une bonne aération accélère le processus. Des conseils d'entretien vous sont transmis pour espacer les prochaines interventions.</p>",
       specificChallenges: [
-        "Taches anciennes incrustées dans les fibres après plusieurs mois sans traitement.",
+        "Taches anciennes <strong>incrustées dans les fibres</strong> après plusieurs mois sans traitement.",
         "Odeurs d'animaux persistantes malgré les produits ménagers classiques.",
         "Stationnement contraint en voirie : intervention planifiée pour limiter les allers-retours.",
-        "Séchage à adapter selon la ventilation des appartements en étage élevé.",
+        "Séchage à adapter selon la <strong>ventilation des appartements</strong> en étage élevé.",
         "Textiles fragiles (velours, laine) nécessitant un réglage de pression spécifique.",
       ],
       faqAdditions: [
@@ -335,7 +335,7 @@ const city: City = {
           question:
             "Faut-il déplacer les meubles avant votre arrivée dans mon appartement à Montrouge ?",
           answer:
-            "<p>Dégager l'accès au canapé ou au tapis facilite l'intervention et réduit la durée sur place. Si des objets fragiles se trouvent à proximité, les éloigner évite tout risque. Pour un matelas, retirer la literie suffit. Nous gérons le reste une fois sur place.</p>",
+            "<p><strong>Dégager l'accès au canapé ou au tapis</strong> facilite l'intervention et réduit la durée sur place. Si des objets fragiles se trouvent à proximité, les éloigner évite tout risque. Pour un matelas, retirer la literie suffit. Nous gérons le reste une fois sur place.</p>",
         },
         {
           question:
@@ -357,13 +357,13 @@ const city: City = {
         "Réactivité pour respecter vos délais d'état des lieux, coordination possible avec agences et artisans.",
       ],
       uniqueIntro:
-        "<p>Après plusieurs semaines de travaux ou à l'approche d'un état des lieux, un appartement accumule poussières de chantier, traces de peinture et résidus divers. Dans les immeubles proches de la <strong>station Mairie de Montrouge</strong> ou du secteur <strong>Barbara</strong>, la rotation locative soutenue impose des délais serrés pour rendre un logement impeccable avant remise des clés.</p>\n<p class=\"mt-4\">Un nettoyage complet change la perception du bien : sols débarrassés des voiles de plâtre, vitres intérieures transparentes, sanitaires désinfectés. Dans les <strong>immeubles années 60-80 du quartier Ferry-Buffalo</strong>, les parquets anciens et carrelages d'époque demandent une attention particulière pour éviter les rayures lors du décrassage. Le résultat facilite la récupération du dépôt de garantie ou valorise le logement pour les nouveaux occupants.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec les agences immobilières, les artisans ou directement avec les particuliers. Le <strong>stationnement contraint</strong> sur la voirie montrougienne impose une logistique anticipée pour le matériel, souvent via les parkings souterrains du centre-ville.</p>",
+        "<p>Après plusieurs semaines de travaux ou à l'approche d'un état des lieux, un appartement accumule poussières de chantier, traces de peinture et résidus divers. Dans les immeubles proches de la <strong>station Mairie de Montrouge</strong> ou du secteur Barbara, la rotation locative soutenue impose des délais serrés pour rendre un logement impeccable avant remise des clés.</p>\n<p class=\"mt-4\">Un nettoyage complet change la perception du bien : sols débarrassés des voiles de plâtre, vitres intérieures transparentes, sanitaires désinfectés. Dans les <strong>immeubles années 60-80 du quartier Ferry-Buffalo</strong>, les parquets anciens et carrelages d'époque demandent une attention particulière pour éviter les rayures lors du décrassage. Le résultat facilite la récupération du dépôt de garantie ou valorise le logement pour les nouveaux occupants.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec les agences immobilières, les artisans ou directement avec les particuliers. Le stationnement contraint sur la voirie montrougienne impose une logistique anticipée pour le matériel, souvent via les parkings souterrains du centre-ville.</p>",
       uniqueDeepDive:
-        "<h3>Diagnostic et préparation</h3>\n<p>Le technicien évalue l'état du logement : nature des résidus (poussière de chantier, traces de colle, salissures courantes), type de sols et surfaces fragiles à protéger. Les gravats ou déchets volumineux sont évacués si nécessaire. Cette étape permet d'adapter les produits et le temps d'intervention.</p>\n\n<h3>Nettoyage pièce par pièce</h3>\n<p>Le travail progresse méthodiquement : dépoussiérage des plafonds, murs et plinthes, puis aspiration et lavage des sols selon leur revêtement. Les pièces d'eau reçoivent un traitement spécifique : détartrage des sanitaires, dégraissage des plans de travail, nettoyage de la faïence et des joints. Les vitres intérieures sont incluses.</p>\n\n<h3>Finitions et contrôle</h3>\n<p>Les détails font la différence : interrupteurs, poignées, radiateurs, intérieurs de placards. Les éventuelles traces de peinture ou d'enduit sont traitées avec précaution. Un contrôle final vérifie chaque zone avant aération du logement et remise des clés si applicable.</p>",
+        "<h3>Diagnostic et préparation</h3>\n<p>Le technicien évalue l'état du logement : nature des résidus (poussière de chantier, traces de colle, salissures courantes), <strong>type de sols et surfaces fragiles</strong> à protéger. Les gravats ou déchets volumineux sont évacués si nécessaire. Cette étape permet d'adapter les produits et le temps d'intervention.</p>\n\n<h3>Nettoyage pièce par pièce</h3>\n<p>Le travail progresse méthodiquement : dépoussiérage des plafonds, murs et plinthes, puis aspiration et lavage des sols selon leur revêtement. <strong>Les pièces d'eau reçoivent un traitement spécifique</strong> : détartrage des sanitaires, dégraissage des plans de travail, nettoyage de la faïence et des joints. Les vitres intérieures sont incluses.</p>\n\n<h3>Finitions et contrôle</h3>\n<p>Les détails font la différence : interrupteurs, poignées, radiateurs, intérieurs de placards. Les éventuelles traces de peinture ou d'enduit sont traitées avec précaution. Un contrôle final vérifie chaque zone avant aération du logement et remise des clés si applicable.</p>",
       specificChallenges: [
         "Rotation locative élevée près des stations de métro, délais souvent contraints.",
-        "Parquets anciens dans le Vieux Montrouge nécessitant un nettoyage sans risque de rayure.",
-        "Livraisons de programmes neufs en ZAC des Portes de Montrouge générant des fins de chantier régulières.",
+        "Parquets anciens dans le Vieux Montrouge nécessitant un <strong>nettoyage sans risque de rayure</strong>.",
+        "Livraisons de programmes neufs en ZAC des Portes de Montrouge générant des <strong>fins de chantier régulières</strong>.",
         "Stationnement très limité imposant une organisation logistique anticipée.",
         "Immeubles sans ascenseur dans l'ancien, montée du matériel à prévoir.",
       ],

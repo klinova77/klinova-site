@@ -14,12 +14,13 @@ const city: City = {
   customDescription:
     "Ville dynamique de Seine-et-Marne desservie par le RER A, Torcy concentre immeubles récents et zones d'activités autour de la gare et du secteur Bay. L'entretien des moquettes dans les copropriétés, des parkings souterrains et des balcons nécessite une approche adaptée aux contraintes urbaines locales.",
 
+    
   hubIntro:
-    "<p>KLINOVA accompagne les syndics et gestionnaires de Torcy dans leur gestion quotidienne de la propreté immobilière. Notre proximité géographique et notre connaissance du tissu urbain local nous permettent d'intervenir rapidement sur vos copropriétés et zones d'activités.</p>\n<p class=\"mt-4\">Nous proposons une approche globale de la maintenance technique : du nettoyage des moquettes de halls aux parkings souterrains, en passant par l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un protocole rigoureux et d'un reporting détaillé pour vos conseils syndicaux.</p>\n<ul>\n  <li><strong>Interventions programmées</strong> sur les copropriétés du secteur Arche-Guédon et centre-ville.</li>\n  <li><strong>Gestion des accès sécurisés</strong> Vigik et coordination avec les gardiens d'immeubles.</li>\n  <li><strong>Protocoles adaptés</strong> aux contraintes de stationnement près de la gare RER.</li>\n  <li><strong>Reporting détaillé</strong> pour assemblées générales et suivi budgétaire.</li>\n</ul>",
+    "<p>KLINOVA accompagne les syndics et gestionnaires de Torcy dans leur gestion quotidienne de la propreté immobilière. Notre proximité géographique et notre connaissance du tissu urbain local nous permettent d'intervenir rapidement sur vos copropriétés et zones d'activités.</p>\n<p class=\"mt-4\">Nous proposons une <strong>approche globale de la maintenance technique</strong> : du nettoyage des moquettes de halls aux parkings souterrains, en passant par l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un protocole rigoureux et d'un reporting détaillé pour vos conseils syndicaux.</p>\n<ul>\n  <li><strong>Interventions programmées</strong> sur les copropriétés du secteur Arche-Guédon et centre-ville.</li>\n  <li><strong>Gestion des accès sécurisés</strong> Vigik et coordination avec les gardiens d'immeubles.</li>\n  <li><strong>Protocoles adaptés</strong> aux contraintes de stationnement près de la gare RER.</li>\n  <li><strong>Reporting détaillé</strong> pour assemblées générales et suivi budgétaire.</li>\n</ul>",
 
   citySpecificChallenges: [
-    "Encrassement accéléré des moquettes de halls par le passage intensif lié à la desserte RER A.",
-    "Accumulation de particules fines et résidus urbains sur les balcons exposés aux axes routiers A4 et A104.",
+    "Encrassement accéléré des moquettes de halls par le <strong>passage intensif</strong> lié à la desserte RER A.",
+    "Accumulation de <strong>particules fines et résidus urbains</strong> sur les balcons exposés aux axes routiers A4 et A104.",
     "Traces de boue et salissures dans les parkings souterrains des résidences récentes du secteur ville nouvelle.",
     "Dépôts de mousses et algues sur les terrasses des étangs de Maubuée en période humide.",
   ],
@@ -117,8 +118,8 @@ const city: City = {
         "<h3>Diagnostic approfondi et préparation sur mesure</h3>\n<p>Notre intervention débute par un diagnostic approfondi de l'état des moquettes : type de fibres, niveau d'encrassement, identification des taches spécifiques et évaluation des contraintes d'accès typiques des immeubles de Torcy. Nous prenons en compte la configuration des halls souvent ouverts sur rue, la proximité de la gare RER générant un flux piétonnier important et les spécificités architecturales des résidences de la ville nouvelle. La phase de préparation inclut la <strong>protection des bas de murs</strong>, le balisage des zones d'intervention et l'organisation par cage d'escalier pour limiter la gêne des résidents.</p>\n\n<h3>Nettoyage par injection-extraction en profondeur</h3>\n<p class=\"mt-4\">Le nettoyage s'effectue par <strong>injection-extraction à l'eau</strong>, méthode qui permet d'éliminer les salissures incrustées sans abîmer les fibres. Nos techniciens effectuent plusieurs passes sur les zones de fort passage comme les seuils d'entrée et les paliers principaux. L'extraction puissante des eaux de lavage assure un séchage optimal même dans les halls exposés à l'humidité hivernale.</p>\n\n<h3>Entretien programmé et conseils de suivi</h3>\n<p class=\"mt-4\">Nous recommandons un <strong>nettoyage complet tous les 12 à 18 mois</strong> pour les copropriétés à fort passage, complété par un entretien régulier par aspiration et détachage ponctuel.</p>",
 
       specificChallenges: [
-        "Encrassement accéléré des moquettes dans les halls proches de la gare RER A, avec des zones de passage à traiter de façon renforcée.",
-        "Incrustation profonde de particules fines issues du trafic des axes A4 et A104, nécessitant un pré-traitement et plusieurs passes d'injection-extraction.",
+        "Encrassement accéléré des moquettes dans les halls proches de la <strong>gare RER A</strong>, avec des zones de passage à traiter de façon renforcée.",
+        "Incrustation profonde de <strong>particules fines</strong> issues du trafic des axes A4 et A104, nécessitant un pré-traitement et plusieurs passes d'injection-extraction.",
         "Ralentissement possible du séchage dans les rez-de-chaussée exposés à l'humidité hivernale, demandant une extraction particulièrement efficace.",
         "Usure différenciée des moquettes d'escaliers selon les paliers, nécessitant une approche par zones pour homogénéiser le rendu.",
       ],
@@ -174,7 +175,7 @@ const city: City = {
       specificChallenges: [
         "Encrassement accéléré des parkings situés près des grands axes routiers A4 et A104, avec particules de combustion et résidus d'hydrocarbures fortement adhérents.",
         "Rampes d'accès étroites et contraintes de hauteur dans les résidences contemporaines, nécessitant un matériel compact et maniable.",
-        "Faible ventilation de certains parkings souterrains du secteur ville nouvelle, qui peut prolonger les temps de séchage et demande une organisation adaptée.",
+        "<strong>Faible ventilation</strong> de certains parkings souterrains du secteur ville nouvelle, qui peut prolonger les temps de séchage et demande une organisation adaptée.",
         "Sols en pente douce vers des évacuations centrales imposant une gestion précise du ruissellement des eaux de lavage pour éviter les débordements.",
       ],
 
@@ -224,12 +225,12 @@ const city: City = {
         "<p>Les balcons des appartements de Torcy subissent un <strong>encrassement constant</strong> lié à l'exposition aux particules issues du trafic des axes A4 et A104, ainsi qu'aux dépôts organiques favorisés par l'humidité des étangs de Maubuée. Entre les joints noircis, les traces verdâtres de mousses et d'algues et l'accumulation de poussière urbaine, ces espaces extérieurs perdent rapidement leur attrait.</p>\n<p class=\"mt-4\">Les résidents des copropriétés récentes du secteur Arche-Guédon comme ceux du vieux Torcy se retrouvent avec des balcons qu'ils évitent d'utiliser, devenus peu accueillants et donnant une impression de négligence. Un <strong>nettoyage professionnel</strong> redonne vie à ces espaces extérieurs et permet de les réinvestir pleinement pour les moments de détente.</p>",
 
       uniqueDeepDive:
-        "<h3>Protection et préparation minutieuse</h3>\n<p>L'intervention commence par la protection soigneuse de la porte-fenêtre, des menuiseries et des éventuels murs adjacents à l'aide de bâches adaptées. Nous déplaçons ou protégeons le mobilier, les plantes en pot et tous les objets présents pour accéder à l'ensemble des surfaces à traiter. Un enlèvement manuel préalable élimine les gros dépôts : feuilles mortes, terre accumulée dans les coins, résidus de jardinières et déchets divers.</p>\n\n<h3>Nettoyage adapté et traitement complet</h3>\n<p class=\"mt-4\">Le nettoyage proprement dit s'adapte au type de revêtement identifié avec application de produits spécifiques, <strong>brossage manuel des zones encrassées</strong> et rinçage contrôlé. Nous nettoyons également le garde-corps, les vitreries de protection et les murs mitoyens. La gestion de l'eau est rigoureuse, avec orientation du ruissellement vers l'évacuation prévue et utilisation de raclettes et chiffons absorbants pour éviter toute coulure le long de la façade ou chez les voisins du dessous.</p>\n\n<h3>Séchage et conseils d'entretien</h3>\n<p class=\"mt-4\">Le délai de séchage varie entre 4 et 6 heures selon les conditions météorologiques. Nous recommandons ensuite un entretien simple pour maintenir la propreté de votre balcon au fil des saisons.</p>",
+        "<h3>Protection et préparation minutieuse</h3>\n<p>L'intervention commence par la <strong>protection soigneuse de la porte-fenêtre</strong>, des menuiseries et des éventuels murs adjacents à l'aide de bâches adaptées. Nous déplaçons ou protégeons le mobilier, les plantes en pot et tous les objets présents pour accéder à l'ensemble des surfaces à traiter. Un enlèvement manuel préalable élimine les gros dépôts : feuilles mortes, terre accumulée dans les coins, résidus de jardinières et déchets divers.</p>\n\n<h3>Nettoyage adapté et traitement complet</h3>\n<p class=\"mt-4\">Le nettoyage proprement dit s'adapte au type de revêtement identifié avec application de produits spécifiques, <strong>brossage manuel des zones encrassées</strong> et rinçage contrôlé. Nous nettoyons également le garde-corps, les vitreries de protection et les murs mitoyens. La gestion de l'eau est rigoureuse, avec orientation du ruissellement vers l'évacuation prévue et utilisation de raclettes et chiffons absorbants pour éviter toute coulure le long de la façade ou chez les voisins du dessous.</p>\n\n<h3>Séchage et conseils d'entretien</h3>\n<p class=\"mt-4\">Le délai de séchage varie entre 4 et 6 heures selon les conditions météorologiques. Nous recommandons ensuite un entretien simple pour maintenir la propreté de votre balcon au fil des saisons.</p>",
 
       specificChallenges: [
-        "Exposition aux embruns humides des étangs de Maubuée qui favorise le développement rapide de mousses et d'algues sur les surfaces carrelées et dans les joints.",
+        "Exposition aux <strong>embruns humides des étangs de Maubuée</strong> qui favorise le développement rapide de mousses et d'algues sur les surfaces carrelées et dans les joints.",
         "Mélange de particules fines issues du trafic routier des grands axes avec cette humidité, créant des dépôts adhérents difficiles à éliminer.",
-        "Configuration en étages des résidences imposant une gestion précise de l'écoulement des eaux de lavage pour éviter les nuisances aux voisins inférieurs.",
+        "Configuration en étages des résidences imposant une <strong>gestion précise de l'écoulement</strong> des eaux de lavage pour éviter les nuisances aux voisins inférieurs.",
         "Garde-corps à barreaudage complexe des programmes récents nécessitant un nettoyage minutieux des dépôts accumulés dans les interstices.",
       ],
 
@@ -280,11 +281,11 @@ const city: City = {
         "<p>Les balcons des appartements de Torcy subissent fréquemment des invasions de pigeons attirés par la proximité des <strong>étangs de Maubuée</strong> et les nombreux espaces verts de la ville nouvelle. Les fientes s'accumulent rapidement sur le carrelage, les garde-corps et les murs, dégageant des odeurs nauséabondes et rendant l'espace totalement inutilisable.</p>\n<p class=\"mt-4\">Cette situation génère un inconfort majeur pour les résidents, des inquiétudes concernant les <strong>risques sanitaires</strong> et parfois des tensions avec le voisinage ou la copropriété. Les immeubles du secteur Arche-Guédon et les résidences récentes offrent de nombreux recoins propices à la nidification des pigeons. Un traitement professionnel sécurisé s'impose pour décontaminer efficacement l'espace et permettre aux occupants de retrouver l'usage de leur balcon en toute sécurité.</p>",
 
       uniqueDeepDive:
-        "<h3>Protocole strict et équipements professionnels</h3>\n<p>Notre intervention respecte un protocole strict de décontamination biologique. Nos techniciens s'équipent d'EPI complets : combinaison étanche, gants renforcés, masque respiratoire FFP2 et lunettes de protection. L'espace est sécurisé par des bâches pour éviter la dispersion des contaminants vers l'intérieur du logement et les balcons adjacents. Une humidification préalable des fientes sèches empêche la formation de poussières potentiellement dangereuses lors du ramassage.</p>\n\n<h3>Nettoyage et désinfection homologuée</h3>\n<p class=\"mt-4\">Les fientes, nids et débris organiques sont collectés manuellement et conditionnés dans des sacs étanches spécialement conçus pour les déchets biologiques contaminés. Le nettoyage complet des surfaces s'effectue avec des produits adaptés, suivi d'une <strong>désinfection obligatoire avec un virucide et bactéricide homologué.</strong> Le temps de contact du désinfectant est scrupuleusement respecté avant rinçage final, puis les déchets sont évacués par nos équipes.</p>\n\n<h3>Aération et conseils de prévention</h3>\n<p class=\"mt-4\">Après intervention, une aération complète est nécessaire. Le balcon peut être réutilisé en toute sécurité après séchage, généralement sous 2 à 4 heures. Si besoin, nous conseillons des solutions anti-intrusion simples pour limiter le retour des pigeons.</p>",
+        "<h3>Protocole strict et équipements professionnels</h3>\n<p>Notre intervention respecte un <strong>protocole strict de décontamination biologique</strong>. Nos techniciens s'équipent d'EPI complets : combinaison étanche, gants renforcés, masque respiratoire FFP2 et lunettes de protection. L'espace est sécurisé par des bâches pour éviter la dispersion des contaminants vers l'intérieur du logement et les balcons adjacents. Une humidification préalable des fientes sèches empêche la formation de poussières potentiellement dangereuses lors du ramassage.</p>\n\n<h3>Nettoyage et désinfection homologuée</h3>\n<p class=\"mt-4\">Les fientes, nids et débris organiques sont collectés manuellement et conditionnés dans des sacs étanches spécialement conçus pour les déchets biologiques contaminés. Le nettoyage complet des surfaces s'effectue avec des produits adaptés, suivi d'une <strong>désinfection obligatoire avec un virucide et bactéricide homologué.</strong> Le temps de contact du désinfectant est scrupuleusement respecté avant rinçage final, puis les déchets sont évacués par nos équipes.</p>\n\n<h3>Aération et conseils de prévention</h3>\n<p class=\"mt-4\">Après intervention, une aération complète est nécessaire. Le balcon peut être réutilisé en toute sécurité après séchage, généralement sous 2 à 4 heures. Si besoin, nous conseillons des solutions anti-intrusion simples pour limiter le retour des pigeons.</p>",
 
       specificChallenges: [
-        "Balcons des étages supérieurs du secteur étangs particulièrement exposés en raison de la proximité des zones humides attractives pour les pigeons.",
-        "Accès en hauteur pour le nettoyage des garde-corps et façades souillées nécessitant des équipements de protection contre les chutes et une coordination précise.",
+        "Balcons des étages supérieurs du <strong>secteur étangs</strong> particulièrement exposés en raison de la proximité des zones humides attractives pour les pigeons.",
+        "<strong>Accès en hauteur</strong> pour le nettoyage des garde-corps et façades souillées nécessitant des équipements de protection contre les chutes et une coordination précise.",
         "Fientes anciennes pouvant avoir corrodé certains supports métalliques et joints, imposant un traitement adapté pour éviter l'aggravation des dégâts.",
         "Gestion des déchets contaminés imposant un conditionnement étanche et une évacuation par nos équipes.",
       ],
@@ -300,7 +301,7 @@ const city: City = {
           question:
             "Les produits de désinfection sont-ils dangereux après séchage ?",
           answer:
-            "Les produits virucides et bactéricides que nous utilisons sont homologués pour un usage en habitat une fois correctement rincés et séchés. Le <strong>délai de quelques heures</strong> que nous recommandons permet l'évaporation complète des résidus et garantit une réutilisation sans risque, y compris pour les enfants et les animaux domestiques.",
+            "Les produits virucides et bactéricides que nous utilisons sont homologués pour un usage en habitat une fois correctement rincés et séchés. Le délai de quelques heures que nous recommandons permet l'évaporation complète des résidus et garantit une réutilisation sans risque, y compris pour les enfants et les animaux domestiques.",
         },
         {
           question:
@@ -335,11 +336,11 @@ const city: City = {
         "<p>Dans les logements de Torcy, canapés et tapis subissent quotidiennement les aléas de la vie familiale : enfants qui jouent, animaux de compagnie, repas devant la télévision et réceptions entre amis. Les taches s'accumulent progressivement, les fibres se chargent de <strong>poussière et d'allergènes</strong>, tandis que des odeurs persistantes s'installent malgré l'entretien régulier.</p>\n<p class=\"mt-4\">Les matelas ne sont pas épargnés avec la transpiration nocturne, les acariens et les incidents du quotidien. Cette situation génère un inconfort croissant, des allergies possibles pour les personnes sensibles et une impression de saleté persistante malgré les efforts d'entretien. Un <strong>nettoyage professionnel à domicile</strong> restaure l'hygiène et l'aspect d'origine de ces éléments centraux du mobilier.</p>",
 
       uniqueDeepDive:
-        "<h3>Diagnostic et prétraitement ciblé</h3>\n<p>Notre intervention à domicile débute par un diagnostic précis du type de textile et l'identification des taches présentes. Nous adaptons notre méthode selon la fragilité du support et procédons à un pré-traitement ciblé des taches tenaces avec des <strong>produits enzymatiques</strong> pour les souillures organiques et des détachants spécialisés selon la nature des salissures.</p>\n\n<h3>Injection-extraction et extraction maximale</h3>\n<p class=\"mt-4\">Le nettoyage principal s'effectue par <strong>injection-extraction à l'eau</strong> avec aspiration immédiate des eaux sales, technique qui préserve les fibres tout en éliminant les salissures incrustées. L'intervention respecte les contraintes de votre logement : accès facilité, niveau sonore raisonnable et organisation pour limiter la perturbation de votre quotidien.</p>\n\n<h3>Séchage et recommandations d'entretien</h3>\n<p class=\"mt-4\">Nous gérons attentivement le séchage par extraction maximale de l'humidité et prodiguons des conseils d'aération selon la configuration de vos pièces. Les textiles retrouvent leur souplesse d'origine et leur confort, avec des recommandations d'entretien pour prolonger le résultat.</p>",
+        "<h3>Diagnostic et prétraitement ciblé</h3>\n<p>Notre intervention à domicile débute par un diagnostic précis du type de textile et l'identification des taches présentes. Nous adaptons notre méthode selon la fragilité du support et procédons à un pré-traitement ciblé des taches tenaces avec des <strong>produits enzymatiques</strong> pour les souillures organiques et des détachants spécialisés selon la nature des salissures.</p>\n\n<h3>Injection-extraction et extraction maximale</h3>\n<p class=\"mt-4\">Le nettoyage principal s'effectue par <strong>injection-extraction à l'eau</strong> avec aspiration immédiate des eaux sales, technique qui préserve les fibres tout en éliminant les salissures incrustées. L'intervention respecte les contraintes de votre logement : accès facilité, niveau sonore raisonnable et organisation pour limiter la perturbation de votre quotidien.</p>\n\n<h3>Séchage et recommandations d'entretien</h3>\n<p class=\"mt-4\">Nous gérons attentivement le <strong>séchage par extraction maximale</strong> de l'humidité et prodiguons des conseils d'aération selon la configuration de vos pièces. Les textiles retrouvent leur souplesse d'origine et leur confort, avec des recommandations d'entretien pour prolonger le résultat.</p>",
 
       specificChallenges: [
-        "Mode de vie familial des résidences de Torcy générant un encrassement diversifié, avec de nombreuses taches organiques et allergènes domestiques.",
-        "Humidité hivernale des logements parfois peu ventilés favorisant le développement d'acariens dans les textiles épais et ralentissant le séchage.",
+        "Mode de vie familial des résidences de Torcy générant un <strong>encrassement diversifié</strong>, avec de nombreuses taches organiques et allergènes domestiques.",
+        "<strong>Humidité hivernale</strong> des logements parfois peu ventilés favorisant le développement d'acariens dans les textiles épais et ralentissant le séchage.",
         "Odeurs d'animaux domestiques très répandus dans les pavillons et appartements familiaux, s'incrustant profondément dans les fibres.",
         "Tissus délicats des canapés contemporains nécessitant une maîtrise technique pointue pour éviter toute décoloration ou rétrécissement.",
       ],
@@ -386,7 +387,7 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Préparation et organisation de l’intervention</h3>\n<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, y compris dans des résidences aux espaces extérieurs partagés.</p>\n\n<h3>Nettoyage en profondeur du sol extérieur</h3>\n<p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’esthétique de la terrasse et le confort d’utilisation au quotidien, en redonnant une impression de propreté durable.</p>",
       specificChallenges: [
-        "Terrasses proches des espaces verts et massifs paysagers : mousses et dépôts organiques fréquents.",
+        "Terrasses proches des <strong>espaces verts</strong> et massifs paysagers : mousses et dépôts organiques fréquents.",
         "Sols extérieurs des résidences récentes : traces noires liées à l’humidité et aux circulations.",
         "Dalles béton ternies par le temps : zones foncées et aspect irrégulier.",
         "Terrasses partiellement couvertes ou enclavées : séchage lent et encrassement accéléré.",
@@ -403,7 +404,7 @@ const city: City = {
           question:
             "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en résidence ?",
           answer:
-            "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+            "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>",
         },
         {
           question:
@@ -440,12 +441,12 @@ const city: City = {
         "<h3>Gare RER A / Le Mail / Les Gradins — états des lieux et “remise à niveau” rapide</h3>\n<p>Autour du pôle gare, les demandes sont souvent orientées sortie/entrée de location : cuisine et salle d’eau d’abord (dégraissage, calcaire), puis sols et finitions. Dans ces résidences, l’enjeu est autant l’efficacité que la logistique : badge Vigik, ascenseurs, règles de copro, et stationnement plus contraint.</p>\n\n<h3>Bel-Air / Beauregard — maisons familiales et volumes sur plusieurs niveaux</h3>\n<p>En pavillonnaire, on rencontre des configurations plus larges : escaliers, chambres, bureau, pièces de rangement. Le nettoyage se joue sur l’homogénéité : sols sans traces, poussière correctement extraite des angles, et pièces d’eau remises “à blanc” sans attaquer les joints ou les surfaces fragiles.</p>\n\n<h3>Le Village / centre ancien — accès serrés et finitions visibles</h3>\n<p>Le Village apporte un autre contexte : rues plus étroites, stationnement parfois plus délicat, escaliers resserrés dans certains immeubles. Ici, on privilégie une intervention compacte : matériel adapté, passages optimisés, et contrôle final des zones qui marquent vite (entrées, poignées, encadrements, rebords).</p>",
 
       specificChallenges: [
-        "Ville de flux : demandes fréquentes liées aux états des lieux et aux relogements autour de la gare RER A.",
-        "Stationnement et circulation : contraintes plus fortes près de la gare et le samedi vers Bay 1/Bay 2.",
+        "Ville de flux : demandes fréquentes liées aux <strong>états des lieux</strong> et aux relogements autour de la gare RER A.",
+        "<strong>Stationnement et circulation</strong> : contraintes plus fortes près de la gare et le samedi vers Bay 1/Bay 2.",
         "Accès sécurisés : digicodes, Vigik, interphones, consignes d’immeuble dans la majorité des collectifs.",
         "Typologies contrastées : collectifs denses (Mail/Gradins) vs pavillons (Bel-Air/Beauregard) avec plusieurs niveaux.",
         "Calcaire en pièces d’eau : dépôts rapides, parois et robinetterie à traiter sans abîmer.",
-        "Sols très variés : PVC/lino, carrelage, stratifié — risque de traces si la méthode n’est pas adaptée.",
+        "<strong>Sols très variés</strong> : PVC/lino, carrelage, stratifié — risque de traces si la méthode n’est pas adaptée.",
       ],
 
       faqAdditions: [
@@ -459,13 +460,13 @@ const city: City = {
           question:
             "Pouvez-vous faire un nettoyage après travaux (poussières fines) à Torcy ?",
           answer:
-            "<p>Oui. Après travaux, on procède en plusieurs passes pour éviter que la poussière revienne : surfaces/menuiseries, puis sols, puis contrôle des rebords et angles. L’objectif est un rendu net et uniforme, sans voile sur les sols ni traces sur les vitres accessibles.</p>",
+            "<p>Oui. Après travaux, on procède en <strong>plusieurs passes</strong> pour éviter que la poussière revienne : surfaces/menuiseries, puis sols, puis contrôle des rebords et angles. L’objectif est un rendu net et uniforme, sans voile sur les sols ni traces sur les vitres accessibles.</p>",
         },
         {
           question:
             "Comment gérez-vous le stationnement près de la gare ou des zones commerciales ?",
           answer:
-            "<p>On anticipe le point de déchargement et le créneau. Autour de la gare et le week-end vers Bay 1/Bay 2, certains horaires sont plus compliqués ; on privilégie des créneaux plus calmes quand c’est possible et on organise l’intervention pour limiter les allers-retours.</p>",
+            "<p>On anticipe le <strong>point de déchargement</strong> et le créneau. Autour de la gare et le week-end vers Bay 1/Bay 2, certains horaires sont plus compliqués ; on privilégie des créneaux plus calmes quand c’est possible et on organise l’intervention pour limiter les allers-retours.</p>",
         },
         {
           question:

@@ -130,7 +130,7 @@ const city = {
           question:
             "Après un nettoyage de moquette dans un local commercial proche de la Zone Sénia, combien de temps avant réutilisation complète ?",
           answer:
-            "<p>Le séchage dépend de l'épaisseur des fibres et de la ventilation du local. En général, comptez deux à quatre heures pour une remise en service. Nous procédons à une extraction maximale de l'humidité et pouvons intervenir en soirée pour que les espaces soient opérationnels dès le lendemain matin.</p>",
+            "<p>Le séchage dépend de <strong>l'épaisseur des fibres</strong> et de la ventilation du local. En général, comptez deux à quatre heures pour une remise en service. Nous procédons à une extraction maximale de l'humidité et pouvons intervenir en soirée pour que les espaces soient opérationnels dès le lendemain matin.</p>",
         },
         {
           question:
@@ -142,7 +142,7 @@ const city = {
           question:
             "Les moquettes épaisses des open-spaces de la Zone Sénia risquent-elles d'être abîmées par certains procédés ?",
           answer:
-            "<p>Le diagnostic initial identifie la nature des fibres — bouclées, velours, synthétiques ou naturelles. Nous ajustons la pression d'injection et la température de la solution pour préserver la tenue du revêtement. Les moquettes épaisses supportent bien l'injection-extraction lorsque les réglages sont adaptés à leur structure.</p>",
+            "<p>Le diagnostic initial identifie la nature des fibres — bouclées, velours, synthétiques ou naturelles. Nous ajustons <strong>la pression d'injection</strong> et la température de la solution pour préserver la tenue du revêtement. Les moquettes épaisses supportent bien l'injection-extraction lorsque les réglages sont adaptés à leur structure.</p>",
         },
       ],
       ctaOverride: "",
@@ -162,8 +162,8 @@ const city = {
       uniqueDeepDive:
         "<h3>Sol dégraissé et circulable</h3>\n<p>Le résultat attendu : une surface débarrassée des nappes d'huile, des traces de pneus et des dépôts gras. Pour y parvenir, un diagnostic préalable identifie le type de revêtement et l'état des évacuations.</p>\n<p class=\"mt-4\">Un balayage mécanique élimine les débris avant l'application d'un dégraissant adapté au béton ou à la résine.</p>\n\n<h3>Passes mécanisées et zones critiques</h3>\n<p>L'autolaveuse effectue plusieurs passes sur l'ensemble de la surface. Les rampes d'accès reçoivent un traitement antidérapant renforcé.</p>\n<p class=\"mt-4\">Les angles morts, pieds de murs et rigoles sont traités manuellement pour ne laisser aucune zone encrassée.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage sont récupérées et dirigées vers les évacuations conformes, sans rejet sauvage. Un dépoussiérage des blocs lumineux ou tuyauteries peut compléter l'intervention si demandé.</p>\n<p class=\"mt-4\">Un compte-rendu précise l'état constaté et la fréquence recommandée selon le trafic observé.</p>",
       specificChallenges: [
-        "Trafic événementiel au Palais Omnisports générant pics de salissures sur les aires de stationnement.",
-        "Dépôts d'huile et poussières routières liés à la proximité de l'A86 et de la N7.",
+        "Trafic événementiel au Palais Omnisports générant <strong>pics de salissures</strong> sur les aires de stationnement.",
+        "<strong>Dépôts d'huile et poussières routières</strong> liés à la proximité de l'A86 et de la N7.",
         "Rampes d'accès étroites dans certaines copropriétés nécessitant un traitement antidérapant ciblé.",
         "Coordination avec syndics et gestionnaires pour intervenir sans bloquer les accès résidents.",
         "Gestion stricte des eaux usées pour respecter les évacuations existantes.",
@@ -173,7 +173,7 @@ const city = {
           question:
             "Comment gérez-vous les eaux de lavage dans les parkings proches du Palais Omnisports pour éviter tout rejet non conforme ?",
           answer:
-            "<p>Les eaux chargées en huile et dégraissant sont dirigées vers les regards existants après vérification de leur état. Nous n'évacuons jamais vers des zones non prévues. Un contrôle visuel des rigoles précède chaque intervention pour adapter le débit de l'autolaveuse aux capacités d'écoulement du site.</p>",
+            "<p>Les eaux chargées en huile et dégraissant sont dirigées vers les regards existants après vérification de leur état. Nous n'évacuons jamais vers des zones non prévues. Un <strong>contrôle visuel des rigoles</strong> précède chaque intervention pour adapter le débit de l'autolaveuse aux capacités d'écoulement du site.</p>",
         },
         {
           question:
@@ -191,7 +191,7 @@ const city = {
           question:
             "Quelle différence de méthode entre le parking souterrain et l'aire aérienne du Palais Omnisports ?",
           answer:
-            "<p>En souterrain, l'autolaveuse travaille en circuit fermé avec aspiration immédiate pour éviter les flaques résiduelles. À l'extérieur, la haute pression peut compléter le lavage sur les zones très encrassées. La ventilation naturelle accélère le séchage en aérien, alors qu'en sous-sol nous adaptons le débit pour limiter l'humidité persistante.</p>",
+            "<p>En souterrain, l'autolaveuse travaille en <strong>circuit fermé</strong> avec aspiration immédiate pour éviter les flaques résiduelles. À l'extérieur, la haute pression peut compléter le lavage sur les zones très encrassées. La ventilation naturelle accélère le séchage en aérien, alors qu'en sous-sol nous adaptons le débit pour limiter l'humidité persistante.</p>",
         },
       ],
       ctaOverride: "",

@@ -119,7 +119,7 @@ const city: City = {
           question:
             "Comment acheminer le matériel dans les cages d'escalier étroites des immeubles du centre-ville de Villemomble ?",
           answer:
-            "<p>Nous utilisons des équipements compacts et modulables, transportables par sections dans les passages réduits. Le repérage préalable permet d'identifier les contraintes d'accès et d'organiser l'intervention sans encombrer les circulations ni gêner les résidents aux heures de passage.</p>",
+            "<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, transportables par sections dans les passages réduits. Le repérage préalable permet d'identifier les contraintes d'accès et d'organiser l'intervention sans encombrer les circulations ni gêner les résidents aux heures de passage.</p>",
         },
         {
           question:
@@ -153,7 +153,7 @@ const city: City = {
         "Coordination avec syndics et gestionnaires pour organiser la rotation véhicules et le balisage sans bloquer l'accès aux résidents.",
       ],
       uniqueIntro:
-        "<p>Les traces d'huile et les dépôts de suie sont visibles sur de nombreux sols de parkings à Villemomble, notamment dans les <strong>résidences des Marnaudes</strong> et aux abords des parkings relais proches de la gare. Ces salissures s'accumulent au fil des mois, rendant les surfaces glissantes et dégradant l'aspect général des espaces de stationnement.</p>\n\n<p class=\"mt-4\">Un sol de parking encrassé génère des remontées régulières auprès des syndics : plaintes de copropriétaires, risques de chute sur les rampes, image dégradée des parties communes. Dans les <strong>parkings souterrains en béton des résidences années 70-90</strong>, l'absence d'entretien régulier accentue l'incrustation des graisses et complique les interventions ultérieures.</p>\n\n<p class=\"mt-4\">Avec un <strong>trafic important lié aux navetteurs RER</strong>, les parkings de Villemomble subissent une rotation véhicules soutenue. Une intervention structurée permet de coordonner le lavage avec les horaires de faible affluence, d'organiser le balisage et de restituer des sols propres sans perturber l'usage quotidien.</p>",
+        "<p>Les traces d'huile et les dépôts de suie sont visibles sur de nombreux sols de parkings à Villemomble, notamment dans les <strong>résidences des Marnaudes</strong> et aux abords des parkings relais proches de la gare. Ces salissures s'accumulent au fil des mois, rendant les surfaces glissantes et dégradant l'aspect général des espaces de stationnement.</p>\n\n<p class=\"mt-4\">Un sol de parking encrassé génère des remontées régulières auprès des syndics : plaintes de copropriétaires, risques de chute sur les rampes, image dégradée des parties communes. Dans les <strong>parkings souterrains en béton des résidences années 70-90</strong>, l'absence d'entretien régulier accentue l'incrustation des graisses et complique les interventions ultérieures.</p>\n\n<p class=\"mt-4\">Avec un trafic important lié aux navetteurs RER, les parkings de Villemomble subissent une rotation véhicules soutenue. Une intervention structurée permet de coordonner le lavage avec les horaires de faible affluence, d'organiser le balisage et de restituer des sols propres sans perturber l'usage quotidien.</p>",
       uniqueDeepDive:
         "<h3>Sol dégraissé et sécurisé</h3>\n<p>L'objectif est d'obtenir un revêtement débarrassé des huiles, graisses et poussières accumulées. Le diagnostic initial identifie le type de sol (béton brut, résine, enrobé) et l'état des évacuations pour adapter le traitement.</p>\n\n<p>Un balayage préalable élimine les débris grossiers avant l'application du dégraissant.</p>\n\n<h3>Lavage mécanisé par zones</h3>\n<p>L'autolaveuse ou la haute pression traite les surfaces par passes successives. Les zones critiques (rampes d'accès, angles morts, pieds de murs, rigoles) reçoivent une attention particulière pour éviter les résidus glissants.</p>\n\n<p>La rotation des véhicules est organisée en amont avec le gestionnaire pour libérer les zones à traiter.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Le balisage sécurise les zones humides pendant le séchage.</p>\n\n<p>Un dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention si demandé. Un compte-rendu avec recommandations de fréquence est transmis au syndic.</p>",
       specificChallenges: [
@@ -168,13 +168,13 @@ const city: City = {
           question:
             "Comment gérer les eaux de lavage dans les parkings souterrains des résidences des Marnaudes ?",
           answer:
-            "<p>Les eaux chargées en dégraissant sont orientées vers les regards et rigoles existants. Nous vérifions leur état avant intervention pour éviter tout engorgement. Aucun rejet n'est effectué vers l'extérieur ou les parties communes. Le syndic reçoit un compte-rendu précisant les volumes traités et l'état des évacuations.</p>",
+            "<p>Les eaux chargées en dégraissant sont orientées vers les <strong>regards et rigoles existants</strong>. Nous vérifions leur état avant intervention pour éviter tout engorgement. Aucun rejet n'est effectué vers l'extérieur ou les parties communes. Le syndic reçoit un compte-rendu précisant les volumes traités et l'état des évacuations.</p>",
         },
         {
           question:
             "Quels traitements pour enlever les taches d'huile anciennes sur les sols béton des parkings proches de la gare ?",
           answer:
-            "<p>Un dégraissant alcalin est appliqué sur les zones marquées, suivi d'un temps de contact adapté à l'ancienneté des dépôts. L'autolaveuse ou la haute pression déloge ensuite les résidus incrustés. Plusieurs passes peuvent être nécessaires sur les taches les plus tenaces. Le résultat dépend de l'état initial du revêtement.</p>",
+            "<p>Un <strong>dégraissant alcalin</strong> est appliqué sur les zones marquées, suivi d'un temps de contact adapté à l'ancienneté des dépôts. L'autolaveuse ou la haute pression déloge ensuite les résidus incrustés. Plusieurs passes peuvent être nécessaires sur les taches les plus tenaces. Le résultat dépend de l'état initial du revêtement.</p>",
         },
         {
           question:
@@ -202,12 +202,12 @@ const city: City = {
         "Organisation anti-coulures systématique et coordination avec les occupants pour limiter la gêne pendant l'intervention.",
       ],
       uniqueIntro:
-        "<p>Dans les quartiers pavillonnaires comme Les Coquetiers ou dans les résidences du centre-ville, les balcons accumulent rapidement un voile grisâtre. La proximité de l'Avenue du Raincy et des axes passants dépose chaque semaine une fine couche de particules sur les garde-corps et les sols. Les occupants finissent par éviter cet espace, faute de pouvoir s'y installer sans salir vêtements ou mobilier.</p>\n\n<p class=\"mt-4\">Sur les balcons filants des immeubles années 60-70 ou les loggias des résidences plus récentes, les joints noircissent et les dépôts verts s'installent dès que l'humidité persiste. Un simple coup de balai ne suffit plus : la crasse s'incruste, le carrelage perd son aspect d'origine, et l'envie de profiter de l'extérieur disparaît progressivement.</p>\n\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un balcon utilisable. Diagnostic du support, choix du produit adapté, rinçage contrôlé sans gêner les voisins du dessous : chaque étape est pensée pour un résultat durable, même sur les façades exposées aux poussières routières de la N302 ou de l'Avenue de Rosny.</p>",
+        "<p>Dans les quartiers pavillonnaires comme Les Coquetiers ou dans les résidences du centre-ville, les balcons accumulent rapidement un <strong>voile grisâtre</strong>. La proximité de l'Avenue du Raincy et des axes passants dépose chaque semaine une fine couche de particules sur les garde-corps et les sols. Les occupants finissent par éviter cet espace, faute de pouvoir s'y installer sans salir vêtements ou mobilier.</p>\n\n<p class=\"mt-4\">Sur les balcons filants des immeubles années 60-70 ou les loggias des résidences plus récentes, les joints noircissent et les dépôts verts s'installent dès que l'humidité persiste. Un simple coup de balai ne suffit plus : la crasse s'incruste, le carrelage perd son aspect d'origine, et l'envie de profiter de l'extérieur disparaît progressivement.</p>\n\n<p class=\"mt-4\">Une intervention structurée permet de retrouver un balcon utilisable. Diagnostic du support, choix du produit adapté, rinçage contrôlé sans gêner les voisins du dessous : chaque étape est pensée pour un résultat durable, même sur les façades exposées aux poussières routières de la N302 ou de l'Avenue de Rosny.</p>",
       uniqueDeepDive:
-        "<h3>Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries, fenêtres et seuils reçoivent une protection pour éviter toute projection. Les gros débris, feuilles mortes et terre accumulée sont retirés manuellement avant le traitement.</p>\n\n<h3>Nettoyage et traitement adapté</h3>\n<p>Un produit est sélectionné selon le support : carrelage, béton brut ou dalles. Le brossage, manuel ou mécanique, désincruste les salissures tenaces. Le garde-corps, les vitrages accessibles et les murs mitoyens sont traités dans la foulée. Si nécessaire, une pression douce est appliquée en contrôlant l'impact sur les joints.</p>\n\n<h3>Rinçage et finalisation</h3>\n<p>Le rinçage s'effectue avec une gestion stricte des écoulements pour éviter les coulures chez les voisins du dessous. La façade est protégée des projections. Après séchage, des conseils d'entretien sont transmis pour espacer les prochaines interventions et préserver le résultat obtenu.</p>",
+        "<h3>Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries, fenêtres et seuils reçoivent une protection pour éviter toute projection. Les gros débris, feuilles mortes et terre accumulée sont retirés manuellement avant le traitement.</p>\n\n<h3>Nettoyage et traitement adapté</h3>\n<p>Un produit est sélectionné selon le support : carrelage, béton brut ou dalles. Le <strong>brossage, manuel ou mécanique</strong>, désincruste les salissures tenaces. Le garde-corps, les vitrages accessibles et les murs mitoyens sont traités dans la foulée. Si nécessaire, une pression douce est appliquée en contrôlant l'impact sur les joints.</p>\n\n<h3>Rinçage et finalisation</h3>\n<p>Le rinçage s'effectue avec une <strong>gestion stricte des écoulements</strong> pour éviter les coulures chez les voisins du dessous. La façade est protégée des projections. Après séchage, des conseils d'entretien sont transmis pour espacer les prochaines interventions et préserver le résultat obtenu.</p>",
       specificChallenges: [
-        "Dépôts noirs sur balcons exposés à l'Avenue du Raincy et aux axes passants.",
-        "Mousses et traces vertes persistantes sur les balcons ombragés côté Parc de la Garenne.",
+        "<strong>Dépôts noirs</strong> sur balcons exposés à l'Avenue du Raincy et aux axes passants.",
+        "Mousses et <strong>traces vertes persistantes</strong> sur les balcons ombragés côté Parc de la Garenne.",
         "Joints de carrelage fragilisés sur les balcons filants des immeubles années 60-70.",
         "Accès nacelle difficile dans les rues étroites du centre-ville, intervention depuis l'intérieur privilégiée.",
         "Gestion des eaux de rinçage pour éviter les coulures chez les voisins en copropriété.",
@@ -217,13 +217,13 @@ const city: City = {
           question:
             "Quel protocole pour nettoyer sans abîmer les joints de carrelage sur les balcons du Plateau d'Avron ?",
           answer:
-            "<p>Le carrelage est d'abord testé sur une zone discrète. La pression est réglée pour déloger les salissures sans creuser les joints. Un brossage manuel complète le passage sur les zones fragiles. Le rinçage final est contrôlé pour ne pas saturer les joints d'eau.</p>",
+            "<p>Le carrelage est d'abord testé sur une zone discrète. La <strong>pression est réglée</strong> pour déloger les salissures sans creuser les joints. Un brossage manuel complète le passage sur les zones fragiles. Le rinçage final est contrôlé pour ne pas saturer les joints d'eau.</p>",
         },
         {
           question:
             "Comment gérer l'eau et éviter les coulures sur les balcons donnant sur Avenue de Rosny ?",
           answer:
-            "<p>Un bâchage est posé en périphérie du balcon avant le rinçage. L'eau est dirigée vers l'évacuation existante ou aspirée au fur et à mesure. Les façades et balcons inférieurs sont surveillés pendant toute l'intervention pour stopper immédiatement en cas de débordement.</p>",
+            "<p>Un bâchage est posé en périphérie du balcon avant le rinçage. L'eau est <strong>dirigée vers l'évacuation</strong> existante ou aspirée au fur et à mesure. Les façades et balcons inférieurs sont surveillés pendant toute l'intervention pour stopper immédiatement en cas de débordement.</p>",
         },
         {
           question:
@@ -251,12 +251,12 @@ const city: City = {
         "Organisation discrète : bâchage pour protéger voisins et intérieur, évacuation sécurisée des déchets en sacs étanches.",
       ],
       uniqueIntro:
-        "<p>Après quelques semaines sans utilisation, un balcon exposé aux passages de pigeons accumule rapidement des déjections. À Villemomble, les logements situés à proximité du <strong>Parc Jean Mermoz</strong> ou donnant sur le <strong>Parc de la Garenne</strong> subissent particulièrement ce phénomène. L'odeur s'installe, les traces s'incrustent sur le sol et le garde-corps, et l'espace extérieur devient inutilisable.</p>\n\n<p class=\"mt-4\">Les <strong>corniches et rebords des immeubles anciens</strong> du centre-ville, ainsi que les <strong>toits plats des résidences années 70</strong> du quartier Les Marnaudes, offrent des points de repos idéaux pour ces oiseaux. Les fientes s'accumulent sur les balcons en contrebas, attaquant progressivement le béton, la peinture et les éléments métalliques.</p>\n\n<p class=\"mt-4\">Les balcons peu utilisés et les cours intérieures favorisent cette accumulation sans qu'on s'en aperçoive immédiatement. Une intervention structurée permet de retrouver un espace sain : diagnostic de l'étendue des souillures, traitement adapté aux supports, et désinfection pour éliminer les agents pathogènes présents dans les déjections.</p>",
+        "<p>Après quelques semaines sans utilisation, un balcon exposé aux passages de pigeons accumule rapidement des déjections. À Villemomble, les logements situés à proximité du Parc Jean Mermoz ou donnant sur le <strong>Parc de la Garenne</strong> subissent particulièrement ce phénomène. L'odeur s'installe, les traces s'incrustent sur le sol et le garde-corps, et l'espace extérieur devient inutilisable.</p>\n\n<p class=\"mt-4\">Les <strong>corniches et rebords des immeubles anciens</strong> du centre-ville, ainsi que les toits plats des résidences années 70 du quartier Les Marnaudes, offrent des points de repos idéaux pour ces oiseaux. Les fientes s'accumulent sur les balcons en contrebas, attaquant progressivement le béton, la peinture et les éléments métalliques.</p>\n\n<p class=\"mt-4\">Les balcons peu utilisés et les cours intérieures favorisent cette accumulation sans qu'on s'en aperçoive immédiatement. Une intervention structurée permet de retrouver un espace sain : diagnostic de l'étendue des souillures, traitement adapté aux supports, et désinfection pour éliminer les agents pathogènes présents dans les déjections.</p>",
       uniqueDeepDive:
-        "<h3>Balcon assaini et désinfecté</h3>\n<p>L'objectif est de restituer un espace utilisable, débarrassé des souillures visibles et des risques sanitaires liés aux fientes. Le sol, le garde-corps, les vitrages et les murs mitoyens sont traités. Un produit virucide homologué élimine les agents pathogènes avec un temps de contact respecté.</p>\n\n<h3>Sécurisation et confinement préalable</h3>\n<p>L'intervenant porte EPI complet : masque FFP2, gants, lunettes et combinaison jetable. La zone est bâchée pour protéger l'intérieur du logement et limiter la dispersion vers les voisins. Une humidification neutralise les poussières contaminées avant toute manipulation.</p>\n\n<h3>Collecte, nettoyage et évacuation</h3>\n<p>Les fientes sont ramassées et conditionnées en sacs étanches. Les supports sont nettoyés selon leur nature : pression contrôlée sur béton, traitement doux sur peinture ou métal. Après rinçage final, un délai d'aération est respecté avant réutilisation. Des solutions de dissuasion (pics, filets) peuvent être proposées pour limiter le retour des pigeons.</p>",
+        "<h3>Balcon assaini et désinfecté</h3>\n<p>L'objectif est de restituer un espace utilisable, débarrassé des souillures visibles et des risques sanitaires liés aux fientes. Le sol, le garde-corps, les vitrages et les murs mitoyens sont traités. Un produit virucide homologué élimine les agents pathogènes avec un temps de contact respecté.</p>\n\n<h3>Sécurisation et confinement préalable</h3>\n<p>L'intervenant porte EPI complet : masque FFP2, gants, lunettes et combinaison jetable. La <strong>zone est bâchée</strong> pour protéger l'intérieur du logement et limiter la dispersion vers les voisins. Une humidification neutralise les poussières contaminées avant toute manipulation.</p>\n\n<h3>Collecte, nettoyage et évacuation</h3>\n<p>Les fientes sont ramassées et conditionnées en sacs étanches. Les supports sont nettoyés selon leur nature : <strong>pression contrôlée sur béton</strong>, traitement doux sur peinture ou métal. Après rinçage final, un délai d'aération est respecté avant réutilisation. Des solutions de dissuasion (pics, filets) peuvent être proposées pour limiter le retour des pigeons.</p>",
       specificChallenges: [
         "Balcons côté Parc de la Garenne : exposition directe aux passages de pigeons nichant dans les arbres.",
-        "Corniches des immeubles anciens Grande Rue : rebords propices à l'accumulation de fientes sur les balcons en contrebas.",
+        "Corniches des immeubles anciens Grande Rue : rebords propices à <strong>l'accumulation de fientes</strong> sur les balcons en contrebas.",
         "Résidences Les Marnaudes : cours intérieures peu ventilées où les déjections s'accumulent sans être remarquées.",
         "Toits plats années 70 : points de repos favoris des pigeons, souillures régulières sur les derniers étages.",
         "Balcons peu utilisés : accumulation progressive nécessitant une désinfection approfondie avant remise en service.",
@@ -266,7 +266,7 @@ const city: City = {
           question:
             "Quels risques sanitaires justifient une intervention urgente sur les balcons proches du Parc Jean Mermoz ?",
           answer:
-            "<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les voies respiratoires. Sur les balcons exposés aux oiseaux du Parc Jean Mermoz, l'accumulation crée un environnement propice à leur prolifération. Une désinfection rapide limite les risques pour les occupants.</p>",
+            "<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les <strong>voies respiratoires</strong>. Sur les balcons exposés aux oiseaux du Parc Jean Mermoz, l'accumulation crée un environnement propice à leur prolifération. Une désinfection rapide limite les risques pour les occupants.</p>",
         },
         {
           question:
@@ -284,7 +284,7 @@ const city: City = {
           question:
             "Comment gérez-vous l'évacuation des déchets sur les balcons donnant sur cour intérieure aux Marnaudes ?",
           answer:
-            "<p>Les fientes sont collectées et conditionnées en sacs étanches pour éviter toute dispersion. Dans les résidences Les Marnaudes avec cours intérieures, nous organisons le passage par les parties communes en protégeant les zones traversées. L'évacuation se fait de manière sécurisée.</p>",
+            "<p>Les fientes sont collectées et conditionnées en <strong>sacs étanches</strong> pour éviter toute dispersion. Dans les résidences Les Marnaudes avec cours intérieures, nous organisons le passage par les parties communes en protégeant les zones traversées. L'évacuation se fait de manière sécurisée.</p>",
         },
       ],
       ctaOverride: "",
@@ -302,11 +302,11 @@ const city: City = {
       uniqueIntro:
         "<p>Comment préserver la propreté d'un canapé familial quand enfants et animaux partagent le quotidien ? Dans les pavillons des Coquetiers ou de l'Époque, les textiles d'ameublement absorbent poussières, miettes et poils au fil des semaines. Les taches de café, les traces laissées par les animaux domestiques ou les accidents du quotidien finissent par s'incruster dans les fibres.</p>\n\n<p class=\"mt-4\">Un entretien régulier redonne du confort à votre intérieur. Les salons équipés de canapés tissu non déhoussables ou de tapis en laine retrouvent un aspect soigné, sans odeurs persistantes. Pour les professions libérales installées en centre-ville, les fauteuils de salle d'attente bénéficient également d'un rafraîchissement qui améliore l'image auprès des patients ou clients.</p>\n\n<p class=\"mt-4\">L'intervention commence par un diagnostic textile pour adapter le traitement à chaque support. Qu'il s'agisse d'un velours fragile ou d'un synthétique résistant, la méthode et la pression sont ajustées. Le matériel est acheminé jusqu'à votre domicile, même dans les rues étroites des quartiers pavillonnaires.</p>",
       uniqueDeepDive:
-        "<h3>Textile propre et assaini</h3>\n<p>L'objectif est d'extraire les salissures incrustées tout en préservant les fibres. Chaque textile réagit différemment : un canapé en coton supporte une extraction plus appuyée qu'un velours délicat. Le résultat visé est une surface nette, sans auréoles ni résidus de produit.</p>\n\n<h3>Diagnostic et pré-traitement ciblé</h3>\n<p>Avant toute injection, un test discret sur une zone cachée permet de vérifier la tenue des couleurs. Les taches identifiées (café, vin, urine, graisse) reçoivent un détachant adapté, enzymatique si nécessaire. Cette étape évite les mauvaises surprises et prépare le textile au nettoyage principal.</p>\n\n<h3>Injection-extraction et séchage</h3>\n<p>Le procédé combine injection d'une solution nettoyante et aspiration immédiate. La pression et la température sont modulées selon l'épaisseur du tissu. Après extraction maximale de l'humidité, des consignes de ventilation vous sont transmises. Selon la saison et l'aération disponible, comptez quelques heures avant de réutiliser votre canapé ou tapis.</p>",
+        "<h3>Textile propre et assaini</h3>\n<p>L'objectif est d'extraire les salissures incrustées tout en préservant les fibres. Chaque textile réagit différemment : un canapé en coton supporte une extraction plus appuyée qu'un velours délicat. Le résultat visé est une surface nette, sans auréoles ni résidus de produit.</p>\n\n<h3>Diagnostic et pré-traitement ciblé</h3>\n<p>Avant toute injection, un <strong>test discret sur une zone cachée</strong> permet de vérifier la tenue des couleurs. Les taches identifiées (café, vin, urine, graisse) reçoivent un détachant adapté, enzymatique si nécessaire. Cette étape évite les mauvaises surprises et prépare le textile au nettoyage principal.</p>\n\n<h3>Injection-extraction et séchage</h3>\n<p>Le procédé combine injection d'une solution nettoyante et aspiration immédiate. La pression et la température sont modulées selon l'épaisseur du tissu. Après <strong>extraction maximale de l'humidité</strong>, des consignes de ventilation vous sont transmises. Selon la saison et l'aération disponible, comptez quelques heures avant de réutiliser votre canapé ou tapis.</p>",
       specificChallenges: [
-        "Taches d'animaux fréquentes dans les pavillons familiaux des Coquetiers et de l'Époque.",
+        "<strong>Taches d'animaux</strong> fréquentes dans les pavillons familiaux des Coquetiers et de l'Époque.",
         "Canapés tissu non déhoussables difficiles à entretenir sans matériel professionnel.",
-        "Accès parfois étroit dans les maisons meulières pour acheminer l'équipement.",
+        "Accès parfois étroit dans les maisons meulières pour <strong>acheminer l'équipement</strong>.",
         "Tapis laine sensibles nécessitant un réglage précis de température et pression.",
         "Séchage à adapter selon l'aération variable des logements anciens.",
       ],
@@ -315,7 +315,7 @@ const city: City = {
           question:
             "Comment adaptez-vous la méthode de nettoyage selon le textile des canapés dans les pavillons du quartier Les Coquetiers ?",
           answer:
-            "<p>Chaque tissu est testé avant intervention. Un coton résistant supporte une extraction appuyée, tandis qu'un velours ou une fibre fragile nécessite une pression réduite et une température modérée. Cette adaptation préserve les couleurs et la texture d'origine.</p>",
+            "<p>Chaque tissu est testé avant intervention. Un coton résistant supporte une extraction appuyée, tandis qu'un velours ou une fibre fragile nécessite une <strong>pression réduite</strong> et une température modérée. Cette adaptation préserve les couleurs et la texture d'origine.</p>",
         },
         {
           question:
@@ -327,7 +327,7 @@ const city: City = {
           question:
             "Quel est le temps de séchage moyen pour un canapé nettoyé dans un appartement proche de la gare du Raincy-Villemomble ?",
           answer:
-            "<p>Comptez entre 4 et 8 heures selon l'épaisseur du tissu et l'aération disponible. Dans un appartement bien ventilé, le séchage est souvent plus rapide. Nous vous transmettons des consignes précises pour accélérer la remise en service.</p>",
+            "<p>Comptez entre 4 et 8 heures selon l'épaisseur du tissu et l'<strong>aération disponible</strong>. Dans un appartement bien ventilé, le séchage est souvent plus rapide. Nous vous transmettons des consignes précises pour accélérer la remise en service.</p>",
         },
         {
           question:
@@ -351,11 +351,11 @@ const city: City = {
       uniqueIntro:
         "<p>Les dépôts verts s'installent progressivement sur les dalles et le bois des terrasses. Dans les <strong>quartiers pavillonnaires du Plateau d'Avron et des Coquetiers</strong>, l'humidité persistante sous les arbres accélère la formation de mousses et de lichens. Les joints noircissent, le carrelage devient glissant après la pluie, et l'espace extérieur perd son attrait au fil des saisons.</p>\n\n<p class=\"mt-4\">Un décrassage régulier redonne à la terrasse sa fonction première : un prolongement du salon vers le jardin, utilisable sans appréhension. Les <strong>supports varient selon l'âge du bâti</strong> — dalles gravillonnées sur les constructions anciennes, bois composite ou carrelage sur les pavillons rénovés — et chaque matériau demande une approche différente pour éviter les dégradations.</p>\n\n<p class=\"mt-4\">L'intervention prend en compte les contraintes d'accès fréquentes à Villemomble : passage du matériel par l'intérieur de la maison lorsque la mitoyenneté bloque l'accès latéral, protection des plantations et gestion de l'écoulement vers les points de drainage existants.</p>",
       uniqueDeepDive:
-        "<h3>Préparation et protection</h3>\n<p>Le mobilier de jardin, les jardinières et les plantes sont déplacés ou bâchés. Les menuiseries — baies vitrées, portes-fenêtres — reçoivent une protection contre les projections. Un balayage préalable élimine feuilles mortes, terre et débris accumulés.</p>\n\n<h3>Traitement et nettoyage</h3>\n<p>Un produit adapté au support est appliqué : formulation douce pour le bois, dégraissant pour le carrelage, traitement anti-mousse sur les dalles poreuses. Le brossage — manuel ou mécanique selon la surface — décolle les salissures incrustées. La haute pression intervient uniquement sur les matériaux qui la supportent, avec réglage de l'intensité pour préserver les joints.</p>\n\n<h3>Rinçage et remise en place</h3>\n<p>L'eau est dirigée vers les points d'écoulement pour éviter les stagnations. Les garde-corps et murets périphériques sont nettoyés dans la foulée. Une fois le séchage suffisant, le mobilier reprend sa place et vous recevez des conseils d'entretien saisonnier pour prolonger le résultat.</p>",
+        "<h3>Préparation et protection</h3>\n<p>Le mobilier de jardin, les jardinières et les plantes sont déplacés ou bâchés. Les menuiseries — baies vitrées, portes-fenêtres — reçoivent une protection contre les projections. Un balayage préalable élimine feuilles mortes, terre et débris accumulés.</p>\n\n<h3>Traitement et nettoyage</h3>\n<p>Un produit adapté au support est appliqué : formulation douce pour le bois, dégraissant pour le carrelage, traitement anti-mousse sur les dalles poreuses. Le <strong>brossage — manuel ou mécanique</strong> selon la surface — décolle les salissures incrustées. La haute pression intervient uniquement sur les matériaux qui la supportent, avec réglage de l'intensité pour préserver les joints.</p>\n\n<h3>Rinçage et remise en place</h3>\n<p>L'eau est dirigée vers les <strong>points d'écoulement</strong> pour éviter les stagnations. Les garde-corps et murets périphériques sont nettoyés dans la foulée. Une fois le séchage suffisant, le mobilier reprend sa place et vous recevez des conseils d'entretien saisonnier pour prolonger le résultat.</p>",
       specificChallenges: [
         "Mousses tenaces sur terrasses exposées nord, fréquentes dans les jardins arborés.",
-        "Dalles gravillonnées sensibles à la haute pression : réglage indispensable pour éviter l'arrachement.",
-        "Accès latéral souvent bloqué par la mitoyenneté : passage du matériel par la maison.",
+        "Dalles gravillonnées sensibles à la haute pression : <strong>réglage indispensable</strong> pour éviter l'arrachement.",
+        "<strong>Accès latéral souvent bloqué</strong> par la mitoyenneté : passage du matériel par la maison.",
         "Feuilles mortes et humidité persistante à proximité du Parc de la Garenne.",
         "Écoulement des eaux à gérer pour éviter les infiltrations vers les fondations.",
       ],
@@ -364,7 +364,7 @@ const city: City = {
           question:
             "Quel protocole appliquez-vous pour nettoyer une terrasse bois sans abîmer les lames dans les pavillons du Plateau d'Avron ?",
           answer:
-            "<p>Le bois reçoit un lavage basse pression avec une buse adaptée, jamais de jet direct à forte intensité. Un produit dégrisant est appliqué si les lames ont grisé. Le sens des fibres est respecté lors du brossage pour éviter l'écaillage, et le séchage complet est attendu avant toute remise en circulation.</p>",
+            "<p>Le bois reçoit un <strong>lavage basse pression</strong> avec une buse adaptée, jamais de jet direct à forte intensité. Un produit dégrisant est appliqué si les lames ont grisé. Le sens des fibres est respecté lors du brossage pour éviter l'écaillage, et le séchage complet est attendu avant toute remise en circulation.</p>",
         },
         {
           question:
@@ -400,7 +400,7 @@ const city: City = {
       uniqueIntro:
         "<p>Après plusieurs semaines de travaux ou une longue période d'occupation, un appartement ou une maison accumule des traces que le ménage courant ne suffit pas à éliminer. Dans la zone de rotation locative autour de la <strong>Gare du Raincy - Villemomble - Montfermeil</strong>, les demandes de remise en état se multiplient entre deux locataires, souvent avec des délais serrés imposés par les agences.</p>\n\n<p class=\"mt-4\">Les pavillons 1930, appartements T2/T3 et maisons meulières présentent des surfaces variées : parquets massifs, carrelages anciens, faïences de salle de bain. Chaque support demande un traitement distinct pour éviter les dégradations. Un logement correctement préparé facilite l'état des lieux et limite les litiges sur le dépôt de garantie.</p>\n\n<p class=\"mt-4\">Qu'il s'agisse d'un ménage fin de chantier avec résidus d'enduit et poussière de plâtre, ou d'une préparation avant emménagement, l'intervention suit un diagnostic initial. Les pièces d'eau, les vitres intérieures et les placards sont traités selon un ordre précis pour une restitution conforme aux attentes.</p>",
       uniqueDeepDive:
-        "<h3>Logement prêt à habiter ou à relouer</h3>\n<p>L'objectif est un bien propre sur l'ensemble des surfaces : sols sans traces, vitres transparentes, sanitaires détartrés, placards vidés et essuyés. Le résultat permet une remise des clés sans réserve ou un emménagement immédiat.</p>\n\n<h3>Diagnostic et séquençage adapté</h3>\n<p>Avant toute action, un tour du logement identifie la nature des salissures : poussière de chantier, calcaire incrusté, traces de colle ou résidus gras. Le plan d'intervention est ajusté selon les surfaces présentes et le délai disponible.</p>\n\n<h3>Traitement par zones et contrôle final</h3>\n<p>Le travail commence par les pièces sèches (dépoussiérage plafonds, murs, plinthes) puis les pièces d'eau (désinfection sanitaires, nettoyage faïences). Les sols sont traités en dernier selon leur nature. Un contrôle visuel clôture l'intervention avant aération du logement.</p>",
+        "<h3>Logement prêt à habiter ou à relouer</h3>\n<p>L'objectif est un bien propre sur l'ensemble des surfaces : sols sans traces, vitres transparentes, sanitaires détartrés, placards vidés et essuyés. Le résultat permet une remise des clés sans réserve ou un emménagement immédiat.</p>\n\n<h3>Diagnostic et séquençage adapté</h3>\n<p>Avant toute action, un tour du logement identifie la nature des salissures : poussière de chantier, calcaire incrusté, traces de colle ou résidus gras. Le plan d'intervention est ajusté selon les surfaces présentes et le délai disponible.</p>\n\n<h3>Traitement par zones et contrôle final</h3>\n<p>Le travail commence par les pièces sèches (<strong>dépoussiérage plafonds, murs, plinthes</strong>) puis les pièces d'eau (désinfection sanitaires, nettoyage faïences). Les sols sont traités en dernier selon leur nature. Un contrôle visuel clôture l'intervention avant aération du logement.</p>",
       specificChallenges: [
         "Délais courts entre deux locataires dans les appartements proches de la gare RER E.",
         "Résidus d'enduit et poussière fine après rénovation de pavillons anciens.",
@@ -413,13 +413,13 @@ const city: City = {
           question:
             "Quelle différence entre un ménage standard et un nettoyage fin de chantier dans un pavillon ancien du quartier de l'Époque ?",
           answer:
-            "<p>Le ménage fin de chantier inclut l'élimination des résidus de travaux : poussière de plâtre, traces de peinture, colle sur les sols. Les surfaces sont traitées en profondeur, y compris les recoins et les menuiseries, ce qu'un ménage courant ne couvre pas.</p>",
+            "<p>Le ménage fin de chantier inclut l'élimination des <strong>résidus de travaux</strong> : poussière de plâtre, traces de peinture, colle sur les sols. Les surfaces sont traitées en profondeur, y compris les recoins et les menuiseries, ce qu'un ménage courant ne couvre pas.</p>",
         },
         {
           question:
             "Quel délai d'intervention pour un nettoyage urgent avant état des lieux près de la Gare du Raincy - Villemomble ?",
           answer:
-            "<p>Selon la disponibilité et la surface du bien, une intervention peut être planifiée sous 24 à 48 heures. Pour les demandes très urgentes, un échange préalable permet d'évaluer la faisabilité et d'ajuster le planning en conséquence.</p>",
+            "<p>Selon la disponibilité et la surface du bien, une intervention peut être planifiée sous 24 à 48 heures. Pour les demandes très urgentes, un <strong>échange préalable</strong> permet d'évaluer la faisabilité et d'ajuster le planning en conséquence.</p>",
         },
         {
           question:

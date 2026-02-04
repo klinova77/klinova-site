@@ -135,7 +135,7 @@ const city: City = {
           question:
             "En Centre-Ville, avec escaliers étroits et halls ouverts sur rue, comment passez-vous le matériel ?",
           answer:
-            "<p>On prévoit un acheminement compact et des protections dès l’entrée. Dans les bâtisses anciennes divisées, on limite les allers-retours, on sécurise les angles/plinthes, puis on travaille par zones (paliers, volées). Le but est d’éviter les traces d’eau et de conserver une circulation possible pendant l’opération.</p>",
+            "<p>On prévoit <strong>un acheminement compact</strong> et des protections dès l’entrée. Dans les bâtisses anciennes divisées, on limite les allers-retours, on sécurise les angles/plinthes, puis on travaille par zones (paliers, volées). Le but est d’éviter les traces d’eau et de conserver une circulation possible pendant l’opération.</p>",
         },
         {
           question:
@@ -153,7 +153,7 @@ const city: City = {
           question:
             "Dans les résidences sécurisées, quel délai de séchage annoncez-vous pour rouvrir les circulations ?",
           answer:
-            "<p>Le délai dépend de la méthode et de l’aération possible. En injection-extraction, on vise une humidité résiduelle faible grâce à l’aspiration, puis on recommande aération et limitation du passage. En basse humidité, la remise en circulation est souvent plus rapide. On annonce toujours une fourchette réaliste, selon saison et épaisseur.</p>",
+            "<p>Le délai dépend de la méthode et de l’aération possible. En injection-extraction, on vise une humidité résiduelle faible grâce à l’aspiration, puis on recommande <strong>aération et limitation du passage</strong>. En basse humidité, la remise en circulation est souvent plus rapide. On annonce toujours une fourchette réaliste, selon saison et épaisseur.</p>",
         },
       ],
       ctaOverride: "",
@@ -173,23 +173,23 @@ const city: City = {
       ],
 
       uniqueIntro:
-        '<p>Quand un parking commence à “noircir”, le constat est généralement immédiat : poussière grasse, traces d’hydrocarbures, marquages qui se lisent moins, et zones glissantes sur les passages. Au Perreux-sur-Marne, on retrouve ce scénario dans les sous-sols de <strong>résidences récentes des Joncs-Marins</strong>, mais aussi sur des niveaux plus profonds où l’air circule peu et où les dépôts s’installent plus durablement.</p>\n<p class="mt-4">La proximité de l’<strong>A86</strong> accentue souvent la présence de particules noires et grasses : un simple lavage ne suffit pas si le dégraissage n’est pas cadré et si la gestion des eaux n’est pas maîtrisée. L’accès est aussi un sujet : digicodes, sas, circulation interne, et parfois stationnement contraint en surface pour la logistique. Un <strong>nettoyage parking Le Perreux-sur-Marne</strong> efficace se joue surtout sur l’organisation : zonage, rotation des véhicules, et traitement rigoureux des rampes, pieds de murs et angles morts.</p>',
+        "<p>Quand un parking commence à “noircir”, le constat est généralement immédiat : poussière grasse, traces d’hydrocarbures, marquages qui se lisent moins, et zones glissantes sur les passages. Au Perreux-sur-Marne, on retrouve ce scénario dans les sous-sols de <strong>résidences récentes des Joncs-Marins</strong>, mais aussi sur des niveaux plus profonds où l’air circule peu et où les dépôts s’installent plus durablement.</p>\n<p class=\"mt-4\">La proximité de l’A86 accentue souvent la présence de particules noires et grasses : un simple lavage ne suffit pas si le dégraissage n’est pas cadré et si la gestion des eaux n’est pas maîtrisée. L’accès est aussi un sujet : digicodes, sas, circulation interne, et parfois stationnement contraint en surface pour la logistique. Un <strong>nettoyage parking Le Perreux-sur-Marne</strong> efficace se joue surtout sur l’organisation : zonage, rotation des véhicules, et traitement rigoureux des rampes, pieds de murs et angles morts.</p>",
       // - 2 à 3 paragraphes <p>...</p>
       // - HTML autorisé
       // - ajouter <p class="mt-4"> à partir du 2ᵉ paragraphe pour l’espacement
 
       uniqueDeepDive:
-        "<h3>Zone A — Préparation et sécurité.</h3>\n<p> Diagnostic du revêtement (béton lissé, résine, peinture) et repérage des évacuations. Balayage/ramassage, puis balisage et zonage pour maintenir une circulation contrôlée et organiser la rotation des véhicules.</p>\n\n<h3>Zone B — Lavage mécanisé et dégraissage.</h3>\n<p> Passage à l’<strong>autolaveuse</strong> (brossage + aspiration simultanés) pour décoller et récupérer les salissures. Sur taches d’huile/essence, dégraissage ciblé avec produit adapté, et si besoin haute pression contrôlée sur zones très encrassées (sans détériorer le support).</p>\n\n<h3>Zone C — Finitions et gestion des eaux.</h3>\n<p> Traitement des zones critiques : rampes, angles, rigoles, pieds de murs. Gestion stricte des eaux de lavage selon les contraintes du site, puis contrôle du rendu et conseils de fréquence en fonction du trafic et de l’exposition aux dépôts.</p>",
+        "<h3>Zone A — Préparation et sécurité.</h3>\n<p> Diagnostic du revêtement (béton lissé, résine, peinture) et repérage des évacuations. Balayage/ramassage, puis balisage et zonage pour maintenir une circulation contrôlée et organiser la rotation des véhicules.</p>\n\n<h3>Zone B — Lavage mécanisé et dégraissage.</h3>\n<p> Passage à l’<strong>autolaveuse</strong> (brossage + aspiration simultanés) pour décoller et récupérer les salissures. Sur taches d’huile/essence, dégraissage ciblé avec produit adapté, et si besoin haute pression contrôlée sur zones très encrassées (sans détériorer le support).</p>\n\n<h3>Zone C — Finitions et gestion des eaux.</h3>\n<p> Traitement des zones critiques : rampes, angles, rigoles, pieds de murs. <strong>Gestion stricte des eaux de lavage</strong> selon les contraintes du site, puis contrôle du rendu et conseils de fréquence en fonction du trafic et de l’exposition aux dépôts.</p>",
       // - Sections structurées en <h3> + <p>
       // - Après chaque <h3> : au moins un <p>
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Les dépôts gras liés à l’A86 se fixent vite sur béton lissé, surtout en sous-sol.",
+        "Les <strong>dépôts gras liés à l’A86</strong> se fixent vite sur béton lissé, surtout en sous-sol.",
         "Les accès par digicodes/sas imposent une coordination stricte dès la préparation.",
         "Les rampes et angles morts concentrent l’encrassement et demandent un traitement dédié.",
-        "Sans plan de rotation véhicules, le lavage mécanisé perd en efficacité et en sécurité.",
+        "Sans <strong>plan de rotation véhicules</strong>, le lavage mécanisé perd en efficacité et en sécurité.",
       ],
 
       faqAdditions: [
@@ -197,13 +197,13 @@ const city: City = {
           question:
             "Sur les parkings souterrains des Joncs-Marins, utilisez-vous plutôt autolaveuse ou haute pression ?",
           answer:
-            "<p>Le plus souvent, l’autolaveuse est la base : elle brosse et récupère l’eau sale en continu, ce qui limite les flaques. La haute pression intervient en complément sur zones très marquées ou reliefs spécifiques, avec une pression contrôlée. Le choix dépend du revêtement et du niveau d’hydrocarbures, pas d’une règle unique.</p>",
+            "<p>Le plus souvent, <strong>l’autolaveuse est la base</strong> : elle brosse et récupère l’eau sale en continu, ce qui limite les flaques. La haute pression intervient en complément sur zones très marquées ou reliefs spécifiques, avec une pression contrôlée. Le choix dépend du revêtement et du niveau d’hydrocarbures, pas d’une règle unique.</p>",
         },
         {
           question:
             "Avec les dépôts noirs liés à l’A86, comment traitez-vous les traces grasses qui reviennent vite ?",
           answer:
-            "<p>On combine dégraissage ciblé et lavage mécanisé, puis on insiste sur les zones de trafic et les virages. Les dépôts “noirs” sont souvent un mélange poussière + gras : sans produit adapté et sans récupération efficace, ils s’étalent. On explique aussi une fréquence d’entretien réaliste selon l’exposition et le trafic.</p>",
+            "<p>On combine <strong>dégraissage ciblé et lavage mécanisé</strong>, puis on insiste sur les zones de trafic et les virages. Les dépôts “noirs” sont souvent un mélange poussière + gras : sans produit adapté et sans récupération efficace, ils s’étalent. On explique aussi une fréquence d’entretien réaliste selon l’exposition et le trafic.</p>",
         },
         {
           question:
@@ -247,8 +247,8 @@ const city: City = {
       // - <p class="mt-4"> uniquement à partir du 2e paragraphe d’un même bloc
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
       specificChallenges: [
-        "Proche des Bords de Marne, les dépôts verts reviennent vite sur sols humides et ombragés.",
-        "Les joints noircis exigent un brossage précis plus qu’un lavage “fort”.",
+        "Proche des Bords de Marne, les <strong>dépôts verts reviennent vite</strong> sur sols humides et ombragés.",
+        "Les joints noircis exigent <strong>un brossage précis</strong> plus qu’un lavage “fort”.",
         "Les quais peuvent compliquer l’accès le week-end : logistique à caler.",
         "Le voisinage impose une gestion anti-coulures stricte, surtout en étage.",
       ],
@@ -258,13 +258,13 @@ const city: City = {
           question:
             "Aux Bords de Marne, l’humidité favorise la mousse : comment traitez-vous sans abîmer les joints ?",
           answer:
-            "<p>On évite la sur-pression et on privilégie un produit adapté + brossage, puis un rinçage maîtrisé. Sur joints fragiles, la clé est d’agir progressivement plutôt que “d’attaquer” le support. On explique aussi les limites : un joint déjà détérioré ne redevient pas neuf, mais l’aspect et la propreté obtenue s’améliorent nettement.</p>",
+            "<p>On évite la sur-pression et on privilégie <strong>un produit adapté + brossage</strong>, puis un rinçage maîtrisé. Sur joints fragiles, la clé est d’agir progressivement plutôt que “d’attaquer” le support. On explique aussi les limites : un joint déjà détérioré ne redevient pas neuf, mais l’aspect et la propreté obtenue s’améliorent nettement.</p>",
         },
         {
           question:
             "Quand un balcon est en carrelage (ou béton en résidence récente), comment adaptez-vous méthode et pression ?",
           answer:
-            "<p>On commence par identifier le support et l’état des joints. Sur carrelage, on vise l’efficacité sans décoller les joints ; sur béton, on contrôle l’agressivité pour éviter d’ouvrir la surface. Si une haute pression est utile, elle reste réglée, et certaines zones se font au brossage manuel pour garder le contrôle.</p>",
+            "<p>On commence par <strong>identifier le support et l’état des joints</strong>. Sur carrelage, on vise l’efficacité sans décoller les joints ; sur béton, on contrôle l’agressivité pour éviter d’ouvrir la surface. Si une haute pression est utile, elle reste réglée, et certaines zones se font au brossage manuel pour garder le contrôle.</p>",
         },
         {
           question:
@@ -303,8 +303,8 @@ const city: City = {
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "Autour du Pont de Bry, la présence d’oiseaux peut rendre les souillures récurrentes.",
-        "Les supports anciens (corniches, ferronneries) demandent une action contrôlée pour ne pas abîmer.",
+        "Autour du Pont de Bry, la <strong>présence d’oiseaux</strong> peut rendre les souillures récurrentes.",
+        "Les supports anciens (corniches, ferronneries) demandent <strong>une action contrôlée</strong> pour ne pas abîmer.",
         "L’humidité proche de la Marne fixe les dépôts et renforce les odeurs.",
         "Sans confinement, la poussière se disperse : la préparation est déterminante.",
       ],
@@ -314,7 +314,7 @@ const city: City = {
           question:
             "Sur un balcon proche des Bords de Marne, comment protégez-vous l’intérieur et limitez-vous les projections vers les voisins ?",
           answer:
-            "<p>On met en place un bâchage et on travaille “humide” dès le départ pour éviter l’envol de particules. Les zones de passage (seuil, baie vitrée) sont protégées, et le ramassage se fait avant tout brossage. Le but est de contenir, puis d’assainir, plutôt que de disperser la salissure en voulant aller trop vite.</p>",
+            "<p>On met en place <strong>un bâchage</strong> et on travaille “humide” dès le départ pour éviter l’envol de particules. Les zones de passage (seuil, baie vitrée) sont protégées, et le ramassage se fait avant tout brossage. Le but est de contenir, puis d’assainir, plutôt que de disperser la salissure en voulant aller trop vite.</p>",
         },
         {
           question:
@@ -326,7 +326,7 @@ const city: City = {
           question:
             "Pour une désinfection à réaliser rapidement en Centre-Ville, quelles étapes suivez-vous et quel temps de contact respectez-vous ?",
           answer:
-            "<p>On ne “saute” pas les étapes : confinement, humidification, retrait, nettoyage, puis désinfection virucide/bactéricide avec temps de contact respecté. Le temps exact dépend du produit utilisé, mais l’idée reste la même : laisser agir suffisamment longtemps avant rinçage/aération. C’est ce qui conditionne l’hygiène obtenue, pas la vitesse d’application.</p>",
+            "<p>On ne “saute” pas les étapes : <strong>confinement, humidification, retrait, nettoyage</strong>, puis désinfection virucide/bactéricide avec temps de contact respecté. Le temps exact dépend du produit utilisé, mais l’idée reste la même : laisser agir suffisamment longtemps avant rinçage/aération. C’est ce qui conditionne l’hygiène obtenue, pas la vitesse d’application.</p>",
         },
         {
           question:
@@ -368,7 +368,7 @@ const city: City = {
         "L’accès peut être plus contraint sur l’Île des Loups : logistique à anticiper pour le matériel.",
         "Les taches “mixtes” (gras + poussière) demandent un pré-traitement précis.",
         "Les odeurs d’animaux s’incrustent dans les fibres si l’extraction est trop faible.",
-        "Sur l’avenue du Maréchal Joffre, la discrétion et le timing comptent pour ne pas perturber l’accueil.",
+        "Sur l’avenue du Maréchal Joffre, <strong>la discrétion et le timing</strong> comptent pour ne pas perturber l’accueil.",
       ],
 
       faqAdditions: [
@@ -376,7 +376,7 @@ const city: City = {
           question:
             "Dans des maisons de type meulière, comment diagnostiquez-vous un canapé tissu avant de choisir la méthode ?",
           answer:
-            "<p>On vérifie la nature du tissu, la tenue des couleurs et les zones fragiles, puis on identifie les taches (café, tanin, gras, urine). Ensuite, on choisit l’approche : injection-extraction pour un nettoyage profond, ou détachage ciblé renforcé si l’objectif est de traiter des marques localisées avec un mouillage maîtrisé.</p>",
+            "<p>On vérifie <strong>la nature du tissu</strong>, la tenue des couleurs et les zones fragiles, puis on identifie les taches (café, tanin, gras, urine). Ensuite, on choisit l’approche : injection-extraction pour un nettoyage profond, ou détachage ciblé renforcé si l’objectif est de traiter des marques localisées avec un mouillage maîtrisé.</p>",
         },
         {
           question:
@@ -394,7 +394,7 @@ const city: City = {
           question:
             "Pour des odeurs incrustées (animaux, humidité), comment les neutralisez-vous sur canapé ou tapis ?",
           answer:
-            "<p>On combine un pré-traitement ciblé et une extraction sérieuse, car l’odeur est souvent “dans” la fibre, pas seulement en surface. Selon le cas, on insiste sur les zones imprégnées (assise, entrée, bords de tapis) et on donne des consignes d’aération. On annonce aussi les limites possibles si l’imprégnation est ancienne.</p>",
+            "<p>On combine <strong>un pré-traitement ciblé et une extraction sérieuse</strong>, car l’odeur est souvent “dans” la fibre, pas seulement en surface. Selon le cas, on insiste sur les zones imprégnées (assise, entrée, bords de tapis) et on donne des consignes d’aération. On annonce aussi les limites possibles si l’imprégnation est ancienne.</p>",
         },
       ],
       ctaOverride: "",

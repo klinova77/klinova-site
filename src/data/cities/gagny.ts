@@ -284,10 +284,10 @@ const city: City = {
         "<p>Certains quartiers de Gagny, proches des gares RER E (Gagny, Chénay-Gagny) ou des zones pavillonnaires anciennes comme les Abbesses, sont particulièrement touchés par les nuisances de pigeons. Les immeubles offrant des corniches, des retraits ou des balcons abrités deviennent rapidement des zones de repos et de nidification privilégiées. Lorsqu'un balcon est colonisé, l'accumulation de fientes le rend non seulement impraticable à cause de l'odeur forte et de la saleté repoussante, mais présente surtout un risque sanitaire réel : les déjections contiennent des bactéries, champignons et parasites nocifs pour la santé humaine.</p>\n<p class=\"mt-4\">Les occupants n'osent plus ouvrir leur porte-fenêtre, craignent pour leur santé et celle de leurs enfants, et subissent parfois la gêne des voisins incommodés par l'aspect ou l'odeur. Certains propriétaires ou bailleurs reçoivent des réclamations du conseil syndical exigeant un assainissement rapide. Face à une telle situation, un simple nettoyage domestique est non seulement inefficace mais dangereusement déconseillé sans équipement adapté : les fientes sèches dégagent des poussières infectieuses dont l'inhalation expose à des risques respiratoires. <strong>Klinova intervient pour remettre le logement en état de salubrité,</strong> en garantissant la sécurité de l'intervenant et des occupants grâce à un protocole professionnel strict.</p>",
 
       uniqueDeepDive:
-        "<h3>1. Confinement et protection</h3>\n<p>Nos techniciens interviennent en tenue de protection complète : combinaison jetable, gants épais, masque respiratoire de type <strong>FFP3</strong> et lunettes de protection. Installation de bâches de protection devant la porte-fenêtre pour limiter la dispersion des poussières vers l'intérieur du logement. <strong>Humidification légère des zones souillées</strong> pour éviter la dispersion de poussières contaminées lors de la manipulation.</p>\n\n<h3>2. Ramassage et nettoyage des surfaces</h3>\n<p>Grattage et ensachage manuel des fientes et nids avec des outils dédiés. Les déchets sont conditionnés dans des sacs étanches prévus pour les matières dangereuses, en aucun cas jetés dans les ordures ménagères classiques. <strong>Lavage des sols et parois</strong> (dalles, garde-corps, vitreries, murs mitoyens) avec des produits biocides puissants qui dissolvent les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et aération</h3>\n<p>Application d'un produit virucide et bactéricide homologué avec respect strict du temps de contact préconisé pour garantir l'élimination des agents pathogènes. Rinçage final pour retirer les résidus chimiques. <strong>Le balcon est laissé en aération complète pendant 24 heures</strong> avant toute réutilisation. Installation possible de pics ou de filets anti-pigeons pour prévenir une récidive et préserver durablement la salubrité du balcon.</p>",
+        "<h3>1. Confinement et protection</h3>\n<p>Nos techniciens interviennent en tenue de protection complète : combinaison jetable, gants épais, masque respiratoire de type FFP3 et lunettes de protection. Installation de bâches de protection devant la porte-fenêtre pour limiter la dispersion des poussières vers l'intérieur du logement. <strong>Humidification légère des zones souillées</strong> pour éviter la dispersion de poussières contaminées lors de la manipulation.</p>\n\n<h3>2. Ramassage et nettoyage des surfaces</h3>\n<p>Grattage et ensachage manuel des fientes et nids avec des outils dédiés. Les déchets sont conditionnés dans des sacs étanches prévus pour les matières dangereuses, en aucun cas jetés dans les ordures ménagères classiques. <strong>Lavage des sols et parois</strong> (dalles, garde-corps, vitreries, murs mitoyens) avec des produits biocides puissants qui dissolvent les résidus organiques incrustés.</p>\n\n<h3>3. Désinfection virucide et aération</h3>\n<p>Application d'un produit virucide et bactéricide homologué avec respect strict du temps de contact préconisé pour garantir l'élimination des agents pathogènes. Rinçage final pour retirer les résidus chimiques. Le balcon est laissé en aération complète pendant 24 heures avant toute réutilisation. Installation possible de pics ou de filets anti-pigeons pour prévenir une récidive et préserver durablement la salubrité du balcon.</p>",
 
       specificChallenges: [
-        "Accès parfois difficile aux balcons via l'appartement, obligeant à un confinement strict du passage.",
+        "Accès parfois difficile aux balcons via l'appartement, obligeant à un <strong>confinement strict du passage</strong>.",
         "Corrosion des garde-corps métalliques par l'acidité des fientes, nécessitant un nettoyage délicat.",
         "Logements vacants ou en succession où l'infestation est ancienne et massive.",
       ],
@@ -339,7 +339,7 @@ const city: City = {
       uniqueDeepDive:
         "<h3>1. Diagnostic textile et pré-traitement</h3>\n<p>Analyse du type de textile pour choisir les produits adaptés (coton, laine, synthétique, velours, microfibre). <strong>Test préalable sur zone discrète</strong> pour les tissus fragiles ou fortement teintés. Application ciblée d'une solution détachante et nettoyante sur les zones très souillées (accoudoirs, assises, passages de tapis). Temps d'action pour dissoudre les salissures avant extraction.</p><h3>2. Injection-extraction professionnelle</h3>\n<p>La machine injecte une solution nettoyante adaptée à la fibre puis aspire immédiatement l'eau sale chargée d'impuretés, d'acariens et de leurs déjections. <strong>Plusieurs passes sur les zones critiques</strong> pour garantir un résultat homogène. Ce procédé élimine non seulement les taches visibles mais aussi les allergènes responsables d'allergies respiratoires. Pour les matelas, c'est une véritable cure de jouvence hygiénique.</p><h3>3. Extraction maximale et conseils</h3>\n<p>L'aspiration puissante de notre équipement retire l'essentiel de l'humidité : le mobilier reste légèrement humide mais non trempé. <strong>Séchage naturel en quelques heures</strong> (4 à 8h selon épaisseur du textile et ventilation de la pièce). Nous recommandons d'ouvrir les fenêtres pour accélérer l'évaporation et de ne pas utiliser le canapé avant séchage complet. Conseils d'entretien pour prolonger le résultat.</p>",
       specificChallenges: [
-        "Traitement des odeurs d'urine d'animaux sur les tapis ou canapés, fréquent en pavillon.",
+        "Traitement des <strong>odeurs d'urine d'animaux</strong> sur les tapis ou canapés, fréquent en pavillon.",
         "Nettoyage de grands canapés d'angle ou panoramiques nécessitant de l'espace pour travailler.",
         "Gestion des tissus délicats (viscose, soie) demandant une expertise technique pour éviter les auréoles.",
       ],
@@ -382,26 +382,26 @@ const city: City = {
       uniqueIntro:
         '<p><strong>Gagny</strong>, commune résidentielle de Seine-Saint-Denis, est reconnue pour ses quartiers pavillonnaires verdoyants et ses nombreux jardins privés. Les terrasses y sont largement utilisées comme espaces de détente et de vie extérieure.</p>\n\n<p class="mt-4">La présence d’arbres, de haies et de zones ombragées favorise toutefois l’apparition de <strong>mousses, algues, traces noires</strong> et dépôts organiques sur les sols extérieurs. Ces salissures s’installent progressivement, en particulier sur les terrasses peu exposées au soleil.</p>\n\n<p class="mt-4">À Gagny, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode adaptée pour obtenir un nettoyage efficace et une remise en état visuellement nette.</p>',
       uniqueDeepDive:
-        "<h3>Préparation et protection de la zone</h3>\n<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, même dans des jardins arborés.</p>\n\n<h3>Nettoyage en profondeur du sol extérieur</h3>\n<p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>",
+        "<h3>Préparation et protection de la zone</h3>\n<p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — façades, garde-corps, menuiseries — sont sécurisés afin de garantir une intervention propre, même dans des jardins arborés.</p>\n\n<h3>Nettoyage en profondeur du sol extérieur</h3>\n<p>La méthode est choisie selon le matériau : solution performante pour dalles béton et carrelages extérieurs, approche spécifique pour pierre, bois ou composite. Un <strong>brossage mécanique efficace</strong> permet de décoller les salissures incrustées, biofilms et zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>",
       specificChallenges: [
         "Terrasses entourées de jardins arborés : dépôts végétaux et mousses persistantes.",
         "Zones pavillonnaires ombragées : séchage lent et traces noires récurrentes.",
-        "Dalles béton ternies par le temps et l’humidité : aspect foncé et irrégulier.",
+        "Dalles béton ternies par le temps et l’humidité : <strong>aspect foncé et irrégulier</strong>.",
         "Terrasses partiellement couvertes : encrassement accéléré dans les zones peu ventilées.",
-        "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+        "Bois et composite exposés plein air : <strong>perte d’éclat et salissures incrustées</strong>.",
       ],
       faqAdditions: [
         {
           question:
             "Pourquoi les terrasses de Gagny se salissent-elles rapidement ?",
           answer:
-            "<p>La <strong>végétation dense</strong>, l’<strong>humidité</strong> et une exposition parfois limitée au soleil favorisent l’apparition de <strong>mousses, algues et traces noires</strong> sur les sols extérieurs, notamment dans les quartiers pavillonnaires.</p>",
+            "<p>La <strong>végétation dense</strong>, l’humidité et une exposition parfois limitée au soleil favorisent l’apparition de mousses, algues et traces noires sur les sols extérieurs, notamment dans les quartiers pavillonnaires.</p>",
         },
         {
           question:
             "Le nettoyage améliore-t-il réellement l’aspect d’une terrasse ancienne ?",
           answer:
-            "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+            "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>",
         },
         {
           question:
@@ -439,7 +439,7 @@ const city: City = {
 
       specificChallenges: [
         "Bâti hétérogène : meulières avec parquet ancien (Plateau/France-Amériques) et collectifs (Chenay/Jean-Moulin) demandent des méthodes différentes.",
-        "Deux gares RER E (Gagny et Chenay-Gagny) : stationnement et accès plus tendus sur ces secteurs, surtout aux heures de pointe.",
+        "Deux gares RER E (Gagny et Chenay-Gagny) : <strong>stationnement et accès plus tendus</strong> sur ces secteurs, surtout aux heures de pointe.",
         "Relief et escaliers étroits : logistique à anticiper pour le matériel et l’ordre d’intervention.",
         "Vitrages et rebords plus marqués près des axes (D111/D10) : besoin d’un passage soigné sur les vitres accessibles.",
       ],
@@ -455,7 +455,7 @@ const city: City = {
           question:
             "Pouvez-vous intervenir rapidement entre deux rendez-vous d’état des lieux (secteur Chenay-Gagny) ?",
           answer:
-            "<p>Oui, si l’accès est simple (clé disponible, digicode/badge transmis) et le périmètre validé. Nous calons un créneau compatible avec les contraintes de stationnement près de la gare du Chenay-Gagny et organisons l’intervention par zones pour aller à l’essentiel.</p>",
+            "<p>Oui, si <strong>l’accès est simple</strong> (clé disponible, digicode/badge transmis) et le périmètre validé. Nous calons un créneau compatible avec les contraintes de stationnement près de la gare du Chenay-Gagny et organisons l’intervention par zones pour aller à l’essentiel.</p>",
         },
         {
           question:
@@ -467,7 +467,7 @@ const city: City = {
           question:
             "Que couvre exactement l’intervention côté cuisine et salle de bain ?",
           answer:
-            "<p>Nous ciblons les zones utiles : <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon l’état) et <strong>détartrage sanitaires</strong> sur robinetterie, parois et joints, avec un nettoyage des points de contact. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>",
+            "<p>Nous ciblons les zones utiles : <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon l’état) et détartrage sanitaires sur robinetterie, parois et joints, avec un nettoyage des points de contact. Le périmètre est défini avant l’intervention pour éviter toute ambiguïté.</p>",
         },
       ],
 

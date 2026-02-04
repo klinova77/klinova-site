@@ -400,7 +400,7 @@ const city: City = {
           question:
             "Comment traitez-vous les terrasses des meulières anciennes au Raincy sans abîmer la pierre ?",
           answer:
-            "<p>Les meulières raincéennes présentent souvent des terrasses en pierre ou en dalles anciennes avec un jointoiement traditionnel. Nous utilisons un produit à pH neutre qui décolle les salissures biologiques sans attaquer le matériau. Le brossage manuel préserve le rocaillage des joints. Le rinçage à pression réduite évite toute dégradation du support.</p>",
+            "<p>Les meulières raincéennes présentent souvent des terrasses en pierre ou en dalles anciennes avec un jointoiement traditionnel. Nous utilisons <strong>un produit à pH neutre</strong> qui décolle les salissures biologiques sans attaquer le matériau. Le brossage manuel préserve le rocaillage des joints. Le rinçage à pression réduite évite toute dégradation du support.</p>",
         },
         {
           question:
@@ -418,7 +418,7 @@ const city: City = {
           question:
             "Quelle est la différence entre un nettoyage haute pression standard et votre prestation sur un carrelage extérieur ?",
           answer:
-            "<p>Le carrelage grès cérame texturé retient les dépôts dans ses reliefs antidérapants. Un simple jet haute pression déplace les salissures sans les éliminer en profondeur. Notre protocole associe un produit désincrustant adapté, un brossage mécanique sur les zones encrassées et un rinçage à pression calibrée qui nettoie efficacement les aspérités du revêtement.</p>",
+            "<p>Le carrelage grès cérame texturé retient les dépôts dans ses reliefs antidérapants. Un simple jet haute pression déplace les salissures sans les éliminer en profondeur. Notre protocole associe <strong>un produit désincrustant adapté</strong>, un brossage mécanique sur les zones encrassées et un rinçage à pression calibrée qui nettoie efficacement les aspérités du revêtement.</p>",
         },
       ],
       ctaOverride: "",

@@ -3,6 +3,7 @@
 import type { City } from "~/types/geo";
 import cities from "~/data/cities";
 
+
 export interface FeaturedCityKln {
   name: string;
   slug: string;
@@ -23,18 +24,23 @@ export const FEATURED_CITY_SLUGS = [
   "meaux",
   "bussy-saint-georges",
   "lagny-sur-marne",
+  "torcy",
 
   // 93 — Seine-Saint-Denis
   "montreuil",
+  
   "noisy-le-grand",
   "le-raincy",
   "villepinte",
+  "bobigny",
 
   // 94 — Val-de-Marne
   "creteil",
   "vincennes",
   "saint-maur-des-fosses",
   "ivry-sur-seine",
+  "le-perreux-sur-mrne",
+
 ] as const;
 
 

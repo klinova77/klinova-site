@@ -15,14 +15,7 @@ const city: City = {
     "Entre la gare RER E, le pôle Rosny–Bois-Perrier et les axes A3/A86, les entrées d’immeubles, circulations et abords se chargent vite en poussières et traces. Avec Rosny 2 et Domus, les zones de passage demandent un entretien régulier pour garder une propreté stable.",
 
   hubIntro:
-    "<p>À Rosny-sous-Bois, Klinova accompagne les syndics de copropriété, gestionnaires et entreprises sur une logique de <strong>gestion globale</strong> : propreté, hygiène, continuité d’usage et interventions qui respectent l’occupation des lieux, notamment autour de <strong>Rosny–Bois-Perrier (RER E)</strong> et du <strong>terminus métro 11</strong>.</p>\n\n" +
-    "<p>Notre approche est <strong>protocolisée</strong> : repérage, organisation, exécution et <strong>reporting</strong> clair. L’objectif est simple : limiter les irritants du quotidien (traces, poussières, odeurs, dépôts) tout en maîtrisant les contraintes d’accès, de stationnement et de planning propres à Rosny-sous-Bois.</p>\n\n" +
-    "<ul>\n" +
-    "  <li><strong>Partenariat terrain avec syndics et gestionnaires :</strong> repérage des zones sensibles, plan d’action réaliste, suivi dans le temps. On s’aligne sur vos priorités (image, sécurité, confort) et sur les contraintes des résidents ou des équipes sur site.</li>\n" +
-    "  <li><strong>Maintenance immobilière & propreté :</strong> interventions pensées pour les circulations, halls, sous-sols, locaux techniques et abords. Un cadre de travail clair, des méthodes adaptées aux surfaces, et une attention constante à la gêne minimale.</li>\n" +
-    "  <li><strong>Protocole & hygiène :</strong> protection des zones, matériel professionnel, gestion maîtrisée de l’eau et des salissures. On vise un rendu propre, régulier, sans “à-coups”, et un niveau d’hygiène cohérent avec l’usage réel des lieux.</li>\n" +
-    "  <li><strong>Reporting utile :</strong> compte-rendu simple, constats observés, points d’attention. Pratique pour piloter la prestation, répondre à un conseil syndical exigeant, ou sécuriser une remise en état après incident.</li>\n" +
-    "</ul>",
+    "<p>À Rosny-sous-Bois, Klinova accompagne les syndics de copropriété, gestionnaires et entreprises sur une logique de <strong>gestion globale</strong> : propreté, hygiène, continuité d’usage et interventions qui respectent l’occupation des lieux, notamment autour de Rosny–Bois-Perrier (RER E) et du terminus métro 11.</p>\n\n<p>Notre approche est protocolisée : repérage, organisation, exécution et <strong>reporting</strong> clair. L’objectif est simple : limiter les irritants du quotidien (traces, poussières, odeurs, dépôts) tout en maîtrisant les contraintes d’accès, de stationnement et de planning propres à Rosny-sous-Bois.</p>\n\n<ul>\n  <li><strong>Partenariat terrain avec syndics et gestionnaires :</strong> repérage des zones sensibles, plan d’action réaliste, suivi dans le temps. On s’aligne sur vos priorités (image, sécurité, confort) et sur les contraintes des résidents ou des équipes sur site.</li>\n  <li><strong>Maintenance immobilière & propreté :</strong> interventions pensées pour les circulations, halls, sous-sols, locaux techniques et abords. Un cadre de travail clair, des méthodes adaptées aux surfaces, et une attention constante à la gêne minimale.</li>\n  <li><strong>Protocole & hygiène :</strong> protection des zones, matériel professionnel, gestion maîtrisée de l’eau et des salissures. On vise un rendu propre, régulier, sans “à-coups”, et un niveau d’hygiène cohérent avec l’usage réel des lieux.</li>\n  <li><strong>Reporting utile :</strong> compte-rendu simple, constats observés, points d’attention. Pratique pour piloter la prestation, répondre à un conseil syndical exigeant, ou sécuriser une remise en état après incident.</li>\n</ul>",
 
   // hubIntro : DOIT suivre ce format :
   // - 2 paragraphes <p>...</p>
@@ -258,8 +251,8 @@ const city: City = {
 
       specificChallenges: [
         "La proximité du parc nature du plateau d’Avron favorise pollen et dépôts verts sur certains balcons.",
-        "Les sols en dalles ou béton poreux gardent les traces : besoin d’un brossage méthodique et d’un rinçage maîtrisé.",
-        "Les garde-corps et angles accumulent la crasse : ce sont eux qui “plombent” l’aspect global si on les oublie.",
+        "<strong>Les sols en dalles ou béton poreux</strong> gardent les traces : besoin d’un brossage méthodique et d’un rinçage maîtrisé.",
+        "<strong>Les garde-corps et angles</strong> accumulent la crasse : ce sont eux qui “plombent” l’aspect global si on les oublie.",
         "La contrainte la plus sensible reste l’eau : éviter coulures en façade et chez le voisin du dessous.",
       ],
       faqAdditions: [
@@ -318,10 +311,10 @@ const city: City = {
       // - Listes <ul><li> autorisées, mais jamais directement après <h3>
 
       specificChallenges: [
-        "La proximité des squares et zones arborées favorise les regroupements d’oiseaux et la récurrence des dépôts.",
+        "<strong>La proximité des squares et zones arborées</strong> favorise les regroupements d’oiseaux et la récurrence des dépôts.",
         "Les fientes sèches produisent des poussières : sans humidification et EPI, le risque de dispersion augmente fortement.",
         "Certains supports (garde-corps, peintures, béton) se dégradent si l’assainissement tarde : corrosion, traces incrustées.",
-        "Le point critique reste la cohabitation : protéger l’intérieur, la façade et les voisins pendant la décontamination.",
+        "Le point critique reste la <strong>cohabitation</strong> : protéger l’intérieur, la façade et les voisins pendant la décontamination.",
       ],
       faqAdditions: [
         {
@@ -380,8 +373,8 @@ const city: City = {
       specificChallenges: [
         "Dans certains logements collectifs, l’aération est limitée : le séchage doit être piloté avec précision.",
         "Les taches organiques (urine, nourriture) et les odeurs s’ancrent vite si elles restent : pré-traitement indispensable.",
-        "Les tissus épais ou fragiles demandent une pression réduite et davantage de passes, sans agresser la fibre.",
-        "Le quotidien (enfants, animaux, invités) relance les salissures : l’intérêt est aussi de repartir sur une base plus saine.",
+        "<strong>Les tissus épais ou fragiles</strong> demandent une pression réduite et davantage de passes, sans agresser la fibre.",
+        "<strong>Le quotidien (enfants, animaux, invités)</strong> relance les salissures : l’intérêt est aussi de repartir sur une base plus saine.",
       ],
       faqAdditions: [
         {
@@ -422,28 +415,28 @@ const city: City = {
         "Prestation soignée et efficace : protection du mobilier, respect des façades et nettoyage précis pour un résultat immédiatement visible.",
       ],
       uniqueIntro:
-        '<p><strong>Rosny-sous-Bois</strong>, commune dynamique de Seine-Saint-Denis, combine un tissu urbain dense, des quartiers pavillonnaires et de nombreux espaces verts. Les terrasses y sont largement utilisées comme prolongement de l’habitat, aussi bien en maison qu’en résidence.</p>\n\n<p class="mt-4">L’environnement urbain, les retombées végétales et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les zones peu exposées au soleil ou proches des jardins et talus.</p>\n\n<p class="mt-4">À Rosny-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, <strong>carrelage extérieur</strong>, parfois en <strong>pierre</strong>, <strong>bois</strong> ou <strong>bois composite</strong>. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement nette.</p>',
+        "<p>Rosny-sous-Bois, commune dynamique de Seine-Saint-Denis, combine un tissu urbain dense, des quartiers pavillonnaires et de nombreux espaces verts. Les terrasses y sont largement utilisées comme prolongement de l’habitat, aussi bien en maison qu’en résidence.</p>\n\n<p class=\"mt-4\">L’environnement urbain, les retombées végétales et l’humidité favorisent l’apparition de <strong>mousses, algues, traces noires</strong> et salissures incrustées sur les sols extérieurs. Ces phénomènes sont fréquents dans les zones peu exposées au soleil ou proches des jardins et talus.</p>\n\n<p class=\"mt-4\">À Rosny-sous-Bois, les terrasses sont principalement réalisées en <strong>dalles béton</strong>, carrelage extérieur, parfois en pierre, bois ou bois composite. Chaque revêtement nécessite une méthode spécifique pour un nettoyage efficace et une remise en état visuellement nette.</p>",
       uniqueDeepDive:
         "<h3>Préparation et sécurisation des abords</h3>\n<p>Le mobilier, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, garde-corps et menuiseries sont sécurisés afin de garantir une intervention propre, y compris dans des espaces extérieurs urbains contraints.</p>\n\n<h3>Nettoyage en profondeur du revêtement</h3>\n<p>Le traitement est choisi selon le sol : solution performante pour dalles béton et carrelages extérieurs, méthode spécifique pour pierre, bois ou composite. Un brossage mécanique efficace permet de décoller les salissures incrustées, les biofilms et les zones noircies. Le rinçage est réalisé de manière contrôlée pour un sol plus clair et plus homogène.</p>\n\n<h3>Mise en valeur et confort d’usage</h3>\n<p>Une attention particulière est portée aux zones de passage et aux surfaces les plus exposées. Le nettoyage améliore nettement l’aspect visuel de la terrasse et le confort d’utilisation au quotidien.</p>",
       specificChallenges: [
-        "Terrasses en environnement urbain : dépôts de pollution et traces noires persistantes.",
+        "<strong>Terrasses en environnement urbain</strong> : dépôts de pollution et traces noires persistantes.",
         "Quartiers pavillonnaires arborés : mousses et salissures organiques fréquentes.",
         "Dalles béton ternies par le temps : zones foncées et aspect irrégulier.",
         "Terrasses partiellement couvertes ou encaissées : séchage lent et encrassement accéléré.",
-        "Bois et composite exposés plein air : perte d’éclat et salissures incrustées.",
+        "<strong>Bois et composite exposés plein air</strong> : perte d’éclat et salissures incrustées.",
       ],
       faqAdditions: [
         {
           question:
             "Pourquoi les terrasses de Rosny-sous-Bois noircissent-elles avec le temps ?",
           answer:
-            "<p>La combinaison de la <strong>pollution urbaine</strong>, de l’humidité et des passages répétés favorise l’apparition de <strong>traces noires et biofilms</strong> sur les sols extérieurs. Sans nettoyage adapté, ces salissures s’installent durablement.</p>",
+            "<p>La combinaison de la <strong>pollution urbaine</strong>, de l’humidité et des passages répétés favorise l’apparition de traces noires et biofilms sur les sols extérieurs. Sans nettoyage adapté, ces salissures s’installent durablement.</p>",
         },
         {
           question:
             "Le nettoyage améliore-t-il vraiment l’aspect d’une terrasse en zone urbaine ?",
           answer:
-            "<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
+            "<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de réduire fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>",
         },
         {
           question:
@@ -477,15 +470,15 @@ const city: City = {
         '<p>À Rosny-sous-Bois, les demandes de nettoyage sont très souvent dictées par le <strong>rythme des flux</strong>. Entre le pôle Bois-Perrier (RER E + Métro 11), les zones commerciales Rosny 2 / Domus et l’échangeur A86/A3, les logements proches des axes et des centres de passage s’encrassent différemment : entrées plus marquées, rebords exposés, vitrages bas plus “chargés”.</p>\n<p class="mt-4">La ville est aussi contrastée : des collectifs denses (Bois-Perrier, Pré-Gentil) où l’accès se joue au digicode/Vigik et au gardien, et des secteurs pavillonnaires plus calmes (Plateau d’Avron, La Boissière) où l’enjeu devient la qualité des finitions, la protection des sols (parquets) et la gestion des volumes (baies vitrées, escaliers, pièces multiples).</p>\n<p class="mt-4">Notre logique est simple : on vise un résultat “propre visuel” sans perdre du temps. On commence par ce qui se voit et se contrôle à l’état des lieux (cuisine, salle d’eau, sols), puis on verrouille les détails qui font la différence (plinthes, encadrements, traces sur portes, interrupteurs). Côté Rosny, l’organisation compte autant que la technique : stationnement, accès immeuble, et choix d’un créneau réaliste pour ne pas subir la saturation du week-end autour de Rosny 2.</p>',
 
       uniqueDeepDive:
-        "<h3>Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3>\n<p>Autour des gares (RER E et Métro 11), les interventions sont souvent liées à une rotation locative : fin de bail, remise en état avant entrée, grand ménage ponctuel. Ici, l’efficacité vient d’une préparation claire : confirmation digicode/Vigik, point de stationnement, puis un déroulé “pièces d’eau → cuisine → sols → finitions”.</p>\n\n<h3>Rosny 2 / Domus — environnement flux et salissures de passage</h3>\n<p>Le secteur commercial attire un trafic continu : piétinement, poussière de parkings, dépôts sur vitrages et parties basses. On insiste sur les zones de contact (poignées, plinthes, bas de portes) et sur les sols d’entrée qui se chargent vite. Le timing est crucial : éviter les pics du week-end change tout.</p>\n\n<h3>Plateau d’Avron / La Boissière — maisons, parquets et finitions</h3>\n<p>Dans les quartiers pavillonnaires, le travail ressemble davantage à une remise à niveau “maison” : volumes, escaliers, vitrages, et finitions. On protège les parquets, on gère le calcaire en pièces d’eau, et on cherche un rendu homogène, particulièrement apprécié dans ces secteurs plus exigeants.</p>",
+        "<h3>Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3>\n<p>Autour des gares (RER E et Métro 11), les interventions sont souvent liées à une rotation locative : fin de bail, remise en état avant entrée, grand ménage ponctuel. Ici, l’efficacité vient d’une préparation claire : <strong>confirmation digicode/Vigik</strong>, point de stationnement, puis un déroulé “pièces d’eau → cuisine → sols → finitions”.</p>\n\n<h3>Rosny 2 / Domus — environnement flux et salissures de passage</h3>\n<p>Le secteur commercial attire un trafic continu : piétinement, <strong>poussière de parkings</strong>, dépôts sur vitrages et parties basses. On insiste sur les zones de contact (poignées, plinthes, bas de portes) et sur les sols d’entrée qui se chargent vite. Le timing est crucial : éviter les pics du week-end change tout.</p>\n\n<h3>Plateau d’Avron / La Boissière — maisons, parquets et finitions</h3>\n<p>Dans les quartiers pavillonnaires, le travail ressemble davantage à une remise à niveau “maison” : volumes, escaliers, vitrages, et finitions. On protège les parquets, on gère le <strong>calcaire en pièces d’eau</strong>, et on cherche un rendu homogène, particulièrement apprécié dans ces secteurs plus exigeants.</p>",
 
       specificChallenges: [
         "Rosny 2 / Domus : saturation week-end, poussière de parkings et piétinement élevé.",
         "Bois-Perrier : accès résidences (Vigik, interphones, gardiens) + rotation locative proche des gares.",
-        "A86/A3 + RN186 : dépôts routiers (suie/particules) sur vitrages, rebords et balcons selon l’exposition.",
-        "Écoquartier / chantiers (Coteaux de Beauclair) : poussières fines et traces de travaux dans les logements livrés.",
+        "<strong>A86/A3 + RN186</strong> : dépôts routiers (suie/particules) sur vitrages, rebords et balcons selon l’exposition.",
+        "<strong>Écoquartier / chantiers (Coteaux de Beauclair)</strong> : poussières fines et traces de travaux dans les logements livrés.",
         "Relief et rues plus serrées côté centre : manœuvres et déchargement parfois contraints.",
-        "Matériaux à préserver : parquets et finitions plus sensibles dans le pavillonnaire (Plateau d’Avron).",
+        "<strong>Matériaux à préserver</strong> : parquets et finitions plus sensibles dans le pavillonnaire (Plateau d’Avron).",
       ],
 
       faqAdditions: [
@@ -499,7 +492,7 @@ const city: City = {
           question:
             "Intervenez-vous après travaux (ponçage, plâtre, peinture) dans les quartiers en rénovation ?",
           answer:
-            "<p>Oui. Après travaux, on procède en plusieurs passes pour éviter la redéposition des poussières fines : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. C’est ce qui donne un rendu réellement “fini”.</p>",
+            "<p>Oui. Après travaux, on procède en <strong>plusieurs passes</strong> pour éviter la redéposition des poussières fines : surfaces et menuiseries d’abord, puis sols, puis contrôle final des rebords, prises, plinthes et zones de passage. C’est ce qui donne un rendu réellement “fini”.</p>",
         },
         {
           question:
@@ -511,7 +504,7 @@ const city: City = {
           question:
             "Faites-vous aussi les vitres (baies, vitrages bas) touchées par les dépôts routiers ?",
           answer:
-            "<p>Oui, sur les vitrages accessibles. À Rosny, la proximité A86/A3 et les grands axes peut marquer les vitres et rebords : on adapte la méthode selon l’exposition et l’encrassement, avec un objectif “sans traces” et un rendu net sur les parties basses.</p>",
+            "<p>Oui, sur les vitrages accessibles. À Rosny, la proximité <strong>A86/A3 et les grands axes</strong> peut marquer les vitres et rebords : on adapte la méthode selon l’exposition et l’encrassement, avec un objectif “sans traces” et un rendu net sur les parties basses.</p>",
         },
       ],
 

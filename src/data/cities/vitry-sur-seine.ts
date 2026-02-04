@@ -120,7 +120,7 @@ const city: City = {
         "<strong>Poussières de chantier liées aux travaux</strong> du Grand Paris Express et de la ZAC Les Ardoines.",
         "Dalles textiles en open space nécessitant une extraction sans détrempage des joints.",
         "Halls d'immeubles à fort passage quotidien vers les transports RER C.",
-        "Accès contraints dans les cages d'escalier étroites des immeubles anciens du centre.",
+        "Accès contraints dans les <strong>cages d'escalier étroites</strong> des immeubles anciens du centre.",
         "Stationnement limité imposant une organisation logistique anticipée pour le matériel.",
       ],
       faqAdditions: [
@@ -134,13 +134,13 @@ const city: City = {
           question:
             "Après une intervention sur des moquettes de bureaux proches de la Gare des Ardoines, combien de temps avant de pouvoir réutiliser les espaces sans odeur ni humidité ?",
           answer:
-            "<p>Le séchage varie de trois à six heures selon l'épaisseur du revêtement et la ventilation des locaux. L'extraction poussée réduit l'humidité résiduelle au minimum. Une aération naturelle ou mécanique accélère le processus. Les espaces sont généralement praticables en fin de journée.</p>",
+            "<p>Le séchage varie de trois à six heures selon l'épaisseur du revêtement et la ventilation des locaux. <strong>L'extraction poussée réduit l'humidité résiduelle</strong> au minimum. Une aération naturelle ou mécanique accélère le processus. Les espaces sont généralement praticables en fin de journée.</p>",
         },
         {
           question:
             "Pour les dalles textiles des open spaces de la ZAC Les Ardoines, quelle méthode offre le meilleur détachage : injection-extraction ou vapeur ?",
           answer:
-            "<p>L'injection-extraction reste la méthode la plus efficace sur dalles textiles. Elle pénètre la fibre, décolle les salissures et les extrait immédiatement. La vapeur seule ne retire pas les résidus, elle les déplace. Sur les taches grasses ou anciennes, un pré-traitement localisé complète l'extraction.</p>",
+            "<p><strong>L'injection-extraction reste la méthode la plus efficace</strong> sur dalles textiles. Elle pénètre la fibre, décolle les salissures et les extrait immédiatement. La vapeur seule ne retire pas les résidus, elle les déplace. Sur les taches grasses ou anciennes, un pré-traitement localisé complète l'extraction.</p>",
         },
         {
           question:
@@ -165,7 +165,7 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Diagnostic et préparation du site</h3>\n<p>Le technicien identifie le type de revêtement, l'état des regards et rigoles, ainsi que le niveau d'encrassement. Un balayage préalable élimine les débris grossiers.</p>\n<p class=\"mt-4\">Le balisage est mis en place pour sécuriser les zones de passage. Si des véhicules occupent les emplacements, une rotation par secteur est organisée avec le gestionnaire.</p>\n\n<h3>Traitement mécanisé et dégraissage</h3>\n<p>L'autolaveuse ou la haute pression associée à un dégraissant adapté traite les surfaces en passes successives. Les zones critiques reçoivent une attention particulière : rampes d'accès, angles morts, pieds de murs.</p>\n<p class=\"mt-4\">Les eaux de lavage sont dirigées vers les évacuations existantes, sans rejet sauvage. Les rigoles sont dégagées pour rétablir un écoulement correct.</p>\n\n<h3>Finalisation et recommandations</h3>\n<p>Un dépoussiérage des blocs lumineux ou tuyauteries peut compléter l'intervention si demandé. Le compte-rendu transmis au syndic inclut des préconisations sur la fréquence adaptée au trafic constaté.</p>",
       specificChallenges: [
-        "Encrassement accéléré par le trafic utilitaire lié aux Ardoines et à l'A86.",
+        "<strong>Encrassement accéléré</strong> par le trafic utilitaire lié aux Ardoines et à l'A86.",
         "Rampes d'accès en béton brut rendues glissantes par les dépôts de graisse.",
         "Rigoles obstruées dans les sous-sols anciens des grands ensembles.",
         "Coordination nécessaire avec les syndics pour organiser le déplacement des véhicules.",
@@ -188,7 +188,7 @@ const city: City = {
           question:
             "Quelles adaptations appliquez-vous entre un parking souterrain et un parking aérien à Vitry-sur-Seine ?",
           answer:
-            "<p>En souterrain, l'aération limitée impose un séchage plus long et une gestion stricte des eaux. À l'air libre, les intempéries et la pollution atmosphérique demandent un dégraissage renforcé. Le matériel et les produits sont ajustés à chaque configuration.</p>",
+            "<p><strong>En souterrain, l'aération limitée</strong> impose un séchage plus long et une gestion stricte des eaux. À l'air libre, les intempéries et la pollution atmosphérique demandent un dégraissage renforcé. Le matériel et les produits sont ajustés à chaque configuration.</p>",
         },
         {
           question:
@@ -263,8 +263,8 @@ const city: City = {
       specificChallenges: [
         "Corniches et loggias des grands ensembles offrant des refuges propices aux nids.",
         "Accumulation rapide sur béton poreux et appuis métalliques des façades années 60-70.",
-        "Proximité du Parc des Lilas et des espaces verts augmentant la pression des volatiles.",
-        "Gestion des eaux de rinçage en étage élevé pour éviter les nuisances aux voisins du dessous.",
+        "Proximité du Parc des Lilas et des espaces verts <strong>augmentant la pression des volatiles</strong>.",
+        "Gestion des eaux de rinçage en <strong>étage élevé</strong> pour éviter les nuisances aux voisins du dessous.",
         "Odeurs persistantes nécessitant une désinfection complète avant réutilisation de l'espace.",
       ],
       faqAdditions: [
@@ -332,7 +332,7 @@ const city: City = {
           question:
             "Pour un canapé tissu non déhoussable dans un appartement HLM, quelles techniques garantissent un nettoyage complet ?",
           answer:
-            "<p>L'injection-extraction reste la méthode la plus efficace : l'eau et le produit pénètrent le rembourrage, puis sont aspirés avec les salissures. Aucun démontage n'est nécessaire. Nous adaptons la pression et la température selon l'épaisseur du tissu pour ne pas détériorer la structure du canapé.</p>",
+            "<p><strong>L'injection-extraction reste la méthode la plus efficace</strong> : l'eau et le produit pénètrent le rembourrage, puis sont aspirés avec les salissures. Aucun démontage n'est nécessaire. Nous adaptons la pression et la température selon l'épaisseur du tissu pour ne pas détériorer la structure du canapé.</p>",
         },
         {
           question:
@@ -357,7 +357,7 @@ const city: City = {
       uniqueDeepDive:
         "<h3>Préparation et protection</h3>\n<p>Le mobilier extérieur est déplacé ou bâché. Les jardinières et plantes sont protégées pour éviter tout contact avec les produits de traitement. Les menuiseries et baies vitrées sont couvertes afin de prévenir les projections.</p>\n<p class=\"mt-4\">Un balayage préalable élimine les gros dépôts : feuilles, terre accumulée, débris végétaux.</p>\n\n<h3>Traitement et nettoyage</h3>\n<p>Un produit adapté au support est appliqué : formulation spécifique pour carrelage, pierre ou bois composite. Le brossage manuel ou mécanique déloge les salissures incrustées dans les joints et les pores du matériau.</p>\n<p class=\"mt-4\">Si l'état le permet, une haute pression contrôlée complète le travail sur les surfaces résistantes. Les matériaux poreux ou fragiles bénéficient d'un traitement plus doux.</p>\n\n<h3>Finalisation et conseils</h3>\n<p>L'eau est évacuée vers les points d'écoulement existants. Un traitement anti-mousse préventif peut être appliqué selon la configuration. Vous recevez des recommandations d'entretien saisonnier pour prolonger le résultat obtenu.</p>",
       specificChallenges: [
-        "Mousse tenace sur dalles peu exposées au soleil dans les jardins du Plateau.",
+        "<strong>Mousse tenace</strong> sur dalles peu exposées au soleil dans les jardins du Plateau.",
         "Terrasses en bois composite sensibles à la pression excessive et aux produits agressifs.",
         "Accès souvent limité par le passage intérieur ou un portillon étroit côté jardin.",
         "<strong>Joints de carrelage noircis</strong> par l'humidité persistante en zone ombragée.",

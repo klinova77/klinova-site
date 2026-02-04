@@ -288,7 +288,7 @@ const city: City = {
         "<h3>1. Confinement et protection sanitaire</h3>\n<p>Protection de l'accès intérieur (porte-fenêtre, seuil, zone de passage) pour limiter la dispersion des poussières vers le logement. <strong>Les techniciens interviennent avec des EPI complets</strong> : combinaison jetable, gants épais, masque respiratoire de type FFP3 et lunettes de protection pour éviter tout contact avec les agents pathogènes.</p>\n\n<h3>2. Humidification et ramassage progressif</h3>\n<p>Humidification contrôlée des fientes sèches avant toute manipulation, afin d'éviter la dispersion de poussières infectieuses dans l'air. <strong>Les fientes, nids et débris sont ensuite retirés progressivement</strong> (grattage manuel avec outils dédiés, ramassage soigneux), puis conditionnés dans des sacs étanches prévus pour les déchets contaminés, en aucun cas jetés dans les ordures ménagères classiques.</p>\n\n<h3>3. Nettoyage, désinfection et finitions</h3>\n<p>Nettoyage complet des surfaces (sol, angles, garde-corps, appuis, murs mitoyens) avec des produits biocides puissants qui dissolvent les résidus organiques incrustés. <strong>Application d'un produit virucide et bactéricide homologué</strong> avec respect strict du temps de contact préconisé pour garantir l'élimination des agents pathogènes. Rinçage final maîtrisé pour retirer les résidus chimiques. Le balcon est laissé en aération complète pendant 24 heures avant toute réutilisation. Installation possible de pics ou de filets anti-pigeons pour prévenir une récidive.</p>",
 
       specificChallenges: [
-        "Proximité d'espaces verts et des bords de Marne : présence d'oiseaux plus régulière et salissures qui s'installent sur la durée.",
+        "Proximité d'espaces verts et des bords de Marne : <strong>présence d'oiseaux plus régulière</strong> et salissures qui s'installent sur la durée.",
         "Fientes très sèches : poussières de fientes de volatiles à maîtriser par humidification contrôlée et collecte progressive.",
         "<strong>Supports poreux (béton brut, joints, seuils)</strong> : nettoyage plus délicat pour désincruster sans abîmer le support.",
         "Contrainte de voisinage en immeuble : écoulements à contrôler strictement pour éviter coulures sur façade et balcons inférieurs.",
@@ -348,7 +348,7 @@ const city: City = {
         "Humidité résiduelle dans certains logements proches des bords de Marne ou en rez-de-jardin, ralentissant le séchage des textiles épais.",
         "Présence fréquente d'animaux domestiques : poils incrustés, odeurs spécifiques et taches organiques nécessitant un pré-traitement adapté.",
         "<strong>Textiles volumineux (canapés profonds, matelas épais)</strong> demandant une extraction maximale pour limiter l'humidité résiduelle.",
-        "Pièces de vie ou logements anciens peu ventilés : nécessité d'adapter la méthode et de conseiller une aération renforcée après intervention.",
+        "Pièces de vie ou logements anciens peu ventilés : <strong>nécessité d'adapter la méthode</strong> et de conseiller une aération renforcée après intervention.",
       ],
 
       faqAdditions: [

@@ -28,9 +28,9 @@ const city: City = {
     "</ul>",
 
   citySpecificChallenges: [
-    "Humidité persistante et dépôts verts sur les balcons et terrasses des quartiers Polangis, Marne et Île Fanac en raison de la proximité immédiate des bords de Marne et du canal, générant mousses et traces verdâtres sur les supports poreux.",
+    "<strong>Humidité persistante et dépôts verts</strong> sur les balcons et terrasses des quartiers Polangis, Marne et Île Fanac en raison de la proximité immédiate des bords de Marne et du canal, générant mousses et traces verdâtres sur les supports poreux.",
     "Accumulation de feuilles, boues et pollens sur les surfaces extérieures le long des quais de la Marne et du quartier Europe (canal, écluse, bassins), nécessitant un nettoyage saisonnier régulier.",
-    "Encrassement accéléré des halls et parkings des copropriétés du quartier Paris et de l'axe Avenue des Canadiens en raison de la proximité de la Nationale 4 et des axes A86-A4, générant des particules fines et des poussières routières.",
+    "<strong>Encrassement accéléré des halls et parkings</strong> des copropriétés du quartier Paris et de l'axe Avenue des Canadiens en raison de la proximité de la Nationale 4 et des axes A86-A4, générant des particules fines et des poussières routières.",
     "Contraintes de circulation et de stationnement autour de la gare RER A et de l'Avenue des Canadiens imposant une planification précise des interventions pour limiter la gêne et optimiser les temps d'accès.",
   ],
 
@@ -71,13 +71,13 @@ const city: City = {
       question:
         "Comment gérez-vous les interventions dans les secteurs où l'accès est difficile, comme autour de la gare RER A ou le long de l'Avenue des Canadiens ?",
       answer:
-        "<p>Les abords de la gare RER A de Joinville-le-Pont et l'axe de la Nationale 4 (Avenue des Canadiens) présentent des <strong>contraintes de stationnement</strong> et de <strong>circulation dense</strong> aux heures de pointe. Nous planifions nos interventions en tenant compte de ces paramètres : passages matinaux avant 8h ou en milieu de journée après le pic de flux, repérage préalable des zones de déchargement et validation des accès avec le syndic ou le propriétaire. Pour les quartiers pavillonnaires comme Polangis ou l'Île Fanac, nous adaptons notre matériel aux contraintes d'accès spécifiques.</p>",
+        "<p>Les abords de la gare RER A de Joinville-le-Pont et l'axe de la Nationale 4 (Avenue des Canadiens) présentent des <strong>contraintes de stationnement</strong> et de circulation dense aux heures de pointe. Nous planifions nos interventions en tenant compte de ces paramètres : passages matinaux avant 8h ou en milieu de journée après le pic de flux, repérage préalable des zones de déchargement et validation des accès avec le syndic ou le propriétaire. Pour les quartiers pavillonnaires comme Polangis ou l'Île Fanac, nous adaptons notre matériel aux contraintes d'accès spécifiques.</p>",
     },
     {
       question:
         "Vous déplacez-vous gratuitement pour établir un devis à Joinville-le-Pont ?",
       answer:
-        "<p>Oui. Nous nous déplaçons <strong>sans frais</strong> dans tous les quartiers de Joinville-le-Pont, de Polangis au quartier Europe, pour établir un diagnostic précis. Cette visite permet d'évaluer la surface à traiter, le type de revêtement, les contraintes d'accès (badges, digicodes, accès pavillonnaire) et les éventuelles spécificités techniques liées à l'humidité des bords de Marne. Vous recevez ensuite une <strong>proposition détaillée</strong>, sans engagement, tenant compte de la configuration réelle du site.</p>",
+        "<p>Oui. Nous nous déplaçons sans frais dans tous les quartiers de Joinville-le-Pont, de Polangis au quartier Europe, pour établir un diagnostic précis. Cette visite permet d'évaluer la surface à traiter, le type de revêtement, les contraintes d'accès (badges, digicodes, accès pavillonnaire) et les éventuelles spécificités techniques liées à l'humidité des bords de Marne. Vous recevez ensuite une <strong>proposition détaillée</strong>, sans engagement, tenant compte de la configuration réelle du site.</p>",
     },
     {
       question:
@@ -89,7 +89,7 @@ const city: City = {
       question:
         "Proposez-vous des contrats d'entretien régulier pour les copropriétés ?",
       answer:
-        "<p>Oui. Nous mettons en place des <strong>contrats d'entretien annuels</strong> pour les syndics et gestionnaires souhaitant planifier les interventions de manière préventive (nettoyage de moquettes tous les 12 à 18 mois, décrassage de parkings semestriel ou annuel). Chaque passage fait l'objet d'un <strong>compte-rendu écrit</strong> transmis au syndic, détaillant les surfaces traitées, les produits utilisés et les éventuelles observations techniques. Cette approche facilite la gestion budgétaire et évite l'accumulation de salissures.</p>",
+        "<p>Oui. Nous mettons en place des contrats d'entretien annuels pour les syndics et gestionnaires souhaitant planifier les interventions de manière préventive (nettoyage de moquettes tous les 12 à 18 mois, décrassage de parkings semestriel ou annuel). Chaque passage fait l'objet d'un <strong>compte-rendu écrit</strong> transmis au syndic, détaillant les surfaces traitées, les produits utilisés et les éventuelles observations techniques. Cette approche facilite la gestion budgétaire et évite l'accumulation de salissures.</p>",
     },
   ],
 
@@ -117,11 +117,7 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>Dans les halls des immeubles du quartier Paris ou des copropriétés de Vautier-Leclerc, les moquettes accumulent jour après jour les traces du passage : semelles boueuses après la pluie, poussières fines remontées depuis l'Avenue des Canadiens, marques grises devant les ascenseurs et les boîtes aux lettres. Les résidents qui empruntent quotidiennement le RER A à la gare de Joinville-le-Pont ramènent avec eux un flux de salissures qui s'incruste progressivement dans les fibres.</p>\n" +
-        "\n" +
-        "<p class=\"mt-4\">Au bout de quelques mois, les moquettes perdent leur éclat d'origine. Les zones de passage deviennent ternes, les taches résistent à l'aspirateur, et une impression générale de négligence s'installe malgré les efforts du gardien ou du personnel d'entretien. Les copropriétaires posent des questions lors des assemblées générales, les visiteurs remarquent immédiatement l'état des parties communes, et le syndic cherche des solutions pour éviter un remplacement prématuré qui pèserait lourdement sur le budget.</p>\n" +
-        "\n" +
-        '<p class="mt-4">Un nettoyage professionnel par injection-extraction élimine les salissures incrustées, ravive les couleurs et redonne aux halls et escaliers un aspect accueillant qui rassure les occupants et valorise le patrimoine immobilier.</p>',
+        "<p>Dans les halls des immeubles du quartier Paris ou des copropriétés de Vautier-Leclerc, les moquettes accumulent jour après jour les traces du passage : semelles boueuses après la pluie, <strong>poussières fines remontées depuis l'Avenue des Canadiens</strong>, marques grises devant les ascenseurs et les boîtes aux lettres. Les résidents qui empruntent quotidiennement le RER A à la gare de Joinville-le-Pont ramènent avec eux un flux de salissures qui s'incruste progressivement dans les fibres.</p>\n\n<p class=\"mt-4\">Au bout de quelques mois, les moquettes perdent leur éclat d'origine. Les zones de passage deviennent ternes, les taches résistent à l'aspirateur, et une impression générale de négligence s'installe malgré les efforts du gardien ou du personnel d'entretien. Les copropriétaires posent des questions lors des assemblées générales, les visiteurs remarquent immédiatement l'état des parties communes, et le syndic cherche des solutions pour éviter un remplacement prématuré qui pèserait lourdement sur le budget.</p>\n\n<p class=\"mt-4\">Un nettoyage professionnel par injection-extraction élimine les salissures incrustées, ravive les couleurs et redonne aux halls et escaliers un aspect accueillant qui rassure les occupants et valorise le patrimoine immobilier.</p>",
 
       uniqueDeepDive:
         "<h3>Diagnostic et préparation adaptée au bâti</h3>\n" +
@@ -135,7 +131,7 @@ const city: City = {
 
       specificChallenges: [
         "Les moquettes des halls situés près de la gare RER A de Joinville-le-Pont subissent un encrassement accéléré lié aux flux piétons quotidiens massifs.",
-        "Les particules fines remontées depuis la Nationale 4 et l'Avenue des Canadiens s'incrustent dans les fibres et nécessitent une extraction puissante pour un résultat durable.",
+        "Les <strong>particules fines remontées depuis la Nationale 4</strong> et l'Avenue des Canadiens s'incrustent dans les fibres et nécessitent une extraction puissante pour un résultat durable.",
         "Les marches d'escalier dans les immeubles du quartier Paris présentent des usures localisées demandant un traitement ciblé et plusieurs passes successives.",
       ],
 
@@ -144,13 +140,13 @@ const city: City = {
           question:
             "Les moquettes des copropriétés proches de la gare RER A nécessitent-elles un entretien plus fréquent ?",
           answer:
-            "<p>Les copropriétés situées à proximité immédiate de la gare RER A de Joinville-le-Pont subissent effectivement un flux piéton quotidien important qui accélère l'encrassement des halls et des paliers. Nous recommandons généralement un nettoyage tous les 12 mois au lieu de 18 pour ces immeubles, et nous adaptons le nombre de passes d'extraction sur les zones de passage intense pour compenser cette usure accrue.</p>",
+            "<p>Les copropriétés situées à proximité immédiate de la gare RER A de Joinville-le-Pont subissent effectivement un <strong>flux piéton quotidien important</strong> qui accélère l'encrassement des halls et des paliers. Nous recommandons généralement un nettoyage tous les 12 mois au lieu de 18 pour ces immeubles, et nous adaptons le nombre de passes d'extraction sur les zones de passage intense pour compenser cette usure accrue.</p>",
         },
         {
           question:
             "Travaillez-vous dans les petites copropriétés du quartier Palissy comme dans les immeubles plus denses de Vautier-Leclerc ?",
           answer:
-            "<p>Oui. Nous intervenons aussi bien dans les cages d'escalier de petites copropriétés que dans les halls vitrés des immeubles collectifs. Le matériel est dimensionné selon la surface et les contraintes d'accès (escaliers étroits, absence d'ascenseur, badges). Chaque intervention fait l'objet d'un diagnostic préalable pour adapter la méthode et le temps nécessaire à la configuration réelle du bâtiment.</p>",
+            "<p>Oui. Nous intervenons aussi bien dans les cages d'escalier de petites copropriétés que dans les halls vitrés des immeubles collectifs. Le matériel est dimensionné selon la surface et les <strong>contraintes d'accès</strong> (escaliers étroits, absence d'ascenseur, badges). Chaque intervention fait l'objet d'un diagnostic préalable pour adapter la méthode et le temps nécessaire à la configuration réelle du bâtiment.</p>",
         },
         {
           question:
@@ -183,24 +179,13 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>Les traces d'huile, les dépôts noirâtres et les murs salis s'accumulent dans les parkings souterrains du quartier Paris ou de Vautier-Leclerc, sous l'effet du va-et-vient quotidien des véhicules et des poussières venues de la Nationale 4 et de l'Avenue des Canadiens. La rotation autour de la gare RER A accentue la fréquence de passage et accélère l'encrassement des zones d'entrée, des rampes et des places proches des circulations principales.</p>\n" +
-        "\n" +
-        "<p class=\"mt-4\">Les tentatives de nettoyage avec des moyens domestiques déplacent temporairement la crasse sans traiter l'encrassement en profondeur. Les taches d'hydrocarbures résistent, les sols deviennent glissants par temps humide, et la lisibilité des marquages se dégrade, ce qui alimente les remarques en assemblée générale et les inquiétudes sur la sécurité des circulations.</p>\n" +
-        "\n" +
-        '<p class="mt-4">Un décrassage structuré par autolaveuse et haute pression contrôlée élimine les dépôts incrustés, ravive les revêtements et rétablit un environnement propre et rassurant pour les usagers.</p>',
+        "<p>Les traces d'huile, les dépôts noirâtres et les murs salis s'accumulent dans les parkings souterrains du quartier Paris ou de Vautier-Leclerc, sous l'effet du va-et-vient quotidien des véhicules et des poussières venues de la Nationale 4 et de l'Avenue des Canadiens. La rotation autour de la gare RER A accentue la fréquence de passage et accélère l'encrassement des zones d'entrée, des rampes et des places proches des circulations principales.</p>\n\n<p class=\"mt-4\">Les tentatives de nettoyage avec des moyens domestiques déplacent temporairement la crasse sans traiter l'encrassement en profondeur. Les <strong>taches d'hydrocarbures</strong> résistent, les sols deviennent glissants par temps humide, et la lisibilité des marquages se dégrade, ce qui alimente les remarques en assemblée générale et les inquiétudes sur la sécurité des circulations.</p>\n\n<p class=\"mt-4\">Un décrassage structuré par autolaveuse et haute pression contrôlée élimine les dépôts incrustés, ravive les revêtements et rétablit un environnement propre et rassurant pour les usagers.</p>",
 
       uniqueDeepDive:
-        "<h3>Coordination préalable et organisation par secteurs</h3>\n" +
-        "<p>Avant toute intervention, nous validons avec le syndic ou le gestionnaire les modalités d'accès (badge, horaires, présence de véhicules à déplacer) et établissons un planning de passage par zones. Pour les parkings de grande capacité du quartier Paris ou de Vautier-Leclerc, nous organisons le travail par secteurs successifs pour permettre aux résidents de stationner temporairement dans les zones non traitées. Les occupants sont informés des créneaux d'intervention par affichage ou message du syndic.</p>\n" +
-        "\n" +
-        "<h3>Décrassage mécanique et traitement ciblé des taches</h3>\n" +
-        "<p>Nous débutons par un balayage mécanique, puis l'autolaveuse brosse le sol béton ou résine tout en aspirant les eaux sales. Les taches d'huile anciennes reçoivent un dégraissant professionnel appliqué localement, laissé agir, puis rincé à la haute pression réglée. Les rampes, pieds de murs, angles et zones de fort passage sont traités manuellement en complément. La rotation des véhicules se fait progressivement, zone par zone, pour minimiser la gêne.</p>\n" +
-        "\n" +
-        "<h3>Compte-rendu et recommandations d'entretien</h3>\n" +
-        "<p>À l'issue du passage, le gestionnaire reçoit un compte-rendu précisant les surfaces traitées, les éventuelles anomalies constatées et la fréquence recommandée pour maintenir la propreté (généralement un à deux décrassages complets par an selon l'intensité d'usage et la proximité des axes routiers).</p>",
+        "<h3>Coordination préalable et organisation par secteurs</h3>\n<p>Avant toute intervention, nous validons avec le syndic ou le gestionnaire les modalités d'accès (badge, horaires, présence de véhicules à déplacer) et établissons un <strong>planning de passage par zones</strong>. Pour les parkings de grande capacité du quartier Paris ou de Vautier-Leclerc, nous organisons le travail par secteurs successifs pour permettre aux résidents de stationner temporairement dans les zones non traitées. Les occupants sont informés des créneaux d'intervention par affichage ou message du syndic.</p>\n\n<h3>Décrassage mécanique et traitement ciblé des taches</h3>\n<p>Nous débutons par un balayage mécanique, puis l'autolaveuse brosse le sol béton ou résine tout en aspirant les eaux sales. <strong>Les taches d'huile anciennes</strong> reçoivent un dégraissant professionnel appliqué localement, laissé agir, puis rincé à la haute pression réglée. Les rampes, pieds de murs, angles et zones de fort passage sont traités manuellement en complément. La rotation des véhicules se fait progressivement, zone par zone, pour minimiser la gêne.</p>\n\n<h3>Compte-rendu et recommandations d'entretien</h3>\n<p>À l'issue du passage, le gestionnaire reçoit un compte-rendu précisant les surfaces traitées, les éventuelles anomalies constatées et la <strong>fréquence recommandée</strong> pour maintenir la propreté (généralement un à deux décrassages complets par an selon l'intensité d'usage et la proximité des axes routiers).</p>",
 
       specificChallenges: [
-        "Les parkings situés à proximité de l'Avenue des Canadiens et de la Nationale 4 subissent un encrassement rapide par poussières noires grasses nécessitant des dégraissants renforcés.",
+        "Les parkings situés à proximité de l'Avenue des Canadiens et de la Nationale 4 subissent un <strong>encrassement rapide par poussières noires grasses</strong> nécessitant des dégraissants renforcés.",
         "L'organisation par zones successives impose une coordination précise avec le syndic pour informer les résidents et gérer les rotations de stationnement.",
         "L'absence de siphons fonctionnels ou d'évacuation efficace dans certains parkings anciens nécessite une récupération manuelle des eaux de lavage pour évacuation conforme.",
       ],
@@ -210,13 +195,13 @@ const city: City = {
           question:
             "Comment organisez-vous le nettoyage pour que les résidents puissent continuer à stationner ?",
           answer:
-            "<p>Nous travaillons par zones successives : pendant que nous traitons le fond du parking, les résidents peuvent stationner près de l'entrée, puis nous inversons. Pour les petits parkings (moins de 30 places), il est parfois plus simple d'organiser une rotation complète en une seule matinée. Nous validons l'organisation la plus adaptée avec le syndic lors de la visite préalable et communiquons le planning aux résidents par affichage dans les parties communes.</p>",
+            "<p>Nous travaillons par <strong>zones successives</strong> : pendant que nous traitons le fond du parking, les résidents peuvent stationner près de l'entrée, puis nous inversons. Pour les petits parkings (moins de 30 places), il est parfois plus simple d'organiser une rotation complète en une seule matinée. Nous validons l'organisation la plus adaptée avec le syndic lors de la visite préalable et communiquons le planning aux résidents par affichage dans les parties communes.</p>",
         },
         {
           question:
             "Les parkings proches de la gare RER A et de l'Avenue des Canadiens nécessitent-ils un entretien particulier ?",
           answer:
-            "<p>Oui. La proximité de la Nationale 4 et de la gare génère des poussières routières et un flux de véhicules quotidien qui accélère l'encrassement. Nous adaptons les produits dégraissants et recommandons généralement une fréquence d'entretien légèrement plus élevée (tous les 6 à 12 mois au lieu d'une fois par an) pour éviter que les salissures ne s'incrustent durablement dans les pores du béton.</p>",
+            "<p>Oui. La proximité de la Nationale 4 et de la gare génère des <strong>poussières routières</strong> et un flux de véhicules quotidien qui accélère l'encrassement. Nous adaptons les produits dégraissants et recommandons généralement une fréquence d'entretien légèrement plus élevée (tous les 6 à 12 mois au lieu d'une fois par an) pour éviter que les salissures ne s'incrustent durablement dans les pores du béton.</p>",
         },
         {
           question:
@@ -249,21 +234,10 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>Après un hiver humide au bord de la Marne, le balcon de la maison de Polangis ou de la résidence du quartier Marne devient une zone délaissée : dépôts verts dans les angles, joints noircis, traces de pluie séchée, feuilles accumulées le long du garde-corps. L'humidité fluviale favorise le développement de mousses sur les dalles exposées à l'ombre, et la terre remontée des berges se mélange aux pollens pour former une croûte grisâtre difficile à éliminer.</p>\n" +
-        "\n" +
-        '<p class="mt-4">Les tentatives de nettoyage au seau et à la brosse donnent un résultat provisoire, mais les joints restent gris, les taches tenaces résistent, et l\'eau coule parfois chez le voisin du dessous ou le long de la façade, créant des tensions dans la copropriété ou avec le voisinage pavillonnaire.</p>\n' +
-        "\n" +
-        '<p class="mt-4">Une intervention professionnelle élimine les salissures incrustées, ravive les supports et rend l\'espace de nouveau utilisable.</p>',
+        "<p>Après un hiver humide au bord de la Marne, le balcon de la maison de Polangis ou de la résidence du quartier Marne devient une zone délaissée : <strong>dépôts verts dans les angles</strong>, joints noircis, traces de pluie séchée, feuilles accumulées le long du garde-corps. L'humidité fluviale favorise le développement de mousses sur les dalles exposées à l'ombre, et la terre remontée des berges se mélange aux pollens pour former une croûte grisâtre difficile à éliminer.</p>\n\n<p class=\"mt-4\">Les tentatives de nettoyage au seau et à la brosse donnent un résultat provisoire, mais les joints restent gris, les taches tenaces résistent, et l'eau coule parfois chez le voisin du dessous ou le long de la façade, créant des tensions dans la copropriété ou avec le voisinage pavillonnaire.</p>\n\n<p class=\"mt-4\">Une intervention professionnelle élimine les salissures incrustées, ravive les supports et rend l'espace de nouveau utilisable.</p>",
 
       uniqueDeepDive:
-        "<h3>Préparation et protection des abords</h3>\n" +
-        "<p>Nous protégeons la porte-fenêtre et les menuiseries avec des bâches pour éviter les projections. Les plantes, le mobilier et les objets sont déplacés ou couverts selon les indications du client. Les gros dépôts sont enlevés manuellement avant tout traitement liquide pour ne pas surcharger l'évacuation.</p>\n" +
-        "\n" +
-        "<h3>Nettoyage adapté aux supports et à l'humidité locale</h3>\n" +
-        "<p>Un produit spécifique au matériau est appliqué, laissé agir, puis brossé selon la rugosité. Les dépôts verts reçoivent un traitement anti-mousse adapté. Les joints, les angles, le garde-corps et les murs mitoyens sont traités au détail. Le rinçage se fait à pression modérée et l'eau est dirigée vers l'évacuation du balcon à l'aide de raclettes ou de chiffons absorbants.</p>\n" +
-        "\n" +
-        "<h3>Conseils pour limiter les réaccumulations</h3>\n" +
-        "<p>Après séchage naturel, nous recommandons un balayage régulier et un nettoyage léger au moins deux fois par an (printemps et automne) pour maintenir la propreté.</p>",
+        "<h3>Préparation et protection des abords</h3>\n<p>Nous protégeons la porte-fenêtre et les menuiseries avec des bâches pour éviter les projections. Les plantes, le mobilier et les objets sont déplacés ou couverts selon les indications du client. <strong>Les gros dépôts sont enlevés manuellement</strong> avant tout traitement liquide pour ne pas surcharger l'évacuation.</p>\n\n<h3>Nettoyage adapté aux supports et à l'humidité locale</h3>\n<p>Un produit spécifique au matériau est appliqué, laissé agir, puis brossé selon la rugosité. <strong>Les dépôts verts reçoivent un traitement anti-mousse</strong> adapté. Les joints, les angles, le garde-corps et les murs mitoyens sont traités au détail. Le rinçage se fait à pression modérée et l'eau est dirigée vers l'évacuation du balcon à l'aide de raclettes ou de chiffons absorbants.</p>\n\n<h3>Conseils pour limiter les réaccumulations</h3>\n<p>Après séchage naturel, nous recommandons un <strong>balayage régulier</strong> et un nettoyage léger au moins deux fois par an (printemps et automne) pour maintenir la propreté.</p>",
 
       specificChallenges: [
         "La proximité immédiate des bords de Marne dans les quartiers Polangis, Marne et Île Fanac génère des dépôts verts, des mousses et une humidité persistante sur les balcons exposés au nord ou à l'ombre.",
@@ -276,13 +250,13 @@ const city: City = {
           question:
             "Les balcons proches des bords de Marne nécessitent-ils un traitement particulier contre les dépôts verts ?",
           answer:
-            "<p>Oui. L'humidité fluviale et l'ombre favorisent le développement de mousses et de dépôts verts sur les supports poreux. Nous utilisons un produit anti-mousse adapté, laissé agir suffisamment longtemps pour décoller les dépôts, puis rincé à pression modérée. Les balcons exposés au nord dans les quartiers Polangis ou Marne peuvent nécessiter un traitement deux fois par an (printemps et automne) pour éviter les réaccumulations rapides.</p>",
+            "<p>Oui. <strong>L'humidité fluviale et l'ombre</strong> favorisent le développement de mousses et de dépôts verts sur les supports poreux. Nous utilisons un produit anti-mousse adapté, laissé agir suffisamment longtemps pour décoller les dépôts, puis rincé à pression modérée. Les balcons exposés au nord dans les quartiers Polangis ou Marne peuvent nécessiter un traitement deux fois par an (printemps et automne) pour éviter les réaccumulations rapides.</p>",
         },
         {
           question:
             "Comment évitez-vous que l'eau de rinçage ne coule chez mes voisins ou le long de la façade ?",
           answer:
-            "<p>Nous dirigeons systématiquement l'eau vers l'évacuation du balcon à l'aide de raclettes et de chiffons absorbants. Si le balcon n'a pas d'évacuation fonctionnelle ou si la pente est mal orientée, nous récupérons l'eau manuellement pour éviter tout écoulement.</p>",
+            "<p>Nous dirigeons systématiquement l'eau vers <strong>l'évacuation du balcon</strong> à l'aide de raclettes et de chiffons absorbants. Si le balcon n'a pas d'évacuation fonctionnelle ou si la pente est mal orientée, nous récupérons l'eau manuellement pour éviter tout écoulement.</p>",
         },
         {
           question:
@@ -315,11 +289,7 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>Les fientes s'accumulent jour après jour sur le balcon : couches séchées qui blanchissent les dalles, nids dissimulés derrière le garde-corps, odeur âcre qui pénètre dans le logement dès qu'on entrouvre la fenêtre. La présence de volatiles près du canal, des quais de la Marne ou des toits des immeubles collectifs devient vite une nuisance chronique que l'occupant n'ose pas toujours évoquer avec le syndic par peur du jugement.</p>\n" +
-        "\n" +
-        "<p class=\"mt-4\">Si rien n'est fait, les conséquences s'aggravent. Les fientes contiennent des agents pathogènes (bactéries, champignons, parasites) qui se dispersent en poussière fine lorsqu'elles sèchent. Un simple balayage à sec aggrave la situation en libérant ces particules contaminées dans l'air. L'odeur imprègne les textiles intérieurs (rideaux, canapé), les supports métalliques du garde-corps commencent à rouiller sous l'effet acide des fientes, et le balcon devient une zone interdite qui pèse sur le confort quotidien et la valeur du logement.</p>\n" +
-        "\n" +
-        '<p class="mt-4">Un traitement professionnel sécurisé avec équipements de protection individuelle et désinfection virucide élimine les fientes, neutralise les agents pathogènes et permet de retrouver un balcon utilisable sans risque pour la santé des occupants.</p>',
+        "<p>Les fientes s'accumulent jour après jour sur le balcon : couches séchées qui blanchissent les dalles, nids dissimulés derrière le garde-corps, odeur âcre qui pénètre dans le logement dès qu'on entrouvre la fenêtre. La présence de volatiles près du canal, des quais de la Marne ou des toits des immeubles collectifs devient vite une nuisance chronique que l'occupant n'ose pas toujours évoquer avec le syndic par peur du jugement.</p>\n\n<p class=\"mt-4\">Si rien n'est fait, les conséquences s'aggravent. Les fientes contiennent des agents pathogènes (bactéries, champignons, parasites) qui se dispersent en poussière fine lorsqu'elles sèchent. Un <strong>simple balayage à sec</strong> aggrave la situation en libérant ces particules contaminées dans l'air. L'odeur imprègne les textiles intérieurs (rideaux, canapé), les supports métalliques du garde-corps commencent à rouiller sous l'effet acide des fientes, et le balcon devient une zone interdite qui pèse sur le confort quotidien et la valeur du logement.</p>\n\n<p class=\"mt-4\">Un traitement professionnel sécurisé avec équipements de protection individuelle et désinfection virucide élimine les fientes, neutralise les agents pathogènes et permet de retrouver un balcon utilisable sans risque pour la santé des occupants.</p>",
 
       uniqueDeepDive:
         "<h3>Sécurité sanitaire et confinement du chantier</h3>\n" +
@@ -333,7 +303,7 @@ const city: City = {
 
       specificChallenges: [
         "Les secteurs proches des bords de Marne et du canal subissent une pression aviaire liée à la présence d'eau et de végétation, nécessitant parfois des interventions régulières.",
-        "L'accès aux balcons en étage dans les immeubles collectifs impose une organisation précise (ascenseurs, badges) et un conditionnement étanche des déchets pour éviter toute contamination des circulations communes.",
+        "L'accès aux balcons en étage dans les immeubles collectifs impose une <strong>organisation précise (ascenseurs, badges)</strong> et un conditionnement étanche des déchets pour éviter toute contamination des circulations communes.",
         "Les fientes anciennes peuvent corroder les peintures, enduits et garde-corps métalliques, nécessitant un signalement au propriétaire pour éventuelles réparations ultérieures.",
       ],
 
@@ -342,13 +312,13 @@ const city: City = {
           question:
             "Les fientes de pigeons représentent-elles vraiment un danger sanitaire justifiant une intervention professionnelle ?",
           answer:
-            "<p>Oui. Les fientes contiennent des bactéries, des champignons et des parasites susceptibles de provoquer infections respiratoires, allergies sévères et maladies digestives. Le simple fait de balayer à sec disperse ces agents pathogènes en poussière fine inhalable. Un nettoyage professionnel avec désinfection virucide est indispensable pour neutraliser ces risques sanitaires.</p>",
+            "<p>Oui. Les fientes contiennent des bactéries, des champignons et des parasites susceptibles de provoquer infections respiratoires, allergies sévères et maladies digestives. Le <strong>simple fait de balayer à sec</strong> disperse ces agents pathogènes en poussière fine inhalable. Un nettoyage professionnel avec désinfection virucide est indispensable pour neutraliser ces risques sanitaires.</p>",
         },
         {
           question:
             "Comment gérez-vous l'évacuation des fientes et des nids récupérés ?",
           answer:
-            "<p>Les déchets contaminés sont conditionnés dans des sacs étanches résistants à double paroi et évacués immédiatement par nos équipes à l'issue de l'intervention. Nous ne les déposons jamais dans les locaux poubelles de la copropriété pour éviter toute contamination des espaces communs. Cette évacuation sécurisée est incluse dans notre prestation.</p>",
+            "<p>Les déchets contaminés sont conditionnés dans des <strong>sacs étanches résistants à double paroi</strong> et évacués immédiatement par nos équipes à l'issue de l'intervention. Nous ne les déposons jamais dans les locaux poubelles de la copropriété pour éviter toute contamination des espaces communs. Cette évacuation sécurisée est incluse dans notre prestation.</p>",
         },
         {
           question:
@@ -381,26 +351,15 @@ const city: City = {
       ],
 
       uniqueIntro:
-        "<p>Dans les logements de Joinville-le-Pont, le canapé, le tapis et le matelas accumulent les traces du quotidien : poussières, miettes, taches, poils d'animaux, et parfois des odeurs tenaces liées à l'humidité. Les textiles retiennent aussi les pollens venus des bords de Marne et de la végétation environnante, ce qui peut accentuer les gênes respiratoires et les allergies.</p>\n" +
-        "\n" +
-        '<p class="mt-4">Les aspirations régulières éliminent les saletés visibles, mais ne suffisent pas à extraire les allergènes et les résidus incrustés en profondeur dans les fibres. Les produits ménagers classiques déplacent temporairement les salissures sans traiter réellement le problème, et les odeurs reviennent dès que l\'humidité augmente.</p>\n' +
-        "\n" +
-        '<p class="mt-4">Un nettoyage professionnel par injection-extraction élimine les salissures en profondeur, neutralise les odeurs et améliore significativement le confort d\'usage des textiles.</p>',
+        "<p>Dans les logements de Joinville-le-Pont, le canapé, le tapis et le matelas accumulent les traces du quotidien : <strong>poussières, miettes, taches</strong>, poils d'animaux, et parfois des odeurs tenaces liées à l'humidité. Les textiles retiennent aussi les pollens venus des bords de Marne et de la végétation environnante, ce qui peut accentuer les gênes respiratoires et les allergies.</p>\n\n<p class=\"mt-4\">Les aspirations régulières éliminent les saletés visibles, mais ne suffisent pas à extraire les allergènes et les résidus incrustés en profondeur dans les fibres. Les produits ménagers classiques déplacent temporairement les salissures sans traiter réellement le problème, et les odeurs reviennent dès que l'humidité augmente.</p>\n\n<p class=\"mt-4\">Un nettoyage professionnel par injection-extraction élimine les salissures en profondeur, neutralise les odeurs et améliore significativement le confort d'usage des textiles.</p>",
 
       uniqueDeepDive:
-        "<h3>Diagnostic textile et identification des taches</h3>\n" +
-        "<p>Le technicien examine la nature du tissu, identifie les taches visibles et teste la solidité des couleurs sur une zone discrète avant tout traitement. Les taches organiques nécessitent un pré-traitement spécifique laissé agir quelques minutes avant le nettoyage général.</p>\n" +
-        "\n" +
-        "<h3>Injection-extraction pour extraction maximale des résidus</h3>\n" +
-        "<p>La machine projette une solution nettoyante chauffée à température adaptée au textile, puis aspire immédiatement l'eau chargée de salissures. Les passes successives sur les zones très sollicitées permettent d'extraire un maximum de résidus. L'aspiration puissante limite l'humidité résiduelle et accélère le séchage.</p>\n" +
-        "\n" +
-        "<h3>Conseils d'entretien pour limiter les réaccumulations</h3>\n" +
-        "<p>Le séchage se fait naturellement selon la ventilation et l'épaisseur du textile. Nous conseillons d'aérer le logement, d'éviter de s'asseoir immédiatement sur les surfaces traitées et de maintenir un aspirateur régulier pour limiter les réaccumulations.</p>",
+        "<h3>Diagnostic textile et identification des taches</h3>\n<p>Le technicien examine la nature du tissu, identifie les taches visibles et teste la solidité des couleurs sur une zone discrète avant tout traitement. <strong>Les taches organiques nécessitent un pré-traitement spécifique</strong> laissé agir quelques minutes avant le nettoyage général.</p>\n\n<h3>Injection-extraction pour extraction maximale des résidus</h3>\n<p>La machine projette une solution nettoyante chauffée à température adaptée au textile, puis aspire immédiatement l'eau chargée de salissures. Les passes successives sur les zones très sollicitées permettent d'extraire un maximum de résidus. <strong>L'aspiration puissante limite l'humidité résiduelle</strong> et accélère le séchage.</p>\n\n<h3>Conseils d'entretien pour limiter les réaccumulations</h3>\n<p>Le séchage se fait naturellement selon la ventilation et l'épaisseur du textile. Nous conseillons <strong>d'aérer le logement</strong>, d'éviter de s'asseoir immédiatement sur les surfaces traitées et de maintenir un aspirateur régulier pour limiter les réaccumulations.</p>",
 
       specificChallenges: [
         "Les taches organiques et les odeurs tenaces nécessitent un pré-traitement ciblé avant injection-extraction.",
         "Les allergènes et acariens s'accumulent dans les textiles et imposent une extraction puissante et un rinçage complet.",
-        "Le séchage peut être ralenti dans les pièces humides proches de la Marne ou du canal, nécessitant des consignes précises.",
+        "Le séchage peut être ralenti dans les <strong>pièces humides proches de la Marne</strong> ou du canal, nécessitant des consignes précises.",
       ],
 
       faqAdditions: [
@@ -414,13 +373,13 @@ const city: City = {
           question:
             "Les odeurs tenaces (urine d'animal, humidité) peuvent-elles être totalement neutralisées ?",
           answer:
-            "<p>Les odeurs récentes partent généralement très bien avec un détachant adapté. Les odeurs anciennes très incrustées peuvent laisser une trace résiduelle légère selon la profondeur de pénétration. L'extraction complète des résidus organiques et le rinçage neutralisent la majorité des odeurs. Dans les cas extrêmes, une seconde intervention ciblée peut être nécessaire.</p>",
+            "<p>Les odeurs récentes partent généralement très bien avec un détachant adapté. Les odeurs anciennes très incrustées peuvent laisser une trace résiduelle légère selon la profondeur de pénétration. <strong>L'extraction complète des résidus organiques</strong> et le rinçage neutralisent la majorité des odeurs. Dans les cas extrêmes, une seconde intervention ciblée peut être nécessaire.</p>",
         },
         {
           question:
             "Combien de temps faut-il attendre avant de réutiliser les textiles nettoyés ?",
           answer:
-            "<p>Le séchage prend généralement entre 4 et 8 heures selon la ventilation et l'humidité ambiante. Nous recommandons d'attendre 6 heures minimum avant de s'asseoir sur le canapé ou de marcher sur le tapis. Pour un matelas, il est préférable d'attendre une nuit complète avant de remettre les draps et de dormir dessus.</p>",
+            "<p>Le séchage prend généralement entre 4 et 8 heures selon la <strong>ventilation et l'humidité ambiante</strong>. Nous recommandons d'attendre 6 heures minimum avant de s'asseoir sur le canapé ou de marcher sur le tapis. Pour un matelas, il est préférable d'attendre une nuit complète avant de remettre les draps et de dormir dessus.</p>",
         },
         {
           question:

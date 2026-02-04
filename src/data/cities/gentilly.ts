@@ -18,7 +18,7 @@ const city: City = {
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // Pattern : 2 <p> then a <ul>
   hubIntro:
-    "<p>Station RER B Gentilly et Campus Sanofi, aux portes du 14e arrondissement : Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre ancrage local permet une réactivité adaptée aux contraintes d'une commune dense et bien desservie.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, balcons exposés à la pollution de l'A6a : chaque intervention s'organise selon les accès, les horaires et les spécificités du bâti. Un interlocuteur dédié coordonne les passages et transmet un suivi clair après chaque prestation.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des digicodes, badges Vigik et présence des gardiens pour fluidifier chaque intervention sans perturber les occupants.</li>\n  <li><strong>Adaptation au stationnement contraint :</strong> Véhicules légers et créneaux horaires choisis pour limiter l'encombrement dans les rues étroites du centre et du Plateau.</li>\n  <li>Suivi structuré : Compte-rendu transmis après passage, planning ajustable selon vos retours et l'évolution des besoins du site.</li>\n</ul>",
+    "<p>Station RER B Gentilly et Campus Sanofi, aux portes du 14e arrondissement : Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre ancrage local permet une <strong>réactivité adaptée aux contraintes</strong> d'une commune dense et bien desservie.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, balcons exposés à la pollution de l'A6a : chaque intervention s'organise selon les accès, les horaires et les spécificités du bâti. Un interlocuteur dédié coordonne les passages et transmet un suivi clair après chaque prestation.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des digicodes, badges Vigik et présence des gardiens pour fluidifier chaque intervention sans perturber les occupants.</li>\n  <li><strong>Adaptation au stationnement contraint :</strong> Véhicules légers et créneaux horaires choisis pour limiter l'encombrement dans les rues étroites du centre et du Plateau.</li>\n  <li>Suivi structuré : <strong>Compte-rendu transmis après passage</strong>, planning ajustable selon vos retours et l'évolution des besoins du site.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -128,13 +128,13 @@ const city: City = {
           question:
             "Avec les escaliers étroits des immeubles du centre-ville de Gentilly, comment organisez-vous la montée du matériel pour traiter une moquette ?",
           answer:
-            "<p>Le matériel d'injection-extraction se démonte en éléments transportables. Nous montons par étapes, avec protection des marches et des murs. Les flexibles permettent de travailler depuis un palier sans encombrer la cage d'escalier pendant toute l'intervention.</p>",
+            "<p>Le matériel d'injection-extraction se démonte en <strong>éléments transportables</strong>. Nous montons par étapes, avec protection des marches et des murs. Les flexibles permettent de travailler depuis un palier sans encombrer la cage d'escalier pendant toute l'intervention.</p>",
         },
         {
           question:
             "Les taches anciennes dans les parties communes du Chaperon Vert sont-elles récupérables sans remplacer la moquette ?",
           answer:
-            "<p>La plupart des taches incrustées — café, tanin, traces organiques — s'atténuent fortement avec un détachage ciblé suivi d'une extraction en profondeur. Certaines marques très anciennes peuvent laisser une ombre résiduelle, mais le rendu global s'améliore nettement.</p>",
+            "<p>La plupart des taches incrustées — café, tanin, traces organiques — s'atténuent fortement avec un <strong>détachage ciblé</strong> suivi d'une extraction en profondeur. Certaines marques très anciennes peuvent laisser une ombre résiduelle, mais le rendu global s'améliore nettement.</p>",
         },
         {
           question:
@@ -167,8 +167,8 @@ const city: City = {
         "<h3>Diagnostic et préparation du chantier</h3>\n<p>Avant toute intervention, nous identifions le type de revêtement et l'état des évacuations. Le balayage préalable élimine les débris grossiers. La signalétique de balisage est mise en place et les véhicules sont déplacés par zones successives selon le planning convenu avec le gestionnaire.</p>\n\n<h3>Lavage mécanisé et traitement des salissures</h3>\n<p>L'autolaveuse effectue des passes sur les surfaces principales. Les zones critiques — rampes, angles morts, pieds de murs — reçoivent un traitement dégraissant ciblé. Les rigoles et regards sont dégagés pour garantir l'écoulement correct des eaux de lavage, sans rejet sauvage.</p>\n\n<h3>Contrôle et recommandations</h3>\n<p>Une vérification finale confirme l'état des sols et des évacuations. Si demandé, un dépoussiérage des blocs lumineux et tuyauteries complète l'intervention. Un compte-rendu est transmis au syndic avec des préconisations de fréquence adaptées au trafic constaté.</p>",
       specificChallenges: [
         "Parkings souterrains des copropriétés avec rampes étroites et ventilation limitée.",
-        "Taches d'huile anciennes incrustées sur béton brut dans les résidences du Chaperon Vert.",
-        "Coordination des accès lors d'événements sportifs au Stade Géo André.",
+        "Taches d'huile anciennes <strong>incrustées sur béton brut</strong> dans les résidences du Chaperon Vert.",
+        "<strong>Coordination des accès</strong> lors d'événements sportifs au Stade Géo André.",
         "Gestion stricte des eaux de lavage pour respecter les évacuations existantes.",
         "Stationnement très contraint imposant une rotation par zones et créneaux décalés.",
       ],
@@ -183,7 +183,7 @@ const city: City = {
           question:
             "Comment traitez-vous les taches d'huile anciennes dans un parking souterrain de copropriété à Gentilly ?",
           answer:
-            "<p>Un dégraissant adapté au revêtement béton est appliqué sur les zones marquées. L'autolaveuse effectue plusieurs passes pour désincruster les résidus. Les taches très anciennes peuvent nécessiter un traitement complémentaire, que nous signalons au syndic avec un devis séparé.</p>",
+            "<p>Un <strong>dégraissant adapté au revêtement béton</strong> est appliqué sur les zones marquées. L'autolaveuse effectue plusieurs passes pour désincruster les résidus. Les taches très anciennes peuvent nécessiter un traitement complémentaire, que nous signalons au syndic avec un devis séparé.</p>",
         },
         {
           question:
@@ -195,7 +195,7 @@ const city: City = {
           question:
             "Quels créneaux recommandez-vous pour intervenir sur un parking quand il y a marché ou événement au stade ?",
           answer:
-            "<p>Nous privilégions les créneaux tôt le matin ou en soirée, hors jours de marché et hors événements sportifs. Le planning est validé avec le syndic ou le gestionnaire pour garantir un accès fluide aux résidents et éviter toute perturbation.</p>",
+            "<p>Nous privilégions les créneaux tôt le matin ou en soirée, <strong>hors jours de marché</strong> et hors événements sportifs. Le planning est validé avec le syndic ou le gestionnaire pour garantir un accès fluide aux résidents et éviter toute perturbation.</p>",
         },
       ],
       ctaOverride: "",
@@ -211,14 +211,14 @@ const city: City = {
         "Gestion rigoureuse des eaux de rinçage pour éviter toute nuisance aux occupants des étages inférieurs.",
       ],
       uniqueIntro:
-        "<p>Les traces noires s'accumulent sur les garde-corps, le carrelage perd son éclat sous une pellicule grasse difficile à déloger. Sur l'avenue Paul Vaillant-Couturier et les axes exposés au trafic routier, cette couche de suie revient en quelques semaines. Le balcon devient un espace qu'on évite plutôt qu'un prolongement du logement.</p>\n<p class=\"mt-4\">Retrouver un sol propre et des surfaces claires change l'usage quotidien. On ressort la table, les plantes reprennent leur place, l'air semble moins chargé. Sur les immeubles des années 60-70 avec balcons béton ou carrelage, le rafraîchissement régulier préserve aussi les joints et limite l'encrassement profond des supports.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic du revêtement et de l'exposition. Protection des menuiseries, déplacement du mobilier, puis traitement adapté à la nature des dépôts. La proximité de l'A6a et du périphérique impose des protocoles anti-pollution spécifiques pour éliminer les résidus gras sans endommager les matériaux.</p>",
+        "<p>Les traces noires s'accumulent sur les garde-corps, le carrelage perd son éclat sous une <strong>pellicule grasse difficile à déloger</strong>. Sur l'avenue Paul Vaillant-Couturier et les axes exposés au trafic routier, cette couche de suie revient en quelques semaines. Le balcon devient un espace qu'on évite plutôt qu'un prolongement du logement.</p>\n<p class=\"mt-4\">Retrouver un sol propre et des surfaces claires change l'usage quotidien. On ressort la table, les plantes reprennent leur place, l'air semble moins chargé. Sur les immeubles des années 60-70 avec balcons béton ou carrelage, le rafraîchissement régulier préserve aussi les joints et limite l'encrassement profond des supports.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic du revêtement et de l'exposition. Protection des menuiseries, déplacement du mobilier, puis traitement adapté à la nature des dépôts. La proximité de l'A6a et du périphérique impose des protocoles anti-pollution spécifiques pour éliminer les résidus gras sans endommager les matériaux.</p>",
       uniqueDeepDive:
-        "<h3>Sol propre et joints préservés</h3>\n<p>Le carrelage retrouve sa teinte d'origine, les joints ne présentent plus de traces verdâtres ou noires. Pour y parvenir, un produit dégraissant adapté au support est appliqué après évacuation des débris. Le brossage manuel ou mécanique déloge les incrustations sans attaquer les matériaux.</p>\n\n<h3>Garde-corps et vitrages dégagés</h3>\n<p>Les barreaux métalliques et les surfaces vitrées perdent leur voile grisâtre. Un passage ciblé élimine la suie accumulée sur ces éléments verticaux souvent négligés. Le rinçage contrôlé évite les coulures chez les voisins du dessous.</p>\n\n<h3>Espace prêt à l'usage</h3>\n<p>Le balcon sèche en quelques heures selon la météo. Avant de partir, le mobilier et les plantes sont replacés. Des conseils d'entretien permettent d'espacer les interventions : un simple passage régulier à l'eau claire limite la réapparition rapide des dépôts liés à la pollution atmosphérique.</p>",
+        "<h3>Sol propre et joints préservés</h3>\n<p>Le carrelage retrouve sa teinte d'origine, les joints ne présentent plus de traces verdâtres ou noires. Pour y parvenir, un <strong>produit dégraissant adapté au support</strong> est appliqué après évacuation des débris. Le brossage manuel ou mécanique déloge les incrustations sans attaquer les matériaux.</p>\n\n<h3>Garde-corps et vitrages dégagés</h3>\n<p>Les barreaux métalliques et les surfaces vitrées perdent leur voile grisâtre. Un passage ciblé élimine la suie accumulée sur ces éléments verticaux souvent négligés. Le rinçage contrôlé évite les coulures chez les voisins du dessous.</p>\n\n<h3>Espace prêt à l'usage</h3>\n<p>Le balcon sèche en quelques heures selon la météo. Avant de partir, le mobilier et les plantes sont replacés. Des <strong>conseils d'entretien</strong> permettent d'espacer les interventions : un simple passage régulier à l'eau claire limite la réapparition rapide des dépôts liés à la pollution atmosphérique.</p>",
       specificChallenges: [
-        "Suie grasse liée à la proximité de l'A6a : nécessite un dégraissant adapté avant brossage.",
+        "Suie grasse liée à la proximité de l'A6a : nécessite un <strong>dégraissant adapté avant brossage</strong>.",
         "Balcons en étage avec évacuation d'eau contrainte : protocole anti-coulures obligatoire.",
         "Joints de carrelage fragilisés sur immeubles anciens : pression contrôlée indispensable.",
-        "Garde-corps métalliques noircis par la pollution : traitement spécifique pour retrouver l'éclat.",
+        "Garde-corps métalliques noircis par la pollution : <strong>traitement spécifique</strong> pour retrouver l'éclat.",
         "Mobilier et plantes à protéger ou déplacer avant intervention.",
       ],
       faqAdditions: [
@@ -226,7 +226,7 @@ const city: City = {
           question:
             "Sur les balcons de l'avenue Paul Vaillant-Couturier, quelle méthode utilisez-vous pour retirer la suie sans abîmer le carrelage ?",
           answer:
-            "<p>Un dégraissant spécifique aux dépôts gras est appliqué avant le brossage. Le produit dissout la pellicule de suie sans attaquer le carrelage ni les joints. Le rinçage se fait à pression modérée pour éviter toute dégradation du support.</p>",
+            "<p>Un <strong>dégraissant spécifique aux dépôts gras</strong> est appliqué avant le brossage. Le produit dissout la pellicule de suie sans attaquer le carrelage ni les joints. Le rinçage se fait à pression modérée pour éviter toute dégradation du support.</p>",
         },
         {
           question:
@@ -244,7 +244,7 @@ const city: City = {
           question:
             "Pour un balcon avec joints fragiles à Gentilly, quelles techniques sans haute pression préconisez-vous ?",
           answer:
-            "<p>Le brossage manuel avec une brosse souple remplace le jet haute pression. Un produit adapté ramollit les salissures avant le passage de la brosse. Le rinçage s'effectue au tuyau basse pression ou au seau pour préserver l'intégrité des joints.</p>",
+            "<p>Le <strong>brossage manuel avec une brosse souple</strong> remplace le jet haute pression. Un produit adapté ramollit les salissures avant le passage de la brosse. Le rinçage s'effectue au tuyau basse pression ou au seau pour préserver l'intégrité des joints.</p>",
         },
       ],
       ctaOverride: "",

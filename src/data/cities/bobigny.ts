@@ -71,7 +71,7 @@ const city: City = {
       question:
         "Comment organisez-vous les interventions dans les immeubles avec gardien ?",
       answer:
-        "<p>Nous prenons contact avec le gardien ou le gestionnaire en amont pour convenir des horaires et des accès. Cette coordination est particulièrement utile dans les grands ensembles où les entrées sont sécurisées (badge, digicode) et où certains locaux techniques nécessitent une ouverture dédiée.</p>",
+        "<p>Nous prenons contact avec le gardien ou le gestionnaire en amont pour convenir des horaires et des accès. <strong>Cette coordination est particulièrement utile</strong> dans les grands ensembles où les entrées sont sécurisées (badge, digicode) et où certains locaux techniques nécessitent une ouverture dédiée.</p>",
     },
     {
       question: "Pouvez-vous intervenir en dehors des heures de bureau ?",
@@ -128,7 +128,7 @@ const city: City = {
           question:
             "Dans les immeubles sociaux aux escaliers étroits, comment procédez-vous pour transporter le shampouineur sans gêner les habitants ?",
           answer:
-            "<p>Notre équipement est modulable et se décompose en éléments transportables à la main. Dans les copropriétés où les ascenseurs sont absents ou en panne, nous montons le matériel par étapes sans encombrer les paliers. L'intervention est organisée pour limiter les allers-retours et réduire la gêne pour les résidents.</p>",
+            "<p>Notre équipement est modulable et se décompose en éléments transportables à la main. Dans les copropriétés où les ascenseurs sont absents ou en panne, <strong>nous montons le matériel par étapes</strong> sans encombrer les paliers. L'intervention est organisée pour limiter les allers-retours et réduire la gêne pour les résidents.</p>",
         },
         {
           question:
@@ -140,7 +140,7 @@ const city: City = {
           question:
             "Quelle méthode technique recommandez-vous pour dalles textiles en bureaux versus velours ras en résidence privée à Bobigny ?",
           answer:
-            "<p>Les dalles textiles supportent une pression d'injection plus élevée et sèchent rapidement grâce à leur faible épaisseur. Le velours ras demande une extraction plus douce pour éviter l'écrasement des fibres. Nous adaptons le réglage du matériel selon le type de revêtement identifié lors du diagnostic initial.</p>",
+            "<p>Les dalles textiles supportent une pression d'injection plus élevée et sèchent rapidement grâce à leur faible épaisseur. <strong><strong>Le velours ras demande une extraction plus douce</strong></strong> pour éviter l'écrasement des fibres. Nous adaptons le réglage du matériel selon le type de revêtement identifié lors du diagnostic initial.</p>",
         },
         {
           question:
@@ -195,7 +195,7 @@ const city: City = {
           question:
             "Intervenez-vous en horaires décalés pour le nettoyage des parkings desservant l'Hôpital Avicenne afin de limiter la gêne ?",
           answer:
-            "<p>Oui, nous proposons des créneaux en soirée, la nuit ou le week-end selon les contraintes du site. La planification est validée avec le gestionnaire pour éviter les heures de forte affluence. Le balisage sécurise les zones en cours de traitement pendant toute la durée de l'intervention.</p>",
+            "<p>Oui, nous proposons des créneaux en soirée, la nuit ou le week-end selon les contraintes du site. <strong><strong>La planification est validée avec le gestionnaire</strong></strong> pour éviter les heures de forte affluence. Le balisage sécurise les zones en cours de traitement pendant toute la durée de l'intervention.</p>",
         },
       ],
       ctaOverride: "",
@@ -213,7 +213,7 @@ const city: City = {
       uniqueIntro:
         "<p>Après quelques saisons, les balcons des grands ensembles comme ceux du quartier Karl Marx ou Paul Eluard accumulent une couche grisâtre tenace. La proximité des axes routiers — notamment l'Avenue Jean Jaurès et la N3 — dépose un film de particules fines qui s'incruste dans les pores du béton. <strong>Les joints noircissent, le sol colle sous les pieds</strong>, et l'envie de profiter de cet espace diminue progressivement.</p>\n<p class=\"mt-4\">Retrouver un balcon propre change la perception du logement. Les supports en béton brut des constructions années 60-70 ou les dalles sur plots des résidences plus récentes retrouvent leur aspect d'origine. Le garde-corps redevient net, les vitres attenantes laissent passer la lumière sans voile gris. C'est un espace récupéré, utilisable pour une table, des plantes, ou simplement pour prendre l'air.</p>\n<p class=\"mt-4\">L'intervention commence par un diagnostic du support et de l'exposition. Chaque balcon présente des contraintes différentes : étage élevé, voisins en dessous, mobilier à protéger. Un plan d'action adapté permet d'intervenir efficacement sans créer de nuisances.</p>",
       uniqueDeepDive:
-        "<h3>Un sol débarrassé des dépôts et un garde-corps net</h3>\n<p>Le résultat visé : un balcon où l'on peut marcher pieds nus sans sensation de crasse, avec des surfaces uniformes et des joints éclaircis. Pour y parvenir, le sol est d'abord débarrassé des gros débris — feuilles mortes, terre accumulée, résidus divers. Le garde-corps et les vitrages attenants sont traités dans la foulée.</p>\n\n<h3>Traitement adapté au support</h3>\n<p>Sur béton brut, un produit désincrustant est appliqué puis brossé mécaniquement pour déloger les particules de pollution. Sur dalles ou carrelage, la pression est ajustée pour préserver les joints. Les plantes et le mobilier sont déplacés ou bâchés avant toute projection d'eau.</p>\n\n<h3>Rinçage contrôlé et protection voisinage</h3>\n<p>L'eau de rinçage est gérée pour éviter les coulures chez les voisins du dessous. Des protections sont posées en périphérie si nécessaire. Le séchage est accéléré par raclage, et des conseils d'entretien sont transmis pour espacer les prochaines interventions.</p>",
+        "<h3>Un sol débarrassé des dépôts et un garde-corps net</h3>\n<p>Le résultat visé : un balcon où l'on peut marcher pieds nus sans sensation de crasse, avec des surfaces uniformes et des joints éclaircis. Pour y parvenir, le sol est d'abord débarrassé des gros débris — feuilles mortes, terre accumulée, résidus divers. <strong>Le garde-corps et les vitrages attenants</strong> sont traités dans la foulée.</p>\n\n<h3>Traitement adapté au support</h3>\n<p>Sur béton brut, <strong>un produit désincrustant est appliqué</strong> puis brossé mécaniquement pour déloger les particules de pollution. Sur dalles ou carrelage, la pression est ajustée pour préserver les joints. Les plantes et le mobilier sont déplacés ou bâchés avant toute projection d'eau.</p>\n\n<h3>Rinçage contrôlé et protection voisinage</h3>\n<p>L'eau de rinçage est gérée pour éviter les coulures chez les voisins du dessous. <strong>Des protections sont posées en périphérie</strong> si nécessaire. Le séchage est accéléré par raclage, et des conseils d'entretien sont transmis pour espacer les prochaines interventions.</p>",
       specificChallenges: [
         "<strong>Noircissement accéléré</strong> par la pollution des axes N3 et A86 sur les balcons exposés côté rue.",
         "<strong>Béton brut poreux</strong> des barres années 60-70 nécessitant un traitement désincrustant adapté.",
@@ -232,7 +232,7 @@ const city: City = {
           question:
             "Quelle gestion de l'eau et quelles protections mettez-vous en place pour éviter coulures chez les voisins du dessous ?",
           answer:
-            "<p>Avant de commencer, nous installons des protections en périphérie du balcon — bâches ou raclettes de retenue. L'eau est dirigée vers l'évacuation existante ou récupérée. Si le balcon n'a pas de siphon, nous travaillons par zones avec un minimum d'eau et un raclage immédiat.</p>",
+            "<p>Avant de commencer, <strong>nous installons des protections en périphérie du balcon</strong> — bâches ou raclettes de retenue. L'eau est dirigée vers l'évacuation existante ou récupérée. Si le balcon n'a pas de siphon, nous travaillons par zones avec un minimum d'eau et un raclage immédiat.</p>",
         },
         {
           question:
@@ -244,7 +244,7 @@ const city: City = {
           question:
             "Pour un balcon au dernier étage d'une tour, quelles solutions d'accès proposez-vous pour intervenir en sécurité et rapidité ?",
           answer:
-            "<p>Le matériel est monté en plusieurs rotations si l'ascenseur est disponible, ou conditionné pour un portage escalier. L'intervention est planifiée pour limiter les allers-retours. Sur place, nous travaillons avec un équipement compact adapté aux espaces réduits et aux contraintes d'évacuation d'eau en hauteur.</p>",
+            "<p><strong><strong>Le matériel est monté en plusieurs rotations</strong></strong> si l'ascenseur est disponible, ou conditionné pour un portage escalier. L'intervention est planifiée pour limiter les allers-retours. Sur place, nous travaillons avec un équipement compact adapté aux espaces réduits et aux contraintes d'évacuation d'eau en hauteur.</p>",
         },
       ],
       ctaOverride: "",
@@ -262,7 +262,7 @@ const city: City = {
       uniqueIntro:
         "<p>Les traces blanchâtres et croûtes sèches sont visibles sur de nombreux balcons orientés vers le <strong>Parc de la Bergère</strong> et les alignements d'arbres qui bordent les avenues. Ces dépôts s'accumulent sur les garde-corps, le sol et parfois les vitrages, rendant l'espace inutilisable. L'odeur persiste, le linge ne peut plus sécher dehors, et la gêne vis-à-vis du voisinage s'installe.</p>\n<p class=\"mt-4\">Sur les <strong>corniches et rebords en béton des tours</strong>, les pigeons trouvent des perchoirs idéaux aux derniers étages. Les fientes attaquent progressivement les surfaces, provoquant des taches tenaces et une dégradation des peintures. Au-delà de l'aspect visuel, ces déjections contiennent des agents pathogènes qui justifient un traitement adapté plutôt qu'un simple rinçage.</p>\n<p class=\"mt-4\">Notre intervention structure chaque étape : diagnostic de l'ampleur des dépôts, protection de votre intérieur, collecte sécurisée, désinfection des supports et recommandations pour limiter le retour. Les zones à risque autour des marchés alimentaires et des cours intérieures nécessitent une attention particulière que nous intégrons dès la préparation du chantier.</p>",
       uniqueDeepDive:
-        '<h3>Sécurisation et confinement</h3>\n<p>Les fientes sèches libèrent des particules nocives lorsqu\'elles sont déplacées. Nous intervenons équipés de masques FFP2, gants, lunettes et combinaisons jetables. Le balcon est bâché pour éviter toute dispersion vers l\'intérieur du logement ou chez les voisins du dessous.</p>\n<p class="mt-4">L\'humidification préalable neutralise les poussières avant manipulation.</p>\n\n<h3>Collecte et traitement des supports</h3>\n<p>Les dépôts sont ramassés et conditionnés en sacs étanches. Le sol, les garde-corps, les vitrages et murs mitoyens sont ensuite nettoyés pour éliminer les résidus incrustés.</p>\n<p class="mt-4">Une désinfection virucide et bactéricide est appliquée sur l\'ensemble des surfaces, avec respect du temps de contact nécessaire à l\'élimination des agents pathogènes.</p>\n\n<h3>Rinçage et prévention</h3>\n<p>Un rinçage final prépare le balcon à une réutilisation après aération. Nous évacuons les déchets contaminés dans le respect des règles sanitaires.</p>\n<p class="mt-4">Si nécessaire, nous proposons la pose de pics anti-pigeons sur les rebords ou de filets de protection pour limiter les retours.</p>',
+        "<h3>Sécurisation et confinement</h3>\n<p>Les fientes sèches libèrent des particules nocives lorsqu'elles sont déplacées. Nous intervenons équipés de masques FFP2, gants, lunettes et combinaisons jetables. <strong>Le balcon est bâché</strong> pour éviter toute dispersion vers l'intérieur du logement ou chez les voisins du dessous.</p>\n<p class=\"mt-4\">L'humidification préalable neutralise les poussières avant manipulation.</p>\n\n<h3>Collecte et traitement des supports</h3>\n<p><strong>Les dépôts sont ramassés et conditionnés</strong> en sacs étanches. Le sol, les garde-corps, les vitrages et murs mitoyens sont ensuite nettoyés pour éliminer les résidus incrustés.</p>\n<p class=\"mt-4\">Une désinfection virucide et bactéricide est appliquée sur l'ensemble des surfaces, avec respect du temps de contact nécessaire à l'élimination des agents pathogènes.</p>\n\n<h3>Rinçage et prévention</h3>\n<p>Un rinçage final prépare le balcon à une réutilisation après aération. <strong>Nous évacuons les déchets contaminés</strong> dans le respect des règles sanitaires.</p>\n<p class=\"mt-4\">Si nécessaire, nous proposons la pose de pics anti-pigeons sur les rebords ou de filets de protection pour limiter les retours.</p>",
       specificChallenges: [
         "Perchoirs fréquents sur les corniches en béton des tours aux derniers étages.",
         "<strong>Accumulation rapide</strong> près des alignements d'arbres et du Parc de la Bergère.",
@@ -281,13 +281,13 @@ const city: City = {
           question:
             "Quel protocole EPI et quels produits utilisez-vous pour désinfecter rebords en béton attaqués par fientes de pigeons ?",
           answer:
-            "<p>Nos équipes portent masques FFP2, gants, lunettes et combinaisons jetables. Après humidification pour éviter l'envol de particules, nous appliquons un produit virucide et bactéricide homologué sur le béton. Le temps de contact est respecté avant rinçage pour garantir l'élimination des agents pathogènes.</p>",
+            "<p><strong>Nos équipes portent masques FFP2, gants, lunettes</strong> et combinaisons jetables. Après humidification pour éviter l'envol de particules, nous appliquons un produit virucide et bactéricide homologué sur le béton. Le temps de contact est respecté avant rinçage pour garantir l'élimination des agents pathogènes.</p>",
         },
         {
           question:
             "Après enlèvement des fientes sur une loggia, quelle désinfection obligatoire appliquez-vous pour rendre l'espace sain aux habitants ?",
           answer:
-            "<p>Une fois les dépôts collectés, nous traitons l'ensemble des surfaces avec un désinfectant à spectre large. Ce produit élimine bactéries et virus présents dans les résidus. Après le temps de contact requis, un rinçage et une aération permettent de réutiliser la loggia en toute sécurité.</p>",
+            "<p>Une fois les dépôts collectés, <strong>nous traitons l'ensemble des surfaces</strong> avec un désinfectant à spectre large. Ce produit élimine bactéries et virus présents dans les résidus. Après le temps de contact requis, un rinçage et une aération permettent de réutiliser la loggia en toute sécurité.</p>",
         },
         {
           question:
@@ -324,7 +324,7 @@ const city: City = {
           question:
             "Pour un canapé familial infesté d'acariens à Bobigny centre, quel résultat d'assainissement pouvez-vous garantir et en combien de temps ?",
           answer:
-            "<p>L'extraction par injection-aspiration retire la majorité des acariens, poussières et allergènes logés dans les fibres. Sur les canapés des logements proches du métro Pablo Picasso, nous constatons une amélioration nette de la qualité de l'air intérieur dès le séchage terminé, généralement sous 4 à 8 heures selon l'épaisseur du tissu.</p>",
+            "<p><strong>L'extraction par injection-aspiration retire la majorité</strong> des acariens, poussières et allergènes logés dans les fibres. Sur les canapés des logements proches du métro Pablo Picasso, nous constatons une amélioration nette de la qualité de l'air intérieur dès le séchage terminé, généralement sous 4 à 8 heures selon l'épaisseur du tissu.</p>",
         },
         {
           question:
@@ -342,7 +342,7 @@ const city: City = {
           question:
             "En secteur Pierre Semard, quelles consignes logistiques donnez-vous pour l'arrivée du technicien et du matériel volumineux ?",
           answer:
-            "<p>Nous demandons une place de stationnement à proximité immédiate ou l'autorisation de stationner brièvement devant l'entrée. Le matériel tient sur un chariot roulant. Si l'accès se fait par un jardin ou une allée étroite, prévenez-nous pour adapter l'organisation. Un créneau de 15 minutes suffit pour l'installation.</p>",
+            "<p>Nous demandons une place de stationnement à proximité immédiate ou l'autorisation de stationner brièvement devant l'entrée. <strong>Le matériel tient sur un chariot roulant</strong>. Si l'accès se fait par un jardin ou une allée étroite, prévenez-nous pour adapter l'organisation. Un créneau de 15 minutes suffit pour l'installation.</p>",
         },
       ],
       ctaOverride: "",
@@ -360,7 +360,7 @@ const city: City = {
       uniqueIntro:
         "<p>Après plusieurs semaines de travaux ou une succession de locataires, un appartement accumule des traces que le ménage courant ne suffit pas à éliminer. Poussière de plâtre incrustée dans les angles, résidus de colle sur les plinthes, sols ternis par les passages répétés : ces marques persistent et compliquent la remise en état. Dans les secteurs proches du <strong>Stade Henri Wallon</strong> et de la <strong>Cité Karl Marx</strong>, les rotations locatives fréquentes amplifient ce besoin de préparation soignée avant chaque nouvelle occupation.</p>\n<p class=\"mt-4\">Un logement correctement préparé facilite l'état des lieux et évite les litiges. Les biens mixtes de Bobigny — grands ensembles avec lino ou PVC, résidences récentes équipées de parquet flottant et carrelage — demandent des techniques adaptées à chaque revêtement. Le résultat : des surfaces assainies, des pièces d'eau détartrées, des vitres transparentes.</p>\n<p class=\"mt-4\">L'intervention s'organise selon un diagnostic préalable : nature du chantier, état général, délai de restitution. Chaque étape est planifiée pour respecter les contraintes des bailleurs sociaux et des agences qui gèrent une partie importante du parc locatif local.</p>",
       uniqueDeepDive:
-        "<h3>Un logement prêt à habiter</h3>\n<p>L'objectif est de restituer un bien propre, sans traces de chantier ni résidus d'occupation précédente. Sols nettoyés selon leur nature, vitres intérieures dégagées, sanitaires détartrés : chaque élément visible est traité pour permettre une remise des clés sans réserve.</p>\n\n<h3>Préparation et nettoyage général</h3>\n<p>Le diagnostic initial identifie les zones critiques : traces de peinture, joints encrassés, placards poussiéreux. L'intervention débute par le dépoussiérage complet des plafonds aux plinthes, suivi de l'aspiration et du lavage des sols adaptés au revêtement. Les pièces d'eau reçoivent un traitement spécifique : faïence, robinetterie, évacuations.</p>\n\n<h3>Finitions et contrôle</h3>\n<p>Les détails font la différence lors de l'état des lieux : interrupteurs, poignées, radiateurs, intérieurs de placards. Un contrôle final vérifie chaque point avant aération du logement. Le compte-rendu d'intervention peut être transmis au donneur d'ordre si nécessaire.</p>",
+        "<h3>Un logement prêt à habiter</h3>\n<p>L'objectif est de restituer un bien propre, sans traces de chantier ni résidus d'occupation précédente. Sols nettoyés selon leur nature, vitres intérieures dégagées, sanitaires détartrés : <strong>chaque élément visible est traité</strong> pour permettre une remise des clés sans réserve.</p>\n\n<h3>Préparation et nettoyage général</h3>\n<p>Le diagnostic initial identifie les zones critiques : traces de peinture, joints encrassés, placards poussiéreux. <strong>L'intervention débute par le dépoussiérage complet</strong> des plafonds aux plinthes, suivi de l'aspiration et du lavage des sols adaptés au revêtement. Les pièces d'eau reçoivent un traitement spécifique : faïence, robinetterie, évacuations.</p>\n\n<h3>Finitions et contrôle</h3>\n<p>Les détails font la différence lors de l'état des lieux : interrupteurs, poignées, radiateurs, intérieurs de placards. <strong>Un contrôle final vérifie chaque point</strong> avant aération du logement. Le compte-rendu d'intervention peut être transmis au donneur d'ordre si nécessaire.</p>",
       specificChallenges: [
         "<strong>Résidus de chantier</strong> fréquents dans les programmes Cœur de Ville en cours de livraison.",
         "<strong>Sols mixtes</strong> (lino, carrelage, parquet) nécessitant des techniques de lavage différenciées.",
@@ -373,7 +373,7 @@ const city: City = {
           question:
             "Pour un nettoyage fin de chantier dans le nouveau Cœur de Ville, quels protocoles et quel délai garantissez-vous avant remise des clés ?",
           answer:
-            "<p>Le nettoyage fin de chantier inclut l'élimination des poussières de plâtre, des traces de peinture et des résidus de colle absents d'un ménage classique. Dans les programmes neufs livrés autour de Cœur de Ville, ces dépôts sont systématiques et demandent un protocole renforcé avant la remise des clés.</p>",
+            "<p>Le nettoyage fin de chantier inclut l'élimination des poussières de plâtre, des traces de peinture et des résidus de colle absents d'un ménage classique. Dans les programmes neufs livrés autour de Cœur de Ville, <strong>ces dépôts sont systématiques</strong> et demandent un protocole renforcé avant la remise des clés.</p>",
         },
         {
           question:
@@ -385,7 +385,7 @@ const city: City = {
           question:
             "Comment établissez-vous un devis pour un appartement T3 avec sols mixtes (lino et parquet) dans une résidence réhabilitée ?",
           answer:
-            "<p>Le devis tient compte de la surface totale, du nombre de pièces d'eau et des types de revêtements présents. Un T3 combinant lino dans les chambres et carrelage en cuisine nécessite des produits et temps de séchage différents, intégrés dans l'estimation.</p>",
+            "<p><strong>Le devis tient compte de la surface totale</strong>, du nombre de pièces d'eau et des types de revêtements présents. Un T3 combinant lino dans les chambres et carrelage en cuisine nécessite des produits et temps de séchage différents, intégrés dans l'estimation.</p>",
         },
         {
           question:

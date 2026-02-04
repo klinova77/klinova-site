@@ -118,7 +118,7 @@ const city: City = {
         "<p>Dans la zone d'activités La Cerisaie, les dalles textiles des bureaux accumulent rapidement poussières fines et traces de passage. Le trafic quotidien des collaborateurs, combiné aux particules transportées depuis l'extérieur, ternit les fibres en quelques semaines. Les couloirs et espaces d'accueil perdent leur aspect professionnel, ce qui peut affecter l'image perçue par les visiteurs et clients.</p>\n\n<p class=\"mt-4\">Les petits collectifs du centre-ville présentent des halls moquettés datant des années 70-80. Ces revêtements velours ras, souvent posés sur des surfaces réduites, concentrent <strong>l'encrassement aux zones de passage</strong> : entrées, paliers d'ascenseur, bas d'escaliers. Un entretien adapté redonne de la tenue aux fibres et prolonge la durée de vie du revêtement sans intervention lourde.</p>\n\n<p class=\"mt-4\">La proximité de l'A6 et du MIN Rungis génère une poussière noire grasse qui se dépose jusque dans les espaces intérieurs. Cette salissure spécifique nécessite un traitement par injection-extraction capable de déloger les particules en profondeur, pas seulement en surface.</p>",
       // HTML autorisé (<h3> + <p>)
       uniqueDeepDive:
-        "<h3>1. Zones de circulation intense</h3>\n<p>Les entrées, couloirs et abords d'ascenseurs reçoivent un diagnostic préalable : type de fibre, nature des dépôts, état général. Une aspiration soignée retire les particules libres avant le traitement humide.</p>\n<p class=\"mt-4\">Les protections sont posées sur les plinthes et bas de murs pour éviter tout transfert de produit.</p>\n\n<h3>2. Surfaces de travail et accueil</h3>\n<p>L'injection-extraction cible les dalles textiles des open spaces et salles de réunion. Plusieurs passes sont effectuées sur les zones de trafic pour déloger les salissures incrustées.</p>\n<p class=\"mt-4\">Le détachage ponctuel traite les marques de café, tanin ou traces grasses identifiées lors du diagnostic.</p>\n\n<h3>3. Gestion du séchage</h3>\n<p>L'extraction maximale réduit le taux d'humidité résiduelle. Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation disponible, généralement entre 4 et 8 heures.</p>\n<p class=\"mt-4\">Des consignes de non-piétinement sont transmises pour garantir un résultat homogène sur l'ensemble de la surface traitée.</p>",
+        "<h3>1. Zones de circulation intense</h3>\n<p>Les entrées, couloirs et abords d'ascenseurs reçoivent un diagnostic préalable : type de fibre, nature des dépôts, état général. Une aspiration soignée retire les particules libres avant le traitement humide.</p>\n<p class=\"mt-4\">Les protections sont posées sur les <strong>plinthes et bas de murs</strong> pour éviter tout transfert de produit.</p>\n\n<h3>2. Surfaces de travail et accueil</h3>\n<p>L'injection-extraction cible les dalles textiles des open spaces et salles de réunion. Plusieurs passes sont effectuées sur les zones de trafic pour déloger les salissures incrustées.</p>\n<p class=\"mt-4\">Le détachage ponctuel traite les <strong>marques de café, tanin</strong> ou traces grasses identifiées lors du diagnostic.</p>\n\n<h3>3. Gestion du séchage</h3>\n<p>L'extraction maximale réduit le taux d'humidité résiduelle. Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation disponible, généralement entre 4 et 8 heures.</p>\n<p class=\"mt-4\">Des consignes de <strong>non-piétinement</strong> sont transmises pour garantir un résultat homogène sur l'ensemble de la surface traitée.</p>",
       // texte brut uniquement (retirer balises <strong> si présentes)
       specificChallenges: [
         "<strong>Poussière noire grasse</strong> liée au trafic routier A6 et aux flux camions du MIN Rungis.",
@@ -139,13 +139,13 @@ const city: City = {
           question:
             "Taches anciennes incrustées dans la moquette des halls copropriétés : quelles solutions efficaces sur place ?",
           answer:
-            "<p>Les dépôts anciens nécessitent un pré-traitement ciblé avant l'injection-extraction. Un détachant adapté au type de salissure est appliqué, puis l'extraction en profondeur déloge les résidus. Le résultat dépend de l'ancienneté et de la nature de la tache, mais une amélioration visible est obtenue dans la majorité des cas.</p>",
+            "<p>Les dépôts anciens nécessitent un <strong>pré-traitement ciblé</strong> avant l'injection-extraction. Un détachant adapté au type de salissure est appliqué, puis l'extraction en profondeur déloge les résidus. Le résultat dépend de l'ancienneté et de la nature de la tache, mais une amélioration visible est obtenue dans la majorité des cas.</p>",
         },
         {
           question:
             "Pour les bureaux de la Cerisaie, quelle méthode (vapeur vs shampouinage) garantit le meilleur résultat ?",
           answer:
-            "<p>L'injection-extraction reste la méthode de référence pour les dalles textiles à fort passage. Elle décolle les salissures en profondeur et les aspire immédiatement. La vapeur convient davantage à un entretien léger ou à des fibres fragiles. Pour un décrassage complet, l'extraction donne un résultat plus durable.</p>",
+            "<p>L'injection-extraction reste la méthode de référence pour les <strong>dalles textiles à fort passage</strong>. Elle décolle les salissures en profondeur et les aspire immédiatement. La vapeur convient davantage à un entretien léger ou à des fibres fragiles. Pour un décrassage complet, l'extraction donne un résultat plus durable.</p>",
         },
         {
           question:
@@ -169,10 +169,10 @@ const city: City = {
       uniqueIntro:
         "<p>Comment préserver un sol de parking propre quand les véhicules circulent quotidiennement et que les traces d'huile s'accumulent semaine après semaine ? Dans le <strong>quartier Les Sorbiers</strong>, les parkings souterrains des copropriétés subissent un encrassement régulier lié au trafic résidentiel et aux retours de véhicules exposés aux axes routiers environnants.</p>\n\n<p class=\"mt-4\">Un sol de parking décrassé régulièrement limite les remontées de poussière dans les cages d'escalier, réduit les odeurs de carburant et préserve l'aspect général des parties communes. Sur les <strong>revêtements béton brut</strong> fréquents dans les sous-sols anciens, les dépôts graisseux pénètrent rapidement si aucun entretien n'est programmé. Les rampes d'accès et places étroites concentrent souvent les salissures les plus tenaces.</p>\n\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic pour définir les créneaux adaptés, le balisage nécessaire et la rotation éventuelle des véhicules. Un compte-rendu avec photos permet de suivre l'évolution de l'état du sol entre chaque passage.</p>",
       uniqueDeepDive:
-        "<h3>1. Sol décrassé et dégraissé sur toute la surface</h3>\n<p>L'objectif est d'obtenir un revêtement débarrassé des traces d'hydrocarbures, des poussières accumulées et des dépôts noirâtres. Le passage mécanisé à l'autolaveuse combiné à un dégraissant adapté au béton permet de traiter l'ensemble de la dalle en une seule intervention.</p>\n\n<h3>2. Diagnostic préalable et préparation du chantier</h3>\n<p>Avant toute action, nous identifions le type de revêtement, l'état des évacuations et le niveau d'encrassement. Un balayage préalable élimine les débris grossiers. Le balisage sécurise les zones de travail et informe les usagers des restrictions temporaires.</p>\n\n<h3>3. Traitement des zones critiques et gestion des eaux</h3>\n<p>Les rampes d'accès, angles morts et pieds de murs reçoivent un traitement ciblé à la haute pression si nécessaire. Les rigoles et regards sont vérifiés pour garantir une évacuation correcte. Les eaux de lavage sont dirigées vers les points d'écoulement prévus, sans rejet sauvage.</p>",
+        "<h3>1. Sol décrassé et dégraissé sur toute la surface</h3>\n<p>L'objectif est d'obtenir un revêtement débarrassé des traces d'hydrocarbures, des poussières accumulées et des dépôts noirâtres. Le passage mécanisé à l'autolaveuse combiné à un dégraissant adapté au béton permet de traiter l'ensemble de la dalle en une seule intervention.</p>\n\n<h3>2. Diagnostic préalable et préparation du chantier</h3>\n<p>Avant toute action, nous identifions le <strong>type de revêtement</strong>, l'état des évacuations et le niveau d'encrassement. Un balayage préalable élimine les débris grossiers. Le balisage sécurise les zones de travail et informe les usagers des restrictions temporaires.</p>\n\n<h3>3. Traitement des zones critiques et gestion des eaux</h3>\n<p>Les <strong>rampes d'accès, angles morts</strong> et pieds de murs reçoivent un traitement ciblé à la haute pression si nécessaire. Les rigoles et regards sont vérifiés pour garantir une évacuation correcte. Les eaux de lavage sont dirigées vers les points d'écoulement prévus, sans rejet sauvage.</p>",
       specificChallenges: [
         "Parkings souterrains aux Sorbiers avec places étroites et rampes inclinées.",
-        "Traces d'huile fréquentes liées aux véhicules exposés aux flux du MIN Rungis.",
+        "<strong>Traces d'huile fréquentes</strong> liées aux véhicules exposés aux flux du MIN Rungis.",
         "Revêtements béton brut anciens nécessitant un dégraissage adapté.",
         "Coordination avec les résidents pour la rotation des véhicules pendant l'intervention.",
         "Évacuations parfois encombrées dans les sous-sols des années 70-80.",
@@ -182,7 +182,7 @@ const city: City = {
           question:
             "Comment enlever des taches d'huile anciennes sur le béton d'un parking proche du MIN Rungis ?",
           answer:
-            "<p>Les dépôts graisseux liés au trafic camion s'incrustent dans le béton poreux. Nous appliquons un dégraissant alcalin avant le passage de l'autolaveuse. Sur les taches anciennes, un temps de pose prolongé et un brossage mécanique permettent de décoller les résidus sans abîmer le revêtement.</p>",
+            "<p>Les dépôts graisseux liés au trafic camion s'incrustent dans le <strong>béton poreux</strong>. Nous appliquons un dégraissant alcalin avant le passage de l'autolaveuse. Sur les taches anciennes, un temps de pose prolongé et un brossage mécanique permettent de décoller les résidus sans abîmer le revêtement.</p>",
         },
         {
           question:
@@ -194,7 +194,7 @@ const city: City = {
           question:
             "Quelles méthodes diffèrent entre un parking souterrain et un parking aérien dans la zone Cerisaie ?",
           answer:
-            "<p>En souterrain, la ventilation limitée impose une gestion rigoureuse des produits et des eaux de lavage. En aérien, l'enrobé supporte mieux la haute pression mais accumule davantage de poussières et débris végétaux. Le diagnostic initial détermine le matériel et les produits adaptés à chaque configuration.</p>",
+            "<p>En souterrain, la <strong>ventilation limitée</strong> impose une gestion rigoureuse des produits et des eaux de lavage. En aérien, l'enrobé supporte mieux la haute pression mais accumule davantage de poussières et débris végétaux. Le diagnostic initial détermine le matériel et les produits adaptés à chaque configuration.</p>",
         },
         {
           question:
@@ -216,13 +216,13 @@ const city: City = {
         "Organisation pensée pour le voisinage : bâchage anti-coulures, horaires adaptés, remise en place du mobilier avant départ.",
       ],
       uniqueIntro:
-        "<p>Le long de l'avenue de Stalingrad et des axes proches de la N7, les balcons accumulent rapidement un voile grisâtre. Les particules de combustion se déposent sur le sol, s'incrustent dans les joints et ternissent les garde-corps. Ce dépôt noirâtre revient semaine après semaine, rendant l'espace peu engageant malgré les tentatives de rinçage au jet.</p>\n\n<p class=\"mt-4\">Sur les loggias vitrées des grands ensembles comme sur les balcons béton des résidences récentes, cette couche grasse finit par adhérer au support. Le carrelage perd son éclat, les dalles sur plots se tachent en profondeur. Sans intervention adaptée, le balcon reste un espace qu'on évite plutôt qu'un prolongement du logement.</p>\n\n<p class=\"mt-4\">Une remise en état structurée permet de retrouver une surface propre et agréable. Le vis-à-vis important dans ces secteurs denses rend d'autant plus appréciable un extérieur soigné, où l'on peut installer table et chaises sans hésitation.</p>",
+        "<p>Le long de l'avenue de Stalingrad et des axes proches de la N7, les balcons accumulent rapidement un voile grisâtre. Les particules de combustion se déposent sur le sol, s'incrustent dans les joints et ternissent les garde-corps. Ce dépôt noirâtre revient semaine après semaine, rendant l'espace peu engageant malgré les tentatives de rinçage au jet.</p>\n\n<p class=\"mt-4\">Sur les loggias vitrées des grands ensembles comme sur les balcons béton des résidences récentes, cette couche grasse finit par adhérer au support. Le carrelage perd son éclat, les dalles sur plots se tachent en profondeur. Sans intervention adaptée, le balcon reste un espace qu'on évite plutôt qu'un prolongement du logement.</p>\n\n<p class=\"mt-4\">Une remise en état structurée permet de retrouver une <strong>surface propre et agréable</strong>. Le vis-à-vis important dans ces secteurs denses rend d'autant plus appréciable un extérieur soigné, où l'on peut installer table et chaises sans hésitation.</p>",
       uniqueDeepDive:
-        "<h3>1. Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. Un premier passage enlève feuilles mortes, terre accumulée et débris divers qui encombrent les angles et les seuils.</p>\n\n<h3>2. Traitement du sol et des parois</h3>\n<p>Un produit adapté au support est appliqué : formule dégraissante pour le béton noirci, solution douce pour les dalles sur plots. Le brossage manuel ou mécanique décolle les salissures incrustées. Le garde-corps et les murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à pression contrôlée, en orientant le flux pour éviter les coulures chez les voisins du dessous.</p>\n\n<h3>3. Finalisation et conseils</h3>\n<p>Les surfaces sont laissées à sécher naturellement. Avant de partir, nous repositionnons le mobilier et partageons quelques conseils d'entretien courant pour espacer les prochaines interventions.</p>",
+        "<h3>1. Préparation et protection</h3>\n<p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. Un premier passage enlève feuilles mortes, terre accumulée et débris divers qui encombrent les angles et les seuils.</p>\n\n<h3>2. Traitement du sol et des parois</h3>\n<p>Un produit adapté au support est appliqué : formule dégraissante pour le béton noirci, solution douce pour les dalles sur plots. Le brossage manuel ou mécanique décolle les salissures incrustées. Le garde-corps et les murs mitoyens accessibles sont traités dans la foulée.</p>\n<p class=\"mt-4\">Le rinçage s'effectue à <strong>pression contrôlée</strong>, en orientant le flux pour éviter les coulures chez les voisins du dessous.</p>\n\n<h3>3. Finalisation et conseils</h3>\n<p>Les surfaces sont laissées à sécher naturellement. Avant de partir, nous repositionnons le mobilier et partageons quelques conseils d'entretien courant pour espacer les prochaines interventions.</p>",
       specificChallenges: [
-        "Dépôt noir gras sur les balcons exposés aux axes routiers, difficile à déloger au simple jet.",
+        "<strong>Dépôt noir gras</strong> sur les balcons exposés aux axes routiers, difficile à déloger au simple jet.",
         "Loggias fermées nécessitant une évacuation d'eau maîtrisée pour protéger les voisins.",
-        "Dalles sur plots en résidences récentes : pression adaptée pour ne pas déplacer les éléments.",
+        "Dalles sur plots en résidences récentes : <strong>pression adaptée</strong> pour ne pas déplacer les éléments.",
         "Garde-corps anciens et joints fragiles demandant un traitement sans haute pression.",
         "Vis-à-vis dense : intervention discrète et remise en état rapide de l'espace.",
       ],
@@ -237,7 +237,7 @@ const city: City = {
           question:
             "Sur les loggias fermées, comment gérez-vous l'évacuation d'eau sans inonder les voisins ?",
           answer:
-            "<p>L'eau de rinçage est orientée vers l'évacuation existante ou récupérée au fur et à mesure. Nous utilisons des quantités limitées et contrôlons le flux pour qu'aucune projection ne déborde sur les balcons inférieurs. Cette précaution est systématique dans les immeubles collectifs.</p>",
+            "<p>L'eau de rinçage est orientée vers <strong>l'évacuation existante</strong> ou récupérée au fur et à mesure. Nous utilisons des quantités limitées et contrôlons le flux pour qu'aucune projection ne déborde sur les balcons inférieurs. Cette précaution est systématique dans les immeubles collectifs.</p>",
         },
         {
           question:
@@ -249,7 +249,7 @@ const city: City = {
           question:
             "Peut-on nettoyer un balcon ancien sans haute pression pour préserver joints et garde-corps ?",
           answer:
-            "<p>Oui, nous intervenons régulièrement sans haute pression sur les balcons fragiles. Le brossage manuel associé à un produit ciblé suffit à décoller les salissures. Le rinçage s'effectue à basse pression ou au jet simple, en protégeant les éléments sensibles comme les garde-corps en fer forgé.</p>",
+            "<p>Oui, nous intervenons régulièrement sans haute pression sur les <strong>balcons fragiles</strong>. Le brossage manuel associé à un produit ciblé suffit à décoller les salissures. Le rinçage s'effectue à basse pression ou au jet simple, en protégeant les éléments sensibles comme les garde-corps en fer forgé.</p>",
         },
       ],
       ctaOverride: "",

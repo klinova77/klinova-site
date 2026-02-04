@@ -128,13 +128,13 @@ const city: City = {
           question:
             "Comment traiter les taches anciennes incrustées sur les moquettes des couloirs du Parc d'Affaires Paris Nord 2 ?",
           answer:
-            "<p>Un pré-détachage localisé précède le passage en injection-extraction. Nous appliquons un produit adapté à la nature de la tache, puis laissons agir avant d'extraire. Les résidus de tanin ou de graisse s'atténuent nettement, même sur des salissures installées depuis plusieurs mois.</p>",
+            "<p><strong>Un pré-détachage localisé</strong> précède le passage en injection-extraction. Nous appliquons un produit adapté à la nature de la tache, puis laissons agir avant d'extraire. Les résidus de tanin ou de graisse s'atténuent nettement, même sur des salissures installées depuis plusieurs mois.</p>",
         },
         {
           question:
             "Après entretien d'une moquette en salle de conférence, quel délai prévoir avant de réutiliser l'espace ?",
           answer:
-            "<p>Le séchage varie de quatre à huit heures selon l'épaisseur du textile et la ventilation du local. Nous conseillons une intervention en fin de journée pour permettre un séchage nocturne. La salle peut généralement être utilisée dès le lendemain matin sans risque de marques.</p>",
+            "<p><strong>Le séchage varie de quatre à huit heures</strong> selon l'épaisseur du textile et la ventilation du local. Nous conseillons une intervention en fin de journée pour permettre un séchage nocturne. La salle peut généralement être utilisée dès le lendemain matin sans risque de marques.</p>",
         },
       ],
       ctaOverride: "",
@@ -150,12 +150,12 @@ const city: City = {
         "Planification en lien direct avec le syndic, balisage adapté et créneaux choisis pour limiter la gêne aux résidents.",
       ],
       uniqueIntro:
-        "<p>Sur les axes proches du Centre Hospitalier Robert Ballanger et le long de l'Avenue des Nations, les parkings souterrains et aériens accumulent rapidement poussières noires, traces de pneus et résidus gras. Le trafic quotidien — véhicules de livraison, ambulances, salariés — dépose une couche tenace sur les revêtements béton ou enrobé. Sans intervention régulière, les rampes deviennent glissantes et les rigoles se bouchent.</p>\n<p class=\"mt-4\">Un lavage mécanisé redonne aux sols leur aspect d'origine et améliore la sécurité des usagers. Les copropriétés récentes de la ZAC de la Pépinière comme les résidences du Parc de la Noue bénéficient d'un parking propre, sans odeurs stagnantes ni taches visibles. Les gestionnaires reçoivent un compte-rendu précis pour suivre l'état du patrimoine.</p>\n<p class=\"mt-4\">L'intervention s'organise en amont avec le syndic ou le responsable technique : balisage, rotation des véhicules si nécessaire, créneaux adaptés aux contraintes de la résidence ou du site tertiaire. Les eaux de lavage sont récupérées et évacuées conformément aux règles en vigueur.</p>",
+        "<p>Sur les axes proches du Centre Hospitalier Robert Ballanger et le long de l'Avenue des Nations, les parkings souterrains et aériens accumulent rapidement <strong>poussières noires, traces de pneus et résidus gras</strong>. Le trafic quotidien — véhicules de livraison, ambulances, salariés — dépose une couche tenace sur les revêtements béton ou enrobé. Sans intervention régulière, les rampes deviennent glissantes et les rigoles se bouchent.</p>\n<p class=\"mt-4\">Un lavage mécanisé redonne aux sols leur aspect d'origine et améliore la sécurité des usagers. Les copropriétés récentes de la ZAC de la Pépinière comme les résidences du Parc de la Noue bénéficient d'un parking propre, sans odeurs stagnantes ni taches visibles. Les gestionnaires reçoivent un compte-rendu précis pour suivre l'état du patrimoine.</p>\n<p class=\"mt-4\">L'intervention s'organise en amont avec le syndic ou le responsable technique : balisage, rotation des véhicules si nécessaire, créneaux adaptés aux contraintes de la résidence ou du site tertiaire. Les eaux de lavage sont récupérées et évacuées conformément aux règles en vigueur.</p>",
       uniqueDeepDive:
-        "<h3>Sol dégraissé et rampes sécurisées</h3>\n<p>Le résultat visé : un revêtement débarrassé des traces d'huile, des dépôts noirs et des résidus de pneus. Les rampes retrouvent leur adhérence, les rigoles leur capacité d'écoulement.</p>\n<p class=\"mt-4\">Pour y parvenir, l'équipe commence par un balayage mécanique qui retire graviers et poussières. Un dégraissant adapté au support — béton brut, résine ou enrobé — est appliqué sur les zones critiques avant le passage de l'autolaveuse.</p>\n\n<h3>Gestion des eaux et respect des évacuations</h3>\n<p>Les eaux chargées sont aspirées au fur et à mesure. Aucun rejet sauvage : le liquide récupéré est dirigé vers les regards prévus à cet effet ou évacué en fin de chantier.</p>\n\n<h3>Coordination et remise en service</h3>\n<p>Le balisage sécurise chaque zone en cours de lavage. Si le parking reste partiellement accessible, la rotation des véhicules est planifiée avec le gestionnaire. Un dépoussiérage des blocs lumineux peut compléter l'intervention sur demande.</p>",
+        "<h3>Sol dégraissé et rampes sécurisées</h3>\n<p>Le résultat visé : un revêtement débarrassé <strong>des traces d'huile, des dépôts noirs</strong> et des résidus de pneus. Les rampes retrouvent leur adhérence, les rigoles leur capacité d'écoulement.</p>\n<p class=\"mt-4\">Pour y parvenir, l'équipe commence par un balayage mécanique qui retire graviers et poussières. Un dégraissant adapté au support — béton brut, résine ou enrobé — est appliqué sur les zones critiques avant le passage de l'autolaveuse.</p>\n\n<h3>Gestion des eaux et respect des évacuations</h3>\n<p>Les eaux chargées sont aspirées au fur et à mesure. Aucun rejet sauvage : le liquide récupéré est dirigé vers les regards prévus à cet effet ou évacué en fin de chantier.</p>\n\n<h3>Coordination et remise en service</h3>\n<p>Le balisage sécurise chaque zone en cours de lavage. Si le parking reste partiellement accessible, la rotation des véhicules est planifiée avec le gestionnaire. Un dépoussiérage des blocs lumineux peut compléter l'intervention sur demande.</p>",
       specificChallenges: [
-        "Dépôts de suies liés au trafic A104 sur les parkings aériens exposés.",
-        "Taches d'huile récurrentes dans les zones logistiques proches de Paris Nord 2.",
+        "<strong>Dépôts de suies</strong> liés au trafic A104 sur les parkings aériens exposés.",
+        "<strong>Taches d'huile récurrentes</strong> dans les zones logistiques proches de Paris Nord 2.",
         "Rampes inclinées nécessitant un traitement antidérapant après lavage.",
         "Coordination accès indispensable les jours de salon au Parc des Expositions.",
         "Rigoles souvent obstruées par les résidus de pneus et graviers.",
@@ -165,13 +165,13 @@ const city: City = {
           question:
             "Comment traitez-vous les taches d'huile anciennes sur le béton des parkings proches des zones logistiques de Villepinte ?",
           answer:
-            "<p>Un dégraissant alcalin est appliqué sur les zones imprégnées, puis laissé agir avant le passage de l'autolaveuse. Les taches anciennes nécessitent parfois deux passes successives. Le résultat dépend de l'ancienneté et de la porosité du support, mais l'aspect général s'améliore nettement.</p>",
+            "<p><strong>Un dégraissant alcalin est appliqué</strong> sur les zones imprégnées, puis laissé agir avant le passage de l'autolaveuse. Les taches anciennes nécessitent parfois deux passes successives. Le résultat dépend de l'ancienneté et de la porosité du support, mais l'aspect général s'améliore nettement.</p>",
         },
         {
           question:
             "Quel dispositif utilisez-vous pour récupérer les eaux de lavage dans un parking souterrain d'établissement de santé ?",
           answer:
-            "<p>L'autolaveuse aspire les eaux chargées au fur et à mesure du passage. Sur les sites sensibles comme les abords du Centre Hospitalier Robert Ballanger, nous veillons à ne laisser aucune flaque résiduelle et à diriger les effluents vers les regards prévus, sans rejet dans les espaces communs.</p>",
+            "<p><strong>L'autolaveuse aspire les eaux chargées</strong> au fur et à mesure du passage. Sur les sites sensibles comme les abords du Centre Hospitalier Robert Ballanger, nous veillons à ne laisser aucune flaque résiduelle et à diriger les effluents vers les regards prévus, sans rejet dans les espaces communs.</p>",
         },
         {
           question:

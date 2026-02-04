@@ -17,7 +17,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   hubIntro:
-    "<p>Au pied de l'Aqueduc de la Vanne et du Campus Cachan, Klinova accompagne syndics, gestionnaires et particuliers dans l'entretien régulier de leurs locaux. Notre implantation locale permet une réactivité adaptée aux rythmes de la commune.</p>\n<p class=\"mt-4\">Nous assurons la propreté des halls, le lavage des parkings, l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un suivi précis, avec reporting disponible pour les gestionnaires qui le souhaitent.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des contraintes d'accès sur le Coteau et des horaires sensibles près de la gare RER pour limiter la gêne.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés selon les surfaces, des studios étudiants aux parkings de résidences collectives.</li>\n  <li><strong>Interlocuteur dédié :</strong> Un référent unique pour centraliser les demandes et assurer le suivi des interventions programmées ou ponctuelles.</li>\n</ul>",
+    "<p>Au pied de l'Aqueduc de la Vanne et du Campus Cachan, Klinova accompagne syndics, gestionnaires et particuliers dans l'entretien régulier de leurs locaux. Notre implantation locale permet une réactivité adaptée aux rythmes de la commune.</p>\n<p class=\"mt-4\">Nous assurons la propreté des halls, le lavage des parkings, l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un <strong>suivi précis</strong>, avec reporting disponible pour les gestionnaires qui le souhaitent.</p>\n<ul>\n  <li><strong>Coordination terrain :</strong> Prise en compte des contraintes d'accès sur le Coteau et des horaires sensibles près de la gare RER pour limiter la gêne.</li>\n  <li><strong>Matériel adapté :</strong> Équipements dimensionnés selon les surfaces, des studios étudiants aux parkings de résidences collectives.</li>\n  <li><strong>Interlocuteur dédié :</strong> Un référent unique pour centraliser les demandes et assurer le suivi des interventions programmées ou ponctuelles.</li>\n</ul>",
 
   citySpecificChallenges: [
     "<strong>Poussière de chantier</strong> liée aux travaux du Grand Paris Express autour de la gare.",
@@ -103,7 +103,7 @@ const city: City = {
       uniqueIntro:
         "<p>Dans les locaux du <strong>Campus Cachan</strong>, les salles de cours et bureaux administratifs accumulent rapidement poussières et traces de passage. Les dalles textiles supportent un trafic quotidien intense, et les fibres retiennent particules fines et résidus de semelles. Sans entretien régulier, le grisaillement s'installe et les taches de café ou d'encre deviennent difficiles à éliminer.</p>\n<p class=\"mt-4\">Un détachage ciblé redonne aux sols textiles leur aspect d'origine. Dans les <strong>immeubles anciens du centre-ville</strong> ou les petits collectifs avec halls ouverts, les moquettes retrouvent une tenue visuelle correcte. Les occupants constatent la différence dès le séchage terminé : couleurs ravivées, odeurs de renfermé dissipées, confort de marche restauré.</p>\n<p class=\"mt-4\">La pollution provenant de l'ex-N20 et le flux d'étudiants génèrent un encrassement récurrent. Une intervention structurée permet d'adapter le traitement selon l'épaisseur des fibres, la nature des taches et les contraintes d'accès propres à chaque site.</p>",
       uniqueDeepDive:
-        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection du produit nettoyant. Les passes d'extraction se multiplient sur ces surfaces très sollicitées.</p>\n\n<h3>Surfaces de travail et espaces cloisonnés</h3>\n<p>Bureaux, salles de réunion et open spaces reçoivent un traitement adapté à leur usage. Les plinthes et bas de murs sont protégés. Le détachage cible les auréoles de café, traces de stylo ou résidus alimentaires selon leur ancienneté.</p>\n\n<h3>Finitions et gestion du séchage</h3>\n<p>L'extraction maximale limite le temps d'humidité résiduelle. Selon l'épaisseur de la moquette et la ventilation du local, le séchage complet intervient sous 4 à 8 heures. Une consigne de non-piétinement est transmise pour préserver le résultat obtenu.</p>",
+        "<h3>Zones de circulation intense</h3>\n<p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection du produit nettoyant. Les passes d'extraction se multiplient sur ces surfaces très sollicitées.</p>\n\n<h3>Surfaces de travail et espaces cloisonnés</h3>\n<p>Bureaux, salles de réunion et open spaces reçoivent un traitement adapté à leur usage. Les plinthes et bas de murs sont protégés. Le détachage cible les auréoles de café, traces de stylo ou résidus alimentaires selon leur ancienneté.</p>\n\n<h3>Finitions et gestion du séchage</h3>\n<p><strong>L'extraction maximale</strong> limite le temps d'humidité résiduelle. Selon l'épaisseur de la moquette et la ventilation du local, le séchage complet intervient sous 4 à 8 heures. Une consigne de non-piétinement est transmise pour préserver le résultat obtenu.</p>",
       specificChallenges: [
         "<strong>Dalles textiles des salles de cours</strong> : trafic étudiant quotidien et taches répétées.",
         "<strong>Moquettes velours des pavillons du Coteau</strong> : fibres délicates nécessitant une pression contrôlée.",
@@ -116,13 +116,13 @@ const city: City = {
           question:
             "Dans les immeubles du quartier Le Coteau avec escaliers étroits, comment acheminez-vous le matériel de nettoyage ?",
           answer:
-            "<p>Le matériel se démonte en éléments transportables à la main. Les flexibles et la cuve passent séparément dans les cages d'escalier pentues. L'intervention reste possible même sans ascenseur, avec un temps de mise en place légèrement allongé.</p>",
+            "<p>Le matériel se démonte en <strong>éléments transportables à la main</strong>. Les flexibles et la cuve passent séparément dans les cages d'escalier pentues. L'intervention reste possible même sans ascenseur, avec un temps de mise en place légèrement allongé.</p>",
         },
         {
           question:
             "Pour des taches anciennes sur les moquettes des salles du Campus Cachan, quel résultat peut-on attendre ?",
           answer:
-            "<p>Les taches incrustées depuis plusieurs mois nécessitent un pré-traitement ciblé avant extraction. Le résultat dépend de la nature de la salissure et du type de fibre. Les traces de café ou de tanin s'atténuent nettement, les auréoles grasses demandent parfois une seconde passe.</p>",
+            "<p>Les taches incrustées depuis plusieurs mois nécessitent un <strong>pré-traitement ciblé</strong> avant extraction. Le résultat dépend de la nature de la salissure et du type de fibre. Les traces de café ou de tanin s'atténuent nettement, les auréoles grasses demandent parfois une seconde passe.</p>",
         },
         {
           question:
@@ -149,7 +149,7 @@ const city: City = {
         "Planification avec le syndic, balisage sécurisé et rotation véhicules par zone pour maintenir l'accès aux résidents.",
       ],
       uniqueIntro:
-        "<p>Les traces noires s'accumulent sur les dalles béton, les coulures d'huile marquent les emplacements, et la poussière forme un voile grisâtre sur l'ensemble du niveau. Dans le quartier La Plaine, les parkings aériens comme les sous-sols de copropriété subissent un encrassement progressif lié au trafic quotidien et aux particules fines du chantier du Grand Paris Express.</p>\n<p class=\"mt-4\">Un sol de parking propre modifie la perception globale de la résidence. Les gestionnaires reçoivent moins de signalements, les usagers circulent dans un espace plus lisible, et la copropriété préserve la valeur de ses équipements. Les revêtements béton des constructions années 70-80 comme les résines des parkings souterrains récents près de la gare nécessitent un traitement adapté à leur porosité et leur état de surface.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic : balisage des zones, rotation des véhicules par secteur, et planification aux heures creuses pour réduire l'impact sur les déplacements pendulaires vers le RER B.</p>",
+        "<p>Les traces noires s'accumulent sur les dalles béton, les coulures d'huile marquent les emplacements, et la poussière forme un <strong>voile grisâtre</strong> sur l'ensemble du niveau. Dans le quartier La Plaine, les parkings aériens comme les sous-sols de copropriété subissent un encrassement progressif lié au trafic quotidien et aux particules fines du chantier du Grand Paris Express.</p>\n<p class=\"mt-4\">Un sol de parking propre modifie la perception globale de la résidence. Les gestionnaires reçoivent moins de signalements, les usagers circulent dans un espace plus lisible, et la copropriété préserve la valeur de ses équipements. Les revêtements béton des constructions années 70-80 comme les résines des parkings souterrains récents près de la gare nécessitent un traitement adapté à leur porosité et leur état de surface.</p>\n<p class=\"mt-4\">L'intervention s'organise en coordination avec le syndic : balisage des zones, rotation des véhicules par secteur, et planification aux heures creuses pour réduire l'impact sur les déplacements pendulaires vers le RER B.</p>",
       uniqueDeepDive:
         "<h3>Sol décrassé, circulation fluide</h3>\n<p>Le résultat visé : un revêtement débarrassé des dépôts gras, des traces de pneus et de la poussière accumulée. Les marquages au sol redeviennent lisibles, les zones de circulation se distinguent nettement des emplacements.</p>\n\n<h3>Autolaveuse et traitement ciblé</h3>\n<p>Le passage mécanisé combine aspiration et injection de solution dégraissante. Sur béton brut, la pression s'adapte pour déloger les salissures incrustées sans dégrader la surface. Les rampes d'accès reçoivent un traitement antidérapant renforcé. Angles morts, pieds de murs et rigoles font l'objet de passes manuelles complémentaires.</p>\n\n<h3>Gestion des eaux et finalisation</h3>\n<p>Les eaux de lavage chargées en résidus sont récupérées et évacuées selon les normes en vigueur. Aucun rejet vers les évacuations pluviales. Le dépoussiérage des blocs lumineux et tuyauteries peut compléter l'intervention sur demande. Un compte-rendu avec photos documente l'état avant/après pour le syndic.</p>",
       specificChallenges: [
@@ -164,7 +164,7 @@ const city: City = {
           question:
             "Intervenez-vous différemment sur un parking souterrain près de la gare RER par rapport à un parking aérien de La Plaine ?",
           answer:
-            "<p>Les parkings souterrains récents disposent souvent de sols en résine moins poreux, ce qui permet un lavage plus rapide. Les parkings aériens de La Plaine, avec leur béton brut exposé aux intempéries, nécessitent un décrassage plus appuyé et un temps de séchage naturel. Le matériel et les produits s'adaptent à chaque configuration.</p>",
+            "<p>Les parkings souterrains récents disposent souvent de <strong>sols en résine moins poreux</strong>, ce qui permet un lavage plus rapide. Les parkings aériens de La Plaine, avec leur béton brut exposé aux intempéries, nécessitent un décrassage plus appuyé et un temps de séchage naturel. Le matériel et les produits s'adaptent à chaque configuration.</p>",
         },
         {
           question:
@@ -176,7 +176,7 @@ const city: City = {
           question:
             "Quelle est votre procédure pour récupérer les eaux de lavage d'un parking proche du Marché Carnot ?",
           answer:
-            "<p>L'autolaveuse aspire les eaux usées au fur et à mesure du passage. Aucun rejet n'est effectué vers les bouches d'évacuation pluviale. Les eaux chargées sont stockées dans la cuve de l'engin puis évacuées conformément à la réglementation. Cette méthode évite tout ruissellement vers les espaces piétons du marché.</p>",
+            "<p>L'autolaveuse aspire les eaux usées au fur et à mesure du passage. <strong>Aucun rejet n'est effectué</strong> vers les bouches d'évacuation pluviale. Les eaux chargées sont stockées dans la cuve de l'engin puis évacuées conformément à la réglementation. Cette méthode évite tout ruissellement vers les espaces piétons du marché.</p>",
         },
         {
           question:
@@ -202,7 +202,7 @@ const city: City = {
         "<h3>Préparation et protection</h3>\n<p>Les menuiseries sont bâchées pour éviter les projections sur les fenêtres et portes. Le mobilier de jardin et les plantes sont déplacés ou protégés. Les gros dépôts — feuilles mortes, terre accumulée, débris divers — sont retirés manuellement avant tout traitement humide.</p>\n\n<h3>Traitement du sol et des éléments verticaux</h3>\n<p>Un produit adapté au support est appliqué : formulation spécifique pour carrelage, béton brut ou dalles sur plots. Le brossage manuel ou mécanique déloge les salissures incrustées. Le garde-corps et les vitrages sont traités dans la foulée. Les murs mitoyens accessibles reçoivent également un passage si nécessaire.</p>\n\n<h3>Rinçage et séchage</h3>\n<p>Le rinçage s'effectue à pression contrôlée pour préserver les joints fragiles. Un système anti-coulures protège la façade et le balcon du voisin situé en dessous. Une fois l'eau évacuée, le séchage naturel s'achève en quelques heures. Des conseils d'entretien vous sont transmis pour espacer les prochaines interventions.</p>",
       specificChallenges: [
         "Dépôts noirs liés à la circulation sur l'Avenue Aristide Briand, incrustés dans les joints.",
-        "Poussières de chantier du futur Métro 15 qui se déposent régulièrement sur les surfaces.",
+        "<strong>Poussières de chantier du futur Métro 15</strong> qui se déposent régulièrement sur les surfaces.",
         "Balcons filants des immeubles années 60-70 avec joints anciens nécessitant une pression maîtrisée.",
         "Loggias des résidences récentes du centre avec carrelage lisse sensible aux traces de calcaire.",
         "Accès parfois contraint par digicode et stationnement difficile en zone gare.",
@@ -212,7 +212,7 @@ const city: City = {
           question:
             "Sur les balcons carrelés des résidences récentes du centre-ville de Cachan, quels produits et précautions utilisez-vous pour préserver les joints ?",
           answer:
-            "<p>Nous sélectionnons des détergents au pH neutre qui n'attaquent pas les joints ciment. Le brossage reste manuel sur les zones fragiles, et la pression de rinçage est réduite pour éviter tout déchaussement. Les carrelages lisses des constructions neuves retrouvent leur aspect sans trace de calcaire.</p>",
+            "<p>Nous sélectionnons des <strong>détergents au pH neutre</strong> qui n'attaquent pas les joints ciment. Le brossage reste manuel sur les zones fragiles, et la pression de rinçage est réduite pour éviter tout déchaussement. Les carrelages lisses des constructions neuves retrouvent leur aspect sans trace de calcaire.</p>",
         },
         {
           question:
@@ -224,7 +224,7 @@ const city: City = {
           question:
             "Proposez-vous un nettoyage combiné garde-corps et vitrages pour les loggias des résidences du centre-ville ?",
           answer:
-            "<p>Oui, l'intervention inclut le garde-corps métallique ou vitré ainsi que les parois vitrées de la loggia. Le traitement est adapté à chaque matériau : dégraissant pour l'aluminium, produit vitres sans trace pour les surfaces transparentes. L'ensemble est rincé et essuyé dans la foulée.</p>",
+            "<p>Oui, l'intervention inclut le <strong>garde-corps métallique ou vitré</strong> ainsi que les parois vitrées de la loggia. Le traitement est adapté à chaque matériau : dégraissant pour l'aluminium, produit vitres sans trace pour les surfaces transparentes. L'ensemble est rincé et essuyé dans la foulée.</p>",
         },
         {
           question:
