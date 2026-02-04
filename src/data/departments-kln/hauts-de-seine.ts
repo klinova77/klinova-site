@@ -10,10 +10,10 @@ export const hautsDeSeine: DepartmentKln = {
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel dans les Hauts-de-Seine (92)",
-  heroKicker: "Neuilly, Levallois, Boulogne, La Défense • Devis sous 24h",
+  heroTitle: "Nettoyage professionnel dans les Hauts-de-Seine (92)",
+  heroKicker: "La Défense • Neuilly • Levallois • Boulogne • Devis sous 24h",
   heroDescription:
-    "Klinova intervient dans tout le département des Hauts-de-Seine pour le nettoyage de moquettes (parties communes de copropriété, bureaux, espaces tertiaires), canapés, tapis et matelas à domicile, balcons, terrasses et parkings souterrains. Nous adaptons nos protocoles aux exigences des environnements corporate et résidentiels premium.",
+    "Bureaux corporate ou résidences de standing, les Hauts-de-Seine imposent des standards de propreté élevés. Klinova intervient dans tout le département pour le nettoyage de moquettes tertiaires, textiles nobles à domicile, parkings souterrains, balcons et terrasses premium. Interventions en soirée ou week-end pour les espaces professionnels, créneaux souples pour le résidentiel — toujours avec la discrétion et la rigueur qu'exige le 92.",
 
   // =========================
   // Images
@@ -22,184 +22,187 @@ export const hautsDeSeine: DepartmentKln = {
     items: [
       {
         src: "/images/92-hauts-de-seine-seine-vue-aerienne.webp",
-        alt: "Immeuble moderne de standing dans les Hauts-de-Seine avec espaces communs professionnels",
+        alt: "Vue aérienne des Hauts-de-Seine avec immeubles de bureaux et résidences de standing en bord de Seine",
         width: 1200,
         height: 800,
         caption:
-          "Résidences et immeubles tertiaires Hauts-de-Seine : des standards de propreté élevés pour préserver l'image.",
+          "Quartiers d'affaires et résidences premium : deux univers, une même exigence de propreté irréprochable.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en expertise)
   // =========================
   challenges: {
-    title: "Contraintes d'intervention dans les Hauts-de-Seine (92)",
+    title: "Notre expertise dans les Hauts-de-Seine",
     items: [
-      "Immeubles de standing et résidences premium avec exigences esthétiques élevées et coordination pointilleuse avec syndics et gestionnaires",
-      "Quartiers d'affaires (La Défense, Levallois, Issy) nécessitant des interventions hors horaires de bureau (soirées, week-ends) avec accès sécurisés par badges",
-      "Moquettes tertiaires à forte fréquentation : encrassement rapide dans les halls d'accueil, open-spaces, circulations et salles de réunion",
-      "Parkings souterrains modernes avec surfaces étendues, rampes hélicoïdales, zones techniques et contraintes de sécurité renforcées",
-      "Appartements haut de gamme équipés de textiles nobles et délicats (soies, velours, cuirs premium) nécessitant une protection maximale",
-      "Balcons et terrasses premium avec matériaux nobles (bois exotiques, pierre naturelle, dalles grand format) et vues dégagées sur la Seine",
-      "Stationnement sélectif dans les zones résidentielles à accès limité, avec parkings visiteurs restreints",
+      "Quartiers d'affaires (La Défense, Levallois, Issy) : interventions hors horaires, coordination facility management, séchage express pour réouverture le lendemain",
+      "Copropriétés de standing (Neuilly, Saint-Cloud, Suresnes) : protocoles adaptés aux matériaux nobles et aux exigences esthétiques des syndics",
+      "Textiles premium à domicile : soies, velours, cuirs pleine fleur — diagnostic préalable, test systématique, extraction douce",
+      "Parkings souterrains modernes : autolaveuses haute performance, traitement des rampes hélicoïdales, gestion de la signalétique",
+      "Terrasses et balcons de standing : bois exotiques, pierres naturelles, dalles grand format — nettoyage respectueux des matériaux",
+      "Logistique maîtrisée : badges d'accès, stationnement restrictif, horaires contraints — nous anticipons tout en amont",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-  title: "Hauts-de-Seine : nettoyage corporate et résidentiel premium",
-    image: "/images/92-hauts-de-seine-residence-moderne.webp",
-  imageAlt: "Immeuble moderne de standing et bureaux dans les Hauts-de-Seine",
-  imageCaption:
-    "Hauts-de-Seine : une expertise double pour l'entretien des sièges sociaux et des copropriétés de prestige.",
-   
+      title: "Le 92, un département aux deux visages",
+      image: "/images/92-hauts-de-seine-residence-moderne.webp",
+      imageAlt: "Résidence moderne de standing dans les Hauts-de-Seine avec hall d'entrée soigné",
+      imageCaption:
+        "Du siège social à la copropriété de prestige : chaque contexte appelle une approche spécifique.",
       html: `
         <p>
-          Les <strong>Hauts-de-Seine</strong> concentrent un double enjeu de nettoyage professionnel. 
-          D'un côté, les quartiers d'affaires comme La Défense, Levallois-Perret, Issy-les-Moulineaux 
-          ou Boulogne-Billancourt abritent des bureaux et des sièges sociaux qui imposent des standards 
-          corporate stricts. De l'autre, les communes résidentielles telles que Neuilly-sur-Seine, Suresnes, 
-          Saint-Cloud ou Rueil-Malmaison affichent un standing élevé qui exige des protocoles de maintenance 
-          irréprochables.
+          Les <strong>Hauts-de-Seine</strong> combinent deux univers distincts. D'un côté, les quartiers 
+          d'affaires — La Défense, Levallois-Perret, Issy-les-Moulineaux, Boulogne-Billancourt — où 
+          des milliers de collaborateurs transitent chaque jour dans des halls d'accueil, open-spaces 
+          et salles de réunion. De l'autre, les communes résidentielles premium — Neuilly-sur-Seine, 
+          Saint-Cloud, Suresnes, Rueil-Malmaison — où le standing des copropriétés et des appartements 
+          impose des standards d'entretien irréprochables.
         </p>
         <p class="mt-4">
-          Dans les <strong>environnements tertiaires</strong>, les halls d'accueil, les open-spaces et 
-          les circulations subissent un trafic quotidien intense : collaborateurs, visiteurs, livraisons, 
-          prestataires. Les moquettes de bureaux s'encrassent rapidement (poussières fines, traces de 
-          roulettes de chaises, taches de café ou alimentaires). La propreté conditionne directement 
-          l'image corporate perçue par les clients et partenaires lors de leurs visites.
+          Dans les <strong>environnements corporate</strong>, la propreté conditionne directement 
+          l'image perçue par les clients, partenaires et candidats. Une moquette de hall encrassée, 
+          des traces sur les vitres de la salle de réunion, un parking souterrain négligé — autant 
+          de détails qui peuvent ternir la réputation d'une entreprise. Les facility managers le 
+          savent : l'entretien régulier n'est pas un coût, c'est un investissement dans l'image.
         </p>
         <p class="mt-4">
-          En <strong>résidentiel haut de gamme</strong>, les parties communes de copropriété (halls, paliers, 
-          ascenseurs) reflètent le standing de l'immeuble. À domicile, les textiles d'ameublement (canapés, 
-          fauteuils design, tapis d'exception) nécessitent des protocoles adaptés aux matériaux nobles : 
-          soies, velours, cuirs pleine fleur, tissus techniques. La moindre maladresse peut compromettre 
-          des pièces de valeur.
+          En <strong>résidentiel haut de gamme</strong>, les enjeux sont tout aussi importants. 
+          Les parties communes (halls d'entrée, paliers, ascenseurs) reflètent le standing de 
+          l'immeuble et influencent la valeur des biens. À l'intérieur des appartements, les 
+          canapés design, tapis d'exception et textiles nobles (soies, velours, cuirs) nécessitent 
+          des protocoles de nettoyage adaptés — pas question de risquer une pièce à plusieurs 
+          milliers d'euros avec une méthode inadaptée.
         </p>
         <p class="mt-4">
-          Notre approche dans les Hauts-de-Seine combine plusieurs exigences : une expertise technique 
-          avec des protocoles différenciés selon le contexte (corporate ou résidentiel), une organisation 
-          logistique millimétrée (accès par badges, interventions hors horaires de bureau, coordination 
-          avec gardiens et gestionnaires), et une discrétion absolue pour minimiser l'impact visuel et 
-          sonore. L'objectif est d'obtenir un résultat impeccable, à la hauteur des standards du département.
+          Notre approche dans le 92 repose sur cette double compétence. Nous maîtrisons aussi bien 
+          les interventions à haut rendement dans les grands espaces tertiaires que les protocoles 
+          délicats pour les textiles nobles à domicile. Et surtout, nous savons gérer la logistique 
+          complexe du département : badges d'accès, stationnement restrictif, horaires contraints, 
+          coordination avec syndics et facility managers.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Notre protocole d'intervention dans les Hauts-de-Seine",
+      title: "Une méthode adaptée à chaque contexte",
       html: `
         <p>
-          Chaque prestation dans le 92 commence par un diagnostic différencié selon le contexte. 
-          Pour les <strong>espaces corporate</strong>, nous identifions les zones prioritaires 
-          (accueil, salles de réunion, open-space, circulations), évaluons le niveau d'encrassement, 
-          et coordonnons les contraintes horaires (soirées, week-ends) ainsi que les accès par badges 
-          avec le facility management.
+          Toute intervention dans les Hauts-de-Seine commence par un diagnostic précis. En 
+          <strong>environnement corporate</strong>, nous identifions les zones à fort trafic 
+          (accueil, circulations, open-space), évaluons le niveau d'encrassement des moquettes, 
+          et calons les contraintes : horaires d'intervention (généralement 19h-23h ou week-end), 
+          accès par badges, coordination avec le facility management, délai de séchage compatible 
+          avec une réouverture le lendemain matin.
         </p>
         <p class="mt-4">
-          En <strong>résidentiel premium</strong>, nous analysons le type de moquette (velours, bouclée, 
-          nouée) et les textiles à domicile (soies, cuirs, velours), repérons les zones sensibles et 
-          organisons la protection du mobilier design. Pour les <strong>parkings modernes</strong>, 
-          nous évaluons les surfaces étendues, les rampes hélicoïdales, les zones techniques et la 
-          signalétique existante. La logistique (stationnement dans les zones résidentielles restrictives, 
-          accès aux immeubles et entreprises, horaires stricts) est systématiquement anticipée.
+          En <strong>résidentiel premium</strong>, l'approche est différente. Pour les parties 
+          communes de copropriété, nous coordonnons avec le syndic et le gardien pour définir 
+          un créneau qui ne gêne pas les résidents. Pour les textiles à domicile, nous commençons 
+          par un diagnostic matière : composition exacte (soie, laine, velours, cuir), solidité 
+          des couleurs, sensibilité à l'eau. Un test sur zone discrète est systématique avant 
+          tout traitement étendu.
         </p>
         <p class="mt-4">
-          Le protocole de nettoyage s'adapte ensuite rigoureusement au contexte. Pour les interventions 
-          <strong>corporate</strong>, nous utilisons des méthodes à haut rendement (autolaveuses, monobrosse, 
-          injection-extraction haute performance) avec des produits neutres sans parfum, et nous privilégions 
-          un séchage rapide pour permettre une remise en service le lendemain matin.
+          Le protocole de nettoyage s'adapte ensuite au contexte. Sur les <strong>moquettes 
+          tertiaires</strong>, nous utilisons des méthodes à haut rendement (injection-extraction, 
+          monobrosse, autolaveuse selon la surface) avec des produits neutres sans parfum et un 
+          séchage accéléré. Sur les <strong>textiles nobles</strong>, nous privilégions l'extraction 
+          douce, le rinçage minutieux et la protection systématique du mobilier environnant.
         </p>
         <p class="mt-4">
-          En <strong>résidentiel</strong>, nous appliquons des protocoles délicats pour les textiles nobles : 
-          tests préalables sur zone discrète, extraction douce, rinçage minutieux, protection du mobilier 
-          environnant et finitions parfaites (bordures, angles, plinthes). Sur les <strong>extérieurs 
-          premium</strong>, nous respectons scrupuleusement les matériaux nobles (bois exotiques, pierres 
-          naturelles), protégeons les évacuations et assurons des finitions impeccables pour les vues 
-          dégagées.
+          Pour les <strong>parkings souterrains</strong>, nous déployons des autolaveuses haute 
+          performance capables de traiter les grandes surfaces, les rampes hélicoïdales et les 
+          zones techniques. Nous gérons l'évacuation de l'eau, traitons les traces de pneus et 
+          les dépôts, et respectons la signalétique en place. Pour les <strong>terrasses premium</strong>, 
+          nous adaptons la pression et les produits au matériau (bois exotique, pierre naturelle, 
+          composite) — l'objectif est un rendu impeccable sans risque pour les surfaces nobles.
         </p>
         <p class="mt-4">
-          En fin d'intervention, nous effectuons un contrôle qualité systématique (checklist corporate 
-          ou résidentiel selon le contexte), validons le résultat avec le facility manager ou le syndic, 
-          et remettons des recommandations d'entretien courant pour préserver le résultat. Pour les 
-          interventions récurrentes (contrats corporate), nous assurons un suivi qualité trimestriel 
-          et ajustons le protocole si nécessaire.
+          Chaque prestation se termine par une validation avec le facility manager, le syndic ou 
+          le client particulier. Nous remettons des recommandations d'entretien courant et, pour 
+          les contrats récurrents, nous assurons un suivi qualité régulier.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "Dans les Hauts-de-Seine, l'organisation logistique est déterminante. Le stationnement dans les zones résidentielles restrictives (parkings visiteurs limités) nécessite une coordination préalable. Les accès aux immeubles et entreprises (badges sécurisés, interphones, réception corporate) doivent être anticipés. Les horaires sont contraints : interventions en soirée ou le week-end pour les espaces tertiaires, créneaux choisis pour éviter les heures de pointe en résidentiel. Pour les prestations corporate, nous coordonnons étroitement avec le facility management et respectons les chartes de sécurité des sites. Pour le résidentiel premium, nous assurons une protection maximale du mobilier design, des parquets anciens et des surfaces nobles.",
+    "Dans les Hauts-de-Seine, la logistique fait partie intégrante de la prestation. Nous anticipons systématiquement les contraintes : badges d'accès pour les immeubles de bureaux, stationnement dans les zones résidentielles restrictives, horaires imposés par les syndics ou le facility management. Cette préparation en amont vous garantit une intervention fluide, sans surprise, et un respect strict du timing annoncé.",
 
   // =========================
-  // FAQ optimisée SEO + conversion + style naturel
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
-      question: "Dans quelles villes des Hauts-de-Seine intervenez-vous ?",
+      question: "Quelles villes des Hauts-de-Seine couvrez-vous ?",
       answer:
-        "Nous couvrons l'ensemble du département : Neuilly-sur-Seine, Levallois-Perret, Boulogne-Billancourt, Issy-les-Moulineaux, La Défense (Puteaux, Courbevoie), Rueil-Malmaison, Suresnes, Saint-Cloud, Asnières-sur-Seine, Colombes, Nanterre, Clichy, Antony, Clamart et toutes les communes environnantes. Nous intervenons aussi bien dans les environnements corporate (bureaux, sièges sociaux) qu'en résidentiel premium (copropriétés de standing, appartements haut de gamme).",
+        "Nous intervenons dans tout le département : Neuilly-sur-Seine, Levallois-Perret, Boulogne-Billancourt, Issy-les-Moulineaux, La Défense (Puteaux, Courbevoie, Nanterre), Rueil-Malmaison, Suresnes, Saint-Cloud, Asnières, Colombes, Clichy, Antony, Clamart et toutes les communes environnantes. Bureaux, copropriétés ou appartements particuliers — nous adaptons notre approche à chaque contexte.",
     },
     {
-      question: "Pouvez-vous intervenir dans les bureaux et espaces tertiaires à La Défense ou Levallois ?",
+      question: "Intervenez-vous dans les bureaux de La Défense et Levallois ?",
       answer:
-        "Nous sommes effectivement spécialisés dans le nettoyage professionnel d'espaces corporate : halls d'accueil, open-spaces, salles de réunion, circulations et moquettes de bureaux. Nos interventions se déroulent hors horaires de travail (soirées entre 19h et 23h, week-ends) pour ne pas perturber l'activité. Nous coordonnons avec le facility management, respectons les chartes de sécurité du site et gérons les accès par badges. Nos méthodes à haute performance sur grandes surfaces permettent un séchage rapide et une remise en service le lendemain matin.",
+        "C'est même une de nos spécialités. Nous nettoyons les moquettes de bureaux, halls d'accueil, open-spaces et salles de réunion. Les interventions se font hors horaires de travail — généralement en soirée (19h-23h) ou le week-end — pour ne pas perturber l'activité. Nous coordonnons avec le facility management, respectons les chartes de sécurité et garantissons un séchage rapide pour une réouverture normale le lendemain matin.",
     },
     {
-      question: "Comment traitez-vous les textiles nobles et délicats comme les soies, velours ou cuirs ?",
+  question: "Utilisez-vous des produits odorants en bureaux ou en appartement ?",
+  answer:
+    "Non. Nous privilégions des produits professionnels neutres et des méthodes mécaniques efficaces. L’objectif est un résultat net, sans odeur persistante et avec un séchage maîtrisé, compatible avec des espaces occupés.",
+},
+
+    {
+      question: "Comment traitez-vous les textiles nobles (soie, velours, cuir) ?",
       answer:
-        "Nous adaptons notre protocole aux matériaux premium. Cela commence par un diagnostic textile précis (composition, solidité des couleurs, sensibilité), suivi d'un test systématique sur une zone discrète. Nous utilisons ensuite des méthodes douces (extraction contrôlée, rinçage minutieux) avec des produits spécifiquement formulés pour les matériaux nobles. Le séchage est maîtrisé et nous protégeons au maximum le mobilier environnant ainsi que les parquets. Pour les cuirs, nous proposons également un nourrissage si nécessaire. Ces interventions sont toujours confiées à un technicien expérimenté.",
+        "Avec la plus grande prudence. Nous commençons par un diagnostic matière pour identifier la composition exacte et la sensibilité du textile. Un test sur zone discrète est systématique. Ensuite, nous utilisons des méthodes douces — extraction contrôlée, rinçage minutieux, séchage maîtrisé — avec des produits formulés pour les matériaux nobles. Le mobilier environnant et les parquets sont protégés. Ces interventions sont toujours confiées à un technicien expérimenté.",
     },
     {
-      question: "Proposez-vous des contrats de maintenance récurrente pour entreprises et copropriétés ?",
+      question: "Proposez-vous des contrats d'entretien pour entreprises et copropriétés ?",
       answer:
-        "Nous mettons effectivement en place des contrats de maintenance récurrente, aussi bien pour les espaces corporate (nettoyage de moquettes de bureaux mensuel ou trimestriel) que pour les copropriétés (parties communes trimestrielles ou semestrielles). Ces contrats présentent plusieurs avantages : tarifs dégressifs, planification anticipée, suivi qualité régulier, interlocuteur dédié et ajustement du protocole selon vos retours. Nous établissons un devis sur mesure après un audit du site et la définition d'un cahier des charges.",
+        "Oui. Pour les espaces corporate, nous mettons en place des contrats de nettoyage récurrent (mensuel, trimestriel) avec un suivi qualité régulier. Pour les copropriétés, nous proposons des formules semestrielles ou annuelles. Ces contrats incluent des tarifs dégressifs, une planification anticipée et un interlocuteur dédié. Nous établissons un devis sur mesure après audit du site.",
     },
     {
-      question: "Quels sont vos délais d'intervention dans les Hauts-de-Seine ?",
+      question: "Quel est votre délai d'intervention dans le 92 ?",
       answer:
-        "Nous vous envoyons un devis gratuit sous 24h après réception de quelques informations (surface, photos, contraintes logistiques). Pour une intervention standard, comptez entre 3 et 7 jours selon nos disponibilités. Si vous avez une urgence corporate (événement client, visite d'investisseurs, assemblée générale), nous pouvons mobiliser un créneau prioritaire sous 48h avec une coordination accélérée. Les interventions le week-end sont également possibles pour les espaces tertiaires.",
+        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités. Pour les urgences corporate (événement client, visite d'investisseurs, assemblée générale), nous pouvons mobiliser un créneau prioritaire sous 48h. Les interventions en soirée et le week-end sont possibles pour les espaces tertiaires.",
     },
     {
-      question: "Nettoyez-vous les parkings souterrains d'immeubles de bureaux et de résidences ?",
+      question: "Nettoyez-vous les parkings souterrains d'immeubles de bureaux ?",
       answer:
-        "Nous intervenons régulièrement dans les parkings souterrains, qu'ils soient corporate ou résidentiels. Nous traitons les zones de circulation, les places de stationnement, les rampes (y compris hélicoïdales), les zones techniques et respectons la signalétique en place. Pour les surfaces étendues, nous utilisons des autolaveuses haute performance. Nous gérons l'évacuation de l'eau, traitons les traces de pneus et les dépôts, et assurons une sécurisation renforcée (signalisation, prévention de la glissance). Pour les parkings de bureaux occupés en journée, nous intervenons la nuit ou le week-end.",
+        "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes (y compris hélicoïdales) et zones techniques. Pour les grandes surfaces, nous utilisons des autolaveuses haute performance. Nous gérons l'évacuation de l'eau, traitons les traces de pneus et respectons la signalétique. Pour les parkings occupés en journée, nous intervenons la nuit ou le week-end.",
     },
     {
-      question: "Proposez-vous le nettoyage de balcons et terrasses d'appartements haut de gamme ?",
+      question: "Proposez-vous le nettoyage de terrasses d'appartements de standing ?",
       answer:
-        "Nous nettoyons effectivement les balcons et terrasses de résidences premium. Cela inclut le décrassage de surfaces nobles (bois exotiques type teck ou ipé, pierres naturelles, dalles grand format), le traitement des mousses et des dépôts, et des finitions parfaites. Nous portons une attention particulière aux matériaux sensibles et aux vues dégagées sur la Seine. La gestion de l'eau (protection des évacuations, prise en compte des voisins du dessous) et l'accès via l'appartement si nécessaire sont anticipés. L'objectif est un rendu impeccable pour ces espaces extérieurs valorisés.",
+        "Oui, c'est une prestation que nous réalisons fréquemment dans le 92. Nous traitons les surfaces nobles — bois exotiques (teck, ipé), pierres naturelles, dalles grand format — avec des méthodes adaptées à chaque matériau. L'objectif est un rendu impeccable sans risque d'abîmer les surfaces. Nous gérons l'écoulement d'eau et prenons en compte les voisins du dessous si nécessaire.",
     },
     {
-      question: "Comment gérez-vous les contraintes de stationnement dans le département ?",
+      question: "Combien coûte le nettoyage de moquettes de bureaux ?",
       answer:
-        "Nous coordonnons systématiquement en amont : identification des zones de stationnement autorisées (parkings visiteurs des résidences, zones de livraison temporaires), réservation de créneaux si possible, et communication avec les gardiens ou gestionnaires. Pour les interventions longues, nous organisons des rotations de véhicule ou utilisons un stationnement relais à proximité. Cette anticipation logistique nous permet d'intervenir de manière fluide sans blocage.",
+        "Le tarif dépend de la surface, du niveau d'encrassement et de la fréquence souhaitée. Pour des bureaux tertiaires, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous vous répondons sous 24 heures avec un devis détaillé.",
     },
   ],
 
   // =========================
   // Liens internes (villes stratégiques corporate + résidentiel)
   // =========================
-  internalLinks: [
-    
-  ],
+
 
   // =========================
-  // SEO (title/description optimisés)
+  // SEO (title/description optimisés pour CTR)
   // =========================
   seo: {
-    title: "Nettoyage Professionnel Hauts-de-Seine (92) - Corporate & Résidentiel | Klinova",
+    title: "Nettoyage Bureaux & Résidences de standing Hauts-de-Seine (92) | Klinova",
     description:
-      "Entreprise de nettoyage dans les Hauts-de-Seine : bureaux, moquettes corporate, canapés premium, parkings. Intervention à Neuilly, Levallois, Boulogne, La Défense. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
+      "Entreprise de nettoyage dans les Hauts-de-Seine : moquettes bureaux, textiles nobles, parkings, terrasses. La Défense, Neuilly, Levallois, Boulogne. Devis 24h. ☎ 06 76 73 86 61",
   },
 };
