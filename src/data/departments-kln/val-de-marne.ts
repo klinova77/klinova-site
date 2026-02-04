@@ -10,10 +10,10 @@ export const valDeMarne: DepartmentKln = {
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel dans le Val-de-Marne (94)",
-  heroKicker: "Vincennes, Créteil, Saint-Maur • Devis gratuit sous 24h",
+  heroTitle: "Nettoyage professionnel dans le Val-de-Marne (94)",
+  heroKicker: "Créteil • Vincennes • Saint-Maur • Vitry • Devis sous 24h",
   heroDescription:
-    "Klinova intervient dans tout le Val-de-Marne pour le nettoyage de moquettes (parties communes de copropriété), canapés, tapis et matelas à domicile, balcons, terrasses et parkings souterrains. Nous adaptons nos protocoles aux contraintes urbaines : accès résidence, coordination avec les syndics, finitions soignées pour préserver l'image des lieux.",
+    "Aux portes de Paris, le Val-de-Marne concentre des copropriétés à forte fréquentation et des quartiers résidentiels exigeants. Klinova intervient dans tout le 94 pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains, terrasses et balcons. Coordination syndic, finitions soignées, résultat qui tient dans le temps.",
 
   // =========================
   // Images
@@ -22,158 +22,180 @@ export const valDeMarne: DepartmentKln = {
     items: [
       {
         src: "/images/94-val-de-marne-klinova.webp",
-        alt: "Résidence moderne dans le Val-de-Marne avec parties communes et espaces collectifs",
+        alt: "Résidence moderne dans le Val-de-Marne avec hall d'entrée et espaces collectifs",
         width: 1200,
         height: 800,
         caption:
-          "Copropriétés Val-de-Marne : des halls et circulations à forte fréquentation nécessitant des protocoles de maintenance structurés.",
+          "Copropriétés du 94 : des parties communes très sollicitées qui méritent un entretien professionnel régulier.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en expertise)
   // =========================
   challenges: {
-    title: "Contraintes d'intervention dans le Val-de-Marne (94)",
+    title: "Ce que nous maîtrisons dans le Val-de-Marne",
     items: [
-      "Densité résidentielle élevée avec halls d'entrée, paliers et circulations soumis à un trafic quotidien intense (résidents, livraisons, poussettes, animaux domestiques)",
-      "Nombreux parkings souterrains avec poussières fines, traces de pneus, rampes d'accès et zones techniques nécessitant des contraintes de ventilation et horaires stricts",
-      "Habitat mixte combinant collectif dense et zones pavillonnaires, imposant des protocoles différenciés selon la configuration (ascenseur, stationnement, local poubelles, accès parties communes)",
-      "Balcons et terrasses urbains exposés à la pollution atmosphérique, aux dépôts carbonés et aux mousses sur surfaces minérales, avec des accès parfois complexes en étages élevés sans point d'eau",
-      "Coordination logistique serrée : badges d'immeuble, créneaux syndic ou gestionnaire, horaires autorisés, circulation des résidents à préserver",
+      "Communes limitrophes de Paris (Vincennes, Charenton, Saint-Mandé) : copropriétés de standing avec exigences élevées",
+      "Pôles urbains denses (Créteil, Vitry, Champigny) : parties communes à fort trafic, protocoles conçus pour durer",
+      "Boucles de Marne (Saint-Maur, Nogent, Le Perreux) : habitat résidentiel mixte, interventions à domicile fréquentes",
+      "Parkings souterrains urbains : poussières fines, traces de pneus, gestion de l'eau et de la ventilation",
+      "Terrasses et balcons exposés à la pollution parisienne : décrassage des dépôts carbonés, traitement des mousses, finitions soignées",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-   title: "Val-de-Marne : densité urbaine et exigences de propreté",
-  image: "/images/94-val-de-marne-klinova.jpg", // URL conservée
-  imageAlt: "Rue de centre-ville dans le Val-de-Marne avec immeubles résidentiels de faible hauteur",
-  imageCaption:
-    "Centres-villes du 94 : un entretien rigoureux des immeubles de standing pour préserver le cadre de vie des résidents.",
+      title: "Le 94, un département sous pression",
+      image: "/images/94-val-de-marne-klinova.jpg",
+      imageAlt: "Rue résidentielle dans le Val-de-Marne avec immeubles et commerces",
+      imageCaption:
+        "Centres-villes du 94 : une densité qui impose un entretien rigoureux des parties communes.",
       html: `
         <p>
-          Le <strong>Val-de-Marne</strong> présente une forte densité résidentielle, particulièrement 
-          dans les communes limitrophes de Paris comme Vincennes, Charenton-le-Pont ou Saint-Mandé, 
-          ainsi que dans les pôles urbains structurants tels que Créteil ou Vitry-sur-Seine. Cette 
-          configuration génère une sollicitation intense des parties communes : passages quotidiens 
-          multiples, livraisons e-commerce, poussettes, animaux domestiques et interventions 
-          techniques ponctuelles.
+          Le <strong>Val-de-Marne</strong> cumule les pressions. Aux portes de Paris, les communes 
+          comme Vincennes, Charenton-le-Pont ou Saint-Mandé abritent des copropriétés de standing 
+          où l'image compte. Plus au sud, Créteil, Vitry-sur-Seine ou Champigny-sur-Marne 
+          concentrent un habitat collectif dense avec des parties communes très sollicitées. 
+          Et le long de la Marne — Saint-Maur, Nogent, Le Perreux — les quartiers résidentiels 
+          mêlent appartements et pavillons.
         </p>
         <p class="mt-4">
-          Sur les <strong>moquettes de parties communes</strong>, l'encrassement est progressif mais 
-          tenace. Les poussières fines urbaines, les taches localisées (boue, liquides) et les marques 
-          de circulation aux points de friction s'accumulent rapidement. Sans un protocole structuré, 
-          le rendu se dégrade et l'image de la résidence en pâtit directement.
+          Dans ce contexte, les <strong>parties communes</strong> encaissent beaucoup. Résidents, 
+          visiteurs, livreurs (et ils sont nombreux avec l'e-commerce), poussettes, animaux 
+          domestiques — les passages se multiplient du matin au soir. Les moquettes de halls et 
+          de paliers s'encrassent vite : poussières urbaines, traces de semelles, taches aux 
+          points de circulation. Sans entretien régulier et rigoureux, la dégradation est rapide 
+          et l'image de la résidence en pâtit.
         </p>
         <p class="mt-4">
-          Notre approche privilégie la tenue dans le temps : un protocole reproductible, des passages 
-          méthodiques par zones, des finitions systématiques (bordures, plinthes, seuils) et une 
-          organisation coordonnée avec le syndic ou le gestionnaire (accès, ascenseur, horaires, 
-          minimisation des nuisances). À <strong>domicile</strong>, nous appliquons la même logique 
-          pour les textiles d'ameublement (canapés, tapis, matelas) : efficacité, contrôle et rendu net.
+          Notre approche dans le 94 privilégie la <strong>tenue dans le temps</strong>. Pas 
+          d'interventions cosmétiques qui s'effacent en quelques semaines, mais des protocoles 
+          structurés : passages méthodiques par zones, finitions systématiques (bordures, plinthes, 
+          seuils), coordination avec le syndic pour les horaires et les accès. L'objectif est un 
+          résultat qui se voit et qui dure.
+        </p>
+        <p class="mt-4">
+          À <strong>domicile</strong>, nous appliquons la même rigueur pour les canapés, tapis et 
+          matelas. Diagnostic précis, nettoyage contrôlé, séchage maîtrisé. Et pour les balcons 
+          exposés à la pollution parisienne — décrassage des dépôts noirs, traitement des mousses, 
+          finitions soignées.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Notre protocole d'intervention : diagnostic, action et contrôle qualité",
+      title: "Notre méthode, conçue pour les copropriétés exigeantes",
       html: `
         <p>
-          Chaque prestation débute par un diagnostic opérationnel structuré. Nous identifions les 
-          <strong>zones d'impact prioritaires</strong> dans les parties communes (entrée, boîtes aux 
-          lettres, ascenseur, paliers, angles), analysons le type de moquette, évaluons le niveau 
-          d'encrassement et repérons les taches localisées.
+          Chaque intervention dans le Val-de-Marne commence par un <strong>diagnostic 
+          opérationnel</strong>. En copropriété, nous identifions les zones à fort passage 
+          (entrée, boîtes aux lettres, ascenseur, paliers), analysons le type de moquette 
+          (bouclée, velours, aiguilletée) et évaluons le niveau d'encrassement zone par zone.
         </p>
         <p class="mt-4">
-          Pour les <strong>textiles à domicile</strong>, nous examinons la nature du tissu (coton, 
-          synthétique, microfibre, velours), identifions les zones de frottement et détectons les 
-          auréoles ou odeurs éventuelles (animaux, humidité, tabac). Les <strong>contraintes 
-          logistiques</strong> sont également évaluées : accès à l'immeuble, stationnement, ascenseur, 
-          créneaux autorisés, circulation des résidents.
+          La <strong>logistique</strong> est anticipée en amont. Nous coordonnons avec le syndic 
+          ou le gardien pour caler les horaires, gérer les badges d'accès et identifier les 
+          possibilités de stationnement. L'objectif : intervenir efficacement sans bloquer les 
+          circulations ni gêner les résidents.
         </p>
         <p class="mt-4">
-          Le protocole de nettoyage est ensuite appliqué méthodiquement. Nous procédons par action 
-          mécanique contrôlée (brossage, injection-extraction si pertinent), utilisons des produits 
-          adaptés au support, effectuons un rinçage ou une neutralisation selon la nécessité, puis 
-          terminons par des finitions systématiques (bordures, plinthes, seuils, points de contact). 
-          L'objectif est d'obtenir un résultat propre et homogène, sans zones négligées.
+          Le <strong>protocole de nettoyage</strong> combine action mécanique et finitions 
+          systématiques. Sur les moquettes, nous procédons par zones : aspiration préalable, 
+          détachage ciblé des points critiques, nettoyage mécanique (injection-extraction ou 
+          monobrosse selon le support), rinçage sans résidu, séchage contrôlé. Et toujours : 
+          finitions bordures, angles, seuils — tout ce qui fait la différence visuellement.
         </p>
         <p class="mt-4">
-          En fin d'intervention, nous effectuons un contrôle visuel qualité, validons le résultat 
-          avec vous ou le gestionnaire, et vous transmettons des recommandations d'entretien courant 
-          pour maintenir le résultat (fréquences adaptées, protections à envisager, points sensibles 
-          à surveiller).
+          Pour les <strong>textiles à domicile</strong>, nous commençons par un diagnostic 
+          matière. Nature du tissu, zones de frottement, taches et odeurs éventuelles — tout 
+          est identifié avant le moindre traitement. Ensuite, nous procédons par étapes : 
+          détachage manuel, nettoyage global contrôlé, extraction douce, séchage maîtrisé.
+        </p>
+        <p class="mt-4">
+          Pour les <strong>parkings souterrains</strong>, nous traitons les zones de circulation, 
+          les places, les rampes d'accès et les zones techniques. Gestion de l'eau, traitement 
+          des traces de pneus, sécurisation des zones glissantes — tout est coordonné avec le 
+          syndic pour choisir les horaires les moins impactants.
+        </p>
+        <p class="mt-4">
+          À la fin de chaque prestation, nous validons le résultat avec vous ou le gestionnaire. 
+          Si un détail mérite un second passage, nous le traitons sur place. Et nous vous 
+          transmettons des recommandations d'entretien pour prolonger le bénéfice de notre 
+          intervention.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "Dans le Val-de-Marne, nous planifions les interventions en intégrant toutes les contraintes réelles : accès à l'immeuble (badges, interphones), stationnement (zones souvent limitées), ascenseur (capacité, fréquentation), créneaux syndic ou gestionnaire, circulation dans les parties communes. Pour les prestations à domicile (canapés, tapis, matelas), nous confirmons également la logistique en amont : configuration de la pièce, accès à l'eau, temps de séchage nécessaire et ventilation disponible. Une organisation anticipée garantit une intervention fluide.",
+    "Dans le Val-de-Marne, la logistique fait partie de la prestation. Nous anticipons les badges d'accès, les horaires imposés par les syndics et les contraintes de stationnement. Pour les interventions à domicile, nous confirmons la configuration de la pièce, l'accès à l'eau et les conditions de séchage. Cette préparation en amont vous garantit une intervention fluide et un résultat à la hauteur.",
 
   // =========================
-  // FAQ optimisée SEO + conversion + style naturel
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
-      question: "Dans quelles villes du Val-de-Marne intervenez-vous ?",
+      question: "Quelles villes du Val-de-Marne couvrez-vous ?",
       answer:
-        "Nous couvrons l'ensemble du département : Créteil, Vincennes, Saint-Maur-des-Fossés, Vitry-sur-Seine, Champigny-sur-Marne, Nogent-sur-Marne, Fontenay-sous-Bois, Charenton-le-Pont, Saint-Mandé, Ivry-sur-Seine, Maisons-Alfort, Alfortville et toutes les communes environnantes. Nous intervenons aussi bien en copropriété (parties communes, parkings) qu'à domicile (textiles d'ameublement).",
+        "Tout le département. Nos interventions les plus fréquentes ont lieu à Créteil, Vincennes, Saint-Maur-des-Fossés, Vitry-sur-Seine, Champigny-sur-Marne, Nogent-sur-Marne, Fontenay-sous-Bois, Charenton-le-Pont, Saint-Mandé, Ivry-sur-Seine, Maisons-Alfort et Alfortville. Copropriétés, appartements, pavillons — nous adaptons notre approche à chaque contexte.",
     },
     {
-      question: "Comment nettoyez-vous les moquettes de halls, paliers et couloirs ?",
+      question: "Comment nettoyez-vous les moquettes de parties communes ?",
       answer:
-        "Nous adaptons notre protocole au type de moquette (bouclée, velours, aiguilletée) et au niveau d'encrassement. L'intervention comprend une pré-aspiration haute puissance, un détachage ciblé, une injection-extraction contrôlée si nécessaire, un rinçage sans résidu et un séchage maîtrisé. Nous travaillons méthodiquement par zones et terminons toujours par des finitions systématiques (bordures, plinthes, seuils, angles). L'organisation est coordonnée avec le syndic ou le gardien pour minimiser la gêne des résidents.",
+        "Nous adaptons le protocole au type de moquette et au niveau d'encrassement. L'intervention comprend aspiration préalable, détachage ciblé, nettoyage mécanique (injection-extraction ou monobrosse), rinçage sans résidu et séchage contrôlé. Nous terminons toujours par des finitions systématiques : bordures, angles, seuils. Tout est coordonné avec le syndic pour limiter la gêne des résidents.",
     },
     {
-      question: "Le nettoyage d'un canapé ou d'un matelas risque-t-il d'abîmer le textile ?",
+      question: "Intervenez-vous à domicile pour les canapés et tapis ?",
       answer:
-        "Non, si le protocole est bien adapté. Nous ajustons notre méthode selon le textile (matière, trame, couleurs, sensibilité), le type de tache (organique, grasse, auréole) et le niveau d'encrassement. L'objectif est d'obtenir un nettoyage efficace et contrôlé, sans sur-humidification ni décoloration. Si nécessaire, nous effectuons un test préalable sur une zone discrète.",
+        "Oui, c'est une prestation fréquente dans le 94. Nous traitons les canapés (tissu, microfibre, velours, cuir), tapis et matelas. Le protocole s'adapte au textile et au type de taches ou d'odeurs. Détachage manuel, extraction douce, rinçage complet, désodorisation si nécessaire — le tout sans sur-humidification. Si nécessaire, nous effectuons un test préalable sur zone discrète.",
     },
     {
-      question: "Quels sont vos délais et durées d'intervention dans le Val-de-Marne ?",
+      question: "Nettoyez-vous les parkings souterrains de copropriété ?",
       answer:
-        "Les délais et durées varient selon le type de prestation et le niveau d'encrassement. Après réception de quelques informations (surface en m², photos si possible, contraintes logistiques), nous vous communiquons un créneau réaliste et une durée estimative. Pour les prestations standard, comptez un devis sous 24h et une intervention sous 3 à 7 jours selon nos disponibilités.",
+        "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes et zones techniques. Le protocole inclut la gestion de l'eau et de l'évacuation, le traitement des traces de pneus et dépôts noirs, et la sécurisation des zones glissantes. Tout est coordonné avec le syndic pour choisir les horaires les moins impactants.",
     },
     {
-      question: "Nettoyez-vous les parkings souterrains de copropriété dans le Val-de-Marne ?",
+      question: "Quel est votre délai d'intervention dans le Val-de-Marne ?",
       answer:
-        "Nous intervenons effectivement dans les parkings souterrains et aériens. Nous traitons les zones de circulation, les places de stationnement, les rampes d'accès et les zones techniques. Le protocole est spécifique : gestion de l'eau et de son évacuation, traitement des traces de pneus et des dépôts noirs, sécurisation (prévention de la glissance, signalisation) et respect des contraintes de ventilation. Tout est coordonné avec le syndic pour une planification optimale.",
+        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités et les créneaux du syndic. Pour les urgences (assemblée générale, visite importante), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
     },
     {
-      question: "Combien de temps faut-il pour qu'une moquette sèche après le nettoyage ?",
+      question: "Combien de temps dure le séchage d'une moquette ?",
       answer:
-        "Le temps de séchage varie entre 6 et 12 heures en conditions standard, selon l'épaisseur de la moquette, la ventilation et la température ambiante. Notre méthode limite l'eau résiduelle grâce à une extraction poussée et des passes contrôlées. Nous vous fournissons également des consignes de ventilation précises pour optimiser le séchage et éviter toute ré-humidification.",
+        "En conditions normales, comptez 6 à 12 heures selon l'épaisseur de la moquette et la ventilation. Notre méthode limite l'eau résiduelle grâce à une extraction poussée et des passes contrôlées. Nous vous donnons des consignes de ventilation précises pour optimiser le séchage.",
+    },
+    {
+      question: "Proposez-vous des contrats d'entretien récurrent ?",
+      answer:
+        "Oui. Pour les copropriétés qui souhaitent maintenir un niveau de propreté constant, nous proposons des contrats trimestriels, semestriels ou annuels. Cela inclut un calendrier prédéfini avec le syndic, des tarifs dégressifs et un suivi régulier. Ce type de formule est particulièrement adapté aux immeubles à fort trafic.",
+    },
+    {
+      question: "Combien coûte un nettoyage de moquette dans le Val-de-Marne ?",
+      answer:
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
     },
   ],
 
   // =========================
-  // Liens internes (villes principales + ajouts stratégiques)
+  // Liens internes (villes principales)
   // =========================
-  internalLinks: [
-    { label: "Créteil", href: "/zones-d-intervention/val-de-marne/creteil" },
-  { label: "Ivry-sur-Seine", href: "/zones-d-intervention/val-de-marne/ivry-sur-seine" },
-  { label: "Vincennes", href: "/zones-d-intervention/val-de-marne/vincennes" },
-  { label: "Saint-Maur-des-Fossés", href: "/zones-d-intervention/val-de-marne/saint-maur-des-fosses" },
-  { label: "Nogent-sur-Marne", href: "/zones-d-intervention/val-de-marne/nogent-sur-marne" },
-  { label: "Champigny-sur-Marne", href: "/zones-d-intervention/val-de-marne/champigny-sur-marne" },
-  ],
+
 
   // =========================
   // SEO (title/description optimisés)
   // =========================
   seo: {
-    title: "Nettoyage Professionnel Val-de-Marne (94) | Klinova",
+    title: "Entreprise de Nettoyage dans le Val-de-Marne (94) | Klinova",
     description:
-      "Entreprise de nettoyage dans le Val-de-Marne : moquettes de copropriété, canapés et tapis à domicile, parkings, balcons. Intervention à Créteil, Vincennes, Saint-Maur. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
+      "Nettoyage professionnel dans le 94 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
   },
 };

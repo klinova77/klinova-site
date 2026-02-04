@@ -182,9 +182,9 @@ export const essonne: DepartmentKln = {
   // =========================
   // SEO (title/description optimisés pour CTR)
   // =========================
-  seo: {
-    title: "Nettoyage Moquettes, Canapés & Terrasses en Essonne (91) | Klinova",
-    description:
-      "Entreprise de nettoyage en Essonne : moquettes copropriété, canapés et tapis à domicile, terrasses, parkings. Évry, Massy, Palaiseau, Saclay. Devis gratuit 24h. ☎ 06 76 73 86 61",
-  },
+ seo: {
+  title: "Entreprise de Nettoyage en Essonne (91) | Klinova",
+  description:
+    "Nettoyage professionnel dans le 91 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+},
 };

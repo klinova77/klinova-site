@@ -187,9 +187,10 @@ export const seineEtMarne: DepartmentKln = {
   // =========================
   // SEO (title/description optimisés pour CTR)
   // =========================
-  seo: {
-    title: "Nettoyage Moquettes, Canapés & Terrasses en Seine-et-Marne (77) | Klinova",
-    description:
-      "Entreprise de nettoyage en Seine-et-Marne : moquettes copropriété, canapés et tapis à domicile, parkings, terrasses. Meaux, Melun, Chelles, Val d'Europe. Devis 24h. ☎ 06 76 73 86 61",
-  },
+seo: {
+  title: "Entreprise de Nettoyage en Seine-et-Marne (77) | Klinova",
+  description:
+    "Nettoyage professionnel dans le 77 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+},
+
 };

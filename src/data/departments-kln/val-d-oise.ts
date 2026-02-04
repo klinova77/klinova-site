@@ -10,10 +10,10 @@ export const valDOise: DepartmentKln = {
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel dans le Val-d'Oise (95)",
-  heroKicker: "Cergy, Pontoise, Argenteuil, Sarcelles • Devis sous 24h",
+  heroTitle: "Nettoyage professionnel dans le Val-d'Oise (95)",
+  heroKicker: "Argenteuil • Cergy • Sarcelles • Enghien • Devis sous 24h",
   heroDescription:
-    "Klinova intervient dans tout le Val-d'Oise pour le nettoyage de moquettes (parties communes de copropriété, locaux professionnels), canapés, tapis et matelas à domicile, balcons, terrasses et parkings souterrains. Nous organisons nos interventions par secteurs géographiques pour garantir réactivité et disponibilité sur l'ensemble du département.",
+    "Des grands ensembles d'Argenteuil aux pavillons de la vallée de Montmorency, le Val-d'Oise combine toutes les configurations. Klinova intervient dans tout le 95 pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains et terrasses. Organisation par secteurs géographiques pour des délais maîtrisés sur l'ensemble du département.",
 
   // =========================
   // Images
@@ -22,181 +22,180 @@ export const valDOise: DepartmentKln = {
     items: [
       {
         src: "/images/95-val-d-oise-residence-moderne.webp",
-        alt: "Résidence collective moderne dans le Val-d'Oise avec espaces communs et parkings",
+        alt: "Résidence moderne dans le Val-d'Oise avec espaces communs et espaces verts",
         width: 1200,
         height: 800,
         caption:
-          "Copropriétés Val-d'Oise : habitat dense et zones pavillonnaires nécessitant adaptation des protocoles.",
+          "Copropriétés du 95 : des configurations variées qui demandent des protocoles adaptés à chaque contexte.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en expertise)
   // =========================
   challenges: {
-    title: "Contraintes d'intervention dans le Val-d'Oise (95)",
+    title: "Ce que nous maîtrisons dans le Val-d'Oise",
     items: [
-      "Département étendu (1 246 km²) nécessitant une organisation par secteurs géographiques pour optimiser les trajets et tenir des délais cohérents",
-      "Typologie d'habitat très variée : grands ensembles urbains (Argenteuil, Sarcelles), villes moyennes (Cergy-Pontoise, Ermont), zones pavillonnaires étendues (vallée de Montmorency, Vexin)",
-      "Moquettes de parties communes soumises à des niveaux d'encrassement différents selon la densité urbaine et le type de fréquentation",
-      "Parkings souterrains de tailles variables, des petits parkings résidentiels aux grands ensembles avec rampes hélicoïdales et zones techniques",
-      "Textiles d'ameublement très sollicités dans les zones résidentielles familiales : taches alimentaires récurrentes, odeurs d'animaux, usure quotidienne",
-      "Balcons et terrasses exposés à des contraintes différentes selon le secteur : pollution urbaine pour les zones denses, mousses et végétation pour les secteurs pavillonnaires",
-      "Logistique adaptée au contexte : accès copropriétés avec badges et ascenseurs, zones pavillonnaires avec allées privées et portails",
+      "Grands ensembles urbains (Argenteuil, Sarcelles, Garges) : moquettes de parties communes à fort trafic, protocoles durables",
+      "Villes moyennes (Cergy-Pontoise, Ermont, Franconville) : mix copropriétés collectives et zones pavillonnaires",
+      "Vallée de Montmorency et secteurs résidentiels : interventions à domicile pour textiles et terrasses,avec créneaux souples",
+      "Parkings souterrains de toutes tailles : du petit parking résidentiel au grand ensemble avec rampes hélicoïdales",
+      "Organisation par secteurs (Est, Ouest, vallée de l'Oise, Montmorency) pour des délais cohérents sur tout le département",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-      title: "Val-d'Oise : un territoire diversifié qui impose des protocoles adaptés",
+      title: "Le 95, un département aux multiples facettes",
       image: "/images/95-val-d-oise-residence-moderne.webp",
       imageAlt: "Hall d'entrée de copropriété dans le Val-d'Oise avec moquette et circulations",
       imageCaption:
-        "Parties communes 95 : la propreté reste essentielle pour le confort quotidien et l'image résidentielle.",
+        "Parties communes du 95 : la propreté reste un marqueur de qualité de vie, quelle que soit la configuration.",
       html: `
         <p>
-          Le <strong>Val-d'Oise</strong> se distingue par sa diversité territoriale. Les grands ensembles 
-          urbains comme Argenteuil, Sarcelles ou Garges-lès-Gonesse concentrent des copropriétés denses où 
-          les parties communes (halls, paliers, cages d'escalier) subissent un trafic quotidien important. 
-          Les villes moyennes telles que Cergy-Pontoise, Ermont ou Franconville combinent habitat collectif 
-          et zones pavillonnaires. Enfin, les secteurs résidentiels de la vallée de Montmorency ou du Vexin 
-          privilégient les maisons individuelles avec jardins et terrasses.
+          Le <strong>Val-d'Oise</strong> concentre des réalités très différentes sur un territoire 
+          de 1 246 km². À l'est, Sarcelles, Garges-lès-Gonesse et Villiers-le-Bel abritent des 
+          grands ensembles où les parties communes subissent un trafic quotidien intense. À l'ouest, 
+          Argenteuil, Bezons et Cormeilles-en-Parisis combinent habitat collectif et zones 
+          pavillonnaires. Au nord, Cergy-Pontoise et la vallée de l'Oise mêlent ville nouvelle et 
+          secteurs résidentiels. Et dans la vallée de Montmorency — Enghien-les-Bains, Montmorency, 
+          Soisy — l'habitat individuel domine avec ses jardins et terrasses.
         </p>
         <p class="mt-4">
-          Cette hétérogénéité se reflète directement dans nos interventions. Sur les <strong>moquettes 
-          de copropriété</strong>, l'encrassement varie sensiblement : poussières fines et traces de 
-          circulation dans les secteurs urbains denses, salissures plus terreuses et végétales dans les 
-          zones résidentielles. Sans un protocole ajusté au contexte et au niveau de sollicitation, le 
-          résultat ne tient pas dans le temps et les interventions doivent être répétées plus fréquemment.
+          Cette diversité se reflète directement dans nos interventions. En <strong>copropriété 
+          urbaine</strong>, l'enjeu est la durabilité du nettoyage. Les moquettes de halls et 
+          de paliers s'encrassent vite — poussières fines, traces de semelles, salissures aux 
+          points de passage. Il faut des protocoles qui tiennent dans le temps, pas des 
+          interventions cosmétiques à répéter tous les mois.
         </p>
         <p class="mt-4">
-          À <strong>domicile</strong>, nous constatons que les textiles d'ameublement reflètent une 
-          utilisation familiale intensive. Les canapés, tapis et matelas accumulent les taches alimentaires 
-          quotidiennes, les odeurs d'animaux domestiques, les auréoles d'usage et subissent une usure 
-          prématurée sur les zones de frottement. Notre objectif est de les remettre à neuf : détachage 
-          précis, extraction en profondeur, désodorisation si nécessaire et rinçage complet pour éviter 
-          qu'ils ne se salissent à nouveau trop rapidement.
+          En <strong>zone pavillonnaire</strong>, la demande est différente. Les particuliers 
+          nous sollicitent pour leurs canapés tachés, leurs tapis fatigués, leurs matelas qui 
+          auraient besoin d'un coup de frais, ou leurs terrasses envahies par les mousses. 
+          L'avantage ? Pas de contrainte de syndic, des créneaux souples, et un résultat visible 
+          immédiatement dans votre intérieur.
         </p>
         <p class="mt-4">
-          Pour couvrir efficacement le département, nous planifions nos interventions par secteurs : 
-          Est 95 (Sarcelles, Garges, Gonesse), Ouest 95 (Argenteuil, Bezons, Cormeilles), vallée de 
-          l'Oise (Cergy-Pontoise, Éragny) et vallée de Montmorency (Montmorency, Enghien, Soisy). 
-          Cette organisation nous permet de limiter les temps de trajet et de vous proposer des créneaux 
-          cohérents, que vous soyez en copropriété ou en pavillon.
+          Pour couvrir efficacement le département, nous avons structuré nos tournées en quatre 
+          secteurs : <strong>Est 95</strong> (Sarcelles, Garges, Gonesse, Villiers-le-Bel), 
+          <strong>Ouest 95</strong> (Argenteuil, Bezons, Cormeilles, Herblay), <strong>Vallée 
+          de l'Oise</strong> (Cergy, Pontoise, Éragny, Conflans) et <strong>Montmorency</strong> 
+          (Enghien, Montmorency, Soisy, Saint-Gratien). Quand vous nous contactez, nous identifions 
+          votre zone et nous vous proposons un créneau cohérent avec nos prochains passages.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Notre protocole d'intervention : diagnostic contextuel et méthode sur mesure",
+      title: "Notre méthode, adaptée à chaque contexte du 95",
       html: `
         <p>
-          Chaque prestation dans le Val-d'Oise commence par un diagnostic qui prend en compte les 
-          spécificités locales. Nous identifions d'abord le type de surface à traiter et son niveau 
-          d'encrassement, puis nous évaluons les contraintes d'accès et les priorités opérationnelles.
+          Chaque intervention dans le Val-d'Oise commence par un <strong>diagnostic contextuel</strong>. 
+          Nous ne traitons pas de la même façon une moquette de hall à Sarcelles et un tapis persan 
+          dans un pavillon d'Enghien. Le type de surface, le niveau d'encrassement, les contraintes 
+          d'accès et les priorités du client — tout est pris en compte avant de définir le protocole.
         </p>
         <p class="mt-4">
-          Pour les <strong>parties communes de copropriété</strong>, nous analysons le type de moquette 
-          (bouclée, velours, aiguilletée), repérons les zones à forte fréquentation (entrée, ascenseur, 
-          paliers) et adaptons notre méthode au contexte urbain ou résidentiel. Sur les <strong>textiles 
-          à domicile</strong>, nous examinons la nature du tissu, les zones de frottement, les taches 
-          spécifiques et les éventuelles odeurs pour calibrer notre intervention.
+          En <strong>copropriété</strong>, nous identifions les zones à fort passage (entrée, 
+          ascenseur, paliers), analysons le type de moquette (bouclée, velours, aiguilletée) et 
+          coordonnons avec le syndic ou le gardien pour les horaires et les accès. L'objectif : 
+          intervenir efficacement sans bloquer les circulations ni gêner les résidents.
         </p>
         <p class="mt-4">
-          Pour les <strong>parkings souterrains</strong>, nous tenons compte de la surface (petit parking 
-          résidentiel ou grand ensemble), du type de sol (béton, enrobé) et des contraintes techniques 
-          (ventilation, évacuation de l'eau). Sur les <strong>balcons et terrasses</strong>, nous adaptons 
-          notre méthode selon le matériau (carrelage, bois, pierre), l'exposition (pollution urbaine ou 
-          végétation) et l'accès à l'eau.
+          À <strong>domicile</strong>, nous commençons par un diagnostic textile. Nature du tissu, 
+          zones de frottement, taches spécifiques (alimentaires, grasses, organiques), odeurs 
+          éventuelles (animaux, tabac, humidité) — tout est identifié avant le moindre traitement. 
+          Ensuite, nous procédons par étapes : détachage manuel des zones critiques, nettoyage 
+          global contrôlé, extraction douce, séchage maîtrisé.
         </p>
         <p class="mt-4">
-          Le protocole de nettoyage proprement dit combine plusieurs étapes : pré-aspiration ou balayage, 
-          détachage ciblé des zones sensibles, nettoyage mécanique adapté au support (injection-extraction 
-          pour les moquettes, extraction douce pour les textiles délicats, autolaveuse pour les parkings), 
-          rinçage sans résidu et séchage maîtrisé. Nous terminons systématiquement par les finitions : 
-          bordures, angles, plinthes et points de contact.
+          Pour les <strong>parkings souterrains</strong>, nous adaptons notre équipement à la 
+          surface : autolaveuse pour les grands ensembles, monobrosse pour les petits parkings 
+          résidentiels. Nous traitons les traces de pneus, gérons l'évacuation de l'eau et 
+          sécurisons les zones potentiellement glissantes.
         </p>
         <p class="mt-4">
-          À l'issue de l'intervention, nous effectuons un contrôle visuel, validons le résultat avec vous 
-          et vous transmettons des recommandations d'entretien adaptées à votre situation (fréquences 
-          optimales, points sensibles à surveiller, protections éventuelles). Pour les copropriétés qui 
-          souhaitent mettre en place un suivi régulier, nous proposons des contrats récurrents avec un 
-          ajustement du protocole si besoin.
+          Sur les <strong>terrasses et balcons</strong>, nous tenons compte du matériau (carrelage, 
+          bois, pierre) et de l'exposition (pollution urbaine ou végétation). Haute pression 
+          ajustée pour les surfaces résistantes, brossage manuel pour les matériaux fragiles — 
+          l'objectif est un décrassage efficace sans risque pour les surfaces.
+        </p>
+        <p class="mt-4">
+          À la fin de chaque prestation, nous validons le résultat avec vous et nous vous 
+          transmettons des recommandations d'entretien adaptées à votre situation.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "Dans le Val-d'Oise, nous planifions nos interventions par secteurs géographiques pour optimiser les trajets et vous garantir des créneaux cohérents. Que vous soyez en copropriété (avec badges d'accès, ascenseurs, stationnement visiteurs) ou en pavillon (avec allées privées, portails, stationnement résidentiel), nous anticipons les contraintes logistiques en amont pour que l'intervention se déroule dans les meilleures conditions.",
+    "Le Val-d'Oise est vaste, mais notre organisation par secteurs géographiques nous permet de vous proposer des créneaux réalistes. Que vous soyez en copropriété (badges, ascenseurs, coordination syndic) ou en pavillon (allées privées, portails, point d'eau extérieur), nous anticipons les contraintes en amont. Cette préparation garantit une intervention fluide et un timing respecté.",
 
   // =========================
-  // FAQ optimisée SEO + conversion + style naturel
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
-      question: "Dans quelles villes du Val-d'Oise intervenez-vous ?",
+      question: "Quelles villes du Val-d'Oise couvrez-vous ?",
       answer:
-        "Nous couvrons l'ensemble du département : Argenteuil, Sarcelles, Cergy, Pontoise, Ermont, Franconville… et toutes les communes du Val-d’Oise. Nous intervenons aussi bien en copropriété qu'à domicile ou en pavillon.",
+        "Tout le département. Nos interventions les plus fréquentes ont lieu à Argenteuil, Sarcelles, Cergy, Pontoise, Garges-lès-Gonesse, Ermont, Franconville, Enghien-les-Bains, Montmorency et Soisy-sous-Montmorency. Copropriétés, pavillons, appartements — nous adaptons notre approche à chaque contexte.",
     },
     {
-      question: "Comment organisez-vous vos interventions sur un département aussi étendu ?",
+      question: "Comment gérez-vous les distances sur un département aussi étendu ?",
       answer:
-        "Nous travaillons par secteurs géographiques : Est 95 (Sarcelles, Garges, Gonesse), Ouest 95 (Argenteuil, Bezons, Cormeilles), vallée de l'Oise (Cergy-Pontoise, Éragny) et vallée de Montmorency (Montmorency, Enghien, Soisy). Cette organisation nous permet de limiter les temps de trajet et de vous proposer des créneaux réalistes. Une fois que vous nous contactez, nous vous répondons sous 24h et planifions l'intervention sous 3 à 7 jours selon le secteur.",
+        "Nous structurons nos tournées par secteurs : Est 95 (Sarcelles, Garges), Ouest 95 (Argenteuil, Bezons), vallée de l'Oise (Cergy-Pontoise) et Montmorency (Enghien, Soisy). Quand vous nous contactez, nous identifions votre zone et nous vous proposons un créneau cohérent avec nos prochains passages. Délai habituel : 3 à 7 jours.",
     },
     {
-      question: "Faites-vous le nettoyage des moquettes de parties communes en copropriété ?",
+      question: "Comment nettoyez-vous les moquettes de parties communes ?",
       answer:
-        "Tout à fait. Nous intervenons sur les halls d'entrée, paliers, couloirs et cages d'escalier. Notre protocole s'adapte au type de moquette (bouclée, velours, aiguilletée) et au niveau d'encrassement. Nous travaillons méthodiquement par zones et terminons toujours par les finitions (bordures, angles, plinthes) pour un rendu homogène. La coordination avec le syndic ou le gardien nous permet de minimiser la gêne pour les résidents.",
+        "Nous adaptons le protocole au type de moquette et au niveau d'encrassement. L'intervention comprend aspiration préalable, détachage ciblé, nettoyage mécanique (injection-extraction ou monobrosse), rinçage sans résidu et séchage contrôlé. Nous terminons toujours par des finitions systématiques : bordures, angles, seuils. Tout est coordonné avec le syndic pour limiter la gêne des résidents.",
     },
     {
-      question: "Nettoyez-vous les canapés, tapis et matelas à domicile ?",
+      question: "Intervenez-vous à domicile pour les canapés et tapis ?",
       answer:
-        "C'est effectivement l'une de nos prestations principales. Nous nous déplaçons chez vous pour nettoyer canapés, fauteuils, tapis et matelas. Le protocole varie selon le textile et le type de taches (alimentaires, grasses, organiques). Nous procédons par détachage manuel précis, extraction douce adaptée au tissu, rinçage complet et, si nécessaire, désodorisation (pour les odeurs d'animaux, d'humidité ou de tabac). Le tout sans sur-humidifier et avec un séchage contrôlé.",
+        "Oui, c'est une prestation fréquente dans le 95, notamment en zone pavillonnaire. Nous traitons les canapés (tissu, microfibre, velours, cuir), tapis et matelas. Le protocole s'adapte au textile et au type de taches ou d'odeurs. Détachage manuel, extraction douce, rinçage complet, désodorisation si nécessaire — le tout sans sur-humidification.",
     },
     {
-      question: "Proposez-vous le nettoyage de parkings souterrains dans le Val-d'Oise ?",
+      question: "Nettoyez-vous les parkings souterrains de copropriété ?",
       answer:
-        "Nous intervenons régulièrement dans les parkings souterrains et semi-enterrés de copropriétés. Nous traitons les zones de circulation, les places de stationnement, les rampes d'accès et les zones techniques. Selon la surface, nous utilisons une autolaveuse ou une monobrosse, nous traitons les traces de pneus et les dépôts noirs, puis nous gérons l'évacuation de l'eau et la sécurisation (signalisation, prévention de la glissance). Tout est coordonné avec le syndic pour limiter l'impact sur les résidents.",
+        "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes et zones techniques. Pour les grands ensembles, nous utilisons des autolaveuses haute performance. Pour les petits parkings résidentiels, une monobrosse suffit. Nous gérons l'évacuation de l'eau et sécurisons les zones glissantes.",
     },
     {
-      question: "Intervenez-vous aussi sur les balcons et terrasses de maisons et appartements ?",
+      question: "Proposez-vous le nettoyage de terrasses et balcons ?",
       answer:
-        "Nous nettoyons effectivement les balcons et terrasses, qu'ils soient en appartement ou en pavillon. Le décrassage porte sur tous types de surfaces (carrelage, dalles, bois, pierre). Nous traitons les mousses et les dépôts (pollution urbaine ou végétation selon le secteur), puis nous rinçons et finissons soigneusement. Si nécessaire, nous adaptons la méthode (haute pression ajustée ou brossage manuel pour les surfaces fragiles) et nous protégeons les évacuations et les voisins du dessous.",
+        "Oui, en appartement comme en pavillon. Nous traitons tous types de surfaces : carrelage, dalles, bois, pierre. Le protocole s'adapte au matériau et à l'exposition — haute pression ajustée ou brossage manuel selon la fragilité de la surface. Nous gérons l'écoulement d'eau et prenons en compte les voisins du dessous si nécessaire.",
     },
     {
-      question: "Quels sont vos délais et vos tarifs dans le Val-d'Oise ?",
+      question: "Quel est votre délai d'intervention dans le Val-d'Oise ?",
       answer:
-        "Nous vous envoyons un devis gratuit sous 24h dès que vous nous transmettez quelques informations : surface en m², photos si possible et adresse exacte pour identifier le secteur géographique. Les tarifs varient selon le type de prestation (moquettes de parties communes, textiles à domicile, parkings, extérieurs). L'intervention a généralement lieu sous 3 à 7 jours selon le secteur et nos disponibilités. Pour les copropriétés qui souhaitent mettre en place un contrat récurrent (trimestriel, semestriel), nous proposons des tarifs dégressifs.",
+        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon votre secteur et nos tournées en cours. Pour les urgences (assemblée générale, visite importante), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
     },
     {
-      question: "Comment préparer votre venue dans une copropriété ou un pavillon ?",
+      question: "Combien coûte un nettoyage de moquette dans le Val-d'Oise ?",
       answer:
-        "En copropriété, il suffit de dégager l'accès aux zones à traiter, de prévoir les badges ou codes d'entrée et, si possible, de coordonner avec le gardien. Communiquez-nous également les horaires autorisés et les contraintes de stationnement visiteurs. En pavillon, pensez à libérer les surfaces extérieures (terrasses, balcons) et à prévoir un accès à l'eau si nécessaire. Pour les canapés et tapis, dégagez un peu l'espace autour pour que nous puissions travailler confortablement. Nous vous envoyons une petite checklist lors de la confirmation du rendez-vous.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
     },
   ],
 
   // =========================
   // Liens internes (villes stratégiques par secteur)
   // =========================
-  internalLinks: [
-   
-  ],
+
 
   // =========================
   // SEO (title/description optimisés)
   // =========================
   seo: {
-    title: "Nettoyage Professionnel Val-d'Oise (95) | Klinova",
+    title: "Entreprise de Nettoyage dans le Val-d'Oise (95) | Klinova",
     description:
-      "Entreprise de nettoyage dans le Val-d'Oise : moquettes de copropriété, canapés et tapis à domicile, parkings, balcons. Intervention à Cergy, Argenteuil, Sarcelles, Pontoise. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
+      "Nettoyage professionnel dans le 95 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
   },
 };

@@ -189,9 +189,10 @@ export const paris: DepartmentKln = {
   // =========================
   // SEO (title/description optimisés pour CTR)
   // =========================
-  seo: {
-    title: "Nettoyage Moquettes & Textiles à Paris (75) | Tous Arrondissements | Klinova",
-    description:
-      "Entreprise de nettoyage à Paris : moquettes copropriétés haussmanniennes, canapés et tapis à domicile, parkings, terrasses. Du 1er au 20e. Devis 24h. ☎ 06 76 73 86 61",
-  },
+seo: {
+  title: "Entreprise de Nettoyage à Paris (75) | Klinova",
+  description:
+    "Nettoyage professionnel à Paris : moquettes de copropriété et bureaux, canapés et tapis à domicile, parkings souterrains, terrasses et balcons. Devis gratuit sous 24h.",
+},
+
 };

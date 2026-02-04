@@ -10,10 +10,10 @@ export const seineSaintDenis: DepartmentKln = {
   // =========================
   // SEO & Hero
   // =========================
-  heroTitle: "Entreprise de nettoyage professionnel en Seine-Saint-Denis (93)",
-  heroKicker: "Copropriétés denses & pavillons • Devis gratuit sous 24h",
+  heroTitle: "Nettoyage professionnel en Seine-Saint-Denis (93)",
+  heroKicker: "Montreuil • Saint-Denis • Pantin • Noisy-le-Grand • Devis sous 24h",
   heroDescription:
-    "Klinova intervient partout en Seine-Saint-Denis pour le nettoyage de moquettes (parties communes), canapés, tapis et matelas à domicile, balcons, terrasses et parkings souterrains. Nous adaptons nos protocoles aux immeubles à forte fréquentation, aux contraintes d'accès et aux exigences de propreté des résidences collectives.",
+    "Habitat collectif dense, circulations intenses, copropriétés à fort trafic : la Seine-Saint-Denis demande des protocoles robustes qui tiennent dans le temps. Klinova intervient dans tout le 93 pour redonner éclat aux moquettes de parties communes, canapés et tapis à domicile, parkings souterrains et balcons urbains. Organisation rigoureuse, finitions soignées, résultat durable.",
 
   // =========================
   // Images
@@ -22,152 +22,174 @@ export const seineSaintDenis: DepartmentKln = {
     items: [
       {
         src: "/images/93-seine-saint-denis-klinova.jpg",
-        alt: "Ensemble résidentiel en Seine-Saint-Denis avec immeubles collectifs et espaces communs",
+        alt: "Ensemble résidentiel en Seine-Saint-Denis avec immeubles collectifs et espaces verts",
         width: 1200,
         height: 800,
         caption:
-          "Résidences Seine-Saint-Denis : des interventions adaptées aux configurations urbaines denses et aux circulations intenses.",
+          "Résidences du 93 : des parties communes très sollicitées qui méritent un entretien professionnel régulier.",
       },
     ],
   },
 
   // =========================
-  // Spécificités terrain
+  // Spécificités terrain (reformulé en expertise)
   // =========================
   challenges: {
-    title: "Contraintes d'intervention en Seine-Saint-Denis (93)",
+    title: "Ce que nous maîtrisons en Seine-Saint-Denis",
     items: [
-      "Densité résidentielle élevée avec halls, paliers, cages d'escalier et ascenseurs soumis à un trafic quotidien intense",
-      "Moquettes de parties communes confrontées à un encrassement accéléré : poussières fines urbaines, traces de circulation, salissures localisées",
-      "Parkings souterrains avec dépôts noirs, traces de pneus, rampes en pente et zones techniques nécessitant des contraintes de sécurité renforcées",
-      "Balcons urbains exposés à la pollution atmosphérique, aux dépôts carbonés et aux mousses sur dalles minérales, avec des accès parfois complexes (étages élevés, absence de point d'eau)",
-      "Coordination logistique serrée : badges d'accès, horaires autorisés stricts, stationnement limité, circulation des résidents à minimiser",
+      "Copropriétés à fort trafic : halls, paliers, escaliers et ascenseurs sollicités du matin au soir — protocoles conçus pour durer",
+      "Moquettes de parties communes encrassées rapidement : poussières urbaines, traces de circulation, salissures localisées — méthode à rendement maîtrisé",
+      "Parkings souterrains avec dépôts noirs et traces de pneus : autolaveuses, gestion de l'eau, sécurisation des zones glissantes",
+      "Balcons urbains exposés à la pollution : décrassage des dalles minérales, traitement des mousses, finitions soignées",
+      "Terrasses et cours intérieures : dépôts, mousses, zones ombragées — décrassage + finitions soignées sans abîmer les supports",
+      "Logistique serrée : badges, horaires stricts, stationnement limité — nous anticipons chaque contrainte avec le syndic",
     ],
   },
 
   // =========================
-  // Sections éditoriales
+  // Sections éditoriales (optimisées conversion)
   // =========================
   sections: [
     {
       id: "contexte",
-      title: "Nettoyage en Seine-Saint-Denis : enjeux de densité et d'image",
+      title: "Le 93, un département où la propreté compte double",
       image: "/images/93-seine-saint-denis-klinova.avif",
-      imageAlt: "Vue d'ensemble d'immeubles collectifs typiques de Seine-Saint-Denis",
+      imageAlt: "Vue d'immeubles collectifs en Seine-Saint-Denis avec espaces communs",
       imageCaption:
-        "Habitat collectif dense : la propreté des circulations communes conditionne le confort quotidien et l'image résidentielle.",
+        "Habitat collectif dense : la propreté des circulations conditionne le confort quotidien et l'image de la copropriété.",
       html: `
         <p>
-          La <strong>Seine-Saint-Denis</strong> concentre un habitat collectif dense où les circulations 
-          communes (halls d'entrée, paliers, ascenseurs, cages d'escalier) subissent une sollicitation 
-          quotidienne intense. Dans ce contexte, la propreté devient un enjeu direct de confort 
-          résidentiel et d'image pour la copropriété.
+          En <strong>Seine-Saint-Denis</strong>, les parties communes travaillent dur. Halls 
+          d'entrée, paliers, cages d'escalier, ascenseurs — tout est sollicité du matin au soir 
+          par les résidents, les visiteurs, les livreurs. Dans ce contexte de forte fréquentation, 
+          la propreté n'est pas un détail : c'est un marqueur direct de la qualité de vie dans 
+          l'immeuble.
         </p>
         <p class="mt-4">
-          Sur les <strong>moquettes de parties communes</strong>, l'encrassement est rapide. Les 
-          poussières fines urbaines, les traces de semelles et les salissures localisées aux points 
-          de contact s'accumulent rapidement. Sans un protocole structuré, le rendu devient terne en 
-          quelques semaines. Notre méthode privilégie l'organisation, le rendement et des finitions 
-          systématiques (bordures, angles, seuils, zones d'impact visuel).
+          Les <strong>moquettes de parties communes</strong> encaissent le plus gros de la charge. 
+          Poussières fines urbaines, traces de semelles, salissures aux points de passage (entrée, 
+          boîtes aux lettres, ascenseur) — l'encrassement est rapide, souvent en quelques semaines. 
+          Un nettoyage superficiel ne suffit pas : il faut des protocoles qui extraient la saleté 
+          en profondeur et qui tiennent dans le temps.
         </p>
         <p class="mt-4">
-          À <strong>domicile</strong>, nous appliquons le même principe pour le nettoyage de canapés, 
-          tapis et matelas : un diagnostic précis, un nettoyage contrôlé sans sur-humidification, un 
-          rendu homogène et des recommandations claires pour maintenir le résultat dans le temps.
+          C'est exactement notre approche. Nous privilégions des <strong>méthodes à rendement 
+          maîtrisé</strong> — efficaces sur les grandes surfaces, mais sans sacrifier les finitions. 
+          Bordures, angles, seuils, zones de contact visuel : chaque détail compte pour un résultat 
+          qui se voit et qui dure.
+        </p>
+        <p class="mt-4">
+          À <strong>domicile</strong>, nous appliquons la même rigueur pour les canapés, tapis et 
+          matelas. Diagnostic précis, nettoyage contrôlé, séchage maîtrisé, recommandations 
+          d'entretien. L'objectif : un résultat homogène qui prolonge la durée de vie de vos 
+          textiles.
         </p>
       `,
     },
     {
       id: "process",
-      title: "Notre protocole en Seine-Saint-Denis : diagnostic, action et contrôle",
+      title: "Notre méthode, conçue pour les copropriétés à fort trafic",
       html: `
         <p>
-          Chaque intervention débute par un diagnostic opérationnel. Nous identifions d'abord les 
-          <strong>zones prioritaires</strong> dans les parties communes (entrée, boîtes aux lettres, 
-          ascenseur, paliers, seuils), analysons le type de moquette, évaluons le niveau d'encrassement 
-          et repérons les taches localisées.
+          Chaque intervention en Seine-Saint-Denis commence par un <strong>diagnostic 
+          opérationnel</strong>. En copropriété, nous identifions les zones à fort passage 
+          (entrée, boîtes aux lettres, ascenseur, paliers), analysons le type de moquette 
+          (bouclée, velours, aiguilletée) et évaluons le niveau d'encrassement zone par zone.
         </p>
         <p class="mt-4">
-          Pour les <strong>textiles à domicile</strong>, nous examinons la nature du tissu, identifions 
-          les zones de frottement et détectons les auréoles ou odeurs éventuelles (animaux, humidité, 
-          tabac). La <strong>logistique</strong> est également évaluée : contraintes d'accès (badges, 
-          ascenseur, stationnement, horaires autorisés), circulation des résidents à préserver.
+          La <strong>logistique</strong> est anticipée en amont. Nous coordonnons avec le syndic 
+          ou le gardien pour caler les horaires (souvent tôt le matin ou en fin de journée), 
+          gérer les badges d'accès et identifier les possibilités de stationnement. L'objectif : 
+          intervenir efficacement sans bloquer les circulations ni gêner les résidents.
         </p>
         <p class="mt-4">
-          Le nettoyage proprement dit combine une action mécanique adaptée et des produits sélectionnés 
-          selon le support. L'objectif n'est pas seulement d'éclaircir la surface, mais d'obtenir un 
-          rendu net et homogène grâce à un travail de finitions systématique : bordures, angles, zones 
-          de contact et tous les détails qui font la différence visuellement.
+          Le <strong>protocole de nettoyage</strong> combine action mécanique et finitions 
+          systématiques. Sur les moquettes, nous procédons par zones : aspiration préalable, 
+          détachage ciblé des points critiques, nettoyage mécanique (injection-extraction ou 
+          monobrosse selon le support), rinçage sans résidu, séchage contrôlé. Et toujours : 
+          finitions bordures, angles, seuils — tout ce qui fait la différence visuellement.
         </p>
         <p class="mt-4">
-          En fin d'intervention, nous effectuons un contrôle visuel, validons le résultat avec vous 
-          ou le gestionnaire, et vous transmettons des recommandations d'entretien courant (fréquences 
-          adaptées, protections à envisager, points sensibles à surveiller).
+          Pour les <strong>textiles à domicile</strong>, nous commençons par un diagnostic 
+          matière. Nature du tissu, zones de frottement, taches et odeurs éventuelles — tout 
+          est identifié avant le moindre traitement. Ensuite, nous procédons par étapes : 
+          détachage manuel, nettoyage global contrôlé, extraction douce, séchage maîtrisé.
+        </p>
+        <p class="mt-4">
+          À la fin de chaque prestation, nous validons le résultat avec vous ou le gestionnaire. 
+          Si un détail mérite un second passage, nous le traitons sur place. Et nous vous 
+          transmettons des recommandations d'entretien pour prolonger le bénéfice de notre 
+          intervention.
         </p>
       `,
     },
   ],
 
   // =========================
-  // Logistique
+  // Logistique (reformulé en avantage client)
   // =========================
   logistics:
-    "En Seine-Saint-Denis, l'organisation logistique conditionne la réussite de l'intervention. Nous anticipons les badges d'accès, les horaires stricts imposés par les copropriétés, le stationnement souvent limité et coordonnons avec le gardien ou le syndic. Pour les prestations à domicile (canapés, tapis, matelas), nous confirmons également les conditions pratiques : configuration de la pièce, accès à l'eau, temps de séchage nécessaire et ventilation disponible.",
+    "En Seine-Saint-Denis, la logistique fait partie de la prestation. Nous anticipons les badges d'accès, les horaires stricts imposés par les copropriétés et les contraintes de stationnement. Pour les interventions à domicile, nous confirmons la configuration de la pièce, l'accès à l'eau et les conditions de séchage. Cette préparation en amont vous garantit une intervention fluide et un résultat à la hauteur.",
 
   // =========================
-  // FAQ optimisée SEO + conversion + style naturel
+  // FAQ optimisée SEO (featured snippets) + conversion + style naturel
   // =========================
   faq: [
     {
-      question: "Dans quelles villes de Seine-Saint-Denis intervenez-vous ?",
+      question: "Quelles villes de Seine-Saint-Denis couvrez-vous ?",
       answer:
-        "Nous couvrons l'ensemble du département : Montreuil, Saint-Denis, Aubervilliers, Pantin, Noisy-le-Grand, Bondy, Le Raincy, Gagny, Livry-Gargan, Neuilly-sur-Marne, Villemomble, Rosny-sous-Bois et toutes les communes environnantes. Nous intervenons aussi bien en copropriété (parties communes, parkings) qu'à domicile (textiles d'ameublement).",
+        "Tout le département. Nos interventions les plus fréquentes ont lieu à Montreuil, Saint-Denis, Aubervilliers, Pantin, Noisy-le-Grand, Bondy, Le Raincy, Gagny, Livry-Gargan, Neuilly-sur-Marne, Villemomble et Rosny-sous-Bois. Copropriétés, appartements particuliers — nous adaptons notre approche à chaque contexte.",
     },
     {
-      question: "Comment nettoyez-vous les moquettes de halls, paliers et couloirs ?",
+      question: "Comment nettoyez-vous les moquettes de parties communes ?",
       answer:
-        "Nous adaptons notre protocole au type de moquette (bouclée, velours, aiguilletée) et au niveau d'encrassement. L'intervention comprend une pré-aspiration, un détachage ciblé, une injection-extraction contrôlée si nécessaire, un rinçage sans résidu et un séchage maîtrisé. Nous travaillons méthodiquement par zones et terminons toujours par des finitions systématiques (bordures, angles, seuils). L'organisation est coordonnée avec le syndic ou le gardien pour limiter la gêne des résidents.",
+        "Nous adaptons le protocole au type de moquette et au niveau d'encrassement. L'intervention comprend aspiration préalable, détachage ciblé, nettoyage mécanique (injection-extraction ou monobrosse), rinçage sans résidu et séchage contrôlé. Nous travaillons par zones et terminons toujours par des finitions systématiques : bordures, angles, seuils. Tout est coordonné avec le syndic pour limiter la gêne des résidents.",
     },
     {
-      question: "Proposez-vous le nettoyage de canapés et matelas à domicile en Seine-Saint-Denis ?",
+      question: "Intervenez-vous à domicile pour les canapés et matelas ?",
       answer:
-        "Nous intervenons effectivement à domicile pour nettoyer les canapés (tissu, microfibre, velours), les tapis et les matelas. Le protocole s'ajuste à la nature du textile, au type de taches (organiques, graisses, auréoles) et aux odeurs éventuelles (animaux, humidité, tabac). Nous procédons par nettoyage sans sur-humidification, avec un séchage contrôlé et des finitions homogènes.",
+        "Oui, c'est une prestation courante dans le 93. Nous traitons les canapés (tissu, microfibre, velours), tapis et matelas. Le protocole s'adapte à la nature du textile et au type de taches (organiques, graisses, auréoles) ou d'odeurs (animaux, tabac, humidité). Nettoyage sans sur-humidification, séchage contrôlé, finitions homogènes.",
     },
     {
       question: "Nettoyez-vous les parkings souterrains de copropriété ?",
       answer:
-        "Nous intervenons régulièrement dans les parkings souterrains. Nous traitons les zones de circulation, les places de stationnement, les rampes et les zones techniques. Le protocole est spécifique : gestion de l'eau et de son évacuation, traitement des traces de pneus et des dépôts noirs, sécurisation (prévention de la glissance, signalisation) et respect des contraintes de ventilation. Tout est coordonné avec le syndic pour une planification optimale.",
+        "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes et zones techniques. Le protocole inclut la gestion de l'eau et de l'évacuation, le traitement des traces de pneus et dépôts noirs, et la sécurisation des zones glissantes. Tout est coordonné avec le syndic pour choisir les horaires les moins impactants.",
     },
     {
-      question: "Quelles informations facilitent l'établissement d'un devis ?",
+      question: "Quel est votre délai d'intervention en Seine-Saint-Denis ?",
       answer:
-        "Pour un chiffrage rapide et précis, transmettez-nous la surface en m² (ou les dimensions), le type de support (moquette, textile, béton, carrelage), des photos si possible (état général, taches spécifiques) et les contraintes logistiques (étage, présence d'ascenseur, stationnement, horaires préférés). Plus le descriptif est détaillé, plus le devis sera juste.",
+        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités et les créneaux du syndic. Pour les urgences (assemblée générale, visite importante), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
     },
     {
-      question: "Combien de temps dure le séchage après le nettoyage d'une moquette ?",
+      question: "Combien de temps dure le séchage d'une moquette ?",
       answer:
-        "Le temps de séchage varie selon l'épaisseur de la moquette, la ventilation et la température ambiante. En conditions standard, comptez un séchage progressif sur 6 à 12 heures. Notre méthode limite l'eau résiduelle grâce à une extraction poussée et des passes contrôlées. Nous vous fournissons également des consignes de ventilation pour optimiser le séchage et éviter toute ré-humidification.",
+        "En conditions normales, comptez 6 à 12 heures selon l'épaisseur de la moquette et la ventilation. Notre méthode limite l'eau résiduelle grâce à une extraction poussée et des passes contrôlées. Nous vous donnons des consignes de ventilation précises pour optimiser le séchage.",
+    },
+    {
+      question: "Proposez-vous des contrats d'entretien récurrent ?",
+      answer:
+        "Oui. Pour les copropriétés qui souhaitent maintenir un niveau de propreté constant, nous proposons des contrats trimestriels, semestriels ou annuels. Cela inclut un calendrier prédéfini avec le syndic, des tarifs dégressifs et un suivi régulier. Ce type de formule est particulièrement adapté aux immeubles à fort trafic.",
+    },
+    {
+      question: "Combien coûte un nettoyage de moquette en Seine-Saint-Denis ?",
+      answer:
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
     },
   ],
 
   // =========================
-  // Liens internes (villes principales + ajouts stratégiques)
+  // Liens internes (villes principales)
   // =========================
-  internalLinks: [
-    { label: "Montreuil", href: "/zones-d-intervention/seine-saint-denis/montreuil" },
-    { label: "Le Raincy", href: "/zones-d-intervention/seine-saint-denis/le-raincy" },
-    { label: "Neuilly-sur-Marne", href: "/zones-d-intervention/seine-saint-denis/neuilly-sur-marne" },
-    { label: "Noisy-le-Grand", href: "/zones-d-intervention/seine-saint-denis/noisy-le-grand" },
-    { label: "Gagny", href: "/zones-d-intervention/seine-saint-denis/gagny" },
-    { label: "Livry-Gargan", href: "/zones-d-intervention/seine-saint-denis/livry-gargan" },
-  ],
+
 
   // =========================
-  // SEO (title/description optimisés)
+  // SEO (title/description optimisés pour CTR)
   // =========================
-  seo: {
-    title: "Nettoyage Professionnel Seine-Saint-Denis (93) | Klinova",
-    description:
-      "Entreprise de nettoyage en Seine-Saint-Denis : moquettes de copropriété, canapés et tapis à domicile, parkings, balcons. Intervention dans tout le 93. Devis gratuit sous 24h. ☎ 06 76 73 86 61",
-  },
+
+
+seo: {
+  title: "Entreprise de Nettoyage en Seine-Saint-Denis (93) | Klinova",
+  description:
+    "Nettoyage professionnel dans le 93 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+},
 };
