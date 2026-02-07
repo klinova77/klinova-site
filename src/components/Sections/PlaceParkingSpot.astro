@@ -1,0 +1,217 @@
+---
+// src/components/parking/PlaceParkingSpot.astro
+import { aVille, deVille } from "~/lib/geo-klinova";
+
+interface Props {
+  cityName: string;
+  /**
+   * Optional: force a template (0..N-1). Leave undefined to pick a stable one from cityName.
+   */
+  templateIndex?: number;
+  /**
+   * Optional: override anchor id for deep-links (#place-parking)
+   */
+  id?: string;
+}
+
+const { cityName, templateIndex, id = "place-parking" } = Astro.props as Props;
+
+const cityAt = aVille(cityName);
+const cityFrom = deVille(cityName);
+
+/**
+ * Stable, tiny hash → deterministic template per city
+ * (so the city keeps the same copy and you avoid "random" diffs in git).
+ */
+function hash32(input: string) {
+  let h = 2166136261;
+  for (let i = 0; i < input.length; i++) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+type Template = {
+  kicker: string;
+  title: string;
+  intro: string;
+  bullets: string[];
+  cta: string;
+  note?: string;
+};
+
+const templates: Template[] = [
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Vous rendez un logement et la place doit être propre pour l’état des lieux ? Nous intervenons sur une place individuelle (béton brut ou sol peint) pour enlever les traces de pneus, d’huile, de poussières noires et autres salissures courantes, avec un rendu net et propre.`,
+    bullets: [
+      "Dégraissage localisé + rinçage maîtrisé",
+      "Finitions manuelles sur angles et zones marquées",
+      "À savoir : les anciennes imprégnations dans le béton peuvent s’éclaircir sans disparaître totalement",
+    ],
+    cta: "Envoyez 2–3 photos, on vous répond sous 24h.",
+  },
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Une tache d’huile sur une place attitrée donne vite une impression de “sale” et peut rendre le sol glissant. Nous appliquons un protocole de dégraissage ciblé, avec produits professionnels et rinçage contrôlé, pour retrouver une surface plus saine et plus sûre.`,
+    bullets: [
+      "Traitement dégraissant spécifique (huile / fluides auto)",
+      "Contrôle de l’humidité et des résidus pour limiter la glissance",
+      "À savoir : sur béton très poreux, on réduit fortement la marque sans promettre un effacement “comme neuf”",
+    ],
+    cta: "Devis possible sur photos, sans déplacement inutile.",
+  },
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Pour une place seule, un box ou une petite zone, nous intervenons avec des machines compactes afin d’obtenir un résultat visible sans mobiliser une intervention “grands volumes”. C’est la bonne approche quand un particulier a besoin de faire nettoyer sa place de parking.`,
+    bullets: [
+      "Nettoyage mécanique + dégraissage localisé si besoin",
+      "Finitions soignées (bordures, poteaux, seuils)",
+      "À savoir : le rendu dépend du type de sol (béton brut, peinture, résine) et de l’ancienneté des taches",
+    ],
+    cta: "Indiquez la surface et envoyez vos photos : on propose la bonne méthode.",
+  },
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Quand un sol est gras ou très encrassé, le risque de glissade augmente. Notre intervention vise autant la propreté que la sécurité : dégraissage, rinçage maîtrisé, et vérification du rendu en fin de prestation.`,
+    bullets: [
+      "Produits et dosage adaptés (sans sur-humidifier inutilement)",
+      "Décollage du film gras par action mécanique",
+      "À savoir : si la peinture de sol est abîmée, on ne pourra pas “rattraper” l’usure du revêtement",
+    ],
+    cta: "On vous dit tout de suite ce qui est réaliste, photos à l’appui.",
+  },
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Une place peut se salir vite : poussière noire, coulures, traces de pneus, taches d’huile. Nous réalisons une remise en état ciblée pour retrouver une place propre et sécurisée.`,
+    bullets: [
+      "Dépoussiérage + nettoyage mécanique",
+      "Dégraissage sur zones marquées",
+      "À savoir : même si la zone est propre et dégraissée, le résultat visuel dépend de la porosité du sol et de l’ancienneté de la tache.",
+    ],
+    cta: "Demandez un avis rapide : 2–3 photos suffisent dans la majorité des cas.",
+  },
+  {
+    kicker: "Particuliers & copropriétaires",
+
+    title: "Nettoyage d’une place de parking",
+    intro:
+      `Nous intervenons aussi pour une place individuelle avec une approche simple : diagnostic, méthode adaptée au sol, exécution propre et contrôle final. L’objectif est un résultat net, conforme à ce qu’on vous annonce avant d’intervenir.`,
+    bullets: [
+      "Méthode adaptée (béton brut / sol peint / résine)",
+      "Produits professionnels + rinçage contrôlé",
+      "À savoir : on privilégie un résultat “propre et sain” plutôt que des promesses irréalistes de remise à neuf si le sol est ancien",
+    ],
+    cta: "Envoyez vos photos : réponse sous 24h, avec un tarif clair.",
+  },
+];
+
+const idx =
+  typeof templateIndex === "number"
+    ? Math.max(0, Math.min(templates.length - 1, templateIndex))
+    : hash32(cityName.toLowerCase()) % templates.length;
+
+const t = templates[idx];
+---
+
+<section id={id} class="py-16 bg-[#FCFCFC] border-y border-[#E5E7EB]">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+      <!-- En-tête -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6 bg-[#E8F2ED] border-[#CFE3D8] text-[#3F8D65]">
+          <span class="block h-2 w-2 rounded-full bg-[#3F8D65]" aria-hidden="true"></span>
+          {t.kicker}
+        </div>
+
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-5 leading-tight">
+          {t.title} {cityAt}
+        </h2>
+    
+
+
+        <div class="max-w-3xl mx-auto">
+          <p class="text-base md:text-lg text-[#475569] leading-relaxed">
+            {t.intro}
+          </p>
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="grid gap-6 lg:grid-cols-3 items-stretch">
+        <!-- Bullets -->
+        <div class="lg:col-span-2 bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm">
+          <h3 class="text-lg font-semibold text-[#1E2939] mb-4">
+            Ce que nous faisons (et ce qu’il faut savoir)
+          </h3>
+
+          <ul class="space-y-3 text-sm md:text-base text-[#475569]">
+            {t.bullets.map((b) => (
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 h-2 w-2 rounded-full bg-[#3F8D65] flex-shrink-0" aria-hidden="true"></span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="mt-6 rounded-xl bg-[#F1F7F3] border border-[#CFE3D8] p-4">
+            <p class="text-sm text-[#1E2939] font-medium">
+              Astuce : pour une place, un devis peut souvent se faire à partir de photos + dimensions (sans visite).
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-white rounded-2xl p-6 border border-[#E5E7EB] shadow-sm flex flex-col">
+          <h3 class="text-lg font-semibold text-[#1E2939] mb-3">
+            Intervention ponctuelle {cityAt}
+          </h3>
+          <p class="text-sm text-[#475569] leading-relaxed mb-5">
+            Idéal pour une place attitrée, un box, ou une remise en état avant l’état des lieux. On vous indique rapidement
+            la méthode la plus pertinente et les limites réalistes.
+          </p>
+
+          <div class="mt-auto">
+            <div class="rounded-xl bg-[#FCFCFC] border border-[#E5E7EB] p-4">
+              <p class="text-sm font-semibold text-[#1E2939] mb-1">À faire pour une estimation</p>
+              <p class="text-xs text-[#475569]">
+                2–3 photos + dimensions approximatives + type de sol (béton brut / sol peint).
+              </p>
+            </div>
+
+            <div class="mt-4 p-4 rounded-xl bg-[#F1F7F3] border-l-4 border-[#3F8D65]">
+              <p class="text-sm font-medium text-[#1E2939]">
+                {t.cta}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro-lien interne (optionnel) -->
+      <div class="text-center mt-10">
+        <p class="text-sm text-[#475569]">
+          Besoin d’un devis pour un parking complet {cityAt} ? 
+          <span class="mx-2 text-[#E5E7EB]">•</span>
+          <a href="#formulaire" class="text-[#3F8D65] font-semibold underline underline-offset-4">Nous contacter</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

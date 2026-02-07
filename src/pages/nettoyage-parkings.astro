@@ -8,6 +8,7 @@ import { LINKS } from '~/lib/links';
 import { Accordion, AccordionItem } from 'free-astro-components';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 
+import PlaceParkingSpot from '~/components/Sections/PlaceParkingSpot.astro';
 import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
@@ -324,7 +325,7 @@ const jsonLd = [
 </div>
         <!-- Mention légale discrete -->
         <p class="text-sm text-[#6B7280] mt-6 animate-fade-in-up animation-delay-500">
-          Intervention planifiée • Syndics, copropriétés et entreprises • Urgences sinistres acceptées
+          Intervention planifiée • Syndics, copropriétés et entreprises • Places/box pour particuliers • Urgences sinistres acceptées
         </p>
       </div>
 
@@ -1089,6 +1090,8 @@ data-hide-header-cta
   </div>
 </section>
 
+
+<PlaceParkingSpot cityName="Île-de-France" templateIndex={5} hideCitySuffix />
 
 
 

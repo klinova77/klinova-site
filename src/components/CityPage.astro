@@ -19,6 +19,7 @@ import ResultatsTextilesCity from '~/components/Sections/ResultatsTextilesCity.a
 import CityTextilesSituations from '~/components/Sections/CityTextilesSituations.astro';
 import CityMoquettesDetail from '~/components/Sections/CityMoquettesDetail.astro';
 import CityParkingsExpertise from '~/components/Sections/CityParkingsExpertise.astro';
+import PlaceParkingSpot from './Sections/PlaceParkingSpot.astro';
 import CityBalconsFientesLocal from '~/components/Sections/CityBalconsFientesDetail.astro';
 import CityBalconsComplete from './Sections/CityBalconsComplete.astro';
 import CityBalconsPigeons from '~/components/Sections/CityBalconsPigeons.astro';
@@ -1064,6 +1065,12 @@ const photos = cityNote?.photos ?? [];
 
  {service.key === 'parkings' && (
       <CityParkingsExpertise cityName={city.name} />
+    )}
+
+
+ {service.key === 'parkings' && (
+      <PlaceParkingSpot cityName={city.name} />
+
     )}
 
 <section id="video">
