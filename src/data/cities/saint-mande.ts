@@ -18,9 +18,9 @@ const city: City = {
         "ivry-sur-seine",
         "fontenay-sous-bois",
         "joinville-le-pont",
+        "les-lilas",
         "nogent-sur-marne",
-        "maisons-alfort",
-        "alfortville"
+        "maisons-alfort"
       ],
 
   customDescription:

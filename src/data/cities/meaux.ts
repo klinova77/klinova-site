@@ -51,11 +51,11 @@ const city: City = {
         "lagny-sur-marne",
         "bussy-saint-georges",
         "villeparisis",
+        "mitry-mory",
         "torcy",
         "vaires-sur-marne",
         "chelles",
-        "noisiel",
-        "montfermeil"
+        "noisiel"
       ],
 
   landmarks: [

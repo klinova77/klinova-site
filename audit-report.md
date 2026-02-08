@@ -1,161 +1,743 @@
 # Audit City — Klinova
 
-Généré : 2026-02-02T21:58:09.743Z
-Total fichiers : 12
+Généré : 2026-02-08T17:57:52.937Z
+Total fichiers : 10
 
-## bagneux — src/data/cities-draft/bagneux.ts
+## aulnay-sous-bois — src/data/cities-draft/aulnay-sous-bois.ts
 
-### GPT patches (setField)
+### Issues
 
-- **HIGH** — orthographe — `services[3].whyUsBullets[0]`
-  - Reason: Faute d’orthographe : « proximity » → « proximité ».
-  - Expected: `Connaissance des zones à risque à Bagneux : proximity des parcs, cimetière, grands ensembles avec corniches exposées.`
-  - Value: `Connaissance des zones à risque à Bagneux : proximité des parcs, cimetière, grands ensembles avec corniches exposées.`
-- **HIGH** — orthographe — `services[3].faqAdditions[2].question`
-  - Reason: Mot en anglais : « balcony » → « balcon ».
-  - Expected: `Après retrait des fientes sur un balcony proche du cimetière parisien, quelle désinfection garantissez-vous pour éliminer germes et spores ?`
-  - Value: `Après retrait des fientes sur un balcon proche du cimetière parisien, quelle désinfection garantissez-vous pour éliminer germes et spores ?`
-
-## bondy — src/data/cities-draft/bondy.ts
-
-### GPT patches (setField)
-
-- **HIGH** — legal — `services[6].faqAdditions[2].answer`
-  - Reason: Retire une promesse commerciale potentiellement engageante (« sans frais supplémentaires ») tout en conservant le sens.
-  - Expected: `<p>L'objectif est un logement propre et fonctionnel, sans traces ni poussières visibles sur les surfaces courantes. Sanitaires, cuisine et sols sont traités pour permettre une installation immédiate. En cas de point non `
-  - Value: `<p>L'objectif est un logement propre et fonctionnel, sans traces ni poussières visibles sur les surfaces courantes. Sanitaires, cuisine et sols sont traités pour permettre une installation immédiate. En cas de point non `
-- **HIGH** — orthographe — `services[5].faqAdditions[0].answer`
-  - Reason: Correction d'une faute (« mortite » → « mortier »).
-  - Expected: `<p>Nous appliquons d'abord un produit désincrustant qui ramollit les dépôts sans attaquer le mortite des joints. Le brossage mécanique déloge ensuite les salissures, puis la haute pression à réglage modéré rince l'ensemb`
-  - Value: `<p>Nous appliquons d'abord un produit désincrustant qui ramollit les dépôts sans attaquer le mortier des joints. Le brossage mécanique déloge ensuite les salissures, puis la haute pression à réglage modéré rince l'ensemb`
-
-## chevilly-la-rue — src/data/cities-draft/chevilly-la-rue.ts
-
-### GPT patches (setField)
-
-- **HIGH** — factual_suspect — `customDescription`
-  - Reason: Référence au métro ligne 14 potentiellement inexacte ; correction minimale en supprimant l’élément factuel incertain.
-  - Expected: `Klinova intervient à Chevilly-la-Rue pour l'entretien des parties communes, parkings et espaces extérieurs. Proche du métro ligne 14 et du tram T7, notre équipe connaît les contraintes locales et adapte chaque interventi`
-  - Value: `Klinova intervient à Chevilly-la-Rue pour l'entretien des parties communes, parkings et espaces extérieurs. Proche du tram T7, notre équipe connaît les contraintes locales et adapte chaque intervention au bâti de la comm`
-- **HIGH** — factual_suspect — `hubIntro`
-  - Reason: Référence au métro 14 potentiellement inexacte ; suppression minimale pour éviter une erreur factuelle.
-  - Expected: `<p>Au cœur du pôle d'Orly-Rungis, desservie par le tram T7 et le métro 14, Chevilly-la-Rue combine zones d'activités et quartiers résidentiels. Klinova accompagne gestionnaires et occupants avec une organisation pensée p`
-  - Value: `<p>Au cœur du pôle d'Orly-Rungis, desservie par le tram T7, Chevilly-la-Rue combine zones d'activités et quartiers résidentiels. Klinova accompagne gestionnaires et occupants avec une organisation pensée pour ce territoi`
-- **HIGH** — factual_suspect — `citySpecificChallenges[2]`
-  - Reason: Référence au métro 14 potentiellement inexacte ; remplacement par un repère déjà présent dans la page (tram T7) sans changer l’idée.
-  - Expected: `Halls des résidences proches du métro 14 sollicités par un <strong>flux quotidien important</strong>.`
-  - Value: `Halls des résidences proches du tram T7 sollicités par un <strong>flux quotidien important</strong>.`
-- **HIGH** — factual_suspect — `faq[2].answer`
-  - Reason: Aucun changement : patch non émis.
-  - Expected: `<p>Nous disposons d'équipes mobilisables sous <strong>24 à 72 heures</strong> selon la nature de l'urgence. Déversement d'huile en parking, souillures dans un hall après sinistre : nous adaptons le planning pour répondre`
-  - Value: `<p>Nous disposons d'équipes mobilisables sous <strong>24 à 72 heures</strong> selon la nature de l'urgence. Déversement d'huile en parking, souillures dans un hall après sinistre : nous adaptons le planning pour répondre`
-
-## choisy-le-roi — src/data/cities-draft/choisy-le-roi.ts
-
-### GPT patches (setField)
-
-- **HIGH** — factual_suspect — `services[3].uniqueIntro`
-  - Reason: Incohérence interne : le texte cite « Parc de la Mairie » alors que les repères/landmarks et autres champs mentionnent « Parc des Gondoles ».
-  - Expected: `<p>Après quelques semaines sans intervention, les fientes s'accumulent sur le sol, le garde-corps et les rebords de fenêtres. À proximité du <strong>Parc de la Mairie</strong> ou le long des <strong>bords de Seine</stron`
-  - Value: `<p>Après quelques semaines sans intervention, les fientes s'accumulent sur le sol, le garde-corps et les rebords de fenêtres. À proximité du <strong>Parc des Gondoles</strong> ou le long des <strong>bords de Seine</stron`
-- **MEDIUM** — orthographe — `services[0].uniqueIntro`
-  - Reason: Accord : « sollicitées » doit s'accorder avec « zones d'attente ».
-  - Expected: `<p>Dans le <strong>Quartier du Port</strong>, les parties communes des résidences récentes accumulent rapidement poussières et traces de passage. Les bureaux proches des programmes neufs subissent le même phénomène : cou`
-  - Value: `<p>Dans le <strong>Quartier du Port</strong>, les parties communes des résidences récentes accumulent rapidement poussières et traces de passage. Les bureaux proches des programmes neufs subissent le même phénomène : cou`
-
-## noisiel — src/data/cities-draft/noisiel.ts
-
-### GPT patches (setField)
-
+- **MEDIUM** — consistency — `customDescription`
+  - Mention de « secteur gare » alors que le reste du contenu utilise plutôt « Centre-Gare » / « autour de la gare ». Risque d'incohérence terminologique (sans être forcément faux).
+  - Evidence: `« contraintes du secteur gare »`
+  - Reco: Harmoniser la terminologie (ex. « secteur Centre-Gare ») si c’est bien l’intention, sans ajouter de nouveau fait.
 - **HIGH** — legal — `faq[1].answer`
-  - Reason: Retire une promesse de délai chiffré (24 à 48 heures) potentiellement risquée/trompeuse tout en conservant le sens.
-  - Expected: `<p>Selon la nature de la demande et notre planning, une intervention rapide peut être organisée sous 24 à 48 heures. Pour les situations nécessitant une <strong>réactivité immédiate</strong> (dégât des eaux, souillure im`
-  - Value: `<p>Selon la nature de la demande et notre planning, une intervention rapide peut être organisée. Pour les situations nécessitant une <strong>réactivité immédiate</strong> (dégât des eaux, souillure importante), nous éval`
+  - Promesse de délai d’intervention (« sous 24 à 48 heures ») et formulation d’« urgence ». Selon les règles fournies (pas d’ajout de promesses/délais), ce contenu est à risque et peut être non conforme aux contraintes éditoriales.
+  - Evidence: `« mobiliser une équipe sous 24 à 48 heures »`
+  - Reco: Retirer ou neutraliser la mention chiffrée de délai et rester sur une formulation non engageante (ex. « selon disponibilité »).
+- **HIGH** — legal — `services[3].faqAdditions[0].answer`
+  - Promesse de délai d’intervention (« sous 48 à 72 heures ») + « intervenir rapidement ». Risque de non-conformité aux règles (promesses/délais).
+  - Evidence: `« interventions sous 48 à 72 heures »`
+  - Reco: Remplacer par une formulation non chiffrée et non engageante (ex. « selon disponibilité »).
+- **HIGH** — legal — `services[3].uniqueDeepDive`
+  - Indication de délai d’aération (« quelques heures ») pouvant être interprétée comme promesse de délai d’usage. Même si non chiffré, c’est un engagement temporel à manier prudemment.
+  - Evidence: `« utilisable après un délai d'aération de quelques heures »`
+  - Reco: Neutraliser en « après aération » / « après le temps d’aération recommandé » sans notion de durée.
+- **HIGH** — legal — `services[3].faqAdditions[2].answer`
+  - Indication de délai d’usage (« sous deux à trois heures ») + « environ quinze minutes ». Ce sont des engagements temporels chiffrés (promesses) susceptibles de contrevenir aux règles.
+  - Evidence: `« temps de contact d'environ quinze minutes » ; « utilisable sous deux à trois heures »`
+  - Reco: Remplacer par une formulation non chiffrée (ex. « après le temps de contact indiqué » ; « après rinçage et aération »).
+- **HIGH** — legal — `services[6].specificChallenges[0]`
+  - Mention d’un délai (« moins de 48 heures ») dans une liste de challenges. Même si descriptif, cela reste une promesse/contrainte temporelle chiffrée à risque au regard des règles.
+  - Evidence: `« parfois moins de 48 heures »`
+  - Reco: Remplacer par une formulation non chiffrée (« très courts » / « très serrés »).
+- **HIGH** — legal — `services[6].faqAdditions[3].answer`
+  - Promesse de délai d’intervention (« sous 24 à 48 heures ») en cas d’urgence/sinistre. Non conforme aux règles (pas de promesses/délais).
+  - Evidence: `« intervenir sous 24 à 48 heures »`
+  - Reco: Remplacer par une formulation non chiffrée (« dans les meilleurs délais selon disponibilité »).
+- **MEDIUM** — style — `hubIntro`
+  - Typographie : « comptes-rendus » est acceptable, mais la forme recommandée en typographie française est souvent « comptes rendus » (sans trait d’union).
+  - Evidence: `« des comptes-rendus si besoin »`
+  - Reco: Uniformiser selon la convention choisie (idéalement « comptes rendus ») sur l’ensemble du site.
+- **MEDIUM** — factual_suspect — `citySpecificChallenges[0]`
+  - Attribution directionnelle potentiellement discutable (« façades exposés au nord ») et accord : « façades exposés » (accord incorrect).
+  - Evidence: `« façades exposés au nord »`
+  - Reco: Corriger l’accord certain (« façades exposées »). Pour l’orientation « au nord », vérifier la pertinence locale ; sinon neutraliser (ex. « façades exposées » sans direction).
+- **LOW** — orthographe — `services[1].whyUsBullets[1]`
+  - Accord : « revêtements résine » sonne incomplet ; on attend « revêtements en résine ».
+  - Evidence: `« revêtements résine »`
+  - Reco: Corriger en « revêtements en résine » (correction minimale).
+- **MEDIUM** — legal — `services[0].faqAdditions[3].answer`
+  - Délai d’usage chiffré (« entre 4 et 8 heures », « dès le lendemain matin ») pouvant être interprété comme promesse de résultat/délai. À risque au regard des règles.
+  - Evidence: `« comptez entre 4 et 8 heures » ; « praticables dès le lendemain matin »`
+  - Reco: Remplacer par une formulation non chiffrée (« selon ventilation… ») sans engagement temporel.
+- **MEDIUM** — legal — `services[4].uniqueDeepDive`
+  - Délai de séchage décrit (« généralement quelques heures en été, davantage en hiver ») : même si nuancé, reste un repère temporel pouvant être considéré comme promesse.
+  - Evidence: `« généralement quelques heures en été, davantage en hiver »`
+  - Reco: Neutraliser en « selon la saison et l’aération » sans quantification.
+- **LOW** — style — `services[2].uniqueIntro`
+  - Formulation un peu familière/subjective (« change la perception du logement », « faute de pouvoir s'y sentir à l'aise »). Pas bloquant mais peut être harmonisé si ligne éditoriale plus factuelle.
+  - Evidence: `Extraits du paragraphe 1-2`
+  - Reco: Optionnel : ton plus factuel, sans réécriture lourde.
+- **MEDIUM** — consistency — `services[1].specificChallenges[0]`
+  - Mention « Cité des 3000 » : élément local très spécifique. À vérifier (risque fact-check si la page doit rester générique ou si ce repère n’est pas souhaité).
+  - Evidence: `« sous-sols de la Cité des 3000 »`
+  - Reco: Si doute, remplacer par une formulation plus générique (ex. « grands ensembles ») sans ajouter de nouveau fait.
+- **MEDIUM** — consistency — `services[6].uniqueIntro`
+  - Mention très précise « Boulevard de Strasbourg » : à vérifier (risque fact-check si l’axe n’est pas pertinent ou si la page doit éviter les micro-localisations).
+  - Evidence: `« secteur du Boulevard de Strasbourg »`
+  - Reco: Si non certain, neutraliser en « autour de la gare » (sans ajouter de nouveau fait).
 
-## noisy-le-sec — src/data/cities-draft/noisy-le-sec.ts
+### Patches
 
-### GPT patches (setField)
+- **HIGH** — legal — `faq[1].answer` — op=substring — applySafe=false
+  - Reason: Neutraliser la promesse de délai chiffré « sous 24 à 48 heures » tout en conservant le sens (intervention possible selon disponibilité).
+  - find/replace: `Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande et la disponibilité du matériel` → `Oui, nous pouvons mobiliser une équipe selon la nature de la demande et la disponibilité du matériel requis.`
+  - context: `<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande et la disponibilité du matériel requis. Pour les situations critiques — dégât des eaux, souillures importantes — nous <strong>pr`
+- **HIGH** — orthographe — `citySpecificChallenges[0]` — op=substring — applySafe=true
+  - Reason: Accord certain : « façades exposés » -> « façades exposées » (correction minimale sans changement de sens).
+  - find/replace: `façades exposés` → `façades exposées`
+  - context: `<strong>Pollution routière A1/A3</strong> : dépôts noirs sur balcons et façades exposés au nord.`
+- **LOW** — orthographe — `services[1].whyUsBullets[1]` — op=substring — applySafe=true
+  - Reason: Correction minimale et certaine : ajout de la préposition manquante (« revêtements en résine »).
+  - find/replace: `revêtements résine` → `revêtements en résine`
+  - context: `Autolaveuse professionnelle et dégraissants adaptés au béton brut comme aux revêtements résine.`
+- **HIGH** — legal — `services[3].faqAdditions[0].answer` — op=substring — applySafe=false
+  - Reason: Retirer le délai chiffré « sous 48 à 72 heures » (promesse) en conservant l’idée d’organisation selon disponibilité.
+  - find/replace: `Nous organisons des interventions sous 48 à 72 heures selon la disponibilité.` → `Nous organisons des interventions selon la disponibilité.`
+  - context: `<p>Nous organisons des interventions sous 48 à 72 heures selon la disponibilité. En cas d'accumulation importante ou de présence d'enfants, nous priorisons le dégrossissement et la désinfection des zones de contact direc`
+- **HIGH** — legal — `services[6].faqAdditions[3].answer` — op=substring — applySafe=false
+  - Reason: Neutraliser la promesse de délai chiffré « sous 24 à 48 heures » en conservant le sens (intervention possible selon disponibilité).
+  - find/replace: `nous pouvons intervenir sous 24 à 48 heures` → `nous pouvons intervenir selon la disponibilité de nos équipes`
+  - context: `<p>Selon la disponibilité de nos équipes, nous pouvons intervenir sous 24 à 48 heures pour un sinistre localisé. Le diagnostic initial permet d'évaluer l'ampleur des dégâts et de définir les priorités : extraction de l'e`
 
-- **HIGH** — orthographe — `services[1].heroDescription`
-  - Reason: Faute d’orthographe : « treatment » → « traitement ».
-  - Expected: `Décrassage complet des sols de parking avec autolaveuse et treatment dégraissant, gestion stricte des eaux usées et remise en circulation rapide des places.`
-  - Value: `Décrassage complet des sols de parking avec autolaveuse et traitement dégraissant, gestion stricte des eaux usées et remise en circulation rapide des places.`
+## chatillon — src/data/cities-draft/chatillon.ts
 
-## orly — src/data/cities-draft/orly.ts
+### Issues
 
-### Local issues
-
-- **HIGH** — consistency — `text`
-  - Template literal/backticks détectés dans un champ non-HTML (risque conventions).
-  - Remplacement: `Remplacer par une string en guillemets doubles.`
-  - Reco: Réserver les backticks aux champs HTML multi-lignes.
-  - Extrait: ``Ville aéroportuaire aux quartiers pavillonnaires historiques (Cité Jardins), desservie par le RER C et le Tram T9.``
-
-### GPT patches (setField)
-
-- **LOW** — orthographe — `landmarks[0]`
-  - Reason: Correction de la préposition (usage : « d'Orly »).
-  - Expected: `Mairie de Orly`
-  - Value: `Mairie d'Orly`
+- **HIGH** — consistency — `services[2].uniqueDeepDive`
+  - Erreur de syntaxe probable : virgule manquante après la chaîne uniqueDeepDive. En l'état, l'objet TypeScript risque de ne pas compiler.
+  - Evidence: `... </p>` specificChallenges: [`
+  - Reco: Ajouter une virgule après le backtick de fin de uniqueDeepDive (avant specificChallenges).
+- **HIGH** — legal — `faq[1].answer`
+  - Promesse/délai d'intervention (« sous 24 à 48 heures ») : risque de non-conformité aux règles (ajout/engagement de délai) et risque légal si non tenu.
+  - Evidence: `"Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures"`
+  - Reco: Remplacer par une formulation non engageante et sans délai chiffré (ex. « dans les meilleurs délais selon la nature de la demande »).
+- **HIGH** — legal — `services[6].faqAdditions[0].answer`
+  - Promesse/délai d'intervention (« sous 48 à 72 heures ») + mention de « créneau prioritaire » : engagement de délai et promesse de priorité potentiellement non conforme.
+  - Evidence: `"Nous intervenons généralement sous 48 à 72 heures" / "un créneau prioritaire peut être proposé"`
+  - Reco: Remplacer par une formulation sans délai chiffré et sans promesse de priorité (ex. « selon nos disponibilités et les accès »).
+- **MEDIUM** — legal — `services[3].whyUsBullets[1]`
+  - Allégation technique/réglementaire : « produit virucide homologué ». Terme potentiellement sensible (homologation/autorisation) si non justifiable.
+  - Evidence: `"désinfection par produit virucide homologué"`
+  - Reco: Privilégier une formulation prudente (ex. « produit désinfectant conforme aux usages professionnels ») si vous ne pouvez pas justifier l’« homologation ». 
 - **MEDIUM** — legal — `services[3].uniqueIntro`
-  - Reason: Évite l'affirmation potentiellement trompeuse « obligatoire » (risque légal) sans changer le sens opérationnel.
-  - Expected: `<p>Après quelques semaines sans intervention, les fientes s'accumulent sur le sol, le garde-corps et parfois les vitres. Près du <strong>Marché du Vieil Orly</strong>, les restes alimentaires attirent les pigeons qui col`
-  - Value: `<p>Après quelques semaines sans intervention, les fientes s'accumulent sur le sol, le garde-corps et parfois les vitres. Près du <strong>Marché du Vieil Orly</strong>, les restes alimentaires attirent les pigeons qui col`
-
-## romainville — src/data/cities-draft/romainville.ts
-
-### GPT patches (setField)
-
-- **MEDIUM** — consistency — `services[1].uniqueIntro`
-  - Reason: Évite la répétition proche « proches » et améliore la fluidité sans changer le sens.
-  - Expected: `<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière marquent progressivement les sols des parkings souterrains de la <strong>ZAC de l'Horloge</strong> et des résidences récentes de Romainville. Ces `
-  - Value: `<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière marquent progressivement les sols des parkings souterrains de la <strong>ZAC de l'Horloge</strong> et des résidences récentes de Romainville. Ces `
-
-## thiais — src/data/cities-draft/thiais.ts
-
-### GPT patches (setField)
-
-- **MEDIUM** — orthographe — `services[2].faqAdditions[3].answer`
-  - Reason: Faute d’orthographe : « treatment » → « traitement ».
-  - Expected: `<p>Oui. Une loggia fermée retient davantage l'humidité et favorise les moisissures sur les murs latéraux. Nous ajustons le treatment en conséquence : produit anti-mousse renforcé, attention particulière aux angles. Sur b`
-  - Value: `<p>Oui. Une loggia fermée retient davantage l'humidité et favorise les moisissures sur les murs latéraux. Nous ajustons le traitement en conséquence : produit anti-mousse renforcé, attention particulière aux angles. Sur `
-
-## villejuif — src/data/cities-draft/villejuif.ts
-
-### GPT patches (setField)
-
+  - Allégation sanitaire : « agents pathogènes » + « traitement virucide » ; peut nécessiter précautions (ne pas sur-promettre l’élimination/risques).
+  - Evidence: `"ce sont des agents pathogènes qui persistent..." / "traitement virucide adapté"`
+  - Reco: Rester factuel et éviter toute promesse implicite d’élimination totale ; conserver une formulation prudente si possible.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Affirmation locale potentiellement inexacte : « Terminus du Métro 13 » (le terminus est « Châtillon–Montrouge » côté Montrouge/Châtillon ; formulation à vérifier).
+  - Evidence: `"Terminus du Métro 13"`
+  - Reco: Vérifier l’exactitude et éventuellement préciser « terminus Châtillon–Montrouge (ligne 13) ».
+- **MEDIUM** — factual_suspect — `citySpecificChallenges[2]`
+  - Référence à « zone rouge/orange » : classification de stationnement locale à vérifier (peut varier selon la commune).
+  - Evidence: `"Stationnement contraint en zone rouge/orange"`
+  - Reco: Vérifier la terminologie officielle (zones, couleurs) ou remplacer par une formulation générique (« stationnement réglementé »).
+- **MEDIUM** — factual_suspect — `services[2].uniqueIntro`
+  - Affirmation locale à vérifier : « Le passage du Tram T6 » à Châtillon (le T6 dessert Châtillon ; vérifier la formulation et la proximité réelle selon secteurs).
+  - Evidence: `"Le passage du Tram T6 génère aussi..."`
+  - Reco: Vérifier la pertinence locale ; sinon généraliser (« la proximité des transports ») sans ajouter de nouveaux faits.
+- **MEDIUM** — factual_suspect — `services[3].faqAdditions[0].question`
+  - Référence très spécifique à « l'église Saint-Philippe » à Châtillon : à vérifier (nom/présence).
+  - Evidence: `"église Saint-Philippe à Châtillon"`
+  - Reco: Vérifier le toponyme ; si doute, remplacer par une référence générique (« une église / un clocher ») sans inventer.
 - **LOW** — orthographe — `hubIntro`
-  - Reason: Typographie : « métro » s’écrit en minuscule et ajout de « du » ; suppression d’un espace superflu après <li>.
-  - Expected: `<p>Au pied de l'Institut Gustave Roussy et du terminus Métro 7, Villejuif concentre des flux importants et des configurations variées. Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de l`
-  - Value: `<p>Au pied de l'Institut Gustave Roussy et du terminus du métro 7, Villejuif concentre des flux importants et des configurations variées. Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier d`
+  - Typographie : « comptes-rendus » (trait d’union) ; les deux existent, mais harmonisation possible avec « comptes rendus ».
+  - Evidence: `"comptes-rendus"`
+  - Reco: Harmoniser la graphie sur l’ensemble du site (si une convention existe).
+- **LOW** — style — `services[0].uniqueDeepDive`
+  - Présence de <h3> alors que le commentaire global indique « HTML autorisé (sans <h3>) » pour certains champs ; ici c’est dans un service (pas explicitement interdit), mais vérifier la règle globale du projet.
+  - Evidence: `"uniqueDeepDive: `<h3>Zones de circulation intensive</h3>"`
+  - Reco: Confirmer si <h3> est autorisé dans les champs service.*. Si non, remplacer par <p><strong>…</strong></p> (correction à relire).
 
-## villemomble — src/data/cities-draft/villemomble.ts
+### Patches
 
-### GPT patches (setField)
+- **HIGH** — consistency — `services[2].uniqueDeepDive` — op=substring — applySafe=false
+  - Reason: Ajout d'une virgule manquante après la chaîne template pour corriger la syntaxe TS sans changer le contenu.
+  - find/replace: `</p>`
+      specificChallenges: [` → `</p>`,
+      specificChallenges: [`
+  - context: `...<p>L'eau de rinçage est dirigée vers l'évacuation du balcon, jamais vers les étages inférieurs. Les vitrages attenants sont essuyés pour retirer les éclaboussures. Une fois le séchage amorcé, des conseils d'entretien `
 
-- **LOW** — orthographe — `customDescription`
-  - Reason: Parallélisme et correction de l’énumération (ajout des articles).
-  - Expected: `Klinova intervient à Villemomble pour l'entretien des parties communes, parkings et espaces extérieurs. Entre la gare RER E et les quartiers pavillonnaires des Coquetiers, une équipe locale adaptée aux contraintes du bât`
-  - Value: `Klinova intervient à Villemomble pour l'entretien des parties communes, des parkings et des espaces extérieurs. Entre la gare RER E et les quartiers pavillonnaires des Coquetiers, une équipe locale adaptée aux contrainte`
+## clamart — src/data/cities-draft/clamart.ts
 
-## vitry-sur-seine — src/data/cities-draft/vitry-sur-seine.ts
-
-### GPT patches (setField)
+### Issues
 
 - **HIGH** — legal — `faq[2].answer`
-  - Reason: Délai chiffré potentiellement engageant/commercialement risqué sur une page locale ; à neutraliser (patch à appliquer avec une reformulation non chiffrée).
-  - Expected: `<p>Après validation du devis, nous pouvons généralement intervenir <strong>sous 5 à 10 jours ouvrés</strong> selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la pos`
-  - Value: `<p>Après validation du devis, nous pouvons généralement intervenir <strong>sous 5 à 10 jours ouvrés</strong> selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la pos`
-- **HIGH** — legal — `services[4].heroDescription`
-  - Reason: Promesse de délai chiffré (24 à 48 heures) potentiellement engageante ; à rendre non chiffrée sans changer le sens.
-  - Expected: `Un détachage en profondeur de vos canapés, tapis et matelas, avec extraction des salissures incrustées et séchage maîtrisé pour retrouver un intérieur sain sous 24 à 48 heures.`
-  - Value: `Un détachage en profondeur de vos canapés, tapis et matelas, avec extraction des salissures incrustées et séchage maîtrisé pour retrouver un intérieur sain dans un délai compatible avec le séchage.`
+  - Présence d'une promesse de délai et d'une mention d'« urgence » (réduction du délai) : formulation potentiellement engageante/commerciale et contraire aux règles « pas d'ajout de promesses ».
+  - Evidence: `"Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous pouvons réduire ce délai."`
+  - Reco: Neutraliser la mention d'urgence et/ou rendre le délai non engageant (formulation indicative), sans ajouter de nouvelle promesse.
+- **HIGH** — legal — `services["nettoyage-appartement-maison"].faqAdditions[1].answer`
+  - Promesse de délai (« généralement sous 48 à 72 heures ») + mention de « créneau prioritaire » en cas d'urgence : formulation engageante/commerciale.
+  - Evidence: `"Nous intervenons généralement sous 48 à 72 heures... En cas d'urgence... un créneau prioritaire peut être organisé"`
+  - Reco: Retirer la notion de priorité/urgence et/ou rendre la phrase plus prudente (dépend des disponibilités), sans introduire de nouveaux engagements.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Référence locale potentiellement discutable : « jours de marché au Trosy ». Le marché du Trosy existe, mais la précision « jours de marché » peut être perçue comme un fait local opérationnel à vérifier.
+  - Evidence: `"...des jours de marché au Trosy..."`
+  - Reco: Si non certain, remplacer par une formulation plus générale (ex. « jours de marché » sans lieu) ou retirer la mention.
+- **MEDIUM** — factual_suspect — `services["parkings"].whyUsBullets[0]`
+  - Référence locale très spécifique : « parkings du secteur Hunebelle » et « événements sportifs locaux ». À vérifier (risque de sur-spécification).
+  - Evidence: `"Connaissance des parkings du secteur Hunebelle et des contraintes d'accès liées aux événements sportifs locaux."`
+  - Reco: Si non vérifié, généraliser légèrement (sans ajouter de faits) ou retirer la partie la plus spécifique.
+- **MEDIUM** — factual_suspect — `services["parkings"].uniqueIntro`
+  - Lien causal très spécifique entre encrassement et « rotation des véhicules lors des événements sportifs » autour du Stade Hunebelle : plausible mais factuel à vérifier.
+  - Evidence: `"...autour du Stade Hunebelle où la rotation des véhicules lors des événements sportifs accélère l'encrassement."`
+  - Reco: Si doute, retirer la causalité « lors des événements sportifs » et garder une formulation générale sur la rotation des véhicules.
+- **MEDIUM** — factual_suspect — `services["canapes-tapis"].faqAdditions[0].question`
+  - Mention d'un secteur « résidences de la Plaine » à Clamart : toponyme/quartier potentiellement imprécis ou non standard. Risque de fait local inventé.
+  - Evidence: `"...des résidences de la Plaine..."`
+  - Reco: Vérifier l'existence/usage local. Sinon remplacer par une formulation neutre (ex. « dans certaines résidences ») sans ajouter de nouveau quartier.
+- **MEDIUM** — legal — `services["balcons-fientes"].uniqueDeepDive`
+  - Mention de « produit virucide et bactéricide » et « homologués » : allégation réglementaire potentiellement sensible (biocides). Peut nécessiter précision/justificatif.
+  - Evidence: `"Un produit virucide et bactéricide..." / "produits de désinfection homologués"`
+  - Reco: Si non documenté, préférer une formulation plus prudente (ex. « désinfectant adapté ») et éviter « homologué »/« virucide » sans preuve.
+- **MEDIUM** — legal — `services["balcons-fientes"].faqAdditions[2].answer`
+  - Allégation « produits virucides et bactéricides homologués » : formulation réglementaire sensible (biocides) et potentiellement invérifiable dans ce contexte.
+  - Evidence: `"Nous utilisons des produits virucides et bactéricides homologués"`
+  - Reco: Remplacer par une formulation non réglementaire et non absolue (ex. « produits de désinfection adaptés ») si vous ne souhaitez pas porter d'allégation d'homologation.
+- **LOW** — style — `customDescription`
+  - Liste sans article : « parties communes, parkings souterrains et espaces extérieurs » OK, mais pourrait gagner en fluidité avec « des » devant chaque élément. (Optionnel)
+  - Evidence: `"...pour l'entretien des parties communes, parkings souterrains et espaces extérieurs."`
+  - Reco: Optionnel : harmoniser (« des parties communes, des parkings souterrains et des espaces extérieurs ») si souhaité, sans changer le sens.
+- **LOW** — consistency — `services["moquettes"].uniqueDeepDive`
+  - Présence de balises <h3> dans uniqueDeepDive alors que des commentaires indiquent des restrictions HTML « sans <h3> » pour certains champs (citySpecificChallenges, faq.answer). Ici ce n'est pas explicitement interdit, mais vérifier la compatibilité du renderer.
+  - Evidence: `"uniqueDeepDive: `<h3>Zones de circulation intense</h3>...`"`
+  - Reco: Vérifier les règles HTML par champ. Si <h3> non supporté, remplacer par <p><strong>...</strong></p> (à faire prudemment).
+
+### Patches
+
+- **HIGH** — legal — `faq[2].answer` — op=substring — applySafe=false
+  - Reason: Retirer la mention d'urgence et la promesse de réduction de délai, tout en conservant l'idée d'un délai indicatif.
+  - find/replace: `Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous p` → `Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, selon les disponibilit`
+  - context: `...nous réalisons un <strong>repérage rapide</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures,`
+
+## issy-les-moulineaux — src/data/cities-draft/issy-les-moulineaux.ts
+
+### Issues
+
+- **MEDIUM** — factual_suspect — `customDescription`
+  - Mention d'« une équipe locale » : formulation potentiellement factuelle (présence locale) sans preuve dans le fichier. Risque de sur-promesse implicite.
+  - Evidence: `« une équipe locale adaptée aux exigences »`
+  - Reco: Si vous voulez rester prudent, remplacer par une formulation neutre (ex. « une équipe dédiée ») sans revendiquer une implantation locale.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Affirmation de desserte « RER C et Tramway T2 » : fact-check prudent, car la desserte exacte peut prêter à discussion selon les stations/limites communales. À vérifier.
+  - Evidence: `« desservi par le RER C et le Tramway T2 »`
+  - Reco: Vérifier l'exactitude. Si doute, généraliser (ex. « bien desservi par les transports en commun ») — correction non proposée ici car change le sens.
+- **LOW** — style — `hubIntro`
+  - « Réactivité secteur » sonne légèrement maladroit (anglicisme/terme interne).
+  - Evidence: `« <strong>Réactivité secteur :</strong> »`
+  - Reco: Envisager « Réactivité sur le secteur » ou « Réactivité locale » (mais « locale » peut réintroduire un fait).
+- **MEDIUM** — factual_suspect — `citySpecificChallenges[2]`
+  - « pollution du périphérique » : Issy-les-Moulineaux n'est pas directement sur le périphérique partout ; formulation peut être contestable selon zones. Fact-check prudent.
+  - Evidence: `« pollution du périphérique »`
+  - Reco: Si besoin, remplacer par « pollution des grands axes » (non patché car change le sens).
+- **MEDIUM** — factual_suspect — `citySpecificChallenges[3]`
+  - « écoquartier du Fort » : l'appellation exacte peut être « Écoquartier du Fort d’Issy ». Cohérence avec landmarks où c'est écrit ainsi.
+  - Evidence: `Challenge: « écoquartier du Fort » vs landmark: « Écoquartier du Fort d'Issy »`
+  - Reco: Harmoniser l'appellation (correction minimale possible).
+- **MEDIUM** — factual_suspect — `faq[2].answer`
+  - Référence à des parkings souterrains publics nommés « Hôtel de Ville, Corentin Celton » : à vérifier (existence, caractère public, dénomination).
+  - Evidence: `« parkings souterrains publics (Hôtel de Ville, Corentin Celton) »`
+  - Reco: Vérifier. Si doute, retirer les noms propres ou parler de « parkings souterrains à proximité » (non patché car change le sens).
+- **HIGH** — legal — `faq[3].answer`
+  - Promesse de délai « sous 48 heures » : engagement temporel potentiellement contractuel. À valider côté légal/ops. (Règles demandent de ne pas ajouter de promesses ; ici elle existe déjà.)
+  - Evidence: `« Le devis est transmis sous 48 heures »`
+  - Reco: Si non garanti, remplacer par une formule non engageante (ex. « dans les meilleurs délais »). Non patché car change le sens.
+- **HIGH** — legal — `services[0].faqAdditions[1].answer`
+  - Délai chiffré de séchage « entre quatre et huit heures » + promesse « dès le lendemain matin » : peut être contestable selon conditions. Risque légal/attente client.
+  - Evidence: `« entre quatre et huit heures » ; « dès le lendemain matin »`
+  - Reco: Si non garanti, rendre conditionnel (ex. « selon conditions ») ou retirer le chiffrage. Non patché car change le sens.
+- **HIGH** — legal — `services[4].whyUsBullets[2]`
+  - Promesse « remise en service sous 24 heures » : engagement temporel potentiellement non garanti, même si nuancé par « selon ventilation ».
+  - Evidence: `« remise en service sous 24 heures selon ventilation »`
+  - Reco: Valider la capacité opérationnelle. Sinon, remplacer par « remise en service rapide » (non patché car change le sens).
+- **MEDIUM** — style — `services[4].uniqueIntro`
+  - « appartements T2 à T4 » : jargon immobilier, peut être acceptable mais à harmoniser selon la charte éditoriale.
+  - Evidence: `« appartements T2 à T4 »`
+  - Reco: Optionnel : remplacer par « appartements de 2 à 4 pièces » (non patché car change le sens).
+- **MEDIUM** — factual_suspect — `services[6].uniqueIntro`
+  - « Hauts d'Issy » : toponyme/quartier pas listé dans districts et peut être discuté. Fact-check prudent.
+  - Evidence: `« secteurs résidentiels des Hauts d'Issy et du Fort »`
+  - Reco: Vérifier l'usage local. Si doute, remplacer par un quartier listé (mais ce serait un nouveau fait local) ou supprimer (non patché).
 - **HIGH** — legal — `services[6].faqAdditions[1].answer`
-  - Reason: Délai chiffré (48 à 72 heures) potentiellement engageant ; à neutraliser de façon conservatrice.
-  - Expected: `<p>Selon la surface et l'état du logement, l'intervention peut être planifiée sous 48 à 72 heures. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée per`
-  - Value: `<p>Selon la surface et l'état du logement, l'intervention peut être planifiée dans des délais courts. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée `
-- **MEDIUM** — orthographe — `services[2].whyUsBullets[0]`
-  - Reason: Faute d’orthographe : « vitrots » → « vitriots ».
-  - Expected: `Connaissance des balcons exposés à la pollution des axes vitrots et aux dépôts végétaux du Parc des Lilas.`
-  - Value: `Connaissance des balcons exposés à la pollution des axes vitriots et aux dépôts végétaux du Parc des Lilas.`
+  - Délais d'intervention « sous 48 à 72 heures » + mention « en cas d'urgence » : promesse de délai et capacité d'urgence. Risque légal/attente client.
+  - Evidence: `« sous 48 à 72 heures » ; « En cas d'urgence… »`
+  - Reco: Valider. Sinon, rendre non engageant. Non patché car change le sens.
+- **LOW** — orthographe — `services[3].uniqueDeepDive`
+  - EPI : en français on écrit souvent « EPI » (ok) mais la liste « masque FFP2 » peut être discutée selon protocole (FFP3 parfois). Fact-check prudent.
+  - Evidence: `« masque FFP2 »`
+  - Reco: Vérifier protocole interne. Pas de patch.
+- **LOW** — consistency — `services[1].whyUsBullets[0]`
+  - Incohérence de toponyme : « Bords de Seine » ici, ailleurs « Bords de Seine »/« Val de Seine ». À harmoniser si c'est la même zone.
+  - Evidence: `« résidences récentes des Bords de Seine » vs multiples occurrences « Val de Seine »`
+  - Reco: Harmoniser si nécessaire (non patché car peut changer le sens local).
+
+### Patches
+
+- **LOW** — consistency — `citySpecificChallenges[3]` — op=substring — applySafe=false
+  - Reason: Harmonisation minimale de l'appellation avec le landmark « Écoquartier du Fort d'Issy » sans ajouter de nouveau fait, juste précision du nom déjà présent ailleurs.
+  - find/replace: `Copropriétés de l'écoquartier du Fort avec <strong>règlements stricts</strong> sur les nuisances et écoulements.` → `Copropriétés de l'écoquartier du Fort d'Issy avec <strong>règlements stricts</strong> sur les nuisances et écoulements.`
+  - context: `..."Balcons exposés à la <strong>pollution du périphérique</strong> et des axes en bord de Seine.", "Copropriétés de l'écoquartier du Fort avec <strong>règlements stricts</strong> sur les nuisances et écoulements.", "Sta`
+
+## le-blanc-mesnil — src/data/cities-draft/le-blanc-mesnil.ts
+
+### Issues
+
+- **MEDIUM** — factual_suspect — `customDescription`
+  - Mention de la « gare RER B » au Blanc-Mesnil : formulation potentiellement inexacte/ambiguë (gare du Blanc-Mesnil vs RER B). Risque de fait local erroné.
+  - Evidence: `« Entre la gare RER B et les zones d'activités »`
+  - Reco: Vérifier l'exactitude (nom de la gare et ligne). Si incertain, reformuler de façon neutre (ex. « la gare ») sans ajouter de fait.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Référence à « la gare RER B » : possible inexactitude locale (gare/ligne).
+  - Evidence: `« ... et la gare RER B ... » ; « ... flux de la gare RER ... »`
+  - Reco: Vérifier la ligne desservant la gare citée. En cas de doute, retirer « RER B » et garder « la gare ».
+- **MEDIUM** — factual_suspect — `landmarks[1]`
+  - Point d'intérêt potentiellement inexact : « Gare du Blanc-Mesnil (RER B) » peut être faux selon la desserte réelle.
+  - Evidence: `« Gare du Blanc-Mesnil (RER B) »`
+  - Reco: Vérifier la ligne. Si incertain, retirer la mention de ligne entre parenthèses.
+- **MEDIUM** — factual_suspect — `faq[0].question`
+  - Question mentionne « gare du Blanc-Mesnil » (ok) mais le contexte global associe parfois à RER B : risque de cohérence/fait local si la ligne est incorrecte.
+  - Evidence: `Question: « ... proches de la gare du Blanc-Mesnil ? » + ailleurs « gare RER B »`
+  - Reco: Harmoniser après vérification de la desserte (éviter d'affirmer une ligne si non certaine).
+- **HIGH** — legal — `services[3].heroDescription`
+  - Allégation « désinfection virucide » : terme réglementé/technique pouvant impliquer conformité à des normes (EN 14476, biocides). Risque légal si non justifiable.
+  - Evidence: `« ... avec désinfection virucide ... »`
+  - Reco: Si non certifiable, remplacer par « désinfection » (sans « virucide ») ou préciser uniquement si vous avez les preuves (homologation/norme).
+- **HIGH** — legal — `services[3].whyUsBullets[1]`
+  - « désinfection virucide certifiée » : revendication de certification potentiellement non prouvable (risque de publicité trompeuse).
+  - Evidence: `« ... désinfection virucide certifiée. »`
+  - Reco: Retirer « certifiée » et/ou « virucide » si vous ne disposez pas de certification vérifiable.
+- **HIGH** — legal — `services[3].uniqueDeepDive`
+  - « produit virucide homologué » : revendication d'homologation/efficacité virucide potentiellement sensible légalement si non documentée.
+  - Evidence: `« Un produit virucide homologué ... »`
+  - Reco: Si vous n'avez pas la preuve (AMM/biocide, norme), remplacer par « produit désinfectant adapté » (sans « virucide/homologué »).
+- **MEDIUM** — legal — `services[3].uniqueDeepDive`
+  - Promesse de délai « réutilisation sous 24 à 48 heures » : engagement temporel pouvant être interprété comme promesse commerciale; déjà présent ailleurs. À valider.
+  - Evidence: `« ... réutilisation sous 24 à 48 heures ... »`
+  - Reco: Si vous ne pouvez pas garantir, reformuler en « généralement »/« selon conditions » (déjà partiellement présent) ou retirer le délai.
+- **MEDIUM** — legal — `faq[2].answer`
+  - Délai « intervenir sous 24 à 48 heures » : promesse de délai pour urgence, potentiellement risquée si non tenue.
+  - Evidence: `« ... intervenir sous 24 à 48 heures ... »`
+  - Reco: Si non garanti, atténuer (ex. « dans les meilleurs délais ») ou conserver uniquement si engagement réel.
+- **MEDIUM** — legal — `services[4].whyUsBullets[2]`
+  - « remise en service du mobilier sous 24 à 48 heures » : promesse de délai potentiellement risquée.
+  - Evidence: `« ... remise en service du mobilier sous 24 à 48 heures. »`
+  - Reco: Si non garanti, atténuer (ex. « généralement ») ou retirer le délai.
+- **MEDIUM** — legal — `services[4].uniqueIntro`
+  - « remise en service du mobilier sous 24 à 48 heures » : répétition d'une promesse de délai dans le texte.
+  - Evidence: `« ... avec remise en service du mobilier sous 24 à 48 heures ... »`
+  - Reco: Même recommandation : atténuer ou retirer si non garanti.
+- **MEDIUM** — legal — `services[6].faqAdditions[1].answer`
+  - « intervenons généralement sous 48 à 72 heures » : promesse de délai (même si nuancée) à valider.
+  - Evidence: `« ... nous intervenons généralement sous 48 à 72 heures ... »`
+  - Reco: Conserver seulement si c'est une pratique réelle; sinon atténuer davantage ou retirer le chiffrage.
+- **LOW** — style — `landmarks[0]`
+  - Formulation grammaticale : « Mairie de Le Blanc-Mesnil » sonne incorrect; usage courant « Mairie du Blanc-Mesnil » (accord avec article).
+  - Evidence: `« Mairie de Le Blanc-Mesnil »`
+  - Reco: Corriger en « Mairie du Blanc-Mesnil » (correction de forme, sans ajout de fait).
+- **LOW** — consistency — `hubIntro`
+  - « flux de la gare RER » : incohérence interne (ailleurs « gare RER B »).
+  - Evidence: `« ... flux de la gare RER ... » vs « ... gare RER B ... »`
+  - Reco: Harmoniser la désignation (après vérification de la ligne).
+- **LOW** — orthographe — `services[2].uniqueIntro`
+  - Accord/typographie : « poussières de chantiers » vs « poussières de chantier » (les deux existent, mais cohérence).
+  - Evidence: `« ... poussières de chantiers fréquents ... »`
+  - Reco: Uniformiser si souhaité (ex. « poussières de chantier ») sans changer le sens.
+- **LOW** — style — `services[4].uniqueIntro`
+  - « flux piétons important » : accord possible (« flux piéton important ») ; « flux » est singulier. Style/grammaire légère.
+  - Evidence: `« Face au flux piétons important ... »`
+  - Reco: Corriger en « flux piéton important » (correction grammaticale minimale).
+
+### Patches
+
+- **LOW** — style — `landmarks[0]` — op=setField — applySafe=true
+  - Reason: Correction grammaticale/usage : « Mairie de Le Blanc-Mesnil » -> « Mairie du Blanc-Mesnil » sans changement de sens.
+  - Expected: `Mairie de Le Blanc-Mesnil`
+  - Value: `Mairie du Blanc-Mesnil`
+- **LOW** — style — `services[4].uniqueIntro` — op=substring — applySafe=false
+  - Reason: Accord grammatical : « flux piétons important » -> « flux piéton important ». Patch en substring pour relecture (HTML).
+  - find/replace: `flux piétons important` → `flux piéton important`
+  - context: `...<strong>flux piétons important et aux poussières générées par les camions</strong> sur ce secteur logistique...`
+
+## les-lilas — src/data/cities-draft/les-lilas.ts
+
+### Issues
+
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Mention d'un « terminus historique de la ligne 11 » : formulation factuelle potentiellement discutable/évolutive (prolongements de ligne). À vérifier pour éviter une affirmation datée.
+  - Evidence: `« Au terminus historique de la ligne 11 »`
+  - Reco: Si vous voulez sécuriser, remplacer par une formulation neutre sans fait temporel (ex. « à proximité de la ligne 11 ») ou vérifier l'exactitude à la date de publication.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Référence à « l'axe N3 » : cohérence avec le reste où la N3 est explicitée comme Rue de Paris. Ici, « axe N3 » peut être compris mais reste à harmoniser.
+  - Evidence: `« balcons exposés à la pollution de l'axe N3 »`
+  - Reco: Harmoniser avec « la N3 (Rue de Paris) » si c'est bien l'intention (sans ajouter de nouveaux faits).
+- **HIGH** — legal — `faq[1].answer`
+  - Promesse de délai (« réactivité sous 48 à 72 heures ») : risque légal/marketing (engagement de délai) et potentiellement non conforme aux règles internes (éviter promesses chiffrées).
+  - Evidence: `« réactivité sous 48 à 72 heures »`
+  - Reco: Retirer ou neutraliser la mention chiffrée (ex. « réactivité » sans délai) si vos règles l'exigent. Correction à valider côté métier.
+- **HIGH** — legal — `services[6].faqAdditions[1].answer`
+  - Promesse de délai (« interventions sous 48 à 72 heures ») : engagement chiffré similaire, à risque et possiblement interdit par les règles.
+  - Evidence: `« interventions sous 48 à 72 heures »`
+  - Reco: Neutraliser la mention de délai (garder l'idée de planification rapide sans chiffre) après validation.
+- **MEDIUM** — consistency — `services[0].uniqueDeepDive`
+  - Commentaire en tête de fichier : « faq[].answer : HTML autorisé (sans <h3>) ». Or plusieurs champs uniqueDeepDive contiennent des <h3>. Si la contrainte « sans <h3> » s'applique aussi à d'autres champs HTML, il y a incohérence de règles/implémentation.
+  - Evidence: `uniqueDeepDive contient « <h3>... » (ex. services[0].uniqueDeepDive)`
+  - Reco: Confirmer la règle : si l'interdiction de <h3> ne concerne que faq.answer, pas de changement. Sinon, remplacer <h3> par un balisage autorisé (ex. <p><strong>...</strong></p>) avec prudence.
+- **LOW** — style — `hubIntro`
+  - Incohérence de mise en forme dans la liste : deux items ont un <strong>...</strong> + deux-points, le 3e non (et « Suivi terrain » n'est pas en gras).
+  - Evidence: `« <li>Suivi terrain : Compte-rendu... »`
+  - Reco: Harmoniser en mettant « <strong>Suivi terrain :</strong> ... » (changement minimal).
+- **LOW** — orthographe — `hubIntro`
+  - Typographie : « Compte-rendu » est acceptable, mais la forme recommandée est souvent « compte rendu » (sans trait d’union) en français courant. À harmoniser selon votre guide éditorial.
+  - Evidence: `« Compte-rendu d'intervention »`
+  - Reco: Si votre guide le prévoit, remplacer par « compte rendu ». Sinon, laisser.
+- **MEDIUM** — factual_suspect — `districts`
+  - Liste de quartiers/secteurs : certains libellés peuvent ne pas correspondre à des découpages officiels (ex. « Secteur Serge Gainsbourg »). Risque de fait local non vérifié.
+  - Evidence: `« Secteur Serge Gainsbourg »`
+  - Reco: Vérifier que ces appellations sont bien utilisées localement/officiellement. Sinon, préférer des formulations neutres (sans inventer).
+- **MEDIUM** — factual_suspect — `landmarks`
+  - « Station Serge Gainsbourg » : dénomination à vérifier (station de métro récente/nom exact). Risque de fait local inexact.
+  - Evidence: `« Station Serge Gainsbourg »`
+  - Reco: Vérifier le nom officiel exact. Si incertain, remplacer par une mention plus générale (ex. « station de métro (ligne 11) ») après validation.
+- **MEDIUM** — factual_suspect — `services[1].whyUsBullets[0]`
+  - « secteur Pasteur » / « Avenue Pasteur » : toponymie locale à vérifier (existence/pertinence).
+  - Evidence: `« secteur Pasteur » ; « Avenue Pasteur »`
+  - Reco: Vérifier l'existence et l'usage local. En cas de doute, retirer la précision ou la rendre plus générale.
+- **MEDIUM** — factual_suspect — `services[4].whyUsBullets[0]`
+  - Référence au « Triton » : lieu local à vérifier (nom exact/pertinence).
+  - Evidence: `« résidences proches du Triton »`
+  - Reco: Vérifier que « Le Triton » est bien un repère local pertinent aux Lilas et orthographié ainsi.
+- **MEDIUM** — factual_suspect — `services[4].uniqueIntro`
+  - Affirmation sur la composition du parc immobilier (« T2 et T3 ... l'essentiel du parc immobilier ») : statistique implicite non sourcée, potentiellement inexacte.
+  - Evidence: `« Dans les T2 et T3 qui composent l'essentiel du parc immobilier »`
+  - Reco: Neutraliser (ex. « Dans de nombreux T2 et T3 ») pour éviter une généralisation chiffrée/structurelle non vérifiée.
+- **MEDIUM** — factual_suspect — `services[6].whyUsBullets[0]`
+  - « attentes des agences immobilières du secteur Mairie des Lilas » : assertion locale potentiellement spéculative.
+  - Evidence: `« des attentes des agences immobilières du secteur Mairie des Lilas »`
+  - Reco: Si non vérifiable, simplifier en « des agences immobilières locales ».
+- **LOW** — style — `services[3].whyUsBullets[1]`
+  - « désinfection virucide » : terme technique fort ; peut nécessiter précision réglementaire (produit homologué) déjà mentionnée plus bas, mais cohérence à surveiller.
+  - Evidence: `« désinfection virucide »`
+  - Reco: S'assurer que les produits utilisés sont bien conformes/« homologués » comme indiqué dans la FAQ ; sinon, atténuer.
+
+### Patches
+
+- **LOW** — style — `hubIntro` — op=substring — applySafe=false
+  - Reason: Harmoniser la mise en forme des puces (mettre le libellé du 3e item en gras comme les deux premiers) sans changer le sens.
+  - find/replace: `<li>Suivi terrain : Compte-rendu d'intervention disponible, ajustements possibles selon les retours des donneurs d'ordre` → `<li><strong>Suivi terrain :</strong> Compte-rendu d'intervention disponible, ajustements possibles selon les retours des`
+  - context: `...<li><strong>Matériel dimensionné :</strong> Équipements compacts ...</li> <li>Suivi terrain : Compte-rendu d'intervention disponible, ajustements possibles selon les retours des donneurs d'ordre.</li> </ul>`
+
+## mitry-mory — src/data/cities-draft/mitry-mory.ts
+
+### Issues
+
+- **MEDIUM** — consistency — `customDescription`
+  - Mention « terminus du RER B » potentiellement inexacte/ambiguë pour Mitry-Mory (le terminus du RER B est généralement associé à d'autres gares). Risque de fact-check local fragile.
+  - Evidence: `« Entre le terminus du RER B et la Z.I. Mitry-Compans »`
+  - Reco: Éviter l'affirmation « terminus » si non certaine (ex. reformuler en « autour du RER B »). Correction minimale recommandée.
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Liste de secteurs/quartiers : « la Villette-aux-Aulnes » semble plutôt être un lieu-dit/secteur associé à Claye-Souilly (à vérifier). Risque d'attribution communale incorrecte.
+  - Evidence: `« Mitry-le-Neuf, le Bourg historique, la Villette-aux-Aulnes »`
+  - Reco: Vérifier l'appartenance de « La Villette-aux-Aulnes » à Mitry-Mory. Si doute, remplacer par un terme générique (ex. « différents secteurs de la commune ») sans ajouter de nouveaux lieux.
+- **MEDIUM** — factual_suspect — `districts`
+  - Présence de « La Villette-aux-Aulnes » dans les districts : possible incohérence géographique (à vérifier).
+  - Evidence: `districts inclut « La Villette-aux-Aulnes »`
+  - Reco: Vérifier la validité. Si non certain, retirer ou remplacer par un secteur avéré (sans en inventer).
+- **HIGH** — legal — `faq[2].answer`
+  - Promesse de délai d'intervention (« sous 24 à 48 heures ») : engagement temporel pouvant être considéré comme une promesse commerciale/contractuelle, à encadrer ou neutraliser.
+  - Evidence: `« nous mobilisons une équipe sous 24 à 48 heures selon disponibilité »`
+  - Reco: Remplacer par une formulation non engageante (ex. « dans les meilleurs délais selon disponibilité ») sans ajouter de nouvelle promesse.
+- **MEDIUM** — legal — `services[0].uniqueDeepDive`
+  - Indication chiffrée de délai de séchage (« 4 à 8 heures ») : peut être perçue comme promesse de résultat/délai, dépendante des conditions. À encadrer davantage.
+  - Evidence: `« comptez entre 4 et 8 heures avant circulation normale »`
+  - Reco: Ajouter un conditionnel/variabilité plus explicite ou retirer les chiffres si la politique éditoriale l'exige (correction minimale).
+- **MEDIUM** — legal — `services[0].faqAdditions[1].answer`
+  - Délai chiffré de remise en service (« 4 à 6 heures », « 8 heures ») : promesse potentielle dépendante des conditions réelles.
+  - Evidence: `« comptez 4 à 6 heures... 8 heures... »`
+  - Reco: Encadrer par « à titre indicatif » / « selon conditions » ou neutraliser les chiffres si nécessaire.
+- **MEDIUM** — legal — `services[1].faqAdditions[2].answer`
+  - Recommandations de fréquence chiffrées (« trimestriel », « bimestriel ») : peut être interprété comme prescription ferme; dépend de l'usage. Risque de sur-promesse/engagement implicite.
+  - Evidence: `« Un décrassage trimestriel... un passage bimestriel... »`
+  - Reco: Rendre plus conditionnel (« peut », « selon l'activité » est déjà présent mais pourrait être renforcé).
+- **MEDIUM** — factual_suspect — `services[3].uniqueIntro`
+  - Mention de « l'église Saint-Martin » à Mitry-Mory : à vérifier (risque de landmark non exact).
+  - Evidence: `« aux abords de l'église Saint-Martin »`
+  - Reco: Vérifier l'existence/nom exact. En cas de doute, retirer la mention spécifique plutôt que de la remplacer par un autre lieu.
+- **HIGH** — legal — `services[3].uniqueDeepDive`
+  - Allégation « désinfectant virucide et bactéricide » + « homologué » : termes réglementés (biocides) nécessitant prudence (normes, autorisations, conditions). Risque légal si non justifié.
+  - Evidence: `« produit désinfectant virucide et bactéricide... désinfectant virucide homologué »`
+  - Reco: Éviter « homologué »/« virucide » si non documenté; préférer « désinfectant adapté » (correction minimale).
+- **MEDIUM** — legal — `services[3].uniqueDeepDive`
+  - EPI : « masque FFP2 » présenté comme standard; ok mais à vérifier cohérence interne (FFP2 vs FFP3) et éviter de figer un protocole si variable.
+  - Evidence: `« masque FFP2, combinaison jetable, gants et lunettes »`
+  - Reco: Optionnel : rendre plus générique (« masque de protection adapté ») si nécessaire. Sinon laisser.
+- **MEDIUM** — legal — `services[3].faqAdditions[0].answer`
+  - Affirmation sanitaire : « agents pathogènes transmissibles » peut nécessiter prudence (risque d'alarmisme).
+  - Evidence: `« peuvent contenir des agents pathogènes transmissibles par inhalation »`
+  - Reco: Ajouter un encadrement (« potentiellement ») ou rester factuel sans dramatiser.
+- **MEDIUM** — legal — `services[6].whyUsBullets[2]`
+  - « respect strict des délais de restitution » : promesse forte (« strict ») pouvant être contestable selon aléas.
+  - Evidence: `« respect strict des délais de restitution »`
+  - Reco: Atténuer (« respect des délais convenus ») sans ajouter de promesse chiffrée.
+- **MEDIUM** — legal — `services[6].faqAdditions[0].answer`
+  - Délai d'intervention chiffré (« 48 à 72 heures ») : promesse temporelle; à encadrer.
+  - Evidence: `« Nous intervenons généralement sous 48 à 72 heures »`
+  - Reco: Remplacer par formulation non engageante (« selon disponibilité ») ou retirer les chiffres.
+- **LOW** — style — `citySpecificChallenges[0]`
+  - Formulation légèrement bancale : « Halls des résidences gare Mitry-Claye » manque une préposition (« près de la gare »).
+  - Evidence: `« Halls des résidences gare Mitry-Claye »`
+  - Reco: Corriger en « Halls des résidences près de la gare de Mitry-Claye » (sans changer le sens).
+- **LOW** — style — `hubIntro`
+  - « Reporting disponible sur demande » anglicisme; possible préférence éditoriale pour « compte rendu » / « rapport ».
+  - Evidence: `« Reporting disponible sur demande. »`
+  - Reco: Remplacer par « Compte rendu disponible sur demande. » si ligne éditoriale FR.
+- **LOW** — consistency — `services[0].uniqueDeepDive`
+  - Commentaire en amont indique « HTML autorisé (sans <h3>) » pour citySpecificChallenges, mais ici uniqueDeepDive utilise des <h3> (probablement autorisé). Vérifier cohérence des règles internes (pas forcément un problème).
+  - Evidence: `uniqueDeepDive contient plusieurs <h3>`
+  - Reco: Aucune action si la contrainte « sans <h3> » ne s'applique qu'à citySpecificChallenges (à confirmer).
+
+### Patches
+
+- **HIGH** — legal — `faq[2].answer` — op=substring — applySafe=false
+  - Reason: Neutraliser une promesse de délai (« sous 24 à 48 heures ») tout en conservant le sens (intervention rapide selon disponibilité).
+  - find/replace: `nous mobilisons une équipe sous 24 à 48 heures selon disponibilité` → `nous mobilisons une équipe dans les meilleurs délais selon disponibilité`
+  - context: `En cas de besoin urgent — dégât des eaux, souillure accidentelle dans un hall — nous mobilisons une équipe sous 24 à 48 heures selon disponibilité. Le syndic ou le gardien nous transmet les <strong>accès et consignes</st`
+- **LOW** — style — `citySpecificChallenges[0]` — op=substring — applySafe=false
+  - Reason: Corriger une tournure maladroite (ajout de préposition) sans changer le sens ni les balises.
+  - find/replace: `Halls des résidences gare <strong>Mitry-Claye</strong> :` → `Halls des résidences près de la gare de <strong>Mitry-Claye</strong> :`
+  - context: `"Halls des résidences gare <strong>Mitry-Claye</strong> : piétinement quotidien lié aux flux pendulaires."`
+
+## sevran — src/data/cities-draft/sevran.ts
+
+### Issues
+
+- **HIGH** — orthographe — `customDescription`
+  - Accent manquant sur la ville (« Sevran » → « Sevran » avec é).
+  - Evidence: `"Klinova intervient à Sevran..."`
+  - Reco: Remplacer « Sevran » par « Sévran » si la graphie officielle est attendue partout.
+- **HIGH** — consistency — `name`
+  - Incohérence potentielle de graphie : name="Sevran" sans accent alors que la graphie officielle est « Sévran ».
+  - Evidence: `name: "Sevran"`
+  - Reco: Vérifier la convention du projet (avec/sans accents) et harmoniser tous les champs si nécessaire.
+- **HIGH** — legal — `faq[1].answer`
+  - Ajout de promesse/délai explicite (« sous 48 à 72 heures ») pouvant être considéré comme engagement de délai. À valider avec les règles internes (souvent interdit/risqué).
+  - Evidence: `"... des créneaux sous 48 à 72 heures ..."`
+  - Reco: Si les délais sont proscrits, remplacer par une formulation non chiffrée (ex. « dans des délais courts selon disponibilité ») après validation.
+- **HIGH** — legal — `services[6].faqAdditions[1].answer`
+  - Promesse/délai explicite (« intervenir sous 48 à 72 heures », « créneau prioritaire ») : risque d'engagement contractuel et non-conformité aux règles annoncées.
+  - Evidence: `"Nous pouvons généralement intervenir sous 48 à 72 heures... un créneau prioritaire..."`
+  - Reco: Si les délais sont proscrits, déchiffrer/neutraliser la promesse (sans chiffres) après validation.
+- **MEDIUM** — consistency — `hubIntro`
+  - Incohérence typographique : « compte-rendu » vs « compte rendu » (plusieurs occurrences).
+  - Evidence: `hubIntro: "... transmet un compte-rendu ..." ; ailleurs "compte-rendu photographique"`
+  - Reco: Choisir une forme et harmoniser (souvent « compte rendu » recommandé par l’orthographe rectifiée, ou conserver « compte-rendu » mais uniformiser).
+- **MEDIUM** — style — `hubIntro`
+  - Incohérence de mise en forme dans la liste : deux items avec <strong>...</strong> et le 3e sans <strong> sur l’intitulé.
+  - Evidence: `<li><strong>Coordination locale :</strong> ...</li> ... <li>Suivi et transparence : Reporting ...</li>`
+  - Reco: Mettre l’intitulé du 3e item en gras comme les autres (correction minimale).
+- **MEDIUM** — legal — `services[3].whyUsBullets[1]`
+  - Mention « désinfection virucide » : allégation sanitaire sensible (virucide) pouvant nécessiter preuves/produits homologués et cadre d’usage. Risque légal si non strictement exact.
+  - Evidence: `"... désinfection virucide ..."`
+  - Reco: Vérifier la conformité (produits, homologation, protocole). Si doute, préférer « désinfection » sans qualifier « virucide ».
+- **MEDIUM** — legal — `services[3].uniqueDeepDive`
+  - Mention « produit virucide homologué » : allégation réglementée (biocides). À sécuriser (référence d’homologation/usage) ou neutraliser si non garanti.
+  - Evidence: `"... produit virucide homologué."`
+  - Reco: Valider juridiquement/techniquement. Si non certain, remplacer par « produit désinfectant adapté ».
+- **MEDIUM** — orthographe — `services[0].uniqueDeepDive`
+  - Accord : « moins sollicitées » devrait s’accorder avec « surfaces » (féminin pluriel) → « moins sollicitées » est correct, mais la phrase contient « Ces surfaces moins sollicitées bénéficient... » : OK. En revanche, vigilance sur « sollicitées » vs « sollicitées » (pas d’erreur) ; signalement prudent inutile mais conservé?
+  - Evidence: `"Ces surfaces moins sollicitées bénéficient..."`
+  - Reco: Aucune correction nécessaire (signalement prudent).
+- **MEDIUM** — consistency — `services[2].faqAdditions[0].answer`
+  - Présence d’un .replace("treatment", "traitement") dans une string template : risque de confusion/maintenance et incohérence avec la règle « uniquement champs string » (c’est une expression).
+  - Evidence: `answer: `<p>... ce treatment ...</p>`.replace("treatment", "traitement"),`
+  - Reco: Remplacer directement le mot dans la chaîne (sans .replace) pour garder une valeur string simple.
+- **MEDIUM** — style — `services[2].uniqueIntro`
+  - Registre familier (« On repousse l'apéro dehors ») potentiellement non aligné avec un ton B2B/collectivités.
+  - Evidence: `"On repousse l'apéro dehors..."`
+  - Reco: Si la charte l’exige, remplacer par une formulation neutre (ex. « on hésite à s’installer dehors ») sans réécriture lourde.
+- **MEDIUM** — factual_suspect — `services[7].uniqueIntro`
+  - Mention locale potentiellement inexacte : « Parc des Sœurs » à Sevran (à vérifier). Risque d’invention/erreur de toponyme.
+  - Evidence: `"... autour du Parc des Sœurs ..."`
+  - Reco: Vérifier l’existence/nom exact. Si doute, remplacer par une référence plus générique (sans ajouter de nouveaux lieux).
+- **MEDIUM** — factual_suspect — `services[7].uniqueIntro`
+  - Mention « ancien site Kodak » : fait local potentiellement sensible/inexact selon contexte. À vérifier.
+  - Evidence: `"... sur l'ancien site Kodak ..."`
+  - Reco: Vérifier la pertinence et l’exactitude. Si non certain, supprimer la mention ou la rendre générique.
+- **MEDIUM** — factual_suspect — `services[0].whyUsBullets[0]`
+  - Référence locale très précise (« bâtiments administratifs du secteur René-Muret ») : à vérifier (risque d’inexactitude ou de sur-spécification).
+  - Evidence: `"... bâtiments administratifs du secteur René-Muret."`
+  - Reco: Vérifier que ce « secteur » est une appellation pertinente. Sinon, généraliser sans ajouter de nouveaux faits.
+- **MEDIUM** — factual_suspect — `services[0].uniqueIntro`
+  - Référence « proche de l'Hôpital René-Muret » : à vérifier (localisation/nom exact).
+  - Evidence: `"Dans le secteur proche de l'Hôpital René-Muret..."`
+  - Reco: Valider le toponyme/établissement. Si doute, remplacer par « proche de l’hôpital » (sans nom) après validation.
+- **LOW** — orthographe — `landmarks[0]`
+  - Accent manquant : « Mairie de Sevran » → « Mairie de Sévran » (si convention avec accents).
+  - Evidence: `"Mairie de Sevran"`
+  - Reco: Harmoniser avec la convention du projet (accents ou non).
+- **LOW** — style — `hubIntro`
+  - Typographie : « compte-rendu » peut être remplacé par « compte rendu » (recommandation orthographique), mais dépend de la charte.
+  - Evidence: `"... transmet un compte-rendu ..."`
+  - Reco: Uniformiser la forme choisie sur toute la page.
+- **LOW** — seo — `customDescription`
+  - « Sevran » apparaît sans accent ; selon SEO, les deux variantes existent. Risque faible mais à harmoniser avec la stratégie (accents).
+  - Evidence: `"... à Sevran ..."`
+  - Reco: Décider d’une convention (avec/sans accents) et l’appliquer partout.
+- **LOW** — consistency — `services[3].uniqueDeepDive`
+  - EPI : « masque FFP2 » OK, mais cohérence interne : ailleurs on pourrait utiliser FFP3 selon protocole ; à vérifier (sans changer si non certain).
+  - Evidence: `"masque FFP2"`
+  - Reco: Vérifier le standard interne EPI pour ce type d’intervention.
+
+### Patches
+
+- **MEDIUM** — style — `hubIntro` — op=substring — applySafe=false
+  - Reason: Harmoniser la mise en forme des puces (intitulé en gras comme les autres) sans changer le sens.
+  - find/replace: `<li>Suivi et transparence : Reporting disponible pour les gestionnaires, photos avant/après sur demande, facturation dét` → `<li><strong>Suivi et transparence :</strong> Reporting disponible pour les gestionnaires, photos avant/après sur demande`
+  - context: `...<li><strong>Interventions adaptées au bâti :</strong> Grands ensembles des années 70, pavillons anciens ou résidences récentes — chaque configuration fait l'objet d'un repérage avant intervention.</li> <li>Suivi et tr`
+
+## tremblay-en-france — src/data/cities-draft/tremblay-en-france.ts
+
+### Issues
+
+- **MEDIUM** — factual_suspect — `hubIntro`
+  - Mention géographique potentiellement inexacte : Tremblay-en-France est décrite comme « bordée par le Canal de l'Ourcq ». À vérifier (le canal traverse/est surtout associé à d'autres communes ; proximité possible mais formulation « bordée par » peut être contestable).
+  - Evidence: `"Au cœur de la plateforme aéroportuaire CDG et bordée par le Canal de l'Ourcq"`
+  - Reco: Si doute confirmé, atténuer la formulation (ex. « à proximité du Canal de l'Ourcq ») sans ajouter de nouveaux faits.
+- **MEDIUM** — legal — `faq[1].answer`
+  - Promesse de délai potentiellement engageante (« sous 48 heures ») dans une FAQ. Risque légal/contractuel si non systématiquement tenu.
+  - Evidence: `"Un devis détaillé vous est transmis sous 48 heures."`
+  - Reco: Atténuer en formulation non engageante (ex. « généralement » / « en général ») ou supprimer le délai si non garanti.
+- **HIGH** — legal — `faq[2].answer`
+  - Promesse/engagement de délai et d'urgence (« faisabilité sous 24 à 48 heures », « priorisons un passage rapide ») pouvant être considérée comme une promesse de service/délai. De plus, le texte introduit une notion d'« urgence » (à éviter selon règles).
+  - Evidence: `"nous priorisons un passage rapide" ; "faisabilité sous 24 à 48 heures"`
+  - Reco: Retirer les délais chiffrés et/ou remplacer par une formulation prudente non chiffrée (« selon disponibilités ») sans ajouter de nouvelles promesses.
+- **MEDIUM** — legal — `services[0].heroDescription`
+  - Formulation pouvant être interprétée comme promesse de résultat/délai (« séchage accéléré », « remise en service rapide »).
+  - Evidence: `"séchage accéléré pour une remise en service rapide"`
+  - Reco: Si non garanti, atténuer (« séchage optimisé » / « remise en service plus rapide selon conditions ») de manière minimale.
+- **MEDIUM** — legal — `services[0].uniqueDeepDive`
+  - Affirmation de délai de remise en service (« varie de quelques heures à une demi-journée ») pouvant être perçue comme engagement.
+  - Evidence: `"le délai de remise en service varie de quelques heures à une demi-journée"`
+  - Reco: Atténuer (ex. « peut varier ») ou retirer la plage si non garantie.
+- **MEDIUM** — legal — `services[0].faqAdditions[1].answer`
+  - Délai chiffré de séchage (« trois à six heures ») potentiellement engageant.
+  - Evidence: `"comptez généralement trois à six heures"`
+  - Reco: Atténuer davantage (ex. « peut varier ») ou retirer les chiffres si non garantis.
+- **MEDIUM** — legal — `services[3].uniqueDeepDive`
+  - Allégation technique/réglementaire potentiellement sensible : « produit virucide homologué ». Le terme « homologué » peut impliquer une certification précise (normes/AMM) ; à sécuriser si non documenté.
+  - Evidence: `"produit virucide homologué"`
+  - Reco: Remplacer par une formulation plus neutre (« produit virucide adapté » / « conforme aux usages ») si vous ne pouvez pas justifier l'homologation.
+- **MEDIUM** — legal — `services[3].whyUsBullets[1]`
+  - Allégation sensible : « désinfection virucide adaptée aux fientes ». Peut nécessiter précision normative ; risque de sur-promesse sanitaire.
+  - Evidence: `"désinfection virucide adaptée aux fientes"`
+  - Reco: Atténuer si nécessaire (ex. « désinfection adaptée ») sans ajouter de promesse.
+- **MEDIUM** — legal — `services[3].faqAdditions[0].question`
+  - La question contient « prise en charge d'urgence » (promesse d'urgence). Même si c'est une question, cela peut induire une offre d'urgence.
+  - Evidence: `"quelle prise en charge d'urgence proposez-vous ?"`
+  - Reco: Remplacer « d'urgence » par une formulation neutre (« prioritaire » / « rapide ») si vous ne proposez pas officiellement un service d'urgence.
+- **MEDIUM** — legal — `services[3].faqAdditions[0].answer`
+  - Promesse temporelle (« le jour même ») potentiellement engageante.
+  - Evidence: `"évacués en sacs étanches le jour même"`
+  - Reco: Atténuer (« dans la foulée » / « selon organisation ») si non garanti.
+- **MEDIUM** — factual_suspect — `services[2].uniqueIntro`
+  - Mention d'un axe/localisation très spécifique (« Avenue du Parc ») à Tremblay-en-France : à vérifier (nom de voie exact et pertinence). Risque d'inexactitude locale.
+  - Evidence: `"Le long de l'Avenue du Parc"`
+  - Reco: Si non certain, remplacer par une formulation générique sans nom de rue.
+- **LOW** — style — `services[1].whyUsBullets[0]`
+  - Incohérence de dénomination : « secteur Centre-Ville de Tremblay » alors que le reste utilise « Tremblay-en-France ».
+  - Evidence: `"secteur Centre-Ville de Tremblay"`
+  - Reco: Harmoniser en « Tremblay-en-France » (correction minimale).
+- **LOW** — style — `services[6].whyUsBullets[2]`
+  - Formulation un peu lourde/marketing (« sans accroc »). Pas une faute, mais peut être adoucie si ton attendu plus neutre.
+  - Evidence: `"une restitution ou une entrée sans accroc"`
+  - Reco: Optionnel : remplacer par une formulation plus neutre (« sans difficulté ») si souhaité.
+- **MEDIUM** — consistency — `services[0].uniqueDeepDive`
+  - Commentaire de règle en tête : « HTML autorisé (sans <h3>) » pour certains champs, mais ici uniqueDeepDive contient des <h3>. À vérifier : si la règle « sans <h3> » s'applique aussi aux services, il y a non-conformité.
+  - Evidence: `uniqueDeepDive contient plusieurs "<h3>"`
+  - Reco: Vérifier la contrainte par champ. Si <h3> interdit ici, remplacer par <h4> ou <p><strong>…</strong></p> de façon minimale.
+
+### Patches
+
+- **LOW** — style — `services[1].whyUsBullets[0]` — op=substring — applySafe=false
+  - Reason: Harmonisation minimale de la dénomination de la ville (« Tremblay » -> « Tremblay-en-France ») sans changer le sens.
+  - find/replace: `secteur Centre-Ville de Tremblay.` → `secteur Centre-Ville de Tremblay-en-France.`
+  - context: `Connaissance des contraintes d'accès en zone logistique et des parkings souterrains du secteur Centre-Ville de Tremblay.`
+
+## vanves — src/data/cities-draft/vanves.ts
+
+### Issues
+
+- **MEDIUM** — consistency — `customDescription`
+  - Mention de « parkings souterrains » sans article (« des parkings souterrains ») : formulation légèrement bancale.
+  - Evidence: `"... l'entretien des parties communes, parkings souterrains et espaces extérieurs."`
+  - Reco: Ajouter l’article manquant : « des parkings souterrains ».
+- **LOW** — style — `customDescription`
+  - « du Plateau » avec majuscule : cohérent avec districts, mais vérifier l’usage local (quartier vs relief).
+  - Evidence: `"... aux résidences récentes du Plateau."`
+  - Reco: Conserver si c’est bien le nom de quartier ; sinon harmoniser (mais éviter si incertain).
+- **MEDIUM** — seo — `hubIntro`
+  - Potentiel manque de mention explicite « Vanves (92170) » dans l’intro (SEO local).
+  - Evidence: `hubIntro mentionne Vanves dans le texte, mais pas le code postal.`
+  - Reco: Optionnel : ajouter « (92170) » après Vanves si la charte SEO le permet (à valider).
+- **HIGH** — legal — `services[3].heroDescription`
+  - Allégation « désinfection virucide » : terme à portée réglementaire/biocide ; risque si absence de preuve/certification et protocole conforme. De plus, « certifiée » est une promesse forte.
+  - Evidence: `"... désinfection virucide ..." et whyUsBullets: "désinfection virucide certifiée."`
+  - Reco: Si non justifiable, remplacer par une formulation plus prudente (ex. « désinfection avec produit virucide conforme ») ou retirer « certifiée ». À valider avec l’équipe conformité.
+- **HIGH** — legal — `services[3].uniqueDeepDive`
+  - « produit virucide et bactéricide homologué » : « homologué » est une allégation réglementaire potentiellement inexacte (AMM/biocide).
+  - Evidence: `"Un produit virucide et bactéricide homologué est appliqué..."`
+  - Reco: Remplacer « homologué » par « conforme » / « adapté » si vous ne pouvez pas prouver l’homologation.
+- **MEDIUM** — factual_suspect — `services[4].uniqueIntro`
+  - Affirmation générale « appartements majoritaires de Vanves, souvent des studios ou T2 » : statistique implicite non sourcée, potentiellement contestable.
+  - Evidence: `"Dans les appartements majoritaires de Vanves, souvent des studios ou T2..."`
+  - Reco: Neutraliser la généralisation (ex. retirer « majoritaires » / « souvent ») ou reformuler sans prétention statistique.
+- **HIGH** — legal — `faq[3].answer`
+  - Promesse de délai « passage sous 48 à 72 heures » assimilable à engagement de délai (même conditionnel). Risque de non-conformité avec la règle interne « pas d'ajout de promesses/délais » et risque commercial si non tenu.
+  - Evidence: `"... proposer un passage sous 48 à 72 heures"`
+  - Reco: Remplacer par une formulation sans délai chiffré (ex. « dans les meilleurs délais selon planning »).
+- **HIGH** — legal — `services[6].faqAdditions[3].answer`
+  - Promesse de délai « sous 24 à 48 heures » (urgence locative) : engagement chiffré potentiellement non tenable et contraire aux règles conservatrices.
+  - Evidence: `"... intervenir sous 24 à 48 heures."`
+  - Reco: Remplacer par « dans les meilleurs délais selon disponibilités » sans chiffre.
+- **MEDIUM** — factual_suspect — `services[0].faqAdditions[2].question`
+  - Références à « Hachette ou Audiens » : entreprises/occupants locaux non justifiés, risque d’inexactitude ou d’association non autorisée.
+  - Evidence: `"... des bureaux comme ceux de Hachette ou Audiens"`
+  - Reco: Remplacer par une formulation générique (« des bureaux du secteur ») pour éviter toute référence non vérifiable.
+- **MEDIUM** — factual_suspect — `services[2].uniqueIntro`
+  - Mention « Avenue du Parc » : odonyme potentiellement inexact à Vanves (à vérifier).
+  - Evidence: `"... secteur Avenue du Parc ..."`
+  - Reco: Vérifier l’existence exacte de la voie ; sinon remplacer par une mention plus générique (sans inventer).
+- **MEDIUM** — factual_suspect — `services[1].faqAdditions[1].question`
+  - Mention précise « rue Jean Bleuzen » : fait local très spécifique ; à vérifier (adresse/voie) pour éviter erreur.
+  - Evidence: `"... parking souterrain rue Jean Bleuzen"`
+  - Reco: Si non certain, généraliser (« dans une rue du secteur ») ou vérifier la voie.
+- **MEDIUM** — factual_suspect — `services[1].faqAdditions[2].question`
+  - Mention « Carrefour de l'Insurrection » : toponyme/enseigne potentiellement inexact ; à vérifier.
+  - Evidence: `"... proche du Carrefour de l'Insurrection"`
+  - Reco: Vérifier l’appellation exacte ; sinon remplacer par « carrefour de l’Insurrection » (sans marque) ou formulation générique.
+- **LOW** — orthographe — `services[1].uniqueDeepDive`
+  - Typographie : « résultat visé : » peut être remplacé par « résultat visé : » ok, mais style ; rien de bloquant.
+  - Evidence: `"Le résultat visé : un béton..."`
+  - Reco: Optionnel : reformuler en phrase complète si souhaité (non nécessaire).
+- **MEDIUM** — consistency — `services[0].uniqueDeepDive`
+  - Présence de balises <h3> dans uniqueDeepDive alors que certains commentaires indiquent des restrictions HTML (ex. citySpecificChallenges/faq sans <h3>). Vérifier si uniqueDeepDive autorise <h3> dans ce template.
+  - Evidence: `uniqueDeepDive contient plusieurs "<h3>..."`
+  - Reco: Confirmer les règles HTML par champ ; si <h3> interdit ici, remplacer par <p><strong>...</strong></p> (à faire prudemment).
+
+### Patches
+
+- **MEDIUM** — consistency — `customDescription` — op=substring — applySafe=false
+  - Reason: Correction grammaticale minimale (article manquant) sans changement de sens.
+  - find/replace: `l'entretien des parties communes, parkings souterrains et espaces extérieurs` → `l'entretien des parties communes, des parkings souterrains et des espaces extérieurs`
+  - context: `Klinova intervient à Vanves pour l'entretien des parties communes, parkings souterrains et espaces extérieurs. Une équipe habituée...`
+- **HIGH** — legal — `faq[3].answer` — op=substring — applySafe=false
+  - Reason: Retirer le délai chiffré (engagement) tout en conservant l’idée de faisabilité selon planning, sans ajouter de promesse.
+  - find/replace: `nous pouvons proposer un <strong>passage sous 48 à 72 heures</strong>` → `nous pouvons proposer un <strong>passage dans les meilleurs délais</strong>`
+  - context: `<p>Selon la nature de la demande et notre planning, nous pouvons proposer un <strong>passage sous 48 à 72 heures</strong>. Pour les situations...`
+- **HIGH** — legal — `services[6].faqAdditions[3].answer` — op=substring — applySafe=false
+  - Reason: Retirer le délai chiffré (engagement) en conservant une formulation conditionnelle.
+  - find/replace: `nous pouvons intervenir sous 24 à 48 heures` → `nous pouvons intervenir dans les meilleurs délais`
+  - context: `<p>Selon la disponibilité de nos équipes et la surface du bien, nous pouvons intervenir sous 24 à 48 heures. Pour les situations...`
+- **HIGH** — legal — `services[3].whyUsBullets[1]` — op=substring — applySafe=false
+  - Reason: Allégation « certifiée » trop forte si non prouvable ; correction minimale en supprimant le terme sans changer le reste.
+  - find/replace: `désinfection virucide certifiée` → `désinfection virucide`
+  - context: `"Protocole complet avec EPI adaptés, confinement systématique et désinfection virucide certifiée."`
+- **HIGH** — legal — `services[3].uniqueDeepDive` — op=substring — applySafe=false
+  - Reason: Remplacer « homologué » (allégation réglementaire) par un terme plus neutre, sans changer le sens global (désinfection).
+  - find/replace: `virucide et bactéricide homologué` → `virucide et bactéricide conforme`
+  - context: `<p>Un produit virucide et bactéricide homologué est appliqué avec un temps de contact respecté...`
+- **MEDIUM** — factual_suspect — `services[0].faqAdditions[2].question` — op=substring — applySafe=false
+  - Reason: Éviter des références à des entreprises spécifiques potentiellement inexactes/non autorisées ; généralisation minimale.
+  - find/replace: `dans des bureaux comme ceux de Hachette ou Audiens` → `dans des bureaux du secteur`
+  - context: `"Q3 : Après un nettoyage de moquette dans des bureaux comme ceux de Hachette ou Audiens, sous quel délai..."`
 

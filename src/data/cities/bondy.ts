@@ -50,9 +50,9 @@ const city: City = {
         "rosny-sous-bois",
         "romainville",
         "livry-gargan",
-        "neuilly-plaisance",
-        "gagny",
-        "montreuil"
+        "le-blanc-mesnil",
+        "aulnay-sous-bois",
+        "neuilly-plaisance"
       ],
 
   // Texte brut uniquement

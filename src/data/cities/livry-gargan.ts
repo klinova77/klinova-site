@@ -36,16 +36,16 @@ const city: City = {
   ],
 
   nearbyCities: [
+        "sevran",
         "le-raincy",
         "montfermeil",
         "bondy",
         "gagny",
         "villemomble",
         "villepinte",
+        "aulnay-sous-bois",
         "chelles",
-        "neuilly-sur-marne",
-        "rosny-sous-bois",
-        "neuilly-plaisance"
+        "neuilly-sur-marne"
       ],
   landmarks: [
     "Mairie de Livry-Gargan",

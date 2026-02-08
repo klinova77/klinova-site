@@ -1,183 +1,88 @@
 {
-  "at": "2026-02-02T22:08:14.341Z",
+  "at": "2026-02-08T13:27:18.854Z",
   "dryRun": false,
   "ignoreExpected": false,
   "maxEditsPerFile": 50,
   "inputApplyFile": "audit-apply.suggested.json",
   "logs": [
     {
-      "file": "src/data/cities-draft/bagneux.ts",
+      "file": "src/data/cities-draft/aulnay-sous-bois.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[3].faqAdditions[3].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/clamart.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[4].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/les-lilas.ts",
       "status": "ok",
       "applied": 2,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[3].whyUsBullets[0]",
+          "path": "services[2].uniqueDeepDive",
           "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[3].faqAdditions[2].question",
+          "path": "services[2].faqAdditions[2].question",
           "mode": "setField",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/bondy.ts",
-      "status": "ok",
-      "applied": 2,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[6].faqAdditions[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].faqAdditions[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/chevilly-la-rue.ts",
-      "status": "ok",
-      "applied": 3,
-      "skipped": 1,
-      "perEdit": [
-        {
-          "path": "customDescription",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "hubIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "citySpecificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "faq[2].answer",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/choisy-le-roi.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 1,
-      "perEdit": [
-        {
-          "path": "services[3].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/noisiel.ts",
+      "file": "src/data/cities-draft/mitry-mory.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "faq[1].answer",
+          "path": "services[4].uniqueIntro",
           "mode": "setField",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/noisy-le-sec.ts",
+      "file": "src/data/cities-draft/tremblay-en-france.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[1].heroDescription",
+          "path": "services[2].faqAdditions[1].question",
           "mode": "setField",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/orly.ts",
+      "file": "src/data/cities-draft/vanves.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[3].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/romainville.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[1].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/thiais.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[2].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/vitry-sur-seine.ts",
-      "status": "ok",
-      "applied": 3,
-      "skipped": 1,
-      "perEdit": [
-        {
-          "path": "faq[2].answer",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        },
-        {
-          "path": "services[4].heroDescription",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].whyUsBullets[0]",
+          "path": "services[2].heroDescription",
           "mode": "setField",
           "status": "applied"
         }

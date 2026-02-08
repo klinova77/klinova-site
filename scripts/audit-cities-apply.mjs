@@ -1,14 +1,14 @@
 // scripts/audit-cities-apply.mjs
 // ============================================================================
 // APPLY — MODE A / AUTO SAFE (Klinova City)
-
-  // Usage:
-  //   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --dry-run
-  //   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --write
+//
+// Usage:
+//   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --dry-run
+//   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --write
 //
 // Applique automatiquement uniquement :
-//  1) setField (expected optionnel) ✅
-//  2) substring (typo mécanique)    ✅ seulement si excerpt unique
+//  1) setField ✅ (SAFE-BY-DEFAULT : refuse si target non-statique)
+//  2) substring ✅ (typo mécanique) seulement si occurrence unique
 //
 // Supporte la lecture des strings "statiques" même si elles sont concaténées :
 //   "..." + "..." + ...
@@ -22,8 +22,10 @@
 //
 // Sécurité :
 // - Ne modifie PAS un array entier : il faut un index [i] dans le path.
-// - Substring : excerpt doit apparaître exactement 1 fois dans le champ.
+// - Substring : excerpt/find doit apparaître exactement 1 fois dans le champ.
+// - setField : refuse par défaut si valeur actuelle non statique.
 // - Si expected fourni et mismatch : skip (sauf --ignore-expected).
+// - Compat substring : supporte excerpt/replacement ET find/replace.
 // ============================================================================
 
 import fs from "node:fs";
@@ -125,8 +127,7 @@ function findSlotByPath(objLit, pathStr) {
   }
 
   // expr = expression courante du slot
-  const expr =
-    lastSlot.kind === "prop" ? lastSlot.node.getInitializer() : lastSlot.node;
+  const expr = lastSlot.kind === "prop" ? lastSlot.node.getInitializer() : lastSlot.node;
 
   return { slot: lastSlot, expr, pointsToWholeArray: false };
 }
@@ -197,6 +198,24 @@ function isSafeMode(mode) {
   return mode === "setField" || mode === "substring";
 }
 
+function getSubstringArgs(e) {
+  const excerpt =
+    typeof e.excerpt === "string"
+      ? e.excerpt
+      : typeof e.find === "string"
+        ? e.find
+        : "";
+
+  const replacement =
+    typeof e.replacement === "string"
+      ? e.replacement
+      : typeof e.replace === "string"
+        ? e.replace
+        : "";
+
+  return { excerpt, replacement };
+}
+
 async function main() {
   // Usage:
   //   node scripts/audit-cities-apply.mjs audit-apply.suggested.json --dry-run
@@ -216,6 +235,10 @@ async function main() {
   const verbose = hasFlag("--verbose");
 
   const ignoreExpected = hasFlag("--ignore-expected") || !!plan.ignoreExpected;
+
+  // Par défaut: setField est SAFE-BY-DEFAULT (refuse si non statique)
+  // Tu peux ajouter plus tard: --allow-non-static-setfield si besoin.
+  const allowNonStaticSetField = hasFlag("--allow-non-static-setfield") || !!plan.allowNonStaticSetField;
 
   const dryRun = cliWrite ? false : cliDryRun ? true : !!plan.dryRun;
 
@@ -292,7 +315,7 @@ async function main() {
       const oldText = getStaticStringValue(expr);
 
       // ----------------------------------------------------------------------
-      // setField
+      // setField (SAFE-BY-DEFAULT)
       // ----------------------------------------------------------------------
       if (mode === "setField") {
         const value = typeof e.value === "string" ? e.value : "";
@@ -301,6 +324,18 @@ async function main() {
         if (!value) {
           skipped++;
           perEdit.push({ path: pth, mode, status: "skipped", reason: "value_missing" });
+          continue;
+        }
+
+        // Sécurité: ne pas écraser une valeur non statique par défaut
+        if (!allowNonStaticSetField && oldText == null) {
+          skipped++;
+          perEdit.push({
+            path: pth,
+            mode,
+            status: "skipped",
+            reason: "target_not_static_string_setfield",
+          });
           continue;
         }
 
@@ -361,8 +396,7 @@ async function main() {
         continue;
       }
 
-      const excerpt = typeof e.excerpt === "string" ? e.excerpt : "";
-      const replacement = typeof e.replacement === "string" ? e.replacement : "";
+      const { excerpt, replacement } = getSubstringArgs(e);
 
       if (!excerpt.trim()) {
         skipped++;
@@ -416,6 +450,7 @@ async function main() {
     at: new Date().toISOString(),
     dryRun,
     ignoreExpected,
+    allowNonStaticSetField,
     maxEditsPerFile,
     inputApplyFile: path.relative(ROOT, absApply).replace(/\\/g, "/"),
     logs,

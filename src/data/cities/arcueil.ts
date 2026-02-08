@@ -44,11 +44,11 @@ const city: City = {
         "montrouge",
         "bagneux",
         "villejuif",
+        "chatillon",
+        "vanves",
         "ivry-sur-seine",
         "chevilly-larue",
-        "vitry-sur-seine",
-        "charenton-le-pont",
-        "thiais"
+        "vitry-sur-seine"
       ],
 
   // Texte brut uniquement

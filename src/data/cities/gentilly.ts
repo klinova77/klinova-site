@@ -48,10 +48,10 @@ const city: City = {
         "villejuif",
         "bagneux",
         "ivry-sur-seine",
+        "chatillon",
+        "vanves",
         "vitry-sur-seine",
-        "charenton-le-pont",
-        "alfortville",
-        "saint-mande"
+        "charenton-le-pont"
       ],
 
   // Texte brut uniquement

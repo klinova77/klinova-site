@@ -39,16 +39,16 @@ const city: City = {
     "Les Merisiers",
   ],
   nearbyCities: [
+        "sevran",
+        "tremblay-en-france",
+        "aulnay-sous-bois",
         "livry-gargan",
+        "le-blanc-mesnil",
+        "mitry-mory",
         "villeparisis",
         "le-raincy",
-        "montfermeil",
-        "gagny",
-        "bobigny",
-        "chelles",
-        "rosny-sous-bois",
-        "neuilly-sur-marne",
-        "neuilly-plaisance"
+        "bondy",
+        "montfermeil"
       ],
 
   // Texte brut uniquement

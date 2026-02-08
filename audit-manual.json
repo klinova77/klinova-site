@@ -1,19 +1,12 @@
 {
-  "generatedAt": "2026-02-08T17:57:52.937Z",
-  "mode": "klinova-city-audit-patches-v2",
-  "batch": {
-    "id": "batch_6988cca8da308190ba7f9301d02baff4",
-    "status": "completed",
-    "output_file_id": "file-KqPe7mgfNZehv72SsNGmTv",
-    "error_file_id": null,
-    "endpoint": "/v1/responses"
-  },
+  "generatedAt": "2026-02-08T17:57:52.938Z",
+  "mode": "klinova-city-audit-manual",
   "files": [
     {
       "file": "src/data/cities-draft/aulnay-sous-bois.ts",
       "fileId": "aulnay-sous-bois",
       "slug": "aulnay-sous-bois",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "consistency",
@@ -135,7 +128,7 @@
           "recommendation": "Si non certain, neutraliser en « autour de la gare » (sans ajouter de nouveau fait)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -207,7 +200,7 @@
       "file": "src/data/cities-draft/chatillon.ts",
       "fileId": "chatillon",
       "slug": "chatillon",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "high",
           "category": "consistency",
@@ -297,7 +290,7 @@
           "recommendation": "Confirmer si <h3> est autorisé dans les champs service.*. Si non, remplacer par <p><strong>…</strong></p> (correction à relire)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -317,7 +310,7 @@
       "file": "src/data/cities-draft/clamart.ts",
       "fileId": "clamart",
       "slug": "clamart",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "high",
           "category": "legal",
@@ -399,7 +392,7 @@
           "recommendation": "Vérifier les règles HTML par champ. Si <h3> non supporté, remplacer par <p><strong>...</strong></p> (à faire prudemment)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -419,7 +412,7 @@
       "file": "src/data/cities-draft/issy-les-moulineaux.ts",
       "fileId": "issy-les-moulineaux",
       "slug": "issy-les-moulineaux",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "factual_suspect",
@@ -533,7 +526,7 @@
           "recommendation": "Harmoniser si nécessaire (non patché car peut changer le sens local)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -553,7 +546,7 @@
       "file": "src/data/cities-draft/le-blanc-mesnil.ts",
       "fileId": "le-blanc-mesnil",
       "slug": "le-blanc-mesnil",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "factual_suspect",
@@ -683,20 +676,7 @@
           "recommendation": "Corriger en « flux piéton important » (correction grammaticale minimale)."
         }
       ],
-      "gptPatches": [
-        {
-          "op": "setField",
-          "applySafe": true,
-          "severity": "low",
-          "category": "style",
-          "path": "landmarks[0]",
-          "reason": "Correction grammaticale/usage : « Mairie de Le Blanc-Mesnil » -> « Mairie du Blanc-Mesnil » sans changement de sens.",
-          "expected": "Mairie de Le Blanc-Mesnil",
-          "value": "Mairie du Blanc-Mesnil",
-          "find": "",
-          "replace": "",
-          "context": ""
-        },
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -716,7 +696,7 @@
       "file": "src/data/cities-draft/les-lilas.ts",
       "fileId": "les-lilas",
       "slug": "les-lilas",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "factual_suspect",
@@ -830,7 +810,7 @@
           "recommendation": "S'assurer que les produits utilisés sont bien conformes/« homologués » comme indiqué dans la FAQ ; sinon, atténuer."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -850,7 +830,7 @@
       "file": "src/data/cities-draft/mitry-mory.ts",
       "fileId": "mitry-mory",
       "slug": "mitry-mory",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "consistency",
@@ -980,7 +960,7 @@
           "recommendation": "Aucune action si la contrainte « sans <h3> » ne s'applique qu'à citySpecificChallenges (à confirmer)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -1013,7 +993,7 @@
       "file": "src/data/cities-draft/sevran.ts",
       "fileId": "sevran",
       "slug": "sevran",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "high",
           "category": "orthographe",
@@ -1167,7 +1147,7 @@
           "recommendation": "Vérifier le standard interne EPI pour ce type d’intervention."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -1187,7 +1167,7 @@
       "file": "src/data/cities-draft/tremblay-en-france.ts",
       "fileId": "tremblay-en-france",
       "slug": "tremblay-en-france",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "factual_suspect",
@@ -1301,7 +1281,7 @@
           "recommendation": "Vérifier la contrainte par champ. Si <h3> interdit ici, remplacer par <h4> ou <p><strong>…</strong></p> de façon minimale."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -1321,7 +1301,7 @@
       "file": "src/data/cities-draft/vanves.ts",
       "fileId": "vanves",
       "slug": "vanves",
-      "gptIssues": [
+      "issues": [
         {
           "severity": "medium",
           "category": "consistency",
@@ -1435,7 +1415,7 @@
           "recommendation": "Confirmer les règles HTML par champ ; si <h3> interdit ici, remplacer par <p><strong>...</strong></p> (à faire prudemment)."
         }
       ],
-      "gptPatches": [
+      "patches": [
         {
           "op": "substring",
           "applySafe": false,
@@ -1512,7 +1492,7 @@
           "value": "",
           "find": "dans des bureaux comme ceux de Hachette ou Audiens",
           "replace": "dans des bureaux du secteur",
-          "context": "\"Q3 : Après un nettoyage de moquette dans des bureaux comme ceux de Hachette ou Audiens, sous quel délai...\""
+          "context": "\" Après un nettoyage de moquette dans des bureaux comme ceux de Hachette ou Audiens, sous quel délai...\""
         }
       ]
     }

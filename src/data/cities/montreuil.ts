@@ -47,12 +47,12 @@ const city: City = {
         "vincennes",
         "fontenay-sous-bois",
         "romainville",
+        "les-lilas",
         "rosny-sous-bois",
         "noisy-le-sec",
         "saint-mande",
         "nogent-sur-marne",
-        "neuilly-plaisance",
-        "le-perreux-sur-marne"
+        "neuilly-plaisance"
       ],
 
   landmarks: [

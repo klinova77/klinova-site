@@ -40,16 +40,16 @@ const city: City = {
     "Les Coutures",
   ],
   nearbyCities: [
+        "chatillon",
         "cachan",
         "arcueil",
         "montrouge",
         "gentilly",
+        "vanves",
         "villejuif",
-        "chevilly-larue",
-        "ivry-sur-seine",
-        "vitry-sur-seine",
-        "thiais",
-        "charenton-le-pont"
+        "clamart",
+        "issy-les-moulineaux",
+        "chevilly-larue"
       ],
 
   // Texte brut uniquement

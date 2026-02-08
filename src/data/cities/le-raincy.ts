@@ -46,7 +46,7 @@ const city: City = {
         "neuilly-plaisance",
         "neuilly-sur-marne",
         "noisy-le-sec",
-        "chelles"
+        "sevran"
       ],
 
   landmarks: [

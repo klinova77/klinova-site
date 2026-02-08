@@ -16,7 +16,7 @@ function escapeForDoubleQuotes(s) {
 const project = new Project({ tsConfigFilePath: TS_CONFIG });
 
 // ✅ CIBLE : uniquement les cities
-const files = project.getSourceFiles("src/data/cities/**/*.ts");
+const files = project.getSourceFiles("src/data/cities-draft/**/*.ts");
 
 let changedFiles = 0;
 const dangerous = [];

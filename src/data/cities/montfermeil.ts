@@ -35,9 +35,9 @@ const city: City = {
         "neuilly-sur-marne",
         "gournay-sur-marne",
         "villemomble",
+        "sevran",
         "neuilly-plaisance",
-        "vaires-sur-marne",
-        "champs-sur-marne"
+        "vaires-sur-marne"
       ],
 
   landmarks: [

@@ -44,12 +44,12 @@ const city: City = {
         "bobigny",
         "bondy",
         "rosny-sous-bois",
+        "les-lilas",
         "montreuil",
         "bagnolet",
         "pantin",
         "villemomble",
-        "le-raincy",
-        "fontenay-sous-bois"
+        "le-raincy"
       ],
 
   landmarks: [

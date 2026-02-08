@@ -51,7 +51,7 @@ const city: City = {
 
   // Texte brut uniquement
   landmarks: [
-    "Mairie de Le Plessis-Trévise",
+    "Mairie du Plessis-Trévise",
     "Avenue Ardouin",
     "Château des Tourelles",
     "Espace Paul Valéry",

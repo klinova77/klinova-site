@@ -1,8 +1,8 @@
 {
-  "batch_id": "batch_69811aec9b508190bba884f96f0ec7ae",
-  "input_file_id": "file-Ca69UgUN7gJdgZSZqJ3Gfc",
+  "batch_id": "batch_6988cca8da308190ba7f9301d02baff4",
+  "input_file_id": "file-6VYKDvXsTydKTs4rxKjKYx",
   "endpoint": "/v1/responses",
   "status": "validating",
-  "created_at": 1770068716,
+  "created_at": 1770572968,
   "citiesDir": "D:\\Klinova-site\\src\\data\\cities-draft"
 }

@@ -47,10 +47,10 @@ const city: City = {
         "vitry-sur-seine",
         "alfortville",
         "maisons-alfort",
+        "chevilly-larue",
         "villejuif",
         "ivry-sur-seine",
-        "saint-maur-des-fosses",
-        "charenton-le-pont"
+        "saint-maur-des-fosses"
       ],
 
   // Texte brut uniquement

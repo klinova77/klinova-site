@@ -1,25 +1,16 @@
 // scripts/audit-cities-batches.mjs
 // ----------------------------------------------------------------------------
 // 1) SUBMIT : envoie l’audit en batch (selon scripts/audit-cities.json)
-//    - Si slugs=[] et slugsJsonPath="" : envoie TOUS les fichiers .ts du dossier citiesDir (y compris sous-dossiers)
-//    - Génère : scripts/.audit_out/batch-meta.json + scripts/.audit_out/batch-input.jsonl
 // node scripts/audit-cities-batches.mjs submit
 //
-// 2) COLLECT : récupère les résultats du batch (quand le statut est "completed")
-//    - Utilise le batch_id de --batch (ou batch-meta.json)
-//    - Génère : audit-report.json + audit-report.md + audit-summary.md
-//    - Génère : audit-apply.suggested.json (SAFE setField uniquement)
+// 2) COLLECT : récupère les résultats
 // node scripts/audit-cities-batches.mjs collect --batch batch_xxx
 //
-// (Optionnel) COLLECT sans --batch => lit scripts/.audit_out/batch-meta.json
-// node scripts/audit-cities-batches.mjs collect
-//
-// ----------------------------------------------------------------------------
-// Notes importantes (Klinova City):
-// - On AUTORISE les template literals/backticks sur les champs HTML (hubIntro, uniqueIntro, uniqueDeepDive, faq.answer, etc.).
-// - On AUTORISE les retours ligne dans ces champs HTML.
-// - On reste conservateur : on ne propose des patches LLM que si c’est sûr et minimal.
-// - L’apply.suggested.json ne contient QUE du setField (pas de substring).
+// Sorties :
+// - audit-report.json / audit-report.md (global)
+// - audit-apply.suggested.json : uniquement applySafe=true (setField only)
+// - audit-manual.json : uniquement applySafe=false (patches + issues)
+// - audit-manual.md : version lisible (triée)
 // ----------------------------------------------------------------------------
 
 import "dotenv/config";
@@ -44,8 +35,11 @@ const OUT_ERROR_JSONL = path.join(OUT_DIR, "batch-error.jsonl");
 
 const OUT_REPORT_JSON = path.join(ROOT, "audit-report.json");
 const OUT_REPORT_MD = path.join(ROOT, "audit-report.md");
-const OUT_SUMMARY_MD = path.join(ROOT, "audit-summary.md");
 const OUT_APPLY_SUGGESTED = path.join(ROOT, "audit-apply.suggested.json");
+
+// NEW: manual review outputs
+const OUT_MANUAL_JSON = path.join(ROOT, "audit-manual.json");
+const OUT_MANUAL_MD = path.join(ROOT, "audit-manual.md");
 
 /* =============================================================================
    HELPERS
@@ -113,18 +107,6 @@ function getPropAssignment(objLit, key) {
 function getInitializer(pa) {
   if (!pa) return null;
   return pa.getInitializer();
-}
-function getStringLiteralText(node) {
-  return node?.asKind(SyntaxKind.StringLiteral)?.getLiteralText?.() ?? null;
-}
-function getTemplateLiteralText(node) {
-  // NoSubstitutionTemplateLiteral => `...`
-  if (!node) return null;
-  if (node.getKind?.() === SyntaxKind.NoSubstitutionTemplateLiteral) {
-    return node.getLiteralText?.() ?? null;
-  }
-  // TemplateExpression => `a ${b} c` (we do NOT try to resolve; treat as non-safe)
-  return null;
 }
 
 /**
@@ -207,222 +189,18 @@ function getTextAtPath(cityObj, pathStr) {
   return null;
 }
 
-function findDuplicateTopLevelKeys(obj) {
-  const counts = new Map();
-  for (const prop of obj.getProperties()) {
-    const pa = prop.asKind(SyntaxKind.PropertyAssignment);
-    if (!pa) continue;
-    const name = pa.getName();
-    counts.set(name, (counts.get(name) || 0) + 1);
-  }
-  return Array.from(counts.entries())
-    .filter(([, c]) => c > 1)
-    .map(([k, c]) => ({ key: k, count: c }));
-}
-
 /* =============================================================================
-   LOCAL AUDIT (conservateur, adapté à City Klinova)
+   LLM AUDIT (BATCH) — issues[] + patches[]
 ============================================================================= */
-
-// Champs où backticks et retours ligne sont NORMAUX (HTML long, multi-lignes).
-// => on ne doit pas déclencher d'alerte "template string" / "\n" sur eux.
-const HTML_FIELDS_ALLOW_BACKTICKS = new Set([
-  "hubIntro",
-  "uniqueIntro",
-  "uniqueDeepDive",
-  "answer", // faq[].answer / faqAdditions[].answer
-]);
-
-// On autorise aussi les retours ligne si le champ est *typiquement* HTML.
-// (Même si c'est stocké en "..." avec \n, ou en `...` multi-lignes)
-function isHtmlishField(propName) {
-  if (HTML_FIELDS_ALLOW_BACKTICKS.has(propName)) return true;
-  // champs connus côté services
-  if (propName === "uniqueIntro" || propName === "uniqueDeepDive") return true;
-  // hubIntro au niveau city
-  if (propName === "hubIntro") return true;
-  return false;
-}
-
-function addIssue(issues, it) {
-  issues.push({
-    severity: it.severity,
-    category: it.category,
-    path: it.path,
-    message: it.message,
-    excerpt: it.excerpt ?? "",
-    replacement: it.replacement ?? "",
-    recommendation: it.recommendation ?? "",
-  });
-}
-
-function scanTextSimple(text) {
-  const found = [];
-
-  // 1) Double espace
-  const idxDouble = text.indexOf("  ");
-  if (idxDouble !== -1) {
-    const excerpt = text.slice(Math.max(0, idxDouble - 25), idxDouble + 25);
-    const replacement = excerpt.replace(/ {2,}/g, " ");
-    found.push({
-      message: "Double espace détecté.",
-      excerpt,
-      replacement,
-    });
-  }
-
-  // 2) Espace avant virgule/point
-  const m = text.match(/\s+[,\.]/);
-  if (m && m.index != null) {
-    const idx = m.index;
-    const excerpt = text.slice(Math.max(0, idx - 25), idx + 25);
-    const replacement = excerpt.replace(/\s+([,\.])/g, "$1");
-    found.push({
-      message: "Espace(s) avant ponctuation détecté(s) (typo FR).",
-      excerpt,
-      replacement,
-    });
-  }
-
-  // 3) Parenthèses "( " ou " )"
-  const m2 = text.match(/\(\s+|\s+\)/);
-  if (m2 && m2.index != null) {
-    const idx = m2.index;
-    const excerpt = text.slice(Math.max(0, idx - 25), idx + 25);
-    const replacement = excerpt.replace(/\(\s+/g, "(").replace(/\s+\)/g, ")");
-    found.push({
-      message: "Espace incorrect près d’une parenthèse détecté.",
-      excerpt,
-      replacement,
-    });
-  }
-
-  return found;
-}
-
-// Convention: on garde l'alerte "guillemets simples" si c'est un vrai string literal.
-// (Mais on ne tente pas de corriger automatiquement : report only.)
-function hasSingleQuoteInRawStringLiteral(node) {
-  const raw = node.getText();
-  return raw.startsWith("'") || raw.endsWith("'");
-}
-
-function localAuditConservative(cityObj) {
-  const issues = [];
-
-  // A) Duplicate top-level keys
-  const dupes = findDuplicateTopLevelKeys(cityObj);
-  for (const d of dupes) {
-    addIssue(issues, {
-      severity: "high",
-      category: "consistency",
-      path: d.key,
-      message: `Duplicate top-level key "${d.key}" (${d.count} occurrences).`,
-      recommendation: "Supprimer la clé en double (risque de comportement inattendu).",
-    });
-  }
-
-  // B) StringLiteral audits (texte brut ou HTML encodé)
-  const stringLits = cityObj.getDescendantsOfKind(SyntaxKind.StringLiteral);
-  for (const lit of stringLits) {
-    const text = lit.getLiteralText();
-    const parentProp = lit.getFirstAncestorByKind(SyntaxKind.PropertyAssignment);
-    const propName = parentProp ? parentProp.getName() : "unknown";
-
-    // 1) micro-typo
-    for (const f of scanTextSimple(text)) {
-      addIssue(issues, {
-        severity: "medium",
-        category: "style",
-        path: propName,
-        message: f.message,
-        excerpt: f.excerpt,
-        replacement: f.replacement,
-        recommendation: "Nettoyage typographique (rendu plus premium).",
-      });
-    }
-
-    // 2) retours ligne : autorisés pour champs HTML-ish
-    if (!isHtmlishField(propName) && text.includes("\n")) {
-      addIssue(issues, {
-        severity: "high",
-        category: "consistency",
-        path: propName,
-        message: "Retour à la ligne détecté dans un champ non-HTML (risque format / rendu).",
-        excerpt: text.slice(0, 160).replace(/\s+/g, " "),
-        replacement: "Remplacer les retours ligne par des espaces (ou basculer en champ HTML si prévu).",
-        recommendation: "Éviter \\n dans les champs texte brut.",
-      });
-    }
-
-    // 3) guillemets simples sur le literal
-    if (hasSingleQuoteInRawStringLiteral(lit)) {
-      addIssue(issues, {
-        severity: "high",
-        category: "consistency",
-        path: propName,
-        message: "String avec guillemets simples détectée (préférence: guillemets doubles).",
-        excerpt: lit.getText().slice(0, 160),
-        replacement: "Convertir en guillemets doubles.",
-        recommendation: "Uniformiser pour faciliter les diffs.",
-      });
-    }
-  }
-
-  // C) Template strings/backticks : on ne flag QUE si c’est un template literal
-  //     sur un champ non HTML-ish (ex: customDescription en `...`).
-  const tmplLits = cityObj.getDescendantsOfKind(SyntaxKind.NoSubstitutionTemplateLiteral);
-  for (const lit of tmplLits) {
-    const parentProp = lit.getFirstAncestorByKind(SyntaxKind.PropertyAssignment);
-    const propName = parentProp ? parentProp.getName() : "unknown";
-
-    if (isHtmlishField(propName)) continue;
-
-    addIssue(issues, {
-      severity: "high",
-      category: "consistency",
-      path: propName,
-      message: "Template literal/backticks détectés dans un champ non-HTML (risque conventions).",
-      excerpt: lit.getText().slice(0, 160).replace(/\s+/g, " "),
-      replacement: "Remplacer par une string en guillemets doubles.",
-      recommendation: "Réserver les backticks aux champs HTML multi-lignes.",
-    });
-  }
-
-  // D) TemplateExpression (`...${}...`) : on signale (non patchable automatiquement)
-  const tmplExpr = cityObj.getDescendantsOfKind(SyntaxKind.TemplateExpression);
-  for (const node of tmplExpr) {
-    const parentProp = node.getFirstAncestorByKind(SyntaxKind.PropertyAssignment);
-    const propName = parentProp ? parentProp.getName() : "unknown";
-
-    // Si tu utilises réellement ${} dans data, c'est souvent un accident pour du contenu statique.
-    // On signale, même dans HTML, parce que ça peut casser la build si c'est non voulu.
-    addIssue(issues, {
-      severity: "high",
-      category: "consistency",
-      path: propName,
-      message: "TemplateExpression (`...${}...`) détectée (contenu potentiellement non statique / fragile).",
-      excerpt: node.getText().slice(0, 180).replace(/\s+/g, " "),
-      replacement: "",
-      recommendation: "Vérifier si ${...} est intentionnel. Sinon, convertir en texte statique.",
-    });
-  }
-
-  return issues;
-}
-
-/* =============================================================================
-   LLM AUDIT (BATCH) — PATCHES setField uniquement
-============================================================================= */
-function buildPatchSchema() {
+function buildAuditSchema() {
   return {
-    name: "CityPatchSet",
-    strict: true,
+    name: "CityAuditResult",
+    
     schema: {
       type: "object",
       additionalProperties: false,
       properties: {
-        patches: {
+        issues: {
           type: "array",
           items: {
             type: "object",
@@ -431,61 +209,101 @@ function buildPatchSchema() {
               severity: { type: "string", enum: ["high", "medium", "low"] },
               category: {
                 type: "string",
-                enum: ["orthographe", "style", "seo", "legal", "consistency", "factual_suspect"],
+                enum: ["orthographe", "style", "seo", "legal", "consistency", "factual_suspect", "other"],
               },
               path: { type: "string" },
+              message: { type: "string" },
+              evidence: { type: "string" },
+              recommendation: { type: "string" },
+            },
+            required: ["severity", "category", "path", "message", "evidence", "recommendation"],
+          },
+        },
+
+        patches: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              op: { type: "string", enum: ["setField", "substring"] },
+              applySafe: { type: "boolean" },
+              severity: { type: "string", enum: ["high", "medium", "low"] },
+              category: {
+                type: "string",
+                enum: ["orthographe", "style", "seo", "legal", "consistency", "factual_suspect", "other"],
+              },
+              path: { type: "string" },
+              reason: { type: "string" },
+
+              // Always required (empty string when irrelevant)
               expected: { type: "string" },
               value: { type: "string" },
-              reason: { type: "string" },
+              find: { type: "string" },
+              replace: { type: "string" },
+              context: { type: "string" },
             },
-            required: ["severity", "category", "path", "expected", "value", "reason"],
+
+            // IMPORTANT: strict schema requires required includes ALL keys in properties
+            required: [
+              "op",
+              "applySafe",
+              "severity",
+              "category",
+              "path",
+              "reason",
+              "expected",
+              "value",
+              "find",
+              "replace",
+              "context",
+            ],
           },
         },
       },
-      required: ["patches"],
+      required: ["issues", "patches"],
     },
   };
 }
 
+
 function buildResponsesBody({ model, fileRel, fileContent, rulesText }) {
-  const schema = buildPatchSchema();
+  const schema = buildAuditSchema();
 
   const system = `
-Tu es relecteur-correcteur + auditeur qualité SEO/conversion pour des pages locales (Klinova) stockées dans un fichier TypeScript (type City).
+Tu es auditeur qualité (orthographe / style / SEO / legal / cohérence / fact-check prudent) pour des pages locales Klinova stockées dans un fichier TypeScript.
 
-Objectif : proposer des CORRECTIONS SÛRES sous forme de PATCHES "setField" (champ entier).
-Interdiction : ne propose JAMAIS de remplacement partiel (substring) et ne réécris pas tout.
+Objectif :
+1) Remonter TOUT ce qui cloche (même si tu n'es pas 100% certain) dans issues[].
+2) Proposer des corrections dans patches[].
 
-Principe central (anti-travers) :
-- Tu ne proposes un patch QUE s'il y a une erreur claire, une erreur factuelle, une incohérence, une faute, une répétition manifeste, un problème de typographie, ou un risque évident (SEO/qualité).
-- une erreur de formatage en TS évidente
-- Si c'est une préférence de style : PAS DE PATCH.
+Règle d'or :
+- Tu peux être "large" dans issues[].
+- Tu ne mets applySafe=true dans patches[] QUE si la correction est certaine, minimale, et ne change pas le sens.
 
-Ce que tu n'as PAS le droit d'introduire :
-- Aucun nouveau fait local, quartier, lieu, chiffre, promesse.
-- Aucun ajout de nuance juridique ("selon conditions", "sous réserve", etc.) sauf si le texte actuel est manifestement illégal/trompeur et que la correction est MINIMALE.
-- Aucun changement de sens.
+Contraintes fortes :
+- Tu n'inventes AUCUN fait local (quartier, axe, chiffre, promesse, délai).
+- Tu n'ajoutes pas de nouvelles promesses ("sous 24h", "urgence", etc.).
+- Tu ne changes pas le sens.
+- Pas de réécriture : correction minimale.
 
-Règles de sortie :
-1) Tu lis le TS fourni.
-2) Pour chaque correction, tu produis un objet patch :
-   - path : ex "customDescription" ou "services[2].uniqueIntro" ou "faq[0].answer"
-   - expected : la VALEUR ACTUELLE EXACTE (contenu du champ, sans guillemets TS)
-   - value : la nouvelle valeur complète (string), corrigée
-   - reason : une phrase courte
-3) Si tu n’es pas certain à 100% de expected : N’ÉMETS PAS de patch.
-4) Tu ne touches qu’aux champs texte (strings). N’édite pas la structure TS, ni les clés, ni l’ordre.
-5) Ne casse pas le HTML : si tu touches un champ HTML, conserve les balises existantes et corrige minimalement.
+Patches :
+- op="setField": tu donnes expected (valeur actuelle exacte) et value (valeur corrigée complète).
+- op="substring": tu donnes find/replace + un petit context (extrait autour) ; mets applySafe=false (car on relira).
 
-Cadre "conservative edits" :
-- Correction minimale : corriger l’erreur, ne pas paraphraser.
-- Longueur : +/- 10% max.
-- 1 patch max par champ.
-- Si plusieurs micro-erreurs dans un même champ : fais UN patch global uniquement si tu es sûr du expected.
+Important :
+- Si tu n'es pas certain de expected EXACT: n'émet PAS de patch setField.
+- En cas de doute : issue plutôt que patch.
+- Dans les champs HTML : ne casse pas les balises ; correction minimale.
+
+IMPORTANT (schema strict):
+- Tous les champs du patch sont requis.
+- Si op="setField": remplis expected + value, et mets find/replace/context à "".
+- Si op="substring": remplis find + replace + context, et mets expected/value à "".
+
 
 Format :
-- Retourne UNIQUEMENT un JSON object conforme au schema (pas de texte, pas de markdown).
-- Si aucun patch sûr : {"patches": []}
+- Retourne UNIQUEMENT un JSON conforme au schéma.
 `.trim();
 
   const user = `
@@ -504,7 +322,7 @@ ${fileContent}
       { role: "system", content: [{ type: "input_text", text: system }] },
       { role: "user", content: [{ type: "input_text", text: user }] },
     ],
-    temperature: 0,
+    temperature: 0.2, // un peu plus "large" pour détecter des issues
     text: {
       format: {
         type: "json_schema",
@@ -517,42 +335,42 @@ ${fileContent}
 }
 
 /* =============================================================================
-   REPORTING
+   NORMALIZATION
 ============================================================================= */
-function normalizeIssueForReport(it) {
+function normalizePatch(p) {
+  const op = p?.op;
+  if (op !== "setField" && op !== "substring") return null;
+
   return {
-    severity: it.severity,
-    category: it.category ?? "consistency",
-    path: it.path,
-    message: it.message,
-    excerpt: it.excerpt ?? "",
-    replacement: it.replacement ?? "",
-    recommendation: it.recommendation ?? "",
+    op,
+    applySafe: Boolean(p?.applySafe),
+    severity: p?.severity ?? "low",
+    category: p?.category ?? "other",
+    path: p?.path ?? "",
+    reason: p?.reason ?? "",
+    expected: typeof p?.expected === "string" ? p.expected : "",
+    value: typeof p?.value === "string" ? p.value : "",
+    find: typeof p?.find === "string" ? p.find : "",
+    replace: typeof p?.replace === "string" ? p.replace : "",
+    context: typeof p?.context === "string" ? p.context : "",
   };
 }
 
-function normalizePatchForReport(p) {
-  const severity = p?.severity ?? "low";
-  const category = p?.category ?? "consistency";
-  const path = p?.path ?? "";
-
-  const isPatch =
-    typeof p?.expected === "string" &&
-    typeof p?.value === "string" &&
-    typeof p?.reason === "string";
-
+function normalizeIssue(it) {
   return {
-    severity,
-    category,
-    path,
-    expected: isPatch ? p.expected : null,
-    value: isPatch ? p.value : null,
-    reason: isPatch ? p.reason : null,
-    _kind: isPatch ? "patch" : "unknown",
+    severity: it?.severity ?? "low",
+    category: it?.category ?? "other",
+    path: it?.path ?? "",
+    message: it?.message ?? "",
+    evidence: it?.evidence ?? "",
+    recommendation: it?.recommendation ?? "",
   };
 }
 
-function toMarkdown(report) {
+/* =============================================================================
+   REPORTING (md)
+============================================================================= */
+function toReportMarkdown(report) {
   let md = `# Audit City — Klinova\n\n`;
   md += `Généré : ${report.generatedAt}\n`;
   md += `Total fichiers : ${report.files.length}\n\n`;
@@ -560,87 +378,86 @@ function toMarkdown(report) {
   for (const f of report.files) {
     md += `## ${f.slug} — ${f.file}\n\n`;
 
-    const local = (f.localIssues || []).map(normalizeIssueForReport);
-    const patches = (f.gptPatches || []).map(normalizePatchForReport).filter((x) => x._kind === "patch");
+    const issues = f.gptIssues || [];
+    const patches = f.gptPatches || [];
 
-    if (!local.length && !patches.length) {
-      md += `✅ Aucun problème détecté.\n\n`;
+    if (!issues.length && !patches.length) {
+      md += `✅ Rien à signaler.\n\n`;
       continue;
     }
 
-    if (local.length) {
-      md += `### Local issues\n\n`;
-      for (const it of local) {
-        md += `- **${String(it.severity).toUpperCase()}** — ${it.category} — \`${it.path}\`\n`;
+    if (issues.length) {
+      md += `### Issues\n\n`;
+      for (const it of issues) {
+        md += `- **${it.severity.toUpperCase()}** — ${it.category} — \`${it.path}\`\n`;
         md += `  - ${it.message}\n`;
-        if (it.replacement) md += `  - Remplacement: \`${String(it.replacement).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
+        if (it.evidence) md += `  - Evidence: \`${String(it.evidence).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
         if (it.recommendation) md += `  - Reco: ${it.recommendation}\n`;
-        if (it.excerpt) md += `  - Extrait: \`${String(it.excerpt).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
       }
       md += `\n`;
     }
 
     if (patches.length) {
-      md += `### GPT patches (setField)\n\n`;
+      md += `### Patches\n\n`;
       for (const p of patches) {
-        md += `- **${String(p.severity).toUpperCase()}** — ${p.category} — \`${p.path}\`\n`;
+        md += `- **${p.severity.toUpperCase()}** — ${p.category} — \`${p.path}\` — op=${p.op} — applySafe=${p.applySafe}\n`;
         md += `  - Reason: ${p.reason}\n`;
-        md += `  - Expected: \`${String(p.expected).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
-        md += `  - Value: \`${String(p.value).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
+        if (p.op === "setField") {
+          md += `  - Expected: \`${String(p.expected).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
+          md += `  - Value: \`${String(p.value).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
+        } else {
+          md += `  - find/replace: \`${String(p.find).slice(0, 120)}\` → \`${String(p.replace).slice(0, 120)}\`\n`;
+          if (p.context) md += `  - context: \`${String(p.context).replace(/\s+/g, " ").slice(0, 220)}\`\n`;
+        }
       }
       md += `\n`;
     }
   }
+
   return md;
 }
 
-function toSummaryMarkdown(report) {
-  const rows = [];
-  const allowed = new Set(["orthographe", "style", "seo", "legal", "factual_suspect", "consistency"]);
+function toManualMarkdown(manual) {
   const sevRank = { high: 0, medium: 1, low: 2 };
+  const items = [];
 
-  for (const f of report.files) {
-    for (const p of f.gptPatches || []) {
-      const pp = normalizePatchForReport(p);
-      if (pp._kind !== "patch") continue;
-      if ((pp.severity === "high" || pp.severity === "medium") && allowed.has(pp.category)) {
-        rows.push({
-          slug: f.slug,
-          severity: pp.severity,
-          category: pp.category,
-          path: pp.path,
-          reason: pp.reason || "",
-        });
-      }
+  for (const f of manual.files) {
+    for (const it of f.issues) {
+      items.push({ kind: "issue", slug: f.slug, file: f.file, ...it });
     }
-    for (const it of f.localIssues || []) {
-      const n = normalizeIssueForReport(it);
-      if ((n.severity === "high" || n.severity === "medium") && allowed.has(n.category)) {
-        rows.push({
-          slug: f.slug,
-          severity: n.severity,
-          category: n.category,
-          path: n.path,
-          reason: n.message || "",
-        });
-      }
+    for (const p of f.patches) {
+      items.push({ kind: "patch", slug: f.slug, file: f.file, ...p });
     }
   }
 
-  rows.sort((a, b) => (sevRank[a.severity] ?? 9) - (sevRank[b.severity] ?? 9) || a.slug.localeCompare(b.slug));
+  items.sort(
+    (a, b) =>
+      (sevRank[a.severity] ?? 9) - (sevRank[b.severity] ?? 9) ||
+      a.slug.localeCompare(b.slug) ||
+      a.path.localeCompare(b.path)
+  );
 
-  let md = `# Audit — Synthèse (HIGH / MEDIUM)\n\n`;
-  md += `Généré : ${report.generatedAt}\n`;
-  md += `Total items HIGH/MEDIUM : ${rows.length}\n\n`;
+  let md = `# Audit — Manuel (applySafe=false)\n\n`;
+  md += `Généré : ${manual.generatedAt}\n`;
+  md += `Total items : ${items.length}\n\n`;
 
-  if (!rows.length) {
-    md += `✅ Aucun problème HIGH/MEDIUM.\n`;
-    return md;
-  }
-
-  for (const r of rows) {
-    md += `- **${r.severity.toUpperCase()}** — ${r.slug} — ${r.category} — \`${r.path}\`\n`;
-    md += `  - ${r.reason}\n`;
+  for (const x of items) {
+    if (x.kind === "issue") {
+      md += `- **ISSUE ${x.severity.toUpperCase()}** — ${x.slug} — ${x.category} — \`${x.path}\`\n`;
+      md += `  - ${x.message}\n`;
+      if (x.evidence) md += `  - Evidence: \`${String(x.evidence).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
+      if (x.recommendation) md += `  - Reco: ${x.recommendation}\n`;
+    } else {
+      md += `- **PATCH ${x.severity.toUpperCase()}** — ${x.slug} — ${x.category} — \`${x.path}\` — op=${x.op}\n`;
+      md += `  - ${x.reason}\n`;
+      if (x.op === "setField") {
+        md += `  - Expected: \`${String(x.expected).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
+        md += `  - Value: \`${String(x.value).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
+      } else {
+        md += `  - find/replace: \`${String(x.find).slice(0, 120)}\` → \`${String(x.replace).slice(0, 120)}\`\n`;
+        if (x.context) md += `  - context: \`${String(x.context).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
+      }
+    }
   }
 
   md += `\n`;
@@ -648,9 +465,7 @@ function toSummaryMarkdown(report) {
 }
 
 /* =============================================================================
-   APPLY SUGGESTED (SAFE) — setField UNIQUEMENT
-   - expected est recalculé depuis TS au moment du collect
-   - drop si path non résoluble en string / template literal simple
+   APPLY SUGGESTED — applySafe=true ONLY + validations
 ============================================================================= */
 function isUsableString(s) {
   if (s == null) return false;
@@ -660,18 +475,20 @@ function isUsableString(s) {
   return true;
 }
 
-function isPatchActionable(p) {
+function isPatchAutoApplicable(p) {
+  // strict: auto apply uniquement setField + applySafe
   if (!p) return false;
-  // Tu peux ajuster: pour l’auto-apply je limite aux high/medium
-  if (!(p.severity === "high" || p.severity === "medium")) return false;
+  if (p.applySafe !== true) return false;
+  if (p.op !== "setField") return false;
 
-  const catOk = new Set(["orthographe", "style", "seo", "legal", "consistency", "factual_suspect"]);
+  const catOk = new Set(["orthographe", "style", "seo", "legal", "consistency"]);
   if (!catOk.has(p.category)) return false;
 
   if (!isUsableString(p.path)) return false;
   if (!isUsableString(p.value)) return false;
   if (!isUsableString(p.reason)) return false;
 
+  // expected peut être vide côté modèle, car on resync depuis TS.
   return true;
 }
 
@@ -689,18 +506,16 @@ function buildSuggestedApply(report) {
     } catch {
       cityObj = null;
     }
+    if (!cityObj) continue;
 
     for (const raw of f.gptPatches ?? []) {
-      const p = normalizePatchForReport(raw);
-      if (p._kind !== "patch") continue;
-      if (!isPatchActionable(p)) continue;
-
-      if (!cityObj) continue;
+      const p = normalizePatch(raw);
+      if (!p) continue;
+      if (!isPatchAutoApplicable(p)) continue;
 
       const expectedFromTs = getTextAtPath(cityObj, p.path);
       if (!isUsableString(expectedFromTs)) continue;
 
-      // value est fourni par le modèle. expected est remplacé par expectedFromTs (sûreté).
       edits.push({
         file: f.file,
         path: String(p.path),
@@ -769,7 +584,6 @@ async function submitBatch() {
 
   const cfg = readJson(CONFIG_PATH);
 
-  // ✅ ton correctif : default = src/data/cities
   const citiesDirRaw = cfg.citiesDir || "src/data/cities-draft";
   const citiesDir = safeJoinUnderRoot(citiesDirRaw);
 
@@ -804,6 +618,9 @@ async function submitBatch() {
 
   console.log("[info] citiesDir =", citiesDir);
   console.log("[info] files selected =", files.length);
+
+
+
 
   if (!files.length) {
     console.log("[info] no files selected; exiting.");
@@ -884,7 +701,6 @@ async function collectBatch() {
 
   const cfg = readJson(CONFIG_PATH);
 
-  // ✅ ton correctif : default = src/data/cities
   const citiesDirRaw = cfg.citiesDir || "src/data/cities-draft";
   const citiesDir = safeJoinUnderRoot(citiesDirRaw);
 
@@ -906,10 +722,11 @@ async function collectBatch() {
   const batch = await openai.batches.retrieve(batchId);
   console.log("[info] batch status:", batch.status);
 
-  if (!["completed", "expired", "failed", "cancelled"].includes(batch.status)) {
-    console.log("[info] not ready yet. Re-run collect when status is completed/expired/failed/cancelled.");
-    return;
+  const isFinal = ["completed", "expired", "failed", "cancelled"].includes(batch.status);
+  if (!isFinal) {
+    console.log("[info] batch not final yet; will still download output/error files if available.");
   }
+
 
   ensureDir(OUT_DIR);
 
@@ -933,9 +750,24 @@ async function collectBatch() {
     errorLines = parseJsonl(errText);
     console.log("[ok] downloaded error:", OUT_ERROR_JSONL);
   }
+  if (errorLines.length) {
+    const byMsg = new Map();
+    for (const line of errorLines) {
+      const err = line?.error ?? line?.response?.body?.error ?? line?.response?.error ?? {};
+      const key = `${err.code || err.type || "unknown"} :: ${err.message || "no_message"}`;
+      byMsg.set(key, (byMsg.get(key) || 0) + 1);
+    }
 
-  // Map fileId -> patches[]
-  const gptPatchesByFileId = new Map();
+    console.log("\n[debug] error summary (top 10):");
+    for (const [k, n] of Array.from(byMsg.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10)) {
+      console.log(`  - ${n}x ${k}`);
+    }
+    console.log("");
+  }
+
+
+  // Map fileId -> {issues, patches}
+  const gptByFileId = new Map();
 
   for (const line of outputLines) {
     const customId = line?.custom_id;
@@ -944,7 +776,7 @@ async function collectBatch() {
 
     const outputText = extractOutputTextFromResponsesBody(respBody);
     if (!outputText) {
-      gptPatchesByFileId.set(fileId, []);
+      gptByFileId.set(fileId, { issues: [], patches: [] });
       continue;
     }
 
@@ -952,39 +784,45 @@ async function collectBatch() {
     try {
       parsed = JSON.parse(outputText);
     } catch {
-      gptPatchesByFileId.set(fileId, [
-        {
-          severity: "high",
-          category: "consistency",
-          path: "api",
-          expected: "",
-          value: "",
-          reason: "Model returned non-JSON output (should be json_schema).",
-        },
-      ]);
+      gptByFileId.set(fileId, {
+        issues: [
+          {
+            severity: "high",
+            category: "consistency",
+            path: "api",
+            message: "Model returned non-JSON output (should be json_schema).",
+            evidence: String(outputText).slice(0, 180),
+            recommendation: "Vérifier le schéma et le parsing.",
+          },
+        ],
+        patches: [],
+      });
       continue;
     }
 
-    const patches = Array.isArray(parsed?.patches) ? parsed.patches : [];
-    gptPatchesByFileId.set(fileId, patches);
+    const issues = Array.isArray(parsed?.issues) ? parsed.issues.map(normalizeIssue) : [];
+    const patches = Array.isArray(parsed?.patches) ? parsed.patches.map(normalizePatch).filter(Boolean) : [];
+    gptByFileId.set(fileId, { issues, patches });
   }
 
   for (const line of errorLines) {
     const customId = line.custom_id;
     const fileId = String(customId || "").replace(/^audit__/, "");
-
     const err = line?.error ?? line?.response?.body?.error ?? line?.response?.error ?? {};
 
-    gptPatchesByFileId.set(fileId, [
-      {
-        severity: "high",
-        category: "consistency",
-        path: "api",
-        expected: "",
-        value: "",
-        reason: `Batch request errored: ${err.code || err.type || "unknown"} — ${err.message || "no message"}`,
-      },
-    ]);
+    gptByFileId.set(fileId, {
+      issues: [
+        {
+          severity: "high",
+          category: "consistency",
+          path: "api",
+          message: `Batch request errored: ${err.code || err.type || "unknown"}`,
+          evidence: err.message || "no message",
+          recommendation: "Vérifier la requête batch / modèle / quota.",
+        },
+      ],
+      patches: [],
+    });
   }
 
   // Resélection fichiers (même logique submit)
@@ -1009,7 +847,7 @@ async function collectBatch() {
 
   const report = {
     generatedAt: new Date().toISOString(),
-    mode: "klinova-city-audit-patches",
+    mode: "klinova-city-audit-patches-v2",
     batch: {
       id: batch.id,
       status: batch.status,
@@ -1020,92 +858,75 @@ async function collectBatch() {
     files: [],
   };
 
+  // manual-only structure
+  const manual = {
+    generatedAt: new Date().toISOString(),
+    mode: "klinova-city-audit-manual",
+    files: [],
+  };
+
   for (const fp of files) {
     const fileRel = path.relative(ROOT, fp).replace(/\\/g, "/");
     const fileId = path.basename(fp, ".ts");
     let displaySlug = fileId;
 
-    let localIssues = [];
     let cityObj = null;
-
     try {
       const sf = project.addSourceFileAtPath(fp);
       cityObj = extractCityObject(sf);
-
-      if (!cityObj) {
-        localIssues = [
-          {
-            severity: "high",
-            category: "consistency",
-            path: "city",
-            message: "Impossible de parser l'objet city (ts-morph).",
-            excerpt: "",
-            replacement: "",
-            recommendation: "Vérifier la structure const city: City = {...}.",
-          },
-        ];
-      } else {
-        const slugText = getTextAtPath(cityObj, "slug");
-        if (slugText) displaySlug = slugText;
-        localIssues = localAuditConservative(cityObj);
-      }
-    } catch (e) {
-      localIssues = [
-        {
-          severity: "high",
-          category: "consistency",
-          path: "file",
-          message: `Erreur parsing local: ${String(e?.message || e)}`,
-          excerpt: "",
-          replacement: "",
-          recommendation: "Corriger le TS pour permettre l'audit.",
-        },
-      ];
+      const slugText = cityObj ? getTextAtPath(cityObj, "slug") : null;
+      if (slugText) displaySlug = slugText;
+    } catch {
+      cityObj = null;
     }
 
-    const rawPatches = gptPatchesByFileId.get(fileId) || [];
-    const gptPatches = [];
-
-    for (const p of rawPatches) {
-      const pp = normalizePatchForReport(p);
-      if (pp._kind !== "patch") continue;
-
-      const expectedFromTs = cityObj ? getTextAtPath(cityObj, pp.path) : null;
-
-      const out = {
-        ...pp,
-        _expectedFromTs: expectedFromTs ?? "",
-      };
-
-      if (expectedFromTs && pp.expected && String(pp.expected) !== String(expectedFromTs)) {
-        out._note = "GPT expected != TS value (expected re-sync in apply suggested).";
-      }
-
-      gptPatches.push(out);
-    }
+    const gpt = gptByFileId.get(fileId) || { issues: [], patches: [] };
+    const gptIssues = gpt.issues || [];
+    const gptPatches = gpt.patches || [];
 
     report.files.push({
       file: fileRel,
       fileId,
       slug: displaySlug,
-      localIssues,
+      gptIssues,
       gptPatches,
     });
 
-    console.log(`[ok] ${displaySlug} (${fileId}) -> local=${localIssues.length}, gptPatches=${gptPatches.length}`);
+    // Split manual: applySafe=false OR op=substring always goes manual
+    const manualIssues = gptIssues; // issues are always manual by definition
+    const manualPatches = gptPatches.filter((p) => !p.applySafe || p.op !== "setField");
+
+    if (manualIssues.length || manualPatches.length) {
+      manual.files.push({
+        file: fileRel,
+        fileId,
+        slug: displaySlug,
+        issues: manualIssues,
+        patches: manualPatches,
+      });
+    }
+
+    const autoCount = gptPatches.filter((p) => isPatchAutoApplicable(p)).length;
+    console.log(`[ok] ${displaySlug} -> issues=${gptIssues.length}, patches=${gptPatches.length}, auto=${autoCount}`);
   }
 
+  // Write outputs
   writeText(OUT_REPORT_JSON, JSON.stringify(report, null, 2));
-  writeText(OUT_REPORT_MD, toMarkdown(report));
-  writeText(OUT_SUMMARY_MD, toSummaryMarkdown(report));
+  writeText(OUT_REPORT_MD, toReportMarkdown(report));
 
+  // apply safe only
   const applySuggested = buildSuggestedApply(report);
   writeText(OUT_APPLY_SUGGESTED, JSON.stringify(applySuggested, null, 2));
 
+  // manual only
+  writeText(OUT_MANUAL_JSON, JSON.stringify(manual, null, 2));
+  writeText(OUT_MANUAL_MD, toManualMarkdown(manual));
+
   console.log("[done] Wrote", OUT_APPLY_SUGGESTED);
+  console.log("[done] Wrote", OUT_MANUAL_JSON);
+  console.log("[done] Wrote", OUT_MANUAL_MD);
   console.log("[done] Wrote", OUT_REPORT_JSON);
   console.log("[done] Wrote", OUT_REPORT_MD);
-  console.log("[done] Wrote", OUT_SUMMARY_MD);
 }
 
 async function main() {

@@ -40,15 +40,15 @@ const city: City = {
 
   nearbyCities: [
         "villeparisis",
+        "mitry-mory",
         "lagny-sur-marne",
         "vaires-sur-marne",
         "chelles",
         "montfermeil",
         "torcy",
+        "tremblay-en-france",
         "livry-gargan",
-        "villepinte",
-        "noisiel",
-        "gournay-sur-marne"
+        "sevran"
       ],
 
   landmarks: [

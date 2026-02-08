@@ -42,6 +42,7 @@ const city: City = {
     "ZAC de l'Horloge",
   ],
   nearbyCities: [
+        "les-lilas",
         "noisy-le-sec",
         "bagnolet",
         "montreuil",
@@ -50,8 +51,7 @@ const city: City = {
         "rosny-sous-bois",
         "bondy",
         "vincennes",
-        "fontenay-sous-bois",
-        "saint-mande"
+        "fontenay-sous-bois"
       ],
 
   // Texte brut uniquement

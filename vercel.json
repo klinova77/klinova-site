@@ -13,8 +13,8 @@
     { "source": "/nettoyage-professionnel-parkings-garages", "destination": "/nettoyage-parkings", "permanent": true },
     { "source": "/nettoyage-terrasses-exterieurs", "destination": "/nettoyage-terrasses", "permanent": true },
     { "source": "/nettoyage-terrasses-et-dexterieurs-copy", "destination": "/nettoyage-terrasses", "permanent": true },
-    { "source": "/nettoyage-professionnel-exterieurs", "destination": "/nettoyage-parkings", "permanent": true },
-    { "source": "/nettoyage-textiles", "destination": "/nettoyage-moquettes", "permanent": true },
+    { "source": "/nettoyage-professionnel-exterieurs", "destination": "/nettoyage-terrasses", "permanent": true },
+    { "source": "/nettoyage-textiles", "destination": "/nettoyage-canapes-tapis-matelas", "permanent": true },
 
     { "source": "/nettoyage-de-balcons", "destination": "/nettoyage-balcons", "permanent": true },
     { "source": "/devis-nettoyage-gratuit", "destination": "/contact", "permanent": true },
@@ -40,7 +40,11 @@
 
     { "source": "/autres-services", "destination": "/", "permanent": true },
     { "source": "/test-hero-stat", "destination": "/", "permanent": true },
-    { "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable", "destination": "/nettoyage-appartement-maison", "permanent": true },
+    {
+      "source": "/dcouvrez-nos-services-de-nettoyage-premium-pour-un-intrieur-impeccable",
+      "destination": "/nettoyage-appartement-maison",
+      "permanent": true
+    },
 
     { "source": "/zones-d-intervention/noisy-le-grand/nettoyage-balcons", "destination": "/zones-d-intervention/seine-saint-denis/noisy-le-grand/nettoyage-balcons", "permanent": true },
     { "source": "/zones-d-intervention/noisy-le-grand/nettoyage-balcons-fientes-pigeons", "destination": "/zones-d-intervention/seine-saint-denis/noisy-le-grand/nettoyage-balcons-fientes-pigeons", "permanent": true },
@@ -64,6 +68,18 @@
     { "source": "/zones-d-intervention/torcy/nettoyage-balcons-fientes-pigeons", "destination": "/zones-d-intervention/seine-et-marne/torcy/nettoyage-balcons-fientes-pigeons", "permanent": true },
     { "source": "/zones-d-intervention/torcy/nettoyage-moquettes", "destination": "/zones-d-intervention/seine-et-marne/torcy/nettoyage-moquettes", "permanent": true },
     { "source": "/zones-d-intervention/torcy/nettoyage-parkings", "destination": "/zones-d-intervention/seine-et-marne/torcy/nettoyage-parkings", "permanent": true },
-    { "source": "/zones-d-intervention/torcy/nettoyage-canapes-tapis-matelas", "destination": "/zones-d-intervention/seine-et-marne/torcy/nettoyage-canapes-tapis-matelas", "permanent": true }
+    { "source": "/zones-d-intervention/torcy/nettoyage-canapes-tapis-matelas", "destination": "/zones-d-intervention/seine-et-marne/torcy/nettoyage-canapes-tapis-matelas", "permanent": true },
+
+  {
+  "source": "/zones-d-intervention/val-de-marne/chevilly-la-rue",
+  "destination": "/zones-d-intervention/val-de-marne/chevilly-larue",
+  "permanent": true
+},
+{
+  "source": "/zones-d-intervention/val-de-marne/chevilly-la-rue/:service",
+  "destination": "/zones-d-intervention/val-de-marne/chevilly-larue/:service",
+  "permanent": true
+}
+
   ]
 }

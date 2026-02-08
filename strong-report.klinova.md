@@ -1,395 +1,256 @@
 # Strong tagger — Klinova report
 
-Généré : 2026-02-04T02:44:56.909Z
-Total fichiers : 58
+Généré : 2026-02-08T20:47:42.501Z
+Total fichiers : 10
 
-## alfortville
+## aulnay-sous-bois
 
 ### Coverage targets (manques/minima)
 
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=82; may add 1 (max2 outside li)
+- `citySpecificChallenges[3]`
+  - challenge_coverage_add: Add 1 <strong> (coverage: need 3, have 2; eligibleItems=6)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[0].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueIntro`
   - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[4]`
+- `services[1].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_missing: 0 strong; words=159; add 1 (max2)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
 - `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=151; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
 - `services[3].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[3]`
+- `services[3].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[3].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=163; add 1 (max2)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
 - `services[4].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].specificChallenges[3]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[2].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `faq[0].answer` — op=setField — FAQ: max 1 <strong> par answer. On conserve un seul segment concret et terrain dans le 1er <p>, en retirant les deux autres <strong>.
-  - value: `<p>Nous repérons les <strong>créneaux de stationnement autorisé</strong> et privilégions les horaires creux. Pour les secteurs proches du marché, nous évitons les jours de forte affluence. Le matériel est adapté pour limiter les allers-reto`
-- `faq[2].answer` — op=setField — FAQ: max 1 <strong> par answer. Conservation d'un seul focus opérationnel dans le 1er <p>, suppression des autres <strong>.
-  - value: `<p>Nous prenons contact <strong>en amont</strong> pour récupérer badges et consignes spécifiques. Le gardien est informé du planning prévu. En cas d'imprévu (panne ascenseur, travaux), il nous alerte pour adapter l'intervention sans gêner l`
-- `faq[3].answer` — op=setField — FAQ: max 1 <strong> par answer. Retrait des <strong> sur 'devis' et sur un délai (interdit), conservation d'un seul élément concret dans le 1er <p>.
-  - value: `<p>Oui, chaque demande fait l'objet d'un devis après échange sur les surfaces, la fréquence souhaitée et les contraintes d'accès. Le devis est transmis sous 48 heures, sans engagement. Un <strong>passage sur site</strong> peut être organisé`
-- `services[0].uniqueDeepDive` — op=setField — uniqueDeepDive services[0]: ajout d'1 <strong> dans le bloc <h3> 'Surfaces textiles des espaces de travail' (block[2] manquant), en restant sous le max 1 par bloc.
-  - value: `<h3>Zones de circulation intensive</h3> <p>Les couloirs et halls d'entrée concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant le traitement humide. Les protections sont posées sur les plinthes e`
-- `services[0].faqAdditions[1].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), segment court et concret.
-  - value: `<p>L'injection-extraction convient mieux aux dalles textiles des espaces tertiaires. <strong>Cette méthode extrait les résidus en profondeur</strong> sans laisser d'excès d'humidité. Le séchage est plus rapide qu'avec un shampooing classiqu`
-- `services[0].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), sans mettre en avant un délai.
-  - value: `<p>Le séchage varie de trois à six heures selon l'épaisseur du revêtement et la ventilation du local. <strong>L'extraction maximale de l'humidité</strong> en fin d'intervention réduit ce délai. Une consigne de non-piétinement est donnée pou`
-- `services[1].uniqueIntro` — op=substring — uniqueIntro services[1]: ajout d'1 <strong> (max 2) sur un repère terrain, sans modifier le texte hors balises.
-  - excerpt: `coulures d'huile près des places de stationnement, dépôts de suie`
-  - replacement: `<strong>coulures d'huile près des places de stationnement</strong>, dépôts de suie`
-- `services[1].uniqueDeepDive` — op=setField — uniqueDeepDive services[1]: ajout d'1 <strong> dans chacun des blocs <h3> block[0] et block[1] (max 1 par bloc), sans toucher au reste.
-  - value: `<h3>Encrassement généralisé et évacuations bouchées</h3> <p>Le diagnostic initial identifie le type de revêtement, l'état des regards et rigoles, ainsi que <strong>les zones les plus marquées</strong> par les huiles et graisses. Un balayage`
-- `services[1].specificChallenges[1]` — op=setField — services[1].specificChallenges: ajout d'1 <strong> (max 1) sur un élément concret et local.
-  - value: `Sols encrassés par les <strong>suies urbaines</strong> liées à la proximité de l'A86 et des quais de Seine.`
-- `services[1].specificChallenges[4]` — op=setField — services[1].specificChallenges: ajout d'1 <strong> (max 1) sur une contrainte terrain.
-  - value: `Horaires d'intervention à caler en dehors des <strong>jours de marché rue de Rome</strong> pour faciliter l'accès.`
-- `services[1].faqAdditions[0].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), focus opérationnel.
-  - value: `<p>Les eaux chargées en huile et dégraissant sont dirigées vers <strong>les regards et rigoles existants</strong>. Nous vérifions leur bon écoulement avant intervention pour éviter toute stagnation. Aucun rejet sauvage n'est effectué, confo`
-- `services[1].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), contrainte terrain.
-  - value: `<p>Les jours de marché, l'accès aux parkings proches est compliqué par <strong>la circulation et le stationnement</strong>. Nous privilégions les interventions en début de semaine ou en soirée pour éviter les créneaux de forte affluence et `
-- `services[2].uniqueIntro` — op=setField — services[2].uniqueIntro: overcap (3). Suppression d'1 <strong> pour revenir à max 2, en retirant le balisage sur un segment moins prioritaire.
-  - value: `<p>Comment profiter pleinement d'un balcon quand les dépôts gris s'accumulent sur le sol et que les joints verdissent au fil des mois ? Dans le secteur dense autour de la <strong>Place François Mitterrand</strong>, les balcons et loggias su`
-- `services[2].uniqueDeepDive` — op=setField — uniqueDeepDive services[2]: ajout d'1 <strong> dans block[0] et d'1 <strong> dans block[1] (max 1 par bloc), pour combler les blocs manquants.
-  - value: `<h3>Sol et joints assainis</h3> <p>Le carrelage ou le béton retrouve sa teinte initiale, débarrassé des voiles gris et des mousses incrustées. Pour y parvenir, les gros dépôts sont d'abord retirés manuellement. Un produit adapté au support `
-- `services[2].specificChallenges[0]` — op=setField — services[2].specificChallenges: ajout d'1 <strong> (max 1) sur une cause locale concrète.
-  - value: `Dépôts de pollution liés à la proximité des <strong>axes routiers et de l'A86</strong>.`
-- `services[2].specificChallenges[1]` — op=setField — services[2].specificChallenges: ajout d'1 <strong> (max 1) sur une contrainte terrain.
-  - value: `Joints de carrelage qui verdissent rapidement avec <strong>l'humidité ambiante des bords de fleuve</strong>.`
-- `services[2].faqAdditions[0].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), geste technique concret.
-  - value: `<p>La pression et les produits sont adaptés au support identifié lors du diagnostic. Sur les balcons en béton brut ou carrelés des immeubles anciens du centre-ville, <strong>le brossage reste manuel sur les joints fragiles</strong>. Le rinç`
-- `services[2].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), formulation courte et pratique.
-  - value: `<p>Oui, l'intervention peut se faire entièrement en <strong>brossage manuel avec rinçage doux</strong>. Cette méthode convient aux loggias fermées où la projection d'eau doit rester limitée. Le temps de travail est légèrement plus long, mai`
-- `services[3].uniqueIntro` — op=substring — uniqueIntro services[3]: ajout d'1 <strong> (max 2) sur une zone concrète, sans termes interdits.
-  - excerpt: `les fientes s'accumulent sur le sol, les garde-corps`
-  - replacement: `les fientes s'accumulent sur <strong>le sol, les garde-corps</strong>`
-- `services[3].uniqueDeepDive` — op=setField — uniqueDeepDive services[3]: ajout d'1 <strong> dans block[1] et d'1 <strong> dans block[2] (max 1 par bloc).
-  - value: `<h3>Préparation et sécurisation</h3> <p>L'intervenant revêt l'équipement de protection individuelle complet : masque FFP2, lunettes, gants et combinaison jetable. La zone est confinée par bâchage pour éviter toute dispersion vers l'intérieu`
-- `services[3].specificChallenges[0]` — op=setField — services[3].specificChallenges: ajout d'1 <strong> (max 1) sur un facteur terrain.
-  - value: `Proximité des berges et du Parc de l'Ile au Cointre : <strong>présence régulière de pigeons</strong> et oiseaux d'eau.`
-- `services[3].specificChallenges[3]` — op=setField — services[3].specificChallenges: ajout d'1 <strong> (max 1) sur une cause concrète.
-  - value: `Dégradation accélérée des supports béton et peinture par <strong>l'acidité des fientes</strong> non traitées.`
-- `services[3].faqAdditions[0].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), sans promesse ni terme interdit.
-  - value: `<p>Les déjections de pigeons contiennent des agents pathogènes qui peuvent affecter les voies respiratoires. Sur les corniches exposées du centre d'Alfortville, <strong>l'accumulation crée un environnement propice</strong> à leur développem`
-- `services[3].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), geste opérationnel clair.
-  - value: `<p>Les fientes et résidus sont conditionnés dans <strong>des sacs étanches dès leur collecte</strong>. L'évacuation s'effectue de manière autonome par nos équipes, sans laisser de déchets sur place. Dans les configurations avec accès restre`
-- `services[4].uniqueDeepDive` — op=setField — uniqueDeepDive services[4]: ajout d'1 <strong> dans block[0] et d'1 <strong> dans block[1] (max 1 par bloc).
-  - value: `<h3>Textile assaini et fibres débarrassées des résidus</h3> <p>L'objectif est de restituer un canapé, tapis ou matelas débarrassé des acariens, poussières et particules accumulées. <strong>L'injection-extraction permet de retirer</strong> c`
-- `services[4].specificChallenges[0]` — op=setField — services[4].specificChallenges: ajout d'1 <strong> (max 1) sur une contrainte pratique.
-  - value: `Escaliers étroits dans le bâti ancien du centre compliquant <strong>l'accès avec le matériel</strong>.`
-- `services[4].specificChallenges[1]` — op=setField — services[4].specificChallenges: ajout d'1 <strong> (max 1) sur un cas fréquent.
-  - value: `Taches d'urine et odeurs persistantes liées à la <strong>présence d'animaux domestiques</strong> dans les foyers.`
-- `services[4].faqAdditions[0].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), bénéfice concret sans promesse absolue.
-  - value: `<p>L'injection-extraction atteint les fibres en profondeur et <strong>déloge les acariens, poussières et allergènes</strong> que l'aspirateur classique ne capte pas. Dans les appartements familiaux d'Alfortville où le mobilier est sollicité`
-- `services[4].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), consigne pratique.
-  - value: `<p>Nous intervenons directement sur place sans déplacer le mobilier hors du logement. <strong>Dégagez simplement l'espace autour du canapé</strong> ou du tapis pour faciliter notre travail. Prévoyez un accès libre depuis l'entrée et signale`
-- `services[5].uniqueIntro` — op=setField — services[5].uniqueIntro: overcap (3). Suppression d'1 <strong> pour revenir à max 2, en retirant un segment moins actionnable.
-  - value: `<p>Les traces verdâtres et les zones noircies sont visibles sur de nombreuses terrasses le long du <strong>Quai Blanqui</strong> et dans les résidences en bord de Seine. L'humidité ambiante liée à la proximité des cours d'eau favorise l'app`
-- `services[5].specificChallenges[0]` — op=setField — services[5].specificChallenges: ajout d'1 <strong> (max 1) sur une contrainte technique.
-  - value: `Dalles sur plots des attiques : nettoyage sans déplacer <strong>les éléments ni endommager les joints</strong>.`
-- `services[5].specificChallenges[3]` — op=setField — services[5].specificChallenges: ajout d'1 <strong> (max 1) sur un risque terrain.
-  - value: `Gestion de l'eau de rinçage pour éviter <strong>les coulures vers les voisins</strong> ou les plantations.`
-- `services[5].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), repère concret.
-  - value: `<p>Le printemps et le début d'automne sont les périodes les plus adaptées. <strong>Après l'hiver, les dépôts accumulés</strong> sont visibles et le traitement anti-mousse appliqué protège la surface pour la belle saison. À l'automne, l'inte`
-- `services[6].uniqueDeepDive` — op=setField — uniqueDeepDive services[6]: ajout d'1 <strong> dans block[0] et d'1 <strong> dans block[1] (max 1 par bloc).
-  - value: `<h3>Diagnostic et préparation du logement</h3> <p>Avant toute action, nous évaluons l'état général : nature des sols, niveau d'encrassement, <strong>présence de résidus de chantier</strong> ou de traces d'usage. Les surfaces fragiles sont p`
-- `services[6].specificChallenges[0]` — op=setField — services[6].specificChallenges: ajout d'1 <strong> (max 1) sur une contrainte terrain.
-  - value: `Rotation locative élevée près de la gare RER : <strong>délais courts entre deux locataires</strong>.`
-- `services[6].specificChallenges[1]` — op=setField — services[6].specificChallenges: ajout d'1 <strong> (max 1) sur un cas concret.
-  - value: `Sols variés selon les quartiers : <strong>parquet ancien au centre</strong>, carrelage dans le neuf.`
-- `services[6].faqAdditions[0].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), sans mettre en avant le délai.
-  - value: `<p>Nous intervenons sous 24 à 48 heures selon la surface et la disponibilité. Pour les logements proches de la gare, <strong>nous organisons la récupération des clés en amont</strong> avec l'agence ou le propriétaire afin de respecter le cr`
-- `services[6].faqAdditions[1].answer` — op=setField — Service FAQ: ajout d'1 <strong> dans le 1er <p> (max 1), élément concret et scannable.
-  - value: `<p>Un ménage fin de chantier inclut <strong>l'évacuation des résidus</strong>, le dépoussiérage complet des surfaces verticales et le retrait des traces de peinture ou d'enduit. Le protocole standard se concentre sur les sols, sanitaires et`
-
-## arcueil
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[0].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
-- `services[4].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[4].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 6)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
-- `services[5].specificChallenges[1]`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[6].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[6].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
+- `services[6].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
 
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — pairs_over_cap(6>2)
-- `services[6].uniqueIntro` — pairs_over_cap(5>2)
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
 
 ### Patches proposés (kept)
 
-- `services[0].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> 2 et 3 de uniqueDeepDive (max 1 par bloc) pour atteindre la couverture demandée, sans toucher au texte hors balises.
-  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et accès principaux concentrent l'essentiel des salissures. Après aspiration préalable, ces surfaces reçoivent plusieurs passes d'<strong>injection-extraction</strong> pour déloger les p`
-- `services[0].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour améliorer la scannabilité et répondre au besoin de couverture sur les specificChallenges du service moquettes.
-  - value: `<strong>Poussières grasses</strong> liées au trafic de l'axe D920 qui s'incrustent dans les fibres.`
-- `services[0].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture demandée.
-  - value: `<p>Nous utilisons du <strong>matériel compact</strong> transportable à la main. L'équipe fractionne l'intervention par palier pour éviter d'encombrer les passages. Les protections sont posées au fur et à mesure de la progression, et le temp`
-- `services[0].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service moquettes, sans mettre en avant des délais interdits.
-  - value: `<p>L'injection-extraction reste la méthode privilégiée : elle extrait davantage de salissures et <strong>réduit le temps de séchage</strong>. Le shampouinage peut convenir pour un entretien léger, mais laisse plus d'humidité résiduelle, ce `
-- `services[1].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> 1 et 2 (max 1 par bloc) pour atteindre la couverture demandée sur uniqueDeepDive du service parkings.
-  - value: `<h3>Diagnostic et préparation du site</h3> <p>Avant toute intervention, nous identifions le type de revêtement — béton brut, résine ou peinture — et <strong>vérifions l'état des évacuations</strong>. Un balayage préalable retire les débris `
-- `services[1].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[0] du service parkings.
-  - value: `<strong>Suie et poussières grasses</strong> liées à la proximité de l'A6 et de la D920.`
-- `services[1].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service parkings.
-  - value: `<p>Les eaux chargées sont aspirées par l'autolaveuse et <strong>dirigées vers les évacuations</strong> prévues à cet effet. Nous vérifions au préalable l'état des regards et rigoles. Aucun rejet n'est effectué en dehors des circuits conform`
-- `services[1].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service parkings, sans mettre en avant des notions interdites.
-  - value: `<p>Oui, nous planifions l'intervention en coordination avec le gestionnaire pour limiter la gêne. <strong>Un zonage par niveaux</strong> ou par travées permet de maintenir l'accès aux usagers. Les horaires décalés — tôt le matin ou en soiré`
-- `services[2].uniqueIntro` — op=setField — Ajoute 1 <strong> (max 2) dans uniqueIntro du service balcons pour atteindre la couverture demandée, en restant concret et terrain.
-  - value: `<p>Dans le secteur des balcons donnant sur les Aqueducs d'Arcueil, on constate une accumulation rapide de <strong>dépôts noirs</strong> et de traces grasses. L'exposition aux flux de circulation depuis la D920 et l'A6 laisse un film sombre `
-- `services[2].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> 2 et 3 (max 1 par bloc) pour atteindre la couverture demandée sur uniqueDeepDive du service balcons.
-  - value: `<h3>Un sol débarrassé de ses dépôts incrustés</h3> <p>Le résultat visé : des dalles ou un béton retrouvant leur teinte d'origine, sans traces noires ni résidus verts. Pour y parvenir, les gros débris sont d'abord retirés manuellement. Un pr`
-- `services[2].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[0] du service balcons.
-  - value: `<strong>Pollution noire</strong> depuis la D920 et l'A6 formant un voile gras sur les garde-corps.`
-- `services[2].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[1] du service balcons.
-  - value: `<strong>Dépôts verts et mousses</strong> sur les balcons exposés nord dans le Bas d'Arcueil.`
-- `services[2].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service balcons.
-  - value: `<p>Sur ces supports poreux, nous évitons la haute pression agressive. <strong>Un brossage mécanique doux</strong> combiné à un produit désincrustant permet de retirer les dépôts sans fragiliser les joints ni créer de micro-fissures. Le rinç`
-- `services[2].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service balcons.
-  - value: `<p>Nous installons des <strong>bâches de protection</strong> en périphérie et contrôlons le débit lors du rinçage. L'eau est dirigée vers les évacuations existantes. Si le balcon n'en dispose pas, nous utilisons un aspirateur à eau pour lim`
-- `services[3].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[0] du service balcons-fientes.
-  - value: `<strong>Secteurs arborés</strong> proches du Parc du Coteau : nidification fréquente sur balcons exposés.`
-- `services[3].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[1] du service balcons-fientes.
-  - value: `<strong>Corniches et garde-corps</strong> des immeubles anciens attaqués par l'acidité des fientes.`
-- `services[3].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service balcons-fientes.
-  - value: `<p>L'intervenant porte <strong>masque FFP2</strong>, combinaison jetable, lunettes et gants. Les fientes sont humidifiées avant manipulation pour éviter l'envol de particules. Le désinfectant utilisé est un produit virucide et bactéricide h`
-- `services[3].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service balcons-fientes.
-  - value: `<p>Les déjections et résidus sont conditionnés dans des <strong>sacs étanches</strong> fermés sur place. L'évacuation se fait sans transit par les parties communes ouvertes. En grand ensemble, nous coordonnons l'intervention pour limiter le`
-- `services[4].uniqueIntro` — op=setField — Corrige le dépassement (max 2) en retirant 1 paire de <strong> dans uniqueIntro du service canapes-tapis, sans modifier le texte.
-  - value: `<p>Comment préserver l'état d'un canapé quand les enfants y prennent leur goûter, que le chat s'y installe chaque soir, ou qu'un locataire vient de quitter les lieux ? Dans le <strong>secteur autour de la gare RER Laplace</strong>, où studi`
-- `services[4].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> 3 (max 1 par bloc) pour corriger le bloc manquant sur uniqueDeepDive du service canapes-tapis.
-  - value: `<h3>Textile propre et fibres préservées</h3> <p>Le résultat visé : des couleurs ravivées, des taches éliminées, une odeur neutre. Pour y parvenir, chaque textile fait l'objet d'un diagnostic initial. Type de tissu — coton, velours, synthéti`
-- `services[4].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[0] du service canapes-tapis.
-  - value: `<strong>Studios meublés</strong> près du RER Laplace avec rotation locative fréquente et taches accumulées.`
-- `services[4].specificChallenges[4]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[4] du service canapes-tapis.
-  - value: `<strong>Matelas à assainir</strong> entre deux locataires avec délai court avant nouvel état des lieux.`
-- `services[4].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service canapes-tapis, sans mettre en avant un délai interdit.
-  - value: `<p>Comptez généralement trois à six heures selon l'épaisseur du tissu et la ventilation du logement. <strong>Notre extraction poussée</strong> limite l'humidité résiduelle. En été ou avec fenêtres ouvertes, le séchage s'accélère. Nous vous `
-- `services[5].uniqueIntro` — op=setField — Corrige le dépassement (max 2) en retirant 4 paires de <strong> dans uniqueIntro du service terrasses, en conservant 2 segments utiles.
-  - value: `<p>Les traces vertes et le noircissement progressif sont visibles sur de nombreuses terrasses du <strong>quartier Jules Ferry</strong> et du secteur Kergomard. Les dalles perdent leur teinte d'origine, les joints se couvrent de mousse, et c`
-- `services[5].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> 2 et 3 (max 1 par bloc) pour corriger les blocs manquants sur uniqueDeepDive du service terrasses.
-  - value: `<h3>Dépôts et mousses accumulés</h3> <p>Les feuilles mortes, la terre et les débris sont retirés manuellement. Le <strong>balayage préalable</strong> dégage la surface pour évaluer l'état réel du support et repérer les zones où la mousse s'`
-- `services[5].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[1] du service terrasses.
-  - value: `<strong>Noircissement accéléré</strong> par la pollution de l'axe D920 sur les terrasses exposées.`
-- `services[5].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[2] du service terrasses.
-  - value: `<strong>Bois composite</strong> des attiques récents nécessitant une pression contrôlée pour éviter les marques.`
-- `services[6].uniqueIntro` — op=setField — Corrige le dépassement (max 2) en retirant 3 paires de <strong> dans uniqueIntro du service nettoyage-appartement-maison, en conservant 2 segments scannables.
-  - value: `<p>Comment rendre un appartement prêt à la location quand le précédent occupant vient de partir et que le prochain arrive sous 48 heures ? Autour de la <strong>gare RER Arcueil-Cachan</strong>, la rotation locative impose des délais serrés.`
-- `services[6].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> 1 (max 1 par bloc) pour corriger le bloc manquant sur uniqueDeepDive du service nettoyage-appartement-maison.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Avant toute intervention, nous évaluons l'état du logement : <strong>nature des sols</strong>, niveau d'encrassement, présence éventuelle de résidus de chantier. Cette étape permet d'adapter le matériel`
-- `services[6].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[0] du service nettoyage-appartement-maison, sans mettre en avant un délai interdit.
-  - value: `Délais courts entre deux locataires dans les zones à <strong>forte rotation</strong> près du RER.`
-- `services[6].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la couverture demandée sur specificChallenges[1] du service nettoyage-appartement-maison.
-  - value: `<strong>Sols variés</strong> selon l'âge du bâti : parquet flottant, lino, carrelage ancien à traiter différemment.`
-- `services[6].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service nettoyage-appartement-maison.
-  - value: `<p>L'intervention couvre le <strong>dépoussiérage complet</strong>, le lavage des sols adaptés au revêtement, le nettoyage approfondi des sanitaires et de la cuisine, le traitement des vitres intérieures et des placards. Les traces sur les `
-- `services[6].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ du service nettoyage-appartement-maison.
-  - value: `<p>Nous échangeons directement avec l'agence pour caler le créneau d'intervention selon la date de l'état des lieux. <strong>Les accès sont transmis en amont</strong>. Un compte-rendu peut être fourni si demandé. Cette organisation évite le`
+- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2 hors <li>) et avec un segment court et concret.
+  - excerpt: `Aulnay-sous-Bois concentre des typologies de bâti très différentes.`
+  - replacement: `Aulnay-sous-Bois concentre des <strong>typologies de bâti très différentes</strong>.`
+- `citySpecificChallenges[3]` — op=setField — Ajoute 1 <strong> sur l’item pour atteindre la couverture demandée, sans dépasser 1 <strong> par challenge et en restant factuel.
+  - value: `Jours de marché (mardi, jeudi, dimanche) : <strong>stationnement et circulation restreints</strong> secteur gare.`
+- `services[0].uniqueIntro` — op=setField — Corrige le dépassement de cap (3 <strong> -> 2 max) en retirant le <strong> du 3e paragraphe, sans modifier le texte hors balises.
+  - value: `<p>Les traces grises le long des circulations, les auréoles sombres devant les postes de travail : dans les bureaux et ateliers de la <strong>zone logistique Garonor</strong>, les moquettes absorbent quotidiennement poussières fines et rési`
+- `services[0].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 'Espaces de travail et postes fixes' (block[1]) qui en manque, en respectant max 1 <strong> par bloc.
+  - excerpt: `Les zones sous bureaux et autour des sièges reçoivent un traitement ciblé.`
+  - replacement: `Les zones <strong>sous bureaux et autour des sièges</strong> reçoivent un traitement ciblé.`
+- `services[0].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour améliorer la scannabilité et répondre à la cible de couverture.
+  - value: `<strong>Poussières noires des axes A1/A3</strong> incrustées dans les fibres des halls d'entrée.`
+- `services[0].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur un point terrain, pour atteindre la couverture demandée.
+  - value: `Dalles textiles de bureaux soumises à un <strong>passage quotidien intense</strong> dans la zone Garonor.`
+- `services[0].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> de la réponse (et aucun après), conforme au cap FAQ (max 1).
+  - excerpt: `Nous identifions d'abord la nature de la tache et le type de colle utilisé.`
+  - replacement: `Nous identifions d'abord <strong>la nature de la tache</strong> et le type de colle utilisé.`
+- `services[0].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) sans mettre en avant délais/urgence, et améliore la lecture.
+  - excerpt: `Le séchage dépend de l'épaisseur des fibres et de la ventilation du local.`
+  - replacement: `Le séchage dépend de <strong>l'épaisseur des fibres</strong> et de la ventilation du local.`
+- `services[1].uniqueIntro` — op=substring — Ajoute 1 <strong> (max 2) dans uniqueIntro pour améliorer la scannabilité sur un point terrain.
+  - excerpt: `Les rampes d'accès deviennent glissantes, les rigoles se bouchent progressivement,`
+  - replacement: `Les <strong>rampes d'accès deviennent glissantes</strong>, les rigoles se bouchent progressivement,`
+- `services[1].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour répondre à la cible de couverture et rendre l’item plus scannable.
+  - value: `<strong>Rampes d'accès glissantes</strong> dans les sous-sols de la Cité des 3000, nécessitant un traitement antidérapant.`
+- `services[1].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur un point concret, pour atteindre la couverture demandée.
+  - value: `Rigoles d'évacuation souvent <strong>obstruées par les résidus de pneus</strong> et la poussière accumulée.`
+- `services[1].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `L'autolaveuse traite les grandes surfaces tandis qu'un dégraissant ciblé agit`
+  - replacement: `L'autolaveuse traite les grandes surfaces tandis qu'un <strong>dégraissant ciblé agit</strong>`
+- `services[1].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) sur un élément opérationnel, conforme aux règles FAQ.
+  - excerpt: `Un balisage sécurisé délimite les zones en cours de traitement`
+  - replacement: `Un <strong>balisage sécurisé délimite les zones</strong> en cours de traitement`
+- `services[2].uniqueIntro` — op=substring — Ajoute 1 <strong> (max 2) dans uniqueIntro pour améliorer la scannabilité sur un problème terrain.
+  - excerpt: `Ce voile grisâtre s'incruste dans les joints, colle aux garde-corps`
+  - replacement: `Ce voile grisâtre <strong>s'incruste dans les joints</strong>, colle aux garde-corps`
+- `services[2].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 'Garde-corps, vitrages et finitions' (block[2]) qui en manque, max 1 par bloc.
+  - excerpt: `Les éléments métalliques et les vitres reçoivent un nettoyage séparé`
+  - replacement: `Les <strong>éléments métalliques et les vitres</strong> reçoivent un nettoyage séparé`
+- `services[2].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, en restant concret.
+  - value: `<strong>Suie routière déposée par le trafic</strong> de la D115 qui noircit les surfaces en quelques semaines.`
+- `services[2].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur une contrainte terrain, pour atteindre la couverture.
+  - value: `Gestion des eaux de rinçage pour éviter <strong>les coulures vers les balcons</strong> des voisins du dessous.`
+- `services[2].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `La pression est réglée en fonction de la largeur des joints`
+  - replacement: `La pression est réglée en fonction de <strong>la largeur des joints</strong>`
+- `services[2].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service, sans termes interdits.
+  - excerpt: `Le rinçage s'effectue à pression modérée pour ne pas creuser les joints`
+  - replacement: `Le rinçage s'effectue à <strong>pression modérée</strong> pour ne pas creuser les joints`
+- `services[3].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> 'Confinement et collecte sécurisée' (block[1]) qui en manque, en respectant max 1 <strong> par bloc et sans termes interdits.
+  - value: `<h3>Balcon assaini et désinfecté</h3> <p>L'objectif est un espace extérieur débarrassé de toute trace organique, avec des supports traités par un produit virucide homologué. Le temps de contact est respecté pour éliminer les agents pathogèn`
+- `services[3].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, segment court et descriptif.
+  - value: `Balcons exposés aux oiseaux près du Parc du Sausset : <strong>accumulation rapide de fientes</strong> sur garde-corps et sols.`
+- `services[3].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur un risque concret, pour atteindre la couverture.
+  - value: `Corniches et rebords métalliques : <strong>risque de corrosion</strong> si les dépôts restent en place plusieurs semaines.`
+- `services[3].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `Les fientes et résidus sont conditionnés dans des sacs étanches fermés sur place.`
+  - replacement: `Les fientes et résidus sont conditionnés dans des <strong>sacs étanches fermés</strong> sur place.`
+- `services[4].uniqueIntro` — op=substring — Ajoute 1 <strong> (max 2) dans uniqueIntro pour améliorer la scannabilité sur des salissures concrètes.
+  - excerpt: `les textiles d'assise accumulent rapidement taches alimentaires, poils et odeurs tenaces.`
+  - replacement: `les textiles d'assise accumulent rapidement <strong>taches alimentaires, poils et odeurs</strong> tenaces.`
+- `services[4].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> 'Injection-extraction et séchage maîtrisé' (block[2]) qui en manque, max 1 par bloc, sans mettre en avant un délai chiffré.
+  - value: `<h3>Textile assaini et taches éliminées</h3> <p>L'objectif est de retrouver un canapé, tapis ou matelas débarrassé des salissures visibles et des résidus piégés dans les fibres. Les taches de café, d'urine animale ou de graisse disparaissen`
+- `services[4].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, formulation terrain.
+  - value: `<strong>Taches d'urine animale</strong> fréquentes dans les foyers avec chiens ou chats, nécessitant un traitement enzymatique.`
+- `services[4].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur une contrainte technique concrète, pour atteindre la couverture.
+  - value: `Tapis laine ou velours ras <strong>sensibles aux excès d'eau</strong>, pression et température à ajuster.`
+- `services[4].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `l'extraction des poussières et résidus gras redonne de l'éclat aux fibres.`
+  - replacement: `l'extraction des <strong>poussières et résidus gras</strong> redonne de l'éclat aux fibres.`
+- `services[4].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) sur une précaution concrète, conforme aux règles FAQ.
+  - excerpt: `Nous testons d'abord sur une zone cachée pour vérifier la tenue des couleurs.`
+  - replacement: `Nous testons d'abord sur <strong>une zone cachée</strong> pour vérifier la tenue des couleurs.`
+- `services[5].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 'Traitement adapté au support' (block[1]) qui en manque, max 1 par bloc.
+  - excerpt: `Selon la nature de votre terrasse, nous appliquons un produit spécifique`
+  - replacement: `Selon la nature de votre terrasse, <strong>nous appliquons un produit spécifique</strong>`
+- `services[5].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, segment court et concret.
+  - value: `Mousses et lichens favorisés par <strong>l'ombre des arbres</strong> et l'humidité ambiante du secteur.`
+- `services[5].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur un constat terrain, pour atteindre la couverture.
+  - value: `Terrasses bois <strong>noircies par la pollution</strong> des axes routiers proches nécessitant un nettoyage doux.`
+- `services[5].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `La haute pression n'est utilisée qu'à faible intensité pour préserver les joints.`
+  - replacement: `La haute pression n'est utilisée qu'à <strong>faible intensité</strong> pour préserver les joints.`
+- `services[5].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service, formulation non marketing.
+  - excerpt: `nous privilégions le nettoyage doux avec brossage manuel ou mécanique à basse pression.`
+  - replacement: `nous privilégions le <strong>nettoyage doux avec brossage</strong> manuel ou mécanique à basse pression.`
+- `services[6].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> 'Diagnostic et séquençage des tâches' (block[1]) qui en manque, max 1 par bloc.
+  - value: `<h3>Logement prêt à la remise des clés</h3> <p>L'objectif est un appartement ou une maison dans lequel chaque surface a été traitée : sols lavés, sanitaires désinfectés, vitres intérieures nettoyées, placards vidés et essuyés. Le résultat a`
+- `services[6].specificChallenges[0]` — op=setField — Aucun patch proposé : l’item contient un délai ('48 heures') qui ne doit pas être mis en <strong>, et sans texte alternatif sûr à baliser sans modifier le contenu.
+  - value: `Délais serrés entre deux locataires dans le secteur Gare, parfois moins de 48 heures.`
+- `services[6].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) sur un point terrain, pour contribuer à la couverture demandée.
+  - value: `<strong>Résidus de travaux (enduit, colle)</strong> fréquents dans les pavillons anciens du Vieux-Pays.`
+- `services[6].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service.
+  - excerpt: `Les poussières fines de plâtre, fréquentes après rénovation de maisons anciennes,`
+  - replacement: `Les <strong>poussières fines de plâtre</strong>, fréquentes après rénovation de maisons anciennes,`
+- `services[6].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) sans mettre en avant les délais (interdits dans <strong>), conforme aux règles FAQ.
+  - excerpt: `Le diagnostic initial permet d'évaluer l'ampleur des dégâts et de définir les priorités`
+  - replacement: `Le diagnostic initial permet d'évaluer <strong>l'ampleur des dégâts</strong> et de définir les priorités`
 
-## bagneux
+## chatillon
 
 ### Coverage targets (manques/minima)
 
 - `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=77; may add 1 (max2 outside li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=82; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[3]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[0].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[1].specificChallenges[3]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_missing: 0 strong; words=175; add 1 (max2)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+- `services[2].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=156; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[3].specificChallenges[3]`
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+- `services[3].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[3].specificChallenges[4]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
@@ -400,37 +261,36 @@ Total fichiers : 58
 - `services[4].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
   - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[4].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[4].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
+- `services[4].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=144; add 1 (max2)
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[5].specificChallenges[3]`
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[5].specificChallenges[4]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=169; add 1 (max2)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
+- `services[6].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[6].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
@@ -439,336 +299,6 @@ Total fichiers : 58
 
 ### Violations / Overlimit (TS actuel)
 
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[2].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Ajout d’un <strong> hors <li> (non-<li> text) pour améliorer la scannabilité, en restant sous le cap (max 2 hors <li>).
-  - value: `<p>Terminus du Métro 4 et futur hub du Grand Paris Express, Bagneux connaît une transformation urbaine intense. Klinova accompagne syndics, gestionnaires et occupants dans le maintien de la propreté des immeubles et espaces communs, malgré `
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’un <strong> dans le bloc <h3>2</h3> (max 1 par bloc) pour couvrir le manque signalé, sans toucher aux autres blocs.
-  - value: `<h3>1. Fibres assainies et couleurs ravivées</h3> <p>L'objectif est d'obtenir une moquette débarrassée des salissures profondes, avec un rendu visuel homogène sur l'ensemble de la surface traitée. Les zones de trafic retrouvent une teinte p`
-- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’un <strong> unique dans le 1er <p> de la réponse (règle FAQ) pour améliorer la scannabilité.
-  - value: `<p>Nous utilisons des équipements compacts et modulables, transportables en plusieurs voyages si nécessaire. Le <strong>repérage préalable des accès</strong> permet d'anticiper les difficultés et d'organiser l'intervention sans bloquer les `
-- `services[0].faqAdditions[3].answer` — op=setField — Ajout d’un <strong> unique dans le 1er <p> de la réponse (règle FAQ) pour améliorer la scannabilité.
-  - value: `<p>L'injection-extraction reste la base dans les deux cas. Pour une médiathèque à fort passage, nous augmentons le <strong>nombre de passes</strong> sur les zones de circulation. Dans un bureau, l'accent porte sur le détachage ciblé des pos`
-
-## bagnolet
-
-### Coverage targets (manques/minima)
-
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=168; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=157; add 1 (max2)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `faq[0].answer` — op=setField — FAQ: max 1 <strong> par answer et éviter les termes interdits (48/72h, urgentes) en <strong>. Suppression des <strong> existants pour conformité.
-  - value: `<p>Nous pouvons généralement intervenir sous 48 à 72 heures après validation du devis. Pour les demandes urgentes (souillure importante, incident), un créneau prioritaire peut être proposé selon la charge en cours. Contactez-nous pour évalu`
-- `services[0].uniqueDeepDive` — op=setField — uniqueDeepDive: ajout de 1 <strong> dans les blocs <h3> 2 et 3 (max 1 par bloc) pour couvrir les manques et améliorer la scannabilité.
-  - value: `<h3>Zones de fort passage</h3> <p>Les allées principales et entrées concentrent l'essentiel de l'encrassement. Après aspiration préalable, le traitement par injection-extraction s'effectue en passes croisées sur ces surfaces. Les fibres com`
-- `services[0].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>Le diagnostic préalable identifie la <strong>structure du revêtement</strong> : moquette fine collée, dalles amovibles ou velours épais. La pression d'injection et le débit d'extraction sont ajustés pour éviter de détremper les fibres ou`
-- `services[1].uniqueIntro` — op=setField — uniqueIntro: ajout d’1 <strong> (max 2) pour améliorer la scannabilité sur un point terrain.
-  - value: `<p>Dans les parkings situés à proximité de l'échangeur A3, les dépôts de suie grasse et de poussière noire s'accumulent rapidement sur les sols. Les rampes d'accès, les allées de circulation et les pieds de murs concentrent des résidus d'hy`
-- `services[1].specificChallenges[0]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Dépôts de suie liés à la proximité de l'A3</strong> : encrassement rapide des sols et rampes.`
-- `services[1].specificChallenges[3]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Rotation des véhicules à organiser avec le syndic</strong> pour libérer les zones par secteur.`
-- `services[1].faqAdditions[1].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>Un dégraissant professionnel est appliqué sur les zones marquées, suivi d'un passage mécanisé à l'autolaveuse. Pour les taches incrustées depuis plusieurs mois, <strong>une action prolongée et un rinçage haute pression</strong> permetten`
-- `services[1].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>En souterrain, <strong>l'autolaveuse domine</strong> pour gérer les poussières fines et l'humidité résiduelle. En aérien, la haute pression s'impose davantage pour éliminer les salissures exposées aux intempéries. Le revêtement — béton b`
-- `services[2].uniqueIntro` — op=setField — uniqueIntro: ajout d’1 <strong> (max 2) pour améliorer la scannabilité sur une contrainte terrain.
-  - value: `<p>Après quelques saisons, les balcons des secteurs résidentiels proches du Château de l'Étang accumulent une couche grisâtre difficile à déloger. Les dépôts verts s'incrustent dans les joints, la poussière noire se fixe sur les garde-corps`
-- `services[2].specificChallenges[0]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Dépôts noirs liés à la proximité des axes routiers</strong>, fixés sur garde-corps et sols.`
-- `services[2].specificChallenges[2]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Gestion de l'eau délicate sur balcons en étage</strong> pour éviter les coulures chez les voisins.`
-- `services[2].faqAdditions[1].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>Un produit adapté au grès cérame ou au carrelage standard est appliqué, suivi d'un <strong>brossage ciblé sur les joints</strong>. Le rinçage s'effectue à pression modérée pour ne pas déchausser les joints neufs. Cette approche préserve `
-- `services[2].faqAdditions[2].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>La pollution routière dépose une couche grasse qui s'accumule rapidement. Un <strong>traitement régulier</strong>, une à deux fois par an, empêche les dépôts de s'incruster durablement. Nous utilisons un dégraissant doux qui retire le fi`
-- `services[3].uniqueIntro` — op=setField — uniqueIntro: ajout d’1 <strong> (max 2) pour améliorer la scannabilité sur un point terrain.
-  - value: `<p>Les traces blanchâtres et les dépôts croûtés sur le sol, les garde-corps ou les rebords de fenêtres signalent une présence régulière de pigeons. Dans le quartier des Coutures, où les corniches et appuis de façades offrent des perchoirs a`
-- `services[3].uniqueDeepDive` — op=setField — uniqueDeepDive: ajout de 1 <strong> dans les blocs <h3> 1 et 3 (max 1 par bloc) pour couvrir les manques.
-  - value: `<h3>Sécurisation et confinement</h3> <p>L'intervenant porte un équipement de protection complet : <strong>masque FFP2, gants, lunettes</strong> et combinaison jetable. La zone est bâchée pour éviter toute dispersion vers l'intérieur du loge`
-- `services[3].specificChallenges[2]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Dégradation des appuis en pierre et des joints</strong> par l'acidité des fientes non traitées.`
-- `services[3].specificChallenges[3]` — op=setField — specificChallenges: ajout d’1 <strong> (max 1) pour atteindre la couverture demandée.
-  - value: `<strong>Proximité du parc Jean-Moulin - Les Guilands</strong> favorisant la présence d'oiseaux sur certains immeubles.`
-- `services[3].faqAdditions[1].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>Le produit virucide et bactéricide utilisé élimine les agents pathogènes présents sur les surfaces traitées. Sur les matériaux poreux comme la pierre ou les joints anciens, <strong>le temps de contact est adapté</strong> pour garantir un`
-- `services[3].faqAdditions[3].answer` — op=setField — Service FAQ: ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture demandée.
-  - value: `<p>L'acidité des déjections attaque progressivement la surface des matériaux poreux. Sur les appuis en pierre et les joints, cela se traduit par des <strong>taches persistantes, une érosion superficielle</strong> et parfois un écaillage. Un`
-
-## bobigny
-
-### Coverage targets (manques/minima)
-
-- `faq[0].answer`
-  - faq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-✅ Aucun problème détecté
-
-### Patches proposés (kept)
-
-- `faq[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for faq[0].answer, keeping it short and terrain-focused, and respecting max 1 strong per answer.
-  - excerpt: `Cette coordination est particulièrement utile dans les grands ensembles`
-  - replacement: `<strong>Cette coordination est particulièrement utile</strong> dans les grands ensembles`
-- `services[0].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[0].answer, max 1 strong per answer, no strong after first <p>.
-  - excerpt: `nous montons le matériel par étapes sans encombrer les paliers.`
-  - replacement: `<strong>nous montons le matériel par étapes</strong> sans encombrer les paliers.`
-- `services[0].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[2].answer, keeping emphasis concise and technical.
-  - excerpt: `Le velours ras demande une extraction plus douce`
-  - replacement: `<strong>Le velours ras demande une extraction plus douce</strong>`
-- `services[1].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[1].faqAdditions[3].answer, without emphasizing forbidden timing claims.
-  - excerpt: `La planification est validée avec le gestionnaire`
-  - replacement: `<strong>La planification est validée avec le gestionnaire</strong>`
-- `services[2].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in each deepDive block (max 1 per <h3> block) for services[2].uniqueDeepDive, improving scanability with concrete, on-site actions.
-  - value: `<h3>Un sol débarrassé des dépôts et un garde-corps net</h3> <p>Le résultat visé : un balcon où l'on peut marcher pieds nus sans sensation de crasse, avec des surfaces uniformes et des joints éclaircis. Pour y parvenir, le sol est d'abord dé`
-- `services[2].faqAdditions[1].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[2].faqAdditions[1].answer.
-  - excerpt: `nous installons des protections en périphérie du balcon — bâches`
-  - replacement: `<strong>nous installons des protections en périphérie du balcon</strong> — bâches`
-- `services[2].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[2].faqAdditions[3].answer, focusing on logistics.
-  - excerpt: `Le matériel est monté en plusieurs rotations`
-  - replacement: `<strong>Le matériel est monté en plusieurs rotations</strong>`
-- `services[3].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in each deepDive block (max 1 per <h3> block) for services[3].uniqueDeepDive, highlighting concrete safety steps.
-  - value: `<h3>Sécurisation et confinement</h3> <p>Les fientes sèches libèrent des particules nocives lorsqu'elles sont déplacées. Nous intervenons équipés de masques FFP2, gants, lunettes et combinaisons jetables. <strong>Le balcon est bâché</strong>`
-- `services[3].faqAdditions[1].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[3].faqAdditions[1].answer, focusing on EPI.
-  - excerpt: `Nos équipes portent masques FFP2, gants, lunettes et combinaisons jetables.`
-  - replacement: `<strong>Nos équipes portent masques FFP2, gants, lunettes</strong> et combinaisons jetables.`
-- `services[3].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[3].faqAdditions[2].answer.
-  - excerpt: `nous traitons l'ensemble des surfaces avec un désinfectant à spectre large.`
-  - replacement: `<strong>nous traitons l'ensemble des surfaces</strong> avec un désinfectant à spectre large.`
-- `services[4].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[4].faqAdditions[0].answer, keeping within max 1 strong per answer.
-  - excerpt: `L'extraction par injection-aspiration retire la majorité des acariens, poussières`
-  - replacement: `<strong>L'extraction par injection-aspiration retire la majorité</strong> des acariens, poussières`
-- `services[4].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[4].faqAdditions[3].answer, focusing on practical logistics.
-  - excerpt: `Le matériel tient sur un chariot roulant.`
-  - replacement: `<strong>Le matériel tient sur un chariot roulant</strong>.`
-- `services[5].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in each deepDive block (max 1 per <h3> block) for services[5].uniqueDeepDive, highlighting concrete checklist items.
-  - value: `<h3>Un logement prêt à habiter</h3> <p>L'objectif est de restituer un bien propre, sans traces de chantier ni résidus d'occupation précédente. Sols nettoyés selon leur nature, vitres intérieures dégagées, sanitaires détartrés : <strong>chaq`
-- `services[5].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[5].faqAdditions[0].answer.
-  - excerpt: `ces dépôts sont systématiques et demandent un protocole renforcé`
-  - replacement: `<strong>ces dépôts sont systématiques</strong> et demandent un protocole renforcé`
-- `services[5].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> for services[5].faqAdditions[2].answer, without emphasizing forbidden pricing terms beyond the existing word.
-  - excerpt: `Le devis tient compte de la surface totale, du nombre de pièces d'eau`
-  - replacement: `<strong>Le devis tient compte de la surface totale</strong>, du nombre de pièces d'eau`
-
-## bondy
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[0].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[0].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=159; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — forbidden_strong
 - `services[0].uniqueIntro` — pairs_over_cap(3>2)
 - `services[1].uniqueIntro` — pairs_over_cap(3>2)
 - `services[4].uniqueIntro` — pairs_over_cap(3>2)
@@ -776,3559 +306,110 @@ Total fichiers : 58
 
 ### Patches proposés (kept)
 
-- `services[0].uniqueIntro` — op=setField — services[0].uniqueIntro dépasse le cap (3 <strong>), suppression d’un <strong> pour revenir à max 2 sans toucher au texte.
-  - value: `<p>Dans les locaux professionnels bordant l'<strong>Avenue Gallieni</strong>, les moquettes absorbent quotidiennement poussières fines et résidus de semelles. Le passage répété des visiteurs et collaborateurs laisse des traces grises sur le`
-- `services[0].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans les blocs <h3> 0 et 2 (max 1 par bloc) pour couvrir les manques signalés, sans modifier le texte.
-  - value: `<h3>Zones de passage intensif</h3> <p>Les entrées, couloirs et espaces d'accueil concentrent l'essentiel des salissures. Après identification du type de fibre, nous appliquons un pré-détachant sur les traces marquées avant injection-extract`
-- `services[0].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) sur un repère terrain court pour améliorer la scannabilité et atteindre la couverture requise.
-  - excerpt: `liées au trafic de l'Avenue Gallieni, incrustées dans les fibres`
-  - replacement: `liées au trafic de l'<strong>Avenue Gallieni</strong>, incrustées dans les fibres`
-- `services[0].specificChallenges[1]` — op=substring — Ajout d’1 <strong> (max 1) sur un point concret d’usage pour atteindre la couverture requise.
-  - excerpt: `soumises à un piétinement quotidien concentré sur les mêmes zones`
-  - replacement: `soumises à un <strong>piétinement quotidien</strong> concentré sur les mêmes zones`
-- `services[0].faqAdditions[1].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la FAQ service, sans mettre en avant délais/prix.
-  - excerpt: `Le séchage dépend de l'épaisseur des fibres et de la ventilation`
-  - replacement: `Le séchage dépend de <strong>l'épaisseur des fibres</strong> et de la ventilation`
-- `services[0].faqAdditions[2].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour améliorer la scannabilité et atteindre la couverture requise.
-  - excerpt: `Des protections plastifiées sont posées le long des plinthes et bas`
-  - replacement: `Des <strong>protections plastifiées</strong> sont posées le long des plinthes et bas`
-- `services[1].uniqueIntro` — op=setField — services[1].uniqueIntro dépasse le cap (3 <strong>), suppression d’un <strong> pour revenir à max 2.
-  - value: `<p>Les traces noires sur les sols de parking se repèrent vite : coulures d'huile près des places, dépôts gras le long des rampes, poussière accumulée dans les angles. <strong>À proximité de l'A3</strong>, les parkings de transit subissent u`
-- `services[1].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans chacun des blocs <h3> 0 et 1 (max 1 par bloc) pour corriger les manques; le bloc 2 reste sans <strong> car non requis par les targets.
-  - value: `<h3>Sol décrassé et circulation rétablie</h3> <p>L'objectif est de retrouver un revêtement propre, débarrassé des taches d'huile et des dépôts gras, avec des marquages au sol à nouveau lisibles. Pour y parvenir, nous commençons par un <stro`
-- `services[1].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) sur un repère concret pour atteindre la couverture requise.
-  - excerpt: `sur les parkings exposés au trafic de l'A3`
-  - replacement: `sur les parkings exposés au trafic de l'<strong>A3</strong>`
-- `services[1].specificChallenges[3]` — op=substring — Ajout d’1 <strong> (max 1) sur une contrainte opérationnelle terrain pour atteindre la couverture requise.
-  - excerpt: `Rotation des véhicules à coordonner avec le syndic`
-  - replacement: `<strong>Rotation des véhicules</strong> à coordonner avec le syndic`
-- `services[1].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la FAQ service, conforme aux règles.
-  - excerpt: `Nous définissons un zonage par secteur avec le syndic ou le gestionnaire`
-  - replacement: `Nous définissons un <strong>zonage par secteur</strong> avec le syndic ou le gestionnaire`
-- `services[1].faqAdditions[3].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `un décrassage complet tous les trois à six mois limite l'accumulation`
-  - replacement: `un <strong>décrassage complet</strong> tous les trois à six mois limite l'accumulation`
-- `services[2].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans les blocs <h3> 0 et 1 (max 1 par bloc) pour corriger les manques signalés; bloc 2 non requis.
-  - value: `<h3>Préparation et protection</h3> <p>Nous déplaçons le mobilier et les plantes vers l'intérieur ou les bâchons sur place. Les menuiseries — fenêtres, portes-fenêtres, seuils — reçoivent une protection pour éviter les projections. Un <stron`
-- `services[2].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) pour atteindre la couverture requise sur les challenges service.
-  - excerpt: `liées aux travaux du Grand Paris sur les balcons`
-  - replacement: `liées aux <strong>travaux du Grand Paris</strong> sur les balcons`
-- `services[2].specificChallenges[3]` — op=substring — Ajout d’1 <strong> (max 1) sur une contrainte terrain pour atteindre la couverture requise.
-  - excerpt: `Gestion des coulures obligatoire en copropriété pour préserver le linge`
-  - replacement: `<strong>Gestion des coulures</strong> obligatoire en copropriété pour préserver le linge`
-- `services[2].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la FAQ service, conforme aux règles.
-  - excerpt: `Nous évitons la haute pression directe sur les joints`
-  - replacement: `Nous évitons la <strong>haute pression directe</strong> sur les joints`
-- `services[2].faqAdditions[2].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `nous installons des protections en périphérie du balcon`
-  - replacement: `nous installons des <strong>protections en périphérie</strong> du balcon`
-- `services[3].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans le bloc <h3> 0 (max 1) pour corriger le manque signalé; bloc 1 non requis par les targets.
-  - value: `<h3>Sécurisation et confinement de la zone</h3> <p>L'intervenant porte un équipement complet : masque FFP2, combinaison jetable, gants et lunettes de protection. Le balcon est isolé par <strong>bâchage</strong> pour éviter toute dispersion `
-- `services[3].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) pour atteindre la couverture requise sur les challenges service.
-  - excerpt: `Balcons exposés au Bois de Bondy : oiseaux nicheurs`
-  - replacement: `Balcons exposés au <strong>Bois de Bondy</strong> : oiseaux nicheurs`
-- `services[3].specificChallenges[2]` — op=substring — Ajout d’1 <strong> (max 1) sur une contrainte matérielle concrète pour atteindre la couverture requise.
-  - excerpt: `sous l'effet acide des fientes`
-  - replacement: `sous l'<strong>effet acide des fientes</strong>`
-- `services[3].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `Le port d'EPI et l'humidification préalable limitent tout risque`
-  - replacement: `Le port d'<strong>EPI</strong> et l'humidification préalable limitent tout risque`
-- `services[3].faqAdditions[1].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `La zone est confinée par bâchage`
-  - replacement: `La zone est <strong>confinée par bâchage</strong>`
-- `services[4].uniqueIntro` — op=setField — services[4].uniqueIntro dépasse le cap (3 <strong>), suppression d’un <strong> pour revenir à max 2.
-  - value: `<p>Comment préserver un canapé ou un tapis quand la vie de famille s'y installe durablement ? Dans le <strong>quartier de la Noue Caillet</strong>, les logements accueillent souvent enfants, repas partagés et animaux de compagnie. Les fibre`
-- `services[4].uniqueDeepDive` — op=setField — Patch non appliqué : expected requis pour services[4].uniqueDeepDive mais aucun coverage target ne demande de modification ici; omission volontaire pour respecter la règle 'ne proposer un patch que si nécessaire'.
-  - value: `<h3>Un textile assaini et des couleurs ravivées</h3> <p>L'objectif est de restituer un canapé, tapis ou matelas débarrassé des salissures visibles et des résidus invisibles. Les fibres retrouvent leur souplesse, les teintes leur netteté. Le`
-- `services[4].specificChallenges[0]` — op=substring — Ajout d’1 <strong> (max 1) pour atteindre la couverture requise (need 1) sur les challenges service.
-  - excerpt: `odeurs animales fréquentes dans les foyers avec chiens ou chats`
-  - replacement: `<strong>odeurs animales</strong> fréquentes dans les foyers avec chiens ou chats`
-- `services[4].faqAdditions[3].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `nous montons l'équipement par les escaliers`
-  - replacement: `nous montons <strong>l'équipement par les escaliers</strong>`
-- `services[5].uniqueIntro` — op=setField — services[5].uniqueIntro dépasse le cap (3 <strong>), suppression d’un <strong> pour revenir à max 2.
-  - value: `<p>Les traces verdâtres et les dépôts noirs sont visibles sur de nombreuses terrasses du <strong>quartier des Merisiers</strong>, où les pavillons disposent souvent d'espaces extérieurs exposés aux intempéries et à l'ombre des jardins voisi`
-- `services[5].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans le bloc <h3> 1 (max 1) pour corriger le manque signalé; bloc 0 non requis par les targets.
-  - value: `<h3>Préparation et protection</h3> <p>Le mobilier extérieur, les jardinières et les plantes sont déplacés ou bâchés selon leur poids et leur fragilité. Les menuiseries, baies vitrées et seuils de porte reçoivent une protection pour éviter l`
-- `services[5].specificChallenges[3]` — op=substring — Ajout d’1 <strong> (max 1) sur une contrainte d’accès terrain pour atteindre la couverture requise.
-  - excerpt: `Accès par le jardin dans les pavillons du Mainguy ou des Merisiers`
-  - replacement: `<strong>Accès par le jardin</strong> dans les pavillons du Mainguy ou des Merisiers`
-- `services[5].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `Le brossage mécanique déloge ensuite les salissures`
-  - replacement: `<strong>Le brossage mécanique</strong> déloge ensuite les salissures`
-- `services[5].faqAdditions[2].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `Tables, chaises et pots sont déplacés ou protégés par bâchage`
-  - replacement: `Tables, chaises et pots sont <strong>déplacés ou protégés</strong> par bâchage`
-- `services[6].uniqueIntro` — op=substring — services[6].uniqueIntro manque de <strong> (0) : ajout d’1 <strong> (max 2) sur un élément concret, sans mention de délais/prix.
-  - excerpt: `un logement accumule poussières fines, résidus de chantier et traces`
-  - replacement: `un logement accumule <strong>poussières fines</strong>, résidus de chantier et traces`
-- `services[6].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans les blocs <h3> 1 et 2 (max 1 par bloc) pour corriger les manques signalés; bloc 0 non requis par les targets.
-  - value: `<h3>Pièces de vie et chambres</h3> <p>Le dépoussiérage commence par les plafonds, luminaires et plinthes avant de traiter les murs et menuiseries. Les sols reçoivent un traitement adapté au revêtement : aspiration puis lavage pour le carrel`
-- `services[6].specificChallenges[1]` — op=substring — Ajout d’1 <strong> (max 1) pour atteindre la couverture requise sur les challenges service.
-  - excerpt: `sur les programmes neufs des Rives de l'Ourcq`
-  - replacement: `sur les programmes neufs des <strong>Rives de l'Ourcq</strong>`
-- `services[6].specificChallenges[2]` — op=substring — Ajout d’1 <strong> (max 1) sur une contrainte d’accès terrain pour atteindre la couverture requise.
-  - excerpt: `autour de la gare RER E pour le matériel d'intervention`
-  - replacement: `autour de la <strong>gare RER E</strong> pour le matériel d'intervention`
-- `services[6].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise, sans mettre en avant les délais.
-  - excerpt: `selon la surface du logement et la disponibilité des accès`
-  - replacement: `selon la <strong>surface du logement</strong> et la disponibilité des accès`
-- `services[6].faqAdditions[1].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1) pour atteindre la couverture FAQ requise.
-  - excerpt: `un dépoussiérage complet des surfaces hautes vers le sol`
-  - replacement: `un <strong>dépoussiérage complet</strong> des surfaces hautes vers le sol`
+- `hubIntro` — op=setField — Ajout d’1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2 hors <li>) et avec un segment concret et court.
+  - value: `<p>Terminus du Métro 13 et siège de l'ONERA, sur l'axe de la Coulée Verte : Châtillon concentre des <strong>flux quotidiens importants</strong> entre habitat collectif et pôles d'activité. Klinova s'appuie sur cette connaissance du terrain `
+- `services[0].uniqueIntro` — op=setField — Réduction à 2 <strong> (cap uniqueIntro) en retirant le 3e, sans modifier le texte hors balises.
+  - value: `<p>Les traces grises sur les dalles textiles des bureaux proches d'<strong>Orange Gardens</strong> apparaissent souvent dès les premiers mois d'exploitation. Dans les couloirs à fort passage, les fibres retiennent poussières fines et résidu`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3> 'Espaces de travail et réunion' (max 1 par bloc) pour couvrir le manque, sans toucher aux autres blocs.
+  - value: `<h3>Zones de circulation intensive</h3> <p>Les couloirs et halls d'entrée concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection d'une solution adaptée au type de fibre. Les passes d'extr`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1 par item) sur un segment terrain et court pour améliorer la scannabilité.
+  - value: `<strong>Poussières fines</strong> ramenées depuis l'avenue de Verdun et les axes à fort trafic.`
+- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1 par item) sur un point opérationnel concret.
+  - value: `Moquettes velours des parties communes nécessitant un <strong>séchage rapide</strong> pour limiter la gêne.`
+- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer.
+  - value: `<p>Le matériel d'injection-extraction se décline en <strong>modules transportables</strong>. Dans les cages d'escalier anciennes, nous utilisons des équipements compacts montés à la main. Le flexible permet d'atteindre chaque palier sans en`
+- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p>, sans dépasser 1 par answer et sans mettre en avant des délais interdits (le segment ne contient pas '24h/48h/72h').
+  - value: `<p>Sur des dalles textiles standard avec une ventilation correcte, <strong>le séchage complet</strong> intervient sous 4 à 6 heures. Une extraction renforcée limite l'humidité résiduelle. Les collaborateurs peuvent généralement réintégrer l`
 
-## bussy-saint-georges
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_overcap: max 1 strong (found 2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 9)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 5 strong pairs; max 1 per <h3> block
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — word_limits
-- `services[1].specificChallenges[0]` — pairs_over_cap(2>1)
-- `services[2].faqAdditions[0].answer` — word_limits
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[4].uniqueIntro` — word_limits
-- `services[4].faqAdditions[0].answer` — faq_rule_violation
-- `services[4].faqAdditions[2].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(9>2)
-- `services[6].uniqueIntro` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3>2</h3> (max 1) pour corriger le manque de mise en évidence et améliorer la scannabilité sans toucher au texte.
-  - value: `<h3>1. Diagnostic technique sur place</h3> <p>Nous évaluons la moquette (type de fibre, épaisseur, sens de pose), le niveau d'encrassement et les taches à traiter. Nous repérons les contraintes d'accès (escaliers, ascenseurs étroits, palier`
-- `services[0].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et améliore la lecture.
-  - value: `<p>Nous renforçons le protocole sur <strong>les zones d’entrée et de circulation</strong> : pré-traitement ciblé, passes supplémentaires en injection-extraction et contrôle de l’extraction pour retirer les particules fines. L’objectif est d`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et rend l’info clé scannable.
-  - value: `<p>Oui. Nous adaptons l’organisation au volume et aux contraintes d’accès : <strong>intervention par paliers, balisage</strong>, circulation maintenue quand c’est possible, et planification avec le syndic. Le matériel est dimensionné pour t`
-- `services[1].uniqueDeepDive` — op=setField — Ajoute 1 <strong> par bloc <h3> (max 1) dans les blocs 1, 2 et 3 pour corriger les manques de coverage et améliorer la scannabilité.
-  - value: `<h3>1. Diagnostic et préparation</h3> <p>Nous évaluons le support (béton, peinture, résine), l'état des zones grasses, la lisibilité des marquages, l'évacuation des eaux et les contraintes d'accès (hauteur, rampes, virages, zones étroites).`
-- `services[1].specificChallenges[0]` — op=setField — Corrige un dépassement (2 <strong>) en supprimant l’imbrication pour revenir à max 1 <strong> sur l’item, sans modifier le texte.
-  - value: `Près de la gare RER A et des axes A4/A104, <strong>les parkings accumulent particules fines, pneus et poussière noire</strong>, difficiles à décrocher sans dégraissage.`
-- `services[2].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3>3</h3> (max 1) pour corriger le manque de mise en évidence sur ce bloc.
-  - value: `<h3>1. Préparation et protection</h3> <p>Nous protégeons la porte-fenêtre, les murs adjacents et les zones sensibles. Les objets et plantes sont déplacés ou couverts selon la configuration. Les dépôts (feuilles, terre, déchets) sont retirés`
-- `services[4].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3>2</h3> et <h3>3</h3> (max 1 chacun) pour corriger les blocs manquants et améliorer la scannabilité.
-  - value: `<h3>1. Diagnostic et préparation</h3> <p>Nous identifions la matière (coton, laine, synthétique, velours), les zones fragiles et la nature des taches (graisse, boisson, organique). Les zones sensibles sont protégées, et un pré-traitement ci`
-- `services[4].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1) sur un item éligible pour atteindre la coverage demandée sur les specificChallenges du service.
-  - value: `Dans les foyers avec enfants et animaux, <strong>taches organiques et poils</strong> s'incrustent et demandent un pré-traitement ciblé.`
-- `services[5].uniqueIntro` — op=setField — Réduit de 9 à 2 <strong> (max 2) en conservant des repères concrets et scannables, sans modifier le texte hors balises.
-  - value: `<p>Bussy-Saint-Georges, intégrée à la ville nouvelle de Marne-la-Vallée depuis 1985, a vu sa population passer de 500 à plus de 27 000 habitants en quatre décennies. Cette croissance s'est accompagnée d'un développement urbain qui mêle aujo`
-- `services[5].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3>2</h3> (max 1) pour corriger le manque de coverage sur ce deepDive.
-  - value: `<h3>État des lieux et préparation</h3> <p>Mobilier de jardin, jardinières et équipements extérieurs sont déplacés ou protégés. Les façades et menuiseries adjacentes sont bâchées. Un balayage préliminaire retire les débris végétaux — feuille`
-- `services[5].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1) sur un item éligible pour améliorer la scannabilité et répondre à la coverage demandée.
-  - value: `Pavillons contemporains des années 90-2000 : <strong>dalles béton ou pierre reconstituée</strong> avec joints parfois fragilisés par les cycles gel-dégel seine-et-marnais.`
-- `services[5].specificChallenges[4]` — op=setField — Ajoute 1 <strong> (max 1) sur un second item éligible pour atteindre la coverage demandée sur les specificChallenges.
-  - value: `Jardins bordant les espaces verts (parc du Génitoy, bassins écologiques) : <strong>prolifération rapide des mousses et algues</strong> due à la proximité de la nature.`
-- `services[5].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et améliore la scannabilité.
-  - value: `<p>Les constructions du quartier des Violennes et du Vieux Village présentent des matériaux traditionnels — pierre, dallages anciens — qui nécessitent <strong>une approche spécifique</strong>. Nous utilisons un produit à pH neutre qui élimi`
-- `services[5].faqAdditions[3].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et améliore la lecture.
-  - value: `<p>Les dalles béton des pavillons buxangeorgiens, souvent posées dans les années 90-2000, présentent une porosité et des joints qui ne supportent pas <strong>un jet haute pression standard</strong>. Notre protocole associe un produit alcali`
-- `services[6].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3>Diagnostic</h3> (max 1) et réduit le bloc <h3>Nettoyage par zones</h3> à 0 <strong> pour corriger le dépassement (max 1 par bloc) sans modifier le texte.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Chaque intervention débute par une évaluation précise : type de logement, nature des salissures (usage courant, logement inoccupé, résidus légers après intervention technique), surfaces sensibles et con`
-- `services[6].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1) sur l’item pour répondre à la coverage demandée sur les specificChallenges.
-  - value: `Rotations locatives fréquentes autour de la gare RER A, avec <strong>délais d’intervention réduits</strong>.`
-- `services[6].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1) sur l’item pour répondre à la coverage demandée sur les specificChallenges.
-  - value: `Présence majoritaire de logements récents aux <strong>surfaces sensibles</strong> nécessitant des méthodes adaptées.`
-- `services[6].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et améliore la scannabilité.
-  - value: `<p>Une remise en état est pertinente lorsque le logement doit être restitué ou réoccupé rapidement : état des lieux, mise en location, logement resté inoccupé. Elle permet de traiter <strong>les zones souvent négligées</strong> lors d’un en`
-- `services[6].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme au format FAQ (max 1) et améliore la lecture.
-  - value: `<p>Oui. Les secteurs proches de la gare connaissent des rotations fréquentes. L’intervention est organisée en tenant compte <strong>des contraintes d’accès et de stationnement</strong> afin de respecter les délais imposés par l’agence ou le`
-
-## cachan
+## clamart
 
 ### Coverage targets (manques/minima)
 
 - `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=71; may add 1 (max2 outside li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=75; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=171; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — word_limits
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Ajout d’1 <strong> dans le texte hors <li> (0→1) pour respecter la cible de couverture hubIntro_nonli_missing, sans dépasser le max (2) hors listes.
-  - value: `<p>Au pied de l'Aqueduc de la Vanne et du Campus Cachan, Klinova accompagne syndics, gestionnaires et particuliers dans l'entretien régulier de leurs locaux. Notre implantation locale permet une réactivité adaptée aux rythmes de la commune.`
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3> "Finitions et gestion du séchage" (block[2]) pour corriger deepDive_block_missing, en respectant max 1 <strong> par bloc.
-  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et entrées concentrent l'essentiel des salissures. L'aspiration préalable retire les particules libres avant injection du produit nettoyant. Les passes d'extraction se multiplient sur ce`
-- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> de la réponse (max 1) pour atteindre la couverture demandée sur services[0].faqAdditions[0].answer, sans <strong> après le 1er <p>.
-  - value: `<p>Le matériel se démonte en <strong>éléments transportables à la main</strong>. Les flexibles et la cuve passent séparément dans les cages d'escalier pentues. L'intervention reste possible même sans ascenseur, avec un temps de mise en plac`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> de la réponse (max 1) pour atteindre la couverture demandée sur services[0].faqAdditions[1].answer, sans <strong> après le 1er <p>.
-  - value: `<p>Les taches incrustées depuis plusieurs mois nécessitent un <strong>pré-traitement ciblé</strong> avant extraction. Le résultat dépend de la nature de la salissure et du type de fibre. Les traces de café ou de tanin s'atténuent nettement,`
-- `services[1].uniqueIntro` — op=setField — Ajout d’1 <strong> (0→1) dans services[1].uniqueIntro pour corriger uniqueIntro_missing, en restant sous le max 2.
-  - value: `<p>Les traces noires s'accumulent sur les dalles béton, les coulures d'huile marquent les emplacements, et la poussière forme un <strong>voile grisâtre</strong> sur l'ensemble du niveau. Dans le quartier La Plaine, les parkings aériens comm`
-- `services[1].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour corriger la couverture sur services[1].faqAdditions[0].answer, sans <strong> après le 1er <p>.
-  - value: `<p>Les parkings souterrains récents disposent souvent de <strong>sols en résine moins poreux</strong>, ce qui permet un lavage plus rapide. Les parkings aériens de La Plaine, avec leur béton brut exposé aux intempéries, nécessitent un décra`
-- `services[1].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour corriger la couverture sur services[1].faqAdditions[2].answer, sans <strong> après le 1er <p>.
-  - value: `<p>L'autolaveuse aspire les eaux usées au fur et à mesure du passage. <strong>Aucun rejet n'est effectué</strong> vers les bouches d'évacuation pluviale. Les eaux chargées sont stockées dans la cuve de l'engin puis évacuées conformément à l`
-- `services[2].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’item pour corriger la couverture demandée sur services[2].specificChallenges[1].
-  - value: `<strong>Poussières de chantier du futur Métro 15</strong> qui se déposent régulièrement sur les surfaces.`
-- `services[2].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour corriger la couverture sur services[2].faqAdditions[0].answer, sans <strong> après le 1er <p>.
-  - value: `<p>Nous sélectionnons des <strong>détergents au pH neutre</strong> qui n'attaquent pas les joints ciment. Le brossage reste manuel sur les zones fragiles, et la pression de rinçage est réduite pour éviter tout déchaussement. Les carrelages `
-- `services[2].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour corriger la couverture sur services[2].faqAdditions[2].answer, sans <strong> après le 1er <p>.
-  - value: `<p>Oui, l'intervention inclut le <strong>garde-corps métallique ou vitré</strong> ainsi que les parois vitrées de la loggia. Le traitement est adapté à chaque matériau : dégraissant pour l'aluminium, produit vitres sans trace pour les surfa`
-
-## champigny-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=188; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `citySpecificChallenges[0]` — forbidden_strong
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[1].answer (max 1 per answer). Segment court et concret.
-  - value: `<p>Les marques incrustées depuis plusieurs mois répondent généralement bien à <strong>l'injection-extraction</strong> combinée à un pré-traitement adapté. Le résultat dépend de la nature de la tache et de l'état des fibres, mais une amélior`
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[0].answer (max 1 per answer). Met en avant un point terrain sans termes interdits.
-  - value: `<p>Nous repérons <strong>les possibilités de stationnement</strong> en amont et convenons d'un créneau avec le syndic ou le gardien. Le matériel est acheminé rapidement depuis le véhicule. Un balisage informe les résidents pendant l'interve`
-- `services[1].uniqueIntro` — op=setField — Coverage target: uniqueIntro overcap (max 2). Suppression d’un <strong> non indispensable pour revenir à 2, sans modifier le texte hors balises.
-  - value: `<p>Les traces d'huile, les coulures grasses et la poussière accumulée sont visibles sur de nombreux sols de parkings à Champigny-sur-Marne. Dans les souterrains des résidences du <strong>Bois l'Abbé</strong> ou les aires de stationnement de`
-- `services[1].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in block[0] and 1 in block[1] (max 1 per <h3> block). Ajouts courts et techniques, aucun terme interdit.
-  - value: `<h3>Diagnostic et préparation du chantier</h3> <p>Repérage du revêtement (béton brut, résine, peinture) et vérification de l'état des évacuations. Le niveau d'encrassement détermine le choix entre <strong>haute pression et autolaveuse</stro`
-- `services[1].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> in services[1].specificChallenges (need 2). Segment terrain (2-10 mots), max 1 par item.
-  - value: `Taches d'huile anciennes <strong>incrustées dans le béton brut</strong> des résidences années 70.`
-- `services[1].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[1].faqAdditions[0].answer (max 1). Point opérationnel, scannable.
-  - value: `<p>Le chantier se découpe en <strong>zones successives</strong>. Les résidents sont prévenus à l'avance pour libérer leur emplacement selon un planning établi avec le syndic. Le balisage sécurise chaque secteur pendant le passage de l'autol`
-- `services[1].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[1].faqAdditions[1].answer (max 1). Met en avant le point clé sans termes interdits.
-  - value: `<p>Les eaux chargées sont dirigées vers <strong>les évacuations existantes</strong> après vérification de leur bon fonctionnement. Aucun rejet sauvage n'est effectué. Si les regards sont partiellement obstrués, un débouchage préalable peut `
-- `services[2].uniqueIntro` — op=setField — Coverage target: services[2].uniqueIntro missing (0 strong; add 1, max 2). Ajout d’un segment court et concret.
-  - value: `<p>Les traces vertes s'installent progressivement sur les dalles, les joints noircissent, et le carrelage perd son aspect d'origine. Dans le quartier Polangis, où l'humidité remonte des boucles de la Marne, ces dépôts apparaissent souvent d`
-- `services[2].uniqueDeepDive` — op=setField — Coverage target: services[2].uniqueDeepDive blocks[0..2] missing 1 strong each (max 1 par bloc <h3>). Ajouts courts, opérationnels.
-  - value: `<h3>Préparation et protection</h3> <p>Nous commençons par déplacer ou bâcher <strong>le mobilier et les plantes</strong> présents sur le balcon. Les menuiseries, fenêtres et portes sont protégées pour éviter toute projection. Les gros dépôt`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[2].specificChallenges (need 2). Segment court, max 1 par item.
-  - value: `<strong>Mousses tenaces</strong> sur les balcons exposés nord, fréquents dans les secteurs proches de la Marne.`
-- `services[2].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> in services[2].specificChallenges (need 2). Met en avant la contrainte terrain, max 1 par item.
-  - value: `Gestion des <strong>eaux de rinçage</strong> en immeuble collectif pour éviter les coulures chez les voisins.`
-- `services[2].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[2].faqAdditions[1].answer (max 1). Segment technique, scannable.
-  - value: `<p>Les mousses et dépôts verts liés à l'humidité ambiante répondent bien à un traitement combinant <strong>produit adapté et brossage mécanique</strong>. Nous ajustons l'intensité selon l'épaisseur des dépôts et l'état du support pour un ré`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[2].faqAdditions[0].answer (max 1). Met en avant la méthode terrain.
-  - value: `<p>Nous utilisons des techniques de <strong>rinçage contrôlé</strong> avec aspiration ou récupération des eaux excédentaires. Sur les résidences du quartier Polangis ou des grands ensembles, nous vérifions l'absence de coulures vers les bal`
-- `services[3].uniqueDeepDive` — op=setField — Coverage target: services[3].uniqueDeepDive blocks[0..2] missing 1 strong each (max 1 par bloc <h3>). Ajouts concrets, non marketing.
-  - value: `<h3>Sécurisation et confinement</h3> <p>L'intervenant porte un <strong>équipement de protection complet</strong> : masque FFP2, combinaison jetable, gants et lunettes. La zone est bâchée pour éviter toute dispersion vers l'intérieur du loge`
-- `services[3].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> in services[3].specificChallenges (need 2). Contrainte terrain, max 1 par item.
-  - value: `Loggias semi-fermées où <strong>les fientes s'accumulent</strong> à l'abri, rendant le nettoyage plus complexe.`
-- `services[3].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[3].faqAdditions[3].answer (max 1). Met en avant la mesure concrète.
-  - value: `<p>La zone est confinée par <strong>bâchage</strong> pour éviter les projections et les odeurs. L'intervention reste discrète et les déchets sont évacués dans des sacs étanches. Si nécessaire, nous pouvons coordonner les horaires avec le vo`
-- `services[3].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[3].faqAdditions[0].answer (max 1). Point de risque concret, sans termes interdits.
-  - value: `<p>Les déjections de pigeons peuvent contenir des agents pathogènes transmissibles par <strong>inhalation de poussières sèches</strong>. Le risque augmente avec l'accumulation et le confinement. Un assainissement avec désinfection élimine c`
-- `services[4].uniqueIntro` — op=setField — Coverage target: services[4].uniqueIntro missing (0 strong; add 1, max 2). Segment court et concret.
-  - value: `<p>Après quelques années d'usage quotidien, les textiles d'ameublement accumulent ce que l'aspirateur ne capte pas : poussières fines, résidus alimentaires, traces d'animaux. Dans les pavillons du quartier Cœuilly comme dans les appartement`
-- `services[4].uniqueDeepDive` — op=setField — Coverage target: services[4].uniqueDeepDive blocks[0..2] missing 1 strong each (max 1 par bloc <h3>). Ajouts courts, techniques.
-  - value: `<h3>Diagnostic et pré-traitement</h3> <p>Avant toute intervention, nous identifions le type de tissu et la nature des taches présentes. Un <strong>test discret</strong> sur une zone cachée permet de valider la compatibilité du traitement av`
-- `services[4].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[4].specificChallenges (need 2). Segment court, max 1 par item.
-  - value: `<strong>Taches d'animaux</strong> fréquentes dans les pavillons avec jardin du quartier Cœuilly.`
-- `services[4].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> in services[4].specificChallenges (need 2). Contrainte terrain, max 1 par item.
-  - value: `Canapés volumineux difficiles à déplacer dans <strong>les escaliers étroits</strong> des immeubles anciens.`
-- `services[4].faqAdditions[1].answer` — op=setField — Coverage target: services[4].faqAdditions[1].answer needs +1 strong (max 1). Ajout dans le 1er <p>, sans termes interdits.
-  - value: `<p>Le délai dépend de <strong>l'épaisseur du textile</strong> et de la ventilation du logement. En été avec fenêtres ouvertes, comptez généralement quatre à six heures. En période humide ou pour un velours épais, prévoyez une demi-journée. `
-- `services[5].uniqueDeepDive` — op=setField — Coverage target: services[5].uniqueDeepDive block[1] and block[2] missing 1 strong each (max 1 par bloc <h3>). Ajouts concrets, non marketing.
-  - value: `<h3>Préparation et protection</h3> <p>Avant toute intervention, nous déplaçons ou bâchons le mobilier extérieur, les jardinières et les plantes. Les menuiseries — baies vitrées, portes-fenêtres — sont protégées contre les projections. Un ba`
-- `services[5].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges (need 2). Segment court, max 1 par item.
-  - value: `<strong>Mousses persistantes</strong> sur les terrasses ombragées des quartiers proches des bords de Marne.`
-- `services[5].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges (need 2). Contrainte terrain, max 1 par item.
-  - value: `Bois composite <strong>grisé par l'exposition</strong> et les intempéries dans les pavillons récents.`
-- `services[5].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[5].faqAdditions[3].answer (max 1). Segment court, sans termes interdits.
-  - value: `<p>Le printemps reste la période idéale : les températures permettent un <strong>séchage rapide</strong> et vous profitez de votre terrasse dès les beaux jours. L'automne convient aussi pour éliminer les résidus de l'été avant l'hiver. Nous`
-- `services[5].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[5].faqAdditions[0].answer (max 1). Met en avant l’action principale.
-  - value: `<p>Nous appliquons un <strong>traitement anti-mousse</strong> adapté au support, suivi d'un brossage mécanique pour décoller les dépôts incrustés. Sur les zones très ombragées, un produit préventif peut être proposé pour ralentir la réappar`
-- `services[6].uniqueDeepDive` — op=setField — Coverage target: services[6].uniqueDeepDive block[1] missing 1 strong (max 1 par bloc <h3>). Ajout court et opérationnel.
-  - value: `<h3>Évaluation et préparation</h3> <p>Le technicien identifie la nature de l'intervention : fin de chantier, état des lieux sortant ou grand ménage ponctuel. Il repère les résidus à traiter — poussière de plâtre, traces de peinture, calcair`
-- `services[6].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> in services[6].specificChallenges (need 2). Contrainte d’accès, max 1 par item.
-  - value: `Accès par <strong>digicode et badge Vigik</strong> à coordonner avec le gardien ou l'agence.`
-- `services[6].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[6].specificChallenges (need 2). Segment court, sans termes interdits.
-  - value: `<strong>Délais serrés</strong> entre deux locataires dans les résidences proches du RER E.`
-- `services[6].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[6].faqAdditions[0].answer (max 1). Évite les termes interdits (pas de mise en avant des délais).
-  - value: `<p>Nous intervenons généralement sous 48 à 72 heures après votre demande. Pour les rotations rapides près de la gare RER E, un <strong>créneau prioritaire</strong> peut être organisé en coordination avec votre agence, selon la surface et l'`
-
-## champs-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — word_limits
-- `services[0].faqAdditions[1].answer` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[2].uniqueIntro` — word_limits
-- `services[2].faqAdditions[2].answer` — forbidden_strong
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[3].uniqueIntro` — word_limits
-- `services[3].faqAdditions[0].answer` — word_limits
-- `services[3].faqAdditions[1].answer` — forbidden_strong
-- `services[3].faqAdditions[2].answer` — word_limits
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].faqAdditions[0].answer` — word_limits
-- `services[4].faqAdditions[1].answer` — word_limits
-- `services[4].faqAdditions[2].answer` — word_limits
-- `services[5].uniqueIntro` — word_limits
-
-### Patches proposés (kept)
-
-- `services[5].uniqueDeepDive` — op=setField — Coverage target: services[5].uniqueDeepDive block[0] and block[1] missing 1 <strong> each. Added one short, concrete <strong> segment in each of the first two <p> blocks, respecting max 1 per <h3> block and without touch
-  - value: `<h3>Diagnostic et préparation</h3> <p>Nous commençons par évaluer l’état réel du logement : niveau d’encrassement, traces liées à l’usage, dépôts de calcaire dans les pièces d’eau, et surfaces sensibles (parquet, joints, vitrages). Les cont`
-
-## charenton-le-pont
-
-### Coverage targets (manques/minima)
-
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=276; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=124; add 1 in this block (max1)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=303; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=100; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=134; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=126; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=336; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=122; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=141; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=144; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=365; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=138; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — word_limits
-- `services[3].faqAdditions[0].answer` — forbidden_strong
-- `services[3].faqAdditions[2].answer` — forbidden_strong
-- `services[4].uniqueDeepDive` — forbidden_strong
-- `services[5].uniqueIntro` — word_limits
-- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `services[1].uniqueIntro` — op=substring — Coverage target: services[1].uniqueIntro has 0 <strong>; add 1 (max2). Segment court et concret sur la source principale d’encrassement, sans termes interdits.
-  - excerpt: `L'encrassement provient de sources multiples : pollution noire grasse de l'A4`
-  - replacement: `L'encrassement provient de sources multiples : <strong>pollution noire grasse de l'A4</strong>`
-- `services[1].uniqueDeepDive` — op=substring — Coverage target: services[1].uniqueDeepDive block[1] missing <strong> (max1). Ajout dans le bloc 'Décrassage...' sans dépasser 1 strong par bloc.
-  - excerpt: `L'autolaveuse brosse ensuite le sol avec un mélange d'eau chaude`
-  - replacement: `L'autolaveuse brosse ensuite le sol avec <strong>un mélange d'eau chaude</strong>`
-- `services[2].uniqueIntro` — op=substring — Coverage target: services[2].uniqueIntro has 0 <strong>; add 1 (max2). Segment court, concret, déjà présent dans le texte.
-  - excerpt: `Les particules noires grasses forment une pellicule tenace sur les dalles`
-  - replacement: `Les <strong>particules noires grasses</strong> forment une pellicule tenace sur les dalles`
-- `services[2].uniqueDeepDive` — op=substring — Coverage target: services[2].uniqueDeepDive block[0] missing <strong> (max1). Ajout discret dans le 1er bloc.
-  - excerpt: `Le technicien identifie précisément les matériaux présents : pierres de taille`
-  - replacement: `Le technicien identifie précisément <strong>les matériaux présents</strong> : pierres de taille`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[2].specificChallenges[0] (max1). Met en avant le symptôme terrain.
-  - value: `Pollution noire grasse multi-sources : Les balcons des secteurs Valmy, Bourg-du-Pont et proches de la Porte de Charenton accumulent des particules de l'A4 et du Périphérique formant <strong>une pellicule tenace</strong> nécessitant un dégra`
-- `services[3].uniqueIntro` — op=substring — Coverage target: services[3].uniqueIntro has 0 <strong>; add 1 (max2). Segment court, descriptif, non marketing.
-  - excerpt: `Les fientes s'accumulent en couches épaisses formant une croûte durcie`
-  - replacement: `Les fientes s'accumulent en <strong>couches épaisses</strong> formant une croûte durcie`
-- `services[3].uniqueDeepDive` — op=substring — Coverage target: services[3].uniqueDeepDive block[0] missing <strong> (max1). Ajout sur un élément matériel du protocole.
-  - excerpt: `Des bâches étanches protègent les baies vitrées, portes-fenêtres et murs`
-  - replacement: `Des <strong>bâches étanches</strong> protègent les baies vitrées, portes-fenêtres et murs`
-- `services[3].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[3].specificChallenges[0] (max1). Accent sur la cause terrain.
-  - value: `Verticalité favorisant la colonisation en hauteur : Les immeubles de grande hauteur (R+8 et plus) typiques de Charenton offrent <strong>de nombreux points de nidification</strong> en altitude à l'abri des prédateurs, accélérant la colonisat`
-- `services[4].uniqueIntro` — op=substring — Coverage target: services[4].uniqueIntro has 0 <strong>; add 1 (max2). Segment court, descriptif, non promotionnel.
-  - excerpt: `formant un dépôt noir microscopique qui s'accumule jour après jour`
-  - replacement: `formant <strong>un dépôt noir microscopique</strong> qui s'accumule jour après jour`
-- `services[4].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[4].specificChallenges[0] (max1). Met en avant le mécanisme terrain.
-  - value: `Prolifération d'acariens favorisée par l'humidité fluviale : L'environnement humide constant de la confluence Seine-Marne accélère <strong>la multiplication des acariens</strong> dans les matelas et canapés, nécessitant un traitement thermi`
-- `services[4].faqAdditions[2].answer` — op=substring — Coverage target: services[4].faqAdditions[2].answer needs 1 <strong> inside first <p> (max1). Ajout en tête de phrase, concret, sans termes interdits.
-  - excerpt: `Aérez impérativement la pièce en ouvrant largement les fenêtres`
-  - replacement: `<strong>Aérez impérativement la pièce</strong> en ouvrant largement les fenêtres`
-- `services[5].uniqueDeepDive` — op=setField — Coverage target: services[5].uniqueDeepDive block[1] and block[2] are overcap (2 strong each; max1). Remove extra <strong> pairs in those blocks while keeping text identical.
-  - value: `<h3>Cadrage et préparation</h3> <p>Nous identifions l’état réel du logement et les points sensibles : parquet ancien (souvent en point de Hongrie) dans le Centre-Ville, pièces d’eau marquées par le calcaire, vitrages plus exposés côté Valmy`
-- `services[5].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges[0] (max1). Met en avant la contrainte logistique sans mention de prix.
-  - value: `Stationnement payant et rare dans le 94220 : <strong>intervention pensée “petit utilitaire”</strong> et trajets optimisés.`
-- `services[5].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges[1] (max1). Segment court, terrain.
-  - value: `Bâti ancien rue de Paris : <strong>escaliers étroits, ascenseurs petits</strong>, manutention à anticiper.`
-- `services[5].faqAdditions[0].answer` — op=substring — Coverage target: services[5].faqAdditions[0].answer needs 1 <strong> inside first <p> (max1). Ajout concret sur les accès.
-  - excerpt: `Nous validons les accès (interphone, Vigik, clés) et la logistique`
-  - replacement: `Nous validons <strong>les accès (interphone, Vigik, clés)</strong> et la logistique`
-- `services[5].faqAdditions[2].answer` — op=substring — Coverage target: services[5].faqAdditions[2].answer needs 1 <strong> inside first <p> (max1). Ajout court, opérationnel.
-  - excerpt: `surfaces de cuisine accessibles avec dégraissage ciblé, et salle`
-  - replacement: `surfaces de cuisine accessibles avec <strong>dégraissage ciblé</strong>, et salle`
-
-## chelles
-
-### Coverage targets (manques/minima)
-
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `services[1].uniqueIntro` — word_limits
-- `services[1].uniqueDeepDive` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[2].faqAdditions[1].answer` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[1].answer` — word_limits
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].uniqueDeepDive` — word_limits
-- `services[6].faqAdditions[0].answer` — word_limits
-- `services[6].faqAdditions[3].answer` — word_limits
-
-### Patches proposés (kept)
-
-- `services[3].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> in this service-specific challenge item (max 1). Segment court et terrain, sans termes interdits.
-  - value: `Nettoyage délicat des fientes sèches devenues poussiéreuses, générant <strong>un aérosol contaminant</strong> nécessitant une humidification préalable et des EPI stricts.`
-- `services[3].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> in this service-specific challenge item (max 1). Met en avant un point concret de dégradation.
-  - value: `Corrosion active des garde-corps en métal et <strong>dégradation des joints de carrelage</strong> provoquées par l'acidité des déjections accumulées.`
-- `services[4].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> in this service-specific challenge item (max 1). Ajout d’un repère concret, sans surligner une phrase entière.
-  - value: `Taches complexes mélangeant <strong>terre des jardins ou balcons</strong>, graisses alimentaires et résidus organiques liées à la vie de famille.`
-
-## chevilly-larue
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=149; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=68; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
   - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les 3 blocs du deep dive et améliorer la lecture terrain (zones protégées, types de taches, consigne clé).
-  - value: `<h3>1. Zones de circulation intense</h3> <p>Les entrées, couloirs et abords d'ascenseurs reçoivent un diagnostic préalable : type de fibre, nature des dépôts, état général. Une aspiration soignée retire les particules libres avant le traite`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la scannabilité et la couverture FAQ service.
-  - value: `<p>Les dépôts anciens nécessitent un <strong>pré-traitement ciblé</strong> avant l'injection-extraction. Un détachant adapté au type de salissure est appliqué, puis l'extraction en profondeur déloge les résidus. Le résultat dépend de l'anci`
-- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour mettre en avant le cas d’usage concret et respecter la règle FAQ.
-  - value: `<p>L'injection-extraction reste la méthode de référence pour les <strong>dalles textiles à fort passage</strong>. Elle décolle les salissures en profondeur et les aspire immédiatement. La vapeur convient davantage à un entretien léger ou à `
-- `services[1].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les blocs 0/1/2 et rendre les points terrain repérables (diagnostic, zones critiques).
-  - value: `<h3>1. Sol décrassé et dégraissé sur toute la surface</h3> <p>L'objectif est d'obtenir un revêtement débarrassé des traces d'hydrocarbures, des poussières accumulées et des dépôts noirâtres. Le passage mécanisé à l'autolaveuse combiné à un `
-- `services[1].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur l’item demandé pour atteindre la couverture des specificChallenges service.
-  - value: `<strong>Traces d'huile fréquentes</strong> liées aux véhicules exposés aux flux du MIN Rungis.`
-- `services[1].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la scannabilité et la couverture FAQ service.
-  - value: `<p>Les dépôts graisseux liés au trafic camion s'incrustent dans le <strong>béton poreux</strong>. Nous appliquons un dégraissant alcalin avant le passage de l'autolaveuse. Sur les taches anciennes, un temps de pose prolongé et un brossage m`
-- `services[1].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour mettre en avant la contrainte clé et respecter la règle FAQ.
-  - value: `<p>En souterrain, la <strong>ventilation limitée</strong> impose une gestion rigoureuse des produits et des eaux de lavage. En aérien, l'enrobé supporte mieux la haute pression mais accumule davantage de poussières et débris végétaux. Le di`
-- `services[2].uniqueIntro` — op=setField — Ajout d’1 <strong> (max 2) dans uniqueIntro pour améliorer la scannabilité et atteindre la couverture demandée.
-  - value: `<p>Le long de l'avenue de Stalingrad et des axes proches de la N7, les balcons accumulent rapidement un voile grisâtre. Les particules de combustion se déposent sur le sol, s'incrustent dans les joints et ternissent les garde-corps. Ce dépô`
-- `services[2].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3>2</h3> (max 1 par bloc) pour couvrir le bloc manquant et mettre en avant la contrainte terrain (coulures voisins).
-  - value: `<h3>1. Préparation et protection</h3> <p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. Un premier passage enlève feuilles mortes, terre accumulée et débris divers q`
-- `services[2].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur l’item pour atteindre la couverture specificChallenges service.
-  - value: `<strong>Dépôt noir gras</strong> sur les balcons exposés aux axes routiers, difficile à déloger au simple jet.`
-- `services[2].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1) sur l’item pour atteindre la couverture specificChallenges service.
-  - value: `Dalles sur plots en résidences récentes : <strong>pression adaptée</strong> pour ne pas déplacer les éléments.`
-- `services[2].faqAdditions[3].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service et une lecture plus rapide.
-  - value: `<p>Oui, nous intervenons régulièrement sans haute pression sur les <strong>balcons fragiles</strong>. Le brossage manuel associé à un produit ciblé suffit à décoller les salissures. Le rinçage s'effectue à basse pression ou au jet simple, e`
-- `services[2].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max 1) pour mettre en avant le point technique clé et respecter la règle FAQ.
-  - value: `<p>L'eau de rinçage est orientée vers <strong>l'évacuation existante</strong> ou récupérée au fur et à mesure. Nous utilisons des quantités limitées et contrôlons le flux pour qu'aucune projection ne déborde sur les balcons inférieurs. Cett`
-
-## choisy-le-roi
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=158; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=163; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=64; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[3].answer` — forbidden_strong
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=substring — services[0].uniqueDeepDive: add 1 <strong> in block[0] (max1) to meet deepDive coverage; short, concrete segment.
-  - excerpt: `Le traitement par injection-extraction cible ensuite les zones de passage`
-  - replacement: `Le traitement par <strong>injection-extraction</strong> cible ensuite les zones de passage`
-- `services[0].faqAdditions[2].answer` — op=substring — services[0].faqAdditions[2].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `L'injection-extraction reste la technique la plus adaptée aux dalles textiles.`
-  - replacement: `<strong>L'injection-extraction</strong> reste la technique la plus adaptée aux dalles textiles.`
-- `services[0].faqAdditions[3].answer` — op=substring — services[0].faqAdditions[3].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Nous repérons en amont les possibilités de stationnement ou de dépose rapide.`
-  - replacement: `Nous repérons en amont les <strong>possibilités de stationnement</strong> ou de dépose rapide.`
-- `services[1].uniqueIntro` — op=substring — services[1].uniqueIntro: add 1 <strong> (max2) to improve scannability and meet uniqueIntro coverage.
-  - excerpt: `Les rampes d'accès concentrent souvent les salissures les plus tenaces`
-  - replacement: `Les <strong>rampes d'accès</strong> concentrent souvent les salissures les plus tenaces`
-- `services[1].uniqueDeepDive` — op=substring — services[1].uniqueDeepDive: add 1 <strong> in block[0] (max1) to meet deepDive coverage; concrete terrain terms.
-  - excerpt: `L'objectif est d'obtenir un revêtement débarrassé des graisses, huiles`
-  - replacement: `L'objectif est d'obtenir un revêtement débarrassé des <strong>graisses, huiles</strong>`
-- `services[1].specificChallenges[0]` — op=substring — services[1].specificChallenges[0]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `rampes étroites et ventilation limitée`
-  - replacement: `<strong>rampes étroites et ventilation limitée</strong>`
-- `services[1].faqAdditions[0].answer` — op=substring — services[1].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Le souterrain sous dalle présente un béton brut sensible aux produits agressifs`
-  - replacement: `Le souterrain sous dalle présente un <strong>béton brut sensible</strong> aux produits agressifs`
-- `services[2].uniqueIntro` — op=substring — services[2].uniqueIntro: add 1 <strong> (max2) to meet uniqueIntro coverage and improve scan.
-  - excerpt: `un film de particules fines qui s'incruste dans les joints`
-  - replacement: `un <strong>film de particules fines</strong> qui s'incruste dans les joints`
-- `services[2].uniqueDeepDive` — op=substring — services[2].uniqueDeepDive: add 1 <strong> in block[1] (max1) to meet deepDive coverage.
-  - excerpt: `Le brossage — manuel ou mécanique selon l'état — déloge les salissures incrustées`
-  - replacement: `Le <strong>brossage — manuel ou mécanique</strong> selon l'état — déloge les salissures incrustées`
-- `services[2].specificChallenges[0]` — op=substring — services[2].specificChallenges[0]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `film gras à traiter en profondeur`
-  - replacement: `<strong>film gras à traiter en profondeur</strong>`
-- `services[2].specificChallenges[1]` — op=substring — services[2].specificChallenges[1]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `rinçage à adapter pour éviter les refoulements`
-  - replacement: `<strong>rinçage à adapter</strong> pour éviter les refoulements`
-- `services[2].faqAdditions[0].answer` — op=substring — services[2].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Le béton brut est poreux et peut se dégrader sous une pression trop forte.`
-  - replacement: `<strong>Le béton brut est poreux</strong> et peut se dégrader sous une pression trop forte.`
-- `services[2].faqAdditions[2].answer` — op=substring — services[2].faqAdditions[2].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Le rinçage est orienté vers la descente d'eau, avec un débit maîtrisé.`
-  - replacement: `Le rinçage est orienté vers la <strong>descente d'eau</strong>, avec un débit maîtrisé.`
-- `services[3].uniqueDeepDive` — op=substring — services[3].uniqueDeepDive: add 1 <strong> in block[0] (max1) to meet deepDive coverage.
-  - excerpt: `Les fientes sont intégralement retirées du sol, du garde-corps`
-  - replacement: `Les fientes sont <strong>intégralement retirées</strong> du sol, du garde-corps`
-- `services[3].specificChallenges[0]` — op=substring — services[3].specificChallenges[0]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `pigeons et oiseaux trouvent refuge dans les arbres`
-  - replacement: `<strong>pigeons et oiseaux</strong> trouvent refuge dans les arbres`
-- `services[3].specificChallenges[3]` — op=substring — services[3].specificChallenges[3]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `confinement renforcé nécessaire`
-  - replacement: `<strong>confinement renforcé</strong> nécessaire`
-- `services[3].faqAdditions[0].answer` — op=substring — services[3].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `évitez de manipuler les dépôts à mains nues et aérez sans balayer à sec.`
-  - replacement: `évitez de manipuler les dépôts à <strong>mains nues</strong> et aérez sans balayer à sec.`
-- `services[3].faqAdditions[2].answer` — op=substring — services[3].faqAdditions[2].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Le temps de contact est respecté avant rinçage`
-  - replacement: `Le <strong>temps de contact</strong> est respecté avant rinçage`
-- `services[4].uniqueIntro` — op=substring — services[4].uniqueIntro: add 1 <strong> (max2) to meet uniqueIntro coverage.
-  - excerpt: `les textiles d'ameublement absorbent les traces du quotidien`
-  - replacement: `les <strong>textiles d'ameublement</strong> absorbent les traces du quotidien`
-- `services[4].uniqueDeepDive` — op=substring — services[4].uniqueDeepDive: add 1 <strong> in block[1] (max1) to meet deepDive coverage.
-  - excerpt: `nous identifions le type de tissu (coton, synthétique, velours)`
-  - replacement: `nous identifions le <strong>type de tissu</strong> (coton, synthétique, velours)`
-- `services[4].specificChallenges[1]` — op=substring — services[4].specificChallenges[1]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `Taches d'animaux et odeurs persistantes`
-  - replacement: `<strong>Taches d'animaux et odeurs persistantes</strong>`
-- `services[4].specificChallenges[2]` — op=substring — services[4].specificChallenges[2]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `Escaliers étroits dans le centre ancien`
-  - replacement: `<strong>Escaliers étroits</strong> dans le centre ancien`
-- `services[4].faqAdditions[0].answer` — op=substring — services[4].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `nous procédons par injection-extraction directement sur le tissu en place.`
-  - replacement: `nous procédons par <strong>injection-extraction</strong> directement sur le tissu en place.`
-- `services[4].faqAdditions[3].answer` — op=substring — services[4].faqAdditions[3].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Les souillures organiques comme l'urine nécessitent un pré-traitement enzymatique`
-  - replacement: `Les <strong>souillures organiques</strong> comme l'urine nécessitent un pré-traitement enzymatique`
-- `services[5].uniqueDeepDive` — op=substring — services[5].uniqueDeepDive: add 1 <strong> in block[0] (max1) to meet deepDive coverage.
-  - excerpt: `Le mobilier extérieur et les jardinières sont déplacés ou bâchés.`
-  - replacement: `Le <strong>mobilier extérieur</strong> et les jardinières sont déplacés ou bâchés.`
-- `services[5].specificChallenges[0]` — op=substring — services[5].specificChallenges[0]: add 1 <strong> (max1) to satisfy serviceChallenge coverage (need 1).
-  - excerpt: `Mousses tenaces sur dalles`
-  - replacement: `<strong>Mousses tenaces</strong> sur dalles`
-- `services[5].faqAdditions[0].answer` — op=substring — services[5].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `nous appliquons un produit anti-mousse préventif qui freine la réapparition des dépôts verts.`
-  - replacement: `nous appliquons un <strong>produit anti-mousse préventif</strong> qui freine la réapparition des dépôts verts.`
-- `services[5].faqAdditions[2].answer` — op=substring — services[5].faqAdditions[2].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `Le bois composite supporte mal la haute pression`
-  - replacement: `<strong>Le bois composite</strong> supporte mal la haute pression`
-- `services[6].uniqueIntro` — op=substring — services[6].uniqueIntro: add 1 <strong> (max2) to meet uniqueIntro coverage.
-  - excerpt: `Les résidus de peinture, les joints de salle de bain ternis`
-  - replacement: `Les <strong>résidus de peinture</strong>, les joints de salle de bain ternis`
-- `services[6].uniqueDeepDive` — op=substring — services[6].uniqueDeepDive: add 1 <strong> in block[1] (max1) to meet deepDive coverage.
-  - excerpt: `Nous commençons par un tour du logement pour repérer les résidus de chantier`
-  - replacement: `Nous commençons par un tour du logement pour repérer les <strong>résidus de chantier</strong>`
-- `services[6].specificChallenges[0]` — op=substring — services[6].specificChallenges[0]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `colle, enduit, poussière de plâtre`
-  - replacement: `<strong>colle, enduit, poussière de plâtre</strong>`
-- `services[6].specificChallenges[1]` — op=substring — services[6].specificChallenges[1]: add 1 <strong> (max1) to satisfy serviceChallenge coverage.
-  - excerpt: `délais serrés pour les états des lieux`
-  - replacement: `<strong>délais serrés</strong> pour les états des lieux`
-- `services[6].faqAdditions[0].answer` — op=substring — services[6].faqAdditions[0].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `les traces de colle sur les sols et la poussière de plâtre accumulée`
-  - replacement: `les <strong>traces de colle</strong> sur les sols et la poussière de plâtre accumulée`
-- `services[6].faqAdditions[1].answer` — op=substring — services[6].faqAdditions[1].answer: add 1 <strong> inside first <p> (and only there) to satisfy service FAQ coverage.
-  - excerpt: `en tenant compte du créneau de l'état des lieux.`
-  - replacement: `en tenant compte du <strong>créneau de l'état des lieux</strong>.`
-
-## claye-souilly
-
-### Coverage targets (manques/minima)
-
-- `citySpecificChallenges[0]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[0].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — forbidden_strong
-- `services[0].uniqueDeepDive` — forbidden_strong
-- `services[0].faqAdditions[0].answer` — word_limits
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[1].faqAdditions[1].answer` — word_limits
-- `services[1].faqAdditions[2].answer` — word_limits
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[0].answer` — word_limits
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[0].answer` — word_limits
-- `services[3].faqAdditions[1].answer` — word_limits
-- `services[3].faqAdditions[2].answer` — word_limits
-- `services[3].faqAdditions[3].answer` — word_limits
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].faqAdditions[0].answer` — word_limits
-- `services[4].faqAdditions[2].answer` — word_limits
-- `services[4].faqAdditions[3].answer` — word_limits
-- `services[5].uniqueIntro` — word_limits
-- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `citySpecificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in citySpecificChallenges[0] (max 1 per item). Segment court et terrain.
-  - value: `Encrassement rapide des moquettes dans les halls situés près de la zone commerciale et des axes RN3, avec <strong>forte circulation de boues</strong> et de particules.`
-- `services[0].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[0].specificChallenges[0] (max 1 per item). Met en avant la cause terrain.
-  - value: `Encrassement rapide des moquettes dans les halls proches de la zone commerciale et de la RN3, avec <strong>apports constants de boues</strong>, graviers et particules fines.`
-- `services[1].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[1].specificChallenges[0] (max 1 per item). Segment concret, non marketing.
-  - value: `Accumulation rapide de <strong>taches d'hydrocarbures</strong> dans les parkings proches de la zone commerciale, liée au fort trafic quotidien et au stationnement prolongé.`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[2].specificChallenges[0] (max 1 per item). Met en évidence le problème principal.
-  - value: `<strong>Dépôts verts et mousses</strong> sur les balcons peu ensoleillés, notamment dans les immeubles du centre-ville et à proximité des zones végétalisées.`
-- `services[3].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[3].specificChallenges[0] (max 1 per item). Segment court et factuel.
-  - value: `<strong>Contamination marquée</strong> sur les balcons du centre-ville, du quartier Victor Hugo et des résidences proches du canal de l'Ourcq, avec zones de nidification en corniches.`
-- `services[5].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges[0] (max 1 per item). Segment terrain, concret.
-  - value: `Dépôts liés aux axes routiers (N3, proximité A104) : <strong>finitions sur vitres, entrées</strong> et plinthes à soigner.`
-- `services[5].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> in services[5].specificChallenges[3] (max 1 per item). Met en avant la contrainte d’accès.
-  - value: `Accès en résidences récentes (Mauperthuis) : <strong>digicodes/badges</strong> et stationnement parfois contraint en centre.`
-
-## creteil
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_overcap: li[0] has 2 strong pairs; max 1 per <li>
-  - hubIntro_li_overcap: li[1] has 2 strong pairs; max 1 per <li>
-  - hubIntro_li_overcap: li[2] has 2 strong pairs; max 1 per <li>
-  - hubIntro_li_overcap: li[3] has 2 strong pairs; max 1 per <li>
-  - hubIntro_nonli_overcap: non-<li> text has 11 strong pairs; max 2 outside <li>
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 3 strong pairs; max 1 per <h3> block
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — hubIntro_li_cap
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[0].faqAdditions[0].answer` — faq_rule_violation
-- `services[0].faqAdditions[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[2].answer` — faq_rule_violation
-- `services[0].faqAdditions[3].answer` — faq_rule_violation
-- `services[1].uniqueIntro` — pairs_over_cap(7>2)
-- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[1].faqAdditions[0].answer` — faq_rule_violation
-- `services[1].faqAdditions[2].answer` — faq_rule_violation
-- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].uniqueIntro` — pairs_over_cap(4>2)
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].faqAdditions[0].answer` — faq_rule_violation
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[5].uniqueIntro` — word_limits
-- `services[5].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Corrige les dépassements: max 1 <strong> par <li> (suppression des seconds <strong> dans chaque item) et max 2 <strong> hors <li> (conservation d’un seul <strong> utile dans le 2e <p>, suppression des 11 autres).
-  - value: `<p>Klinova intervient à Créteil pour accompagner syndics de copropriété, gestionnaires immobiliers et bailleurs dans la maintenance des surfaces et l'entretien des équipements collectifs. Nous connaissons les contraintes d'accès autour de l`
-
-## emerainville
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=104; may add 1 (max2 outside li)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=189; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=82; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=72; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=93; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=195; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=143; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — word_limits
-- `faq[1].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `faq[3].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(7>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-✅ Aucun patch
-
-## fontenay-sous-bois
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=134; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=137; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=285; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=131; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=143; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=125; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=351; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=112; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=123; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=130; add 1 in this block (max1)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=356; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=120; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=142; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=148; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=427; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=163; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=157; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=166; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 10)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[0].uniqueIntro` — word_limits
-- `services[0].faqAdditions[0].answer` — forbidden_strong
-- `services[5].uniqueIntro` — pairs_over_cap(10>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-- `services[6].uniqueIntro` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[6].faqAdditions[2].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-✅ Aucun patch
-
-## gagny
-
-### Coverage targets (manques/minima)
-
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — word_limits
-- `services[0].uniqueDeepDive` — forbidden_strong
-- `services[0].faqAdditions[0].answer` — word_limits
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[1].uniqueDeepDive` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[1].faqAdditions[2].answer` — forbidden_strong
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[1].answer` — word_limits
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].faqAdditions[0].answer` — word_limits
-- `services[3].faqAdditions[1].answer` — word_limits
-- `services[3].faqAdditions[3].answer` — word_limits
-- `services[4].uniqueIntro` — word_limits
-- `services[4].faqAdditions[0].answer` — word_limits
-- `services[4].faqAdditions[2].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(7>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-- `services[6].uniqueIntro` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[6].faqAdditions[3].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `services[3].uniqueDeepDive` — op=setField — services[3].uniqueDeepDive block[0] had 2 <strong> pairs; keep only one in the block by removing <strong> around “FFP3” and keep a short, concrete highlight on the handling step.
-  - value: `<h3>1. Confinement et protection</h3> <p>Nos techniciens interviennent en tenue de protection complète : combinaison jetable, gants épais, masque respiratoire de type FFP3 et lunettes de protection. Installation de bâches de protection deva`
-- `services[3].specificChallenges[0]` — op=setField — Add 1 <strong> to meet serviceChallenge coverage for services[3].specificChallenges[0] (max 1 per item).
-  - value: `Accès parfois difficile aux balcons via l'appartement, obligeant à un <strong>confinement strict du passage</strong>.`
-- `services[4].specificChallenges[0]` — op=setField — Add 1 <strong> to meet serviceChallenge coverage for services[4].specificChallenges[0] (max 1 per item).
-  - value: `Traitement des <strong>odeurs d'urine d'animaux</strong> sur les tapis ou canapés, fréquent en pavillon.`
-- `services[5].uniqueDeepDive` — op=substring — services[5].uniqueDeepDive block[1] missing <strong>; add 1 short, concrete highlight within that <h3> block (max 1).
-  - excerpt: `Un brossage mécanique efficace permet de décoller les salissures incrustées,`
-  - replacement: `Un <strong>brossage mécanique efficace</strong> permet de décoller les salissures incrustées,`
-- `services[5].specificChallenges[2]` — op=setField — Add 1 <strong> to meet serviceChallenge coverage for services[5].specificChallenges[2] (max 1 per item).
-  - value: `Dalles béton ternies par le temps et l’humidité : <strong>aspect foncé et irrégulier</strong>.`
-- `services[5].specificChallenges[4]` — op=setField — Add 1 <strong> to meet serviceChallenge coverage for services[5].specificChallenges[4] (max 1 per item).
-  - value: `Bois et composite exposés plein air : <strong>perte d’éclat et salissures incrustées</strong>.`
-- `services[5].faqAdditions[0].answer` — op=setField — FAQ format fix: ensure max 1 <strong> in the answer and keep it in the first <p> (single paragraph here).
-  - value: `<p>La <strong>végétation dense</strong>, l’humidité et une exposition parfois limitée au soleil favorisent l’apparition de mousses, algues et traces noires sur les sols extérieurs, notamment dans les quartiers pavillonnaires.</p>`
-- `services[5].faqAdditions[1].answer` — op=setField — FAQ format fix: reduce to max 1 <strong> in the answer (single paragraph).
-  - value: `<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>`
-- `services[6].specificChallenges[1]` — op=setField — Add 1 <strong> to meet serviceChallenge coverage for services[6].specificChallenges[1] (max 1 per item).
-  - value: `Deux gares RER E (Gagny et Chenay-Gagny) : <strong>stationnement et accès plus tendus</strong> sur ces secteurs, surtout aux heures de pointe.`
-- `services[6].faqAdditions[3].answer` — op=setField — FAQ format fix: ensure max 1 <strong> in the answer (single paragraph) and keep it in the first <p>.
-  - value: `<p>Nous ciblons les zones utiles : <strong>dégraissage cuisine</strong> sur les surfaces accessibles (plans, crédences, façades selon l’état) et détartrage sanitaires sur robinetterie, parois et joints, avec un nettoyage des points de conta`
-- `services[6].faqAdditions[1].answer` — op=substring — Add 1 <strong> inside first <p> for services[6].faqAdditions[1].answer (coverage), keeping max 1.
-  - excerpt: `Oui, si l’accès est simple (clé disponible, digicode/badge transmis)`
-  - replacement: `Oui, si <strong>l’accès est simple</strong> (clé disponible, digicode/badge transmis)`
-
-## gentilly
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_missing: li[2] has 0 strong; words=18; add 1 inside this <li> (max1/li)
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=82; may add 1 (max2 outside li)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=153; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=223; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=92; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=82; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `faq[1].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `faq[3].answer` — word_limits
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Coverage: ajoute 1 <strong> hors <li> (autorisé max2) et ajoute 1 <strong> dans le <li>[2] (max1/li) pour améliorer la scannabilité.
-  - value: `<p>Station RER B Gentilly et Campus Sanofi, aux portes du 14e arrondissement : Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre ancrage local permet une <strong>réactivité adaptée aux c`
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>Le matériel d'injection-extraction se démonte en <strong>éléments transportables</strong>. Nous montons par étapes, avec protection des marches et des murs. Les flexibles permettent de travailler depuis un palier sans encombrer la cage d`
-- `services[0].faqAdditions[1].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>La plupart des taches incrustées — café, tanin, traces organiques — s'atténuent fortement avec un <strong>détachage ciblé</strong> suivi d'une extraction en profondeur. Certaines marques très anciennes peuvent laisser une ombre résiduell`
-- `services[1].specificChallenges[1]` — op=setField — Coverage: ajoute 1 <strong> (max1/item) sur un point terrain concret.
-  - value: `Taches d'huile anciennes <strong>incrustées sur béton brut</strong> dans les résidences du Chaperon Vert.`
-- `services[1].specificChallenges[2]` — op=setField — Coverage: ajoute 1 <strong> (max1/item) pour rendre l’item plus scannable.
-  - value: `<strong>Coordination des accès</strong> lors d'événements sportifs au Stade Géo André.`
-- `services[1].faqAdditions[1].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>Un <strong>dégraissant adapté au revêtement béton</strong> est appliqué sur les zones marquées. L'autolaveuse effectue plusieurs passes pour désincruster les résidus. Les taches très anciennes peuvent nécessiter un traitement complémenta`
-- `services[1].faqAdditions[3].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>Nous privilégions les créneaux tôt le matin ou en soirée, <strong>hors jours de marché</strong> et hors événements sportifs. Le planning est validé avec le syndic ou le gestionnaire pour garantir un accès fluide aux résidents et éviter t`
-- `services[2].uniqueIntro` — op=setField — Coverage: ajoute 1 <strong> (max2) dans uniqueIntro pour améliorer la scannabilité.
-  - value: `<p>Les traces noires s'accumulent sur les garde-corps, le carrelage perd son éclat sous une <strong>pellicule grasse difficile à déloger</strong>. Sur l'avenue Paul Vaillant-Couturier et les axes exposés au trafic routier, cette couche de s`
-- `services[2].uniqueDeepDive` — op=setField — Coverage: ajoute 1 <strong> dans les blocs <h3>[0] et <h3>[2] (max1 par bloc) pour améliorer la scannabilité.
-  - value: `<h3>Sol propre et joints préservés</h3> <p>Le carrelage retrouve sa teinte d'origine, les joints ne présentent plus de traces verdâtres ou noires. Pour y parvenir, un <strong>produit dégraissant adapté au support</strong> est appliqué après`
-- `services[2].specificChallenges[0]` — op=setField — Coverage: ajoute 1 <strong> (max1/item) sur l’action terrain.
-  - value: `Suie grasse liée à la proximité de l'A6a : nécessite un <strong>dégraissant adapté avant brossage</strong>.`
-- `services[2].specificChallenges[3]` — op=setField — Coverage: ajoute 1 <strong> (max1/item) pour rendre l’item plus scannable.
-  - value: `Garde-corps métalliques noircis par la pollution : <strong>traitement spécifique</strong> pour retrouver l'éclat.`
-- `services[2].faqAdditions[3].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>Le <strong>brossage manuel avec une brosse souple</strong> remplace le jet haute pression. Un produit adapté ramollit les salissures avant le passage de la brosse. Le rinçage s'effectue au tuyau basse pression ou au seau pour préserver l`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage: ajoute 1 <strong> dans le 1er <p> (max1/answer) conformément aux règles FAQ.
-  - value: `<p>Un <strong>dégraissant spécifique aux dépôts gras</strong> est appliqué avant le brossage. Le produit dissout la pellicule de suie sans attaquer le carrelage ni les joints. Le rinçage se fait à pression modérée pour éviter toute dégradat`
-
-## gournay-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `faq[1].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `services[0].uniqueIntro` — forbidden_strong
-- `services[0].uniqueDeepDive` — word_limits
-- `services[0].faqAdditions[0].answer` — word_limits
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[0].faqAdditions[3].answer` — word_limits
-- `services[1].uniqueIntro` — forbidden_strong
-- `services[1].uniqueDeepDive` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[2].uniqueIntro` — word_limits
-- `services[2].uniqueDeepDive` — word_limits
-- `services[2].faqAdditions[0].answer` — word_limits
-- `services[2].faqAdditions[1].answer` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[0].answer` — word_limits
-- `services[3].faqAdditions[2].answer` — word_limits
-- `services[4].uniqueIntro` — word_limits
-- `services[4].uniqueDeepDive` — word_limits
-- `services[4].faqAdditions[2].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(8>2)
-- `services[5].uniqueDeepDive` — forbidden_strong
-- `services[6].uniqueIntro` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `services[3].specificChallenges[0]` — op=substring — Coverage target: add 1 <strong> in this specificChallenges item (max 1). Segment court et terrain.
-  - excerpt: `présence d'oiseaux plus régulière et salissures qui s'installent`
-  - replacement: `<strong>présence d'oiseaux plus régulière</strong> et salissures qui s'installent`
-- `services[4].specificChallenges[3]` — op=substring — Coverage target: add 1 <strong> in this specificChallenges item (max 1). Met en avant la contrainte opérationnelle.
-  - excerpt: `nécessité d'adapter la méthode et de conseiller une aération renforcée`
-  - replacement: `<strong>nécessité d'adapter la méthode</strong> et de conseiller une aération renforcée`
-
-## index
-
-### Coverage targets (manques/minima)
-
-✅ Aucun manque détecté
-
-### Violations / Overlimit (TS actuel)
-
-✅ Aucun problème détecté
-
-### Patches proposés (kept)
-
-✅ Aucun patch
-
-## ivry-sur-seine
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=259; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=94; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=78; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 11)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `faq[1].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(11>2)
-- `services[6].uniqueIntro` — word_limits
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Segment court et concret.
-  - value: `<p>Nous utilisons des <strong>injecteurs-extracteurs compacts</strong>, conçus pour passer dans les escaliers de moins d'un mètre de large. Le flexible permet de traiter plusieurs paliers depuis un seul point de stationnement de la machine,`
-- `services[1].uniqueDeepDive` — op=setField — Coverage targets: add 1 <strong> in block[1] and 1 in block[2], max 1 per <h3> block. Segments courts, opérationnels.
-  - value: `<h3>Sol décrassé et sécurisé</h3> <p>Le résultat attendu : un revêtement débarrassé des dépôts gras, des rampes antidérapantes et des rigoles dégagées. Les zones critiques — angles morts, pieds de murs, regards d'évacuation — retrouvent un `
-- `services[1].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> (max 1 par item). Focus terrain sans termes interdits.
-  - value: `Gestion stricte des eaux de lavage vers les <strong>regards existants</strong>, sans rejet sur voirie.`
-- `services[1].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1). Terme technique concret.
-  - value: `<p>Les taches d'huile incrustées sur béton brut nécessitent un <strong>dégraissant alcalin</strong> appliqué avant le passage de l'autolaveuse. Sur les rampes des Étoiles, la porosité du revêtement impose parfois deux passes successives. Le`
-- `services[2].uniqueIntro` — op=setField — Coverage target: uniqueIntro missing; add 1 <strong> (max 2). Mot concret, non marketing.
-  - value: `<p>Comment profiter d'un espace extérieur quand les dépôts noirs s'accumulent semaine après semaine ? Entre le boulevard Paul Vaillant-Couturier et les quais, les balcons du centre-ville et de Petit-Ivry reçoivent en continu particules fine`
-- `services[2].uniqueDeepDive` — op=setField — Coverage target: deepDive block[1] missing; add 1 <strong> in this block (max 1). Segment opérationnel.
-  - value: `<h3>Préparation et protection</h3> <p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries reçoivent une protection pour éviter les projections. On retire ensuite les gros dépôts : feuilles mortes, terre accumulée, débris div`
-- `services[2].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> (max 1 par item). Terme court et concret.
-  - value: `Joints de carrelage <strong>fragilisés</strong> par les variations thermiques et l'humidité de la Seine.`
-- `services[2].specificChallenges[4]` — op=setField — Coverage target: add 1 <strong> (max 1 par item). Point terrain.
-  - value: `Dépôts de <strong>poussières de chantier</strong> liés aux travaux en cours sur la ZAC Confluences.`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1). Met en avant la méthode.
-  - value: `<p>Le béton brut des constructions Renaudie supporte mal la haute pression directe. On privilégie un <strong>brossage mécanique</strong> avec produit alcalin, suivi d'un rinçage à pression modérée. Les arêtes vives et les angles sont traité`
-- `services[2].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1). Segment court, concret.
-  - value: `<p>Sur une loggia fermée, la haute pression risque de projeter de l'eau sur les menuiseries et à l'intérieur. On utilise plutôt un <strong>nettoyage manuel</strong> ou basse pression, avec raclette pour les vitrages. Le sol est traité au ba`
-- `services[3].uniqueDeepDive` — op=setField — Coverage targets: add 1 <strong> in block[1] and 1 in block[2], max 1 per <h3> block. Terme terrain, sans promesse.
-  - value: `<h3>Balcon assaini et désinfecté</h3> <p>Le résultat visé : un sol propre, des garde-corps débarrassés de toute trace, une odeur neutralisée. La désinfection virucide élimine les agents pathogènes présents dans les fientes séchées.</p> <h3>`
-- `services[3].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> (max 1 par item). Point concret.
-  - value: `Proximité du Parc des Cormailles : <strong>concentration de pigeons</strong> et dépôts fréquents sur les balcons alentour.`
-- `services[3].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> (max 1 par item). Segment court.
-  - value: `Corniches en briques anciennes offrant des <strong>rebords propices</strong> à l'installation des oiseaux.`
-- `services[3].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1). Point terrain.
-  - value: `<p>Les fientes et résidus sont conditionnés dans des <strong>sacs étanches</strong> dès le ramassage. En centre-ville, nous stationnons au plus près pour limiter les manipulations. L'évacuation se fait en fin d'intervention, sans stockage s`
-
-## joinville-le-pont
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=130; may add 1 (max2 outside li)
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +1, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `citySpecificChallenges[0]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `citySpecificChallenges[2]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=180; add 1 (max2)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=83; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=75; add 1 in this block (max1)
-- `services[0].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=154; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=81; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=78; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=144; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=71; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=188; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=80; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=126; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 9)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=69; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 3 strong pairs; max 1 per <h3> block
-  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[5].uniqueIntro` — pairs_over_cap(9>2)
-- `services[6].uniqueIntro` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `faq[0].answer` — op=setField — FAQ: corriger le format (max 1 <strong> par answer) en retirant le second <strong> tout en gardant un repère scannable dans le 1er <p>.
-  - value: `<p>Les abords de la gare RER A de Joinville-le-Pont et l'axe de la Nationale 4 (Avenue des Canadiens) présentent des <strong>contraintes de stationnement</strong> et de circulation dense aux heures de pointe. Nous planifions nos interventio`
-- `faq[1].answer` — op=setField — FAQ: corriger le format (max 1 <strong>) et éviter de mettre en avant une notion assimilable à une gratuité/frais dans <strong>.
-  - value: `<p>Oui. Nous nous déplaçons sans frais dans tous les quartiers de Joinville-le-Pont, de Polangis au quartier Europe, pour établir un diagnostic précis. Cette visite permet d'évaluer la surface à traiter, le type de revêtement, les contraint`
-- `faq[3].answer` — op=setField — FAQ: corriger le format (max 1 <strong>) en conservant un repère opérationnel scannable dans le 1er <p>.
-  - value: `<p>Oui. Nous mettons en place des contrats d'entretien annuels pour les syndics et gestionnaires souhaitant planifier les interventions de manière préventive (nettoyage de moquettes tous les 12 à 18 mois, décrassage de parkings semestriel o`
-- `citySpecificChallenges[0]` — op=setField — citySpecificChallenges: ajouter 1 <strong> (max 1 par item) pour améliorer la scannabilité sur un enjeu terrain.
-  - value: `<strong>Humidité persistante et dépôts verts</strong> sur les balcons et terrasses des quartiers Polangis, Marne et Île Fanac en raison de la proximité immédiate des bords de Marne et du canal, générant mousses et traces verdâtres sur les s`
-- `citySpecificChallenges[2]` — op=setField — citySpecificChallenges: ajouter 1 <strong> (max 1 par item) sur un point concret lié aux axes routiers.
-  - value: `<strong>Encrassement accéléré des halls et parkings</strong> des copropriétés du quartier Paris et de l'axe Avenue des Canadiens en raison de la proximité de la Nationale 4 et des axes A86-A4, générant des particules fines et des poussières`
-- `services[0].uniqueIntro` — op=substring — services[0].uniqueIntro: ajouter 1 <strong> (max 2) sur un signal terrain court et concret.
-  - excerpt: `poussières fines remontées depuis l'Avenue des Canadiens, marques grises`
-  - replacement: `<strong>poussières fines remontées depuis l'Avenue des Canadiens</strong>, marques grises`
-- `services[0].specificChallenges[1]` — op=setField — services[0].specificChallenges: ajouter 1 <strong> (max 1 par item) sur la cause principale d'encrassement.
-  - value: `Les <strong>particules fines remontées depuis la Nationale 4</strong> et l'Avenue des Canadiens s'incrustent dans les fibres et nécessitent une extraction puissante pour un résultat durable.`
-- `services[0].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - excerpt: `subissent effectivement un flux piéton quotidien important qui accélère`
-  - replacement: `subissent effectivement un <strong>flux piéton quotidien important</strong> qui accélère`
-- `services[0].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur un point opérationnel.
-  - excerpt: `Le matériel est dimensionné selon la surface et les contraintes d'accès`
-  - replacement: `Le matériel est dimensionné selon la surface et les <strong>contraintes d'accès</strong>`
-- `services[1].uniqueIntro` — op=substring — services[1].uniqueIntro: ajouter 1 <strong> (max 2) sur un problème terrain concret.
-  - excerpt: `Les taches d'hydrocarbures résistent, les sols deviennent glissants`
-  - replacement: `Les <strong>taches d'hydrocarbures</strong> résistent, les sols deviennent glissants`
-- `services[1].uniqueDeepDive` — op=setField — services[1].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) pour la couverture, sans dépasser le max.
-  - value: `<h3>Coordination préalable et organisation par secteurs</h3> <p>Avant toute intervention, nous validons avec le syndic ou le gestionnaire les modalités d'accès (badge, horaires, présence de véhicules à déplacer) et établissons un <strong>pl`
-- `services[1].specificChallenges[0]` — op=setField — services[1].specificChallenges: ajouter 1 <strong> (max 1) sur le type de salissure.
-  - value: `Les parkings situés à proximité de l'Avenue des Canadiens et de la Nationale 4 subissent un <strong>encrassement rapide par poussières noires grasses</strong> nécessitant des dégraissants renforcés.`
-- `services[1].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur l'organisation.
-  - excerpt: `Nous travaillons par zones successives : pendant que nous traitons`
-  - replacement: `Nous travaillons par <strong>zones successives</strong> : pendant que nous traitons`
-- `services[1].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur la cause locale.
-  - excerpt: `génère des poussières routières et un flux de véhicules quotidien`
-  - replacement: `génère des <strong>poussières routières</strong> et un flux de véhicules quotidien`
-- `services[2].uniqueIntro` — op=substring — services[2].uniqueIntro: ajouter 1 <strong> (max 2) sur un symptôme visible.
-  - excerpt: `dépôts verts dans les angles, joints noircis, traces de pluie`
-  - replacement: `<strong>dépôts verts dans les angles</strong>, joints noircis, traces de pluie`
-- `services[2].uniqueDeepDive` — op=setField — services[2].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (2 blocs requis par target, ici 3 blocs) sans dépasser le max.
-  - value: `<h3>Préparation et protection des abords</h3> <p>Nous protégeons la porte-fenêtre et les menuiseries avec des bâches pour éviter les projections. Les plantes, le mobilier et les objets sont déplacés ou couverts selon les indications du clie`
-- `services[2].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur la cause locale.
-  - excerpt: `L'humidité fluviale et l'ombre favorisent le développement de mousses`
-  - replacement: `<strong>L'humidité fluviale et l'ombre</strong> favorisent le développement de mousses`
-- `services[2].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur le geste clé.
-  - excerpt: `Nous dirigeons systématiquement l'eau vers l'évacuation du balcon`
-  - replacement: `Nous dirigeons systématiquement l'eau vers <strong>l'évacuation du balcon</strong>`
-- `services[3].uniqueIntro` — op=substring — services[3].uniqueIntro: ajouter 1 <strong> (max 2) sur un risque opérationnel concret.
-  - excerpt: `Un simple balayage à sec aggrave la situation en libérant`
-  - replacement: `Un <strong>simple balayage à sec</strong> aggrave la situation en libérant`
-- `services[3].specificChallenges[1]` — op=setField — services[3].specificChallenges: ajouter 1 <strong> (max 1) sur la contrainte logistique.
-  - value: `L'accès aux balcons en étage dans les immeubles collectifs impose une <strong>organisation précise (ascenseurs, badges)</strong> et un conditionnement étanche des déchets pour éviter toute contamination des circulations communes.`
-- `services[3].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur le geste à risque.
-  - excerpt: `Le simple fait de balayer à sec disperse ces agents`
-  - replacement: `Le <strong>simple fait de balayer à sec</strong> disperse ces agents`
-- `services[3].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur le conditionnement.
-  - excerpt: `conditionnés dans des sacs étanches résistants à double paroi`
-  - replacement: `conditionnés dans des <strong>sacs étanches résistants à double paroi</strong>`
-- `services[4].uniqueIntro` — op=substring — services[4].uniqueIntro: ajouter 1 <strong> (max 2) sur une liste concrète et courte.
-  - excerpt: `poussières, miettes, taches, poils d'animaux, et parfois`
-  - replacement: `<strong>poussières, miettes, taches</strong>, poils d'animaux, et parfois`
-- `services[4].uniqueDeepDive` — op=setField — services[4].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le max.
-  - value: `<h3>Diagnostic textile et identification des taches</h3> <p>Le technicien examine la nature du tissu, identifie les taches visibles et teste la solidité des couleurs sur une zone discrète avant tout traitement. <strong>Les taches organiques`
-- `services[4].specificChallenges[2]` — op=setField — services[4].specificChallenges: ajouter 1 <strong> (max 1) sur le contexte local.
-  - value: `Le séchage peut être ralenti dans les <strong>pièces humides proches de la Marne</strong> ou du canal, nécessitant des consignes précises.`
-- `services[4].faqAdditions[2].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sans mettre en avant des délais.
-  - excerpt: `selon la ventilation et l'humidité ambiante. Nous recommandons`
-  - replacement: `selon la <strong>ventilation et l'humidité ambiante</strong>. Nous recommandons`
-- `services[4].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) sur le mécanisme concret.
-  - excerpt: `L'extraction complète des résidus organiques et le rinçage`
-  - replacement: `<strong>L'extraction complète des résidus organiques</strong> et le rinçage`
-
-## lagny-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[2].answer` — forbidden_strong
-- `services[0].uniqueIntro` — word_limits
-- `services[0].faqAdditions[2].answer` — word_limits
-- `services[1].uniqueIntro` — word_limits
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[1].faqAdditions[2].answer` — forbidden_strong
-- `services[2].uniqueIntro` — word_limits
-- `services[2].uniqueDeepDive` — word_limits
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[2].answer` — word_limits
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].faqAdditions[0].answer` — word_limits
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `services[3].uniqueDeepDive` — op=substring — Coverage target: services[3].uniqueDeepDive block[2] missing 1 <strong>; add a short, concrete strong within the block (max 1).
-  - excerpt: `Nettoyage des surfaces (sol, garde-corps, murs) avec des produits adaptés.`
-  - replacement: `Nettoyage des surfaces (sol, garde-corps, murs) avec des <strong>produits adaptés</strong>.`
-- `services[3].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1 per item) to meet service challenge coverage.
-  - value: `<strong>Corrosion des supports métalliques</strong> comme les garde-corps et rambardes due à l'acidité des fientes, exigeant un nettoyage et une protection adaptés.`
-- `services[5].uniqueDeepDive` — op=setField — Coverage targets: services[5].uniqueDeepDive blocks[0..2] each missing 1 <strong>; add exactly 1 short, concrete strong per <h3> block (max 1).
-  - value: `<h3>Diagnostic du support et préparation</h3> <p>Avant toute intervention, le revêtement est identifié et son état évalué. <strong>Le mobilier, les pots et les éléments décoratifs</strong> sont déplacés ou protégés. Les zones adjacentes (fa`
-- `services[5].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1 per item) to improve service challenge coverage.
-  - value: `Terrasses proches des bords de Marne : <strong>humidité persistante</strong> favorisant la repousse rapide des mousses et algues.`
-- `services[5].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1 per item) to improve service challenge coverage.
-  - value: `Résidences récentes avec carrelage ou grès cérame : <strong>reliefs de surface</strong> retenant les salissures et traces noires.`
-- `services[6].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1 per item) to improve service challenge coverage.
-  - value: `Jour de marché Place de la Fontaine : <strong>affluence et accès plus compliqué</strong> (choix du créneau).`
-- `services[6].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1 per item) to improve service challenge coverage.
-  - value: `Accès gare / pont : <strong>flux pendulaires côté Lagny-Thorigny</strong>, congestion possible autour du Pont de Fer.`
-- `services[6].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> of this answer (max 1 per answer) to meet service FAQ coverage.
-  - excerpt: `Nous cadrons l’accès (digicode/clé), l’étage et le périmètre attendu,`
-  - replacement: `Nous cadrons <strong>l’accès (digicode/clé), l’étage et le périmètre attendu</strong>,`
-
-## le-perreux-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=65; add 1 in this block (max1)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — word_limits
-- `faq[3].answer` — forbidden_strong
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[6].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Segment court et terrain, sans termes interdits.
-  - value: `<p>Le délai dépend de la méthode et de l’aération possible. En injection-extraction, on vise une humidité résiduelle faible grâce à l’aspiration, puis on recommande <strong>aération et limitation du passage</strong>. En basse humidité, la r`
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Met en avant un point opérationnel scannable.
-  - value: `<p>On prévoit <strong>un acheminement compact</strong> et des protections dès l’entrée. Dans les bâtisses anciennes divisées, on limite les allers-retours, on sécurise les angles/plinthes, puis on travaille par zones (paliers, volées). Le b`
-- `services[1].uniqueIntro` — op=setField — UniqueIntro overcap: réduire à max 2 <strong> en retirant le <strong> autour de A86 (terme court, non essentiel à la scannabilité).
-  - value: `<p>Quand un parking commence à “noircir”, le constat est généralement immédiat : poussière grasse, traces d’hydrocarbures, marquages qui se lisent moins, et zones glissantes sur les passages. Au Perreux-sur-Marne, on retrouve ce scénario da`
-- `services[1].uniqueDeepDive` — op=setField — DeepDive block[2] missing: ajout d’1 <strong> dans le bloc Zone C (max 1 par bloc <h3>). Segment concret et opérationnel.
-  - value: `<h3>Zone A — Préparation et sécurité.</h3> <p> Diagnostic du revêtement (béton lissé, résine, peinture) et repérage des évacuations. Balayage/ramassage, puis balisage et zonage pour maintenir une circulation contrôlée et organiser la rotati`
-- `services[1].specificChallenges[0]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Met en avant la cause terrain.
-  - value: `Les <strong>dépôts gras liés à l’A86</strong> se fixent vite sur béton lissé, surtout en sous-sol.`
-- `services[1].specificChallenges[3]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Point organisationnel clé, scannable.
-  - value: `Sans <strong>plan de rotation véhicules</strong>, le lavage mécanisé perd en efficacité et en sécurité.`
-- `services[1].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Met en avant le choix matériel.
-  - value: `<p>Le plus souvent, <strong>l’autolaveuse est la base</strong> : elle brosse et récupère l’eau sale en continu, ce qui limite les flaques. La haute pression intervient en complément sur zones très marquées ou reliefs spécifiques, avec une p`
-- `services[1].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Résume l’action terrain.
-  - value: `<p>On combine <strong>dégraissage ciblé et lavage mécanisé</strong>, puis on insiste sur les zones de trafic et les virages. Les dépôts “noirs” sont souvent un mélange poussière + gras : sans produit adapté et sans récupération efficace, il`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Fait ressortir le problème récurrent.
-  - value: `Proche des Bords de Marne, les <strong>dépôts verts reviennent vite</strong> sur sols humides et ombragés.`
-- `services[2].specificChallenges[1]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Met l’accent sur le geste.
-  - value: `Les joints noircis exigent <strong>un brossage précis</strong> plus qu’un lavage “fort”.`
-- `services[2].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Point de départ concret.
-  - value: `<p>On commence par <strong>identifier le support et l’état des joints</strong>. Sur carrelage, on vise l’efficacité sans décoller les joints ; sur béton, on contrôle l’agressivité pour éviter d’ouvrir la surface. Si une haute pression est u`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Met en avant la méthode sans promesse.
-  - value: `<p>On évite la sur-pression et on privilégie <strong>un produit adapté + brossage</strong>, puis un rinçage maîtrisé. Sur joints fragiles, la clé est d’agir progressivement plutôt que “d’attaquer” le support. On explique aussi les limites :`
-- `services[3].specificChallenges[0]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Cause terrain claire.
-  - value: `Autour du Pont de Bry, la <strong>présence d’oiseaux</strong> peut rendre les souillures récurrentes.`
-- `services[3].specificChallenges[1]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Met en avant la contrainte de geste.
-  - value: `Les supports anciens (corniches, ferronneries) demandent <strong>une action contrôlée</strong> pour ne pas abîmer.`
-- `services[3].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Met en avant la protection initiale.
-  - value: `<p>On met en place <strong>un bâchage</strong> et on travaille “humide” dès le départ pour éviter l’envol de particules. Les zones de passage (seuil, baie vitrée) sont protégées, et le ramassage se fait avant tout brossage. Le but est de co`
-- `services[3].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Liste d’étapes terrain, scannable.
-  - value: `<p>On ne “saute” pas les étapes : <strong>confinement, humidification, retrait, nettoyage</strong>, puis désinfection virucide/bactéricide avec temps de contact respecté. Le temps exact dépend du produit utilisé, mais l’idée reste la même :`
-- `services[4].specificChallenges[3]` — op=setField — Coverage target serviceChallenge: ajout d’1 <strong> (max 1 par item). Met en avant la contrainte d’exploitation.
-  - value: `Sur l’avenue du Maréchal Joffre, <strong>la discrétion et le timing</strong> comptent pour ne pas perturber l’accueil.`
-- `services[4].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Résume la méthode sans termes interdits.
-  - value: `<p>On combine <strong>un pré-traitement ciblé et une extraction sérieuse</strong>, car l’odeur est souvent “dans” la fibre, pas seulement en surface. Selon le cas, on insiste sur les zones imprégnées (assise, entrée, bords de tapis) et on d`
-- `services[4].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Point diagnostic concret.
-  - value: `<p>On vérifie <strong>la nature du tissu</strong>, la tenue des couleurs et les zones fragiles, puis on identifie les taches (café, tanin, gras, urine). Ensuite, on choisit l’approche : injection-extraction pour un nettoyage profond, ou dét`
-
-## le-plessis-trevise
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_missing: li[0] has 0 strong; words=24; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[1] has 0 strong; words=16; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[2] has 0 strong; words=17; add 1 inside this <li> (max1/li)
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=173; add 1 (max2)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=186; add 1 (max2)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=73; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=76; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=167; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `faq[3].answer` — op=setField — FAQ format fix + forbidden-in-strong: remove <strong> around timeframes (24-48h, 48-72h) and ensure max 1 <strong> (here: none) in the answer.
-  - value: `<p>Selon la nature : assainissement balcon (24-48h), nettoyage après sinistre (devis rapide, intervention 48-72h). Nous évaluons d'abord la situation, proposons un protocole clair et un délai réaliste. Pas de promesse "immédiate", mais réac`
-- `services[0].uniqueDeepDive` — op=setField — DeepDive coverage: add 1 <strong> in block[1] (Injection-extraction par zones) while keeping max 1 <strong> per <h3> block.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Nous commençons par identifier le type de moquette (dalles textiles, velours ras, bouclée) et évaluer l'état des salissures : taches localisées, encrassement général, odeurs. Nous protégeons <strong>les`
-- `services[0].faqAdditions[0].answer` — op=substring — Service FAQ coverage: add exactly 1 <strong> inside the first <p> (max1/answer) with a short, concrete segment.
-  - excerpt: `Nous utilisons un injecteur-extracteur compact et un aspirateur eau/poussières`
-  - replacement: `Nous utilisons un <strong>injecteur-extracteur compact</strong> et un aspirateur eau/poussières`
-- `services[0].faqAdditions[1].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting the actionable method.
-  - excerpt: `Pour l'Espace Paul Valéry, nous préconisons l'injection-extraction avec détachage préalable,`
-  - replacement: `Pour l'Espace Paul Valéry, nous préconisons <strong>l'injection-extraction avec détachage préalable</strong>,`
-- `services[1].uniqueIntro` — op=substring — UniqueIntro coverage: add 1 <strong> (max2) to make the key on-site issues scannable.
-  - excerpt: `accumulent rapidement des traces d'huile, des graviers et des dépôts gris`
-  - replacement: `accumulent rapidement <strong>des traces d'huile, des graviers</strong> et des dépôts gris`
-- `services[1].specificChallenges[0]` — op=setField — Service specificChallenges coverage: add max 1 <strong> to highlight the concrete operational constraint.
-  - value: `Trafic intense les jours de marché (mercredi et samedi) : <strong>coordination d'accès</strong> et horaires décalés nécessaires.`
-- `services[1].specificChallenges[3]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to emphasize the main local constraint.
-  - value: `Sensibilité résidentielle forte : minimiser <strong>les nuisances sonores</strong> et la gêne aux usagers pendant l'intervention.`
-- `services[1].faqAdditions[0].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), focusing on the key constraint.
-  - excerpt: `exigent une gestion stricte des eaux de lavage via les évacuations existantes,`
-  - replacement: `exigent une <strong>gestion stricte des eaux de lavage</strong> via les évacuations existantes,`
-- `services[1].faqAdditions[3].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting a practical check.
-  - excerpt: `Nous vérifions avant intervention que les évacuations ne sont pas obstruées.`
-  - replacement: `Nous vérifions avant intervention que <strong>les évacuations ne sont pas obstruées</strong>.`
-- `services[2].uniqueIntro` — op=substring — UniqueIntro coverage: add 1 <strong> (max2) to surface the most visible issues.
-  - excerpt: `l'accumulation de dépôts verts, traces grises et salissures incrustées`
-  - replacement: `l'accumulation de <strong>dépôts verts, traces grises</strong> et salissures incrustées`
-- `services[2].specificChallenges[0]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to make the key exposure factor scannable.
-  - value: `Mousses et dépôts verts tenaces sur <strong>expositions nord/est</strong> proches des parcs municipaux.`
-- `services[2].faqAdditions[0].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), focusing on the technique.
-  - excerpt: `suivi d'un brossage doux pour préserver les joints.`
-  - replacement: `suivi d'un <strong>brossage doux</strong> pour préserver les joints.`
-- `services[3].faqAdditions[0].answer` — op=setField — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), focusing on the concrete risk element (not a guarantee or timing).
-  - value: `<p>Oui, les fientes contiennent des <strong>agents pathogènes</strong> (histoplasmose, cryptococcose) dangereux surtout pour enfants et immunodéprimés. Risques : infections respiratoires, allergies. Action rapide : confinement de la zone, p`
-- `services[3].faqAdditions[2].answer` — op=setField — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting the key procedural point.
-  - value: `<p>Nous appliquons un produit virucide/bactéricide homologué avec <strong>temps de contact respecté</strong> (selon produit, 10-15 min). Cela élimine 99,9% des agents pathogènes. Rinçage final à l'eau claire, puis aération 24h avant réutili`
-- `services[4].uniqueDeepDive` — op=setField — DeepDive coverage: add 1 <strong> in block[0] (max1 per <h3> block) to improve scanability with a concrete pitfall.
-  - value: `<h3>1. Diagnostic textile et repérage des zones à traiter en priorité</h3> <p>On commence par identifier les matières (tissu, microfibre, velours, laine/synthétique), la sensibilité des couleurs et l’état réel des fibres. Le diagnostic cibl`
-- `services[4].specificChallenges[0]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to highlight the main textile type encountered.
-  - value: `Textiles très sollicités : <strong>canapés en tissu/microfibre</strong> et tapis de salon typiques des pavillons et grands appartements.`
-- `services[4].faqAdditions[2].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting the core mechanism.
-  - excerpt: `les odeurs diminuent nettement quand on extrait la salissure et les résidus incrustés.`
-  - replacement: `les odeurs diminuent nettement quand on <strong>extrait la salissure</strong> et les résidus incrustés.`
-- `services[5].uniqueDeepDive` — op=setField — DeepDive coverage: add 1 <strong> in each missing block[0..2] (max1 per <h3> block) to improve scanability with concrete operational points.
-  - value: `<h3>Diagnostic et préparation de la terrasse</h3> <p>Le revêtement est identifié et son état contrôlé avant toute intervention. Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les façades, seuils et menuise`
-- `services[5].specificChallenges[3]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to highlight the key material risk.
-  - value: `Terrasses en bois ou composite : <strong>sensibilité aux rayures</strong> et aux UV, nécessitant un brossage et des produits adaptés.`
-- `services[5].faqAdditions[0].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting the concrete cause.
-  - excerpt: `favorisent le développement de biofilms (mousses, algues) rendant les terrasses glissantes`
-  - replacement: `favorisent le développement de <strong>biofilms (mousses, algues)</strong> rendant les terrasses glissantes`
-- `services[5].faqAdditions[2].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), focusing on the main driver rather than the timeframe.
-  - excerpt: `La fréquence dépend toutefois de l’exposition à l’ombre, de la végétation environnante`
-  - replacement: `La fréquence dépend toutefois de <strong>l’exposition à l’ombre</strong>, de la végétation environnante`
-- `services[6].uniqueIntro` — op=substring — UniqueIntro coverage: add 1 <strong> (max2) to surface the most common on-site residues.
-  - excerpt: `Poussières de chantier, traces de peinture, résidus de colle, salissures accumulées`
-  - replacement: `<strong>Poussières de chantier, traces de peinture</strong>, résidus de colle, salissures accumulées`
-- `services[6].uniqueDeepDive` — op=setField — DeepDive coverage: add 1 <strong> in each missing block[0] and block[1] (max1 per <h3> block) to highlight concrete steps.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Avant toute intervention, nous établissons l'état réel du bien : type de salissures (poussière de chantier, traces de peinture, résidus), surfaces fragiles (parquet ancien, carrelage délicat), accès (ét`
-- `services[6].specificChallenges[0]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to emphasize the operational need (without highlighting time promises).
-  - value: `Délais d'état des lieux souvent comprimés : <strong>coordination requise</strong> avec agences avenue Ardouin.`
-- `services[6].specificChallenges[2]` — op=setField — Service specificChallenges coverage: add 1 <strong> (max1/item) to make the key constraint scannable.
-  - value: `Accès étages et ascenseurs parfois petits dans les résidences anciennes : <strong>organisation logistique</strong> critique.`
-- `services[6].faqAdditions[0].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), highlighting the operational difference.
-  - excerpt: `Nous utilisons des techniques ciblées par surface (décapage doux parquet, détachage chimique carrelage)`
-  - replacement: `Nous utilisons des <strong>techniques ciblées par surface</strong> (décapage doux parquet, détachage chimique carrelage)`
-- `services[6].faqAdditions[3].answer` — op=substring — Service FAQ coverage: add 1 <strong> in first <p> only (max1/answer), focusing on a concrete process step (not a guarantee claim).
-  - excerpt: `Contrôle qualité systématique avant remise.`
-  - replacement: `<strong>Contrôle qualité systématique</strong> avant remise.`
-
-## le-raincy
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=88; may add 1 (max2 outside li)
-- `services[0].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=93; add 1 (max2)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=82; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=98; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=73; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[2].answer` — word_limits
-- `services[0].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[5].uniqueIntro` — pairs_over_cap(5>2)
-- `services[6].uniqueIntro` — pairs_over_cap(5>2)
-- `services[6].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-
-### Patches proposés (kept)
-
-- `services[5].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> de la réponse FAQ (max 1), pour atteindre la couverture demandée.
-  - excerpt: `Nous utilisons un produit à pH neutre qui décolle les salissures`
-  - replacement: `Nous utilisons <strong>un produit à pH neutre</strong> qui décolle les salissures`
-- `services[5].faqAdditions[3].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> de la réponse FAQ (max 1), pour atteindre la couverture demandée.
-  - excerpt: `Notre protocole associe un produit désincrustant adapté, un brossage mécanique`
-  - replacement: `Notre protocole associe <strong>un produit désincrustant adapté</strong>, un brossage mécanique`
-
-## livry-gargan
-
-### Coverage targets (manques/minima)
-
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[1].faqAdditions[3].answer` — forbidden_strong
-- `services[6].uniqueIntro` — pairs_over_cap(5>2)
-
-### Patches proposés (kept)
-
-- `services[3].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> in services[3].specificChallenges[0] (max 1 per item). Segment court et terrain, sans termes interdits.
-  - value: `<strong>Forte densité de pigeons</strong> autour des zones d'eau (Lac de Sévigné) cherchant des nichoirs en hauteur.`
-- `services[6].uniqueIntro` — op=setField — Coverage target: uniqueIntro overcap (found 5, max 2). Remove extra <strong> around district names/axe to keep only 1 strong here (<=2) while preserving text exactly outside tags.
-  - value: `<p>À Livry-Gargan, on change vite de configuration en quelques rues : maisons avec jardin côté Jacob ou Sully-Fragonard, collectifs autour de Danton, et zones plus denses le long de l’Avenue Aristide-Briand (RN3). Cette diversité impose un `
-
-## maisons-alfort
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=104; may add 1 (max2 outside li)
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +1, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `citySpecificChallenges[1]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `citySpecificChallenges[0]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=196; add 1 (max2)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=83; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=169; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=87; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=76; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=159; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=102; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=164; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=78; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=88; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=200; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=81; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=86; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=67; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[5].uniqueIntro` — pairs_over_cap(4>2)
-
-### Patches proposés (kept)
-
-- `faq[0].answer` — op=setField — FAQ: corriger le format (max 1 <strong> par answer). Conserver un seul segment court dans le 1er <p>.
-  - value: `<p>Les abords des gares RER D et les axes comme la RD19 présentent effectivement des <strong>contraintes de stationnement</strong> et de circulation dense aux heures de pointe. Nous planifions nos interventions en tenant compte de ces param`
-- `faq[1].answer` — op=setField — FAQ: corriger le format (max 1 <strong> par answer) et éviter de mettre en <strong> un élément assimilable à une condition tarifaire ('sans frais').
-  - value: `<p>Oui. Nous nous déplaçons sans frais dans tous les quartiers de Maisons-Alfort, du Charentonneau à Liberté-Vert-de-Maisons, pour établir un diagnostic précis. Cette visite permet d'évaluer la surface à traiter, le type de revêtement, les `
-- `faq[3].answer` — op=setField — FAQ: corriger le format (max 1 <strong> par answer) en conservant un seul point saillant dans le 1er <p>.
-  - value: `<p>Chaque passage fait l'objet d'un <strong>compte-rendu écrit</strong> transmis au syndic ou au gestionnaire, précisant les surfaces traitées, les produits utilisés, les éventuelles observations techniques (siphon bouché, fissure, marquage`
-- `citySpecificChallenges[1]` — op=substring — citySpecificChallenges: ajouter 1 <strong> (max 1 par item) pour rendre l'item plus scannable.
-  - excerpt: `Flux piétons quotidiens massifs autour des trois stations de métro`
-  - replacement: `<strong>Flux piétons quotidiens massifs</strong> autour des trois stations de métro`
-- `services[0].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `Le matériel est dimensionné selon la surface et les contraintes d'accès`
-  - replacement: `Le matériel est dimensionné selon la surface et les <strong>contraintes d'accès</strong>`
-- `services[0].faqAdditions[3].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `Nous vous fournissons un modèle d'affichage simple indiquant la date`
-  - replacement: `Nous vous fournissons un <strong>modèle d'affichage</strong> simple indiquant la date`
-- `services[1].uniqueIntro` — op=substring — services[1].uniqueIntro: ajouter 1 <strong> (max 2) sur un problème terrain récurrent.
-  - excerpt: `la poussière noire grasse venue des axes A4 et A86`
-  - replacement: `la <strong>poussière noire grasse</strong> venue des axes A4 et A86`
-- `services[1].uniqueDeepDive` — op=setField — services[1].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le cap.
-  - value: `<h3>Diagnostic technique des revêtements et des évacuations</h3> <p>Le technicien inspecte le type de sol (béton brut, peinture, résine), l'état des marquages, la présence et le fonctionnement des siphons et des caniveaux d'évacuation. Dans`
-- `services[1].specificChallenges[0]` — op=substring — services[1].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `subissent un encrassement rapide par poussières noires grasses nécessitant`
-  - replacement: `subissent un <strong>encrassement rapide</strong> par poussières noires grasses nécessitant`
-- `services[1].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `génère des poussières noires grasses plus tenaces que dans les zones`
-  - replacement: `génère des <strong>poussières noires grasses</strong> plus tenaces que dans les zones`
-- `services[1].faqAdditions[2].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `peuvent laisser une trace résiduelle malgré le dégraissant et la haute`
-  - replacement: `peuvent laisser une <strong>trace résiduelle</strong> malgré le dégraissant et la haute`
-- `services[2].uniqueIntro` — op=substring — services[2].uniqueIntro: ajouter 1 <strong> (max 2) sur une contrainte locale concrète.
-  - excerpt: `La proximité des bords de Marne génère une humidité persistante`
-  - replacement: `La proximité des bords de Marne génère une <strong>humidité persistante</strong>`
-- `services[2].uniqueDeepDive` — op=setField — services[2].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le cap.
-  - value: `<h3>Identification des supports et protection des menuiseries</h3> <p>Le technicien examine la nature des revêtements (carrelage grès cérame, béton brut, dalle composite, pierre naturelle) et l'état des <strong>joints d'étanchéité</strong>.`
-- `services[2].specificChallenges[0]` — op=substring — services[2].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `génère une humidité persistante favorisant mousses et dépôts verts`
-  - replacement: `génère une <strong>humidité persistante</strong> favorisant mousses et dépôts verts`
-- `services[2].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `Si le balcon n'a pas d'évacuation fonctionnelle ou si la pente`
-  - replacement: `Si le balcon n'a pas <strong>d'évacuation fonctionnelle</strong> ou si la pente`
-- `services[2].faqAdditions[3].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `selon l'ensoleillement, la ventilation et la porosité du revêtement`
-  - replacement: `selon l'ensoleillement, la ventilation et la <strong>porosité du revêtement</strong>`
-- `services[3].uniqueIntro` — op=substring — services[3].uniqueIntro: ajouter 1 <strong> (max 2) sur un signal terrain concret.
-  - excerpt: `odeur acide qui pénètre dans le logement dès qu'on entrouvre`
-  - replacement: `<strong>odeur acide</strong> qui pénètre dans le logement dès qu'on entrouvre`
-- `services[3].uniqueDeepDive` — op=setField — services[3].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le cap.
-  - value: `<h3>Équipements de protection et confinement du chantier</h3> <p>Le technicien revêt une combinaison jetable intégrale, des gants résistants, un masque respiratoire FFP2 et des lunettes de protection avant toute approche du balcon souillé. `
-- `services[3].specificChallenges[1]` — op=substring — services[3].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `impose une organisation précise (ascenseurs, badges, coordination avec gardien)`
-  - replacement: `impose une <strong>organisation précise</strong> (ascenseurs, badges, coordination avec gardien)`
-- `services[3].faqAdditions[1].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `Après séchage complet (24 heures recommandées), le balcon est totalement`
-  - replacement: `Après <strong>séchage complet</strong> (24 heures recommandées), le balcon est totalement`
-- `services[3].faqAdditions[3].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `conditionnés dans des sacs étanches résistants à double paroi`
-  - replacement: `conditionnés dans des <strong>sacs étanches</strong> résistants à double paroi`
-- `services[4].uniqueIntro` — op=substring — services[4].uniqueIntro: ajouter 1 <strong> (max 2) sur un détail concret et fréquent.
-  - excerpt: `miettes coincées entre les coussins, taches de café ou de chocolat`
-  - replacement: `<strong>miettes coincées entre les coussins</strong>, taches de café ou de chocolat`
-- `services[4].uniqueDeepDive` — op=setField — services[4].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le cap.
-  - value: `<h3>Diagnostic textile et identification des taches</h3> <p>Le technicien examine la nature du tissu (coton, laine, synthétique, velours, microfibre), identifie les taches visibles (vin, café, graisse, urine d'animal, encre) et teste la sol`
-- `services[4].specificChallenges[2]` — op=substring — services[4].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `Le séchage peut être ralenti dans les pièces humides ou mal`
-  - replacement: `Le <strong>séchage peut être ralenti</strong> dans les pièces humides ou mal`
-- `services[4].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `et l'aspiration puissante éliminent une grande partie des acariens`
-  - replacement: `et l'<strong>aspiration puissante</strong> éliminent une grande partie des acariens`
-- `services[4].faqAdditions[2].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `selon la ventilation, l'épaisseur du textile et l'humidité ambiante`
-  - replacement: `selon la ventilation, l'épaisseur du textile et l'<strong>humidité ambiante</strong>`
-- `services[5].uniqueIntro` — op=setField — services[5].uniqueIntro: corriger l'overcap (4 <strong> -> max 2) en retirant des <strong> sur des noms de secteurs/transport, conserver 2 segments utiles.
-  - value: `<p>Maisons-Alfort a une signature très différente des communes “bord de Marne” voisines : ici, le quotidien est rythmé par le Métro 8 (École Vétérinaire, Stade, Juilliottes) et le <strong>RER D</strong>, avec un bâti qui alterne grands coll`
-- `services[5].uniqueDeepDive` — op=setField — services[5].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (3 blocs) sans dépasser le cap.
-  - value: `<h3>Secteur Métro 8 / Avenue de la République — logistique et fin de bail</h3> <p>Autour des stations et de l’axe central, le point dur est rarement “le nettoyage” mais l’organisation : stationnement, accès, créneaux. Nous structurons l’int`
-- `services[5].specificChallenges[0]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `flux Métro 8 / RER D, rotation locative et contraintes de timing`
-  - replacement: `flux Métro 8 / RER D, <strong>rotation locative</strong> et contraintes de timing`
-- `services[5].specificChallenges[1]` — op=substring — services[5].specificChallenges: ajouter 1 <strong> (max 1 par item) pour la couverture demandée.
-  - excerpt: `Stationnement tendu autour de l’ENVA, des stations de métro`
-  - replacement: `<strong>Stationnement tendu</strong> autour de l’ENVA, des stations de métro`
-- `services[5].faqAdditions[0].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `nous traitons les zones qui comptent le plus lors d’un contrôle`
-  - replacement: `nous traitons les <strong>zones qui comptent le plus</strong> lors d’un contrôle`
-- `services[5].faqAdditions[2].answer` — op=substring — service FAQ: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture demandée.
-  - excerpt: `le cheminement pour monter le matériel en une fois, puis nous`
-  - replacement: `le <strong>cheminement pour monter le matériel</strong> en une fois, puis nous`
-
-## meaux
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_missing: li[0] has 0 strong; words=32; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[1] has 0 strong; words=39; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[2] has 0 strong; words=37; add 1 inside this <li> (max1/li)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=373; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=146; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=154; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=144; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=390; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=108; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=148; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=155; add 1 in this block (max1)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=425; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=133; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=169; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=173; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=411; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=140; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=155; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=182; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — word_limits
-- `faq[0].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `faq[3].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(3>2)
-- `services[6].uniqueIntro` — pairs_over_cap(5>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: ajouter 1 <strong> dans le 1er <p> de cette answer (max 1/answer), sur un segment concret et terrain.
-  - value: `<p>Oui, les poussières minérales de chantiers (béton, ciment, plâtre) générées par les programmes de rénovation urbaine de Beauval, Dunant et La Pierre Collinet se déposent quotidiennement dans les halls et cages d'escalier. Ces particules `
-- `services[0].faqAdditions[3].answer` — op=setField — Coverage target: ajouter 1 <strong> dans le 1er <p> de cette answer (max 1/answer), sans strong après le 1er <p>.
-  - value: `<p>Nous planifions chaque intervention en tenant compte des points de congestion récurrents aux ponts du Marché et de la République qui scindent la ville. Les horaires sont ajustés pour éviter les heures de pointe. Pour les quartiers en rén`
-
-## montfermeil
-
-### Coverage targets (manques/minima)
-
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 2 strong pairs; max 1 per <h3> block
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 10)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
   - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — word_limits
-- `services[0].uniqueIntro` — word_limits
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[1].uniqueIntro` — word_limits
-- `services[1].faqAdditions[0].answer` — forbidden_strong
-- `services[1].faqAdditions[3].answer` — forbidden_strong
-- `services[2].uniqueIntro` — word_limits
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].faqAdditions[1].answer` — forbidden_strong
-- `services[4].uniqueIntro` — word_limits
-- `services[4].faqAdditions[2].answer` — forbidden_strong
-- `services[4].faqAdditions[3].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(10>2)
-- `services[6].uniqueIntro` — pairs_over_cap(7>2)
-
-### Patches proposés (kept)
-
-- `services[3].specificChallenges[0]` — op=substring — Ajout de 1 <strong> requis sur services[3].specificChallenges[0] (max 1 par item) pour améliorer la scannabilité.
-  - excerpt: `les fientes tombent directement sur les balcons des étages inférieurs.`
-  - replacement: `les fientes tombent directement sur <strong>les balcons des étages inférieurs</strong>.`
-- `services[4].specificChallenges[0]` — op=substring — Ajout de 1 <strong> requis sur services[4].specificChallenges[0] (max 1 par item) pour rendre l’item plus scannable.
-  - excerpt: `apports saisonniers importants de pollens et d'allergènes qui se fixent`
-  - replacement: `<strong>apports saisonniers importants de pollens et d'allergènes</strong> qui se fixent`
-- `services[5].uniqueIntro` — op=setField — services[5].uniqueIntro dépasse le cap (10 <strong>); réduction à 2 <strong> max en retirant les balises superflues tout en gardant des repères concrets.
-  - value: `<p>Montfermeil, commune résidentielle de Seine-Saint-Denis située en hauteur à l’est de Paris, se distingue par son relief marqué et ses quartiers pavillonnaires verdoyants. Cette configuration entraîne un ruissellement fréquent de l’eau et`
-- `services[5].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans services[5].uniqueDeepDive block[1] et block[2] (max 1 par bloc <h3>) pour atteindre la couverture demandée.
-  - value: `<h3>Préparation et sécurisation de la zone</h3> <p>Le mobilier de jardin, les pots et éléments décoratifs sont déplacés ou protégés. Les abords immédiats (murs, façades, menuiseries) sont bâchés afin de travailler proprement, y compris sur `
-- `services[5].specificChallenges[0]` — op=substring — Ajout de 1 <strong> requis sur services[5].specificChallenges[0] (max 1 par item) pour améliorer la scannabilité.
-  - excerpt: `ruissellement de l’eau accentuant les traces noires et les zones encrassées.`
-  - replacement: `<strong>ruissellement de l’eau accentuant les traces noires</strong> et les zones encrassées.`
-- `services[5].specificChallenges[2]` — op=substring — Ajout de 1 <strong> requis sur services[5].specificChallenges[2] (max 1 par item) pour atteindre la couverture demandée.
-  - excerpt: `porosité marquée retenant les salissures et l’humidité.`
-  - replacement: `<strong>porosité marquée retenant les salissures et l’humidité</strong>.`
-- `services[5].faqAdditions[0].answer` — op=substring — Ajout de 1 <strong> requis dans le 1er <p> de services[5].faqAdditions[0].answer (max 1 par answer) pour la couverture.
-  - excerpt: `Cette combinaison accélère l’apparition de mousses, d’algues et de traces noires`
-  - replacement: `Cette combinaison accélère l’apparition de <strong>mousses, d’algues et de traces noires</strong>`
-- `services[5].faqAdditions[1].answer` — op=substring — Ajout de 1 <strong> requis dans le 1er <p> de services[5].faqAdditions[1].answer (max 1 par answer) pour la couverture.
-  - excerpt: `Le nettoyage en profondeur permet d’éclaircir les surfaces, d’uniformiser l’aspect du sol`
-  - replacement: `Le nettoyage en profondeur permet <strong>d’éclaircir les surfaces, d’uniformiser l’aspect du sol</strong>`
-- `services[6].uniqueIntro` — op=setField — services[6].uniqueIntro dépasse le cap (7 <strong>); réduction à 2 <strong> max en conservant des repères locaux utiles.
-  - value: `<p>À Montfermeil, un nettoyage “appartement/maison” doit intégrer la géographie et les usages. La commune alterne des quartiers pavillonnaires vastes comme Franceville et Les Coudreaux, et des zones collectives en mutation autour des Bosque`
-- `services[6].uniqueDeepDive` — op=setField — Ajout de 1 <strong> dans chaque bloc <h3> de services[6].uniqueDeepDive (blocks[0..2]) pour atteindre la couverture demandée (max 1 par bloc).
-  - value: `<h3>Pavillonnaire (Franceville / Les Coudreaux) — maisons, étages et vitrages</h3> <p>Dans les pavillons, la difficulté est rarement “une pièce”, mais l’enchaînement : entrée, escalier, couloirs, puis cuisine et salles d’eau où le calcaire `
-- `services[6].specificChallenges[0]` — op=substring — Ajout de 1 <strong> requis sur services[6].specificChallenges[0] (max 1 par item) pour la couverture.
-  - excerpt: `portage et accès à prévoir (pentes, rues résidentielles), surtout avec matériel`
-  - replacement: `<strong>portage et accès à prévoir (pentes, rues résidentielles)</strong>, surtout avec matériel`
-- `services[6].specificChallenges[4]` — op=substring — Ajout de 1 <strong> requis sur services[6].specificChallenges[4] (max 1 par item) pour la couverture.
-  - excerpt: `salles d’eau et robinetteries qui marquent vite, particulièrement en logements de rotation.`
-  - replacement: `<strong>salles d’eau et robinetteries qui marquent vite</strong>, particulièrement en logements de rotation.`
-- `services[6].specificChallenges[5]` — op=substring — Ajout de 1 <strong> requis sur services[6].specificChallenges[5] (max 1 par item) pour la couverture.
-  - excerpt: `exigence de discrétion et protection des sols (parquet/carrelage) dans le pavillonnaire.`
-  - replacement: `<strong>exigence de discrétion et protection des sols</strong> (parquet/carrelage) dans le pavillonnaire.`
-- `services[6].faqAdditions[1].answer` — op=substring — Ajout de 1 <strong> requis dans le 1er <p> de services[6].faqAdditions[1].answer (max 1 par answer) pour la couverture.
-  - excerpt: `l’essentiel est de traiter la poussière fine et les traces sur menuiseries`
-  - replacement: `l’essentiel est de traiter <strong>la poussière fine et les traces sur menuiseries</strong>`
-- `services[6].faqAdditions[0].answer` — op=substring — Ajout de 1 <strong> requis dans le 1er <p> de services[6].faqAdditions[0].answer (max 1 par answer) pour la couverture.
-  - excerpt: `On vise un rendu “contrôlable” : cuisine, salle d’eau, sols et finitions visibles`
-  - replacement: `On vise un rendu “contrôlable” : <strong>cuisine, salle d’eau, sols et finitions visibles</strong>`
-
-## montreuil
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_missing: li[0] has 0 strong; words=39; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[1] has 0 strong; words=31; add 1 inside this <li> (max1/li)
-  - hubIntro_li_missing: li[2] has 0 strong; words=28; add 1 inside this <li> (max1/li)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=99; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=102; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=87; add 1 in this block (max1)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=210; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=112; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=113; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=101; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=249; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=91; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=100; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=108; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=241; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=122; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=109; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=116; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=254; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=100; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=126; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 15)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=74; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=69; add 1 in this block (max1)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(15>2)
-- `services[6].uniqueIntro` — pairs_over_cap(8>2)
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Coverage hubIntro: ajouter 1 <strong> dans chacun des trois <li> (max 1/li) pour rendre la liste scannable, sans toucher au texte hors balises.
-  - value: `<p>Montreuil présente un tissu urbain contrasté, entre Bas-Montreuil gentrifié et Haut-Montreuil résidentiel, avec des copropriétés de toutes tailles et des contraintes d'accès variées. <strong>Klinova intervient auprès des syndics, gestion`
-- `services[0].uniqueDeepDive` — op=setField — Coverage services[0].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (max 1) pour améliorer la scannabilité sans surligner une phrase entière.
-  - value: `<h3>Diagnostic adapté à l'environnement urbain dense</h3> <p>Le technicien examine l'état de la moquette (fibres synthétiques robustes des grands ensembles ou bouclées plus délicates des immeubles faubouriens), identifie les salissures typi`
-- `services[1].uniqueIntro` — op=setField — Coverage services[1].uniqueIntro: ajouter 1 <strong> (max 2) sur un point terrain concret pour faciliter le scan.
-  - value: `<p>Les parkings souterrains de Montreuil, qu'ils desservent les grands ensembles du Haut-Montreuil ou les copropriétés du Bas-Montreuil, présentent un encrassement spécifique lié à l'environnement urbain dense. La proximité du Périphérique `
-- `services[1].uniqueDeepDive` — op=setField — Coverage services[1].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (max 1) sur des éléments opérationnels (choix matériel, eau chaude, rotation).
-  - value: `<h3>Évaluation technique et identification des contraintes</h3> <p>Le technicien visite le parking pour identifier le type de revêtement (béton brut souvent poreux dans les parkings anciens, peinture de sol, résine dans les parkings rénovés`
-- `services[1].faqAdditions[2].answer` — op=substring — Coverage services[1].faqAdditions[2].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer), sans <strong> après.
-  - excerpt: `Les taches anciennes, imprégnées profondément dans le béton poreux typique`
-  - replacement: `Les taches anciennes, <strong>imprégnées profondément dans le béton poreux</strong> typique`
-- `services[1].faqAdditions[3].answer` — op=substring — Coverage services[1].faqAdditions[3].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer) sur un point logistique concret.
-  - excerpt: `coordonnons avec le syndic pour obtenir une autorisation de stationnement temporaire`
-  - replacement: `coordonnons avec le syndic pour obtenir <strong>une autorisation de stationnement temporaire</strong>`
-- `services[2].uniqueIntro` — op=setField — Coverage services[2].uniqueIntro: ajouter 1 <strong> (max 2) sur un symptôme concret et court.
-  - value: `<p>Les habitants de Montreuil finissent par renoncer à utiliser leur balcon, découragés par la saleté qui revient sans cesse. Dans le Bas-Montreuil proche du Périphérique, les balcons accumulent une poussière noire grasse qui colle aux dall`
-- `services[2].uniqueDeepDive` — op=setField — Coverage services[2].uniqueDeepDive: ajouter 1 <strong> par bloc <h3> (max 1) sur des gestes concrets (protection, brossage joints, gestion coulures).
-  - value: `<h3>Préparation et protection des accès</h3> <p>Le technicien commence par protéger la porte-fenêtre, les menuiseries et les murs intérieurs avec des bâches étanches fixées au ruban adhésif. Les meubles de balcon, plantes en pot et objets s`
-- `services[2].faqAdditions[1].answer` — op=substring — Coverage services[2].faqAdditions[1].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer) sur une action simple et concrète.
-  - excerpt: `Nous recommandons un balayage hebdomadaire pour éliminer la poussière`
-  - replacement: `Nous recommandons <strong>un balayage hebdomadaire</strong> pour éliminer la poussière`
-- `services[2].faqAdditions[2].answer` — op=substring — Coverage services[2].faqAdditions[2].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer) sur le risque matériel concret.
-  - excerpt: `Les particules de plâtre et de ciment sont abrasives et peuvent rayer`
-  - replacement: `<strong>Les particules de plâtre et de ciment sont abrasives</strong> et peuvent rayer`
-- `services[3].uniqueIntro` — op=setField — Coverage services[3].uniqueIntro: ajouter 1 <strong> (max 2) sur un symptôme terrain court, sans termes interdits.
-  - value: `<p>Les balcons montreuillois, particulièrement ceux des étages élevés des grands ensembles du Haut-Montreuil ou des immeubles faubouriens du Bas-Montreuil, subissent régulièrement la colonisation par les pigeons urbains. Les anciennes struc`
-- `services[3].faqAdditions[2].answer` — op=substring — Coverage services[3].faqAdditions[2].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer) sur l'effet matériel concret.
-  - excerpt: `l'acidité des fientes provoque une oxydation rapide qui fragilise la structure`
-  - replacement: `l'acidité des fientes provoque <strong>une oxydation rapide</strong> qui fragilise la structure`
-- `services[3].faqAdditions[3].answer` — op=substring — Coverage services[3].faqAdditions[3].answer: ajouter 1 <strong> dans le 1er <p> (max 1/answer) sur un dispositif concret.
-  - excerpt: `pics discrets sur les garde-corps et corniches, filets transparents pour les loggias`
-  - replacement: `<strong>pics discrets sur les garde-corps et corniches</strong>, filets transparents pour les loggias`
-
-## montrouge
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=77; may add 1 (max2 outside li)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[0].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[0].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[0].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[0].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[1].specificChallenges[3]`
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=174; add 1 (max2)
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=71; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=165; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
 - `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[3].specificChallenges[3]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
 - `services[4].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[1].answer`
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 4)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[5].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[5].uniqueIntro` — pairs_over_cap(4>2)
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2 hors <li>) et en gardant un segment court et concret.
-  - value: `<p>Montrouge concentre sur un territoire restreint une densité exceptionnelle de logements et de bureaux. Klinova s'y positionne comme partenaire terrain, capable de coordonner des interventions régulières ou ponctuelles sans perturber le q`
-- `services[0].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service moquettes.
-  - value: `Moquettes des parties communes années 70-90 : <strong>fibres compactées</strong> par le trafic quotidien.`
-- `services[0].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service moquettes.
-  - value: `Accès aux locaux tertiaires soumis à badge et PC sécurité : <strong>coordination préalable</strong> indispensable.`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p>Les marques incrustées depuis plusieurs années répondent au <strong>détachage ciblé</strong>, avec des résultats variables selon l'ancienneté et la nature de la tache. Nous évaluons le potentiel de récupération lors du diagnostic et vous`
-- `services[0].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p>Le temps de séchage dépend de l'épaisseur du textile et de la <strong>ventilation des locaux</strong>. Comptez généralement entre 4 et 8 heures. Nous maximisons l'extraction pour réduire ce délai et vous transmettons les consignes adapté`
-- `services[1].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans chacun des 3 blocs <h3> manquants (max 1 par bloc) pour améliorer la scannabilité et corriger la couverture.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Avant toute intervention, nous identifions le type de revêtement présent : béton brut, résine ou peinture. <strong>L'état des évacuations est vérifié</strong> pour garantir l'écoulement correct des eaux`
-- `services[1].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service parkings.
-  - value: `Revêtements béton brut des années 70 nécessitant un <strong>dégraissage en profondeur</strong>.`
-- `services[1].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service parkings.
-  - value: `Rigoles et regards parfois <strong>obstrués par des dépôts anciens</strong> à dégager avant lavage.`
-- `services[1].faqAdditions[1].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p>Une <strong>signalétique visible</strong> est installée aux entrées et sorties du parking avant le démarrage. Les zones en cours de traitement sont délimitées pour éviter tout passage. Si le parking dessert un immeuble à forte rotation, `
-- `services[2].uniqueIntro` — op=setField — Ajoute 1 <strong> (max 2) dans uniqueIntro du service balcons, segment court et terrain, pour corriger la couverture manquante.
-  - value: `<p>Les traces noires sur le carrelage, les <strong>joints verdis par l'humidité</strong>, la fine pellicule grasse qui recouvre le garde-corps : sur les balcons donnant sur l'avenue de la République ou les résidences bordant les Allées Jean`
-- `services[2].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans le bloc <h3> manquant (block[1]) en respectant max 1 <strong> par bloc <h3>.
-  - value: `<h3>Préparation et protection</h3> <p>Nous déplaçons le mobilier et bâchons les plantes. Les menuiseries, fenêtres et seuils sont protégés avec un film adhésif. Les gros débris — feuilles mortes, terre accumulée, résidus divers — sont retir`
-- `services[2].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service balcons.
-  - value: `Balcons exposés à la pollution de la N20 : <strong>dépôts noirs tenaces</strong> sur garde-corps et sols.`
-- `services[2].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service balcons.
-  - value: `Densité urbaine forte : <strong>gestion stricte des eaux</strong> pour préserver les voisins du dessous.`
-- `services[2].faqAdditions[0].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p>Nous posons des <strong>bâches de rétention</strong> sur les bords du balcon et raclons l'eau vers vos évacuations. Avant de quitter les lieux, nous vérifions visuellement l'étage inférieur et la façade pour nous assurer qu'aucune trace `
-- `services[2].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p>Oui. Le béton brut supporte un brossage plus appuyé et un rinçage à pression modérée. <strong>Les dalles sur plots sont soulevées</strong> si nécessaire pour nettoyer en dessous, puis repositionnées. Chaque support reçoit un traitement s`
-- `services[3].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour corriger la couverture demandée sur les specificChallenges du service balcons-fientes.
-  - value: `Balcons sous toits dans le Vieux Montrouge : <strong>niches à pigeons fréquentes</strong>.`
-- `services[4].specificChallenges[0]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service canapes-tapis.
-  - value: `Taches anciennes <strong>incrustées dans les fibres</strong> après plusieurs mois sans traitement.`
-- `services[4].specificChallenges[3]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service canapes-tapis.
-  - value: `Séchage à adapter selon la <strong>ventilation des appartements</strong> en étage élevé.`
-- `services[4].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et corriger la couverture manquante.
-  - value: `<p><strong>Dégager l'accès au canapé ou au tapis</strong> facilite l'intervention et réduit la durée sur place. Si des objets fragiles se trouvent à proximité, les éloigner évite tout risque. Pour un matelas, retirer la literie suffit. Nous`
-- `services[5].uniqueIntro` — op=setField — Réduit uniqueIntro à max 2 <strong> (actuellement 4) en retirant deux balises sur des éléments secondaires, sans modifier le texte hors balises.
-  - value: `<p>Après plusieurs semaines de travaux ou à l'approche d'un état des lieux, un appartement accumule poussières de chantier, traces de peinture et résidus divers. Dans les immeubles proches de la <strong>station Mairie de Montrouge</strong> `
-- `services[5].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> manquants (block[0] et block[1]) en respectant max 1 <strong> par bloc <h3>.
-  - value: `<h3>Diagnostic et préparation</h3> <p>Le technicien évalue l'état du logement : nature des résidus (poussière de chantier, traces de colle, salissures courantes), <strong>type de sols et surfaces fragiles</strong> à protéger. Les gravats ou`
-- `services[5].specificChallenges[1]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service nettoyage-appartement-maison.
-  - value: `Parquets anciens dans le Vieux Montrouge nécessitant un <strong>nettoyage sans risque de rayure</strong>.`
-- `services[5].specificChallenges[2]` — op=setField — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service nettoyage-appartement-maison.
-  - value: `Livraisons de programmes neufs en ZAC des Portes de Montrouge générant des <strong>fins de chantier régulières</strong>.`
-
-## neuilly-plaisance
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 5 strong pairs; max 1 per <h3> block
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 4 strong pairs; max 1 per <h3> block
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_overcap: block[0] has 3 strong pairs; max 1 per <h3> block
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 6)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[2].answer` — word_limits
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[2].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].uniqueIntro` — pairs_over_cap(4>2)
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[5].uniqueIntro` — pairs_over_cap(8>2)
-- `services[6].uniqueIntro` — pairs_over_cap(6>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), focusing on a concrete on-site lever.
-  - value: `<p>Le séchage dépend de l’épaisseur, de la ventilation et de la méthode. En zone très passante (accès RER), on privilégie <strong>une extraction puissante</strong> et, si pertinent, une approche basse humidité. L’objectif est de retrouver u`
-- `services[0].faqAdditions[1].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the practical risk to avoid.
-  - value: `<p>Quand l’entrée est sollicitée quotidiennement, un entretien régulier évite <strong>l’encrassement profond</strong>. On ajuste selon la salissure réelle : zones d’entrée, paliers, angles. Autour des axes et commerces, la poussière fine se`
-- `services[1].uniqueIntro` — op=setField — Fix overcap: uniqueIntro max 2 <strong>; remove the extra <strong> around the service keyword phrase while keeping existing location highlights.
-  - value: `<p>Un parking qui s’encrasse finit par cumuler plusieurs problèmes : poussière noire grasse, traces d’huile, zones glissantes sur les rampes, et pieds de murs marqués. Sur Neuilly-Plaisance, ces situations se renforcent souvent au contact d`
-- `services[1].uniqueDeepDive` — op=setField — Fix deepDive overcap: block[0] must have max 1 <strong> pair; keep a single, useful emphasis and remove the others in later paragraphs.
-  - value: `<p><strong>Objectif visé :</strong> un sol décrassé, plus lisible, avec zones critiques traitées et remise en circulation progressive. On commence par le diagnostic (revêtement, pentes, évacuations) et un balayage préparatoire.</p> <p class`
-- `services[1].specificChallenges[0]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), emphasizing the concrete operational issue.
-  - value: `Poussière noire plus marquée près de la N34 : <strong>encrassement rapide des circulations</strong>.`
-- `services[1].specificChallenges[1]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), highlighting the key constraint.
-  - value: `Parkings profonds : <strong>logistique et temps de séchage</strong> à cadrer par zones.`
-- `services[1].faqAdditions[2].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), focusing on a decisive on-site difference.
-  - value: `<p>Oui, surtout sur <strong>la gestion des eaux</strong>, l’aération et le séchage. En souterrain, on privilégie le lavage mécanisé à l’autolaveuse et des dégraissages ciblés, avec une organisation par zones. En aérien, la haute pression co`
-- `services[1].faqAdditions[3].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), making the operational mode scannable.
-  - value: `<p>Pas forcément. Quand le plan de circulation le permet, on travaille par secteurs avec <strong>des fermetures partielles</strong> et une remise en service progressive. En revanche, sur certaines rampes ou zones critiques, une neutralisati`
-- `services[2].uniqueDeepDive` — op=setField — Fix deepDive overcap: block[0] max 1 <strong> pair; keep the first zone label emphasized and remove the others.
-  - value: `<p><strong>Zone 1 — Préparation & protections.</strong> Protection des menuiseries, bâchage si nécessaire, mise à l’abri du mobilier et des plantes. Retrait des gros dépôts (terre, feuilles) et repérage des zones fragiles (joints, angles, s`
-- `services[2].faqAdditions[2].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), making the constraint-handling scannable.
-  - value: `<p>On prépare <strong>un passage compact</strong> et on limite le matériel au strict nécessaire, avec une intervention par zones. Dans les accès étroits, la gestion de l’eau et du rinçage est essentielle : on protège, on contrôle les écoule`
-- `services[3].uniqueIntro` — op=setField — Fix overcap: uniqueIntro max 2 <strong>; remove extra emphasis on 'désinfecter' and the service keyword phrase, keep the two location anchors.
-  - value: `<p>On reconnaît tout de suite un balcon touché par les pigeons : fientes accumulées, odeur tenace, traces qui “mordent” le support, et une appréhension à rouvrir la porte-fenêtre. À Neuilly-Plaisance, certaines zones proches du <strong>Parc`
-- `services[3].uniqueDeepDive` — op=setField — Fix deepDive overcap: block[0] max 1 <strong> pair; keep only the first label emphasized and remove other <strong> in the block.
-  - value: `<p><strong>Problème : dispersion & risques.</strong> Mise en place des EPI (FFP2 minimum, gants, lunettes, combinaison) et confinement de la zone (bâchage, protections) pour éviter la propagation vers l’intérieur et les voisins.</p> <p clas`
-- `services[3].specificChallenges[0]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), highlighting the recurring issue.
-  - value: `Secteurs proches du Parc des Côteaux d’Avron : <strong>retours possibles sans prévention</strong>.`
-- `services[3].specificChallenges[1]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), making the on-site difficulty scannable.
-  - value: `Corniches et rebords (ex. Voie Lambert) : <strong>dépôts fixés et accès délicat</strong>.`
-- `services[3].faqAdditions[2].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), emphasizing the non-negotiable step.
-  - value: `<p>Après le retrait et le nettoyage, <strong>la désinfection est indispensable</strong>. Elle aide à neutraliser une partie des odeurs et à assainir les surfaces. Sur les supports poreux, certaines traces peuvent rester visibles selon l’anc`
-- `services[3].faqAdditions[3].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), pointing to the key gating phase without mentioning forbidden delay terms.
-  - value: `<p>On peut souvent rétablir un usage rapidement, mais le délai dépend de la quantité de dépôts, du support et de l’aération. Le plus important est de respecter <strong>la phase de désinfection</strong> (temps de contact) puis l’aération. On`
-- `services[4].uniqueDeepDive` — op=setField — Fix deepDive overcap: block[0] max 1 <strong> pair; keep only the first step label emphasized and remove the others.
-  - value: `<p><strong>1) Diagnostic textile & taches.</strong> Identification du tissu (coton, synthétique, velours, laine) et des risques (dégorgement, fragilité), repérage des taches (café, vin, encre, sébum, urine) et des odeurs.</p> <p class="mt-4`
-- `services[4].specificChallenges[0]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), focusing on the recurring on-site issue.
-  - value: `Vie de famille à Bel-Air : <strong>taches récurrentes</strong> et poussières incrustées dans les fibres.`
-- `services[4].specificChallenges[1]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), making the pain point scannable.
-  - value: `Autour de l’Avenue du Maréchal Joffre : <strong>tapis d’entrée vite marqués</strong> par les passages.`
-- `services[4].faqAdditions[0].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the key condition for effect.
-  - value: `<p>Oui, surtout quand on réalise <strong>un nettoyage profond</strong> avec aspiration puissante. L’injection-extraction retire une partie importante des poussières et salissures incrustées qui nourrissent les allergènes. On complète avec d`
-- `services[4].faqAdditions[3].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), emphasizing the practical setup choice.
-  - value: `<p>On vient avec <strong>un dispositif compact</strong> et on sécurise l’installation dès l’arrivée. Sur place, on limite les allers-retours, on protège les zones de passage, puis on donne des consignes d’aération simples. Le temps de remis`
-- `services[5].uniqueIntro` — op=setField — Fix overcap: uniqueIntro max 2 <strong>; reduce from 8 by keeping only one local anchor and removing the rest of the strong tags.
-  - value: `<p><strong>Neuilly-Plaisance</strong>, commune résidentielle appréciée de l’est parisien, séduit par son cadre verdoyant et ses quartiers pavillonnaires bien entretenus, notamment le long des bords de Marne. Les terrasses y occupent une pla`
-- `services[5].uniqueDeepDive` — op=setField — Fix missing coverage: add exactly 1 <strong> per <h3> block (3 blocks), staying within max 1 per block and keeping emphases concrete.
-  - value: `<h3>Préparation soignée de l’espace extérieur</h3> <p>Le mobilier, les pots et les éléments décoratifs sont déplacés ou protégés. Les abords immédiats — <strong>façades, garde-corps, menuiseries</strong> — sont bâchés afin de garantir une i`
-- `services[5].specificChallenges[0]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), highlighting the main local driver.
-  - value: `Terrasses proches des bords de Marne : <strong>humidité régulière</strong> favorisant mousses et traces verdâtres.`
-- `services[5].specificChallenges[2]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), making the visible symptom scannable.
-  - value: `Dalles béton et carrelages extérieurs ternis par le temps : <strong>zones foncées et aspect irrégulier</strong>.`
-- `services[5].faqAdditions[0].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), emphasizing the local cause.
-  - value: `<p>La végétation dense, l’ombre et <strong>la proximité de la Marne</strong> créent des conditions idéales pour le développement de mousses et de traces noires. Même dans un environnement entretenu, les sols extérieurs s’encrassent progress`
-- `services[6].uniqueIntro` — op=setField — Fix overcap: uniqueIntro max 2 <strong>; keep the two main geographic anchors and remove the other strong tags.
-  - value: `<p>Neuilly-Plaisance est une commune résidentielle qui se vit en deux niveaux : d’un côté le <strong>secteur Gare RER A</strong> et le centre-ville, plus denses et plus “rythmés”, de l’autre les hauteurs du <strong>Plateau d’Avron</strong>,`
-- `services[6].specificChallenges[1]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), highlighting the concrete local constraint.
-  - value: `Stationnement tendu autour de la gare RER A et du centre (<strong>zone bleue</strong>, saturation dès le matin).`
-- `services[6].specificChallenges[2]` — op=setField — Coverage: add 1 <strong> to this specific challenge item (max 1), focusing on the visible impact.
-  - value: `Axes très circulés (RN34 / A86 à proximité) : <strong>vitrages et balcons plus marqués</strong> par la pollution.`
-- `services[6].faqAdditions[0].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), emphasizing the checkable scope.
-  - value: `<p>Oui. Nous cadrons le périmètre pour viser <strong>un rendu net et vérifiable</strong> : cuisine, salle d’eau, sols, vitres accessibles, puis finitions (plinthes, portes, interrupteurs). À Neuilly-Plaisance, on anticipe surtout l’accès (b`
-- `services[6].faqAdditions[1].answer` — op=setField — Coverage: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the practical sequencing.
-  - value: `<p>Oui. Les pavillons demandent <strong>une organisation par zones</strong> (étage → RDC) et une protection renforcée des sols, surtout sur parquet. Nous adaptons aussi le portage matériel au relief et aux accès (escaliers, jardin, véranda)`
-
-## neuilly-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=118; may add 1 (max2 outside li)
-- `services[1].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=4)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 9)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=71; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=61; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=79; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — forbidden_strong
-- `services[1].uniqueDeepDive` — word_limits
-- `services[1].faqAdditions[0].answer` — forbidden_strong
-- `services[1].faqAdditions[2].answer` — word_limits
-- `services[1].faqAdditions[3].answer` — word_limits
-- `services[2].uniqueIntro` — word_limits
-- `services[2].uniqueDeepDive` — word_limits
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[1].answer` — forbidden_strong
-- `services[3].faqAdditions[2].answer` — word_limits
-- `services[4].uniqueIntro` — word_limits
-- `services[4].faqAdditions[0].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(8>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-- `services[6].uniqueIntro` — pairs_over_cap(9>2)
-
-### Patches proposés (kept)
-
-- `services[1].specificChallenges[3]` — op=substring — Ajout d’1 <strong> sur un item éligible pour atteindre la couverture demandée (max 1 par item).
-  - excerpt: `Forte présence de poussières fines liée à la proximité des grands axes`
-  - replacement: `<strong>Forte présence de poussières fines</strong> liée à la proximité des grands axes`
-- `services[4].specificChallenges[3]` — op=substring — Ajout d’1 <strong> sur un item éligible pour atteindre la couverture demandée (max 1 par item).
-  - excerpt: `Tissus fragiles (velours, soie) ou épais (tapis à poils longs)`
-  - replacement: `<strong>Tissus fragiles (velours, soie) ou épais (tapis à poils longs)</strong>`
-- `services[5].uniqueIntro` — op=setField — Réduction à max 2 <strong> (8 → 2) en retirant les sur-tagging tout en gardant des repères scannables et concrets.
-  - value: `<p><strong>Neuilly-sur-Marne</strong>, commune de Seine-Saint-Denis bordée par la Marne, présente un habitat varié mêlant maisons individuelles, résidences et quartiers pavillonnaires. Les terrasses y sont très présentes, aussi bien dans le`
-- `services[5].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3>2</h3> qui en manquait (max 1 par bloc).
-  - excerpt: `La méthode est adaptée au matériau : solution performante pour béton`
-  - replacement: `La méthode est adaptée au matériau : <strong>solution performante pour béton</strong>`
-- `services[5].specificChallenges[0]` — op=substring — Ajout d’1 <strong> sur un item éligible pour la couverture demandée (max 1 par item).
-  - excerpt: `Terrasses situées près des bords de Marne : humidité régulière`
-  - replacement: `<strong>Terrasses situées près des bords de Marne</strong> : humidité régulière`
-- `services[5].specificChallenges[2]` — op=substring — Ajout d’1 <strong> sur un item éligible pour la couverture demandée (max 1 par item).
-  - excerpt: `Dalles béton et carrelages extérieurs ternis par le temps`
-  - replacement: `<strong>Dalles béton et carrelages extérieurs ternis</strong> par le temps`
-- `services[5].faqAdditions[0].answer` — op=setField — Mise en conformité FAQ : max 1 <strong> par answer (2 → 1), en conservant un repère scannable dans le 1er <p>.
-  - value: `<p>La proximité de la Marne, combinée à l’humidité et à la végétation environnante, favorise l’apparition de <strong>mousses, algues et traces noires</strong>. Ces salissures s’installent progressivement sur les sols extérieurs si aucun net`
-- `services[5].faqAdditions[1].answer` — op=setField — Mise en conformité FAQ : max 1 <strong> par answer (2 → 1), en gardant le <strong> dans le 1er <p>.
-  - value: `<p>Oui. Un nettoyage en profondeur permet de <strong>clarifier les surfaces</strong>, d’atténuer fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>`
-- `services[6].uniqueIntro` — op=setField — Réduction à max 2 <strong> (9 → 2) en conservant deux repères terrain (absence de gare, ZAC Maison Blanche) et en retirant le sur-tagging.
-  - value: `<p>Neuilly-sur-Marne a une configuration particulière : <strong>aucune gare ferroviaire dans la commune</strong>, mais une ville très connectée par les bus et les grands axes, avec une colonne vertébrale routière (la RN34) et une vie locale`
-- `services[6].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3>1</h3> (max 1 par bloc) pour corriger le manque.
-  - excerpt: `la contrainte n°1 est la poussière fine (plâtre, découpe, va-et-vient`
-  - replacement: `la contrainte n°1 est <strong>la poussière fine</strong> (plâtre, découpe, va-et-vient`
-- `services[6].specificChallenges[0]` — op=substring — Ajout d’1 <strong> sur un item éligible pour la couverture demandée (max 1 par item).
-  - excerpt: `Absence de gare intra-muros : organisation des trajets et des créneaux`
-  - replacement: `<strong>Absence de gare intra-muros</strong> : organisation des trajets et des créneaux`
-- `services[6].specificChallenges[4]` — op=substring — Ajout d’1 <strong> sur un item éligible pour la couverture demandée (max 1 par item).
-  - excerpt: `Bords de Marne : accès camions plus contraints dans certaines rues`
-  - replacement: `<strong>Bords de Marne : accès camions plus contraints</strong> dans certaines rues`
-- `services[6].specificChallenges[1]` — op=substring — Ajout d’1 <strong> sur un item éligible pour la couverture demandée (max 1 par item).
-  - excerpt: `Chantier ZAC Maison Blanche : poussières fines (plâtre/terre)`
-  - replacement: `<strong>Chantier ZAC Maison Blanche : poussières fines</strong> (plâtre/terre)`
-- `services[6].faqAdditions[1].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1 par answer) pour atteindre la couverture demandée.
-  - excerpt: `Dans le neuf, on traite d’abord la poussière fine (plâtre, découpes, retombées),`
-  - replacement: `Dans le neuf, on traite d’abord <strong>la poussière fine</strong> (plâtre, découpes, retombées),`
-- `services[6].faqAdditions[3].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> (max 1 par answer) pour atteindre la couverture demandée.
-  - excerpt: `On adapte la méthode aux zones sensibles : dépôts minéraux et humidité`
-  - replacement: `On adapte la méthode aux zones sensibles : <strong>dépôts minéraux et humidité</strong>`
-
-## nogent-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=119; add 1 in this block (max1)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=258; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=132; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=112; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=120; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=141; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=302; add 1 (max2)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=76; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=70; add 1 in this block (max1)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — word_limits
-- `faq[2].answer` — word_limits
-- `services[0].uniqueDeepDive` — word_limits
-- `services[4].uniqueDeepDive` — forbidden_strong
-- `services[5].uniqueIntro` — pairs_over_cap(8>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-- `services[6].uniqueIntro` — pairs_over_cap(7>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max1) for this service FAQ answer; keeps emphasis short and terrain.
-  - excerpt: `Les pollens collants du printemps s'incrustent rapidement dans les fibres`
-  - replacement: `Les <strong>pollens collants du printemps</strong> s'incrustent rapidement dans les fibres`
-- `services[1].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max1) for services[1] FAQ addition[0].
-  - excerpt: `L'hygrométrie élevée des bords de Marne génère un environnement idéal`
-  - replacement: `<strong>L'hygrométrie élevée des bords de Marne</strong> génère un environnement idéal`
-- `services[1].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max1) for services[1] FAQ addition[2].
-  - excerpt: `Les taches anciennes, imprégnées profondément dans le béton poreux`
-  - replacement: `Les <strong>taches anciennes</strong>, imprégnées profondément dans le béton poreux`
-- `services[2].uniqueIntro` — op=substring — Coverage target: services[2].uniqueIntro has 0 strong; add 1 (max2) with a concrete local factor.
-  - excerpt: `L'humidité constante de la Marne combinée à l'ombre portée`
-  - replacement: `<strong>L'humidité constante de la Marne</strong> combinée à l'ombre portée`
-- `services[2].uniqueDeepDive` — op=substring — Coverage target: services[2].uniqueDeepDive block[1] missing 1 <strong> (max1). Adds a short, procedural emphasis within the second block.
-  - excerpt: `Après un temps de contact de 20 à 30 minutes`
-  - replacement: `Après un <strong>temps de contact</strong> de 20 à 30 minutes`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to services[2].specificChallenges[0] (max1). Keeps emphasis short and concrete.
-  - value: `<strong>Développement biologique massif</strong> lié à l'humidité : Les balcons des propriétés proches de la Marne développent rapidement mousses vertes et lichens blancs sur pierres et murets, nécessitant un traitement anti-mousse renforcé`
-- `services[2].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max1) for services[2] FAQ addition[2].
-  - excerpt: `Les pollens collants du printemps s'incrustent dans les pores`
-  - replacement: `Les <strong>pollens collants du printemps</strong> s'incrustent dans les pores`
-- `services[2].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max1) for services[2] FAQ addition[3].
-  - excerpt: `Les ferronneries d'art typiques des villas Art Déco nogentaises`
-  - replacement: `Les <strong>ferronneries d'art</strong> typiques des villas Art Déco nogentaises`
-
-## noisiel
-
-### Coverage targets (manques/minima)
-
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=173; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[2].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=175; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=165; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[2].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[1].uniqueIntro` — op=substring — Ajout d’1 <strong> dans services[1].uniqueIntro (0→1, max2) pour mettre en avant un risque terrain concret et améliorer la scannabilité.
-  - excerpt: `rendant les surfaces glissantes sur les rampes d'accès et`
-  - replacement: `rendant les surfaces <strong>glissantes sur les rampes d'accès</strong> et`
-- `services[1].uniqueDeepDive` — op=substring — Ajout d’1 <strong> dans le bloc <h3>Préparation et sécurisation</h3> (block[0]) pour respecter la couverture (max1 par bloc) et faciliter le repérage des points clés.
-  - excerpt: `repère l'état des évacuations. Un balayage préalable élimine`
-  - replacement: `repère l'état des <strong>évacuations</strong>. Un balayage préalable élimine`
-- `services[1].specificChallenges[0]` — op=substring — Ajout d’1 <strong> sur un item de specificChallenges pour atteindre la couverture demandée (max1 par item) avec un élément terrain concret.
-  - excerpt: `souvent encrassées par les coulures d'huile et les traces`
-  - replacement: `souvent encrassées par les <strong>coulures d'huile</strong> et les traces`
-- `services[1].specificChallenges[1]` — op=substring — Ajout d’1 <strong> sur un second item de specificChallenges pour atteindre la couverture demandée (max1 par item) en mettant en avant la contrainte support.
-  - excerpt: `poreux et difficiles à dégraisser sans matériel adapté.`
-  - replacement: `<strong>poreux et difficiles à dégraisser</strong> sans matériel adapté.`
-- `services[1].faqAdditions[0].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> de la réponse FAQ (max1) pour améliorer la scannabilité sans placer de <strong> après le premier paragraphe.
-  - excerpt: `Les eaux chargées sont systématiquement dirigées vers les regards`
-  - replacement: `<strong>Les eaux chargées</strong> sont systématiquement dirigées vers les regards`
-- `services[1].faqAdditions[3].answer` — op=substring — Ajout d’1 <strong> dans le 1er <p> de la réponse FAQ (max1) pour mettre en avant l’étape opérationnelle clé.
-  - excerpt: `appliqué en pré-traitement sur les zones marquées. Après`
-  - replacement: `appliqué en <strong>pré-traitement sur les zones marquées</strong>. Après`
-
-## noisy-le-grand
-
-### Coverage targets (manques/minima)
-
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].uniqueDeepDive`
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 4)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=74; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=69; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[6].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].faqAdditions[2].answer`
@@ -4336,66 +417,122 @@ Total fichiers : 58
 
 ### Violations / Overlimit (TS actuel)
 
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[0].uniqueIntro` — forbidden_strong
-- `services[0].faqAdditions[0].answer` — faq_rule_violation
-- `services[0].faqAdditions[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[2].answer` — faq_rule_violation
-- `services[0].faqAdditions[3].answer` — faq_rule_violation
-- `services[1].uniqueIntro` — forbidden_strong
-- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[1].faqAdditions[0].answer` — faq_rule_violation
-- `services[1].faqAdditions[1].answer` — faq_rule_violation
-- `services[1].faqAdditions[2].answer` — faq_rule_violation
-- `services[1].faqAdditions[3].answer` — faq_rule_violation
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[0].answer` — faq_rule_violation
-- `services[2].faqAdditions[1].answer` — faq_rule_violation
-- `services[2].faqAdditions[2].answer` — faq_rule_violation
-- `services[2].faqAdditions[3].answer` — faq_rule_violation
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].uniqueDeepDive` — forbidden_strong
-- `services[3].faqAdditions[0].answer` — faq_rule_violation
-- `services[3].faqAdditions[1].answer` — faq_rule_violation
-- `services[3].faqAdditions[2].answer` — faq_rule_violation
-- `services[3].faqAdditions[3].answer` — faq_rule_violation
-- `services[4].faqAdditions[0].answer` — faq_rule_violation
-- `services[4].faqAdditions[1].answer` — faq_rule_violation
-- `services[4].faqAdditions[2].answer` — faq_rule_violation
-- `services[4].faqAdditions[3].answer` — faq_rule_violation
-- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `citySpecificChallenges[5]` — word_limits
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].uniqueIntro` — pairs_over_cap(4>2)
 - `services[6].uniqueIntro` — pairs_over_cap(4>2)
 
 ### Patches proposés (kept)
 
-✅ Aucun patch
+- `hubIntro` — op=substring — Coverage target hubIntro_nonli_missing: ajouter 1 <strong> dans le texte hors <li> (max 2), segment court et concret.
+  - excerpt: `la commune présente des configurations variées qui demandent une gestion coordonnée.`
+  - replacement: `la commune présente des <strong>configurations variées</strong> qui demandent une gestion coordonnée.`
+- `services[0].uniqueIntro` — op=setField — Coverage target uniqueIntro_overcap (services[0]): réduire à max 2 <strong> en retirant le 3e, sans toucher au texte.
+  - value: `<p>Dans la <strong>Zone d'Activités du Petit Clamart</strong>, les moquettes des open spaces et couloirs de bureaux accumulent rapidement poussières fines et traces de passage. Le trafic quotidien des collaborateurs laisse des marques grise`
+- `services[0].uniqueDeepDive` — op=setField — Coverage target deepDive_block_missing (services[0] block[1] et block[2]): ajouter 1 <strong> dans chacun des blocs <h3> concernés (max 1 par bloc).
+  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et accès principaux concentrent l'essentiel de l'encrassement. Après aspiration préalable, l'injection-extraction cible ces bandes de passage avec plusieurs passes successives. Les fibre`
+- `services[0].specificChallenges[0]` — op=substring — Coverage target serviceChallenge_coverage_add (services[0].specificChallenges[0]): ajouter 1 <strong> (max 1 par item), segment court et terrain.
+  - excerpt: `Dalles textiles des bureaux du Petit Clamart : encrassement rapide`
+  - replacement: `Dalles textiles des bureaux du Petit Clamart : <strong>encrassement rapide</strong>`
+- `services[0].specificChallenges[2]` — op=substring — Coverage target serviceChallenge_coverage_add (services[0].specificChallenges[2]): ajouter 1 <strong> (max 1 par item), focalisé sur la contrainte opérationnelle.
+  - excerpt: `Accès sécurisés (Vigik, digicode) nécessitant une coordination préalable`
+  - replacement: `Accès sécurisés (Vigik, digicode) nécessitant une <strong>coordination préalable</strong>`
+- `services[0].faqAdditions[1].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[0].faqAdditions[1].answer): ajouter 1 <strong> dans le 1er <p>, et aucun après (answer = 1 seul <strong>).
+  - excerpt: `Un détachage ciblé précède l'extraction. Les auréoles de café,`
+  - replacement: `Un <strong>détachage ciblé</strong> précède l'extraction. Les auréoles de café,`
+- `services[0].faqAdditions[2].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[0].faqAdditions[2].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `L'injection-extraction reste la méthode la plus efficace pour les dalles`
+  - replacement: `<strong>L'injection-extraction</strong> reste la méthode la plus efficace pour les dalles`
+- `services[1].uniqueIntro` — op=setField — Coverage target uniqueIntro_overcap (services[1]): réduire à max 2 <strong> en retirant le 3e, sans modifier le texte.
+  - value: `<p>Les traces noires s'accumulent sur le béton des parkings souterrains, particulièrement <strong>autour du Stade Hunebelle</strong> où la rotation des véhicules lors des événements sportifs accélère l'encrassement. Huile moteur, résidus de`
+- `services[1].uniqueDeepDive` — op=substring — Coverage target deepDive_block_missing (services[1] block[1]): ajouter 1 <strong> dans ce bloc <h3> (max 1).
+  - excerpt: `L'autolaveuse effectue ensuite des passes mécanisées sur les surfaces planes,`
+  - replacement: `L'autolaveuse effectue ensuite des <strong>passes mécanisées</strong> sur les surfaces planes,`
+- `services[1].specificChallenges[0]` — op=substring — Coverage target serviceChallenge_coverage_add (services[1].specificChallenges[0]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `Taches d'huile anciennes incrustées dans le béton poreux`
+  - replacement: `Taches d'huile anciennes <strong>incrustées</strong> dans le béton poreux`
+- `services[1].specificChallenges[1]` — op=substring — Coverage target serviceChallenge_coverage_add (services[1].specificChallenges[1]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `Rampes d'accès en pente nécessitant un traitement antidérapant adapté`
+  - replacement: `Rampes d'accès en pente nécessitant un <strong>traitement antidérapant</strong> adapté`
+- `services[1].faqAdditions[1].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[1].faqAdditions[1].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `Pour les taches tenaces incrustées dans le béton poreux,`
+  - replacement: `Pour les taches tenaces <strong>incrustées</strong> dans le béton poreux,`
+- `services[1].faqAdditions[3].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[1].faqAdditions[3].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `Le planning est validé avec le syndic ou le gestionnaire`
+  - replacement: `Le planning est validé avec le <strong>syndic ou le gestionnaire</strong>`
+- `services[2].uniqueIntro` — op=setField — Coverage target uniqueIntro_overcap (services[2]): réduire à max 2 <strong> en retirant le 3e, sans modifier le texte.
+  - value: `<p>Dans le <strong>quartier Panorama</strong>, les balcons et loggias des étages moyens accumulent rapidement poussières fines et dépôts verts. L'exposition variable selon l'orientation — plein sud face aux axes routiers ou côté bois — accé`
+- `services[2].uniqueDeepDive` — op=substring — Coverage target deepDive_block_missing (services[2] block[0]): ajouter 1 <strong> dans ce bloc <h3> (max 1).
+  - excerpt: `Les gros débris — feuilles, terre, résidus divers — sont retirés manuellement.`
+  - replacement: `Les <strong>gros débris</strong> — feuilles, terre, résidus divers — sont retirés manuellement.`
+- `services[2].specificChallenges[0]` — op=substring — Coverage target serviceChallenge_coverage_add (services[2].specificChallenges[0]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `Dalles sur plots au quartier Panorama : nettoyage sans déplacer`
+  - replacement: `Dalles sur plots au quartier Panorama : <strong>nettoyage sans déplacer</strong>`
+- `services[2].specificChallenges[1]` — op=substring — Coverage target serviceChallenge_coverage_add (services[2].specificChallenges[1]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `dépôts gras nécessitant un dégraissage ciblé.`
+  - replacement: `dépôts gras nécessitant un <strong>dégraissage ciblé</strong>.`
+- `services[2].faqAdditions[1].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[2].faqAdditions[1].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `Ces traces grasses nécessitent un dégraissant alcalin appliqué avant brossage.`
+  - replacement: `Ces traces grasses nécessitent un <strong>dégraissant alcalin</strong> appliqué avant brossage.`
+- `services[2].faqAdditions[2].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[2].faqAdditions[2].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `Les dalles sur plots supportent mal la haute pression :`
+  - replacement: `Les dalles sur plots supportent mal la <strong>haute pression</strong> :`
+- `services[3].uniqueIntro` — op=substring — Coverage target uniqueIntro_missing (services[3]): ajouter 1 <strong> (max 2), segment court et factuel.
+  - excerpt: `accumulent des couches de fientes qui s'incrustent dans le béton`
+  - replacement: `accumulent des <strong>couches de fientes</strong> qui s'incrustent dans le béton`
+- `services[3].uniqueDeepDive` — op=setField — Coverage target deepDive_block_missing (services[3] block[1] et block[2]): ajouter 1 <strong> dans chacun des blocs <h3> concernés (max 1 par bloc).
+  - value: `<h3>Balcon assaini et désinfecté</h3> <p>L'objectif est d'éliminer toute trace de fientes et de neutraliser les agents pathogènes présents sur les surfaces. Le sol, le garde-corps, les vitrages et les murs mitoyens retrouvent un état sain, `
+- `services[3].specificChallenges[0]` — op=substring — Coverage target serviceChallenge_coverage_add (services[3].specificChallenges[0]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `les balcons des derniers étages subissent une exposition permanente`
+  - replacement: `les balcons des derniers étages subissent une <strong>exposition permanente</strong>`
+- `services[3].specificChallenges[3]` — op=substring — Coverage target serviceChallenge_coverage_add (services[3].specificChallenges[3]): ajouter 1 <strong> (max 1 par item).
+  - excerpt: `la gestion des écoulements et la coordination avec les voisins`
+  - replacement: `la <strong>gestion des écoulements</strong> et la coordination avec les voisins`
+- `services[3].faqAdditions[0].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[3].faqAdditions[0].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `peuvent affecter les voies respiratoires si les poussières sont inhalées.`
+  - replacement: `peuvent affecter les <strong>voies respiratoires</strong> si les poussières sont inhalées.`
+- `services[3].faqAdditions[1].answer` — op=substring — Coverage target serviceFaq_coverage_add (services[3].faqAdditions[1].answer): ajouter 1 <strong> dans le 1er <p> (max 1 par answer).
+  - excerpt: `La zone est confinée par bâchage pour protéger l'intérieur du logement.`
+  - replacement: `La zone est <strong>confinée par bâchage</strong> pour protéger l'intérieur du logement.`
+- `services[4].uniqueDeepDive` — op=setField — Coverage targets demand des ajouts sur services[4].uniqueDeepDive, mais ce champ contient déjà 1 <strong> par bloc? Ici il n'y a aucun <strong> : ce patch est nécessaire pour ajouter, mais sans extrait fiable par bloc vi
+  - value: `<h3>Textile assaini et taches éliminées</h3> <p>L'objectif est d'obtenir un tissu débarrassé des salissures visibles et des résidus organiques. Chaque fibre retrouve sa souplesse, les odeurs disparaissent et les couleurs se ravivent. Le dia`
 
-## noisy-le-sec
+## issy-les-moulineaux
 
 ### Coverage targets (manques/minima)
 
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=78; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[0].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].faqAdditions[2].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
   - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
 - `services[1].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=165; add 1 (max2)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
 - `services[2].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].specificChallenges[1]`
@@ -4405,140 +542,156 @@ Total fichiers : 58
 - `services[2].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+- `services[3].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[3].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
+- `services[4].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_missing: 0 strong; words=163; add 1 (max2)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
 - `services[5].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
+- `services[5].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
+- `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=179; add 1 (max2)
+  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
 - `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
   - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[6].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
 
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[1].uniqueIntro` — word_limits
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
 
 ### Patches proposés (kept)
 
-- `services[0].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[2].answer (max 1 per answer respected).
-  - value: `<p>Les taches incrustées reçoivent un <strong>détachant ciblé</strong> avant le passage de la machine. Plusieurs passes d'extraction sont effectuées sur les zones marquées pour déloger les résidus en profondeur. Certaines traces très ancien`
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> inside first <p> for services[0].faqAdditions[0].answer (max 1 per answer respected).
-  - value: `<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, conçus pour passer dans les cages d'escalier réduites. Le flexible d'injection-extraction se déploie depuis le palier ou le hall, ce qui évite de monter l'ensemble d`
+- `hubIntro` — op=setField — Ajout d’1 <strong> dans le texte hors <li> (0 → 1), en restant sous le cap (max 2 hors <li>). Segment court et factuel.
+  - value: `<p>Pôle économique majeur du Val de Seine, desservi par le RER C et le Tramway T2, Issy-les-Moulineaux concentre des <strong>flux importants</strong> entre zones d'activités et secteurs résidentiels. Klinova s'y positionne comme partenaire `
+- `services[0].uniqueIntro` — op=setField — Correction overcap : suppression d’1 paire <strong> (3 → 2) en gardant les deux segments les plus utiles à la lecture.
+  - value: `<p>Dans le <strong>quartier Val de Seine</strong>, les sièges sociaux et immeubles tertiaires concentrent un trafic piéton soutenu. Les halls d'accueil, couloirs et salles de réunion voient défiler chaque jour des centaines de collaborateur`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les 3 blocs manquants, avec segments courts et techniques.
+  - value: `<h3>1. Zones de circulation principale</h3> <p>Les couloirs et halls d'entrée reçoivent le plus fort piétinement. L'intervention débute par une aspiration minutieuse, puis un détachage ciblé sur les traces de café ou de tanin. L'injection-e`
+- `services[0].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1) sur un élément concret et scannable.
+  - value: `Halls d'accueil à <strong>fort passage quotidien</strong>, fibres encrassées en quelques semaines.`
+- `services[0].specificChallenges[1]` — op=setField — Ajout d’1 <strong> (max 1) sur le point technique clé.
+  - value: `Dalles textiles collées nécessitant une <strong>extraction contrôlée</strong> pour éviter le décollement.`
+- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1).
+  - value: `<p>L'intervention se cale en soirée ou le week-end, après validation avec le gestionnaire. Nous récupérons les badges ou codes Vigik en amont, et le matériel est acheminé par le <strong>parking souterrain</strong> si le stationnement en sur`
+- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1).
+  - value: `<p>Des protections adhésives ou des bâches légères sont posées le long des plinthes et du mobilier fixe avant le traitement. La buse d'injection reste à distance des angles pour éviter les projections. Cette précaution préserve les <strong>`
 
-## orly
+## le-blanc-mesnil
 
 ### Coverage targets (manques/minima)
 
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=72; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[0].faqAdditions[2].answer`
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
+- `services[0].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[4]`
+- `services[1].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-- `services[2].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[2].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
+- `services[2].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
+  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
+- `services[3].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[3].specificChallenges[4]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
+- `services[3].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[3].answer`
+- `services[3].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
 - `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[4].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=68; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
 - `services[5].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
+- `services[5].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
@@ -4547,584 +700,241 @@ Total fichiers : 58
 - `services[6].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[0].answer`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[6].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
 
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
 - `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[2].uniqueIntro` — pairs_over_cap(3>2)
 - `services[3].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
 - `services[6].uniqueIntro` — pairs_over_cap(3>2)
 
 ### Patches proposés (kept)
 
-- `services[0].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans les blocs <h3> 0 et 1 (max 1 par bloc) pour améliorer la scannabilité, sans toucher au texte hors balises. Le bloc 2 a déjà un <strong> implicite interdit par la cible ? Non, il reste à 0 ici : on 
-  - value: `<h3>Zones de passage intensif</h3> <p>Les couloirs, entrées et espaces devant ascenseurs concentrent l'essentiel des salissures. Le diagnostic identifie le type de fibre — bouclée, velours ou dalle plombante — pour adapter la <strong>pressi`
-- `services[0].faqAdditions[2].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la limite max 1 par answer.
-  - value: `<p>Les taches anciennes font l'objet d'un <strong>pré-traitement</strong> avec un détachant adapté à leur nature — tanin, graisse ou protéine. Après un temps de pose, l'injection-extraction déloge les résidus en profondeur. Certaines marque`
-- `services[0].faqAdditions[3].answer` — op=setField — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la limite max 1 par answer.
-  - value: `<p>Sur un velours ras bien ventilé, le <strong>séchage complet</strong> intervient généralement sous 4 à 6 heures. Pour les moquettes plus épaisses ou les pièces peu aérées, comptez jusqu'à 8 heures. Nous pouvons intervenir en fin de journé`
+- `services[0].uniqueIntro` — op=setField — Réduction à 2 <strong> (cap max 2) en retirant le 3e <strong> du 3e paragraphe, sans modifier le texte hors balises.
+  - value: `<p>Dans la <strong>Zone d'Activités de la Molette</strong>, les bureaux et open spaces accumulent rapidement poussières fines et particules liées au trafic logistique environnant. Les dalles textiles des couloirs de circulation perdent leur`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3>Halls et parties communes</h3> (block[2] manquant), en respectant max 1 <strong> par bloc.
+  - value: `<h3>Zones de circulation intensive</h3> <p>Les couloirs et espaces d'accueil concentrent l'essentiel des salissures. Après aspiration approfondie, nous appliquons un pré-détachant sur les traces de semelles et taches grasses avant le passag`
+- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer, pour la couverture FAQ service.
+  - value: `<p>Les taches installées depuis plusieurs mois nécessitent un <strong>pré-détachage ciblé</strong> avant le passage en injection-extraction. Nous appliquons un produit adapté à la nature de la salissure, puis effectuons plusieurs passes cro`
+- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer, pour la couverture FAQ service.
+  - value: `<p>L'injection-extraction permet d'extraire les <strong>salissures en profondeur</strong> sans détremper le support. Contrairement à l'encapsulation, cette méthode évacue réellement les particules au lieu de les figer. Le séchage reste rapi`
 
-## pantin
+## les-lilas
 
 ### Coverage targets (manques/minima)
 
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=15; add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=76; may add 1 (max2 outside li)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[0].faqAdditions[2].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
 - `services[1].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[3]`
+- `services[1].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
+- `services[1].faqAdditions[2].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
 - `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[0].answer`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
+  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
+- `services[3].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[3].specificChallenges[2]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=157; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — forbidden_strong
-- `faq[1].answer` — word_limits
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[2].uniqueIntro` — pairs_over_cap(4>2)
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans chacun des 3 blocs <h3> (max 1 par bloc) pour respecter la couverture demandée sur uniqueDeepDive.
-  - value: `<h3>Zones de circulation principale</h3> <p>Les couloirs, halls d'entrée et espaces d'accueil concentrent l'essentiel du piétinement. Nous identifions le type de fibre et l'état d'encrassement avant toute action. Les plinthes et bas de murs`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, pas après le 1er <p>).
-  - value: `<p>Le temps de séchage varie selon l'épaisseur du revêtement et la ventilation du local. En général, comptez 4 à 8 heures pour une remise en service. Nous conseillons d'intervenir en fin de journée afin que les moquettes soient praticables `
-- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, pas après le 1er <p>).
-  - value: `<p>L'injection-extraction reste la technique la plus adaptée : elle nettoie en profondeur sans saturer le support. Nous ajustons la pression et le débit selon la densité des fibres. Un <strong>brossage doux</strong> en fin d'intervention re`
-- `services[1].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (suppression d’un <strong> en trop) pour respecter le cap.
-  - value: `<p>Comment maintenir un parking souterrain propre quand les véhicules y circulent quotidiennement et que les traces d'huile s'accumulent sur le béton ? <strong>Le long de l'avenue Jean Lolive</strong>, les accès livraison et les places publ`
-
-## pontault-combault
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=325; add 1 (max2)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=151; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=126; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=312; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=150; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=138; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=136; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=338; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=107; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=137; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=145; add 1 in this block (max1)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=428; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=140; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=157; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=161; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
 - `services[3].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=357; add 1 (max2)
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=157; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=136; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=167; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[5].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+- `services[5].specificChallenges[4]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[5].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[5].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[6].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
+- `services[6].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[6].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+
+### Violations / Overlimit (TS actuel)
+
+- `services[1].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+
+### Patches proposés (kept)
+
+- `hubIntro` — op=substring — Coverage: hubIntro li[2] missing strong. Add 1 <strong> inside the 3rd <li> (max 1/li) on a concrete, terrain element.
+  - excerpt: `Suivi terrain : Compte-rendu d'intervention disponible, ajustements possibles selon`
+  - replacement: `Suivi terrain : <strong>Compte-rendu d'intervention</strong> disponible, ajustements possibles selon`
+- `services[0].uniqueDeepDive` — op=substring — Coverage: services[0].uniqueDeepDive block[2] missing strong. Add 1 short, concrete <strong> within the 'Surfaces périphériques et angles' block (max 1 per <h3> block).
+  - excerpt: `Le détachage ciblé traite les marques localisées : café, tanin, résidus`
+  - replacement: `Le <strong>détachage ciblé</strong> traite les marques localisées : café, tanin, résidus`
+- `services[0].specificChallenges[0]` — op=setField — Coverage: add 1 <strong> to services[0].specificChallenges[0] (max 1/item). Focus on a concrete usage constraint.
+  - value: `Moquettes de cabinets médicaux soumises à un <strong>passage patient régulier</strong> et exigeant une hygiène irréprochable.`
+- `services[0].specificChallenges[2]` — op=setField — Coverage: add 1 <strong> to services[0].specificChallenges[2] (max 1/item). Highlight the practical difficulty without marketing.
+  - value: `Taches de tanin et café <strong>incrustées dans les fibres</strong> des salles d'attente depuis plusieurs mois.`
+- `services[0].faqAdditions[2].answer` — op=substring — Coverage: add 1 <strong> in services[0].faqAdditions[2].answer within the first <p> (max 1/answer).
+  - excerpt: `L'injection-extraction reste la méthode principale pour ce niveau d'encrassement.`
+  - replacement: `<strong>L'injection-extraction</strong> reste la méthode principale pour ce niveau d'encrassement.`
+- `services[0].faqAdditions[3].answer` — op=substring — Coverage: add 1 <strong> in services[0].faqAdditions[3].answer within the first <p> (max 1/answer).
+  - excerpt: `Nous repérons les créneaux de livraison et les emplacements disponibles`
+  - replacement: `Nous repérons les <strong>créneaux de livraison</strong> et les emplacements disponibles`
+- `services[1].uniqueIntro` — op=setField — Fix overcap: services[1].uniqueIntro has 3 <strong> (max 2). Remove <strong> around a less scannable phrase while keeping the other two.
+  - value: `<p>Les traces noires sur le béton, les coulures d'huile près des places de stationnement, la poussière accumulée le long des rampes : ces marques visibles dans les parkings souterrains du secteur <strong>Avenue Pasteur</strong> témoignent d`
+
+## mitry-mory
+
+### Coverage targets (manques/minima)
+
+- `hubIntro`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=76; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
+- `services[0].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=155; add 1 (max2)
+- `services[1].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[1].specificChallenges[4]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[1].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
+- `services[3].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[3].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[3].faqAdditions[2].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
+- `services[4].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
+- `services[4].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[1].answer`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=72; add 1 in this block (max1)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — word_limits
-- `faq[3].answer` — word_limits
-- `services[0].uniqueDeepDive` — forbidden_strong
-- `services[5].uniqueIntro` — pairs_over_cap(7>2)
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `services[0].uniqueIntro` — op=substring — Ajout d’un <strong> court et concret dans l’intro (max 2) pour améliorer la scannabilité, sans toucher au texte hors balises.
-  - excerpt: `Ces particules grisâtres s'incrustent profondément dans les fibres des moquettes,`
-  - replacement: `Ces particules grisâtres s'incrustent profondément dans <strong>les fibres des moquettes</strong>,`
-- `services[0].faqAdditions[0].answer` — op=substring — Ajout d’un unique <strong> dans le 1er <p> (et aucun après) pour respecter le format FAQ et améliorer la lecture.
-  - excerpt: `Ces particules grisâtres forment des dépôts tenaces que l'aspirateur domestique`
-  - replacement: `Ces particules grisâtres forment <strong>des dépôts tenaces</strong> que l'aspirateur domestique`
-- `services[0].faqAdditions[2].answer` — op=substring — Ajout d’un unique <strong> dans le 1er <p> (et aucun après) pour la scannabilité, conforme aux règles FAQ.
-  - excerpt: `peuvent former des taches jaunâtres permanentes s'ils ne sont pas`
-  - replacement: `peuvent former <strong>des taches jaunâtres permanentes</strong> s'ils ne sont pas`
-
-## romainville
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[0].faqAdditions[0].answer (max 1 per answer). Segment court et terrain.
-  - value: `<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, transportables à la main dans les escaliers sans ascenseur. Le repérage préalable permet d'identifier les contraintes d'accès et de prévoir le matériel adapté. Les p`
-- `services[0].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[0].faqAdditions[3].answer (max 1 per answer). Mise en avant d'un point opérationnel.
-  - value: `<p>Le diagnostic initial identifie le <strong>type de fibre</strong> (bouclée, velours ras ou épais). Pour les moquettes épaisses, nous augmentons le temps d'extraction afin de retirer l'humidité en profondeur. Les dalles textiles fines reç`
-- `services[1].uniqueIntro` — op=setField — Coverage target: services[1].uniqueIntro overcap (3 strong). Suppression d'un <strong> pour revenir à max 2, sans toucher au texte.
-  - value: `<p>Les traces d'huile, les coulures de graisse et les dépôts de poussière marquent progressivement les sols des parkings souterrains de la <strong>ZAC de l'Horloge</strong> et des résidences récentes de Romainville. Ces salissures s'accumul`
-- `services[1].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[1].faqAdditions[2].answer (max 1). Focus sur l'organisation terrain.
-  - value: `<p>Les interventions sont programmées en début de matinée ou en soirée, hors pics d'affluence. <strong>Un balisage signalétique</strong> délimite les zones en cours de lavage. La rotation par secteur permet de maintenir une partie des place`
-- `services[1].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[1].faqAdditions[3].answer (max 1). Point concret de méthode.
-  - value: `<p>En souterrain, la ventilation réduite impose un séchage plus long et une <strong>gestion stricte des eaux</strong>. En aérien, l'évacuation naturelle simplifie le rinçage mais l'exposition aux intempéries génère davantage de dépôts organ`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[2].faqAdditions[0].answer (max 1). Met en avant la contrainte support.
-  - value: `<p>Les dalles sur plots des résidences récentes de Romainville présentent des <strong>joints ouverts sensibles</strong> à la haute pression. Nous utilisons un brossage doux combiné à un rinçage à pression modérée, orienté pour éviter l'infi`
-- `services[2].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[2].faqAdditions[3].answer (max 1). Contrainte terrain claire.
-  - value: `<p>Dans les immeubles anciens du centre de Romainville, les <strong>escaliers étroits</strong> et l'absence d'ascenseur compliquent le transport du matériel. Nous prévoyons un équipement léger et modulable. La coordination avec le gardien o`
-- `services[3].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[3].faqAdditions[0].answer (max 1). Évite les termes interdits, reste factuel.
-  - value: `<p>Les fientes de pigeons peuvent contenir des <strong>agents pathogènes transmissibles</strong> par inhalation de poussières sèches. Sur les secteurs exposés comme les abords de la Corniche des Forts, nous intervenons généralement sous 48 `
-- `services[3].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[3].faqAdditions[2].answer (max 1). Met en avant une mesure de protection.
-  - value: `<p>Avant l'intervention, nous informons les occupants des balcons adjacents pour qu'ils rentrent leur linge et ferment leurs fenêtres. <strong>La zone est bâchée</strong> pour éviter toute projection. Les déchets sont conditionnés en sacs é`
-- `services[4].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[4].faqAdditions[0].answer (max 1). Segment concret, non marketing.
-  - value: `<p>L'extraction en profondeur retire une grande partie des <strong>acariens, poussières et squames</strong> accumulés dans les fibres. Les personnes sensibles constatent souvent une amélioration du confort respiratoire dans les jours suivan`
-- `services[4].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[4].faqAdditions[1].answer (max 1). Met en avant l'étape clé.
-  - value: `<p>Un <strong>pré-traitement enzymatique</strong> cible les composés organiques responsables des odeurs. L'injection-extraction déloge ensuite les résidus incrustés en profondeur. Sur les taches anciennes, plusieurs passages peuvent être né`
-- `services[5].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[5].faqAdditions[2].answer (max 1). Terme technique utile.
-  - value: `<p>Après le nettoyage, nous appliquons un <strong>produit filmogène</strong> qui pénètre les pores de la dalle. Ce traitement limite la réapparition des mousses pendant une à deux saisons selon l'exposition. Il convient aux dalles béton ou `
-- `services[5].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of services[5].faqAdditions[3].answer (max 1). Met en avant l'élément à protéger.
-  - value: `<p>Le mobilier léger est déplacé hors de la zone de travail. Les jardinières et plantations sont bâchées ou éloignées. <strong>Les baies vitrées et seuils</strong> reçoivent une protection pour éviter les projections. Tout est remis en plac`
-
-## rosny-sous-bois
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_overcap: non-<li> text has 5 strong pairs; max 2 outside <li>
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 7)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — hubIntro_li_cap
-- `faq[0].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `faq[3].answer` — forbidden_strong
-- `services[2].faqAdditions[3].answer` — word_limits
-- `services[3].uniqueDeepDive` — forbidden_strong
-- `services[4].faqAdditions[2].answer` — forbidden_strong
-- `services[5].uniqueIntro` — pairs_over_cap(7>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Réduit les <strong> hors <li> de 5 à 2 paires (max 2) en retirant le balisage sur des repères de lieu et sur “protocolisée”, tout en gardant 1 point d’accroche scannable par paragraphe.
-  - value: `<p>À Rosny-sous-Bois, Klinova accompagne les syndics de copropriété, gestionnaires et entreprises sur une logique de <strong>gestion globale</strong> : propreté, hygiène, continuité d’usage et interventions qui respectent l’occupation des l`
-- `services[2].specificChallenges[1]` — op=substring — Ajoute 1 <strong> sur un point terrain concret (support poreux) pour atteindre la couverture demandée, sans dépasser 1 par item.
-  - excerpt: `Les sols en dalles ou béton poreux gardent les traces`
-  - replacement: `<strong>Les sols en dalles ou béton poreux</strong> gardent les traces`
-- `services[2].specificChallenges[2]` — op=substring — Ajoute 1 <strong> sur une zone critique (angles/garde-corps) pour la scannabilité et la couverture, max 1 par item respecté.
-  - excerpt: `Les garde-corps et angles accumulent la crasse : ce sont eux`
-  - replacement: `<strong>Les garde-corps et angles</strong> accumulent la crasse : ce sont eux`
-- `services[3].specificChallenges[0]` — op=substring — Ajoute 1 <strong> sur la cause locale (zones arborées) pour la couverture, sans terme interdit.
-  - excerpt: `La proximité des squares et zones arborées favorise les regroupements`
-  - replacement: `<strong>La proximité des squares et zones arborées</strong> favorise les regroupements`
-- `services[3].specificChallenges[3]` — op=substring — Ajoute 1 <strong> sur l’enjeu opérationnel (cohabitation) pour la couverture, max 1 par item.
-  - excerpt: `Le point critique reste la cohabitation : protéger l’intérieur, la façade`
-  - replacement: `Le point critique reste la <strong>cohabitation</strong> : protéger l’intérieur, la façade`
-- `services[4].specificChallenges[2]` — op=substring — Ajoute 1 <strong> sur une contrainte technique concrète (tissus épais/fragiles) pour la couverture.
-  - excerpt: `Les tissus épais ou fragiles demandent une pression réduite`
-  - replacement: `<strong>Les tissus épais ou fragiles</strong> demandent une pression réduite`
-- `services[4].specificChallenges[3]` — op=substring — Ajoute 1 <strong> sur le facteur d’encrassement réel (usage) pour la couverture, sans surligner une phrase entière.
-  - excerpt: `Le quotidien (enfants, animaux, invités) relance les salissures`
-  - replacement: `<strong>Le quotidien (enfants, animaux, invités)</strong> relance les salissures`
-- `services[5].uniqueIntro` — op=setField — Ramène uniqueIntro à max 2 <strong> (au lieu de 7) en gardant 2 accroches scannables (phénomènes + support principal) et en retirant le balisage sur le nom de ville et la liste de matériaux.
-  - value: `<p>Rosny-sous-Bois, commune dynamique de Seine-Saint-Denis, combine un tissu urbain dense, des quartiers pavillonnaires et de nombreux espaces verts. Les terrasses y sont largement utilisées comme prolongement de l’habitat, aussi bien en ma`
-- `services[5].specificChallenges[0]` — op=substring — Ajoute 1 <strong> sur le contexte terrain (urbain) pour la couverture, max 1 par item.
-  - excerpt: `Terrasses en environnement urbain : dépôts de pollution et traces noires`
-  - replacement: `<strong>Terrasses en environnement urbain</strong> : dépôts de pollution et traces noires`
-- `services[5].specificChallenges[4]` — op=substring — Ajoute 1 <strong> sur le type de support (bois/composite) pour la couverture, max 1 par item.
-  - excerpt: `Bois et composite exposés plein air : perte d’éclat et salissures`
-  - replacement: `<strong>Bois et composite exposés plein air</strong> : perte d’éclat et salissures`
-- `services[5].faqAdditions[0].answer` — op=setField — Met l’answer au format (max 1 <strong>) en conservant un seul repère scannable dans le 1er <p>.
-  - value: `<p>La combinaison de la <strong>pollution urbaine</strong>, de l’humidité et des passages répétés favorise l’apparition de traces noires et biofilms sur les sols extérieurs. Sans nettoyage adapté, ces salissures s’installent durablement.</p`
-- `services[5].faqAdditions[1].answer` — op=setField — Met l’answer au format (max 1 <strong>) en gardant un seul segment court et utile dans le 1er <p>.
-  - value: `<p>Oui. Un nettoyage en profondeur permet d’éclaircir les surfaces, de réduire fortement les zones foncées et de retrouver un sol plus <strong>homogène et agréable</strong> à l’usage.</p>`
-- `services[6].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans chacun des 3 blocs <h3> manquants (max 1 par bloc), sur des points opérationnels concrets (accès, poussière, calcaire).
-  - value: `<h3>Bois-Perrier / Centre-ville — accès sécurisés et forte rotation</h3> <p>Autour des gares (RER E et Métro 11), les interventions sont souvent liées à une rotation locative : fin de bail, remise en état avant entrée, grand ménage ponctuel`
-- `services[6].specificChallenges[2]` — op=substring — Ajoute 1 <strong> pour la couverture sur un repère local concret (axes), max 1 par item.
-  - excerpt: `A86/A3 + RN186 : dépôts routiers (suie/particules) sur vitrages`
-  - replacement: `<strong>A86/A3 + RN186</strong> : dépôts routiers (suie/particules) sur vitrages`
-- `services[6].specificChallenges[3]` — op=substring — Ajoute 1 <strong> pour la couverture sur la source de salissures (chantiers), max 1 par item.
-  - excerpt: `Écoquartier / chantiers (Coteaux de Beauclair) : poussières fines`
-  - replacement: `<strong>Écoquartier / chantiers (Coteaux de Beauclair)</strong> : poussières fines`
-- `services[6].specificChallenges[5]` — op=substring — Ajoute 1 <strong> pour la couverture sur l’enjeu (préservation matériaux), max 1 par item.
-  - excerpt: `Matériaux à préserver : parquets et finitions plus sensibles`
-  - replacement: `<strong>Matériaux à préserver</strong> : parquets et finitions plus sensibles`
-- `services[6].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (et unique) pour atteindre la couverture FAQ, max 1 respecté.
-  - excerpt: `Après travaux, on procède en plusieurs passes pour éviter la redéposition`
-  - replacement: `Après travaux, on procède en <strong>plusieurs passes</strong> pour éviter la redéposition`
-- `services[6].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (et unique) sur un repère terrain (axes) pour la couverture FAQ, max 1 respecté.
-  - excerpt: `À Rosny, la proximité A86/A3 et les grands axes peut marquer`
-  - replacement: `À Rosny, la proximité <strong>A86/A3 et les grands axes</strong> peut marquer`
-
-## saint-mande
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_li_overcap: li[0] has 6 strong pairs; max 1 per <li>
-  - hubIntro_li_overcap: li[1] has 8 strong pairs; max 1 per <li>
-  - hubIntro_li_overcap: li[2] has 5 strong pairs; max 1 per <li>
-  - hubIntro_nonli_overcap: non-<li> text has 14 strong pairs; max 2 outside <li>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=204; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=83; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=96; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=90; add 1 in this block (max1)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=103; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=106; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=100; add 1 in this block (max1)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=214; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=93; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=109; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=96; add 1 in this block (max1)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=63; add 1 in this block (max1)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — hubIntro_li_cap
-- `faq[3].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Réduction forte du sur-balisage : respect des caps hubIntro (max 1 <strong> par <li>, max 2 hors <li>) tout en gardant des repères scannables (1 accroche + titres de liste).
-  - value: `<p>Saint-Mandé réunit un parc immobilier d'exception et des exigences de propreté élevées, portées par des copropriétés avec gardiens et des conseils syndicaux attentifs aux détails. <strong>Klinova répond à ces attentes par des interventio`
-- `faq[3].answer` — op=setField — Mise en conformité FAQ : max 1 <strong> dans l’answer, placé dans le 1er <p>, suppression des autres <strong>.
-  - value: `<p><strong>Oui, nous ajustons pression, température et produits selon le support</strong>. Les parquets anciens sensibles à l'humidité sont traités avec une extraction renforcée et un séchage accéléré. Les pierres de taille des balcons reço`
-- `services[0].faqAdditions[2].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), focus concret sur un réglage terrain.
-  - excerpt: `Nous réduisons la température de l'eau (50-60°C au lieu de 70°C)`
-  - replacement: `Nous réduisons <strong>la température de l'eau</strong> (50-60°C au lieu de 70°C)`
-- `services[1].faqAdditions[1].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), repère opérationnel.
-  - excerpt: `Nous effectuons systématiquement une visite préalable pour mesurer les contraintes`
-  - replacement: `Nous effectuons systématiquement une <strong>visite préalable</strong> pour mesurer les contraintes`
-- `services[1].faqAdditions[3].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), point technique clé.
-  - excerpt: `Nous vérifions systématiquement l'état des siphons avant intervention`
-  - replacement: `Nous vérifions systématiquement <strong>l'état des siphons</strong> avant intervention`
-- `services[2].uniqueIntro` — op=substring — Couverture uniqueIntro manquante : ajout d’1 <strong> (max 2), segment court et concret.
-  - excerpt: `les balcons accumulent une poussière noire grasse qui colle aux dalles`
-  - replacement: `les balcons accumulent une <strong>poussière noire grasse</strong> qui colle aux dalles`
-- `services[2].faqAdditions[0].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), repère technique.
-  - excerpt: `Nous utilisons une pression modérée (80 à 100 bars maximum)`
-  - replacement: `Nous utilisons une <strong>pression modérée</strong> (80 à 100 bars maximum)`
-- `services[2].faqAdditions[3].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), consigne concrète.
-  - excerpt: `attendez le séchage total des joints et des angles`
-  - replacement: `attendez <strong>le séchage total des joints</strong> et des angles`
-- `services[3].faqAdditions[2].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), effet concret sur le support.
-  - excerpt: `elles accélèrent l'oxydation et fragilisent les soudures`
-  - replacement: `elles <strong>accélèrent l'oxydation</strong> et fragilisent les soudures`
-- `services[3].faqAdditions[3].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), point logistique terrain.
-  - excerpt: `sans transit par les parties communes de la copropriété`
-  - replacement: `sans transit par <strong>les parties communes</strong> de la copropriété`
-- `services[4].uniqueIntro` — op=substring — Couverture uniqueIntro manquante : ajout d’1 <strong> (max 2), segment court et concret.
-  - excerpt: `L'humidité ambiante du Bois favorise le développement d'acariens`
-  - replacement: `L'humidité ambiante du Bois favorise le <strong>développement d'acariens</strong>`
-- `services[4].faqAdditions[0].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), action concrète.
-  - excerpt: `L'aspiration puissante retire ensuite les acariens morts et leurs déjections`
-  - replacement: `<strong>L'aspiration puissante retire</strong> ensuite les acariens morts et leurs déjections`
-- `services[4].faqAdditions[1].answer` — op=substring — Ajout de couverture : 1 <strong> dans le 1er <p> (max 1), repère produit/méthode sans promesse.
-  - excerpt: `un détachant enzymatique qui décompose les cristaux d'acide urique`
-  - replacement: `un <strong>détachant enzymatique</strong> qui décompose les cristaux d'acide urique`
-
-## saint-maur-des-fosses
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=59; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=56; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=76; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=81; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[4].uniqueDeepDive`
   - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
+- `services[5].specificChallenges[4]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
+- `services[5].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 4)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=68; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=68; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
+  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
 - `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[6].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[6].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[6].faqAdditions[0].answer`
@@ -5132,192 +942,176 @@ Total fichiers : 58
 
 ### Violations / Overlimit (TS actuel)
 
-- `hubIntro` — word_limits
-- `faq[1].answer` — forbidden_strong
-- `services[0].faqAdditions[2].answer` — forbidden_strong
-- `services[1].uniqueIntro` — pairs_over_cap(4>2)
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
 - `services[2].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].faqAdditions[0].answer` — forbidden_strong
-- `services[4].uniqueIntro` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(5>2)
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
+- `services[6].uniqueIntro` — pairs_over_cap(4>2)
 
 ### Patches proposés (kept)
 
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3>1</h3> (max 1) pour atteindre la couverture demandée, sans toucher au texte hors balises.
-  - value: `<h3>1. Audit des fibres et des contraintes</h3> <p>Laine vierge dans les immeubles anciens ou synthétique grand passage ? Le technicien adapte la température et le pH. Il repère les "chemins de marche" usés et les zones de stagnation d'humi`
-- `services[1].uniqueIntro` — op=setField — Réduction à max 2 <strong> dans uniqueIntro (suppression de 2 balises) pour respecter le cap, sans modifier le texte.
-  - value: `<p>Un parking mal entretenu est le premier signal de dévalorisation d'un immeuble. À Saint-Maur, les parkings souffrent de deux maux : l'apport massif de <strong>débris végétaux</strong> (feuilles, bogues) collés aux pneus, et le développem`
+- `hubIntro` — op=setField — Ajouter 1 <strong> hors <li> (actuellement 0) pour améliorer la scannabilité, en restant sous le cap (max 2 hors <li>).
+  - value: `<p>Terminus du RER B et pôle logistique majeur aux portes de Roissy-CDG, Mitry-Mory concentre des flux intenses entre zones résidentielles et activités économiques. Klinova s'y positionne comme partenaire terrain pour accompagner syndics, g`
+- `services[0].uniqueIntro` — op=setField — Réduire à max 2 <strong> (found 3) en retirant le balisage sur un segment moins utile à la scannabilité.
+  - value: `<p>Les traces grises le long des couloirs, les auréoles près des entrées, les fibres tassées aux passages fréquents : dans les <strong>bureaux de la Z.I. Mitry-Compans</strong>, ces marques d'usure apparaissent rapidement. Le trafic quotidi`
+- `services[0].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les challenges service[0].
+  - value: `Dalles textiles soumises au <strong>passage intensif</strong> des équipes en chaussures de sécurité.`
+- `services[0].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les challenges service[0].
+  - value: `Salles de réunion avec <strong>taches localisées (café, encre)</strong> nécessitant un détachage ciblé.`
+- `services[0].faqAdditions[0].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[0].
+  - value: `<p>Nous identifions d'abord <strong>le type de fibre</strong> et son état d'usure. Sur les dalles textiles fréquentes dans ces locaux, la pression d'injection est ajustée pour éviter toute détérioration. Les zones de passage intense reçoive`
+- `services[0].faqAdditions[1].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[0].
+  - value: `<p>Le séchage varie selon <strong>l'épaisseur de la moquette</strong> et la ventilation de la salle. En conditions normales, comptez 4 à 6 heures pour une circulation légère, 8 heures pour un usage intensif. Nous programmons l'intervention `
+- `services[1].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc[2] (max 1 par bloc <h3>) pour la couverture deepDive service[1].
+  - value: `<h3>Sol décrassé et rigoles dégagées</h3> <p>L'objectif est d'obtenir un revêtement débarrassé des graisses, huiles et poussières accumulées. Les rigoles d'évacuation retrouvent leur fonction, les marquages redeviennent lisibles. Sur béton `
+- `services[1].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[1].
+  - value: `Parkings relais gare Mitry-Claye : <strong>trafic quotidien intense</strong> et taches d'huile récurrentes.`
+- `services[1].specificChallenges[4]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[1].
+  - value: `Poussières industrielles retombant sur les <strong>parkings aériens</strong> proches de la Z.I.`
+- `services[1].faqAdditions[0].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[1].
+  - value: `<p>Les taches d'huile incrustées nécessitent <strong>un dégraissant appliqué avant</strong> le passage de l'autolaveuse. Sur béton brut, le produit pénètre dans les pores du revêtement. Plusieurs passes peuvent être nécessaires selon l'anci`
+- `services[1].faqAdditions[1].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[1].
+  - value: `<p>Le souterrain impose <strong>une ventilation suffisante</strong> et une gestion stricte des eaux vers les regards existants. L'aérien en enrobé supporte mieux la haute pression mais accumule davantage de poussières. Le diagnostic initial`
+- `services[2].uniqueIntro` — op=setField — Réduire à max 2 <strong> (found 3) en retirant le balisage sur un segment moins prioritaire.
+  - value: `<p>Dans les résidences de la <strong>Villette-aux-Aulnes</strong> comme dans les secteurs pavillonnaires de Mitry-Bourg, les balcons accumulent rapidement des dépôts tenaces. Feuilles mortes coincées dans les angles, traces verdâtres sur le`
+- `services[2].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc[1] (max 1 par bloc <h3>) pour la couverture deepDive service[2].
+  - value: `<h3>Préparation et protection</h3> <p>Le mobilier et les plantes sont déplacés ou bâchés pour éviter tout contact avec les produits. Les menuiseries, fenêtres et seuils reçoivent une protection adaptée. Les gros débris — feuilles, terre acc`
+- `services[2].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[2].
+  - value: `Dépôts atmosphériques liés aux axes routiers et au trafic aérien qui <strong>ternissent rapidement les surfaces</strong>.`
+- `services[2].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[2].
+  - value: `Béton poreux des immeubles années 70 favorisant <strong>mousses et traces verdâtres</strong> persistantes.`
+- `services[2].faqAdditions[1].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[2].
+  - value: `<p>L'eau de rinçage est <strong>canalisée vers les évacuations</strong> existantes. Des protections sont installées au niveau des seuils et des joints de vitrage pour éviter les infiltrations. Si la loggia donne sur un balcon voisin en dess`
+- `services[2].faqAdditions[3].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[2].
+  - value: `<p>La pression reste <strong>basse à moyenne</strong> pour préserver l'intégrité des joints. Le produit choisi agit sur les salissures organiques et les traces calcaires sans attaquer le carrelage ni décolorer les joints. Un brossage manuel`
+- `services[3].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc[0] (max 1 par bloc <h3>) pour la couverture deepDive service[3].
+  - value: `<h3>Sécurisation et confinement de la zone</h3> <p>L'intervenant porte un équipement complet : masque FFP2, combinaison jetable, gants et lunettes de protection. Le balcon est bâché pour éviter toute <strong>dispersion vers l'intérieur du l`
+- `services[3].specificChallenges[2]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[3].
+  - value: `Immeubles R+4 à R+8 nécessitant une <strong>gestion rigoureuse des écoulements</strong> vers les voisins.`
+- `services[3].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[3].
+  - value: `Balcons exposés aux <strong>retombées régulières</strong> près du Parc des Corbeaux et des grands arbres.`
+- `services[3].faqAdditions[2].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[3].
+  - value: `<p>Le désinfectant agit <strong>pendant l'intervention</strong> et élimine les bactéries et virus présents au moment de l'application. Son effet ne persiste pas dans le temps : si de nouvelles fientes s'accumulent, une nouvelle contaminatio`
+- `services[3].faqAdditions[3].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[3].
+  - value: `<p>Les fientes et résidus sont <strong>conditionnés dans des sacs étanches</strong> dès la collecte. L'évacuation s'effectue discrètement via les parties communes, sans laisser de traces ni d'odeurs dans les escaliers. Le stationnement du v`
+- `services[4].uniqueIntro` — op=setField — Ajouter 1 <strong> (0 présent) dans uniqueIntro service[4], en restant sous le cap (max 2).
+  - value: `<p>Après quelques années d'usage quotidien, les textiles d'ameublement accumulent ce que l'œil ne voit plus : poussières fines, résidus alimentaires, traces d'animaux. Dans les pavillons du quartier des Acacias ou de Mitry-le-Neuf, les cana`
+- `services[4].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[4].
+  - value: `Taches d'urine animale <strong>incrustées dans les fibres</strong> des canapés familiaux.`
+- `services[4].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[4].
+  - value: `Matelas épais difficiles à sécher dans les <strong>chambres peu ventilées</strong>.`
+- `services[4].faqAdditions[3].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[4].
+  - value: `<p>Un délai de trois à cinq jours permet généralement de caler <strong>un créneau adapté</strong> à vos contraintes. En période chargée ou pour une intervention le samedi, anticiper d'une semaine facilite l'organisation. Nous confirmons le `
+- `services[4].faqAdditions[2].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[4].
+  - value: `<p>Le matériel d'injection-extraction est conçu pour être transporté en <strong>configuration escalier</strong>. Le traitement s'effectue directement sur place, sans déplacer le canapé hors du logement. La quantité d'eau injectée reste cont`
+- `services[5].uniqueIntro` — op=setField — Réduire à max 2 <strong> (found 3) en retirant le balisage sur une liste de supports moins utile à la scannabilité.
+  - value: `<p>Dans les secteurs pavillonnaires de <strong>Mitry-Bourg</strong> et les rez-de-jardin de la <strong>Villette-aux-Aulnes</strong>, les terrasses accumulent rapidement des dépôts verts dès les premiers mois d'automne. L'humidité ambiante e`
+- `services[5].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc[0] (max 1 par bloc <h3>) pour la couverture deepDive service[5].
+  - value: `<h3>Préparation et protection</h3> <p>Avant toute action, nous déplaçons ou bâchons le mobilier extérieur et les jardinières. Les menuiseries — baies vitrées, portes-fenêtres — sont protégées pour éviter les projections.</p> <p class="mt-4"`
+- `services[5].specificChallenges[4]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[5].
+  - value: `Écoulement d'eau à gérer pour éviter les <strong>projections vers les voisins</strong> ou les plantations.`
+- `services[5].specificChallenges[0]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[5].
+  - value: `Mousse persistante sur les <strong>joints de carrelage</strong> exposés à l'ombre des arbres.`
+- `services[5].faqAdditions[0].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[5].
+  - value: `<p>Le bois composite noirci nécessite <strong>un produit spécifique</strong> qui décolle les micro-organismes sans attaquer les fibres. Nous appliquons une solution adaptée, suivie d'un brossage doux et d'un rinçage à pression modérée. Le r`
+- `services[5].faqAdditions[1].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[5].
+  - value: `<p>Sur les zones ombragées de Mitry-Mory, nous utilisons <strong>un traitement anti-mousse</strong> à action prolongée après le nettoyage. Ce produit freine la réapparition des lichens pendant plusieurs mois. L'efficacité varie selon l'expo`
+- `services[6].uniqueDeepDive` — op=setField — Ajouter 1 <strong> dans le bloc[0] (max 1 par bloc <h3>) pour la couverture deepDive service[6].
+  - value: `<h3>Pièces de vie et chambres</h3> <p>Le dépoussiérage commence par les plafonds, murs et plinthes pour éliminer les résidus de travaux ou la poussière accumulée. Les sols sont ensuite aspirés puis lavés selon leur nature : eau tiède et pro`
+- `services[6].specificChallenges[1]` — op=setField — Ajouter 1 <strong> (max 1 par item) pour la couverture challenges service[6].
+  - value: `Sols mixtes dans un même logement : <strong>adapter le traitement</strong> pièce par pièce.`
+- `services[6].faqAdditions[1].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[6].
+  - value: `<p>Après travaux, nous commençons par <strong>l'évacuation des résidus grossiers</strong> puis le dépoussiérage complet des surfaces hautes. Les sols sont traités selon leur nature, les traces de peinture ou d'enduit retirées avec précautio`
+- `services[6].faqAdditions[0].answer` — op=setField — Ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour la couverture FAQ service[6], sans mettre en <strong> des délais (interdit).
+  - value: `<p>Nous intervenons généralement sous 48 à 72 heures selon la surface et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente dans le secteur de la gare, nous adaptons notre planning pour proposer <strong>un c`
 
-## serris
+## sevran
 
 ### Coverage targets (manques/minima)
 
+- `hubIntro`
+  - hubIntro_li_missing: li[2] has 0 strong; words=17; add 1 inside this <li> (max1/li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=72; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=145; add 1 (max2)
 - `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=106; add 1 in this block (max1)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=244; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=125; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=119; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=108; add 1 in this block (max1)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=266; add 1 (max2)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=111; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=130; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=118; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=278; add 1 (max2)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=125; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=132; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=142; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=267; add 1 (max2)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=118; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=118; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=123; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 11)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=69; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=64; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=71; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — word_limits
-- `services[5].uniqueIntro` — pairs_over_cap(11>2)
-- `services[6].uniqueIntro` — forbidden_strong
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=substring — Coverage target: services[0].uniqueDeepDive block[2] missing 1 <strong>; add a short, concrete emphasis within the third block without exceeding max 1 per <h3> block.
-  - excerpt: `Le séchage complet intervient sous 6 à 8 heures`
-  - replacement: `Le <strong>séchage complet</strong> intervient sous 6 à 8 heures`
-
-## thiais
-
-### Coverage targets (manques/minima)
-
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
 - `services[0].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
+- `services[0].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[1].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=154; add 1 (max2)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
 - `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
 - `services[1].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[0].answer`
+- `services[1].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=175; add 1 (max2)
+- `services[2].uniqueDeepDive`
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[2].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[2].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
 - `services[3].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[3]`
+- `services[3].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[1] has 0 strong; words=49; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=62; add 1 in this block (max1)
 - `services[4].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[1].answer`
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
   - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-- `services[5].specificChallenges[2]`
+- `services[5].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[5].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[5].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=163; add 1 (max2)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
 - `services[6].specificChallenges[1]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].specificChallenges[4]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[6].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
@@ -5326,1340 +1120,289 @@ Total fichiers : 58
 
 ### Patches proposés (kept)
 
-- `services[0].faqAdditions[1].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> of this service FAQ answer (max 1), to improve scannability with a concrete, non-marketing cue.
-  - excerpt: `Le séchage dépend de l'épaisseur des fibres et de la ventilation`
-  - replacement: `Le séchage dépend de <strong>l'épaisseur des fibres</strong> et de la ventilation`
-- `services[0].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> of this service FAQ answer (max 1), highlighting a practical parameter without changing any other text.
-  - excerpt: `Nous ajustons la pression d'injection et la température de la solution`
-  - replacement: `Nous ajustons <strong>la pression d'injection</strong> et la température de la solution`
-- `services[1].specificChallenges[0]` — op=substring — Coverage target: add 1 <strong> to this specific challenge item (max 1), emphasizing the on-site issue for scannability.
-  - excerpt: `générant pics de salissures sur les aires de stationnement.`
-  - replacement: `générant <strong>pics de salissures</strong> sur les aires de stationnement.`
-- `services[1].specificChallenges[1]` — op=substring — Coverage target: add 1 <strong> to this specific challenge item (max 1), highlighting the concrete type of soiling.
-  - excerpt: `Dépôts d'huile et poussières routières liés à la proximité`
-  - replacement: `<strong>Dépôts d'huile et poussières routières</strong> liés à la proximité`
-- `services[1].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> of this service FAQ answer (max 1), focusing on a practical on-site check.
-  - excerpt: `Un contrôle visuel des rigoles précède chaque intervention`
-  - replacement: `Un <strong>contrôle visuel des rigoles</strong> précède chaque intervention`
-- `services[1].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> of this service FAQ answer (max 1), making the key operational difference scannable.
-  - excerpt: `l'autolaveuse travaille en circuit fermé avec aspiration immédiate`
-  - replacement: `l'autolaveuse travaille en <strong>circuit fermé</strong> avec aspiration immédiate`
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (non-<li> manquant) et d’1 <strong> dans le <li> sans strong (li[2]) en respectant max 1 strong par <li> et max 2 hors <li>.
+  - value: `<p>Au cœur du parc de la Poudrerie et traversée par le canal de l'Ourcq, Sevran présente des configurations variées qui demandent une <strong>organisation rigoureuse</strong>. Klinova accompagne syndics, gestionnaires et particuliers avec d`
+- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> (max2) pour améliorer la scannabilité sur un point terrain, sans terme interdit.
+  - value: `<p>Dans le secteur proche de l'Hôpital René-Muret, les cabinets médicaux et bureaux administratifs reçoivent un flux régulier de visiteurs. Les fibres textiles accumulent poussières fines, traces de semelles et résidus organiques qui ternis`
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3> manquant (block[2]) en respectant max 1 strong par bloc.
+  - value: `<h3>Zones de circulation principale</h3> <p>Les couloirs et entrées concentrent l'essentiel des dépôts. Après diagnostic du type de fibre, une aspiration préalable retire les particules libres. Le traitement par injection-extraction cible e`
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max1/item) pour atteindre la couverture demandée sur les specificChallenges du service[0].
+  - value: `Apport constant de <strong>boue et poussière</strong> depuis les gares RER vers les espaces d'accueil.`
+- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (max1/answer) pour la couverture FAQ service[0].
+  - value: `<p>L'injection-extraction à basse pression convient aux fibres courtes et denses. Nous ajustons le débit d'eau et la puissance d'aspiration pour éviter d'écraser les poils. Un <strong>brossage doux</strong> en fin d'intervention redresse le`
 
-## torcy
+## tremblay-en-france
 
 ### Coverage targets (manques/minima)
 
 - `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=83; may add 1 (max2 outside li)
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `citySpecificChallenges[1]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `citySpecificChallenges[0]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=72; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=70; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=47; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 8)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=196; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[0].uniqueIntro` — forbidden_strong
-- `services[0].faqAdditions[0].answer` — faq_rule_violation
-- `services[0].faqAdditions[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[2].answer` — faq_rule_violation
-- `services[0].faqAdditions[3].answer` — faq_rule_violation
-- `services[1].uniqueIntro` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — faq_rule_violation
-- `services[1].faqAdditions[1].answer` — faq_rule_violation
-- `services[1].faqAdditions[2].answer` — faq_rule_violation
-- `services[1].faqAdditions[3].answer` — faq_rule_violation
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[0].answer` — faq_rule_violation
-- `services[2].faqAdditions[1].answer` — faq_rule_violation
-- `services[2].faqAdditions[2].answer` — faq_rule_violation
-- `services[2].faqAdditions[3].answer` — faq_rule_violation
-- `services[3].faqAdditions[0].answer` — faq_rule_violation
-- `services[3].faqAdditions[1].answer` — faq_rule_violation
-- `services[3].faqAdditions[2].answer` — faq_rule_violation
-- `services[3].faqAdditions[3].answer` — faq_rule_violation
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].faqAdditions[0].answer` — faq_rule_violation
-- `services[4].faqAdditions[1].answer` — faq_rule_violation
-- `services[4].faqAdditions[2].answer` — faq_rule_violation
-- `services[4].faqAdditions[3].answer` — faq_rule_violation
-- `services[5].uniqueIntro` — pairs_over_cap(8>2)
-- `services[5].faqAdditions[0].answer` — faq_rule_violation
-- `services[5].faqAdditions[1].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=substring — Ajoute 1 <strong> dans le texte hors <li> (actuellement 0), sans dépasser le cap (max 2 hors <li>) et en gardant un segment court et concret.
-  - excerpt: `Nous proposons une approche globale de la maintenance technique : du nettoyage`
-  - replacement: `Nous proposons une <strong>approche globale de la maintenance technique</strong> : du nettoyage`
-- `citySpecificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur un élément terrain et scannable pour atteindre la couverture demandée.
-  - excerpt: `des moquettes de halls par le passage intensif lié à la`
-  - replacement: `des moquettes de halls par le <strong>passage intensif</strong> lié à la`
-- `citySpecificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur un point concret pour atteindre la couverture demandée.
-  - excerpt: `Accumulation de particules fines et résidus urbains sur les balcons`
-  - replacement: `Accumulation de <strong>particules fines et résidus urbains</strong> sur les balcons`
-- `services[0].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur un repère terrain (gare) pour la couverture des challenges service 1.
-  - excerpt: `dans les halls proches de la gare RER A, avec des`
-  - replacement: `dans les halls proches de la <strong>gare RER A</strong>, avec des`
-- `services[0].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur un problème concret pour la couverture des challenges service 1.
-  - excerpt: `Incrustation profonde de particules fines issues du trafic des axes`
-  - replacement: `Incrustation profonde de <strong>particules fines</strong> issues du trafic des axes`
-- `services[1].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte concrète pour la couverture des challenges service 2.
-  - excerpt: `Faible ventilation de certains parkings souterrains du secteur ville nouvelle`
-  - replacement: `<strong>Faible ventilation</strong> de certains parkings souterrains du secteur ville nouvelle`
-- `services[2].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 1 (max 1 par bloc) pour corriger le manque de couverture du deep dive.
-  - excerpt: `L'intervention commence par la protection soigneuse de la porte-fenêtre, des menuiseries`
-  - replacement: `L'intervention commence par la <strong>protection soigneuse de la porte-fenêtre</strong>, des menuiseries`
-- `services[2].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur une cause locale concrète pour la couverture des challenges service 3.
-  - excerpt: `Exposition aux embruns humides des étangs de Maubuée qui favorise`
-  - replacement: `Exposition aux <strong>embruns humides des étangs de Maubuée</strong> qui favorise`
-- `services[2].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte terrain pour la couverture des challenges service 3.
-  - excerpt: `imposant une gestion précise de l'écoulement des eaux de lavage`
-  - replacement: `imposant une <strong>gestion précise de l'écoulement</strong> des eaux de lavage`
-- `services[3].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 1 (max 1 par bloc) pour corriger le manque de couverture du deep dive.
-  - excerpt: `Notre intervention respecte un protocole strict de décontamination biologique. Nos techniciens`
-  - replacement: `Notre intervention respecte un <strong>protocole strict de décontamination biologique</strong>. Nos techniciens`
-- `services[3].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur un repère local pour la couverture des challenges service 4.
-  - excerpt: `Balcons des étages supérieurs du secteur étangs particulièrement exposés`
-  - replacement: `Balcons des étages supérieurs du <strong>secteur étangs</strong> particulièrement exposés`
-- `services[3].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte opérationnelle pour la couverture des challenges service 4.
-  - excerpt: `Accès en hauteur pour le nettoyage des garde-corps et façades souillées`
-  - replacement: `<strong>Accès en hauteur</strong> pour le nettoyage des garde-corps et façades souillées`
-- `services[3].faqAdditions[1].answer` — op=setField — Corrige le format FAQ service en supprimant le <strong> sur une notion de délai (interdit).
-  - value: `Les produits virucides et bactéricides que nous utilisons sont homologués pour un usage en habitat une fois correctement rincés et séchés. Le délai de quelques heures que nous recommandons permet l'évaporation complète des résidus et garant`
-- `services[4].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> 3 (max 1 par bloc) pour corriger le manque de couverture du deep dive.
-  - excerpt: `Nous gérons attentivement le séchage par extraction maximale de l'humidité`
-  - replacement: `Nous gérons attentivement le <strong>séchage par extraction maximale</strong> de l'humidité`
-- `services[4].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) sur un constat terrain pour la couverture des challenges service 5.
-  - excerpt: `générant un encrassement diversifié, avec de nombreuses taches organiques`
-  - replacement: `générant un <strong>encrassement diversifié</strong>, avec de nombreuses taches organiques`
-- `services[4].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) sur une contrainte concrète pour la couverture des challenges service 5.
-  - excerpt: `Humidité hivernale des logements parfois peu ventilés favorisant le développement`
-  - replacement: `<strong>Humidité hivernale</strong> des logements parfois peu ventilés favorisant le développement`
-- `services[5].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) pour la couverture des challenges service 6.
-  - excerpt: `Terrasses proches des espaces verts et massifs paysagers : mousses`
-  - replacement: `Terrasses proches des <strong>espaces verts</strong> et massifs paysagers : mousses`
-- `services[5].faqAdditions[1].answer` — op=setField — Corrige le format FAQ service (max 1 <strong>) en supprimant le second <strong>.
-  - value: `<p>Oui. Un nettoyage en profondeur permet d’<strong>éclaircir les surfaces</strong>, de réduire fortement les zones foncées et de retrouver un sol plus homogène et agréable à l’usage.</p>`
-- `services[6].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1) pour la couverture des challenges service 7 (besoin 3).
-  - excerpt: `demandes fréquentes liées aux états des lieux et aux relogements`
-  - replacement: `demandes fréquentes liées aux <strong>états des lieux</strong> et aux relogements`
-- `services[6].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1) pour la couverture des challenges service 7 (besoin 3).
-  - excerpt: `Stationnement et circulation : contraintes plus fortes près de la gare`
-  - replacement: `<strong>Stationnement et circulation</strong> : contraintes plus fortes près de la gare`
-- `services[6].specificChallenges[5]` — op=substring — Ajoute 1 <strong> (max 1) pour la couverture des challenges service 7 (besoin 3).
-  - excerpt: `Sols très variés : PVC/lino, carrelage, stratifié — risque de traces`
-  - replacement: `<strong>Sols très variés</strong> : PVC/lino, carrelage, stratifié — risque de traces`
-- `services[6].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service 7 (besoin 2).
-  - excerpt: `Après travaux, on procède en plusieurs passes pour éviter que la`
-  - replacement: `Après travaux, on procède en <strong>plusieurs passes</strong> pour éviter que la`
-- `services[6].faqAdditions[2].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (max 1) pour la couverture FAQ service 7 (besoin 2).
-  - excerpt: `On anticipe le point de déchargement et le créneau. Autour de`
-  - replacement: `On anticipe le <strong>point de déchargement</strong> et le créneau. Autour de`
-
-## vaires-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=102; may add 1 (max2 outside li)
-- `faq[0].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - faq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong> (others too short / not patchable without forcing)
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[2].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `faq[3].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=67; add 1 in this block (max1)
-- `services[0].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=64; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +2, only 0 eligible answers without <strong>
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 13)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=230; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `hubIntro` — forbidden_strong
-- `faq[0].answer` — faq_rule_violation
-- `faq[1].answer` — faq_rule_violation
-- `faq[2].answer` — faq_rule_violation
-- `faq[3].answer` — faq_rule_violation
-- `services[0].uniqueIntro` — forbidden_strong
-- `services[0].faqAdditions[0].answer` — faq_rule_violation
-- `services[0].faqAdditions[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[2].answer` — faq_rule_violation
-- `services[0].faqAdditions[3].answer` — faq_rule_violation
-- `services[1].faqAdditions[0].answer` — faq_rule_violation
-- `services[1].faqAdditions[1].answer` — faq_rule_violation
-- `services[1].faqAdditions[2].answer` — faq_rule_violation
-- `services[1].faqAdditions[3].answer` — faq_rule_violation
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[0].answer` — faq_rule_violation
-- `services[2].faqAdditions[1].answer` — faq_rule_violation
-- `services[2].faqAdditions[2].answer` — faq_rule_violation
-- `services[2].faqAdditions[3].answer` — faq_rule_violation
-- `services[3].uniqueIntro` — forbidden_strong
-- `services[3].faqAdditions[0].answer` — faq_rule_violation
-- `services[3].faqAdditions[1].answer` — faq_rule_violation
-- `services[3].faqAdditions[2].answer` — faq_rule_violation
-- `services[3].faqAdditions[3].answer` — faq_rule_violation
-- `services[4].uniqueIntro` — forbidden_strong
-- `services[4].faqAdditions[0].answer` — faq_rule_violation
-- `services[4].faqAdditions[1].answer` — faq_rule_violation
-- `services[4].faqAdditions[2].answer` — faq_rule_violation
-- `services[4].faqAdditions[3].answer` — faq_rule_violation
-- `services[5].uniqueIntro` — pairs_over_cap(13>2)
-
-### Patches proposés (kept)
-
-- `services[0].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans le premier bloc (max 1 par <h3>), segment court et terrain.
-  - excerpt: `Chaque intervention débute par un diagnostic complet de l'état des moquettes`
-  - replacement: `Chaque intervention débute par un <strong>diagnostic complet</strong> de l'état des moquettes`
-- `services[0].specificChallenges[1]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Présence de <strong>poussières fines</strong> en provenance de la gare de Vaires-Torcy et des axes routiers proches.`
-- `services[0].specificChallenges[2]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Nombreux <strong>escaliers en moquette</strong> dans les résidences sans ascenseur, rendant le nettoyage plus complexe.`
-- `services[1].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans le premier bloc (max 1 par <h3>), segment court et opérationnel.
-  - excerpt: `Cette phase permet de planifier l'intervention par zones pour limiter la gêne.`
-  - replacement: `Cette phase permet de <strong>planifier l'intervention par zones</strong> pour limiter la gêne.`
-- `services[1].specificChallenges[0]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Circulation dense liée à la gare de Vaires-Torcy, générant <strong>poussières et hydrocarbures</strong> dans les zones d'entrée.`
-- `services[1].specificChallenges[2]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et terrain.
-  - value: `Parkings avec <strong>rampes étroites</strong> et peu ventilés, rendant la gestion des fumées et du séchage plus complexe.`
-- `services[2].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans le premier bloc (max 1 par <h3>), segment court et concret.
-  - excerpt: `L'intervention commence par une préparation soignée : protection de la porte-fenêtre`
-  - replacement: `L'intervention commence par une <strong>préparation soignée</strong> : protection de la porte-fenêtre`
-- `services[2].specificChallenges[0]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et terrain.
-  - value: `Les balcons proches de la Marne ou de la D934 accumulent <strong>poussières, humidité et mousses vertes</strong>.`
-- `services[2].specificChallenges[3]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et opérationnel.
-  - value: `Coulures à éviter systématiquement vers les balcons du dessous, avec <strong>gestion par raclette et bâchage</strong>.`
-- `services[3].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans le premier bloc (max 1 par <h3>), segment court et terrain.
-  - excerpt: `L'intervention débute par la mise en place d'équipements de protection individuelle`
-  - replacement: `L'intervention débute par la mise en place d'<strong>équipements de protection individuelle</strong>`
-- `services[3].specificChallenges[0]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Fientes plus fréquentes autour des résidences proches du bois de Vaires et des <strong>couloirs de vol</strong>.`
-- `services[3].specificChallenges[1]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et opérationnel.
-  - value: `Accès en étage parfois complexe, nécessitant une <strong>sécurisation complète</strong> et un confinement des poussières.`
-- `services[4].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans le premier bloc (max 1 par <h3>), segment court et concret.
-  - excerpt: `L'intervention débute par un diagnostic du mobilier ou des tapis à nettoyer`
-  - replacement: `L'intervention débute par un <strong>diagnostic du mobilier</strong> ou des tapis à nettoyer`
-- `services[4].specificChallenges[0]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et terrain.
-  - value: `Canapés et tapis souvent exposés aux <strong>poils et salissures</strong> dans les logements avec animaux.`
-- `services[4].specificChallenges[3]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Séchage parfois plus lent en hiver dans les logements <strong>peu aérés</strong> ou peu exposés.`
-- `services[5].uniqueIntro` — op=setField — UniqueIntro overcap (13) : réduire à max 2 <strong> en conservant des repères scannables et concrets (ici 2 : nom de ville + type de revêtement).
-  - value: `<p><strong>Vaires-sur-Marne</strong>, commune de Seine-et-Marne d'environ 13 000 habitants, s'étire le long de la Marne et du canal de Chelles. Révélée au monde entier lors des Jeux Olympiques de Paris 2024 — le stade nautique olympique d'Î`
-- `services[5].uniqueDeepDive` — op=substring — Coverage deepDive block[1] : ajouter 1 <strong> dans ce bloc (max 1 par <h3>), segment court et technique.
-  - excerpt: `Le produit est sélectionné en fonction du support identifié : formule douce`
-  - replacement: `Le produit est sélectionné en fonction du <strong>support identifié</strong> : formule douce`
-- `services[5].specificChallenges[0]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et terrain.
-  - value: `Pavillons proches de la Marne et du canal de Chelles : <strong>humidité permanente</strong> favorisant la prolifération rapide des mousses et algues vertes.`
-- `services[5].specificChallenges[1]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Quartier des Pêcheurs et ZAC des Pêcheurs : zone exposée aux <strong>risques d'inondation</strong>, terrasses souvent ombragées par la végétation riveraine.`
-- `services[5].faqAdditions[0].answer` — op=substring — Coverage service FAQ : ajouter 1 <strong> dans le 1er <p> (max 1), segment court et terrain.
-  - excerpt: `La proximité de la Marne et du canal de Chelles génère une humidité constante`
-  - replacement: `La proximité de la Marne et du canal de Chelles génère une <strong>humidité constante</strong>`
-- `services[5].faqAdditions[3].answer` — op=substring — Coverage service FAQ : ajouter 1 <strong> dans le 1er <p> (max 1), segment court et concret.
-  - excerpt: `qui ne supportent pas un jet haute pression standard. Notre protocole associe`
-  - replacement: `qui ne supportent pas un <strong>jet haute pression standard</strong>. Notre protocole associe`
-- `services[6].uniqueIntro` — op=substring — UniqueIntro missing : ajouter 1 <strong> (max 2), segment court et non marketing.
-  - excerpt: `les demandes de nettoyage sont souvent liées à des situations très concrètes`
-  - replacement: `les demandes de nettoyage sont souvent liées à des <strong>situations très concrètes</strong>`
-- `services[6].uniqueDeepDive` — op=substring — Coverage deepDive block[0] : ajouter 1 <strong> dans ce bloc (max 1 par <h3>), segment court et terrain.
-  - excerpt: `les logements en collectif demandent surtout une bonne organisation : badges/digicodes`
-  - replacement: `les logements en collectif demandent surtout une <strong>bonne organisation</strong> : badges/digicodes`
-- `services[6].specificChallenges[2]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Humidité locale : <strong>joints et parois de douche</strong> qui marquent vite si le nettoyage n’est pas cadré.`
-- `services[6].specificChallenges[1]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et terrain.
-  - value: `Bords de Marne / base nautique : <strong>terre, sable et traces de passage</strong> ramenées plus facilement.`
-- `services[6].specificChallenges[5]` — op=setField — Coverage service specificChallenges : ajout d’1 <strong> (max 1 par item), segment court et concret.
-  - value: `Typologies mixtes : <strong>cités cheminotes et bâti ancien</strong> (accès/escaliers) vs résidences récentes (Vigik/digicode).`
-- `services[6].faqAdditions[0].answer` — op=substring — Coverage service FAQ : ajouter 1 <strong> dans le 1er <p> (max 1), segment court et concret.
-  - excerpt: `On suit une logique “état des lieux” : cuisine et salle d’eau en priorité`
-  - replacement: `On suit une logique <strong>“état des lieux”</strong> : cuisine et salle d’eau en priorité`
-- `services[6].faqAdditions[1].answer` — op=substring — Coverage service FAQ : ajouter 1 <strong> dans le 1er <p> (max 1), segment court et terrain.
-  - excerpt: `Après travaux, on intervient en plusieurs passes pour éviter que la poussière revienne`
-  - replacement: `Après travaux, on intervient en <strong>plusieurs passes</strong> pour éviter que la poussière revienne`
-
-## villejuif
-
-### Coverage targets (manques/minima)
-
-- `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=70; may add 1 (max2 outside li)
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=66; may add 1 (max2 outside li)
 - `services[0].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=67; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=55; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=45; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=60; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=167; add 1 (max2)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=60; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=181; add 1 (max2)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[2].answer` — forbidden_strong
-- `services[2].uniqueIntro` — pairs_over_cap(4>2)
-
-### Patches proposés (kept)
-
-- `hubIntro` — op=setField — Ajout d’un <strong> hors <li> (non-<li> text) pour atteindre la couverture demandée, en restant sous le cap (max 2 hors <li>).
-  - value: `<p>Au pied de l'Institut Gustave Roussy et du terminus du métro 7, Villejuif concentre des flux importants et des configurations variées. Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs espaces comm`
-- `services[0].uniqueIntro` — op=setField — Ajout d’1 <strong> dans uniqueIntro (0 → 1) pour améliorer la scannabilité, sous le cap max 2.
-  - value: `<p>Les traces de passage répété sont visibles sur les moquettes dès l'entrée des halls et couloirs. Autour de la station Métro Villejuif - Louis Aragon, le flux quotidien de visiteurs, patients et résidents laisse des marques grises le long`
-- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> dans le bloc <h3> "Diagnostic et préparation du support" (block[1]) en respectant max 1 par bloc.
-  - value: `<h3>Fibres assainies et taches éliminées</h3> <p>L'objectif est d'obtenir une moquette débarrassée des salissures incrustées, avec des fibres redressées et un rendu homogène. Les zones de passage intensif retrouvent leur aspect d'origine, s`
-- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, pas après le 1er <p>).
-  - value: `<p>Le matériel d'injection-extraction se compose d'éléments modulables, transportables à la main dans les cages d'escalier sans ascenseur. Les flexibles et la cuve se montent sur place. Les <strong>protections de sol</strong> sont posées av`
-- `services[0].faqAdditions[3].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1).
-  - value: `<p>Le créneau d'intervention est fixé en amont avec le gardien ou le gestionnaire pour identifier un <strong>point de dépose temporaire</strong>. Le matériel est déchargé rapidement, puis le véhicule stationné sur un emplacement autorisé à `
-
-## villemomble
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
-- `services[1].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].uniqueDeepDive`
+  - deepDive_block_missing: block[2] has 0 strong; words=59; add 1 in this block (max1)
+- `services[0].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=54; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
+- `services[1].specificChallenges[0]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[1].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[1].answer`
+- `services[1].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
+- `services[1].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=170; add 1 (max2)
+  - uniqueIntro_missing: 0 strong; words=176; add 1 (max2)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
 - `services[2].specificChallenges[1]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[2].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[2].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 4)
+  - uniqueIntro_missing: 0 strong; words=160; add 1 (max2)
 - `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+  - deepDive_block_missing: block[2] has 0 strong; words=54; add 1 in this block (max1)
 - `services[3].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=166; add 1 (max2)
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=67; add 1 in this block (max1)
+- `services[4].specificChallenges[4]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
 - `services[4].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[4].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[5].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[5].specificChallenges[1]`
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
+- `services[5].specificChallenges[0]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[2]`
+- `services[5].specificChallenges[3]`
   - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[5].faqAdditions[2].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].uniqueIntro`
+  - uniqueIntro_missing: 0 strong; words=165; add 1 (max2)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=45; add 1 in this block (max1)
+  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
 - `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[0].answer`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[6].specificChallenges[3]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
+- `services[6].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
+- `services[6].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
 
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].uniqueIntro` — pairs_over_cap(4>2)
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].uniqueIntro` — pairs_over_cap(3>2)
 
 ### Patches proposés (kept)
 
-- `services[0].faqAdditions[0].answer` — op=setField — services[0].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1 par answer) pour atteindre la couverture demandée, sans toucher au texte hors balises.
-  - value: `<p>Nous utilisons des <strong>équipements compacts et modulables</strong>, transportables par sections dans les passages réduits. Le repérage préalable permet d'identifier les contraintes d'accès et d'organiser l'intervention sans encombrer`
-- `services[1].uniqueIntro` — op=setField — services[1].uniqueIntro: réduire à max 2 <strong> (3 trouvés) en retirant le <strong> du 3e paragraphe, sans modifier le texte.
-  - value: `<p>Les traces d'huile et les dépôts de suie sont visibles sur de nombreux sols de parkings à Villemomble, notamment dans les <strong>résidences des Marnaudes</strong> et aux abords des parkings relais proches de la gare. Ces salissures s'ac`
-- `services[1].faqAdditions[0].answer` — op=setField — services[1].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture, sans <strong> après le 1er <p>.
-  - value: `<p>Les eaux chargées en dégraissant sont orientées vers les <strong>regards et rigoles existants</strong>. Nous vérifions leur état avant intervention pour éviter tout engorgement. Aucun rejet n'est effectué vers l'extérieur ou les parties `
-- `services[1].faqAdditions[1].answer` — op=setField — services[1].faqAdditions[1].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture, segment court et concret.
-  - value: `<p>Un <strong>dégraissant alcalin</strong> est appliqué sur les zones marquées, suivi d'un temps de contact adapté à l'ancienneté des dépôts. L'autolaveuse ou la haute pression déloge ensuite les résidus incrustés. Plusieurs passes peuvent `
-- `services[2].uniqueIntro` — op=setField — services[2].uniqueIntro: ajouter 1 <strong> (0 présent, texte long) en restant sous le cap (max 2) et en gardant un segment court.
-  - value: `<p>Dans les quartiers pavillonnaires comme Les Coquetiers ou dans les résidences du centre-ville, les balcons accumulent rapidement un <strong>voile grisâtre</strong>. La proximité de l'Avenue du Raincy et des axes passants dépose chaque se`
-- `services[2].uniqueDeepDive` — op=setField — services[2].uniqueDeepDive: ajouter 1 <strong> dans block[1] et block[2] (max 1 par bloc <h3>) pour la couverture, segments courts et opérationnels.
-  - value: `<h3>Préparation et protection</h3> <p>Le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries, fenêtres et seuils reçoivent une protection pour éviter toute projection. Les gros débris, feuilles mortes et terre accumulée sont re`
-- `services[2].specificChallenges[0]` — op=setField — services[2].specificChallenges[0]: ajouter 1 <strong> (max 1 par item) pour la couverture et la scannabilité.
-  - value: `<strong>Dépôts noirs</strong> sur balcons exposés à l'Avenue du Raincy et aux axes passants.`
-- `services[2].specificChallenges[1]` — op=setField — services[2].specificChallenges[1]: ajouter 1 <strong> (max 1 par item) pour la couverture, segment concret.
-  - value: `Mousses et <strong>traces vertes persistantes</strong> sur les balcons ombragés côté Parc de la Garenne.`
-- `services[2].faqAdditions[0].answer` — op=setField — services[2].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Le carrelage est d'abord testé sur une zone discrète. La <strong>pression est réglée</strong> pour déloger les salissures sans creuser les joints. Un brossage manuel complète le passage sur les zones fragiles. Le rinçage final est contrô`
-- `services[2].faqAdditions[1].answer` — op=setField — services[2].faqAdditions[1].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Un bâchage est posé en périphérie du balcon avant le rinçage. L'eau est <strong>dirigée vers l'évacuation</strong> existante ou aspirée au fur et à mesure. Les façades et balcons inférieurs sont surveillés pendant toute l'intervention po`
-- `services[3].uniqueIntro` — op=setField — services[3].uniqueIntro: réduire à max 2 <strong> (4 trouvés) en retirant 2 balises <strong> sans modifier le texte.
-  - value: `<p>Après quelques semaines sans utilisation, un balcon exposé aux passages de pigeons accumule rapidement des déjections. À Villemomble, les logements situés à proximité du Parc Jean Mermoz ou donnant sur le <strong>Parc de la Garenne</stro`
-- `services[3].uniqueDeepDive` — op=setField — services[3].uniqueDeepDive: ajouter 1 <strong> dans block[0] et block[2] (max 1 par bloc <h3>) pour la couverture, segments courts et terrain.
-  - value: `<h3>Balcon assaini et désinfecté</h3> <p>L'objectif est de restituer un espace utilisable, débarrassé des souillures visibles et des risques sanitaires liés aux fientes. Le sol, le garde-corps, les vitrages et les murs mitoyens sont traités`
-- `services[3].specificChallenges[1]` — op=setField — services[3].specificChallenges[1]: ajouter 1 <strong> (max 1 par item) pour la couverture et la scannabilité.
-  - value: `Corniches des immeubles anciens Grande Rue : rebords propices à <strong>l'accumulation de fientes</strong> sur les balcons en contrebas.`
-- `services[3].faqAdditions[0].answer` — op=setField — services[3].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent affecter les <strong>voies respiratoires</strong>. Sur les balcons exposés aux oiseaux du Parc Jean Mermoz, l'accumulation crée un environnemen`
-- `services[3].faqAdditions[3].answer` — op=setField — services[3].faqAdditions[3].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Les fientes sont collectées et conditionnées en <strong>sacs étanches</strong> pour éviter toute dispersion. Dans les résidences Les Marnaudes avec cours intérieures, nous organisons le passage par les parties communes en protégeant les `
-- `services[4].uniqueDeepDive` — op=setField — services[4].uniqueDeepDive: ajouter 1 <strong> dans block[0], block[1], block[2] (max 1 par bloc <h3>) pour la couverture, segments courts et concrets.
-  - value: `<h3>Textile propre et assaini</h3> <p>L'objectif est d'extraire les salissures incrustées tout en préservant les fibres. Chaque textile réagit différemment : un canapé en coton supporte une extraction plus appuyée qu'un velours délicat. Le `
-- `services[4].specificChallenges[0]` — op=setField — services[4].specificChallenges[0]: ajouter 1 <strong> (max 1 par item) pour la couverture.
-  - value: `<strong>Taches d'animaux</strong> fréquentes dans les pavillons familiaux des Coquetiers et de l'Époque.`
-- `services[4].specificChallenges[2]` — op=setField — services[4].specificChallenges[2]: ajouter 1 <strong> (max 1 par item) pour la couverture, segment terrain.
-  - value: `Accès parfois étroit dans les maisons meulières pour <strong>acheminer l'équipement</strong>.`
-- `services[4].faqAdditions[0].answer` — op=setField — services[4].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Chaque tissu est testé avant intervention. Un coton résistant supporte une extraction appuyée, tandis qu'un velours ou une fibre fragile nécessite une <strong>pression réduite</strong> et une température modérée. Cette adaptation préserv`
-- `services[4].faqAdditions[2].answer` — op=setField — services[4].faqAdditions[2].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture, sans mettre en avant des délais interdits.
-  - value: `<p>Comptez entre 4 et 8 heures selon l'épaisseur du tissu et l'<strong>aération disponible</strong>. Dans un appartement bien ventilé, le séchage est souvent plus rapide. Nous vous transmettons des consignes précises pour accélérer la remis`
-- `services[5].uniqueDeepDive` — op=setField — services[5].uniqueDeepDive: ajouter 1 <strong> dans block[1] et block[2] (max 1 par bloc <h3>) pour la couverture.
-  - value: `<h3>Préparation et protection</h3> <p>Le mobilier de jardin, les jardinières et les plantes sont déplacés ou bâchés. Les menuiseries — baies vitrées, portes-fenêtres — reçoivent une protection contre les projections. Un balayage préalable é`
-- `services[5].specificChallenges[1]` — op=setField — services[5].specificChallenges[1]: ajouter 1 <strong> (max 1 par item) pour la couverture.
-  - value: `Dalles gravillonnées sensibles à la haute pression : <strong>réglage indispensable</strong> pour éviter l'arrachement.`
-- `services[5].specificChallenges[2]` — op=setField — services[5].specificChallenges[2]: ajouter 1 <strong> (max 1 par item) pour la couverture.
-  - value: `<strong>Accès latéral souvent bloqué</strong> par la mitoyenneté : passage du matériel par la maison.`
-- `services[5].faqAdditions[0].answer` — op=setField — services[5].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Le bois reçoit un <strong>lavage basse pression</strong> avec une buse adaptée, jamais de jet direct à forte intensité. Un produit dégrisant est appliqué si les lames ont grisé. Le sens des fibres est respecté lors du brossage pour évite`
-- `services[6].uniqueDeepDive` — op=setField — services[6].uniqueDeepDive: ajouter 1 <strong> dans block[2] (max 1 par bloc <h3>) pour la couverture.
-  - value: `<h3>Logement prêt à habiter ou à relouer</h3> <p>L'objectif est un bien propre sur l'ensemble des surfaces : sols sans traces, vitres transparentes, sanitaires détartrés, placards vidés et essuyés. Le résultat permet une remise des clés san`
-- `services[6].specificChallenges[0]` — op=setField — services[6].specificChallenges[0]: ne pas mettre en <strong> des notions de délais (interdit). Aucun patch proposé malgré la cible de couverture.
-  - value: `Délais courts entre deux locataires dans les appartements proches de la gare RER E.`
-- `services[6].faqAdditions[0].answer` — op=setField — services[6].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture.
-  - value: `<p>Le ménage fin de chantier inclut l'élimination des <strong>résidus de travaux</strong> : poussière de plâtre, traces de peinture, colle sur les sols. Les surfaces sont traitées en profondeur, y compris les recoins et les menuiseries, ce `
-- `services[6].faqAdditions[1].answer` — op=setField — services[6].faqAdditions[1].answer: ajouter 1 <strong> dans le 1er <p> (max 1) pour la couverture, en évitant de mettre en avant des délais interdits.
-  - value: `<p>Selon la disponibilité et la surface du bien, une intervention peut être planifiée sous 24 à 48 heures. Pour les demandes très urgentes, un <strong>échange préalable</strong> permet d'évaluer la faisabilité et d'ajuster le planning en co`
+- `services[0].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> Bureaux et zones secondaires (block[2]) qui en manque, en respectant max 1 par bloc.
+  - excerpt: `Le traitement s'étend aux espaces moins fréquentés mais exposés`
+  - replacement: `<strong>Le traitement s'étend aux espaces moins fréquentés</strong> mais exposés`
+- `services[0].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour améliorer la scannabilité et atteindre la couverture demandée.
+  - excerpt: `les moquettes des halls d'hôtels accumulent traces de valises`
+  - replacement: `les moquettes des halls d'hôtels <strong>accumulent traces de valises</strong>`
+- `services[0].specificChallenges[2]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, segment terrain et court.
+  - excerpt: `interventions à caler entre les rotations de chambres`
+  - replacement: `interventions à caler <strong>entre les rotations de chambres</strong>`
+- `services[0].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `Pour les accès contraints du Centre-Ville de Tremblay-en-France`
+  - replacement: `<strong>Pour les accès contraints du Centre-Ville de Tremblay-en-France</strong>`
+- `services[0].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, sans mention de délais interdits dans <strong>.
+  - excerpt: `où la climatisation fonctionne en continu`
+  - replacement: `où la <strong>climatisation fonctionne en continu</strong>`
+- `services[1].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans block[0] et 1 <strong> dans block[2] (max 1 par bloc) pour corriger les manques de couverture deepDive.
+  - value: `<h3>Sol dégraissé et rampes sécurisées</h3> <p>L'objectif est d'obtenir un revêtement débarrassé des dépôts gras et des poussières incrustées. <strong>Les rampes retrouvent leur adhérence</strong>, les rigoles leur capacité d'évacuation. Su`
+- `services[1].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture demandée, formulation terrain.
+  - excerpt: `encrassement rapide des sols par huile et gomme de pneus`
+  - replacement: `<strong>encrassement rapide des sols par huile et gomme de pneus</strong>`
+- `services[1].specificChallenges[3]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture specificChallenges.
+  - excerpt: `Coordination horaire avec les hôtels proches de CDG`
+  - replacement: `<strong>Coordination horaire avec les hôtels proches de CDG</strong>`
+- `services[1].faqAdditions[2].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `Nous vérifions au préalable l'état des rigoles`
+  - replacement: `<strong>Nous vérifions au préalable l'état des rigoles</strong>`
+- `services[1].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `Le planning est validé avec le gestionnaire`
+  - replacement: `<strong>Le planning est validé avec le gestionnaire</strong>`
+- `services[2].uniqueIntro` — op=substring — Ajoute 1 <strong> (uniqueIntro était à 0, max 2) avec un segment concret et court.
+  - excerpt: `les balcons accumulent rapidement un voile grisâtre`
+  - replacement: `les balcons <strong>accumulent rapidement un voile grisâtre</strong>`
+- `services[2].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans block[1] et 1 <strong> dans block[2] (max 1 par bloc) pour corriger les manques deepDive.
+  - value: `<h3>Préparation et protection</h3> <p>Avant toute action, le mobilier et les plantes sont déplacés ou bâchés. Les menuiseries (fenêtres, portes-fenêtres) reçoivent une protection pour éviter les projections. Un système anti-coulures est mis`
+- `services[2].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture specificChallenges.
+  - excerpt: `Dépôts de suies liés au trafic routier`
+  - replacement: `<strong>Dépôts de suies liés au trafic routier</strong>`
+- `services[2].specificChallenges[1]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée.
+  - excerpt: `balcons exposés à l'humidité près du Canal de l'Ourcq`
+  - replacement: `balcons <strong>exposés à l'humidité près du Canal de l'Ourcq</strong>`
+- `services[2].faqAdditions[0].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `suivi d'un brossage mécanique pour décoller les suies routières incrustées`
+  - replacement: `suivi d'un <strong>brossage mécanique pour décoller les suies routières incrustées</strong>`
+- `services[3].uniqueIntro` — op=substring — Ajoute 1 <strong> (uniqueIntro était à 0, max 2) avec un segment factuel et scannable.
+  - excerpt: `les fientes s'accumulent sur les balcons et corniches`
+  - replacement: `les fientes <strong>s'accumulent sur les balcons et corniches</strong>`
+- `services[3].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> Nettoyage des supports et rinçage (block[2]) manquant, max 1 par bloc.
+  - excerpt: `Les fientes sont humidifiées pour éviter l'envol de particules`
+  - replacement: `Les fientes sont <strong>humidifiées pour éviter l'envol de particules</strong>`
+- `services[3].faqAdditions[1].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `Nos intervenants portent combinaison jetable, masque FFP2, gants`
+  - replacement: `<strong>Nos intervenants portent combinaison jetable, masque FFP2, gants</strong>`
+- `services[4].uniqueIntro` — op=setField — Réduit à max 2 <strong> (cap) en retirant le 3e <strong> du 3e paragraphe, sans modifier le texte hors balises.
+  - value: `<p>Comment préserver la propreté d'un canapé familial quand les enfants y passent leurs après-midi, que le chien s'y installe régulièrement et que les taches de café s'accumulent au fil des mois ? Dans les pavillons du quartier <strong>Les `
+- `services[4].uniqueDeepDive` — op=substring — Ajoute 1 <strong> dans le bloc <h3> Injection-extraction et séchage maîtrisé (block[2]) manquant, max 1 par bloc.
+  - excerpt: `Le nettoyage principal utilise la technique injection-extraction`
+  - replacement: `<strong>Le nettoyage principal utilise la technique injection-extraction</strong>`
+- `services[4].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture specificChallenges.
+  - excerpt: `café, vin, traces d'enfants accumulées depuis des mois`
+  - replacement: `<strong>café, vin, traces d'enfants accumulées depuis des mois</strong>`
+- `services[4].specificChallenges[4]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée.
+  - excerpt: `selon la saison et l'aération du logement`
+  - replacement: `<strong>selon la saison et l'aération du logement</strong>`
+- `services[4].faqAdditions[3].answer` — op=substring — Ajoute 1 <strong> dans le 1er <p>, max 1 par answer, pour la couverture FAQ service.
+  - excerpt: `l'équipement rejoint le salon sans encombrer les passages`
+  - replacement: `l'équipement <strong>rejoint le salon sans encombrer les passages</strong>`
+- `services[5].uniqueIntro` — op=setField — Réduit à max 2 <strong> (cap) en retirant le 3e <strong> du 3e paragraphe, sans modifier le texte hors balises.
+  - value: `<p>Les traces verdâtres et les voiles grisés sont visibles sur de nombreuses terrasses du secteur Vert-Galant et des pavillons bordant le <strong>Canal de l'Ourcq</strong>. L'humidité ambiante, combinée à l'ombre des arbres environnants, fa`
+- `services[5].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture specificChallenges.
+  - excerpt: `favorisant mousses et algues sur dalles et bois`
+  - replacement: `<strong>favorisant mousses et algues sur dalles et bois</strong>`
+- `services[5].specificChallenges[3]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée.
+  - excerpt: `Accès jardin parfois uniquement par l'intérieur de la maison`
+  - replacement: `<strong>Accès jardin parfois uniquement par l'intérieur de la maison</strong>`
+- `services[6].uniqueIntro` — op=substring — Ajoute 1 <strong> (uniqueIntro était à 0, max 2) avec un segment concret et non marketing.
+  - excerpt: `accumulent poussières fines, traces sur les murs et résidus tenaces`
+  - replacement: `accumulent <strong>poussières fines, traces sur les murs et résidus tenaces</strong>`
+- `services[6].uniqueDeepDive` — op=setField — Ajoute 1 <strong> dans block[0] et 1 <strong> dans block[1] (max 1 par bloc) pour corriger les manques deepDive.
+  - value: `<h3>Un logement prêt à être occupé ou restitué</h3> <p>L'objectif est de rendre chaque pièce propre, sans trace ni résidu, avec des surfaces nettoyées en profondeur. <strong>Sols, vitres intérieures, sanitaires et placards</strong> doivent `
+- `services[6].specificChallenges[0]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour la couverture specificChallenges.
+  - excerpt: `Rotation locative soutenue près de la zone aéroportuaire`
+  - replacement: `<strong>Rotation locative soutenue près de la zone aéroportuaire</strong>`
+- `services[6].specificChallenges[3]` — op=substring — Ajoute 1 <strong> (max 1 par item) pour atteindre la couverture demandée.
+  - excerpt: `plâtre, colle, traces de peinture sur les sols`
+  - replacement: `<strong>plâtre, colle, traces de peinture sur les sols</strong>`
 
-## villeparisis
+## vanves
 
 ### Coverage targets (manques/minima)
 
 - `hubIntro`
-  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=101; may add 1 (max2 outside li)
-- `citySpecificChallenges[3]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `citySpecificChallenges[1]`
-  - challenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[5].uniqueDeepDive`
+  - hubIntro_nonli_missing: non-<li> text has 0 strong; words=81; may add 1 (max2 outside li)
+- `services[0].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].uniqueDeepDive`
   - deepDive_block_missing: block[0] has 0 strong; words=48; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=48; add 1 in this block (max1)
   - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
-- `services[5].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=216; add 1 (max2)
-- `services[6].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — word_limits
-- `faq[2].answer` — word_limits
-- `faq[3].answer` — word_limits
-- `services[0].faqAdditions[1].answer` — word_limits
-- `services[0].faqAdditions[2].answer` — word_limits
-- `services[1].uniqueIntro` — word_limits
-- `services[1].uniqueDeepDive` — forbidden_strong
-- `services[1].faqAdditions[0].answer` — word_limits
-- `services[1].faqAdditions[2].answer` — word_limits
-- `services[2].uniqueIntro` — forbidden_strong
-- `services[2].faqAdditions[0].answer` — word_limits
-- `services[2].faqAdditions[1].answer` — word_limits
-- `services[3].uniqueIntro` — word_limits
-- `services[4].uniqueIntro` — word_limits
-- `services[4].faqAdditions[1].answer` — word_limits
-- `services[4].faqAdditions[2].answer` — word_limits
-
-### Patches proposés (kept)
-
-- `citySpecificChallenges[1]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur un segment court et concret.
-  - value: `<strong>Développement accéléré de mousses et lichens</strong> sur les terrasses dans les secteurs plus humides proches du Canal de l'Ourcq.`
-- `citySpecificChallenges[3]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) en mettant en avant un marqueur terrain.
-  - value: `Sols de parkings souterrains marqués par <strong>les hydrocarbures et la gomme</strong> dans les résidences à forte rotation pendulaire autour des gares.`
-- `services[1].specificChallenges[1]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur l'élément le plus scannable.
-  - value: `Pollution atmosphérique liée à la RN3 : <strong>dépôt constant de particules grasses noires</strong> sur sols, murs et zones d'éclairage.`
-- `services[2].specificChallenges[1]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur un point terrain récurrent.
-  - value: `Humidité liée au Canal de l'Ourcq favorisant <strong>le retour des mousses</strong> sur balcons exposées au nord ou ombragées.`
-- `services[5].uniqueDeepDive` — op=substring — DeepDive: block[0] manquant. Ajout 1 <strong> dans le bloc 1 (max 1 par <h3>) sur une action terrain concrète.
-  - excerpt: `Un balayage soigné retire feuilles, terre et débris accumulés`
-  - replacement: `Un balayage soigné retire <strong>feuilles, terre et débris accumulés</strong>`
-- `services[5].specificChallenges[3]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur une contrainte locale claire.
-  - value: `Proximité du canal de l'Ourcq et du parc de la Poudrerie : <strong>humidité persistante</strong> accélérant le développement des mousses.`
-- `services[5].specificChallenges[4]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur un point opérationnel concret.
-  - value: `Terrasses de plain-pied avec accès direct au jardin : <strong>gestion de l'écoulement</strong> pour éviter le ruissellement vers les plantations.`
-- `services[5].faqAdditions[3].answer` — op=substring — FAQ service: ajouter 1 <strong> dans le 1er <p> (max 1 par answer). Évite de mettre en avant des délais chiffrés.
-  - excerpt: `Le temps de séchage varie selon le matériau et les conditions`
-  - replacement: `<strong>Le temps de séchage varie selon le matériau</strong> et les conditions`
-- `services[6].uniqueIntro` — op=substring — UniqueIntro: ajouter 1 <strong> (max 2) sur un repère opérationnel, sans marketing.
-  - excerpt: `Cette diversité oblige à raisonner en organisation et en méthode`
-  - replacement: `Cette diversité oblige à raisonner en <strong>organisation et en méthode</strong>`
-- `services[6].specificChallenges[0]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur une contrainte terrain.
-  - value: `Secteur gare Villeparisis–Mitry (RER B) : <strong>stationnement plus tendu</strong> et accès immeubles à anticiper (digicode/badge).`
-- `services[6].specificChallenges[2]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur les zones sensibles concrètes.
-  - value: `Calcaire (77) : <strong>robinetterie, parois et joints qui marquent vite</strong> si le traitement n’est pas cadré.`
-- `services[6].specificChallenges[5]` — op=setField — Coverage: ajouter 1 <strong> (max 1 par item) sur un point logistique clé.
-  - value: `Collectifs denses (La Plaine / Renouveau) : <strong>circulation du matériel et contrôle final</strong> indispensables pour un rendu “état des lieux”.`
-- `services[6].faqAdditions[1].answer` — op=substring — FAQ service: ajouter 1 <strong> dans le 1er <p> (max 1 par answer) sur la méthode d'exécution.
-  - excerpt: `on intervient en plusieurs passes pour éviter que la poussière`
-  - replacement: `on intervient en <strong>plusieurs passes</strong> pour éviter que la poussière`
-
-## villepinte
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=161; add 1 (max2)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=71; add 1 in this block (max1)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[2] has 0 strong; words=62; add 1 in this block (max1)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[2].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=58; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=46; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[4].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=57; add 1 in this block (max1)
-- `services[5].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=77; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=56; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[2].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — pairs_over_cap(5>2)
-- `services[6].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[3].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max 1 per answer). Segment court et concret, sans termes interdits.
-  - excerpt: `Le séchage varie de quatre à huit heures selon l'épaisseur`
-  - replacement: `<strong>Le séchage varie de quatre à huit heures</strong> selon l'épaisseur`
-- `services[0].faqAdditions[2].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max 1). Met en avant une étape terrain, sans marketing.
-  - excerpt: `Un pré-détachage localisé précède le passage en injection-extraction.`
-  - replacement: `<strong>Un pré-détachage localisé</strong> précède le passage en injection-extraction.`
-- `services[1].uniqueIntro` — op=substring — Coverage target: uniqueIntro missing (0 strong); add 1 (max 2). Segment concret, 6 mots, améliore la scannabilité.
-  - excerpt: `accumulent rapidement poussières noires, traces de pneus et résidus gras.`
-  - replacement: `accumulent rapidement <strong>poussières noires, traces de pneus et résidus gras</strong>.`
-- `services[1].uniqueDeepDive` — op=substring — Coverage target: deepDive block[0] missing; add 1 <strong> in this block (max 1 per <h3> block). Segment court et factuel.
-  - excerpt: `un revêtement débarrassé des traces d'huile, des dépôts noirs`
-  - replacement: `un revêtement débarrassé <strong>des traces d'huile, des dépôts noirs</strong>`
-- `services[1].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> (max 1 per item). Met en avant le problème terrain, segment court.
-  - value: `<strong>Taches d'huile récurrentes</strong> dans les zones logistiques proches de Paris Nord 2.`
-- `services[1].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> (max 1 per item). Segment concret, 3 mots.
-  - value: `<strong>Dépôts de suies</strong> liés au trafic A104 sur les parkings aériens exposés.`
-- `services[1].faqAdditions[1].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max 1). Met en avant le point opérationnel clé.
-  - excerpt: `L'autolaveuse aspire les eaux chargées au fur et à mesure`
-  - replacement: `<strong>L'autolaveuse aspire les eaux chargées</strong> au fur et à mesure`
-- `services[1].faqAdditions[0].answer` — op=substring — Coverage target: add 1 <strong> inside first <p> (max 1). Segment court, technique, non marketing.
-  - excerpt: `Un dégraissant alcalin est appliqué sur les zones imprégnées`
-  - replacement: `<strong>Un dégraissant alcalin est appliqué</strong> sur les zones imprégnées`
-
-## villiers-sur-marne
-
-### Coverage targets (manques/minima)
-
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[0].specificChallenges[2]`
+  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
 - `services[0].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+- `services[0].faqAdditions[1].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=62; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=60; add 1 in this block (max1)
-- `services[1].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[1].faqAdditions[0].answer`
+  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
+- `services[1].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[1].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
 - `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=55; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
   - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[2].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[2].faqAdditions[0].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=51; add 1 in this block (max1)
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[0].answer`
+- `services[2].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].uniqueIntro`
+  - uniqueIntro_overcap: max 2 strong (found 5)
+- `services[3].uniqueDeepDive`
+  - deepDive_block_missing: block[0] has 0 strong; words=53; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=59; add 1 in this block (max1)
 - `services[3].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[3].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[4].uniqueIntro`
   - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=61; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=50; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=53; add 1 in this block (max1)
-- `services[4].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[4].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
+  - deepDive_block_missing: block[0] has 0 strong; words=46; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=50; add 1 in this block (max1)
 - `services[4].faqAdditions[2].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[0].answer`
+- `services[4].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
+  - uniqueIntro_overcap: max 2 strong (found 4)
 - `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=57; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[5].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=52; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=52; add 1 in this block (max1)
-- `services[6].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[6].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `services[1].uniqueIntro` — pairs_over_cap(3>2)
-- `services[2].uniqueIntro` — pairs_over_cap(5>2)
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[5].uniqueIntro` — pairs_over_cap(3>2)
-- `services[6].uniqueIntro` — pairs_over_cap(3>2)
-
-### Patches proposés (kept)
-
-- `services[0].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), with a short, concrete on-site cue.
-  - value: `<p>Nous posons des <strong>protections adhésives le long des plinthes</strong> et des bas de murs avant de commencer. Le réglage de pression est adapté pour éviter les projections. Les angles sont traités manuellement avec une buse réduite `
-- `services[0].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting a practical constraint.
-  - value: `<p>Notre matériel est conçu pour passer dans des <strong>accès réduits sans démontage</strong>. Les flexibles rallongés permettent de laisser l'unité principale au rez-de-chaussée et d'intervenir aux étages. Nous repérons l'accès en amont p`
-- `services[1].uniqueIntro` — op=setField — Fix overcap: services[1].uniqueIntro must have max 2 <strong>; removed the 3rd while keeping the most local/structural cues.
-  - value: `<p>Les traces noires sur les sols, les coulures d'huile aux emplacements et les dépôts gras le long des rampes sont visibles dans de nombreux parkings le long du <strong>boulevard de Friedberg</strong>. Ces marques s'accumulent avec le pass`
-- `services[1].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in deepDive block[0] and block[1] (max 1 per <h3> block). Inserted short, concrete operational points.
-  - value: `<h3>Diagnostic et préparation du chantier</h3> <p>Avant toute intervention, nous identifions le type de revêtement (béton brut, résine ou enrobé) et vérifions <strong>l'état des évacuations</strong>. Un balayage préalable élimine les débris`
-- `services[1].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), focusing on a real constraint.
-  - value: `<strong>Coordination des créneaux d'intervention</strong> avec le flux pendulaire vers la ZAC des Boutareines.`
-- `services[1].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), highlighting the main on-site issue.
-  - value: `<strong>Taches d'huile anciennes</strong> incrustées dans le béton brut des sous-sols de copropriétés.`
-- `services[1].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), making the method scannable.
-  - value: `<p>Nous découpons le parking en <strong>zones traitées successivement</strong>. Les résidents déplacent leurs véhicules d'un secteur à l'autre selon un planning communiqué à l'avance. Cette méthode permet de maintenir l'accès tout en assura`
-- `services[1].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), pointing to a key technical constraint.
-  - value: `<p>En souterrain, la <strong>ventilation limitée</strong> impose des produits à faible émission et une gestion stricte des eaux. En aérien, l'enrobé supporte mieux la haute pression mais nécessite un traitement des joints et fissures. Le ma`
-- `services[2].uniqueIntro` — op=setField — Fix overcap: services[2].uniqueIntro must have max 2 <strong>; kept 2 and removed 3 while preserving readability and locality.
-  - value: `<p>Après quelques saisons d'exposition aux particules fines et aux poussières urbaines, les balcons du <strong>centre-ville</strong> et de la rue du Général Leclerc accumulent un voile grisâtre tenace. Les dépôts se logent dans les joints, `
-- `services[2].specificChallenges[3]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), emphasizing the key operational risk.
-  - value: `<strong>Gestion de l'eau</strong> pour éviter les coulures chez les voisins du dessous.`
-- `services[2].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), making the main issue scannable.
-  - value: `<strong>Dépôts gris liés au trafic</strong> sur les axes proches du centre-ville.`
-- `services[2].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the chosen method.
-  - value: `<p>Oui, nous privilégions le <strong>brossage manuel</strong> et le rinçage à faible débit sur les balcons dont les joints ou le revêtement sont fragiles. Cette méthode évite les infiltrations et préserve l'intégrité du support tout en obte`
-- `services[2].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), focusing on a practical precaution.
-  - value: `<p>Nous appliquons un détergent neutre adapté aux carrelages extérieurs. <strong>Le brossage reste manuel sur les joints</strong> pour éviter toute érosion. Le rinçage s'effectue à basse pression, ce qui préserve l'étanchéité et la teinte d`
-- `services[3].uniqueIntro` — op=setField — Fix overcap: services[3].uniqueIntro must have max 2 <strong>; removed the 3rd while keeping the two most location/structure-specific cues.
-  - value: `<p>Les traces blanchâtres et les dépôts croûteux s'accumulent sur les garde-corps et le sol du balcon. <strong>Aux abords du Parc du Bois-Saint-Denis</strong>, la présence d'oiseaux favorise ces salissures répétées qui finissent par imprégn`
-- `services[3].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in each deepDive block[0], block[1], block[2] (max 1 per <h3> block). Chosen short, concrete safety/tech points.
-  - value: `<h3>Sécurisation et confinement</h3> <p>Les fientes sèches libèrent des particules potentiellement pathogènes. L'intervenant porte un équipement complet : <strong>masque FFP2, lunettes, gants</strong> et combinaison jetable. La zone est bâc`
-- `services[3].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), highlighting the recurring cause.
-  - value: `Proximité du Parc du Bois-Saint-Denis : <strong>présence régulière de pigeons</strong> sur les balcons orientés vers les arbres.`
-- `services[3].specificChallenges[4]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), making the key risk scannable.
-  - value: `<strong>Odeurs persistantes</strong> si le traitement désinfectant n'est pas appliqué après le retrait des fientes.`
-- `services[3].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), focusing on the first on-site step.
-  - value: `<p>L'intervention débute par le <strong>confinement de la zone</strong> et le port d'équipements de protection. Les déjections sont humidifiées pour éviter la dispersion de particules, puis collectées et conditionnées. Une désinfection immé`
-- `services[3].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the key containment measure.
-  - value: `<p>Les déjections et matériaux souillés sont placés dans des <strong>sacs étanches</strong> dès leur collecte. L'évacuation se fait en fin d'intervention pour limiter la gêne dans les parties communes. Le conditionnement sécurisé évite tout`
-- `services[4].uniqueIntro` — op=setField — Fix overcap: services[4].uniqueIntro must have max 2 <strong>; removed the 3rd while keeping the most concrete/local cues.
-  - value: `<p>Comment préserver la propreté d'un canapé quand les enfants y passent leurs après-midi, que le chat s'y installe chaque soir, ou que les repas se prennent parfois devant l'écran ? Dans le <strong>quartier Les Luats</strong>, où les résid`
-- `services[4].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in deepDive block[0], block[1], block[2] (max 1 per <h3> block). Only block[2] was missing; added a short, concrete focus without touching timing terms.
-  - value: `<h3>Textile assaini et taches éliminées</h3> <p>L'objectif est de retrouver un canapé, tapis ou matelas débarrassé des salissures visibles et des résidus invisibles. Nous identifions d'abord la nature du tissu — coton, synthétique, velours `
-- `services[4].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), highlighting the key constraint.
-  - value: `<strong>Canapés non déhoussables</strong> fréquents dans les appartements locatifs près de la gare.`
-- `services[4].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), making the main issue scannable.
-  - value: `<strong>Taches anciennes incrustées</strong> dans les fibres après plusieurs années d'usage familial.`
-- `services[4].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), avoiding forbidden timing terms inside <strong>.
-  - value: `<p>En période froide avec peu d'aération, le séchage complet d'un canapé 3 places prend généralement 6 à 8 heures. Nous maximisons l'extraction pour réduire <strong>l'humidité résiduelle</strong>. Ouvrir les fenêtres quelques minutes ou uti`
-- `services[4].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the key first step.
-  - value: `<p>Nous réalisons systématiquement un <strong>diagnostic du tissu</strong> avant intervention. Un test sur zone discrète confirme la compatibilité du traitement. Selon que votre canapé soit en coton, synthétique ou velours, nous adaptons la`
-- `services[5].uniqueIntro` — op=setField — Fix overcap: services[5].uniqueIntro must have max 2 <strong>; removed the 3rd while keeping the most concrete/local cues.
-  - value: `<p>Dans le secteur du <strong>Bois de Gaumont</strong>, les terrasses des pavillons subissent une dégradation progressive liée à l'environnement immédiat. L'ombre portée par les arbres des jardins, combinée à l'humidité persistante proche d`
-- `services[5].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in each deepDive block[0], block[1], block[2] (max 1 per <h3> block), using concrete on-site steps.
-  - value: `<h3>Préparation et protection</h3> <p>Le mobilier de jardin, les jardinières et les plantes en pot sont déplacés ou bâchés. Les menuiseries des baies vitrées et portes-fenêtres reçoivent <strong>une protection contre les projections</strong`
-- `services[5].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), highlighting the material constraint.
-  - value: `Dalles gravillonnées des pavillons années 70 : <strong>joints poreux</strong> favorisant l'enracinement des mousses.`
-- `services[5].specificChallenges[2]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), focusing on the recurring condition.
-  - value: `Zones ombragées par les arbres des jardins du Bois de Gaumont : <strong>humidité persistante</strong>.`
-- `services[5].faqAdditions[2].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), highlighting the key product constraint.
-  - value: `<p>Le bois composite reçoit un <strong>traitement à pH neutre</strong>, sans chlore ni acide, qui préserve les pigments du matériau. Le produit agit sur les micro-organismes sans attaquer les fibres synthétiques. Le rinçage s'effectue à bas`
-- `services[5].faqAdditions[0].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), making the approach scannable.
-  - value: `<p>Les dalles gravillonnées nécessitent un <strong>traitement en deux temps</strong>. D'abord un produit désincrustant adapté aux supports minéraux poreux, laissé agir pour décoller les mousses. Puis un rinçage à pression modérée qui préser`
-- `services[6].uniqueIntro` — op=setField — Fix overcap: services[6].uniqueIntro must have max 2 <strong>; removed the 3rd while keeping the most concrete/local cues.
-  - value: `<p>Après plusieurs semaines de travaux ou à l'approche d'un changement de locataire, un logement accumule poussières, traces et résidus sur toutes les surfaces. Dans le <strong>quartier des Hautes Noues</strong>, où la rotation locative res`
-- `services[6].uniqueDeepDive` — op=setField — Coverage target: add 1 <strong> in deepDive block[0] and block[1] (max 1 per <h3> block). Only block[0] was missing; added a short, concrete deliverable list.
-  - value: `<h3>Un logement prêt à remettre</h3> <p>L'objectif est un bien propre sur l'ensemble des surfaces, sans trace de chantier ni résidu d'occupation. <strong>Sols lavés, vitres intérieures nettoyées</strong>, sanitaires désinfectés, placards vi`
-- `services[6].specificChallenges[0]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), highlighting the main constraint.
-  - value: `<strong>Délais serrés entre deux locataires</strong> dans les résidences à forte rotation.`
-- `services[6].specificChallenges[1]` — op=setField — Coverage target: add 1 <strong> to this specificChallenges item (max 1), focusing on access constraints.
-  - value: `<strong>Escaliers étroits et absence d'ascenseur</strong> dans certains immeubles du centre-ville.`
-- `services[6].faqAdditions[1].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), avoiding forbidden pricing terms inside <strong>.
-  - value: `<p>Un T2 représente généralement 35 à 50 m². <strong>L'intervention couvre l'ensemble du logement</strong> : pièces de vie, cuisine, salle de bain, WC et placards. Le temps nécessaire dépend de l'état initial et des finitions demandées. Un `
-- `services[6].faqAdditions[3].answer` — op=setField — Coverage target: add 1 <strong> in first <p> of this service FAQ answer (max 1), focusing on access info; avoids forbidden timing terms inside <strong>.
-  - value: `<p>Nous demandons le <strong>code d'entrée</strong>, les éventuels badges nécessaires et les coordonnées du gardien si présent. En cas de remise de clés préalable, nous convenons d'un point de dépôt sécurisé. Ces éléments sont vérifiés 24 à`
-
-## vincennes
-
-### Coverage targets (manques/minima)
-
-- `faq[1].answer`
-  - faq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=67; add 1 in this block (max1)
-- `services[0].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +1, only 0 eligible answers without <strong>
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[0].faqAdditions[3].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 5)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=89; add 1 in this block (max1)
-  - deepDive_block_overcap: block[2] has 2 strong pairs; max 1 per <h3> block
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[1].faqAdditions[0].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-  - serviceFaq_coverage_note: Coverage shortfall: need +1, only 0 eligible answers without <strong>
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=75; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=92; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=82; add 1 in this block (max1)
-- `services[2].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[2].faqAdditions[1].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[3].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_overcap: block[1] has 2 strong pairs; max 1 per <h3> block
-- `services[3].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=85; add 1 in this block (max1)
-- `services[4].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 1, have 0; eligibleItems=3)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_format_fix: max 1 <strong>; if present, must be inside first <p> and none after first <p>
-- `services[5].uniqueIntro`
-  - uniqueIntro_missing: 0 strong; words=209; add 1 (max2)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=70; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=66; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=73; add 1 in this block (max1)
-- `services[5].specificChallenges[5]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[5].specificChallenges[4]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 3, have 0; eligibleItems=6)
-- `services[5].faqAdditions[0].answer`
+  - deepDive_block_missing: block[0] has 0 strong; words=50; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[2] has 0 strong; words=49; add 1 in this block (max1)
+- `services[5].faqAdditions[3].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 - `services[5].faqAdditions[1].answer`
   - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-
-### Violations / Overlimit (TS actuel)
-
-- `faq[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[0].answer` — faq_rule_violation
-- `services[0].faqAdditions[1].answer` — faq_rule_violation
-- `services[0].faqAdditions[3].answer` — faq_rule_violation
-- `services[1].uniqueIntro` — pairs_over_cap(5>2)
-- `services[1].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[1].faqAdditions[0].answer` — faq_rule_violation
-- `services[1].faqAdditions[1].answer` — faq_rule_violation
-- `services[1].faqAdditions[2].answer` — faq_rule_violation
-- `services[2].faqAdditions[1].answer` — faq_rule_violation
-- `services[3].uniqueIntro` — pairs_over_cap(3>2)
-- `services[3].uniqueDeepDive` — uniqueDeepDive_over_h3_cap
-- `services[3].faqAdditions[1].answer` — forbidden_strong
-- `services[4].uniqueIntro` — pairs_over_cap(3>2)
-- `services[4].faqAdditions[2].answer` — faq_rule_violation
-
-### Patches proposés (kept)
-
-- `faq[1].answer` — op=setField — FAQ format: réduire à 1 seul <strong> dans l’answer, placé dans le 1er <p>; éviter aussi les mentions interdites en <strong> (gratuit / sous 48h).
-  - value: `<p>Non, le déplacement et le diagnostic sur site sont gratuits, que l'immeuble soit situé près du Château ou dans les quartiers résidentiels bordant le Bois. Le technicien <strong>évalue les surfaces</strong>, identifie les contraintes d'ac`
-- `services[0].uniqueDeepDive` — op=substring — DeepDive services[0] block[1] manquant: ajouter 1 <strong> dans le bloc <h3> Injection-extraction (max 1 par bloc).
-  - excerpt: `Le technicien ajuste la pression selon la fragilité de la moquette,`
-  - replacement: `Le technicien ajuste la pression selon la <strong>fragilité de la moquette</strong>,`
-- `services[0].faqAdditions[0].answer` — op=setField — Service FAQ format + coverage: ramener à 1 seul <strong> dans le 1er <p> (max 1), tout en conservant un point de scannabilité.
-  - value: `<p>Oui, le <strong>flux piéton intense</strong> génère un encrassement rapide et profond. Les particules fines se logent dans les fibres et les zones de seuil noircissent vite. Nous adaptons le nombre de passes et la concentration du déterg`
-- `services[0].faqAdditions[1].answer` — op=setField — Service FAQ format: max 1 <strong> par answer, dans le 1er <p>.
-  - value: `<p>Absolument. Nous intervenons autant dans les grandes résidences collectives que dans les petits immeubles de 10 à 20 logements des quartiers Diderot ou Les Vignerons. Le diagnostic et la méthode restent identiques, seule la surface à tra`
-- `services[0].faqAdditions[3].answer` — op=setField — Service FAQ format: max 1 <strong>; retirer le <strong> sur une mention de délai (48h) interdite en gras.
-  - value: `<p>Nous planifions le passage en <strong>heures creuses</strong> (matinée ou après-midi hors pointe) et informons les résidents 48h à l'avance via le syndic. Les zones sont balisées pendant le séchage (6 à 12h). Pour les copropriétés du cen`
-- `services[1].uniqueIntro` — op=setField — UniqueIntro overcap (5>2): réduire à 2 <strong> en conservant des repères concrets (salissures + enjeu sécurité).
-  - value: `<p>Les parkings souterrains de Vincennes, qu'ils desservent les résidences du centre-ville ou les copropriétés proches du Bois, accumulent rapidement une couche de <strong>poussière noire</strong> mêlée à des traces d'hydrocarbures. La prox`
-- `services[1].specificChallenges[0]` — op=substring — Service specificChallenges coverage: ajouter 1 <strong> (max 1) sur un élément terrain et concret.
-  - excerpt: `Les particules fines et résidus de freinage s'accumulent rapidement`
-  - replacement: `Les <strong>particules fines et résidus de freinage</strong> s'accumulent rapidement`
-- `services[1].faqAdditions[0].answer` — op=setField — Service FAQ format + coverage: ramener à 1 seul <strong> dans le 1er <p>.
-  - value: `<p>La proximité du RER A et du métro ligne 1 génère un <strong>trafic automobile dense</strong>. Les véhicules transportent particules fines, résidus de freinage et hydrocarbures qui se déposent quotidiennement sur les sols en béton. Les ra`
-- `services[1].faqAdditions[1].answer` — op=setField — Service FAQ format: max 1 <strong> par answer.
-  - value: `<p>Non, nous travaillons par <strong>zones successives</strong>. Les copropriétaires stationnent dans la zone non traitée pendant que nous nettoyons l'autre moitié, puis inversement. Cette rotation planifiée avec le syndic garantit un accès`
-- `services[2].uniqueDeepDive` — op=setField — DeepDive services[2] blocks[0-2] manquants: ajouter 1 <strong> par bloc <h3> (max1). Ici: block[1].
-  - value: `<h3>Préparation et protection des supports</h3> <p>Le technicien commence par protéger la porte-fenêtre, les menuiseries et les murs intérieurs avec des bâches étanches et du ruban adhésif. Les meubles de jardin, plantes et objets sont dépl`
-- `services[2].specificChallenges[1]` — op=substring — Service specificChallenges coverage: ajouter 1 <strong> (max 1) sur un point terrain.
-  - excerpt: `présentent souvent des joints poreux qui retiennent particules fines`
-  - replacement: `présentent souvent des <strong>joints poreux</strong> qui retiennent particules fines`
-- `services[3].uniqueIntro` — op=setField — UniqueIntro overcap (3>2): réduire à 1 <strong> (reste sous le cap) en gardant un repère concret, sans surligner des formulations générales.
-  - value: `<p>Les balcons vincennois, particulièrement ceux des immeubles proches du Bois ou du Château, subissent régulièrement l'installation de <strong>colonies de pigeons</strong>. Les fientes s'accumulent sur le sol, le garde-corps et les murs mi`
-- `services[3].uniqueDeepDive` — op=setField — DeepDive services[3] block[1] overcap (2>1): retirer les <strong> supplémentaires; éviter aussi les délais en gras (24 heures).
-  - value: `<h3>Mise en sécurité et protection intégrale</h3> <p>Le technicien revêt une combinaison jetable, des gants épais, un masque respiratoire FFP2 et des lunettes de protection pour éviter tout contact avec les agents pathogènes. Des bâches éta`
-- `services[3].specificChallenges[0]` — op=substring — Service specificChallenges coverage: ajouter 1 <strong> (max 1) sur un facteur concret.
-  - excerpt: `offrent de nombreux points de nidification, accélérant la contamination`
-  - replacement: `offrent de nombreux <strong>points de nidification</strong>, accélérant la contamination`
-- `services[4].uniqueIntro` — op=setField — UniqueIntro overcap (3>2): réduire à 2 <strong> en conservant des repères concrets (usage + effet intérieur).
-  - value: `<p>Dans les appartements vincennois, canapés et tapis supportent l'essentiel de la <strong>vie familiale</strong>. Les enfants y jouent, mangent, renversent du sirop ou du chocolat. Les animaux de compagnie laissent poils, traces de pattes `
-- `services[4].uniqueDeepDive` — op=substring — DeepDive services[4] block[0] manquant: ajouter 1 <strong> dans ce bloc (max1).
-  - excerpt: `Le technicien examine chaque élément à traiter : type de tissu`
-  - replacement: `Le technicien examine chaque élément à traiter : <strong>type de tissu</strong>`
-- `services[4].specificChallenges[2]` — op=substring — Service specificChallenges coverage: ajouter 1 <strong> (max 1) sur une contrainte terrain.
-  - excerpt: `Les appartements sans balcon ou exposés au nord du centre-ville`
-  - replacement: `Les <strong>appartements sans balcon</strong> ou exposés au nord du centre-ville`
-- `services[4].faqAdditions[2].answer` — op=setField — Service FAQ format fix: retirer les <strong> sur des délais (interdits en gras) et respecter max 1 (ici 0).
-  - value: `<p>Le séchage complet intervient sous 4 à 8 heures selon la ventilation. Vous pouvez marcher légèrement sur le tapis dès 2h, mais évitez de vous installer sur le canapé avant séchage total. Aérez la pièce, orientez un ventilateur si possibl`
-- `services[5].uniqueIntro` — op=substring — UniqueIntro services[5] missing: ajouter 1 <strong> (max2) sur une contrainte terrain, sans marketing.
-  - excerpt: `des circulations étroites, des étages sans ascenseur et des accès sécurisés`
-  - replacement: `des <strong>circulations étroites</strong>, des étages sans ascenseur et des accès sécurisés`
-- `services[5].uniqueDeepDive` — op=setField — DeepDive services[5] blocks[0-2] manquants: ajouter 1 <strong> dans un bloc <h3> (max1). Ici: block[2].
-  - value: `<h3>Centre / Avenue de Paris — haussmannien, parquet et accès contraints</h3> <p>Dans le cœur de Vincennes, on rencontre souvent des parquets anciens (pointe de Hongrie), des boiseries et des cages d’escalier étroites. L’approche est progre`
-- `services[5].specificChallenges[4]` — op=substring — Service specificChallenges coverage (need 3): ajouter 1 <strong> (max1) sur un point terrain.
-  - excerpt: `poussières de voirie et traces sur vitrages bas, surtout`
-  - replacement: `<strong>poussières de voirie</strong> et traces sur vitrages bas, surtout`
-- `services[5].specificChallenges[0]` — op=substring — Service specificChallenges coverage (need 3): ajouter 1 <strong> (max1) sur une contrainte opérationnelle.
-  - excerpt: `planifier l’accès et limiter les allers-retours, surtout en hyper-centre`
-  - replacement: `planifier l’accès et limiter les <strong>allers-retours</strong>, surtout en hyper-centre`
-- `services[5].faqAdditions[0].answer` — op=substring — Service FAQ coverage add: ajouter 1 <strong> dans le 1er <p> (max1).
-  - excerpt: `cuisine et salle d’eau en priorité, sols ensuite, puis finitions`
-  - replacement: `<strong>cuisine et salle d’eau en priorité</strong>, sols ensuite, puis finitions`
-- `services[5].faqAdditions[1].answer` — op=substring — Service FAQ coverage add: ajouter 1 <strong> dans le 1er <p> (max1).
-  - excerpt: `on procède en passes pour éviter le retour de poussière`
-  - replacement: `on procède en passes pour éviter le <strong>retour de poussière</strong>`
-
-## vitry-sur-seine
-
-### Coverage targets (manques/minima)
-
-- `services[0].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=63; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=52; add 1 in this block (max1)
-- `services[0].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[0].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[0].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=58; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=58; add 1 in this block (max1)
-- `services[1].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].specificChallenges[1]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=4)
-- `services[1].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[1].faqAdditions[1].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[2].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=56; add 1 in this block (max1)
-- `services[2].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[3].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=47; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=48; add 1 in this block (max1)
-- `services[3].specificChallenges[3]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].specificChallenges[2]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 0; eligibleItems=5)
-- `services[3].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[3].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=61; add 1 in this block (max1)
-- `services[4].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[4].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].uniqueDeepDive`
-  - deepDive_block_missing: block[0] has 0 strong; words=49; add 1 in this block (max1)
-  - deepDive_block_missing: block[1] has 0 strong; words=62; add 1 in this block (max1)
-- `services[5].specificChallenges[0]`
-  - serviceChallenge_coverage_add: Add 1 <strong> (coverage: need 2, have 1; eligibleItems=5)
-- `services[5].faqAdditions[0].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[5].faqAdditions[3].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
-- `services[6].uniqueIntro`
-  - uniqueIntro_overcap: max 2 strong (found 3)
 - `services[6].uniqueDeepDive`
-  - deepDive_block_missing: block[1] has 0 strong; words=51; add 1 in this block (max1)
-  - deepDive_block_missing: block[2] has 0 strong; words=46; add 1 in this block (max1)
-- `services[6].faqAdditions[2].answer`
-  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 1)
+  - deepDive_block_missing: block[0] has 0 strong; words=65; add 1 in this block (max1)
+  - deepDive_block_missing: block[1] has 0 strong; words=55; add 1 in this block (max1)
+- `services[6].faqAdditions[3].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
+- `services[6].faqAdditions[0].answer`
+  - serviceFaq_coverage_add: Add 1 <strong> inside first <p> (coverage: need 2, have 0)
 
 ### Violations / Overlimit (TS actuel)
 
-- `services[6].uniqueIntro` — pairs_over_cap(3>2)
+- `citySpecificChallenges[5]` — forbidden_strong
+- `services[0].uniqueIntro` — pairs_over_cap(3>2)
+- `services[3].uniqueIntro` — pairs_over_cap(5>2)
+- `services[4].uniqueIntro` — pairs_over_cap(3>2)
+- `services[5].uniqueIntro` — pairs_over_cap(4>2)
+- `services[6].specificChallenges[4]` — forbidden_strong
 
 ### Patches proposés (kept)
 
-- `services[0].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1 par item) pour compléter la couverture manquante sur les specificChallenges du service moquettes.
-  - value: `Accès contraints dans les <strong>cages d'escalier étroites</strong> des immeubles anciens du centre.`
-- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture demandée.
-  - value: `<p>Le séchage varie de trois à six heures selon l'épaisseur du revêtement et la ventilation des locaux. <strong>L'extraction poussée réduit l'humidité résiduelle</strong> au minimum. Une aération naturelle ou mécanique accélère le processus`
-- `services[0].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture demandée.
-  - value: `<p><strong>L'injection-extraction reste la méthode la plus efficace</strong> sur dalles textiles. Elle pénètre la fibre, décolle les salissures et les extrait immédiatement. La vapeur seule ne retire pas les résidus, elle les déplace. Sur l`
-- `services[1].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1 par item) pour compléter la couverture manquante sur les specificChallenges du service parkings.
-  - value: `<strong>Encrassement accéléré</strong> par le trafic utilitaire lié aux Ardoines et à l'A86.`
-- `services[1].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture demandée.
-  - value: `<p><strong>En souterrain, l'aération limitée</strong> impose un séchage plus long et une gestion stricte des eaux. À l'air libre, les intempéries et la pollution atmosphérique demandent un dégraissage renforcé. Le matériel et les produits s`
-- `services[3].specificChallenges[2]` — op=setField — Ajout d’1 <strong> (max 1 par item) pour compléter la couverture manquante sur les specificChallenges du service balcons-fientes.
-  - value: `Proximité du Parc des Lilas et des espaces verts <strong>augmentant la pression des volatiles</strong>.`
-- `services[3].specificChallenges[3]` — op=setField — Ajout d’1 <strong> (max 1 par item) pour compléter la couverture manquante sur les specificChallenges du service balcons-fientes.
-  - value: `Gestion des eaux de rinçage en <strong>étage élevé</strong> pour éviter les nuisances aux voisins du dessous.`
-- `services[4].faqAdditions[2].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture demandée.
-  - value: `<p><strong>L'injection-extraction reste la méthode la plus efficace</strong> : l'eau et le produit pénètrent le rembourrage, puis sont aspirés avec les salissures. Aucun démontage n'est nécessaire. Nous adaptons la pression et la températur`
-- `services[5].specificChallenges[0]` — op=setField — Ajout d’1 <strong> (max 1 par item) pour compléter la couverture manquante sur les specificChallenges du service terrasses.
-  - value: `<strong>Mousse tenace</strong> sur dalles peu exposées au soleil dans les jardins du Plateau.`
+- `hubIntro` — op=setField — Ajout d’1 <strong> hors <li> (non-<li> text avait 0), en restant sous le cap (max 2) et en mettant en avant une contrainte terrain scannable.
+  - value: `<p>Autour de la Gare Vanves-Malakoff et du Parc Frédéric Pic, Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs locaux. Notre présence sur le secteur permet une réactivité adaptée aux contraintes d'un`
+- `services[0].uniqueIntro` — op=setField — Correction overcap: suppression d’un <strong> (3→2) dans uniqueIntro, sans modifier le texte hors balises.
+  - value: `<p>Dans le secteur des bureaux proches du <strong>Lycée Michelet</strong>, les moquettes subissent un passage quotidien soutenu. Couloirs d'open spaces, salles de réunion, halls d'accueil : les fibres accumulent poussières fines, traces de `
+- `services[0].uniqueDeepDive` — op=setField — Ajout d’1 <strong> par bloc <h3> (3 blocs manquants), en respectant max 1 par bloc et en ciblant des actions terrain scannables.
+  - value: `<h3>Zones de circulation intense</h3> <p>Les couloirs et axes de passage concentrent l'essentiel de l'encrassement. Nous commençons par une aspiration approfondie pour retirer les particules libres, puis appliquons un pré-détachant sur les `
+- `services[0].specificChallenges[2]` — op=setField — Ajout d’1 <strong> sur un item éligible pour atteindre la couverture demandée, en restant à 1 <strong> max par item.
+  - value: `Taches de café ou tanin <strong>incrustées depuis plusieurs semaines</strong> sur les zones de pause.`
+- `services[0].faqAdditions[0].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) pour respecter la règle FAQ (max 1, pas après le 1er <p>) et améliorer la scannabilité.
+  - value: `<p>Nous utilisons des équipements compacts et modulables. Les flexibles d'injection-extraction se déploient sur plusieurs mètres depuis un point d'ancrage au rez-de-chaussée ou sur le palier. Cette configuration évite de monter l'ensemble d`
+- `services[0].faqAdditions[1].answer` — op=setField — Ajout d’1 <strong> dans le 1er <p> (et unique) pour la couverture FAQ, en restant sous le cap (max 1) et sans termes interdits.
+  - value: `<p>L'injection-extraction reste la technique la plus efficace sur les dalles textiles saturées. Elle permet de déloger les salissures en profondeur sans détremper le support. Pour les fibres fragiles ou les taches grasses anciennes, <strong`
 

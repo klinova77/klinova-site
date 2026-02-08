@@ -46,13 +46,13 @@ const city: City = {
         "arcueil",
         "gentilly",
         "bagneux",
+        "vanves",
+        "chatillon",
         "cachan",
+        "issy-les-moulineaux",
         "villejuif",
-        "ivry-sur-seine",
-        "vitry-sur-seine",
-        "charenton-le-pont",
-        "alfortville",
-        "thiais"
+        "clamart",
+        "ivry-sur-seine"
       ],
 
   // Texte brut uniquement

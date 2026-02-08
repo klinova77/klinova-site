@@ -42,9 +42,9 @@ const city: City = {
         "nogent-sur-marne",
         "charenton-le-pont",
         "joinville-le-pont",
-        "rosny-sous-bois",
-        "le-perreux-sur-marne",
-        "maisons-alfort"
+        "les-lilas",
+        "romainville",
+        "rosny-sous-bois"
       ],
 
   landmarks: [

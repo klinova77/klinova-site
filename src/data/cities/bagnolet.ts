@@ -43,6 +43,7 @@ const city: City = {
     "La Capsulerie",
   ],
   nearbyCities: [
+        "les-lilas",
         "montreuil",
         "romainville",
         "vincennes",
@@ -51,8 +52,7 @@ const city: City = {
         "pantin",
         "fontenay-sous-bois",
         "rosny-sous-bois",
-        "bobigny",
-        "charenton-le-pont"
+        "bobigny"
       ],
 
   // Texte brut uniquement

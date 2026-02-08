@@ -48,12 +48,12 @@ const city: City = {
         "romainville",
         "pantin",
         "bondy",
+        "les-lilas",
+        "le-blanc-mesnil",
         "bagnolet",
         "montreuil",
         "rosny-sous-bois",
-        "villemomble",
-        "le-raincy",
-        "vincennes"
+        "villemomble"
       ],
 
   // Texte brut uniquement
