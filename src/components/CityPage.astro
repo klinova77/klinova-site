@@ -1243,7 +1243,7 @@ const photos = cityNote?.photos ?? [];
         </div>
       </section>
     )}
---> --> 
+-->
 
 
 {showReviewsWidget && (
@@ -1397,12 +1397,12 @@ const photos = cityNote?.photos ?? [];
 
 
 {cityNote?.uniqueDeepDive && (
-  <section class="py-16 md:py-24 bg-[#FCFCFC] border-b border-[#E5E7EB]">
+  <section class="py-6 md:py-6 bg-[#FCFCFC] border-b border-[#E5E7EB] mt-12">
     <div class="container-responsive">
       <div class="max-w-4xl mx-auto">
         
 
-        <div class="text-center mb-12">
+        <div class="text-center mb-1">
          
           <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4">
             Notre méthode de travail
@@ -2148,111 +2148,122 @@ const photos = cityNote?.photos ?? [];
   </section>
 
   <!-- Script pour gérer le sélecteur de fichiers -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const photosInput = document.getElementById('photos-input');
-      const photosDropZone = document.getElementById('photos-drop-zone');
-      const photosStatus = document.getElementById('photos-status');
-      const photosList = document.getElementById('photos-list');
-      const photosHidden = document.getElementById('photos-hidden');
+ <script is:inline>
+  (function initPhotosUpload() {
+    const photosInput = document.getElementById('photos-input');
+    const photosDropZone = document.getElementById('photos-drop-zone');
+    const photosStatus = document.getElementById('photos-status');
+    const photosList = document.getElementById('photos-list');
 
-      if (!photosInput || !photosDropZone || !photosStatus) return;
-
-      // Fonction pour ouvrir le sélecteur de fichiers
-      function openFileSelector() {
-        photosInput.click();
+    // Si les éléments n'existent pas encore, réessayer
+    if (!photosInput || !photosDropZone) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPhotosUpload);
       }
+      return;
+    }
 
-      // Gestionnaire de clic sur la zone de drop
-      photosDropZone.addEventListener('click', openFileSelector);
+    // Fonction pour ouvrir le sélecteur de fichiers
+    function openFileSelector() {
+      photosInput.click();
+    }
 
-      // Gestionnaire de changement de fichiers
-      photosInput.addEventListener('change', function(e) {
-        const files = Array.from(e.target.files);
-        handleFiles(files);
-      });
+    // Gestionnaire de clic sur la zone de drop
+    photosDropZone.addEventListener('click', openFileSelector);
 
-      // Gestionnaire drag & drop
-      photosDropZone.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        photosDropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
-      });
-
-      photosDropZone.addEventListener('dragleave', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
-      });
-
-      photosDropZone.addEventListener('drop', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
-        
-        const files = Array.from(e.dataTransfer.files).filter(file => 
-          file.type.startsWith('image/')
-        );
-        
-        if (files.length > 0) {
-          // Mettre à jour l'input file
-          const dt = new DataTransfer();
-          files.slice(0, 4).forEach(file => dt.items.add(file)); // Max 4 photos
-          photosInput.files = dt.files;
-          handleFiles(files.slice(0, 4));
-        }
-      });
-
-      // Fonction pour gérer les fichiers sélectionnés
-      function handleFiles(files) {
-        if (files.length === 0) {
-          photosStatus.textContent = 'Aucune photo';
-          photosList.classList.add('hidden');
-          return;
-        }
-
-        const fileCount = Math.min(files.length, 4);
-        photosStatus.textContent = `${fileCount} photo(s) sélectionnée(s)`;
-        
-        // Afficher la liste des fichiers
-        photosList.innerHTML = '';
-        photosList.classList.remove('hidden');
-        
-        files.slice(0, 4).forEach((file, index) => {
-          const fileItem = document.createElement('div');
-          fileItem.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm';
-          
-          const fileName = file.name.length > 30 ? 
-            file.name.substring(0, 30) + '...' : file.name;
-          
-          const fileSize = (file.size / (1024 * 1024)).toFixed(2);
-          
-          fileItem.innerHTML = `
-            <span class="text-[#475569]">${fileName} (${fileSize} MB)</span>
-            <button type="button" class="text-red-500 hover:text-red-700" onclick="removeFile(${index})">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </button>
-          `;
-          
-          photosList.appendChild(fileItem);
-        });
-      }
-
-      // Fonction pour supprimer un fichier (à définir globalement)
-      window.removeFile = function(index) {
-        const files = Array.from(photosInput.files);
-        files.splice(index, 1);
-        
-        const dt = new DataTransfer();
-        files.forEach(file => dt.items.add(file));
-        photosInput.files = dt.files;
-        
-        handleFiles(files);
-      };
+    // Gestionnaire de changement de fichiers
+    photosInput.addEventListener('change', function(e) {
+      const files = Array.from(e.target.files);
+      handleFiles(files);
     });
-  </script>
+
+    // Gestionnaire drag & drop
+    photosDropZone.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      photosDropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+    });
+
+    photosDropZone.addEventListener('dragleave', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+    });
+
+    photosDropZone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      
+      const files = Array.from(e.dataTransfer.files).filter(file => 
+        file.type.startsWith('image/')
+      );
+      
+      if (files.length > 0) {
+        const dt = new DataTransfer();
+        files.slice(0, 4).forEach(file => dt.items.add(file));
+        photosInput.files = dt.files;
+        handleFiles(files.slice(0, 4));
+      }
+    });
+
+    // Fonction pour gérer les fichiers sélectionnés
+    function handleFiles(files) {
+      if (files.length === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        photosList.classList.add('hidden');
+        return;
+      }
+
+      const fileCount = Math.min(files.length, 4);
+      photosStatus.textContent = `${fileCount} photo(s) sélectionnée(s)`;
+      
+      photosList.innerHTML = '';
+      photosList.classList.remove('hidden');
+      
+      files.slice(0, 4).forEach((file, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm';
+        
+        const fileName = file.name.length > 30 ? 
+          file.name.substring(0, 30) + '...' : file.name;
+        
+        const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+        
+        fileItem.innerHTML = `
+          <span class="text-[#475569]">${fileName} (${fileSize} MB)</span>
+          <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700" data-index="${index}">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        `;
+        
+        photosList.appendChild(fileItem);
+      });
+
+      // Event delegation pour les boutons de suppression
+      photosList.querySelectorAll('.remove-photo-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const idx = parseInt(this.dataset.index);
+          removeFile(idx);
+        });
+      });
+    }
+
+    // Fonction pour supprimer un fichier
+    function removeFile(index) {
+      const files = Array.from(photosInput.files);
+      files.splice(index, 1);
+      
+      const dt = new DataTransfer();
+      files.forEach(file => dt.items.add(file));
+      photosInput.files = dt.files;
+      
+      handleFiles(files);
+    }
+  })();
+</script>
 )}
 
 
@@ -2636,144 +2647,760 @@ const photos = cityNote?.photos ?? [];
   </section>
 
   <!-- Script spécifique moquettes avec namespace -->
-  <script>
-    (() => {
-      const FORM_PREFIX = 'moquettes-city';
-      const form = document.getElementById('moquettes-city-form');
-      const submitBtn = document.getElementById('moquettes-city-submit-btn');
-      const photosInput = document.getElementById('moquettes-city-photos-input');
-      const dropZone = document.getElementById('moquettes-city-photos-drop-zone');
-      const photosList = document.getElementById('moquettes-city-photos-list');
-      const photosStatus = document.getElementById('moquettes-city-photos-status');
-      const photosHidden = document.getElementById('moquettes-city-photos-hidden');
+ <script is:inline>
+  (function initMoquettesForm() {
+    const form = document.getElementById('moquettes-city-form');
+    const submitBtn = document.getElementById('moquettes-city-submit-btn');
+    const photosInput = document.getElementById('moquettes-city-photos-input');
+    const dropZone = document.getElementById('moquettes-city-photos-drop-zone');
+    const photosList = document.getElementById('moquettes-city-photos-list');
+    const photosStatus = document.getElementById('moquettes-city-photos-status');
+    const photosHidden = document.getElementById('moquettes-city-photos-hidden');
+
+    // Si les éléments n'existent pas encore, réessayer
+    if (!form || !photosInput || !dropZone) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMoquettesForm);
+      }
+      return;
+    }
+    
+    const moquettesFormState = {
+      uploadingCount: 0,
+      uploadedFiles: [],
+      maxFiles: 5,
+      maxMB: 8
+    };
+
+    function setLoading(loading) {
+      if (submitBtn) {
+        submitBtn.disabled = loading || moquettesFormState.uploadingCount > 0;
+        const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+        const btnText = submitBtn.querySelector('span');
+        if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
+        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon devis personnalisé';
+      }
+    }
+
+    function bytesToMB(bytes) {
+      return (bytes / 1024 / 1024).toFixed(1);
+    }
+
+    function updatePhotosStatus() {
+      if (!photosStatus) return;
+      const total = moquettesFormState.uploadedFiles.length;
+      const success = moquettesFormState.uploadedFiles.filter(f => f.status === 'success').length;
+      const uploading = moquettesFormState.uploadingCount;
       
-      const moquettesFormState = {
-        uploadingCount: 0,
-        uploadedFiles: [],
-        maxFiles: 5,
-        maxMB: 8
-      };
+      if (total === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        if (photosList) photosList.classList.add('hidden');
+      } else {
+        photosStatus.textContent = `${total}/${moquettesFormState.maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
+        if (photosList) photosList.classList.remove('hidden');
+      }
+      
+      if (submitBtn) submitBtn.disabled = moquettesFormState.uploadingCount > 0;
+    }
 
-      function setLoading(loading) {
-        if (submitBtn) {
-          submitBtn.disabled = loading || moquettesFormState.uploadingCount > 0;
-          const loadingSpinner = submitBtn.querySelector('.loading-spinner');
-          const btnText = submitBtn.querySelector('span');
-          if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
-          if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon devis personnalisé';
+    function addPhotoToList(file) {
+      if (!photosList) return;
+      const photoDiv = document.createElement('div');
+      photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+      photoDiv.dataset.fileName = file.name;
+      
+      photoDiv.innerHTML = `
+        <span class="text-[#475569] flex-1 truncate mr-2">${file.name}</span>
+        <span class="text-[#64748B] mr-2">${bytesToMB(file.size)} MB</span>
+        <span class="photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>
+        <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center" data-filename="${file.name}">×</button>
+      `;
+      
+      photoDiv.querySelector('.remove-photo-btn').addEventListener('click', function() {
+        removePhoto(this.dataset.filename);
+      });
+      photosList.appendChild(photoDiv);
+    }
+
+    function updatePhotoStatus(fileName, status, progress) {
+      if (!photosList) return;
+      const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
+      if (!photoDiv) return;
+      const statusEl = photoDiv.querySelector('.photo-status');
+      if (!statusEl) return;
+      
+      switch (status) {
+        case 'uploading':
+          statusEl.textContent = `${progress}%`;
+          statusEl.className = 'photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center';
+          break;
+        case 'success':
+          statusEl.textContent = 'Importée ✓';
+          statusEl.className = 'photo-status text-[#10B981] mr-2 min-w-[60px] text-center';
+          break;
+        case 'error':
+          statusEl.textContent = 'Erreur ⚠';
+          statusEl.className = 'photo-status text-[#EF4444] mr-2 min-w-[60px] text-center';
+          break;
+      }
+    }
+
+    function removePhoto(fileName) {
+      const fileIndex = moquettesFormState.uploadedFiles.findIndex(f => f.name === fileName);
+      if (fileIndex !== -1) {
+        const file = moquettesFormState.uploadedFiles[fileIndex];
+        if (file.cloudinaryUrl && photosHidden) {
+          const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
+          if (hiddenInput) hiddenInput.remove();
         }
+        moquettesFormState.uploadedFiles.splice(fileIndex, 1);
       }
-
-      function bytesToMB(bytes) {
-        return (bytes / 1024 / 1024).toFixed(1);
-      }
-
-      function updatePhotosStatus() {
-        if (!photosStatus) return;
-        const total = moquettesFormState.uploadedFiles.length;
-        const success = moquettesFormState.uploadedFiles.filter(f => f.status === 'success').length;
-        const uploading = moquettesFormState.uploadingCount;
-        
-        if (total === 0) {
-          photosStatus.textContent = 'Aucune photo';
-          if (photosList) photosList.classList.add('hidden');
-        } else {
-          photosStatus.textContent = `${total}/${moquettesFormState.maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
-          if (photosList) photosList.classList.remove('hidden');
-        }
-        
-        if (submitBtn) submitBtn.disabled = moquettesFormState.uploadingCount > 0;
-      }
-
-      function addPhotoToList(file) {
-        if (!photosList) return;
-        const photoDiv = document.createElement('div');
-        photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
-        photoDiv.dataset.fileName = file.name;
-        
-        photoDiv.innerHTML = `
-          <span class="text-[#475569] flex-1 truncate mr-2">${file.name}</span>
-          <span class="text-[#64748B] mr-2">${bytesToMB(file.size)} MB</span>
-          <span class="text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>
-          <button type="button" class="text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center">×</button>
-        `;
-        
-        photoDiv.querySelector('button').addEventListener('click', () => removePhoto(file.name));
-        photosList.appendChild(photoDiv);
-      }
-
-      function updatePhotoStatus(fileName, status, progress = 0) {
-        if (!photosList) return;
+      
+      if (photosList) {
         const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-        if (!photoDiv) return;
-        const statusEl = photoDiv.querySelector('span:nth-child(3)');
-        if (!statusEl) return;
-        
-        switch (status) {
-          case 'uploading':
-            statusEl.textContent = `${progress}%`;
-            statusEl.className = 'text-[#3B82F6] mr-2 min-w-[60px] text-center';
-            break;
-          case 'success':
-            statusEl.textContent = 'Importée ✓';
-            statusEl.className = 'text-[#10B981] mr-2 min-w-[60px] text-center';
-            break;
-          case 'error':
-            statusEl.textContent = 'Erreur ⚠';
-            statusEl.className = 'text-[#EF4444] mr-2 min-w-[60px] text-center';
-            break;
-        }
+        if (photoDiv) photoDiv.remove();
       }
+      updatePhotosStatus();
+    }
 
-      function removePhoto(fileName) {
-        const fileIndex = moquettesFormState.uploadedFiles.findIndex(f => f.name === fileName);
-        if (fileIndex !== -1) {
-          const file = moquettesFormState.uploadedFiles[fileIndex];
-          if (file.cloudinaryUrl && photosHidden) {
-            const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
-            if (hiddenInput) hiddenInput.remove();
+    async function getCloudinarySignature() {
+      const response = await fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+      
+      const data = await response.json();
+      if (!data.ok) {
+        throw new Error(data.error || 'Erreur signature Cloudinary');
+      }
+      return data;
+    }
+
+    async function uploadToCloudinary(file) {
+      const fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null
+      };
+      
+      moquettesFormState.uploadedFiles.push(fileObj);
+      addPhotoToList(file);
+      moquettesFormState.uploadingCount++;
+      updatePhotosStatus();
+      
+      try {
+        const signature = await getCloudinarySignature();
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('api_key', signature.apiKey);
+        formData.append('timestamp', String(signature.timestamp));
+        formData.append('signature', signature.signature);
+        formData.append('folder', signature.folder);
+        if (signature.uploadPreset) {
+          formData.append('upload_preset', signature.uploadPreset);
+        }
+
+        const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
+        const xhr = new XMLHttpRequest();
+        
+        xhr.upload.onprogress = function(e) {
+          if (e.lengthComputable) {
+            const progress = Math.round((e.loaded / e.total) * 100);
+            fileObj.progress = progress;
+            updatePhotoStatus(file.name, 'uploading', progress);
           }
-          moquettesFormState.uploadedFiles.splice(fileIndex, 1);
-        }
-        
-        if (photosList) {
-          const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-          if (photoDiv) photoDiv.remove();
-        }
-        updatePhotosStatus();
-      }
-
-      async function getCloudinarySignature() {
-        const response = await fetch('/api/cloudinary-signature', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
-        
-        const data = await response.json();
-        if (!data.ok) {
-          throw new Error(data.error || 'Erreur signature Cloudinary');
-        }
-        return data;
-      }
-
-      async function uploadToCloudinary(file) {
-        const fileObj = {
-          name: file.name,
-          size: file.size,
-          status: 'uploading',
-          progress: 0,
-          cloudinaryUrl: null
         };
         
-        moquettesFormState.uploadedFiles.push(fileObj);
-        addPhotoToList(file);
-        moquettesFormState.uploadingCount++;
-        updatePhotosStatus();
+        xhr.onload = function() {
+          moquettesFormState.uploadingCount--;
+          try {
+            const result = JSON.parse(xhr.responseText);
+            if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+              fileObj.status = 'success';
+              fileObj.cloudinaryUrl = result.secure_url;
+              updatePhotoStatus(file.name, 'success');
+              
+              if (photosHidden) {
+                const hiddenInput = document.createElement('input');
+                hiddenInput.type = 'hidden';
+                hiddenInput.name = 'photos[]';
+                hiddenInput.value = result.secure_url;
+                photosHidden.appendChild(hiddenInput);
+              }
+            } else {
+              throw new Error('Upload failed');
+            }
+          } catch (err) {
+            fileObj.status = 'error';
+            updatePhotoStatus(file.name, 'error');
+          }
+          updatePhotosStatus();
+        };
         
-        try {
-          const signature = await getCloudinarySignature();
-          const formData = new FormData();
+        xhr.onerror = function() {
+          moquettesFormState.uploadingCount--;
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          updatePhotosStatus();
+        };
+        
+        xhr.open('POST', uploadUrl);
+        xhr.send(formData);
+        
+      } catch (error) {
+        moquettesFormState.uploadingCount--;
+        fileObj.status = 'error';
+        updatePhotoStatus(file.name, 'error');
+        updatePhotosStatus();
+      }
+    }
+
+    function validateFiles(files) {
+      const validFiles = [];
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        if (!file.type.startsWith('image/')) {
+          alert(file.name + " n'est pas une image valide");
+          continue;
+        }
+        if (file.size > moquettesFormState.maxMB * 1024 * 1024) {
+          alert(file.name + ' dépasse la limite de ' + moquettesFormState.maxMB + ' MB');
+          continue;
+        }
+        if (moquettesFormState.uploadedFiles.length + validFiles.length >= moquettesFormState.maxFiles) {
+          alert('Maximum ' + moquettesFormState.maxFiles + ' photos autorisées');
+          break;
+        }
+        validFiles.push(file);
+      }
+      return validFiles;
+    }
+
+    function handleFiles(files) {
+      var validFiles = validateFiles(Array.from(files));
+      validFiles.forEach(function(file) {
+        uploadToCloudinary(file);
+      });
+    }
+
+    // Event listeners pour l'upload de photos
+    photosInput.addEventListener('change', function(e) {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
+      }
+    });
+
+    dropZone.addEventListener('click', function() {
+      photosInput.click();
+    });
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', function(e) {
+      var files = e.dataTransfer.files;
+      if (files.length > 0) handleFiles(files);
+    });
+
+    function validateField(field) {
+      var value = field.value.trim();
+      var errorDiv = field.parentNode.querySelector('.form-error');
+      
+      if (field.required && !value) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Ce champ est requis';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Format email invalide';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      field.classList.remove('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.classList.add('hidden');
+      }
+      return true;
+    }
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      if (moquettesFormState.uploadingCount > 0) {
+        alert("Veuillez attendre la fin de l'upload des photos");
+        return;
+      }
+      
+      var requiredFields = form.querySelectorAll('[required]');
+      var isValid = true;
+      
+      requiredFields.forEach(function(field) {
+        if (!validateField(field)) isValid = false;
+      });
+      
+      var emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) isValid = false;
+      }
+      
+      if (!isValid) {
+        alert('Veuillez corriger les erreurs ci-dessus');
+        return;
+      }
+      
+      setLoading(true);
+      
+      try {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'form_submit', {
+            form_location: 'citypage_moquettes',
+            form_type: 'devis_moquettes'
+          });
+        }
+
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_generated',
+            form_type: 'devis_moquettes',
+            service: 'Nettoyage moquettes - Devis personnalisé',
+            source: 'page-moquettes-' + window.location.pathname.split('/').pop()
+          });
+        }
+
+        var formData = new FormData(form);
+        var response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        var data = null;
+        try { data = await response.json(); } catch (err) {}
+
+        if (response.ok) {
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = '\
+            <div class="text-center py-10" style="animation: fade-in 0.5s ease-out;">\
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">\
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>\
+                </svg>\
+              </div>\
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>\
+              <p class="text-[#475569] max-w-md mx-auto">\
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté au type de moquette.<br>\
+                Un expert Klinova évaluera la technique de nettoyage<br>\
+                la plus appropriée à vos fibres.\
+              </p>\
+            </div>\
+          ';
+
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch (err) {}
+        } else {
+          var err = (data && (data.error || data.message)) || 'Une erreur est survenue. Merci de réessayer.';
+          alert(err);
+        }
+      } catch (error) {
+        alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+      } finally {
+        setLoading(false);
+      }
+    });
+  })();
+</script>
+)}
+
+
+{service.key === 'terrasses' && (
+<section
+  data-section="cta-final"
+  data-hide-header-cta
+  data-hide-floating-cta
+  id="formulaire"
+  class="section-padding bg-[#DFF1E8]"
+  aria-labelledby="cta-title"
+>
+  <div class="container-responsive">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Demandez votre devis gratuit
+      </h2>
+      <p class="mt-3 text-[#475569]">
+        Intervention rapide {cityAt}, protocole professionnel, satisfaction garantie.
+      </p>
+    </div>
+
+    <!-- Messages d'état -->
+    <div id="terrasses-form-messages" class="mx-auto max-w-2xl mt-6"></div>
+
+    <!-- Form -->
+    <form
+      id="terrasses-form"
+      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
+      method="post"
+      action="/api/contact"
+      novalidate
+    >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      
+      <!-- Champs cachés pour tracking -->
+      <input type="hidden" name="source" value={`page-terrasses-${city.slug}`}>
+      <input type="hidden" name="service" value={`Nettoyage terrasse - ${city.name}`}>
+      <input type="hidden" name="city" value={city.name}>
+      <input type="hidden" name="rgpd" value="accepte">
+
+      <!-- Prénom + Nom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="terrasses-prenom" class="sr-only">Prénom</label>
+          <input
+            id="terrasses-prenom" name="prenom" type="text" required
+            placeholder="Prénom"
+            autocomplete="given-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="terrasses-nom" class="sr-only">Nom</label>
+          <input
+            id="terrasses-nom" name="nom" type="text"
+            placeholder="Nom (optionnel)"
+            autocomplete="family-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Email + Téléphone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="terrasses-email" class="sr-only">Email</label>
+          <input
+            id="terrasses-email" name="email" type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="terrasses-telephone" class="sr-only">Téléphone</label>
+          <input
+            id="terrasses-telephone" name="telephone" type="tel" inputmode="tel" required
+            placeholder="Téléphone"
+            autocomplete="tel"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Ville -->
+      <div>
+        <label for="terrasses-ville" class="sr-only">Ville</label>
+        <input
+          id="terrasses-ville" name="ville" type="text" required
+          placeholder="Ville"
+          autocomplete="address-level2"
+          value={city.name}
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200"
+        />
+        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+      </div>
+
+      <!-- Message libre -->
+      <div>
+        <label for="terrasses-message" class="sr-only">Décrivez votre terrasse</label>
+        <textarea
+          id="terrasses-message" name="message"
+          placeholder="Décrivez votre terrasse : surface, type de revêtement (bois, carrelage, pierre, béton...), salissures (mousse, taches, pollution...), urgence... (optionnel)"
+          rows="3"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Photos avec Cloudinary -->
+      <div>
+        <label for="terrasses-photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+          Photos de votre terrasse (optionnel)
+        </label>
+        
+        <input type="file" id="terrasses-photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+        
+        <div id="terrasses-photos-drop-zone" 
+             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
+                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
+          <div class="flex flex-col items-center space-y-2">
+            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+          </div>
+        </div>
+        
+        <div id="terrasses-photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+        <div id="terrasses-photos-list" class="mt-3 space-y-2 hidden"></div>
+        <div id="terrasses-photos-hidden"></div>
+      </div>
+
+      <!-- RGPD -->
+      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
+        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
+          En savoir plus
+        </a>
+      </div>
+
+      <!-- CTA -->
+      <ButtonSubmit
+        label="Recevoir mon devis"
+        variant="primary"
+        size="lg"
+        fullWidth={true}
+        id="terrasses-submit-btn"
+        formId="terrasses-form"
+        formName={`Terrasses Contact Form - ${city.name}`}
+        formType="devis"
+        value={200}
+        source={`page-terrasses-${city.slug}`}
+        className="inline-flex w-full items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+        tracking={{
+          action: 'lead',
+          source: `terrasses-form-${city.slug}`,
+          intent: 'nettoyage-terrasse-devis'
+        }}
+      />
+    </form>
+  </div>
+</section>
+
+<script is:inline>
+  (function initTerrassesForm() {
+    var form = document.getElementById('terrasses-form');
+    var messagesContainer = document.getElementById('terrasses-form-messages');
+    var submitBtn = document.getElementById('terrasses-submit-btn');
+    
+    var photosInput = document.getElementById('terrasses-photos-input');
+    var dropZone = document.getElementById('terrasses-photos-drop-zone');
+    var photosList = document.getElementById('terrasses-photos-list');
+    var photosStatus = document.getElementById('terrasses-photos-status');
+    var photosHidden = document.getElementById('terrasses-photos-hidden');
+
+    // Si les éléments n'existent pas encore, réessayer
+    if (!form || !photosInput || !dropZone) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTerrassesForm);
+      }
+      return;
+    }
+    
+    var uploadingCount = 0;
+    var uploadedFiles = [];
+    var maxFiles = 4;
+    var maxMB = 8;
+
+    function showMessage(text, type) {
+      var messageDiv = document.createElement('div');
+      messageDiv.className = 'p-4 rounded-lg text-center ' + 
+        (type === 'success' ? 'bg-[#EAF6F0] text-[#1E2939]' : 'bg-red-50 text-red-700');
+      messageDiv.textContent = text;
+      messagesContainer.innerHTML = '';
+      messagesContainer.appendChild(messageDiv);
+      
+      if (type === 'success') {
+        setTimeout(function() {
+          messageDiv.style.opacity = '0';
+          setTimeout(function() { messageDiv.remove(); }, 300);
+        }, 5000);
+      }
+    }
+
+    function setLoading(loading) {
+      if (submitBtn) {
+        submitBtn.disabled = loading || uploadingCount > 0;
+        var btnText = submitBtn.querySelector('span');
+        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
+      }
+    }
+
+    function bytesToMB(bytes) {
+      return (bytes / 1024 / 1024).toFixed(1);
+    }
+
+    function updatePhotosStatus() {
+      if (!photosStatus) return;
+      var total = uploadedFiles.length;
+      var success = uploadedFiles.filter(function(f) { return f.status === 'success'; }).length;
+      
+      if (total === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        if (photosList) photosList.classList.add('hidden');
+      } else {
+        var text = total + '/' + maxFiles + ' photos • ' + success + ' importée' + (success > 1 ? 's' : '');
+        if (uploadingCount > 0) text += ' • ' + uploadingCount + ' en cours...';
+        photosStatus.textContent = text;
+        if (photosList) photosList.classList.remove('hidden');
+      }
+      
+      if (submitBtn) submitBtn.disabled = uploadingCount > 0;
+    }
+
+    function addPhotoToList(file) {
+      if (!photosList) return;
+      var photoDiv = document.createElement('div');
+      photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+      photoDiv.dataset.fileName = file.name;
+      
+      photoDiv.innerHTML = '\
+        <span class="text-[#475569] flex-1 truncate mr-2">' + file.name + '</span>\
+        <span class="text-[#64748B] mr-2">' + bytesToMB(file.size) + ' MB</span>\
+        <span class="photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>\
+        <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center" data-filename="' + file.name + '">×</button>\
+      ';
+      
+      photoDiv.querySelector('.remove-photo-btn').addEventListener('click', function() {
+        removePhoto(this.dataset.filename);
+      });
+      photosList.appendChild(photoDiv);
+    }
+
+    function updatePhotoStatus(fileName, status, progress) {
+      if (!photosList) return;
+      var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+      if (!photoDiv) return;
+      var statusEl = photoDiv.querySelector('.photo-status');
+      if (!statusEl) return;
+      
+      switch (status) {
+        case 'uploading':
+          statusEl.textContent = progress + '%';
+          statusEl.className = 'photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center';
+          break;
+        case 'success':
+          statusEl.textContent = 'Importée ✓';
+          statusEl.className = 'photo-status text-[#10B981] mr-2 min-w-[60px] text-center';
+          break;
+        case 'error':
+          statusEl.textContent = 'Erreur ⚠';
+          statusEl.className = 'photo-status text-[#EF4444] mr-2 min-w-[60px] text-center';
+          break;
+      }
+    }
+
+    function removePhoto(fileName) {
+      var fileIndex = -1;
+      for (var i = 0; i < uploadedFiles.length; i++) {
+        if (uploadedFiles[i].name === fileName) {
+          fileIndex = i;
+          break;
+        }
+      }
+      
+      if (fileIndex !== -1) {
+        var file = uploadedFiles[fileIndex];
+        if (file.cloudinaryUrl && photosHidden) {
+          var hiddenInput = photosHidden.querySelector('input[value="' + file.cloudinaryUrl + '"]');
+          if (hiddenInput) hiddenInput.remove();
+        }
+        uploadedFiles.splice(fileIndex, 1);
+      }
+      
+      if (photosList) {
+        var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+        if (photoDiv) photoDiv.remove();
+      }
+      updatePhotosStatus();
+    }
+
+    function getCloudinarySignature() {
+      return fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (!data.ok) throw new Error(data.error || 'Erreur signature Cloudinary');
+        return data;
+      });
+    }
+
+    function uploadToCloudinary(file) {
+      var fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null
+      };
+      
+      uploadedFiles.push(fileObj);
+      addPhotoToList(file);
+      uploadingCount++;
+      updatePhotosStatus();
+      
+      getCloudinarySignature()
+        .then(function(signature) {
+          var formData = new FormData();
           formData.append('file', file);
           formData.append('api_key', signature.apiKey);
           formData.append('timestamp', String(signature.timestamp));
@@ -2783,28 +3410,28 @@ const photos = cityNote?.photos ?? [];
             formData.append('upload_preset', signature.uploadPreset);
           }
 
-          const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
-          const xhr = new XMLHttpRequest();
+          var uploadUrl = 'https://api.cloudinary.com/v1_1/' + signature.cloudName + '/auto/upload';
+          var xhr = new XMLHttpRequest();
           
-          xhr.upload.onprogress = (e) => {
+          xhr.upload.onprogress = function(e) {
             if (e.lengthComputable) {
-              const progress = Math.round((e.loaded / e.total) * 100);
+              var progress = Math.round((e.loaded / e.total) * 100);
               fileObj.progress = progress;
               updatePhotoStatus(file.name, 'uploading', progress);
             }
           };
           
-          xhr.onload = () => {
-            moquettesFormState.uploadingCount--;
+          xhr.onload = function() {
+            uploadingCount--;
             try {
-              const result = JSON.parse(xhr.responseText);
+              var result = JSON.parse(xhr.responseText);
               if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
                 fileObj.status = 'success';
                 fileObj.cloudinaryUrl = result.secure_url;
                 updatePhotoStatus(file.name, 'success');
                 
                 if (photosHidden) {
-                  const hiddenInput = document.createElement('input');
+                  var hiddenInput = document.createElement('input');
                   hiddenInput.type = 'hidden';
                   hiddenInput.name = 'photos[]';
                   hiddenInput.value = result.secure_url;
@@ -2820,8 +3447,8 @@ const photos = cityNote?.photos ?? [];
             updatePhotosStatus();
           };
           
-          xhr.onerror = () => {
-            moquettesFormState.uploadingCount--;
+          xhr.onerror = function() {
+            uploadingCount--;
             fileObj.status = 'error';
             updatePhotoStatus(file.name, 'error');
             updatePhotosStatus();
@@ -2829,1040 +3456,127 @@ const photos = cityNote?.photos ?? [];
           
           xhr.open('POST', uploadUrl);
           xhr.send(formData);
-          
-        } catch (error) {
-          moquettesFormState.uploadingCount--;
+        })
+        .catch(function(error) {
+          uploadingCount--;
           fileObj.status = 'error';
           updatePhotoStatus(file.name, 'error');
           updatePhotosStatus();
-        }
-      }
-
-      function validateFiles(files) {
-        const validFiles = [];
-        for (const file of files) {
-          if (!file.type.startsWith('image/')) {
-            alert(`${file.name} n'est pas une image valide`);
-            continue;
-          }
-          if (file.size > moquettesFormState.maxMB * 1024 * 1024) {
-            alert(`${file.name} dépasse la limite de ${moquettesFormState.maxMB} MB`);
-            continue;
-          }
-          if (moquettesFormState.uploadedFiles.length + validFiles.length >= moquettesFormState.maxFiles) {
-            alert(`Maximum ${moquettesFormState.maxFiles} photos autorisées`);
-            break;
-          }
-          validFiles.push(file);
-        }
-        return validFiles;
-      }
-
-      function handleFiles(files) {
-        const validFiles = validateFiles(Array.from(files));
-        validFiles.forEach(file => uploadToCloudinary(file));
-      }
-
-      if (photosInput && dropZone) {
-        photosInput.addEventListener('change', (e) => {
-          if (e.target.files.length > 0) {
-            handleFiles(e.target.files);
-            e.target.value = '';
-          }
         });
+    }
 
-        dropZone.addEventListener('click', () => photosInput.click());
-
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-          dropZone.addEventListener(eventName, (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          });
-        });
-
-        ['dragenter', 'dragover'].forEach(eventName => {
-          dropZone.addEventListener(eventName, () => {
-            dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
-          });
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-          dropZone.addEventListener(eventName, () => {
-            dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
-          });
-        });
-
-        dropZone.addEventListener('drop', (e) => {
-          const files = e.dataTransfer.files;
-          if (files.length > 0) handleFiles(files);
-        });
-      }
-
-      function validateField(field) {
-        const value = field.value.trim();
-        const errorDiv = field.parentNode.querySelector('.form-error');
-        
-        if (field.required && !value) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Ce champ est requis';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
+    function validateFiles(files) {
+      var validFiles = [];
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        if (!file.type.startsWith('image/')) {
+          showMessage(file.name + " n'est pas une image valide", 'error');
+          continue;
         }
-        
-        if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Format email invalide';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
+        if (file.size > maxMB * 1024 * 1024) {
+          showMessage(file.name + ' dépasse la limite de ' + maxMB + ' MB', 'error');
+          continue;
         }
-        
-        if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Code postal invalide (5 chiffres)';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
+        if (uploadedFiles.length + validFiles.length >= maxFiles) {
+          showMessage('Maximum ' + maxFiles + ' photos autorisées', 'error');
+          break;
         }
-        
-        field.classList.remove('border-red-500');
-        if (errorDiv) {
-          errorDiv.textContent = '';
-          errorDiv.classList.add('hidden');
-        }
-        return true;
+        validFiles.push(file);
       }
+      return validFiles;
+    }
 
-      if (form) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          
-          if (moquettesFormState.uploadingCount > 0) {
-            alert('Veuillez attendre la fin de l\'upload des photos');
-            return;
-          }
-          
-          const requiredFields = form.querySelectorAll('[required]');
-          let isValid = true;
-          
-          requiredFields.forEach(field => {
-            if (!validateField(field)) isValid = false;
-          });
-          
-          const emailField = form.querySelector('[name="email"]');
-          if (emailField && emailField.value.trim()) {
-            if (!validateField(emailField)) isValid = false;
-          }
-          
-          if (!isValid) {
-            alert('Veuillez corriger les erreurs ci-dessus');
-            return;
-          }
-          
-          setLoading(true);
-          
-          try {
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'form_submit', {
-                form_location: 'citypage_moquettes',
-                form_type: 'devis_moquettes'
-              });
-            }
-
-            if (window.dataLayer) {
-              window.dataLayer.push({
-                event: 'lead_generated',
-                form_type: 'devis_moquettes',
-                service: 'Nettoyage moquettes - Devis personnalisé',
-                source: `page-moquettes-${window.location.pathname.split('/').pop()}`
-              });
-            }
-
-            const formData = new FormData(form);
-            const response = await fetch('/api/contact', {
-              method: 'POST',
-              body: formData,
-              headers: { 'Accept': 'application/json' }
-            });
-
-            let data = null;
-            try { data = await response.json(); } catch {}
-
-            if (response.ok) {
-              form.setAttribute('aria-hidden', 'true');
-              form.style.pointerEvents = 'none';
-              form.innerHTML = `
-                <div class="text-center py-10" style="animation: fade-in 0.5s ease-out;">
-                  <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
-                  <p class="text-[#475569] max-w-md mx-auto">
-                    Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté au type de moquette.<br>
-                    Un expert Klinova évaluera la technique de nettoyage<br>
-                    la plus appropriée à vos fibres.
-                  </p>
-                </div>
-              `;
-
-              try { 
-                form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
-              } catch {}
-            } else {
-              const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
-              alert(err);
-            }
-          } catch (error) {
-            alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
-          } finally {
-            setLoading(false);
-          }
-        });
+    function handleFiles(files) {
+      var validFiles = validateFiles(Array.from(files));
+      for (var i = 0; i < validFiles.length; i++) {
+        uploadToCloudinary(validFiles[i]);
       }
-    })();
-  </script>
-)}
-
-
-{service.key === 'nettoyage-appartement-maison' && (
-<section
-data-section="cta-final"
-data-hide-cta
-  id="formulaire"
-  class="section-padding bg-[#DFF1E8]"
-  aria-labelledby="cta-title"
->
-  <div class="container-responsive">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
-        Demandez votre devis gratuit
-      </h2>
-      <p class="mt-3 text-[#475569]">
-        Intervention rapide {cityAt}, protocole professionnel, satisfaction garantie.
-      </p>
-    </div>
-
-    <!-- Messages d'état -->
-    <div id="form-messages" class="mx-auto max-w-2xl mt-6"></div>
-
-    <!-- Form amélioré -->
-    <form
-      id="devis-grand-menage-form"
-      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
-      method="post"
-      action="/api/contact"
-      novalidate
-    >
-      <!-- Honeypot anti-spam -->
-      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
-      
-      <!-- Champs cachés pour tracking -->
-      <input type="hidden" name="source" value="grand-menage">
-      <input type="hidden" name="service" value="Nettoyage appartement-maison - Demande devis">
-      <input type="hidden" name="rgpd" value="accepte">
-
-      <!-- Prénom + Nom -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="prenom" class="sr-only">Prénom</label>
-          <input
-            id="prenom" name="prenom" type="text" required
-            placeholder="Prénom"
-            autocomplete="given-name"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-        
-        <div>
-          <label for="nom" class="sr-only">Nom</label>
-          <input
-            id="nom" name="nom" type="text"
-            placeholder="Nom (optionnel)"
-            autocomplete="family-name"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-        </div>
-      </div>
-
-      <!-- Email + Téléphone -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="email" class="sr-only">Email</label>
-          <input
-            id="email" name="email" type="email"
-            placeholder="Email"
-            autocomplete="email"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-        
-        <div>
-          <label for="telephone" class="sr-only">Téléphone</label>
-          <input
-            id="telephone" name="telephone" type="tel" inputmode="tel" required
-            placeholder="Téléphone"
-            autocomplete="tel"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-      </div>
-
-      <!-- Ville -->
-      <div>
-        <label for="ville" class="sr-only">Ville</label>
-        <input
-          id="ville" name="ville" type="text" required
-          placeholder="Ville (ex. Paris 12e)"
-          autocomplete="address-level2"
-          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                 transition-all duration-200"
-        />
-        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-      </div>
-
-      <!-- Message libre -->
-      <div>
-        <label for="message" class="sr-only">Décrivez les services de nettoyage dont vous avez besoin</label>
-        <textarea
-          id="message" name="message"
-          placeholder="Décrivez votre logement : surface, piéces à nettoyer, urgence... (optionnel)"
-          rows="3"
-          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                 transition-all duration-200 resize-none"
-        ></textarea>
-      </div>
-
-      <!-- Photos avec Cloudinary -->
-      <div>
-        <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
-          Photos (optionnel)
-        </label>
-        
-        <!-- Input caché -->
-        <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
-        
-        <!-- Zone de drop -->
-        <div id="photos-drop-zone" 
-             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
-                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
-          <div class="flex flex-col items-center space-y-2">
-            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
-            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
-          </div>
-        </div>
-        
-        <!-- Statut des photos -->
-        <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
-        
-        <!-- Liste des photos -->
-        <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
-        
-        <!-- Container pour les URLs Cloudinary -->
-        <div id="photos-hidden"></div>
-      </div>
-
-      <!-- RGPD -->
-      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
-        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
-        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
-          En savoir plus
-        </a>
-      </div>
-
-      <!-- CTA form -->
-     
-       <ButtonSubmit
-  label="Recevoir mon devis"
-  variant="primary"
-  size="lg"
-  fullWidth={true}
-  id="submit-btn"
-  formId="fientes-pigeons-form"
-  formName="Fientes Pigeons Contact Form"
-  formType="devis"
-  value={220}
-  source="grand-menage"
-  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
-  tracking={{
-    action: 'cta-submit-devis',
-    source: 'grand-menage',
-    intent: 'fientes-pigeons-devis'
-  }}
-  data={{
-    action: 'cta-submit-devis',
-    source: 'grand-menage'
-  }}
-/>
-
-       
-      </div>
-    </form>
-  </div>
-</section>
-)}
-
-<!-- 🧾 formualaire terrasses pour CityPage -->
-{service.key === 'terrasses' && (
-
-<section
-data-section="cta-final"
-data-hide-cta
-  id="formulaire"
-  class="section-padding bg-[#DFF1E8]"
-  aria-labelledby="cta-title"
->
-  <div class="container-responsive">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
-        Demandez votre devis gratuit
-      </h2>
-      <p class="mt-3 text-[#475569]">
-        Intervention rapide {cityAt}, protocole professionnel, satisfaction garantie.
-      </p>
-    </div>
-
-    <!-- Messages d'état -->
-    <div id="form-messages" class="mx-auto max-w-2xl mt-6"></div>
-
-    <!-- Form amélioré -->
-    <form
-      id="devis-terrasses-form"
-      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
-      method="post"
-      action="/api/contact"
-      novalidate
-    >
-      <!-- Honeypot anti-spam -->
-      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
-      
-      <!-- Champs cachés pour tracking -->
-            <input type="hidden" name="source" value={`page-terrasses-${city.slug}`}>
-            <input type="hidden" name="service" value={`Nettoyage terrasses - demande devis - ${city.name}`}>
-            <input type="hidden" name="city" value={city.name}>
-
-
-
-      <!-- Prénom + Nom -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="prenom" class="sr-only">Prénom</label>
-          <input
-            id="prenom" name="prenom" type="text" required
-            placeholder="Prénom"
-            autocomplete="given-name"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-        
-        <div>
-          <label for="nom" class="sr-only">Nom</label>
-          <input
-            id="nom" name="nom" type="text"
-            placeholder="Nom (optionnel)"
-            autocomplete="family-name"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-        </div>
-      </div>
-
-      <!-- Email + Téléphone -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="email" class="sr-only">Email</label>
-          <input
-            id="email" name="email" type="email"
-            placeholder="Email"
-            autocomplete="email"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-        
-        <div>
-          <label for="telephone" class="sr-only">Téléphone</label>
-          <input
-            id="telephone" name="telephone" type="tel" inputmode="tel" required
-            placeholder="Téléphone"
-            autocomplete="tel"
-            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                   transition-all duration-200"
-          />
-          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-        </div>
-      </div>
-
-      <!-- Ville -->
-      <div>
-        <label for="ville" class="sr-only">Ville</label>
-        <input
-          id="ville" name="ville" type="text" required
-          placeholder="Ville (ex: Créteil)"
-          autocomplete="address-level2"
-          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                 transition-all duration-200"
-        />
-        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
-      </div>
-
-      <!-- Message libre -->
-      <div>
-        <label for="message" class="sr-only">Décrivez les services de nettoyage dont vous avez besoin</label>
-        <textarea
-          id="message" name="message"
-          placeholder="Décrivez votre terrasses : surface, type de revêtement, type de salissures, urgence... (optionnel)"
-          rows="3"
-          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
-                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
-                 transition-all duration-200 resize-none"
-        ></textarea>
-      </div>
-
-      <!-- Photos avec Cloudinary -->
-      <div>
-        <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
-          Photos (optionnel)
-        </label>
-        
-        <!-- Input caché -->
-        <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
-        
-        <!-- Zone de drop -->
-        <div id="photos-drop-zone" 
-             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
-                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
-          <div class="flex flex-col items-center space-y-2">
-            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
-            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
-          </div>
-        </div>
-        
-        <!-- Statut des photos -->
-        <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
-        
-        <!-- Liste des photos -->
-        <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
-        
-        <!-- Container pour les URLs Cloudinary -->
-        <div id="photos-hidden"></div>
-      </div>
-
-      <!-- RGPD -->
-      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
-        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
-        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
-          En savoir plus
-        </a>
-      </div>
-
-      <!-- CTA form -->
-     
-       <ButtonSubmit
-  label="Recevoir mon devis"
-  variant="primary"
-  size="lg"
-  fullWidth={true}
-  id="submit-btn"
-  formId="fientes-pigeons-form"
-  formName="Fientes Pigeons Contact Form"
-  formType="devis"
-  value={220}
-  source="local terrasses"
-  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
-  tracking={{
-    action: 'cta-submit-devis',
-    source: `terrasses-city-form-${city.slug}`, 
-    intent: 'terrasses-devis'
-  }}
-  data={{
-    action: 'cta-submit-devis',
-    source: 'terrasses'
-  }}
-/>
-
-       
-      </div>
-    </form>
-  </div>
-</section>
-
-<style>
-/* Styles pour les photos */
-.photo-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px;
-  background: #F8FAFC;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.photo-name {
-  font-weight: 500;
-  color: #1E2939;
-  flex: 1;
-  margin-right: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.photo-size {
-  color: #64748B;
-  margin-right: 8px;
-}
-
-.photo-status {
-  font-weight: 500;
-  margin-right: 8px;
-}
-
-.photo-status.uploading { color: #3B82F6; }
-.photo-status.success { color: #10B981; }
-.photo-status.error { color: #EF4444; }
-
-.photo-remove {
-  background: #EF4444;
-  color: white;
-  border: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 1;
-}
-
-.photo-progress {
-  grid-column: 1 / -1;
-  height: 3px;
-  background: #E5E7EB;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 4px;
-}
-
-.photo-progress-fill {
-  height: 100%;
-  background: #3F8D65;
-  width: 0%;
-  transition: width 0.3s ease;
-}
-
-.form-message {
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
-.form-message.success {
-  background: #ECFDF5;
-  color: #047857;
-  border: 1px solid #D1FAE5;
-}
-
-.form-message.error {
-  background: #FEF2F2;
-  color: #DC2626;
-  border: 1px solid #FECACA;
-}
-
-.form-error:not(:empty) {
-  display: block !important;
-}
-</style>
-
-<script>
-(() => {
-  const form = document.getElementById('devis-terrasses-form');
-  const messagesContainer = document.getElementById('form-messages');
-  const submitBtn = document.getElementById('submit-btn');
-  const submitText = document.getElementById('btn-text');
-const loadingSpinner = document.querySelector('.loading-spinner');
-  
-  // Upload de photos
-  const photosInput = document.getElementById('photos-input');
-  const dropZone = document.getElementById('photos-drop-zone');
-  const photosList = document.getElementById('photos-list');
-  const photosStatus = document.getElementById('photos-status');
-  const photosHidden = document.getElementById('photos-hidden');
-  
-  let uploadingCount = 0;
-  let uploadedFiles = [];
-  const maxFiles = 4;
-  const maxMB = 8;
-
-  // Fonctions utilitaires
-  function showMessage(text, type) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `form-message ${type}`;
-    messageDiv.textContent = text;
-    messagesContainer.innerHTML = '';
-    messagesContainer.appendChild(messageDiv);
-    
-    if (type === 'success') {
-      setTimeout(() => {
-        messageDiv.style.opacity = '0';
-        setTimeout(() => messageDiv.remove(), 300);
-      }, 5000);
     }
-  }
 
-function setLoading(loading) {
-  submitBtn.disabled = loading || uploadingCount > 0;
-  if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
-  if (submitText) submitText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
-}
-
-  function bytesToMB(bytes) {
-    return (bytes / 1024 / 1024).toFixed(1);
-  }
-
-  function updatePhotosStatus() {
-    const total = uploadedFiles.length;
-    const success = uploadedFiles.filter(f => f.status === 'success').length;
-    const uploading = uploadingCount;
-    
-    if (total === 0) {
-      photosStatus.textContent = 'Aucune photo';
-      photosList.classList.add('hidden');
-    } else {
-      photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
-      photosList.classList.remove('hidden');
-    }
-    
-    submitBtn.disabled = uploadingCount > 0;
-  }
-
-  function addPhotoToList(file) {
-    const photoDiv = document.createElement('div');
-    photoDiv.className = 'photo-item';
-    photoDiv.dataset.fileName = file.name;
-    
-    photoDiv.innerHTML = `
-      <span class="photo-name">${file.name}</span>
-      <span class="photo-size">${bytesToMB(file.size)} MB</span>
-      <span class="photo-status uploading">Upload...</span>
-      <button type="button" class="photo-remove" aria-label="Supprimer">×</button>
-      <div class="photo-progress">
-        <div class="photo-progress-fill"></div>
-      </div>
-    `;
-    
-    photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
-      removePhoto(file.name);
-    });
-    
-    photosList.appendChild(photoDiv);
-  }
-
-  function updatePhotoStatus(fileName, status, progress = 0) {
-    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-    if (!photoDiv) return;
-    
-    const statusEl = photoDiv.querySelector('.photo-status');
-    const progressFill = photoDiv.querySelector('.photo-progress-fill');
-    
-    statusEl.className = `photo-status ${status}`;
-    
-    switch (status) {
-      case 'uploading':
-        statusEl.textContent = `${progress}%`;
-        progressFill.style.width = `${progress}%`;
-        break;
-      case 'success':
-        statusEl.textContent = 'Importée ✓';
-        progressFill.style.width = '100%';
-        break;
-      case 'error':
-        statusEl.textContent = 'Erreur ⚠';
-        progressFill.style.width = '0%';
-        break;
-    }
-  }
-
-  function removePhoto(fileName) {
-    const fileIndex = uploadedFiles.findIndex(f => f.name === fileName);
-    if (fileIndex !== -1) {
-      const file = uploadedFiles[fileIndex];
-      if (file.cloudinaryUrl) {
-        // Supprimer l'input caché
-        const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
-        if (hiddenInput) hiddenInput.remove();
-      }
-      uploadedFiles.splice(fileIndex, 1);
-    }
-    
-    const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-    if (photoDiv) photoDiv.remove();
-    
-    updatePhotosStatus();
-  }
-
-  async function getCloudinarySignature() {
-    const response = await fetch('/api/cloudinary-signature', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({})
-    });
-    
-    const data = await response.json();
-    if (!data.ok) {
-      throw new Error(data.error || 'Erreur signature Cloudinary');
-    }
-    
-    return data;
-  }
-
-  async function uploadToCloudinary(file) {
-    const fileObj = {
-      name: file.name,
-      size: file.size,
-      status: 'uploading',
-      progress: 0,
-      cloudinaryUrl: null
-    };
-    
-    uploadedFiles.push(fileObj);
-    addPhotoToList(file);
-    uploadingCount++;
-    updatePhotosStatus();
-    
-    try {
-      const signature = await getCloudinarySignature();
-      
-      const formData = new FormData();
-      formData.append('file', file);
-      formData.append('api_key', signature.apiKey);
-      formData.append('timestamp', String(signature.timestamp));
-      formData.append('signature', signature.signature);
-      formData.append('folder', signature.folder);
-      if (signature.uploadPreset) {
-        formData.append('upload_preset', signature.uploadPreset);
-      }
-
-      const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
-      
-      const xhr = new XMLHttpRequest();
-      
-      xhr.upload.onprogress = (e) => {
-        if (e.lengthComputable) {
-          const progress = Math.round((e.loaded / e.total) * 100);
-          fileObj.progress = progress;
-          updatePhotoStatus(file.name, 'uploading', progress);
-        }
-      };
-      
-      xhr.onload = () => {
-        uploadingCount--;
-        try {
-          const result = JSON.parse(xhr.responseText);
-          if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
-            fileObj.status = 'success';
-            fileObj.cloudinaryUrl = result.secure_url;
-            updatePhotoStatus(file.name, 'success');
-            
-            // Ajouter l'URL au formulaire
-            const hiddenInput = document.createElement('input');
-            hiddenInput.type = 'hidden';
-            hiddenInput.name = 'photos[]';
-            hiddenInput.value = result.secure_url;
-            photosHidden.appendChild(hiddenInput);
-          } else {
-            throw new Error('Upload failed');
-          }
-        } catch (err) {
-          fileObj.status = 'error';
-          updatePhotoStatus(file.name, 'error');
-          console.error('Upload error:', err);
-        }
-        updatePhotosStatus();
-      };
-      
-      xhr.onerror = () => {
-        uploadingCount--;
-        fileObj.status = 'error';
-        updatePhotoStatus(file.name, 'error');
-        updatePhotosStatus();
-        console.error('Upload network error');
-      };
-      
-      xhr.open('POST', uploadUrl);
-      xhr.send(formData);
-      
-    } catch (error) {
-      uploadingCount--;
-      fileObj.status = 'error';
-      updatePhotoStatus(file.name, 'error');
-      updatePhotosStatus();
-      console.error('Cloudinary error:', error);
-    }
-  }
-
-  function validateFiles(files) {
-    const validFiles = [];
-    
-    for (const file of files) {
-      if (!file.type.startsWith('image/')) {
-        showMessage(`${file.name} n'est pas une image valide`, 'error');
-        continue;
-      }
-      
-      if (file.size > maxMB * 1024 * 1024) {
-        showMessage(`${file.name} dépasse la limite de ${maxMB} MB`, 'error');
-        continue;
-      }
-      
-      if (uploadedFiles.length + validFiles.length >= maxFiles) {
-        showMessage(`Maximum ${maxFiles} photos autorisées`, 'error');
-        break;
-      }
-      
-      validFiles.push(file);
-    }
-    
-    return validFiles;
-  }
-
-  function handleFiles(files) {
-    const validFiles = validateFiles(Array.from(files));
-    validFiles.forEach(file => uploadToCloudinary(file));
-  }
-
-  // Event listeners pour les photos
-  if (photosInput && dropZone) {
-    photosInput.addEventListener('change', (e) => {
+    // Event listeners pour l'upload de photos
+    photosInput.addEventListener('change', function(e) {
       if (e.target.files.length > 0) {
         handleFiles(e.target.files);
-        e.target.value = ''; // Reset pour permettre de re-sélectionner
+        e.target.value = '';
       }
     });
 
-    dropZone.addEventListener('click', () => photosInput.click());
+    dropZone.addEventListener('click', function() {
+      photosInput.click();
+    });
 
-    // Drag & Drop
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      dropZone.addEventListener(eventName, (e) => {
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function(e) {
         e.preventDefault();
         e.stopPropagation();
       });
     });
 
-    ['dragenter', 'dragover'].forEach(eventName => {
-      dropZone.addEventListener(eventName, () => {
+    ['dragenter', 'dragover'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
         dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
       });
     });
 
-    ['dragleave', 'drop'].forEach(eventName => {
-      dropZone.addEventListener(eventName, () => {
+    ['dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
         dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
       });
     });
 
-    dropZone.addEventListener('drop', (e) => {
-      const files = e.dataTransfer.files;
-      if (files.length > 0) {
-        handleFiles(files);
-      }
+    dropZone.addEventListener('drop', function(e) {
+      var files = e.dataTransfer.files;
+      if (files.length > 0) handleFiles(files);
     });
-  }
 
-  // Validation basique des champs
-  function validateField(field) {
-    const value = field.value.trim();
-    const errorDiv = field.parentNode.querySelector('.form-error');
-    
-    if (field.required && !value) {
-      field.classList.add('border-red-500');
-      if (errorDiv) {
-        errorDiv.textContent = 'Ce champ est requis';
-        errorDiv.classList.remove('hidden');
+    function validateField(field) {
+      var value = field.value.trim();
+      var errorDiv = field.parentNode.querySelector('.form-error');
+      
+      if (field.required && !value) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Ce champ est requis';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
       }
-      return false;
-    }
-    
-    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      field.classList.add('border-red-500');
-      if (errorDiv) {
-        errorDiv.textContent = 'Format email invalide';
-        errorDiv.classList.remove('hidden');
+      
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Format email invalide';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
       }
-      return false;
+      
+      field.classList.remove('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.classList.add('hidden');
+      }
+      return true;
     }
-    
-    field.classList.remove('border-red-500');
-    if (errorDiv) {
-      errorDiv.textContent = '';
-      errorDiv.classList.add('hidden');
-    }
-    return true;
-  }
 
-  // Soumission du formulaire
-  if (form) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
       
       if (uploadingCount > 0) {
-        showMessage('Veuillez attendre la fin de l\'upload des photos', 'error');
+        showMessage("Veuillez attendre la fin de l'upload des photos", 'error');
         return;
       }
       
-      // Validation
-      const requiredFields = form.querySelectorAll('[required]');
-      let isValid = true;
+      var requiredFields = form.querySelectorAll('[required]');
+      var isValid = true;
       
-      requiredFields.forEach(field => {
-        if (!validateField(field)) {
-          isValid = false;
-        }
+      requiredFields.forEach(function(field) {
+        if (!validateField(field)) isValid = false;
       });
       
-      // Validation email si rempli
-      const emailField = form.querySelector('[name="email"]');
+      var emailField = form.querySelector('[name="email"]');
       if (emailField && emailField.value.trim()) {
-        if (!validateField(emailField)) {
-          isValid = false;
-        }
+        if (!validateField(emailField)) isValid = false;
       }
       
       if (!isValid) {
@@ -3873,71 +3587,71 @@ function setLoading(loading) {
       setLoading(true);
       messagesContainer.innerHTML = '';
       
-      try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'landing_terrasses',
-            form_type: 'devis_terrasses'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_terrasses',
-            service: 'Nettoyage terrasses',
-            source: 'terrasses'
-          });
-        }
-
-        const formData = new FormData(form);
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          form_location: 'citypage_terrasses',
+          form_type: 'devis_nettoyage_terrasse'
         });
+      }
 
-        let data = null;
-        try { data = await response.json(); } catch {}
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'lead_generated',
+          form_type: 'devis_nettoyage_terrasse',
+          service: 'Nettoyage terrasse',
+          source: 'page-terrasses-' + window.location.pathname.split('/').pop()
+        });
+      }
 
-        if (response.ok) {
-          // Remplacer complètement le contenu du formulaire par le message de succès
+      var formData = new FormData(form);
+      
+      fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(response) {
+        return response.json().then(function(data) {
+          return { ok: response.ok, data: data };
+        }).catch(function() {
+          return { ok: response.ok, data: null };
+        });
+      })
+      .then(function(result) {
+        if (result.ok) {
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
-          form.innerHTML = `
-            <div class="text-center py-10">
-              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
-              <p class="text-[#475569] max-w-md mx-auto">
-                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>
-                Un expert Klinova analysera votre demande<br>
-                et vous proposera un planning d'intervention.
-              </p>
-            </div>
-          `;
-
-          // Scroll vers le formulaire transformé
+          form.innerHTML = '\
+            <div class="text-center py-10">\
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">\
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>\
+                </svg>\
+              </div>\
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>\
+              <p class="text-[#475569] max-w-md mx-auto">\
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>\
+                Un expert Klinova évaluera le type de revêtement<br>\
+                et vous proposera la technique de nettoyage adaptée.\
+              </p>\
+            </div>\
+          ';
           try { 
             form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
-          } catch {}
+          } catch (err) {}
         } else {
-          const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
+          var err = (result.data && (result.data.error || result.data.message)) || 'Une erreur est survenue. Merci de réessayer.';
           showMessage(err, 'error');
         }
-      } catch (error) {
+      })
+      .catch(function(error) {
         showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
-        console.error('Submit error:', error);
-      } finally {
+      })
+      .finally(function() {
         setLoading(false);
-      }
+      });
     });
-  }
-})();
+  })();
 </script>
 )}
 
@@ -3948,11 +3662,13 @@ function setLoading(loading) {
 
 <!-- 🧾 formualaire parkings pour CityPage -->
 {service.key === 'parkings' && (
-  <section class="bg-[#DBEAFE] py-16 md:py-24" data-section="cta-final"
-  data-hide-cta
+ <section 
+  class="bg-[#DBEAFE] py-16 md:py-24" 
+  data-section="cta-final"
   data-hide-floating-cta
   data-hide-header-cta 
-    id="formulaire">
+  id="formulaire"
+>
     <div class="container-responsive">
       <div class="max-w-4xl mx-auto text-center">
         
@@ -4329,144 +4045,159 @@ function setLoading(loading) {
   </section>
 
   <!-- Script spécifique parkings avec namespace -->
-  <script>
-    (() => {
-      const FORM_PREFIX = 'parking-city';
-      const form = document.getElementById('parking-city-form');
-      const submitBtn = document.getElementById('parking-city-submit-btn');
-      const photosInput = document.getElementById('parking-city-photos-input');
-      const dropZone = document.getElementById('parking-city-photos-drop-zone');
-      const photosList = document.getElementById('parking-city-photos-list');
-      const photosStatus = document.getElementById('parking-city-photos-status');
-      const photosHidden = document.getElementById('parking-city-photos-hidden');
+  <!-- Remplacer <script> par : -->
+<script is:inline>
+  (function initParkingForm() {
+    var form = document.getElementById('parking-city-form');
+    var submitBtn = document.getElementById('parking-city-submit-btn');
+    var photosInput = document.getElementById('parking-city-photos-input');
+    var dropZone = document.getElementById('parking-city-photos-drop-zone');
+    var photosList = document.getElementById('parking-city-photos-list');
+    var photosStatus = document.getElementById('parking-city-photos-status');
+    var photosHidden = document.getElementById('parking-city-photos-hidden');
+
+    // Si les éléments n'existent pas encore, réessayer
+    if (!form || !photosInput || !dropZone) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initParkingForm);
+      }
+      return;
+    }
+    
+    var parkingFormState = {
+      uploadingCount: 0,
+      uploadedFiles: [],
+      maxFiles: 4,
+      maxMB: 8
+    };
+
+    function setLoading(loading) {
+      if (submitBtn) {
+        submitBtn.disabled = loading || parkingFormState.uploadingCount > 0;
+        var btnText = submitBtn.querySelector('span');
+        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon diagnostic gratuit';
+      }
+    }
+
+    function bytesToMB(bytes) {
+      return (bytes / 1024 / 1024).toFixed(1);
+    }
+
+    function updatePhotosStatus() {
+      if (!photosStatus) return;
+      var total = parkingFormState.uploadedFiles.length;
+      var success = parkingFormState.uploadedFiles.filter(function(f) { return f.status === 'success'; }).length;
       
-      const parkingFormState = {
-        uploadingCount: 0,
-        uploadedFiles: [],
-        maxFiles: 4,
-        maxMB: 8
-      };
+      if (total === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        if (photosList) photosList.classList.add('hidden');
+      } else {
+        var text = total + '/' + parkingFormState.maxFiles + ' photos • ' + success + ' importée' + (success > 1 ? 's' : '');
+        if (parkingFormState.uploadingCount > 0) text += ' • ' + parkingFormState.uploadingCount + ' en cours...';
+        photosStatus.textContent = text;
+        if (photosList) photosList.classList.remove('hidden');
+      }
+      
+      if (submitBtn) submitBtn.disabled = parkingFormState.uploadingCount > 0;
+    }
 
-      function setLoading(loading) {
-        if (submitBtn) {
-          submitBtn.disabled = loading || parkingFormState.uploadingCount > 0;
-          const loadingSpinner = submitBtn.querySelector('.loading-spinner');
-          const btnText = submitBtn.querySelector('span');
-          if (loadingSpinner) loadingSpinner.classList.toggle('hidden', !loading);
-          if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon diagnostic gratuit';
+    function addPhotoToList(file) {
+      if (!photosList) return;
+      var photoDiv = document.createElement('div');
+      photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+      photoDiv.dataset.fileName = file.name;
+      
+      photoDiv.innerHTML = '\
+        <span class="text-[#475569] flex-1 truncate mr-2">' + file.name + '</span>\
+        <span class="text-[#64748B] mr-2">' + bytesToMB(file.size) + ' MB</span>\
+        <span class="photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>\
+        <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center" data-filename="' + file.name + '">×</button>\
+      ';
+      
+      photoDiv.querySelector('.remove-photo-btn').addEventListener('click', function() {
+        removePhoto(this.dataset.filename);
+      });
+      photosList.appendChild(photoDiv);
+    }
+
+    function updatePhotoStatus(fileName, status, progress) {
+      if (!photosList) return;
+      var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+      if (!photoDiv) return;
+      var statusEl = photoDiv.querySelector('.photo-status');
+      if (!statusEl) return;
+      
+      switch (status) {
+        case 'uploading':
+          statusEl.textContent = progress + '%';
+          statusEl.className = 'photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center';
+          break;
+        case 'success':
+          statusEl.textContent = 'Importée ✓';
+          statusEl.className = 'photo-status text-[#10B981] mr-2 min-w-[60px] text-center';
+          break;
+        case 'error':
+          statusEl.textContent = 'Erreur ⚠';
+          statusEl.className = 'photo-status text-[#EF4444] mr-2 min-w-[60px] text-center';
+          break;
+      }
+    }
+
+    function removePhoto(fileName) {
+      var fileIndex = -1;
+      for (var i = 0; i < parkingFormState.uploadedFiles.length; i++) {
+        if (parkingFormState.uploadedFiles[i].name === fileName) {
+          fileIndex = i;
+          break;
         }
       }
-
-      function bytesToMB(bytes) {
-        return (bytes / 1024 / 1024).toFixed(1);
-      }
-
-      function updatePhotosStatus() {
-        if (!photosStatus) return;
-        const total = parkingFormState.uploadedFiles.length;
-        const success = parkingFormState.uploadedFiles.filter(f => f.status === 'success').length;
-        const uploading = parkingFormState.uploadingCount;
-        
-        if (total === 0) {
-          photosStatus.textContent = 'Aucune photo';
-          if (photosList) photosList.classList.add('hidden');
-        } else {
-          photosStatus.textContent = `${total}/${parkingFormState.maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
-          if (photosList) photosList.classList.remove('hidden');
+      
+      if (fileIndex !== -1) {
+        var file = parkingFormState.uploadedFiles[fileIndex];
+        if (file.cloudinaryUrl && photosHidden) {
+          var hiddenInput = photosHidden.querySelector('input[value="' + file.cloudinaryUrl + '"]');
+          if (hiddenInput) hiddenInput.remove();
         }
-        
-        if (submitBtn) submitBtn.disabled = parkingFormState.uploadingCount > 0;
+        parkingFormState.uploadedFiles.splice(fileIndex, 1);
       }
-
-      function addPhotoToList(file) {
-        if (!photosList) return;
-        const photoDiv = document.createElement('div');
-        photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
-        photoDiv.dataset.fileName = file.name;
-        
-        photoDiv.innerHTML = `
-          <span class="text-[#475569] flex-1 truncate mr-2">${file.name}</span>
-          <span class="text-[#64748B] mr-2">${bytesToMB(file.size)} MB</span>
-          <span class="text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>
-          <button type="button" class="text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center">×</button>
-        `;
-        
-        photoDiv.querySelector('button').addEventListener('click', () => removePhoto(file.name));
-        photosList.appendChild(photoDiv);
+      
+      if (photosList) {
+        var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+        if (photoDiv) photoDiv.remove();
       }
+      updatePhotosStatus();
+    }
 
-      function updatePhotoStatus(fileName, status, progress = 0) {
-        if (!photosList) return;
-        const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-        if (!photoDiv) return;
-        const statusEl = photoDiv.querySelector('span:nth-child(3)');
-        if (!statusEl) return;
-        
-        switch (status) {
-          case 'uploading':
-            statusEl.textContent = `${progress}%`;
-            statusEl.className = 'text-[#3B82F6] mr-2 min-w-[60px] text-center';
-            break;
-          case 'success':
-            statusEl.textContent = 'Importée ✓';
-            statusEl.className = 'text-[#10B981] mr-2 min-w-[60px] text-center';
-            break;
-          case 'error':
-            statusEl.textContent = 'Erreur ⚠';
-            statusEl.className = 'text-[#EF4444] mr-2 min-w-[60px] text-center';
-            break;
-        }
-      }
-
-      function removePhoto(fileName) {
-        const fileIndex = parkingFormState.uploadedFiles.findIndex(f => f.name === fileName);
-        if (fileIndex !== -1) {
-          const file = parkingFormState.uploadedFiles[fileIndex];
-          if (file.cloudinaryUrl && photosHidden) {
-            const hiddenInput = photosHidden.querySelector(`input[value="${file.cloudinaryUrl}"]`);
-            if (hiddenInput) hiddenInput.remove();
-          }
-          parkingFormState.uploadedFiles.splice(fileIndex, 1);
-        }
-        
-        if (photosList) {
-          const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
-          if (photoDiv) photoDiv.remove();
-        }
-        updatePhotosStatus();
-      }
-
-      async function getCloudinarySignature() {
-        const response = await fetch('/api/cloudinary-signature', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        });
-        
-        const data = await response.json();
-        if (!data.ok) {
-          throw new Error(data.error || 'Erreur signature Cloudinary');
-        }
+    function getCloudinarySignature() {
+      return fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (!data.ok) throw new Error(data.error || 'Erreur signature Cloudinary');
         return data;
-      }
+      });
+    }
 
-      async function uploadToCloudinary(file) {
-        const fileObj = {
-          name: file.name,
-          size: file.size,
-          status: 'uploading',
-          progress: 0,
-          cloudinaryUrl: null
-        };
-        
-        parkingFormState.uploadedFiles.push(fileObj);
-        addPhotoToList(file);
-        parkingFormState.uploadingCount++;
-        updatePhotosStatus();
-        
-        try {
-          const signature = await getCloudinarySignature();
-          const formData = new FormData();
+    function uploadToCloudinary(file) {
+      var fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null
+      };
+      
+      parkingFormState.uploadedFiles.push(fileObj);
+      addPhotoToList(file);
+      parkingFormState.uploadingCount++;
+      updatePhotosStatus();
+      
+      getCloudinarySignature()
+        .then(function(signature) {
+          var formData = new FormData();
           formData.append('file', file);
           formData.append('api_key', signature.apiKey);
           formData.append('timestamp', String(signature.timestamp));
@@ -4476,28 +4207,28 @@ function setLoading(loading) {
             formData.append('upload_preset', signature.uploadPreset);
           }
 
-          const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
-          const xhr = new XMLHttpRequest();
+          var uploadUrl = 'https://api.cloudinary.com/v1_1/' + signature.cloudName + '/auto/upload';
+          var xhr = new XMLHttpRequest();
           
-          xhr.upload.onprogress = (e) => {
+          xhr.upload.onprogress = function(e) {
             if (e.lengthComputable) {
-              const progress = Math.round((e.loaded / e.total) * 100);
+              var progress = Math.round((e.loaded / e.total) * 100);
               fileObj.progress = progress;
               updatePhotoStatus(file.name, 'uploading', progress);
             }
           };
           
-          xhr.onload = () => {
+          xhr.onload = function() {
             parkingFormState.uploadingCount--;
             try {
-              const result = JSON.parse(xhr.responseText);
+              var result = JSON.parse(xhr.responseText);
               if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
                 fileObj.status = 'success';
                 fileObj.cloudinaryUrl = result.secure_url;
                 updatePhotoStatus(file.name, 'success');
                 
                 if (photosHidden) {
-                  const hiddenInput = document.createElement('input');
+                  var hiddenInput = document.createElement('input');
                   hiddenInput.type = 'hidden';
                   hiddenInput.name = 'photos[]';
                   hiddenInput.value = result.secure_url;
@@ -4513,7 +4244,7 @@ function setLoading(loading) {
             updatePhotosStatus();
           };
           
-          xhr.onerror = () => {
+          xhr.onerror = function() {
             parkingFormState.uploadingCount--;
             fileObj.status = 'error';
             updatePhotoStatus(file.name, 'error');
@@ -4522,204 +4253,211 @@ function setLoading(loading) {
           
           xhr.open('POST', uploadUrl);
           xhr.send(formData);
-          
-        } catch (error) {
+        })
+        .catch(function(error) {
           parkingFormState.uploadingCount--;
           fileObj.status = 'error';
           updatePhotoStatus(file.name, 'error');
           updatePhotosStatus();
+        });
+    }
+
+    function validateFiles(files) {
+      var validFiles = [];
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        if (!file.type.startsWith('image/')) {
+          alert(file.name + " n'est pas une image valide");
+          continue;
         }
+        if (file.size > parkingFormState.maxMB * 1024 * 1024) {
+          alert(file.name + ' dépasse la limite de ' + parkingFormState.maxMB + ' MB');
+          continue;
+        }
+        if (parkingFormState.uploadedFiles.length + validFiles.length >= parkingFormState.maxFiles) {
+          alert('Maximum ' + parkingFormState.maxFiles + ' photos autorisées');
+          break;
+        }
+        validFiles.push(file);
       }
+      return validFiles;
+    }
 
-      function validateFiles(files) {
-        const validFiles = [];
-        for (const file of files) {
-          if (!file.type.startsWith('image/')) {
-            alert(`${file.name} n'est pas une image valide`);
-            continue;
-          }
-          if (file.size > parkingFormState.maxMB * 1024 * 1024) {
-            alert(`${file.name} dépasse la limite de ${parkingFormState.maxMB} MB`);
-            continue;
-          }
-          if (parkingFormState.uploadedFiles.length + validFiles.length >= parkingFormState.maxFiles) {
-            alert(`Maximum ${parkingFormState.maxFiles} photos autorisées`);
-            break;
-          }
-          validFiles.push(file);
-        }
-        return validFiles;
+    function handleFiles(files) {
+      var validFiles = validateFiles(Array.from(files));
+      for (var i = 0; i < validFiles.length; i++) {
+        uploadToCloudinary(validFiles[i]);
       }
+    }
 
-      function handleFiles(files) {
-        const validFiles = validateFiles(Array.from(files));
-        validFiles.forEach(file => uploadToCloudinary(file));
+    // Event listeners pour l'upload de photos
+    photosInput.addEventListener('change', function(e) {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
       }
+    });
 
-      if (photosInput && dropZone) {
-        photosInput.addEventListener('change', (e) => {
-          if (e.target.files.length > 0) {
-            handleFiles(e.target.files);
-            e.target.value = '';
-          }
-        });
+    dropZone.addEventListener('click', function() {
+      photosInput.click();
+    });
 
-        dropZone.addEventListener('click', () => photosInput.click());
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
 
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-          dropZone.addEventListener(eventName, (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          });
-        });
+    ['dragenter', 'dragover'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.add('border-[#1E40AF]', 'bg-[#F0F9FF]');
+      });
+    });
 
-        ['dragenter', 'dragover'].forEach(eventName => {
-          dropZone.addEventListener(eventName, () => {
-            dropZone.classList.add('border-[#1E40AF]', 'bg-[#F0F9FF]');
-          });
-        });
+    ['dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.remove('border-[#1E40AF]', 'bg-[#F0F9FF]');
+      });
+    });
 
-        ['dragleave', 'drop'].forEach(eventName => {
-          dropZone.addEventListener(eventName, () => {
-            dropZone.classList.remove('border-[#1E40AF]', 'bg-[#F0F9FF]');
-          });
-        });
+    dropZone.addEventListener('drop', function(e) {
+      var files = e.dataTransfer.files;
+      if (files.length > 0) handleFiles(files);
+    });
 
-        dropZone.addEventListener('drop', (e) => {
-          const files = e.dataTransfer.files;
-          if (files.length > 0) handleFiles(files);
-        });
-      }
-
-      function validateField(field) {
-        const value = field.value.trim();
-        const errorDiv = field.parentNode.querySelector('.form-error');
-        
-        if (field.required && !value) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Ce champ est requis';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
-        }
-        
-        if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Format email invalide';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
-        }
-        
-        if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
-          field.classList.add('border-red-500');
-          if (errorDiv) {
-            errorDiv.textContent = 'Code postal invalide (5 chiffres)';
-            errorDiv.classList.remove('hidden');
-          }
-          return false;
-        }
-        
-        field.classList.remove('border-red-500');
+    function validateField(field) {
+      var value = field.value.trim();
+      var errorDiv = field.parentNode.querySelector('.form-error');
+      
+      if (field.required && !value) {
+        field.classList.add('border-red-500');
         if (errorDiv) {
-          errorDiv.textContent = '';
-          errorDiv.classList.add('hidden');
+          errorDiv.textContent = 'Ce champ est requis';
+          errorDiv.classList.remove('hidden');
         }
-        return true;
+        return false;
       }
+      
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Format email invalide';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      if (field.name === 'code_postal' && value && !/^[0-9]{5}$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Code postal invalide (5 chiffres)';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      field.classList.remove('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.classList.add('hidden');
+      }
+      return true;
+    }
 
-      if (form) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          
-          if (parkingFormState.uploadingCount > 0) {
-            alert('Veuillez attendre la fin de l\'upload des photos');
-            return;
-          }
-          
-          const requiredFields = form.querySelectorAll('[required]');
-          let isValid = true;
-          
-          requiredFields.forEach(field => {
-            if (!validateField(field)) isValid = false;
-          });
-          
-          const emailField = form.querySelector('[name="email"]');
-          if (emailField && emailField.value.trim()) {
-            if (!validateField(emailField)) isValid = false;
-          }
-          
-          if (!isValid) {
-            alert('Veuillez corriger les erreurs ci-dessus');
-            return;
-          }
-          
-          setLoading(true);
-          
-          try {
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'form_submit', {
-                form_location: 'citypage_parking',
-                form_type: 'diagnostic_parking'
-              });
-            }
-
-            if (window.dataLayer) {
-              window.dataLayer.push({
-                event: 'lead_generated',
-                form_type: 'diagnostic_parking',
-                service: 'Nettoyage parking - Diagnostic gratuit',
-                source: `page-parking-${window.location.pathname.split('/').pop()}`
-              });
-            }
-
-            const formData = new FormData(form);
-            const response = await fetch('/api/contact', {
-              method: 'POST',
-              body: formData,
-              headers: { 'Accept': 'application/json' }
-            });
-
-            let data = null;
-            try { data = await response.json(); } catch {}
-
-            if (response.ok) {
-              form.setAttribute('aria-hidden', 'true');
-              form.style.pointerEvents = 'none';
-              form.innerHTML = `
-                <div class="text-center py-10" style="animation: fade-in 0.5s ease-out;">
-                  <div class="w-16 h-16 bg-[#DBEAFE] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
-                  <p class="text-[#475569] max-w-md mx-auto">
-                    Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté à votre parking.<br>
-                    Un expert Klinova évaluera la technique de nettoyage<br>
-                    la plus appropriée à votre revêtement.
-                  </p>
-                </div>
-              `;
-
-              try { 
-                form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
-              } catch {}
-            } else {
-              const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
-              alert(err);
-            }
-          } catch (error) {
-            alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
-          } finally {
-            setLoading(false);
-          }
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (parkingFormState.uploadingCount > 0) {
+        alert("Veuillez attendre la fin de l'upload des photos");
+        return;
+      }
+      
+      var requiredFields = form.querySelectorAll('[required]');
+      var isValid = true;
+      
+      requiredFields.forEach(function(field) {
+        if (!validateField(field)) isValid = false;
+      });
+      
+      var emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) isValid = false;
+      }
+      
+      if (!isValid) {
+        alert('Veuillez corriger les erreurs ci-dessus');
+        return;
+      }
+      
+      setLoading(true);
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          form_location: 'citypage_parking',
+          form_type: 'diagnostic_parking'
         });
       }
-    })();
-  </script>
+
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'lead_generated',
+          form_type: 'diagnostic_parking',
+          service: 'Nettoyage parking - Diagnostic gratuit',
+          source: 'page-parking-' + window.location.pathname.split('/').pop()
+        });
+      }
+
+      var formData = new FormData(form);
+      
+      fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(response) {
+        return response.json().then(function(data) {
+          return { ok: response.ok, data: data };
+        }).catch(function() {
+          return { ok: response.ok, data: null };
+        });
+      })
+      .then(function(result) {
+        if (result.ok) {
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = '\
+            <div class="text-center py-10">\
+              <div class="w-16 h-16 bg-[#DBEAFE] rounded-full flex items-center justify-center mx-auto mb-4">\
+                <svg class="w-8 h-8 text-[#1E40AF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>\
+                </svg>\
+              </div>\
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>\
+              <p class="text-[#475569] max-w-md mx-auto">\
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté à votre parking.<br>\
+                Un expert Klinova évaluera la technique de nettoyage<br>\
+                la plus appropriée à votre revêtement.\
+              </p>\
+            </div>\
+          ';
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch (err) {}
+        } else {
+          var err = (result.data && (result.data.error || result.data.message)) || 'Une erreur est survenue. Merci de réessayer.';
+          alert(err);
+        }
+      })
+      .catch(function(error) {
+        alert('Impossible de contacter le serveur. Merci de réessayer dans un instant.');
+      })
+      .finally(function() {
+        setLoading(false);
+      });
+    });
+  })();
+</script>
 )}
 
 
