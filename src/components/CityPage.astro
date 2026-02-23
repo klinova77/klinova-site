@@ -2266,7 +2266,608 @@ const photos = cityNote?.photos ?? [];
 </script>
 )}
 
+{service.key === 'nettoyage-appartement-maison' && (
+<section
+  data-section="cta-final"
+  data-hide-header-cta
+  data-hide-floating-cta
+  id="formulaire"
+  class="section-padding bg-[#DFF1E8]"
+  aria-labelledby="cta-title"
+>
+  <div class="container-responsive">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 id="cta-title" class="text-2xl md:text-3xl font-semibold text-[#1E2939]">
+        Demandez votre devis gratuit
+      </h2>
+      <p class="mt-3 text-[#475569]">
+        Intervention rapide {cityAt}, protocole professionnel, satisfaction garantie.
+      </p>
+    </div>
 
+    <!-- Messages d'état -->
+    <div id="grand-menage-form-messages" class="mx-auto max-w-2xl mt-6"></div>
+
+    <!-- Form -->
+    <form
+      id="grand-menage-form"
+      class="mx-auto mt-8 max-w-2xl grid gap-4 rounded-2xl bg-white p-6 md:p-8 border border-[#CFE3D8]"
+      method="post"
+      action="/api/contact"
+      novalidate
+    >
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+      
+      <!-- Champs cachés pour tracking -->
+      <input type="hidden" name="source" value={`grand-menage-${city.slug}`}>
+      <input type="hidden" name="service" value={`Nettoyage appartement/maison - ${city.name}`}>
+      <input type="hidden" name="city" value={city.name}>
+      <input type="hidden" name="rgpd" value="accepte">
+
+      <!-- Prénom + Nom -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="grand-menage-prenom" class="sr-only">Prénom</label>
+          <input
+            id="grand-menage-prenom" name="prenom" type="text" required
+            placeholder="Prénom"
+            autocomplete="given-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="grand-menage-nom" class="sr-only">Nom</label>
+          <input
+            id="grand-menage-nom" name="nom" type="text"
+            placeholder="Nom (optionnel)"
+            autocomplete="family-name"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Email + Téléphone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="grand-menage-email" class="sr-only">Email</label>
+          <input
+            id="grand-menage-email" name="email" type="email"
+            placeholder="Email"
+            autocomplete="email"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+        
+        <div>
+          <label for="grand-menage-telephone" class="sr-only">Téléphone</label>
+          <input
+            id="grand-menage-telephone" name="telephone" type="tel" inputmode="tel" required
+            placeholder="Téléphone"
+            autocomplete="tel"
+            class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                   focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                   transition-all duration-200"
+          />
+          <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+        </div>
+      </div>
+
+      <!-- Ville -->
+      <div>
+        <label for="grand-menage-ville" class="sr-only">Ville</label>
+        <input
+          id="grand-menage-ville" name="ville" type="text" required
+          placeholder="Ville (ex. Paris 12e)"
+          autocomplete="address-level2"
+          value={city.name}
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200"
+        />
+        <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
+      </div>
+
+      <!-- Message libre -->
+      <div>
+        <label for="grand-menage-message" class="sr-only">Décrivez les services de nettoyage dont vous avez besoin</label>
+        <textarea
+          id="grand-menage-message" name="message"
+          placeholder="Décrivez votre logement : surface, pièces à nettoyer, urgence... (optionnel)"
+          rows="3"
+          class="w-full rounded-xl border border-[#E5E7EB] px-4 py-3 text-[#1E2939] placeholder-[#94A3B8]
+                 focus:outline-none focus:ring-2 focus:ring-[#3F8D65] focus:border-transparent
+                 transition-all duration-200 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Photos avec Cloudinary -->
+      <div>
+        <label for="grand-menage-photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
+          Photos (optionnel)
+        </label>
+        
+        <input type="file" id="grand-menage-photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
+        
+        <div id="grand-menage-photos-drop-zone" 
+             class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
+                    hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
+          <div class="flex flex-col items-center space-y-2">
+            <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
+            <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
+          </div>
+        </div>
+        
+        <div id="grand-menage-photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
+        <div id="grand-menage-photos-list" class="mt-3 space-y-2 hidden"></div>
+        <div id="grand-menage-photos-hidden"></div>
+      </div>
+
+      <!-- RGPD -->
+      <div class="text-sm text-[#64748B] bg-[#F8FAFC] rounded-lg p-3">
+        En soumettant ce formulaire, vous acceptez d'être recontacté par Klinova dans le cadre de votre demande.
+        <a href="/politique-de-confidentialite" class="text-[#3F8D65] hover:underline" target="_blank">
+          En savoir plus
+        </a>
+      </div>
+
+      <!-- CTA -->
+      <ButtonSubmit
+        label="Recevoir mon devis"
+        variant="primary"
+        size="lg"
+        fullWidth={true}
+        id="grand-menage-submit-btn"
+        formId="grand-menage-form"
+        formName={`Grand Ménage Contact Form - ${city.name}`}
+        formType="devis"
+        value={180}
+        source={`grand-menage-${city.slug}`}
+        className="inline-flex w-full items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+        tracking={{
+          action: 'lead',
+          source: `grand-menage-${city.slug}`,
+          intent: 'nettoyage-appartement-devis'
+        }}
+      />
+    </form>
+  </div>
+</section>
+
+<script is:inline>
+  (function initGrandMenageForm() {
+    var form = document.getElementById('grand-menage-form');
+    var messagesContainer = document.getElementById('grand-menage-form-messages');
+    var submitBtn = document.getElementById('grand-menage-submit-btn');
+    
+    var photosInput = document.getElementById('grand-menage-photos-input');
+    var dropZone = document.getElementById('grand-menage-photos-drop-zone');
+    var photosList = document.getElementById('grand-menage-photos-list');
+    var photosStatus = document.getElementById('grand-menage-photos-status');
+    var photosHidden = document.getElementById('grand-menage-photos-hidden');
+
+    // Si les éléments n'existent pas encore, réessayer
+    if (!form || !photosInput || !dropZone) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGrandMenageForm);
+      }
+      return;
+    }
+    
+    var uploadingCount = 0;
+    var uploadedFiles = [];
+    var maxFiles = 4;
+    var maxMB = 8;
+
+    function showMessage(text, type) {
+      var messageDiv = document.createElement('div');
+      messageDiv.className = 'p-4 rounded-lg text-center ' + 
+        (type === 'success' ? 'bg-[#EAF6F0] text-[#1E2939]' : 'bg-red-50 text-red-700');
+      messageDiv.textContent = text;
+      messagesContainer.innerHTML = '';
+      messagesContainer.appendChild(messageDiv);
+      
+      if (type === 'success') {
+        setTimeout(function() {
+          messageDiv.style.opacity = '0';
+          setTimeout(function() { messageDiv.remove(); }, 300);
+        }, 5000);
+      }
+    }
+
+    function setLoading(loading) {
+      if (submitBtn) {
+        submitBtn.disabled = loading || uploadingCount > 0;
+        var btnText = submitBtn.querySelector('span');
+        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Recevoir mon devis';
+      }
+    }
+
+    function bytesToMB(bytes) {
+      return (bytes / 1024 / 1024).toFixed(1);
+    }
+
+    function updatePhotosStatus() {
+      if (!photosStatus) return;
+      var total = uploadedFiles.length;
+      var success = uploadedFiles.filter(function(f) { return f.status === 'success'; }).length;
+      
+      if (total === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        if (photosList) photosList.classList.add('hidden');
+      } else {
+        var text = total + '/' + maxFiles + ' photos • ' + success + ' importée' + (success > 1 ? 's' : '');
+        if (uploadingCount > 0) text += ' • ' + uploadingCount + ' en cours...';
+        photosStatus.textContent = text;
+        if (photosList) photosList.classList.remove('hidden');
+      }
+      
+      if (submitBtn) submitBtn.disabled = uploadingCount > 0;
+    }
+
+    function addPhotoToList(file) {
+      if (!photosList) return;
+      var photoDiv = document.createElement('div');
+      photoDiv.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm border border-[#E5E7EB]';
+      photoDiv.dataset.fileName = file.name;
+      
+      photoDiv.innerHTML = '\
+        <span class="text-[#475569] flex-1 truncate mr-2">' + file.name + '</span>\
+        <span class="text-[#64748B] mr-2">' + bytesToMB(file.size) + ' MB</span>\
+        <span class="photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center">Upload...</span>\
+        <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700 w-5 h-5 flex items-center justify-center" data-filename="' + file.name + '">×</button>\
+      ';
+      
+      photoDiv.querySelector('.remove-photo-btn').addEventListener('click', function() {
+        removePhoto(this.dataset.filename);
+      });
+      photosList.appendChild(photoDiv);
+    }
+
+    function updatePhotoStatus(fileName, status, progress) {
+      if (!photosList) return;
+      var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+      if (!photoDiv) return;
+      var statusEl = photoDiv.querySelector('.photo-status');
+      if (!statusEl) return;
+      
+      switch (status) {
+        case 'uploading':
+          statusEl.textContent = progress + '%';
+          statusEl.className = 'photo-status text-[#3B82F6] mr-2 min-w-[60px] text-center';
+          break;
+        case 'success':
+          statusEl.textContent = 'Importée ✓';
+          statusEl.className = 'photo-status text-[#10B981] mr-2 min-w-[60px] text-center';
+          break;
+        case 'error':
+          statusEl.textContent = 'Erreur ⚠';
+          statusEl.className = 'photo-status text-[#EF4444] mr-2 min-w-[60px] text-center';
+          break;
+      }
+    }
+
+    function removePhoto(fileName) {
+      var fileIndex = -1;
+      for (var i = 0; i < uploadedFiles.length; i++) {
+        if (uploadedFiles[i].name === fileName) {
+          fileIndex = i;
+          break;
+        }
+      }
+      
+      if (fileIndex !== -1) {
+        var file = uploadedFiles[fileIndex];
+        if (file.cloudinaryUrl && photosHidden) {
+          var hiddenInput = photosHidden.querySelector('input[value="' + file.cloudinaryUrl + '"]');
+          if (hiddenInput) hiddenInput.remove();
+        }
+        uploadedFiles.splice(fileIndex, 1);
+      }
+      
+      if (photosList) {
+        var photoDiv = photosList.querySelector('[data-file-name="' + fileName + '"]');
+        if (photoDiv) photoDiv.remove();
+      }
+      updatePhotosStatus();
+    }
+
+    function getCloudinarySignature() {
+      return fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        if (!data.ok) throw new Error(data.error || 'Erreur signature Cloudinary');
+        return data;
+      });
+    }
+
+    function uploadToCloudinary(file) {
+      var fileObj = {
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null
+      };
+      
+      uploadedFiles.push(fileObj);
+      addPhotoToList(file);
+      uploadingCount++;
+      updatePhotosStatus();
+      
+      getCloudinarySignature()
+        .then(function(signature) {
+          var formData = new FormData();
+          formData.append('file', file);
+          formData.append('api_key', signature.apiKey);
+          formData.append('timestamp', String(signature.timestamp));
+          formData.append('signature', signature.signature);
+          formData.append('folder', signature.folder);
+          if (signature.uploadPreset) {
+            formData.append('upload_preset', signature.uploadPreset);
+          }
+
+          var uploadUrl = 'https://api.cloudinary.com/v1_1/' + signature.cloudName + '/auto/upload';
+          var xhr = new XMLHttpRequest();
+          
+          xhr.upload.onprogress = function(e) {
+            if (e.lengthComputable) {
+              var progress = Math.round((e.loaded / e.total) * 100);
+              fileObj.progress = progress;
+              updatePhotoStatus(file.name, 'uploading', progress);
+            }
+          };
+          
+          xhr.onload = function() {
+            uploadingCount--;
+            try {
+              var result = JSON.parse(xhr.responseText);
+              if (xhr.status >= 200 && xhr.status < 300 && result.secure_url) {
+                fileObj.status = 'success';
+                fileObj.cloudinaryUrl = result.secure_url;
+                updatePhotoStatus(file.name, 'success');
+                
+                if (photosHidden) {
+                  var hiddenInput = document.createElement('input');
+                  hiddenInput.type = 'hidden';
+                  hiddenInput.name = 'photos[]';
+                  hiddenInput.value = result.secure_url;
+                  photosHidden.appendChild(hiddenInput);
+                }
+              } else {
+                throw new Error('Upload failed');
+              }
+            } catch (err) {
+              fileObj.status = 'error';
+              updatePhotoStatus(file.name, 'error');
+            }
+            updatePhotosStatus();
+          };
+          
+          xhr.onerror = function() {
+            uploadingCount--;
+            fileObj.status = 'error';
+            updatePhotoStatus(file.name, 'error');
+            updatePhotosStatus();
+          };
+          
+          xhr.open('POST', uploadUrl);
+          xhr.send(formData);
+        })
+        .catch(function(error) {
+          uploadingCount--;
+          fileObj.status = 'error';
+          updatePhotoStatus(file.name, 'error');
+          updatePhotosStatus();
+        });
+    }
+
+    function validateFiles(files) {
+      var validFiles = [];
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        if (!file.type.startsWith('image/')) {
+          showMessage(file.name + " n'est pas une image valide", 'error');
+          continue;
+        }
+        if (file.size > maxMB * 1024 * 1024) {
+          showMessage(file.name + ' dépasse la limite de ' + maxMB + ' MB', 'error');
+          continue;
+        }
+        if (uploadedFiles.length + validFiles.length >= maxFiles) {
+          showMessage('Maximum ' + maxFiles + ' photos autorisées', 'error');
+          break;
+        }
+        validFiles.push(file);
+      }
+      return validFiles;
+    }
+
+    function handleFiles(files) {
+      var validFiles = validateFiles(Array.from(files));
+      for (var i = 0; i < validFiles.length; i++) {
+        uploadToCloudinary(validFiles[i]);
+      }
+    }
+
+    // Event listeners pour l'upload de photos
+    photosInput.addEventListener('change', function(e) {
+      if (e.target.files.length > 0) {
+        handleFiles(e.target.files);
+        e.target.value = '';
+      }
+    });
+
+    dropZone.addEventListener('click', function() {
+      photosInput.click();
+    });
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+
+    ['dragenter', 'dragover'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(function(eventName) {
+      dropZone.addEventListener(eventName, function() {
+        dropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
+      });
+    });
+
+    dropZone.addEventListener('drop', function(e) {
+      var files = e.dataTransfer.files;
+      if (files.length > 0) handleFiles(files);
+    });
+
+    function validateField(field) {
+      var value = field.value.trim();
+      var errorDiv = field.parentNode.querySelector('.form-error');
+      
+      if (field.required && !value) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Ce champ est requis';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        field.classList.add('border-red-500');
+        if (errorDiv) {
+          errorDiv.textContent = 'Format email invalide';
+          errorDiv.classList.remove('hidden');
+        }
+        return false;
+      }
+      
+      field.classList.remove('border-red-500');
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.classList.add('hidden');
+      }
+      return true;
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (uploadingCount > 0) {
+        showMessage("Veuillez attendre la fin de l'upload des photos", 'error');
+        return;
+      }
+      
+      var requiredFields = form.querySelectorAll('[required]');
+      var isValid = true;
+      
+      requiredFields.forEach(function(field) {
+        if (!validateField(field)) isValid = false;
+      });
+      
+      var emailField = form.querySelector('[name="email"]');
+      if (emailField && emailField.value.trim()) {
+        if (!validateField(emailField)) isValid = false;
+      }
+      
+      if (!isValid) {
+        showMessage('Veuillez corriger les erreurs ci-dessus', 'error');
+        return;
+      }
+      
+      setLoading(true);
+      messagesContainer.innerHTML = '';
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          form_location: 'citypage_grand_menage',
+          form_type: 'devis_nettoyage_appartement'
+        });
+      }
+
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'lead_generated',
+          form_type: 'devis_nettoyage_appartement',
+          service: 'Nettoyage appartement/maison',
+          source: 'page-grand-menage-' + window.location.pathname.split('/').pop()
+        });
+      }
+
+      var formData = new FormData(form);
+      
+      fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(response) {
+        return response.json().then(function(data) {
+          return { ok: response.ok, data: data };
+        }).catch(function() {
+          return { ok: response.ok, data: null };
+        });
+      })
+      .then(function(result) {
+        if (result.ok) {
+          form.setAttribute('aria-hidden', 'true');
+          form.style.pointerEvents = 'none';
+          form.innerHTML = '\
+            <div class="text-center py-10">\
+              <div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">\
+                <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">\
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>\
+                </svg>\
+              </div>\
+              <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>\
+              <p class="text-[#475569] max-w-md mx-auto">\
+                Nous vous recontactons sous <strong>24&nbsp;h</strong> pour votre devis personnalisé.<br>\
+                Un expert Klinova analysera votre demande<br>\
+                et vous proposera un planning d\'intervention.\
+              </p>\
+            </div>\
+          ';
+          try { 
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          } catch (err) {}
+        } else {
+          var err = (result.data && (result.data.error || result.data.message)) || 'Une erreur est survenue. Merci de réessayer.';
+          showMessage(err, 'error');
+        }
+      })
+      .catch(function(error) {
+        showMessage('Impossible de contacter le serveur. Merci de réessayer dans un instant.', 'error');
+      })
+      .finally(function() {
+        setLoading(false);
+      });
+    });
+  })();
+</script>
+)}
 
 
 <!-- 🧾 formualaire moquettes pour CityPage -->
