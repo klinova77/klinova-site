@@ -41,6 +41,12 @@ export const FEATURED_CITY_SLUGS = [
   "ivry-sur-seine",
   "le-perreux-sur-mrne",
 
+   "Boulogne-Billancourt",
+  "Neuilly-sur-Seine",
+  "Nanterre",
+  "Courbevoie",
+  "Sceaux",
+
 ] as const;
 
 
@@ -73,21 +79,25 @@ export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
 export const FOOTER_CITY_SLUGS = [
   // 94 — Val-de-Marne (volume + notoriété)
   "creteil",                 // Hub / volume
-  "ivry-sur-seine",          // Densité + demandes variées
+           // Densité + demandes variées
   "saint-maur-des-fosses",   // Standing + pavillonnaire
   "vincennes",               // Notoriété + CSP+
 
   // 93 — Seine-Saint-Denis (volume + mix habitats)
   "montreuil",               // Volume majeur
   "noisy-le-grand",          // Très gros volume + mix
-  "pantin",                  // Densité + copro / appart
+                 // Densité + copro / appart
   "villepinte",              // Surfaces + pavillons + zones pro
 
   // 77 — Seine-et-Marne (surfaces + pavillons)
   "chelles",                 // Base arrière / volume
   "meaux",                   // Gros volume + grandes surfaces
   "bussy-saint-georges",     // Ville récente / standing
-  "lagny-sur-marne",         // Bassin Marne-la-Vallée / mix
+          
+  "Boulogne-Billancourt",
+  "Neuilly-sur-Seine",
+  "Nanterre",
+
 ] as const;
 
 

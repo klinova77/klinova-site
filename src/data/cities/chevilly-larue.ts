@@ -45,12 +45,12 @@ const city: City = {
         "villejuif",
         "cachan",
         "vitry-sur-seine",
+        "sceaux",
+        "antony",
         "arcueil",
         "bagneux",
         "orly",
-        "gentilly",
-        "choisy-le-roi",
-        "ivry-sur-seine"
+        "gentilly"
       ],
 
   // Texte brut uniquement

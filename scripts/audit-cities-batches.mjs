@@ -1,16 +1,21 @@
 // scripts/audit-cities-batches.mjs
 // ----------------------------------------------------------------------------
 // 1) SUBMIT : envoie l’audit en batch (selon scripts/audit-cities.json)
-// node scripts/audit-cities-batches.mjs submit
+//   node scripts/audit-cities-batches.mjs submit
 //
 // 2) COLLECT : récupère les résultats
-// node scripts/audit-cities-batches.mjs collect --batch batch_xxx
+//   node scripts/audit-cities-batches.mjs collect --batch batch_xxx
 //
 // Sorties :
 // - audit-report.json / audit-report.md (global)
-// - audit-apply.suggested.json : uniquement applySafe=true (setField only)
-// - audit-manual.json : uniquement applySafe=false (patches + issues)
+// - audit-apply.suggested.json : corrections auto-proposées (setField + substring) quand c'est SAFE
+// - audit-manual.json : le reste (patches + issues)
 // - audit-manual.md : version lisible (triée)
+//
+// Points clés (moins conservateur, mais sécurisé) :
+// - On accepte aussi des substring SAFE si la cible est statique ET occurrence unique
+// - On accepte aussi category="other" si le patch est mécanique (typo/spacing)
+// - On BLOQUE explicitement tout changement de structure HTML (ex: <h3> -> <strong>)
 // ----------------------------------------------------------------------------
 
 import "dotenv/config";
@@ -37,7 +42,6 @@ const OUT_REPORT_JSON = path.join(ROOT, "audit-report.json");
 const OUT_REPORT_MD = path.join(ROOT, "audit-report.md");
 const OUT_APPLY_SUGGESTED = path.join(ROOT, "audit-apply.suggested.json");
 
-// NEW: manual review outputs
 const OUT_MANUAL_JSON = path.join(ROOT, "audit-manual.json");
 const OUT_MANUAL_MD = path.join(ROOT, "audit-manual.md");
 
@@ -89,6 +93,10 @@ function parseJsonl(text) {
 function safeJoinUnderRoot(p) {
   return path.isAbsolute(p) ? p : path.join(ROOT, p);
 }
+function normalizePathForApply(p) {
+  // services.2.uniqueIntro -> services[2].uniqueIntro
+  return String(p || "").replace(/\.([0-9]+)(?=\.|$)/g, "[$1]");
+}
 
 /* =============================================================================
    TS-MORPH EXTRACTION
@@ -109,13 +117,6 @@ function getInitializer(pa) {
   return pa.getInitializer();
 }
 
-/**
- * Parse path like:
- *  - "customDescription"
- *  - "services[2].uniqueIntro"
- *  - "services[2].faqAdditions[0].answer"
- *  - "faq[1].answer"
- */
 function parsePathTokens(pathStr) {
   const tokens = [];
   const parts = String(pathStr || "").split(".").filter(Boolean);
@@ -131,11 +132,43 @@ function parsePathTokens(pathStr) {
 }
 
 /**
- * Returns text content for a given path if it resolves to:
- * - StringLiteral "..."
- * - NoSubstitutionTemplateLiteral `...`
+ * Lit une string "statique" si possible :
+ * - "..." (StringLiteral)
+ * - `...` (NoSubstitutionTemplateLiteral)
+ * - ParenthesizedExpression
+ * - "a" + "b" + ... (BinaryExpression +)
  *
- * IMPORTANT: returns null for TemplateExpression (with ${}).
+ * REFUSE :
+ * - TemplateExpression (`a ${b} c`) -> null (non statique)
+ */
+function getStaticStringValue(node) {
+  if (!node) return null;
+
+  const s1 = node.asKind?.(SyntaxKind.StringLiteral);
+  if (s1) return s1.getLiteralText();
+
+  const s2 = node.asKind?.(SyntaxKind.NoSubstitutionTemplateLiteral);
+  if (s2) return s2.getLiteralText();
+
+  if (node.asKind?.(SyntaxKind.TemplateExpression)) return null;
+
+  const par = node.asKind?.(SyntaxKind.ParenthesizedExpression);
+  if (par) return getStaticStringValue(par.getExpression());
+
+  const bin = node.asKind?.(SyntaxKind.BinaryExpression);
+  if (bin && bin.getOperatorToken().getText() === "+") {
+    const left = getStaticStringValue(bin.getLeft());
+    if (left == null) return null;
+    const right = getStaticStringValue(bin.getRight());
+    if (right == null) return null;
+    return left + right;
+  }
+
+  return null;
+}
+
+/**
+ * Retourne le texte statique au path (si résoluble), sinon null.
  */
 function getTextAtPath(cityObj, pathStr) {
   const tokens = parsePathTokens(pathStr);
@@ -157,9 +190,7 @@ function getTextAtPath(cityObj, pathStr) {
         if (!el) return null;
 
         if (i === tokens.length - 1) {
-          if (el.getKind() === SyntaxKind.StringLiteral) return el.getLiteralText();
-          if (el.getKind() === SyntaxKind.NoSubstitutionTemplateLiteral) return el.getLiteralText();
-          return null;
+          return getStaticStringValue(el);
         }
 
         if (el.getKind() === SyntaxKind.ObjectLiteralExpression) {
@@ -170,9 +201,7 @@ function getTextAtPath(cityObj, pathStr) {
       }
 
       if (i === tokens.length - 1) {
-        if (init.getKind() === SyntaxKind.StringLiteral) return init.getLiteralText();
-        if (init.getKind() === SyntaxKind.NoSubstitutionTemplateLiteral) return init.getLiteralText();
-        return null;
+        return getStaticStringValue(init);
       }
 
       if (init.getKind() === SyntaxKind.ObjectLiteralExpression) {
@@ -190,12 +219,45 @@ function getTextAtPath(cityObj, pathStr) {
 }
 
 /* =============================================================================
+   HTML SAFETY: block tag-structure changes (ex: <h3> -> <strong>)
+============================================================================= */
+const HEADING_TAG_RE = /<\/?\s*h[1-6]\b/i;
+const STRONG_TAG_RE = /<\/?\s*strong\b/i;
+
+function touchesBlockedHtmlTags(s) {
+  if (!s) return false;
+  const t = String(s);
+  return HEADING_TAG_RE.test(t) || STRONG_TAG_RE.test(t);
+}
+
+function isHtmlStructureChange(patch) {
+  // We block any patch that attempts to alter heading/strong tags.
+  // - substring: find/replace includes these tags
+  // - setField: expected/value includes these tags and they differ around them
+  if (!patch) return false;
+
+  if (patch.op === "substring") {
+    if (touchesBlockedHtmlTags(patch.find) || touchesBlockedHtmlTags(patch.replace)) return true;
+    if (touchesBlockedHtmlTags(patch.context)) return true; // sometimes model includes tags in context
+    return false;
+  }
+
+  if (patch.op === "setField") {
+    // If it touches those tags at all, we refuse auto-suggest (still can appear in manual if you want).
+    // You explicitly asked not to propose these.
+    if (touchesBlockedHtmlTags(patch.expected) || touchesBlockedHtmlTags(patch.value)) return true;
+    return false;
+  }
+
+  return false;
+}
+
+/* =============================================================================
    LLM AUDIT (BATCH) — issues[] + patches[]
 ============================================================================= */
 function buildAuditSchema() {
   return {
     name: "CityAuditResult",
-    
     schema: {
       type: "object",
       additionalProperties: false,
@@ -236,15 +298,12 @@ function buildAuditSchema() {
               path: { type: "string" },
               reason: { type: "string" },
 
-              // Always required (empty string when irrelevant)
               expected: { type: "string" },
               value: { type: "string" },
               find: { type: "string" },
               replace: { type: "string" },
               context: { type: "string" },
             },
-
-            // IMPORTANT: strict schema requires required includes ALL keys in properties
             required: [
               "op",
               "applySafe",
@@ -266,7 +325,6 @@ function buildAuditSchema() {
   };
 }
 
-
 function buildResponsesBody({ model, fileRel, fileContent, rulesText }) {
   const schema = buildAuditSchema();
 
@@ -277,9 +335,16 @@ Objectif :
 1) Remonter TOUT ce qui cloche (même si tu n'es pas 100% certain) dans issues[].
 2) Proposer des corrections dans patches[].
 
-Règle d'or :
-- Tu peux être "large" dans issues[].
-- Tu ne mets applySafe=true dans patches[] QUE si la correction est certaine, minimale, et ne change pas le sens.
+IMPORTANT — HTML / structure :
+- Ne change JAMAIS la structure HTML.
+- Interdiction totale de remplacer des titres <h1..h6> par <strong> (ou l’inverse), ou de modifier les balises de titre.
+- Tu peux corriger UNIQUEMENT le texte A L’INTERIEUR des balises existantes (typos, accents, espaces), sans toucher aux balises.
+
+Règle d'or pour applySafe :
+- Mets applySafe=true si (et seulement si) c’est une correction mécanique et certaine :
+  - typos évidentes, accents, apostrophes, double espaces, ponctuation,
+  - petites corrections de grammaire évidente (accord simple) SANS réécriture.
+- Sinon applySafe=false.
 
 Contraintes fortes :
 - Tu n'inventes AUCUN fait local (quartier, axe, chiffre, promesse, délai).
@@ -288,8 +353,10 @@ Contraintes fortes :
 - Pas de réécriture : correction minimale.
 
 Patches :
-- op="setField": tu donnes expected (valeur actuelle exacte) et value (valeur corrigée complète).
-- op="substring": tu donnes find/replace + un petit context (extrait autour) ; mets applySafe=false (car on relira).
+- op="setField": expected = valeur actuelle exacte ; value = valeur corrigée complète.
+- op="substring": find/replace + context (extrait autour).
+  - Tu PEUX mettre applySafe=true pour substring uniquement si c'est une micro-correction mécanique (ex: "intervation"->"intervention", double espace, "d'esinfestation"->"désinfestation") et si find est très court et non ambigu.
+  - Sinon applySafe=false.
 
 Important :
 - Si tu n'es pas certain de expected EXACT: n'émet PAS de patch setField.
@@ -300,7 +367,6 @@ IMPORTANT (schema strict):
 - Tous les champs du patch sont requis.
 - Si op="setField": remplis expected + value, et mets find/replace/context à "".
 - Si op="substring": remplis find + replace + context, et mets expected/value à "".
-
 
 Format :
 - Retourne UNIQUEMENT un JSON conforme au schéma.
@@ -322,7 +388,8 @@ ${fileContent}
       { role: "system", content: [{ type: "input_text", text: system }] },
       { role: "user", content: [{ type: "input_text", text: user }] },
     ],
-    temperature: 0.2, // un peu plus "large" pour détecter des issues
+    // un peu moins conservateur pour générer plus de patches
+    temperature: 0.35,
     text: {
       format: {
         type: "json_schema",
@@ -422,12 +489,8 @@ function toManualMarkdown(manual) {
   const items = [];
 
   for (const f of manual.files) {
-    for (const it of f.issues) {
-      items.push({ kind: "issue", slug: f.slug, file: f.file, ...it });
-    }
-    for (const p of f.patches) {
-      items.push({ kind: "patch", slug: f.slug, file: f.file, ...p });
-    }
+    for (const it of f.issues) items.push({ kind: "issue", slug: f.slug, file: f.file, ...it });
+    for (const p of f.patches) items.push({ kind: "patch", slug: f.slug, file: f.file, ...p });
   }
 
   items.sort(
@@ -437,7 +500,7 @@ function toManualMarkdown(manual) {
       a.path.localeCompare(b.path)
   );
 
-  let md = `# Audit — Manuel (applySafe=false)\n\n`;
+  let md = `# Audit — Manuel (non auto)\n\n`;
   md += `Généré : ${manual.generatedAt}\n`;
   md += `Total items : ${items.length}\n\n`;
 
@@ -448,7 +511,7 @@ function toManualMarkdown(manual) {
       if (x.evidence) md += `  - Evidence: \`${String(x.evidence).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
       if (x.recommendation) md += `  - Reco: ${x.recommendation}\n`;
     } else {
-      md += `- **PATCH ${x.severity.toUpperCase()}** — ${x.slug} — ${x.category} — \`${x.path}\` — op=${x.op}\n`;
+      md += `- **PATCH ${x.severity.toUpperCase()}** — ${x.slug} — ${x.category} — \`${x.path}\` — op=${x.op} — applySafe=${x.applySafe}\n`;
       md += `  - ${x.reason}\n`;
       if (x.op === "setField") {
         md += `  - Expected: \`${String(x.expected).replace(/\s+/g, " ").slice(0, 240)}\`\n`;
@@ -465,7 +528,7 @@ function toManualMarkdown(manual) {
 }
 
 /* =============================================================================
-   APPLY SUGGESTED — applySafe=true ONLY + validations
+   APPLY SUGGESTED — less conservative, but safe by validation
 ============================================================================= */
 function isUsableString(s) {
   if (s == null) return false;
@@ -475,23 +538,45 @@ function isUsableString(s) {
   return true;
 }
 
-function isPatchAutoApplicable(p) {
-  // strict: auto apply uniquement setField + applySafe
+function isPatchCandidateForAuto(p) {
+  // Candidate if model says applySafe=true and we have minimum required fields.
   if (!p) return false;
   if (p.applySafe !== true) return false;
-  if (p.op !== "setField") return false;
-
-  const catOk = new Set(["orthographe", "style", "seo", "legal", "consistency"]);
-  if (!catOk.has(p.category)) return false;
-
+  if (p.op !== "setField" && p.op !== "substring") return false;
   if (!isUsableString(p.path)) return false;
-  if (!isUsableString(p.value)) return false;
-  if (!isUsableString(p.reason)) return false;
 
-  // expected peut être vide côté modèle, car on resync depuis TS.
+  // hard block: no HTML tag structure changes (your explicit requirement)
+  if (isHtmlStructureChange(p)) return false;
+
+  if (p.op === "setField") {
+    if (!isUsableString(p.value)) return false;
+    return true;
+  }
+
+  // substring
+  if (!isUsableString(p.find)) return false;
+  // replace may be empty (deletion)
   return true;
 }
 
+function countOccurrences(haystack, needle) {
+  if (!needle) return 0;
+  let count = 0;
+  let idx = 0;
+  while (true) {
+    const i = haystack.indexOf(needle, idx);
+    if (i === -1) break;
+    count++;
+    idx = i + needle.length;
+  }
+  return count;
+}
+
+/**
+ * Build apply plan:
+ * - setField: requires static current value at path (expectedFromTs), then emits edit (mode setField)
+ * - substring: requires static current value at path, and find occurrence unique, then emits edit (mode substring)
+ */
 function buildSuggestedApply(report) {
   const edits = [];
   const project = new Project({ tsConfigFilePath: TS_CONFIG });
@@ -511,18 +596,51 @@ function buildSuggestedApply(report) {
     for (const raw of f.gptPatches ?? []) {
       const p = normalizePatch(raw);
       if (!p) continue;
-      if (!isPatchAutoApplicable(p)) continue;
+      if (!isPatchCandidateForAuto(p)) continue;
 
-      const expectedFromTs = getTextAtPath(cityObj, p.path);
-      if (!isUsableString(expectedFromTs)) continue;
+      const pth = normalizePathForApply(p.path);
+      const current = getTextAtPath(cityObj, pth);
+      if (!isUsableString(current)) {
+        // non statique => on ne propose pas en auto
+        continue;
+      }
+
+      // setField
+      if (p.op === "setField") {
+        // extra sanity: skip no-change
+        if (String(p.value) === String(current)) continue;
+
+        edits.push({
+          file: f.file,
+          path: pth,
+          mode: "setField",
+          expected: String(current),
+          value: String(p.value),
+          reason: String(p.reason || "auto: setField safe"),
+          meta: { severity: p.severity, category: p.category, op: p.op },
+        });
+        continue;
+      }
+
+      // substring
+      const find = String(p.find || "");
+      const replace = String(p.replace ?? "");
+      const occ = countOccurrences(String(current), find);
+
+      // SAFE: exactly one occurrence
+      if (occ !== 1) continue;
+
+      // extra safety: avoid too-long find (often risky)
+      if (find.length > 120) continue;
 
       edits.push({
         file: f.file,
-        path: String(p.path),
-        mode: "setField",
-        expected: String(expectedFromTs),
-        value: String(p.value),
-        reason: String(p.reason || ""),
+        path: pth,
+        mode: "substring",
+        find,
+        replace,
+        reason: String(p.reason || "auto: substring safe"),
+        meta: { severity: p.severity, category: p.category, op: p.op, occ },
       });
     }
   }
@@ -530,8 +648,8 @@ function buildSuggestedApply(report) {
   return {
     version: 3,
     dryRun: true,
-    mode: "setField-only",
-    maxEditsPerFile: 50,
+    mode: "setField+substring-auto-safe",
+    maxEditsPerFile: 200,
     edits,
   };
 }
@@ -556,12 +674,8 @@ function extractOutputTextFromResponsesBody(respBody) {
         if (c?.type === "output_text" && typeof c.text === "string" && c.text.trim()) {
           return c.text;
         }
-        if (c?.type === "output_json" && c.json) {
-          return JSON.stringify(c.json);
-        }
-        if (c?.type === "json" && c.json) {
-          return JSON.stringify(c.json);
-        }
+        if (c?.type === "output_json" && c.json) return JSON.stringify(c.json);
+        if (c?.type === "json" && c.json) return JSON.stringify(c.json);
       }
     }
   }
@@ -618,9 +732,6 @@ async function submitBatch() {
 
   console.log("[info] citiesDir =", citiesDir);
   console.log("[info] files selected =", files.length);
-
-
-
 
   if (!files.length) {
     console.log("[info] no files selected; exiting.");
@@ -727,7 +838,6 @@ async function collectBatch() {
     console.log("[info] batch not final yet; will still download output/error files if available.");
   }
 
-
   ensureDir(OUT_DIR);
 
   let outputLines = [];
@@ -750,6 +860,7 @@ async function collectBatch() {
     errorLines = parseJsonl(errText);
     console.log("[ok] downloaded error:", OUT_ERROR_JSONL);
   }
+
   if (errorLines.length) {
     const byMsg = new Map();
     for (const line of errorLines) {
@@ -764,7 +875,6 @@ async function collectBatch() {
     }
     console.log("");
   }
-
 
   // Map fileId -> {issues, patches}
   const gptByFileId = new Map();
@@ -801,7 +911,11 @@ async function collectBatch() {
     }
 
     const issues = Array.isArray(parsed?.issues) ? parsed.issues.map(normalizeIssue) : [];
-    const patches = Array.isArray(parsed?.patches) ? parsed.patches.map(normalizePatch).filter(Boolean) : [];
+    let patches = Array.isArray(parsed?.patches) ? parsed.patches.map(normalizePatch).filter(Boolean) : [];
+
+    // HARD BLOCK: remove any patches that attempt HTML tag structure changes (<h3> / <strong>)
+    patches = patches.filter((p) => !isHtmlStructureChange(p));
+
     gptByFileId.set(fileId, { issues, patches });
   }
 
@@ -847,7 +961,7 @@ async function collectBatch() {
 
   const report = {
     generatedAt: new Date().toISOString(),
-    mode: "klinova-city-audit-patches-v2",
+    mode: "klinova-city-audit-patches-v3",
     batch: {
       id: batch.id,
       status: batch.status,
@@ -892,41 +1006,87 @@ async function collectBatch() {
       gptPatches,
     });
 
-    // Split manual: applySafe=false OR op=substring always goes manual
-    const manualIssues = gptIssues; // issues are always manual by definition
-    const manualPatches = gptPatches.filter((p) => !p.applySafe || p.op !== "setField");
+    // We'll build suggested apply from report at the end.
+    // For manual, we keep everything for now; we will not duplicate suggested items:
+    // => After buildSuggestedApply, we will re-split.
+    const rawManualIssues = gptIssues;
+    const rawManualPatches = gptPatches;
 
-    if (manualIssues.length || manualPatches.length) {
-      manual.files.push({
-        file: fileRel,
-        fileId,
-        slug: displaySlug,
-        issues: manualIssues,
-        patches: manualPatches,
-      });
-    }
-
-    const autoCount = gptPatches.filter((p) => isPatchAutoApplicable(p)).length;
-    console.log(`[ok] ${displaySlug} -> issues=${gptIssues.length}, patches=${gptPatches.length}, auto=${autoCount}`);
+    manual.files.push({
+      file: fileRel,
+      fileId,
+      slug: displaySlug,
+      issues: rawManualIssues,
+      patches: rawManualPatches,
+    });
   }
 
-  // Write outputs
+  // Write report
   writeText(OUT_REPORT_JSON, JSON.stringify(report, null, 2));
   writeText(OUT_REPORT_MD, toReportMarkdown(report));
 
-  // apply safe only
+  // Build suggested apply (setField + substring safe)
   const applySuggested = buildSuggestedApply(report);
   writeText(OUT_APPLY_SUGGESTED, JSON.stringify(applySuggested, null, 2));
 
-  // manual only
-  writeText(OUT_MANUAL_JSON, JSON.stringify(manual, null, 2));
-  writeText(OUT_MANUAL_MD, toManualMarkdown(manual));
+  // Now rebuild manual by removing patches that ended up in applySuggested (avoid duplicates).
+  // Key = file|path|op|find|replace|value
+  const suggestedKey = new Set();
+  for (const e of applySuggested.edits || []) {
+    const k =
+      e.mode === "substring"
+        ? `${e.file}||${e.path}||substring||${e.find}||${e.replace}`
+        : `${e.file}||${e.path}||setField||${e.value}`;
+    suggestedKey.add(k);
+  }
+
+  const manualFiltered = {
+    generatedAt: manual.generatedAt,
+    mode: manual.mode,
+    files: [],
+  };
+
+  for (const f of manual.files) {
+    const keptIssues = f.issues || [];
+    const keptPatches = [];
+
+    for (const pRaw of f.patches || []) {
+      const p = normalizePatch(pRaw);
+      if (!p) continue;
+
+      const pth = normalizePathForApply(p.path);
+      const k =
+        p.op === "substring"
+          ? `${f.file}||${pth}||substring||${p.find}||${p.replace}`
+          : `${f.file}||${pth}||setField||${p.value}`;
+
+      if (suggestedKey.has(k)) continue;
+      keptPatches.push(p);
+    }
+
+    if (keptIssues.length || keptPatches.length) {
+      manualFiltered.files.push({
+        file: f.file,
+        fileId: f.fileId,
+        slug: f.slug,
+        issues: keptIssues,
+        patches: keptPatches,
+      });
+    }
+  }
+
+  writeText(OUT_MANUAL_JSON, JSON.stringify(manualFiltered, null, 2));
+  writeText(OUT_MANUAL_MD, toManualMarkdown(manualFiltered));
 
   console.log("[done] Wrote", OUT_APPLY_SUGGESTED);
   console.log("[done] Wrote", OUT_MANUAL_JSON);
   console.log("[done] Wrote", OUT_MANUAL_MD);
   console.log("[done] Wrote", OUT_REPORT_JSON);
   console.log("[done] Wrote", OUT_REPORT_MD);
+
+  console.log(
+    `[info] suggested edits = ${(applySuggested.edits || []).length} (mode=${applySuggested.mode})`
+  );
 }
 
 async function main() {

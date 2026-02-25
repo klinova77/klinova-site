@@ -1,16 +1,302 @@
 {
   "version": 3,
   "dryRun": true,
-  "mode": "setField-only",
-  "maxEditsPerFile": 50,
+  "mode": "setField+substring-auto-safe",
+  "maxEditsPerFile": 200,
   "edits": [
     {
-      "file": "src/data/cities-draft/le-blanc-mesnil.ts",
-      "path": "landmarks[0]",
-      "mode": "setField",
-      "expected": "Mairie de Le Blanc-Mesnil",
-      "value": "Mairie du Blanc-Mesnil",
-      "reason": "Correction grammaticale/usage : « Mairie de Le Blanc-Mesnil » -> « Mairie du Blanc-Mesnil » sans changement de sens."
+      "file": "src/data/cities-draft/colombes.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "comptes-rendus",
+      "replace": "comptes rendus",
+      "reason": "Correction typographique courante : suppression du trait d’union dans « comptes rendus » (sans changer le sens).",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[0].whyUsBullets[2]",
+      "mode": "substring",
+      "find": "weekend",
+      "replace": "week-end",
+      "reason": "Correction orthographique standard en français.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[1].uniqueIntro",
+      "mode": "substring",
+      "find": "générant accumulation de",
+      "replace": "générant une accumulation de",
+      "reason": "Correction grammaticale simple (article manquant) sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "Coordination simplifiée : Un interlocuteur unique",
+      "replace": "Coordination simplifiée : un interlocuteur unique",
+      "reason": "Minuscule après deux-points : correction typographique simple sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "path": "customDescription",
+      "mode": "substring",
+      "find": "parties communes, parkings souterrains et espaces extérieurs",
+      "replace": "parties communes, des parkings souterrains et des espaces extérieurs",
+      "reason": "Correction typographique : ajout de l’article manquant pour une liste (accord/grammaire évident) sans changer le sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "parkings profonds sur plusieurs niveaux",
+      "replace": "des parkings profonds sur plusieurs niveaux",
+      "reason": "Typographie : ajout de l’article manquant dans une énumération (correction mécanique).",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "path": "services[0].faqAdditions[3].question",
+      "mode": "substring",
+      "find": "préfecture",
+      "replace": "Préfecture",
+      "reason": "Harmonisation de la casse d'un nom propre (« Préfecture ») ; correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Correction typographique courante : « compte-rendu » -> « compte rendu » (sans modifier la structure HTML).",
+      "meta": {
+        "severity": "medium",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "faq[0].answer",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "faq[3].answer",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "services[3].uniqueDeepDive",
+      "mode": "substring",
+      "find": "garantit l'élimination",
+      "replace": "garantissent l'élimination",
+      "reason": "Accord sujet/verbe : sujet pluriel (« le temps de contact respecté » + proposition précédente) => « garantissent ». Correction grammaticale minimale sans réécriture.",
+      "meta": {
+        "severity": "high",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "Rueil‑sur‑Seine",
+      "replace": "Rueil-sur-Seine",
+      "reason": "Remplacement mécanique de tirets insécables/variantes : harmoniser « Rueil‑sur‑Seine » (tiret insécable) en « Rueil-sur-Seine » pour cohérence avec le reste du fichier. Correction typographique sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "open‑space",
+      "replace": "open-space",
+      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "Rueil‑sur‑Seine",
+      "replace": "Rueil-sur-Seine",
+      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[1].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "Rueil‑Malmaison",
+      "replace": "Rueil-Malmaison",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "nettoyez‑vous",
+      "replace": "nettoyez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "utilisez‑vous",
+      "replace": "utilisez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[2].question",
+      "mode": "substring",
+      "find": "conseillez‑vous",
+      "replace": "conseillez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[3].question",
+      "mode": "substring",
+      "find": "pourquoi éviter le nettoyage haute pression sur le balcon et quelles alternatives ?",
+      "replace": "pourquoi éviter le nettoyage à haute pression sur le balcon et quelles alternatives ?",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[6].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "estimez‑vous",
+      "replace": "estimez-vous",
+      "reason": "Harmonisation typographique : apostrophe/espaces OK; correction mécanique du tiret insécable vers tiret standard.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "path": "faq[2].answer",
+      "mode": "substring",
+      "find": "stationnement payant strict",
+      "replace": "stationnement payant et strict",
+      "reason": "Correction minimale d'une tournure maladroite (« payant strict ») vers une formulation idiomatique sans changer le sens global.",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
     }
   ]
 }

@@ -40,16 +40,16 @@ const city: City = {
     "Panorama",
   ],
   nearbyCities: [
+        "fontenay-aux-roses",
         "chatillon",
         "issy-les-moulineaux",
         "vanves",
+        "malakoff",
+        "sceaux",
         "bagneux",
+        "boulogne-billancourt",
         "montrouge",
-        "cachan",
-        "arcueil",
-        "gentilly",
-        "chevilly-larue",
-        "villejuif"
+        "cachan"
       ],
 
   // Texte brut uniquement

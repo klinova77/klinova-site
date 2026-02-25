@@ -17,11 +17,11 @@
     "montrouge",
     "bagneux",
     "villejuif",
+    "malakoff",
     "chatillon",
+    "fontenay-aux-roses",
     "vanves",
-    "ivry-sur-seine",
-    "chevilly-larue",
-    "vitry-sur-seine"
+    "ivry-sur-seine"
   ],
   "aulnay-sous-bois": [
     "le-blanc-mesnil",
@@ -38,14 +38,14 @@
   "bagneux": [
     "chatillon",
     "cachan",
+    "fontenay-aux-roses",
     "arcueil",
     "montrouge",
+    "malakoff",
+    "sceaux",
     "gentilly",
     "vanves",
-    "villejuif",
-    "clamart",
-    "issy-les-moulineaux",
-    "chevilly-larue"
+    "villejuif"
   ],
   "bagnolet": [
     "les-lilas",
@@ -102,10 +102,10 @@
     "gentilly",
     "chevilly-larue",
     "montrouge",
+    "sceaux",
+    "fontenay-aux-roses",
     "chatillon",
-    "vitry-sur-seine",
-    "vanves",
-    "ivry-sur-seine"
+    "malakoff"
   ],
   "champigny-sur-marne": [
     "villiers-sur-marne",
@@ -144,16 +144,16 @@
     "bagnolet"
   ],
   "chatillon": [
+    "fontenay-aux-roses",
+    "malakoff",
     "bagneux",
     "vanves",
     "montrouge",
     "clamart",
     "issy-les-moulineaux",
+    "sceaux",
     "arcueil",
-    "cachan",
-    "gentilly",
-    "villejuif",
-    "chevilly-larue"
+    "cachan"
   ],
   "chelles": [
     "montfermeil",
@@ -172,12 +172,12 @@
     "villejuif",
     "cachan",
     "vitry-sur-seine",
+    "sceaux",
+    "antony",
     "arcueil",
     "bagneux",
     "orly",
-    "gentilly",
-    "choisy-le-roi",
-    "ivry-sur-seine"
+    "gentilly"
   ],
   "choisy-le-roi": [
     "thiais",
@@ -192,16 +192,16 @@
     "saint-maur-des-fosses"
   ],
   "clamart": [
+    "fontenay-aux-roses",
     "chatillon",
     "issy-les-moulineaux",
     "vanves",
+    "malakoff",
+    "sceaux",
     "bagneux",
+    "boulogne-billancourt",
     "montrouge",
-    "cachan",
-    "arcueil",
-    "gentilly",
-    "chevilly-larue",
-    "villejuif"
+    "cachan"
   ],
   "claye-souilly": [
     "villeparisis",
@@ -270,10 +270,10 @@
     "villejuif",
     "bagneux",
     "ivry-sur-seine",
+    "malakoff",
     "chatillon",
     "vanves",
-    "vitry-sur-seine",
-    "charenton-le-pont"
+    "vitry-sur-seine"
   ],
   "gournay-sur-marne": [
     "champs-sur-marne",
@@ -289,15 +289,15 @@
   ],
   "issy-les-moulineaux": [
     "vanves",
+    "boulogne-billancourt",
+    "malakoff",
     "chatillon",
     "clamart",
     "montrouge",
+    "fontenay-aux-roses",
     "bagneux",
     "arcueil",
-    "gentilly",
-    "cachan",
-    "villejuif",
-    "chevilly-larue"
+    "sceaux"
   ],
   "ivry-sur-seine": [
     "charenton-le-pont",
@@ -468,16 +468,16 @@
     "neuilly-plaisance"
   ],
   "montrouge": [
+    "malakoff",
     "arcueil",
     "gentilly",
     "bagneux",
     "vanves",
     "chatillon",
     "cachan",
+    "fontenay-aux-roses",
     "issy-les-moulineaux",
-    "villejuif",
-    "clamart",
-    "ivry-sur-seine"
+    "villejuif"
   ],
   "neuilly-plaisance": [
     "rosny-sous-bois",
@@ -561,7 +561,7 @@
     "villejuif",
     "maisons-alfort",
     "cachan",
-    "ivry-sur-seine"
+    "antony"
   ],
   "pantin": [
     "les-lilas",
@@ -708,16 +708,16 @@
     "neuilly-sur-marne"
   ],
   "vanves": [
+    "malakoff",
     "issy-les-moulineaux",
     "chatillon",
     "montrouge",
     "bagneux",
+    "fontenay-aux-roses",
+    "boulogne-billancourt",
     "arcueil",
     "clamart",
-    "gentilly",
-    "cachan",
-    "villejuif",
-    "ivry-sur-seine"
+    "gentilly"
   ],
   "villejuif": [
     "cachan",
@@ -802,5 +802,149 @@
     "chevilly-larue",
     "creteil",
     "gentilly"
+  ],
+  "antony": [
+    "sceaux",
+    "chevilly-larue",
+    "fontenay-aux-roses",
+    "cachan",
+    "bagneux",
+    "chatillon",
+    "clamart",
+    "arcueil",
+    "villejuif",
+    "thiais"
+  ],
+  "asnieres-sur-seine": [
+    "levallois-perret",
+    "colombes",
+    "courbevoie",
+    "neuilly-sur-seine",
+    "nanterre",
+    "pantin",
+    "boulogne-billancourt",
+    "rueil-malmaison",
+    "les-lilas",
+    "issy-les-moulineaux"
+  ],
+  "boulogne-billancourt": [
+    "issy-les-moulineaux",
+    "vanves",
+    "malakoff",
+    "clamart",
+    "chatillon",
+    "neuilly-sur-seine",
+    "montrouge",
+    "rueil-malmaison",
+    "fontenay-aux-roses",
+    "bagneux"
+  ],
+  "colombes": [
+    "courbevoie",
+    "asnieres-sur-seine",
+    "neuilly-sur-seine",
+    "levallois-perret",
+    "nanterre",
+    "rueil-malmaison",
+    "boulogne-billancourt",
+    "issy-les-moulineaux",
+    "vanves",
+    "pantin"
+  ],
+  "courbevoie": [
+    "neuilly-sur-seine",
+    "levallois-perret",
+    "colombes",
+    "asnieres-sur-seine",
+    "nanterre",
+    "rueil-malmaison",
+    "boulogne-billancourt",
+    "issy-les-moulineaux",
+    "vanves",
+    "malakoff"
+  ],
+  "fontenay-aux-roses": [
+    "chatillon",
+    "sceaux",
+    "bagneux",
+    "clamart",
+    "malakoff",
+    "cachan",
+    "vanves",
+    "montrouge",
+    "arcueil",
+    "issy-les-moulineaux"
+  ],
+  "levallois-perret": [
+    "neuilly-sur-seine",
+    "courbevoie",
+    "asnieres-sur-seine",
+    "colombes",
+    "nanterre",
+    "boulogne-billancourt",
+    "issy-les-moulineaux",
+    "vanves",
+    "rueil-malmaison",
+    "malakoff"
+  ],
+  "malakoff": [
+    "vanves",
+    "chatillon",
+    "montrouge",
+    "bagneux",
+    "issy-les-moulineaux",
+    "fontenay-aux-roses",
+    "arcueil",
+    "gentilly",
+    "clamart",
+    "cachan"
+  ],
+  "nanterre": [
+    "rueil-malmaison",
+    "courbevoie",
+    "colombes",
+    "neuilly-sur-seine",
+    "levallois-perret",
+    "asnieres-sur-seine",
+    "boulogne-billancourt",
+    "issy-les-moulineaux",
+    "vanves",
+    "malakoff"
+  ],
+  "neuilly-sur-seine": [
+    "courbevoie",
+    "levallois-perret",
+    "asnieres-sur-seine",
+    "colombes",
+    "nanterre",
+    "boulogne-billancourt",
+    "rueil-malmaison",
+    "issy-les-moulineaux",
+    "vanves",
+    "malakoff"
+  ],
+  "rueil-malmaison": [
+    "nanterre",
+    "boulogne-billancourt",
+    "courbevoie",
+    "neuilly-sur-seine",
+    "colombes",
+    "issy-les-moulineaux",
+    "levallois-perret",
+    "vanves",
+    "asnieres-sur-seine",
+    "clamart"
+  ],
+  "sceaux": [
+    "fontenay-aux-roses",
+    "bagneux",
+    "antony",
+    "chatillon",
+    "cachan",
+    "clamart",
+    "chevilly-larue",
+    "arcueil",
+    "malakoff",
+    "montrouge"
   ]
 }

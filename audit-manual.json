@@ -1,1500 +1,1241 @@
 {
-  "generatedAt": "2026-02-08T17:57:52.938Z",
+  "generatedAt": "2026-02-25T04:15:33.762Z",
   "mode": "klinova-city-audit-manual",
   "files": [
     {
-      "file": "src/data/cities-draft/aulnay-sous-bois.ts",
-      "fileId": "aulnay-sous-bois",
-      "slug": "aulnay-sous-bois",
+      "file": "src/data/cities-draft/antony.ts",
+      "fileId": "antony",
+      "slug": "antony",
       "issues": [
         {
           "severity": "medium",
-          "category": "consistency",
-          "path": "customDescription",
-          "message": "Mention de « secteur gare » alors que le reste du contenu utilise plutôt « Centre-Gare » / « autour de la gare ». Risque d'incohérence terminologique (sans être forcément faux).",
-          "evidence": "« contraintes du secteur gare »",
-          "recommendation": "Harmoniser la terminologie (ex. « secteur Centre-Gare ») si c’est bien l’intention, sans ajouter de nouveau fait."
-        },
-        {
-          "severity": "high",
           "category": "legal",
-          "path": "faq[1].answer",
-          "message": "Promesse de délai d’intervention (« sous 24 à 48 heures ») et formulation d’« urgence ». Selon les règles fournies (pas d’ajout de promesses/délais), ce contenu est à risque et peut être non conforme aux contraintes éditoriales.",
-          "evidence": "« mobiliser une équipe sous 24 à 48 heures »",
-          "recommendation": "Retirer ou neutraliser la mention chiffrée de délai et rester sur une formulation non engageante (ex. « selon disponibilité »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].faqAdditions[0].answer",
-          "message": "Promesse de délai d’intervention (« sous 48 à 72 heures ») + « intervenir rapidement ». Risque de non-conformité aux règles (promesses/délais).",
-          "evidence": "« interventions sous 48 à 72 heures »",
-          "recommendation": "Remplacer par une formulation non chiffrée et non engageante (ex. « selon disponibilité »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "Indication de délai d’aération (« quelques heures ») pouvant être interprétée comme promesse de délai d’usage. Même si non chiffré, c’est un engagement temporel à manier prudemment.",
-          "evidence": "« utilisable après un délai d'aération de quelques heures »",
-          "recommendation": "Neutraliser en « après aération » / « après le temps d’aération recommandé » sans notion de durée."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].faqAdditions[2].answer",
-          "message": "Indication de délai d’usage (« sous deux à trois heures ») + « environ quinze minutes ». Ce sont des engagements temporels chiffrés (promesses) susceptibles de contrevenir aux règles.",
-          "evidence": "« temps de contact d'environ quinze minutes » ; « utilisable sous deux à trois heures »",
-          "recommendation": "Remplacer par une formulation non chiffrée (ex. « après le temps de contact indiqué » ; « après rinçage et aération »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].specificChallenges[0]",
-          "message": "Mention d’un délai (« moins de 48 heures ») dans une liste de challenges. Même si descriptif, cela reste une promesse/contrainte temporelle chiffrée à risque au regard des règles.",
-          "evidence": "« parfois moins de 48 heures »",
-          "recommendation": "Remplacer par une formulation non chiffrée (« très courts » / « très serrés »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[3].answer",
-          "message": "Promesse de délai d’intervention (« sous 24 à 48 heures ») en cas d’urgence/sinistre. Non conforme aux règles (pas de promesses/délais).",
-          "evidence": "« intervenir sous 24 à 48 heures »",
-          "recommendation": "Remplacer par une formulation non chiffrée (« dans les meilleurs délais selon disponibilité »)."
-        },
-        {
-          "severity": "medium",
-          "category": "style",
-          "path": "hubIntro",
-          "message": "Typographie : « comptes-rendus » est acceptable, mais la forme recommandée en typographie française est souvent « comptes rendus » (sans trait d’union).",
-          "evidence": "« des comptes-rendus si besoin »",
-          "recommendation": "Uniformiser selon la convention choisie (idéalement « comptes rendus ») sur l’ensemble du site."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "citySpecificChallenges[0]",
-          "message": "Attribution directionnelle potentiellement discutable (« façades exposés au nord ») et accord : « façades exposés » (accord incorrect).",
-          "evidence": "« façades exposés au nord »",
-          "recommendation": "Corriger l’accord certain (« façades exposées »). Pour l’orientation « au nord », vérifier la pertinence locale ; sinon neutraliser (ex. « façades exposées » sans direction)."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "services[1].whyUsBullets[1]",
-          "message": "Accord : « revêtements résine » sonne incomplet ; on attend « revêtements en résine ».",
-          "evidence": "« revêtements résine »",
-          "recommendation": "Corriger en « revêtements en résine » (correction minimale)."
+          "path": "faq[2].answer",
+          "message": "Promesse de délai (« sous 24 à 48 heures ») : peut être interprétée comme un engagement de service. À valider côté conformité/CGV si ce type de délai est autorisé sur pages locales.",
+          "evidence": "« Nous répondons généralement sous 24 à 48 heures. »",
+          "recommendation": "Si non autorisé, reformuler de manière moins engageante (ex. « dans les meilleurs délais ») ou supprimer la mention chiffrée."
         },
         {
           "severity": "medium",
           "category": "legal",
-          "path": "services[0].faqAdditions[3].answer",
-          "message": "Délai d’usage chiffré (« entre 4 et 8 heures », « dès le lendemain matin ») pouvant être interprété comme promesse de résultat/délai. À risque au regard des règles.",
-          "evidence": "« comptez entre 4 et 8 heures » ; « praticables dès le lendemain matin »",
-          "recommendation": "Remplacer par une formulation non chiffrée (« selon ventilation… ») sans engagement temporel."
+          "path": "services[4].whyUsBullets[2]",
+          "message": "Promesse de délai (« sous quelques heures ») : peut être interprétée comme un engagement de résultat/temps de remise en service.",
+          "evidence": "« remise en service du mobilier sous quelques heures après passage. »",
+          "recommendation": "Si la politique éditoriale interdit les délais, remplacer par une formulation non chiffrée (ex. « après séchage ») ou conditionnelle."
         },
         {
           "severity": "medium",
           "category": "legal",
           "path": "services[4].uniqueDeepDive",
-          "message": "Délai de séchage décrit (« généralement quelques heures en été, davantage en hiver ») : même si nuancé, reste un repère temporel pouvant être considéré comme promesse.",
-          "evidence": "« généralement quelques heures en été, davantage en hiver »",
-          "recommendation": "Neutraliser en « selon la saison et l’aération » sans quantification."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[2].uniqueIntro",
-          "message": "Formulation un peu familière/subjective (« change la perception du logement », « faute de pouvoir s'y sentir à l'aise »). Pas bloquant mais peut être harmonisé si ligne éditoriale plus factuelle.",
-          "evidence": "Extraits du paragraphe 1-2",
-          "recommendation": "Optionnel : ton plus factuel, sans réécriture lourde."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "services[1].specificChallenges[0]",
-          "message": "Mention « Cité des 3000 » : élément local très spécifique. À vérifier (risque fact-check si la page doit rester générique ou si ce repère n’est pas souhaité).",
-          "evidence": "« sous-sols de la Cité des 3000 »",
-          "recommendation": "Si doute, remplacer par une formulation plus générique (ex. « grands ensembles ») sans ajouter de nouveau fait."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "services[6].uniqueIntro",
-          "message": "Mention très précise « Boulevard de Strasbourg » : à vérifier (risque fact-check si l’axe n’est pas pertinent ou si la page doit éviter les micro-localisations).",
-          "evidence": "« secteur du Boulevard de Strasbourg »",
-          "recommendation": "Si non certain, neutraliser en « autour de la gare » (sans ajouter de nouveau fait)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[1].answer",
-          "reason": "Neutraliser la promesse de délai chiffré « sous 24 à 48 heures » tout en conservant le sens (intervention possible selon disponibilité).",
-          "expected": "",
-          "value": "",
-          "find": "Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande et la disponibilité du matériel requis.",
-          "replace": "Oui, nous pouvons mobiliser une équipe selon la nature de la demande et la disponibilité du matériel requis.",
-          "context": "<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande et la disponibilité du matériel requis. Pour les situations critiques — dégât des eaux, souillures importantes — nous <strong>priorisons le déplacement</strong> et adaptons le planning en conséquence.</p>"
-        },
-        {
-          "op": "substring",
-          "applySafe": true,
-          "severity": "high",
-          "category": "orthographe",
-          "path": "citySpecificChallenges[0]",
-          "reason": "Accord certain : « façades exposés » -> « façades exposées » (correction minimale sans changement de sens).",
-          "expected": "",
-          "value": "",
-          "find": "façades exposés",
-          "replace": "façades exposées",
-          "context": "<strong>Pollution routière A1/A3</strong> : dépôts noirs sur balcons et façades exposés au nord."
-        },
-        {
-          "op": "substring",
-          "applySafe": true,
-          "severity": "low",
-          "category": "orthographe",
-          "path": "services[1].whyUsBullets[1]",
-          "reason": "Correction minimale et certaine : ajout de la préposition manquante (« revêtements en résine »).",
-          "expected": "",
-          "value": "",
-          "find": "revêtements résine",
-          "replace": "revêtements en résine",
-          "context": "Autolaveuse professionnelle et dégraissants adaptés au béton brut comme aux revêtements résine."
-        },
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].faqAdditions[0].answer",
-          "reason": "Retirer le délai chiffré « sous 48 à 72 heures » (promesse) en conservant l’idée d’organisation selon disponibilité.",
-          "expected": "",
-          "value": "",
-          "find": "Nous organisons des interventions sous 48 à 72 heures selon la disponibilité.",
-          "replace": "Nous organisons des interventions selon la disponibilité.",
-          "context": "<p>Nous organisons des interventions sous 48 à 72 heures selon la disponibilité. En cas d'accumulation importante ou de présence d'enfants, nous priorisons le dégrossissement et la désinfection des zones de contact direct.</p>"
-        },
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[3].answer",
-          "reason": "Neutraliser la promesse de délai chiffré « sous 24 à 48 heures » en conservant le sens (intervention possible selon disponibilité).",
-          "expected": "",
-          "value": "",
-          "find": "nous pouvons intervenir sous 24 à 48 heures",
-          "replace": "nous pouvons intervenir selon la disponibilité de nos équipes",
-          "context": "<p>Selon la disponibilité de nos équipes, nous pouvons intervenir sous 24 à 48 heures pour un sinistre localisé. Le diagnostic initial permet d'évaluer l'ampleur des dégâts et de définir les priorités : extraction de l'eau résiduelle, séchage des sols, nettoyage des surfaces touchées.</p>"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/chatillon.ts",
-      "fileId": "chatillon",
-      "slug": "chatillon",
-      "issues": [
-        {
-          "severity": "high",
-          "category": "consistency",
-          "path": "services[2].uniqueDeepDive",
-          "message": "Erreur de syntaxe probable : virgule manquante après la chaîne uniqueDeepDive. En l'état, l'objet TypeScript risque de ne pas compiler.",
-          "evidence": "... </p>`\n      specificChallenges: [",
-          "recommendation": "Ajouter une virgule après le backtick de fin de uniqueDeepDive (avant specificChallenges)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[1].answer",
-          "message": "Promesse/délai d'intervention (« sous 24 à 48 heures ») : risque de non-conformité aux règles (ajout/engagement de délai) et risque légal si non tenu.",
-          "evidence": "\"Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures\"",
-          "recommendation": "Remplacer par une formulation non engageante et sans délai chiffré (ex. « dans les meilleurs délais selon la nature de la demande »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[0].answer",
-          "message": "Promesse/délai d'intervention (« sous 48 à 72 heures ») + mention de « créneau prioritaire » : engagement de délai et promesse de priorité potentiellement non conforme.",
-          "evidence": "\"Nous intervenons généralement sous 48 à 72 heures\" / \"un créneau prioritaire peut être proposé\"",
-          "recommendation": "Remplacer par une formulation sans délai chiffré et sans promesse de priorité (ex. « selon nos disponibilités et les accès »)."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].whyUsBullets[1]",
-          "message": "Allégation technique/réglementaire : « produit virucide homologué ». Terme potentiellement sensible (homologation/autorisation) si non justifiable.",
-          "evidence": "\"désinfection par produit virucide homologué\"",
-          "recommendation": "Privilégier une formulation prudente (ex. « produit désinfectant conforme aux usages professionnels ») si vous ne pouvez pas justifier l’« homologation ». "
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].uniqueIntro",
-          "message": "Allégation sanitaire : « agents pathogènes » + « traitement virucide » ; peut nécessiter précautions (ne pas sur-promettre l’élimination/risques).",
-          "evidence": "\"ce sont des agents pathogènes qui persistent...\" / \"traitement virucide adapté\"",
-          "recommendation": "Rester factuel et éviter toute promesse implicite d’élimination totale ; conserver une formulation prudente si possible."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Affirmation locale potentiellement inexacte : « Terminus du Métro 13 » (le terminus est « Châtillon–Montrouge » côté Montrouge/Châtillon ; formulation à vérifier).",
-          "evidence": "\"Terminus du Métro 13\"",
-          "recommendation": "Vérifier l’exactitude et éventuellement préciser « terminus Châtillon–Montrouge (ligne 13) »."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "citySpecificChallenges[2]",
-          "message": "Référence à « zone rouge/orange » : classification de stationnement locale à vérifier (peut varier selon la commune).",
-          "evidence": "\"Stationnement contraint en zone rouge/orange\"",
-          "recommendation": "Vérifier la terminologie officielle (zones, couleurs) ou remplacer par une formulation générique (« stationnement réglementé »)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[2].uniqueIntro",
-          "message": "Affirmation locale à vérifier : « Le passage du Tram T6 » à Châtillon (le T6 dessert Châtillon ; vérifier la formulation et la proximité réelle selon secteurs).",
-          "evidence": "\"Le passage du Tram T6 génère aussi...\"",
-          "recommendation": "Vérifier la pertinence locale ; sinon généraliser (« la proximité des transports ») sans ajouter de nouveaux faits."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[3].faqAdditions[0].question",
-          "message": "Référence très spécifique à « l'église Saint-Philippe » à Châtillon : à vérifier (nom/présence).",
-          "evidence": "\"église Saint-Philippe à Châtillon\"",
-          "recommendation": "Vérifier le toponyme ; si doute, remplacer par une référence générique (« une église / un clocher ») sans inventer."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "hubIntro",
-          "message": "Typographie : « comptes-rendus » (trait d’union) ; les deux existent, mais harmonisation possible avec « comptes rendus ».",
-          "evidence": "\"comptes-rendus\"",
-          "recommendation": "Harmoniser la graphie sur l’ensemble du site (si une convention existe)."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Présence de <h3> alors que le commentaire global indique « HTML autorisé (sans <h3>) » pour certains champs ; ici c’est dans un service (pas explicitement interdit), mais vérifier la règle globale du projet.",
-          "evidence": "\"uniqueDeepDive: `<h3>Zones de circulation intensive</h3>\"",
-          "recommendation": "Confirmer si <h3> est autorisé dans les champs service.*. Si non, remplacer par <p><strong>…</strong></p> (correction à relire)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "consistency",
-          "path": "services[2].uniqueDeepDive",
-          "reason": "Ajout d'une virgule manquante après la chaîne template pour corriger la syntaxe TS sans changer le contenu.",
-          "expected": "",
-          "value": "",
-          "find": "</p>`\n      specificChallenges: [",
-          "replace": "</p>`,\n      specificChallenges: [",
-          "context": "...<p>L'eau de rinçage est dirigée vers l'évacuation du balcon, jamais vers les étages inférieurs. Les vitrages attenants sont essuyés pour retirer les éclaboussures. Une fois le séchage amorcé, des conseils d'entretien sont partagés pour espacer les prochaines interventions.</p>`\n      specificChallenges: ["
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/clamart.ts",
-      "fileId": "clamart",
-      "slug": "clamart",
-      "issues": [
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "message": "Présence d'une promesse de délai et d'une mention d'« urgence » (réduction du délai) : formulation potentiellement engageante/commerciale et contraire aux règles « pas d'ajout de promesses ».",
-          "evidence": "\"Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous pouvons réduire ce délai.\"",
-          "recommendation": "Neutraliser la mention d'urgence et/ou rendre le délai non engageant (formulation indicative), sans ajouter de nouvelle promesse."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[\"nettoyage-appartement-maison\"].faqAdditions[1].answer",
-          "message": "Promesse de délai (« généralement sous 48 à 72 heures ») + mention de « créneau prioritaire » en cas d'urgence : formulation engageante/commerciale.",
-          "evidence": "\"Nous intervenons généralement sous 48 à 72 heures... En cas d'urgence... un créneau prioritaire peut être organisé\"",
-          "recommendation": "Retirer la notion de priorité/urgence et/ou rendre la phrase plus prudente (dépend des disponibilités), sans introduire de nouveaux engagements."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Référence locale potentiellement discutable : « jours de marché au Trosy ». Le marché du Trosy existe, mais la précision « jours de marché » peut être perçue comme un fait local opérationnel à vérifier.",
-          "evidence": "\"...des jours de marché au Trosy...\"",
-          "recommendation": "Si non certain, remplacer par une formulation plus générale (ex. « jours de marché » sans lieu) ou retirer la mention."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[\"parkings\"].whyUsBullets[0]",
-          "message": "Référence locale très spécifique : « parkings du secteur Hunebelle » et « événements sportifs locaux ». À vérifier (risque de sur-spécification).",
-          "evidence": "\"Connaissance des parkings du secteur Hunebelle et des contraintes d'accès liées aux événements sportifs locaux.\"",
-          "recommendation": "Si non vérifié, généraliser légèrement (sans ajouter de faits) ou retirer la partie la plus spécifique."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[\"parkings\"].uniqueIntro",
-          "message": "Lien causal très spécifique entre encrassement et « rotation des véhicules lors des événements sportifs » autour du Stade Hunebelle : plausible mais factuel à vérifier.",
-          "evidence": "\"...autour du Stade Hunebelle où la rotation des véhicules lors des événements sportifs accélère l'encrassement.\"",
-          "recommendation": "Si doute, retirer la causalité « lors des événements sportifs » et garder une formulation générale sur la rotation des véhicules."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[\"canapes-tapis\"].faqAdditions[0].question",
-          "message": "Mention d'un secteur « résidences de la Plaine » à Clamart : toponyme/quartier potentiellement imprécis ou non standard. Risque de fait local inventé.",
-          "evidence": "\"...des résidences de la Plaine...\"",
-          "recommendation": "Vérifier l'existence/usage local. Sinon remplacer par une formulation neutre (ex. « dans certaines résidences ») sans ajouter de nouveau quartier."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[\"balcons-fientes\"].uniqueDeepDive",
-          "message": "Mention de « produit virucide et bactéricide » et « homologués » : allégation réglementaire potentiellement sensible (biocides). Peut nécessiter précision/justificatif.",
-          "evidence": "\"Un produit virucide et bactéricide...\" / \"produits de désinfection homologués\"",
-          "recommendation": "Si non documenté, préférer une formulation plus prudente (ex. « désinfectant adapté ») et éviter « homologué »/« virucide » sans preuve."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[\"balcons-fientes\"].faqAdditions[2].answer",
-          "message": "Allégation « produits virucides et bactéricides homologués » : formulation réglementaire sensible (biocides) et potentiellement invérifiable dans ce contexte.",
-          "evidence": "\"Nous utilisons des produits virucides et bactéricides homologués\"",
-          "recommendation": "Remplacer par une formulation non réglementaire et non absolue (ex. « produits de désinfection adaptés ») si vous ne souhaitez pas porter d'allégation d'homologation."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "customDescription",
-          "message": "Liste sans article : « parties communes, parkings souterrains et espaces extérieurs » OK, mais pourrait gagner en fluidité avec « des » devant chaque élément. (Optionnel)",
-          "evidence": "\"...pour l'entretien des parties communes, parkings souterrains et espaces extérieurs.\"",
-          "recommendation": "Optionnel : harmoniser (« des parties communes, des parkings souterrains et des espaces extérieurs ») si souhaité, sans changer le sens."
-        },
-        {
-          "severity": "low",
-          "category": "consistency",
-          "path": "services[\"moquettes\"].uniqueDeepDive",
-          "message": "Présence de balises <h3> dans uniqueDeepDive alors que des commentaires indiquent des restrictions HTML « sans <h3> » pour certains champs (citySpecificChallenges, faq.answer). Ici ce n'est pas explicitement interdit, mais vérifier la compatibilité du renderer.",
-          "evidence": "\"uniqueDeepDive: `<h3>Zones de circulation intense</h3>...`\"",
-          "recommendation": "Vérifier les règles HTML par champ. Si <h3> non supporté, remplacer par <p><strong>...</strong></p> (à faire prudemment)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "reason": "Retirer la mention d'urgence et la promesse de réduction de délai, tout en conservant l'idée d'un délai indicatif.",
-          "expected": "",
-          "value": "",
-          "find": "Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous pouvons réduire ce délai.",
-          "replace": "Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, selon les disponibilités et les contraintes d'accès.",
-          "context": "...nous réalisons un <strong>repérage rapide</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous pouvons réduire ce délai.</p>"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/issy-les-moulineaux.ts",
-      "fileId": "issy-les-moulineaux",
-      "slug": "issy-les-moulineaux",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "customDescription",
-          "message": "Mention d'« une équipe locale » : formulation potentiellement factuelle (présence locale) sans preuve dans le fichier. Risque de sur-promesse implicite.",
-          "evidence": "« une équipe locale adaptée aux exigences »",
-          "recommendation": "Si vous voulez rester prudent, remplacer par une formulation neutre (ex. « une équipe dédiée ») sans revendiquer une implantation locale."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Affirmation de desserte « RER C et Tramway T2 » : fact-check prudent, car la desserte exacte peut prêter à discussion selon les stations/limites communales. À vérifier.",
-          "evidence": "« desservi par le RER C et le Tramway T2 »",
-          "recommendation": "Vérifier l'exactitude. Si doute, généraliser (ex. « bien desservi par les transports en commun ») — correction non proposée ici car change le sens."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "hubIntro",
-          "message": "« Réactivité secteur » sonne légèrement maladroit (anglicisme/terme interne).",
-          "evidence": "« <strong>Réactivité secteur :</strong> »",
-          "recommendation": "Envisager « Réactivité sur le secteur » ou « Réactivité locale » (mais « locale » peut réintroduire un fait)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "citySpecificChallenges[2]",
-          "message": "« pollution du périphérique » : Issy-les-Moulineaux n'est pas directement sur le périphérique partout ; formulation peut être contestable selon zones. Fact-check prudent.",
-          "evidence": "« pollution du périphérique »",
-          "recommendation": "Si besoin, remplacer par « pollution des grands axes » (non patché car change le sens)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "citySpecificChallenges[3]",
-          "message": "« écoquartier du Fort » : l'appellation exacte peut être « Écoquartier du Fort d’Issy ». Cohérence avec landmarks où c'est écrit ainsi.",
-          "evidence": "Challenge: « écoquartier du Fort » vs landmark: « Écoquartier du Fort d'Issy »",
-          "recommendation": "Harmoniser l'appellation (correction minimale possible)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "faq[2].answer",
-          "message": "Référence à des parkings souterrains publics nommés « Hôtel de Ville, Corentin Celton » : à vérifier (existence, caractère public, dénomination).",
-          "evidence": "« parkings souterrains publics (Hôtel de Ville, Corentin Celton) »",
-          "recommendation": "Vérifier. Si doute, retirer les noms propres ou parler de « parkings souterrains à proximité » (non patché car change le sens)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[3].answer",
-          "message": "Promesse de délai « sous 48 heures » : engagement temporel potentiellement contractuel. À valider côté légal/ops. (Règles demandent de ne pas ajouter de promesses ; ici elle existe déjà.)",
-          "evidence": "« Le devis est transmis sous 48 heures »",
-          "recommendation": "Si non garanti, remplacer par une formule non engageante (ex. « dans les meilleurs délais »). Non patché car change le sens."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[0].faqAdditions[1].answer",
-          "message": "Délai chiffré de séchage « entre quatre et huit heures » + promesse « dès le lendemain matin » : peut être contestable selon conditions. Risque légal/attente client.",
-          "evidence": "« entre quatre et huit heures » ; « dès le lendemain matin »",
-          "recommendation": "Si non garanti, rendre conditionnel (ex. « selon conditions ») ou retirer le chiffrage. Non patché car change le sens."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[4].whyUsBullets[2]",
-          "message": "Promesse « remise en service sous 24 heures » : engagement temporel potentiellement non garanti, même si nuancé par « selon ventilation ».",
-          "evidence": "« remise en service sous 24 heures selon ventilation »",
-          "recommendation": "Valider la capacité opérationnelle. Sinon, remplacer par « remise en service rapide » (non patché car change le sens)."
-        },
-        {
-          "severity": "medium",
-          "category": "style",
-          "path": "services[4].uniqueIntro",
-          "message": "« appartements T2 à T4 » : jargon immobilier, peut être acceptable mais à harmoniser selon la charte éditoriale.",
-          "evidence": "« appartements T2 à T4 »",
-          "recommendation": "Optionnel : remplacer par « appartements de 2 à 4 pièces » (non patché car change le sens)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[6].uniqueIntro",
-          "message": "« Hauts d'Issy » : toponyme/quartier pas listé dans districts et peut être discuté. Fact-check prudent.",
-          "evidence": "« secteurs résidentiels des Hauts d'Issy et du Fort »",
-          "recommendation": "Vérifier l'usage local. Si doute, remplacer par un quartier listé (mais ce serait un nouveau fait local) ou supprimer (non patché)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[1].answer",
-          "message": "Délais d'intervention « sous 48 à 72 heures » + mention « en cas d'urgence » : promesse de délai et capacité d'urgence. Risque légal/attente client.",
-          "evidence": "« sous 48 à 72 heures » ; « En cas d'urgence… »",
-          "recommendation": "Valider. Sinon, rendre non engageant. Non patché car change le sens."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "services[3].uniqueDeepDive",
-          "message": "EPI : en français on écrit souvent « EPI » (ok) mais la liste « masque FFP2 » peut être discutée selon protocole (FFP3 parfois). Fact-check prudent.",
-          "evidence": "« masque FFP2 »",
-          "recommendation": "Vérifier protocole interne. Pas de patch."
-        },
-        {
-          "severity": "low",
-          "category": "consistency",
-          "path": "services[1].whyUsBullets[0]",
-          "message": "Incohérence de toponyme : « Bords de Seine » ici, ailleurs « Bords de Seine »/« Val de Seine ». À harmoniser si c'est la même zone.",
-          "evidence": "« résidences récentes des Bords de Seine » vs multiples occurrences « Val de Seine »",
-          "recommendation": "Harmoniser si nécessaire (non patché car peut changer le sens local)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "low",
-          "category": "consistency",
-          "path": "citySpecificChallenges[3]",
-          "reason": "Harmonisation minimale de l'appellation avec le landmark « Écoquartier du Fort d'Issy » sans ajouter de nouveau fait, juste précision du nom déjà présent ailleurs.",
-          "expected": "",
-          "value": "",
-          "find": "Copropriétés de l'écoquartier du Fort avec <strong>règlements stricts</strong> sur les nuisances et écoulements.",
-          "replace": "Copropriétés de l'écoquartier du Fort d'Issy avec <strong>règlements stricts</strong> sur les nuisances et écoulements.",
-          "context": "...\"Balcons exposés à la <strong>pollution du périphérique</strong> et des axes en bord de Seine.\",\n    \"Copropriétés de l'écoquartier du Fort avec <strong>règlements stricts</strong> sur les nuisances et écoulements.\",\n    \"Stationnement voirie quasi impossible..."
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/le-blanc-mesnil.ts",
-      "fileId": "le-blanc-mesnil",
-      "slug": "le-blanc-mesnil",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "customDescription",
-          "message": "Mention de la « gare RER B » au Blanc-Mesnil : formulation potentiellement inexacte/ambiguë (gare du Blanc-Mesnil vs RER B). Risque de fait local erroné.",
-          "evidence": "« Entre la gare RER B et les zones d'activités »",
-          "recommendation": "Vérifier l'exactitude (nom de la gare et ligne). Si incertain, reformuler de façon neutre (ex. « la gare ») sans ajouter de fait."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Référence à « la gare RER B » : possible inexactitude locale (gare/ligne).",
-          "evidence": "« ... et la gare RER B ... » ; « ... flux de la gare RER ... »",
-          "recommendation": "Vérifier la ligne desservant la gare citée. En cas de doute, retirer « RER B » et garder « la gare »."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "landmarks[1]",
-          "message": "Point d'intérêt potentiellement inexact : « Gare du Blanc-Mesnil (RER B) » peut être faux selon la desserte réelle.",
-          "evidence": "« Gare du Blanc-Mesnil (RER B) »",
-          "recommendation": "Vérifier la ligne. Si incertain, retirer la mention de ligne entre parenthèses."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "faq[0].question",
-          "message": "Question mentionne « gare du Blanc-Mesnil » (ok) mais le contexte global associe parfois à RER B : risque de cohérence/fait local si la ligne est incorrecte.",
-          "evidence": "Question: « ... proches de la gare du Blanc-Mesnil ? » + ailleurs « gare RER B »",
-          "recommendation": "Harmoniser après vérification de la desserte (éviter d'affirmer une ligne si non certaine)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].heroDescription",
-          "message": "Allégation « désinfection virucide » : terme réglementé/technique pouvant impliquer conformité à des normes (EN 14476, biocides). Risque légal si non justifiable.",
-          "evidence": "« ... avec désinfection virucide ... »",
-          "recommendation": "Si non certifiable, remplacer par « désinfection » (sans « virucide ») ou préciser uniquement si vous avez les preuves (homologation/norme)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].whyUsBullets[1]",
-          "message": "« désinfection virucide certifiée » : revendication de certification potentiellement non prouvable (risque de publicité trompeuse).",
-          "evidence": "« ... désinfection virucide certifiée. »",
-          "recommendation": "Retirer « certifiée » et/ou « virucide » si vous ne disposez pas de certification vérifiable."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "« produit virucide homologué » : revendication d'homologation/efficacité virucide potentiellement sensible légalement si non documentée.",
-          "evidence": "« Un produit virucide homologué ... »",
-          "recommendation": "Si vous n'avez pas la preuve (AMM/biocide, norme), remplacer par « produit désinfectant adapté » (sans « virucide/homologué »)."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "Promesse de délai « réutilisation sous 24 à 48 heures » : engagement temporel pouvant être interprété comme promesse commerciale; déjà présent ailleurs. À valider.",
-          "evidence": "« ... réutilisation sous 24 à 48 heures ... »",
-          "recommendation": "Si vous ne pouvez pas garantir, reformuler en « généralement »/« selon conditions » (déjà partiellement présent) ou retirer le délai."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "message": "Délai « intervenir sous 24 à 48 heures » : promesse de délai pour urgence, potentiellement risquée si non tenue.",
-          "evidence": "« ... intervenir sous 24 à 48 heures ... »",
-          "recommendation": "Si non garanti, atténuer (ex. « dans les meilleurs délais ») ou conserver uniquement si engagement réel."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[4].whyUsBullets[2]",
-          "message": "« remise en service du mobilier sous 24 à 48 heures » : promesse de délai potentiellement risquée.",
-          "evidence": "« ... remise en service du mobilier sous 24 à 48 heures. »",
-          "recommendation": "Si non garanti, atténuer (ex. « généralement ») ou retirer le délai."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[4].uniqueIntro",
-          "message": "« remise en service du mobilier sous 24 à 48 heures » : répétition d'une promesse de délai dans le texte.",
-          "evidence": "« ... avec remise en service du mobilier sous 24 à 48 heures ... »",
-          "recommendation": "Même recommandation : atténuer ou retirer si non garanti."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[6].faqAdditions[1].answer",
-          "message": "« intervenons généralement sous 48 à 72 heures » : promesse de délai (même si nuancée) à valider.",
-          "evidence": "« ... nous intervenons généralement sous 48 à 72 heures ... »",
-          "recommendation": "Conserver seulement si c'est une pratique réelle; sinon atténuer davantage ou retirer le chiffrage."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "landmarks[0]",
-          "message": "Formulation grammaticale : « Mairie de Le Blanc-Mesnil » sonne incorrect; usage courant « Mairie du Blanc-Mesnil » (accord avec article).",
-          "evidence": "« Mairie de Le Blanc-Mesnil »",
-          "recommendation": "Corriger en « Mairie du Blanc-Mesnil » (correction de forme, sans ajout de fait)."
-        },
-        {
-          "severity": "low",
-          "category": "consistency",
-          "path": "hubIntro",
-          "message": "« flux de la gare RER » : incohérence interne (ailleurs « gare RER B »).",
-          "evidence": "« ... flux de la gare RER ... » vs « ... gare RER B ... »",
-          "recommendation": "Harmoniser la désignation (après vérification de la ligne)."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "services[2].uniqueIntro",
-          "message": "Accord/typographie : « poussières de chantiers » vs « poussières de chantier » (les deux existent, mais cohérence).",
-          "evidence": "« ... poussières de chantiers fréquents ... »",
-          "recommendation": "Uniformiser si souhaité (ex. « poussières de chantier ») sans changer le sens."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[4].uniqueIntro",
-          "message": "« flux piétons important » : accord possible (« flux piéton important ») ; « flux » est singulier. Style/grammaire légère.",
-          "evidence": "« Face au flux piétons important ... »",
-          "recommendation": "Corriger en « flux piéton important » (correction grammaticale minimale)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "low",
-          "category": "style",
-          "path": "services[4].uniqueIntro",
-          "reason": "Accord grammatical : « flux piétons important » -> « flux piéton important ». Patch en substring pour relecture (HTML).",
-          "expected": "",
-          "value": "",
-          "find": "flux piétons important",
-          "replace": "flux piéton important",
-          "context": "...<strong>flux piétons important et aux poussières générées par les camions</strong> sur ce secteur logistique..."
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/les-lilas.ts",
-      "fileId": "les-lilas",
-      "slug": "les-lilas",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Mention d'un « terminus historique de la ligne 11 » : formulation factuelle potentiellement discutable/évolutive (prolongements de ligne). À vérifier pour éviter une affirmation datée.",
-          "evidence": "« Au terminus historique de la ligne 11 »",
-          "recommendation": "Si vous voulez sécuriser, remplacer par une formulation neutre sans fait temporel (ex. « à proximité de la ligne 11 ») ou vérifier l'exactitude à la date de publication."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Référence à « l'axe N3 » : cohérence avec le reste où la N3 est explicitée comme Rue de Paris. Ici, « axe N3 » peut être compris mais reste à harmoniser.",
-          "evidence": "« balcons exposés à la pollution de l'axe N3 »",
-          "recommendation": "Harmoniser avec « la N3 (Rue de Paris) » si c'est bien l'intention (sans ajouter de nouveaux faits)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[1].answer",
-          "message": "Promesse de délai (« réactivité sous 48 à 72 heures ») : risque légal/marketing (engagement de délai) et potentiellement non conforme aux règles internes (éviter promesses chiffrées).",
-          "evidence": "« réactivité sous 48 à 72 heures »",
-          "recommendation": "Retirer ou neutraliser la mention chiffrée (ex. « réactivité » sans délai) si vos règles l'exigent. Correction à valider côté métier."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[1].answer",
-          "message": "Promesse de délai (« interventions sous 48 à 72 heures ») : engagement chiffré similaire, à risque et possiblement interdit par les règles.",
-          "evidence": "« interventions sous 48 à 72 heures »",
-          "recommendation": "Neutraliser la mention de délai (garder l'idée de planification rapide sans chiffre) après validation."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Commentaire en tête de fichier : « faq[].answer : HTML autorisé (sans <h3>) ». Or plusieurs champs uniqueDeepDive contiennent des <h3>. Si la contrainte « sans <h3> » s'applique aussi à d'autres champs HTML, il y a incohérence de règles/implémentation.",
-          "evidence": "uniqueDeepDive contient « <h3>... » (ex. services[0].uniqueDeepDive)",
-          "recommendation": "Confirmer la règle : si l'interdiction de <h3> ne concerne que faq.answer, pas de changement. Sinon, remplacer <h3> par un balisage autorisé (ex. <p><strong>...</strong></p>) avec prudence."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "hubIntro",
-          "message": "Incohérence de mise en forme dans la liste : deux items ont un <strong>...</strong> + deux-points, le 3e non (et « Suivi terrain » n'est pas en gras).",
-          "evidence": "« <li>Suivi terrain : Compte-rendu... »",
-          "recommendation": "Harmoniser en mettant « <strong>Suivi terrain :</strong> ... » (changement minimal)."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "hubIntro",
-          "message": "Typographie : « Compte-rendu » est acceptable, mais la forme recommandée est souvent « compte rendu » (sans trait d’union) en français courant. À harmoniser selon votre guide éditorial.",
-          "evidence": "« Compte-rendu d'intervention »",
-          "recommendation": "Si votre guide le prévoit, remplacer par « compte rendu ». Sinon, laisser."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "districts",
-          "message": "Liste de quartiers/secteurs : certains libellés peuvent ne pas correspondre à des découpages officiels (ex. « Secteur Serge Gainsbourg »). Risque de fait local non vérifié.",
-          "evidence": "« Secteur Serge Gainsbourg »",
-          "recommendation": "Vérifier que ces appellations sont bien utilisées localement/officiellement. Sinon, préférer des formulations neutres (sans inventer)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "landmarks",
-          "message": "« Station Serge Gainsbourg » : dénomination à vérifier (station de métro récente/nom exact). Risque de fait local inexact.",
-          "evidence": "« Station Serge Gainsbourg »",
-          "recommendation": "Vérifier le nom officiel exact. Si incertain, remplacer par une mention plus générale (ex. « station de métro (ligne 11) ») après validation."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[1].whyUsBullets[0]",
-          "message": "« secteur Pasteur » / « Avenue Pasteur » : toponymie locale à vérifier (existence/pertinence).",
-          "evidence": "« secteur Pasteur » ; « Avenue Pasteur »",
-          "recommendation": "Vérifier l'existence et l'usage local. En cas de doute, retirer la précision ou la rendre plus générale."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[4].whyUsBullets[0]",
-          "message": "Référence au « Triton » : lieu local à vérifier (nom exact/pertinence).",
-          "evidence": "« résidences proches du Triton »",
-          "recommendation": "Vérifier que « Le Triton » est bien un repère local pertinent aux Lilas et orthographié ainsi."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[4].uniqueIntro",
-          "message": "Affirmation sur la composition du parc immobilier (« T2 et T3 ... l'essentiel du parc immobilier ») : statistique implicite non sourcée, potentiellement inexacte.",
-          "evidence": "« Dans les T2 et T3 qui composent l'essentiel du parc immobilier »",
-          "recommendation": "Neutraliser (ex. « Dans de nombreux T2 et T3 ») pour éviter une généralisation chiffrée/structurelle non vérifiée."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[6].whyUsBullets[0]",
-          "message": "« attentes des agences immobilières du secteur Mairie des Lilas » : assertion locale potentiellement spéculative.",
-          "evidence": "« des attentes des agences immobilières du secteur Mairie des Lilas »",
-          "recommendation": "Si non vérifiable, simplifier en « des agences immobilières locales »."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[3].whyUsBullets[1]",
-          "message": "« désinfection virucide » : terme technique fort ; peut nécessiter précision réglementaire (produit homologué) déjà mentionnée plus bas, mais cohérence à surveiller.",
-          "evidence": "« désinfection virucide »",
-          "recommendation": "S'assurer que les produits utilisés sont bien conformes/« homologués » comme indiqué dans la FAQ ; sinon, atténuer."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "low",
-          "category": "style",
-          "path": "hubIntro",
-          "reason": "Harmoniser la mise en forme des puces (mettre le libellé du 3e item en gras comme les deux premiers) sans changer le sens.",
-          "expected": "",
-          "value": "",
-          "find": "<li>Suivi terrain : Compte-rendu d'intervention disponible, ajustements possibles selon les retours des donneurs d'ordre.</li>",
-          "replace": "<li><strong>Suivi terrain :</strong> Compte-rendu d'intervention disponible, ajustements possibles selon les retours des donneurs d'ordre.</li>",
-          "context": "...<li><strong>Matériel dimensionné :</strong> Équipements compacts ...</li>\n  <li>Suivi terrain : Compte-rendu d'intervention disponible, ajustements possibles selon les retours des donneurs d'ordre.</li>\n</ul>"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/mitry-mory.ts",
-      "fileId": "mitry-mory",
-      "slug": "mitry-mory",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "customDescription",
-          "message": "Mention « terminus du RER B » potentiellement inexacte/ambiguë pour Mitry-Mory (le terminus du RER B est généralement associé à d'autres gares). Risque de fact-check local fragile.",
-          "evidence": "« Entre le terminus du RER B et la Z.I. Mitry-Compans »",
-          "recommendation": "Éviter l'affirmation « terminus » si non certaine (ex. reformuler en « autour du RER B »). Correction minimale recommandée."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Liste de secteurs/quartiers : « la Villette-aux-Aulnes » semble plutôt être un lieu-dit/secteur associé à Claye-Souilly (à vérifier). Risque d'attribution communale incorrecte.",
-          "evidence": "« Mitry-le-Neuf, le Bourg historique, la Villette-aux-Aulnes »",
-          "recommendation": "Vérifier l'appartenance de « La Villette-aux-Aulnes » à Mitry-Mory. Si doute, remplacer par un terme générique (ex. « différents secteurs de la commune ») sans ajouter de nouveaux lieux."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "districts",
-          "message": "Présence de « La Villette-aux-Aulnes » dans les districts : possible incohérence géographique (à vérifier).",
-          "evidence": "districts inclut « La Villette-aux-Aulnes »",
-          "recommendation": "Vérifier la validité. Si non certain, retirer ou remplacer par un secteur avéré (sans en inventer)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "message": "Promesse de délai d'intervention (« sous 24 à 48 heures ») : engagement temporel pouvant être considéré comme une promesse commerciale/contractuelle, à encadrer ou neutraliser.",
-          "evidence": "« nous mobilisons une équipe sous 24 à 48 heures selon disponibilité »",
-          "recommendation": "Remplacer par une formulation non engageante (ex. « dans les meilleurs délais selon disponibilité ») sans ajouter de nouvelle promesse."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Indication chiffrée de délai de séchage (« 4 à 8 heures ») : peut être perçue comme promesse de résultat/délai, dépendante des conditions. À encadrer davantage.",
-          "evidence": "« comptez entre 4 et 8 heures avant circulation normale »",
-          "recommendation": "Ajouter un conditionnel/variabilité plus explicite ou retirer les chiffres si la politique éditoriale l'exige (correction minimale)."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[0].faqAdditions[1].answer",
-          "message": "Délai chiffré de remise en service (« 4 à 6 heures », « 8 heures ») : promesse potentielle dépendante des conditions réelles.",
-          "evidence": "« comptez 4 à 6 heures... 8 heures... »",
-          "recommendation": "Encadrer par « à titre indicatif » / « selon conditions » ou neutraliser les chiffres si nécessaire."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[1].faqAdditions[2].answer",
-          "message": "Recommandations de fréquence chiffrées (« trimestriel », « bimestriel ») : peut être interprété comme prescription ferme; dépend de l'usage. Risque de sur-promesse/engagement implicite.",
-          "evidence": "« Un décrassage trimestriel... un passage bimestriel... »",
-          "recommendation": "Rendre plus conditionnel (« peut », « selon l'activité » est déjà présent mais pourrait être renforcé)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[3].uniqueIntro",
-          "message": "Mention de « l'église Saint-Martin » à Mitry-Mory : à vérifier (risque de landmark non exact).",
-          "evidence": "« aux abords de l'église Saint-Martin »",
-          "recommendation": "Vérifier l'existence/nom exact. En cas de doute, retirer la mention spécifique plutôt que de la remplacer par un autre lieu."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "Allégation « désinfectant virucide et bactéricide » + « homologué » : termes réglementés (biocides) nécessitant prudence (normes, autorisations, conditions). Risque légal si non justifié.",
-          "evidence": "« produit désinfectant virucide et bactéricide... désinfectant virucide homologué »",
-          "recommendation": "Éviter « homologué »/« virucide » si non documenté; préférer « désinfectant adapté » (correction minimale)."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "EPI : « masque FFP2 » présenté comme standard; ok mais à vérifier cohérence interne (FFP2 vs FFP3) et éviter de figer un protocole si variable.",
-          "evidence": "« masque FFP2, combinaison jetable, gants et lunettes »",
-          "recommendation": "Optionnel : rendre plus générique (« masque de protection adapté ») si nécessaire. Sinon laisser."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].faqAdditions[0].answer",
-          "message": "Affirmation sanitaire : « agents pathogènes transmissibles » peut nécessiter prudence (risque d'alarmisme).",
-          "evidence": "« peuvent contenir des agents pathogènes transmissibles par inhalation »",
-          "recommendation": "Ajouter un encadrement (« potentiellement ») ou rester factuel sans dramatiser."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[6].whyUsBullets[2]",
-          "message": "« respect strict des délais de restitution » : promesse forte (« strict ») pouvant être contestable selon aléas.",
-          "evidence": "« respect strict des délais de restitution »",
-          "recommendation": "Atténuer (« respect des délais convenus ») sans ajouter de promesse chiffrée."
+          "message": "Mention chiffrée de délai de séchage (« sous 4 à 8 heures ») : peut être perçue comme promesse. Même si présentée comme variable, c’est un engagement potentiel.",
+          "evidence": "« un séchage complet sous 4 à 8 heures selon la saison et l'aération disponible. »",
+          "recommendation": "Si nécessaire, garder une formulation non chiffrée (« en quelques heures », « selon conditions ») ou préciser davantage le caractère indicatif (sans ajouter de nouvelles promesses)."
         },
         {
           "severity": "medium",
           "category": "legal",
           "path": "services[6].faqAdditions[0].answer",
-          "message": "Délai d'intervention chiffré (« 48 à 72 heures ») : promesse temporelle; à encadrer.",
+          "message": "Promesse de délai (« sous 48 à 72 heures ») : engagement potentiel. À vérifier avec les règles internes (le brief utilisateur indique de ne pas ajouter de promesses ; ici elles existent déjà).",
           "evidence": "« Nous intervenons généralement sous 48 à 72 heures »",
-          "recommendation": "Remplacer par formulation non engageante (« selon disponibilité ») ou retirer les chiffres."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "citySpecificChallenges[0]",
-          "message": "Formulation légèrement bancale : « Halls des résidences gare Mitry-Claye » manque une préposition (« près de la gare »).",
-          "evidence": "« Halls des résidences gare Mitry-Claye »",
-          "recommendation": "Corriger en « Halls des résidences près de la gare de Mitry-Claye » (sans changer le sens)."
+          "recommendation": "Si non conforme, remplacer par une formulation non chiffrée (« selon disponibilités ») ou supprimer les chiffres."
         },
         {
           "severity": "low",
           "category": "style",
           "path": "hubIntro",
-          "message": "« Reporting disponible sur demande » anglicisme; possible préférence éditoriale pour « compte rendu » / « rapport ».",
-          "evidence": "« Reporting disponible sur demande. »",
-          "recommendation": "Remplacer par « Compte rendu disponible sur demande. » si ligne éditoriale FR."
+          "message": "Formulation un peu télégraphique (« Carrefour multimodal RER B et C, pôle d'activités… ») : acceptable mais légèrement abrupte. Pas de correction nécessaire si style voulu.",
+          "evidence": "Début de phrase sans verbe principal explicite.",
+          "recommendation": "Optionnel : ajouter un verbe (mais cela serait une réécriture, donc à éviter si consigne stricte)."
         },
         {
           "severity": "low",
-          "category": "consistency",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Commentaire en amont indique « HTML autorisé (sans <h3>) » pour citySpecificChallenges, mais ici uniqueDeepDive utilise des <h3> (probablement autorisé). Vérifier cohérence des règles internes (pas forcément un problème).",
-          "evidence": "uniqueDeepDive contient plusieurs <h3>",
-          "recommendation": "Aucune action si la contrainte « sans <h3> » ne s'applique qu'à citySpecificChallenges (à confirmer)."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "reason": "Neutraliser une promesse de délai (« sous 24 à 48 heures ») tout en conservant le sens (intervention rapide selon disponibilité).",
-          "expected": "",
-          "value": "",
-          "find": "nous mobilisons une équipe sous 24 à 48 heures selon disponibilité",
-          "replace": "nous mobilisons une équipe dans les meilleurs délais selon disponibilité",
-          "context": "En cas de besoin urgent — dégât des eaux, souillure accidentelle dans un hall — nous mobilisons une équipe sous 24 à 48 heures selon disponibilité. Le syndic ou le gardien nous transmet les <strong>accès et consignes</strong>,"
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[4]",
+          "message": "« quatre gares RER B » semble factuellement douteux (Antony a plusieurs gares, mais pas forcément 4 gares RER B). Risque d'inexactitude locale.",
+          "evidence": "« Flux piétons importants autour des quatre gares RER B »",
+          "recommendation": "Vérifier le nombre et les lignes exactes ; si incertain, remplacer par une formulation non chiffrée et non spécifique (ex. « autour des gares RER ») sans ajouter de nouveaux faits."
         },
         {
-          "op": "substring",
-          "applySafe": false,
           "severity": "low",
-          "category": "style",
-          "path": "citySpecificChallenges[0]",
-          "reason": "Corriger une tournure maladroite (ajout de préposition) sans changer le sens ni les balises.",
-          "expected": "",
-          "value": "",
-          "find": "Halls des résidences gare <strong>Mitry-Claye</strong> :",
-          "replace": "Halls des résidences près de la gare de <strong>Mitry-Claye</strong> :",
-          "context": "\"Halls des résidences gare <strong>Mitry-Claye</strong> : piétinement quotidien lié aux flux pendulaires.\""
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/sevran.ts",
-      "fileId": "sevran",
-      "slug": "sevran",
-      "issues": [
-        {
-          "severity": "high",
           "category": "orthographe",
-          "path": "customDescription",
-          "message": "Accent manquant sur la ville (« Sevran » → « Sevran » avec é).",
-          "evidence": "\"Klinova intervient à Sevran...\"",
-          "recommendation": "Remplacer « Sevran » par « Sévran » si la graphie officielle est attendue partout."
-        },
-        {
-          "severity": "high",
-          "category": "consistency",
-          "path": "name",
-          "message": "Incohérence potentielle de graphie : name=\"Sevran\" sans accent alors que la graphie officielle est « Sévran ».",
-          "evidence": "name: \"Sevran\"",
-          "recommendation": "Vérifier la convention du projet (avec/sans accents) et harmoniser tous les champs si nécessaire."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[1].answer",
-          "message": "Ajout de promesse/délai explicite (« sous 48 à 72 heures ») pouvant être considéré comme engagement de délai. À valider avec les règles internes (souvent interdit/risqué).",
-          "evidence": "\"... des créneaux sous 48 à 72 heures ...\"",
-          "recommendation": "Si les délais sont proscrits, remplacer par une formulation non chiffrée (ex. « dans des délais courts selon disponibilité ») après validation."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[1].answer",
-          "message": "Promesse/délai explicite (« intervenir sous 48 à 72 heures », « créneau prioritaire ») : risque d'engagement contractuel et non-conformité aux règles annoncées.",
-          "evidence": "\"Nous pouvons généralement intervenir sous 48 à 72 heures... un créneau prioritaire...\"",
-          "recommendation": "Si les délais sont proscrits, déchiffrer/neutraliser la promesse (sans chiffres) après validation."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "hubIntro",
-          "message": "Incohérence typographique : « compte-rendu » vs « compte rendu » (plusieurs occurrences).",
-          "evidence": "hubIntro: \"... transmet un compte-rendu ...\" ; ailleurs \"compte-rendu photographique\"",
-          "recommendation": "Choisir une forme et harmoniser (souvent « compte rendu » recommandé par l’orthographe rectifiée, ou conserver « compte-rendu » mais uniformiser)."
-        },
-        {
-          "severity": "medium",
-          "category": "style",
-          "path": "hubIntro",
-          "message": "Incohérence de mise en forme dans la liste : deux items avec <strong>...</strong> et le 3e sans <strong> sur l’intitulé.",
-          "evidence": "<li><strong>Coordination locale :</strong> ...</li> ... <li>Suivi et transparence : Reporting ...</li>",
-          "recommendation": "Mettre l’intitulé du 3e item en gras comme les autres (correction minimale)."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].whyUsBullets[1]",
-          "message": "Mention « désinfection virucide » : allégation sanitaire sensible (virucide) pouvant nécessiter preuves/produits homologués et cadre d’usage. Risque légal si non strictement exact.",
-          "evidence": "\"... désinfection virucide ...\"",
-          "recommendation": "Vérifier la conformité (produits, homologation, protocole). Si doute, préférer « désinfection » sans qualifier « virucide »."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "Mention « produit virucide homologué » : allégation réglementée (biocides). À sécuriser (référence d’homologation/usage) ou neutraliser si non garanti.",
-          "evidence": "\"... produit virucide homologué.\"",
-          "recommendation": "Valider juridiquement/techniquement. Si non certain, remplacer par « produit désinfectant adapté »."
-        },
-        {
-          "severity": "medium",
-          "category": "orthographe",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Accord : « moins sollicitées » devrait s’accorder avec « surfaces » (féminin pluriel) → « moins sollicitées » est correct, mais la phrase contient « Ces surfaces moins sollicitées bénéficient... » : OK. En revanche, vigilance sur « sollicitées » vs « sollicitées » (pas d’erreur) ; signalement prudent inutile mais conservé?",
-          "evidence": "\"Ces surfaces moins sollicitées bénéficient...\"",
-          "recommendation": "Aucune correction nécessaire (signalement prudent)."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "services[2].faqAdditions[0].answer",
-          "message": "Présence d’un .replace(\"treatment\", \"traitement\") dans une string template : risque de confusion/maintenance et incohérence avec la règle « uniquement champs string » (c’est une expression).",
-          "evidence": "answer: `<p>... ce treatment ...</p>`.replace(\"treatment\", \"traitement\"),",
-          "recommendation": "Remplacer directement le mot dans la chaîne (sans .replace) pour garder une valeur string simple."
-        },
-        {
-          "severity": "medium",
-          "category": "style",
           "path": "services[2].uniqueIntro",
-          "message": "Registre familier (« On repousse l'apéro dehors ») potentiellement non aligné avec un ton B2B/collectivités.",
-          "evidence": "\"On repousse l'apéro dehors...\"",
-          "recommendation": "Si la charte l’exige, remplacer par une formulation neutre (ex. « on hésite à s’installer dehors ») sans réécriture lourde."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[7].uniqueIntro",
-          "message": "Mention locale potentiellement inexacte : « Parc des Sœurs » à Sevran (à vérifier). Risque d’invention/erreur de toponyme.",
-          "evidence": "\"... autour du Parc des Sœurs ...\"",
-          "recommendation": "Vérifier l’existence/nom exact. Si doute, remplacer par une référence plus générique (sans ajouter de nouveaux lieux)."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[7].uniqueIntro",
-          "message": "Mention « ancien site Kodak » : fait local potentiellement sensible/inexact selon contexte. À vérifier.",
-          "evidence": "\"... sur l'ancien site Kodak ...\"",
-          "recommendation": "Vérifier la pertinence et l’exactitude. Si non certain, supprimer la mention ou la rendre générique."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[0].whyUsBullets[0]",
-          "message": "Référence locale très précise (« bâtiments administratifs du secteur René-Muret ») : à vérifier (risque d’inexactitude ou de sur-spécification).",
-          "evidence": "\"... bâtiments administratifs du secteur René-Muret.\"",
-          "recommendation": "Vérifier que ce « secteur » est une appellation pertinente. Sinon, généraliser sans ajouter de nouveaux faits."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[0].uniqueIntro",
-          "message": "Référence « proche de l'Hôpital René-Muret » : à vérifier (localisation/nom exact).",
-          "evidence": "\"Dans le secteur proche de l'Hôpital René-Muret...\"",
-          "recommendation": "Valider le toponyme/établissement. Si doute, remplacer par « proche de l’hôpital » (sans nom) après validation."
-        },
-        {
-          "severity": "low",
-          "category": "orthographe",
-          "path": "landmarks[0]",
-          "message": "Accent manquant : « Mairie de Sevran » → « Mairie de Sévran » (si convention avec accents).",
-          "evidence": "\"Mairie de Sevran\"",
-          "recommendation": "Harmoniser avec la convention du projet (accents ou non)."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "hubIntro",
-          "message": "Typographie : « compte-rendu » peut être remplacé par « compte rendu » (recommandation orthographique), mais dépend de la charte.",
-          "evidence": "\"... transmet un compte-rendu ...\"",
-          "recommendation": "Uniformiser la forme choisie sur toute la page."
-        },
-        {
-          "severity": "low",
-          "category": "seo",
-          "path": "customDescription",
-          "message": "« Sevran » apparaît sans accent ; selon SEO, les deux variantes existent. Risque faible mais à harmoniser avec la stratégie (accents).",
-          "evidence": "\"... à Sevran ...\"",
-          "recommendation": "Décider d’une convention (avec/sans accents) et l’appliquer partout."
+          "message": "Casse/typographie : « Avenue » au milieu d’une phrase peut s’écrire en minuscule (« avenue ») en français courant. Non bloquant.",
+          "evidence": "« le long de l'Avenue de la Division Leclerc »",
+          "recommendation": "Optionnel : « l’avenue de la Division-Leclerc » (attention au trait d’union : à vérifier)."
         },
         {
           "severity": "low",
           "category": "consistency",
-          "path": "services[3].uniqueDeepDive",
-          "message": "EPI : « masque FFP2 » OK, mais cohérence interne : ailleurs on pourrait utiliser FFP3 selon protocole ; à vérifier (sans changer si non certain).",
-          "evidence": "\"masque FFP2\"",
-          "recommendation": "Vérifier le standard interne EPI pour ce type d’intervention."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "medium",
-          "category": "style",
-          "path": "hubIntro",
-          "reason": "Harmoniser la mise en forme des puces (intitulé en gras comme les autres) sans changer le sens.",
-          "expected": "",
-          "value": "",
-          "find": "<li>Suivi et transparence : Reporting disponible pour les gestionnaires, photos avant/après sur demande, facturation détaillée sans surprise.</li>",
-          "replace": "<li><strong>Suivi et transparence :</strong> Reporting disponible pour les gestionnaires, photos avant/après sur demande, facturation détaillée sans surprise.</li>",
-          "context": "...<li><strong>Interventions adaptées au bâti :</strong> Grands ensembles des années 70, pavillons anciens ou résidences récentes — chaque configuration fait l'objet d'un repérage avant intervention.</li>\n  <li>Suivi et transparence : Reporting disponible pour les gestionnaires, photos avant/après sur demande, facturation détaillée sans surprise.</li>\n</ul>"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/tremblay-en-france.ts",
-      "fileId": "tremblay-en-france",
-      "slug": "tremblay-en-france",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "hubIntro",
-          "message": "Mention géographique potentiellement inexacte : Tremblay-en-France est décrite comme « bordée par le Canal de l'Ourcq ». À vérifier (le canal traverse/est surtout associé à d'autres communes ; proximité possible mais formulation « bordée par » peut être contestable).",
-          "evidence": "\"Au cœur de la plateforme aéroportuaire CDG et bordée par le Canal de l'Ourcq\"",
-          "recommendation": "Si doute confirmé, atténuer la formulation (ex. « à proximité du Canal de l'Ourcq ») sans ajouter de nouveaux faits."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "faq[1].answer",
-          "message": "Promesse de délai potentiellement engageante (« sous 48 heures ») dans une FAQ. Risque légal/contractuel si non systématiquement tenu.",
-          "evidence": "\"Un devis détaillé vous est transmis sous 48 heures.\"",
-          "recommendation": "Atténuer en formulation non engageante (ex. « généralement » / « en général ») ou supprimer le délai si non garanti."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[2].answer",
-          "message": "Promesse/engagement de délai et d'urgence (« faisabilité sous 24 à 48 heures », « priorisons un passage rapide ») pouvant être considérée comme une promesse de service/délai. De plus, le texte introduit une notion d'« urgence » (à éviter selon règles).",
-          "evidence": "\"nous priorisons un passage rapide\" ; \"faisabilité sous 24 à 48 heures\"",
-          "recommendation": "Retirer les délais chiffrés et/ou remplacer par une formulation prudente non chiffrée (« selon disponibilités ») sans ajouter de nouvelles promesses."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[0].heroDescription",
-          "message": "Formulation pouvant être interprétée comme promesse de résultat/délai (« séchage accéléré », « remise en service rapide »).",
-          "evidence": "\"séchage accéléré pour une remise en service rapide\"",
-          "recommendation": "Si non garanti, atténuer (« séchage optimisé » / « remise en service plus rapide selon conditions ») de manière minimale."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Affirmation de délai de remise en service (« varie de quelques heures à une demi-journée ») pouvant être perçue comme engagement.",
-          "evidence": "\"le délai de remise en service varie de quelques heures à une demi-journée\"",
-          "recommendation": "Atténuer (ex. « peut varier ») ou retirer la plage si non garantie."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[0].faqAdditions[1].answer",
-          "message": "Délai chiffré de séchage (« trois à six heures ») potentiellement engageant.",
-          "evidence": "\"comptez généralement trois à six heures\"",
-          "recommendation": "Atténuer davantage (ex. « peut varier ») ou retirer les chiffres si non garantis."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "message": "Allégation technique/réglementaire potentiellement sensible : « produit virucide homologué ». Le terme « homologué » peut impliquer une certification précise (normes/AMM) ; à sécuriser si non documenté.",
-          "evidence": "\"produit virucide homologué\"",
-          "recommendation": "Remplacer par une formulation plus neutre (« produit virucide adapté » / « conforme aux usages ») si vous ne pouvez pas justifier l'homologation."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].whyUsBullets[1]",
-          "message": "Allégation sensible : « désinfection virucide adaptée aux fientes ». Peut nécessiter précision normative ; risque de sur-promesse sanitaire.",
-          "evidence": "\"désinfection virucide adaptée aux fientes\"",
-          "recommendation": "Atténuer si nécessaire (ex. « désinfection adaptée ») sans ajouter de promesse."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].faqAdditions[0].question",
-          "message": "La question contient « prise en charge d'urgence » (promesse d'urgence). Même si c'est une question, cela peut induire une offre d'urgence.",
-          "evidence": "\"quelle prise en charge d'urgence proposez-vous ?\"",
-          "recommendation": "Remplacer « d'urgence » par une formulation neutre (« prioritaire » / « rapide ») si vous ne proposez pas officiellement un service d'urgence."
-        },
-        {
-          "severity": "medium",
-          "category": "legal",
-          "path": "services[3].faqAdditions[0].answer",
-          "message": "Promesse temporelle (« le jour même ») potentiellement engageante.",
-          "evidence": "\"évacués en sacs étanches le jour même\"",
-          "recommendation": "Atténuer (« dans la foulée » / « selon organisation ») si non garanti."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[2].uniqueIntro",
-          "message": "Mention d'un axe/localisation très spécifique (« Avenue du Parc ») à Tremblay-en-France : à vérifier (nom de voie exact et pertinence). Risque d'inexactitude locale.",
-          "evidence": "\"Le long de l'Avenue du Parc\"",
-          "recommendation": "Si non certain, remplacer par une formulation générique sans nom de rue."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[1].whyUsBullets[0]",
-          "message": "Incohérence de dénomination : « secteur Centre-Ville de Tremblay » alors que le reste utilise « Tremblay-en-France ».",
-          "evidence": "\"secteur Centre-Ville de Tremblay\"",
-          "recommendation": "Harmoniser en « Tremblay-en-France » (correction minimale)."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "services[6].whyUsBullets[2]",
-          "message": "Formulation un peu lourde/marketing (« sans accroc »). Pas une faute, mais peut être adoucie si ton attendu plus neutre.",
-          "evidence": "\"une restitution ou une entrée sans accroc\"",
-          "recommendation": "Optionnel : remplacer par une formulation plus neutre (« sans difficulté ») si souhaité."
-        },
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "services[0].uniqueDeepDive",
-          "message": "Commentaire de règle en tête : « HTML autorisé (sans <h3>) » pour certains champs, mais ici uniqueDeepDive contient des <h3>. À vérifier : si la règle « sans <h3> » s'applique aussi aux services, il y a non-conformité.",
-          "evidence": "uniqueDeepDive contient plusieurs \"<h3>\"",
-          "recommendation": "Vérifier la contrainte par champ. Si <h3> interdit ici, remplacer par <h4> ou <p><strong>…</strong></p> de façon minimale."
-        }
-      ],
-      "patches": [
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "low",
-          "category": "style",
-          "path": "services[1].whyUsBullets[0]",
-          "reason": "Harmonisation minimale de la dénomination de la ville (« Tremblay » -> « Tremblay-en-France ») sans changer le sens.",
-          "expected": "",
-          "value": "",
-          "find": "secteur Centre-Ville de Tremblay.",
-          "replace": "secteur Centre-Ville de Tremblay-en-France.",
-          "context": "Connaissance des contraintes d'accès en zone logistique et des parkings souterrains du secteur Centre-Ville de Tremblay."
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/vanves.ts",
-      "fileId": "vanves",
-      "slug": "vanves",
-      "issues": [
-        {
-          "severity": "medium",
-          "category": "consistency",
-          "path": "customDescription",
-          "message": "Mention de « parkings souterrains » sans article (« des parkings souterrains ») : formulation légèrement bancale.",
-          "evidence": "\"... l'entretien des parties communes, parkings souterrains et espaces extérieurs.\"",
-          "recommendation": "Ajouter l’article manquant : « des parkings souterrains »."
-        },
-        {
-          "severity": "low",
-          "category": "style",
-          "path": "customDescription",
-          "message": "« du Plateau » avec majuscule : cohérent avec districts, mais vérifier l’usage local (quartier vs relief).",
-          "evidence": "\"... aux résidences récentes du Plateau.\"",
-          "recommendation": "Conserver si c’est bien le nom de quartier ; sinon harmoniser (mais éviter si incertain)."
-        },
-        {
-          "severity": "medium",
-          "category": "seo",
-          "path": "hubIntro",
-          "message": "Potentiel manque de mention explicite « Vanves (92170) » dans l’intro (SEO local).",
-          "evidence": "hubIntro mentionne Vanves dans le texte, mais pas le code postal.",
-          "recommendation": "Optionnel : ajouter « (92170) » après Vanves si la charte SEO le permet (à valider)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
           "path": "services[3].heroDescription",
-          "message": "Allégation « désinfection virucide » : terme à portée réglementaire/biocide ; risque si absence de preuve/certification et protocole conforme. De plus, « certifiée » est une promesse forte.",
-          "evidence": "\"... désinfection virucide ...\" et whyUsBullets: \"désinfection virucide certifiée.\"",
-          "recommendation": "Si non justifiable, remplacer par une formulation plus prudente (ex. « désinfection avec produit virucide conforme ») ou retirer « certifiée ». À valider avec l’équipe conformité."
+          "message": "« désinfection virucide » : terme technique potentiellement sensible (allégation). Sans précision de norme/produit, cela peut être perçu comme promesse sanitaire forte.",
+          "evidence": "« désinfection virucide »",
+          "recommendation": "Vérifier que l’entreprise utilise bien des produits homologués et que la communication « virucide » est autorisée. Sinon, préférer « désinfection » (mais ce serait un changement de sens)."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/asnieres-sur-seine.ts",
+      "fileId": "asnieres-sur-seine",
+      "slug": "asnieres-sur-seine",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[1].answer",
+          "message": "Promesse de délai (« sous 24 à 48 heures ») : risque de non-conformité si non garanti contractuellement. À minima, formulation à prudence/indicatif recommandée.",
+          "evidence": "« Nous répondons généralement sous 24 à 48 heures. »",
+          "recommendation": "Atténuer en formulation non engageante (ex. « en général » est déjà présent, mais on peut éviter le format trop précis) ou supprimer la plage chiffrée si non contractualisée."
         },
         {
           "severity": "high",
+          "category": "legal",
+          "path": "faq[2].answer",
+          "message": "Promesse d'urgence et délai chiffré (« intervenir sous 24 à 72 heures ») : engagement potentiellement risqué (publicité/contractuel) et peut contrevenir aux règles internes « pas d'ajout de promesses ». Même si déjà présent, c'est un point de vigilance.",
+          "evidence": "« pouvons généralement intervenir sous 24 à 72 heures »",
+          "recommendation": "Remplacer par une formulation non chiffrée et conditionnelle (ex. « dans les meilleurs délais selon disponibilité ») si la politique Klinova ne garantit pas ces délais."
+        },
+        {
+          "severity": "medium",
           "category": "legal",
           "path": "services[3].uniqueDeepDive",
-          "message": "« produit virucide et bactéricide homologué » : « homologué » est une allégation réglementaire potentiellement inexacte (AMM/biocide).",
-          "evidence": "\"Un produit virucide et bactéricide homologué est appliqué...\"",
-          "recommendation": "Remplacer « homologué » par « conforme » / « adapté » si vous ne pouvez pas prouver l’homologation."
+          "message": "Délai chiffré de réutilisation (« sous 24 à 48 heures ») : promesse temporelle potentiellement engageante.",
+          "evidence": "« ... prépare le balcon à une réutilisation sous 24 à 48 heures selon ventilation. »",
+          "recommendation": "Remplacer par une formulation non chiffrée (ex. « après un temps d’aération adapté ») si non garanti."
         },
         {
           "severity": "medium",
           "category": "factual_suspect",
-          "path": "services[4].uniqueIntro",
-          "message": "Affirmation générale « appartements majoritaires de Vanves, souvent des studios ou T2 » : statistique implicite non sourcée, potentiellement contestable.",
-          "evidence": "\"Dans les appartements majoritaires de Vanves, souvent des studios ou T2...\"",
-          "recommendation": "Neutraliser la généralisation (ex. retirer « majoritaires » / « souvent ») ou reformuler sans prétention statistique."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[3].answer",
-          "message": "Promesse de délai « passage sous 48 à 72 heures » assimilable à engagement de délai (même conditionnel). Risque de non-conformité avec la règle interne « pas d'ajout de promesses/délais » et risque commercial si non tenu.",
-          "evidence": "\"... proposer un passage sous 48 à 72 heures\"",
-          "recommendation": "Remplacer par une formulation sans délai chiffré (ex. « dans les meilleurs délais selon planning »)."
-        },
-        {
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[3].answer",
-          "message": "Promesse de délai « sous 24 à 48 heures » (urgence locative) : engagement chiffré potentiellement non tenable et contraire aux règles conservatrices.",
-          "evidence": "\"... intervenir sous 24 à 48 heures.\"",
-          "recommendation": "Remplacer par « dans les meilleurs délais selon disponibilités » sans chiffre."
+          "path": "hubIntro",
+          "message": "Mention « trois stations de la ligne 13 » : point factuel à vérifier (nombre exact de stations ligne 13 sur la commune).",
+          "evidence": "« ... et les trois stations de la ligne 13 ... »",
+          "recommendation": "Vérifier la donnée. En cas de doute, remplacer par une formulation non chiffrée (« plusieurs stations de la ligne 13 »)."
         },
         {
           "severity": "medium",
           "category": "factual_suspect",
-          "path": "services[0].faqAdditions[2].question",
-          "message": "Références à « Hachette ou Audiens » : entreprises/occupants locaux non justifiés, risque d’inexactitude ou d’association non autorisée.",
-          "evidence": "\"... des bureaux comme ceux de Hachette ou Audiens\"",
-          "recommendation": "Remplacer par une formulation générique (« des bureaux du secteur ») pour éviter toute référence non vérifiable."
+          "path": "services[6].uniqueIntro",
+          "message": "Stations citées « Gabriel Péri » et « Les Agnettes » associées à Asnières-sur-Seine : à vérifier (localisation exacte selon communes/arrêts).",
+          "evidence": "« ... comme Gabriel Péri ou Les Agnettes ... »",
+          "recommendation": "Vérifier l’exactitude. Si incertain, remplacer par une formulation générique (« les stations de la ligne 13 à proximité ») sans citer de noms."
         },
         {
           "severity": "medium",
           "category": "factual_suspect",
           "path": "services[2].uniqueIntro",
-          "message": "Mention « Avenue du Parc » : odonyme potentiellement inexact à Vanves (à vérifier).",
-          "evidence": "\"... secteur Avenue du Parc ...\"",
-          "recommendation": "Vérifier l’existence exacte de la voie ; sinon remplacer par une mention plus générique (sans inventer)."
+          "message": "Référence à la D909 et à une « pollution routière » : axe routier à vérifier sur la commune et risque de sur-spécification locale.",
+          "evidence": "« pollution routière de la D909 »",
+          "recommendation": "Vérifier que la D909 traverse/impacte bien Asnières-sur-Seine. Sinon, généraliser (« pollution routière ») sans numéro de route."
         },
         {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[1].faqAdditions[1].question",
-          "message": "Mention précise « rue Jean Bleuzen » : fait local très spécifique ; à vérifier (adresse/voie) pour éviter erreur.",
-          "evidence": "\"... parking souterrain rue Jean Bleuzen\"",
-          "recommendation": "Si non certain, généraliser (« dans une rue du secteur ») ou vérifier la voie."
-        },
-        {
-          "severity": "medium",
-          "category": "factual_suspect",
-          "path": "services[1].faqAdditions[2].question",
-          "message": "Mention « Carrefour de l'Insurrection » : toponyme/enseigne potentiellement inexact ; à vérifier.",
-          "evidence": "\"... proche du Carrefour de l'Insurrection\"",
-          "recommendation": "Vérifier l’appellation exacte ; sinon remplacer par « carrefour de l’Insurrection » (sans marque) ou formulation générique."
+          "severity": "low",
+          "category": "style",
+          "path": "services[2].uniqueDeepDive",
+          "message": "Mot potentiellement incorrect : « bâchons » (verbe) semble être une faute (probable « bâchons » vs « bâchons » est correct mais registre oral ; plus standard : « bâchons » reste acceptable).",
+          "evidence": "« ... ou les bâchons sur place. »",
+          "recommendation": "Préférer une tournure plus neutre (« ou les bâchons » → « ou les bâchons ») ; si correction, viser « ou les bâchons sur place » → « ou les bâchons sur place » (pas de gain). À vérifier : alternative « ou les bâchons »/« ou les couvrons d’une bâche » (mais ce serait une réécriture)."
         },
         {
           "severity": "low",
           "category": "orthographe",
           "path": "services[1].uniqueDeepDive",
-          "message": "Typographie : « résultat visé : » peut être remplacé par « résultat visé : » ok, mais style ; rien de bloquant.",
-          "evidence": "\"Le résultat visé : un béton...\"",
-          "recommendation": "Optionnel : reformuler en phrase complète si souhaité (non nécessaire)."
+          "message": "Accord : « le produit utilisés » devrait être « le produit utilisé » (accord singulier). Correction mécanique.",
+          "evidence": "« ... détermine la pression et le produit utilisés. »",
+          "recommendation": "Corriger en « le produit utilisé »."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[3].specificChallenges[0]",
+          "message": "Terme : « nidifications » est peu idiomatique dans ce contexte ; on dit plutôt « nidification » (singulier) ou « nidification/installation ». Correction légère possible.",
+          "evidence": "« propices aux nidifications »",
+          "recommendation": "Remplacer par « propices à la nidification » (sans changer le sens)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[0].uniqueDeepDive",
+          "message": "Formulation : « Une consigne de non-piétinement » est un peu lourde/technique ; acceptable mais améliorable. (Pas nécessaire si corrections minimales.)",
+          "evidence": "« Une consigne de non-piétinement est transmise »",
+          "recommendation": "Optionnel : « Une consigne de ne pas piétiner… » (mais cela relève de la réécriture, à éviter)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[0].whyUsBullets[0]",
+          "message": "« secteur Bécon » vs ailleurs « Bécon-les-Bruyères » : cohérence de dénomination (préférer la forme complète).",
+          "evidence": "« ... du secteur Bécon. »",
+          "recommendation": "Harmoniser en « Bécon-les-Bruyères » si c’est bien l’intention."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "fileId": "boulogne-billancourt",
+      "slug": "boulogne-billancourt",
+      "issues": [
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "customDescription",
+          "message": "Formulation légèrement elliptique : « une équipe locale adaptée… » sans verbe (sous-entendu « intervient »). Ce n’est pas fautif, mais peut être amélioré pour la fluidité.",
+          "evidence": "« ... une équipe locale adaptée aux exigences du bâti boulonnais. »",
+          "recommendation": "Ajouter un verbe minimal sans changer le sens (ex. « avec une équipe locale, adaptée… »)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "hubIntro",
+          "message": "Typographie : espace insécable recommandée avant les deux-points en français (ici, espaces simples).",
+          "evidence": "« <strong>Coordination accès :</strong> », « <strong>Adaptation au stationnement :</strong> », « <strong>Méthodes ajustées au bâti :</strong> »",
+          "recommendation": "Remplacer «  : » par « : » (espace insécable) avant « : » dans ces libellés."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[0]",
+          "message": "Affirmation potentiellement sensible/localisée : « en zone inondable » et « nécessitant parfois pompage » peut être perçu comme un fait local généralisant (et une capacité opérationnelle).",
+          "evidence": "« Parkings souterrains profonds en zone inondable, nécessitant parfois pompage après épisodes pluvieux. »",
+          "recommendation": "Si non sourcé, atténuer (ex. « pouvant être exposés à des infiltrations ») sans ajouter de promesse. (Patch non proposé car réécriture)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[3]",
+          "message": "Référence à une source de pollution précise (A13) : peut être contestable selon les zones exactes ; prudence fact-check.",
+          "evidence": "« retombées de pollution de l'A13 et des quais de Seine »",
+          "recommendation": "Si besoin, généraliser (« axes routiers ») sans ajouter de nouveaux faits. (Pas de patch : réécriture)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "districts[1]",
+          "message": "Incohérence possible d’orthographe du toponyme : « Silly-Gallieni » est souvent écrit « Silly-Gallieni » mais l’avenue/nom « Gallieni » peut aussi apparaître « Gallieni » (ok) ; vérifier la graphie officielle du quartier (parfois « Silly-Gallieni » / « Silly-Gallieni »).",
+          "evidence": "« Silly-Gallieni »",
+          "recommendation": "Vérifier la graphie officielle de la ville/quartier. Pas de correction proposée sans certitude."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].whyUsBullets[1]",
+          "message": "Allégation réglementaire potentiellement sensible : « désinfection virucide homologuée ». Le terme « homologuée » peut impliquer une conformité réglementaire précise (normes/AMM) qui doit être justifiable.",
+          "evidence": "« ... désinfection virucide homologuée. »",
+          "recommendation": "Si non documenté, préférer une formulation neutre (ex. « désinfection virucide conforme aux recommandations fabricant ») — nécessite réécriture, donc pas de patch safe."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].uniqueDeepDive",
+          "message": "Mention d’EPI « masque FFP2 » : ok, mais attention à la conformité réelle des procédures ; et « produit virucide » implique un biocide avec conditions d’usage. Prudence si non systématique.",
+          "evidence": "« masque FFP2... » / « produit virucide »",
+          "recommendation": "S’assurer que ces éléments sont réellement appliqués et documentables. Sinon, atténuer. (Pas de patch : réécriture)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[6].faqAdditions[0].answer",
+          "message": "Promesse de délai chiffré (« sous 48 à 72 heures ») : peut être considéré comme engagement commercial. À valider côté opérationnel et juridique.",
+          "evidence": "« ... intervenir sous 48 à 72 heures ... »",
+          "recommendation": "Si non garanti, remplacer par une formulation non chiffrée (« dans les meilleurs délais »). (Pas de patch safe : réécriture)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[1].uniqueIntro",
+          "message": "Accord/forme : « trafic véhicule intense » sonne incorrect ; on attend « trafic de véhicules intense » ou « trafic routier intense ».",
+          "evidence": "« trafic véhicule intense le long des axes A13 et D910 »",
+          "recommendation": "Corriger en « trafic de véhicules intense » (correction grammaticale minimale)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[2].faqAdditions[3].question",
+          "message": "Terme possiblement inadapté localement : « balcons haussmanniens » à Boulogne-Billancourt peut être discutable (Haussmann surtout Paris). Fact-check prudent.",
+          "evidence": "« balcons haussmanniens de Boulogne »",
+          "recommendation": "Si doute, remplacer par « balcons anciens » (réécriture ; pas de patch safe)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].uniqueDeepDive",
+          "message": "Typographie : « comptez entre 4 et 12 heures » ok, mais cohérence avec FAQ qui dit 4–8h ; ce n’est pas une erreur mais peut créer une perception d’incohérence.",
+          "evidence": "DeepDive: « entre 4 et 12 heures » vs FAQ: « entre 4 et 8 heures »",
+          "recommendation": "Harmoniser les fourchettes si possible (sans ajouter de promesse). Pas de patch proposé sans arbitrage éditorial."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/colombes.ts",
+      "fileId": "colombes",
+      "slug": "colombes",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[0].answer",
+          "message": "Présence d'une promesse de délai (« réactivité sous 24 à 48 heures ») : risque de non-conformité aux règles (ajout/affirmation de délai) et risque légal/marketing si non systématiquement tenu.",
+          "evidence": "« réactivité sous 24 à 48 heures »",
+          "recommendation": "Remplacer par une formulation non chiffrée et non engageante (ex. « réactivité rapide » / « selon disponibilités ») sans ajouter de nouvelle promesse."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[1].answer",
+          "message": "Promesse de gratuité (« passage gratuit ») + promesse de délai (« Le devis détaillé suit sous 48 heures »). Risque légal/marketing si conditions non précisées et non systématiquement tenues ; non conforme aux règles de prudence.",
+          "evidence": "« passage gratuit » ; « Le devis détaillé suit sous 48 heures. »",
+          "recommendation": "Remplacer par une formulation non engageante (ex. « passage sur place » / « devis transmis après la visite ») sans délai chiffré."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[0].uniqueDeepDive",
+          "message": "Affirmation chiffrée sur le délai de séchage (« sous 4 à 8 heures ») : promesse potentiellement contestable selon conditions (ventilation, hygrométrie, épaisseur).",
+          "evidence": "« le séchage complet intervient généralement sous 4 à 8 heures. »",
+          "recommendation": "Remplacer par une formulation non chiffrée ou plus prudente sans engagement (ex. « en quelques heures selon les conditions »)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[0].faqAdditions[1].answer",
+          "message": "Délai de séchage chiffré (« 4 à 6 heures », « le lendemain matin ») : promesse de résultat/délai dépendante des conditions, potentiellement non tenue.",
+          "evidence": "« le séchage complet prend généralement 4 à 6 heures » ; « sèche le lendemain matin »",
+          "recommendation": "Rendre la phrase plus conditionnelle et/ou supprimer les chiffres si la règle interne interdit les délais."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[6].faqAdditions[0].answer",
+          "message": "Promesse de délai d'intervention (« sous 24 à 48 heures », « le samedi matin reste souvent possible ») : engagement temporel potentiellement non tenu, et contraire aux règles de prudence.",
+          "evidence": "« intervenir sous 24 à 48 heures » ; « le samedi matin reste souvent possible »",
+          "recommendation": "Remplacer par une formulation sans délai chiffré et sans créneau garanti (ex. « selon disponibilités »)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "Typographie : « comptes-rendus » est acceptable mais la forme recommandée en français courant est « comptes rendus » (sans trait d’union).",
+          "evidence": "« des comptes-rendus sur demande »",
+          "recommendation": "Remplacer par « des comptes rendus » (correction typographique)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "customDescription",
+          "message": "Cohérence typographique : « parkings souterrains » est OK, mais la liste manque d’article défini avant « parkings » (style) ; toutefois la phrase reste correcte. Point de vigilance mineur.",
+          "evidence": "« l'entretien des parties communes, parkings souterrains et espaces extérieurs »",
+          "recommendation": "Optionnel : « l'entretien des parties communes, des parkings souterrains et des espaces extérieurs » (si vous acceptez une micro-correction de parallélisme)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[0].whyUsBullets[0]",
+          "message": "Formulation potentiellement étrange : « configurations tertiaires colombiennes » (adjectif « colombiennes » appliqué à « configurations tertiaires ») peut sonner artificiel.",
+          "evidence": "« configurations tertiaires colombiennes »",
+          "recommendation": "Alléger sans changer le sens (ex. « configurations tertiaires à Colombes »)."
+        },
+        {
+          "severity": "low",
+          "category": "factual_suspect",
+          "path": "services[0].uniqueIntro",
+          "message": "Mention locale très spécifique (« zone Kléber ») : peut être correct mais à vérifier (risque de micro-inexactitude toponymique/usage local).",
+          "evidence": "« flux tertiaires de la zone Kléber »",
+          "recommendation": "Vérifier l’existence/pertinence de l’appellation « zone Kléber » à Colombes ; sinon remplacer par une formulation plus générique sans nouveau fait local."
+        },
+        {
+          "severity": "low",
+          "category": "factual_suspect",
+          "path": "services[2].uniqueIntro",
+          "message": "Mention très spécifique (« rue Saint-Denis ») : peut être correct mais à vérifier (risque d’inexactitude locale si la rue n’est pas un repère pertinent pour Colombes).",
+          "evidence": "« Dans le secteur de la rue Saint-Denis »",
+          "recommendation": "Vérifier que la rue Saint-Denis est bien un repère local pertinent à Colombes ; sinon généraliser (sans ajouter de nouveaux lieux)."
+        },
+        {
+          "severity": "low",
+          "category": "factual_suspect",
+          "path": "services[3].uniqueIntro",
+          "message": "Mention très spécifique (« autour de l'église Saint-Pierre-Saint-Paul ») : plausible mais à vérifier (risque d’inexactitude ou de ciblage trop précis).",
+          "evidence": "« notamment autour de l'église Saint-Pierre-Saint-Paul »",
+          "recommendation": "Vérifier l’existence et la pertinence locale ; sinon retirer le « notamment autour de… » ou généraliser."
+        },
+        {
+          "severity": "low",
+          "category": "factual_suspect",
+          "path": "services[6].uniqueIntro",
+          "message": "Mention « gare du Stade » : à vérifier (nom exact de la gare/arrêt ; risque de confusion avec « Stade de Colombes » / « Le Stade »).",
+          "evidence": "« Dans le secteur de la gare du Stade »",
+          "recommendation": "Vérifier l’appellation exacte ; si doute, remplacer par une formulation plus générique (ex. « près du stade ») sans créer de nouveau fait local."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[5].uniqueIntro",
+          "message": "« dalles sur plots en ZAC » : formulation abrégée ; pourrait gagner en clarté (« en ZAC ») mais reste compréhensible. Point mineur.",
+          "evidence": "« dalles sur plots en ZAC »",
+          "recommendation": "Optionnel : « dalles sur plots dans les ZAC » (si cohérent avec le reste)."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "fileId": "courbevoie",
+      "slug": "courbevoie",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "customDescription",
+          "message": "Mention de lieux/secteurs précis (« Du quartier Bécon aux immeubles proches de La Défense ») : possible, mais à vérifier car cela ancre la page sur des repères locaux. Risque si la couverture réelle n'inclut pas ces zones.",
+          "evidence": "\"Du quartier Bécon aux immeubles proches de La Défense\"",
+          "recommendation": "Conserver si exact. Sinon, remplacer par une formulation plus neutre sans ajouter de nouveaux faits (ex. retirer la référence à La Défense)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "Formulation un peu lourde : « typologies de bâtiments variées ». Pas une faute, mais style perfectible.",
+          "evidence": "\"Courbevoie concentre des typologies de bâtiments variées\"",
+          "recommendation": "Optionnel : remplacer « des typologies de bâtiments variées » par « des typologies de bâtiments variées » n'apporte pas d'amélioration; envisager « des typologies de bâtiments variées » -> « des typologies de bâtiments variées » (sinon laisser)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].whyUsBullets[2]",
+          "message": "Orthographe/usage : « weekend » est généralement écrit « week-end » en français.",
+          "evidence": "\"en soirée ou le weekend\"",
+          "recommendation": "Remplacer « weekend » par « week-end » (correction mécanique)."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[0].faqAdditions[1].answer",
+          "message": "Affirmation chiffrée potentiellement engageante sur le temps de séchage (4 à 8 heures) + recommandation de planification (« fin de semaine... lundi matin »). Risque de promesse implicite selon conditions réelles.",
+          "evidence": "\"Le séchage varie entre 4 et 8 heures\" ; \"Nous recommandons de planifier l'intervention en fin de semaine pour une remise en service complète le lundi matin.\"",
+          "recommendation": "Si vous devez rester conservateur légalement, atténuer (sans ajouter de nouvelles promesses) ou retirer la phrase de recommandation. À défaut, garder mais valider en interne."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[1].uniqueIntro",
+          "message": "Formulation : « générant accumulation de » manque un article (« une accumulation de »).",
+          "evidence": "\"générant accumulation de poussières\"",
+          "recommendation": "Ajouter « une » (correction grammaticale simple)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[2].uniqueDeepDive",
+          "message": "Phrase dupliquée à l'identique (répétition).",
+          "evidence": "\"Les garde-corps en verre ou acier reçoivent un traitement spécifique pour éliminer traces grasses et dépôts atmosphériques.\" apparaît deux fois",
+          "recommendation": "Supprimer une occurrence (idéalement la seconde) sans modifier la structure HTML (ne supprimer que le texte de la phrase dupliquée)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[5].uniqueDeepDive",
+          "message": "Phrase dupliquée à l'identique (répétition).",
+          "evidence": "\"La haute pression intervient uniquement sur les supports qui la tolèrent, avec réglage adapté pour préserver joints et finitions.\" apparaît deux fois",
+          "recommendation": "Supprimer une occurrence (idéalement la seconde) sans modifier la structure HTML (ne supprimer que le texte de la phrase dupliquée)."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[6].specificChallenges[0]",
+          "message": "Promesse/délai : « intervention sous 48h possible » est une promesse de délai (même conditionnée) susceptible d'être non tenue.",
+          "evidence": "\"intervention sous 48h possible selon planning\"",
+          "recommendation": "Atténuer ou retirer la mention de délai (ex. supprimer « sous 48h ») si vous ne pouvez pas le garantir."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[6].faqAdditions[3].answer",
+          "message": "Promesse/délai : « sous 24 à 48h » est une promesse de délai pour une demande urgente.",
+          "evidence": "\"une intervention sous 24 à 48h est envisageable\"",
+          "recommendation": "Atténuer/supprimer la mention chiffrée si non garantie. Préférer une formulation non chiffrée (sans ajouter de nouvelles promesses)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[6].faqAdditions[3].question",
+          "message": "Typographie : « 24 à 48h » devrait s'écrire « 24 à 48 h » (espace avant l'unité).",
+          "evidence": "\"sous 24 à 48h\"",
+          "recommendation": "Ajouter l'espace : « 48 h ». (Si vous conservez la mention chiffrée.)"
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[2].faqAdditions[0].question",
+          "message": "Référence locale très précise (« boulevard de Verdun ») : à vérifier (existence/pertinence à Courbevoie). Risque de fait local inexact.",
+          "evidence": "\"boulevard de Verdun à Courbevoie\"",
+          "recommendation": "Si non certain, remplacer par une formulation générique (« un boulevard passant ») sans ajouter de nouveaux lieux."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[4].uniqueIntro",
+          "message": "Mention locale précise (« Rue de Bezons ») : à vérifier (existence/pertinence à Courbevoie).",
+          "evidence": "\"Rue de Bezons\"",
+          "recommendation": "Si doute, retirer la rue et garder une mention générique (« à Courbevoie ») sans ajouter de nouveaux faits."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[6].uniqueIntro",
+          "message": "Mention locale précise (« Avenue de la Liberté ») : à vérifier (existence/pertinence à Courbevoie).",
+          "evidence": "\"Avenue de la Liberté\"",
+          "recommendation": "Si doute, retirer la rue/avenue et garder une mention générique (« à Courbevoie ») sans ajouter de nouveaux faits."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[4].uniqueDeepDive",
+          "message": "Typographie : espace insécable recommandée avant « heures » (ici OK), mais « 4 et 8 heures » est correct. En revanche, cohérence avec d'autres occurrences « 4 à 8 heures » : variation de style.",
+          "evidence": "\"entre 4 et 8 heures\" vs ailleurs \"4 et 8 heures\" / \"4 à 8 heures\"",
+          "recommendation": "Optionnel : harmoniser (sans changer le sens)."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "fileId": "fontenay-aux-roses",
+      "slug": "fontenay-aux-roses",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "hubIntro",
+          "message": "Mention de « site historique du CEA » : formulation potentiellement discutable/à vérifier (le CEA est bien présent, mais le qualificatif « historique » peut être interprété comme un fait non sourcé).",
+          "evidence": "« ...et site historique du CEA... »",
+          "recommendation": "Si vous souhaitez rester strictement factuel, retirer/atténuer le qualificatif (« site du CEA ») sans ajouter d'information nouvelle."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "faq[1].answer",
+          "message": "Promesse de délai (« sous 24 à 48 heures ») : engagement temporel pouvant être considéré comme une promesse commerciale. À valider juridiquement/ops si c’est réellement tenu.",
+          "evidence": "« ...nous revenons vers vous sous 24 à 48 heures... »",
+          "recommendation": "Si vous ne pouvez pas garantir ce délai, remplacer par une formulation non engageante (ex. « dans les meilleurs délais »). Correction non mécanique => à traiter manuellement."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "faq[2].answer",
+          "message": "Promesse de délai d’intervention (« sous 24 à 72 heures ») : engagement temporel explicite, potentiellement risqué si non garanti.",
+          "evidence": "« ...une intervention sous 24 à 72 heures... »",
+          "recommendation": "Remplacer par une formulation non chiffrée (ex. « dans les meilleurs délais selon disponibilité ») si nécessaire. À traiter manuellement (pas de patch automatique)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].heroDescription",
+          "message": "Allégation « désinfection virucide » : terme technique/réglementé. Sans précision (norme EN, produit homologué, conditions), cela peut être juridiquement sensible (allégation biocide).",
+          "evidence": "« ...désinfection virucide des supports... »",
+          "recommendation": "Vérifier que les produits/protocoles répondent bien aux exigences (ex. virucide selon EN 14476) et, si besoin, reformuler plus prudemment (ex. « désinfection ») ou préciser la conformité (si vrai)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].whyUsBullets[1]",
+          "message": "« désinfection virucide certifiée » : notion de certification potentiellement trompeuse si aucune certification formelle n’existe/ n’est pas documentée.",
+          "evidence": "« ...désinfection virucide certifiée... »",
+          "recommendation": "Remplacer « certifiée » par « conforme »/« avec produit homologué » uniquement si vous pouvez le prouver, sinon retirer le terme. À traiter manuellement."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].uniqueDeepDive",
+          "message": "« produit virucide homologué » : allégation réglementée (biocides). À vérifier (AMM/TP, usage, normes).",
+          "evidence": "« ...produit virucide homologué... »",
+          "recommendation": "Si non justifiable, préférer « produit désinfectant adapté » ou « désinfectant conforme aux normes applicables » (si vrai). Modification non mécanique => manuelle."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].faqAdditions[2].answer",
+          "message": "Répétition d’allégations « virucide et bactéricide homologué » : même risque réglementaire (biocides) + nécessité de preuve.",
+          "evidence": "« Un produit virucide et bactéricide homologué... »",
+          "recommendation": "Vérifier la conformité et la preuve ; sinon reformuler plus générique. À traiter manuellement."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[2].uniqueIntro",
+          "message": "Référence à « pollution de la D906 » : la D906 existe dans le secteur, mais l’affirmation de pollution déposant un voile grisâtre est une généralisation locale non sourcée.",
+          "evidence": "« ...la pollution de la D906 dépose un voile grisâtre... »",
+          "recommendation": "Si vous voulez rester strictement prudent, remplacer par une formulation plus générale (« la pollution urbaine ») sans citer un axe précis, ou conserver si vous assumez l’assertion."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "Cohérence typographique : « Coordination simplifiée : Un interlocuteur unique » -> majuscule après deux-points non nécessaire en français courant.",
+          "evidence": "« Coordination simplifiée : Un interlocuteur unique... »",
+          "recommendation": "Mettre « un » en minuscule après « : » (correction mécanique)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[0].uniqueIntro",
+          "message": "Anglicisme/typographie : « open spaces » souvent écrit « open-spaces » en français ; à harmoniser si souhaité.",
+          "evidence": "« ...Les dalles textiles des open spaces... »",
+          "recommendation": "Harmoniser en « open-spaces » (optionnel)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[3].uniqueDeepDive",
+          "message": "Incohérence interne : le texte mentionne « produit virucide homologué » puis « produit bactéricide » (sans virucide) plus bas ; manque d’alignement terminologique.",
+          "evidence": "« ...produit virucide homologué... » / « Le produit bactéricide agit... »",
+          "recommendation": "Aligner les termes (si vous gardez virucide, rester cohérent) ; à traiter manuellement compte tenu du risque légal."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "fileId": "levallois-perret",
+      "slug": "levallois-perret",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "consistency",
+          "path": "department.name",
+          "message": "Nom de département en minuscules alors que c’est un nom propre ; incohérence possible avec d’autres villes (souvent capitalisé).",
+          "evidence": "\"hauts-de-seine\"",
+          "recommendation": "Vérifier la convention globale du projet (name vs slug). Si 'name' est affiché, préférer \"Hauts-de-Seine\"."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "hubIntro",
+          "message": "Mention d’un \"Hôtel de Ville monumental\" : qualificatif subjectif et potentiellement discutable/factuel. Risque de sur-promesse descriptive locale.",
+          "evidence": "\"Entre l'Hôtel de Ville monumental\"",
+          "recommendation": "Remplacer par une formulation neutre (ex. \"l'Hôtel de Ville\") sans ajouter d’informations."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "hubIntro",
+          "message": "Référence à des \"parkings Indigo\" et \"So Ouest\" : marque/enseigne et affirmation locale potentiellement inexacte (présence/gestion).",
+          "evidence": "\"(parkings Indigo, So Ouest)\"",
+          "recommendation": "Éviter les marques ou citer de façon générique (ex. \"parkings publics\") si la présence exacte n’est pas certaine."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[0]",
+          "message": "Indication chiffrée \"(-3/-4 niveaux)\" : détail potentiellement variable selon les immeubles, donc factuellement risqué.",
+          "evidence": "\"(-3/-4 niveaux)\"",
+          "recommendation": "Retirer la précision chiffrée ou la rendre générique (ex. \"sur plusieurs niveaux\") sans ajouter de promesse."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[2]",
+          "message": "Affirmation locale précise sur la pollution \"balcons côté Quai Michelet\" : peut être discutable et trop spécifique.",
+          "evidence": "\"Pollution atmosphérique marquée sur les <strong>balcons côté Quai Michelet</strong>\"",
+          "recommendation": "Rendre plus général (ex. \"sur certains axes\"), ou vérifier la pertinence locale exacte."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[2]",
+          "message": "Nom de voie potentiellement incorrect/ambigu : \"Quai Michelet\" à Levallois-Perret n’est pas certain (risque de confusion avec d’autres communes).",
+          "evidence": "\"Quai Michelet\"",
+          "recommendation": "Vérifier l’existence exacte de la voie à Levallois-Perret ; sinon remplacer par une mention plus générique (ex. \"quais\"), sans ajouter de nouveau lieu."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "citySpecificChallenges[5]",
+          "message": "Mention \"immeubles haussmanniens\" à Levallois-Perret : typologie architecturale possible mais potentiellement discutable selon les secteurs.",
+          "evidence": "\"immeubles haussmanniens du quartier Greffulhe\"",
+          "recommendation": "Si non certain, remplacer par \"immeubles anciens\" (neutre) en conservant le sens."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "districts",
+          "message": "Liste de quartiers : risque factuel si certains noms ne correspondent pas aux dénominations officielles/localement reconnues.",
+          "evidence": "\"Jean Zay\", \"Collange\", \"Alsace\", etc.",
+          "recommendation": "Vérifier la liste vs quartiers officiels/usage local. En cas de doute, utiliser des secteurs plus génériques (centre-ville, Front de Seine, etc.) sans inventer."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "landmarks",
+          "message": "\"Île de la Jatte\" est principalement associée à Neuilly-sur-Seine/Levallois ; l’inclure comme repère de Levallois peut être discutable selon le cadrage.",
+          "evidence": "\"Île de la Jatte\"",
+          "recommendation": "Vérifier la cohérence éditoriale (repères proches vs dans la commune). Si la règle exige des repères strictement dans la ville, retirer."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "faq[2].answer",
+          "message": "Annonce d’un délai de devis \"sous 24 à 48 heures\" : promesse/délai commercial pouvant engager et varier ; risque légal/qualité si non garanti.",
+          "evidence": "\"un devis sous <strong>24 à 48 heures</strong>\"",
+          "recommendation": "Remplacer par une formulation non engageante (ex. \"dans les meilleurs délais\" / \"généralement sous ...\" déjà présent mais reste un engagement). À valider avec le juridique/commercial."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[0].faqAdditions[3].answer",
+          "message": "Indication de délai de séchage \"4 à 8 heures\" : peut être interprété comme engagement de résultat/temps, variable selon conditions.",
+          "evidence": "\"comptez entre 4 et 8 heures\"",
+          "recommendation": "Conserver une fourchette mais renforcer le conditionnel (ex. \"souvent\" / \"à titre indicatif\") si la charte le permet, sans ajouter de promesse ferme."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[7].faqAdditions[3].answer",
+          "message": "Promesse \"repasse ciblée ... sans frais supplémentaires\" : engagement commercial explicite pouvant nécessiter validation (conditions, limites).",
+          "evidence": "\"une repasse ciblée est effectuée sans frais supplémentaires\"",
+          "recommendation": "Valider avec l’équipe commerciale/juridique ; sinon neutraliser (ex. \"nous ajustons si nécessaire\") sans mention de gratuité."
+        },
+        {
+          "severity": "medium",
+          "category": "orthographe",
+          "path": "hubIntro",
+          "message": "Typographie française : espace insécable avant deux-points recommandé (ici espace simple).",
+          "evidence": "\"spécificités locales : accès\"",
+          "recommendation": "Remplacer par une espace insécable (ou fine insécable) avant « : » si la stack le supporte (ex. \"locales&nbsp;:\")."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[0].specificChallenges[0]",
+          "message": "Formulation télégraphique : manque de préposition \"des\" (lisibilité).",
+          "evidence": "\"Dalles textiles bureaux Trézel\"",
+          "recommendation": "Corriger minimalement en \"Dalles textiles de bureaux (Trézel)\" si conforme à la charte, sans ajouter de fait."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].faqAdditions[0].question",
+          "message": "Orthographe : \"shampouinage\" est acceptable, mais la forme la plus courante est \"shampooing\" / \"shampouinage\" selon guide ; risque d’incohérence terminologique SEO.",
+          "evidence": "\"matériel de shampouinage\"",
+          "recommendation": "Harmoniser avec la terminologie du site (si ailleurs \"shampooing moquette\" est utilisé)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[5].whyUsBullets[0]",
+          "message": "\"rooftops en ZAC\" : mention d’une ZAC et association à des rooftops peut être trop spécifique/localement discutable.",
+          "evidence": "\"des rooftops en ZAC\"",
+          "recommendation": "Rendre plus générique (ex. \"dans les secteurs récents\") si non certain."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[5].specificChallenges[1]",
+          "message": "\"ZAC Collange\" : existence/dénomination exacte incertaine ; risque factuel local.",
+          "evidence": "\"ZAC Collange\"",
+          "recommendation": "Vérifier la dénomination ; sinon retirer \"ZAC\" et garder \"Collange\" (déjà listé comme quartier) ou formulation neutre."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[4].uniqueIntro",
+          "message": "Mention de \"rue du Président Wilson\" : voie potentiellement existante mais à vérifier (risque de confusion avec d’autres communes).",
+          "evidence": "\"rue du Président Wilson\"",
+          "recommendation": "Vérifier l’intitulé exact ; sinon retirer le nom de rue ou le remplacer par une mention générique (sans ajouter de nouveau lieu)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[2].uniqueIntro",
+          "message": "Mention \"Quai Charles-Pasqua\" : à vérifier (voie existante à Levallois-Perret). Risque factuel si incorrect.",
+          "evidence": "\"Quai Charles-Pasqua\"",
+          "recommendation": "Vérifier l’intitulé exact ; sinon neutraliser (ex. \"le long des quais\")."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[2].specificChallenges[4]",
+          "message": "Toponyme : \"Square Edith-de-Villepin\" — vérifier la graphie officielle (tiret, capitalisation).",
+          "evidence": "\"Square Edith-de-Villepin\"",
+          "recommendation": "Aligner sur la graphie officielle si connue dans la base ; sinon conserver mais surveiller la cohérence."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/malakoff.ts",
+      "fileId": "malakoff",
+      "slug": "malakoff",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[2].answer",
+          "message": "Promesse de délai chiffré (« sous 24 à 48 heures ») pouvant être interprétée comme un engagement commercial. La règle fournie indique de ne pas ajouter de promesses/chiffres ; ici c'est déjà présent et peut poser un risque de conformité selon la politique interne.",
+          "evidence": "« nous pouvons intervenir sous <strong>24 à 48 heures</strong> »",
+          "recommendation": "Remplacer par une formulation non chiffrée et non engageante (ex. « dans les meilleurs délais » / « selon disponibilité ») sans ajouter de nouvelle promesse."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[6].faqAdditions[0].answer",
+          "message": "Promesse de délai chiffré (« sous 48 à 72 heures ») + mention d'un « créneau prioritaire » pouvant être perçue comme engagement/garantie. Risque similaire de conformité.",
+          "evidence": "« Nous intervenons généralement sous 48 à 72 heures… un créneau prioritaire peut être proposé »",
+          "recommendation": "Remplacer par une formulation non chiffrée et conditionnelle (sans notion de priorité garantie)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "hubIntro",
+          "message": "Référence locale potentiellement discutable : « Coulée Verte » à Malakoff. Il existe des coulées vertes/chemins, mais l'intitulé exact et l'association directe à Malakoff peuvent être imprécis. À vérifier pour éviter une inexactitude locale.",
+          "evidence": "« au carrefour de la ligne 13 et de la Coulée Verte »",
+          "recommendation": "Vérifier l'appellation exacte (ex. « Coulée verte du Sud parisien » déjà utilisée ailleurs) et harmoniser si besoin."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[2].uniqueIntro",
+          "message": "Incohérence de casse sur « Avenue » vs « avenue » Pierre Brossolette au sein de la même page. Ce n'est pas bloquant mais nuit à l'homogénéité éditoriale.",
+          "evidence": "« le long de l'Avenue Pierre Brossolette » vs ailleurs « avenue Pierre Brossolette »",
+          "recommendation": "Uniformiser (souvent « avenue Pierre-Brossolette » ou « avenue Pierre Brossolette » selon la charte) sans changer le sens."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[0].uniqueDeepDive",
+          "message": "Typographie : « Compte-rendu » est acceptable, mais la forme recommandée en français courant est souvent « compte rendu » (sans trait d'union). Harmonisation possible avec d'autres occurrences.",
+          "evidence": "« Compte-rendu d'intervention »",
+          "recommendation": "Harmoniser en « compte rendu » si c'est la convention retenue sur le site."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "Typographie : « Compte-rendu » dans la liste à puces ; même remarque d'harmonisation stylistique.",
+          "evidence": "« Compte-rendu d'intervention disponible sur demande »",
+          "recommendation": "Harmoniser en « compte rendu » si souhaité."
+        },
+        {
+          "severity": "low",
+          "category": "factual_suspect",
+          "path": "services[4].uniqueIntro",
+          "message": "Mention locale très spécifique (« Rue de la Tour ») : plausible mais à vérifier (nom exact, présence à Malakoff). Risque d'inexactitude locale si la rue n'est pas dans la commune.",
+          "evidence": "« autour de la <strong>Rue de la Tour</strong> »",
+          "recommendation": "Vérifier que la rue est bien à Malakoff ; sinon remplacer par une formulation plus générique (sans ajouter de nouveaux lieux)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[2].uniqueIntro",
+          "message": "Casse : « grès cérame » est correct ; en revanche « bétons peints » peut être discuté (pluriel) mais reste acceptable. Pas de correction certaine.",
+          "evidence": "« carrelages grès cérame et bétons peints »",
+          "recommendation": "Optionnel : « béton peint » si l'intention est générique, mais éviter si non certain."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "fileId": "nanterre",
+      "slug": "nanterre",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[1].answer",
+          "message": "Promesse de délai (« sous 24 à 48 heures ») assimilable à un engagement de rapidité. La règle fournie indique de ne pas ajouter de promesses/délais ; ici c'est déjà présent et peut poser un risque de conformité/attentes client.",
+          "evidence": "« Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures »",
+          "recommendation": "Remplacer par une formulation non engageante (ex. « dans les meilleurs délais » / « selon disponibilité ») sans mention chiffrée."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[6].faqAdditions[0].answer",
+          "message": "Promesse de délai (« sous 24 à 48 heures ») dans une FAQ service. Risque similaire d'engagement et de non-conformité aux règles internes (pas de promesses/délais).",
+          "evidence": "« Nous intervenons sous 24 à 48 heures »",
+          "recommendation": "Retirer la mention chiffrée et conserver une formulation conditionnelle sans délai précis."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "Manque d'article dans une énumération : « présence gardien » sonne incorrect ; attendu « présence du gardien ».",
+          "evidence": "« contraintes d'accès, présence gardien et disponibilité »",
+          "recommendation": "Corriger en « présence du gardien » (correction minimale)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].faqAdditions[3].question",
+          "message": "Incohérence de casse : « préfecture » est utilisé comme nom propre ailleurs (« Préfecture »).",
+          "evidence": "« ... des moquettes en préfecture ? »",
+          "recommendation": "Harmoniser en « Préfecture »."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "districts",
+          "message": "Doublon potentiel : « Mont-Valérien » apparaît deux fois (une fois seul, une fois dans « Plateau - Mont-Valérien »). Peut être voulu, mais risque de redondance dans l'affichage.",
+          "evidence": "« Plateau - Mont-Valérien », puis « Mont-Valérien »",
+          "recommendation": "Si non intentionnel, supprimer l'un des deux ou renommer pour distinguer (sans ajouter de nouveaux faits)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[0].uniqueDeepDive",
+          "message": "Formulation potentiellement trop précise/engageante sur le temps de séchage (« généralement deux à quatre heures »). Même si présenté comme estimation, cela peut être perçu comme promesse de délai.",
+          "evidence": "« — généralement deux à quatre heures »",
+          "recommendation": "Envisager une formulation plus prudente sans plage chiffrée si la politique interne l'exige."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[4].faqAdditions[0].answer",
+          "message": "Recommandation de fréquence chiffrée (« tous les douze à dix-huit mois ») : ce n'est pas une promesse, mais reste une prescription chiffrée pouvant être contestable selon cas.",
+          "evidence": "« ... un entretien tous les douze à dix-huit mois »",
+          "recommendation": "Optionnel : rendre plus général (« régulièrement », « selon l'usage ») si vous souhaitez éviter les chiffres."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "fileId": "neuilly-sur-seine",
+      "slug": "neuilly-sur-seine",
+      "issues": [
+        {
+          "severity": "high",
+          "category": "factual_suspect",
+          "path": "services[1].uniqueIntro",
+          "message": "Référence géographique probablement incohérente : « Rue du Faubourg de l'Arche » est associée à La Défense / Courbevoie, pas à Neuilly-sur-Seine. Risque d'erreur factuelle locale.",
+          "evidence": "« ...parkings souterrains autour de la Rue du Faubourg de l'Arche. ... fréquents dans les résidences de Neuilly-sur-Seine »",
+          "recommendation": "Vérifier la pertinence locale. Si doute, remplacer par une formulation générique sans nom de rue (sans ajouter de nouveaux lieux)."
+        },
+        {
+          "severity": "high",
+          "category": "factual_suspect",
+          "path": "services[1].faqAdditions[0].question",
+          "message": "Même problème de localisation potentiellement erronée (« Rue du Faubourg de l'Arche ») pour Neuilly-sur-Seine.",
+          "evidence": "« ...dans les parkings souterrains de la Rue du Faubourg de l'Arche ? »",
+          "recommendation": "Vérifier la localisation. En cas de doute, retirer la rue (formulation générique) sans ajouter de nouveaux faits."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[3].heroDescription",
+          "message": "Allégation potentiellement problématique : « désinfection virucide ... » peut impliquer une efficacité/qualification réglementée (biocide, protocole, normes). Risque de sur-promesse si non justifiée.",
+          "evidence": "« ...avec désinfection virucide des supports... »",
+          "recommendation": "Si vous n'avez pas de base juridique/technique solide, préférer une formulation plus prudente (ex. « désinfection adaptée ») sans revendiquer « virucide »."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[3].whyUsBullets[1]",
+          "message": "« désinfection virucide certifiée » : mention de certification sans préciser laquelle. Risque juridique (allégation de certification).",
+          "evidence": "« ...désinfection virucide certifiée sur tous les supports. »",
+          "recommendation": "Soit préciser la certification exacte (si vraie) dans un autre cadre, soit retirer « certifiée » et/ou « virucide » au profit d'une formulation prudente."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[3].uniqueDeepDive",
+          "message": "Problème de grammaire + risque d'allégation : « ..., garantit l'élimination... » (accord) et promesse d'élimination des risques sanitaires trop absolue.",
+          "evidence": "« ...homologué, le temps de contact respecté, garantit l'élimination des risques sanitaires. »",
+          "recommendation": "Corriger l'accord (« garantit » -> « garantissent ») et atténuer l'absolu si nécessaire (ex. « contribue à réduire ») — si atténuation, applySafe=false."
+        },
+        {
+          "severity": "medium",
+          "category": "style",
+          "path": "hubIntro",
+          "message": "« compte-rendu » : graphie recommandée « compte rendu » (sans trait d’union) selon l’usage typographique courant.",
+          "evidence": "« ...fait l'objet d'un compte-rendu transmis... »",
+          "recommendation": "Remplacer par « compte rendu » (cohérence à appliquer partout)."
         },
         {
           "severity": "medium",
           "category": "consistency",
+          "path": "faq[0].answer",
+          "message": "Incohérence de graphie : « compte-rendu » apparaît aussi ici. Harmoniser avec « compte rendu » si choisi.",
+          "evidence": "« ...laissons un compte-rendu dans la loge. »",
+          "recommendation": "Uniformiser la graphie sur toute la page."
+        },
+        {
+          "severity": "medium",
+          "category": "consistency",
+          "path": "faq[3].answer",
+          "message": "Incohérence de graphie : « compte-rendu » apparaît aussi ici. Harmoniser.",
+          "evidence": "« ...un compte-rendu écrit... »",
+          "recommendation": "Uniformiser la graphie sur toute la page."
+        },
+        {
+          "severity": "medium",
+          "category": "style",
+          "path": "services[3].uniqueDeepDive",
+          "message": "Ponctuation/rythme : enchaînement par virgules rendant la phrase difficile à lire.",
+          "evidence": "« ...homologué, le temps de contact respecté, garantit... »",
+          "recommendation": "A minima corriger l'accord ; idéalement scinder (mais éviter la réécriture)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[5].uniqueDeepDive",
+          "message": "Typographie : unités avec espace insécable recommandée (« 100 m² ») déjà correcte ; en revanche cohérence chiffres : ailleurs « 4 à 8 heures » vs « quatre et huit heures » (hétérogène).",
+          "evidence": "« ...plus de 100 m²... » vs « comptez entre quatre et huit heures... » / « entre 4 et 8 heures... »",
+          "recommendation": "Harmoniser la forme des nombres (tous en chiffres ou toutes en lettres) si charte éditoriale, sans changer le sens."
+        }
+      ],
+      "patches": []
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "fileId": "rueil-malmaison",
+      "slug": "rueil-malmaison",
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[1].question",
+          "message": "La mention « intervenir en urgence » peut être interprétée comme une promesse de service d'urgence. Même si la réponse nuance, cela peut créer une attente commerciale sensible.",
+          "evidence": "« Pouvez-vous intervenir en urgence sur un dégât ou une salissure importante ? »",
+          "recommendation": "Remplacer « en urgence » par une formulation plus neutre (ex. « rapidement » / « dans des délais courts ») sans ajouter de promesse chiffrée."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
           "path": "services[0].uniqueDeepDive",
-          "message": "Présence de balises <h3> dans uniqueDeepDive alors que certains commentaires indiquent des restrictions HTML (ex. citySpecificChallenges/faq sans <h3>). Vérifier si uniqueDeepDive autorise <h3> dans ce template.",
-          "evidence": "uniqueDeepDive contient plusieurs \"<h3>...\"",
-          "recommendation": "Confirmer les règles HTML par champ ; si <h3> interdit ici, remplacer par <p><strong>...</strong></p> (à faire prudemment)."
+          "message": "Mention d'un délai de séchage chiffré (« 4 à 8 heures ») : cela peut être perçu comme une promesse de résultat/délai. Présent aussi ailleurs. À valider juridiquement/marketing.",
+          "evidence": "« généralement sous 4 à 8 heures selon la ventilation des locaux. »",
+          "recommendation": "Si vous souhaitez réduire le risque, remplacer par une formulation non chiffrée (ex. « en quelques heures, selon la ventilation »). Correction non mécanique => patch non safe."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[0].faqAdditions[1].answer",
+          "message": "Délai de séchage chiffré (« 4 à 8 heures ») pouvant être interprété comme engagement. Déjà nuancé, mais reste une promesse potentielle.",
+          "evidence": "« En conditions normales, comptez 4 à 8 heures… »",
+          "recommendation": "Remplacer par une formulation non chiffrée (« en quelques heures ») ou ajouter une réserve plus forte. Pas de patch safe proposé (réécriture)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].whyUsBullets[1]",
+          "message": "« désinfection virucide certifiée » : allégation potentiellement réglementée (biocides) et susceptible d'exiger une preuve/certification précise. Formulation à risque si non documentée.",
+          "evidence": "« ... désinfection virucide certifiée. »",
+          "recommendation": "Si vous n'avez pas de certification formelle, préférer « désinfection avec produit virucide homologué » (déjà utilisé plus bas) ou « conforme aux préconisations fabricant ». Pas de patch safe (changement de fond)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "services[1].uniqueIntro",
+          "message": "Typographie/usage : « Centre Commercial » est souvent écrit en minuscules (« centre commercial ») sauf nom officiel. Ici, l'ensemble « Centre Commercial E.Leclerc de Rueil-Malmaison » peut être discutable selon l'appellation exacte.",
+          "evidence": "« Au Centre Commercial E.Leclerc de Rueil-Malmaison »",
+          "recommendation": "Vérifier l'appellation officielle. Si ce n'est pas un nom propre complet, passer en « centre commercial E.Leclerc de Rueil-Malmaison ». Pas de patch safe (incertitude)."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "districts",
+          "message": "Cohérence toponymique : « Belle Rive » vs usage local possible « Belle-Rive ». Idem pour certains quartiers (traits d’union).",
+          "evidence": "districts contient « Belle Rive »",
+          "recommendation": "Vérifier l’orthographe officielle des quartiers. En cas de correction, appliquer de façon cohérente sur tous les champs concernés."
+        },
+        {
+          "severity": "low",
+          "category": "consistency",
+          "path": "services[1].specificChallenges[4]",
+          "message": "« traitement antidérapant » : le texte précédent parle surtout de nettoyage. Cela peut suggérer une prestation additionnelle (traitement) non décrite ailleurs, risque de sur-promesse/prestation non incluse.",
+          "evidence": "« Rampes d'accès glissantes après pluie : le traitement antidérapant sécurise la circulation. »",
+          "recommendation": "Si ce traitement n’est pas systématiquement proposé, remplacer par une formulation centrée sur le nettoyage (ex. « un nettoyage renforcé améliore l’adhérence »). Pas de patch safe (changement de sens)."
+        },
+        {
+          "severity": "low",
+          "category": "seo",
+          "path": "hubIntro",
+          "message": "SEO : le hubIntro est riche mais ne contient pas explicitement la ville dans la première phrase (elle est implicite via Rueil-sur-Seine / Saint-Cucufa). Peut être légèrement moins optimal pour la requête « nettoyage Rueil-Malmaison ».",
+          "evidence": "« Entre le pôle tertiaire de Rueil-sur-Seine... » (sans « à Rueil-Malmaison »)",
+          "recommendation": "Ajouter « à Rueil-Malmaison » dans la première phrase serait mieux, mais cela implique une réécriture (non proposée en patch safe)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[5].uniqueDeepDive",
+          "message": "Formulation : « des plafonds aux plinthes » est correct mais l’expression idiomatique est souvent « du plafond aux plinthes ». Style léger.",
+          "evidence": "« dépoussiérage des plafonds aux plinthes »",
+          "recommendation": "Optionnel : « du plafond aux plinthes ». Pas de patch safe (micro-réécriture)."
         }
       ],
       "patches": [
         {
           "op": "substring",
+          "applySafe": true,
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].uniqueDeepDive",
+          "reason": "Typographie française : ajouter l’espace insécable avant le symbole %/unités n’est pas applicable ici; en revanche, harmoniser « open-spaces » (pluriel) est déjà correct. Correction mécanique retenue : remplacer « open-spaces » par « open spaces » est discutable. Donc patch sur une correction certaine : « nez de marche » est ok. Aucune correction mécanique certaine détectée dans ce champ => pas de patch.",
+          "expected": "",
+          "value": "",
+          "find": "",
+          "replace": "",
+          "context": ""
+        },
+        {
+          "op": "substring",
           "applySafe": false,
+          "severity": "low",
+          "category": "style",
+          "path": "services[2].faqAdditions[3].question",
+          "reason": "La correction précédente ajoute « à » (micro-réécriture) : potentiellement acceptable mais pas 100% mécanique. Marquer non safe si appliquée. (Note: garder un seul patch par champ; donc ne pas appliquer ce patch en plus).",
+          "expected": "",
+          "value": "",
+          "find": "",
+          "replace": "",
+          "context": ""
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "fileId": "sceaux",
+      "slug": "sceaux",
+      "issues": [
+        {
           "severity": "medium",
           "category": "consistency",
           "path": "customDescription",
-          "reason": "Correction grammaticale minimale (article manquant) sans changement de sens.",
-          "expected": "",
-          "value": "",
-          "find": "l'entretien des parties communes, parkings souterrains et espaces extérieurs",
-          "replace": "l'entretien des parties communes, des parkings souterrains et des espaces extérieurs",
-          "context": "Klinova intervient à Vanves pour l'entretien des parties communes, parkings souterrains et espaces extérieurs. Une équipe habituée..."
+          "message": "Mention d'« une équipe locale » : peut être interprété comme une présence locale établie (allégation potentiellement non vérifiable).",
+          "evidence": "« une équipe locale adapte ses méthodes »",
+          "recommendation": "Formulation plus neutre sans affirmer une équipe locale (ex. « notre équipe adapte… ») si cela doit rester strictement factuel."
         },
         {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "faq[3].answer",
-          "reason": "Retirer le délai chiffré (engagement) tout en conservant l’idée de faisabilité selon planning, sans ajouter de promesse.",
-          "expected": "",
-          "value": "",
-          "find": "nous pouvons proposer un <strong>passage sous 48 à 72 heures</strong>",
-          "replace": "nous pouvons proposer un <strong>passage dans les meilleurs délais</strong>",
-          "context": "<p>Selon la nature de la demande et notre planning, nous pouvons proposer un <strong>passage sous 48 à 72 heures</strong>. Pour les situations..."
+          "severity": "low",
+          "category": "style",
+          "path": "customDescription",
+          "message": "Énumération : absence de virgule avant « et » peut nuire à la lisibilité (optionnel).",
+          "evidence": "« parties communes, parkings souterrains et espaces extérieurs »",
+          "recommendation": "Optionnel : conserver tel quel ou ajouter une virgule selon la charte (pas indispensable)."
         },
         {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "services[6].faqAdditions[3].answer",
-          "reason": "Retirer le délai chiffré (engagement) en conservant une formulation conditionnelle.",
-          "expected": "",
-          "value": "",
-          "find": "nous pouvons intervenir sous 24 à 48 heures",
-          "replace": "nous pouvons intervenir dans les meilleurs délais",
-          "context": "<p>Selon la disponibilité de nos équipes et la surface du bien, nous pouvons intervenir sous 24 à 48 heures. Pour les situations..."
-        },
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].whyUsBullets[1]",
-          "reason": "Allégation « certifiée » trop forte si non prouvable ; correction minimale en supprimant le terme sans changer le reste.",
-          "expected": "",
-          "value": "",
-          "find": "désinfection virucide certifiée",
-          "replace": "désinfection virucide",
-          "context": "\"Protocole complet avec EPI adaptés, confinement systématique et désinfection virucide certifiée.\""
-        },
-        {
-          "op": "substring",
-          "applySafe": false,
-          "severity": "high",
-          "category": "legal",
-          "path": "services[3].uniqueDeepDive",
-          "reason": "Remplacer « homologué » (allégation réglementaire) par un terme plus neutre, sans changer le sens global (désinfection).",
-          "expected": "",
-          "value": "",
-          "find": "virucide et bactéricide homologué",
-          "replace": "virucide et bactéricide conforme",
-          "context": "<p>Un produit virucide et bactéricide homologué est appliqué avec un temps de contact respecté..."
-        },
-        {
-          "op": "substring",
-          "applySafe": false,
           "severity": "medium",
           "category": "factual_suspect",
-          "path": "services[0].faqAdditions[2].question",
-          "reason": "Éviter des références à des entreprises spécifiques potentiellement inexactes/non autorisées ; généralisation minimale.",
-          "expected": "",
-          "value": "",
-          "find": "dans des bureaux comme ceux de Hachette ou Audiens",
-          "replace": "dans des bureaux du secteur",
-          "context": "\" Après un nettoyage de moquette dans des bureaux comme ceux de Hachette ou Audiens, sous quel délai...\""
+          "path": "hubIntro",
+          "message": "Référence à des lieux/établissements (Lycée Lakanal, Domaine départemental de Sceaux) : probablement vrai mais à vérifier (fact-check prudent).",
+          "evidence": "« abritant le Lycée Lakanal et le Domaine départemental de Sceaux »",
+          "recommendation": "Si doute, simplifier en restant générique (sans ajouter de nouveaux faits)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "hubIntro",
+          "message": "« Compte-rendu » : orthographe recommandée « compte rendu » (rectifications/usage courant) ; les deux existent mais harmonisation possible.",
+          "evidence": "« Compte-rendu d'intervention »",
+          "recommendation": "Harmoniser en « Compte rendu d'intervention » (correction légère)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "faq[1].answer",
+          "message": "Le terme « urgence » + « dans les meilleurs délais » peut être perçu comme une promesse implicite de rapidité ; rester prudent selon la politique commerciale.",
+          "evidence": "Question : « Intervenez-vous en urgence… » / Réponse : « Oui, nous pouvons mobiliser une équipe dans les meilleurs délais… »",
+          "recommendation": "Conserver un conditionnel et éviter toute impression de garantie (déjà partiellement le cas)."
+        },
+        {
+          "severity": "low",
+          "category": "style",
+          "path": "faq[2].answer",
+          "message": "Formulation un peu lourde : « stationnement payant strict » sonne maladroit ; « stationnement payant et réglementé » serait plus naturel.",
+          "evidence": "« stationnement payant strict »",
+          "recommendation": "Remplacer par une formulation plus idiomatique sans changer le sens."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[0].whyUsBullets[0]",
+          "message": "Mention « près du Trianon » : référence locale spécifique à vérifier (et cohérence avec le reste).",
+          "evidence": "« accès contraints près du Trianon »",
+          "recommendation": "Si non certain, retirer la précision ou rester générique (mais cela serait une réécriture ; à minima vérifier la véracité)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[0].uniqueIntro",
+          "message": "Référence « Cinéma Le Trianon » : fait local spécifique à vérifier (existence/nom exact).",
+          "evidence": "« autour du Cinéma Le Trianon »",
+          "recommendation": "Vérifier le nom exact ; sinon neutraliser (sans ajouter de nouveaux faits)."
+        },
+        {
+          "severity": "low",
+          "category": "orthographe",
+          "path": "services[0].faqAdditions[3].question",
+          "message": "Orthographe : « shampouinage » est souvent écrit « shampooing » / « shampouinage » admis mais incohérent avec l'usage ; harmonisation possible.",
+          "evidence": "« extraction ou shampouinage ? »",
+          "recommendation": "Harmoniser si une forme est privilégiée dans la charte (ex. « shampooing »)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[2].specificChallenges[0]",
+          "message": "Mention d'axes « D920 et D60 » : fait local précis à vérifier (D60 à Sceaux ?).",
+          "evidence": "« axes D920 et D60 »",
+          "recommendation": "Vérifier l'exactitude ; en cas de doute, retirer la référence à D60 (mais cela serait une modification de contenu)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].heroDescription",
+          "message": "« désinfection virucide » : allégation technique/réglementaire sensible (normes, produits, conditions). À sécuriser (éviter toute impression de garantie sanitaire).",
+          "evidence": "« désinfection virucide »",
+          "recommendation": "Si conservé, s'assurer que les produits/protocoles répondent bien aux normes applicables ; sinon préférer « désinfection » (mais ce serait une modification de sens)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].whyUsBullets[1]",
+          "message": "« désinfection virucide certifiée » : revendication de certification potentiellement vérifiable/contestable (risque légal).",
+          "evidence": "« désinfection virucide certifiée »",
+          "recommendation": "Remplacer « certifiée » par « conforme » uniquement si justifiable, ou retirer la mention de certification (à valider en interne)."
+        },
+        {
+          "severity": "medium",
+          "category": "legal",
+          "path": "services[3].uniqueDeepDive",
+          "message": "« élimine les agents pathogènes » : formulation absolue pouvant être considérée comme une garantie sanitaire.",
+          "evidence": "« élimine les agents pathogènes »",
+          "recommendation": "Atténuer (ex. « vise à réduire… ») si la charte l'exige ; sinon s'assurer de la conformité des allégations."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[4].uniqueIntro",
+          "message": "« Résidence Le Parc de Sceaux » : nom propre très spécifique, à vérifier (risque d'invention).",
+          "evidence": "« Résidence Le Parc de Sceaux »",
+          "recommendation": "Vérifier l'existence/nom exact ; sinon remplacer par une formulation générique (sans créer un autre lieu)."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[6].uniqueIntro",
+          "message": "Référence « Faculté Jean Monnet » à proximité de Sceaux : fait local spécifique à vérifier (localisation exacte).",
+          "evidence": "« étudiants liés à la Faculté Jean Monnet »",
+          "recommendation": "Vérifier la pertinence géographique ; sinon neutraliser la référence."
+        },
+        {
+          "severity": "high",
+          "category": "legal",
+          "path": "services[6].faqAdditions[2].answer",
+          "message": "Promesse de délai chiffré « sous 24 à 48 heures » : interdit par les règles (ajout/présence de promesse de délai).",
+          "evidence": "« Nous pouvons intervenir sous 24 à 48 heures »",
+          "recommendation": "Retirer le chiffrage et rester sur une formulation non chiffrée et conditionnelle (ex. « dans les meilleurs délais selon… ») sans ajouter de nouvelle promesse."
+        },
+        {
+          "severity": "medium",
+          "category": "factual_suspect",
+          "path": "services[6].specificChallenges[0]",
+          "message": "Jours de marché « mercredi et samedi matin » : fait local précis à vérifier.",
+          "evidence": "« (mercredi et samedi matin) »",
+          "recommendation": "Vérifier ; sinon retirer la précision des jours (mais cela modifie le contenu)."
         }
-      ]
+      ],
+      "patches": []
     }
   ]
 }

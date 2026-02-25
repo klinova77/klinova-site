@@ -1,0 +1,716 @@
+{
+  "generatedAt": "2026-02-25T04:42:59.184Z",
+  "dryRun": false,
+  "inputPath": "C:\\projets\\klinova-site\\strong-apply.klinova.suggested.json",
+  "onlyCsv": "",
+  "limit": 0,
+  "totalEdits": 107,
+  "applied": 107,
+  "wouldApply": 0,
+  "skipped": 0,
+  "errors": 0,
+  "files": [
+    {
+      "file": "src/data/cities-draft/antony.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "hubIntro: ajouter 1 <strong> dans le texte hors <li> (actuellement 0), en restant sous le cap (max 2 hors <li>) et avec un segment concret."
+        },
+        {
+          "path": "citySpecificChallenges[1]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "citySpecificChallenges[1]: ajouter 1 <strong> (max 1 par item) pour atteindre la couverture demandée, avec un focus terrain."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "services[0].uniqueIntro: réduire de 3 à 2 <strong> (cap max 2) en retirant le balisage sur un nom de lieu, sans toucher au texte hors balises."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "services[0].uniqueDeepDive: ajouter 1 <strong> dans le bloc <h3> Méthode d'extraction (block[1]) en respectant max 1 par bloc."
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "services[0].specificChallenges[1]: ajouter 1 <strong> (max 1 par item) pour la couverture demandée, segment court et concret."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "services[0].faqAdditions[0].answer: ajouter 1 <strong> dans le 1er <p> (et aucun après), max 1 par answer."
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "services[0].faqAdditions[3].answer: ajouter 1 <strong> dans le 1er <p>, max 1 par answer, focus méthode."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/asnieres-sur-seine.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le texte hors <li> pour atteindre la couverture demandée (0→1), en restant sous le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans uniqueIntro (0→1) pour améliorer la scannabilité, en respectant le maximum de 2."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> par bloc <h3> (3 blocs) pour respecter la couverture demandée, sans dépasser le cap (max 1 par bloc)."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, aucun <strong> après le 1er <p>)."
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, aucun <strong> après le 1er <p>)."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le texte hors <li> de hubIntro (actuellement 0), en restant sous le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduction à max 2 <strong> dans uniqueIntro (3 -> 2) en conservant des repères concrets et courts."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les 3 blocs manquants et améliorer la lecture par étapes."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ (max 1, pas après le 1er <p>)."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, sans mettre en avant délais/urgence."
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduction à max 2 <strong> dans uniqueIntro (3 -> 2) en gardant des éléments terrain (lieu + type de revêtement)."
+        },
+        {
+          "path": "services[1].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les 3 blocs manquants et rendre les étapes plus scannables."
+        },
+        {
+          "path": "services[1].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        },
+        {
+          "path": "services[1].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, sans enfreindre les caps."
+        },
+        {
+          "path": "services[2].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduction à max 2 <strong> dans uniqueIntro (3 -> 2) en conservant lieu + typologie de supports."
+        },
+        {
+          "path": "services[2].specificChallenges[2]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> sur un item éligible pour atteindre la couverture demandée, en restant à max 1 par item."
+        },
+        {
+          "path": "services[2].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        },
+        {
+          "path": "services[2].faqAdditions[2].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, sans ajout après le 1er <p>."
+        },
+        {
+          "path": "services[3].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> par bloc <h3> (max 1) pour couvrir les 3 blocs manquants et rendre les points clés plus visibles."
+        },
+        {
+          "path": "services[3].specificChallenges[3]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> sur l’item ciblé pour atteindre la couverture demandée, en restant à max 1 par item."
+        },
+        {
+          "path": "services[3].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        },
+        {
+          "path": "services[3].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, sans enfreindre les caps."
+        },
+        {
+          "path": "services[4].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduction à max 2 <strong> dans uniqueIntro (3 -> 2) en conservant un repère de lieu et une contrainte terrain."
+        },
+        {
+          "path": "services[5].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduction à max 2 <strong> dans uniqueIntro (3 -> 2) en conservant lieu + typologie de terrasse."
+        },
+        {
+          "path": "services[5].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        },
+        {
+          "path": "services[5].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, sans mention interdite."
+        },
+        {
+          "path": "services[6].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3> manquants (block[0] et block[1]), en respectant max 1 par bloc."
+        },
+        {
+          "path": "services[6].specificChallenges[3]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> sur l’item ciblé pour atteindre la couverture demandée, en restant à max 1 par item."
+        },
+        {
+          "path": "services[6].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        },
+        {
+          "path": "services[6].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) de la réponse, conforme à la règle FAQ."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/colombes.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’un <strong> hors <li> (non-<li> text) pour améliorer la scannabilité, en restant sous le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3> manquants (block[0] et block[2]) en respectant max 1 <strong> par bloc."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> (max 1) pour améliorer la scannabilité et atteindre la couverture demandée."
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> (max 1) pour améliorer la scannabilité et atteindre la couverture demandée."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et la couverture."
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et la couverture."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "items": [
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> dans les blocs <h3> 0 et 1 (max 1 par bloc) pour améliorer la scannabilité, sans toucher au reste. Aucun ajout dans le bloc 2 non demandé."
+        },
+        {
+          "path": "services[0].specificChallenges[2]",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> (max 1 par item) sur un point opérationnel concret, pour atteindre la couverture demandée."
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> (max 1 par item) sur la cause terrain, pour atteindre la couverture demandée."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, respectant la limite max 1 par answer."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> dans le 1er <p> (et unique) de la réponse, sans dépasser 1 <strong> par answer."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "items": [
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> dans les blocs <h3> manquants (block[1] et block[2]), en respectant max 1 <strong> par bloc <h3>."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> (coverage serviceChallenge) en restant à max 1 par item, segment court et concret."
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> (coverage serviceChallenge) en restant à max 1 par item."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> dans le 1er <p> (max 1 par answer) pour atteindre la couverture FAQ service."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "hubIntro: ajout d’1 <strong> hors <li> (max 2) pour améliorer la scannabilité du 2e paragraphe, sans toucher au texte."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/malakoff.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le texte hors <li> (0→1), en restant sous le cap (max 2 hors <li>) et avec un segment court et concret."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Correction overcap uniqueIntro (3→2) en retirant un <strong> sur un segment moins utile, sans modifier le texte hors balises."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le bloc deepDive[2] (max 1 par bloc <h3>) pour améliorer la scannabilité, sans toucher au reste."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> sur un segment court et concret (max 1 par item) pour atteindre la couverture demandée."
+        },
+        {
+          "path": "services[0].specificChallenges[4]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> (max 1 par item) sur un point terrain facilement scannable, pour compléter la couverture demandée."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (max 1 par answer) sur un élément opérationnel, conforme aux règles FAQ."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’un <strong> hors <li> (non-<li> text) pour améliorer la scannabilité, en restant sous le cap (max 2 pairs hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Suppression d’un <strong> pour respecter le cap uniqueIntro (max 2)."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> par bloc <h3> manquant (max 1 par bloc) pour améliorer la scannabilité du deep dive."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) pour respecter la couverture FAQ service, sans dépasser 1 <strong> par answer."
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et unique) pour la couverture FAQ service, en restant sous le cap."
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Suppression d’un <strong> pour respecter le cap uniqueIntro (max 2)."
+        },
+        {
+          "path": "services[1].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3> 1 et 3 (max 1 par bloc) pour combler les manques de couverture deep dive."
+        },
+        {
+          "path": "services[1].faqAdditions[2].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[2].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> (uniqueIntro était à 0) pour améliorer la scannabilité, en restant sous le cap (max 2)."
+        },
+        {
+          "path": "services[2].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le bloc <h3>2 manquant (max 1 par bloc) pour la couverture deep dive."
+        },
+        {
+          "path": "services[2].specificChallenges[3]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> sur l’item éligible pour atteindre la couverture demandée (max 1 par item)."
+        },
+        {
+          "path": "services[2].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[2].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[3].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Suppression d’un <strong> pour respecter le cap uniqueIntro (max 2)."
+        },
+        {
+          "path": "services[3].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3>1 et 3 manquants (max 1 par bloc) pour la couverture deep dive."
+        },
+        {
+          "path": "services[3].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[3].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[4].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Suppression d’un <strong> pour respecter le cap uniqueIntro (max 2)."
+        },
+        {
+          "path": "services[4].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le bloc <h3>3 manquant (max 1 par bloc) pour la couverture deep dive."
+        },
+        {
+          "path": "services[4].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[4].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[5].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3>1 et 2 manquants (max 1 par bloc) pour la couverture deep dive."
+        },
+        {
+          "path": "services[5].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[5].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service."
+        },
+        {
+          "path": "services[6].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans les blocs <h3>2 et 3 manquants (max 1 par bloc) pour la couverture deep dive."
+        },
+        {
+          "path": "services[6].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Aucun patch proposé : l’answer contient « 24 à 48 heures », interdit dans <strong>, et toute insertion de <strong> risquerait de violer les règles sans autre segment sûr à mettre e"
+        },
+        {
+          "path": "services[6].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (unique) pour la couverture FAQ service, en restant sous le cap."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’un <strong> hors <li> (0→1) pour respecter la cible de couverture hubIntro_nonli_missing, sans dépasser le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Suppression d’un <strong> pour corriger le dépassement (3→2) sur uniqueIntro, en conservant des segments concrets et scannables."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’un <strong> dans le bloc[2] manquant, en respectant max 1 <strong> par bloc <h3>."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> pour atteindre la couverture requise sur les specificChallenges du service moquettes (max 1 par item)."
+        },
+        {
+          "path": "services[0].specificChallenges[2]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> pour atteindre la couverture requise sur les specificChallenges du service moquettes (max 1 par item)."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajout d’1 <strong> dans le 1er <p> (et un seul sur l’answer) pour la couverture FAQ service."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> dans le texte hors <li> (hubIntro) pour améliorer la scannabilité, en restant sous le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Réduit uniqueIntro à max 2 <strong> (suppression du 3e) pour respecter le cap sans modifier le texte hors balises."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> dans les blocs <h3> 2 et 3 (max 1 par bloc) pour atteindre la couverture demandée, sans toucher au reste."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> (max 1) sur un segment concret pour améliorer la scannabilité et répondre à la cible de couverture."
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajoute 1 <strong> (max 1) sur l'élément pour répondre à la couverture requise, segment court et terrain."
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour respecter la règle FAQ et atteindre la couverture."
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajoute 1 <strong> dans le 1er <p> (et aucun après) pour la scannabilité, sans mettre en avant délais/urgence, et pour la couverture."
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "items": [
+        {
+          "path": "hubIntro",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> dans le texte hors <li> (actuellement 0), sans dépasser le cap (max 2 hors <li>)."
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> (0 actuellement) dans uniqueIntro (max 2) avec un segment concret et scannable."
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "status": "applied",
+          "mode": "setField",
+          "reason": "Ajouter 1 <strong> dans le bloc <h3> \"Espaces secondaires et finitions\" (block[2]) tout en respectant max 1 <strong> par bloc <h3>."
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service."
+        },
+        {
+          "path": "services[0].specificChallenges[2]",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> (max 1 par item) pour atteindre la couverture demandée sur les specificChallenges du service."
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer."
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "status": "applied",
+          "mode": "substring",
+          "reason": "Ajouter 1 <strong> dans le 1er <p> (et unique) de la réponse, max 1 par answer."
+        }
+      ]
+    }
+  ]
+}

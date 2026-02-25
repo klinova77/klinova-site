@@ -42,14 +42,14 @@ const city: City = {
   nearbyCities: [
         "chatillon",
         "cachan",
+        "fontenay-aux-roses",
         "arcueil",
         "montrouge",
+        "malakoff",
+        "sceaux",
         "gentilly",
         "vanves",
-        "villejuif",
-        "clamart",
-        "issy-les-moulineaux",
-        "chevilly-larue"
+        "villejuif"
       ],
 
   // Texte brut uniquement

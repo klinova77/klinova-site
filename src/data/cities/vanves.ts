@@ -34,16 +34,16 @@ const city: City = {
   // Texte brut uniquement
   districts: ["Centre Saint-Rémy", "Le Plateau", "Les Hauts-de-Vanves"],
   nearbyCities: [
+        "malakoff",
         "issy-les-moulineaux",
         "chatillon",
         "montrouge",
         "bagneux",
+        "fontenay-aux-roses",
+        "boulogne-billancourt",
         "arcueil",
         "clamart",
-        "gentilly",
-        "cachan",
-        "villejuif",
-        "ivry-sur-seine"
+        "gentilly"
       ],
 
   // Texte brut uniquement

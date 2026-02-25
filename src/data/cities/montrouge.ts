@@ -43,16 +43,16 @@ const city: City = {
     "Plein Sud",
   ],
   nearbyCities: [
+        "malakoff",
         "arcueil",
         "gentilly",
         "bagneux",
         "vanves",
         "chatillon",
         "cachan",
+        "fontenay-aux-roses",
         "issy-les-moulineaux",
-        "villejuif",
-        "clamart",
-        "ivry-sur-seine"
+        "villejuif"
       ],
 
   // Texte brut uniquement

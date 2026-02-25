@@ -1,66 +1,302 @@
 {
   "version": 3,
   "dryRun": true,
-  "mode": "setField-only",
-  "maxEditsPerFile": 50,
+  "mode": "setField+substring-auto-safe",
+  "maxEditsPerFile": 200,
   "edits": [
     {
-      "file": "src/data/cities-draft/aulnay-sous-bois.ts",
-      "path": "services[3].faqAdditions[3].answer",
-      "mode": "setField",
-      "expected": "<p>Les fientes et résidus sont conditionnés dans des sacs étanches fermés sur place. Nous les évacuons avec notre matériel sans laisser de déchets dans les parties communes ou sur la voie publique. Le bâchage de protection est également replié et emporté à la fin de l'intervention.</p>",
-      "value": "<p>Les fientes et résidus sont conditionnés dans des sacs étanches fermés sur place. Nous les évacuons avec notre matériel sans laisser de déchets dans les parties communes ou sur la voie publique. Le bâchage de protection est également replié et emporté à la fin de l’intervention.</p>",
-      "reason": "Cohérence typographique : apostrophe courbe déjà utilisée ailleurs (d’intervention)."
+      "file": "src/data/cities-draft/colombes.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "comptes-rendus",
+      "replace": "comptes rendus",
+      "reason": "Correction typographique courante : suppression du trait d’union dans « comptes rendus » (sans changer le sens).",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
     },
     {
-      "file": "src/data/cities-draft/clamart.ts",
-      "path": "services[4].uniqueIntro",
-      "mode": "setField",
-      "expected": "<p>Comment préserver l'état d'un canapé familial quand les enfants y passent leurs après-midi, que le chien s'y installe régulièrement, et que les taches s'accumulent sans qu'on sache vraiment comment les traiter ? Dans les <strong>résidences de la Plaine</strong> comme dans les secteurs familiaux de Clamart, les textiles d'assise encaissent un usage intensif. Les traces de café, les auréoles d'humidité et les odeurs persistantes finissent par s'incruster dans les fibres.</p>\n<p class=\"mt-4\">Un nettoyage adapté redonne au tissu sa fraîcheur d'origine et supprime les allergènes accumulés. Dans les <strong>intérieurs T2 à T5</strong>, qu'il s'agisse de parquet ancien ou de sols stratifiés récents, le canapé reste souvent la pièce centrale du salon. Son aspect conditionne l'impression générale du logement, surtout lors d'une visite ou d'un changement de locataire.</p>\n<p class=\"mt-4\">La présence de <strong>cabinets médicaux et salles d'attente</strong> dans le secteur Percy génère également des besoins spécifiques : fauteuils patients, sièges de consultation, mobilier d'accueil. Une intervention structurée permet de traiter chaque textile selon sa nature et son niveau d'encrassement.</p>",
-      "value": "<p>Comment préserver l'état d'un canapé familial quand les enfants y passent leurs après-midi, que le chien s'y installe régulièrement, et que les taches s'accumulent sans qu'on sache vraiment comment les traiter ? Dans les résidences et les secteurs familiaux de Clamart, les textiles d'assise encaissent un usage intensif. Les traces de café, les auréoles d'humidité et les odeurs persistantes finissent par s'incruster dans les fibres.</p>\n<p class=\"mt-4\">Un nettoyage adapté redonne au tissu sa fraîcheur d'origine et supprime les allergènes accumulés. Dans les <strong>intérieurs T2 à T5</strong>, qu'il s'agisse de parquet ancien ou de sols stratifiés récents, le canapé reste souvent la pièce centrale du salon. Son aspect conditionne l'impression générale du logement, surtout lors d'une visite ou d'un changement de locataire.</p>\n<p class=\"mt-4\">La présence de <strong>cabinets médicaux et salles d'attente</strong> dans le secteur Percy génère également des besoins spécifiques : fauteuils patients, sièges de consultation, mobilier d'accueil. Une intervention structurée permet de traiter chaque textile selon sa nature et son niveau d'encrassement.</p>",
-      "reason": "Référence locale potentiellement inexacte (« résidences de la Plaine ») : suppression minimale du toponyme pour éviter un risque factuel sans changer le sens."
-    },
-  
-    {
-      "file": "src/data/cities-draft/les-lilas.ts",
-      "path": "services[2].uniqueDeepDive",
-      "mode": "setField",
-      "expected": "<h3>Dépôts accumulés et préparation</h3>\n<p>Les feuilles, la terre et les débris divers sont retirés manuellement avant tout mouillage. Nous déplaçons ou bâchons le mobilier et les jardinières. Les menuiseries et seuils de porte reçoivent une protection pour éviter les infiltrations pendant le lavage.</p>\n\n<h3>Salissures incrustées et tratamiento adapté</h3>\n<p>Un produit spécifique au support est appliqué : formule douce pour les joints fragiles du carrelage, dégraissant pour le béton brut, solution adaptée au bois composite. Le brossage manuel ou mécanique déloge les traces grasses et les dépôts verts. Le rinçage s'effectue à pression contrôlée, orienté vers l'intérieur du balcon.</p>\n\n<h3>Éléments annexes et finition</h3>\n<p>Les garde-corps sont nettoyés sur toute leur hauteur. Les vitrages attenants et les murs mitoyens accessibles sont traités si nécessaire. Nous vérifions l'absence de coulures vers l'étage inférieur avant de laisser sécher. Vous recevez quelques conseils pour espacer les prochaines interventions selon l'exposition de votre balcon.</p>",
-      "value": "<h3>Dépôts accumulés et préparation</h3>\n<p>Les feuilles, la terre et les débris divers sont retirés manuellement avant tout mouillage. Nous déplaçons ou bâchons le mobilier et les jardinières. Les menuiseries et seuils de porte reçoivent une protection pour éviter les infiltrations pendant le lavage.</p>\n\n<h3>Salissures incrustées et traitement adapté</h3>\n<p>Un produit spécifique au support est appliqué : formule douce pour les joints fragiles du carrelage, dégraissant pour le béton brut, solution adaptée au bois composite. Le brossage manuel ou mécanique déloge les traces grasses et les dépôts verts. Le rinçage s'effectue à pression contrôlée, orienté vers l'intérieur du balcon.</p>\n\n<h3>Éléments annexes et finition</h3>\n<p>Les garde-corps sont nettoyés sur toute leur hauteur. Les vitrages attenants et les murs mitoyens accessibles sont traités si nécessaire. Nous vérifions l'absence de coulures vers l'étage inférieur avant de laisser sécher. Vous recevez quelques conseils pour espacer les prochaines interventions selon l'exposition de votre balcon.</p>",
-      "reason": "Faute évidente : mot espagnol « tratamiento » à corriger en « traitement »."
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[0].whyUsBullets[2]",
+      "mode": "substring",
+      "find": "weekend",
+      "replace": "week-end",
+      "reason": "Correction orthographique standard en français.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
     },
     {
-      "file": "src/data/cities-draft/les-lilas.ts",
-      "path": "services[2].faqAdditions[2].question",
-      "mode": "setField",
-      "expected": "Comment éliminez-vous les dépôts verts et mousses sur un balcony ombragé proche du Parc Lucie-Aubrac ?",
-      "value": "Comment éliminez-vous les dépôts verts et mousses sur un balcon ombragé proche du Parc Lucie-Aubrac ?",
-      "reason": "Anglicisme/typo : « balcony » doit être « balcon »."
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[1].uniqueIntro",
+      "mode": "substring",
+      "find": "générant accumulation de",
+      "replace": "générant une accumulation de",
+      "reason": "Correction grammaticale simple (article manquant) sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
     },
     {
-      "file": "src/data/cities-draft/mitry-mory.ts",
-      "path": "services[4].uniqueIntro",
-      "mode": "setField",
-      "expected": "<p>Après quelques années d'usage quotidien, les textiles d'ameublement accumulent ce que l'œil ne voit plus : poussières fines, résidus alimentaires, traces d'animaux. Dans les pavillons du quartier des Acacias ou de Mitry-le-Neuf, les canapés familiaux encaissent le passage répété des enfants et des chiens. Les tapis de salon retiennent les particules ramenées de l'extérieur, tandis que les matelas absorbent transpiration et allergènes nuit après nuit.</p>\n<p class=\"mt-4\">Un entretien adapté redonne aux fibres leur souplesse et leur fraîcheur. Les couleurs ternes retrouvent de l'éclat, les odeurs persistantes disparaissent, et le confort d'assise s'améliore sensiblement. Pour les foyers avec animaux domestiques, fréquents dans les zones pavillonnaires, c'est aussi une question de bien-être respiratoire au quotidien.</p>\n<p class=\"mt-4\">Notre intervention repose sur un diagnostic textile préalable et un traitement par injection-extraction. Chaque support — coton, velours, synthétique — reçoit un soin calibré selon son'épaisseur et sa sensibilité. Les consignes de séchage sont adaptées à la configuration du logement, y compris lorsque l'accès se fait par escalier sans ascenseur.</p>",
-      "value": "<p>Après quelques années d'usage quotidien, les textiles d'ameublement accumulent ce que l'œil ne voit plus : poussières fines, résidus alimentaires, traces d'animaux. Dans les pavillons du quartier des Acacias ou de Mitry-le-Neuf, les canapés familiaux encaissent le passage répété des enfants et des chiens. Les tapis de salon retiennent les particules ramenées de l'extérieur, tandis que les matelas absorbent transpiration et allergènes nuit après nuit.</p>\n<p class=\"mt-4\">Un entretien adapté redonne aux fibres leur souplesse et leur fraîcheur. Les couleurs ternes retrouvent de l'éclat, les odeurs persistantes disparaissent, et le confort d'assise s'améliore sensiblement. Pour les foyers avec animaux domestiques, fréquents dans les zones pavillonnaires, c'est aussi une question de bien-être respiratoire au quotidien.</p>\n<p class=\"mt-4\">Notre intervention repose sur un diagnostic textile préalable et un traitement par injection-extraction. Chaque support — coton, velours, synthétique — reçoit un soin calibré selon son épaisseur et sa sensibilité. Les consignes de séchage sont adaptées à la configuration du logement, y compris lorsque l'accès se fait par escalier sans ascenseur.</p>",
-      "reason": "Correction d'une faute de typographie/orthographe : « son'épaisseur » → « son épaisseur »."
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "Coordination simplifiée : Un interlocuteur unique",
+      "replace": "Coordination simplifiée : un interlocuteur unique",
+      "reason": "Minuscule après deux-points : correction typographique simple sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
     },
     {
-      "file": "src/data/cities-draft/tremblay-en-france.ts",
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "path": "customDescription",
+      "mode": "substring",
+      "find": "parties communes, parkings souterrains et espaces extérieurs",
+      "replace": "parties communes, des parkings souterrains et des espaces extérieurs",
+      "reason": "Correction typographique : ajout de l’article manquant pour une liste (accord/grammaire évident) sans changer le sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "parkings profonds sur plusieurs niveaux",
+      "replace": "des parkings profonds sur plusieurs niveaux",
+      "reason": "Typographie : ajout de l’article manquant dans une énumération (correction mécanique).",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "path": "services[0].faqAdditions[3].question",
+      "mode": "substring",
+      "find": "préfecture",
+      "replace": "Préfecture",
+      "reason": "Harmonisation de la casse d'un nom propre (« Préfecture ») ; correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Correction typographique courante : « compte-rendu » -> « compte rendu » (sans modifier la structure HTML).",
+      "meta": {
+        "severity": "medium",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "faq[0].answer",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "faq[3].answer",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "services[3].uniqueDeepDive",
+      "mode": "substring",
+      "find": "garantit l'élimination",
+      "replace": "garantissent l'élimination",
+      "reason": "Accord sujet/verbe : sujet pluriel (« le temps de contact respecté » + proposition précédente) => « garantissent ». Correction grammaticale minimale sans réécriture.",
+      "meta": {
+        "severity": "high",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "Rueil‑sur‑Seine",
+      "replace": "Rueil-sur-Seine",
+      "reason": "Remplacement mécanique de tirets insécables/variantes : harmoniser « Rueil‑sur‑Seine » (tiret insécable) en « Rueil-sur-Seine » pour cohérence avec le reste du fichier. Correction typographique sans changement de sens.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "open‑space",
+      "replace": "open-space",
+      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "Rueil‑sur‑Seine",
+      "replace": "Rueil-sur-Seine",
+      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[1].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "Rueil‑Malmaison",
+      "replace": "Rueil-Malmaison",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "nettoyez‑vous",
+      "replace": "nettoyez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
       "path": "services[2].faqAdditions[1].question",
-      "mode": "setField",
-      "expected": "Q2 : Comment traitez-vous les dépôts verts et la mousse sur un balcony exposé à l'humidité ?",
-      "value": "Q2 : Comment traitez-vous les dépôts verts et la mousse sur un balcon exposé à l'humidité ?",
-      "reason": "Faute d’orthographe : « balcony » doit être « balcon » en français."
+      "mode": "substring",
+      "find": "utilisez‑vous",
+      "replace": "utilisez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
     },
     {
-      "file": "src/data/cities-draft/vanves.ts",
-      "path": "services[2].heroDescription",
-      "mode": "setField",
-      "expected": "Une remise en état complète de votre balcony, du sol aux garde-corps, avec gestion maîtrisée des eaux pour préserver le voisinage et retrouver un espace extérieur agréable.",
-      "value": "Une remise en état complète de votre balcon, du sol aux garde-corps, avec gestion maîtrisée des eaux pour préserver le voisinage et retrouver un espace extérieur agréable.",
-      "reason": "Anglicisme/typo : « balcony » doit être « balcon » en français."
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[2].question",
+      "mode": "substring",
+      "find": "conseillez‑vous",
+      "replace": "conseillez-vous",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[2].faqAdditions[3].question",
+      "mode": "substring",
+      "find": "pourquoi éviter le nettoyage haute pression sur le balcon et quelles alternatives ?",
+      "replace": "pourquoi éviter le nettoyage à haute pression sur le balcon et quelles alternatives ?",
+      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[6].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "estimez‑vous",
+      "replace": "estimez-vous",
+      "reason": "Harmonisation typographique : apostrophe/espaces OK; correction mécanique du tiret insécable vers tiret standard.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "path": "faq[2].answer",
+      "mode": "substring",
+      "find": "stationnement payant strict",
+      "replace": "stationnement payant et strict",
+      "reason": "Correction minimale d'une tournure maladroite (« payant strict ») vers une formulation idiomatique sans changer le sens global.",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
     }
-  
   ]
 }

@@ -38,16 +38,16 @@ const city: City = {
     "ZAC des Arues",
   ],
   nearbyCities: [
+        "fontenay-aux-roses",
+        "malakoff",
         "bagneux",
         "vanves",
         "montrouge",
         "clamart",
         "issy-les-moulineaux",
+        "sceaux",
         "arcueil",
-        "cachan",
-        "gentilly",
-        "villejuif",
-        "chevilly-larue"
+        "cachan"
       ],
 
   // Texte brut uniquement

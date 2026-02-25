@@ -1346,7 +1346,7 @@ async function submitBatch() {
 
   const cfg = readJson(CONFIG_PATH);
 
-  const citiesDir = safeJoinUnderRoot(cfg.citiesDir || "src/data/cities");
+  const citiesDir = safeJoinUnderRoot(cfg.citiesDir || "src/data/cities/cities-draft");
   const model = cfg.model || "gpt-5.2";
   const rulesText = cfg.rulesText || "";
 
@@ -1486,7 +1486,7 @@ async function collectBatch() {
   }
 
   const cfg = readJson(CONFIG_PATH);
-  const citiesDir = safeJoinUnderRoot(cfg.citiesDir || "src/data/cities");
+  const citiesDir = safeJoinUnderRoot(cfg.citiesDir || "src/data/cities/cities-draft");
 
   const forbiddenFromCfg = Array.isArray(cfg.forbiddenStrong) ? cfg.forbiddenStrong.map(String) : [];
   const forbiddenStrong = uniqLowerTrim([...FORBIDDEN_STRONG_KLINOVA, ...forbiddenFromCfg]);

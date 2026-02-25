@@ -1,89 +1,176 @@
 {
-  "at": "2026-02-08T13:27:18.854Z",
+  "at": "2026-02-25T04:29:02.232Z",
   "dryRun": false,
   "ignoreExpected": false,
-  "maxEditsPerFile": 50,
+  "allowNonStaticSetField": false,
+  "maxEditsPerFile": 200,
   "inputApplyFile": "audit-apply.suggested.json",
   "logs": [
     {
-      "file": "src/data/cities-draft/aulnay-sous-bois.ts",
+      "file": "src/data/cities-draft/colombes.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[3].faqAdditions[3].answer",
-          "mode": "setField",
+          "path": "hubIntro",
+          "mode": "substring",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/clamart.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[4].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/les-lilas.ts",
+      "file": "src/data/cities-draft/courbevoie.ts",
       "status": "ok",
       "applied": 2,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[2].uniqueDeepDive",
-          "mode": "setField",
+          "path": "services[0].whyUsBullets[2]",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "status": "ok",
+      "applied": 2,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "customDescription",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "status": "ok",
+      "applied": 1,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[0].faqAdditions[3].question",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "status": "ok",
+      "applied": 4,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "faq[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "faq[3].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "status": "ok",
+      "applied": 9,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[0].faqAdditions[0].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[1].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[0].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[1].question",
+          "mode": "substring",
           "status": "applied"
         },
         {
           "path": "services[2].faqAdditions[2].question",
-          "mode": "setField",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[3].question",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].faqAdditions[1].question",
+          "mode": "substring",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/mitry-mory.ts",
+      "file": "src/data/cities-draft/sceaux.ts",
       "status": "ok",
       "applied": 1,
       "skipped": 0,
       "perEdit": [
         {
-          "path": "services[4].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/tremblay-en-france.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[2].faqAdditions[1].question",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/vanves.ts",
-      "status": "ok",
-      "applied": 1,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[2].heroDescription",
-          "mode": "setField",
+          "path": "faq[2].answer",
+          "mode": "substring",
           "status": "applied"
         }
       ]

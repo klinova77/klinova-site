@@ -39,15 +39,15 @@ const city: City = {
   ],
   nearbyCities: [
         "vanves",
+        "boulogne-billancourt",
+        "malakoff",
         "chatillon",
         "clamart",
         "montrouge",
+        "fontenay-aux-roses",
         "bagneux",
         "arcueil",
-        "gentilly",
-        "cachan",
-        "villejuif",
-        "chevilly-larue"
+        "sceaux"
       ],
 
   // Texte brut uniquement

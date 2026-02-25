@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "dryRun": true,
+  "mode": "substring-only-from-manual",
+  "maxEditsPerFile": 200,
+  "edits": [
+    {
+      "file": "src/data/cities-draft/antony.ts",
+      "path": "services[1].uniqueDeepDive",
+      "mode": "substring",
+      "find": "<h3>Lecture Lavage mécanisé et dégraissage</h3>",
+      "replace": "<h3>Lavage mécanisé et dégraissage</h3>",
+      "reason": "Coquille probable : « Lecture » semble accidentel dans le titre <h3>. Correction minimale sans changement de sens.",
+      "severity": "low",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/asnieres-sur-seine.ts",
+      "path": "services[2].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction certaine d’un mot anglais/typo (« balcony ») en français (« balcon ») sans changer le sens.",
+      "severity": "low",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/asnieres-sur-seine.ts",
+      "path": "services[3].faqAdditions[2].answer",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction certaine d’un mot anglais/typo (« balcony ») en français (« balcon ») sans changer le sens.",
+      "severity": "low",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "path": "faq[1].answer",
+      "mode": "substring",
+      "find": "Oui, nous disposons d'équipes mobilisables sous 24 à 48 heures selon la nature de la demande.",
+      "replace": "Oui, nous disposons d'équipes mobilisables dans les meilleurs délais selon la nature de la demande.",
+      "reason": "Supprimer l'engagement de délai chiffré (« sous 24 à 48 heures ») tout en conservant le sens (capacité à mobiliser des équipes selon la demande).",
+      "severity": "high",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "path": "services[3].faqAdditions[0].answer",
+      "mode": "substring",
+      "find": "Nous intervenons généralement sous 48 à 72 heures selon la charge de travail.",
+      "replace": "Nous intervenons généralement dans les meilleurs délais selon la charge de travail.",
+      "reason": "Supprimer l'engagement de délai chiffré (« sous 48 à 72 heures ») en conservant l'idée d'une intervention rapide selon la charge.",
+      "severity": "high",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "path": "services[7].faqAdditions[0].answer",
+      "mode": "substring",
+      "find": "Nous pouvons généralement intervenir sous 48 à 72 heures selon la taille du logement et la disponibilité des accès.",
+      "replace": "Nous pouvons généralement intervenir dans les meilleurs délais selon la taille du logement et la disponibilité des accès.",
+      "reason": "Supprimer l'engagement de délai chiffré (« sous 48 à 72 heures ») en conservant le sens (dépendance à la taille/disponibilité).",
+      "severity": "high",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/boulogne-billancourt.ts",
+      "path": "landmarks",
+      "mode": "substring",
+      "find": "Centre Commercial Les Passages",
+      "replace": "Centre commercial Les Passages",
+      "reason": "Correction typographique (casse) : « Centre Commercial » -> « Centre commercial » sans changer le sens.",
+      "severity": "low",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/colombes.ts",
+      "path": "services[0].faqAdditions[3].answer",
+      "mode": "substring",
+      "find": "treatment",
+      "replace": "traitement",
+      "reason": "Correction certaine d'un mot anglais (« treatment ») en français (« traitement ») sans changer le sens.",
+      "severity": "medium",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "après treatment",
+      "replace": "après traitement",
+      "reason": "Correction certaine d'une faute (« treatment » -> « traitement »).",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/courbevoie.ts",
+      "path": "services[2].whyUsBullets[0]",
+      "mode": "substring",
+      "find": "proximity de la Seine",
+      "replace": "proximité de la Seine",
+      "reason": "Correction certaine d'un mot erroné (« proximity » -> « proximité »).",
+      "severity": "medium",
+      "category": "consistency"
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "path": "services[2].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction certaine d'un mot anglais (« balcony ») en français (« balcon ») sans changer le sens.",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
+      "path": "services[2].faqAdditions[2].question",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction certaine d'un mot anglais (« balcony ») en français (« balcon ») sans changer le sens.",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/levallois-perret.ts",
+      "path": "services[0].specificChallenges[2]",
+      "mode": "substring",
+      "find": "Halls proches Gare Clichy-Levallois : flux piétons quotidiens apportant poussières et traces humides.",
+      "replace": "Halls proches de la gare de Clichy-Levallois : flux piétons quotidiens apportant poussières et traces humides.",
+      "reason": "Correction grammaticale minimale (ajout de préposition) sans changer le sens ; applySafe=false car modification dans une liste à relire (casse/nom propre).",
+      "severity": "low",
+      "category": "style"
+    },
+    {
+      "file": "src/data/cities-draft/malakoff.ts",
+      "path": "services[3].uniqueDeepDive",
+      "mode": "substring",
+      "find": "Le sol du balcony, le garde-corps, les vitrages et les murs mitoyens sont nettoyés avec un produit adapté au support.",
+      "replace": "Le sol du balcon, le garde-corps, les vitrages et les murs mitoyens sont nettoyés avec un produit adapté au support.",
+      "reason": "Correction certaine d'un mot erroné (anglais) sans impact sur le sens.",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/malakoff.ts",
+      "path": "services[3].specificChallenges[4]",
+      "mode": "substring",
+      "find": "avant réutilisation du balcony.",
+      "replace": "avant réutilisation du balcon.",
+      "reason": "Correction certaine d'un mot erroné (anglais) sans impact sur le sens.",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/malakoff.ts",
+      "path": "services[4].specificChallenges[0]",
+      "mode": "substring",
+      "find": "Taches d'urine animals fréquentes dans les foyers avec chiens ou chats, nécessitant un traitement enzymatique.",
+      "replace": "Taches d'urine animales fréquentes dans les foyers avec chiens ou chats, nécessitant un traitement enzymatique.",
+      "reason": "Correction certaine d'une faute (« animals ») sans changement de sens.",
+      "severity": "high",
+      "category": "orthographe"
+    },
+    
+    
+    {
+      "file": "src/data/cities-draft/nanterre.ts",
+      "path": "services[0].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "réouvrir",
+      "replace": "rouvrir",
+      "reason": "Correction orthographique recommandée : « réouvrir » -> « rouvrir » (usage courant).",
+      "severity": "low",
+      "category": "orthographe"
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "<li>Stationnement anticipé : Repérage préalable des zones de livraison et créneaux autorisés pour éviter tout blocage du véhicule technique pendant l'intervention.</li>",
+      "replace": "<li><strong>Stationnement anticipé :</strong> Repérage préalable des zones de livraison et créneaux autorisés pour éviter tout blocage du véhicule technique pendant l'intervention.</li>",
+      "reason": "Harmoniser la typographie des puces (3e item) sans changer le sens.",
+      "severity": "low",
+      "category": "style"
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "services[2].specificChallenges[3]",
+      "mode": "substring",
+      "find": "Loggias Haussmanniennes",
+      "replace": "Loggias haussmanniennes",
+      "reason": "Adjectif \"haussmanniennes\" en minuscule (typographie française) ; correction certaine et minimale.",
+      "severity": "low",
+      "category": "consistency"
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "services[2].faqAdditions[3].question",
+      "mode": "substring",
+      "find": "loggias Haussmanniennes",
+      "replace": "loggias haussmanniennes",
+      "reason": "Adjectif \"haussmanniennes\" en minuscule (typographie) ; correction certaine et minimale.",
+      "severity": "low",
+      "category": "consistency"
+    },
+    {
+      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
+      "path": "services[3].uniqueDeepDive",
+      "mode": "substring",
+      "find": "homologué, le temps de contact respecté garantit",
+      "replace": "homologué, le temps de contact respecté, garantit",
+      "reason": "Ponctuation pour améliorer la lisibilité sans changer le sens (ajout d'une virgule).",
+      "severity": "low",
+      "category": "style"
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "faq[1].answer",
+      "mode": "substring",
+      "find": "Oui, nous disposons d'équipes mobilisables sous 24 à 48 heures selon la nature de la demande. Un premier diagnostic téléphonique permet d'évaluer le matériel nécessaire et de <strong>planifier l'intervention</strong> dans les meilleurs délais, y compris le week-end pour les situations critiques.",
+      "replace": "Oui, nous disposons d'équipes mobilisables selon la nature de la demande et nos disponibilités. Un premier diagnostic téléphonique permet d'évaluer le matériel nécessaire et de <strong>planifier l'intervention</strong> dans les meilleurs délais.",
+      "reason": "Retirer la promesse de délai chiffrée et la mention week-end, tout en conservant le sens (capacité à intervenir rapidement) sans engagement temporel.",
+      "severity": "high",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[4].whyUsBullets[2]",
+      "mode": "substring",
+      "find": "Intervention planifiée avec véhicule adapté, remise en service du mobilier sous 24 à 48 heures selon conditions.",
+      "replace": "Intervention planifiée avec véhicule adapté, remise en service du mobilier après séchage complet selon conditions.",
+      "reason": "Supprimer le délai chiffré « sous 24 à 48 heures » (promesse) en conservant l'idée de séchage/ remise en service dépendante des conditions.",
+      "severity": "high",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "path": "services[6].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "visite d'État des lieux",
+      "replace": "visite d'état des lieux",
+      "reason": "Correction typographique certaine : « état des lieux » ne prend pas de majuscule à « état » dans ce contexte ; correction minimale sans changer le sens.",
+      "severity": "low",
+      "category": "style"
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "path": "faq[1].answer",
+      "mode": "substring",
+      "find": "Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande.",
+      "replace": "Oui, nous pouvons mobiliser une équipe dans les meilleurs délais selon la nature de la demande et nos disponibilités.",
+      "reason": "Réduire la promesse de délai chiffré et la notion d'urgence (risque de promesse commerciale). Correction à relire car modifie le wording.",
+      "severity": "medium",
+      "category": "legal"
+    },
+    {
+      "file": "src/data/cities-draft/sceaux.ts",
+      "path": "services[7].faqAdditions[2].answer",
+      "mode": "substring",
+      "find": "Nous pouvons intervenir sous 24 à 48 heures selon la surface et la disponibilité.",
+      "replace": "Nous pouvons intervenir dans les meilleurs délais selon la surface et nos disponibilités.",
+      "reason": "Réduire la promesse de délai chiffré (« sous 24 à 48 heures »). À relire car impact marketing/engagement.",
+      "severity": "medium",
+      "category": "legal"
+    }
+  ]
+}
