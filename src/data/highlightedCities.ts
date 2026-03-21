@@ -27,8 +27,7 @@ export const FEATURED_CITY_SLUGS = [
   "torcy",
 
   // 93 — Seine-Saint-Denis
-  "montreuil",
-  
+  "montreuil",  
   "noisy-le-grand",
   "le-raincy",
   "villepinte",
@@ -41,11 +40,27 @@ export const FEATURED_CITY_SLUGS = [
   "ivry-sur-seine",
   "le-perreux-sur-mrne",
 
+  // 92
+
    "Boulogne-Billancourt",
   "Neuilly-sur-Seine",
   "Nanterre",
   "Courbevoie",
   "Sceaux",
+
+  // 95
+
+  "cergy",
+  "argenteuil",
+  "franconville",
+  "herblay-sur-seine",
+
+  // 78 
+
+  "verseailles",
+  "saint-germain-en-laye",
+  "houilles",
+
 
 ] as const;
 
@@ -77,26 +92,35 @@ export const featuredCities: FeaturedCityKln[] = FEATURED_CITY_SLUGS
  * Mets ici les villes les plus “business” / les plus recherchées.
  */
 export const FOOTER_CITY_SLUGS = [
+
+   "verseailles",
+  "saint-germain-en-laye",
+  "houilles",
   // 94 — Val-de-Marne (volume + notoriété)
-  "creteil",                 // Hub / volume
+          // Hub / volume
            // Densité + demandes variées
   "saint-maur-des-fosses",   // Standing + pavillonnaire
   "vincennes",               // Notoriété + CSP+
 
   // 93 — Seine-Saint-Denis (volume + mix habitats)
-  "montreuil",               // Volume majeur
-  "noisy-le-grand",          // Très gros volume + mix
+  "montreuil",  
+  "chelles",             // Volume majeur
+        // Très gros volume + mix
                  // Densité + copro / appart
-  "villepinte",              // Surfaces + pavillons + zones pro
+              // Surfaces + pavillons + zones pro
 
   // 77 — Seine-et-Marne (surfaces + pavillons)
-  "chelles",                 // Base arrière / volume
+               // Base arrière / volume
   "meaux",                   // Gros volume + grandes surfaces
   "bussy-saint-georges",     // Ville récente / standing
           
   "Boulogne-Billancourt",
   "Neuilly-sur-Seine",
   "Nanterre",
+
+   "cergy",
+  "argenteuil",
+  "franconville",
 
 ] as const;
 
