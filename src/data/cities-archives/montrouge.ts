@@ -304,7 +304,7 @@ faq: [
 <p class="mt-4">Un canapé taché ou un matelas imprégné d'odeurs change l'atmosphère d'un logement. Dans les <strong>immeubles années 70-80 du quartier Ferry-Buffalo</strong>, les appartements bien entretenus méritent des textiles à la hauteur. Un nettoyage adapté redonne aux tissus leur aspect d'origine, élimine les allergènes accumulés et neutralise les odeurs que l'aération seule ne suffit pas à dissiper.</p>
 <p class="mt-4">Chaque intervention commence par un diagnostic du textile : nature des fibres, type de taches, état général. Cette évaluation permet d'adapter la méthode et d'anticiper le temps de séchage selon l'épaisseur du tissu et la ventilation du logement.</p>`,
       uniqueDeepDive: `<h3>Diagnostic et pré-traitement</h3>
-<p>Avant toute intervention, le textile est examiné : coton, velours, synthétique ou laine réagissent différemment. Un test discret sur une zone cachée valide la compatibilité du treatment. Les taches identifiées (café, urine, graisse) reçoivent un détachage ciblé avec des produits enzymatiques si nécessaire.</p>
+<p>Avant toute intervention, le textile est examiné : coton, velours, synthétique ou laine réagissent différemment. Un test discret sur une zone cachée valide la compatibilité du traitement. Les taches identifiées (café, urine, graisse) reçoivent un détachage ciblé avec des produits enzymatiques si nécessaire.</p>
 
 <h3>Nettoyage par injection-extraction</h3>
 <p>La méthode injecte une solution adaptée au cœur des fibres, puis aspire immédiatement l'eau chargée de salissures. La pression et la température sont ajustées selon la fragilité du tissu. Cette technique déloge les résidus incrustés sans détremper excessivement le textile.</p>
@@ -371,7 +371,7 @@ faq: [
       faqAdditions: [
         {
           question: "Comment traitez-vous les mousses tenaces sur les terrasses ombragées des immeubles du centre de Montrouge ?",
-          answer: `<p>Nous appliquons un produit anti-mousse adapté au support après le nettoyage principal. Ce treatment agit en profondeur pour décoller les dépôts verts existants et ralentir leur réapparition. Sur les terrasses exposées nord, entre immeubles rapprochés, nous recommandons un passage préventif annuel.</p>`,
+          answer: `<p>Nous appliquons un produit anti-mousse adapté au support après le nettoyage principal. Ce traitement agit en profondeur pour décoller les dépôts verts existants et ralentir leur réapparition. Sur les terrasses exposées nord, entre immeubles rapprochés, nous recommandons un passage préventif annuel.</p>`,
         },
         {
           question: "Quelle différence de traitement entre une terrasse en bois composite et une en dalles béton dans les résidences de la ZAC des Portes de Montrouge ?",

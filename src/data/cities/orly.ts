@@ -45,14 +45,14 @@ const city: City = {
   nearbyCities: [
         "thiais",
         "choisy-le-roi",
+        "rungis",
         "chevilly-larue",
         "vitry-sur-seine",
         "creteil",
         "alfortville",
         "villejuif",
         "maisons-alfort",
-        "cachan",
-        "antony"
+        "cachan"
       ],
 
   // Texte brut uniquement

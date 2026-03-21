@@ -66,10 +66,10 @@
     "bondy",
     "les-lilas",
     "le-blanc-mesnil",
+    "aubervilliers",
     "bagnolet",
     "montreuil",
-    "rosny-sous-bois",
-    "villemomble"
+    "rosny-sous-bois"
   ],
   "bondy": [
     "noisy-le-sec",
@@ -168,6 +168,7 @@
     "livry-gargan"
   ],
   "chevilly-larue": [
+    "rungis",
     "thiais",
     "villejuif",
     "cachan",
@@ -176,8 +177,7 @@
     "antony",
     "arcueil",
     "bagneux",
-    "orly",
-    "gentilly"
+    "orly"
   ],
   "choisy-le-roi": [
     "thiais",
@@ -187,9 +187,9 @@
     "alfortville",
     "maisons-alfort",
     "chevilly-larue",
+    "rungis",
     "villejuif",
-    "ivry-sur-seine",
-    "saint-maur-des-fosses"
+    "ivry-sur-seine"
   ],
   "clamart": [
     "fontenay-aux-roses",
@@ -199,9 +199,9 @@
     "malakoff",
     "sceaux",
     "bagneux",
+    "sevres",
     "boulogne-billancourt",
-    "montrouge",
-    "cachan"
+    "montrouge"
   ],
   "claye-souilly": [
     "villeparisis",
@@ -294,10 +294,10 @@
     "chatillon",
     "clamart",
     "montrouge",
+    "sevres",
     "fontenay-aux-roses",
     "bagneux",
-    "arcueil",
-    "sceaux"
+    "saint-cloud"
   ],
   "ivry-sur-seine": [
     "charenton-le-pont",
@@ -342,10 +342,10 @@
     "noisy-le-sec",
     "sevran",
     "pantin",
+    "aubervilliers",
     "villepinte",
     "romainville",
-    "livry-gargan",
-    "le-raincy"
+    "livry-gargan"
   ],
   "le-perreux-sur-marne": [
     "nogent-sur-marne",
@@ -391,9 +391,9 @@
     "noisy-le-sec",
     "bobigny",
     "vincennes",
+    "aubervilliers",
     "saint-mande",
-    "rosny-sous-bois",
-    "fontenay-sous-bois"
+    "rosny-sous-bois"
   ],
   "livry-gargan": [
     "sevran",
@@ -554,26 +554,26 @@
   "orly": [
     "thiais",
     "choisy-le-roi",
+    "rungis",
     "chevilly-larue",
     "vitry-sur-seine",
     "creteil",
     "alfortville",
     "villejuif",
     "maisons-alfort",
-    "cachan",
-    "antony"
+    "cachan"
   ],
   "pantin": [
+    "aubervilliers",
     "les-lilas",
     "bobigny",
     "romainville",
     "noisy-le-sec",
     "bagnolet",
     "montreuil",
+    "saint-denis",
     "le-blanc-mesnil",
-    "bondy",
-    "vincennes",
-    "rosny-sous-bois"
+    "bondy"
   ],
   "pontault-combault": [
     "emerainville",
@@ -663,13 +663,13 @@
     "choisy-le-roi",
     "orly",
     "chevilly-larue",
+    "rungis",
     "vitry-sur-seine",
     "villejuif",
     "alfortville",
     "cachan",
     "creteil",
-    "ivry-sur-seine",
-    "maisons-alfort"
+    "ivry-sur-seine"
   ],
   "torcy": [
     "vaires-sur-marne",
@@ -805,63 +805,63 @@
   ],
   "antony": [
     "sceaux",
+    "massy",
+    "rungis",
     "chevilly-larue",
     "fontenay-aux-roses",
     "cachan",
     "bagneux",
     "chatillon",
     "clamart",
-    "arcueil",
-    "villejuif",
-    "thiais"
+    "arcueil"
   ],
   "asnieres-sur-seine": [
+    "gennevilliers",
+    "clichy",
     "levallois-perret",
+    "saint-ouen-sur-seine",
     "colombes",
     "courbevoie",
     "neuilly-sur-seine",
-    "nanterre",
-    "pantin",
-    "boulogne-billancourt",
-    "rueil-malmaison",
-    "les-lilas",
-    "issy-les-moulineaux"
+    "argenteuil",
+    "puteaux",
+    "saint-denis"
   ],
   "boulogne-billancourt": [
     "issy-les-moulineaux",
+    "saint-cloud",
+    "sevres",
     "vanves",
+    "suresnes",
     "malakoff",
     "clamart",
+    "puteaux",
     "chatillon",
-    "neuilly-sur-seine",
-    "montrouge",
-    "rueil-malmaison",
-    "fontenay-aux-roses",
-    "bagneux"
+    "neuilly-sur-seine"
   ],
   "colombes": [
     "courbevoie",
+    "argenteuil",
+    "gennevilliers",
     "asnieres-sur-seine",
     "neuilly-sur-seine",
     "levallois-perret",
     "nanterre",
-    "rueil-malmaison",
-    "boulogne-billancourt",
-    "issy-les-moulineaux",
-    "vanves",
-    "pantin"
+    "puteaux",
+    "houilles",
+    "clichy"
   ],
   "courbevoie": [
     "neuilly-sur-seine",
+    "puteaux",
     "levallois-perret",
     "colombes",
     "asnieres-sur-seine",
+    "clichy",
     "nanterre",
-    "rueil-malmaison",
-    "boulogne-billancourt",
-    "issy-les-moulineaux",
-    "vanves",
-    "malakoff"
+    "suresnes",
+    "gennevilliers",
+    "saint-ouen-sur-seine"
   ],
   "fontenay-aux-roses": [
     "chatillon",
@@ -876,16 +876,16 @@
     "issy-les-moulineaux"
   ],
   "levallois-perret": [
+    "clichy",
     "neuilly-sur-seine",
     "courbevoie",
     "asnieres-sur-seine",
+    "puteaux",
+    "saint-ouen-sur-seine",
+    "gennevilliers",
     "colombes",
-    "nanterre",
-    "boulogne-billancourt",
-    "issy-les-moulineaux",
-    "vanves",
-    "rueil-malmaison",
-    "malakoff"
+    "suresnes",
+    "nanterre"
   ],
   "malakoff": [
     "vanves",
@@ -900,40 +900,40 @@
     "cachan"
   ],
   "nanterre": [
+    "puteaux",
+    "suresnes",
     "rueil-malmaison",
+    "houilles",
     "courbevoie",
     "colombes",
     "neuilly-sur-seine",
+    "saint-cloud",
     "levallois-perret",
-    "asnieres-sur-seine",
-    "boulogne-billancourt",
-    "issy-les-moulineaux",
-    "vanves",
-    "malakoff"
+    "argenteuil"
   ],
   "neuilly-sur-seine": [
     "courbevoie",
     "levallois-perret",
+    "puteaux",
+    "clichy",
+    "suresnes",
     "asnieres-sur-seine",
     "colombes",
     "nanterre",
-    "boulogne-billancourt",
-    "rueil-malmaison",
-    "issy-les-moulineaux",
-    "vanves",
-    "malakoff"
+    "gennevilliers",
+    "boulogne-billancourt"
   ],
   "rueil-malmaison": [
+    "suresnes",
     "nanterre",
+    "saint-cloud",
+    "puteaux",
+    "sevres",
     "boulogne-billancourt",
+    "houilles",
     "courbevoie",
     "neuilly-sur-seine",
-    "colombes",
-    "issy-les-moulineaux",
-    "levallois-perret",
-    "vanves",
-    "asnieres-sur-seine",
-    "clamart"
+    "le-chesnay-rocquencourt"
   ],
   "sceaux": [
     "fontenay-aux-roses",
@@ -946,5 +946,245 @@
     "arcueil",
     "malakoff",
     "montrouge"
+  ],
+  "argenteuil": [
+    "colombes",
+    "gennevilliers",
+    "franconville",
+    "asnieres-sur-seine",
+    "houilles",
+    "courbevoie",
+    "clichy",
+    "nanterre",
+    "levallois-perret",
+    "neuilly-sur-seine"
+  ],
+  "aubervilliers": [
+    "pantin",
+    "saint-denis",
+    "bobigny",
+    "saint-ouen-sur-seine",
+    "les-lilas",
+    "romainville",
+    "noisy-le-sec",
+    "le-blanc-mesnil",
+    "bagnolet",
+    "clichy"
+  ],
+  "cergy": [
+    "herblay-sur-seine",
+    "saint-germain-en-laye",
+    "franconville",
+    "houilles",
+    "argenteuil",
+    "nanterre",
+    "colombes",
+    "rueil-malmaison",
+    "gennevilliers",
+    "courbevoie"
+  ],
+  "clichy": [
+    "levallois-perret",
+    "asnieres-sur-seine",
+    "saint-ouen-sur-seine",
+    "gennevilliers",
+    "neuilly-sur-seine",
+    "courbevoie",
+    "colombes",
+    "puteaux",
+    "saint-denis",
+    "aubervilliers"
+  ],
+  "franconville": [
+    "argenteuil",
+    "herblay-sur-seine",
+    "houilles",
+    "colombes",
+    "gennevilliers",
+    "asnieres-sur-seine",
+    "nanterre",
+    "courbevoie",
+    "saint-germain-en-laye",
+    "clichy"
+  ],
+  "gennevilliers": [
+    "asnieres-sur-seine",
+    "colombes",
+    "clichy",
+    "argenteuil",
+    "saint-ouen-sur-seine",
+    "levallois-perret",
+    "courbevoie",
+    "neuilly-sur-seine",
+    "saint-denis",
+    "puteaux"
+  ],
+  "herblay-sur-seine": [
+    "franconville",
+    "cergy",
+    "houilles",
+    "saint-germain-en-laye",
+    "argenteuil",
+    "colombes",
+    "nanterre",
+    "gennevilliers",
+    "asnieres-sur-seine",
+    "courbevoie"
+  ],
+  "houilles": [
+    "nanterre",
+    "colombes",
+    "argenteuil",
+    "saint-germain-en-laye",
+    "courbevoie",
+    "rueil-malmaison",
+    "puteaux",
+    "suresnes",
+    "neuilly-sur-seine",
+    "franconville"
+  ],
+  "le-chesnay-rocquencourt": [
+    "versailles",
+    "sevres",
+    "saint-cloud",
+    "rueil-malmaison",
+    "suresnes",
+    "boulogne-billancourt",
+    "nanterre",
+    "clamart",
+    "issy-les-moulineaux",
+    "puteaux"
+  ],
+  "massy": [
+    "antony",
+    "sceaux",
+    "rungis",
+    "fontenay-aux-roses",
+    "chevilly-larue",
+    "clamart",
+    "bagneux",
+    "cachan",
+    "chatillon",
+    "thiais"
+  ],
+  "puteaux": [
+    "suresnes",
+    "neuilly-sur-seine",
+    "courbevoie",
+    "nanterre",
+    "levallois-perret",
+    "rueil-malmaison",
+    "colombes",
+    "saint-cloud",
+    "boulogne-billancourt",
+    "clichy"
+  ],
+  "rungis": [
+    "chevilly-larue",
+    "thiais",
+    "antony",
+    "orly",
+    "cachan",
+    "sceaux",
+    "villejuif",
+    "choisy-le-roi",
+    "vitry-sur-seine",
+    "bagneux"
+  ],
+  "saint-cloud": [
+    "sevres",
+    "boulogne-billancourt",
+    "suresnes",
+    "rueil-malmaison",
+    "issy-les-moulineaux",
+    "puteaux",
+    "nanterre",
+    "le-chesnay-rocquencourt",
+    "clamart",
+    "neuilly-sur-seine"
+  ],
+  "saint-denis": [
+    "aubervilliers",
+    "saint-ouen-sur-seine",
+    "pantin",
+    "gennevilliers",
+    "asnieres-sur-seine",
+    "clichy",
+    "bobigny",
+    "le-blanc-mesnil",
+    "les-lilas",
+    "levallois-perret"
+  ],
+  "saint-germain-en-laye": [
+    "houilles",
+    "nanterre",
+    "rueil-malmaison",
+    "herblay-sur-seine",
+    "colombes",
+    "suresnes",
+    "argenteuil",
+    "franconville",
+    "puteaux",
+    "le-chesnay-rocquencourt"
+  ],
+  "saint-ouen-l-aumone": [
+    "herblay-sur-seine",
+    "cergy",
+    "franconville",
+    "saint-germain-en-laye",
+    "argenteuil",
+    "houilles",
+    "colombes",
+    "gennevilliers",
+    "nanterre",
+    "asnieres-sur-seine"
+  ],
+  "saint-ouen-sur-seine": [
+    "clichy",
+    "asnieres-sur-seine",
+    "saint-denis",
+    "levallois-perret",
+    "gennevilliers",
+    "aubervilliers",
+    "pantin",
+    "neuilly-sur-seine",
+    "courbevoie",
+    "colombes"
+  ],
+  "sevres": [
+    "saint-cloud",
+    "boulogne-billancourt",
+    "issy-les-moulineaux",
+    "clamart",
+    "suresnes",
+    "rueil-malmaison",
+    "vanves",
+    "le-chesnay-rocquencourt",
+    "chatillon",
+    "malakoff"
+  ],
+  "suresnes": [
+    "puteaux",
+    "rueil-malmaison",
+    "nanterre",
+    "saint-cloud",
+    "neuilly-sur-seine",
+    "courbevoie",
+    "boulogne-billancourt",
+    "sevres",
+    "levallois-perret",
+    "colombes"
+  ],
+  "versailles": [
+    "le-chesnay-rocquencourt",
+    "sevres",
+    "saint-cloud",
+    "rueil-malmaison",
+    "clamart",
+    "boulogne-billancourt",
+    "suresnes",
+    "issy-les-moulineaux",
+    "nanterre",
+    "puteaux"
   ]
 }

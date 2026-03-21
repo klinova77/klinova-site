@@ -1,26 +1,16 @@
 {
-  "at": "2026-02-08T20:51:33.943Z",
+  "at": "2026-03-21T00:32:41.588Z",
   "dryRun": false,
   "ignoreExpected": false,
   "maxEditsPerFile": 50,
   "inputApplyFile": "strong-apply.klinova.suggested.json",
   "logs": [
     {
-      "file": "src/data/cities-draft/aulnay-sous-bois.ts",
+      "file": "src/data/cities-draft/argenteuil.ts",
       "status": "ok",
-      "applied": 38,
-      "skipped": 1,
+      "applied": 6,
+      "skipped": 0,
       "perEdit": [
-        {
-          "path": "hubIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "citySpecificChallenges[3]",
-          "mode": "setField",
-          "status": "applied"
-        },
         {
           "path": "services[0].uniqueIntro",
           "mode": "setField",
@@ -28,7 +18,7 @@
         },
         {
           "path": "services[0].uniqueDeepDive",
-          "mode": "substring",
+          "mode": "setField",
           "status": "applied"
         },
         {
@@ -37,182 +27,26 @@
           "status": "applied"
         },
         {
-          "path": "services[0].specificChallenges[1]",
+          "path": "services[0].specificChallenges[4]",
           "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[0].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].uniqueIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].specificChallenges[0]",
+          "path": "services[0].faqAdditions[0].answer",
           "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[1].specificChallenges[1]",
+          "path": "services[0].faqAdditions[2].answer",
           "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[0].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueDeepDive",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[0].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].uniqueIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].specificChallenges[3]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueDeepDive",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].faqAdditions[0].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].specificChallenges[0]",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        },
-        {
-          "path": "services[6].specificChallenges[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].faqAdditions[0].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].faqAdditions[3].answer",
-          "mode": "substring",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/chatillon.ts",
+      "file": "src/data/cities-draft/aubervilliers.ts",
       "status": "ok",
-      "applied": 7,
+      "applied": 6,
       "skipped": 0,
       "perEdit": [
         {
@@ -227,11 +61,6 @@
         },
         {
           "path": "services[0].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[1]",
           "mode": "setField",
           "status": "applied"
         },
@@ -253,148 +82,9 @@
       ]
     },
     {
-      "file": "src/data/cities-draft/clamart.ts",
+      "file": "src/data/cities-draft/cergy.ts",
       "status": "ok",
-      "applied": 25,
-      "skipped": 1,
-      "perEdit": [
-        {
-          "path": "hubIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[0]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[2]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[2].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].uniqueDeepDive",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].specificChallenges[0]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].specificChallenges[1]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueDeepDive",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[0]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[1]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[2].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].uniqueIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[0]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[3]",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[0].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[1].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].uniqueDeepDive",
-          "mode": "setField",
-          "status": "skipped",
-          "reason": "no_change"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/issy-les-moulineaux.ts",
-      "status": "ok",
-      "applied": 7,
+      "applied": 10,
       "skipped": 0,
       "perEdit": [
         {
@@ -414,11 +104,6 @@
         },
         {
           "path": "services[0].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[1]",
           "mode": "setField",
           "status": "applied"
         },
@@ -431,128 +116,14 @@
           "path": "services[0].faqAdditions[2].answer",
           "mode": "setField",
           "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/le-blanc-mesnil.ts",
-      "status": "ok",
-      "applied": 4,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/les-lilas.ts",
-      "status": "ok",
-      "applied": 7,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "hubIntro",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueDeepDive",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[2].answer",
-          "mode": "substring",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[3].answer",
-          "mode": "substring",
-          "status": "applied"
         },
         {
           "path": "services[1].uniqueIntro",
           "mode": "setField",
           "status": "applied"
-        }
-      ]
-    },
-    {
-      "file": "src/data/cities-draft/mitry-mory.ts",
-      "status": "ok",
-      "applied": 37,
-      "skipped": 0,
-      "perEdit": [
-        {
-          "path": "hubIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[0].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
         },
         {
           "path": "services[1].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[1].specificChallenges[4]",
           "mode": "setField",
           "status": "applied"
         },
@@ -565,143 +136,13 @@
           "path": "services[1].faqAdditions[1].answer",
           "mode": "setField",
           "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].specificChallenges[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[2].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[2]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[3].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].specificChallenges[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].faqAdditions[3].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[4].faqAdditions[2].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueIntro",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].specificChallenges[4]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].specificChallenges[0]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].faqAdditions[0].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[5].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].uniqueDeepDive",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].specificChallenges[1]",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].faqAdditions[1].answer",
-          "mode": "setField",
-          "status": "applied"
-        },
-        {
-          "path": "services[6].faqAdditions[0].answer",
-          "mode": "setField",
-          "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/sevran.ts",
+      "file": "src/data/cities-draft/clichy.ts",
       "status": "ok",
-      "applied": 5,
+      "applied": 7,
       "skipped": 0,
       "perEdit": [
         {
@@ -720,7 +161,17 @@
           "status": "applied"
         },
         {
-          "path": "services[0].specificChallenges[2]",
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
           "mode": "setField",
           "status": "applied"
         },
@@ -732,11 +183,21 @@
       ]
     },
     {
-      "file": "src/data/cities-draft/tremblay-en-france.ts",
+      "file": "src/data/cities-draft/franconville.ts",
       "status": "ok",
-      "applied": 30,
+      "applied": 6,
       "skipped": 0,
       "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
         {
           "path": "services[0].uniqueDeepDive",
           "mode": "substring",
@@ -748,8 +209,195 @@
           "status": "applied"
         },
         {
-          "path": "services[0].specificChallenges[2]",
+          "path": "services[0].specificChallenges[1]",
           "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/gennevilliers.ts",
+      "status": "ok",
+      "applied": 5,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/herblay-sur-seine.ts",
+      "status": "ok",
+      "applied": 15,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].specificChallenges[4]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/houilles.ts",
+      "status": "ok",
+      "applied": 6,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/le-chesnay-rocquencourt.ts",
+      "status": "ok",
+      "applied": 6,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
           "status": "applied"
         },
         {
@@ -761,24 +409,133 @@
           "path": "services[0].faqAdditions[1].answer",
           "mode": "substring",
           "status": "applied"
-        },
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/massy.ts",
+      "status": "ok",
+      "applied": 7,
+      "skipped": 0,
+      "perEdit": [
         {
-          "path": "services[1].uniqueDeepDive",
+          "path": "hubIntro",
           "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[1].specificChallenges[0]",
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/puteaux.ts",
+      "status": "ok",
+      "applied": 6,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[4]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/rungis.ts",
+      "status": "ok",
+      "applied": 26,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
           "mode": "substring",
           "status": "applied"
         },
         {
-          "path": "services[1].specificChallenges[3]",
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
           "mode": "substring",
           "status": "applied"
         },
         {
-          "path": "services[1].faqAdditions[2].answer",
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[1].answer",
           "mode": "substring",
           "status": "applied"
         },
@@ -794,16 +551,212 @@
         },
         {
           "path": "services[2].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[3].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].faqAdditions[2].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].faqAdditions[2].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].uniqueDeepDive",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/saint-cloud.ts",
+      "status": "ok",
+      "applied": 7,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[4]",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[1].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "substring",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/saint-germain-en-laye.ts",
+      "status": "ok",
+      "applied": 38,
+      "skipped": 1,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[0].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[2].answer",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].uniqueIntro",
+          "mode": "substring",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].uniqueDeepDive",
           "mode": "setField",
           "status": "applied"
         },
         {
           "path": "services[2].specificChallenges[0]",
-          "mode": "substring",
+          "mode": "setField",
           "status": "applied"
         },
         {
           "path": "services[2].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].faqAdditions[3].answer",
           "mode": "substring",
           "status": "applied"
         },
@@ -819,31 +772,52 @@
         },
         {
           "path": "services[3].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].faqAdditions[0].answer",
           "mode": "substring",
           "status": "applied"
         },
         {
-          "path": "services[3].faqAdditions[1].answer",
+          "path": "services[3].faqAdditions[3].answer",
           "mode": "substring",
           "status": "applied"
         },
         {
           "path": "services[4].uniqueIntro",
-          "mode": "setField",
+          "mode": "substring",
           "status": "applied"
         },
         {
           "path": "services[4].uniqueDeepDive",
-          "mode": "substring",
+          "mode": "setField",
+          "status": "skipped",
+          "reason": "no_change"
+        },
+        {
+          "path": "services[4].specificChallenges[3]",
+          "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[4].specificChallenges[0]",
-          "mode": "substring",
+          "path": "services[4].specificChallenges[1]",
+          "mode": "setField",
           "status": "applied"
         },
         {
-          "path": "services[4].specificChallenges[4]",
+          "path": "services[4].faqAdditions[1].answer",
           "mode": "substring",
           "status": "applied"
         },
@@ -858,18 +832,33 @@
           "status": "applied"
         },
         {
-          "path": "services[5].specificChallenges[0]",
+          "path": "services[5].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].specificChallenges[4]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].faqAdditions[0].answer",
           "mode": "substring",
           "status": "applied"
         },
         {
-          "path": "services[5].specificChallenges[3]",
+          "path": "services[5].faqAdditions[3].answer",
           "mode": "substring",
           "status": "applied"
         },
         {
           "path": "services[6].uniqueIntro",
-          "mode": "substring",
+          "mode": "setField",
           "status": "applied"
         },
         {
@@ -878,21 +867,21 @@
           "status": "applied"
         },
         {
-          "path": "services[6].specificChallenges[0]",
+          "path": "services[6].faqAdditions[0].answer",
           "mode": "substring",
           "status": "applied"
         },
         {
-          "path": "services[6].specificChallenges[3]",
+          "path": "services[6].faqAdditions[1].answer",
           "mode": "substring",
           "status": "applied"
         }
       ]
     },
     {
-      "file": "src/data/cities-draft/vanves.ts",
+      "file": "src/data/cities-draft/saint-ouen-l-aumone.ts",
       "status": "ok",
-      "applied": 6,
+      "applied": 13,
       "skipped": 0,
       "perEdit": [
         {
@@ -911,6 +900,11 @@
           "status": "applied"
         },
         {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
           "path": "services[0].specificChallenges[2]",
           "mode": "setField",
           "status": "applied"
@@ -921,7 +915,250 @@
           "status": "applied"
         },
         {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[1].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/saint-ouen-sur-seine.ts",
+      "status": "ok",
+      "applied": 6,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/sevres.ts",
+      "status": "ok",
+      "applied": 4,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[2].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/suresnes.ts",
+      "status": "ok",
+      "applied": 6,
+      "skipped": 0,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[0]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
           "path": "services[0].faqAdditions[1].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].faqAdditions[3].answer",
+          "mode": "setField",
+          "status": "applied"
+        }
+      ]
+    },
+    {
+      "file": "src/data/cities-draft/versailles.ts",
+      "status": "ok",
+      "applied": 19,
+      "skipped": 1,
+      "perEdit": [
+        {
+          "path": "hubIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].uniqueIntro",
+          "mode": "setField",
+          "status": "skipped",
+          "reason": "not_strong_only_edit"
+        },
+        {
+          "path": "services[0].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[0].specificChallenges[3]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[1].faqAdditions[0].answer",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[2].specificChallenges[3]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].specificChallenges[1]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[3].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[4].specificChallenges[2]",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[5].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].uniqueIntro",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].uniqueDeepDive",
+          "mode": "setField",
+          "status": "applied"
+        },
+        {
+          "path": "services[6].specificChallenges[4]",
           "mode": "setField",
           "status": "applied"
         }

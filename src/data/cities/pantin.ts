@@ -39,16 +39,16 @@ const city: City = {
     "Sept Arpents - Stalingrad",
   ],
   nearbyCities: [
+        "aubervilliers",
         "les-lilas",
         "bobigny",
         "romainville",
         "noisy-le-sec",
         "bagnolet",
         "montreuil",
+        "saint-denis",
         "le-blanc-mesnil",
-        "bondy",
-        "vincennes",
-        "rosny-sous-bois"
+        "bondy"
       ],
 
   // Texte brut uniquement

@@ -45,15 +45,15 @@ const city: City = {
   ],
   nearbyCities: [
         "issy-les-moulineaux",
+        "saint-cloud",
+        "sevres",
         "vanves",
+        "suresnes",
         "malakoff",
         "clamart",
+        "puteaux",
         "chatillon",
-        "neuilly-sur-seine",
-        "montrouge",
-        "rueil-malmaison",
-        "fontenay-aux-roses",
-        "bagneux"
+        "neuilly-sur-seine"
       ],
 
   // Texte brut uniquement

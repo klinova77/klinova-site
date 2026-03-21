@@ -190,7 +190,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Comment éliminez-vous les dépôts verts et mousses sur les balcons exposés à l'humidité du Canal de l'Ourcq ?",
-          answer: "<p>Un produit désincrustant est appliqué sur les zones vertes, puis laissé agir quelques minutes. Le brossage décolle la mousse sans gratter le support. Le rinçage à pression modérée évacue les résidus. Sur les balcons proches du canal, ce treatment limite la repousse pendant plusieurs mois.</p>",
+          answer: "<p>Un produit désincrustant est appliqué sur les zones vertes, puis laissé agir quelques minutes. Le brossage décolle la mousse sans gratter le support. Le rinçage à pression modérée évacue les résidus. Sur les balcons proches du canal, ce traitement limite la repousse pendant plusieurs mois.</p>",
         },
         {
           question: "Quelle méthode douce recommandez-vous pour nettoyer carrelage et joints des loggias de Freinville sans abîmer les carreaux ?",

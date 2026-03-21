@@ -43,16 +43,16 @@ const city: City = {
     "Les Philosophes",
   ],
   nearbyCities: [
+        "gennevilliers",
+        "clichy",
         "levallois-perret",
+        "saint-ouen-sur-seine",
         "colombes",
         "courbevoie",
         "neuilly-sur-seine",
-        "nanterre",
-        "pantin",
-        "boulogne-billancourt",
-        "rueil-malmaison",
-        "les-lilas",
-        "issy-les-moulineaux"
+        "argenteuil",
+        "puteaux",
+        "saint-denis"
       ],
 
   // Texte brut uniquement

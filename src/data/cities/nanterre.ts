@@ -47,16 +47,16 @@ const city: City = {
     "Mont-Valérien",
   ],
   nearbyCities: [
+        "puteaux",
+        "suresnes",
         "rueil-malmaison",
+        "houilles",
         "courbevoie",
         "colombes",
         "neuilly-sur-seine",
+        "saint-cloud",
         "levallois-perret",
-        "asnieres-sur-seine",
-        "boulogne-billancourt",
-        "issy-les-moulineaux",
-        "vanves",
-        "malakoff"
+        "argenteuil"
       ],
 
   // Texte brut uniquement

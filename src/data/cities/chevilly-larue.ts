@@ -41,6 +41,7 @@ const city: City = {
 
   // Voisins / villes proches (texte brut)
   nearbyCities: [
+        "rungis",
         "thiais",
         "villejuif",
         "cachan",
@@ -49,8 +50,7 @@ const city: City = {
         "antony",
         "arcueil",
         "bagneux",
-        "orly",
-        "gentilly"
+        "orly"
       ],
 
   // Texte brut uniquement

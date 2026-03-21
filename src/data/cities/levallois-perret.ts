@@ -54,16 +54,16 @@ const city: City = {
     "Anatole France",
   ],
   nearbyCities: [
+        "clichy",
         "neuilly-sur-seine",
         "courbevoie",
         "asnieres-sur-seine",
+        "puteaux",
+        "saint-ouen-sur-seine",
+        "gennevilliers",
         "colombes",
-        "nanterre",
-        "boulogne-billancourt",
-        "issy-les-moulineaux",
-        "vanves",
-        "rueil-malmaison",
-        "malakoff"
+        "suresnes",
+        "nanterre"
       ],
 
   // Texte brut uniquement

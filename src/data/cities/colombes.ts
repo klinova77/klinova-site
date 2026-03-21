@@ -48,15 +48,15 @@ const city: City = {
   ],
   nearbyCities: [
         "courbevoie",
+        "argenteuil",
+        "gennevilliers",
         "asnieres-sur-seine",
         "neuilly-sur-seine",
         "levallois-perret",
         "nanterre",
-        "rueil-malmaison",
-        "boulogne-billancourt",
-        "issy-les-moulineaux",
-        "vanves",
-        "pantin"
+        "puteaux",
+        "houilles",
+        "clichy"
       ],
 
   // Texte brut uniquement

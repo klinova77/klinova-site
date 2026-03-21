@@ -33,15 +33,15 @@ const city: City = {
   districts: ["Bécon", "Faubourg de l'Arche", "Cœur de Ville", "Gambetta"],
   nearbyCities: [
         "neuilly-sur-seine",
+        "puteaux",
         "levallois-perret",
         "colombes",
         "asnieres-sur-seine",
+        "clichy",
         "nanterre",
-        "rueil-malmaison",
-        "boulogne-billancourt",
-        "issy-les-moulineaux",
-        "vanves",
-        "malakoff"
+        "suresnes",
+        "gennevilliers",
+        "saint-ouen-sur-seine"
       ],
 
   // Texte brut uniquement

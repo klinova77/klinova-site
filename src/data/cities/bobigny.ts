@@ -50,10 +50,10 @@ const city: City = {
         "bondy",
         "les-lilas",
         "le-blanc-mesnil",
+        "aubervilliers",
         "bagnolet",
         "montreuil",
-        "rosny-sous-bois",
-        "villemomble"
+        "rosny-sous-bois"
       ],
 
   // Texte brut uniquement

@@ -47,10 +47,10 @@ const city: City = {
         "noisy-le-sec",
         "sevran",
         "pantin",
+        "aubervilliers",
         "villepinte",
         "romainville",
-        "livry-gargan",
-        "le-raincy"
+        "livry-gargan"
       ],
 
   // Texte brut uniquement

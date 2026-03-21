@@ -49,15 +49,15 @@ const city: City = {
   ],
   nearbyCities: [
         "sceaux",
+        "massy",
+        "rungis",
         "chevilly-larue",
         "fontenay-aux-roses",
         "cachan",
         "bagneux",
         "chatillon",
         "clamart",
-        "arcueil",
-        "villejuif",
-        "thiais"
+        "arcueil"
       ],
 
   // Texte brut uniquement

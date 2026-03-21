@@ -46,9 +46,9 @@ const city: City = {
         "noisy-le-sec",
         "bobigny",
         "vincennes",
+        "aubervilliers",
         "saint-mande",
-        "rosny-sous-bois",
-        "fontenay-sous-bois"
+        "rosny-sous-bois"
       ],
 
   // Texte brut uniquement

@@ -48,9 +48,9 @@ const city: City = {
         "alfortville",
         "maisons-alfort",
         "chevilly-larue",
+        "rungis",
         "villejuif",
-        "ivry-sur-seine",
-        "saint-maur-des-fosses"
+        "ivry-sur-seine"
       ],
 
   // Texte brut uniquement

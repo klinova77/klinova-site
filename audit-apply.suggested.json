@@ -5,152 +5,26 @@
   "maxEditsPerFile": 200,
   "edits": [
     {
-      "file": "src/data/cities-draft/colombes.ts",
-      "path": "hubIntro",
+      "file": "src/data/cities-draft/argenteuil.ts",
+      "path": "services[5].faqAdditions[2].answer",
       "mode": "substring",
-      "find": "comptes-rendus",
-      "replace": "comptes rendus",
-      "reason": "Correction typographique courante : suppression du trait d’union dans « comptes rendus » (sans changer le sens).",
-      "meta": {
-        "severity": "low",
-        "category": "style",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/courbevoie.ts",
-      "path": "services[0].whyUsBullets[2]",
-      "mode": "substring",
-      "find": "weekend",
-      "replace": "week-end",
-      "reason": "Correction orthographique standard en français.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/courbevoie.ts",
-      "path": "services[1].uniqueIntro",
-      "mode": "substring",
-      "find": "générant accumulation de",
-      "replace": "générant une accumulation de",
-      "reason": "Correction grammaticale simple (article manquant) sans changement de sens.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/fontenay-aux-roses.ts",
-      "path": "hubIntro",
-      "mode": "substring",
-      "find": "Coordination simplifiée : Un interlocuteur unique",
-      "replace": "Coordination simplifiée : un interlocuteur unique",
-      "reason": "Minuscule après deux-points : correction typographique simple sans changement de sens.",
-      "meta": {
-        "severity": "low",
-        "category": "style",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/levallois-perret.ts",
-      "path": "customDescription",
-      "mode": "substring",
-      "find": "parties communes, parkings souterrains et espaces extérieurs",
-      "replace": "parties communes, des parkings souterrains et des espaces extérieurs",
-      "reason": "Correction typographique : ajout de l’article manquant pour une liste (accord/grammaire évident) sans changer le sens.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/levallois-perret.ts",
-      "path": "hubIntro",
-      "mode": "substring",
-      "find": "parkings profonds sur plusieurs niveaux",
-      "replace": "des parkings profonds sur plusieurs niveaux",
-      "reason": "Typographie : ajout de l’article manquant dans une énumération (correction mécanique).",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/nanterre.ts",
-      "path": "services[0].faqAdditions[3].question",
-      "mode": "substring",
-      "find": "préfecture",
-      "replace": "Préfecture",
-      "reason": "Harmonisation de la casse d'un nom propre (« Préfecture ») ; correction mécanique et non ambiguë.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
-      "path": "hubIntro",
-      "mode": "substring",
-      "find": "compte-rendu",
-      "replace": "compte rendu",
-      "reason": "Correction typographique courante : « compte-rendu » -> « compte rendu » (sans modifier la structure HTML).",
+      "find": "treatment",
+      "replace": "traitement",
+      "reason": "Faute évidente : mot anglais « treatment » au lieu de « traitement ». Correction mécanique sans impact sur la structure HTML.",
       "meta": {
         "severity": "medium",
-        "category": "style",
+        "category": "orthographe",
         "op": "substring",
         "occ": 1
       }
     },
     {
-      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
-      "path": "faq[0].answer",
+      "file": "src/data/cities-draft/aubervilliers.ts",
+      "path": "services[2].heroDescription",
       "mode": "substring",
-      "find": "compte-rendu",
-      "replace": "compte rendu",
-      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
-      "meta": {
-        "severity": "medium",
-        "category": "consistency",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
-      "path": "faq[3].answer",
-      "mode": "substring",
-      "find": "compte-rendu",
-      "replace": "compte rendu",
-      "reason": "Harmonisation typographique certaine : « compte-rendu » -> « compte rendu ».",
-      "meta": {
-        "severity": "medium",
-        "category": "consistency",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/neuilly-sur-seine.ts",
-      "path": "services[3].uniqueDeepDive",
-      "mode": "substring",
-      "find": "garantit l'élimination",
-      "replace": "garantissent l'élimination",
-      "reason": "Accord sujet/verbe : sujet pluriel (« le temps de contact respecté » + proposition précédente) => « garantissent ». Correction grammaticale minimale sans réécriture.",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction mécanique certaine : anglicisme/typo (« balcony ») -> « balcon » sans changer le sens.",
       "meta": {
         "severity": "high",
         "category": "orthographe",
@@ -159,96 +33,40 @@
       }
     },
     {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[0].faqAdditions[0].question",
+      "file": "src/data/cities-draft/aubervilliers.ts",
+      "path": "services[3].uniqueIntro",
       "mode": "substring",
-      "find": "Rueil‑sur‑Seine",
-      "replace": "Rueil-sur-Seine",
-      "reason": "Remplacement mécanique de tirets insécables/variantes : harmoniser « Rueil‑sur‑Seine » (tiret insécable) en « Rueil-sur-Seine » pour cohérence avec le reste du fichier. Correction typographique sans changement de sens.",
+      "find": "balkon",
+      "replace": "balcon",
+      "reason": "Correction mécanique certaine : mot incorrect (« balkon ») -> « balcon ».",
       "meta": {
-        "severity": "low",
+        "severity": "high",
         "category": "orthographe",
         "op": "substring",
         "occ": 1
       }
     },
     {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[0].faqAdditions[1].question",
-      "mode": "substring",
-      "find": "open‑space",
-      "replace": "open-space",
-      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[0].faqAdditions[1].question",
-      "mode": "substring",
-      "find": "Rueil‑sur‑Seine",
-      "replace": "Rueil-sur-Seine",
-      "reason": "Harmonisation typographique des tirets insécables en tirets standards, correction mécanique et non ambiguë.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[1].faqAdditions[1].question",
-      "mode": "substring",
-      "find": "Rueil‑Malmaison",
-      "replace": "Rueil-Malmaison",
-      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[2].faqAdditions[0].question",
-      "mode": "substring",
-      "find": "nettoyez‑vous",
-      "replace": "nettoyez-vous",
-      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[2].faqAdditions[1].question",
-      "mode": "substring",
-      "find": "utilisez‑vous",
-      "replace": "utilisez-vous",
-      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
-      "meta": {
-        "severity": "low",
-        "category": "orthographe",
-        "op": "substring",
-        "occ": 1
-      }
-    },
-    {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
+      "file": "src/data/cities-draft/aubervilliers.ts",
       "path": "services[2].faqAdditions[2].question",
       "mode": "substring",
-      "find": "conseillez‑vous",
-      "replace": "conseillez-vous",
-      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction mécanique certaine : anglicisme (« balcony ») -> « balcon ».",
+      "meta": {
+        "severity": "high",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/cergy.ts",
+      "path": "services[1].uniqueDeepDive",
+      "mode": "substring",
+      "find": "compte-rendu",
+      "replace": "compte rendu",
+      "reason": "Correction typographique courante (trait d'union) sans impact de sens.",
       "meta": {
         "severity": "low",
         "category": "orthographe",
@@ -257,43 +75,281 @@
       }
     },
     {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[2].faqAdditions[3].question",
+      "file": "src/data/cities-draft/clichy.ts",
+      "path": "services[0].uniqueIntro",
       "mode": "substring",
-      "find": "pourquoi éviter le nettoyage haute pression sur le balcon et quelles alternatives ?",
-      "replace": "pourquoi éviter le nettoyage à haute pression sur le balcon et quelles alternatives ?",
-      "reason": "Harmonisation typographique : tiret insécable vers tiret standard, correction mécanique.",
+      "find": "d'entrée de ville",
+      "replace": "d'Entrée de ville",
+      "reason": "Harmonisation certaine de la casse du nom de quartier déjà présent dans districts (« Entrée de ville »). Correction mécanique sans changement de sens.",
       "meta": {
-        "severity": "low",
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/clichy.ts",
+      "path": "services[1].whyUsBullets[0]",
+      "mode": "substring",
+      "find": "des berges de Seine",
+      "replace": "des Berges de Seine",
+      "reason": "Harmonisation de la casse du toponyme (« Berges de Seine ») déjà utilisé ailleurs. Correction minimale.",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/franconville.ts",
+      "path": "services[3].faqAdditions[0].question",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction mécanique certaine : anglicisme/typo « balcony » -> « balcon » sans changer le sens.",
+      "meta": {
+        "severity": "medium",
         "category": "orthographe",
         "op": "substring",
         "occ": 1
       }
     },
     {
-      "file": "src/data/cities-draft/rueil-malmaison.ts",
-      "path": "services[6].faqAdditions[1].question",
+      "file": "src/data/cities-draft/gennevilliers.ts",
+      "path": "services[2].faqAdditions[1].question",
       "mode": "substring",
-      "find": "estimez‑vous",
-      "replace": "estimez-vous",
-      "reason": "Harmonisation typographique : apostrophe/espaces OK; correction mécanique du tiret insécable vers tiret standard.",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction mécanique certaine : « balcony » est une faute/anglicisme dans une question en français.",
       "meta": {
-        "severity": "low",
+        "severity": "medium",
         "category": "orthographe",
         "op": "substring",
         "occ": 1
       }
     },
     {
-      "file": "src/data/cities-draft/sceaux.ts",
-      "path": "faq[2].answer",
+      "file": "src/data/cities-draft/gennevilliers.ts",
+      "path": "ctaOverride",
       "mode": "substring",
-      "find": "stationnement payant strict",
-      "replace": "stationnement payant et strict",
-      "reason": "Correction minimale d'une tournure maladroite (« payant strict ») vers une formulation idiomatique sans changer le sens global.",
+      "find": " + ",
+      "replace": " et ",
+      "reason": "Remplacement mécanique du signe « + » par « et » pour améliorer la lisibilité sans changer le sens.",
       "meta": {
         "severity": "low",
         "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/herblay-sur-seine.ts",
+      "path": "services[2].faqAdditions[1].question",
+      "mode": "substring",
+      "find": "nettoyage de balcony",
+      "replace": "nettoyage de balcon",
+      "reason": "Correction mécanique certaine : mot anglais “balcony” → français “balcon”, sans changer le sens ni la structure.",
+      "meta": {
+        "severity": "medium",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/houilles.ts",
+      "path": "services[2].heroDescription",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction certaine d’un mot anglais (« balcony ») en français (« balcon ») sans changer le sens.",
+      "meta": {
+        "severity": "high",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/houilles.ts",
+      "path": "ctaOverride",
+      "mode": "substring",
+      "find": "le centre Commandant-Millé",
+      "replace": "le Centre Commandant-Millé",
+      "reason": "Harmonisation de la casse d’un nom propre déjà présent dans les repères (« Centre Commandant-Millé »). Correction typographique certaine.",
+      "meta": {
+        "severity": "medium",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/le-chesnay-rocquencourt.ts",
+      "path": "services[2].uniqueIntro",
+      "mode": "substring",
+      "find": "proximity",
+      "replace": "proximité",
+      "reason": "Correction mécanique certaine d’une faute d’orthographe (anglais -> français) sans impact sur la structure HTML.",
+      "meta": {
+        "severity": "low",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/puteaux.ts",
+      "path": "faq[0].answer",
+      "mode": "substring",
+      "find": "sur voie",
+      "replace": "sur la voie publique",
+      "reason": "Correction minimale et certaine de la locution (« sur voie » -> « sur la voie publique ») sans changer le sens.",
+      "meta": {
+        "severity": "medium",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/puteaux.ts",
+      "path": "services[1].whyUsBullets[2]",
+      "mode": "substring",
+      "find": "rotation véhicules",
+      "replace": "rotation des véhicules",
+      "reason": "Correction grammaticale minimale et certaine (ajout de la préposition) sans réécriture.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rungis.ts",
+      "path": "services[3].faqAdditions[2].question",
+      "mode": "substring",
+      "find": "balcony",
+      "replace": "balcon",
+      "reason": "Correction orthographique certaine : « balcony » → « balcon ».",
+      "meta": {
+        "severity": "medium",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/rungis.ts",
+      "path": "ctaOverride",
+      "mode": "substring",
+      "find": " + ",
+      "replace": " et ",
+      "reason": "Amélioration typographique/lecture sans changer le sens : remplacer « + » par « et ».",
+      "meta": {
+        "severity": "low",
+        "category": "style",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/saint-cloud.ts",
+      "path": "services[2].faqAdditions[0].answer",
+      "mode": "substring",
+      "find": "mortite",
+      "replace": "mortier",
+      "reason": "Correction orthographique certaine : « mortite » est une faute, le terme attendu est « mortier » dans le contexte des joints.",
+      "meta": {
+        "severity": "high",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/saint-cloud.ts",
+      "path": "services[4].faqAdditions[1].answer",
+      "mode": "substring",
+      "find": "treatment",
+      "replace": "traitement",
+      "reason": "Correction mécanique certaine : « treatment » -> « traitement ».",
+      "meta": {
+        "severity": "medium",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/saint-germain-en-laye.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "maintenance :",
+      "replace": "maintenance\u0000a0:",
+      "reason": "Typographie française : espace insécable avant deux-points ; correction mécanique sans impact sur le sens ni la structure HTML.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/saint-ouen-sur-seine.ts",
+      "path": "services[0].whyUsBullets[0]",
+      "mode": "substring",
+      "find": "du secteur Docks",
+      "replace": "du secteur des Docks",
+      "reason": "Correction mécanique d'une tournure elliptique pour cohérence avec « secteur des Docks » utilisé ailleurs, sans changer le sens.",
+      "meta": {
+        "severity": "low",
+        "category": "consistency",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/saint-ouen-sur-seine.ts",
+      "path": "ctaOverride",
+      "mode": "substring",
+      "find": "stade Bauer",
+      "replace": "Stade Bauer",
+      "reason": "Correction mécanique de la capitalisation d'un nom propre (« Stade Bauer ») déjà employé ailleurs dans le contenu.",
+      "meta": {
+        "severity": "low",
+        "category": "orthographe",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/sevres.ts",
+      "path": "hubIntro",
+      "mode": "substring",
+      "find": "N, L et U",
+      "replace": "N et L",
+      "reason": "Correction minimale d’un élément potentiellement faux (ligne Transilien U) sans réécriture ni ajout de faits ; suppression simple.",
+      "meta": {
+        "severity": "high",
+        "category": "factual_suspect",
+        "op": "substring",
+        "occ": 1
+      }
+    },
+    {
+      "file": "src/data/cities-draft/versailles.ts",
+      "path": "services[2].uniqueDeepDive",
+      "mode": "substring",
+      "find": "treatment spécifique",
+      "replace": "traitement spécifique",
+      "reason": "Correction mécanique d'un anglicisme/typo évident.",
+      "meta": {
+        "severity": "medium",
+        "category": "orthographe",
         "op": "substring",
         "occ": 1
       }

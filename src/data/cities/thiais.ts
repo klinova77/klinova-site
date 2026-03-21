@@ -42,13 +42,13 @@ const city = {
         "choisy-le-roi",
         "orly",
         "chevilly-larue",
+        "rungis",
         "vitry-sur-seine",
         "villejuif",
         "alfortville",
         "cachan",
         "creteil",
-        "ivry-sur-seine",
-        "maisons-alfort"
+        "ivry-sur-seine"
       ],
 
   // Texte brut uniquement

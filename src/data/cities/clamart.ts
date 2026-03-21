@@ -47,9 +47,9 @@ const city: City = {
         "malakoff",
         "sceaux",
         "bagneux",
+        "sevres",
         "boulogne-billancourt",
-        "montrouge",
-        "cachan"
+        "montrouge"
       ],
 
   // Texte brut uniquement

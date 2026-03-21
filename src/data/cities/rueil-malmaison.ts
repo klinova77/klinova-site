@@ -49,16 +49,16 @@ const city: City = {
   ],
 
   nearbyCities: [
+        "suresnes",
         "nanterre",
+        "saint-cloud",
+        "puteaux",
+        "sevres",
         "boulogne-billancourt",
+        "houilles",
         "courbevoie",
         "neuilly-sur-seine",
-        "colombes",
-        "issy-les-moulineaux",
-        "levallois-perret",
-        "vanves",
-        "asnieres-sur-seine",
-        "clamart"
+        "le-chesnay-rocquencourt"
       ],
 
   landmarks: [

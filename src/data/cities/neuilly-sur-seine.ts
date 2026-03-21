@@ -44,14 +44,14 @@ const city: City = {
   nearbyCities: [
         "courbevoie",
         "levallois-perret",
+        "puteaux",
+        "clichy",
+        "suresnes",
         "asnieres-sur-seine",
         "colombes",
         "nanterre",
-        "boulogne-billancourt",
-        "rueil-malmaison",
-        "issy-les-moulineaux",
-        "vanves",
-        "malakoff"
+        "gennevilliers",
+        "boulogne-billancourt"
       ],
 
   landmarks: [
