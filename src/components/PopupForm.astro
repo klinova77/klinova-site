@@ -248,7 +248,18 @@ const {
 
         <!-- Actions -->
         <div class="form-actions premium">
-          <button type="submit" class="btn-primary premium" id="submitBtn">
+          <button
+  type="submit"
+  class="btn-primary premium"
+  id="submitBtn"
+  data-form-id="popup-contact-form"
+  data-form-name="Popup Contact Form"
+  data-form-type="devis"
+  data-form-location={context.trackingSource || 'popup-general'}
+  data-tracking-source={context.trackingSource || 'popup-general'}
+  data-action="lead"
+  data-intent="popup-contact"
+>
             <span class="btn-content">
               <span class="loading-spinner"></span>
               <span id="submitText">Envoyer ma demande</span>
@@ -1205,9 +1216,15 @@ const {
         let data = null;
         try { data = await response.json(); } catch {}
 
-        if (response.ok) {
-          // ✅ MESSAGE DE SUCCÈS VISIBLE EN BAS
-          showMessage('✅ Merci ! Votre demande a été envoyée.\nNous vous recontactons rapidement.', 'success');
+       if (response.ok && data?.ok === true) {
+        if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('popup-contact-form', {
+    service: document.getElementById('popup-service-key')?.value || 'general',
+    service_name:
+      document.getElementById('popup-service-label')?.value || 'Service Klinova'
+  });
+}
+        showMessage('✅ Merci ! Votre demande a été envoyée.\nNous vous recontactons rapidement.', 'success');
           contactForm.reset();
           if (window.__resetPhotoUploader) window.__resetPhotoUploader();
           
