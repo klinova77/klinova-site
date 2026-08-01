@@ -2801,21 +2801,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       messagesContainer.innerHTML = '';
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_grand_menage',
-          form_type: 'devis_nettoyage_appartement'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'devis_nettoyage_appartement',
-          service: 'Nettoyage appartement/maison',
-          source: 'page-grand-menage-' + window.location.pathname.split('/').pop()
-        });
-      }
+     
 
       var formData = new FormData(form);
       
@@ -2832,7 +2818,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('grand-menage-form', {
+    service: 'nettoyage-appartement-maison',
+    service_name: 'Nettoyage appartement/maison'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -3590,21 +3582,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       
       try {
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'citypage_moquettes',
-            form_type: 'devis_moquettes'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_moquettes',
-            service: 'Nettoyage moquettes - Devis personnalisé',
-            source: 'page-moquettes-' + window.location.pathname.split('/').pop()
-          });
-        }
+       
 
         var formData = new FormData(form);
         var response = await fetch('/api/contact', {
@@ -3616,7 +3594,13 @@ const photos = cityNote?.photos ?? [];
         var data = null;
         try { data = await response.json(); } catch (err) {}
 
-        if (response.ok) {
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('moquettes-city-form', {
+    service: 'nettoyage-moquettes',
+    service_name: 'Nettoyage moquettes - Devis personnalisé'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -4188,22 +4172,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       messagesContainer.innerHTML = '';
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_terrasses',
-          form_type: 'devis_nettoyage_terrasse'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'devis_nettoyage_terrasse',
-          service: 'Nettoyage terrasse',
-          source: 'page-terrasses-' + window.location.pathname.split('/').pop()
-        });
-      }
-
+     
       var formData = new FormData(form);
       
       fetch('/api/contact', {
@@ -4219,7 +4188,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('terrasses-form', {
+    service: 'nettoyage-terrasses',
+    service_name: 'Nettoyage terrasse'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -4993,21 +4968,7 @@ const photos = cityNote?.photos ?? [];
       
       setLoading(true);
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_parking',
-          form_type: 'diagnostic_parking'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'diagnostic_parking',
-          service: 'Nettoyage parking - Diagnostic gratuit',
-          source: 'page-parking-' + window.location.pathname.split('/').pop()
-        });
-      }
+     
 
       var formData = new FormData(form);
       
@@ -5024,7 +4985,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('parking-city-form', {
+    service: 'nettoyage-parkings',
+    service_name: 'Nettoyage parking - Diagnostic gratuit'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
