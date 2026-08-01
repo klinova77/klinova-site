@@ -2357,22 +2357,7 @@ data-hide-floating-cta
       setLoading(true);
       
       try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'page_balcons',
-            form_type: 'diagnostic_balcons'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'diagnostic_balcons',
-            service: 'Nettoyage balcon - Diagnostic gratuit',
-            source: 'page-balcons'
-          });
-        }
+      
 
         const formData = new FormData(form);
         const response = await fetch('/api/contact', {
@@ -2384,7 +2369,13 @@ data-hide-floating-cta
         let data = null;
         try { data = await response.json(); } catch {}
 
-        if (response.ok) {
+        if (response.ok && data?.ok === true) {
+  if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('balcons-form', {
+    service: 'nettoyage-balcons',
+    service_name: 'Nettoyage balcon - Diagnostic gratuit'
+  });
+}
           // Remplacer complètement le contenu du formulaire par le message de succès
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';

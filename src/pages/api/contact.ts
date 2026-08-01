@@ -49,6 +49,7 @@ function normalizePhoneFR(raw?: string | null): string | null {
 }
 
 async function sendViaResend(payload: Record<string, any>): Promise<boolean> {
+    
   if (!RESEND_API_KEY) return false;
   try {
     const r = await fetch('https://api.resend.com/emails', {
@@ -221,9 +222,30 @@ const revetementSol = String(form.get('revetement_sol') || '').trim();
       html,
     });
 
-    if (!okInterne) {
-      console.warn('[contact] Envoi Resend KO (RESEND_API_KEY manquant ? domaine non vérifié ?)');
-    }
+  if (!okInterne) {
+  const msg = "L’envoi du message a échoué. Merci de réessayer.";
+
+  console.error(
+    '[contact] Envoi Resend KO : la demande n’a pas été transmise à Klinova'
+  );
+
+  return wantsJSON(request.headers)
+    ? new Response(
+        JSON.stringify({
+          ok: false,
+          error: msg,
+        }),
+        {
+          status: 502,
+          headers: {
+            'content-type': 'application/json',
+          },
+        }
+      )
+    : new Response(msg, {
+        status: 502,
+      });
+}
 
     // Accusé client si mail fourni
     if (isEmail(email)) {
