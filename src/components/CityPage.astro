@@ -2262,6 +2262,61 @@ const photos = cityNote?.photos ?? [];
       
       handleFiles(files);
     }
+    const form = document.getElementById('balcon-form');
+    const submitBtn = document.getElementById('submit-btn-balcon-city');
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          const formData = new FormData(form);
+
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          let data = null;
+          try {
+            data = await response.json();
+          } catch {}
+
+          if (response.ok && data?.ok === true) {
+            if (window.KlinovaTracking?.triggerFormSuccess) {
+              window.KlinovaTracking.triggerFormSuccess('balcon-form', {
+                service: 'nettoyage-balcons',
+                service_name: 'Nettoyage balcon et fientes - Diagnostic gratuit'
+              });
+            }
+
+            form.innerHTML = `
+              <div class="text-center py-10">
+                <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
+                <p class="text-[#475569]">
+                  Votre demande a bien été envoyée. Nous vous recontacterons rapidement.
+                </p>
+              </div>
+            `;
+          } else {
+            alert(data?.error || 'Une erreur est survenue. Merci de réessayer.');
+          }
+        } catch (error) {
+          console.error('Erreur formulaire balcon :', error);
+          alert('Impossible de contacter le serveur. Merci de réessayer.');
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      });
+    }
   })();
 </script>
 )}
