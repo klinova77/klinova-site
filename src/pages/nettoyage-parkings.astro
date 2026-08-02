@@ -10,6 +10,16 @@ import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 
 import PlaceParkingSpot from '~/components/Sections/PlaceParkingSpot.astro';
 import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
+import parkingsConfig from '~/data/services/parkings.config';
+import {
+  formatFrenchList,
+  formatLargeParkingPricingWithConditions,
+  formatLargeParkingPricingWithoutFloor,
+  formatParkingAmount,
+  formatParkingRange,
+  formatParkingSurface,
+  formatReferenceUnitPrice,
+} from '~/lib/parking-pricing';
 
 import heroParking from '~/assets/images/nettoyage-parking-professionnel-paris.webp';
 import autolaveuseParkingImage from '~/assets/images/nettoyage-parking-autolaveuse.jpg';
@@ -18,6 +28,24 @@ import autolaveuseParkingImage from '~/assets/images/nettoyage-parking-autolaveu
 const site = 'https://klinova.fr';
 const pageUrl = '/nettoyage-parkings';
 const pageName = 'Nettoyage de parkings souterrains';
+
+const commercialPricing = parkingsConfig.commercialPricing;
+if (!commercialPricing) {
+  throw new Error('Missing commercialPricing for the parkings service');
+}
+
+const standardRangeText = formatParkingRange(commercialPricing.standardParking);
+const referenceAmountText = formatParkingAmount(commercialPricing.referenceCase);
+const referenceSurfaceText = formatParkingSurface(commercialPricing.referenceCase.surfaceM2);
+const referenceUnitPriceText = formatReferenceUnitPrice(commercialPricing.referenceCase);
+const individualMinimumText = formatParkingAmount(commercialPricing.individualMinimum);
+const largeParkingText = formatLargeParkingPricingWithConditions(commercialPricing.largeParking);
+const largeParkingWithoutFloorText = formatLargeParkingPricingWithoutFloor(commercialPricing.largeParking);
+const individualApplicationsText = formatFrenchList(commercialPricing.individualMinimum.appliesTo, 'ou');
+const referenceFrequencyText = commercialPricing.referenceCase.cleaningsPerYear === 1
+  ? 'une fois par an'
+  : `${commercialPricing.referenceCase.cleaningsPerYear} fois par an`;
+const metaDescription = `Prix du nettoyage d’un parking : autour de ${referenceAmountText} pour ${referenceSurfaceText} en banlieue, selon l’état, l’accès et les opérations retenues.`;
 
 // Images optimisées
 const heroPreload = await getImage({
@@ -31,7 +59,7 @@ const heroSizes = '(min-width:1024px) 640px, 100vw';
 // Configuration popup
 const popupContext = {
   title: 'Demander à être rappelé',
-  subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
+  subtitle: 'Un expert Klinova étudie votre besoin et vous recontacte pour discuter de votre projet.',
   serviceKey: 'rappel-parking',
   serviceLabel: 'Demande rappel - Page parking',
   trackingSource: 'popup-parking-header',
@@ -40,7 +68,13 @@ const popupContext = {
 };
 
 // FAQ
-const faq = [
+type ParkingFaqItem = {
+  title: string;
+  content: string;
+  includeInSchema?: boolean;
+};
+
+const faq: ParkingFaqItem[] = [
   {
     title: "Quelle est la différence entre autolaveuse et monobrosse ?",
     content: "L'autolaveuse convient aux grandes surfaces (>200m²) : elle nettoie, aspire et sèche en un passage. La monobrosse est utilisée pour les petites zones ou les traces tenaces (gomme, freinage) avec un travail plus précis mais manuel."
@@ -59,15 +93,16 @@ const faq = [
   },
   {
     title: "Quel est le coût d'un nettoyage de parking ?",
-    content: "Les tarifs varient entre 1,0 et 2,0€/m² selon la surface, l'état d'encrassement et la fréquence. La dégressivité s'applique rapidement dès 1000m². Pour les petites surfaces, un forfait minimum s'applique (déplacement et mise en sécurité)."
+    content: `Le nettoyage des sols d'un parking collectif de taille courante est généralement facturé de ${standardRangeText}. À titre indicatif, un parking d'environ ${referenceSurfaceText}, ${commercialPricing.referenceCase.soilCondition} et nettoyé ${referenceFrequencyText}, représente souvent un budget proche de ${referenceAmountText} ${commercialPricing.referenceCase.locationContext}. ${largeParkingWithoutFloorText} Les remises en état, dégraissages renforcés, nettoyages haute pression et autres interventions complexes font l'objet d'un devis adapté. Pour les particuliers, le minimum d'intervention pour une place, un box ou une petite surface est de ${individualMinimumText}.`,
+    includeInSchema: false,
   },
   {
     title: "Proposez-vous des contrats d'entretien régulier ?",
-    content: "Oui, nous recommandons 1 à 4 passages par an selon le trafic et la ventilation du parking. Les contrats annuels incluent des rappels automatiques et une tarification préférentielle."
+    content: "Oui, nous recommandons 1 à 4 passages par an selon le trafic et la ventilation du parking. Les contrats d'entretien régulier peuvent inclure des rappels automatiques et une tarification dégressive."
   },
   {
-    title: "Le diagnostic est-il payant ?",
-    content: "Non, l'état des lieux et l'estimation sont gratuits. Nous envoyons le devis détaillé sous 24h avec un plan d'intervention adapté à votre parking."
+    title: "Comment préparez-vous le devis ?",
+    content: "Nous réalisons un état des lieux et une estimation, puis nous préparons un devis détaillé avec un plan d'intervention adapté à votre parking."
   },
   {
     title: "Comment sécurisez-vous le chantier ?",
@@ -79,7 +114,7 @@ const faq = [
   },
   {
     title: "Intervenez-vous en urgence ?",
-    content: "Pour les post-sinistres (incendie, dégât des eaux), nous priorisons selon disponibilité avec diagnostic sous 24h. Les interventions de maintenance classique sont planifiées selon vos contraintes horaires."
+    content: "Pour les post-sinistres (incendie, dégât des eaux), nous priorisons les demandes selon nos disponibilités. Les interventions de maintenance classique sont planifiées selon vos contraintes horaires."
   },
   {
     title: "Nettoyez-vous tous types de parkings ?",
@@ -95,7 +130,7 @@ const faq = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
+  mainEntity: faq.filter((item) => item.includeInSchema !== false).map((item) => ({
     "@type": "Question",
     name: item.title,
     acceptedAnswer: { "@type": "Answer", text: item.content }
@@ -159,26 +194,6 @@ const jsonLd = [
     category: 'Nettoyage professionnel',
     serviceOutput:
       "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
-
-    // ✅ Prix structuré + "à partir de"
-    offers: {
-      '@type': 'Offer',
-      price: 1.0,
-      priceCurrency: 'EUR',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: 1.0,
-        priceCurrency: 'EUR',
-        unitText: 'EUR par m²',
-      },
-      availability: 'https://schema.org/InStock',
-      eligibleRegion: {
-        '@type': 'AdministrativeArea',
-        name: 'Île-de-France',
-      },
-      description:
-        "Tarif à partir de 1,0 € / m², ajusté selon la surface, l'état et la fréquence d'entretien.",
-    },
 
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -247,8 +262,8 @@ const jsonLd = [
 
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Klinova – Entreprise de nettoyage de parkings et garages en Île-de-France"
-  description="Nettoyage professionnel de parkings souterrains : autolaveuse industrielle, dégraissage, séchage rapide. Devis gratuit 24h. Paris & Île-de-France."
+  title="Nettoyage de parking : prix au m² en Île-de-France | Klinova"
+  description={metaDescription}
   canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
   ogImageAlt="Klinova — Nettoyage de parkings souterrains en Île-de-France"
@@ -310,22 +325,21 @@ const jsonLd = [
        
 
        <!-- CTA principal avec animations -->
-<div class="hidden md:flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up animation-delay-400">
+<div class="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up animation-delay-400">
   <Button
     href="#formulaire"
+    label="Demander un devis pour mon parking"
     variant="tertiary"
     size="lg"
     class="border border-gray-700/80 text-gray-800 bg-white/90 hover:bg-white hover:border-gray-800 active:bg-gray-50 shadow-sm transition-all duration-300"
     ariaLabel="Nous contacter pour le nettoyage de parking"
     tracking={{ action: 'lead', source: 'hero-parking', intent: 'cta-tertiary' }}
     data={{ service: 'devis-parking' }}
-  >
-    Nous contacter
-  </Button>
+  />
 </div>
         <!-- Mention légale discrete -->
         <p class="text-sm text-[#6B7280] mt-6 animate-fade-in-up animation-delay-500">
-          Intervention planifiée • Syndics, copropriétés et entreprises • Places/box pour particuliers • Urgences sinistres acceptées
+          Intervention planifiée • Syndics, copropriétés, gestionnaires, bailleurs et entreprises • Entretien annuel ou régulier • Places/box pour particuliers • Urgences sinistres acceptées
         </p>
       </div>
 
@@ -379,6 +393,51 @@ const jsonLd = [
             <div class="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Repère tarifaire court placé immédiatement après le hero -->
+<section class="bg-white py-10 md:py-12 border-b border-[#E5E7EB]" data-section="prix-repere">
+  <div class="container-responsive">
+    <div class="max-w-5xl mx-auto">
+      <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-5 bg-[#DBEAFE] border-[#BFDBFE] text-[#1E40AF]">
+        <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
+        Prix indicatifs {commercialPricing.standardParking.tax}
+      </div>
+
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#1E2939] leading-snug mb-4">
+        Quel est le prix du nettoyage d'un parking&nbsp;?
+      </h2>
+
+      <div class="space-y-4 text-base md:text-lg text-[#475569] leading-relaxed">
+        <p>
+          Le nettoyage des sols d'un parking collectif de taille courante est généralement facturé de
+          <strong>{standardRangeText}</strong>. À titre indicatif, un parking d'environ
+          <strong>{referenceSurfaceText}</strong>, {commercialPricing.referenceCase.soilCondition} et nettoyé
+          {referenceFrequencyText}, représente souvent un budget proche de <strong>{referenceAmountText}</strong>
+          {commercialPricing.referenceCase.locationContext}, soit environ <strong>{referenceUnitPriceText}</strong>.
+        </p>
+        <p>
+          Le prix final dépend de la surface, du niveau d'encrassement, des opérations retenues, de la fréquence,
+          de l'accessibilité et de l'organisation du chantier. Le devis définit précisément le périmètre retenu.
+        </p>
+        <p class="rounded-xl border border-[#CFE3D8] bg-[#F1F7F3] p-4 text-[#1E2939]">
+          {largeParkingText}
+        </p>
+        <p>
+          Les remises en état, dégraissages renforcés, nettoyages haute pression et autres interventions complexes
+          <strong>font l'objet d'un devis adapté</strong>.
+        </p>
+      </div>
+
+      <div class="mt-5 rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] p-4">
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Les opérations retenues sont précisées dans chaque devis&nbsp;: balayage ou aspiration, nettoyage mécanisé,
+          traitement des taches, rampes, caniveaux et reprises manuelles selon les besoins du site.
+          Montants indicatifs exprimés {commercialPricing.standardParking.tax}.
+        </p>
       </div>
     </div>
   </div>
@@ -837,7 +896,7 @@ data-hide-header-cta
             </ul>
             <div class="p-4 rounded-lg bg-[#F0F9FF] border-l-4 border-[#1E40AF]">
               <p class="text-sm text-[#1E2939] font-medium">
-                <strong>Ce que vous recevez :</strong> synthèse diagnostic + estimation chiffrée sous 24&nbsp;h
+                <strong>Ce que vous recevez :</strong> synthèse diagnostic + estimation chiffrée
               </p>
             </div>
           </div>
@@ -896,9 +955,9 @@ data-hide-header-cta
             <h3 class="text-xl md:text-2xl font-semibold text-[#1E2939] mb-4">Contrôle qualité & suivi</h3>
             <ul class="list-disc ml-5 space-y-2 text-[#475569] mb-6">
               <li>Inspection finale conjointe (visuelle, adhérence, écoulements)</li>
-              <li><strong>Report photo</strong> avant/après envoyé sous 24&nbsp;h</li>
+              <li><strong>Report photo</strong> avant/après</li>
               <li><strong>Recommandations d'entretien</strong> (périodicité 1–4 passages/an selon trafic)</li>
-              <li>Option : mise en place d'un contrat annuel et rappels automatiques</li>
+              <li>Option : mise en place d'un contrat d'entretien régulier et rappels automatiques</li>
             </ul>
             <div class="p-4 rounded-lg bg-[#F0F9FF] border-l-4 border-[#1E40AF]">
               <p class="text-sm text-[#1E2939] font-medium">
@@ -1076,31 +1135,37 @@ data-hide-header-cta
       </p>
       <Button
         href="#formulaire"
-        label="Diagnostic sous 24&nbsp;h et protocole d'action adapté"
+        label="Étudier mon besoin après sinistre"
         variant="secondary"
         size="lg"
         tracking={{ action: 'cta_post_sinistre', source: 'section_post_sinistre', intent: 'lead' }}
         data={{ section: 'post-sinistre' }}
-        ariaLabel="Demander un diagnostic post-sinistre sous 24 heures"
+        ariaLabel="Demander l'étude d'un besoin de nettoyage post-sinistre"
       />
       <p class="text-sm text-[#475569] mt-3">
-        Intervention d'urgence 7&nbsp;j/7 &middot; Coordination avec assureurs et experts
+        Intervention selon disponibilité &middot; Coordination avec assureurs et experts
       </p>
     </div>
   </div>
 </section>
 
 
-<PlaceParkingSpot cityName="Île-de-France" templateIndex={5} hideCitySuffix />
+<PlaceParkingSpot
+  cityName="Île-de-France"
+  templateIndex={5}
+  hideCitySuffix
+  ctaOverride="Envoyez vos photos et dimensions pour recevoir une proposition adaptée."
+  showIndividualTaxNote
+  individualMinimum={commercialPricing.individualMinimum}
+/>
 
 
 
 
-<!-- Section Tarifs indicatifs (courte) -->
+<!-- Section Tarifs indicatifs détaillée -->
 <section class="bg-white py-16 md:py-20" data-section="tarifs">
   <div class="container-responsive">
-    <!-- En-tête -->
-    <div class="max-w-3xl mb-10">
+    <div class="max-w-4xl mb-10">
       <div class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider mb-6
                   bg-[#DBEAFE] border-[#BFDBFE] text-[#1E40AF]">
         <span class="block h-2 w-2 rounded-full bg-[#1E40AF]" aria-hidden="true"></span>
@@ -1110,74 +1175,87 @@ data-hide-header-cta
         Combien coûte l’entretien d’un parking&nbsp;?
       </h2>
       <p class="text-lg text-[#475569] mt-3">
-        Les prix varient selon la surface, l’état des sols, l’accès à l’eau/évacuations et la fréquence.
-        Comptez généralement <strong>entre 1,0 et 2,0&nbsp;€/m²</strong>, avec une <strong>dégressivité rapide</strong> dès 1 000&nbsp;m².
+        Pour un parking collectif de taille courante, le nettoyage des sols se situe généralement de
+        <strong>{standardRangeText}</strong>. Cette fourchette est indicative : le devis définit précisément
+        le périmètre et les opérations retenues.
       </p>
     </div>
 
-    <!-- Bandes de surface -->
-    <div class="grid md:grid-cols-3 gap-4 md:gap-6">
-      <!-- < 1 000 m² -->
+    <div class="grid md:grid-cols-2 gap-4 md:gap-6">
       <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
-        <h3 class="text-base font-semibold text-[#1E2939] mb-1">Jusqu’à 1 000&nbsp;m²</h3>
-        <p class="text-sm text-[#475569] mb-4">Intervention ponctuelle, préparation &amp; finitions incluses.</p>
+        <h3 class="text-base font-semibold text-[#1E2939] mb-1">Parkings courants</h3>
+        <p class="text-sm text-[#475569] mb-4">
+          Nettoyage des sols selon l'état du parking, les accès et les opérations définies au devis.
+        </p>
         <div class="inline-flex items-center rounded-md bg-[#EEF2FF] border border-[#C7D2FE] px-3 py-1 text-sm font-medium text-[#1E40AF]">
-          Indicatif&nbsp;: 1,4–2,5&nbsp;€/m²
+          Fourchette indicative : {standardRangeText}
         </div>
       </article>
 
-      <!-- 1 000 – 5 000 m² -->
       <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
-        <h3 class="text-base font-semibold text-[#1E2939] mb-1">1 000–5 000&nbsp;m²</h3>
-        <p class="text-sm text-[#475569] mb-4">Meilleur ratio machine/temps, dégressivité appliquée.</p>
+        <h3 class="text-base font-semibold text-[#1E2939] mb-1">Cas de référence</h3>
+        <p class="text-sm text-[#475569] mb-4">
+          Environ {referenceSurfaceText}, {commercialPricing.referenceCase.soilCondition} et nettoyé
+          {referenceFrequencyText}, {commercialPricing.referenceCase.locationContext}.
+        </p>
         <div class="inline-flex items-center rounded-md bg-[#F0F9FF] border border-[#BAE6FD] px-3 py-1 text-sm font-medium text-[#0369A1]">
-          Indicatif&nbsp;: 1,0–1,4&nbsp;€/m²
+          Budget indicatif : environ {referenceAmountText}, soit {referenceUnitPriceText}
         </div>
       </article>
 
-      <!-- > 5 000 m² -->
+      <article class="rounded-2xl border border-[#CFE3D8] bg-[#F1F7F3] p-6 shadow-sm">
+        <h3 class="text-base font-semibold text-[#1E2939] mb-2">Grands et très grands parkings</h3>
+        <p class="text-sm text-[#1E2939] leading-relaxed font-medium">
+          {largeParkingText}
+        </p>
+      </article>
+
       <article class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
-        <h3 class="text-base font-semibold text-[#1E2939] mb-1">&gt;&nbsp;5 000&nbsp;m²</h3>
-        <p class="text-sm text-[#475569] mb-4">Optimisation planning &amp; équipements&nbsp;/ plusieurs passages.</p>
+        <h3 class="text-base font-semibold text-[#1E2939] mb-2">Prestations lourdes</h3>
+        <ul class="list-disc ms-5 text-sm text-[#475569] space-y-1.5 mb-4">
+          {commercialPricing.heavyCleaning.operations.map((operation) => <li>{operation}</li>)}
+        </ul>
+        <p class="text-sm text-[#475569] mb-4">
+          Ou {commercialPricing.heavyCleaning.specialConfigurationLabel}.
+        </p>
         <div class="inline-flex items-center rounded-md bg-[#DBEAFE] border border-[#BFDBFE] px-3 py-1 text-sm font-medium text-[#1E40AF]">
-          Sur devis optimisé
+          Sur devis selon l'état du site et les opérations nécessaires
         </div>
       </article>
     </div>
 
-    <!-- Facteurs & particuliers -->
     <div class="grid md:grid-cols-2 gap-6 mt-8">
       <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6">
         <h4 class="text-sm font-semibold text-[#1E2939] mb-3">Ce qui fait varier le prix</h4>
         <ul class="list-disc ms-5 text-sm text-[#475569] space-y-1.5">
-          <li>État des sols (traces d’hydrocarbures, poussières accumulées)</li>
-          <li>Accès à l’eau / évacuations, dénivelés et rampes</li>
-          <li>Temps de mise en sécurité (balisage, panneaux, ventilation)</li>
-          <li>Fréquence d’entretien (ponctuel vs contrat récurrent)</li>
+          {commercialPricing.standardParking.factors.map((factor) => <li>{factor}</li>)}
         </ul>
       </div>
       <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6">
-        <h4 class="text-sm font-semibold text-[#1E2939] mb-2">Petites surfaces &nbsp;•&nbsp; particuliers</h4>
+        <h4 class="text-sm font-semibold text-[#1E2939] mb-2">Places, box et petites surfaces pour particuliers</h4>
         <p class="text-sm text-[#475569]">
-          Pour les surfaces réduites ou les <em>traces noires localisées</em>, nous intervenons à la 
-          <strong>monobrosse</strong> (zones ciblées, faible volume d’eau). Un <strong>minimum d’intervention</strong> s’applique
-          (déplacement et mise en sécurité).
+          Pour {individualApplicationsText}, le <strong>minimum d’intervention est de {individualMinimumText}</strong>.
+          Il ne s’agit ni d’un tarif au m² ni d’un minimum applicable aux parkings collectifs. Le montant définitif
+          dépend des opérations nécessaires et est précisé {commercialPricing.individualMinimum.tax} dans le devis.
+        </p>
+        <p class="text-sm text-[#475569] mt-4 pt-4 border-t border-[#E5E7EB]">
+          <strong>Petite surface professionnelle :</strong> tarification sur devis selon le périmètre et les conditions
+          d’intervention.
         </p>
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="mt-8">
       <Button
         href="#formulaire"
-        label="Obtenir une estimation précise"
+        label="Demander un devis pour mon parking"
         variant="secondary"
         size="lg"
         tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
         data={{ section: 'tarifs' }}
-        ariaLabel="Obtenir une estimation précise pour le nettoyage de parking"
+        ariaLabel="Demander un devis pour le nettoyage de mon parking"
       />
-      <p class="text-sm text-[#475569] mt-3">Devis détaillé sous 24&nbsp;h &middot; Dégressif selon surface et fréquence</p>
+      <p class="text-sm text-[#475569] mt-3">Périmètre, opérations et prix précisés dans le devis</p>
     </div>
   </div>
 </section>
@@ -1324,7 +1402,7 @@ data-hide-header-cta
 </Button>
 
         <p class="text-sm text-[#475569] mt-3">
-          Réponse sous 24h - Diagnostic gratuit sur site
+          Étude du besoin - Proposition adaptée au parking
         </p>
       </div>
     </div>
@@ -1414,7 +1492,7 @@ data-hide-header-cta
           Besoin d'un expert pour l'entretien de vos parkings ?
         </h2>
         <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
-          Diagnostic gratuit, intervention professionnelle et traçabilité complète. 
+          Étude de votre besoin, intervention professionnelle et traçabilité complète.
           Nous garantissons la propreté, la sécurité et la conformité de vos installations.
         </p>
       </div>
@@ -1423,10 +1501,10 @@ data-hide-header-cta
       <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
         <div class="mb-6 text-center">
           <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
-            Programmer votre diagnostic gratuit
+            Demander un devis pour votre parking
           </h3>
           <p class="text-[#475569]">
-            Particuliers et professionnels : obtenez un devis précis sous 24h
+            Particuliers et professionnels : recevez une proposition adaptée à votre besoin
           </p>
         </div>
 
@@ -1436,7 +1514,7 @@ data-hide-header-cta
           
           <!-- Champs cachés pour tracking et API -->
           <input type="hidden" name="source" value="page-parking">
-          <input type="hidden" name="service" value="Nettoyage parking - Diagnostic gratuit">
+          <input type="hidden" name="service" value="Nettoyage parking - Demande de devis">
           <input type="hidden" name="rgpd" value="accepte">
           
           <!-- Ligne 1 : Prénom/Nom -->
@@ -1683,7 +1761,7 @@ data-hide-header-cta
           <!-- Remplacer cette partie -->
 <div class="text-center">
 <ButtonSubmit
-  label="Obtenir mon diagnostic gratuit"
+  label="Demander un devis"
   variant="primary"
   size="lg"
   fullWidth={false}
@@ -1712,7 +1790,7 @@ data-hide-header-cta
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
             </div>
-            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+            <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Retour personnalisé</h4>
             <p class="text-xs text-[#475569]">Devis adapté au revêtement</p>
           </div>
           
@@ -1921,7 +1999,7 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
     submitBtn.disabled = loading || uploadingCount > 0;
     loadingSpinner.classList.toggle('hidden', !loading);
     emailIcon.classList.toggle('hidden', loading);
-    btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon diagnostic gratuit';
+    btnText.textContent = loading ? 'Envoi en cours...' : 'Demander un devis';
   }
 
   function bytesToMB(bytes) {
@@ -2270,7 +2348,7 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
               'parking-form',
               {
                 service: 'nettoyage-parkings',
-                service_name: 'Nettoyage parking - Diagnostic gratuit'
+                service_name: 'Nettoyage parking - Demande de devis'
               }
             );
           }
@@ -2285,7 +2363,7 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
               </div>
               <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>
               <p class="text-[#475569] max-w-md mx-auto">
-                Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté à votre parking.<br>
+                Nous vous recontactons avec une proposition adaptée à votre parking.<br>
                 Un expert Klinova évaluera la technique de nettoyage<br>
                 la plus appropriée à votre revêtement.
               </p>

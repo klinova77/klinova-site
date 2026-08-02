@@ -1,6 +1,8 @@
 ---
 // src/components/parking/PlaceParkingSpot.astro
 import { aVille, deVille } from "~/lib/geo-klinova";
+import type { ParkingCommercialPricing } from "~/types/geo";
+import { formatFrenchList, formatParkingAmount } from "~/lib/parking-pricing";
 
 interface Props {
   cityName: string;
@@ -12,11 +14,27 @@ interface Props {
    * Optional: override anchor id for deep-links (#place-parking)
    */
   id?: string;
+  /** Hide the localized suffix when the component is used on the regional parent page. */
+  hideCitySuffix?: boolean;
+  /** Override the template CTA without changing localized pages that reuse the same template. */
+  ctaOverride?: string;
+  /** Show the neutral tax note required on mixed professional/consumer pages. */
+  showIndividualTaxNote?: boolean;
+  /** Minimum reserved for individual places, boxes and other eligible consumer jobs. */
+  individualMinimum?: ParkingCommercialPricing["individualMinimum"];
 }
 
-const { cityName, templateIndex, id = "place-parking" } = Astro.props as Props;
+const {
+  cityName,
+  templateIndex,
+  id = "place-parking",
+  hideCitySuffix = false,
+  ctaOverride,
+  showIndividualTaxNote = false,
+  individualMinimum,
+} = Astro.props as Props;
 
-const cityAt = aVille(cityName);
+const cityAt = hideCitySuffix ? "" : aVille(cityName);
 const cityFrom = deVille(cityName);
 
 /**
@@ -53,7 +71,7 @@ const templates: Template[] = [
       "Finitions manuelles sur angles et zones marquées",
       "À savoir : les anciennes imprégnations dans le béton peuvent s’éclaircir sans disparaître totalement",
     ],
-    cta: "Envoyez 2–3 photos, on vous répond sous 24h.",
+    cta: "Envoyez 2–3 photos et dimensions pour recevoir une proposition adaptée.",
   },
   {
     kicker: "Particuliers & copropriétaires",
@@ -118,7 +136,7 @@ const templates: Template[] = [
       "Produits professionnels + rinçage contrôlé",
       "À savoir : on privilégie un résultat “propre et sain” plutôt que des promesses irréalistes de remise à neuf si le sol est ancien",
     ],
-    cta: "Envoyez vos photos : réponse sous 24h, avec un tarif clair.",
+    cta: "Envoyez vos photos et dimensions pour recevoir une proposition adaptée.",
   },
 ];
 
@@ -128,6 +146,10 @@ const idx =
     : hash32(cityName.toLowerCase()) % templates.length;
 
 const t = templates[idx];
+const ctaText = ctaOverride ?? t.cta;
+const individualApplicationsText = individualMinimum
+  ? formatFrenchList(individualMinimum.appliesTo, "ou")
+  : "";
 ---
 
 <section id={id} class="py-16 bg-[#FCFCFC] border-y border-[#E5E7EB]">
@@ -197,9 +219,18 @@ const t = templates[idx];
 
             <div class="mt-4 p-4 rounded-xl bg-[#F1F7F3] border-l-4 border-[#3F8D65]">
               <p class="text-sm font-medium text-[#1E2939]">
-                {t.cta}
+                {ctaText}
               </p>
             </div>
+
+            {showIndividualTaxNote && individualMinimum && (
+              <p class="mt-4 text-xs text-[#475569] leading-relaxed">
+                <strong class="block text-sm text-[#1E2939] mb-1">
+                  Pour {individualApplicationsText}, le minimum d’intervention est de {formatParkingAmount(individualMinimum)}.
+                </strong>
+                Le montant définitif dépend des opérations nécessaires et est précisé {individualMinimum.tax} dans le devis.
+              </p>
+            )}
           </div>
         </div>
       </div>

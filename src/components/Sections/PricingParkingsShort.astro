@@ -1,204 +1,135 @@
 ---
 import Button from "~/components/UI/Button.astro";
-import type { ServiceConfig } from "~/types/geo";
+import type { ParkingCommercialPricing } from "~/types/geo";
 import { aVille, deVille } from "~/lib/geo-klinova";
+import {
+  formatFrenchList,
+  formatLargeParkingPricingWithoutFloor,
+  formatParkingAmount,
+  formatParkingRange,
+} from "~/lib/parking-pricing";
 
 interface Props {
   cityName?: string;
-  service: ServiceConfig;
+  commercialPricing: ParkingCommercialPricing;
 }
 
-const { cityName, service } = Astro.props as Props;
+const { cityName, commercialPricing } = Astro.props as Props;
 
 const cityAt = cityName ? aVille(cityName) : "";
 const cityFrom = cityName ? deVille(cityName) : "";
+const citySuffix = cityAt ? ` ${cityAt}` : "";
 
-const citySuffix = cityAt ? ` ${cityAt}` : ""; // ex: " au Raincy"
-
-
-// Helpers
-const fmtEuro = (n?: number) =>
-  typeof n === 'number' && Number.isFinite(n) ? n.toLocaleString('fr-FR') : '';
-
-const tiers = Array.isArray(service.pricingTiers) ? service.pricingTiers : [];
-const rangeTiers = tiers.filter((t) => t.priceType === 'range');
-const quoteTier = tiers.find((t) => t.priceType === 'quote');
-const fromTier = tiers.find((t) => t.priceType === 'from');
-
-// Si tu as 2 ranges (petit / standard) on les mappe.
-// Sinon fallback : on prend le seul range partout.
-const smallRange = rangeTiers[0];
-const standardRange = rangeTiers[1] ?? rangeTiers[0];
-
-const smallText =
-  smallRange?.low != null && smallRange?.high != null
-    ? `${fmtEuro(smallRange.low)} – ${fmtEuro(smallRange.high)} €`
-    : 'Sur devis';
-
-const standardText =
-  standardRange?.low != null && standardRange?.high != null
-    ? `${fmtEuro(standardRange.low)} – ${fmtEuro(standardRange.high)} €`
-    : 'Sur devis';
-
-// Phrase “générale” sous le titre
-const generalRange = standardRange ?? smallRange;
-const generalRangeText =
-  generalRange?.low != null && generalRange?.high != null
-    ? `${fmtEuro(generalRange.low)} et ${fmtEuro(generalRange.high)} €/m²`
-    : 'sur devis';
-
-// Note forfait minimum (si tu utilises un tier from)
-const minimumText =
-  fromTier?.from != null ? `Forfait minimum dès ${fmtEuro(fromTier.from)} €` : '';
+const standardRangeText = formatParkingRange(commercialPricing.standardParking);
+const largeParkingText = formatLargeParkingPricingWithoutFloor(
+  commercialPricing.largeParking,
+);
+const individualMinimumText = formatParkingAmount(
+  commercialPricing.individualMinimum,
+);
+const individualApplicationsText = formatFrenchList(
+  commercialPricing.individualMinimum.appliesTo,
+  "ou",
+);
 ---
-
 
 <section class="bg-white py-16 md:py-20 border-y border-neutral-100" data-section="tarifs" id="tarifs">
   <div class="container-responsive">
-    
-    <!--En-tête SEO Localisé -->
     <div class="max-w-4xl mb-12 text-center mx-auto">
       <div
         class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-wide mb-6
                bg-blue-50 border-blue-100 text-[#1E40AF]"
       >
         <span class="block h-2 w-2 rounded-full bg-[#1E40AF] animate-pulse" aria-hidden="true"></span>
-        Transparence Tarifaire
+        Transparence tarifaire
       </div>
-      
-      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] leading-tight mb-4">
-        Coût nettoyage parking <span class="text-[#3F8D65]">{citySuffix}</span>
-      </h2>
-      
-      <p class="text-lg text-[#475569] max-w-2xl mx-auto">
-        Une tarification adaptée à la surface et à l'encrassement.
-        <br class="hidden md:block" />
-        Pour les copropriétés {cityFrom}, nos prix varient généralement <strong>entre {generalRangeText}</strong>.
 
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] leading-tight mb-4">
+        Coût du nettoyage de parking <span class="text-[#3F8D65]">{citySuffix}</span>
+      </h2>
+
+      <p class="text-lg text-[#475569] max-w-3xl mx-auto">
+        Pour les parkings collectifs de taille courante {cityFrom}, les prix se situent généralement de
+        <strong>{standardRangeText}</strong>. Le devis précise les opérations retenues selon la configuration du site.
       </p>
     </div>
 
-    
-    <div class="grid md:grid-cols-3 gap-6 items-start">
-      
-      
-      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm hover:shadow-md transition-all">
+    <div class="grid lg:grid-cols-3 gap-6 items-stretch">
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm">
         <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-2xl">🚗</div>
-        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Petites Surfaces</h3>
-        <p class="text-xs text-[#64748B] font-semibold uppercase tracking-wide mb-4">Jusqu’à 1 000 m²</p>
-        
-        <div class="text-2xl font-bold text-[#1E2939] mb-2">
-  {smallText} <span class="text-sm font-normal text-gray-500">/m²</span>
-</div>
-
-        <p class="text-sm text-[#475569] mb-6 leading-relaxed">
-          Idéal pour petites résidences ou niveaux uniques. Préparation & finitions manuelles incluses.
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Parkings courants</h3>
+        <div class="inline-flex rounded-md bg-[#EEF2FF] border border-[#C7D2FE] px-3 py-2 text-lg font-bold text-[#1E40AF] mb-4">
+          {standardRangeText}
+        </div>
+        <p class="text-sm text-[#475569] leading-relaxed">
+          Fourchette indicative pour les parkings collectifs ou professionnels de taille courante. Les opérations ne sont
+          pas systématiquement toutes incluses.
         </p>
-        
-       <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
-  {minimumText || "Forfait minimum de déplacement applicable."}
-</div>
-
       </article>
 
-      <article class="relative rounded-2xl border-2 border-[#3F8D65]/20 bg-[#F0FDF4]/30 p-8 shadow-lg transform md:-translate-y-2 z-10">
-        <div class="absolute top-0 right-0 bg-[#3F8D65] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
-          STANDARD COPRO
-        </div>
-        
-        <div class="w-12 h-12 bg-[#3F8D65]/10 text-[#3F8D65] rounded-full flex items-center justify-center mb-4 text-2xl">🏢</div>
-        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Moyennes Surfaces</h3>
-        <p class="text-xs text-[#3F8D65] font-semibold uppercase tracking-wide mb-4">1 000 – 5 000 m²</p>
-        
-        <div class="text-3xl font-bold text-[#3F8D65] mb-2">
-  {standardText} <span class="text-sm font-normal text-gray-500">/m²</span>
-</div>
-
-        
-        <p class="text-sm text-[#1E2939] mb-6 leading-relaxed font-medium">
-          Ratio optimisé machine/temps. Tarif dégressif spécial Syndic.
+      <article class="rounded-2xl border-2 border-[#3F8D65]/20 bg-[#F0FDF4]/30 p-8 shadow-sm">
+        <div class="w-12 h-12 bg-[#3F8D65]/10 text-[#3F8D65] rounded-full flex items-center justify-center mb-4 text-2xl">🏭</div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Grands et très grands parkings</h3>
+        <p class="text-sm text-[#1E2939] leading-relaxed font-medium">
+          {largeParkingText}
         </p>
-        
-        <ul class="space-y-2 mb-6">
-          <li class="flex items-center gap-2 text-sm text-[#475569]">
-            <span class="text-[#3F8D65] font-bold">✓</span> Dégraissage inclus
-          </li>
-          <li class="flex items-center gap-2 text-sm text-[#475569]">
-            <span class="text-[#3F8D65] font-bold">✓</span> Dépoussiérage box/tubes
-          </li>
+      </article>
+
+      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm">
+        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-2xl">🧰</div>
+        <h3 class="text-lg font-bold text-[#1E2939] mb-3">Prestations lourdes</h3>
+        <div class="text-xl font-bold text-[#1E2939] mb-3">Sur devis</div>
+        <p class="text-sm text-[#475569] leading-relaxed mb-4">
+          Sur devis selon l’état du site et les opérations nécessaires.
+        </p>
+        <ul class="space-y-1.5 text-xs text-[#64748B]">
+          {commercialPricing.heavyCleaning.operations.slice(0, 4).map((operation) => (
+            <li>• {operation}</li>
+          ))}
         </ul>
-      </article>
-
-      <!-- 5 000 m² (Grands Comptes) -->
-      <article class="rounded-2xl border border-[#E5E7EB] bg-white p-8 shadow-sm hover:shadow-md transition-all">
-        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-2xl">🏭</div>
-        <h3 class="text-lg font-bold text-[#1E2939] mb-1">Grands Volumes</h3>
-        <p class="text-xs text-[#64748B] font-semibold uppercase tracking-wide mb-4">Plus de 5 000 m²</p>
-        
-        <div class="text-2xl font-bold text-[#1E2939] mb-2">Sur Devis</div>
-        <p class="text-sm text-gray-500 mb-2">Étude sur mesure</p>
-        
-        <p class="text-sm text-[#475569] mb-6 leading-relaxed">
-          Optimisation logistique lourde. Possibilité de lisser la facturation sur l'année (Contrat).
-        </p>
-        
-        <div class="pt-4 border-t border-gray-100 text-xs text-gray-400 italic">
-          Intervention en équipe renforcée.
-        </div>
       </article>
     </div>
 
-    <!--Facteurs & particuliers -->
     <div class="grid md:grid-cols-2 gap-6 mt-12">
       <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-        <h4 class="text-base font-bold text-amber-900 mb-3 flex items-center gap-2">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Ce qui fait varier le devis {citySuffix}
-        </h4>
+        <h4 class="text-base font-bold text-amber-900 mb-3">Ce qui fait varier le devis {citySuffix}</h4>
         <ul class="space-y-2 text-sm text-amber-800">
-          <li class="flex gap-2">
-            <span class="font-bold">• État des sols :</span> Traces d’hydrocarbures anciennes vs entretien courant.
-          </li>
-          <li class="flex gap-2">
-            <span class="font-bold">• Accessibilité :</span> Points d'eau éloignés, rampes d'accès pentues.
-          </li>
-          <li class="flex gap-2">
-            <span class="font-bold">• Sécurité :</span> Nécessité de balisage complexe ou ventilation.
-          </li>
+          {commercialPricing.standardParking.factors.map((factor) => (
+            <li class="flex gap-2"><span aria-hidden="true">•</span><span>{factor}</span></li>
+          ))}
         </ul>
       </div>
-      
-      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6 flex flex-col justify-center">
-        <h4 class="text-base font-bold text-[#1E2939] mb-2">
-          Box individuels & Petites surfaces
-        </h4>
+
+      <div class="rounded-2xl border border-[#E5E7EB] bg-white p-6">
+        <h4 class="text-base font-bold text-[#1E2939] mb-2">Places, box et petites surfaces pour particuliers</h4>
         <p class="text-sm text-[#475569] leading-relaxed">
-          Pour les surfaces réduites (&lt; 200m²) ou les box fermés {cityAt || 'domicile'}, 
-          nous intervenons avec des machines compactes (monobrosses). 
-          <br/>
-         <span class="text-[#3F8D65] font-medium mt-1 block">
-  {minimumText || "Un forfait minimum d'intervention s'applique."}
-</span>
+          Pour {individualApplicationsText}, le <strong>minimum d’intervention est de {individualMinimumText}</strong>.
+          Le montant définitif dépend des opérations nécessaires et est précisé
+          {commercialPricing.individualMinimum.tax} dans le devis.
         </p>
+
+        <div class="mt-5 pt-5 border-t border-[#E5E7EB]">
+          <h5 class="text-sm font-semibold text-[#1E2939] mb-1">Petite surface professionnelle</h5>
+          <p class="text-sm text-[#475569]">
+            Tarification sur devis selon le périmètre et les conditions d’intervention.
+          </p>
+        </div>
       </div>
     </div>
 
-    <!--CTA -->
     <div class="mt-12 text-center">
-      <div class="inline-block">
-        <Button
-          href="#formulaire"
-          label={`Obtenir mon devis parking ${citySuffix}`}
-          variant="primary" 
-          size="lg"
-          tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
-          data={{ section: 'tarifs' }}
-          ariaLabel={`Obtenir une estimation précise pour le nettoyage de parking ${citySuffix}`}
-          className="bg-[#3F8D65] hover:bg-[#357a53] text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
-        />
-      </div>
+      <Button
+        href="#formulaire"
+        label={`Demander un devis parking ${citySuffix}`}
+        variant="primary"
+        size="lg"
+        tracking={{ action: 'cta_tarifs', source: 'section_tarifs', intent: 'lead' }}
+        data={{ section: 'tarifs' }}
+        ariaLabel={`Demander un devis adapté pour le nettoyage de parking ${citySuffix}`}
+        className="bg-[#3F8D65] hover:bg-[#357a53] text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+      />
       <p class="text-sm text-[#64748B] mt-4">
-        Réponse sous 24 h • Visite technique gratuite sur {cityName || 'site'}
+        Proposition établie selon la surface, l’état et l’organisation du site
       </p>
     </div>
   </div>

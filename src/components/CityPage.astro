@@ -76,6 +76,11 @@ if (!currentServiceSlug) {
   throw new Error(`Missing service.urls.parent for service key: ${service.key}`);
 }
 
+const parkingPricing = service.key === "parkings" ? service.commercialPricing : undefined;
+if (service.key === "parkings" && !parkingPricing) {
+  throw new Error("Missing commercialPricing for the parkings service");
+}
+
 // Catalogue global (configs) -> uniquement ceux qui ont une URL
 const allServiceConfigs = (Array.isArray(services) ? services : []).filter(
   (s): s is ServiceConfig => typeof s === "object" && s !== null && typeof s.urls?.parent === "string" && !!s.urls.parent
@@ -492,13 +497,15 @@ const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
 const pageUrl = `${baseUrl}${canonical}`;
 
 
-const pricingOffers = buildPricingOffers({
-  pricingTiers: service.pricingTiers,
-  legacyPricing: service.pricing,
-  pageUrl,
-  fallbackOfferName: `${service.name} ${cityAt}`,
-  fallbackOfferDescription: description,
-});
+const pricingOffers = service.key === "parkings"
+  ? []
+  : buildPricingOffers({
+      pricingTiers: service.pricingTiers,
+      legacyPricing: service.pricing,
+      pageUrl,
+      fallbackOfferName: `${service.name} ${cityAt}`,
+      fallbackOfferDescription: description,
+    });
 
 
 const webPageJsonLd = {
@@ -557,7 +564,7 @@ const faqEntities = combinedFaq.map((item) => ({
 
 
 // ============================================================
-// Construction Service JSON-LD (OfferCatalog alimenté)
+// Construction Service JSON-LD (catalogue conditionnel)
 // ============================================================
 
 const serviceJsonLd: Record<string, any> = {
@@ -580,11 +587,13 @@ const serviceJsonLd: Record<string, any> = {
     ...(city.wikipediaUrl && { sameAs: city.wikipediaUrl }),
   },
 
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: `Tarifs ${service.name} ${cityAt}`,
-    itemListElement: pricingOffers,
-  },
+  ...(pricingOffers.length > 0 && {
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Tarifs ${service.name} ${cityAt}`,
+      itemListElement: pricingOffers,
+    },
+  }),
 };
 
 
@@ -649,7 +658,9 @@ const photos = cityNote?.photos ?? [];
 <LayoutWithCTA
   popupContext={{
     title: 'Demander à être rappelé',
-    subtitle: 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
+    subtitle: service.key === 'parkings'
+      ? 'Un conseiller de Klinova étudie votre besoin et vous recontacte pour discuter de votre projet.'
+      : 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
     serviceKey: service.key,
     serviceLabel,
     trackingSource: `citypage-${service.key}-${citySlug}`,
@@ -1068,8 +1079,12 @@ const photos = cityNote?.photos ?? [];
     )}
 
 
- {service.key === 'parkings' && (
-      <PlaceParkingSpot cityName={city.name} />
+ {service.key === 'parkings' && parkingPricing && (
+      <PlaceParkingSpot
+        cityName={city.name}
+        showIndividualTaxNote
+        individualMinimum={parkingPricing.individualMinimum}
+      />
 
     )}
 
@@ -1602,8 +1617,8 @@ const photos = cityNote?.photos ?? [];
 
 )}
 
-{service.key === 'parkings' && (
-  <PricingParkingsShort cityName={city.name} service={service} />
+{service.key === 'parkings' && parkingPricing && (
+  <PricingParkingsShort cityName={city.name} commercialPricing={parkingPricing} />
 
 )}
 
@@ -4745,7 +4760,7 @@ const photos = cityNote?.photos ?? [];
             Besoin d'un expert pour l'entretien de vos parkings {cityAt} ?
           </h2>
           <p class="text-xl md:text-2xl text-[#475569] leading-relaxed mb-8 max-w-3xl mx-auto">
-            Diagnostic gratuit, intervention professionnelle et traçabilité complète. 
+            Étude de votre besoin, intervention professionnelle et traçabilité complète.
             Nous garantissons la propreté, la sécurité et la conformité de vos installations.
           </p>
         </div>
@@ -4754,10 +4769,10 @@ const photos = cityNote?.photos ?? [];
         <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-[#E5E7EB] mb-12">
           <div class="mb-6 text-center">
             <h3 class="text-xl font-semibold text-[#1E2939] mb-2">
-              Programmer votre diagnostic gratuit
+              Demander un devis adapté
             </h3>
             <p class="text-[#475569]">
-              Particuliers et professionnels : obtenez un devis précis sous 24h
+              Particuliers et professionnels : recevez une proposition selon la configuration du site
             </p>
           </div>
 
@@ -4767,7 +4782,7 @@ const photos = cityNote?.photos ?? [];
             
             <!-- Champs cachés pour tracking et API -->
             <input type="hidden" name="source" value={`page-parking-${city.slug}`}>
-            <input type="hidden" name="service" value={`Nettoyage parking - Diagnostic gratuit - ${city.name}`}>
+            <input type="hidden" name="service" value={`Nettoyage parking - Demande de devis - ${city.name}`}>
             <input type="hidden" name="city" value={city.name}>
             <input type="hidden" name="rgpd" value="accepte">
             
@@ -5006,7 +5021,7 @@ const photos = cityNote?.photos ?? [];
             <!-- Bouton de soumission -->
             <div class="text-center">
               <ButtonSubmit
-                label="Obtenir mon diagnostic gratuit"
+                label="Demander un devis"
                 variant="primary"
                 size="lg"
                 fullWidth={false}
@@ -5034,7 +5049,7 @@ const photos = cityNote?.photos ?? [];
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
               </div>
-              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Retour personnalisé</h4>
               <p class="text-xs text-[#475569]">Devis adapté au revêtement</p>
             </div>
             
@@ -5142,7 +5157,7 @@ const photos = cityNote?.photos ?? [];
       if (submitBtn) {
         submitBtn.disabled = loading || parkingFormState.uploadingCount > 0;
         var btnText = submitBtn.querySelector('span');
-        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Obtenir mon diagnostic gratuit';
+        if (btnText) btnText.textContent = loading ? 'Envoi en cours...' : 'Demander un devis';
       }
     }
 
@@ -5480,7 +5495,7 @@ const photos = cityNote?.photos ?? [];
           if (window.KlinovaTracking?.triggerFormSuccess) {
   window.KlinovaTracking.triggerFormSuccess('parking-city-form', {
     service: 'nettoyage-parkings',
-    service_name: 'Nettoyage parking - Diagnostic gratuit'
+    service_name: 'Nettoyage parking - Demande de devis'
   });
 }
           form.setAttribute('aria-hidden', 'true');
@@ -5494,7 +5509,7 @@ const photos = cityNote?.photos ?? [];
               </div>\
               <h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>\
               <p class="text-[#475569] max-w-md mx-auto">\
-                Nous vous recontactons sous <strong>24&nbsp;h</strong> avec un devis adapté à votre parking.<br>\
+                Nous vous recontactons avec une proposition adaptée à votre parking.<br>\
                 Un expert Klinova évaluera la technique de nettoyage<br>\
                 la plus appropriée à votre revêtement.\
               </p>\

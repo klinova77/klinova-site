@@ -1,5 +1,75 @@
 // src/data/services/parkings.config.ts
-import type { ServiceConfig } from "~/types/geo";
+import type { ParkingCommercialPricing, ServiceConfig } from "~/types/geo";
+
+const commercialPricing: ParkingCommercialPricing = {
+  standardParking: {
+    min: 1,
+    max: 2.5,
+    currency: "EUR",
+    unitCode: "MTK",
+    tax: "HT",
+    factors: [
+      "la surface",
+      "le niveau d’encrassement",
+      "les opérations demandées",
+      "l’accessibilité et l’organisation du chantier",
+      "la fréquence d’entretien",
+    ],
+  },
+  referenceCase: {
+    amount: 1300,
+    surfaceM2: 1000,
+    currency: "EUR",
+    tax: "HT",
+    approximate: true,
+    locationContext: "en banlieue francilienne",
+    soilCondition: "normalement encrassé",
+    cleaningsPerYear: 1,
+  },
+  largeParking: {
+    min: 0.5,
+    max: 1,
+    currency: "EUR",
+    unitCode: "MTK",
+    tax: "HT",
+    conditional: true,
+    conditions: [
+      "une très grande surface",
+      "des sols en bon état",
+      "des accès dégagés",
+      "peu de reprises manuelles",
+      "une organisation permettant un rendement mécanisé élevé",
+    ],
+    exposeAsGenericMinimum: false,
+    exposeInStructuredData: false,
+  },
+  heavyCleaning: {
+    pricingMode: "quote",
+    operations: [
+      "remise en état",
+      "dégraissage renforcé",
+      "nettoyage haute pression",
+      "traitement lourd des hydrocarbures",
+      "aspiration ou pompage complexe des eaux",
+      "reprises manuelles importantes",
+      "intervention post-sinistre",
+    ],
+    specialConfigurationLabel: "toute configuration technique particulière",
+  },
+  individualMinimum: {
+    amount: 360,
+    currency: "EUR",
+    tax: "TTC",
+    audience: "individual",
+    appliesTo: [
+      "une place individuelle",
+      "un box",
+      "un petit garage",
+      "une autre petite surface demandée par un particulier",
+    ],
+    exposeInStructuredData: false,
+  },
+};
 
 const parkings: ServiceConfig = {
   key: "parkings",
@@ -23,42 +93,7 @@ const parkings: ServiceConfig = {
 
   averageDuration: "Nuit entière pour 1–2 niveaux",
 
-  pricingTiers: [
-    {
-      name: "Petites surfaces (≤ 1 000 m²)",
-      description: "Tarif indicatif incluant préparation & finitions manuelles.",
-      priceType: "range",
-      low: 1.4,
-      high: 2.5,
-      unitCode: "MTK",
-      vatIncluded: true,
-      currency: "EUR",
-    },
-    {
-      name: "Standard copro (1 000–5 000 m²)",
-      description: "Ratio machine/temps optimisé. Tarif dégressif syndic.",
-      priceType: "range",
-      low: 1.0,
-      high: 1.4,
-      unitCode: "MTK",
-      vatIncluded: true,
-      currency: "EUR",
-    },
-    {
-      name: "Grands volumes (> 5 000 m²)",
-      description: "Étude sur mesure, optimisation logistique.",
-      priceType: "quote",
-      currency: "EUR",
-    },
-    {
-      name: "Forfait minimum",
-      description: "Forfait minimum d’intervention selon accès/contraintes.",
-      priceType: "from",
-      from: 240,
-      vatIncluded: true,
-      currency: "EUR",
-    },
-  ],
+  commercialPricing,
 
   faq: [
     {
@@ -104,3 +139,4 @@ const parkings: ServiceConfig = {
 };
 
 export default parkings;
+export { commercialPricing as parkingCommercialPricing };
