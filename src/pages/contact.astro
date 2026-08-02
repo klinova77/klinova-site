@@ -10,9 +10,6 @@ const site = 'https://klinova.fr';
 const pageUrl = '/contact';
 const pageName = 'Contact & devis';
 
-// UID pour isoler l'autofill & éviter conflits si plusieurs formulaires
-const uid = 'cf' + Math.random().toString(36).slice(2, 8);
-const formId = `contact-form-${uid}`;
 
 // JSON-LD optimisé
 const jsonLd = [
@@ -337,7 +334,7 @@ const jsonLd = [
   size="lg"
   fullWidth={true}
   id="submitBtn"
-  formId="contact-form"
+  formId="formulaire"
   formName="Contact Form"
   formType="contact"
   value={0}
@@ -1720,7 +1717,16 @@ const jsonLd = [
       let data = null;
       try { data = await response.json(); } catch {}
 
-      if (response.ok) {
+      if (response.ok && data?.ok === true) {
+        if (window.KlinovaTracking?.triggerFormSuccess) {
+          window.KlinovaTracking.triggerFormSuccess(
+            'formulaire',
+            {
+              service: 'contact-general',
+              service_name: 'Contact et devis - Page contact'
+            }
+          );
+        }
         showMessage('✅ Merci ! Votre demande a été envoyée.\nNous vous recontactons rapidement.', 'success');
         contactForm.reset();
         

@@ -359,14 +359,14 @@ const jsonLd = [
   }
 </style>
 
-<section class="relative bg-[#DFF1E8] pt-12 pb-16 lg:pt-18 lg:pb-24 overflow-hidden"  
+<section class="relative bg-[#DFF1E8] pt-12 pb-16 lg:pt-18 lg:pb-24 overflow-hidden"
 data-hide-floating-cta
-data-hide-header-cta 
+data-hide-header-cta
 >
   <div class="container-responsive">
     <!-- Grille responsive : texte à gauche, image à droite -->
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      
+
       <!-- Contenu textuel -->
       <div class="order-1 lg:order-1">
         <!-- Badge optionnel -->
@@ -379,7 +379,7 @@ data-hide-header-cta
 
         <!-- Titre principal H1 -->
         <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1E2939] leading-tight mb-6 hero-title">
-          Grand ménage  
+          Grand ménage
           <span class="text-[#3F8D65]">d'appartements ou de maisons</span>
           – nettoyage complet et remise en état
         </h1>
@@ -467,10 +467,10 @@ data-hide-header-cta
         <div class="relative">
           <!-- Décoration de fond animée -->
           <div class="absolute inset-0 bg-gradient-to-br from-[#3F8D65]/10 to-transparent rounded-2xl floating-shape" aria-hidden="true"></div>
-          
+
           <!-- Container image -->
           <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden">
-            <Image 
+            <Image
               src={heroGrandMenageImage}
               alt="Appartement vide et lumineux après un grand ménage et une remise en état complète"
               formats={['avif', 'webp', 'jpeg']}
@@ -941,7 +941,7 @@ data-hide-header-cta
         </p>
       </a>
 
-      <!-- Terrasses (optionnel / plus tard) 
+      <!-- Terrasses (optionnel / plus tard)
       <a
         href="/nettoyage-terrasses"
         class="group bg-[#FCFCFC] border border-[#E5E7EB] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#3F8D65]/20"
@@ -1039,7 +1039,7 @@ data-hide-cta
     >
       <!-- Honeypot anti-spam -->
       <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
-      
+
       <!-- Champs cachés pour tracking -->
       <input type="hidden" name="source" value="grand-menage">
       <input type="hidden" name="service" value="Nettoyage appartement-maison - Demande devis">
@@ -1059,7 +1059,7 @@ data-hide-cta
           />
           <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
         </div>
-        
+
         <div>
           <label for="nom" class="sr-only">Nom</label>
           <input
@@ -1087,7 +1087,7 @@ data-hide-cta
           />
           <div class="form-error text-red-600 text-sm mt-1 hidden"></div>
         </div>
-        
+
         <div>
           <label for="telephone" class="sr-only">Téléphone</label>
           <input
@@ -1134,30 +1134,30 @@ data-hide-cta
         <label for="photos-input" class="block text-sm font-medium text-[#1E2939] mb-2">
           Photos (optionnel)
         </label>
-        
+
         <!-- Input caché -->
         <input type="file" id="photos-input" name="__photos_local" accept="image/*" multiple class="hidden" />
-        
+
         <!-- Zone de drop -->
-        <div id="photos-drop-zone" 
+        <div id="photos-drop-zone"
              class="border-2 border-dashed border-[#CFE3D8] rounded-xl p-6 text-center cursor-pointer
                     hover:border-[#3F8D65] hover:bg-[#F8FBF9] transition-all duration-200">
           <div class="flex flex-col items-center space-y-2">
             <svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <p class="text-[#475569] font-medium">Cliquez pour ajouter des photos</p>
             <p class="text-xs text-[#64748B]">Ou glissez-déposez vos images • Max 4 photos • 8 MB chacune</p>
           </div>
         </div>
-        
+
         <!-- Statut des photos -->
         <div id="photos-status" class="mt-2 text-sm text-[#64748B]">Aucune photo</div>
-        
+
         <!-- Liste des photos -->
         <div id="photos-list" class="mt-3 space-y-2 hidden"></div>
-        
+
         <!-- Container pour les URLs Cloudinary -->
         <div id="photos-hidden"></div>
       </div>
@@ -1171,31 +1171,31 @@ data-hide-cta
       </div>
 
       <!-- CTA form -->
-     
-       <ButtonSubmit
-  label="Recevoir mon devis"
-  variant="primary"
-  size="lg"
-  fullWidth={true}
-  id="submit-btn"
-  formId="fientes-pigeons-form"
-  formName="Fientes Pigeons Contact Form"
-  formType="devis"
-  value={220}
-  source="grand-menage"
-  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
-  tracking={{
-    action: 'cta-submit-devis',
-    source: 'grand-menage',
-    intent: 'fientes-pigeons-devis'
-  }}
-  data={{
-    action: 'cta-submit-devis',
-    source: 'grand-menage'
-  }}
-/>
 
-       
+      <ButtonSubmit
+        label="Recevoir mon devis"
+        variant="primary"
+        size="lg"
+        fullWidth={true}
+        id="submit-btn"
+        formId="devis-grand-menage-form"
+        formName="Grand Menage Contact Form"
+        formType="devis"
+        value={220}
+        source="grand-menage"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+        tracking={{
+          action: 'cta-submit-devis',
+          source: 'grand-menage',
+          intent: 'grand-menage-devis'
+        }}
+        data={{
+          action: 'cta-submit-devis',
+          source: 'grand-menage'
+        }}
+      />
+
+
       </div>
     </form>
   </div>
@@ -1297,14 +1297,14 @@ data-hide-cta
   const submitBtn = document.getElementById('submit-btn');
   const submitText = document.getElementById('btn-text');
 const loadingSpinner = document.querySelector('.loading-spinner');
-  
+
   // Upload de photos
   const photosInput = document.getElementById('photos-input');
   const dropZone = document.getElementById('photos-drop-zone');
   const photosList = document.getElementById('photos-list');
   const photosStatus = document.getElementById('photos-status');
   const photosHidden = document.getElementById('photos-hidden');
-  
+
   let uploadingCount = 0;
   let uploadedFiles = [];
   const maxFiles = 4;
@@ -1317,7 +1317,7 @@ const loadingSpinner = document.querySelector('.loading-spinner');
     messageDiv.textContent = text;
     messagesContainer.innerHTML = '';
     messagesContainer.appendChild(messageDiv);
-    
+
     if (type === 'success') {
       setTimeout(() => {
         messageDiv.style.opacity = '0';
@@ -1340,7 +1340,7 @@ function setLoading(loading) {
     const total = uploadedFiles.length;
     const success = uploadedFiles.filter(f => f.status === 'success').length;
     const uploading = uploadingCount;
-    
+
     if (total === 0) {
       photosStatus.textContent = 'Aucune photo';
       photosList.classList.add('hidden');
@@ -1348,7 +1348,7 @@ function setLoading(loading) {
       photosStatus.textContent = `${total}/${maxFiles} photos • ${success} importée${success > 1 ? 's' : ''}${uploading > 0 ? ` • ${uploading} en cours...` : ''}`;
       photosList.classList.remove('hidden');
     }
-    
+
     submitBtn.disabled = uploadingCount > 0;
   }
 
@@ -1356,7 +1356,7 @@ function setLoading(loading) {
     const photoDiv = document.createElement('div');
     photoDiv.className = 'photo-item';
     photoDiv.dataset.fileName = file.name;
-    
+
     photoDiv.innerHTML = `
       <span class="photo-name">${file.name}</span>
       <span class="photo-size">${bytesToMB(file.size)} MB</span>
@@ -1366,23 +1366,23 @@ function setLoading(loading) {
         <div class="photo-progress-fill"></div>
       </div>
     `;
-    
+
     photoDiv.querySelector('.photo-remove').addEventListener('click', () => {
       removePhoto(file.name);
     });
-    
+
     photosList.appendChild(photoDiv);
   }
 
   function updatePhotoStatus(fileName, status, progress = 0) {
     const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
     if (!photoDiv) return;
-    
+
     const statusEl = photoDiv.querySelector('.photo-status');
     const progressFill = photoDiv.querySelector('.photo-progress-fill');
-    
+
     statusEl.className = `photo-status ${status}`;
-    
+
     switch (status) {
       case 'uploading':
         statusEl.textContent = `${progress}%`;
@@ -1410,10 +1410,10 @@ function setLoading(loading) {
       }
       uploadedFiles.splice(fileIndex, 1);
     }
-    
+
     const photoDiv = photosList.querySelector(`[data-file-name="${fileName}"]`);
     if (photoDiv) photoDiv.remove();
-    
+
     updatePhotosStatus();
   }
 
@@ -1423,12 +1423,12 @@ function setLoading(loading) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({})
     });
-    
+
     const data = await response.json();
     if (!data.ok) {
       throw new Error(data.error || 'Erreur signature Cloudinary');
     }
-    
+
     return data;
   }
 
@@ -1440,15 +1440,15 @@ function setLoading(loading) {
       progress: 0,
       cloudinaryUrl: null
     };
-    
+
     uploadedFiles.push(fileObj);
     addPhotoToList(file);
     uploadingCount++;
     updatePhotosStatus();
-    
+
     try {
       const signature = await getCloudinarySignature();
-      
+
       const formData = new FormData();
       formData.append('file', file);
       formData.append('api_key', signature.apiKey);
@@ -1460,9 +1460,9 @@ function setLoading(loading) {
       }
 
       const uploadUrl = `https://api.cloudinary.com/v1_1/${signature.cloudName}/auto/upload`;
-      
+
       const xhr = new XMLHttpRequest();
-      
+
       xhr.upload.onprogress = (e) => {
         if (e.lengthComputable) {
           const progress = Math.round((e.loaded / e.total) * 100);
@@ -1470,7 +1470,7 @@ function setLoading(loading) {
           updatePhotoStatus(file.name, 'uploading', progress);
         }
       };
-      
+
       xhr.onload = () => {
         uploadingCount--;
         try {
@@ -1479,7 +1479,7 @@ function setLoading(loading) {
             fileObj.status = 'success';
             fileObj.cloudinaryUrl = result.secure_url;
             updatePhotoStatus(file.name, 'success');
-            
+
             // Ajouter l'URL au formulaire
             const hiddenInput = document.createElement('input');
             hiddenInput.type = 'hidden';
@@ -1496,7 +1496,7 @@ function setLoading(loading) {
         }
         updatePhotosStatus();
       };
-      
+
       xhr.onerror = () => {
         uploadingCount--;
         fileObj.status = 'error';
@@ -1504,10 +1504,10 @@ function setLoading(loading) {
         updatePhotosStatus();
         console.error('Upload network error');
       };
-      
+
       xhr.open('POST', uploadUrl);
       xhr.send(formData);
-      
+
     } catch (error) {
       uploadingCount--;
       fileObj.status = 'error';
@@ -1519,26 +1519,26 @@ function setLoading(loading) {
 
   function validateFiles(files) {
     const validFiles = [];
-    
+
     for (const file of files) {
       if (!file.type.startsWith('image/')) {
         showMessage(`${file.name} n'est pas une image valide`, 'error');
         continue;
       }
-      
+
       if (file.size > maxMB * 1024 * 1024) {
         showMessage(`${file.name} dépasse la limite de ${maxMB} MB`, 'error');
         continue;
       }
-      
+
       if (uploadedFiles.length + validFiles.length >= maxFiles) {
         showMessage(`Maximum ${maxFiles} photos autorisées`, 'error');
         break;
       }
-      
+
       validFiles.push(file);
     }
-    
+
     return validFiles;
   }
 
@@ -1590,7 +1590,7 @@ function setLoading(loading) {
   function validateField(field) {
     const value = field.value.trim();
     const errorDiv = field.parentNode.querySelector('.form-error');
-    
+
     if (field.required && !value) {
       field.classList.add('border-red-500');
       if (errorDiv) {
@@ -1599,7 +1599,7 @@ function setLoading(loading) {
       }
       return false;
     }
-    
+
     if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
       field.classList.add('border-red-500');
       if (errorDiv) {
@@ -1608,7 +1608,7 @@ function setLoading(loading) {
       }
       return false;
     }
-    
+
     field.classList.remove('border-red-500');
     if (errorDiv) {
       errorDiv.textContent = '';
@@ -1621,22 +1621,22 @@ function setLoading(loading) {
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       if (uploadingCount > 0) {
         showMessage('Veuillez attendre la fin de l\'upload des photos', 'error');
         return;
       }
-      
+
       // Validation
       const requiredFields = form.querySelectorAll('[required]');
       let isValid = true;
-      
+
       requiredFields.forEach(field => {
         if (!validateField(field)) {
           isValid = false;
         }
       });
-      
+
       // Validation email si rempli
       const emailField = form.querySelector('[name="email"]');
       if (emailField && emailField.value.trim()) {
@@ -1644,32 +1644,17 @@ function setLoading(loading) {
           isValid = false;
         }
       }
-      
+
       if (!isValid) {
         showMessage('Veuillez corriger les erreurs ci-dessus', 'error');
         return;
       }
-      
+
       setLoading(true);
       messagesContainer.innerHTML = '';
-      
-      try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'landing_grand-menage',
-            form_type: 'devis_grand-menage'
-          });
-        }
 
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_grand-menage',
-            service: 'Nettoyage grand-menage',
-            source: 'grand-menage'
-          });
-        }
+      try {
+
 
         const formData = new FormData(form);
         const response = await fetch('/api/contact', {
@@ -1681,7 +1666,16 @@ function setLoading(loading) {
         let data = null;
         try { data = await response.json(); } catch {}
 
-        if (response.ok) {
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+            window.KlinovaTracking.triggerFormSuccess(
+              'devis-grand-menage-form',
+              {
+                service: 'nettoyage-appartement-maison',
+                service_name: 'Nettoyage appartement-maison - Demande devis'
+              }
+            );
+          }
           // Remplacer complètement le contenu du formulaire par le message de succès
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
@@ -1702,8 +1696,8 @@ function setLoading(loading) {
           `;
 
           // Scroll vers le formulaire transformé
-          try { 
-            form.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          try {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
           } catch {}
         } else {
           const err = data?.error || data?.message || 'Une erreur est survenue. Merci de réessayer.';
@@ -1765,7 +1759,7 @@ function setLoading(loading) {
 
 
 
- 
+
 
 
 

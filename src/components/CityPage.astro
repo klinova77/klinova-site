@@ -2148,120 +2148,611 @@ const photos = cityNote?.photos ?? [];
   </section>
 
   <!-- Script pour gérer le sélecteur de fichiers -->
- <script is:inline>
-  (function initPhotosUpload() {
-    const photosInput = document.getElementById('photos-input');
-    const photosDropZone = document.getElementById('photos-drop-zone');
-    const photosStatus = document.getElementById('photos-status');
-    const photosList = document.getElementById('photos-list');
+<script is:inline>
+  (function initBalconForm() {
+    var form = document.getElementById('balcon-form');
+    var submitBtn = document.getElementById('submit-btn-balcon-city');
 
-    // Si les éléments n'existent pas encore, réessayer
-    if (!photosInput || !photosDropZone) {
+    var photosInput = document.getElementById('photos-input');
+    var photosDropZone = document.getElementById('photos-drop-zone');
+    var photosStatus = document.getElementById('photos-status');
+    var photosList = document.getElementById('photos-list');
+    var photosHidden = document.getElementById('photos-hidden');
+
+    /*
+     * Le composant peut ne pas être disponible immédiatement
+     * selon le moment où Astro insère le script.
+     */
+    if (
+      !form ||
+      !photosInput ||
+      !photosDropZone ||
+      !photosStatus ||
+      !photosList ||
+      !photosHidden
+    ) {
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPhotosUpload);
+        document.addEventListener('DOMContentLoaded', initBalconForm, {
+          once: true
+        });
       }
+
       return;
     }
 
-    // Fonction pour ouvrir le sélecteur de fichiers
-    function openFileSelector() {
-      photosInput.click();
+    /*
+     * Évite d'initialiser deux fois le formulaire.
+     */
+    if (form.dataset.photosInitialized === 'true') {
+      return;
     }
 
-    // Gestionnaire de clic sur la zone de drop
-    photosDropZone.addEventListener('click', openFileSelector);
+    form.dataset.photosInitialized = 'true';
 
-    // Gestionnaire de changement de fichiers
-    photosInput.addEventListener('change', function(e) {
-      const files = Array.from(e.target.files);
-      handleFiles(files);
-    });
+    var uploadingCount = 0;
+    var isSubmitting = false;
+    var uploadedFiles = [];
 
-    // Gestionnaire drag & drop
-    photosDropZone.addEventListener('dragover', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      photosDropZone.classList.add('border-[#3F8D65]', 'bg-[#F8FBF9]');
-    });
+    var maxFiles = 4;
+    var maxFileSizeMB = 8;
 
-    photosDropZone.addEventListener('dragleave', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
-    });
-
-    photosDropZone.addEventListener('drop', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      photosDropZone.classList.remove('border-[#3F8D65]', 'bg-[#F8FBF9]');
-      
-      const files = Array.from(e.dataTransfer.files).filter(file => 
-        file.type.startsWith('image/')
+    function createFileId() {
+      return (
+        Date.now().toString(36) +
+        '-' +
+        Math.random().toString(36).slice(2, 10)
       );
-      
-      if (files.length > 0) {
-        const dt = new DataTransfer();
-        files.slice(0, 4).forEach(file => dt.items.add(file));
-        photosInput.files = dt.files;
-        handleFiles(files.slice(0, 4));
+    }
+
+    function bytesToMB(bytes) {
+      return (bytes / 1024 / 1024).toFixed(1);
+    }
+
+    function showError(message) {
+      alert(message);
+    }
+
+    function updateSubmitState() {
+      if (!submitBtn) return;
+
+      submitBtn.disabled = isSubmitting || uploadingCount > 0;
+      submitBtn.setAttribute(
+        'aria-busy',
+        isSubmitting || uploadingCount > 0 ? 'true' : 'false'
+      );
+    }
+
+    function updatePhotosStatus() {
+      var activeFiles = uploadedFiles.filter(function(file) {
+        return !file.removed;
+      });
+
+      var successfulUploads = activeFiles.filter(function(file) {
+        return file.status === 'success';
+      }).length;
+
+      if (activeFiles.length === 0) {
+        photosStatus.textContent = 'Aucune photo';
+        photosList.classList.add('hidden');
+      } else {
+        var text =
+          activeFiles.length +
+          '/' +
+          maxFiles +
+          ' photos • ' +
+          successfulUploads +
+          ' importée' +
+          (successfulUploads > 1 ? 's' : '');
+
+        if (uploadingCount > 0) {
+          text +=
+            ' • ' +
+            uploadingCount +
+            ' en cours de téléchargement...';
+        }
+
+        photosStatus.textContent = text;
+        photosList.classList.remove('hidden');
+      }
+
+      updateSubmitState();
+    }
+
+    function findPhotoRow(fileId) {
+      return photosList.querySelector(
+        '[data-photo-id="' + fileId + '"]'
+      );
+    }
+
+    function addPhotoToList(fileObj) {
+      var row = document.createElement('div');
+
+      row.className =
+        'flex items-center justify-between gap-2 ' +
+        'bg-[#F8FAFC] rounded p-2 text-sm ' +
+        'border border-[#E5E7EB]';
+
+      row.dataset.photoId = fileObj.id;
+
+      var fileName = document.createElement('span');
+      fileName.className = 'text-[#475569] flex-1 truncate';
+      fileName.textContent = fileObj.name;
+
+      var fileSize = document.createElement('span');
+      fileSize.className = 'text-[#64748B] whitespace-nowrap';
+      fileSize.textContent = bytesToMB(fileObj.size) + ' MB';
+
+      var status = document.createElement('span');
+      status.className =
+        'photo-upload-status text-[#3B82F6] ' +
+        'min-w-[80px] text-center whitespace-nowrap';
+      status.textContent = 'Upload...';
+
+      var removeButton = document.createElement('button');
+      removeButton.type = 'button';
+      removeButton.className =
+        'remove-photo-btn text-red-500 hover:text-red-700 ' +
+        'w-6 h-6 flex items-center justify-center';
+      removeButton.setAttribute('aria-label', 'Supprimer cette photo');
+      removeButton.textContent = '×';
+
+      removeButton.addEventListener('click', function() {
+        removePhoto(fileObj.id);
+      });
+
+      row.appendChild(fileName);
+      row.appendChild(fileSize);
+      row.appendChild(status);
+      row.appendChild(removeButton);
+
+      photosList.appendChild(row);
+    }
+
+    function updatePhotoStatus(fileObj, status, progress) {
+      var row = findPhotoRow(fileObj.id);
+
+      if (!row) return;
+
+      var statusElement = row.querySelector('.photo-upload-status');
+
+      if (!statusElement) return;
+
+      if (status === 'uploading') {
+        statusElement.textContent =
+          typeof progress === 'number' ? progress + '%' : 'Upload...';
+
+        statusElement.className =
+          'photo-upload-status text-[#3B82F6] ' +
+          'min-w-[80px] text-center whitespace-nowrap';
+      }
+
+      if (status === 'success') {
+        statusElement.textContent = 'Importée ✓';
+
+        statusElement.className =
+          'photo-upload-status text-[#10B981] ' +
+          'min-w-[80px] text-center whitespace-nowrap';
+      }
+
+      if (status === 'error') {
+        statusElement.textContent = 'Erreur ⚠';
+
+        statusElement.className =
+          'photo-upload-status text-[#EF4444] ' +
+          'min-w-[80px] text-center whitespace-nowrap';
+      }
+    }
+
+    function removePhoto(fileId) {
+      var fileObj = uploadedFiles.find(function(file) {
+        return file.id === fileId;
+      });
+
+      if (fileObj) {
+        fileObj.removed = true;
+
+        var hiddenInput = photosHidden.querySelector(
+          'input[data-photo-id="' + fileId + '"]'
+        );
+
+        if (hiddenInput) {
+          hiddenInput.remove();
+        }
+      }
+
+      var row = findPhotoRow(fileId);
+
+      if (row) {
+        row.remove();
+      }
+
+      updatePhotosStatus();
+    }
+
+    function getCloudinarySignature() {
+      return fetch('/api/cloudinary-signature', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({})
+      })
+        .then(function(response) {
+          return response.json().then(function(data) {
+            return {
+              response: response,
+              data: data
+            };
+          });
+        })
+        .then(function(result) {
+          if (!result.response.ok || !result.data || !result.data.ok) {
+            throw new Error(
+              result.data && result.data.error
+                ? result.data.error
+                : 'Impossible de préparer le téléchargement'
+            );
+          }
+
+          return result.data;
+        });
+    }
+
+    function uploadToCloudinary(file) {
+      var fileObj = {
+        id: createFileId(),
+        name: file.name,
+        size: file.size,
+        status: 'uploading',
+        progress: 0,
+        cloudinaryUrl: null,
+        removed: false
+      };
+
+      uploadedFiles.push(fileObj);
+      addPhotoToList(fileObj);
+
+      uploadingCount++;
+      updatePhotosStatus();
+
+      getCloudinarySignature()
+        .then(function(signatureData) {
+          var cloudinaryFormData = new FormData();
+
+          cloudinaryFormData.append('file', file);
+          cloudinaryFormData.append('api_key', signatureData.apiKey);
+          cloudinaryFormData.append(
+            'timestamp',
+            String(signatureData.timestamp)
+          );
+          cloudinaryFormData.append(
+            'signature',
+            signatureData.signature
+          );
+          cloudinaryFormData.append(
+            'folder',
+            signatureData.folder
+          );
+
+          if (signatureData.uploadPreset) {
+            cloudinaryFormData.append(
+              'upload_preset',
+              signatureData.uploadPreset
+            );
+          }
+
+          var uploadUrl =
+            'https://api.cloudinary.com/v1_1/' +
+            signatureData.cloudName +
+            '/auto/upload';
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.upload.onprogress = function(event) {
+            if (!event.lengthComputable || fileObj.removed) return;
+
+            var progress = Math.round(
+              (event.loaded / event.total) * 100
+            );
+
+            fileObj.progress = progress;
+            updatePhotoStatus(fileObj, 'uploading', progress);
+          };
+
+          xhr.onload = function() {
+            uploadingCount = Math.max(0, uploadingCount - 1);
+
+            try {
+              var result = JSON.parse(xhr.responseText);
+
+              if (
+                xhr.status >= 200 &&
+                xhr.status < 300 &&
+                result.secure_url
+              ) {
+                fileObj.status = 'success';
+                fileObj.cloudinaryUrl = result.secure_url;
+
+                /*
+                 * La photo a pu être supprimée pendant l'upload.
+                 * Dans ce cas, on ne l'ajoute pas au formulaire.
+                 */
+                if (!fileObj.removed) {
+                  updatePhotoStatus(fileObj, 'success');
+
+                  var hiddenInput = document.createElement('input');
+
+                  hiddenInput.type = 'hidden';
+                  hiddenInput.name = 'photos[]';
+                  hiddenInput.value = result.secure_url;
+                  hiddenInput.dataset.photoId = fileObj.id;
+
+                  photosHidden.appendChild(hiddenInput);
+                }
+              } else {
+                throw new Error('Échec du téléchargement Cloudinary');
+              }
+            } catch (error) {
+              fileObj.status = 'error';
+
+              if (!fileObj.removed) {
+                updatePhotoStatus(fileObj, 'error');
+              }
+            }
+
+            updatePhotosStatus();
+          };
+
+          xhr.onerror = function() {
+            uploadingCount = Math.max(0, uploadingCount - 1);
+            fileObj.status = 'error';
+
+            if (!fileObj.removed) {
+              updatePhotoStatus(fileObj, 'error');
+            }
+
+            updatePhotosStatus();
+          };
+
+          xhr.open('POST', uploadUrl);
+          xhr.send(cloudinaryFormData);
+        })
+        .catch(function(error) {
+          uploadingCount = Math.max(0, uploadingCount - 1);
+          fileObj.status = 'error';
+
+          if (!fileObj.removed) {
+            updatePhotoStatus(fileObj, 'error');
+          }
+
+          console.error(
+            'Erreur upload photo balcon :',
+            error
+          );
+
+          updatePhotosStatus();
+        });
+    }
+
+    function validateFiles(files) {
+      var activeFileCount = uploadedFiles.filter(function(file) {
+        return !file.removed;
+      }).length;
+
+      var validFiles = [];
+
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+
+        if (!file.type || !file.type.startsWith('image/')) {
+          showError(
+            file.name + " n'est pas une image valide."
+          );
+          continue;
+        }
+
+        if (file.size > maxFileSizeMB * 1024 * 1024) {
+          showError(
+            file.name +
+              ' dépasse la limite de ' +
+              maxFileSizeMB +
+              ' MB.'
+          );
+          continue;
+        }
+
+        if (
+          activeFileCount + validFiles.length >= maxFiles
+        ) {
+          showError(
+            'Vous pouvez ajouter au maximum ' +
+              maxFiles +
+              ' photos.'
+          );
+          break;
+        }
+
+        validFiles.push(file);
+      }
+
+      return validFiles;
+    }
+
+    function handleFiles(files) {
+      var validFiles = validateFiles(Array.from(files));
+
+      validFiles.forEach(function(file) {
+        uploadToCloudinary(file);
+      });
+    }
+
+    photosInput.addEventListener('change', function(event) {
+      if (event.target.files && event.target.files.length > 0) {
+        handleFiles(event.target.files);
+
+        /*
+         * Empêche les fichiers locaux d'être envoyés directement
+         * à /api/contact sous le champ __photos_local.
+         */
+        event.target.value = '';
       }
     });
 
-    // Fonction pour gérer les fichiers sélectionnés
-    function handleFiles(files) {
-      if (files.length === 0) {
-        photosStatus.textContent = 'Aucune photo';
-        photosList.classList.add('hidden');
+    photosDropZone.addEventListener('click', function() {
+      photosInput.click();
+    });
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(
+      function(eventName) {
+        photosDropZone.addEventListener(
+          eventName,
+          function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        );
+      }
+    );
+
+    ['dragenter', 'dragover'].forEach(function(eventName) {
+      photosDropZone.addEventListener(eventName, function() {
+        photosDropZone.classList.add(
+          'border-[#3F8D65]',
+          'bg-[#F8FBF9]'
+        );
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(function(eventName) {
+      photosDropZone.addEventListener(eventName, function() {
+        photosDropZone.classList.remove(
+          'border-[#3F8D65]',
+          'bg-[#F8FBF9]'
+        );
+      });
+    });
+
+    photosDropZone.addEventListener('drop', function(event) {
+      if (
+        event.dataTransfer &&
+        event.dataTransfer.files &&
+        event.dataTransfer.files.length > 0
+      ) {
+        handleFiles(event.dataTransfer.files);
+      }
+    });
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (uploadingCount > 0) {
+        showError(
+          "Veuillez attendre la fin de l'importation des photos."
+        );
         return;
       }
 
-      const fileCount = Math.min(files.length, 4);
-      photosStatus.textContent = `${fileCount} photo(s) sélectionnée(s)`;
-      
-      photosList.innerHTML = '';
-      photosList.classList.remove('hidden');
-      
-      files.slice(0, 4).forEach((file, index) => {
-        const fileItem = document.createElement('div');
-        fileItem.className = 'flex items-center justify-between bg-[#F8FAFC] rounded p-2 text-sm';
-        
-        const fileName = file.name.length > 30 ? 
-          file.name.substring(0, 30) + '...' : file.name;
-        
-        const fileSize = (file.size / (1024 * 1024)).toFixed(2);
-        
-        fileItem.innerHTML = `
-          <span class="text-[#475569]">${fileName} (${fileSize} MB)</span>
-          <button type="button" class="remove-photo-btn text-red-500 hover:text-red-700" data-index="${index}">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </button>
-        `;
-        
-        photosList.appendChild(fileItem);
-      });
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
-      // Event delegation pour les boutons de suppression
-      photosList.querySelectorAll('.remove-photo-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          const idx = parseInt(this.dataset.index);
-          removeFile(idx);
+      isSubmitting = true;
+      updateSubmitState();
+
+      var formData = new FormData(form);
+
+      fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then(function(response) {
+          return response
+            .json()
+            .then(function(data) {
+              return {
+                ok: response.ok,
+                data: data
+              };
+            })
+            .catch(function() {
+              return {
+                ok: response.ok,
+                data: null
+              };
+            });
+        })
+        .then(function(result) {
+          if (
+            result.ok &&
+            result.data &&
+            result.data.ok === true
+          ) {
+            if (
+              window.KlinovaTracking &&
+              window.KlinovaTracking.triggerFormSuccess
+            ) {
+              window.KlinovaTracking.triggerFormSuccess(
+                'balcon-form',
+                {
+                  service: 'nettoyage-balcons',
+                  service_name:
+                    'Nettoyage balcon et fientes - Diagnostic gratuit'
+                }
+              );
+            }
+
+            form.innerHTML =
+              '<div class="text-center py-10">' +
+                '<div class="w-16 h-16 bg-[#EAF6F0] rounded-full flex items-center justify-center mx-auto mb-4">' +
+                  '<svg class="w-8 h-8 text-[#3F8D65]" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
+                    '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>' +
+                  '</svg>' +
+                '</div>' +
+                '<h3 class="text-xl font-bold text-[#1E2939] mb-2">Merci !</h3>' +
+                '<p class="text-[#475569]">' +
+                  'Votre demande a bien été envoyée. ' +
+                  'Nous vous recontacterons rapidement.' +
+                '</p>' +
+              '</div>';
+
+            try {
+              form.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              });
+            } catch (error) {}
+          } else {
+            var errorMessage =
+              result.data &&
+              (result.data.error || result.data.message)
+                ? result.data.error || result.data.message
+                : 'Une erreur est survenue. Merci de réessayer.';
+
+            showError(errorMessage);
+          }
+        })
+        .catch(function(error) {
+          console.error(
+            'Erreur formulaire balcon :',
+            error
+          );
+
+          showError(
+            'Impossible de contacter le serveur. Merci de réessayer.'
+          );
+        })
+        .finally(function() {
+          isSubmitting = false;
+          updateSubmitState();
         });
-      });
-    }
+    });
 
-    // Fonction pour supprimer un fichier
-    function removeFile(index) {
-      const files = Array.from(photosInput.files);
-      files.splice(index, 1);
-      
-      const dt = new DataTransfer();
-      files.forEach(file => dt.items.add(file));
-      photosInput.files = dt.files;
-      
-      handleFiles(files);
-    }
+    updatePhotosStatus();
   })();
 </script>
 )}
@@ -2801,21 +3292,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       messagesContainer.innerHTML = '';
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_grand_menage',
-          form_type: 'devis_nettoyage_appartement'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'devis_nettoyage_appartement',
-          service: 'Nettoyage appartement/maison',
-          source: 'page-grand-menage-' + window.location.pathname.split('/').pop()
-        });
-      }
+     
 
       var formData = new FormData(form);
       
@@ -2832,7 +3309,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('grand-menage-form', {
+    service: 'nettoyage-appartement-maison',
+    service_name: 'Nettoyage appartement/maison'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -3590,21 +4073,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       
       try {
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'citypage_moquettes',
-            form_type: 'devis_moquettes'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_moquettes',
-            service: 'Nettoyage moquettes - Devis personnalisé',
-            source: 'page-moquettes-' + window.location.pathname.split('/').pop()
-          });
-        }
+       
 
         var formData = new FormData(form);
         var response = await fetch('/api/contact', {
@@ -3616,7 +4085,13 @@ const photos = cityNote?.photos ?? [];
         var data = null;
         try { data = await response.json(); } catch (err) {}
 
-        if (response.ok) {
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('moquettes-city-form', {
+    service: 'nettoyage-moquettes',
+    service_name: 'Nettoyage moquettes - Devis personnalisé'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -4188,22 +4663,7 @@ const photos = cityNote?.photos ?? [];
       setLoading(true);
       messagesContainer.innerHTML = '';
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_terrasses',
-          form_type: 'devis_nettoyage_terrasse'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'devis_nettoyage_terrasse',
-          service: 'Nettoyage terrasse',
-          source: 'page-terrasses-' + window.location.pathname.split('/').pop()
-        });
-      }
-
+     
       var formData = new FormData(form);
       
       fetch('/api/contact', {
@@ -4219,7 +4679,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('terrasses-form', {
+    service: 'nettoyage-terrasses',
+    service_name: 'Nettoyage terrasse'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\
@@ -4993,21 +5459,7 @@ const photos = cityNote?.photos ?? [];
       
       setLoading(true);
       
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          form_location: 'citypage_parking',
-          form_type: 'diagnostic_parking'
-        });
-      }
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_generated',
-          form_type: 'diagnostic_parking',
-          service: 'Nettoyage parking - Diagnostic gratuit',
-          source: 'page-parking-' + window.location.pathname.split('/').pop()
-        });
-      }
+     
 
       var formData = new FormData(form);
       
@@ -5024,7 +5476,13 @@ const photos = cityNote?.photos ?? [];
         });
       })
       .then(function(result) {
-        if (result.ok) {
+        if (result.ok && result.data && result.data.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+  window.KlinovaTracking.triggerFormSuccess('parking-city-form', {
+    service: 'nettoyage-parkings',
+    service_name: 'Nettoyage parking - Diagnostic gratuit'
+  });
+}
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = '\

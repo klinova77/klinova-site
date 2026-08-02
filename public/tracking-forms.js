@@ -34,6 +34,7 @@
       form_id: d.formId || '',
       form_name: d.formName || '',
       form_type: d.formType || 'devis',
+      form_location: d.formLocation || d.trackingSource || window.location.pathname,
       conversion_value: d.value ? parseFloat(d.value) : 0,
       currency: 'EUR',
       source: d.trackingSource || 'website',
@@ -64,24 +65,23 @@
       });
     });
 
-    // 2️⃣ Succès de formulaire
+    // 2️⃣ Succès réel du formulaire
     document.addEventListener('formSuccess', (e) => {
-      const { formId } = e.detail || {};
-      const button = document.querySelector(`button[data-form-id="${formId}"]`);
+      const { formId, ...extra } = e.detail || {};
+
+      const button = document.querySelector(
+        `button[data-form-id="${formId}"]`
+      );
+
       if (!button) return;
+
       const data = getTrackingData(button);
 
-      // Événement principal pour Google Ads
-      pushDL('lead_generated', {
-        ...data,
-        event_category: 'conversion',
-        event_action: 'form_success',
-        status: 'success',
-      });
-
-      // Événement miroir pour GA4
       pushDL('form_submit_success', {
         ...data,
+        ...extra,
+        event_category: 'conversion',
+        event_action: 'form_success',
         status: 'success',
       });
     });

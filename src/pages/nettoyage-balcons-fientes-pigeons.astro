@@ -943,28 +943,28 @@ data-hide-cta
 
       <!-- CTA form -->
      
-       <ButtonSubmit
-  label="Recevoir mon devis"
-  variant="primary"
-  size="lg"
-  fullWidth={true}
-  id="submit-btn"
-  formId="fientes-pigeons-form"
-  formName="Fientes Pigeons Contact Form"
-  formType="devis"
-  value={220}
-  source="lp-balcons"
-  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
-  tracking={{
-    action: 'cta-submit-devis',
-    source: 'lp-balcons',
-    intent: 'fientes-pigeons-devis'
-  }}
-  data={{
-    action: 'cta-submit-devis',
-    source: 'lp-balcons'
-  }}
-/>
+      <ButtonSubmit
+        label="Recevoir mon devis"
+        variant="primary"
+        size="lg"
+        fullWidth={true}
+        id="submit-btn"
+        formId="devis-balcons-form"
+        formName="Fientes Pigeons Contact Form"
+        formType="devis"
+        value={220}
+        source="lp-balcons"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+        tracking={{
+          action: 'cta-submit-devis',
+          source: 'lp-balcons',
+          intent: 'fientes-pigeons-devis'
+        }}
+        data={{
+          action: 'cta-submit-devis',
+          source: 'lp-balcons'
+        }}
+      />
 
        
       </div>
@@ -1425,23 +1425,6 @@ function setLoading(loading) {
       messagesContainer.innerHTML = '';
       
       try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'landing_balcons',
-            form_type: 'devis_balcons'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_balcons',
-            service: 'Nettoyage balcon',
-            source: 'lp-balcons'
-          });
-        }
-
         const formData = new FormData(form);
         const response = await fetch('/api/contact', {
           method: 'POST',
@@ -1450,10 +1433,23 @@ function setLoading(loading) {
         });
 
         let data = null;
-        try { data = await response.json(); } catch {}
+        try {
+          data = await response.json();
+        } catch {}
 
-        if (response.ok) {
-          // Remplacer complètement le contenu du formulaire par le message de succès
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+            window.KlinovaTracking.triggerFormSuccess(
+              'devis-balcons-form',
+              {
+                service: 'nettoyage-balcons-fientes-pigeons',
+                service_name:
+                  'Nettoyage balcon fientes de pigeons - Demande devis'
+              }
+            );
+          }
+
+          // Remplacer complètement le formulaire par le message de succès
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = `
