@@ -283,7 +283,16 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
         headers: { 'Accept': 'application/json' }
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data?.ok === true) {
+        const tracking = (window as any).KlinovaTracking;
+
+        tracking?.triggerFormSuccess?.('booking-textiles-form', {
+          service: 'nettoyage-textiles',
+          service_name: 'Nettoyage textiles - Réservation',
+          city_name: cityName || ''
+        });
         setSubmitStatus('success');
         // Reset form
         setFormData({
@@ -353,18 +362,22 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
-    <div class="bg-[#DFF1E8] p-6 border-b text-center">
-  <h3 class="text-2xl font-bold text-[#1E2939] mb-3">
+    <div className="bg-[#DFF1E8] p-6 border-b text-center">
+  <h3 className="text-2xl font-bold text-[#1E2939] mb-3">
     Réserver votre intervention
   </h3>
-  <p class="text-[#475569] max-w-xl mx-auto">
+  <p className="text-[#475569] max-w-xl mx-auto">
     Choisissez un créneau disponible ou optez pour une intervention urgente selon disponibilité
   </p>
 </div>
 
 
 
-      <form onSubmit={handleSubmit} className="p-6 space-y-8">
+      <form
+        id="booking-textiles-form"
+        onSubmit={handleSubmit}
+        className="p-6 space-y-8"
+      >
         {/* Type d'intervention */}
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-[#1E2939]">Type d'intervention</h4>
@@ -790,6 +803,13 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
         {/* Bouton submit */}
         <div className="pt-6 border-t">
           <button
+            data-form-id="booking-textiles-form"
+            data-form-name="Booking Textiles Form"
+            data-form-type="reservation"
+            data-form-location="booking-textiles"
+            data-service="nettoyage-textiles"
+            data-service-name="Nettoyage textiles - Réservation"
+            data-source="textiles-reservation"
             type="submit"
             disabled={isSubmitting || (formData.slotType === 'scheduled' && !formData.selectedSlot) || photoState.uploading}
             className="w-full bg-[#3F8D65] text-white font-medium py-4 px-6 rounded-lg hover:bg-[#387B58] active:bg-[#2F6B47] disabled:bg-gray-300 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
