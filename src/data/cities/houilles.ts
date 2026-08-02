@@ -89,7 +89,6 @@ const city: City = {
     building: "",
   },
 
-  ctaOverride: "Commune desservie par le RER A et le Transilien, abritant le Centre Commandant-Millé.",
 
   // IMPORTANT: Services absents : ne pas les inclure dans services (ne pas générer l’objet).
   // => Le FORMAT ONLY injecte uniquement les services présents dans l’entrée (bundle/plan/servicesRequested).

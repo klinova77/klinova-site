@@ -85,7 +85,6 @@ const city: City = {
     building: "",
   },
 
-  ctaOverride: "Gare RER C et Transilien H, au cœur de la communauté d'agglomération Val Parisis",
 
   // IMPORTANT: Services absents : ne pas les inclure dans services (ne pas générer l’objet).
   services: [

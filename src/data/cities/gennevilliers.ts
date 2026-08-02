@@ -87,7 +87,6 @@ const city: City = {
     building: "",
   },
 
-  ctaOverride: "Site du plus important port fluvial d'Île-de-France et Carrefour multimodal RER C, Tram T1 et Métro 13",
 
   // IMPORTANT: Services absents : ne pas les inclure
   services: [

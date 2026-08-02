@@ -84,8 +84,6 @@ const city: City = {
     building: "",
   },
 
-  ctaOverride:
-    "Sous-préfecture du Val-d'Oise desservie par la ligne J du Transilien, abritant la Basilique Saint-Denys.",
 
   // IMPORTANT: Services absents : ne pas les inclure dans services (ne pas générer l’objet).
   services: [

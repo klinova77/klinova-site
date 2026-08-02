@@ -85,7 +85,6 @@ const city: City = {
     building: ""
   },
 
-  ctaOverride: "Desservie par le RER E et le Tram T4, au pied du Plateau d'Avron",
 
   services: [
     {
