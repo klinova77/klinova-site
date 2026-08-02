@@ -1696,8 +1696,8 @@ data-hide-header-cta
   id="submit-btn"  
   tracking={{
     action: 'lead',
-    source: 'parking-form',
-    intent: 'diagnostic-request'
+    source: 'page-parking',
+    intent: 'diagnostic-parking'
   }}
 />
 </div>
@@ -2254,23 +2254,6 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
       setLoading(true);
       
       try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'page_parking',
-            form_type: 'diagnostic_parking'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'diagnostic_parking',
-            service: 'Nettoyage parking - Diagnostic gratuit',
-            source: 'page-parking'
-          });
-        }
-
         const formData = new FormData(form);
         const response = await fetch('/api/contact', {
           method: 'POST',
@@ -2281,8 +2264,16 @@ console.log('Email icon trouvé:', document.querySelector('.email-icon'));
         let data = null;
         try { data = await response.json(); } catch {}
 
-        if (response.ok) {
-          // Remplacer complètement le contenu du formulaire par le message de succès
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+            window.KlinovaTracking.triggerFormSuccess(
+              'parking-form',
+              {
+                service: 'nettoyage-parkings',
+                service_name: 'Nettoyage parking - Diagnostic gratuit'
+              }
+            );
+          }
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = `
