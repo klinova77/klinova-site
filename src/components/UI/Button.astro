@@ -1,7 +1,7 @@
 ---
 //D:\Klinova-site\src\components\UI\Button.astro
 
-import { linkAttrs, withUtm } from '~/lib/links';
+import { isUtmEligibleUrl, linkAttrs, withUtm } from '~/lib/links';
 
 export interface Props {
   href: string;
@@ -45,11 +45,8 @@ if (!href || !href.trim()) {
   console.warn('[Button] href manquant ou vide');
 }
 
-// UTM intelligents (pas sur tel/mail/ancre)
-const isHash = href?.startsWith('#');
-const isTel = href?.startsWith('tel:');
-const isMail = href?.startsWith('mailto:');
-const canApplyUtm = !isHash && !isTel && !isMail;
+// UTM uniquement sur les URL HTTP(S) externes
+const canApplyUtm = isUtmEligibleUrl(href);
 
 const trackedHref = (withTrackingParams && canApplyUtm)
   ? withUtm(href, {

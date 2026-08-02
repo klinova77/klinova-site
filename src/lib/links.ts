@@ -13,6 +13,23 @@ export const toAbsolute = (url: string) =>
 
 export const isExternalUrl = (url: string) => /^https?:\/\//i.test(url);
 
+const SITE_HOSTNAME = new URL(SITE_URL).hostname.toLowerCase();
+
+export const isInternalUrl = (url: string) => {
+  try {
+    const hostname = new URL(url, SITE_URL).hostname.toLowerCase();
+    return (
+      hostname === SITE_HOSTNAME ||
+      hostname.endsWith(`.${SITE_HOSTNAME}`)
+    );
+  } catch {
+    return false;
+  }
+};
+
+export const isUtmEligibleUrl = (url: string) =>
+  isExternalUrl(url) && !isInternalUrl(url);
+
 export const linkAttrs = (href: string) => ({
   target: '_top',
   rel: isExternalUrl(href) ? 'noopener noreferrer' : 'noopener',
@@ -41,15 +58,23 @@ export const withUtm = (
     absolute = false,
   } = opts || {};
 
-  const sep = url.includes('?') ? '&' : '?';
+  if (!isUtmEligibleUrl(url)) {
+    return absolute ? toAbsolute(url) : url;
+  }
+
+  const hashIndex = url.indexOf('#');
+  const baseUrl = hashIndex >= 0 ? url.slice(0, hashIndex) : url;
+  const hash = hashIndex >= 0 ? url.slice(hashIndex) : '';
+  const sep = baseUrl.includes('?') ? '&' : '?';
   const u =
-    `${url}${sep}utm_source=${encodeURIComponent(source)}` +
+    `${baseUrl}${sep}utm_source=${encodeURIComponent(source)}` +
     `&utm_medium=${encodeURIComponent(medium)}` +
     (campaign ? `&utm_campaign=${encodeURIComponent(campaign)}` : '') +
     (content ? `&utm_content=${encodeURIComponent(content)}` : '') +
     (term ? `&utm_term=${encodeURIComponent(term)}` : '');
 
-  return absolute ? toAbsolute(u) : u;
+  const trackedUrl = `${u}${hash}`;
+  return absolute ? toAbsolute(trackedUrl) : trackedUrl;
 };
 
 // -----------------------------------------------------------
