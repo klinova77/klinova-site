@@ -97,6 +97,51 @@ export type PricingTier =
       currency?: string;
     };
 
+export type PriceTax = "HT" | "TTC";
+
+export interface ParkingUnitPriceRange {
+  min: number;
+  max: number;
+  currency: "EUR";
+  unitCode: "MTK";
+  tax: PriceTax;
+}
+
+export interface ParkingCommercialPricing {
+  standardParking: ParkingUnitPriceRange & {
+    factors: string[];
+  };
+  referenceCase: {
+    amount: number;
+    surfaceM2: number;
+    currency: "EUR";
+    tax: "HT";
+    approximate: boolean;
+    locationContext: string;
+    soilCondition: string;
+    cleaningsPerYear: number;
+  };
+  largeParking: ParkingUnitPriceRange & {
+    conditional: true;
+    conditions: string[];
+    exposeAsGenericMinimum: false;
+    exposeInStructuredData: false;
+  };
+  heavyCleaning: {
+    pricingMode: "quote";
+    operations: string[];
+    specialConfigurationLabel: string;
+  };
+  individualMinimum: {
+    amount: number;
+    currency: "EUR";
+    tax: "TTC";
+    audience: "individual";
+    appliesTo: string[];
+    exposeInStructuredData: false;
+  };
+}
+
 export interface ServiceProcessStep {
   step: string;
   description: string;
@@ -126,6 +171,9 @@ export interface ServiceConfig {
 
   // new
   pricingTiers?: PricingTier[];
+
+  // Tarification commerciale structurée propre au service parkings.
+  commercialPricing?: ParkingCommercialPricing;
 
   faq?: ServiceFaqItem[];
   urls?: ServiceUrls;
