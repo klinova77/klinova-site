@@ -715,27 +715,27 @@ data-hide-cta
       <!-- CTA form -->
      
        <ButtonSubmit
-  label="Recevoir mon devis"
-  variant="primary"
-  size="lg"
-  fullWidth={true}
-  id="submit-btn"
-  formId="fientes-pigeons-form"
-  formName="Fientes Pigeons Contact Form"
-  formType="devis"
-  value={220}
-  source="terrasses"
-  className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
-  tracking={{
-    action: 'cta-submit-devis',
-    source: 'terrasses',
-    intent: 'terasses-devis'
-  }}
-  data={{
-    action: 'cta-submit-devis',
-    source: 'terrasses'
-  }}
-/>
+        label="Recevoir mon devis"
+        variant="primary"
+        size="lg"
+        fullWidth={true}
+        id="submit-btn"
+        formId="devis-terrasses-form"
+        formName="Terrasses Contact Form"
+        formType="devis"
+        value={220}
+        source="terrasses"
+        className="inline-flex w-full sm:w-auto items-center justify-center rounded-2xl text-base font-semibold shadow-sm hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#3F8D65] transition-all duration-200"
+        tracking={{
+          action: 'cta-submit-devis',
+          source: 'terrasses',
+          intent: 'terrasses-devis'
+        }}
+        data={{
+          action: 'cta-submit-devis',
+          source: 'terrasses'
+        }}
+      />
 
        
       </div>
@@ -1196,23 +1196,6 @@ function setLoading(loading) {
       messagesContainer.innerHTML = '';
       
       try {
-        // Tracking
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'form_submit', {
-            form_location: 'landing_terrasses',
-            form_type: 'devis_terrasses'
-          });
-        }
-
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'lead_generated',
-            form_type: 'devis_terrasses',
-            service: 'Nettoyage terrasses',
-            source: 'terrasses'
-          });
-        }
-
         const formData = new FormData(form);
         const response = await fetch('/api/contact', {
           method: 'POST',
@@ -1223,8 +1206,16 @@ function setLoading(loading) {
         let data = null;
         try { data = await response.json(); } catch {}
 
-        if (response.ok) {
-          // Remplacer complètement le contenu du formulaire par le message de succès
+        if (response.ok && data?.ok === true) {
+          if (window.KlinovaTracking?.triggerFormSuccess) {
+            window.KlinovaTracking.triggerFormSuccess(
+              'devis-terrasses-form',
+              {
+                service: 'nettoyage-terrasses',
+                service_name: 'Nettoyage terrasses - Demande devis'
+              }
+            );
+          }
           form.setAttribute('aria-hidden', 'true');
           form.style.pointerEvents = 'none';
           form.innerHTML = `
