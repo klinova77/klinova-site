@@ -1,10 +1,43 @@
 ---
 /**
  * SeoBase.astro — Klinova
- * SEO centralisé pour le site Klinova :
- * - balises meta (title, desc, OG, Twitter)
- * - JSON-LD Organization (KLINOVA) + LocalBusiness (siège Chelles + zones IDF)
- * - relation brand avec Stop-Punaises
+ *
+ * SEO centralisé :
+ * - balises meta (title, description, canonical, OG, Twitter)
+ * - JSON-LD en un seul @graph
+ *
+ * Modèle d'entité retenu :
+ *
+ *   Organization — KLINOVA
+ *   ├── address      → Paris
+ *   │                  siège social / adresse légale
+ *   ├── location     → Chelles
+ *   │                  base opérationnelle, sans adresse de rue
+ *   ├── areaServed   → Île-de-France
+ *   ├── SIREN / SIRET / TVA
+ *   ├── contact      → 06 76 73 86 61
+ *   │                  7j/7, 08:00–20:00
+ *   │                  français + anglais
+ *   └── brand        → Klinova + Stop-Punaises
+ *
+ * Pourquoi pas LocalBusiness avec l'adresse complète de Chelles ?
+ *
+ * Le Google Business Profile est actuellement configuré comme :
+ * « Aucun établissement physique (livraisons ou services à domicile uniquement) »
+ * avec une zone desservie « Île-de-France ».
+ *
+ * Google Search continue néanmoins d'afficher publiquement l'adresse
+ * 9 allée de la Prairie à Chelles. Solocal / PagesJaunes impose également
+ * l'affichage d'une adresse complète.
+ *
+ * Ces affichages externes ne sont donc pas utilisés pour transformer le
+ * domicile en établissement physique dans les données structurées.
+ *
+ * Klinova reste décrite comme basée à Chelles, mais le siège social légal
+ * demeure celui de Paris.
+ *
+ * @id stable : ${site}#organization
+ * → utilisable dans les futures pages Service (`provider`).
  */
 
 import { buildSeo } from '~/lib/seo'
@@ -49,9 +82,14 @@ const {
   allowThirdPartyHints = false,
 } = Astro.props as Props
 
-// Domaine & helper URL
-const site = (Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr') as string
 
+/* ---------------------------------------------------------------------------
+ * Domaine & helpers URL
+ * ------------------------------------------------------------------------- */
+
+const site = (
+  Astro.site?.toString().replace(/\/+$/, '') || 'https://klinova.fr'
+) as string
 
 const toAbs = (url?: string) =>
   !url
@@ -60,13 +98,26 @@ const toAbs = (url?: string) =>
       ? url
       : `${site}${url.startsWith('/') ? url : `/${url}`}`
 
-// Path effectif pour SEO
+
+/* ---------------------------------------------------------------------------
+ * Path effectif
+ * ------------------------------------------------------------------------- */
+
 const effectivePath =
   typeof pathname === 'string'
     ? pathname
     : Astro.url?.pathname || '/'
 
-// Auto SEO
+const normalizedPath =
+  effectivePath === '/'
+    ? '/'
+    : effectivePath.replace(/\/+$/, '')
+
+
+/* ---------------------------------------------------------------------------
+ * Auto SEO
+ * ------------------------------------------------------------------------- */
+
 const auto = buildSeo({
   pathname: effectivePath,
   pageType,
@@ -78,118 +129,108 @@ const auto = buildSeo({
   appendBrandToTitle,
 })
 
-const finalTitle       = auto.title
+const finalTitle = auto.title
 const finalDescription = auto.description
-const finalCanonical   = auto.canonical
-const finalNoindex     = auto.noindex
-const finalOgImage     = auto.ogImage
+const finalCanonical = auto.canonical
+const finalNoindex = auto.noindex
+const finalOgImage = auto.ogImage
 
-// Canonical & meta
-const canonicalAbs =
-  finalCanonical
-    ? toAbs(finalCanonical)
-    : canonical
-      ? toAbs(canonical)
-      : `${site}${effectivePath}`
+
+/* ---------------------------------------------------------------------------
+ * Canonical & meta
+ * ------------------------------------------------------------------------- */
+
+const canonicalAbs = finalCanonical
+  ? toAbs(finalCanonical)
+  : canonical
+    ? toAbs(canonical)
+    : `${site}${effectivePath}`
 
 let canonicalNormalized = canonicalAbs
 
 try {
   const urlObj = new URL(canonicalAbs)
 
-  // On enlève le / final sauf pour la home
-  if (urlObj.pathname !== '/' && urlObj.pathname.endsWith('/')) {
+  if (
+    urlObj.pathname !== '/' &&
+    urlObj.pathname.endsWith('/')
+  ) {
     urlObj.pathname = urlObj.pathname.slice(0, -1)
   }
 
   canonicalNormalized = urlObj.toString()
 } catch {
-  // En cas d'URL bizarre, on ne casse pas le build, on garde canonicalAbs tel quel
+  canonicalNormalized = canonicalAbs
 }
 
-const ogImageAbs = finalOgImage ? toAbs(finalOgImage) : ''
-const robots     = finalNoindex ? 'noindex, follow' : 'index, follow'
+const ogImageAbs =
+  finalOgImage
+    ? toAbs(finalOgImage)
+    : ''
 
-// IDs JSON-LD
-const orgId = `${site}#organization`
-const lbId  = `${site}#localbusiness`
+const robots =
+  finalNoindex
+    ? 'noindex, follow'
+    : 'index, follow'
 
-// Organization JSON-LD (KLINOVA)
-// Organization JSON-LD (KLINOVA)
-const orgJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': orgId,
-  name: 'Klinova',
+
+/* ===========================================================================
+ * DONNÉES D'ENTREPRISE — point unique de vérité
+ *
+ * Identité juridique :
+ * - siège social : Paris
+ *
+ * Implantation opérationnelle :
+ * - Klinova est basée à Chelles
+ * - aucun établissement physique n'est déclaré dans Google Business Profile
+ * - prestations réalisées chez les clients
+ *
+ * Références opérationnelles à conserver cohérentes :
+ * - téléphone principal : 06 76 73 86 61
+ * - horaires : 7j/7, 08:00–20:00
+ * - zone desservie : Île-de-France
+ *
+ * Le 01 85 42 04 78 reste actuellement un numéro secondaire dans le GBP
+ * et n'est volontairement pas balisé ici puisqu'il n'est pas présenté
+ * comme numéro principal sur le site.
+ * ========================================================================= */
+
+const BUSINESS = {
   legalName: 'KLINOVA',
-  url: site,
-  logo: `${site}/images/logo-klinova.webp`,
-  description:
-    'Entreprise de propreté et de maintenance technique en Île-de-France : parkings, moquettes, balcons, hygiène renforcée.',
-  sameAs: [
-    'https://www.facebook.com/KlinovaNettoyage',
-    'https://www.youtube.com/@KlinovaNettoyage',
-  ],
-  brand: {
-    '@type': 'Brand',
-    '@id': `${site}#brand`,
-    name: 'Klinova',
-    url: site,
-  },
-  owns: [
-    {
-      '@type': 'Brand',
-      '@id': 'https://stop-punaises.fr#brand',
-      name: 'Stop-Punaises',
-      url: 'https://stop-punaises.fr','description': 'Service spécialisé dans le traitement des punaises de lit.'
-    },
-  ],
+  displayName: 'Klinova',
 
-
-}
-
-// LocalBusiness JSON-LD (siège Chelles + zones IDF)
-const localBusinessDescription =
-  'Klinova intervient en Île-de-France pour l’entretien professionnel des immeubles : nettoyage de moquettes, parkings souterrains, balcons, terrasses et textiles d’ameublement. Nous appliquons des protocoles documentés, une traçabilité complète, des produits adaptés et un contrôle qualité systématique afin d’assurer propreté durable et sécurité des occupants.';
-
-const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'CleaningService','ProfessionalService'],
-  '@id': lbId,
-  name: 'Klinova',
-  legalName: 'KLINOVA',
-  url: site,
-  image: ogImageAbs || `${site}/images/og/og-klinova-home.png`,
   telephone: '+33676738661',
-  priceRange: '€€',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '9 allée de la Prairie',
+  email: 'contact@klinova.fr',
+
+  /*
+   * Siège social — société de domiciliation.
+   */
+  legalAddress: {
+    streetAddress: "6 rue d'Armaillé",
+    postalCode: '75017',
+    addressLocality: 'Paris',
+  },
+
+  /*
+   * Base opérationnelle.
+   *
+   * Chelles est indiquée au niveau ville + code postal.
+   * On ne publie pas ici l'adresse personnelle complète.
+   */
+  operationalLocation: {
     postalCode: '77500',
     addressLocality: 'Chelles',
-    addressRegion: 'Île-de-France',
-    addressCountry: 'FR',
   },
-    geo: {
-    '@type': 'GeoCoordinates',
-   latitude: 48.8814,  
-   longitude: 2.5936,
-  },
-  serviceArea: [
-    { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-    { '@type': 'AdministrativeArea', name: 'Paris' },
-    { '@type': 'AdministrativeArea', name: 'Seine-et-Marne' },
-    { '@type': 'AdministrativeArea', name: 'Seine-Saint-Denis' },
-    { '@type': 'AdministrativeArea', name: 'Val-de-Marne' },
-    { '@type': 'AdministrativeArea', name: 'Hauts-de-Seine' },
-    { '@type': 'AdministrativeArea', name: 'Essonne' },
-    { '@type': 'AdministrativeArea', name: 'Yvelines' },
-    { '@type': 'AdministrativeArea', name: "Val-d'Oise" },
-  ],
- 
-  openingHoursSpecification: [
+
+  /*
+   * Horaires de disponibilité alignés avec :
+   * - le site
+   * - Google Business Profile
+   *
+   * 7 jours sur 7 : 08:00–20:00
+   */
+  hoursAvailable: [
     {
-      '@type': 'OpeningHoursSpecification',
       dayOfWeek: [
         'Monday',
         'Tuesday',
@@ -203,37 +244,427 @@ const localBusinessJsonLd = {
       closes: '20:00',
     },
   ],
- description: localBusinessDescription,
-};
 
-// JSON-LD additionnels
-const extraJsonLd = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []
+  /*
+   * Identifiants officiels.
+   *
+   * SIREN       : 943439810
+   * SIRET siège : 94343981000012
+   * TVA         : FR92943439810
+   *
+   * ICD ISO 6523 :
+   * - 0002 = SIRENE / SIREN
+   * - 0009 = SIRET
+   * - 9957 = TVA française
+   */
+  siren: '943439810',
+  siret: '94343981000012',
+  vatID: 'FR92943439810',
+
+  /*
+   * Sources externes décrivant la même entreprise.
+   *
+   * TODO :
+   * 
+   * - ajouter éventuellement la fiche PagesJaunes / Solocal exacte
+   *
+   * Ne conserver que des URL actives correspondant réellement à KLINOVA.
+   */
+sameAs: [
+  'https://www.google.com/maps/place/KLINOVA+Nettoyage/@48.9042096,2.6021012,17z/data=!3m1!4b1!4m6!3m5!1s0x47e611bcf07989d3:0x8b1947b905612f57!8m2!3d48.9042061!4d2.6046761!16s%2Fg%2F11x6xb_lcz',
+  'https://www.pagesjaunes.fr/pros/64422634',
+  'https://annuaire-entreprises.data.gouv.fr/entreprise/943439810',
+  'https://www.pappers.fr/entreprise/klinova-943439810',
+  'https://www.facebook.com/KlinovaNettoyage',
+  'https://www.youtube.com/@KlinovaNettoyage',
+],
+} as const
+
+
+/* ---------------------------------------------------------------------------
+ * JSON-LD — identifiants stables
+ * ------------------------------------------------------------------------- */
+
+const orgId = `${site}#organization`
+const websiteId = `${site}#website`
+const klinovaBrandId = `${site}#brand`
+const operationalLocationId = `${site}#operational-location`
+
+const entityImage =
+  `${site}/images/og/og-klinova-home.png`
+
+
+/* ---------------------------------------------------------------------------
+ * Pages émettant les données d'entité
+ *
+ * WebSite :
+ * - accueil uniquement
+ *
+ * Organization :
+ * - accueil
+ * - à propos
+ * - contact
+ * ------------------------------------------------------------------------- */
+
+const isHome =
+  normalizedPath === '/'
+
+const emitWebsite =
+  isHome
+
+const emitOrganization =
+  ['/', '/a-propos', '/contact'].includes(normalizedPath)
+
+
+/* ---------------------------------------------------------------------------
+ * Zone d'intervention
+ * ------------------------------------------------------------------------- */
+
+const areaServed = [
+  'Île-de-France',
+  'Paris',
+  'Seine-et-Marne',
+  'Seine-Saint-Denis',
+  'Val-de-Marne',
+  'Hauts-de-Seine',
+  'Essonne',
+  'Yvelines',
+  "Val-d'Oise",
+].map((name) => ({
+  '@type': 'AdministrativeArea',
+  name,
+}))
+
+
+/* ---------------------------------------------------------------------------
+ * Organization — KLINOVA
+ *
+ * Une seule entité :
+ *
+ * - siège social / identité légale → Paris
+ * - base opérationnelle → Chelles
+ * - pas d'établissement physique déclaré à Chelles
+ * - interventions chez les clients
+ * - zone de service → Île-de-France
+ * ------------------------------------------------------------------------- */
+
+const organizationJsonLd = {
+  '@type': 'Organization',
+  '@id': orgId,
+
+  name: BUSINESS.displayName,
+  legalName: BUSINESS.legalName,
+
+  url: site,
+
+  logo: `${site}/images/logo-klinova.webp`,
+  image: entityImage,
+
+  description:
+    "Klinova est une entreprise de propreté et de maintenance technique basée à Chelles et intervenant en Île-de-France auprès des copropriétés, entreprises et particuliers : nettoyage de moquettes, parkings, balcons, terrasses, logements et textiles d'ameublement.",
+
+  telephone: BUSINESS.telephone,
+  email: BUSINESS.email,
+
+
+  /* -------------------------------------------------------------------------
+   * Siège social / adresse juridique
+   * ----------------------------------------------------------------------- */
+
+  address: {
+    '@type': 'PostalAddress',
+
+    streetAddress:
+      BUSINESS.legalAddress.streetAddress,
+
+    postalCode:
+      BUSINESS.legalAddress.postalCode,
+
+    addressLocality:
+      BUSINESS.legalAddress.addressLocality,
+
+    addressRegion:
+      'Île-de-France',
+
+    addressCountry:
+      'FR',
+  },
+
+
+  /* -------------------------------------------------------------------------
+   * Base opérationnelle
+   *
+   * Chelles reste explicitement associée à Klinova sans streetAddress.
+   * ----------------------------------------------------------------------- */
+
+  location: {
+    '@type': 'Place',
+    '@id': operationalLocationId,
+
+    name:
+      'Base opérationnelle Klinova à Chelles',
+
+    address: {
+      '@type': 'PostalAddress',
+
+      postalCode:
+        BUSINESS.operationalLocation.postalCode,
+
+      addressLocality:
+        BUSINESS.operationalLocation.addressLocality,
+
+      addressRegion:
+        'Île-de-France',
+
+      addressCountry:
+        'FR',
+    },
+  },
+
+
+  /* -------------------------------------------------------------------------
+   * Identifiants officiels
+   * ----------------------------------------------------------------------- */
+
+  iso6523Code: [
+    `0002:${BUSINESS.siren}`,
+    `0009:${BUSINESS.siret}`,
+    `9957:${BUSINESS.vatID}`,
+  ],
+
+  vatID:
+    BUSINESS.vatID,
+
+  identifier: [
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'SIREN',
+      value: BUSINESS.siren,
+    },
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'SIRET',
+      value: BUSINESS.siret,
+    },
+  ],
+
+
+  /* -------------------------------------------------------------------------
+   * Zone desservie
+   * ----------------------------------------------------------------------- */
+
+  areaServed,
+
+
+  /* -------------------------------------------------------------------------
+   * Contact et disponibilité
+   *
+   * Il s'agit d'horaires de disponibilité / contact et non des horaires
+   * d'ouverture d'un établissement physique.
+   * ----------------------------------------------------------------------- */
+
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+
+      contactType:
+        'customer service',
+
+      telephone:
+        BUSINESS.telephone,
+
+      email:
+        BUSINESS.email,
+
+      areaServed:
+        'Île-de-France',
+
+      availableLanguage: [
+        'fr',
+        'en',
+      ],
+
+      hoursAvailable:
+        BUSINESS.hoursAvailable.map((slot) => ({
+          '@type':
+            'OpeningHoursSpecification',
+
+          dayOfWeek:
+            [...slot.dayOfWeek],
+
+          opens:
+            slot.opens,
+
+          closes:
+            slot.closes,
+        })),
+    },
+  ],
+
+
+  /* -------------------------------------------------------------------------
+   * Sources externes
+   * ----------------------------------------------------------------------- */
+
+  sameAs:
+    [...BUSINESS.sameAs],
+
+
+  /* -------------------------------------------------------------------------
+   * Marques exploitées
+   * ----------------------------------------------------------------------- */
+
+  brand: [
+    {
+      '@type': 'Brand',
+
+      '@id':
+        klinovaBrandId,
+
+      name:
+        'Klinova',
+
+      url:
+        site,
+    },
+
+    {
+      '@type': 'Brand',
+
+      '@id':
+        'https://stop-punaises.fr#brand',
+
+      name:
+        'Stop-Punaises',
+
+      url:
+        'https://stop-punaises.fr',
+
+      description:
+        'Service spécialisé dans le traitement des punaises de lit.',
+    },
+  ],
+}
+
+
+/* ---------------------------------------------------------------------------
+ * WebSite
+ * ------------------------------------------------------------------------- */
 
 const websiteJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${site}#website`,
+  '@id': websiteId,
+
   url: site,
   name: siteName,
-  publisher: { '@id': orgId },
+
+  publisher: {
+    '@id': orgId,
+  },
+
   inLanguage: 'fr-FR',
 }
 
-const jsonLdBlocks = [
-  websiteJsonLd,
-  orgJsonLd,
-  localBusinessJsonLd,
+
+/* ---------------------------------------------------------------------------
+ * JSON-LD additionnels fournis par les pages
+ *
+ * Exemples :
+ * - BreadcrumbList
+ * - Article
+ * - FAQPage
+ * - Service
+ *
+ * On retire uniquement un @context Schema.org déjà porté par le graphe.
+ * Un éventuel contexte différent est conservé.
+ * ------------------------------------------------------------------------- */
+
+const SCHEMA_CONTEXT =
+  /^https?:\/\/schema\.org\/?$/
+
+const rawExtraJsonLd =
+  Array.isArray(jsonLd)
+    ? jsonLd
+    : jsonLd
+      ? [jsonLd]
+      : []
+
+const extraJsonLd =
+  rawExtraJsonLd
+    .filter(Boolean)
+    .map((node) => {
+      const ctx =
+        node['@context']
+
+      if (
+        typeof ctx === 'string' &&
+        SCHEMA_CONTEXT.test(ctx)
+      ) {
+        const {
+          '@context': _dropped,
+          ...rest
+        } = node
+
+        return rest
+      }
+
+      return node
+    })
+
+
+/* ---------------------------------------------------------------------------
+ * Construction du graphe JSON-LD
+ * ------------------------------------------------------------------------- */
+
+const jsonLdGraphNodes = [
+  ...(emitWebsite
+    ? [websiteJsonLd]
+    : []),
+
+  ...(emitOrganization
+    ? [organizationJsonLd]
+    : []),
+
   ...extraJsonLd,
 ]
+
+const jsonLdGraph =
+  jsonLdGraphNodes.length > 0
+    ? {
+        '@context':
+          'https://schema.org',
+
+        '@graph':
+          jsonLdGraphNodes,
+      }
+    : null
 ---
 
 <title>{finalTitle}</title>
-{finalDescription && <meta name="description" content={finalDescription} />}
 
-<meta name="robots" content={robots} />
-<meta name="googlebot" content={robots} />
+{finalDescription && (
+  <meta
+    name="description"
+    content={finalDescription}
+  />
+)}
 
-{canonicalNormalized && <link rel="canonical" href={canonicalNormalized} />}
+<meta
+  name="robots"
+  content={robots}
+/>
+
+<meta
+  name="googlebot"
+  content={robots}
+/>
+
+{canonicalNormalized && (
+  <link
+    rel="canonical"
+    href={canonicalNormalized}
+  />
+)}
 
 {hrefLangs &&
   Object.entries(hrefLangs).map(([lang, url]) => (
@@ -244,58 +675,146 @@ const jsonLdBlocks = [
     />
   ))}
 
-<meta property="og:type" content={articleType} />
-<meta property="og:site_name" content={siteName} />
-<meta property="og:title" content={finalTitle} />
-{finalDescription && <meta property="og:description" content={finalDescription} />}
-{canonicalNormalized && <meta property="og:url" content={canonicalNormalized} />}
-{locale && <meta property="og:locale" content={locale} />}
+
+{/* Open Graph */}
+
+<meta
+  property="og:type"
+  content={articleType}
+/>
+
+<meta
+  property="og:site_name"
+  content={siteName}
+/>
+
+<meta
+  property="og:title"
+  content={finalTitle}
+/>
+
+{finalDescription && (
+  <meta
+    property="og:description"
+    content={finalDescription}
+  />
+)}
+
+{canonicalNormalized && (
+  <meta
+    property="og:url"
+    content={canonicalNormalized}
+  />
+)}
+
+{locale && (
+  <meta
+    property="og:locale"
+    content={locale}
+  />
+)}
+
 {ogImageAbs && (
   <>
-    <meta property="og:image" content={ogImageAbs} />
-    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta
+      property="og:image"
+      content={ogImageAbs}
+    />
+
+    <meta
+      property="og:image:alt"
+      content={ogImageAlt}
+    />
   </>
 )}
+
+
+{/* Article */}
 
 {articleType === 'article' && (
   <>
     {publishedTime && (
-      <meta property="article:published_time" content={publishedTime} />
+      <meta
+        property="article:published_time"
+        content={publishedTime}
+      />
     )}
+
     {modifiedTime && (
-      <meta property="article:modified_time" content={modifiedTime} />
+      <meta
+        property="article:modified_time"
+        content={modifiedTime}
+      />
     )}
+
     <meta
       property="article:author"
       content={siteName}
     />
+
     <meta
       property="article:section"
       content="Propreté et hygiène professionnelle"
     />
-    <meta property="article:tag" content="nettoyage professionnel" />
-    <meta property="article:tag" content="Île-de-France" />
+
+    <meta
+      property="article:tag"
+      content="nettoyage professionnel"
+    />
+
+    <meta
+      property="article:tag"
+      content="Île-de-France"
+    />
   </>
 )}
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={finalTitle} />
+
+{/* Twitter */}
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+/>
+
+<meta
+  name="twitter:title"
+  content={finalTitle}
+/>
+
 {finalDescription && (
-  <meta name="twitter:description" content={finalDescription} />
+  <meta
+    name="twitter:description"
+    content={finalDescription}
+  />
 )}
+
 {ogImageAbs && (
   <>
-    <meta name="twitter:image" content={ogImageAbs} />
-    <meta name="twitter:image:alt" content={ogImageAlt} />
+    <meta
+      name="twitter:image"
+      content={ogImageAbs}
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content={ogImageAlt}
+    />
   </>
 )}
 
-{jsonLdBlocks.map((obj) => (
+
+{/* JSON-LD */}
+
+{jsonLdGraph && (
   <script
     type="application/ld+json"
-    set:html={JSON.stringify(obj)}
+    set:html={JSON.stringify(jsonLdGraph)}
   ></script>
-))}
+)}
+
+
+{/* Third-party performance hints */}
 
 {allowThirdPartyHints && (
   <>
@@ -304,12 +823,21 @@ const jsonLdBlocks = [
       href="https://www.google-analytics.com"
       crossorigin
     />
+
     <link
       rel="preconnect"
       href="https://www.googletagmanager.com"
       crossorigin
     />
-    <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+    <link
+      rel="dns-prefetch"
+      href="//www.google-analytics.com"
+    />
+
+    <link
+      rel="dns-prefetch"
+      href="//www.googletagmanager.com"
+    />
   </>
 )}
