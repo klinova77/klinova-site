@@ -115,45 +115,7 @@ const serviceContext =
   serviceContextLabels[service.key] ?? 'les surfaces concernées';
 
 // 🔧 Config des services pour la section "Autres services à {ville}"
-const allServicesForCards = [
 
-  {
-    key: 'moquettes',
-    name: 'Nettoyage de moquettes',
-    shortDescription:
-      'Entretien et détachage de moquettes en copropriété, bureaux et parties communes.',
-  },
-  {
-  key: "nettoyage-appartement-maison",
-  name: "Nettoyage d'appartements et maisons",
-  shortDescription: "Remise en état avant état des lieux, vente/location ou après déménagement.",
-},
-
-  {
-    key: 'parkings',
-    name: 'Nettoyage de parkings',
-    shortDescription:
-      'Nettoyage en profondeur des parkings souterrains, rampes et zones de circulation.',
-  },
-  {
-    key: 'balcons',
-    name: 'Nettoyage de balcons et terrasses',
-    shortDescription:
-      'Remise en état des balcons, terrasses et loggias en respectant les revêtements.',
-  },
-  {
-    key: 'balcons-fientes',
-    name: 'Balcons – fientes de pigeons (désinfection)',
-    shortDescription:
-      'Décontamination et désinfection de balcons souillés par les fientes de pigeons.',
-  },
-  {
-    key: 'canapes-tapis',
-    name: 'Nettoyage de canapés, tapis et matelas',
-    shortDescription:
-      'Nettoyage professionnel des textiles d’ameublement directement au domicile.',
-  },
-];
 
 
 
@@ -401,27 +363,29 @@ const departmentCode = department.code ?? city.department?.code ?? 'IDF';
 
 const descriptionByServiceKey: Record<string, string> = {
   // ===== B2C (domicile) =====
+
   "nettoyage-appartement-maison":
-    `${service.name} ${cityAt} (${departmentCode}) : remise en état avant état des lieux, mise en vente/location ou reprise après déménagement. Approche par check-list et finitions soignées.`,
+    `${service.name} ${cityAt} : remise en état avant état des lieux, vente, location ou après déménagement. Devis gratuit.`,
 
   "canapes-tapis":
-    `${service.name} ${cityAt} (${departmentCode}) : nettoyage à domicile avec détachage ciblé selon le textile, hygiène renforcée des zones d’usage et séchage maîtrisé.`,
+    `${service.name} ${cityAt} : détachage ciblé des textiles d’ameublement à domicile, avec un séchage maîtrisé.`,
 
   "balcons":
-    `${service.name} ${cityAt} (${departmentCode}) : remise en état d’extérieur, nettoyage adapté au revêtement, traitement des salissures incrustées et finitions propres pour un rendu net.`,
+    `${service.name} ${cityAt} : remise en état des sols, surfaces et loggias avec une méthode adaptée au revêtement.`,
 
   "balcons-fientes":
-    `${service.name} ${cityAt} (${departmentCode}) : nettoyage, décontamination et désinfection après fientes, protocole sécurisé et finitions soignées pour rendre l’espace utilisable.`,
+    `${service.name} ${cityAt} : retrait des fientes de pigeons, nettoyage approfondi et désinfection des surfaces souillées.`,
 
   "terrasses":
-    `${service.name} ${cityAt} (${departmentCode}) : nettoyage de terrasse et sols extérieurs, méthode adaptée au support (carrelage, pierre, béton) et rendu homogène.`,
+    `${service.name} ${cityAt} : remise en état du carrelage, de la pierre ou du béton selon la nature des salissures.`,
 
-  // ===== B2B (immeubles / parties communes) =====
+  // ===== B2B / copropriétés / particuliers =====
+
   "moquettes":
-    `${service.name} ${cityAt} (${departmentCode}) : entretien et détachage des moquettes à domicile ou en copropriété, bureaux et parties communes. Intervention discrète et résultat homogène.`,
+    `${service.name} ${cityAt} : entretien et détachage en copropriété, bureaux et parties communes, avec une intervention discrète.`,
 
   "parkings":
-    `${service.name} ${cityAt} (${departmentCode}) : nettoyage en profondeur des parkings souterrains, rampes et zones de circulation. Organisation, sécurité et contrôle qualité.`,
+    `${service.name} ${cityAt} : nettoyage en profondeur des sols, rampes et zones de circulation, avec intervention planifiée.`,
 };
 
 
