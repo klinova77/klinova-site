@@ -198,6 +198,7 @@ const robots =
 const BUSINESS = {
   legalName: 'KLINOVA',
   displayName: 'Klinova',
+   googleBusinessName: 'KLINOVA Nettoyage',
 
   telephone: '+33676738661',
   email: 'contact@klinova.fr',
@@ -271,9 +272,9 @@ const BUSINESS = {
    * Ne conserver que des URL actives correspondant réellement à KLINOVA.
    */
 sameAs: [
-  'https://www.google.com/maps/place/KLINOVA+Nettoyage/@48.9042096,2.6021012,17z/data=!3m1!4b1!4m6!3m5!1s0x47e611bcf07989d3:0x8b1947b905612f57!8m2!3d48.9042061!4d2.6046761!16s%2Fg%2F11x6xb_lcz',
+  'https://www.google.com/maps/place/KLINOVA+Nettoyage/data=!4m2!3m1!1s0x47e611bcf07989d3:0x8b1947b905612f57',
   'https://www.pagesjaunes.fr/pros/64422634',
-  'https://annuaire-entreprises.data.gouv.fr/entreprise/943439810',
+  'https://annuaire-entreprises.data.gouv.fr/entreprise/klinova-943439810',
   'https://www.pappers.fr/entreprise/klinova-943439810',
   'https://www.facebook.com/KlinovaNettoyage',
   'https://www.youtube.com/@KlinovaNettoyage',
@@ -354,6 +355,7 @@ const organizationJsonLd = {
 
   name: BUSINESS.displayName,
   legalName: BUSINESS.legalName,
+  alternateName: BUSINESS.googleBusinessName,
 
   url: site,
 
