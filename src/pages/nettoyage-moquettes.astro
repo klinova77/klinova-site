@@ -58,23 +58,19 @@ const faq = [
   {
     title: "Vos produits sont-ils sans danger pour les enfants et animaux ?",
     content:
-      "Absolument. Nous utilisons des produits professionnels biodégradables, sans solvants agressifs et conformes aux normes européennes. Aucune odeur chimique persistante après intervention. Les surfaces sont sans danger dès le séchage terminé. Fiches de sécurité disponibles sur demande.",
+      "Nous sélectionnons les produits et les dosages en fonction du textile et des conditions d'utilisation. Les consignes de remise en service sont précisées après l'intervention et les fiches de données de sécurité peuvent être communiquées sur demande.",
   },
   {
     title: "Quelle est la différence entre vos méthodes de nettoyage ?",
     content:
-      "Nous adaptons la méthode selon votre moquette :\n• Nettoyage à sec : fibres délicates, remise en service immédiate\n• Injection-extraction : encrassement important, désinfection profonde\n• Monobrosse + mousse : compromis efficacité/séchage rapide\n\nLe choix se fait après diagnostic gratuit selon le type de fibre, l'état et vos contraintes.",
+      "Nous adaptons la méthode selon votre moquette :\n• Nettoyage à sec : fibres délicates, remise en service immédiate\n• Injection-extraction : nettoyage en profondeur pour les moquettes compatibles et les encrassements importants\n• Monobrosse + mousse : compromis efficacité/séchage rapide\n\nLe choix se fait après diagnostic gratuit selon le type de fibre, l'état et vos contraintes.",
   },
   {
     title: "Pouvez-vous enlever toutes les taches ?",
     content:
       "La plupart des taches courantes (café, vin, nourriture, boue) peuvent être éliminées avec nos techniques spécialisées. Les taches anciennes ou certaines substances (encre permanente, décoloration) peuvent laisser des traces. Nous réalisons toujours un test préalable et vous informons honnêtement des résultats attendus.",
   },
-  {
-    title: "Le bruit pendant l'intervention est-il gênant ?",
-    content:
-      "Nos équipements professionnels restent en dessous de 65 dB (niveau conversation normale). Nous pouvons adapter nos horaires (tôt le matin, soirée ou week-end) pour minimiser la gêne, particulièrement en environnement de bureau ou résidentiel.",
-  },
+
   {
     title: "Comment se déroule votre diagnostic gratuit ?",
     content:
@@ -93,122 +89,209 @@ const faq = [
 ];
 
 // Schema FAQ
+// Schema FAQ
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
+  '@type': 'FAQPage',
+
   mainEntity: faq.map((item) => ({
-    "@type": "Question",
+    '@type': 'Question',
     name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content },
+
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.content,
+    },
   })),
 };
 
-// Fil d'Ariane
+/* -------------------------------------------------------------------------- */
+/* Fil d'Ariane                                                               */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  '@type': 'BreadcrumbList',
+
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: `${site}/` },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
+    {
+      '@type': 'ListItem',
       position: 2,
-      name: "Nettoyage de moquettes",
+      name: 'Nettoyage de moquettes',
       item: `${site}${pageUrl}`,
     },
   ],
 };
 
-// JSON-LD optimisé (évite duplication avec SeoBase)
+/* -------------------------------------------------------------------------- */
+/* IDs                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
+const webpageId = `${site}${pageUrl}#webpage`;
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
+    '@type': 'WebPage',
+
+    '@id': webpageId,
+
     url: `${site}${pageUrl}`,
-    name: "Nettoyage de moquettes — Klinova",
-    isPartOf: { "@id": `${site}#website` },
-    inLanguage: "fr-FR",
-    primaryImageOfPage: {
-      "@type": "ImageObject",
-      url: `${site}/images/og/og-moquettes.png`,
-      width: 1200,
-      height: 630,
+
+    name:
+      'Nettoyage de moquettes — Klinova',
+
+    description:
+      "Nettoyage professionnel de moquettes en Île-de-France : détachage, entretien en profondeur et méthodes adaptées aux fibres, à l'encrassement et aux contraintes de remise en service.",
+
+    isPartOf: {
+      '@id': `${site}#website`,
     },
+
+    mainEntity: {
+      '@id': serviceId,
+    },
+
+    about: {
+      '@id': serviceId,
+    },
+
+primaryImageOfPage: {
+  '@type': 'ImageObject',
+  url: `${site}/images/og/og-klinova-home.png`,
+  width: 1200,
+  height: 630,
+},
+
+    inLanguage: 'fr-FR',
   },
 
-  // Service spécifique à cette page
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${site}#service-moquettes`,
-    serviceType: "Nettoyage de moquettes",
-    name: "Nettoyage et entretien de moquettes à Paris et en Île-de-France",
-    alternateName: "Shampoinage moquette professionnel",
+    '@type': 'Service',
+
+    '@id': serviceId,
+
     url: `${site}${pageUrl}`,
-    provider: { "@id": `${site}#localbusiness` },
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Île-de-France" },
-      { "@type": "City", name: "Paris" },
-    ],
-    audience: {
-      "@type": "Audience",
-      audienceType: ["Bureaux", "Copropriétés", "Particuliers"],
-    },
-    category: "Nettoyage professionnel des revêtements textiles",
-    serviceOutput:
-      "Moquette nettoyée en profondeur, désodorisée et à séchage rapide",
+
+    name:
+      'Nettoyage professionnel de moquettes',
+
+    alternateName:
+      'Entretien et nettoyage en profondeur de moquettes',
+
+    serviceType:
+      'Nettoyage et entretien de moquettes',
+
     description:
-      "Prestations d'entretien de moquettes : diagnostic, détachage, nettoyage à sec ou injection-extraction, monobrosse avec mousse, désodorisation. Méthodes adaptées aux fibres (aiguilletée, bouclée, velours, dalles).",
+      "Nettoyage professionnel de moquettes : diagnostic du revêtement, détachage, aspiration, injection-extraction, nettoyage à sec ou autres méthodes adaptées selon les fibres, le niveau d'encrassement et les contraintes de séchage.",
+
+    provider: {
+      '@id': `${site}#organization`,
+    },
+
+    brand: {
+      '@id': `${site}#brand`,
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France',
+    },
+
+    audience: {
+      '@type': 'Audience',
+      audienceType: [
+        'Entreprises',
+        'Bureaux',
+        'Copropriétés',
+        'Hôtels',
+        'Particuliers',
+      ],
+    },
+
+    category:
+      'Nettoyage professionnel des revêtements textiles',
+
+    serviceOutput:
+      "Moquette nettoyée et remise en propreté selon son état initial et la méthode retenue",
+
     offers: {
-      "@type": "Offer",
-      price: 10,
-      priceCurrency: "EUR",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: 10,
-        priceCurrency: "EUR",
-        unitText: "EUR par m²",
-      },
-      availability: "https://schema.org/InStock",
-      eligibleRegion: { "@type": "AdministrativeArea", name: "Île-de-France" },
+      '@type': 'Offer',
+
       description:
-        "Tarif à partir de 10 € TTC par m², ajusté selon la surface, l’encrassement et les contraintes d’accès.",
+        "Tarif à partir de 10 € TTC par m², ajusté selon la surface, le type de moquette, le niveau d'encrassement et les contraintes d'intervention.",
+
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        minPrice: 10,
+        priceCurrency: 'EUR',
+        valueAddedTaxIncluded: true,
+        unitText: 'm²',
+      },
+
+      eligibleRegion: {
+        '@type': 'AdministrativeArea',
+        name: 'Île-de-France',
+      },
     },
 
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Méthodes de nettoyage de moquettes",
+      '@type': 'OfferCatalog',
+
+      name:
+        'Méthodes de nettoyage de moquettes',
+
       itemListElement: [
         {
-          "@type": "Offer",
+          '@type': 'Offer',
+
           itemOffered: {
-            "@type": "Service",
-            name: "Nettoyage à sec",
-            description: "Idéal fibres délicates et remise en service rapide",
+            '@type': 'Service',
+            name: 'Nettoyage par injection-extraction',
+            description:
+              "Nettoyage en profondeur adapté aux moquettes compatibles avec cette méthode.",
           },
         },
+
         {
-          "@type": "Offer",
+          '@type': 'Offer',
+
           itemOffered: {
-            "@type": "Service",
-            name: "Injection-extraction",
-            description: "Nettoyage en profondeur, encrassement marqué",
+            '@type': 'Service',
+            name: 'Nettoyage à faible humidité ou à sec',
+            description:
+              "Méthode adaptée aux fibres ou aux situations nécessitant une remise en service plus rapide.",
           },
         },
+
         {
-          "@type": "Offer",
+          '@type': 'Offer',
+
           itemOffered: {
-            "@type": "Service",
-            name: "Monobrosse + mousse",
-            description: "Compromis efficacité et séchage rapide",
+            '@type': 'Service',
+            name: 'Détachage de moquettes',
+            description:
+              "Traitement ciblé des taches selon leur nature, leur ancienneté et la résistance des fibres.",
           },
         },
+
         {
-          "@type": "Offer",
+          '@type': 'Offer',
+
           itemOffered: {
-            "@type": "Service",
-            name: "Désodorisation",
-            description: "Neutralisation des odeurs et pH rééquilibré",
+            '@type': 'Service',
+            name: 'Entretien périodique de moquettes',
+            description:
+              "Programme d'entretien adapté aux bureaux, copropriétés, hôtels et autres locaux à fréquentation régulière.",
           },
         },
       ],
@@ -230,7 +313,7 @@ const jsonLd = [
   stickyMobileOnly={true}
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Klinova – Entreprise de nettoyage de moquettes en Île-de-France"
+  title="Nettoyage professionnel de moquettes en Île-de-France | Klinova"
   description="Nettoyage professionnel de moquettes en Île-de-France : injection-extraction, séchage rapide, devis gratuit. Intervention copropriétés, bureaux, particuliers."
   canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"

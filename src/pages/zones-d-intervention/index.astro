@@ -1,20 +1,18 @@
 ---
 // src/pages/zones-d-intervention/index.astro
-
-// src/pages/zones-d-intervention/index.astro
 export const prerender = true;
 
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import { DEPARTMENTS } from '~/data/departments';
 import cities from '~/data/cities'; 
 
-const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
+const site = (import.meta.env.SITE ?? 'https://klinova.fr').replace(/\/$/, '');
 
 const title =
   'Zones d’intervention Klinova – Nettoyage professionnel en Île-de-France';
+
 const description =
-  'Klinova intervient en Île-de-France pour le nettoyage de moquettes, canapés, tapis, balcons et parkings souterrains. ' +
-  'Découvrez nos zones d’intervention par département et par ville.';
+  'Klinova intervient dans toute l’Île-de-France pour des prestations de nettoyage professionnel auprès des particuliers, copropriétés et entreprises. Découvrez nos zones d’intervention par département et par ville.';
 const canonical = '/zones-d-intervention';
 
 const allCities = (cities ?? []).slice().sort((a, b) =>
@@ -22,32 +20,120 @@ const allCities = (cities ?? []).slice().sort((a, b) =>
 );
 
 // JSON-LD basique pour la page "index des zones"
+/* -------------------------------------------------------------------------- */
+/* Variables SEO / JSON-LD                                                    */
+/* -------------------------------------------------------------------------- */
+
+
+const pageUrl = `${site}${canonical}`;
+
+const collectionPageId = `${pageUrl}#webpage`;
+const departmentsListId = `${pageUrl}#departments`;
+
+/* -------------------------------------------------------------------------- */
+/* Fil d'Ariane                                                               */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+
   itemListElement: [
     {
       '@type': 'ListItem',
       position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
+    {
+      '@type': 'ListItem',
+      position: 2,
       name: "Zones d'intervention",
-      item: `${baseUrl}${canonical}`,
+      item: pageUrl,
     },
   ],
 };
 
-const pageUrl = `${baseUrl}${canonical}`;
-const webPageJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': `${pageUrl}#webpage-zones`,
+/* -------------------------------------------------------------------------- */
+/* Liste des départements                                                     */
+/* -------------------------------------------------------------------------- */
+
+const departmentsListJsonLd = {
+  '@type': 'ItemList',
+
+  '@id': departmentsListId,
+
+  name:
+    "Départements couverts par Klinova en Île-de-France",
+
+  numberOfItems: DEPARTMENTS.length,
+
+  itemListElement: DEPARTMENTS.map((department, index) => ({
+    '@type': 'ListItem',
+
+    position: index + 1,
+
+    item: {
+      '@type': 'WebPage',
+
+      '@id': `${site}/zones-d-intervention/${department.slug}#webpage`,
+
+      url: `${site}/zones-d-intervention/${department.slug}`,
+
+      name:
+        `${department.name} (${department.code}) — Zones d’intervention Klinova`,
+    },
+  })),
+};
+
+/* -------------------------------------------------------------------------- */
+/* Page                                                                       */
+/* -------------------------------------------------------------------------- */
+
+const collectionPageJsonLd = {
+  '@type': 'CollectionPage',
+
+  '@id': collectionPageId,
+
   url: pageUrl,
+
   name: title,
+
   description,
-  isPartOf: { '@id': `${baseUrl}#website` },
+
+  isPartOf: {
+    '@id': `${site}#website`,
+  },
+
+  about: {
+    '@id': `${site}#organization`,
+  },
+
+  publisher: {
+    '@id': `${site}#organization`,
+  },
+
+  mainEntity: {
+    '@id': departmentsListId,
+  },
+
+  spatialCoverage: {
+    '@type': 'AdministrativeArea',
+    name: 'Île-de-France',
+  },
+
   inLanguage: 'fr-FR',
 };
 
-const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
+const jsonLd = [
+  collectionPageJsonLd,
+  departmentsListJsonLd,
+  breadcrumbJsonLd,
+];
 
 ---
 
@@ -92,12 +178,11 @@ const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
         <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1E2939] mb-4">
           Nos zones d’intervention en Île-de-France
         </h1>
-        <p class="text-base md:text-lg text-[#475569] leading-relaxed">
-          Klinova intervient pour le nettoyage de moquettes, canapés, tapis, balcons
-          et parkings souterrains dans plusieurs départements d’Île-de-France.
-          Sélectionnez votre département pour découvrir les villes déjà structurées
-          avec des pages locales détaillées.
-        </p>
+<p class="text-base md:text-lg text-[#475569] leading-relaxed">
+  Klinova intervient dans toute l’Île-de-France pour des prestations de
+  nettoyage professionnel auprès des particuliers, copropriétés et entreprises.
+  Sélectionnez votre département pour découvrir nos zones d’intervention.
+</p>
       </header>
 
       <!-- Liste des départements -->
@@ -108,8 +193,7 @@ const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
           </h2>
           <p class="text-sm md:text-base text-[#475569]">
             Chaque département ci-dessous dispose d’une page dédiée avec un récapitulatif
-            de nos services et une liste de villes pour lesquelles nous avons déjà créé
-            des pages locales.
+            de nos services et une sélection de villes dans lesquelles nous intervenons.
           </p>
         </div>
 
@@ -154,7 +238,7 @@ const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
 <section class="max-w-4xl mx-auto mb-16">
   <div class="mb-8 text-center max-w-3xl mx-auto">
     <h2 class="text-xl md:text-2xl font-bold text-[#1E2939] mb-3">
-      Quelques exemple de communes dans lesquelles nous intervenons en Île-de-France
+      Quelques exemples de communes dans lesquelles nous intervenons en Île-de-France
     </h2>
 
     <p class="text-sm md:text-base text-[#475569]">

@@ -1,58 +1,78 @@
 ---
 export const prerender = true;
+
 import Layout from '../layouts/Layout.astro';
 
-// Variables de base
+/* -------------------------------------------------------------------------- */
+/* Variables de base                                                          */
+/* -------------------------------------------------------------------------- */
+
 const site = 'https://klinova.fr';
 const pageUrl = '/mentions-legales';
-const pageName = 'Mentions légales';
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * SeoBase définit l'entité KLINOVA avec l'@id :
+ * https://klinova.fr#organization
+ *
+ * La page Mentions légales référence cette entité
+ * sans recréer une nouvelle Organization.
+ */
 const jsonLd = [
-  // WebPage Mentions légales
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
-    "inLanguage": "fr-FR",
-    "name": `${pageName} — Klinova`,
-    "url": `${site}${pageUrl}`,
-    "description": "Mentions légales du site Klinova.fr — société de propreté et maintenance technique à Paris & en Île-de-France.",
-    "isPartOf": { "@id": `${site}#website` },
-    "publisher": { "@id": `${site}#organization` }
+    '@type': 'WebPage',
+
+    '@id': `${site}${pageUrl}#webpage`,
+
+    url: `${site}${pageUrl}`,
+
+    name: 'Mentions légales — Klinova',
+
+    description:
+      "Mentions légales du site Klinova.fr : informations sur l'éditeur KLINOVA, l'hébergeur, la propriété intellectuelle et les responsabilités.",
+
+    isPartOf: {
+      '@id': `${site}#website`
+    },
+
+    mainEntity: {
+      '@id': `${site}#organization`
+    },
+
+    about: {
+      '@id': `${site}#organization`
+    },
+
+    publisher: {
+      '@id': `${site}#organization`
+    },
+
+    inLanguage: 'fr-FR'
   },
 
-  // Mentions légales comme document
   {
-    "@context": "https://schema.org",
-    "@type": "DigitalDocument",
-    "@id": `${site}${pageUrl}#legal-document`,
-    "name": "Mentions légales Klinova",
-    "url": `${site}${pageUrl}`,
-    "inLanguage": "fr-FR",
-    "author": { "@id": `${site}#organization` },
-    "publisher": { "@id": `${site}#organization` }
-  },
+    '@type': 'BreadcrumbList',
 
-  // Lien depuis l'Organization vers les mentions (facultatif mais propre)
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${site}#organization`,
-    "termsOfService": `${site}${pageUrl}`
-  },
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Accueil',
+        item: `${site}/`
+      },
 
-  // Fil d'Ariane
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "Mentions légales", "item": `${site}${pageUrl}` }
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Mentions légales',
+        item: `${site}${pageUrl}`
+      }
     ]
   }
 ];
-
 ---
 
 <Layout

@@ -1,12 +1,12 @@
 ---
 export const prerender = true;
+
 import LayoutWithCTA from '~/layouts/LayoutWithCTA.astro';
 import Button from '~/components/UI/Button.astro';
 import ButtonSubmit from '~/components/UI/ButtonSubmit.astro';
 import { LINKS } from '~/lib/links';
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
-import DepartmentCardsKln from "~/components/local/DepartmentCardsKln.astro";
-
+import DepartmentCardsKln from '~/components/local/DepartmentCardsKln.astro';
 
 import { getImage, Image } from 'astro:assets';
 import heroImg from '~/assets/images/machines-klinova.jpg';
@@ -25,23 +25,22 @@ import CapabilityCard from '~/components/cards/CapabilityCard.astro';
 import StatCard from '~/components/cards/StatCard.astro';
 import FeatureItem from '~/components/cards/FeatureItem.astro';
 
-
-
 import { highlightedCities } from '~/data/highlightedCities';
 
+/* -------------------------------------------------------------------------- */
+/* Variables de base                                                          */
+/* -------------------------------------------------------------------------- */
 
-// Variables de base
-// Variables de base
-const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
-const site = baseUrl;                 // alias, pour tout ce qui utilise déjà `site`
-
+const site = 'https://klinova.fr';
 const canonical = '/';
-const pageUrl = `${baseUrl}${canonical}`;
-const pageName = 'Accueil';
+const pageUrl = `${site}/`;
 
+/* -------------------------------------------------------------------------- */
+/* Images                                                                      */
+/* -------------------------------------------------------------------------- */
 
-// Images optimisées
 const heroSizes = '(min-width:1024px) 1024px, 100vw';
+
 const heroPreload = await getImage({
   src: heroImg,
   widths: [640, 1024],
@@ -49,7 +48,10 @@ const heroPreload = await getImage({
   quality: 62,
 });
 
-// Configuration popup
+/* -------------------------------------------------------------------------- */
+/* Popup                                                                       */
+/* -------------------------------------------------------------------------- */
+
 const popupContext = {
   title: 'Demander à être rappelé',
   subtitle: 'Un expert Klinova vous contacte sous 24h pour discuter de votre projet.',
@@ -60,109 +62,193 @@ const popupContext = {
   creditImpotEnabled: false,
 };
 
-// JSON-LD optimisé pour la home (évite duplication avec SeoBase)
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * SeoBase émet déjà sur la home :
+ *
+ * - WebSite
+ * - Organization KLINOVA
+ *
+ * La home ajoute :
+ *
+ * - WebPage
+ * - ItemList des principaux services
+ *
+ * Chaque Service utilise l'@id de sa vraie page de prestation.
+ * La page de prestation pourra ensuite enrichir exactement la même entité.
+ */
+
+const servicesListId = `${site}/#services`;
+
 const jsonLd = [
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}#webpage-home`,
-    "url": site,
-    "name": "Accueil — Klinova",
-    "isPartOf": { "@id": `${site}#website` },
-    "@id": `${pageUrl}#webpage-home`,
-    "url": pageUrl,
-    "inLanguage": "fr-FR",
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": `${site}/images/og/og-klinova-home.png`,
-      "width": 1200,
-      "height": 630
-    }
+    '@type': 'WebPage',
+
+    '@id': `${site}/#webpage`,
+
+    url: pageUrl,
+
+    name: 'Klinova — Nettoyage professionnel Paris & Île-de-France',
+
+    description:
+      "Nettoyage professionnel de parkings, moquettes, balcons, terrasses et autres prestations de propreté à Paris et en Île-de-France.",
+
+    isPartOf: {
+      '@id': `${site}#website`
+    },
+
+    about: {
+      '@id': `${site}#organization`
+    },
+
+    mainEntity: {
+      '@id': servicesListId
+    },
+
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630
+    },
+
+    inLanguage: 'fr-FR'
   },
 
-
-  // Catalogue des services principaux
   {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Services de propreté Klinova",
-    "description": "Prestations de nettoyage professionnel à Paris et en Île-de-France",
-    "itemListOrder": "https://schema.org/ItemListOrderAscending",
-    "numberOfItems": 5,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Service",
-          "@id": `${site}#service-parkings`,
-          "name": "Nettoyage de parkings souterrains",
-          "url": `${site}/nettoyage-parkings`,
-          "category": "Nettoyage professionnel",
-          "provider": { "@id": `${site}#localbusiness` }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Service",
-          "@id": `${site}#service-moquettes`,
-          "name": "Nettoyage de moquettes",
-          "url": `${site}/nettoyage-moquettes`,
-          "category": "Nettoyage professionnel",
-          "provider": { "@id": `${site}#localbusiness` }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Service",
-          "@id": `${site}#service-balcons`,
-          "name": "Nettoyage de balcons et terrasses",
-          "url": `${site}/nettoyage-balcons`,
-          "category": "Nettoyage extérieur",
-          "provider": { "@id": `${site}#localbusiness` }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "Service",
-          "@id": `${site}#service-terrasses`,
-          "name": "Nettoyage de terrasses",
-          "url": `${site}/nettoyage-terrasses`,
-          "category": "Nettoyage extérieur",
-          "provider": { "@id": `${site}#localbusiness` }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "Service",
-          "@id": `${site}#service-nuisibles`,
-          "name": "Traitement anti-nuisibles",
-          "url": `${site}/traitement-nuisibles`,
-          "category": "Désinfection professionnelle",
-          "provider": { "@id": `${site}#localbusiness` }
-        }
-      }
-    ]
-  },
+    '@type': 'ItemList',
 
-  // Fil d'Ariane simple pour la home
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    '@id': servicesListId,
+
+    name: 'Principaux services de Klinova',
+
+    description:
+      'Principales prestations de propreté et de maintenance proposées par Klinova en Île-de-France.',
+
+    numberOfItems: 5,
+
+    itemListElement: [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Accueil",
-        "item": `${site}/`
+        '@type': 'ListItem',
+        position: 1,
+
+        item: {
+          '@type': 'Service',
+          '@id': `${site}/nettoyage-parkings#service`,
+
+          name: 'Nettoyage de parkings souterrains',
+
+          url: `${site}/nettoyage-parkings`,
+
+          serviceType: 'Nettoyage professionnel de parkings',
+
+          provider: {
+            '@id': `${site}#organization`
+          },
+
+          brand: {
+            '@id': `${site}#brand`
+          }
+        }
+      },
+
+      {
+        '@type': 'ListItem',
+        position: 2,
+
+        item: {
+          '@type': 'Service',
+          '@id': `${site}/nettoyage-moquettes#service`,
+
+          name: 'Nettoyage professionnel de moquettes',
+
+          url: `${site}/nettoyage-moquettes`,
+
+          serviceType: 'Nettoyage professionnel de moquettes',
+
+          provider: {
+            '@id': `${site}#organization`
+          },
+
+          brand: {
+            '@id': `${site}#brand`
+          }
+        }
+      },
+
+      {
+        '@type': 'ListItem',
+        position: 3,
+
+        item: {
+          '@type': 'Service',
+          '@id': `${site}/nettoyage-balcons#service`,
+
+          name: 'Nettoyage de balcons',
+
+          url: `${site}/nettoyage-balcons`,
+
+          serviceType: 'Nettoyage professionnel de balcons',
+
+          provider: {
+            '@id': `${site}#organization`
+          },
+
+          brand: {
+            '@id': `${site}#brand`
+          }
+        }
+      },
+
+      {
+        '@type': 'ListItem',
+        position: 4,
+
+        item: {
+          '@type': 'Service',
+          '@id': `${site}/nettoyage-terrasses#service`,
+
+          name: 'Nettoyage de terrasses',
+
+          url: `${site}/nettoyage-terrasses`,
+
+          serviceType: 'Nettoyage professionnel de terrasses',
+
+          provider: {
+            '@id': `${site}#organization`
+          },
+
+          brand: {
+            '@id': `${site}#brand`
+          }
+        }
+      },
+
+      {
+        '@type': 'ListItem',
+        position: 5,
+
+        item: {
+          '@type': 'Service',
+          '@id': `${site}/traitement-nuisibles#service`,
+
+          name: 'Traitement anti-nuisibles',
+
+          url: `${site}/traitement-nuisibles`,
+
+          serviceType: 'Traitement professionnel des nuisibles',
+
+          provider: {
+            '@id': `${site}#organization`
+          },
+
+          brand: {
+            '@id': `${site}#brand`
+          }
+        }
       }
     ]
   }

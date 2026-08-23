@@ -9,6 +9,7 @@ import type { City, CityServiceLocal, ServiceConfig, Department } from '~/types/
 import CrossServiceMoquettesNote from "~/components/Sections/CrossServiceMoquettesNote.astro";
 
 
+
 import { PHONE_E164, PHONE_DISPLAY } from '~/lib/phone';
 
 import ButtonSubmit from './UI/ButtonSubmit.astro';
@@ -52,7 +53,7 @@ import heroTerrasses from '~/assets/images/nettoyage-terrasses-sol-exterieur-ava
 
 
 
-import { buildPricingOffers } from "~/lib/schema/pricing";
+
 
 
 
@@ -183,11 +184,15 @@ const showAvanceImmed = service.key !== "parkings";
 const citySlug = city.slug ?? slugify(city.name);
 const departmentSlug = department.slug ?? slugify(department.name);
 
-// Canonical = toujours l'URL réelle de la page
+const site = (
+  import.meta.env.SITE ?? 'https://klinova.fr'
+).replace(/\/$/, '');
+
 const canonical =
-  Astro.url.pathname || `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
+  `/zones-d-intervention/${departmentSlug}/${citySlug}/${currentServiceSlug}`;
 
-
+const pageUrl =
+  `${site}${canonical}`;
 
 // 🔀 Autres services Klinova pour cette ville (maillage local cross-service)
 const otherServicesForCity = servicesForCity
@@ -491,153 +496,228 @@ const combinedFaq = (cityNote?.faqAdditions ?? []).slice(0, MAX_FAQ_TOTAL);
 
 
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
 
-const baseUrl = import.meta.env.SITE ?? 'https://klinova.fr';
-const pageUrl = `${baseUrl}${canonical}`;
+/**
+ * Une page ville + service ne crée PAS un nouveau Service.
+ *
+ * Elle décrit une page locale consacrée à un Service Klinova existant.
+ *
+ * Exemple :
+ *
+ * /nettoyage-moquettes#service
+ *                     ↑
+ *                     │ mainEntity / about
+ *                     │
+ * /chelles/nettoyage-moquettes#webpage
+ */
+
+const webpageId =
+  `${pageUrl}#webpage`;
+
+const cityHubId =
+  `${site}/zones-d-intervention/${departmentSlug}/${citySlug}#webpage`;
 
 
-const pricingOffers = service.key === "parkings"
-  ? []
-  : buildPricingOffers({
-      pricingTiers: service.pricingTiers,
-      legacyPricing: service.pricing,
-      pageUrl,
-      fallbackOfferName: `${service.name} ${cityAt}`,
-      fallbackOfferDescription: description,
-    });
 
+const parentServiceId =
+  `${site}${serviceUrl}#service`;
+
+
+/* -------------------------------------------------------------------------- */
+/* WebPage locale                                                             */
+/* -------------------------------------------------------------------------- */
 
 const webPageJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `${pageUrl}#webpage-city-service`,
-  url: pageUrl,
-  name: pageTitle,
+
+  '@id':
+    webpageId,
+
+  url:
+    pageUrl,
+
+  name:
+    pageTitle,
+
   description,
-  isPartOf: { '@id': `${baseUrl}#website` },
-  inLanguage: 'fr-FR',
+
+  isPartOf: [
+    {
+      '@id':
+        cityHubId,
+    },
+    {
+      '@id':
+        `${site}#website`,
+    },
+  ],
+
+  mainEntity: {
+    '@id':
+      parentServiceId,
+  },
+
+  about: {
+    '@id':
+      parentServiceId,
+  },
+
+  publisher: {
+    '@id':
+      `${site}#organization`,
+  },
+
+  spatialCoverage: {
+    '@type':
+      'City',
+
+    name:
+      city.name,
+
+    containedInPlace: {
+      '@type':
+        'AdministrativeArea',
+
+      name:
+        departmentName,
+    },
+  },
+
+  inLanguage:
+    'fr-FR',
 };
 
-const serviceId = `${pageUrl}#service`;
+
+/* -------------------------------------------------------------------------- */
+/* BreadcrumbList                                                             */
+/* -------------------------------------------------------------------------- */
 
 const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  '@type':
+    'BreadcrumbList',
+
   itemListElement: [
     {
-      '@type': 'ListItem',
-      position: 1,
-      name: "Zones d'intervention",
-      item: `${baseUrl}/zones-d-intervention`,
+      '@type':
+        'ListItem',
+
+      position:
+        1,
+
+      name:
+        'Accueil',
+
+      item:
+        `${site}/`,
     },
+
     {
-      '@type': 'ListItem',
-      position: 2,
-      name: `${department.name} (${department.code})`,
-      item: `${baseUrl}/zones-d-intervention/${departmentSlug}`,
+      '@type':
+        'ListItem',
+
+      position:
+        2,
+
+      name:
+        "Zones d’intervention",
+
+      item:
+        `${site}/zones-d-intervention`,
     },
+
     {
-      '@type': 'ListItem',
-      position: 3,
-      name: city.name,
-      item: `${baseUrl}/zones-d-intervention/${departmentSlug}/${citySlug}`,
+      '@type':
+        'ListItem',
+
+      position:
+        3,
+
+      name:
+        `${department.name} (${department.code})`,
+
+      item:
+        `${site}/zones-d-intervention/${departmentSlug}`,
     },
+
     {
-      '@type': 'ListItem',
-      position: 4,
-      name: service.name,
-      item: pageUrl,
+      '@type':
+        'ListItem',
+
+      position:
+        4,
+
+      name:
+        city.name,
+
+      item:
+        `${site}/zones-d-intervention/${departmentSlug}/${citySlug}`,
+    },
+
+    {
+      '@type':
+        'ListItem',
+
+      position:
+        5,
+
+      name:
+        service.name,
+
+      item:
+        pageUrl,
     },
   ],
 };
 
 
+/* -------------------------------------------------------------------------- */
+/* FAQPage                                                                    */
+/* -------------------------------------------------------------------------- */
 
-const faqEntities = combinedFaq.map((item) => ({
-  "@type": "Question",
-  name: item.question,
-  acceptedAnswer: { "@type": "Answer", text: item.answer },
-}));
+const faqEntities =
+  combinedFaq.map((item) => ({
+    '@type':
+      'Question',
 
+    name:
+      item.question,
 
+    acceptedAnswer: {
+      '@type':
+        'Answer',
 
-
-// ============================================================
-// Construction Service JSON-LD (catalogue conditionnel)
-// ============================================================
-
-const serviceJsonLd: Record<string, any> = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": serviceId,
-  serviceType: service.name,
-  name: `${service.name} ${cityAt}`,
-  description,
-
-  provider: {
-    "@id": `${baseUrl}#localbusiness`,
-  },
-
-  areaServed: {
-    "@type": "City",
-    name: city.name,
-    postalCode: city.postalCodes?.[0],
-    addressCountry: "FR",
-    ...(city.wikipediaUrl && { sameAs: city.wikipediaUrl }),
-  },
-
-  ...(pricingOffers.length > 0 && {
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Tarifs ${service.name} ${cityAt}`,
-      itemListElement: pricingOffers,
+     text:
+  item.answer
+    .replace(/<[^>]*>/g, '')
+    .trim(),
     },
-  }),
-};
+  }));
 
-
-
-
-
-
-
-// HowTo basé sur le process (optionnel)
-const howToJsonLd =
-  serviceProcess && serviceProcess.length > 0
+const faqJsonLd =
+  faqEntities.length > 0
     ? {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: `${service.name} ${cityAt} – protocole d'intervention`,
-        description,
-        step: serviceProcess.map((step, index) => ({
-          '@type': 'HowToStep',
-          position: index + 1,
-          name: step.step,
-          itemListElement: [
-            {
-              '@type': 'HowToDirection',
-              text: step.description,
-            },
-          ],
-        })),
+        '@type':
+          'FAQPage',
+
+        mainEntity:
+          faqEntities,
       }
     : null;
 
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD final                                                              */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd: any[] = [
   webPageJsonLd,
-  serviceJsonLd,
   breadcrumbJsonLd,
-  ...(faqEntities.length
-    ? [
-        {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqEntities,
-        },
-      ]
+  ...(faqJsonLd
+    ? [faqJsonLd]
     : []),
-  ...(howToJsonLd ? [howToJsonLd] : []),
 ];
 
 
@@ -653,29 +733,36 @@ const fromPrice = firstFromTier && "from" in firstFromTier ? firstFromTier.from 
 const caseStudy = cityNote?.caseStudy;
 const photos = cityNote?.photos ?? [];
 
+const popupContext = {
+  title: 'Demander à être rappelé',
+
+  subtitle:
+    service.key === 'parkings'
+      ? 'Un conseiller de Klinova étudie votre besoin et vous recontacte pour discuter de votre projet.'
+      : 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
+
+  serviceKey: service.key,
+
+  serviceLabel,
+
+  trackingSource:
+    `citypage-${service.key}-${citySlug}`,
+
+  creditImpotEnabled:
+    service.key !== 'parkings',
+};
+
 ---
 
 <LayoutWithCTA
-  popupContext={{
-    title: 'Demander à être rappelé',
-    subtitle: service.key === 'parkings'
-      ? 'Un conseiller de Klinova étudie votre besoin et vous recontacte pour discuter de votre projet.'
-      : 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
-    serviceKey: service.key,
-    serviceLabel,
-    trackingSource: `citypage-${service.key}-${citySlug}`,
-     creditImpotEnabled: true
-  }}
-
+  popupContext={popupContext}
   stickyEnabled={true}
   stickyShowAfter="scroll"
   hideSelector="[data-hide-floating-cta]"
   activateSelector="[data-activate-floating-cta]"
   activateDelayMs={800}
   stickyMobileOnly={true}
-
   pathname={Astro.url.pathname}
-  
   title={pageTitle}
   description={description}
   canonical={canonical}

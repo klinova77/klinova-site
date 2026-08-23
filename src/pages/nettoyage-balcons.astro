@@ -61,92 +61,201 @@ const faq = [
 
 // Schema FAQ
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
+  '@type': 'FAQPage',
+
   mainEntity: faq.map((item) => ({
-    "@type": "Question",
+    '@type': 'Question',
     name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content },
+
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.content,
+    },
   })),
 };
 
 // Fil d'Ariane
 const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-    { "@type": "ListItem", "position": 2, "name": "Nettoyage de balcons", "item": `${site}${pageUrl}` }
-  ]
+  '@type': 'BreadcrumbList',
+
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Nettoyage de balcons',
+      item: `${site}${pageUrl}`,
+    },
+  ],
 };
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                     */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
+
 const jsonLd = [
-
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": `${site}${pageUrl}#webpage`,
-  "url": `${site}${pageUrl}`,
-  "name": "Nettoyage de balcons et terrasses — Klinova",
-  "isPartOf": { "@id": `${site}#website` },
-  "inLanguage": "fr-FR",
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": `${site}/images/og/og-klinova-home.png`,
-    "width": 1200,
-    "height": 630
-  }
-},
-
-  // Service spécifique
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${site}#service-balcons`,
-    "inLanguage": "fr-FR",
-    "serviceType": "Nettoyage de balcons et terrasses",
-    "name": "Nettoyage de balcons et terrasses à Paris et en Île-de-France",
-    "alternateName": "Nettoyage haute pression balcons",
-    "url": `${site}${pageUrl}`,
-    "provider": { "@id": `${site}#localbusiness` },
-    "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-    "audience": { "@type": "Audience", "audienceType": ["Copropriétés", "Résidentiel", "Syndics"] },
-    "category": "Nettoyage de surfaces extérieures",
-    "serviceOutput": "Balcon propre, désinfecté et restauré dans son état d'origine",
-    "description": "Service de nettoyage complet de balcons, rambardes et sols extérieurs. Nettoyage haute pression, dégraissage, désinfection. Intervention adaptée aux copropriétés et immeubles parisiens.",
-  "offers": {
-  "@type": "Offer",
-  "price": 190,                       // ✅ nombre, pas une string
-  "priceCurrency": "EUR",
-  "priceSpecification": {
-    "@type": "UnitPriceSpecification",
-    "price": 190,
-    "priceCurrency": "EUR",
-    "unitText": "Forfait intervention balcon"
-  },
-  "availability": "https://schema.org/InStock",
-  "eligibleRegion": { 
-    "@type": "AdministrativeArea", 
-    "name": "Île-de-France" 
-  },
-  "description": "Tarif à partir de 190 € TTC pour un balcon standard, ajusté selon la surface, l’encrassement et les contraintes d’accès."
-},
+    '@type': 'WebPage',
 
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Services de nettoyage balcons",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage haute pression", "description": "Décapage des salissures incrustées" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dégraissage des sols", "description": "Élimination des taches grasses et résidus" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage des vitres", "description": "Vitres et baies vitrées parfaitement propres" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pose de protections anti-pigeons", "description": "Pics, filets et gels répulsifs garantis 2 ans" } }
-      ]
-    }
+    '@id': `${site}${pageUrl}#webpage`,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage professionnel de balcons — Klinova',
+
+    description:
+      "Nettoyage professionnel de balcons en Île-de-France : lavage approfondi des sols et surfaces extérieures, dégraissage, traitement adapté aux salissures et finitions.",
+
+    isPartOf: {
+      '@id': `${site}#website`,
+    },
+
+    mainEntity: {
+      '@id': serviceId,
+    },
+
+    about: {
+      '@id': serviceId,
+    },
+
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630,
+    },
+
+    inLanguage: 'fr-FR',
+  },
+
+  {
+    '@type': 'Service',
+
+    '@id': serviceId,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage professionnel de balcons',
+
+    serviceType:
+      'Nettoyage et remise en état de balcons',
+
+    description:
+      "Nettoyage professionnel de balcons : sols, garde-corps, surfaces extérieures et éléments prévus au devis. Les méthodes et produits sont adaptés au support, au niveau d'encrassement et aux contraintes d'accès.",
+
+    provider: {
+      '@id': `${site}#organization`,
+    },
+
+    brand: {
+      '@id': `${site}#brand`,
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France',
+    },
+
+    audience: {
+      '@type': 'Audience',
+      audienceType: [
+        'Particuliers',
+        'Copropriétés',
+        'Syndics',
+      ],
+    },
+
+    category:
+      'Nettoyage de balcons et surfaces extérieures',
+
+    serviceOutput:
+      'Balcon nettoyé et remis en propreté selon le périmètre défini au devis',
+
+    offers: {
+      '@type': 'Offer',
+
+      description:
+        "Tarif à partir de 290 € TTC, ajusté selon la surface, le niveau d'encrassement, les éléments à traiter et les contraintes d'accès.",
+
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: 290,
+        priceCurrency: 'EUR',
+        valueAddedTaxIncluded: true,
+      },
+
+      eligibleRegion: {
+        '@type': 'AdministrativeArea',
+        name: 'Île-de-France',
+      },
+    },
+
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+
+      name:
+        'Prestations complémentaires de nettoyage de balcons',
+
+      itemListElement: [
+        {
+          '@type': 'Offer',
+
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Nettoyage approfondi des sols de balcon',
+            description:
+              'Lavage et traitement adaptés au support et au niveau de salissure.',
+          },
+        },
+
+        {
+          '@type': 'Offer',
+
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Dégraissage et traitement des salissures',
+            description:
+              'Traitement ciblé des traces grasses et salissures incrustées lorsque le support le permet.',
+          },
+        },
+
+        {
+          '@type': 'Offer',
+
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Nettoyage des vitres et baies vitrées',
+            description:
+              'Nettoyage des vitrages accessibles lorsqu’il est prévu dans la prestation.',
+          },
+        },
+
+        {
+          '@type': 'Offer',
+
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Protection anti-pigeons',
+            description:
+              'Installation de dispositifs anti-pigeons adaptée à la configuration du balcon, lorsqu’elle est proposée au devis.',
+          },
+        },
+      ],
+    },
   },
 
   faqSchema,
-  breadcrumb
+  breadcrumb,
 ];
 ---
 
@@ -158,14 +267,13 @@ const jsonLd = [
   activateSelector="[data-activate-floating-cta]"
   activateDelayMs={800}
   stickyMobileOnly={true}
-
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Klinova – Entreprise de nettoyage de balcons et extérieurs en Île-de-France"
-  description="Nettoyage professionnel de balcons et terrasses : haute pression, dégraissage, désinfection. Intervention copropriétés. Devis gratuit en Île-de-France."
+  title="Klinova – Entreprise de nettoyage de balcons en Île-de-France"
+  description="Nettoyage professionnel de balcons : sols, garde-corps, dégraissage et remise en propreté. Devis gratuit et intervention en Île-de-France."
   canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"
-  ogImageAlt="Klinova — Nettoyage professionnel de balcons et terrasses à Paris et en Île-de-France"
+  ogImageAlt="Klinova — Nettoyage professionnel de balcons à Paris et en Île-de-France"
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >

@@ -79,18 +79,20 @@ const faq: ParkingFaqItem[] = [
     title: "Quelle est la différence entre autolaveuse et monobrosse ?",
     content: "L'autolaveuse convient aux grandes surfaces (>200m²) : elle nettoie, aspire et sèche en un passage. La monobrosse est utilisée pour les petites zones ou les traces tenaces (gomme, freinage) avec un travail plus précis mais manuel."
   },
-  {
-    title: "Combien de temps faut-il pour nettoyer un parking ?",
-    content: "Comptez 3 à 6 heures pour 1000m² selon l'encrassement et les contraintes d'accès. Le séchage avec nos turbines XPOWER réduit l'attente à 2-4h avant réouverture complète."
-  },
+{
+  title: "Combien de temps faut-il pour nettoyer un parking ?",
+  content:
+    "La durée dépend principalement de la surface, du niveau d'encrassement, du nombre de niveaux, des contraintes d'accès et du protocole retenu. Le devis permet d'organiser l'intervention et, lorsque cela est nécessaire, la remise en service progressive des différentes zones."
+},
   {
     title: "Utilisez-vous des produits chimiques agressifs ?",
     content: "Nos dégraissants sont alcalins professionnels (pH contrôlé) spécialement conçus pour les sols béton. Ils éliminent les hydrocarbures sans endommager les surfaces et sont évacués selon les normes environnementales."
   },
-  {
-    title: "Comment gérez-vous l'évacuation des eaux usées ?",
-    content: "Nous aspirons immédiatement les eaux de lavage avec nos autolaveuses. Aucun écoulement direct dans les caniveaux : tout est récupéré et évacué vers les réseaux adaptés ou cuves de rétention."
-  },
+{
+  title: "Comment gérez-vous les eaux de lavage ?",
+  content:
+    "La gestion des eaux de lavage est définie selon la configuration du parking, les équipements disponibles sur le site et le protocole d'intervention retenu. Lorsque cela est nécessaire, les eaux et résidus sont récupérés avec du matériel adapté."
+},
   {
     title: "Quel est le coût d'un nettoyage de parking ?",
     content: `Le nettoyage des sols d'un parking collectif de taille courante est généralement facturé de ${standardRangeText}. À titre indicatif, un parking d'environ ${referenceSurfaceText}, ${commercialPricing.referenceCase.soilCondition} et nettoyé ${referenceFrequencyText}, représente souvent un budget proche de ${referenceAmountText} ${commercialPricing.referenceCase.locationContext}. ${largeParkingWithoutFloorText} Les remises en état, dégraissages renforcés, nettoyages haute pression et autres interventions complexes font l'objet d'un devis adapté. Pour les particuliers, le minimum d'intervention pour une place, un box ou une petite surface est de ${individualMinimumText}.`,
@@ -104,14 +106,12 @@ const faq: ParkingFaqItem[] = [
     title: "Comment préparez-vous le devis ?",
     content: "Nous réalisons un état des lieux et une estimation, puis nous préparons un devis détaillé avec un plan d'intervention adapté à votre parking."
   },
-  {
-    title: "Comment sécurisez-vous le chantier ?",
-    content: "Balisage complet, panneaux de signalisation, ruban barrière et EPI pour toute l'équipe. Nous coupons les alimentations électriques si nécessaire et maintenons une ventilation continue pendant l'intervention."
-  },
-  {
-    title: "Travaillez-vous avec les assurances après sinistre ?",
-    content: "Oui, nous coordonnons avec les gestionnaires, experts et assureurs. Chaque intervention est documentée (photos, produits utilisés, durée) pour faciliter les démarches administratives."
-  },
+{
+  title: "Comment sécurisez-vous le chantier ?",
+  content:
+    "L'intervention est organisée en fonction de la circulation et des contraintes du parking. Les zones de travail peuvent être balisées et les équipements de protection adaptés au chantier sont utilisés afin de limiter les risques pendant les opérations."
+},
+
   {
     title: "Intervenez-vous en urgence ?",
     content: "Pour les post-sinistres (incendie, dégât des eaux), nous priorisons les demandes selon nos disponibilités. Les interventions de maintenance classique sont planifiées selon vos contraintes horaires."
@@ -126,128 +126,212 @@ const faq: ParkingFaqItem[] = [
   }
 ];
 
+
 // Schema FAQ
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.filter((item) => item.includeInSchema !== false).map((item) => ({
-    "@type": "Question",
-    name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content }
-  }))
+  '@type': 'FAQPage',
+
+  mainEntity: faq
+    .filter((item) => item.includeInSchema !== false)
+    .map((item) => ({
+      '@type': 'Question',
+      name: item.title,
+
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.content,
+      },
+    })),
 };
 
-// Fil d'Ariane
+/* -------------------------------------------------------------------------- */
+/* Fil d'Ariane                                                               */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-    { "@type": "ListItem", "position": 2, "name": "Nettoyage de parkings", "item": `${site}${pageUrl}` }
-  ]
+  '@type': 'BreadcrumbList',
+
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Nettoyage de parkings',
+      item: `${site}${pageUrl}`,
+    },
+  ],
 };
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* IDs                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
+const webpageId = `${site}${pageUrl}#webpage`;
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
-  // WebPage spécifique
   {
-    '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${site}${pageUrl}#webpage`,
+
+    '@id': webpageId,
+
     url: `${site}${pageUrl}`,
-    name: 'Nettoyage de parkings souterrains — Klinova',
-    isPartOf: { '@id': `${site}#website` },
-    inLanguage: 'fr-FR',
+
+    name:
+      'Nettoyage de parkings souterrains — Klinova',
+
+    description:
+      "Nettoyage professionnel de parkings en Île-de-France : balayage, lavage mécanisé, dégraissage, traitement des zones de circulation et remise en propreté selon l’état du parking.",
+
+    isPartOf: {
+      '@id': `${site}#website`,
+    },
+
+    mainEntity: {
+      '@id': serviceId,
+    },
+
+    about: {
+      '@id': serviceId,
+    },
+
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: `${site}/images/og/og-klinova-home.png`,
       width: 1200,
       height: 630,
     },
+
+    inLanguage: 'fr-FR',
   },
 
-  // Service spécifique
   {
-    '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${site}#service-parkings`,
-    inLanguage: 'fr-FR',
-    serviceType: 'Nettoyage de parkings souterrains',
-    name: 'Nettoyage de parkings souterrains à Paris et en Île-de-France',
-    alternateName: 'Nettoyage autolaveuse parkings',
-    description:
-      "Décapage et dégraissage des sols, autolaveuse industrielle, gestion des rampes et zones piétonnes, protocole sécurisé et traçable.",
-    url: `${site}${pageUrl}`,
-    provider: { '@id': `${site}#localbusiness` },
 
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-      { '@type': 'City', name: 'Paris' },
-      { '@type': 'City', name: 'Chelles' },
-    ],
+    '@id': serviceId,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage professionnel de parkings',
+
+    alternateName:
+      'Nettoyage et entretien de parkings souterrains',
+
+    serviceType:
+      'Nettoyage de parkings souterrains et couverts',
+
+    description:
+      "Nettoyage professionnel de parkings : préparation des surfaces, balayage, lavage mécanisé, dégraissage ciblé et traitement des rampes, voies de circulation et zones piétonnes selon le revêtement et le niveau d’encrassement.",
+
+    provider: {
+      '@id': `${site}#organization`,
+    },
+
+    brand: {
+      '@id': `${site}#brand`,
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France',
+    },
 
     audience: {
       '@type': 'Audience',
-      audienceType: ['Syndics', 'Entreprises', 'Commerces'],
+      audienceType: [
+        'Copropriétés',
+        'Syndics',
+        'Entreprises',
+        'Gestionnaires immobiliers',
+        'Professionnels',
+      ],
     },
 
-    category: 'Nettoyage professionnel',
+    category:
+      'Nettoyage professionnel de parkings',
+
     serviceOutput:
-      "Parking propre, dégraissé et sec, prêt à l'usage avec surfaces antidérapantes restaurées",
+      "Parking nettoyé et remis en propreté selon le périmètre et le niveau de traitement définis au devis",
 
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Prestations parking',
+
+      name:
+        'Prestations de nettoyage de parkings',
+
       itemListElement: [
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Pré-balayage et déblaiement',
-            description: 'Préparation de la surface avant nettoyage',
+            name: 'Balayage et préparation du parking',
+            description:
+              'Évacuation des déchets et préparation des surfaces avant lavage.',
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Dégraissant alcalin sur hydrocarbures',
-            description: "Traitement spécialisé des taches d'huile",
+            name: 'Nettoyage mécanisé des sols',
+            description:
+              'Lavage des surfaces compatibles à l’aide de matériels professionnels adaptés.',
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Autolaveuse eau chaude',
-            description: 'Nettoyage et aspiration en un passage',
+            name: 'Dégraissage ciblé',
+            description:
+              "Traitement adapté des traces grasses et salissures liées à l’usage du parking.",
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Finition rampes et zones piétonnes',
-            description: 'Nettoyage précis des zones difficiles',
+            name: 'Nettoyage des rampes et zones piétonnes',
+            description:
+              'Traitement des zones nécessitant un travail complémentaire ou plus précis.',
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Séchage assisté air movers',
-            description: 'Remise en service rapide',
+            name: 'Entretien périodique de parkings',
+            description:
+              'Programme de nettoyage récurrent adapté à la fréquentation et aux contraintes du site.',
           },
         },
       ],
     },
   },
 
-  // ✅ On réutilise les objets déjà définis au-dessus
   faqSchema,
   breadcrumb,
 ];
-
 
 ---
 

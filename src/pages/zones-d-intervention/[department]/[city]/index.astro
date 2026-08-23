@@ -1,308 +1,610 @@
 ---
-// D:\Klinova-site\src\pages\zones-d-intervention\[department]\[city]\index.astro
 import type { ServiceConfig } from "~/types/geo";
 
 import LayoutWithCTA from "~/layouts/LayoutWithCTA.astro";
+
 import cities from "~/data/cities";
 import services from "~/data/services";
+
 import { PHONE_DISPLAY, PHONE_E164, toTelHref } from "~/lib/phone";
 import { getExperienceYears } from "~/lib/company";
+
 import Button from "~/components/UI/Button.astro";
+
 import { aVille, deVille } from "~/lib/geo-klinova";
 
-const slugify = (v: string) =>
-  v
+
+/* -------------------------------------------------------------------------- */
+/* Helpers                                                                    */
+/* -------------------------------------------------------------------------- */
+
+const slugify = (value: string) =>
+  value
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "");
 
+
+/* -------------------------------------------------------------------------- */
+/* Génération statique                                                        */
+/* -------------------------------------------------------------------------- */
+
 export const prerender = true;
 
 export async function getStaticPaths() {
   return cities
-    .filter((city) => city?.name && city?.department)
+    .filter(
+      (city) =>
+        city?.name &&
+        city?.department
+    )
     .map((city) => {
-      const deptSlug = city.department.slug ?? slugify(city.department.name);
-      const citySlug = city.slug ?? slugify(city.name);
+      const departmentSlug =
+        city.department.slug ??
+        slugify(city.department.name);
+
+      const citySlug =
+        city.slug ??
+        slugify(city.name);
 
       return {
-        params: { department: deptSlug, city: citySlug },
-        props: { department: city.department, city },
+        params: {
+          department: departmentSlug,
+          city: citySlug,
+        },
+
+        props: {
+          department: city.department,
+          city,
+        },
       };
     });
 }
 
-// ==========================
-// Variables globales
-// ==========================
-const experienceYears = getExperienceYears();
-const baseUrl = import.meta.env.SITE ?? "https://klinova.fr";
 
-// ✅ Source de vérité : props (issus de getStaticPaths)
-const { department: currentDepartment, city: currentCity } = Astro.props;
+/* -------------------------------------------------------------------------- */
+/* Configuration générale                                                     */
+/* -------------------------------------------------------------------------- */
 
-// Slugs utiles pour URLs
-const departmentSlug = currentDepartment.slug ?? slugify(currentDepartment.name);
-const citySlug = currentCity.slug ?? slugify(currentCity.name);
+const site = (
+  import.meta.env.SITE ??
+  "https://klinova.fr"
+).replace(/\/$/, "");
 
-// ==========================
-// Services affichés pour la ville
-// ==========================
-const cityServiceKeys = new Set((currentCity.services ?? []).map((s) => s.serviceKey));
+const experienceYears =
+  getExperienceYears();
+
+
+/* -------------------------------------------------------------------------- */
+/* Ville et département courants                                              */
+/* -------------------------------------------------------------------------- */
+
+const {
+  department: currentDepartment,
+  city: currentCity,
+} = Astro.props;
+
+const departmentSlug =
+  currentDepartment.slug ??
+  slugify(currentDepartment.name);
+
+const citySlug =
+  currentCity.slug ??
+  slugify(currentCity.name);
+
+const cityName =
+  currentCity.name;
+
+const cityAt =
+  aVille(cityName);
+
+const cityFrom =
+  deVille(cityName);
+
+const departmentName =
+  currentCity.department?.name ??
+  "Île-de-France";
+
+
+/* -------------------------------------------------------------------------- */
+/* URL                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const canonical =
+  `/zones-d-intervention/${departmentSlug}/${citySlug}`;
+
+const pageUrl =
+  `${site}${canonical}`;
+
+
+/* -------------------------------------------------------------------------- */
+/* Services affichés pour cette ville                                         */
+/* -------------------------------------------------------------------------- */
+
+const cityServiceKeys =
+  new Set(
+    (currentCity.services ?? [])
+      .map((service) => service.serviceKey)
+  );
 
 const SERVICE_ORDER = [
   "moquettes",
   "nettoyage-appartement-maison",
-  
   "balcons",
   "balcons-fientes",
   "terrasses",
-  
   "canapes-tapis",
   "parkings",
 ];
 
-const servicesForCity = (Array.isArray(services) ? services : [])
-  .filter((s): s is ServiceConfig => !!s && typeof (s as any).key === "string")
-  .filter((s) => typeof s.urls?.parent === "string" && s.urls.parent.length > 0)
-  .filter((s) => cityServiceKeys.has(s.key))
-  .sort((a, b) => {
-    const ia = SERVICE_ORDER.indexOf(a.key);
-    const ib = SERVICE_ORDER.indexOf(b.key);
-    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
-  });
+const servicesForCity =
+  (Array.isArray(services) ? services : [])
+    .filter(
+      (service): service is ServiceConfig =>
+        !!service &&
+        typeof (service as any).key === "string"
+    )
+    .filter(
+      (service) =>
+        typeof service.urls?.parent === "string" &&
+        service.urls.parent.length > 0
+    )
+    .filter(
+      (service) =>
+        cityServiceKeys.has(service.key)
+    )
+    .sort((a, b) => {
+      const indexA =
+        SERVICE_ORDER.indexOf(a.key);
+
+      const indexB =
+        SERVICE_ORDER.indexOf(b.key);
+
+      return (
+        (indexA === -1 ? 999 : indexA) -
+        (indexB === -1 ? 999 : indexB)
+      );
+    });
+
+const serviceSlug = (
+  service: ServiceConfig
+) =>
+  service.urls?.parent
+    ?.replace(/^\/+/, "") ??
+  "";
 
 
+/* -------------------------------------------------------------------------- */
+/* Villes voisines                                                            */
+/* -------------------------------------------------------------------------- */
 
-const serviceSlug = (s: ServiceConfig) => s.urls?.parent?.replace(/^\//, "") ?? "";
-
-
-// ==========================
-// Helpers ville
-// ==========================
-const cityName = currentCity.name;
-const cityAt = aVille(cityName);
-const cityFrom = deVille(cityName);
-
-
-// ==========================
-// Villes voisines (nearbyCities)
-// ==========================
 const nearbyCitiesResolved =
-  currentCity.nearbyCities && currentCity.nearbyCities.length > 0
+  currentCity.nearbyCities &&
+  currentCity.nearbyCities.length > 0
     ? currentCity.nearbyCities
-        .map((slug) => cities.find((c) => c.slug === slug))
-        .filter((c): c is (typeof cities)[number] => Boolean(c))
+        .map((slug) =>
+          cities.find(
+            (city) =>
+              city.slug === slug
+          )
+        )
+        .filter(
+          (city): city is (typeof cities)[number] =>
+            Boolean(city)
+        )
     : [];
 
 
-// ==========================
-// SEO : helpers département
-// ==========================
-const departmentName = currentCity.department?.name ?? 'Île-de-France';
+/* -------------------------------------------------------------------------- */
+/* Helpers département                                                        */
+/* -------------------------------------------------------------------------- */
 
 const departmentAreaLabel = (() => {
-  const slug = currentCity.department?.slug ?? '';
+  const slug =
+    currentCity.department?.slug ?? "";
 
   switch (slug) {
-    case 'val-de-marne':
-      return 'du Val-de-Marne';
-    case 'essonne':
-      return 'de l\'Essonne';
-    case 'seine-et-marne':
-      return 'de la Seine-et-Marne';
-    case 'seine-saint-denis':
-      return 'de la Seine-Saint-Denis';
-    case 'hauts-de-seine':
-      return 'des Hauts-de-Seine';
-    case 'paris':
-      return 'de Paris';
-    case 'yvelines':
-      return 'des Yvelines';
+    case "val-de-marne":
+      return "du Val-de-Marne";
+
+    case "essonne":
+      return "de l'Essonne";
+
+    case "seine-et-marne":
+      return "de la Seine-et-Marne";
+
+    case "seine-saint-denis":
+      return "de la Seine-Saint-Denis";
+
+    case "hauts-de-seine":
+      return "des Hauts-de-Seine";
+
+    case "paris":
+      return "de Paris";
+
+    case "yvelines":
+      return "des Yvelines";
+
     default:
       return `du département ${departmentName}`;
   }
 })();
 
 const departmentCoproLabel = (() => {
-  const slug = currentCity.department?.slug ?? '';
+  const slug =
+    currentCity.department?.slug ?? "";
 
   switch (slug) {
-    case 'paris':
-      return 'de Paris';
-    case 'val-de-marne':
-      return 'du Val-de-Marne';
-    case 'essonne':
+    case "paris":
+      return "de Paris";
+
+    case "val-de-marne":
+      return "du Val-de-Marne";
+
+    case "essonne":
       return "de l'Essonne";
-    case 'seine-et-marne':
-      return 'de Seine-et-Marne';
-    case 'seine-saint-denis':
-      return 'de Seine-Saint-Denis';
-    case 'hauts-de-seine':
-      return 'des Hauts-de-Seine';
-    case 'yvelines':
-      return 'des Yvelines';
+
+    case "seine-et-marne":
+      return "de Seine-et-Marne";
+
+    case "seine-saint-denis":
+      return "de Seine-Saint-Denis";
+
+    case "hauts-de-seine":
+      return "des Hauts-de-Seine";
+
+    case "yvelines":
+      return "des Yvelines";
+
     default:
       return `du département ${departmentName}`;
   }
 })();
 
 
-// Stats par département (à ajuster au besoin)
-const departmentStats: Record<string, { clientsDepartment: number }> = {
-  'paris': { clientsDepartment: 120 },
-  'val-de-marne': { clientsDepartment: 60 },
-  'seine-et-marne': { clientsDepartment: 80 },
-  'seine-saint-denis': { clientsDepartment: 70 },
-  'hauts-de-seine': { clientsDepartment: 90 },
-  'yvelines': { clientsDepartment: 50 },
-  // autres départements si besoin
+/* -------------------------------------------------------------------------- */
+/* Stats                                                                      */
+/* -------------------------------------------------------------------------- */
+
+const departmentStats: Record<
+  string,
+  {
+    clientsDepartment: number;
+  }
+> = {
+  paris: {
+    clientsDepartment: 120,
+  },
+
+  "val-de-marne": {
+    clientsDepartment: 60,
+  },
+
+  "seine-et-marne": {
+    clientsDepartment: 80,
+  },
+
+  "seine-saint-denis": {
+    clientsDepartment: 70,
+  },
+
+  "hauts-de-seine": {
+    clientsDepartment: 90,
+  },
+
+  yvelines: {
+    clientsDepartment: 50,
+  },
 };
 
-// Satisfaction globale affichée partout pareil
-const globalSatisfaction = '4,9/5';
+const globalSatisfaction =
+  "4,9/5";
 
-// Valeur finale utilisée dans la section
 const clientsDepartment =
-  departmentStats[currentCity.department?.slug ?? '']?.clientsDepartment ?? 40;
+  departmentStats[
+    currentCity.department?.slug ?? ""
+  ]?.clientsDepartment ?? 40;
 
 
-// ==========================
-// Title / description / canonical
-// ==========================
-const title = `Entreprise de nettoyage ${cityAt} – Klinova`;
+/* -------------------------------------------------------------------------- */
+/* SEO                                                                        */
+/* -------------------------------------------------------------------------- */
 
-const description = `Société de nettoyage ${cityAt} : copropriétés, parkings souterrains, moquettes et balcons. Interventions professionnelles en ${departmentName}. Devis gratuit.`;
+const postalCode =
+  currentCity.postalCodes?.[0] ?? "";
 
-const canonical = `/zones-d-intervention/${departmentSlug}/${citySlug}`;
+const title =
+  `Entreprise de nettoyage ${cityAt} – Klinova`;
+
+const description =
+  `Klinova intervient ${cityAt} pour des prestations de nettoyage professionnel auprès des particuliers, copropriétés et entreprises. Devis gratuit et intervention en Île-de-France.`;
 
 
-// ==========================
-// FAQ hub ville (données)
-// ==========================
+/* -------------------------------------------------------------------------- */
+/* FAQ ville                                                                  */
+/* -------------------------------------------------------------------------- */
+
 const fallbackCityFaq = [
   {
-    question: "Comment se déroule le premier rendez-vous sur site ?",
+    question:
+      "Comment se déroule le premier rendez-vous sur site ?",
+
     answer:
-      `Pour une copropriété à <strong>${currentCity.name}</strong>, ...`
+      `Pour une intervention à <strong>${currentCity.name}</strong>, nous échangeons d’abord sur le besoin, les surfaces à traiter et les contraintes d’accès. Selon la prestation, des photos peuvent suffire pour préparer le devis ou une visite technique peut être proposée.`,
   },
+
   {
-    question: `Sous quels délais pouvez-vous intervenir ${cityAt} ?`,
+    question:
+      `Sous quels délais pouvez-vous intervenir ${cityAt} ?`,
+
     answer:
-      "Pour un contrat d’entretien régulier, la mise en place se fait généralement ... <strong>24 à 48h</strong>."
+      "Les délais dépendent du type de prestation, de la surface et de nos disponibilités. Lors de la demande de devis, nous vous indiquons les créneaux possibles et organisons l’intervention selon vos contraintes.",
   },
+
   {
-    question: "Comment gérez-vous les accès (badges, codes, clés) ?",
+    question:
+      "Comment gérez-vous les accès aux immeubles et copropriétés ?",
+
     answer:
-      "C'est un point que nous maîtrisons parfaitement. ... avant la première intervention à <strong>${currentCity.name}</strong> ..."
+      `Les modalités d’accès à <strong>${currentCity.name}</strong> sont définies avant l’intervention : badges, codes, clés, accès parking ou présence d’un gardien selon la configuration du site.`,
   },
+
   {
-    question: "Les devis sont-ils payants ?",
+    question:
+      "Les devis sont-ils payants ?",
+
     answer:
-      `Non. Tous nos déplacements pour chiffrage à <strong>${currentCity.name}</strong> et dans le département ${departmentName} sont <strong>100% gratuits</strong> et sans engagement.`
+      `Non. Les demandes de devis pour nos prestations à <strong>${currentCity.name}</strong> sont gratuites et sans engagement.`,
   },
 ];
 
-
 const cityFaq =
-  currentCity.faq && currentCity.faq.length > 0
+  currentCity.faq &&
+  currentCity.faq.length > 0
     ? currentCity.faq
     : fallbackCityFaq;
 
-// ==========================
-// JSON-LD : WebPage + Breadcrumb + Service + FAQ
-// ==========================
-const pageUrl = `${baseUrl}${canonical}`;
 
-const webPageLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': `${pageUrl}#webpage-city-hub`,
-  url: pageUrl,
-  name: title,
-  description,
-  isPartOf: { '@id': `${baseUrl}#website` },
-  inLanguage: 'fr-FR',
+/* -------------------------------------------------------------------------- */
+/* IDs JSON-LD                                                                */
+/* -------------------------------------------------------------------------- */
+
+const webpageId =
+  `${pageUrl}#webpage`;
+
+const servicesListId =
+  `${pageUrl}#services`;
+
+
+/* -------------------------------------------------------------------------- */
+/* Liste des services disponibles                                             */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * On ne crée pas de nouveaux Service spécifiques à la ville.
+ *
+ * On référence les véritables Service définis sur les pages
+ * principales de Klinova :
+ *
+ * /nettoyage-moquettes#service
+ * /nettoyage-balcons#service
+ * etc.
+ */
+const servicesListLd = {
+  "@type": "ItemList",
+
+  "@id":
+    servicesListId,
+
+  name:
+    `Services de nettoyage Klinova ${cityAt}`,
+
+  numberOfItems:
+    servicesForCity.length,
+
+  itemListElement:
+    servicesForCity.map(
+      (
+        service: ServiceConfig,
+        index: number
+      ) => ({
+        "@type": "ListItem",
+
+        position:
+          index + 1,
+
+        item: {
+          "@id":
+            `${site}${service.urls.parent}#service`,
+        },
+      })
+    ),
 };
 
 
+/* -------------------------------------------------------------------------- */
+/* CollectionPage ville                                                       */
+/* -------------------------------------------------------------------------- */
+
+const webPageLd = {
+  "@type":
+    "CollectionPage",
+
+  "@id":
+    webpageId,
+
+  url:
+    pageUrl,
+
+  name:
+    title,
+
+  description,
+
+  isPartOf: {
+    "@id":
+      `${site}#website`,
+  },
+
+  about: {
+    "@id":
+      `${site}#organization`,
+  },
+
+  publisher: {
+    "@id":
+      `${site}#organization`,
+  },
+
+  mainEntity: {
+    "@id":
+      servicesListId,
+  },
+
+  spatialCoverage: {
+    "@type":
+      "City",
+
+    name:
+      currentCity.name,
+
+    containedInPlace: {
+      "@type":
+        "AdministrativeArea",
+
+      name:
+        departmentName,
+    },
+  },
+
+  inLanguage:
+    "fr-FR",
+};
+
+
+/* -------------------------------------------------------------------------- */
+/* BreadcrumbList                                                             */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumbLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  "@type":
+    "BreadcrumbList",
+
   itemListElement: [
     {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Zones d’intervention',
-      item: `${baseUrl}/zones-d-intervention`,
+      "@type":
+        "ListItem",
+
+      position:
+        1,
+
+      name:
+        "Accueil",
+
+      item:
+        `${site}/`,
     },
+
     {
-      '@type': 'ListItem',
-      position: 2,
-      name: departmentName,
-      item: `${baseUrl}/zones-d-intervention/${departmentSlug}`,
+      "@type":
+        "ListItem",
+
+      position:
+        2,
+
+      name:
+        "Zones d’intervention",
+
+      item:
+        `${site}/zones-d-intervention`,
     },
+
     {
-      '@type': 'ListItem',
-      position: 3,
-      name: currentCity.name,
-      item: `${baseUrl}${canonical}`,
+      "@type":
+        "ListItem",
+
+      position:
+        3,
+
+      name:
+        departmentName,
+
+      item:
+        `${site}/zones-d-intervention/${departmentSlug}`,
+    },
+
+    {
+      "@type":
+        "ListItem",
+
+      position:
+        4,
+
+      name:
+        currentCity.name,
+
+      item:
+        pageUrl,
     },
   ],
 };
 
-const cityUrl = `${baseUrl}${canonical}`;
 
-const serviceLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': `${cityUrl}#service`,
-  name: `Entreprise de nettoyage ${cityAt}`,
-  serviceType: 'Nettoyage professionnel d’immeubles et de parkings',
-  description, // ta meta description, déjà définie plus haut
-
-  // 🔗 On se rattache au LocalBusiness global
-  provider: {
-    '@id': `${baseUrl}#localbusiness`,
-  },
-
-  areaServed: {
-    '@type': 'City',
-    name: currentCity.name,
-    postalCode: currentCity.postalCodes?.[0],
-    addressCountry: 'FR',
-    // sameAs → à faire plus tard proprement via un champ dédié dans City
-    // sameAs: currentCity.wikipediaUrl,
-  },
-};
-
+/* -------------------------------------------------------------------------- */
+/* FAQPage                                                                    */
+/* -------------------------------------------------------------------------- */
 
 const faqLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: cityFaq.slice(0, 5).map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer.replace(/<[^>]*>?/gm, ''),
-    },
-  })),
+  "@type":
+    "FAQPage",
+
+  mainEntity:
+    cityFaq
+      .slice(0, 5)
+      .map((item) => ({
+        "@type":
+          "Question",
+
+        name:
+          item.question,
+
+        acceptedAnswer: {
+          "@type":
+            "Answer",
+
+          text:
+            item.answer
+              .replace(/<[^>]*>/g, "")
+              .trim(),
+        },
+      })),
 };
 
 
-const jsonLd = [webPageLd, breadcrumbLd, serviceLd, faqLd];
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
 
-// ==========================
-// Hero vars
-// ==========================
-const postalCode = currentCity.postalCodes?.[0] ?? '';
+const jsonLd = [
+  webPageLd,
+  servicesListLd,
+  breadcrumbLd,
+  faqLd,
+];
+
+
+/* -------------------------------------------------------------------------- */
+/* Hero                                                                       */
+/* -------------------------------------------------------------------------- */
+
 const customDescription =
   currentCity.customDescription ??
-  `Klinova est une entreprise de nettoyage basée en Île-de-France. Nous intervenons à ${cityAt} pour l’entretien des copropriétés, parkings souterrains, moquettes et balcons.`;
-const phoneHref = toTelHref(PHONE_E164);
+  `Klinova intervient ${cityAt} pour des prestations de nettoyage professionnel auprès des particuliers, copropriétés et entreprises. Les méthodes et équipements sont adaptés à la nature des surfaces et au besoin de chaque intervention.`;
+
+const phoneHref =
+  toTelHref(PHONE_E164);
 ---
 
 <LayoutWithCTA

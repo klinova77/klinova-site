@@ -1,66 +1,70 @@
 ---
 export const prerender = true;
+
 import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/ui/Button.astro';
 import { LINKS, PHONE_DISPLAY } from '~/lib/links';
 
-// Variables de base
+/* -------------------------------------------------------------------------- */
+/* Variables de base                                                          */
+/* -------------------------------------------------------------------------- */
+
 const site = 'https://klinova.fr';
 const pageUrl = '/politique-de-confidentialite';
-const pageName = 'Politique de confidentialité';
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
-  // WebPage Politique de confidentialité
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
-    "url": `${site}${pageUrl}`,
-    "name": `${pageName} — Klinova`,
-    "inLanguage": "fr-FR",
-    "isPartOf": { "@id": `${site}#website` },
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": `${site}/images/og/og-klinova-home.png`
+    '@type': 'WebPage',
+
+    '@id': `${site}${pageUrl}#webpage`,
+
+    url: `${site}${pageUrl}`,
+
+    name: 'Politique de confidentialité — Klinova',
+
+    description:
+      "Politique de confidentialité de Klinova : données collectées, finalités des traitements, bases légales, conservation, sous-traitants, sécurité et droits des personnes.",
+
+    isPartOf: {
+      '@id': `${site}#website`
     },
-    "about": { "@id": `${site}#organization` },
-    "publisher": { "@id": `${site}#organization` }
+
+    about: {
+      '@id': `${site}#organization`
+    },
+
+    publisher: {
+      '@id': `${site}#organization`
+    },
+
+    inLanguage: 'fr-FR'
   },
 
-  // Politique de confidentialité comme document RGPD
   {
-    "@context": "https://schema.org",
-    "@type": "DigitalDocument",
-    "@id": `${site}${pageUrl}#privacy-policy`,
-    "name": "Politique de confidentialité – Klinova",
-    "description": "Informations RGPD : données collectées, finalités, base légale, durées de conservation, sous-traitants, sécurité, droits des personnes et contact.",
-    "url": `${site}${pageUrl}`,
-    "inLanguage": "fr-FR",
-    "genre": "Politique de confidentialité",
-    "author": { "@id": `${site}#organization` },
-    "publisher": { "@id": `${site}#organization` },
-    "isPartOf": { "@id": `${site}#website` }
-  },
+    '@type': 'BreadcrumbList',
 
-  // Enrichissement de l'organisation : lien vers la privacy policy
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${site}#organization`,
-    "privacyPolicy": `${site}${pageUrl}`
-  },
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Accueil',
+        item: `${site}/`
+      },
 
-  // Fil d'Ariane
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "Politique de confidentialité", "item": `${site}${pageUrl}` }
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Politique de confidentialité',
+        item: `${site}${pageUrl}`
+      }
     ]
   }
 ];
+---
 
 ---
 

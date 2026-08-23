@@ -1,81 +1,104 @@
 ---
 export const prerender = true;
+
 import Layout from '~/layouts/Layout.astro';
 import Button from '~/components/UI/Button.astro';
-import { LINKS, PHONE_E164, PHONE_DISPLAY, withUtm, linkAttrs, anchorOn } from '~/lib/links';
+import {
+  LINKS,
+  PHONE_E164,
+  PHONE_DISPLAY,
+  withUtm,
+  linkAttrs,
+  anchorOn
+} from '~/lib/links';
 
-// Variables de base
+/* -------------------------------------------------------------------------- */
+/* Variables de base                                                           */
+/* -------------------------------------------------------------------------- */
+
 const site = 'https://klinova.fr';
 const pageUrl = '/cgv';
-const pageName = 'Conditions Générales de Vente';
 
-// Contact
+/* -------------------------------------------------------------------------- */
+/* Contact                                                                     */
+/* -------------------------------------------------------------------------- */
+
 const phoneHref = LINKS.phone;
 const phoneLabel = PHONE_DISPLAY;
-const contactHref = withUtm(LINKS.contactPage, { source: 'cgv', content: 'header-cta' });
-const phoneDisplay = '06 76 73 86 61';
-const phoneE164 = '+33676738661';
 
-// Astro ne supporte pas le spread sur éléments HTML -> on prépare les attrs
+const contactHref = withUtm(
+  LINKS.contactPage,
+  {
+    source: 'cgv',
+    content: 'header-cta'
+  }
+);
+
+/**
+ * Aliases conservés si le template utilise encore
+ * phoneDisplay / phoneE164.
+ */
+const phoneDisplay = PHONE_DISPLAY;
+const phoneE164 = PHONE_E164;
+
 const phoneA = linkAttrs(phoneHref);
 const contactA = linkAttrs(contactHref);
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                     */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
-  // WebPage CGV
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
-    "url": `${site}${pageUrl}`,
-    "name": `${pageName} — Klinova`,
-    "inLanguage": "fr-FR",
-    "isPartOf": { "@id": `${site}#website` },
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": `${site}/images/og/og-klinova-home.png`
+    '@type': 'WebPage',
+
+    '@id': `${site}${pageUrl}#webpage`,
+
+    url: `${site}${pageUrl}`,
+
+    name: 'Conditions Générales de Vente — Klinova',
+
+    description:
+      "Conditions Générales de Vente de KLINOVA : devis, exécution des prestations, modalités de paiement, responsabilités, réclamations, litiges et droit applicable.",
+
+    isPartOf: {
+      '@id': `${site}#website`
     },
-    "about": {
-      "@id": `${site}#organization`
+
+    /**
+     * Les CGV concernent l'activité commerciale de KLINOVA.
+     */
+    about: {
+      '@id': `${site}#organization`
     },
-    "publisher": {
-      "@id": `${site}#organization`
-    }
+
+    publisher: {
+      '@id': `${site}#organization`
+    },
+
+    inLanguage: 'fr-FR'
   },
 
-  // CGV comme document
   {
-    "@context": "https://schema.org",
-    "@type": "DigitalDocument",
-    "@id": `${site}${pageUrl}#cgv`,
-    "name": "Conditions Générales de Vente – Klinova",
-    "description": "Conditions d'exécution des prestations de nettoyage et maintenance : devis, paiements, responsabilité, litiges et droit applicable.",
-    "url": `${site}${pageUrl}`,
-    "inLanguage": "fr-FR",
-    "author": { "@id": `${site}#organization` },
-    "publisher": { "@id": `${site}#organization` },
-    "isPartOf": { "@id": `${site}#website` }
-  },
+    '@type': 'BreadcrumbList',
 
-  // Enrichissement de l'Organization principale : lien vers les CGV
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${site}#organization`,
-    "termsOfService": `${site}${pageUrl}`
-  },
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Accueil',
+        item: `${site}/`
+      },
 
-  // Fil d'Ariane
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": `${site}/` },
-      { "@type": "ListItem", "position": 2, "name": "Conditions Générales de Vente", "item": `${site}${pageUrl}` }
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Conditions Générales de Vente',
+        item: `${site}${pageUrl}`
+      }
     ]
   }
 ];
-
 ---
 
 <Layout
@@ -89,7 +112,6 @@ const jsonLd = [
   appendBrandToTitle={false}
   jsonLd={jsonLd}
 >
- 
 
 <section class="section-padding bg-white">
   <div class="container-responsive">

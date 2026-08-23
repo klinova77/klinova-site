@@ -15,178 +15,458 @@ import DepartmentCardsKln from "~/components/local/DepartmentCardsKln.astro";
 import { featuredCities } from "~/data/highlightedCities";
 
 
+/* -------------------------------------------------------------------------- */
+/* Configuration générale                                                     */
+/* -------------------------------------------------------------------------- */
 
-const baseUrl = import.meta.env.SITE ?? "https://klinova.fr";
+export const prerender = true;
 
-// Helpers FR (déjà présents chez toi)
-function getDepartmentLocationPhrase(dep: { slug: string; name: string }): string {
+const site = (
+  import.meta.env.SITE ?? "https://klinova.fr"
+).replace(/\/$/, "");
+
+
+/* -------------------------------------------------------------------------- */
+/* Helpers français                                                           */
+/* -------------------------------------------------------------------------- */
+
+function getDepartmentLocationPhrase(dep: {
+  slug: string;
+  name: string;
+}): string {
   switch (dep.slug) {
     case "seine-saint-denis":
     case "seine-et-marne":
     case "val-de-marne":
     case "essonne":
       return `en ${dep.name}`;
+
     case "hauts-de-seine":
     case "yvelines":
       return `dans les ${dep.name}`;
+
     case "paris":
       return "à Paris";
+
     default:
       return `dans le ${dep.name}`;
   }
 }
 
-function getDepartmentCommunesPhrase(dep: { slug: string; name: string }): string {
+function getDepartmentCommunesPhrase(dep: {
+  slug: string;
+  name: string;
+}): string {
   switch (dep.slug) {
     case "paris":
       return "de Paris";
+
     case "seine-saint-denis":
     case "seine-et-marne":
     case "val-de-marne":
       return `de la ${dep.name}`;
+
     case "hauts-de-seine":
     case "yvelines":
       return `des ${dep.name}`;
+
     case "essonne":
       return "de l'Essonne";
+
     default:
       return `du ${dep.name}`;
   }
 }
 
-export const prerender = true;
+
+/* -------------------------------------------------------------------------- */
+/* Génération des pages                                                       */
+/* -------------------------------------------------------------------------- */
 
 export async function getStaticPaths() {
-  return DEPARTMENTS.map((d) => ({ params: { departmentSlug: d.slug } }));
+  return DEPARTMENTS.map((department) => ({
+    params: {
+      departmentSlug: department.slug,
+    },
+  }));
 }
+
+
+/* -------------------------------------------------------------------------- */
+/* Département courant                                                        */
+/* -------------------------------------------------------------------------- */
 
 const { departmentSlug } = Astro.params;
-const department = DEPARTMENTS.find((d) => d.slug === departmentSlug);
+
+const department = DEPARTMENTS.find(
+  (department) => department.slug === departmentSlug
+);
 
 if (!department) {
-  return new Response("Not found", { status: 404 });
+  return new Response("Not found", {
+    status: 404,
+  });
 }
 
-const departmentLocationPhrase = getDepartmentLocationPhrase(department);
-const departmentCommunesPhrase = getDepartmentCommunesPhrase(department);
+const departmentLocationPhrase =
+  getDepartmentLocationPhrase(department);
 
-const canonical = `/zones-d-intervention/${department.slug}`;
-const pageUrl = `${baseUrl}${canonical}`;
+const departmentCommunesPhrase =
+  getDepartmentCommunesPhrase(department);
 
-const phoneLink = toTelHref(PHONE_E164);
 
-// Villes du département
+/* -------------------------------------------------------------------------- */
+/* URL                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const canonical =
+  `/zones-d-intervention/${department.slug}`;
+
+const pageUrl =
+  `${site}${canonical}`;
+
+
+/* -------------------------------------------------------------------------- */
+/* Téléphone                                                                  */
+/* -------------------------------------------------------------------------- */
+
+const phoneLink =
+  toTelHref(PHONE_E164);
+
+
+/* -------------------------------------------------------------------------- */
+/* Villes du département                                                      */
+/* -------------------------------------------------------------------------- */
+
 const departmentCities = (cities ?? [])
-  .filter((city: any) => city?.department?.slug === department.slug)
-  .sort((a: any, b: any) => (a?.name ?? "").localeCompare(b?.name ?? ""));
+  .filter(
+    (city: any) =>
+      city?.department?.slug === department.slug
+  )
+  .sort(
+    (a: any, b: any) =>
+      (a?.name ?? "").localeCompare(
+        b?.name ?? "",
+        "fr"
+      )
+  );
 
-// Top 3 pour micro-precision (comme SP)
 
-// Top 3 "business/SEO" du département (via featuredCities) — fallback sur l'ordre actuel
+/* -------------------------------------------------------------------------- */
+/* Villes mises en avant                                                      */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Top 3 des villes mises en avant pour apporter
+ * une précision géographique dans certains textes.
+ *
+ * Fallback : trois premières villes du département.
+ */
 const featuredForDept = (featuredCities ?? [])
-  .filter((c) => c.deptSlug === department.slug)
+  .filter(
+    (city) =>
+      city.deptSlug === department.slug
+  )
   .slice(0, 3);
 
 const topCitiesList = featuredForDept.length
-  ? featuredForDept
-      .map((fc) => (departmentCities as City[]).find((c) => c.slug === fc.slug))
-      .filter(Boolean) as City[]
+  ? (
+      featuredForDept
+        .map((featuredCity) =>
+          (departmentCities as City[]).find(
+            (city) =>
+              city.slug === featuredCity.slug
+          )
+        )
+        .filter(Boolean) as City[]
+    )
   : (departmentCities as City[]).slice(0, 3);
 
-const topCitiesString = topCitiesList.map((c: City) => c.name).join(", ");
+const topCitiesString =
+  topCitiesList
+    .map((city: City) => city.name)
+    .join(", ");
+
 const geoPrecision = topCitiesString
   ? `(${topCitiesString} et alentours)`
   : `sur l'ensemble du département`;
 
 
-// ✅ deptContent data-driven (peut être null)
-const deptContent =
-  (DEPARTMENTS_KLN as Record<string, DepartmentKln | undefined>)[departmentSlug] ?? null;
+/* -------------------------------------------------------------------------- */
+/* Contenu spécifique du département                                          */
+/* -------------------------------------------------------------------------- */
 
-  // Fallback internalLinks : si non fournis dans deptContent, on utilise les villes featured du département
+const deptContent =
+  (
+    DEPARTMENTS_KLN as Record<
+      string,
+      DepartmentKln | undefined
+    >
+  )[department.slug] ?? null;
+
+
+/* -------------------------------------------------------------------------- */
+/* Liens internes                                                             */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Si aucun ensemble de liens internes n'est défini dans
+ * le fichier départemental, on utilise les villes mises
+ * en avant du département.
+ */
 const featuredQuickLinks = (featuredCities ?? [])
-  .filter((c) => c.deptSlug === department.slug)
+  .filter(
+    (city) =>
+      city.deptSlug === department.slug
+  )
   .slice(0, 5)
-  .map((c) => ({
-    label: c.name,
-    href: `/zones-d-intervention/${department.slug}/${c.slug}`,
+  .map((city) => ({
+    label: city.name,
+    href:
+      `/zones-d-intervention/${department.slug}/${city.slug}`,
   }));
 
 const internalLinks =
-  deptContent?.internalLinks && deptContent.internalLinks.length >= 3
+  deptContent?.internalLinks &&
+  deptContent.internalLinks.length >= 3
     ? deptContent.internalLinks
     : featuredQuickLinks;
 
 
+/* -------------------------------------------------------------------------- */
+/* Sections                                                                   */
+/* -------------------------------------------------------------------------- */
 
-// Sections helpers (comme SP)
-const sections = Array.isArray(deptContent?.sections) ? deptContent!.sections! : [];
-const getSection = (id: string) => sections.find((s) => s?.id === id);
-const getSectionsByIds = (ids: string[]) => ids.map(getSection).filter(Boolean) as any[];
+const sections =
+  Array.isArray(deptContent?.sections)
+    ? deptContent!.sections!
+    : [];
 
-const contexteSections = getSectionsByIds(["contexte"]);
-const processSections = getSectionsByIds(["process"]);
+const getSection = (id: string) =>
+  sections.find(
+    (section) =>
+      section?.id === id
+  );
 
-const kickerParts = (deptContent?.heroKicker ?? "")
-  .split("•")
-  .map((s) => s.trim())
-  .filter(Boolean);
+const getSectionsByIds = (
+  ids: string[]
+) =>
+  ids
+    .map(getSection)
+    .filter(Boolean) as any[];
 
-// On repère la partie "délai" (ex: Devis sous 24h / Réponse 2h / Intervention 48h)
-const delayRegex = /\b(devis|réponse|rdv|intervention|sous)\b/i;
+const contexteSections =
+  getSectionsByIds(["contexte"]);
 
-const kickerDelay = kickerParts.find((p) => delayRegex.test(p)) ?? "";
-
-// Tout le reste = zone (ex: villes/secteurs)
-const kickerZone = kickerParts
-  .filter((p) => p !== kickerDelay)
-  .join(" • ");
+const processSections =
+  getSectionsByIds(["process"]);
 
 
-// SEO : data si dispo sinon fallback actuel
+/* -------------------------------------------------------------------------- */
+/* Hero kicker                                                                */
+/* -------------------------------------------------------------------------- */
+
+const kickerParts =
+  (deptContent?.heroKicker ?? "")
+    .split("•")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+/**
+ * Exemple :
+ * "Devis sous 24h • Chelles, Meaux et alentours"
+ */
+const delayRegex =
+  /\b(devis|réponse|rdv|intervention|sous)\b/i;
+
+const kickerDelay =
+  kickerParts.find(
+    (part) =>
+      delayRegex.test(part)
+  ) ?? "";
+
+const kickerZone =
+  kickerParts
+    .filter(
+      (part) =>
+        part !== kickerDelay
+    )
+    .join(" • ");
+
+
+/* -------------------------------------------------------------------------- */
+/* SEO                                                                        */
+/* -------------------------------------------------------------------------- */
+
 const title =
   deptContent?.seo?.title ??
   `Entreprise de nettoyage ${departmentLocationPhrase} (${department.code}) – Klinova`;
 
 const description =
   deptContent?.seo?.description ??
-  `Nettoyage professionnel (moquettes, canapés, tapis, balcons, parkings) ${departmentLocationPhrase} (${department.code}). ` +
-    `Intervention à domicile, en pavillon ou en copropriété ${geoPrecision}.`;
+  `Klinova intervient ${departmentLocationPhrase} (${department.code}) pour des prestations de nettoyage professionnel auprès des particuliers, copropriétés et entreprises ${geoPrecision}.`;
 
-// JSON-LD : page + breadcrumb + collection (itemlist)
+
+/* -------------------------------------------------------------------------- */
+/* IDs JSON-LD                                                                */
+/* -------------------------------------------------------------------------- */
+
+const webpageId =
+  `${pageUrl}#webpage`;
+
+const citiesListId =
+  `${pageUrl}#cities`;
+
+
+/* -------------------------------------------------------------------------- */
+/* BreadcrumbList                                                             */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Zones d’intervention", item: `${baseUrl}/zones-d-intervention` },
-    { "@type": "ListItem", position: 2, name: `${department.name} (${department.code})`, item: pageUrl },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: `${site}/`,
+    },
+
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Zones d’intervention",
+      item: `${site}/zones-d-intervention`,
+    },
+
+    {
+      "@type": "ListItem",
+      position: 3,
+      name:
+        `${department.name} (${department.code})`,
+      item: pageUrl,
+    },
   ],
 };
 
-const webPageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["WebPage", "CollectionPage"],
-  "@id": `${pageUrl}#webpage-department`,
-  url: pageUrl,
-  name: title,
-  description,
-  isPartOf: { "@id": `${baseUrl}#website` },
-  inLanguage: "fr-FR",
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: (departmentCities ?? []).slice(0, 80).map((city: any, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      url: `${baseUrl}/zones-d-intervention/${department.slug}/${city.slug}`,
-      name: `Entreprise de nettoyage à ${city.name}`,
-    })),
-  },
+
+/* -------------------------------------------------------------------------- */
+/* ItemList des villes                                                        */
+/* -------------------------------------------------------------------------- */
+
+const citiesListJsonLd = {
+  "@type": "ItemList",
+
+  "@id": citiesListId,
+
+  name:
+    `Villes desservies par Klinova ${departmentLocationPhrase}`,
+
+  numberOfItems:
+    departmentCities.length,
+
+  itemListElement:
+    departmentCities.map(
+      (
+        city: City,
+        index: number
+      ) => ({
+        "@type": "ListItem",
+
+        position:
+          index + 1,
+
+        item: {
+          "@type": "WebPage",
+
+          "@id":
+            `${site}/zones-d-intervention/${department.slug}/${city.slug}#webpage`,
+
+          url:
+            `${site}/zones-d-intervention/${department.slug}/${city.slug}`,
+
+          name:
+            `Nettoyage professionnel à ${city.name} — Klinova`,
+        },
+      })
+    ),
 };
 
-const jsonLd = [webPageJsonLd, breadcrumbJsonLd];
 
-// FAQ pour Layout (si ton Layout l’utilise un jour : prêt)
-const faq = deptContent?.faq?.length ? deptContent.faq : undefined;
+/* -------------------------------------------------------------------------- */
+/* CollectionPage départementale                                              */
+/* -------------------------------------------------------------------------- */
+
+const collectionPageJsonLd = {
+  "@type": "CollectionPage",
+
+  "@id": webpageId,
+
+  url:
+    pageUrl,
+
+  name:
+    title,
+
+  description,
+
+  isPartOf: {
+    "@id":
+      `${site}#website`,
+  },
+
+  about: {
+    "@id":
+      `${site}#organization`,
+  },
+
+  publisher: {
+    "@id":
+      `${site}#organization`,
+  },
+
+  mainEntity: {
+    "@id":
+      citiesListId,
+  },
+
+  spatialCoverage: {
+    "@type":
+      "AdministrativeArea",
+
+    name:
+      department.name,
+  },
+
+  inLanguage:
+    "fr-FR",
+};
+
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
+const jsonLd = [
+  collectionPageJsonLd,
+  citiesListJsonLd,
+  breadcrumbJsonLd,
+];
+
+
+/* -------------------------------------------------------------------------- */
+/* FAQ                                                                        */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Conservé pour le template actuel
+ * et pour une éventuelle utilisation par le Layout.
+ */
+const faq =
+  deptContent?.faq?.length
+    ? deptContent.faq
+    : undefined;
 ---
 
 <LayoutWithCTA

@@ -26,8 +26,6 @@ const popupContext = {
   serviceLabel: "Demande rappel - Page nettoyage-terrasses",
   trackingSource: "popup-nettoyage-terrasses-header",
   presetSubject: "Nouvelle demande de rappel – nettoyage-terrasses",
-  // ⚠️ crédit d’impôt : je le désactive ici par défaut pour éviter une promesse risquée
-  // (à réactiver seulement si tu es sûr que ça s'applique à ce service dans ton cadre).
   creditImpotEnabled: true,
 };
 
@@ -92,59 +90,138 @@ const faqs = [...faq, ...faqLongTail];
 
 // Schema FAQ
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
+  '@type': 'FAQPage',
+
   mainEntity: faqs.map((item) => ({
-    "@type": "Question",
+    '@type': 'Question',
     name: item.title,
-    acceptedAnswer: { "@type": "Answer", text: item.content },
+
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.content,
+    },
   })),
 };
 
-// Fil d'Ariane
+/* -------------------------------------------------------------------------- */
+/* Fil d'Ariane                                                               */
+/* -------------------------------------------------------------------------- */
+
 const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  '@type': 'BreadcrumbList',
+
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: `${site}/` },
     {
-      "@type": "ListItem",
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
+    {
+      '@type': 'ListItem',
       position: 2,
-      name: "Nettoyage de terrasses",
+      name: 'Nettoyage de terrasses',
       item: `${site}${pageUrl}`,
     },
   ],
 };
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* IDs                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
+const webpageId = `${site}${pageUrl}#webpage`;
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${site}#service-nettoyage-terrasses`,
-    inLanguage: "fr-FR",
-    serviceType: "Nettoyage, décrassage et remise en état de terrasses",
-    name: "Nettoyage de terrasses à Paris et en Île-de-France",
-    alternateName:
-      "Nettoyage de sols extérieurs : béton, carrelage/grès cérame, pierre naturelle, bois et composite",
+    '@type': 'WebPage',
+
+    '@id': webpageId,
+
     url: `${site}${pageUrl}`,
-    provider: { "@id": `${site}#localbusiness` },
-    areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
-    audience: { "@type": "Audience", audienceType: ["Particuliers", "Copropriétés", "professionnels"] },
-    category: "Nettoyage extérieur",
-    serviceOutput:
-      "Terrasse plus propre, plus nette et plus agréable à l’usage, avec une méthode adaptée au revêtement",
+
+    name:
+      'Nettoyage de terrasses — Klinova',
+
     description:
-      "Nettoyage de terrasses et sols extérieurs : mousses, algues, lichens, traces noires, taches grasses et encrassements. Méthodes adaptées au matériau (béton, carrelage, pierre, bois/composite), avec action mécanique contrôlée, produits adaptés et rinçage maîtrisé. Option de protection selon support.",
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-      eligibleRegion: { "@type": "AdministrativeArea", name: "Île-de-France" },
-      description:
-        "Devis gratuit. Tarif ajusté selon surface, revêtement, niveau d’encrassement, accès et contraintes de rinçage.",
+      "Nettoyage professionnel de terrasses et sols extérieurs : mousses, traces noires, taches grasses et encrassement. Méthodes adaptées au béton, carrelage, pierre, bois et composite.",
+
+    isPartOf: {
+      '@id': `${site}#website`,
     },
+
+    mainEntity: {
+      '@id': serviceId,
+    },
+
+    about: {
+      '@id': serviceId,
+    },
+
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630,
+    },
+
+    inLanguage: 'fr-FR',
   },
+
+  {
+    '@type': 'Service',
+
+    '@id': serviceId,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage professionnel de terrasses',
+
+    alternateName:
+      'Nettoyage et remise en état de sols extérieurs',
+
+    serviceType:
+      'Nettoyage, décrassage et remise en état de terrasses',
+
+    description:
+      "Nettoyage professionnel de terrasses et sols extérieurs : traitement des mousses, algues, traces noires, taches grasses et autres encrassements. Les méthodes sont adaptées au revêtement, à son état et aux contraintes de rinçage et d’accès.",
+
+    provider: {
+      '@id': `${site}#organization`,
+    },
+
+    brand: {
+      '@id': `${site}#brand`,
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France',
+    },
+
+    audience: {
+      '@type': 'Audience',
+      audienceType: [
+        'Particuliers',
+        'Copropriétés',
+        'Professionnels',
+      ],
+    },
+
+    category:
+      'Nettoyage de terrasses et sols extérieurs',
+
+    serviceOutput:
+      "Terrasse nettoyée et remise en propreté selon le revêtement, son état initial et le périmètre défini au devis",
+  },
+
   faqSchema,
   breadcrumb,
 ];
@@ -161,7 +238,7 @@ const jsonLd = [
   stickyMobileOnly={true}
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Nettoyage de terrasses • Décrassage, démoussage & remise en état"
+  title="Nettoyage professionnel de terrasses en Île-de-France | Klinova"
   description="Nettoyage de terrasses et sols extérieurs : mousses, traces noires, taches grasses, encrassement. Méthode adaptée au revêtement (béton, carrelage, pierre, bois). Intervention à Paris & Île-de-France."
   canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"

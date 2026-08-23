@@ -52,41 +52,36 @@ const faq = [
 ];
 
 // Schema FAQ
+// Schema FAQ
 const faqSchema = {
-  '@context': 'https://schema.org',
   '@type': 'FAQPage',
+
   mainEntity: faq.map((item) => ({
     '@type': 'Question',
     name: item.title,
-    acceptedAnswer: { '@type': 'Answer', text: item.content },
+
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.content,
+    },
   })),
 };
 
-// Schema VideoObject pour la vidéo de démonstration
-const videoSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'VideoObject',
-  name: 'Nettoyage de canapé à domicile - démonstration Klinova',
-  description: 'Démonstration réelle d\'une intervention Klinova : canapé taché, passage de l\'injecteur-extracteur, eau sale extraite et résultat final visiblement plus propre.',
-  thumbnailUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/so_3/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.jpg',
-  uploadDate: '2024-11-24T00:00:00+01:00',
-  duration: 'PT0M30S',
-  contentUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4',
-  embedUrl: 'https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4',
-  url: `${site}${pageUrl}`,
-  publisher: {
-    '@type': 'Organization',
-    name: 'Klinova',
-    url: 'https://klinova.fr'
-  }
-};
+/* -------------------------------------------------------------------------- */
+/* Fil d'Ariane                                                               */
+/* -------------------------------------------------------------------------- */
 
-// Fil d'Ariane
 const breadcrumb = {
-  '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${site}/` },
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: `${site}/`,
+    },
+
     {
       '@type': 'ListItem',
       position: 2,
@@ -96,82 +91,189 @@ const breadcrumb = {
   ],
 };
 
-// JSON-LD optimisé
+/* -------------------------------------------------------------------------- */
+/* IDs                                                                        */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
+const webpageId = `${site}${pageUrl}#webpage`;
+
+/* -------------------------------------------------------------------------- */
+/* VideoObject                                                                */
+/* -------------------------------------------------------------------------- */
+
+const videoSchema = {
+  '@type': 'VideoObject',
+
+  '@id': `${site}${pageUrl}#video-nettoyage-canape`,
+
+  name:
+    'Nettoyage de canapé à domicile — démonstration Klinova',
+
+  description:
+    "Démonstration d'une intervention Klinova sur un canapé : nettoyage par injection-extraction et résultat après intervention.",
+
+  thumbnailUrl:
+    'https://res.cloudinary.com/dgpeykj44/video/upload/so_3/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.jpg',
+
+  contentUrl:
+    'https://res.cloudinary.com/dgpeykj44/video/upload/nettoyage_de_canap%C3%A9_avant_apr%C3%A9s_lfuqm3.mp4',
+
+  duration: 'PT30S',
+
+  publisher: {
+    '@id': `${site}#organization`,
+  },
+
+  mainEntityOfPage: {
+    '@id': webpageId,
+  },
+
+  inLanguage: 'fr-FR',
+};
+
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                    */
+/* -------------------------------------------------------------------------- */
+
 const jsonLd = [
   {
-    '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${site}${pageUrl}#webpage`,
+
+    '@id': webpageId,
+
     url: `${site}${pageUrl}`,
-    name: 'Nettoyage de canapés, tapis et matelas — Klinova',
-    isPartOf: { '@id': `${site}#website` },
-    inLanguage: 'fr-FR',
+
+    name:
+      'Nettoyage de canapés, tapis et matelas — Klinova',
+
+    description:
+      "Nettoyage professionnel de canapés, tapis et matelas : détachage, nettoyage en profondeur et traitement des odeurs selon le textile et son état. Intervention à Paris et en Île-de-France.",
+
+    isPartOf: {
+      '@id': `${site}#website`,
+    },
+
+    mainEntity: {
+      '@id': serviceId,
+    },
+
+    about: {
+      '@id': serviceId,
+    },
+
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: `${site}/images/og/og-klinova-home.png`,
       width: 1200,
       height: 630,
     },
+
+    inLanguage: 'fr-FR',
   },
 
-  // Service spécifique
   {
-    '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `${site}#service-canapes-tapis-matelas`,
-    inLanguage: 'fr-FR',
-    serviceType: 'Nettoyage de canapés, tapis et matelas',
-    name: 'Nettoyage de canapé, tapis et matelas à Paris et en Île-de-France',
-    alternateName: 'Désodorisation canapé, traitement urine de chat et chien, nettoyage matelas odeurs',
+
+    '@id': serviceId,
+
     url: `${site}${pageUrl}`,
-    provider: { '@id': `${site}#localbusiness` },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
+
+    name:
+      'Nettoyage de canapés, tapis et matelas',
+
+    alternateName:
+      "Nettoyage et désodorisation des textiles d’ameublement",
+
+    serviceType:
+      "Nettoyage professionnel de textiles d’ameublement",
+
+    description:
+      "Nettoyage professionnel de canapés, tapis et matelas : aspiration, prétraitement adapté, détachage, nettoyage en profondeur et traitement des odeurs selon la nature du textile et son état.",
+
+    provider: {
+      '@id': `${site}#organization`,
+    },
+
+    brand: {
+      '@id': `${site}#brand`,
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France',
+    },
+
     audience: {
       '@type': 'Audience',
-      audienceType: ['Particuliers', 'Résidentiel'],
+      audienceType: [
+        'Particuliers',
+        'Résidentiel',
+      ],
     },
-    category: 'Nettoyage de textiles d’ameublement',
+
+    category:
+      "Nettoyage de textiles d’ameublement",
 
     serviceOutput:
-      'Canapés, tapis et matelas nettoyés en profondeur, visuellement améliorés et assainis',
-    description:
-      'Spécialiste du nettoyage et de la désodorisation profonde des canapés, tapis et matelas : traitement des odeurs d’urine d’animaux, auréoles, taches, odeurs persistantes et textiles imprégnés.',
-   offers: {
-  '@type': 'Offer',
-  price: 80,
-  priceCurrency: 'EUR',
-  availability: 'https://schema.org/InStock',
-  eligibleRegion: { '@type': 'AdministrativeArea', name: 'Île-de-France' },
-  description:
-    'Tarif à partir de 80 € TTC pour un canapé standard, ajusté selon le nombre de places, le type de textile et l’état des taches.',
-},
+      "Textiles nettoyés en profondeur avec amélioration de leur aspect et réduction des salissures et odeurs selon leur état initial",
+
+    offers: {
+      '@type': 'Offer',
+
+      description:
+        "Tarif à partir de 80 € TTC, ajusté selon le type de textile, ses dimensions, son état et les traitements nécessaires.",
+
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: 80,
+        priceCurrency: 'EUR',
+        valueAddedTaxIncluded: true,
+      },
+
+      eligibleRegion: {
+        '@type': 'AdministrativeArea',
+        name: 'Île-de-France',
+      },
+    },
+
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Services de nettoyage textiles',
+
+      name:
+        'Prestations de nettoyage de textiles d’ameublement',
+
       itemListElement: [
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
             name: 'Nettoyage de canapés en tissu',
-            description: 'Détachage, nettoyage en profondeur et réduction des odeurs.',
+            description:
+              'Détachage, nettoyage en profondeur et traitement des odeurs selon le textile.',
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
-            name: 'Nettoyage de tapis de salon',
-            description: 'Aspiration, pré-traitement des taches et nettoyage en profondeur.',
+            name: 'Nettoyage de tapis',
+            description:
+              'Aspiration, prétraitement des taches et nettoyage adapté aux fibres du tapis.',
           },
         },
+
         {
           '@type': 'Offer',
+
           itemOffered: {
             '@type': 'Service',
             name: 'Nettoyage de matelas',
             description:
-              'Nettoyage ciblé pour améliorer l’hygiène, l’aspect et limiter les odeurs persistantes.',
+              "Nettoyage en profondeur visant à améliorer l’aspect du matelas et à réduire les salissures et odeurs.",
           },
         },
       ],
@@ -194,7 +296,7 @@ const jsonLd = [
   stickyMobileOnly={true}
   pathname={Astro.url.pathname}
   pageType="service"
-  title="Nettoyage de canapés, tapis et matelas • Désodorisation & traitement des odeurs d’urine"
+  title="Nettoyage de canapés, tapis et matelas | Klinova"
   description="Nettoyage professionnel et désodorisation de canapés, tapis et matelas : traitement des odeurs d’urine de chat/chien, taches, auréoles et odeurs incrustées. Intervention à Paris & Île-de-France."
   canonical={pageUrl}
   ogImage="/images/og/og-klinova-home.png"

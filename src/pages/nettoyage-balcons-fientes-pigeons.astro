@@ -30,57 +30,109 @@ import thumbBalcon from '~/assets/images/video-balcon-fientes.webp';
 const videoId = 'GvYRj2hhRMo';
 const title = 'Transformation balcon infesté de fientes — Nettoyage professionnel Klinova';
 
-// JSON-LD
-const lbId = `${site}#localbusiness`;
+/* -------------------------------------------------------------------------- */
+/* JSON-LD                                                                     */
+/* -------------------------------------------------------------------------- */
+
+const serviceId = `${site}${pageUrl}#service`;
 
 const jsonLd = [
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${site}${pageUrl}#webpage`,
-    "url": `${site}${pageUrl}`,
-    "name": "Nettoyage de balcons souillés par des fientes de pigeons — Klinova",
-    "isPartOf": { "@id": `${site}#website` },
-    "inLanguage": "fr-FR",
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": `${site}/images/og/og-klinova-home.png`,
-      "width": 1200,
-      "height": 630
-    }
+    '@type': 'WebPage',
+
+    '@id': `${site}${pageUrl}#webpage`,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage de balcons souillés par des fientes de pigeons — Klinova',
+
+    description:
+      "Nettoyage approfondi de balcons et surfaces extérieures souillés par des fientes de pigeons : retrait des dépôts, nettoyage mécanique, désinfection adaptée et remise en propreté. Intervention en Île-de-France.",
+
+    isPartOf: {
+      '@id': `${site}#website`
+    },
+
+    mainEntity: {
+      '@id': serviceId
+    },
+
+    about: {
+      '@id': serviceId
+    },
+
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${site}/images/og/og-klinova-home.png`,
+      width: 1200,
+      height: 630
+    },
+
+    inLanguage: 'fr-FR'
   },
+
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${site}#service-balcons-fientes`,
-    "serviceType": "Nettoyage de balcons souillés par des fientes de pigeons",
-    "name": "Nettoyage et désinfection de balcons – Île-de-France",
-    "url": `${site}${pageUrl}`,
-    "provider": { "@id": lbId },
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Île-de-France" },
-      { "@type": "City", "name": "Paris" },
-      { "@type": "City", "name": "Chelles" }
-    ],
-    "category": "Désinfection et nettoyage de surfaces extérieures",
-    "description": "Intervention professionnelle sécurisée : désinfection EN 14476, nettoyage vapeur, évacuation des résidus, pose de protections anti-pigeons.",
-    "offers": {
-      "@type": "Offer",
-      "price": 290,
-      "priceCurrency": "EUR",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": 290,
-        "priceCurrency": "EUR",
-        "unitText": "Forfait intervention balcon"
+    '@type': 'Service',
+
+    '@id': serviceId,
+
+    url: `${site}${pageUrl}`,
+
+    name:
+      'Nettoyage de balcons souillés par des fientes de pigeons',
+
+    serviceType:
+      'Nettoyage et remise en état de balcons souillés par des fientes de pigeons',
+
+    description:
+      "Intervention professionnelle comprenant selon la situation le retrait des accumulations et résidus, le nettoyage mécanique des surfaces, le lavage approfondi et une désinfection adaptée. Le protocole est ajusté au support, au niveau d'encrassement et aux contraintes d'accès.",
+
+    provider: {
+      '@id': `${site}#organization`
+    },
+
+    brand: {
+      '@id': `${site}#brand`
+    },
+
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Île-de-France'
+    },
+
+    audience: {
+      '@type': 'Audience',
+      audienceType: [
+        'Particuliers',
+        'Copropriétés',
+        'Professionnels'
+      ]
+    },
+
+    category:
+      'Nettoyage de balcons et surfaces extérieures',
+
+    offers: {
+      '@type': 'Offer',
+
+      description:
+        "Tarif à partir de 490 € TTC, ajusté selon la surface, le niveau d'encrassement, les supports à traiter et les contraintes d'accès.",
+
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: 490,
+        priceCurrency: 'EUR',
+        valueAddedTaxIncluded: true
       },
-      "availability": "https://schema.org/InStock",
-      "eligibleRegion": { "@type": "AdministrativeArea", "name": "Île-de-France" },
-      "description": "Tarif à partir de 290 € TTC pour un balcon standard, ajusté selon la surface, l’encrassement et les contraintes d’accès."
+
+      eligibleRegion: {
+        '@type': 'AdministrativeArea',
+        name: 'Île-de-France'
+      }
     }
   }
 ];
-
 ---
 
 <LayoutLP
