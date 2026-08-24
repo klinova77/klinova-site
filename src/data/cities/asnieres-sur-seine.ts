@@ -73,11 +73,11 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour obtenir un devis après une demande ?",
-      answer: "<p>Nous répondons généralement sous 24 à 48 heures. Si une visite technique s'impose — notamment pour les <strong>parkings souterrains</strong> ou les parties communes étendues — nous la planifions dans la semaine selon vos disponibilités. Le devis détaille surfaces, méthodes et planning prévisionnel.</p>",
+      answer: "<p>Nous répondons rapidement à chaque demande. Si une visite technique s'impose — notamment pour les <strong>parkings souterrains</strong> ou les parties communes étendues — nous la planifions selon vos disponibilités. Le devis détaille surfaces, méthodes et planning prévisionnel.</p>",
     },
     {
       question: "Intervenez-vous en urgence sur Asnières-sur-Seine ?",
-      answer: "<p>Oui, pour les situations qui nécessitent une réponse rapide : dégât des eaux dans un hall, souillures accidentelles en parking ou incident locatif. Nous évaluons la faisabilité selon nos équipes disponibles et pouvons généralement <strong>intervenir sous 24 à 72 heures</strong> selon l'ampleur du chantier.</p>",
+      answer: "<p>Oui, pour les situations qui nécessitent une réponse rapide : dégât des eaux dans un hall, souillures accidentelles en parking ou incident locatif. Nous évaluons la faisabilité selon nos équipes disponibles et pouvons généralement <strong>intervenir</strong> selon l'ampleur du chantier.</p>",
     },
     {
       question: "Comment se passe la coordination avec un syndic ou un gestionnaire d'immeuble ?",
@@ -348,7 +348,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Quel est votre délai d'intervention pour un nettoyage avant état des lieux près d'une station de la ligne 13 à Asnières ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la disponibilité. Pour les secteurs proches de Gabriel Péri ou Les Agnettes, nous adaptons nos créneaux aux contraintes de remise de clés et pouvons proposer des passages en fin de journée si nécessaire.</p>",
+          answer: "<p>Nous intervenons selon la disponibilité. Pour les secteurs proches de Gabriel Péri ou Les Agnettes, nous adaptons nos créneaux aux contraintes de remise de clés et pouvons proposer des passages en fin de journée si nécessaire.</p>",
         },
         {
           question: "Quelle différence de protocole appliquez-vous entre un nettoyage standard et une remise en état fin de chantier sur parquet chêne ancien ?",

@@ -16,7 +16,7 @@ const city: City = {
     "Klinova intervient à Issy-les-Moulineaux pour l'entretien des parties communes, parkings souterrains et espaces extérieurs. Du quartier Val de Seine aux résidences du Fort, une équipe locale adaptée aux exigences du bâti récent comme ancien.",
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
-  hubIntro: "<p>Pôle économique majeur du Val de Seine, desservi par le RER C et le Tramway T2, Issy-les-Moulineaux concentre des <strong>flux importants</strong> entre zones d'activités et secteurs résidentiels. Klinova s'y positionne comme partenaire terrain pour les syndics, gestionnaires et occupants exigeants.</p>\n<p class=\"mt-4\">Notre organisation repose sur une coordination étroite avec les gardiens et services généraux. Chaque intervention fait l'objet d'un planning adapté aux contraintes horaires, avec reporting disponible sur demande pour les donneurs d'ordre professionnels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes basées en proche couronne, capables d'intervenir rapidement sur l'ensemble des quartiers, du Centre-Ville aux Épinettes.</li>\n  <li><strong>Gestion des accès :</strong> Badges Vigik, coordination gardiens, créneaux décalés pour limiter la gêne dans les halls et parkings à fort passage.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention transmis aux syndics et gestionnaires, traçabilité des prestations réalisées.</li>\n</ul>",
+  hubIntro: "<p>Pôle économique majeur du Val de Seine, desservi par le RER C et le Tramway T2, Issy-les-Moulineaux concentre des <strong>flux importants</strong> entre zones d'activités et secteurs résidentiels. Klinova s'y positionne comme partenaire terrain pour les syndics, gestionnaires et occupants exigeants.</p>\n<p class=\"mt-4\">Notre organisation repose sur une coordination étroite avec les gardiens et services généraux. Chaque intervention fait l'objet d'un planning adapté aux contraintes horaires, avec reporting disponible sur demande pour les donneurs d'ordre professionnels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes basées en proche couronne, mobilisables sur l'ensemble des quartiers, du Centre-Ville aux Épinettes.</li>\n  <li><strong>Gestion des accès :</strong> Badges Vigik, coordination gardiens, créneaux décalés pour limiter la gêne dans les halls et parkings à fort passage.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention transmis aux syndics et gestionnaires, traçabilité des prestations réalisées.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -78,7 +78,7 @@ const city: City = {
     },
     {
       question: "Proposez-vous un devis avant intervention ?",
-      answer: "<p>Chaque demande fait l'objet d'un <strong>échange préalable</strong> pour évaluer la surface, l'état des lieux et les contraintes d'accès. Le devis est transmis sous 48 heures, détaillant les prestations prévues et les modalités d'intervention.</p>",
+      answer: "<p>Chaque demande fait l'objet d'un <strong>échange préalable</strong> pour évaluer la surface, l'état des lieux et les contraintes d'accès. Le devis est transmis rapidement, détaillant les prestations prévues et les modalités d'intervention.</p>",
     },
   ],
 
@@ -378,7 +378,7 @@ const city: City = {
         {
           question:
             "Quel est le délai d'intervention pour une remise en état avant état des lieux à Issy-les-Moulineaux ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement et la période. En cas d'urgence liée à une date d'état des lieux imminente, nous adaptons notre planning pour proposer un créneau plus rapide, y compris en soirée ou le samedi matin.</p>",
+          answer: "<p>Nous intervenons selon la taille du logement et la période. En cas d'urgence liée à une date d'état des lieux imminente, nous adaptons notre planning pour proposer un créneau adapté, y compris en soirée ou le samedi matin.</p>",
         },
         {
           question:

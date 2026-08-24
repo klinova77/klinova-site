@@ -27,7 +27,7 @@ const city: City = {
     "Poussières de chantier liées aux <strong>travaux du Grand Paris Express</strong> sur certains secteurs.",
     "Résidences pavillonnaires avec <strong>accès par rues étroites</strong> et stationnement limité.",
     "Proximité de l'A4 générant des <strong>dépôts de suies grasses</strong> sur les façades et balcons.",
-    "Halls ouverts dans les cités nécessitant des <strong>interventions rapides et discrètes</strong>.",
+    "Halls ouverts dans les cités nécessitant des <strong>interventions efficaces et discrètes</strong>.",
   ],
 
   // Texte brut uniquement
@@ -82,7 +82,7 @@ const city: City = {
     {
       question: "Pouvez-vous intervenir en urgence à Champigny-sur-Marne ?",
       answer:
-        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau rapide. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir dans les meilleurs délais.</p>",
+        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau rapide. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous priorisons votre demande.</p>",
     },
     {
       question:
@@ -422,7 +422,7 @@ const city: City = {
           question:
             "Quel délai prévoir pour une remise en état avant état des lieux dans le quartier des Boullereaux ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures après votre demande. Pour les rotations rapides près de la gare RER E, un <strong>créneau prioritaire</strong> peut être organisé en coordination avec votre agence, selon la surface et l'état du logement.</p>",
+            "<p>Nous intervenons après votre demande, selon la surface et l'état du logement. Pour les rotations rapides près de la gare RER E, un <strong>créneau prioritaire</strong> peut être organisé en coordination avec votre agence.</p>",
         },
         {
           question:

@@ -11,10 +11,10 @@ export const seineEtMarne: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel en Seine-et-Marne (77)",
-  heroKicker: "Interventions Nord-77 & Sud-77 • Devis sous 24h",
+  heroKicker: "Interventions Nord-77 & Sud-77 • Devis rapide",
 
   heroDescription:
-    "Plus grand département d'Île-de-France, la Seine-et-Marne demande une organisation rigoureuse. Klinova couvre tout le 77 grâce à des tournées structurées Nord/Sud : moquettes de copropriété, canapés et tapis à domicile, parkings souterrains, terrasses encrassées. Des résidences récentes du Val d'Europe aux pavillons de Brie, nous adaptons nos méthodes à chaque configuration — avec des délais maîtrisés malgré les distances.",
+    "Plus grand département d'Île-de-France, la Seine-et-Marne demande une organisation rigoureuse. Klinova couvre tout le 77 grâce à des tournées structurées Nord/Sud : moquettes de copropriété, canapés et tapis à domicile, parkings souterrains, terrasses encrassées. Des résidences récentes du Val d'Europe aux pavillons de Brie, nous adaptons nos méthodes à chaque configuration, malgré les distances.",
 
   // =========================
   // Images
@@ -140,12 +140,12 @@ export const seineEtMarne: DepartmentKln = {
     {
       question: "Quelles villes de Seine-et-Marne couvrez-vous ?",
       answer:
-        "Tout le département. Nos interventions les plus fréquentes ont lieu à Meaux, Chelles, Melun, Pontault-Combault, Bussy-Saint-Georges, Serris (Val d'Europe), Lagny-sur-Marne, Savigny-le-Temple, Torcy et Sénart. Notre organisation en secteurs Nord-77 et Sud-77 nous permet de couvrir aussi les communes plus éloignées avec des délais cohérents.",
+        "Tout le département. Nos interventions les plus fréquentes ont lieu à Meaux, Chelles, Melun, Pontault-Combault, Bussy-Saint-Georges, Serris (Val d'Europe), Lagny-sur-Marne, Savigny-le-Temple, Torcy et Sénart. Notre organisation en secteurs Nord-77 et Sud-77 nous permet de couvrir aussi les communes plus éloignées.",
     },
     {
       question: "Comment gérez-vous les distances dans un département aussi vaste ?",
       answer:
-        "Nous structurons nos tournées par zones géographiques. Quand vous nous contactez, nous identifions votre secteur et nous vous proposons un créneau cohérent avec nos prochains passages. Cette organisation nous permet de maintenir des délais raisonnables sans surcoût de déplacement.",
+        "Nous structurons nos tournées par zones géographiques. Quand vous nous contactez, nous identifions votre secteur et nous vous proposons un créneau cohérent avec nos prochains passages. Cette organisation nous permet d'éviter tout surcoût de déplacement.",
     },
     {
       question: "Quel est le délai de séchage après un nettoyage de moquette ?",
@@ -175,7 +175,7 @@ export const seineEtMarne: DepartmentKln = {
     {
       question: "Combien coûte un nettoyage de moquette en Seine-et-Marne ?",
       answer:
-        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -190,7 +190,7 @@ export const seineEtMarne: DepartmentKln = {
 seo: {
   title: "Entreprise de Nettoyage en Seine-et-Marne (77) | Klinova",
   description:
-    "Nettoyage professionnel dans le 77 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+    "Nettoyage professionnel dans le 77 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit et rapide.",
 },
 
 };

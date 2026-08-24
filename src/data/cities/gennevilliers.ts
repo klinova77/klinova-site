@@ -68,7 +68,7 @@ const city: City = {
     },
     {
       question: "Quel délai pour une première intervention sur la commune ?",
-      answer: "<p>Après validation du devis, nous pouvons généralement intervenir sous <strong>5 à 10 jours ouvrés</strong>. En cas d'urgence (dégradation importante, fin de chantier), un passage plus rapide peut être organisé selon la disponibilité des équipes et la nature de la prestation demandée.</p>",
+      answer: "<p>Après validation du devis, nous planifions l'intervention selon la disponibilité de nos équipes. En cas d'urgence (dégradation importante, fin de chantier), un passage plus rapide peut être organisé selon la nature de la prestation demandée.</p>",
     },
     {
       question: "Intervenez-vous aussi pour les entreprises situées dans la zone portuaire ?",
@@ -76,7 +76,7 @@ const city: City = {
     },
     {
       question: "Comment gérez-vous les demandes urgentes ou imprévues ?",
-      answer: "<p>Un interlocuteur dédié traite les demandes urgentes. Selon la nature du besoin — <strong>sinistre, dégradation, état des lieux imprévu</strong> — nous mobilisons une équipe dans les meilleurs délais. La réactivité dépend de la charge en cours, mais nous privilégions toujours une réponse rapide.</p>",
+      answer: "<p>Un interlocuteur dédié traite les demandes urgentes. Selon la nature du besoin — <strong>sinistre, dégradation, état des lieux imprévu</strong> — nous mobilisons une équipe selon les disponibilités. La réactivité dépend de la charge en cours, mais nous privilégions toujours une réponse rapide.</p>",
     },
   ],
 
@@ -345,7 +345,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Dans la Cité du Luth à Gennevilliers, quel délai proposez-vous pour un nettoyage d'appartement en urgence ?",
-          answer: "<p>Nous intervenons sous 24 à 48 heures selon la disponibilité et la surface du logement. Pour les situations urgentes liées à un état des lieux imminent, nous ajustons le planning en priorité. La coordination avec le gardien ou l'agence facilite l'accès rapide au logement.</p>",
+          answer: "<p>Nous nous organisons selon la disponibilité et la surface du logement. Pour les situations urgentes liées à un état des lieux imminent, nous ajustons le planning en priorité. La coordination avec le gardien ou l'agence facilite l'accès rapide au logement.</p>",
         },
         {
           question: "À Gennevilliers, comment distinguez-vous un nettoyage standard d'un nettoyage fin de chantier en appartement ?",

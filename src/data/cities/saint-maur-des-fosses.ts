@@ -13,7 +13,7 @@ const city: City = {
 
   // OPTIMISATION SEO : Plus court, plus incitatif au clic (CTR), mots-clés placés au début.
   customDescription:
-    "Expert du nettoyage à Saint-Maur-des-Fossés (94). Entretien de standing pour pavillons et copropriétés : moquettes, terrasses, parkings et canapés. Protocoles spécialisés meulières et bois exotique. Devis gratuit sous 48h.",
+    "Expert du nettoyage à Saint-Maur-des-Fossés (94). Entretien de standing pour pavillons et copropriétés : moquettes, terrasses, parkings et canapés. Protocoles spécialisés meulières et bois exotique. Devis gratuit et rapide.",
 
   // OPTIMISATION CONVERSION : Mise en avant de l'autorité et de la rassurance immédiate.
   hubIntro:

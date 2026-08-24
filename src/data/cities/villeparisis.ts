@@ -62,7 +62,7 @@ const city: City = {
       question:
         "Quelle est votre réactivité pour une intervention dans le secteur de la gare de Villeparisis - Mitry-le-Neuf ?",
       answer:
-        "<p><strong>Grâce à notre ancrage local en Seine-et-Marne,</strong> nos équipes techniques peuvent intervenir rapidement sur l'ensemble de Villeparisis. Nous avons l'habitude des secteurs plus denses autour de la gare et des zones commerçantes, et nous adaptons nos créneaux pour limiter la gêne et préserver la circulation des résidents.</p>",
+        "<p><strong>Grâce à notre ancrage local en Seine-et-Marne,</strong> nos équipes techniques interviennent sur l'ensemble de Villeparisis. Nous avons l'habitude des secteurs plus denses autour de la gare et des zones commerçantes, et nous adaptons nos créneaux pour limiter la gêne et préserver la circulation des résidents.</p>",
     },
     {
       question:

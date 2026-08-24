@@ -84,12 +84,6 @@ const city: City = {
       answer:
         "<p><strong>Oui.</strong> Parkings souterrains, digicodes, gardiens, parties communes étroites : nous maîtrisons ces environnements. Cité de la Joie (histoire Abbé Pierre) et Val Roger (immeubles années 70-80) demandent une organisation précise. Nous coordonnons avec les syndics et <strong>respectons les horaires d'accès</strong>.</p>",
     },
-    {
-      question:
-        "Quel est votre délai d'intervention en cas d'urgence (fientes pigeons, dégât) ?",
-      answer:
-        "<p>Selon la nature : assainissement balcon (24-48h), nettoyage après sinistre (devis rapide, intervention 48-72h). Nous évaluons d'abord la situation, proposons un protocole clair et un délai réaliste. Pas de promesse \"immédiate\", mais réactivité adaptée au contexte.</p>",
-    },
   ],
 
   testimonial: {
@@ -274,7 +268,7 @@ const city: City = {
           question:
             "Les fientes sur mon balcon proche du Parc de la Mairie semblent infectieuses. Quels sont les risques sanitaires réels et comment agir rapidement ?",
           answer:
-            "<p>Oui, les fientes contiennent des <strong>agents pathogènes</strong> (histoplasmose, cryptococcose) dangereux surtout pour enfants et immunodéprimés. Risques : infections respiratoires, allergies. Action rapide : confinement de la zone, port EPI, nettoyage + désinfection virucide. Délai avant réutilisation : 24h. Contactez-nous pour diagnostic et devis sans délai.</p>",
+            "<p>Oui, les fientes contiennent des <strong>agents pathogènes</strong> (histoplasmose, cryptococcose) dangereux surtout pour enfants et immunodéprimés. Risques : infections respiratoires, allergies. Action rapide : confinement de la zone, port EPI, nettoyage + désinfection virucide. Délai avant réutilisation : 24h. Contactez-nous pour un diagnostic et un devis rapide.</p>",
         },
         {
           question:
@@ -436,7 +430,7 @@ const city: City = {
           question:
             "En cas d'urgence avant état des lieux, quels délais d'intervention garantissez-vous pour un appartement du centre ?",
           answer:
-            "<p>Pour un bien accessible (digicode, clés disponibles), nous intervenons sous 48 heures en semaine. Centre-ville et Val Roger : délais réduits grâce à la proximité. Coordination directe avec l'agence ou le syndic pour accès et horaires. Remise de clés le jour même si intervention matinale.</p>",
+            "<p>Pour un bien accessible (digicode, clés disponibles), nous intervenons rapidement en semaine. Centre-ville et Val Roger : délais réduits grâce à la proximité. Coordination directe avec l'agence ou le syndic pour accès et horaires.</p>",
         },
         {
           question:

@@ -69,10 +69,6 @@ const city: City = {
       answer: "<p>Nous contactons le gardien ou le syndic en amont pour obtenir les <strong>codes d'accès</strong> et convenir d'un créneau. Le jour de l'intervention, notre technicien se présente à l'heure convenue. En cas d'absence du gardien, nous utilisons les accès transmis et laissons un compte rendu dans la loge.</p>",
     },
     {
-      question: "Quel délai prévoir pour une première intervention à Neuilly-sur-Seine ?",
-      answer: "<p>Pour une demande standard, nous proposons généralement un passage sous <strong>5 à 7 jours ouvrés</strong>. En cas d'urgence — dégât des eaux, remise en état avant état des lieux — nous pouvons intervenir sous 48 à 72 heures selon la disponibilité de nos équipes sur le secteur.</p>",
-    },
-    {
       question: "Comment gérez-vous le stationnement sur les zones à forte contrainte ?",
       answer: "<p>Nous identifions les <strong>emplacements livraison</strong> et les créneaux horaires autorisés avant chaque intervention. Sur l'Avenue Charles de Gaulle ou les rues étroites du quartier Madrid, nous privilégions les passages tôt le matin pour éviter les verbalisations et ne pas bloquer la circulation.</p>",
     },
@@ -350,7 +346,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "En cas d'état des lieux urgent près du Lycée Pasteur, quel délai proposez-vous pour une remise en état complète ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la superficie et l'état du logement. Pour les situations pressantes, un diagnostic rapide par téléphone permet d'évaluer la faisabilité d'une intervention plus courte et de mobiliser une équipe disponible.</p>",
+          answer: "<p>Nous intervenons selon la superficie et l'état du logement. Pour les situations pressantes, un diagnostic rapide par téléphone permet d'évaluer la faisabilité d'une intervention plus courte et de mobiliser une équipe disponible.</p>",
         },
         {
           question: "Pour un grand appartement de plus de 100 m² avec parquet massif, quelle différence entre nettoyage standard et fin de chantier ?",

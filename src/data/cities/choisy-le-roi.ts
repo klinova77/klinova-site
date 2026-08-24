@@ -69,12 +69,12 @@ const city: City = {
       question:
         "Intervenez-vous rapidement en cas de besoin urgent sur Choisy-le-Roi ?",
       answer:
-        "<p>Oui, notre équipe basée en Île-de-France peut se mobiliser sous <strong>24 à 48 heures</strong> selon la nature de la demande. Pour les situations critiques (dégât des eaux, souillure importante), nous priorisons l'intervention afin de limiter la gêne pour les occupants ou usagers du site.</p>",
+        "<p>Oui, notre équipe basée en Île-de-France peut se mobiliser selon la nature de la demande. Pour les situations critiques (dégât des eaux, souillure importante), nous priorisons l'intervention afin de limiter la gêne pour les occupants ou usagers du site.</p>",
     },
     {
       question: "Comment se passe la prise de rendez-vous pour un devis ?",
       answer:
-        "<p>Nous organisons une visite technique sur place pour évaluer les surfaces, les accès et les contraintes spécifiques. À Choisy-le-Roi, cela inclut souvent la <strong>vérification du stationnement</strong> près du chantier et la coordination avec le gardien ou le syndic. Le devis est transmis sous 48 heures après passage.</p>",
+        "<p>Nous organisons une visite technique sur place pour évaluer les surfaces, les accès et les contraintes spécifiques. À Choisy-le-Roi, cela inclut souvent la <strong>vérification du stationnement</strong> près du chantier et la coordination avec le gardien ou le syndic. Le devis est transmis rapidement après passage.</p>",
     },
     {
       question: "Pouvez-vous intervenir en dehors des heures de bureau ?",

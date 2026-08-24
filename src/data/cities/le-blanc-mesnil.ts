@@ -76,10 +76,6 @@ const city: City = {
       answer: "<p>Oui, nous travaillons régulièrement avec des entreprises implantées sur ces zones. Les interventions sont planifiées selon les <strong>horaires d'exploitation</strong> : tôt le matin, en soirée ou le week-end pour les parkings et parties communes sans perturber l'activité.</p>",
     },
     {
-      question: "Quel délai pour une intervention urgente au Blanc-Mesnil ?",
-      answer: "<p>En cas de besoin urgent — dégât des eaux, salissure importante après incident — nous pouvons généralement intervenir sous <strong>24 à 48 heures</strong> selon la disponibilité des équipes. Un premier échange téléphonique permet d'évaluer la situation et de confirmer le créneau.</p>",
-    },
-    {
       question:
         "Comment se passe la coordination avec un syndic pour plusieurs immeubles ?",
       answer: "<p>Un référent Klinova centralise les échanges et assure le suivi de chaque site. Les <strong>plannings sont mutualisés</strong> quand c'est pertinent, et un compte-rendu peut être transmis après chaque passage si le gestionnaire le souhaite.</p>",
@@ -377,7 +373,7 @@ const city: City = {
         {
           question:
             "En cas d'état des lieux sortant aux Tilleuls, quels sont vos délais d'intervention pour un nettoyage complet avant remise des clefs ?",
-          answer: "<p>Selon la surface et l'état du logement, nous intervenons généralement sous 48 à 72 heures après confirmation. Pour les situations urgentes, un créneau peut être avancé si notre planning le permet. Le délai exact est confirmé après échange sur les contraintes du bien.</p>",
+          answer: "<p>Selon la surface et l'état du logement, nous planifions l'intervention après confirmation. Pour les situations urgentes, un créneau peut être avancé si notre planning le permet. Le délai exact est confirmé après échange sur les contraintes du bien.</p>",
         },
         {
           question:

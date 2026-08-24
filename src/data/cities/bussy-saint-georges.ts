@@ -65,7 +65,7 @@ const city: City = {
       question:
         "Le déplacement pour un devis à Bussy-Saint-Georges est-il facturé, même pour les quartiers éloignés du centre ?",
       answer:
-        "<p><strong>Non, jamais.</strong> Que vous soyez situés au Sycomore, au Vieux Village ou près du golf de Bussy-Guermantes, nous nous déplaçons gratuitement pour réaliser un diagnostic sur site. Cela nous permet d'évaluer les surfaces, les contraintes d'accès et de vous remettre un chiffrage précis sous 48 heures, sans engagement.</p>",
+        "<p><strong>Non, jamais.</strong> Que vous soyez situés au Sycomore, au Vieux Village ou près du golf de Bussy-Guermantes, nous nous déplaçons gratuitement pour réaliser un diagnostic sur site. Cela nous permet d'évaluer les surfaces, les contraintes d'accès et de vous remettre rapidement un chiffrage précis, sans engagement.</p>",
     },
     {
       question:

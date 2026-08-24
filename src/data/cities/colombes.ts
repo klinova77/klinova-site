@@ -73,11 +73,11 @@ const city: City = {
   faq: [
     {
       question: "Intervenez-vous rapidement sur Colombes en cas de besoin urgent ?",
-      answer: "<p>Nous disposons d'équipes basées à proximité, ce qui permet une <strong>réactivité sous 24 à 48 heures</strong> selon la nature de la demande. Pour les situations nécessitant une prise en charge rapide (dégât, remise en état avant visite), nous ajustons notre planning en conséquence.</p>",
+      answer: "<p>Nous disposons d'équipes basées à proximité, ce qui permet une <strong>réactivité adaptée</strong> selon la nature de la demande. Pour les situations nécessitant une prise en charge rapide (dégât, remise en état avant visite), nous ajustons notre planning en conséquence.</p>",
     },
     {
       question: "Comment se passe la prise de rendez-vous pour un devis sur place ?",
-      answer: "<p>Nous proposons un passage gratuit pour évaluer les surfaces et contraintes d'accès. À Colombes, cela permet notamment de vérifier les conditions de <strong>stationnement</strong> et les modalités d'entrée dans l'immeuble (badge, gardien). Le devis détaillé suit sous 48 heures.</p>",
+      answer: "<p>Nous proposons un passage gratuit pour évaluer les surfaces et contraintes d'accès. À Colombes, cela permet notamment de vérifier les conditions de <strong>stationnement</strong> et les modalités d'entrée dans l'immeuble (badge, gardien). Le devis détaillé suit rapidement.</p>",
     },
     {
       question: "Travaillez-vous avec les syndics et gestionnaires de copropriétés ?",
@@ -109,7 +109,7 @@ const city: City = {
         "Matériel d'injection-extraction professionnel, réglages adaptés aux dalles textiles comme aux moquettes épaisses.",
         "Interventions planifiées en dehors des heures d'affluence pour limiter la gêne des occupants et usagers.",
       ],
-      uniqueIntro: "<p>Les traces grises le long des circulations, les auréoles de café près des postes de travail, les zones ternies aux entrées : ces marques s'accumulent sur les <strong>moquettes des cabinets médicaux et bureaux autour de l'Hôpital Louis-Mourier</strong>. Le passage quotidien des patients, visiteurs et salariés imprime dans les fibres des salissures que l'aspiration seule ne décroche plus.</p>\n<p class=\"mt-4\">Un revêtement textile encrassé modifie l'image d'un espace professionnel. Dans les <strong>halls équipés de dalles textiles</strong>, fréquents dans les établissements de santé et immeubles tertiaires de Colombes, le grisaillement progressif donne une impression de vétusté. Retrouver une surface propre améliore le confort visuel et prolonge la durée de vie du support.</p>\n<p class=\"mt-4\">L'intervention repose sur un diagnostic préalable : identification du type de moquette, repérage des taches spécifiques, évaluation des <strong>contraintes d'accès liées aux flux tertiaires de la zone Kléber</strong>. Ce cadrage permet d'adapter le matériel et d'organiser le chantier pour une remise en service dans les meilleurs délais.</p>",
+      uniqueIntro: "<p>Les traces grises le long des circulations, les auréoles de café près des postes de travail, les zones ternies aux entrées : ces marques s'accumulent sur les <strong>moquettes des cabinets médicaux et bureaux autour de l'Hôpital Louis-Mourier</strong>. Le passage quotidien des patients, visiteurs et salariés imprime dans les fibres des salissures que l'aspiration seule ne décroche plus.</p>\n<p class=\"mt-4\">Un revêtement textile encrassé modifie l'image d'un espace professionnel. Dans les <strong>halls équipés de dalles textiles</strong>, fréquents dans les établissements de santé et immeubles tertiaires de Colombes, le grisaillement progressif donne une impression de vétusté. Retrouver une surface propre améliore le confort visuel et prolonge la durée de vie du support.</p>\n<p class=\"mt-4\">L'intervention repose sur un diagnostic préalable : identification du type de moquette, repérage des taches spécifiques, évaluation des <strong>contraintes d'accès liées aux flux tertiaires de la zone Kléber</strong>. Ce cadrage permet d'adapter le matériel et d'organiser le chantier sans perturber l'activité du site.</p>",
       uniqueDeepDive: "<h3>Fibres débarrassées des résidus incrustés</h3>\
 <p>L'injection-extraction projette une solution nettoyante dans l'épaisseur du textile, puis aspire immédiatement l'eau chargée de salissures. Les zones de fort passage reçoivent plusieurs passes pour <strong>déloger les particules compactées</strong>.</p>\
 <p class=\"mt-4\">Les taches localisées — tanin, graisse, encre — font l'objet d'un détachage ciblé avant le traitement général.</p>\
@@ -389,7 +389,7 @@ const city: City = {
         {
           question:
             "En cas d'urgence état des lieux près de la gare du Stade, quel délai d'intervention proposez-vous ?",
-          answer: "<p>Nous pouvons généralement intervenir sous 24 à 48 heures selon la surface et la disponibilité. Pour les demandes urgentes dans ce secteur, un créneau en fin de journée ou le samedi matin reste souvent possible après échange téléphonique pour confirmer l'accès au logement.</p>",
+          answer: "<p>Nous nous organisons selon la surface et la disponibilité. Pour les demandes urgentes dans ce secteur, un créneau en fin de journée ou le samedi matin reste souvent possible après échange téléphonique pour confirmer l'accès au logement.</p>",
         },
         {
           question:

@@ -83,7 +83,7 @@ const city: City = {
       question:
         "Quel délai pour obtenir un devis après une demande à Montrouge ?",
       answer:
-        "<p>Le devis est généralement transmis sous <strong>24 à 48 heures</strong> après réception des informations nécessaires. Si une visite technique s'impose, elle est planifiée rapidement compte tenu de nos passages réguliers dans le secteur. Le chiffrage précise les prestations, surfaces et conditions d'accès.</p>",
+        "<p>Le devis est généralement transmis <strong>rapidement</strong> après réception des informations nécessaires. Si une visite technique s'impose, elle est planifiée sans attendre compte tenu de nos passages réguliers dans le secteur. Le chiffrage précise les prestations, surfaces et conditions d'accès.</p>",
     },
     {
       question: "Comment gérez-vous le stationnement lors des interventions ?",
@@ -372,7 +372,7 @@ const city: City = {
           question:
             "Quel délai pour une intervention avant état des lieux près de la station Barbara ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement. Pour les situations urgentes liées à une remise de clés imminente, contactez-nous directement : nous adaptons notre planning quand c'est possible, en tenant compte des contraintes d'accès aux immeubles du secteur.</p>",
+            "<p>Nous intervenons selon la taille du logement et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente, contactez-nous directement : nous adaptons notre planning quand c'est possible, en tenant compte des contraintes d'accès aux immeubles du secteur.</p>",
         },
         {
           question:

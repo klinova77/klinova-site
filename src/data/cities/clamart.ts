@@ -73,10 +73,6 @@ const city: City = {
       answer: "<p>Oui, c'est une configuration courante à Clamart, notamment dans les résidences récentes. Nous récupérons les <strong>accès auprès du syndic ou du gardien</strong> en amont. L'équipe dispose des badges nécessaires pour accéder aux parties communes, parkings et locaux techniques sans solliciter les occupants.</p>",
     },
     {
-      question: "Quel délai prévoir pour une première intervention sur un site que vous ne connaissez pas ?",
-      answer: "<p>Après réception de la demande, nous réalisons un <strong>repérage rapide</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le délai habituel entre la validation du devis et la première intervention est de 48 à 72 heures, sauf urgence où nous pouvons réduire ce délai.</p>",
-    },
-    {
       question: "Comment limitez-vous la gêne pour les résidents lors des interventions ?",
       answer: "<p>Nous privilégions les <strong>horaires décalés</strong> : tôt le matin pour les halls et parties communes, journée pour les parkings souterrains. Le balisage est systématique, et l'équipe informe le gardien ou le gestionnaire de l'avancement. Les zones traitées restent accessibles dès séchage.</p>",
     },
@@ -346,7 +342,7 @@ const city: City = {
         },
         {
           question: "Quel délai d'intervention proposez-vous pour un nettoyage avant état des lieux dans le secteur de la Gare de Clamart ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement et la période. En cas d'urgence liée à une remise de clés imminente, un créneau prioritaire peut être organisé après échange sur les accès et le périmètre exact de la prestation.</p>",
+          answer: "<p>Nous intervenons selon la taille du logement et la période. En cas d'urgence liée à une remise de clés imminente, un créneau prioritaire peut être organisé après échange sur les accès et le périmètre exact de la prestation.</p>",
         },
         {
           question: "Comment est tarifée une prestation de ménage complet pour un T3 bourgeois avec parquet massif à Clamart ?",

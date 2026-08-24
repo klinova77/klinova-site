@@ -74,7 +74,7 @@ const city: City = {
     },
     {
       question: "Quels délais pour une intervention urgente à Malakoff ?",
-      answer: "<p>Selon la nature de la demande et notre planning, nous pouvons intervenir sous <strong>24 à 48 heures</strong> pour les situations prioritaires (dégât, salissure importante). Pour les prestations régulières, un calendrier est établi en amont avec le gestionnaire.</p>",
+      answer: "<p>Selon la nature de la demande et notre planning, nous intervenons <strong>dès que possible</strong> pour les situations prioritaires (dégât, salissure importante). Pour les prestations régulières, un calendrier est établi en amont avec le gestionnaire.</p>",
     },
     {
       question: "Comment adaptez-vous vos horaires aux immeubles de bureaux du quartier Val de Seine ?",
@@ -350,7 +350,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Pour un état des lieux près de la Mairie, quel délai d'intervention garantissez-vous pour un nettoyage complet ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la surface et la disponibilité du logement. Pour les demandes urgentes autour de la Place du 11 Novembre, un créneau prioritaire peut être proposé après échange téléphonique afin de respecter la date de remise des clés.</p>",
+          answer: "<p>Nous intervenons selon la surface et la disponibilité du logement. Pour les demandes urgentes autour de la Place du 11 Novembre, un créneau prioritaire peut être proposé après échange téléphonique afin de respecter la date de remise des clés.</p>",
         },
         {
           question: "Pour un nettoyage post-chantier dans un appartement ancien, quelles méthodes employez-vous pour les traces de colle et de peinture ?",

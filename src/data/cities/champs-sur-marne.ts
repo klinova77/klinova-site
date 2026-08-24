@@ -62,7 +62,7 @@ const city: City = {
       question:
         "Êtes-vous en mesure d'intervenir rapidement près de la Cité Descartes pour des remises en état urgentes ?",
       answer:
-        "<p><strong>Oui, notre organisation est calibrée pour ce secteur dynamique.</strong> Que ce soit pour une fin de chantier ou un nettoyage après sinistre dans une résidence proche du Boulevard Newton ou de la gare Noisy-Champs, nous déployons une équipe technique rapidement pour assurer la continuité de service.</p>",
+        "<p><strong>Oui, notre organisation est calibrée pour ce secteur dynamique.</strong> Que ce soit pour une fin de chantier ou un nettoyage après sinistre dans une résidence proche du Boulevard Newton ou de la gare Noisy-Champs, nous déployons une équipe technique pour assurer la continuité de service.</p>",
     },
     {
       question:

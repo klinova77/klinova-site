@@ -79,12 +79,6 @@ const city: City = {
         "<p><strong>Oui, nous travaillons régulièrement dans des immeubles sécurisés. Avant la première intervention, nous récupérons les accès nécessaires auprès du syndic ou du gardien. Les badges Vigik et codes sont gérés de manière confidentielle pour garantir la sécurité du site.</strong></p>",
     },
     {
-      question:
-        "Quel délai prévoir pour une première intervention après demande de devis ?",
-      answer:
-        "<p><strong>Après validation du devis, nous programmons généralement l'intervention sous 5 à 10 jours ouvrés selon la disponibilité du site et la nature des travaux. En cas d'urgence signalée, nous étudions un passage plus rapide en fonction de notre planning.</strong></p>",
-    },
-    {
       question: "Proposez-vous un suivi écrit après chaque passage ?",
       answer:
         "<p><strong>Un compte-rendu est transmis après intervention, mentionnant les zones traitées, les observations éventuelles et les points à surveiller. Ce document facilite les échanges avec le conseil syndical ou le gestionnaire et permet d'ajuster la fréquence des prestations.</strong></p>",

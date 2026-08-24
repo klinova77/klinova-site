@@ -65,11 +65,11 @@ const city: City = {
     },
     {
       question: "Quel délai pour obtenir un devis après une demande ?",
-      answer: "<p>Nous répondons sous <strong>24 à 48 heures</strong> après réception de votre demande. Si une visite technique est nécessaire — notamment pour les parkings souterrains ou les grands ensembles — nous la planifions rapidement pour établir un chiffrage précis.</p>",
+      answer: "<p>Nous répondons rapidement après réception de votre demande. Si une visite technique est nécessaire — notamment pour les parkings souterrains ou les grands ensembles — nous la planifions rapidement pour établir un chiffrage précis.</p>",
     },
     {
       question: "Pouvez-vous intervenir en urgence sur un sinistre ou une dégradation ?",
-      answer: "<p>Oui, nous proposons des <strong>créneaux prioritaires</strong> pour les situations urgentes : dégât des eaux, souillures importantes, remise en état avant visite. Le délai dépend de la disponibilité des équipes, mais nous faisons le maximum pour intervenir sous 24 à 72 heures.</p>",
+      answer: "<p>Oui, nous proposons des <strong>créneaux prioritaires</strong> pour les situations urgentes : dégât des eaux, souillures importantes, remise en état avant visite. Le délai dépend de la disponibilité de nos équipes.</p>",
     },
     {
       question: "Comment se passe la coordination avec notre syndic ou gestionnaire ?",
@@ -336,7 +336,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Dans les résidences récentes de Cergy, quel délai proposez-vous pour un nettoyage avant un état des lieux ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la surface et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente, un créneau prioritaire peut être organisé après échange téléphonique afin de respecter votre échéance.</p>",
+          answer: "<p>Nous intervenons selon la surface et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente, un créneau prioritaire peut être organisé après échange téléphonique afin de respecter votre échéance.</p>",
         },
         {
           question: "Après une fin de chantier à Cergy, quelles différences faites-vous entre un nettoyage standard et un nettoyage approfondi ?",

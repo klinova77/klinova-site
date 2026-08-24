@@ -66,15 +66,15 @@ const city: City = {
     },
     {
       question:
-        "Pouvez-vous intervenir rapidement en cas de dégradation imprévue ?",
+        "Pouvez-vous intervenir en cas de dégradation imprévue ?",
       answer:
-        "<p>Oui. Pour les situations urgentes — souillure accidentelle, dégât des eaux, incident en parking — nous réorganisons le planning sous <strong>24 à 48 heures</strong> selon disponibilité. Un contact direct avec le gestionnaire permet de valider le périmètre avant déplacement.</p>",
+        "<p>Oui. Pour les situations urgentes — souillure accidentelle, dégât des eaux, incident en parking — nous réorganisons le planning selon disponibilité. Un contact direct avec le gestionnaire permet de valider le périmètre avant déplacement.</p>",
     },
     {
       question:
         "Comment se passe la prise de contact pour un devis à Villemomble ?",
       answer:
-        "<p><strong>Un premier échange téléphonique ou par mail</strong> permet de cerner le besoin. Si nécessaire, nous programmons une visite technique pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit sous quelques jours, sans engagement.</p>",
+        "<p><strong>Un premier échange téléphonique ou par mail</strong> permet de cerner le besoin. Si nécessaire, nous programmons une visite technique pour évaluer les surfaces, les accès et les contraintes horaires. Le devis détaillé suit rapidement, sans engagement.</p>",
     },
     {
       question: "Travaillez-vous avec les syndics et bailleurs du secteur ?",
@@ -395,7 +395,7 @@ const city: City = {
       whyUsBullets: [
         "Connaissance des typologies locales : meulières du quartier de l'Époque, collectifs années 70, pavillons familiaux.",
         "Polyvalence sur les supports : parquet massif, carrelage ancien, faïence, vitres intérieures traitées avec produits adaptés.",
-        "Organisation calée sur vos contraintes : intervention possible en 24-48h, coordination directe avec agence ou propriétaire.",
+        "Organisation calée sur vos contraintes, coordination directe avec agence ou propriétaire.",
       ],
       uniqueIntro:
         "<p>Après plusieurs semaines de travaux ou une longue période d'occupation, un appartement ou une maison accumule des traces que le ménage courant ne suffit pas à éliminer. Dans la zone de rotation locative autour de la <strong>Gare du Raincy - Villemomble - Montfermeil</strong>, les demandes de remise en état se multiplient entre deux locataires, souvent avec des délais serrés imposés par les agences.</p>\n\n<p class=\"mt-4\">Les pavillons 1930, appartements T2/T3 et maisons meulières présentent des surfaces variées : parquets massifs, carrelages anciens, faïences de salle de bain. Chaque support demande un traitement distinct pour éviter les dégradations. Un logement correctement préparé facilite l'état des lieux et limite les litiges sur le dépôt de garantie.</p>\n\n<p class=\"mt-4\">Qu'il s'agisse d'un ménage fin de chantier avec résidus d'enduit et poussière de plâtre, ou d'une préparation avant emménagement, l'intervention suit un diagnostic initial. Les pièces d'eau, les vitres intérieures et les placards sont traités selon un ordre précis pour une restitution conforme aux attentes.</p>",
@@ -417,9 +417,9 @@ const city: City = {
         },
         {
           question:
-            "Quel délai d'intervention pour un nettoyage urgent avant état des lieux près de la Gare du Raincy - Villemomble ?",
+            "Comment organisez-vous un nettoyage urgent avant état des lieux près de la Gare du Raincy - Villemomble ?",
           answer:
-            "<p>Selon la disponibilité et la surface du bien, une intervention peut être planifiée sous 24 à 48 heures. Pour les demandes très urgentes, un <strong>échange préalable</strong> permet d'évaluer la faisabilité et d'ajuster le planning en conséquence.</p>",
+            "<p>Selon la disponibilité et la surface du bien, nous nous adaptons pour planifier une intervention. Pour les demandes très urgentes, un <strong>échange préalable</strong> permet d'évaluer la faisabilité et d'ajuster le planning en conséquence.</p>",
         },
         {
           question:

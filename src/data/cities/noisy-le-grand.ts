@@ -81,7 +81,7 @@ const city: City = {
     {
       question: "Pouvez-vous intervenir rapidement à Noisy-le-Grand ?",
       answer:
-        "<strong>Oui.</strong> Nos équipes couvrent régulièrement Noisy-le-Grand. Un rendez-vous peut être fixé sous 48 à 72 h selon la zone (Mont d'Est, Yvris, Richardets, etc.).",
+        "<strong>Oui.</strong> Nos équipes couvrent régulièrement Noisy-le-Grand. Un rendez-vous est fixé selon la zone (Mont d'Est, Yvris, Richardets, etc.) et la disponibilité de nos équipes.",
     },
     {
       question:

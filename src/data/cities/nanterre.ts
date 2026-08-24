@@ -77,7 +77,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe sous <strong>24 à 48 heures</strong> selon la nature de la demande et la disponibilité des accès. Le délai exact dépend du type d'intervention et des contraintes logistiques du site concerné.</p>",
+      answer: "<p>Oui, nous pouvons mobiliser une équipe selon la nature de la demande et la disponibilité des accès. Le délai exact dépend du type d'intervention et des contraintes logistiques du site concerné.</p>",
     },
     {
       question: "Le stationnement est difficile près de la Préfecture, comment procédez-vous ?",
@@ -411,7 +411,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Quel délai proposez-vous pour un nettoyage complet avant état des lieux près de la Gare de Nanterre-Ville ?",
-          answer: "<p>Nous intervenons sous 24 à 48 heures selon la surface et la disponibilité. Pour les états des lieux urgents dans le secteur de Nanterre-Ville, nous adaptons notre planning en coordination avec l'agence ou le propriétaire pour respecter la date de remise des clés.</p>",
+          answer: "<p>Nous intervenons selon la surface et la disponibilité. Pour les états des lieux urgents dans le secteur de Nanterre-Ville, nous adaptons notre planning en coordination avec l'agence ou le propriétaire pour respecter la date de remise des clés.</p>",
         },
         {
           question: "Quelle différence entre un ménage standard et une remise en état après travaux dans un appartement neuf de la ZAC Hoche ?",

@@ -16,7 +16,7 @@ const city: City = {
     "Klinova assure l'entretien des parties communes, parkings et espaces extérieurs à Saint-Ouen-sur-Seine. Du secteur des Docks aux immeubles du Vieux-Saint-Ouen, une équipe locale adapte ses interventions aux contraintes de chaque bâtiment.",
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
-  hubIntro: "<p>Desservie par les lignes 13 et 14 du métro ainsi que le RER C, Saint-Ouen-sur-Seine concentre des flux importants entre résidences, bureaux et commerces. Klinova s'appuie sur cette connaissance du terrain pour coordonner les interventions avec les gestionnaires locaux.</p>\n<p class=\"mt-4\">Nos équipes prennent en charge la propreté des halls, sous-sols et extérieurs selon un planning adapté aux contraintes d'accès. <strong>Un interlocuteur dédié assure le suivi</strong> et transmet les comptes rendus après chaque passage.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Présence régulière sur Plaine Commune, délais d'intervention courts pour les demandes urgentes ou les remises en état ponctuelles.</li>\n  <li><strong>Adaptation au bâti :</strong> Protocoles ajustés selon la configuration — halls ouverts, digicodes, parkings en sous-sol ou résidences récentes des Docks.</li>\n  <li><strong>Coordination gestionnaires :</strong> Échanges directs avec syndics et bailleurs pour planifier les passages sans gêner les occupants ni les visiteurs du Marché aux Puces.</li>\n</ul>",
+  hubIntro: "<p>Desservie par les lignes 13 et 14 du métro ainsi que le RER C, Saint-Ouen-sur-Seine concentre des flux importants entre résidences, bureaux et commerces. Klinova s'appuie sur cette connaissance du terrain pour coordonner les interventions avec les gestionnaires locaux.</p>\n<p class=\"mt-4\">Nos équipes prennent en charge la propreté des halls, sous-sols et extérieurs selon un planning adapté aux contraintes d'accès. <strong>Un interlocuteur dédié assure le suivi</strong> et transmet les comptes rendus après chaque passage.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Présence régulière sur Plaine Commune, avec suivi des demandes urgentes ou des remises en état ponctuelles.</li>\n  <li><strong>Adaptation au bâti :</strong> Protocoles ajustés selon la configuration — halls ouverts, digicodes, parkings en sous-sol ou résidences récentes des Docks.</li>\n  <li><strong>Coordination gestionnaires :</strong> Échanges directs avec syndics et bailleurs pour planifier les passages sans gêner les occupants ni les visiteurs du Marché aux Puces.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -66,10 +66,6 @@ const city: City = {
       question:
         "Comment organisez-vous les interventions dans les copropriétés proches du Marché aux Puces ?",
       answer: "<p>Les jours de marché génèrent un <strong>flux piéton important</strong> dans le quartier Garibaldi-Les-Puces. Nous planifions les passages en dehors des pics d'affluence, généralement en début de semaine ou tôt le matin. Le matériel reste discret et les accès sont libérés rapidement pour ne pas gêner les résidents.</p>",
-    },
-    {
-      question: "Quel délai prévoir pour une première intervention à Saint-Ouen-sur-Seine ?",
-      answer: "<p>Notre présence régulière sur le territoire de <strong>Plaine Commune</strong> permet une prise en charge sous 48 à 72 heures pour les demandes courantes. En cas d'urgence — dégât des eaux, souillure accidentelle — nous pouvons intervenir le jour même selon disponibilité des équipes.</p>",
     },
     {
       question:

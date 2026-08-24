@@ -66,7 +66,7 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour une première intervention sur le secteur ?",
-      answer: "<p>Selon la nature de la demande et la disponibilité, nous pouvons généralement <strong>intervenir sous 48 à 72 heures</strong>. Pour les situations urgentes, un passage plus rapide reste possible après échange téléphonique. Le délai exact dépend de l'accessibilité du site et du volume de travail.</p>",
+      answer: "<p>Selon la nature de la demande et la disponibilité, nous nous organisons au cas par cas pour intervenir. Pour les situations urgentes, un passage plus rapide reste possible après échange téléphonique. Le délai exact dépend de l'accessibilité du site et du volume de travail.</p>",
     },
     {
       question: "Proposez-vous un interlocuteur unique pour le suivi des prestations ?",

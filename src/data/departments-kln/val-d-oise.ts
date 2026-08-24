@@ -11,9 +11,9 @@ export const valDOise: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel dans le Val-d'Oise (95)",
-  heroKicker: "Argenteuil • Cergy • Sarcelles • Enghien • Devis sous 24h",
+  heroKicker: "Argenteuil • Cergy • Sarcelles • Enghien • Devis rapide",
   heroDescription:
-    "Des grands ensembles d'Argenteuil aux pavillons de la vallée de Montmorency, le Val-d'Oise combine toutes les configurations. Klinova intervient dans tout le 95 pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains et terrasses. Organisation par secteurs géographiques pour des délais maîtrisés sur l'ensemble du département.",
+    "Des grands ensembles d'Argenteuil aux pavillons de la vallée de Montmorency, le Val-d'Oise combine toutes les configurations. Klinova intervient dans tout le 95 pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains et terrasses. Organisation par secteurs géographiques sur l'ensemble du département.",
 
   // =========================
   // Images
@@ -41,7 +41,7 @@ export const valDOise: DepartmentKln = {
       "Villes moyennes (Cergy-Pontoise, Ermont, Franconville) : mix copropriétés collectives et zones pavillonnaires",
       "Vallée de Montmorency et secteurs résidentiels : interventions à domicile pour textiles et terrasses,avec créneaux souples",
       "Parkings souterrains de toutes tailles : du petit parking résidentiel au grand ensemble avec rampes hélicoïdales",
-      "Organisation par secteurs (Est, Ouest, vallée de l'Oise, Montmorency) pour des délais cohérents sur tout le département",
+      "Organisation par secteurs (Est, Ouest, vallée de l'Oise, Montmorency) sur tout le département",
     ],
   },
 
@@ -151,7 +151,7 @@ export const valDOise: DepartmentKln = {
     {
       question: "Comment gérez-vous les distances sur un département aussi étendu ?",
       answer:
-        "Nous structurons nos tournées par secteurs : Est 95 (Sarcelles, Garges), Ouest 95 (Argenteuil, Bezons), vallée de l'Oise (Cergy-Pontoise) et Montmorency (Enghien, Soisy). Quand vous nous contactez, nous identifions votre zone et nous vous proposons un créneau cohérent avec nos prochains passages. Délai habituel : 3 à 7 jours.",
+        "Nous structurons nos tournées par secteurs : Est 95 (Sarcelles, Garges), Ouest 95 (Argenteuil, Bezons), vallée de l'Oise (Cergy-Pontoise) et Montmorency (Enghien, Soisy). Quand vous nous contactez, nous identifions votre zone et nous vous proposons un créneau cohérent avec nos prochains passages.",
     },
     {
       question: "Comment nettoyez-vous les moquettes de parties communes ?",
@@ -174,14 +174,9 @@ export const valDOise: DepartmentKln = {
         "Oui, en appartement comme en pavillon. Nous traitons tous types de surfaces : carrelage, dalles, bois, pierre. Le protocole s'adapte au matériau et à l'exposition — haute pression ajustée ou brossage manuel selon la fragilité de la surface. Nous gérons l'écoulement d'eau et prenons en compte les voisins du dessous si nécessaire.",
     },
     {
-      question: "Quel est votre délai d'intervention dans le Val-d'Oise ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon votre secteur et nos tournées en cours. Pour les urgences (assemblée générale, visite importante), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
-    },
-    {
       question: "Combien coûte un nettoyage de moquette dans le Val-d'Oise ?",
       answer:
-        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -196,6 +191,6 @@ export const valDOise: DepartmentKln = {
   seo: {
     title: "Entreprise de Nettoyage dans le Val-d'Oise (95) | Klinova",
     description:
-      "Nettoyage professionnel dans le 95 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+      "Nettoyage professionnel dans le 95 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit et rapide.",
   },
 };

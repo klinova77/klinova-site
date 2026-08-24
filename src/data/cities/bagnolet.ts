@@ -21,7 +21,7 @@ const city: City = {
   // - puis une liste à puces <ul><li>...</li></ul>
   // - HTML autorisé : <p>, <p class=\"mt-4\">, <ul>, <li>, <strong>, <br>
   hubIntro:
-    "<p>Au pied des tours Mercuriales et du terminus Gallieni, Bagnolet concentre bureaux, commerces et logements sur un territoire compact. Klinova s'y positionne comme partenaire terrain pour les gestionnaires et occupants confrontés à des besoins réguliers de propreté.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions selon les <strong>contraintes d'accès propres à chaque site</strong> : horaires décalés pour les immeubles de bureaux, créneaux adaptés aux copropriétés résidentielles. Un interlocuteur unique assure le suivi et transmet les comptes-rendus si nécessaire.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, déplacements rapides vers Bagnolet. Prise en charge possible sous 48 à 72 heures selon disponibilité.</li>\n  <li><strong>Coordination sur mesure :</strong> Échange préalable avec syndic, gardien ou gestionnaire pour caler les créneaux et éviter toute gêne aux occupants ou usagers.</li>\n  <li><strong>Méthodes adaptées au bâti :</strong> Matériel dimensionné selon la configuration — parkings souterrains des grands ensembles, halls d'immeubles anciens ou espaces extérieurs.</li>\n</ul>",
+    "<p>Au pied des tours Mercuriales et du terminus Gallieni, Bagnolet concentre bureaux, commerces et logements sur un territoire compact. Klinova s'y positionne comme partenaire terrain pour les gestionnaires et occupants confrontés à des besoins réguliers de propreté.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions selon les <strong>contraintes d'accès propres à chaque site</strong> : horaires décalés pour les immeubles de bureaux, créneaux adaptés aux copropriétés résidentielles. Un interlocuteur unique assure le suivi et transmet les comptes-rendus si nécessaire.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, mobilisable vers Bagnolet selon disponibilité.</li>\n  <li><strong>Coordination sur mesure :</strong> Échange préalable avec syndic, gardien ou gestionnaire pour caler les créneaux et éviter toute gêne aux occupants ou usagers.</li>\n  <li><strong>Méthodes adaptées au bâti :</strong> Matériel dimensionné selon la configuration — parkings souterrains des grands ensembles, halls d'immeubles anciens ou espaces extérieurs.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -70,7 +70,7 @@ const city: City = {
     {
       question: "Quel délai pour une première intervention à Bagnolet ?",
       answer:
-        "<p>Nous pouvons généralement intervenir sous 48 à 72 heures après validation du devis. Pour les demandes urgentes (souillure importante, incident), un créneau prioritaire peut être proposé selon la charge en cours. Contactez-nous pour évaluer la faisabilité.</p>",
+        "<p>Nous pouvons généralement intervenir après validation du devis. Pour les demandes urgentes (souillure importante, incident), un créneau prioritaire peut être proposé selon la charge en cours. Contactez-nous pour évaluer la faisabilité.</p>",
     },
     {
       question:
@@ -386,7 +386,7 @@ const city: City = {
           question:
             "Quel est le délai moyen d'intervention pour un nettoyage avant état des lieux demandé par une agence du centre-ville ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures après confirmation du créneau. En cas d'urgence — remise de clés imminente — un passage sous 24 heures peut être organisé selon disponibilité. Le planning est validé directement avec l'agence ou le propriétaire.</p>",
+            "<p>Nous intervenons après confirmation du créneau. En cas d'urgence — remise de clés imminente — un passage peut être organisé selon disponibilité. Le planning est validé directement avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

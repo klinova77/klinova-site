@@ -61,11 +61,11 @@ const city: City = {
   faq: [
     {
       question: "Quel délai pour une première intervention sur Rungis ?",
-      answer: "<p>Nous organisons généralement un premier passage sous <strong>48 à 72 heures</strong> après validation du devis. Ce délai peut varier selon la nature de la prestation et les contraintes d'accès au site. Pour les demandes urgentes, nous étudions la faisabilité d'une intervention plus rapide.</p>",
+      answer: "<p>Nous organisons chaque premier passage après validation du devis, selon la nature de la prestation et les contraintes d'accès au site. Pour les demandes urgentes, nous étudions la faisabilité d'une intervention plus rapide.</p>",
     },
     {
       question: "Comment se déroule la prise de contact pour un devis ?",
-      answer: "<p>Vous pouvez nous joindre par téléphone ou par mail. Nous recueillons les informations essentielles : <strong>type de surface</strong>, localisation, contraintes d'accès. Un devis détaillé vous est transmis sous 24 à 48 heures, sans engagement de votre part.</p>",
+      answer: "<p>Vous pouvez nous joindre par téléphone ou par mail. Nous recueillons les informations essentielles : <strong>type de surface</strong>, localisation, contraintes d'accès. Un devis détaillé vous est transmis rapidement, sans engagement de votre part.</p>",
     },
     {
       question: "Intervenez-vous en dehors des horaires classiques ?",
@@ -365,7 +365,7 @@ const city: City = {
         {
           question:
             "À Rungis Ville, pouvez-vous intervenir rapidement pour un nettoyage avant état des lieux ou après déménagement ?",
-          answer: "<p>Nous organisons des interventions sous 48 à 72 heures selon la disponibilité. Pour les états des lieux urgents dans le secteur de Rungis Ville, contactez-nous dès que la date est confirmée afin de caler un créneau compatible avec votre planning et celui de l'agence.</p>",
+          answer: "<p>Nous organisons une intervention rapide selon la disponibilité de nos équipes. Pour les états des lieux urgents dans le secteur de Rungis Ville, contactez-nous dès que la date est confirmée afin de caler un créneau compatible avec votre planning et celui de l'agence.</p>",
         },
         {
           question:

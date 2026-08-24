@@ -67,7 +67,7 @@ const city: City = {
     },
     {
       question: "Quel délai pour une première intervention sur la commune ?",
-      answer: "<p>Après validation du devis, nous programmons généralement le premier passage sous <strong>5 à 10 jours ouvrés</strong>. Pour une urgence (dégât, remise en état avant état des lieux), un créneau prioritaire peut être organisé selon disponibilité de l'équipe secteur Yvelines.</p>",
+      answer: "<p>Après validation du devis, nous programmons le premier passage selon la disponibilité de nos équipes. Pour une urgence (dégât, remise en état avant état des lieux), un créneau prioritaire peut être organisé selon disponibilité de l'équipe secteur Yvelines.</p>",
     },
     {
       question: "Le stationnement en centre-ville complique-t-il vos interventions ?",

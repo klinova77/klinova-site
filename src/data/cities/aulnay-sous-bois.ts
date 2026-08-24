@@ -73,7 +73,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande et la disponibilité du matériel requis. Pour les situations critiques — dégât des eaux, souillures importantes — nous <strong>priorisons le déplacement</strong> et adaptons le planning en conséquence.</p>",
+      answer: "<p>Oui, nous pouvons mobiliser une équipe selon la nature de la demande et la disponibilité du matériel requis. Pour les situations critiques — dégât des eaux, souillures importantes — nous <strong>priorisons le déplacement</strong> et adaptons le planning en conséquence.</p>",
     },
     {
       question:
@@ -243,7 +243,7 @@ const city: City = {
         {
           question:
             "Des fientes fraîches s'accumulent sur mon balcon proche du Parc du Sausset : pouvez-vous intervenir rapidement pour sécuriser la zone ?",
-          answer: "<p>Nous organisons des interventions sous 48 à 72 heures selon la disponibilité. En cas d'accumulation importante ou de présence d'enfants, nous priorisons le dégrossissement et la désinfection des zones de contact direct. Le balcon est ensuite protégé en attendant un traitement complet si nécessaire.</p>",
+          answer: "<p>Nous organisons des interventions selon la disponibilité. En cas d'accumulation importante ou de présence d'enfants, nous priorisons le dégrossissement et la désinfection des zones de contact direct. Le balcon est ensuite protégé en attendant un traitement complet si nécessaire.</p>",
         },
         {
           question:
@@ -387,7 +387,7 @@ const city: City = {
         {
           question:
             "En cas  d'urgence après un dégât des eaux à Aulnay-sous-Bois, quel délai d'intervention proposez-vous ?",
-          answer: "<p>Selon la disponibilité de nos équipes, nous pouvons intervenir sous 24 à 48 heures pour un sinistre localisé. Le diagnostic initial permet d'évaluer <strong>l'ampleur des dégâts</strong> et de définir les priorités : extraction de l'eau résiduelle, séchage des sols, nettoyage des surfaces touchées.</p>",
+          answer: "<p>Selon la disponibilité de nos équipes, nous pouvons intervenir pour un sinistre localisé. Le diagnostic initial permet d'évaluer <strong>l'ampleur des dégâts</strong> et de définir les priorités : extraction de l'eau résiduelle, séchage des sols, nettoyage des surfaces touchées.</p>",
         },
       ],
       ctaOverride: "",

@@ -77,7 +77,7 @@ const city: City = {
     {
       question: "Quel délai pour une intervention urgente sur la commune ?",
       answer:
-        "<p><strong>Selon la nature de la demande</strong> et notre planning, nous pouvons intervenir sous 24 à 48 heures pour les situations prioritaires. Un premier échange permet d'évaluer le contexte et de confirmer la disponibilité d'une équipe sur le secteur.</p>",
+        "<p><strong>Selon la nature de la demande</strong> et notre planning, nous organisons une intervention pour les situations prioritaires. Un premier échange permet d'évaluer le contexte et de confirmer la disponibilité d'une équipe sur le secteur.</p>",
     },
     {
       question:
@@ -368,7 +368,7 @@ const city: City = {
           question:
             "En cas d'urgence pour un état des lieux près de la station Hoche, sous quel délai pouvez-vous intervenir ?",
           answer:
-            "<p>Nous organisons des interventions sous 24 à 48 heures selon la taille du logement et la disponibilité. Pour les demandes urgentes dans le secteur Hoche ou Mairie, nous ajustons le planning pour respecter la date de remise de clés convenue avec l'agence ou le propriétaire.</p>",
+            "<p>Nous organisons nos interventions selon la taille du logement et la disponibilité de nos équipes. Pour les demandes urgentes dans le secteur Hoche ou Mairie, nous ajustons le planning pour respecter la date de remise de clés convenue avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

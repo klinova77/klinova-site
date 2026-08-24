@@ -11,9 +11,9 @@ export const essonne: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel en Essonne (91)",
-  heroKicker: "Évry • Massy • Plateau de Saclay • Devis sous 24h",
+  heroKicker: "Évry • Massy • Plateau de Saclay • Devis rapide",
   heroDescription:
-    "Des villes nouvelles aux zones pavillonnaires, Klinova intervient dans toute l'Essonne pour redonner un coup d'éclat à vos espaces : moquettes de copropriété, canapés et tapis à domicile, terrasses encrassées, parkings souterrains. Notre organisation par secteurs géographiques garantit des délais courts et des créneaux adaptés, que vous soyez syndic à Évry, particulier à Brétigny ou facility manager sur le plateau de Saclay.",
+    "Des villes nouvelles aux zones pavillonnaires, Klinova intervient dans toute l'Essonne pour redonner un coup d'éclat à vos espaces : moquettes de copropriété, canapés et tapis à domicile, terrasses encrassées, parkings souterrains. Notre organisation par secteurs géographiques garantit des créneaux adaptés, que vous soyez syndic à Évry, particulier à Brétigny ou facility manager sur le plateau de Saclay.",
 
   // =========================
   // Images
@@ -129,7 +129,7 @@ export const essonne: DepartmentKln = {
     {
       question: "Dans quelles villes de l'Essonne intervenez-vous ?",
       answer:
-        "Nous couvrons l'ensemble du département. Nos interventions les plus fréquentes ont lieu à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Sainte-Geneviève-des-Bois, Viry-Châtillon, Grigny, Athis-Mons, Brétigny-sur-Orge et Étampes. Nos tournées par secteur (Nord, Centre, Sud, Ouest) nous permettent de desservir aussi les communes plus petites avec des délais cohérents.",
+        "Nous couvrons l'ensemble du département. Nos interventions les plus fréquentes ont lieu à Évry-Courcouronnes, Massy, Palaiseau, Corbeil-Essonnes, Sainte-Geneviève-des-Bois, Viry-Châtillon, Grigny, Athis-Mons, Brétigny-sur-Orge et Étampes. Nos tournées par secteur (Nord, Centre, Sud, Ouest) nous permettent de desservir aussi les communes plus petites.",
     },
     {
       question: "Intervenez-vous dans les bureaux du plateau de Saclay ?",
@@ -140,11 +140,6 @@ export const essonne: DepartmentKln = {
       question: "Comment se passe une intervention dans un pavillon ?",
       answer:
         "C'est plus simple qu'en copropriété : pas de syndic, pas de contrainte horaire collective. Nous fixons ensemble le créneau qui vous arrange. Avant notre venue, nous confirmons l'accès (jardin, allée, stationnement) et le point d'eau disponible. Sur place, nous protégeons vos sols et meubles, puis nous traitons les textiles ou surfaces concernés avec le même niveau d'exigence qu'en immeuble.",
-    },
-    {
-      question: "Quel est votre délai d'intervention en Essonne ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon votre secteur et nos tournées en cours. Pour les zones plus éloignées (sud ou ouest du département), nous regroupons parfois plusieurs interventions sur une même journée, ce qui peut légèrement décaler le planning — mais nous vous communiquons toujours un créneau précis dès validation.",
     },
     {
   question: "Y a-t-il des frais de déplacement en Essonne ?",
@@ -170,7 +165,7 @@ export const essonne: DepartmentKln = {
     {
       question: "Combien coûte un nettoyage de moquette en Essonne ?",
       answer:
-        "Le tarif dépend de la surface, du niveau d'encrassement et du type de moquette. Pour une copropriété, comptez généralement entre 2 et 4 € HT/m² selon le volume et la fréquence. Pour un devis précis, envoyez-nous quelques photos et la superficie approximative — nous vous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du niveau d'encrassement et du type de moquette. Pour une copropriété, comptez généralement entre 2 et 4 € HT/m² selon le volume et la fréquence. Pour un devis précis, envoyez-nous quelques photos et la superficie approximative — nous vous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -185,6 +180,6 @@ export const essonne: DepartmentKln = {
  seo: {
   title: "Entreprise de Nettoyage en Essonne (91) | Klinova",
   description:
-    "Nettoyage professionnel dans le 91 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+    "Nettoyage professionnel dans le 91 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit et rapide.",
 },
 };

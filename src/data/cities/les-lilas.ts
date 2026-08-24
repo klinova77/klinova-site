@@ -69,7 +69,7 @@ const city: City = {
     },
     {
       question: "Pouvez-vous intervenir rapidement en cas de besoin urgent ?",
-      answer: "<p>Oui, nous maintenons une <strong>réactivité sous 48 à 72 heures</strong> pour les demandes urgentes en petite couronne. La proximité avec nos équipes basées en Île-de-France permet de mobiliser rapidement du personnel et du matériel adapté à la situation signalée.</p>",
+      answer: "<p>Oui, nous restons <strong>réactifs</strong> pour les demandes urgentes en petite couronne. La proximité avec nos équipes basées en Île-de-France permet de mobiliser rapidement du personnel et du matériel adapté à la situation signalée.</p>",
     },
     {
       question: "Comment se passe la coordination avec le syndic ou le gestionnaire ?",
@@ -313,7 +313,7 @@ const city: City = {
         },
         {
           question: "Avec des délais serrés entre deux états des lieux sur la Rue de Paris, sous quel délai pouvez-vous intervenir ?",
-          answer: "<p>Nous proposons des interventions sous 48 à 72 heures selon la surface et le niveau de salissure. Pour les situations urgentes liées à une rotation locative rapide, nous adaptons notre planning afin de respecter la date de remise des clés prévue avec l'agence ou le propriétaire.</p>",
+          answer: "<p>Nous planifions l'intervention selon la surface et le niveau de salissure. Pour les situations urgentes liées à une rotation locative rapide, nous adaptons notre planning afin de respecter la date de remise des clés prévue avec l'agence ou le propriétaire.</p>",
         },
         {
           question: "Quel niveau de propreté garantissez-vous pour un ménage avant état des lieux demandé par une agence locale ?",

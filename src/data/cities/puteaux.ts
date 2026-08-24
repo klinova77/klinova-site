@@ -67,7 +67,7 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour obtenir un devis après une demande ?",
-      answer: "<p>Un premier retour intervient généralement sous 24 à 48 heures. Si une visite technique s'avère nécessaire — notamment pour évaluer l'accès ou l'état des surfaces — nous la planifions rapidement selon vos disponibilités. Le devis détaillé suit dans les jours qui suivent.</p>",
+      answer: "<p>Nous vous répondons sous 24h ouvrées. Si une visite technique s'avère nécessaire — notamment pour évaluer l'accès ou l'état des surfaces — nous la planifions rapidement selon vos disponibilités. Le devis détaillé suit dans les jours qui suivent.</p>",
     },
     {
       question: "Pouvez-vous intervenir en dehors des horaires de bureau pour limiter la gêne ?",
@@ -75,7 +75,7 @@ const city: City = {
     },
     {
       question: "Comment gérez-vous une demande urgente sur un immeuble ou un local ?",
-      answer: "<p>En cas d'urgence (dégât, incident, remise en état rapide), nous évaluons la faisabilité d'une intervention sous 24 à 72 heures selon la nature du chantier. La coordination avec le syndic ou le gestionnaire se fait par téléphone pour accélérer la prise en charge.</p>",
+      answer: "<p>En cas d'urgence (dégât, incident, remise en état rapide), nous évaluons la faisabilité d'une intervention selon la nature du chantier. La coordination avec le syndic ou le gestionnaire se fait par téléphone pour accélérer la prise en charge.</p>",
     },
   ],
 
@@ -386,7 +386,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Dans les rues étroites du Vieux Puteaux, comment gérez-vous un délai d'intervention urgent pour un appartement ?",
-          answer: "<p>Nous organisons le chargement du matériel en amont et repérons les accès avant le jour J. Pour les urgences, nous mobilisons une équipe réduite mais efficace, capable d'intervenir sous 48 heures en adaptant le parcours de stationnement aux contraintes du quartier.</p>",
+          answer: "<p>Nous organisons le chargement du matériel en amont et repérons les accès avant le jour J. Pour les urgences, nous mobilisons une équipe réduite mais efficace, capable d'une intervention rapide en adaptant le parcours de stationnement aux contraintes du quartier.</p>",
         },
         {
           question: "Dans les immeubles putéoliens, quelle différence faites-vous entre nettoyage standard et fin de chantier ?",

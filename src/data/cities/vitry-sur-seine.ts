@@ -80,9 +80,9 @@ const city: City = {
     },
     {
       question:
-        "Quel délai prévoir pour une première intervention sur un immeuble ou un parking ?",
+        "Comment organisez-vous une première intervention sur un immeuble ou un parking ?",
       answer:
-        "<p><strong>Après validation du devis</strong>, nous pouvons généralement intervenir sous 5 à 10 jours ouvrés selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous étudions la possibilité d'un passage plus rapide en fonction de notre planning.</p>",
+        "<p><strong>Après validation du devis</strong>, nous planifions l'intervention selon la nature de la prestation et la disponibilité des accès. En cas d'urgence signalée, nous adaptons notre planning en fonction des disponibilités.</p>",
     },
     {
       question:
@@ -420,9 +420,9 @@ const city: City = {
         },
         {
           question:
-            "Quel est votre délai d'intervention pour une remise en état avant état des lieux dans le secteur de la Mairie ?",
+            "Comment organisez-vous une remise en état avant état des lieux dans le secteur de la Mairie ?",
           answer:
-            "<p><strong>Selon la surface et l'état du logement</strong>, l'intervention peut être planifiée dans des délais courts. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée permet de respecter l'échéance convenue avec l'agence ou le propriétaire.</p>",
+            "<p><strong>Selon la surface et l'état du logement</strong>, nous adaptons notre planning à votre échéance. Pour les situations urgentes liées à une date d'état des lieux imminente, une organisation en journée ou demi-journée permet de respecter l'échéance convenue avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

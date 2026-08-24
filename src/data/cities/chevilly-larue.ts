@@ -75,13 +75,13 @@ const city: City = {
       question:
         "Proposez-vous un devis gratuit pour les copropriétés de Chevilly-Larue ?",
       answer:
-        "<p>Oui. Nous effectuons une <strong>visite technique préalable</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le devis détaillé est transmis sous 48 heures, sans engagement. Nous intervenons aussi bien dans les grands ensembles que dans les petites copropriétés.</p>",
+        "<p>Oui. Nous effectuons une <strong>visite technique préalable</strong> pour évaluer les surfaces, les accès et les contraintes spécifiques. Le devis détaillé est transmis rapidement, sans engagement. Nous intervenons aussi bien dans les grands ensembles que dans les petites copropriétés.</p>",
     },
     {
       question:
         "Pouvez-vous intervenir rapidement en cas de dégradation imprévue ?",
       answer:
-        "<p>Nous disposons d'équipes mobilisables sous <strong>24 à 72 heures</strong> selon la nature de l'urgence. Déversement d'huile en parking, souillures dans un hall après sinistre : nous adaptons le planning pour répondre aux situations qui ne peuvent pas attendre l'entretien régulier.</p>",
+        "<p>Nous disposons d'équipes mobilisables selon la nature de l'urgence. Déversement d'huile en parking, souillures dans un hall après sinistre : nous adaptons le planning pour répondre aux situations qui ne peuvent pas attendre l'entretien régulier.</p>",
     },
     {
       question:
@@ -427,7 +427,7 @@ const city: City = {
           question:
             "Urgence pour état des lieux près du métro Chevilly-Larue : quel délai d'intervention proposez-vous ?",
           answer:
-            "<p>Nous intervenons sous 24 à 48 heures selon la disponibilité. La proximité de la station métro Chevilly-Larue facilite l'accès pour nos équipes. Contactez-nous avec la date de remise des clés : nous ajustons le planning pour respecter votre échéance.</p>",
+            "<p>Nous intervenons selon la disponibilité. La proximité de la station métro Chevilly-Larue facilite l'accès pour nos équipes. Contactez-nous avec la date de remise des clés : nous ajustons le planning pour respecter votre échéance.</p>",
         },
         {
           question:

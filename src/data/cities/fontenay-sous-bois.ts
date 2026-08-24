@@ -79,7 +79,7 @@ const city: City = {
       question:
         "Le diagnostic sur site est-il gratuit dans tous les quartiers de Fontenay ?",
       answer:
-        "<p><strong>Oui, le déplacement et le diagnostic restent gratuits</strong> quel que soit le quartier (Village, Plateau/Voisins du Bois, Val de Fontenay, Rigollots, Parapluies, La Redoute/Jean Zay). Le technicien évalue les surfaces, identifie les contraintes spécifiques (végétation du Bois, pollution A86, humidité, matériaux anciens ou modernes) et remet un chiffrage détaillé sous 48h adapté à votre villa, copropriété ou résidence.</p>",
+        "<p><strong>Oui, le déplacement et le diagnostic restent gratuits</strong> quel que soit le quartier (Village, Plateau/Voisins du Bois, Val de Fontenay, Rigollots, Parapluies, La Redoute/Jean Zay). Le technicien évalue les surfaces, identifie les contraintes spécifiques (végétation du Bois, pollution A86, humidité, matériaux anciens ou modernes) et remet un chiffrage détaillé rapide adapté à votre villa, copropriété ou résidence.</p>",
     },
     {
       question:

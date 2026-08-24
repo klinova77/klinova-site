@@ -72,7 +72,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur Vanves ?",
-      answer: "<p>Selon la nature de la demande et notre planning, nous pouvons proposer un <strong>passage sous 48 à 72 heures</strong>. Pour les situations nécessitant une réponse rapide (dégât, salissure importante), nous évaluons la faisabilité dès le premier échange téléphonique.</p>",
+      answer: "<p>Selon la nature de la demande et notre planning, nous nous organisons pour proposer un passage adapté. Pour les situations nécessitant une réponse rapide (dégât, salissure importante), nous évaluons la faisabilité dès le premier échange téléphonique.</p>",
     },
   ],
 
@@ -259,7 +259,7 @@ const city: City = {
         {
           question:
             "Comment gérez-vous l'évacuation des déchets contaminés lors d'une intervention en centre-ville de Vanves ?",
-          answer: "<p>Les fientes et résidus sont conditionnés dans des sacs étanches dès la collecte. Aucun stockage n'est laissé sur place ni dans les parties communes. L'évacuation est organisée le jour même pour éviter toute nuisance. Dans les rues étroites du Centre Saint-Rémy, nous coordonnons l'accès véhicule en amont pour limiter la gêne.</p>",
+          answer: "<p>Les fientes et résidus sont conditionnés dans des sacs étanches dès la collecte. Aucun stockage n'est laissé sur place ni dans les parties communes. L'évacuation est organisée dès la fin de l'intervention pour éviter toute nuisance. Dans les rues étroites du Centre Saint-Rémy, nous coordonnons l'accès véhicule en amont pour limiter la gêne.</p>",
         },
       ],
       ctaOverride: "",
@@ -348,8 +348,8 @@ const city: City = {
         },
         {
           question:
-            "En cas  d'urgence locative à Vanves, quel est votre délai d'intervention pour un nettoyage complet d'appartement ?",
-          answer: "<p>Selon la disponibilité de nos équipes et la surface du bien, nous pouvons intervenir sous 24 à 48 heures. Pour les situations très urgentes, un échange téléphonique permet de confirmer rapidement un créneau et d'organiser la coordination avec l'agence ou le gardien.</p>",
+            "En cas d'urgence locative à Vanves, comment organisez-vous une intervention pour un nettoyage complet d'appartement ?",
+          answer: "<p>Selon la disponibilité de nos équipes et la surface du bien, nous nous adaptons pour proposer un créneau. Pour les situations très urgentes, un échange téléphonique permet de confirmer rapidement un créneau et d'organiser la coordination avec l'agence ou le gardien.</p>",
         },
       ],
       ctaOverride: "",

@@ -29,7 +29,6 @@ import PricingTextiles from '~/components/Sections/PricingTextiles.astro';
 import PricingMoquettes from '~/components/Sections/PricingMoquettes.astro';
 import PricingParkingsShort from '~/components/Sections/PricingParkingsShort.astro';
 
-import AvailabilityBadge from '~/components/AvailabilityBadge.astro';
 import CityWhyUs from '~/components/Sections/CityWhyUs.astro';
 
 
@@ -703,7 +702,7 @@ const popupContext = {
   subtitle:
     service.key === 'parkings'
       ? 'Un conseiller de Klinova étudie votre besoin et vous recontacte pour discuter de votre projet.'
-      : 'Un conseiller de Klinova vous contacte sous 24h pour discuter de votre projet.',
+      : 'Un conseiller de Klinova vous répond sous 24h ouvrées pour discuter de votre projet.',
 
   serviceKey: service.key,
 
@@ -1563,7 +1562,6 @@ const popupContext = {
         
         <!--En-tête avec design moderne -->
         <div class="text-center mb-12">
-          <AvailabilityBadge cityName={city.name} position="hero" variant="default" />
           <h2 class="text-3xl md:text-4xl font-bold text-[#1E2939] mb-4 mt-4">
             {service.name} {cityAt}
           </h2>
@@ -1739,7 +1737,7 @@ const popupContext = {
               Demandez le nettoyage de votre balcon {cityAt}
             </h3>
             <p class="text-[#475569]">
-              Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h
+              Remplissez ce formulaire pour recevoir votre devis personnalisé rapidement
             </p>
           </div>
 
@@ -2079,7 +2077,7 @@ const popupContext = {
                 </svg>
               </div>
               <h4 class="text-sm font-semibold text-[#1E2939] mb-1">
-                Réponse sous 24h
+                Réponse sous 24h ouvrées
               </h4>
               <p class="text-xs text-[#475569]">
                 Devis détaillé et planning
@@ -2197,7 +2195,7 @@ const popupContext = {
               <span>Paris et Île-de-France</span>
             </div>
             <p class="text-sm text-[#475569] mt-2">
-              Intervention rapide sur toute la région parisienne
+              Intervention sur toute la région parisienne
             </p>
           </div>
         </div>
@@ -3719,7 +3717,7 @@ const popupContext = {
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
               </div>
-              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h</h4>
+              <h4 class="text-sm font-semibold text-[#1E2939] mb-1">Réponse sous 24h ouvrées</h4>
               <p class="text-xs text-[#475569]">Devis détaillé par type de moquette</p>
             </div>
             
@@ -3781,7 +3779,7 @@ const popupContext = {
               <span>Paris et Île-de-France</span>
             </div>
             <p class="text-sm text-[#475569] mt-2">
-              Intervention rapide pour professionnels et particuliers
+              Intervention pour professionnels et particuliers
             </p>
           </div>
         </div>
@@ -4209,7 +4207,7 @@ const popupContext = {
         Demandez votre devis gratuit
       </h2>
       <p class="mt-3 text-[#475569]">
-        Intervention rapide {cityAt}, protocole professionnel, satisfaction garantie.
+        Intervention {cityAt}, protocole professionnel, satisfaction garantie.
       </p>
     </div>
 
@@ -5162,7 +5160,7 @@ const popupContext = {
               <span>Paris et Île-de-France</span>
             </div>
             <p class="text-sm text-[#475569] mt-2">
-              Intervention rapide pour professionnels et particuliers
+              Intervention pour professionnels et particuliers
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   hubIntro:
-    "<p>Siège du Parc des Expositions Paris Nord et du Parc d'Affaires Paris Nord 2, Villepinte concentre des besoins variés en propreté. Klinova accompagne syndics, gestionnaires et entreprises avec une <strong>présence terrain régulière</strong> et une coordination adaptée aux pics d'activité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, espaces extérieurs : chaque intervention suit un protocole défini et un suivi documenté. L'organisation s'ajuste aux <strong>contraintes d'accès</strong>, aux horaires sensibles et aux exigences de discrétion propres aux sites tertiaires comme résidentiels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes positionnées pour couvrir rapidement les quartiers du Parc de la Noue aux zones d'activités de l'Avenue des Nations.</li>\n  <li><strong>Coordination accès :</strong> Gestion des badges, digicodes et créneaux horaires en lien direct avec gardiens et gestionnaires de sites.</li>\n  <li><strong>Suivi documenté :</strong> Reporting disponible après chaque passage, traçabilité des interventions pour les copropriétés et entreprises.</li>\n</ul>",
+    "<p>Siège du Parc des Expositions Paris Nord et du Parc d'Affaires Paris Nord 2, Villepinte concentre des besoins variés en propreté. Klinova accompagne syndics, gestionnaires et entreprises avec une <strong>présence terrain régulière</strong> et une coordination adaptée aux pics d'activité.</p>\n<p class=\"mt-4\">Halls d'immeubles, parkings souterrains, espaces extérieurs : chaque intervention suit un protocole défini et un suivi documenté. L'organisation s'ajuste aux <strong>contraintes d'accès</strong>, aux horaires sensibles et aux exigences de discrétion propres aux sites tertiaires comme résidentiels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes positionnées pour couvrir les quartiers du Parc de la Noue aux zones d'activités de l'Avenue des Nations.</li>\n  <li><strong>Coordination accès :</strong> Gestion des badges, digicodes et créneaux horaires en lien direct avec gardiens et gestionnaires de sites.</li>\n  <li><strong>Suivi documenté :</strong> Reporting disponible après chaque passage, traçabilité des interventions pour les copropriétés et entreprises.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -83,7 +83,7 @@ const city: City = {
       question:
         "Pouvez-vous intervenir en urgence sur une copropriété à Villepinte ?",
       answer:
-        "<p><strong>Oui, selon disponibilité.</strong> Un premier échange permet de qualifier la situation (zone concernée, risques, accès) et de proposer un créneau rapide. En copropriété, on se coordonne avec le syndic/gestionnaire pour sécuriser l’accès et intervenir sans désorganiser les résidents.</p>",
+        "<p><strong>Oui, selon disponibilité.</strong> Un premier échange permet de qualifier la situation (zone concernée, risques, accès) et de proposer un créneau adapté. En copropriété, on se coordonne avec le syndic/gestionnaire pour sécuriser l’accès et intervenir sans désorganiser les résidents.</p>",
     },
   ],
 
@@ -290,7 +290,7 @@ const city: City = {
     {
       serviceKey: "canapes-tapis",
       heroDescription:
-        "Détachage ciblé et extraction en profondeur de vos canapés, tapis et matelas, avec séchage optimisé pour retrouver un textile propre et sain sous 24 à 48 heures.",
+        "Détachage ciblé et extraction en profondeur de vos canapés, tapis et matelas, avec séchage optimisé pour retrouver rapidement un textile propre et sain.",
       whyUsBullets: [
         "Connaissance des logements villepintois, des pavillons aux appartements familiaux du secteur Mousseaux.",
         "Détachage ciblé selon la nature des taches et extraction textile sans risque d'auréole ni décoloration.",
@@ -414,9 +414,9 @@ const city: City = {
         },
         {
           question:
-            "Quelle est votre capacité d'intervention pour un état des lieux urgent proche de la gare RER Villepinte ?",
+            "Comment organisez-vous une intervention pour un état des lieux urgent proche de la gare RER Villepinte ?",
           answer:
-            "<p>Nous pouvons généralement intervenir sous 48 à 72 heures selon la surface et la disponibilité des équipes. Pour les relocations très urgentes, un créneau en soirée ou le samedi peut être envisagé après confirmation des accès avec l'agence ou le propriétaire.</p>",
+            "<p>Nous nous adaptons selon la surface et la disponibilité des équipes. Pour les relocations très urgentes, un créneau en soirée ou le samedi peut être envisagé après confirmation des accès avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

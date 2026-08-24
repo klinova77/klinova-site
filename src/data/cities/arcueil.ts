@@ -73,7 +73,7 @@ const city: City = {
       question:
         "Pouvez-vous intervenir en urgence sur une dégradation dans un hall ou un parking ?",
       answer:
-        "<p>Oui, selon la nature du problème et notre planning, nous pouvons intervenir sous <strong>24 à 48 heures</strong>. Le syndic ou le gestionnaire reçoit un retour rapide sur le diagnostic et les délais de remise en état envisageables.</p>",
+        "<p>Oui, selon la nature du problème et notre planning, nous pouvons intervenir. Le syndic ou le gestionnaire reçoit un retour rapide sur le diagnostic et les délais de remise en état envisageables.</p>",
     },
     {
       question:
@@ -275,7 +275,7 @@ const city: City = {
           question:
             "Mon balcon côté Parc du Coteau de Bièvre est envahi de fientes : quelle intervention urgente proposez-vous ?",
           answer:
-            "<p>Nous intervenons sous 48 à 72 heures selon disponibilité. Le protocole inclut confinement de la zone, collecte sécurisée des déjections, nettoyage des supports et désinfection virucide. L'espace redevient utilisable après séchage complet, généralement sous 24 heures.</p>",
+            "<p>Nous intervenons selon disponibilité. Le protocole inclut confinement de la zone, collecte sécurisée des déjections, nettoyage des supports et désinfection virucide. L'espace redevient utilisable après séchage complet, généralement sous 24 heures.</p>",
         },
         {
           question:
@@ -407,7 +407,7 @@ const city: City = {
       whyUsBullets: [
         "Connaissance du parc locatif arcueillais : studios proches du RER, T3 familiaux, logements sociaux rénovés.",
         "Polyvalence sur tous types de sols et finitions : parquet, carrelage, lino, faïence, surfaces vitrées.",
-        "Réactivité sous 24-48h et coordination directe avec agences ou bailleurs pour respecter vos délais de rotation.",
+        "Réactivité et coordination directe avec agences ou bailleurs pour respecter vos délais de rotation.",
       ],
       uniqueIntro:
         "<p>Comment rendre un appartement prêt à la location quand le précédent occupant vient de partir et que le prochain arrive sous 48 heures ? Autour de la <strong>gare RER Arcueil-Cachan</strong>, la rotation locative impose des délais serrés. Les studios et T2 se libèrent, se relouent, et entre les deux, il faut effacer toute trace du passage précédent : poussière accumulée, traces sur les murs, résidus dans les placards.</p>\n\n<p class=\"mt-4\">Un logement correctement préparé évite les litiges lors de l'état des lieux sortant. Sur les parquets flottants des résidences récentes comme sur le carrelage des immeubles anciens, chaque surface demande un traitement spécifique. Les pièces d'eau concentrent souvent les points de friction : joints noircis, calcaire sur la robinetterie, traces dans les sanitaires.</p>\n\n<p class=\"mt-4\">Les <strong>agences de l'avenue Laplace</strong> et les bailleurs sociaux comme Opaly gèrent des volumes importants. Une intervention structurée — diagnostic initial, nettoyage méthodique, contrôle final — permet de respecter les créneaux imposés sans compromettre la qualité du rendu.</p>",

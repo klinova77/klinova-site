@@ -78,7 +78,7 @@ const city: City = {
       question:
         "Que faire en cas de besoin urgent, par exemple après un dégât des eaux ?",
       answer:
-        "<p>Contactez-nous par téléphone pour décrire la situation. Selon la disponibilité, une équipe peut intervenir <strong>sous 24 à 48 heures</strong>. Nous évaluons sur place l'ampleur des travaux nécessaires : aspiration, séchage, remise en état des surfaces touchées.</p>",
+        "<p>Contactez-nous par téléphone pour décrire la situation. Selon la disponibilité, une équipe peut intervenir. Nous évaluons sur place l'ampleur des travaux nécessaires : aspiration, séchage, remise en état des surfaces touchées.</p>",
     },
     {
       question:
@@ -423,13 +423,13 @@ const city: City = {
           question:
             "Comment calculez-vous le coût d'un nettoyage complet selon la surface et l'urgence, notamment proche de la gare RER ?",
           answer:
-            "<p>Le devis tient compte de la superficie, du type de bien (appartement ou pavillon), de l'état initial et du délai demandé. Une intervention sous 48 heures reste possible selon notre planning, avec ajustement si contraintes d'accès particulières.</p>",
+            "<p>Le devis tient compte de la superficie, du type de bien (appartement ou pavillon), de l'état initial et du délai demandé. Une intervention peut être organisée selon notre planning, avec ajustement si contraintes d'accès particulières.</p>",
         },
         {
           question:
             "Quel est votre délai d'intervention pour un nettoyage suite à déménagement dans un pavillon de Noisy-le-Sec ?",
           answer:
-            "<p>En fonction de la disponibilité, nous pouvons intervenir sous trois à cinq jours ouvrés. Pour les situations urgentes liées à une vente ou une succession, un créneau prioritaire peut être proposé après échange sur les contraintes d'accès au bien.</p>",
+            "<p>En fonction de la disponibilité de nos équipes, nous organisons l'intervention selon vos contraintes. Pour les situations urgentes liées à une vente ou une succession, un créneau prioritaire peut être proposé après échange sur les contraintes d'accès au bien.</p>",
         },
       ],
       ctaOverride: "",

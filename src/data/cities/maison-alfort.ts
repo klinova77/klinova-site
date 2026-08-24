@@ -72,7 +72,7 @@ const city: City = {
       question:
         "Intervenez-vous en urgence en cas de sinistre ou de fin de chantier ?",
       answer:
-        "<p>Oui. Nous mobilisons nos équipes pour des <strong>interventions urgentes</strong> à Maisons-Alfort, notamment après un dégât des eaux, une pollution accidentelle ou une livraison de chantier nécessitant une remise en état rapide. Nous établissons un diagnostic par téléphone, confirmons la faisabilité technique et planifions le passage sous 24 à 48 heures selon disponibilité. Le matériel déployé (autolaveuse, injection-extraction, haute pression) est adapté à la nature de l'urgence et aux surfaces concernées.</p>",
+        "<p>Oui. Nous mobilisons nos équipes pour des <strong>interventions urgentes</strong> à Maisons-Alfort, notamment après un dégât des eaux, une pollution accidentelle ou une livraison de chantier nécessitant une remise en état rapide. Nous établissons un diagnostic par téléphone, confirmons la faisabilité technique et planifions le passage selon la disponibilité. Le matériel déployé (autolaveuse, injection-extraction, haute pression) est adapté à la nature de l'urgence et aux surfaces concernées.</p>",
     },
     {
       question:

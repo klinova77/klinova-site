@@ -60,7 +60,7 @@ const city: City = {
     },
     {
       question: "Quel délai pour obtenir un devis après une demande ?",
-      answer: "<p>Un premier retour intervient sous 24 à 48 heures. Si une visite technique s'avère nécessaire — notamment pour les parkings souterrains ou les grandes copropriétés — elle est programmée dans la semaine. Le devis détaille surfaces, fréquence proposée et <strong>modalités d'accès</strong> identifiées.</p>",
+      answer: "<p>Un premier retour vous est apporté sous 24h ouvrées. Si une visite technique s'avère nécessaire — notamment pour les parkings souterrains ou les grandes copropriétés — elle est programmée rapidement. Le devis détaille surfaces, fréquence proposée et <strong>modalités d'accès</strong> identifiées.</p>",
     },
     {
       question: "Le stationnement est compliqué près de Parly 2, comment vous organisez-vous ?",
@@ -234,7 +234,7 @@ const city: City = {
         {
           question:
             "Près de l'Arboretum de Versailles-Chèvreloup, sous quel délai intervenez-vous pour des fientes de pigeons sur balcon ?",
-          answer: "<p>Nous programmons généralement l'intervention sous 48 à 72 heures selon la disponibilité et l'urgence signalée. Les zones proches de l'Arboretum connaissent une pression régulière des volatiles, ce qui justifie une réactivité adaptée pour éviter l'incrustation des déjections dans les supports.</p>",
+          answer: "<p>Nous programmons l'intervention selon la disponibilité et l'urgence signalée. Les zones proches de l'Arboretum connaissent une pression régulière des volatiles, ce qui justifie une réactivité adaptée pour éviter l'incrustation des déjections dans les supports.</p>",
         },
         {
           question:
@@ -363,7 +363,7 @@ const city: City = {
         {
           question:
             "Dans les secteurs résidentiels du Chesnay-Rocquencourt, sous quel délai pouvez-vous intervenir pour un nettoyage d'appartement urgent ?",
-          answer: "<p>Nous organisons les interventions urgentes sous 24 à 48 heures selon la disponibilité. Pour les états des lieux ou remises de clés pressantes, nous ajustons le planning en fonction de vos contraintes horaires et des accès au logement.</p>",
+          answer: "<p>Nous organisons les interventions urgentes selon la disponibilité. Pour les états des lieux ou remises de clés pressantes, nous ajustons le planning en fonction de vos contraintes horaires et des accès au logement.</p>",
         },
         {
           question:

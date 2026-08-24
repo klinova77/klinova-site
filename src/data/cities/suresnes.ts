@@ -15,7 +15,7 @@ const city: City = {
   customDescription: "Klinova assure l'entretien des parties communes, parkings et espaces extérieurs à Suresnes. Entre la gare Suresnes-Mont-Valérien et les résidences des coteaux, nos équipes s'adaptent aux contraintes d'accès et au relief de la commune.",
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
-  hubIntro: "<p>Commune desservie par la gare Suresnes-Mont-Valérien et le tramway T2, située en bordure de Seine face au bois de Boulogne : Suresnes concentre un tissu résidentiel dense et un parc tertiaire actif. Klinova y intervient comme partenaire terrain pour la propreté des immeubles et locaux professionnels.</p>\n<p class=\"mt-4\">Notre organisation repose sur une <strong>coordination étroite</strong> avec syndics, gestionnaires et occupants. Chaque intervention fait l'objet d'un planning adapté aux contraintes du site : horaires décalés, gestion des accès, reporting si demandé.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, délais d'intervention courts sur Suresnes et communes limitrophes du 92.</li>\n  <li><strong>Adaptation au bâti</strong> : Immeubles anciens du centre-ville, résidences récentes ou pavillons sur les hauteurs : méthodes ajustées à chaque configuration.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention disponible, échanges directs avec l'interlocuteur désigné.</li>\n</ul>",
+  hubIntro: "<p>Commune desservie par la gare Suresnes-Mont-Valérien et le tramway T2, située en bordure de Seine face au bois de Boulogne : Suresnes concentre un tissu résidentiel dense et un parc tertiaire actif. Klinova y intervient comme partenaire terrain pour la propreté des immeubles et locaux professionnels.</p>\n<p class=\"mt-4\">Notre organisation repose sur une <strong>coordination étroite</strong> avec syndics, gestionnaires et occupants. Chaque intervention fait l'objet d'un planning adapté aux contraintes du site : horaires décalés, gestion des accès, reporting si demandé.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, mobilisables sur Suresnes et communes limitrophes du 92.</li>\n  <li><strong>Adaptation au bâti</strong> : Immeubles anciens du centre-ville, résidences récentes ou pavillons sur les hauteurs : méthodes ajustées à chaque configuration.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu d'intervention disponible, échanges directs avec l'interlocuteur désigné.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -66,11 +66,11 @@ const city: City = {
     },
     {
       question: "Quel délai pour obtenir un devis après une demande sur Suresnes ?",
-      answer: "<p>Un premier retour intervient généralement sous 24 à 48 heures. Si une visite technique est nécessaire — notamment pour les parkings souterrains ou les halls avec contraintes d'accès — nous la programmons rapidement afin de <strong>fournir un chiffrage précis</strong> adapté au site.</p>",
+      answer: "<p>Un premier retour vous est apporté sous 24h ouvrées. Si une visite technique est nécessaire — notamment pour les parkings souterrains ou les halls avec contraintes d'accès — nous la programmons rapidement afin de <strong>fournir un chiffrage précis</strong> adapté au site.</p>",
     },
     {
       question: "Pouvez-vous intervenir en urgence sur une copropriété ?",
-      answer: "<p>Oui, nous traitons les demandes urgentes selon la disponibilité de nos équipes. En cas de <strong>sinistre ou de salissure importante</strong>, nous évaluons la situation par téléphone pour mobiliser une intervention dans les meilleurs délais, en coordination avec le syndic ou le gestionnaire.</p>",
+      answer: "<p>Oui, nous traitons les demandes urgentes selon la disponibilité de nos équipes. En cas de <strong>sinistre ou de salissure importante</strong>, nous évaluons la situation par téléphone pour organiser une intervention, en coordination avec le syndic ou le gestionnaire.</p>",
     },
     {
       question: "Comment s'organise la coordination avec un syndic pour plusieurs immeubles ?",

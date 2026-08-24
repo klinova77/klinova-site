@@ -62,9 +62,9 @@ const city: City = {
   faq: [
     {
       question:
-        "Pouvez-vous intervenir rapidement à Vaires-sur-Marne en cas d'urgence ?",
+        "Pouvez-vous intervenir à Vaires-sur-Marne en cas d'urgence ?",
       answer:
-        "<strong>Oui.</strong> Nous sommes organisés pour répondre sous 24 à 48 h en cas de sinistre ou de fin de chantier. Nos équipes peuvent mobiliser du matériel professionnel en urgence à Vaires-sur-Marne, selon les disponibilités.",
+        "<strong>Oui.</strong> Nous nous organisons pour intervenir en cas de sinistre ou de fin de chantier. Nos équipes peuvent mobiliser du matériel professionnel en urgence à Vaires-sur-Marne, selon les disponibilités.",
     },
     {
       question:

@@ -88,7 +88,7 @@ const city: City = {
       question:
         "Le déplacement pour diagnostic est-il gratuit même pour les propriétés isolées des bords de Marne ?",
       answer:
-        "<p><strong>Oui, le diagnostic sur site reste gratuit</strong> quel que soit le quartier (Centre-Ville, Plateau, Port, Sous la Lune, Beauté-Baltard, Plaisance). Le technicien évalue les matériaux patrimoniaux, identifie les contraintes environnementales (humidité, mousses, pollution végétale ou atmosphérique) et remet un chiffrage détaillé sous 48h adapté aux spécificités de votre bien. Cette expertise préalable garantit le choix des méthodes adaptées à la préservation du patrimoine nogentais.</p>",
+        "<p><strong>Oui, le diagnostic sur site reste gratuit</strong> quel que soit le quartier (Centre-Ville, Plateau, Port, Sous la Lune, Beauté-Baltard, Plaisance). Le technicien évalue les matériaux patrimoniaux, identifie les contraintes environnementales (humidité, mousses, pollution végétale ou atmosphérique) et remet rapidement un chiffrage détaillé adapté aux spécificités de votre bien. Cette expertise préalable garantit le choix des méthodes adaptées à la préservation du patrimoine nogentais.</p>",
     },
   ],
 

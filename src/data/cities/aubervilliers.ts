@@ -66,7 +66,7 @@ const city: City = {
   faq: [
     {
       question: "Comment se déroule la prise de rendez-vous pour une intervention à Aubervilliers ?",
-      answer: "<p>Un premier échange permet de préciser le type de surface, l'accès au site et les contraintes horaires. Pour les immeubles avec <strong>digicode ou badge</strong>, nous organisons la remise des accès en amont. Le créneau est confirmé sous 48 heures selon disponibilité.</p>",
+      answer: "<p>Un premier échange permet de préciser le type de surface, l'accès au site et les contraintes horaires. Pour les immeubles avec <strong>digicode ou badge</strong>, nous organisons la remise des accès en amont. Le créneau est confirmé sous 24h ouvrées selon disponibilité.</p>",
     },
     {
       question: "Le stationnement est compliqué dans ma rue, comment gérez-vous ce point ?",
@@ -78,7 +78,7 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour une demande urgente ?",
-      answer: "<p>En cas de besoin rapide — dégât, salissure accidentelle — nous évaluons la faisabilité d'une intervention sous <strong>24 à 72 heures</strong> selon la nature du chantier et la disponibilité des équipes sur le secteur d'Aubervilliers.</p>",
+      answer: "<p>En cas de besoin rapide — dégât, salissure accidentelle — nous évaluons la faisabilité d'une intervention selon la nature du chantier et la disponibilité des équipes sur le secteur d'Aubervilliers.</p>",
     },
   ],
 
@@ -375,7 +375,7 @@ const city: City = {
         {
           question:
             "Dans le quartier Maladrerie, sous quel délai pouvez-vous intervenir pour un nettoyage d'appartement avant état des lieux ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la disponibilité. Pour une urgence liée à une remise de clés imminente dans le secteur Maladrerie-Emile Dubois, nous ajustons le planning pour respecter votre échéance. Un échange préalable permet de confirmer le créneau.</p>",
+          answer: "<p>Nous intervenons selon la disponibilité. Pour une urgence liée à une remise de clés imminente dans le secteur Maladrerie-Emile Dubois, nous ajustons le planning pour respecter votre échéance. Un échange préalable permet de confirmer le créneau.</p>",
         },
         {
           question:

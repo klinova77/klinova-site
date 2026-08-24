@@ -58,14 +58,14 @@ const city: City = {
   faq: [
     {
       question:
-        "Intervenez-vous rapidement sur Vincennes malgré la densité de circulation ?",
+        "Intervenez-vous sur Vincennes malgré la densité de circulation ?",
       answer:
-        "<p><strong>Oui, nous planifions les interventions</strong> en tenant compte des créneaux de circulation fluide (matinée tôt ou après-midi). Nos équipes connaissent les accès depuis le RER A et le métro ligne 1, ainsi que les zones de stationnement temporaire autorisées. Pour une urgence (sinistre, fuite), nous mobilisons un technicien sous 48h avec du matériel léger adapté aux rues étroites.</p>",
+        "<p><strong>Oui, nous planifions les interventions</strong> en tenant compte des créneaux de circulation fluide (matinée tôt ou après-midi). Nos équipes connaissent les accès depuis le RER A et le métro ligne 1, ainsi que les zones de stationnement temporaire autorisées. Pour une urgence (sinistre, fuite), nous mobilisons un technicien avec du matériel léger adapté aux rues étroites.</p>",
     },
     {
       question: "Le déplacement pour établir un devis est-il facturé ?",
       answer:
-        "<p>Non, le déplacement et le diagnostic sur site sont gratuits, que l'immeuble soit situé près du Château ou dans les quartiers résidentiels bordant le Bois. Le technicien <strong>évalue les surfaces</strong>, identifie les contraintes d'accès (digicode, sous-sol, encombrement) et remet un chiffrage détaillé sous 48h.</p>",
+        "<p>Non, le déplacement et le diagnostic sur site sont gratuits, que l'immeuble soit situé près du Château ou dans les quartiers résidentiels bordant le Bois. Le technicien <strong>évalue les surfaces</strong>, identifie les contraintes d'accès (digicode, sous-sol, encombrement) et remet un chiffrage détaillé rapidement.</p>",
     },
     {
       question:

@@ -78,7 +78,7 @@ const city: City = {
     {
       question: "Quelle est votre réactivité pour une intervention à Chelles ?",
       answer:
-        "<p><strong>Nous intervenons généralement sous 24 à 48h pour une demande urgente.</strong> Une équipe dédiée sur le secteur Seine-et-Marne Est garantit cette réactivité à Chelles et dans ses alentours.</p>",
+        "<p><strong>Une équipe dédiée sur le secteur Seine-et-Marne Est</strong> garantit une bonne réactivité pour les demandes urgentes à Chelles et dans ses alentours.</p>",
     },
     {
       question:

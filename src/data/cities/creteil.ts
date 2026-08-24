@@ -80,7 +80,7 @@ const city: City = {
       question:
         "Intervenez-vous rapidement sur Créteil en cas d'urgence (sinistre, fin de chantier) ?",
       answer:
-        "<p>Nous mobilisons nos équipes locales pour des interventions urgentes à Créteil, notamment autour de la Préfecture, du CHU Henri-Mondor ou dans les copropriétés de Mont-Mesly. En cas de <strong>sinistre</strong> (dégât des eaux, pollution accidentelle) ou de <strong>livraison de chantier</strong> nécessitant une remise en état rapide, nous établissons un diagnostic par téléphone, confirmons la faisabilité technique et planifions le passage <strong>dans un délai de 24 à 48 heures</strong> selon disponibilité. Le matériel est adapté à la surface et à la contrainte (autolaveuse, injection-extraction, haute pression contrôlée).</p>",
+        "<p>Nous mobilisons nos équipes locales pour des interventions urgentes à Créteil, notamment autour de la Préfecture, du CHU Henri-Mondor ou dans les copropriétés de Mont-Mesly. En cas de <strong>sinistre</strong> (dégât des eaux, pollution accidentelle) ou de <strong>livraison de chantier</strong> nécessitant une remise en état rapide, nous établissons un diagnostic par téléphone, confirmons la faisabilité technique et planifions le passage selon disponibilité. Le matériel est adapté à la surface et à la contrainte (autolaveuse, injection-extraction, haute pression contrôlée).</p>",
     },
     {
       question:
@@ -229,7 +229,7 @@ const city: City = {
       whyUsBullets: [
         "Connaissance des quartiers résidentiels de Créteil : Halage, bords de Marne, Chenevier avec balcons exposés à la végétation.",
         "Produits adaptés aux supports courants (carrelage, béton, dalle) et maîtrise de la pression pour préserver les joints fragiles.",
-        "Intervention rapide à domicile, gestion soigneuse de l'eau pour éviter coulures chez les voisins et respect des plantations existantes.",
+        "Intervention à domicile organisée avec soin, gestion soigneuse de l'eau pour éviter coulures chez les voisins et respect des plantations existantes.",
       ],
 
       uniqueIntro:

@@ -74,7 +74,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous disposons d'équipes mobilisables dans les meilleurs délais selon la nature de la demande. Pour les situations critiques — dégât des eaux en parking, souillure importante en hall — nous priorisons le déplacement. Un premier diagnostic téléphonique permet d'évaluer le <strong>matériel nécessaire</strong> avant intervention.</p>"
+      answer: "<p>Oui, nous disposons d'équipes mobilisables selon la nature de la demande. Pour les situations critiques — dégât des eaux en parking, souillure importante en hall — nous priorisons le déplacement. Un premier diagnostic téléphonique permet d'évaluer le <strong>matériel nécessaire</strong> avant intervention.</p>"
     },
     {
       question: "Comment se déroule une demande de devis pour un immeuble ou un local professionnel ?",
@@ -268,7 +268,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Quel est votre délai d'intervention en cas d'accumulation importante de fientes sur un balcon du Boulevard de la République ?",
-          answer: "<p>Nous intervenons généralement dans les meilleurs délais selon la charge de travail. Pour les situations présentant un <strong>risque sanitaire avéré</strong> ou une gêne importante, un passage prioritaire peut être organisé. Contactez-nous pour évaluer l'urgence de votre situation.</p>"
+          answer: "<p>Nous intervenons selon la charge de travail. Pour les situations présentant un <strong>risque sanitaire avéré</strong> ou une gêne importante, un passage prioritaire peut être organisé. Contactez-nous pour évaluer l'urgence de votre situation.</p>"
         },
         {
           question: "Quels équipements de protection utilisez-vous pour traiter les corniches et appuis fortement souillés près des parcs ?",
@@ -393,7 +393,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Quel est votre délai d'intervention pour un nettoyage urgent d'appartement autour de la Place Marcel Sembat en cas d'état des lieux imminent ?",
-          answer: "<p>Nous pouvons généralement intervenir sous 48 à 72 heures selon la taille du logement et la disponibilité des accès. Pour les situations très urgentes, un créneau prioritaire peut être proposé après échange téléphonique afin de valider les contraintes de planning et de stationnement.</p>"
+          answer: "<p>Nous pouvons généralement intervenir selon la taille du logement et la disponibilité des accès. Pour les situations très urgentes, un créneau prioritaire peut être proposé après échange téléphonique afin de valider les contraintes de planning et de stationnement.</p>"
         },
         {
           question: "Quelle différence de process appliquez-vous entre un nettoyage standard et un nettoyage après chantier dans un appartement rénové à Boulogne ?",

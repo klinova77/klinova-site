@@ -78,7 +78,7 @@ const city: City = {
       question:
         "Le déplacement pour établir un devis est-il gratuit dans tous les quartiers de Montreuil ?",
       answer:
-        "<p><strong>Oui, le diagnostic sur site reste gratuit</strong> quel que soit le quartier (Bas-Montreuil, Croix de Chavaux, Haut-Montreuil, secteur Beaumonts, La Noue, Ruffins). Le technicien évalue les surfaces, identifie les contraintes spécifiques (accès cour intérieure, pollution atmosphérique, poussières de chantier) et remet un chiffrage détaillé sous 48h adapté à votre copropriété ou votre bien.</p>",
+        "<p><strong>Oui, le diagnostic sur site reste gratuit</strong> quel que soit le quartier (Bas-Montreuil, Croix de Chavaux, Haut-Montreuil, secteur Beaumonts, La Noue, Ruffins). Le technicien évalue les surfaces, identifie les contraintes spécifiques (accès cour intérieure, pollution atmosphérique, poussières de chantier) et remet un chiffrage détaillé rapidement, adapté à votre copropriété ou votre bien.</p>",
     },
     {
       question:

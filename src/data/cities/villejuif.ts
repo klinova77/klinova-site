@@ -17,7 +17,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   hubIntro:
-    "<p>Au pied de l'Institut Gustave Roussy et du terminus du métro 7, Villejuif concentre des flux importants et des configurations variées. Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs espaces communs et privatifs.</p>\n<p class=\"mt-4\">Notre organisation repose sur une <strong>coordination terrain rigoureuse</strong> : planification des passages, adaptation aux contraintes de stationnement, reporting si demandé. Chaque intervention tient compte du bâti existant et des usages réels du site.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, capables d'intervenir rapidement sur les secteurs denses comme Léo Lagrange ou les abords de l'hôpital Paul Brousse.</li>\n  <li> <strong>Adaptation au bâti :</strong> Résidences années 70, constructions récentes de la ZAC Campus Grand Parc ou pavillons des Barmonts : méthodes ajustées à chaque configuration.</li>\n  <li><strong>Coordination simplifiée :</strong> Un interlocuteur unique pour planifier les interventions, gérer les accès (badges, gardiens) et limiter la gêne pour les occupants.</li>\n</ul>",
+    "<p>Au pied de l'Institut Gustave Roussy et du terminus du métro 7, Villejuif concentre des flux importants et des configurations variées. Klinova accompagne syndics, gestionnaires et occupants dans l'entretien régulier de leurs espaces communs et privatifs.</p>\n<p class=\"mt-4\">Notre organisation repose sur une <strong>coordination terrain rigoureuse</strong> : planification des passages, adaptation aux contraintes de stationnement, reporting si demandé. Chaque intervention tient compte du bâti existant et des usages réels du site.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, mobilisables sur les secteurs denses comme Léo Lagrange ou les abords de l'hôpital Paul Brousse.</li>\n  <li> <strong>Adaptation au bâti :</strong> Résidences années 70, constructions récentes de la ZAC Campus Grand Parc ou pavillons des Barmonts : méthodes ajustées à chaque configuration.</li>\n  <li><strong>Coordination simplifiée :</strong> Un interlocuteur unique pour planifier les interventions, gérer les accès (badges, gardiens) et limiter la gêne pour les occupants.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -75,7 +75,7 @@ const city: City = {
     {
       question: "Quel délai pour obtenir un devis après une demande ?",
       answer:
-        "<p>Nous répondons généralement sous 24 à 48 heures. Pour les demandes concernant des <strong>copropriétés ou locaux professionnels</strong>, un passage sur site peut être proposé afin d'évaluer les surfaces, l'état des sols et les contraintes d'accès spécifiques.</p>",
+        "<p>Nous vous répondons généralement sous 24h ouvrées. Pour les demandes concernant des <strong>copropriétés ou locaux professionnels</strong>, un passage sur site peut être proposé afin d'évaluer les surfaces, l'état des sols et les contraintes d'accès spécifiques.</p>",
     },
     {
       question: "Proposez-vous un suivi ou un reporting après intervention ?",
@@ -264,7 +264,7 @@ const city: City = {
           question:
             "Face à des fientes abondantes sur un balcon donnant sur le Parc des Hautes-Bruyères, quelle intervention proposez-vous en urgence ?",
           answer:
-            "<p>Nous intervenons rapidement avec un protocole complet : confinement de la zone, port d'EPI, humidification des dépôts pour éviter la dispersion, puis ramassage et désinfection. L'objectif est de rendre le balcon utilisable sous 24 à 48 heures selon l'ampleur des dépôts.</p>",
+            "<p>Nous intervenons rapidement avec un protocole complet : confinement de la zone, port d'EPI, humidification des dépôts pour éviter la dispersion, puis ramassage et désinfection. Le balcon redevient utilisable une fois le protocole terminé, selon l'ampleur des dépôts.</p>",
         },
         {
           question:
@@ -406,9 +406,9 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Quel délai d'intervention proposez-vous pour un ménage d'état des lieux dans le quartier des Lozaits entre deux locataires ?",
+            "Comment organisez-vous un ménage d'état des lieux dans le quartier des Lozaits entre deux locataires ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures, parfois moins selon la disponibilité. La rotation locative importante dans ce secteur nous a habitués à caler des créneaux serrés en coordination directe avec les agences ou les propriétaires.</p>",
+            "<p>Selon la disponibilité de nos équipes, nous nous adaptons à votre échéance. La rotation locative importante dans ce secteur nous a habitués à caler des créneaux serrés en coordination directe avec les agences ou les propriétaires.</p>",
         },
         {
           question:

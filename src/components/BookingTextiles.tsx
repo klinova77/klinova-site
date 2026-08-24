@@ -345,7 +345,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
         </div>
         <h3 className="text-2xl font-bold text-[#1E2939] mb-4">Demande envoyée !</h3>
         <p className="text-[#475569] mb-6">
-          Nous avons bien reçu votre demande de réservation. Vous recevrez une confirmation par email sous 24h avec les détails de votre intervention.
+          Nous avons bien reçu votre demande de réservation. Vous recevrez une confirmation par email sous 24h ouvrées avec les détails de votre intervention.
         </p>
         <p className="text-sm text-[#475569]">
           <strong>Contact direct :</strong> 📞 06 76 73 86 61
@@ -825,7 +825,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
           </button>
           
           <p className="text-center text-sm text-[#475569] mt-3">
-            Vous recevrez une confirmation par email sous 24h
+            Vous recevrez une confirmation par email sous 24h ouvrées
           </p>
         </div>
 

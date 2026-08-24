@@ -79,13 +79,13 @@ const city: City = {
     {
       question: "Quel délai prévoir pour obtenir un devis après une demande ?",
       answer:
-        "<p>Nous répondons généralement sous <strong>24 à 48 heures</strong>. Si une visite technique est nécessaire — par exemple pour évaluer l'état d'un parking souterrain ou la surface d'un balcon — nous la planifions rapidement selon vos disponibilités.</p>",
+        "<p>Nous répondons rapidement à chaque demande. Si une visite technique est nécessaire — par exemple pour évaluer l'état d'un parking souterrain ou la surface d'un balcon — nous la planifions rapidement selon vos disponibilités.</p>",
     },
     {
       question:
         "Intervenez-vous en urgence si une dégradation survient dans les parties communes ?",
       answer:
-        "<p>Nous traitons les demandes urgentes en priorité, selon la nature du problème et notre planning. Pour une <strong>salissure importante</strong> ou un incident ponctuel, contactez-nous directement : nous évaluons la faisabilité d'une intervention rapide.</p>",
+        "<p>Nous traitons les demandes urgentes en priorité, selon la nature du problème et notre planning. Pour une <strong>salissure importante</strong> ou un incident ponctuel, contactez-nous directement : nous évaluons la faisabilité d'une intervention.</p>",
     },
   ],
 
@@ -269,7 +269,7 @@ const city: City = {
           question:
             "Les balcons donnant sur le Parc François Mitterrand sont couverts de fientes : quels risques sanitaires et dans quel délai intervenez-vous ?",
           answer:
-            "<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent provoquer des infections respiratoires. La proximité du parc attire les oiseaux en nombre. Nous intervenons généralement sous 48 à 72 heures pour stopper l'accumulation et assainir l'espace.</p>",
+            "<p>Les fientes de pigeons contiennent des agents pathogènes (bactéries, champignons) qui peuvent provoquer des infections respiratoires. La proximité du parc attire les oiseaux en nombre. Nous intervenons pour stopper l'accumulation et assainir l'espace.</p>",
         },
         {
           question:

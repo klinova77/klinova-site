@@ -72,7 +72,7 @@ const city = {
     {
       question: "Quel délai prévoir pour obtenir un devis après une demande ?",
       answer:
-        "<p>Un premier retour intervient sous 24 à 48 heures. Si une visite technique s'impose — parking souterrain, grande surface vitrée, état dégradé — nous la programmons rapidement. Le devis détaillé précise les <strong>étapes, délais et conditions d'accès</strong> nécessaires à l'intervention.</p>",
+        "<p>Un premier retour vous est apporté sous 24h ouvrées. Si une visite technique s'impose — parking souterrain, grande surface vitrée, état dégradé — nous la programmons rapidement. Le devis détaillé précise les <strong>étapes, délais et conditions d'accès</strong> nécessaires à l'intervention.</p>",
     },
     {
       question:
@@ -84,7 +84,7 @@ const city = {
       question:
         "Pouvez-vous intervenir en urgence sur une dégradation imprévue ?",
       answer:
-        "<p>Oui, nous traitons les demandes urgentes — fuite ayant souillé un hall, dégât localisé avant visite — avec une <strong>réactivité sous 24 à 72 heures</strong> selon disponibilité. Le syndic ou le particulier reçoit une confirmation rapide et un créneau adapté aux contraintes d'accès.</p>",
+        "<p>Oui, nous traitons les demandes urgentes — fuite ayant souillé un hall, dégât localisé avant visite — selon la disponibilité de nos équipes. Le syndic ou le particulier reçoit une confirmation rapide et un créneau adapté aux contraintes d'accès.</p>",
     },
   ],
 
@@ -400,7 +400,7 @@ const city = {
       whyUsBullets: [
         "Connaissance des copropriétés et pavillons du secteur, habitude des rotations locatives liées à la zone aéroportuaire.",
         "Polyvalence sur tous types de sols et finitions : carrelage, parquet, faïence, surfaces peintes récemment.",
-        "Réactivité sous 48 à 72h, coordination directe avec agences et artisans pour respecter vos échéances.",
+        "Coordination directe avec agences et artisans pour respecter vos échéances.",
       ],
       uniqueIntro:
         "<p>Après quelques semaines de travaux ou une rotation locative rapide, un appartement accumule poussières de chantier, traces de colle et résidus sur toutes les surfaces. Dans les secteurs proches de la <strong>Gare Pont de Rungis - Aéroport d'Orly</strong>, la demande de remise en état reste soutenue : personnel aéroportuaire en mobilité, locataires en turnover fréquent, propriétaires pressés par les délais d'agence.</p>\n<p class=\"mt-4\">Un logement correctement préparé facilite l'état des lieux et évite les litiges sur le dépôt de garantie. Dans les appartements T2/T3 en copropriétés comme dans les maisons pavillonnaires du secteur, les sols carrelage et parquets récents demandent un traitement adapté pour éliminer voiles de ciment, projections de peinture et poussières fines sans abîmer les finitions.</p>\n<p class=\"mt-4\">L'intervention couvre l'ensemble du bien : pièces de vie, cuisine, sanitaires, placards. La coordination avec agences immobilières ou artisans permet de respecter les délais serrés imposés par la rotation locative, tout en garantissant un niveau de propreté conforme aux attentes d'un état des lieux sortant.</p>",
@@ -422,9 +422,9 @@ const city = {
         },
         {
           question:
-            "Si l'agence demande une intervention urgente après état des lieux près de la gare, quels sont vos délais réels ?",
+            "Comment organisez-vous une intervention urgente après état des lieux près de la gare ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement et notre planning. Pour les demandes très urgentes liées à une remise de clés imminente, un créneau prioritaire peut être proposé après échange téléphonique avec l'agence ou le propriétaire.</p>",
+            "<p>Nous nous adaptons selon la taille du logement et notre planning. Pour les demandes très urgentes liées à une remise de clés imminente, un créneau prioritaire peut être proposé après échange téléphonique avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

@@ -114,7 +114,7 @@ ${data.slotType === 'scheduled' && data.selectedSlot ?
 
 ${data.slotType === 'urgent' ? 
   '⚡ INTERVENTION URGENTE : Nous vous recontacterons dans les plus brefs délais pour organiser votre intervention.' :
-  'Nous vous recontacterons sous 24h pour confirmer votre rendez-vous et vous transmettre un devis personnalisé.'
+  'Nous vous recontacterons sous 24h ouvrées pour confirmer votre rendez-vous et vous transmettre un devis personnalisé.'
 }
 
 ${data.photoUrls && data.photoUrls.length > 0 ? 

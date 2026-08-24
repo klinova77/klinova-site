@@ -16,7 +16,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // pattern : 2 <p> then <ul>
-  hubIntro: "<p>Herblay-sur-Seine, desservie par la ligne J du Transilien et proche de la zone commerciale de la Patte d'Oie, concentre un parc immobilier varié. Klinova accompagne syndics, gestionnaires et particuliers dans l'entretien régulier de leurs espaces.</p>\n<p class=\"mt-4\">Notre approche repose sur une organisation adaptée aux réalités du terrain : coordination avec les occupants, interventions planifiées selon les contraintes d'accès, et suivi des prestations réalisées. Un interlocuteur dédié assure la liaison pour chaque site.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, capable d'intervenir rapidement sur Herblay et les communes voisines selon les urgences signalées.</li>\n  <li><strong>Adaptation au bâti :</strong> Méthodes ajustées aux petits collectifs, résidences récentes ou pavillons, avec prise en compte des digicodes et accès restreints.</li>\n  <li>Suivi transparent : Compte-rendu d'intervention disponible, échanges réguliers avec le donneur d'ordre pour ajuster les fréquences si nécessaire.</li>\n</ul>",
+  hubIntro: "<p>Herblay-sur-Seine, desservie par la ligne J du Transilien et proche de la zone commerciale de la Patte d'Oie, concentre un parc immobilier varié. Klinova accompagne syndics, gestionnaires et particuliers dans l'entretien régulier de leurs espaces.</p>\n<p class=\"mt-4\">Notre approche repose sur une organisation adaptée aux réalités du terrain : coordination avec les occupants, interventions planifiées selon les contraintes d'accès, et suivi des prestations réalisées. Un interlocuteur dédié assure la liaison pour chaque site.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, mobilisable sur Herblay et les communes voisines selon les urgences signalées.</li>\n  <li><strong>Adaptation au bâti :</strong> Méthodes ajustées aux petits collectifs, résidences récentes ou pavillons, avec prise en compte des digicodes et accès restreints.</li>\n  <li>Suivi transparent : Compte-rendu d'intervention disponible, échanges réguliers avec le donneur d'ordre pour ajuster les fréquences si nécessaire.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -66,11 +66,11 @@ const city: City = {
     },
     {
       question: "Proposez-vous un devis avant intervention ?",
-      answer: "<p>Oui, chaque demande fait l'objet d'une <strong>évaluation préalable</strong>. Nous recueillons les informations sur la surface, le type de revêtement et les contraintes d'accès. Le devis est transmis sous 48 heures, sans engagement. Pour les sites complexes, une visite technique peut être programmée.</p>",
+      answer: "<p>Oui, chaque demande fait l'objet d'une <strong>évaluation préalable</strong>. Nous recueillons les informations sur la surface, le type de revêtement et les contraintes d'accès. Le devis est transmis rapidement, sans engagement. Pour les sites complexes, une visite technique peut être programmée.</p>",
     },
     {
       question: "Intervenez-vous en urgence sur Herblay-sur-Seine ?",
-      answer: "<p>Nous traitons les demandes urgentes selon la disponibilité de nos équipes. En cas de <strong>sinistre ou de dégradation importante</strong>, un premier passage peut être organisé sous 24 à 72 heures. Le délai exact dépend de la nature de l'intervention et de l'accessibilité du site.</p>",
+      answer: "<p>Nous traitons les demandes urgentes selon la disponibilité de nos équipes. En cas de <strong>sinistre ou de dégradation importante</strong>, un premier passage peut être organisé rapidement. Le délai exact dépend de la nature de l'intervention et de l'accessibilité du site.</p>",
     },
     {
       question: "Comment se passe la coordination avec un syndic ou un gestionnaire ?",

@@ -67,7 +67,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande. Pour les situations critiques (dégât des eaux, souillures importantes), un <strong>premier passage rapide</strong> est organisé avant planification complète si nécessaire.</p>",
+      answer: "<p>Oui, nous pouvons mobiliser une équipe selon la nature de la demande. Pour les situations critiques (dégât des eaux, souillures importantes), un <strong>premier passage</strong> est organisé avant planification complète si nécessaire.</p>",
     },
     {
       question: "Le stationnement est difficile à Versailles : comment gérez-vous ce point ?",
@@ -337,8 +337,8 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Dans le quartier Bernard de Jussieu-Petit-Bois-Picardie, quel délai proposez-vous pour une urgence avant état des lieux ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la surface et la disponibilité. Pour les situations urgentes, un créneau prioritaire peut être organisé après échange téléphonique, en tenant compte des contraintes d'accès propres à ce secteur résidentiel.</p>",
+          question: "Dans le quartier Bernard de Jussieu-Petit-Bois-Picardie, comment organisez-vous une intervention urgente avant état des lieux ?",
+          answer: "<p>Nous nous adaptons selon la surface et la disponibilité de nos équipes. Pour les situations urgentes, un créneau prioritaire peut être organisé après échange téléphonique, en tenant compte des contraintes d'accès propres à ce secteur résidentiel.</p>",
         },
         {
           question: "Dans les résidences versaillaises, quelle différence faites-vous entre un ménage standard et un nettoyage de fin de chantier ?",

@@ -76,13 +76,13 @@ const city: City = {
       question:
         "Le déplacement pour établir un devis est-il facturé pour une copropriété située au Raincy ?",
       answer:
-        "<p><strong>Non.</strong> Le diagnostic sur site est réalisé sans frais : surfaces, contraintes d’accès, état des supports (textiles, sols, sous-sols, extérieurs) et organisation. Le devis est ensuite transmis sous 48 à 72 heures, sur la base des éléments constatés.</p>",
+        "<p><strong>Non.</strong> Le diagnostic sur site est réalisé sans frais : surfaces, contraintes d’accès, état des supports (textiles, sols, sous-sols, extérieurs) et organisation. Le devis est ensuite transmis rapidement, sur la base des éléments constatés.</p>",
     },
     {
       question:
         "Pouvez-vous intervenir en urgence après un dégât des eaux ou une zone fortement souillée ?",
       answer:
-        "<p><strong>Oui, selon la situation.</strong> En cas de sinistre ou de souillure accidentelle, nous pouvons mobiliser une équipe sous 24 à 48 heures pour une remise en état, avec un protocole clair (sécurisation, traitement, séchage si nécessaire) et un reporting utile au syndic.</p>",
+        "<p><strong>Oui, selon la situation.</strong> En cas de sinistre ou de souillure accidentelle, nous mobilisons une équipe selon la disponibilité pour une remise en état, avec un protocole clair (sécurisation, traitement, séchage si nécessaire) et un reporting utile au syndic.</p>",
     },
   ],
 

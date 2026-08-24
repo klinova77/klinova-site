@@ -39,7 +39,7 @@ const city: City = {
     {
       question: "Le déplacement pour établir un devis est-il gratuit ?",
       answer:
-        "<p><strong>Oui, le diagnostic sur site</strong> et le chiffrage sont gratuits, que l'immeuble soit situé près du Lac, de l'avenue de Paris ou dans les quartiers résidentiels bordant le Bois. Le technicien évalue les surfaces, identifie les contraintes (parquets anciens, accès parking, niveau d'exigence) et remet un devis détaillé sous 48h, adapté aux spécificités de votre copropriété.</p>",
+        "<p><strong>Oui, le diagnostic sur site</strong> et le chiffrage sont gratuits, que l'immeuble soit situé près du Lac, de l'avenue de Paris ou dans les quartiers résidentiels bordant le Bois. Le technicien évalue les surfaces, identifie les contraintes (parquets anciens, accès parking, niveau d'exigence) et remet rapidement un devis détaillé, adapté aux spécificités de votre copropriété.</p>",
     },
     {
       question:

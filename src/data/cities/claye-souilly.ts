@@ -65,7 +65,7 @@ const city: City = {
       question:
         "Intervenez-vous rapidement sur Claye-Souilly et les communes voisines ?",
       answer:
-        "<p><strong>Oui, Claye-Souilly fait partie de notre zone d'intervention habituelle.</strong> Nous programmons les interventions sous 5 à 10 jours ouvrés pour les demandes classiques, et sous 48 à 72 heures en cas d'urgence technique ou de sinistre, selon disponibilité. Notre proximité avec les axes RN3 et A104 facilite les rotations.</p>",
+        "<p><strong>Oui, Claye-Souilly fait partie de notre zone d'intervention habituelle.</strong> Nous programmons les interventions selon la nature de la demande, avec une prise en charge adaptée en cas d'urgence technique ou de sinistre, selon disponibilité. Notre proximité avec les axes RN3 et A104 facilite les rotations.</p>",
     },
     {
       question:

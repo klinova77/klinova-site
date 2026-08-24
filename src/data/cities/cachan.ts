@@ -71,7 +71,7 @@ const city: City = {
     {
       question: "Proposez-vous des interventions en urgence sur Cachan ?",
       answer:
-        "<p>Oui, selon la nature de la demande et notre planning, nous pouvons intervenir rapidement. Dégât des eaux, souillure accidentelle ou remise en état avant visite : nous adaptons le créneau pour répondre aux situations imprévues.</p>",
+        "<p>Oui, selon la nature de la demande et notre planning, nous pouvons organiser une intervention. Dégât des eaux, souillure accidentelle ou remise en état avant visite : nous adaptons le créneau pour répondre aux situations imprévues.</p>",
     },
     {
       question:
@@ -386,7 +386,7 @@ const city: City = {
       whyUsBullets: [
         "Connaissance des typologies de logements à Cachan, du studio étudiant aux pavillons familiaux du Coteau.",
         "Polyvalence sur tous types de sols et de surfaces, avec traitement adapté aux résidus de chantier.",
-        "Organisation calée sur vos contraintes : coordination agence, récupération de clés, intervention sous 48h si besoin.",
+        "Organisation calée sur vos contraintes : coordination agence, récupération de clés, intervention rapide si besoin.",
       ],
       uniqueIntro:
         "<p>Après plusieurs mois d'occupation ou quelques semaines de travaux, un logement accumule des traces que le ménage courant ne suffit pas à éliminer. À Cachan, les studios et T2 proches de la gare RER connaissent une rotation soutenue : chaque changement de locataire impose une remise en état rapide, souvent sous contrainte de délai imposé par l'agence ou le propriétaire.</p>\n<p class=\"mt-4\">Un nettoyage complet avant restitution des clés évite les litiges sur l'état des lieux et facilite la relocation. Dans les immeubles anciens du centre-ville comme dans les pavillons rénovés du Coteau, les sols, les pièces d'eau et les menuiseries présentent des salissures spécifiques : résidus de peinture après chantier, calcaire incrusté dans les sanitaires, poussière fine sur les plinthes et radiateurs.</p>\n<p class=\"mt-4\">L'intervention couvre l'ensemble du logement selon un plan adapté à la surface et au contexte. Coordination avec artisans en fin de chantier, remise des clés à l'agence, accès par digicode ou gardien : chaque contrainte est intégrée dès la prise de rendez-vous pour respecter vos délais.</p>",
@@ -404,7 +404,7 @@ const city: City = {
           question:
             "En urgence pour un état des lieux près de la gare RER, quel est votre délai d'intervention habituel à Cachan ?",
           answer:
-            "<p>Pour les logements proches de la gare d'Arcueil-Cachan, nous pouvons intervenir sous 48 à 72 heures selon la surface et la disponibilité. En cas d'urgence avérée, un créneau prioritaire peut être proposé après échange téléphonique pour confirmer l'accès et le périmètre.</p>",
+            "<p>Pour les logements proches de la gare d'Arcueil-Cachan, nous pouvons intervenir selon la surface et la disponibilité. En cas d'urgence avérée, un créneau prioritaire peut être proposé après échange téléphonique pour confirmer l'accès et le périmètre.</p>",
         },
         {
           question:

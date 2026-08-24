@@ -16,7 +16,7 @@ const city: City = {
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
   // Format : 2 <p> then <ul>
-  hubIntro: "<p>Commune des Hauts-de-Seine desservie par les lignes Transilien N et L, abritant le Musée National de Céramique, Sèvres concentre un parc immobilier varié qui nécessite un suivi régulier. Klinova s'inscrit comme partenaire terrain pour les syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions de propreté et de maintenance selon les spécificités de chaque site. <strong>Reporting disponible, planification adaptée</strong> aux accès contraints, matériel acheminé sans encombrer les parties communes.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipe mobile couvrant Sèvres et communes limitrophes, délais d'intervention courts pour les demandes urgentes ou programmées.</li>\n  <li><strong>Gestion des accès :</strong> Prise en charge des digicodes, badges et créneaux horaires imposés par les copropriétés ou entreprises.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu après chaque passage, photos avant/après si demandé, interlocuteur unique pour simplifier les échanges.</li>\n</ul>",
+  hubIntro: "<p>Commune des Hauts-de-Seine desservie par les lignes Transilien N et L, abritant le Musée National de Céramique, Sèvres concentre un parc immobilier varié qui nécessite un suivi régulier. Klinova s'inscrit comme partenaire terrain pour les syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Notre équipe coordonne les interventions de propreté et de maintenance selon les spécificités de chaque site. <strong>Reporting disponible, planification adaptée</strong> aux accès contraints, matériel acheminé sans encombrer les parties communes.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipe mobile couvrant Sèvres et communes limitrophes, avec suivi des demandes urgentes ou programmées.</li>\n  <li><strong>Gestion des accès :</strong> Prise en charge des digicodes, badges et créneaux horaires imposés par les copropriétés ou entreprises.</li>\n  <li><strong>Suivi transparent :</strong> Compte-rendu après chaque passage, photos avant/après si demandé, interlocuteur unique pour simplifier les échanges.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -63,10 +63,6 @@ const city: City = {
     {
       question: "Comment gérez-vous le stationnement lors des interventions à Sèvres ?",
       answer: "<p>Le stationnement en centre-ville reste compliqué. Nous repérons les <strong>zones de dépose</strong> autorisées en amont et privilégions les créneaux matinaux pour limiter les contraintes. Si nécessaire, nous sollicitons une autorisation temporaire auprès du syndic ou du gestionnaire.</p>",
-    },
-    {
-      question: "Quel délai prévoir pour une première intervention ?",
-      answer: "<p>Après validation du devis, l'intervention est généralement programmée sous <strong>5 à 10 jours ouvrés</strong>. En cas d'urgence (dégât, nuisance), nous pouvons réduire ce délai selon la disponibilité de l'équipe et l'accès au site.</p>",
     },
     {
       question: "Intervenez-vous dans les immeubles avec digicode ou badge ?",

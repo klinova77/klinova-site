@@ -60,7 +60,7 @@ const city: City = {
   faq: [
     {
       question:
-        "Intervenez-vous rapidement malgré le trafic touristique intense du Val d'Europe ?",
+        "Intervenez-vous malgré le trafic touristique intense du Val d'Europe ?",
       answer:
         "<p><strong>Oui, nous planifions chaque intervention en tenant compte des pics de saturation</strong> autour du centre commercial Val d'Europe, de La Vallée Village et de la gare RER A. Nos techniciens privilégient les créneaux en semaine hors vacances scolaires et évitent les week-ends touristiques. Nous utilisons des véhicules utilitaires compacts adaptés aux parkings souterrains à hauteur limitée (1m90) pour accéder directement aux résidences sans saturer la voirie de surface.</p>",
     },
@@ -68,7 +68,7 @@ const city: City = {
       question:
         "Le diagnostic sur site est-il gratuit pour toutes les résidences de Serris ?",
       answer:
-        "<p><strong>Oui, le déplacement et le diagnostic restent gratuits</strong> quel que soit le quartier (Centre Urbain, Quartier du Lac, Le Bourg, Serris-Sud, secteur La Vallée). Le technicien évalue les surfaces, identifie les contraintes spécifiques (matériaux de standing, accès sécurisé, flux touristique) et remet un chiffrage détaillé sous 48h adapté à votre copropriété ou résidence de services.</p>",
+        "<p><strong>Oui, le déplacement et le diagnostic restent gratuits</strong> quel que soit le quartier (Centre Urbain, Quartier du Lac, Le Bourg, Serris-Sud, secteur La Vallée). Le technicien évalue les surfaces, identifie les contraintes spécifiques (matériaux de standing, accès sécurisé, flux touristique) et remet un chiffrage détaillé et rapide adapté à votre copropriété ou résidence de services.</p>",
     },
     {
       question:

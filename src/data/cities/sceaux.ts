@@ -72,7 +72,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe dans les meilleurs délais selon la nature de la demande et nos disponibilités. Pour les situations nécessitant une réponse rapide — dégât des eaux, salissure accidentelle — nous ajustons notre planning. Le délai exact dépend de la <strong>disponibilité du matériel</strong> et de l'accessibilité du site.</p>",
+      answer: "<p>Oui, nous mobilisons une équipe selon la nature de la demande et nos disponibilités. Pour les situations comme un dégât des eaux ou une salissure accidentelle, nous ajustons notre planning en conséquence. Le délai dépend de la <strong>disponibilité du matériel</strong> et de l'accessibilité du site.</p>",
     },
     {
       question: "Le stationnement en centre-ville complique-t-il vos interventions ?",
@@ -369,8 +369,8 @@ const city: City = {
           answer: "<p>Après séchage complet du support, nous procédons à un nettoyage en profondeur sans excès d'eau pour préserver le bois. Les zones touchées par l'humidité sont inspectées pour détecter d'éventuelles moisissures. Le traitement est adapté à l'état du parquet et à son niveau de fragilité.</p>",
         },
         {
-          question: "Quel délai d'intervention proposez-vous en urgence pour un état des lieux à proximité de la Faculté Jean Monnet ?",
-          answer: "<p>Nous pouvons intervenir sous 24 à 48 heures selon la surface et la disponibilité. Les périodes de forte rotation locative (juin-juillet) nécessitent une réservation anticipée. Nous confirmons systématiquement le créneau pour garantir le respect de votre échéance.</p>",
+          question: "Comment anticiper une intervention en urgence pour un état des lieux à proximité de la Faculté Jean Monnet ?",
+          answer: "<p>Les périodes de forte rotation locative (juin-juillet) nécessitent une réservation anticipée. Nous confirmons systématiquement le créneau pour garantir le respect de votre échéance.</p>",
         },
         {
           question: "Comment coordonnez-vous une intervention avec une agence immobilière locale pour une remise en état rapide ?",

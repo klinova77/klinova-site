@@ -70,8 +70,8 @@ const city: City = {
       answer: "<p>Nous contactons le gardien ou le syndic en amont pour <strong>valider les accès</strong> et définir un créneau adapté. Le matériel est acheminé tôt le matin ou en milieu de journée pour limiter la gêne. Un balisage temporaire sécurise la zone pendant l'intervention.</p>",
     },
     {
-      question: "Pouvez-vous intervenir rapidement en cas de dégradation urgente ?",
-      answer: "<p>Oui, nous proposons des créneaux sous 48 à 72 heures selon la nature de la demande. Pour les situations critiques à Sevran — fuite ayant souillé un parking, accumulation de déjections — nous <strong>priorisons le déplacement</strong> après échange téléphonique.</p>",
+      question: "Intervenez-vous en cas de dégradation urgente ?",
+      answer: "<p>Nous nous adaptons selon la nature de la demande. Pour les situations critiques à Sevran — fuite ayant souillé un parking, accumulation de déjections — nous <strong>priorisons le déplacement</strong> après échange téléphonique.</p>",
     },
     {
       question: "Le stationnement est compliqué près des gares RER. Comment gérez-vous cela ?",
@@ -345,8 +345,8 @@ const city: City = {
           answer: "<p>Nous intervenons après les travaux pour éliminer poussières de plâtre, traces de peinture et résidus sur les sols. Le diagnostic préalable identifie les zones sensibles. L'intervention couvre l'ensemble du logement, vitres intérieures comprises, pour une remise en état complète avant emménagement.</p>",
         },
         {
-          question: "Quel est votre délai d'intervention pour un nettoyage avant état des lieux dans une location sociale à Sevran ?",
-          answer: "<p>Nous pouvons généralement intervenir sous 48 à 72 heures selon la disponibilité. Pour les rotations locatives urgentes, un créneau prioritaire peut être organisé en coordination avec le bailleur. Le planning est calé sur la date de remise des clés communiquée.</p>",
+          question: "Comment organisez-vous une intervention avant état des lieux dans une location sociale à Sevran ?",
+          answer: "<p>Nous nous adaptons selon la disponibilité et la nature de la demande. Pour les rotations locatives urgentes, un créneau prioritaire peut être organisé en coordination avec le bailleur. Le planning est calé sur la date de remise des clés communiquée.</p>",
         },
         {
           question: "Pouvez-vous traiter traces et odeurs après dégât des eaux dans un appartement d'un collectif ancien ?",

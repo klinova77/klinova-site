@@ -16,7 +16,7 @@ const city: City = {
 
     
   hubIntro:
-    "<p>KLINOVA accompagne les syndics et gestionnaires de Torcy dans leur gestion quotidienne de la propreté immobilière. Notre proximité géographique et notre connaissance du tissu urbain local nous permettent d'intervenir rapidement sur vos copropriétés et zones d'activités.</p>\n<p class=\"mt-4\">Nous proposons une <strong>approche globale de la maintenance technique</strong> : du nettoyage des moquettes de halls aux parkings souterrains, en passant par l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un protocole rigoureux et d'un reporting détaillé pour vos conseils syndicaux.</p>\n<ul>\n  <li><strong>Interventions programmées</strong> sur les copropriétés du secteur Arche-Guédon et centre-ville.</li>\n  <li><strong>Gestion des accès sécurisés</strong> Vigik et coordination avec les gardiens d'immeubles.</li>\n  <li><strong>Protocoles adaptés</strong> aux contraintes de stationnement près de la gare RER.</li>\n  <li><strong>Reporting détaillé</strong> pour assemblées générales et suivi budgétaire.</li>\n</ul>",
+    "<p>KLINOVA accompagne les syndics et gestionnaires de Torcy dans leur gestion quotidienne de la propreté immobilière. Notre proximité géographique et notre connaissance du tissu urbain local nous permettent d'intervenir efficacement sur vos copropriétés et zones d'activités.</p>\n<p class=\"mt-4\">Nous proposons une <strong>approche globale de la maintenance technique</strong> : du nettoyage des moquettes de halls aux parkings souterrains, en passant par l'entretien des balcons et terrasses. Chaque intervention fait l'objet d'un protocole rigoureux et d'un reporting détaillé pour vos conseils syndicaux.</p>\n<ul>\n  <li><strong>Interventions programmées</strong> sur les copropriétés du secteur Arche-Guédon et centre-ville.</li>\n  <li><strong>Gestion des accès sécurisés</strong> Vigik et coordination avec les gardiens d'immeubles.</li>\n  <li><strong>Protocoles adaptés</strong> aux contraintes de stationnement près de la gare RER.</li>\n  <li><strong>Reporting détaillé</strong> pour assemblées générales et suivi budgétaire.</li>\n</ul>",
 
   citySpecificChallenges: [
     "Encrassement accéléré des moquettes de halls par le <strong>passage intensif</strong> lié à la desserte RER A.",
@@ -64,11 +64,6 @@ const city: City = {
   ],
 
   faq: [
-    {
-      question: "Intervenez-vous rapidement sur le secteur de Torcy ?",
-      answer:
-        "<strong>Notre équipe intervient rapidement en semaine</strong> sur Torcy et environs. Pour les urgences, sinistre ou fin de chantier, nous mobilisons nos techniciens dans la journée. La proximité de notre base logistique nous permet cette réactivité.",
-    },
     {
       question: "Comment gérez-vous les accès aux immeubles sécurisés ?",
       answer:

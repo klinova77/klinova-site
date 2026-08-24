@@ -21,7 +21,7 @@ const city: City = {
 <p class=\"mt-4\">Notre approche repose sur une <strong>coordination étroite avec les donneurs d'ordre</strong>. Planification des passages, adaptation aux contraintes d'accès, suivi des interventions : chaque prestation s'inscrit dans une logique de maintenance durable, pas de coup par coup.</p>\
 \
 <ul>\
-  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, capables d'intervenir rapidement sur Antony et les communes voisines selon les urgences signalées.</li>\
+  <li><strong>Réactivité locale :</strong> Équipes basées en Île-de-France, capables d'intervenir sur Antony et les communes voisines selon les urgences signalées.</li>\
   <li><strong>Coordination simplifiée :</strong> Un interlocuteur dédié pour centraliser les demandes, qu'il s'agisse d'un immeuble résidentiel ou d'un site tertiaire.</li>\
   <li><strong>Méthodes adaptées au bâti :</strong> Matériel dimensionné selon la configuration des lieux, des halls étroits du centre-ville aux parkings souterrains des grandes résidences.</li>\
 </ul>",
@@ -82,7 +82,7 @@ const city: City = {
     },
     {
       question: "Quel délai pour obtenir un devis après une demande ?",
-      answer: "<p>Nous répondons généralement sous <strong>24 à 48 heures</strong>. Si une visite technique est nécessaire pour évaluer l'état des surfaces ou les contraintes d'accès, elle est planifiée rapidement. Le devis détaille les prestations, fréquences et modalités d'intervention.</p>",
+      answer: "<p>Nous répondons rapidement à chaque demande. Si une visite technique est nécessaire pour évaluer l'état des surfaces ou les contraintes d'accès, elle est planifiée rapidement. Le devis détaille les prestations, fréquences et modalités d'intervention.</p>",
     },
     {
       question: "Proposez-vous un suivi régulier pour les copropriétés ou entreprises ?",
@@ -362,7 +362,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "En cas de départ locataire à Croix de Berny, quel est votre délai d'intervention pour un nettoyage état des lieux ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la disponibilité. Pour les situations urgentes liées à une date d'état des lieux fixée, nous adaptons notre planning. Un échange préalable permet de confirmer le créneau et d'organiser la remise des clés ou l'accès par badge.</p>",
+          answer: "<p>Nous intervenons selon la disponibilité. Pour les situations urgentes liées à une date d'état des lieux fixée, nous adaptons notre planning. Un échange préalable permet de confirmer le créneau et d'organiser la remise des clés ou l'accès par badge.</p>",
         },
         {
           question: "Que comprend votre prestation de nettoyage après travaux pour un logement dans la ZAC Jean Zay ?",

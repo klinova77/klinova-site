@@ -11,7 +11,7 @@ export const hautsDeSeine: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel dans les Hauts-de-Seine (92)",
-  heroKicker: "La Défense • Neuilly • Levallois • Boulogne • Devis sous 24h",
+  heroKicker: "La Défense • Neuilly • Levallois • Boulogne • Devis rapide",
   heroDescription:
     "Bureaux corporate ou résidences de standing, les Hauts-de-Seine imposent des standards de propreté élevés. Klinova intervient dans tout le département pour le nettoyage de moquettes tertiaires, textiles nobles à domicile, parkings souterrains, balcons et terrasses premium. Interventions en soirée ou week-end pour les espaces professionnels, créneaux souples pour le résidentiel — toujours avec la discrétion et la rigueur qu'exige le 92.",
 
@@ -171,11 +171,6 @@ export const hautsDeSeine: DepartmentKln = {
         "Oui. Pour les espaces corporate, nous mettons en place des contrats de nettoyage récurrent (mensuel, trimestriel) avec un suivi qualité régulier. Pour les copropriétés, nous proposons des formules semestrielles ou annuelles. Ces contrats incluent des tarifs dégressifs, une planification anticipée et un interlocuteur dédié. Nous établissons un devis sur mesure après audit du site.",
     },
     {
-      question: "Quel est votre délai d'intervention dans le 92 ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités. Pour les urgences corporate (événement client, visite d'investisseurs, assemblée générale), nous pouvons mobiliser un créneau prioritaire sous 48h. Les interventions en soirée et le week-end sont possibles pour les espaces tertiaires.",
-    },
-    {
       question: "Nettoyez-vous les parkings souterrains d'immeubles de bureaux ?",
       answer:
         "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes (y compris hélicoïdales) et zones techniques. Pour les grandes surfaces, nous utilisons des autolaveuses haute performance. Nous gérons l'évacuation de l'eau, traitons les traces de pneus et respectons la signalétique. Pour les parkings occupés en journée, nous intervenons la nuit ou le week-end.",
@@ -188,7 +183,7 @@ export const hautsDeSeine: DepartmentKln = {
     {
       question: "Combien coûte le nettoyage de moquettes de bureaux ?",
       answer:
-        "Le tarif dépend de la surface, du niveau d'encrassement et de la fréquence souhaitée. Pour des bureaux tertiaires, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous vous répondons sous 24 heures avec un devis détaillé.",
+        "Le tarif dépend de la surface, du niveau d'encrassement et de la fréquence souhaitée. Pour des bureaux tertiaires, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous vous répondons sous 24h ouvrées avec un devis détaillé.",
     },
   ],
 
@@ -203,6 +198,6 @@ export const hautsDeSeine: DepartmentKln = {
   seo: {
     title: "Nettoyage Bureaux & Résidences de standing Hauts-de-Seine (92) | Klinova",
     description:
-      "Entreprise de nettoyage dans les Hauts-de-Seine : moquettes bureaux, textiles nobles, parkings, terrasses. La Défense, Neuilly, Levallois, Boulogne. Devis 24h. ☎ 06 76 73 86 61",
+      "Entreprise de nettoyage dans les Hauts-de-Seine : moquettes bureaux, textiles nobles, parkings, terrasses. La Défense, Neuilly, Levallois, Boulogne. Devis rapide. ☎ 06 76 73 86 61",
   },
 };

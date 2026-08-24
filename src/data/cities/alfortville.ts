@@ -74,7 +74,7 @@ const city: City = {
       question:
         "Pouvez-vous intervenir rapidement en cas de dégradation imprévue dans un hall ?",
       answer:
-        "<p>Oui, nous proposons des <strong>interventions ponctuelles</strong> sous <strong>24 à 48 heures</strong> selon disponibilité. Le syndic ou le gardien nous transmet les accès, et nous confirmons le créneau par retour. Un <strong>compte-rendu</strong> peut être fourni après passage.</p>",
+        "<p>Oui, nous proposons des <strong>interventions ponctuelles</strong> selon disponibilité. Le syndic ou le gardien nous transmet les accès, et nous confirmons le créneau par retour. Un <strong>compte-rendu</strong> peut être fourni après passage.</p>",
     },
     {
       question:
@@ -85,7 +85,7 @@ const city: City = {
     {
       question: "Proposez-vous un devis avant intervention à Alfortville ?",
       answer:
-        "<p>Oui, chaque demande fait l'objet d'un devis après échange sur les surfaces, la fréquence souhaitée et les contraintes d'accès. Le devis est transmis sous 48 heures, sans engagement. Un <strong>passage sur site</strong> peut être organisé si nécessaire.</p>",
+        "<p>Oui, chaque demande fait l'objet d'un devis après échange sur les surfaces, la fréquence souhaitée et les contraintes d'accès. Le devis est transmis rapidement, sans engagement. Un <strong>passage sur site</strong> peut être organisé si nécessaire.</p>",
     },
   ],
 
@@ -421,7 +421,7 @@ const city: City = {
           question:
             "Quelle est votre réactivité pour une remise en état urgente avant état des lieux près de la gare Maisons-Alfort - Alfortville ?",
           answer:
-            "<p>Nous intervenons sous 24 à 48 heures selon la surface et la disponibilité. Pour les logements proches de la gare, <strong>nous organisons la récupération des clés en amont</strong> avec l'agence ou le propriétaire afin de respecter le créneau imposé par l'état des lieux.</p>",
+            "<p>Nous intervenons selon la surface et la disponibilité. Pour les logements proches de la gare, <strong>nous organisons la récupération des clés en amont</strong> avec l'agence ou le propriétaire afin de respecter le créneau imposé par l'état des lieux.</p>",
         },
         {
           question:

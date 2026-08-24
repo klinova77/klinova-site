@@ -11,7 +11,7 @@ export const paris: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel à Paris (75)",
-  heroKicker: "Tous arrondissements • Devis sous 24h",
+  heroKicker: "Tous arrondissements • Devis rapide",
   heroDescription:
   "Immeubles haussmanniens, copropriétés de standing, bureaux et appartements parisiens : Paris impose des standards de propreté élevés. Klinova intervient dans les 20 arrondissements pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains, balcons et terrasses. Logistique parisienne maîtrisée — stationnement, accès, horaires — pour un résultat impeccable sans perturber votre quotidien.",
 
@@ -155,11 +155,6 @@ export const paris: DepartmentKln = {
         "C'est même une de nos spécialités. Nous intervenons sur les moquettes d'époque avec un protocole adapté : diagnostic préalable du type de textile (velours, bouclée, nouée main), test sur zone discrète, puis méthode douce (brossage manuel, extraction limitée, séchage contrôlé). Pour les escaliers classés ou les éléments patrimoniaux, la coordination avec le syndic est particulièrement rigoureuse.",
     },
     {
-      question: "Quel est votre délai d'intervention à Paris ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités et les créneaux du syndic. Pour les urgences (événement, visite importante, assemblée générale), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
-    },
-    {
       question: "Nettoyez-vous les canapés et tapis à domicile ?",
       answer:
         "Oui, c'est une prestation fréquente dans les appartements parisiens. Nous traitons les canapés (tissu, cuir, velours), fauteuils, tapis et matelas. Pour les textiles nobles — soies, lins, velours — nous procédons avec la plus grande prudence : diagnostic matière, test préalable, extraction douce, séchage maîtrisé. Le mobilier environnant et les parquets sont systématiquement protégés.",
@@ -177,7 +172,7 @@ export const paris: DepartmentKln = {
     {
       question: "Combien coûte un nettoyage de moquette à Paris ?",
       answer:
-        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 5 € HT/m². Les moquettes d'époque ou les textiles nobles peuvent nécessiter un protocole spécifique avec un tarif ajusté. Envoyez-nous quelques photos et la superficie — nous vous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 5 € HT/m². Les moquettes d'époque ou les textiles nobles peuvent nécessiter un protocole spécifique avec un tarif ajusté. Envoyez-nous quelques photos et la superficie — nous vous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -192,7 +187,7 @@ export const paris: DepartmentKln = {
 seo: {
   title: "Entreprise de Nettoyage à Paris (75) | Klinova",
   description:
-    "Nettoyage professionnel à Paris : moquettes de copropriété et bureaux, canapés et tapis à domicile, parkings souterrains, terrasses et balcons. Devis gratuit sous 24h.",
+    "Nettoyage professionnel à Paris : moquettes de copropriété et bureaux, canapés et tapis à domicile, parkings souterrains, terrasses et balcons. Devis gratuit et rapide.",
 },
 
 };

@@ -15,7 +15,7 @@ const city: City = {
   customDescription: "Klinova assure l'entretien des parties communes, parkings et espaces extérieurs à Saint-Ouen-l'Aumône. Une organisation adaptée aux contraintes des zones d'activités et des résidences, avec une équipe réactive sur l'ensemble de la commune.",
 
   // hubIntro : HTML autorisé
-  hubIntro: "<p>Saint-Ouen-l'Aumône concentre un tissu dense d'entreprises sur les ZAC des Béthunes et Bellevues, desservi par le RER C et le Transilien H. Klinova accompagne gestionnaires et syndics dans le maintien de la propreté des locaux professionnels comme des résidences.</p>\n<p class=\"mt-4\">Notre approche repose sur une <strong>coordination terrain régulière</strong>, des interventions planifiées selon vos contraintes d'exploitation, et un suivi documenté. Chaque site bénéficie d'un interlocuteur dédié pour ajuster les prestations aux besoins réels.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, capable d'intervenir rapidement sur la commune et les zones d'activités environnantes.</li>\n  <li><strong>Adaptation aux flux :</strong> Horaires décalés possibles pour limiter la gêne dans les halls d'entreprises ou les parties communes résidentielles.</li>\n  <li><strong>Suivi structuré :</strong> Reporting disponible sur demande, traçabilité des passages et remontée des anomalies constatées sur site.</li>\n</ul>",
+  hubIntro: "<p>Saint-Ouen-l'Aumône concentre un tissu dense d'entreprises sur les ZAC des Béthunes et Bellevues, desservi par le RER C et le Transilien H. Klinova accompagne gestionnaires et syndics dans le maintien de la propreté des locaux professionnels comme des résidences.</p>\n<p class=\"mt-4\">Notre approche repose sur une <strong>coordination terrain régulière</strong>, des interventions planifiées selon vos contraintes d'exploitation, et un suivi documenté. Chaque site bénéficie d'un interlocuteur dédié pour ajuster les prestations aux besoins réels.</p>\n<ul>\n  <li><strong>Réactivité locale :</strong> Équipe basée en Île-de-France, mobilisable sur la commune et les zones d'activités environnantes.</li>\n  <li><strong>Adaptation aux flux :</strong> Horaires décalés possibles pour limiter la gêne dans les halls d'entreprises ou les parties communes résidentielles.</li>\n  <li><strong>Suivi structuré :</strong> Reporting disponible sur demande, traçabilité des passages et remontée des anomalies constatées sur site.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -66,11 +66,7 @@ const city: City = {
     },
     {
       question: "Comment se déroule la prise de contact pour un devis ?",
-      answer: "<p>Après un premier échange téléphonique ou par mail, nous organisons une <strong>visite technique</strong> sur place. Cette étape permet d'évaluer les surfaces, les contraintes d'accès et de proposer un devis adapté sous quelques jours.</p>",
-    },
-    {
-      question: "Intervenez-vous en urgence sur Saint-Ouen-l'Aumône ?",
-      answer: "<p>Nous traitons les demandes urgentes selon disponibilité. En cas de sinistre ou de situation nécessitant une <strong>remise en état rapide</strong>, contactez-nous directement pour évaluer la faisabilité d'une intervention dans les meilleurs délais.</p>",
+      answer: "<p>Après un premier échange téléphonique ou par mail, nous organisons une <strong>visite technique</strong> sur place. Cette étape permet d'évaluer les surfaces, les contraintes d'accès et de proposer un devis rapide et adapté.</p>",
     },
     {
       question: "Comment gérez-vous les accès sécurisés dans les immeubles ou entreprises ?",
@@ -336,8 +332,8 @@ const city: City = {
       ],
       faqAdditions: [
         {
-          question: "Dans le centre-ville de Saint-Ouen-l'Aumône, sous quel délai pouvez-vous intervenir pour un nettoyage d'appartement ou de maison ?",
-          answer: "<p>Nous organisons les interventions en fonction de vos contraintes. Pour une remise en état urgente avant état des lieux, un créneau peut généralement être proposé dans les meilleurs délais selon la surface et la disponibilité. La coordination avec l'agence ou le propriétaire est assurée dès la prise de contact.</p>",
+          question: "Dans le centre-ville de Saint-Ouen-l'Aumône, comment organisez-vous une intervention pour un nettoyage d'appartement ou de maison ?",
+          answer: "<p>Nous organisons les interventions en fonction de vos contraintes, de la surface à traiter et de la disponibilité de nos équipes. Pour une remise en état urgente avant état des lieux, nous ajustons notre planning en conséquence. La coordination avec l'agence ou le propriétaire est assurée dès la prise de contact.</p>",
         },
         {
           question: "Quelle différence entre un nettoyage standard et un nettoyage de fin de chantier dans un appartement à Saint-Ouen-l'Aumône ?",

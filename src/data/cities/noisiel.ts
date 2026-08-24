@@ -417,7 +417,7 @@ const city: City = {
           question:
             "Combien de temps avant l'état des lieux intervenez-vous pour un ménage complet d'un appartement proche gare Noisiel ?",
           answer:
-            "<p>Nous intervenons généralement 24 à 48 heures avant la date prévue. Ce délai permet un séchage complet des sols et une aération suffisante. Pour les logements à forte rotation près du RER, nous ajustons nos créneaux selon vos contraintes de remise des clés.</p>",
+            "<p>Nous planifions généralement notre intervention en amont de la date prévue, pour permettre un séchage complet des sols et une aération suffisante. Pour les logements à forte rotation près du RER, nous ajustons nos créneaux selon vos contraintes de remise des clés.</p>",
         },
         {
           question:

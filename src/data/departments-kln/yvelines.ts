@@ -11,7 +11,7 @@ export const yvelines: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel dans les Yvelines (78)",
-  heroKicker: "Versailles • Saint-Germain • Vélizy • Le Chesnay • Devis sous 24h",
+  heroKicker: "Versailles • Saint-Germain • Vélizy • Le Chesnay • Devis rapide",
   heroDescription:
     "Résidences de standing, pavillons avec terrasses en bois exotique, bureaux de Saint-Quentin-en-Yvelines : le 78 cumule les exigences. Klinova intervient dans tout le département pour redonner éclat à vos moquettes de parties communes, canapés et tapis à domicile, parkings souterrains, terrasses et balcons. Matériaux nobles traités avec soin, finitions irréprochables, organisation par bassins géographiques.",
 
@@ -165,11 +165,6 @@ export const yvelines: DepartmentKln = {
         "Ces bois durs résistent bien aux intempéries mais accumulent des salissures qui ternissent leur aspect. Nous utilisons un nettoyage mécanique doux — brossage, haute pression ajustée à faible intensité pour ne pas abîmer les fibres. L'objectif est de retrouver la teinte naturelle du bois sans altérer sa structure. Nous pouvons également vous conseiller sur l'application d'une huile de protection.",
     },
     {
-      question: "Quel est votre délai d'intervention dans les Yvelines ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon votre secteur et nos tournées en cours. Pour les urgences (événement, réception, assemblée générale), nous pouvons mobiliser un créneau sous 48-72h avec un éventuel supplément.",
-    },
-    {
       question: "Proposez-vous des contrats d'entretien pour les copropriétés ?",
       answer:
         "Oui. Beaucoup de copropriétés yvelinoises souhaitent maintenir leurs parties communes impeccables toute l'année. Nous mettons en place des contrats récurrents (trimestriel, semestriel, annuel) avec un calendrier défini à l'avance, des tarifs dégressifs et un suivi qualité régulier. Nous intervenons aux mêmes horaires pour ne pas perturber les habitudes des résidents.",
@@ -182,7 +177,7 @@ export const yvelines: DepartmentKln = {
     {
       question: "Combien coûte un nettoyage de moquette dans les Yvelines ?",
       answer:
-        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 5 € HT/m² — la fourchette haute correspondant aux moquettes velours et matériaux nobles nécessitant un protocole spécifique. Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 5 € HT/m² — la fourchette haute correspondant aux moquettes velours et matériaux nobles nécessitant un protocole spécifique. Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -197,6 +192,6 @@ export const yvelines: DepartmentKln = {
   seo: {
     title: "Entreprise de Nettoyage dans les Yvelines (78) | Klinova",
     description:
-      "Nettoyage professionnel dans le 78 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+      "Nettoyage professionnel dans le 78 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit et rapide.",
   },
 };

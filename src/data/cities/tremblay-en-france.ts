@@ -69,11 +69,11 @@ const city: City = {
     },
     {
       question: "Comment se passe la prise de rendez-vous pour une première intervention ?",
-      answer: "<p>Après votre demande, nous convenons d'un créneau pour évaluer les surfaces et contraintes. Un devis détaillé vous est transmis sous 48 heures. Si validé, l'intervention est planifiée selon vos disponibilités, avec <strong>confirmation la veille</strong>.</p>",
+      answer: "<p>Après votre demande, nous convenons d'un créneau pour évaluer les surfaces et contraintes. Un devis détaillé vous est transmis rapidement. Si validé, l'intervention est planifiée selon vos disponibilités, avec <strong>confirmation la veille</strong>.</p>",
     },
     {
       question: "Proposez-vous des interventions en urgence sur Tremblay-en-France ?",
-      answer: "<p>Nous traitons les demandes urgentes dans la mesure de nos disponibilités. Pour les situations critiques — dégât des eaux, souillure importante — nous priorisons un passage rapide. Contactez-nous directement pour évaluer la <strong>faisabilité sous 24 à 48 heures</strong>.</p>",
+      answer: "<p>Nous traitons les demandes urgentes dans la mesure de nos disponibilités. Pour les situations critiques — dégât des eaux, souillure importante — nous priorisons ces demandes. Contactez-nous directement pour évaluer la <strong>faisabilité</strong>.</p>",
     },
     {
       question: "Travaillez-vous avec les syndics et gestionnaires de copropriétés ?",
@@ -243,7 +243,7 @@ const city: City = {
         {
           question:
             "Mon balcon près de l'église Saint-Médard est entièrement recouvert de fientes : quelle prise en charge d'urgence proposez-vous ?",
-          answer: "<p>Nous intervenons rapidement avec un protocole complet. L'équipe confine la zone, humidifie les déjections pour éviter la dispersion de poussières contaminées, puis procède au ramassage et à la désinfection. Les déchets sont évacués en sacs étanches le jour même.</p>",
+          answer: "<p>Nous intervenons rapidement avec un protocole complet. L'équipe confine la zone, humidifie les déjections pour éviter la dispersion de poussières contaminées, puis procède au ramassage et à la désinfection. Les déchets sont évacués en sacs étanches dès la fin de l'intervention.</p>",
         },
         {
           question:
@@ -371,8 +371,8 @@ const city: City = {
       faqAdditions: [
         {
           question:
-            "Quel délai d'intervention proposez-vous pour un ménage d'état des lieux sur une location proche de la gare Vert-Galant ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la disponibilité. Pour les demandes urgentes liées à une remise de clés imminente, nous adaptons notre planning. La récupération des clés ou l'accès par digicode est organisé en amont avec vous ou l'agence concernée.</p>",
+            "Comment organisez-vous une intervention pour un ménage d'état des lieux sur une location proche de la gare Vert-Galant ?",
+          answer: "<p>Nous nous adaptons selon la disponibilité de nos équipes. Pour les demandes urgentes liées à une remise de clés imminente, nous ajustons notre planning. La récupération des clés ou l'accès par digicode est organisé en amont avec vous ou l'agence concernée.</p>",
         },
         {
           question:

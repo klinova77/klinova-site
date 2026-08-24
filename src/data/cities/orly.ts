@@ -82,7 +82,7 @@ const city: City = {
     {
       question: "Quel délai pour une première intervention à Orly ?",
       answer:
-        "<p>En général, nous proposons un <strong>premier passage sous 5 à 7 jours ouvrés</strong> après validation du devis. Pour les demandes urgentes — dégradation importante ou état des lieux imminent — nous étudions la possibilité d'un créneau anticipé selon la disponibilité de l'équipe.</p>",
+        "<p>Nous organisons chaque premier passage après validation du devis, selon la disponibilité de nos équipes. Pour les demandes urgentes — dégradation importante ou état des lieux imminent — nous étudions la possibilité d'un créneau anticipé.</p>",
     },
     {
       question:
@@ -425,7 +425,7 @@ const city: City = {
           question:
             "Quel est le délai d'intervention pour un nettoyage avant état des lieux près de la Gare Les Saules ?",
           answer:
-            "<p>Les demandes urgentes autour de la Gare Les Saules sont fréquentes en raison de la forte rotation locative. Nous pouvons intervenir sous 48 à 72 heures selon la surface du logement et la disponibilité des accès. Un échange préalable permet de caler le créneau avec l'agence ou le propriétaire.</p>",
+            "<p>Les demandes urgentes autour de la Gare Les Saules sont fréquentes en raison de la forte rotation locative. Nous organisons une intervention rapide selon la surface du logement et la disponibilité des accès. Un échange préalable permet de caler le créneau avec l'agence ou le propriétaire.</p>",
         },
         {
           question:

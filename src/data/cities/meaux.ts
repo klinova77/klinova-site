@@ -80,7 +80,7 @@ const city: City = {
       question:
         "Le diagnostic sur site est-il gratuit dans tous les quartiers de Meaux ?",
       answer:
-        "<p><strong>Oui, le déplacement et le diagnostic sont gratuits</strong> quel que soit le quartier (Centre-Ville/Cathédrale, Marché, Beauval, La Pierre Collinet, Dunant, Saint-Faron, La Grosse Pierre, Luxembourg, Corniche de Meaux). Le technicien évalue les surfaces, identifie les contraintes spécifiques (bâti ancien protégé, poussières de chantiers, humidité de la Marne, présence de pigeons) et remet un chiffrage détaillé sous 48h adapté à votre immeuble, copropriété ou pavillon.</p>",
+        "<p><strong>Oui, le déplacement et le diagnostic sont gratuits</strong> quel que soit le quartier (Centre-Ville/Cathédrale, Marché, Beauval, La Pierre Collinet, Dunant, Saint-Faron, La Grosse Pierre, Luxembourg, Corniche de Meaux). Le technicien évalue les surfaces, identifie les contraintes spécifiques (bâti ancien protégé, poussières de chantiers, humidité de la Marne, présence de pigeons) et remet un chiffrage détaillé rapidement, adapté à votre immeuble, copropriété ou pavillon.</p>",
     },
     {
       question:

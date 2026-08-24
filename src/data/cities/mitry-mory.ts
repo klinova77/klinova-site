@@ -70,7 +70,7 @@ const city: City = {
     },
     {
       question: "Pouvez-vous intervenir en urgence sur une copropriété à Mitry-Mory ?",
-      answer: "<p>En cas de besoin urgent — dégât des eaux, souillure accidentelle dans un hall — nous mobilisons une équipe sous 24 à 48 heures selon disponibilité. Le syndic ou le gardien nous transmet les <strong>accès et consignes</strong>, et nous confirmons le créneau par retour.</p>",
+      answer: "<p>En cas de besoin urgent — dégât des eaux, souillure accidentelle dans un hall — nous mobilisons une équipe selon la disponibilité. Le syndic ou le gardien nous transmet les <strong>accès et consignes</strong>, et nous confirmons le créneau par retour.</p>",
     },
     {
       question: "Comment gérez-vous les interventions dans les quartiers pavillonnaires ?",
@@ -365,7 +365,7 @@ const city: City = {
         {
           question:
             "Pour un état des lieux urgent proche de la gare Mitry-Claye, quel est votre délai d'intervention possible ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la surface et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente dans le secteur de la gare, nous adaptons notre planning pour proposer <strong>un créneau</strong> rapide après échange téléphonique.</p>",
+          answer: "<p>Nous intervenons selon la surface et la disponibilité. Pour les situations urgentes liées à une remise de clés imminente dans le secteur de la gare, nous adaptons notre planning pour proposer <strong>un créneau</strong> rapide après échange téléphonique.</p>",
         },
         {
           question:

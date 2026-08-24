@@ -16,7 +16,7 @@ const city: City = {
     "Klinova intervient à Clichy pour l'entretien des parties communes, parkings et espaces extérieurs. Nos équipes connaissent les contraintes du secteur, entre immeubles anciens du Centre-ville et résidences récentes des Berges de Seine-Beaujon.",
 
   // hubIntro : HTML autorisé (voir règles ci-dessous)
-  hubIntro: "<p>Commune de la Métropole du Grand Paris desservie par la ligne 13 du métro et le Transilien L à la gare Clichy-Levallois, Clichy cumule flux quotidiens et densité résidentielle. Klinova s'y positionne comme partenaire terrain pour syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Notre organisation repose sur une coordination directe avec vos interlocuteurs : <strong>planification adaptée aux contraintes d'accès</strong>, interventions calées sur vos disponibilités, reporting transmis sur demande. Chaque prestation s'ajuste au bâti et aux usages réels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes basées en Île-de-France, déplacements rapides sur Clichy et communes limitrophes. Prise en charge sous 48 à 72h selon disponibilité.</li>\n  <li><strong>Adaptation au bâti :</strong> Immeubles anciens avec cages étroites, résidences récentes avec digicodes — nos méthodes s'ajustent aux configurations rencontrées boulevard Jean-Jaurès ou quartier Bac d'Asnières.</li>\n  <li><strong>Coordination simplifiée :</strong> Un interlocuteur unique pour le suivi, transmission des accès, gestion des créneaux horaires et retour d'intervention.</li>\n</ul>",
+  hubIntro: "<p>Commune de la Métropole du Grand Paris desservie par la ligne 13 du métro et le Transilien L à la gare Clichy-Levallois, Clichy cumule flux quotidiens et densité résidentielle. Klinova s'y positionne comme partenaire terrain pour syndics, gestionnaires et occupants.</p>\n<p class=\"mt-4\">Notre organisation repose sur une coordination directe avec vos interlocuteurs : <strong>planification adaptée aux contraintes d'accès</strong>, interventions calées sur vos disponibilités, reporting transmis sur demande. Chaque prestation s'ajuste au bâti et aux usages réels.</p>\n<ul>\n  <li><strong>Réactivité secteur :</strong> Équipes basées en Île-de-France, déplacements rapides sur Clichy et communes limitrophes. Prise en charge selon disponibilité.</li>\n  <li><strong>Adaptation au bâti :</strong> Immeubles anciens avec cages étroites, résidences récentes avec digicodes — nos méthodes s'ajustent aux configurations rencontrées boulevard Jean-Jaurès ou quartier Bac d'Asnières.</li>\n  <li><strong>Coordination simplifiée :</strong> Un interlocuteur unique pour le suivi, transmission des accès, gestion des créneaux horaires et retour d'intervention.</li>\n</ul>",
 
   // HTML autorisé (sans <h3>)
   citySpecificChallenges: [
@@ -67,7 +67,7 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour une première intervention sur le secteur ?",
-      answer: "<p>En fonction de la nature de la prestation et de notre planning, comptez généralement <strong>48 à 72 heures</strong> après validation du devis. Pour les demandes urgentes — dégât des eaux, souillures importantes — nous étudions une prise en charge accélérée selon disponibilité des équipes.</p>",
+      answer: "<p>En fonction de la nature de la prestation et de notre planning, le délai est confirmé après validation du devis. Pour les demandes urgentes — dégât des eaux, souillures importantes — nous étudions une prise en charge accélérée selon disponibilité des équipes.</p>",
     },
     {
       question:
@@ -366,7 +366,7 @@ const city: City = {
         {
           question:
             "Dans le secteur Entrée de ville à Clichy, pouvez-vous intervenir rapidement pour un nettoyage d'appartement entre deux locations ?",
-          answer: "<p>Nous adaptons notre planning aux contraintes de rotation locative. Après échange sur les accès et l'état du logement, nous proposons un créneau sous 48 à 72 heures selon la disponibilité. La coordination avec l'agence ou le propriétaire est assurée pour respecter les délais de remise des clés.</p>",
+          answer: "<p>Nous adaptons notre planning aux contraintes de rotation locative. Après échange sur les accès et l'état du logement, nous proposons un créneau adapté selon la disponibilité. La coordination avec l'agence ou le propriétaire est assurée pour respecter les délais de remise des clés.</p>",
         },
         {
           question:

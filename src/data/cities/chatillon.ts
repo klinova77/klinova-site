@@ -68,7 +68,7 @@ const city: City = {
     },
     {
       question: "Intervenez-vous en urgence sur la commune ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de la demande. Pour les situations nécessitant une <strong>réponse rapide</strong> (dégât des eaux, souillure accidentelle), nous priorisons les créneaux disponibles et confirmons le délai dès réception de la demande.</p>",
+      answer: "<p>Oui, nous pouvons mobiliser une équipe selon la nature de la demande. Pour les situations nécessitant une <strong>réponse rapide</strong> (dégât des eaux, souillure accidentelle), nous priorisons les créneaux disponibles et confirmons le délai dès réception de la demande.</p>",
     },
     {
       question: "Le stationnement est compliqué près du métro, comment gérez-vous ça ?",
@@ -334,7 +334,7 @@ const city: City = {
       faqAdditions: [
         {
           question: "Quel est votre délai d'intervention pour un ménage avant état des lieux près du métro Châtillon-Montrouge ?",
-          answer: "<p>Nous intervenons généralement sous 48 à 72 heures selon la taille du logement et la disponibilité des accès. Pour les situations urgentes en zone tendue proche du terminus de la ligne 13, un créneau prioritaire peut être proposé après échange téléphonique.</p>",
+          answer: "<p>Nous intervenons selon la taille du logement et la disponibilité des accès. Pour les situations urgentes en zone tendue proche du terminus de la ligne 13, un créneau prioritaire peut être proposé après échange téléphonique.</p>",
         },
         {
           question: "Quelle différence de protocole appliquez-vous pour un nettoyage fin de chantier dans la ZAC des Arues ?",

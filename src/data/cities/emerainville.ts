@@ -73,7 +73,7 @@ const city: City = {
       question:
         "Combien de temps faut-il pour obtenir un devis de nettoyage parking à Émerainville ?",
       answer:
-        "<p><strong>Un devis simple (surface, type de revêtement, état général) se fait en 2-3 jours après visite terrain. Pour les parkings souterrains avec accès restreint, nous coordonnons avec le syndic au préalable. Pas de frais de déplacement pour la visite, tarification transparente sans surprise.</strong></p>",
+        "<p><strong>Un devis simple (surface, type de revêtement, état général) est transmis rapidement après visite terrain. Pour les parkings souterrains avec accès restreint, nous coordonnons avec le syndic au préalable. Pas de frais de déplacement pour la visite, tarification transparente sans surprise.</strong></p>",
     },
     {
       question:
@@ -413,7 +413,7 @@ const city: City = {
       uniqueDeepDive:
         '<h3>Diagnostic et protection</h3>\n<p>Dès l\'arrivée, nous établissons un état des lieux détaillé : type de bien, nature de l\'intervention (fin chantier, état des lieux, sinistre), état général (poussière, traces, résidus). Nous identifions les surfaces fragiles (parquet ancien, marbre, joints sensibles) et les protégeons si nécessaire. Cette étape détermine le matériel et les produits à utiliser pour chaque zone.</p>\n\n<h3 class="mt-4">Nettoyage général et pièces d\'eau</h3>\n<p>Dépoussiérage complet des plafonds, murs, plinthes et radiateurs. Aspiration puis lavage des sols adaptés au revêtement (carrelage, parquet, moquette). Salle de bain : sanitaires, faïence, joints. Cuisine : plans de travail, électroménager, crédence. WC : désinfection complète. Vitres intérieures incluses. Cette phase représente 70 % du travail et garantit une propreté visible.</p>\n\n<h3 class="mt-4">Finitions et contrôle</h3>\n<p>Interrupteurs, poignées, radiateurs, placards intérieurs. Enlèvement des traces de peinture ou colle si fin de chantier. Ventilation et aération finale. Contrôle qualité complet avant remise des clés.</p>',
       specificChallenges: [
-        "Délais serrés entre départ locataire et visite suivante : intervention en 24–48h selon urgence.",
+        "Délais serrés entre départ locataire et visite suivante : organisation adaptée selon l'urgence.",
         "Traces de peinture et résidus de chantier incrustés : nécessite technique adaptée par surface.",
         "Coordination avec artisans et agences : respect des accès, horaires, communication claire.",
         "Sols fragiles (parquet ancien, marbre) : risque de dégradation si produits ou pression inadaptés.",
@@ -430,13 +430,13 @@ const city: City = {
           question:
             "Après un dégât des eaux dans un appartement proche de la gare, quelles opérations techniques et de séchage réalisez-vous ?",
           answer:
-            "<p>Nous nettoyons et désinfectons les zones affectées, assurons une ventilation complète pour éviter moisissures, et traitons les résidus d'humidité. Si moisissures légères présentes, nous les éliminons. Pour dégâts importants, nous coordonnons avec spécialistes sinistre. Intervention rapide : 24–48h après appel.</p>",
+            "<p>Nous nettoyons et désinfectons les zones affectées, assurons une ventilation complète pour éviter moisissures, et traitons les résidus d'humidité. Si moisissures légères présentes, nous les éliminons. Pour dégâts importants, nous coordonnons avec spécialistes sinistre. Intervention rapide après appel.</p>",
         },
         {
           question:
             "Quel est votre mode de tarification pour un nettoyage état des lieux d'un T2 proche du RER Émerainville - Pontault-Combault ?",
           answer:
-            "<p>Nous proposons tarification au forfait selon surface et nature de l'intervention (état des lieux standard vs fin de chantier). Devis gratuit sur visite ou photos. Pas de surprise : le prix inclut dépoussiérage, sols, pièces d'eau, finitions. Délai de remise en état : 24–48h selon urgence et accès au bien.</p>",
+            "<p>Nous proposons tarification au forfait selon surface et nature de l'intervention (état des lieux standard vs fin de chantier). Devis gratuit sur visite ou photos. Pas de surprise : le prix inclut dépoussiérage, sols, pièces d'eau, finitions. Délai de remise en état : adapté selon urgence et accès au bien.</p>",
         },
         {
           question:

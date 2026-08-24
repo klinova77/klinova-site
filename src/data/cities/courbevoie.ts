@@ -333,7 +333,7 @@ const city: City = {
       uniqueIntro: "<p>Comment rendre un appartement impeccable quand le locataire précédent vient de partir et que le suivant arrive dans trois jours ? Autour de l'<strong>Avenue de la Liberté</strong> et dans le quartier Bécon, cette situation se répète chaque mois. Les agences immobilières gèrent des rotations fréquentes, et le moindre retard dans la mise en propreté décale toute la chaîne : signature, remise des clés, emménagement.</p>\n<p class=\"mt-4\">Un logement correctement préparé facilite l'état des lieux. Les <strong>copropriétés avec halls sécurisés et digicodes</strong>, typiques des immeubles de Courbevoie, imposent une coordination précise pour accéder au bien. Les studios comme les T3 ou T4 nécessitent un traitement adapté : sols, vitres intérieures, sanitaires, placards. Chaque surface retrouve un aspect propre, sans traces ni résidus.</p>\n<p class=\"mt-4\">La <strong>rotation locative importante</strong> dans ce secteur demande une organisation rigoureuse. Nous planifions l'intervention en fonction des contraintes de l'agence ou du propriétaire, avec un créneau défini et un compte-rendu à l'issue du passage.</p>",
       uniqueDeepDive: "<h3>Logement prêt pour visite ou remise de clés</h3>\n<p>À l'issue de l'intervention, chaque pièce présente un niveau de propreté compatible avec un état des lieux. Sols lavés, vitres sans traces, sanitaires désinfectés, placards vidés et essuyés. Le bien peut être présenté ou occupé immédiatement.</p>\n\n<h3>Traitement méthodique par zone</h3>\n<p>Nous commençons par les pièces d'eau : salle de bain, WC, cuisine. Détartrage des robinetteries, nettoyage des faïences, dégraissage des plans de travail. Ensuite, les pièces de vie : dépoussiérage des plinthes, aspiration et lavage des sols selon le revêtement, essuyage des interrupteurs et poignées.</p>\n\n<h3>Adaptation au contexte d'intervention</h3>\n<p>Pour une fin de chantier, nous retirons les résidus de peinture, les traces d'enduit et la poussière de plâtre. Pour un état des lieux, l'accent porte sur les finitions visibles. Le temps d'intervention varie selon la surface et l'état initial du logement.</p>",
       specificChallenges: [
-        "Délais serrés entre deux locataires : intervention sous 48h possible selon planning.",
+        "Délais serrés entre deux locataires : organisation flexible selon planning.",
         "Accès par digicode ou badge : coordination préalable avec agence ou propriétaire.",
         "Résidus de chantier (peinture, plâtre) : traitement spécifique sans abîmer les supports.",
         "Stationnement difficile en zone dense : véhicule technique positionné au plus proche.",
@@ -351,10 +351,6 @@ const city: City = {
         {
           question: "Comment coordonnez-vous l'intervention avec les agences immobilières ou artisans rue de Bezons ?",
           answer: "<p>Nous calons le créneau en fonction des contraintes de chacun : fin de travaux, disponibilité des clés, date d'état des lieux. Un contact direct avec l'agence ou le propriétaire permet d'ajuster le planning. Nous transmettons un compte-rendu une fois l'intervention terminée.</p>",
-        },
-        {
-          question: "Quel délai proposez-vous pour une intervention urgente après départ locataire près de la gare de Bécon-les-Bruyères ?",
-          answer: "<p>Selon notre planning, une intervention sous 24 à 48h est envisageable pour les demandes urgentes. Nous confirmons la disponibilité dès réception de la demande. La durée sur place dépend de la surface et de l'état du logement à traiter.</p>",
         },
       ],
       ctaOverride: "",

@@ -81,7 +81,7 @@ const city: City = {
     {
       question: "Quel délai pour obtenir un devis après une demande ?",
       answer:
-        "<p>Le devis est généralement transmis sous <strong>24 à 48 heures</strong> après réception des informations nécessaires. Si une visite technique est utile, elle est planifiée rapidement pour confirmer les surfaces, l’état des sols et les conditions d’accès.</p>",
+        "<p>Le devis est transmis rapidement après réception des informations nécessaires. Si une visite technique est utile, elle est planifiée rapidement pour confirmer les surfaces, l’état des sols et les conditions d’accès.</p>",
     },
     {
       question:
@@ -379,7 +379,7 @@ const city: City = {
           question:
             "Quel délai d'intervention proposez-vous pour un nettoyage état des lieux urgent demandé par un bailleur social à Bobigny ?",
           answer:
-            "<p>Nous pouvons intervenir sous 48 à 72 heures selon la surface et la disponibilité du logement. Pour les bailleurs sociaux gérant un volume important de rotations, un planning récurrent peut être mis en place afin de sécuriser les créneaux d'intervention.</p>",
+            "<p>Nous pouvons intervenir selon la surface et la disponibilité du logement. Pour les bailleurs sociaux gérant un volume important de rotations, un planning récurrent peut être mis en place afin de sécuriser les créneaux d'intervention.</p>",
         },
         {
           question:

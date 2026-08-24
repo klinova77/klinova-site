@@ -76,7 +76,7 @@ const city: City = {
     {
       question: "Pouvez-vous intervenir rapidement en cas de besoin urgent ?",
       answer:
-        "<p>Selon la nature de la demande et notre planning, nous proposons des <strong>créneaux sous 24 à 48h</strong> pour les situations prioritaires. Un premier échange téléphonique permet d'évaluer l'urgence et de confirmer la faisabilité d'une intervention rapide sur Bondy.</p>",
+        "<p>Selon la nature de la demande et notre planning, nous proposons des <strong>créneaux prioritaires</strong> pour les situations urgentes. Un premier échange téléphonique permet d'évaluer l'urgence et de confirmer la faisabilité d'une intervention sur Bondy.</p>",
     },
     {
       question:
@@ -221,7 +221,7 @@ const city: City = {
         "Dépôts verts et mousses persistants sur les loggias ombragées exposées au canal.",
         "Joints de carrelage sensibles nécessitant un rinçage à pression contrôlée.",
         "<strong>Gestion des coulures</strong> obligatoire en copropriété pour préserver le linge et les balcons voisins.",
-        "Vis-à-vis nombreux imposant une intervention rapide et sans nuisance sonore prolongée.",
+        "Vis-à-vis nombreux imposant une intervention discrète et sans nuisance sonore prolongée.",
       ],
       faqAdditions: [
         {
@@ -277,7 +277,7 @@ const city: City = {
           question:
             "Des fientes importantes sur mon balcon côté Bois de Bondy : intervenez-vous en urgence et comment gérez-vous les risques sanitaires ?",
           answer:
-            "<p>Les fientes de pigeons peuvent contenir des agents pathogènes transmissibles par inhalation de poussières. Nous intervenons sous quelques jours selon l'urgence. Le port d'<strong>EPI</strong> et l'humidification préalable limitent tout risque de dispersion pendant le traitement.</p>",
+            "<p>Les fientes de pigeons peuvent contenir des agents pathogènes transmissibles par inhalation de poussières. Nous intervenons selon l'urgence. Le port d'<strong>EPI</strong> et l'humidification préalable limitent tout risque de dispersion pendant le traitement.</p>",
         },
         {
           question:
@@ -424,7 +424,7 @@ const city: City = {
           question:
             "J'ai un état des lieux imminent près de la Mairie : quel est votre délai d'intervention pour un nettoyage complet ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures selon la <strong>surface du logement</strong> et la disponibilité des accès. Pour les situations très urgentes en centre-ville de Bondy, un créneau rapproché peut être organisé après échange téléphonique pour confirmer les contraintes horaires et le niveau de nettoyage attendu.</p>",
+            "<p>Nous intervenons selon la <strong>surface du logement</strong> et la disponibilité des accès. Pour les situations très urgentes en centre-ville de Bondy, un créneau rapproché peut être organisé après échange téléphonique pour confirmer les contraintes horaires et le niveau de nettoyage attendu.</p>",
         },
         {
           question:

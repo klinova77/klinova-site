@@ -11,7 +11,7 @@ export const seineSaintDenis: DepartmentKln = {
   // SEO & Hero
   // =========================
   heroTitle: "Nettoyage professionnel en Seine-Saint-Denis (93)",
-  heroKicker: "Montreuil • Saint-Denis • Pantin • Noisy-le-Grand • Devis sous 24h",
+  heroKicker: "Montreuil • Saint-Denis • Pantin • Noisy-le-Grand • Devis rapide",
   heroDescription:
     "Habitat collectif dense, circulations intenses, copropriétés à fort trafic : la Seine-Saint-Denis demande des protocoles robustes qui tiennent dans le temps. Klinova intervient dans tout le 93 pour redonner éclat aux moquettes de parties communes, canapés et tapis à domicile, parkings souterrains et balcons urbains. Organisation rigoureuse, finitions soignées, résultat durable.",
 
@@ -156,11 +156,6 @@ export const seineSaintDenis: DepartmentKln = {
         "Régulièrement. Nous traitons les zones de circulation, places de stationnement, rampes et zones techniques. Le protocole inclut la gestion de l'eau et de l'évacuation, le traitement des traces de pneus et dépôts noirs, et la sécurisation des zones glissantes. Tout est coordonné avec le syndic pour choisir les horaires les moins impactants.",
     },
     {
-      question: "Quel est votre délai d'intervention en Seine-Saint-Denis ?",
-      answer:
-        "Nous envoyons un devis sous 24 heures. L'intervention est généralement planifiée entre 3 et 7 jours selon nos disponibilités et les créneaux du syndic. Pour les urgences (assemblée générale, visite importante), nous pouvons mobiliser un créneau prioritaire sous 48-72h.",
-    },
-    {
       question: "Combien de temps dure le séchage d'une moquette ?",
       answer:
         "En conditions normales, comptez 6 à 12 heures selon l'épaisseur de la moquette et la ventilation. Notre méthode limite l'eau résiduelle grâce à une extraction poussée et des passes contrôlées. Nous vous donnons des consignes de ventilation précises pour optimiser le séchage.",
@@ -173,7 +168,7 @@ export const seineSaintDenis: DepartmentKln = {
     {
       question: "Combien coûte un nettoyage de moquette en Seine-Saint-Denis ?",
       answer:
-        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24 heures.",
+        "Le tarif dépend de la surface, du type de moquette et du niveau d'encrassement. Pour les parties communes de copropriété, comptez généralement entre 2 et 4 € HT/m². Les contrats récurrents bénéficient de tarifs dégressifs. Envoyez-nous quelques photos et la superficie — nous répondons sous 24h ouvrées.",
     },
   ],
 
@@ -190,6 +185,6 @@ export const seineSaintDenis: DepartmentKln = {
 seo: {
   title: "Entreprise de Nettoyage en Seine-Saint-Denis (93) | Klinova",
   description:
-    "Nettoyage professionnel dans le 93 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit sous 24h.",
+    "Nettoyage professionnel dans le 93 : moquettes en copropriété et bureaux, canapés et tapis à domicile, parkings, terrasses, balcons. Devis gratuit et rapide.",
 },
 };

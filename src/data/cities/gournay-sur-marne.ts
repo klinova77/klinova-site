@@ -57,9 +57,9 @@ const city: City = {
   faq: [
     {
       question:
-        "Intervenez-vous rapidement sur le secteur de Gournay-sur-Marne ?",
+        "Intervenez-vous sur le secteur de Gournay-sur-Marne ?",
       answer:
-        "<p><strong>Oui, nous intervenons régulièrement à Gournay-sur-Marne et dans les communes limitrophes.</strong> Les prestations programmées sont généralement planifiées sous 48 heures, et les situations urgentes sont traitées selon disponibilité.</p>",
+        "<p><strong>Oui, nous intervenons régulièrement à Gournay-sur-Marne et dans les communes limitrophes.</strong> Les prestations programmées sont planifiées selon nos disponibilités, et les situations urgentes sont traitées en priorité.</p>",
     },
     {
       question: "Comment gérez-vous les accès sécurisés en copropriété ?",

@@ -66,7 +66,7 @@ const city: City = {
     },
     {
       question: "Pouvez-vous intervenir rapidement en cas de besoin urgent ?",
-      answer: "<p>Nous organisons des <strong>interventions sous délai court</strong> selon la nature de la demande et la disponibilité des équipes sur le secteur. Un premier échange permet d'évaluer l'urgence et de proposer un créneau adapté, généralement sous 48 à 72 heures pour les situations prioritaires.</p>",
+      answer: "<p>Nous organisons des interventions selon la nature de la demande et la disponibilité des équipes sur le secteur. Un premier échange permet d'évaluer l'urgence et de proposer un créneau adapté aux situations prioritaires.</p>",
     },
     {
       question: "Comment se déroule la coordination avec un syndic ou un gestionnaire ?",

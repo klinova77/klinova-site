@@ -80,7 +80,7 @@ const city: City = {
       question:
         "Pouvez-vous intervenir en urgence après un sinistre ou un dégât des eaux ?",
       answer:
-        "<p>Nous traitons les demandes urgentes sous 24 à 48 heures selon disponibilité. L'équipe évalue l'étendue des dégâts, sécurise la zone si nécessaire et procède à l'<strong>assainissement adapté</strong> — aspiration, séchage, désinfection selon le contexte.</p>",
+        "<p>Nous traitons les demandes urgentes selon disponibilité. L'équipe évalue l'étendue des dégâts, sécurise la zone si nécessaire et procède à l'<strong>assainissement adapté</strong> — aspiration, séchage, désinfection selon le contexte.</p>",
     },
     {
       question:
@@ -273,7 +273,7 @@ const city: City = {
           question:
             "Les balcons proches de la Corniche des Forts sont couverts de fientes : quels risques sanitaires réels et quel délai pour une intervention ?",
           answer:
-            "<p>Les fientes de pigeons peuvent contenir des <strong>agents pathogènes transmissibles</strong> par inhalation de poussières sèches. Sur les secteurs exposés comme les abords de la Corniche des Forts, nous intervenons généralement sous 48 à 72 heures selon la charge de travail. Le port d'EPI et le confinement de la zone limitent tout risque pendant le traitement.</p>",
+            "<p>Les fientes de pigeons peuvent contenir des <strong>agents pathogènes transmissibles</strong> par inhalation de poussières sèches. Sur les secteurs exposés comme les abords de la Corniche des Forts, nous intervenons selon la charge de travail. Le port d'EPI et le confinement de la zone limitent tout risque pendant le traitement.</p>",
         },
         {
           question:
@@ -426,7 +426,7 @@ const city: City = {
           question:
             "Si un état des lieux est prévu sous 48 heures près du métro Romainville-Carnot, pouvez-vous intervenir rapidement ?",
           answer:
-            "<p>Nous organisons des interventions en délai court selon la disponibilité de nos équipes. Pour un appartement de type T2 ou T3, une remise en état complète peut être planifiée sous 24 à 48 heures. Le créneau est confirmé après échange sur la surface et l'état du logement.</p>",
+            "<p>Nous organisons une intervention rapide selon la disponibilité de nos équipes. Pour un appartement de type T2 ou T3, une remise en état complète peut être planifiée selon vos contraintes. Le créneau est confirmé après échange sur la surface et l'état du logement.</p>",
         },
         {
           question:

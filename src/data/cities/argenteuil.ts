@@ -64,7 +64,7 @@ const city: City = {
     {
       question:
         "Intervenez-vous en urgence sur Argenteuil si un incident survient dans un parking ou un hall ?",
-      answer: "<p>Oui, nous pouvons mobiliser une équipe sous 24 à 48 heures selon la nature de l'incident. Pour les situations critiques — déversement, dégradation importante —, un <strong>créneau prioritaire</strong> est proposé. Contactez-nous par téléphone pour évaluer ensemble le délai réalisable.</p>",
+      answer: "<p>Oui, nous pouvons mobiliser une équipe selon la nature de l'incident. Pour les situations critiques — déversement, dégradation importante —, un <strong>créneau prioritaire</strong> est proposé. Contactez-nous par téléphone pour évaluer ensemble le délai réalisable.</p>",
     },
     {
       question: "Comment se passe la coordination avec un syndic pour plusieurs immeubles ?",
@@ -367,7 +367,7 @@ const city: City = {
         {
           question:
             "Près de la gare d'Argenteuil, sous quel délai intervenez-vous pour un nettoyage d'appartement en urgence ?",
-          answer: "<p>Nous pouvons intervenir sous 24 à 48 heures selon la disponibilité et la surface du logement. Pour les situations urgentes liées à un état des lieux imminent, nous adaptons notre planning en priorité après échange téléphonique sur les contraintes d'accès et le périmètre à traiter.</p>",
+          answer: "<p>Nous pouvons intervenir selon la disponibilité et la surface du logement. Pour les situations urgentes liées à un état des lieux imminent, nous adaptons notre planning en priorité après échange téléphonique sur les contraintes d'accès et le périmètre à traiter.</p>",
         },
         {
           question:

@@ -77,7 +77,7 @@ const city: City = {
     {
       question: "Pouvez-vous intervenir en urgence sur Villiers-sur-Marne ?",
       answer:
-        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau rapide. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous faisons le maximum pour intervenir dans les meilleurs délais.</p>",
+        "<p><strong>Selon nos disponibilités</strong>, nous pouvons traiter les demandes urgentes. Un premier échange permet d’évaluer la situation et de confirmer un créneau adapté. En cas de dégradation importante ou de besoin de remise en propreté prioritaire, nous ajustons notre planning en conséquence.</p>",
     },
     {
       question:

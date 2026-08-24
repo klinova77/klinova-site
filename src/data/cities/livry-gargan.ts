@@ -79,7 +79,7 @@ const city: City = {
       question:
         "Pouvez-vous intervenir en urgence après un dégât des eaux dans un hall ?",
       answer:
-        "<p><strong>Oui, c'est notre métier.</strong> En cas de sinistre ou de souillure accidentelle, nous mobilisons une équipe technique sous 24 à 48 heures pour l'aspiration, le séchage et la désinfection des zones touchées, limitant ainsi la dégradation des matériaux et la gêne des résidents.</p>",
+        "<p><strong>Oui, c'est notre métier.</strong> En cas de sinistre ou de souillure accidentelle, nous mobilisons une équipe technique pour l'aspiration, le séchage et la désinfection des zones touchées, limitant ainsi la dégradation des matériaux et la gêne des résidents.</p>",
     },
   ],
 

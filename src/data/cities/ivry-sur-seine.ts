@@ -71,9 +71,9 @@ const city: City = {
     },
     {
       question:
-        "Pouvez-vous intervenir rapidement en cas de besoin urgent à Ivry-sur-Seine ?",
+        "Pouvez-vous intervenir en cas de besoin urgent à Ivry-sur-Seine ?",
       answer:
-        "<p>Notre équipe intervient régulièrement sur le secteur, ce qui nous permet de réagir <strong>dans un délai de 24 à 48 heures selon la nature de la demande</strong>. Pour les urgences sanitaires ou les dégradations importantes, nous priorisons le passage et confirmons le créneau dès validation.</p>",
+        "<p>Notre équipe intervient régulièrement sur le secteur. Pour les urgences sanitaires ou les dégradations importantes, nous priorisons le passage et confirmons le créneau dès validation.</p>",
     },
     {
       question:
@@ -271,7 +271,7 @@ const city: City = {
           question:
             "Des fientes abondantes sur mon balcon près du Parc des Cormailles : intervention d'urgence possible et délai ?",
           answer:
-            "<p>Nous intervenons sous 48 à 72 heures selon la disponibilité. La proximité du parc favorise les rassemblements de pigeons, ce qui explique l'accumulation rapide. Le diagnostic initial permet d'évaluer l'ampleur et de planifier le confinement adapté à votre configuration de balcon.</p>",
+            "<p>Nous intervenons selon la disponibilité. La proximité du parc favorise les rassemblements de pigeons, ce qui explique l'accumulation rapide. Le diagnostic initial permet d'évaluer l'ampleur et de planifier le confinement adapté à votre configuration de balcon.</p>",
         },
         {
           question:
@@ -406,7 +406,7 @@ const city: City = {
       whyUsBullets: [
         "Connaissance des typologies locatives ivryennes, du studio étudiant au loft atypique près de la Cité Pierre et Marie Curie.",
         "Polyvalence sur tous types de sols et finitions : parquet, béton ciré, carrelage ancien, lino.",
-        "Réactivité sous 48 à 72h et coordination possible avec agences ou artisans pour respecter vos délais.",
+        "Réactivité et coordination possible avec agences ou artisans pour respecter vos délais.",
       ],
       uniqueIntro:
         "<p>Après plusieurs mois d'occupation ou à la suite d'un chantier de rénovation, un appartement accumule des traces que le ménage courant ne suffit pas à éliminer. <strong>Autour de la gare RER C et du centre-ville</strong>, la rotation locative impose des délais serrés entre deux locataires. Les agences et propriétaires doivent remettre le bien en état rapidement, sans compromettre la qualité du rendu final.</p>\n<p class=\"mt-4\">Un logement propre facilite la validation de l'état des lieux et évite les litiges sur le dépôt de garantie. Dans les <strong>T2/T3, studios ou lofts issus de réhabilitations d'anciennes usines</strong>, chaque surface demande une attention particulière : parquet ancien, béton ciré, carrelage, sanitaires. Le résultat visuel conditionne la première impression du futur occupant ou de l'agence mandatée.</p>\n<p class=\"mt-4\">Face aux demandes fréquentes pour états des lieux et ménages fin de chantier, nous organisons chaque intervention selon vos contraintes horaires et d'accès. Diagnostic préalable, coordination avec les artisans si nécessaire, et contrôle qualité avant remise des clés.</p>",
@@ -430,7 +430,7 @@ const city: City = {
           question:
             "Quel est votre délai moyen d'intervention pour un nettoyage état des lieux près de la gare d'Ivry-sur-Seine ?",
           answer:
-            "<p>Nous intervenons généralement sous 48 à 72 heures selon la disponibilité. Pour les demandes urgentes liées à une restitution imminente, nous pouvons ajuster notre planning. Contactez-nous avec la date de l'état des lieux pour confirmer notre disponibilité.</p>",
+            "<p>Nous intervenons selon la disponibilité. Pour les demandes urgentes liées à une restitution imminente, nous pouvons ajuster notre planning. Contactez-nous avec la date de l'état des lieux pour confirmer notre disponibilité.</p>",
         },
         {
           question:

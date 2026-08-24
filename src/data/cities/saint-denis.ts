@@ -71,7 +71,7 @@ const city: City = {
     },
     {
       question: "Quel délai prévoir pour une intervention urgente ?",
-      answer: "<p>Selon la nature de la demande et la disponibilité, nous pouvons intervenir <strong>sous 24 à 48 heures</strong> sur Saint-Denis. Pour les situations critiques (dégât des eaux, souillure importante), un passage en journée est souvent possible après échange téléphonique.</p>",
+      answer: "<p>Selon la nature de la demande et la disponibilité de nos équipes, nous évaluons la faisabilité d'une intervention sur Saint-Denis. Pour les situations critiques (dégât des eaux, souillure importante), un échange téléphonique permet d'évaluer rapidement la situation.</p>",
     },
     {
       question:
@@ -371,7 +371,7 @@ const city: City = {
         {
           question:
             "Après un déménagement dans le centre-ville de Saint-Denis, sous quel délai pouvez-vous intervenir pour un nettoyage complet ?",
-          answer: "<p>Selon la disponibilité et la surface du logement, nous pouvons généralement intervenir sous 48 à 72 heures. Pour les situations urgentes liées à un état des lieux imminent, nous étudions chaque demande afin de proposer un créneau adapté aux contraintes de remise des clés.</p>",
+          answer: "<p>Selon la disponibilité et la surface du logement, nous organisons l'intervention au plus tôt possible. Pour les situations urgentes liées à un état des lieux imminent, nous étudions chaque demande afin de proposer un créneau adapté aux contraintes de remise des clés.</p>",
         },
         {
           question:
