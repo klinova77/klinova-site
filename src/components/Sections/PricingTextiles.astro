@@ -20,7 +20,7 @@ const formatEuro = (n: number) =>
 
 // 2) table rows fallback (si jamais pricingTiers absent)
 const fallbackRows = [
-  { label: "Fauteuils", value: "80 €" },
+  { label: "Fauteuil", value: "80 €" },
   { label: "Canapé 2 places", value: "110 €" },
   { label: "Canapé 3 places", value: "130 €" },
   { label: "Canapé d'angle", value: "160 €" },
@@ -141,8 +141,8 @@ const tableRows = rowsFromTiers;
         Offre dégressive – Formule "Maison Saine"
       </h3>
       <p class="text-[#475569] mb-4">
-        <strong>Offre spéciale pour les nettoyages de 2 pièces ou plus !</strong><br />
-        À partir de 2 pièces nettoyées, vous bénéficiez d'une remise progressive sur le total de votre facture.
+        <strong>Offre spéciale pour les nettoyages de 2 éléments ou plus !</strong><br />
+        À partir de 2 éléments nettoyés, vous bénéficiez d'une remise progressive sur le total de votre facture.
         Cette offre est valable pour les canapés, matelas et tapis.
       </p>
 
@@ -150,22 +150,22 @@ const tableRows = rowsFromTiers;
         <table class="w-full">
           <thead>
             <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
-              <th class="px-4 py-3 text-left text-[#1E2939] font-semibold">Nombre de pièces</th>
+              <th class="px-4 py-3 text-left text-[#1E2939] font-semibold">Nombre d'éléments</th>
               <th class="px-4 py-3 text-center text-[#1E2939] font-semibold">Remise</th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-b border-[#E5E7EB]">
-              <td class="px-4 py-3 text-[#475569]">2 pièces</td>
-              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-10%</td>
+              <td class="px-4 py-3 text-[#475569]">2 éléments</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-10 %</td>
             </tr>
             <tr class="bg-[#FCFCFC] border-b border-[#E5E7EB]">
-              <td class="px-4 py-3 text-[#475569]">3 pièces</td>
-              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-15%</td>
+              <td class="px-4 py-3 text-[#475569]">3 éléments</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-15 %</td>
             </tr>
             <tr>
-              <td class="px-4 py-3 text-[#475569]">4 pièces ou +</td>
-              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-20%</td>
+              <td class="px-4 py-3 text-[#475569]">4 éléments ou plus</td>
+              <td class="px-4 py-3 text-center text-[#3F8D65] font-semibold">-20 %</td>
             </tr>
           </tbody>
         </table>
@@ -184,32 +184,36 @@ const tableRows = rowsFromTiers;
       </h3>
 
       <div class="grid gap-6 md:grid-cols-2">
-        <!-- Protection textile -->
-        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
-          <h4 class="font-semibold text-[#1E2939] mb-2">Protection textile après nettoyage</h4>
-          <p class="text-[#475569] text-sm mb-2">
-            Traitement anti-tache et imperméabilisant pour prolonger la propreté de vos textiles.
-          </p>
-          <p class="text-[#3F8D65] font-semibold">25–40 € selon l'objet</p>
-        </div>
+ <!-- Détachage renforcé -->
+<div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+  <h4 class="font-semibold text-[#1E2939] mb-2">Détachage renforcé</h4>
+  <p class="text-[#475569] text-sm mb-2">
+    Traitement ciblé des taches tenaces nécessitant des produits et un temps d'intervention supplémentaires.
+  </p>
+  <p class="text-[#3F8D65] font-semibold">
+    +30 à +60 € selon la taille et la nature des taches
+  </p>
+</div>
 
         <!-- Désinfection vapeur -->
         <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
-          <h4 class="font-semibold text-[#1E2939] mb-2">Désinfection vapeur haute température</h4>
+          <h4 class="font-semibold text-[#1E2939] mb-2">Désinfection vapeur 180 °C</h4>
           <p class="text-[#475569] text-sm mb-2">
-            Détruit 99% des bactéries, virus et autres agents pathogènes.
+            Élimine jusqu'à 99,99 % des bactéries, virus et autres agents pathogènes.
           </p>
-          <p class="text-[#3F8D65] font-semibold">+30 à +40 € selon l'objet</p>
+          <p class="text-[#3F8D65] font-semibold">+30 à +50 € selon la taille de l'élément</p>
         </div>
 
-        <!-- Neutralisation odeurs -->
-        <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
-          <h4 class="font-semibold text-[#1E2939] mb-2">Neutralisation des odeurs</h4>
-          <p class="text-[#475569] text-sm mb-2">
-            Traitement spécialisé contre les odeurs de tabac, animaux ou moisissures.
-          </p>
-          <p class="text-[#3F8D65] font-semibold">Inclus dans le nettoyage standard</p>
-        </div>
+<!-- Neutralisation des odeurs -->
+<div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
+  <h4 class="font-semibold text-[#1E2939] mb-2">Neutralisation des odeurs</h4>
+  <p class="text-[#475569] text-sm mb-2">
+    Traitement ciblé des odeurs persistantes, notamment urine, odeurs animales ou tabac.
+  </p>
+  <p class="text-[#3F8D65] font-semibold">
+    +20 à +50 € selon la taille de l'élément
+  </p>
+</div>
 
         <!-- Nettoyage après sinistre -->
         <div class="p-4 bg-[#FCFCFC] rounded-lg border border-[#E5E7EB]">
