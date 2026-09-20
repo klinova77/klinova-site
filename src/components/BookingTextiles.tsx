@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { TEXTILES_SLOTS, TEXTILE_SERVICES, type TextileSlot, type ServiceType } from '../config/textilesSlots';
+import React, { useEffect, useState } from 'react';
+import { getTextileSlots, TEXTILE_SERVICES, type TextileSlot, type ServiceType } from '../config/textilesSlots';
 
 interface FormData {
   slotType: 'scheduled' | 'urgent';
@@ -54,6 +54,13 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [textileSlots, setTextileSlots] = useState<TextileSlot[]>([]);
+
+  // Générer les créneaux côté navigateur uniquement.
+  // Cela évite un décalage d'hydratation avec Astro (page prerender + client:load).
+  useEffect(() => {
+    setTextileSlots(getTextileSlots());
+  }, []);
 
   // Upload photos via l'API Cloudinary existante
   const uploadToCloudinary = async (file: File): Promise<string> => {
@@ -243,7 +250,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
       if (formData.slotType === 'urgent') {
         message += `🚨 INTERVENTION URGENTE demandée\n\n`;
       } else if (formData.selectedSlot) {
-        const slot = TEXTILES_SLOTS.find(s => s.id === formData.selectedSlot);
+        const slot = textileSlots.find(s => s.id === formData.selectedSlot);
         if (slot) {
           message += `Créneau demandé : ${slot.dateLabel} à ${slot.timeLabel}\n\n`;
         }
@@ -328,7 +335,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
   };
 
   // Grouper TOUS les créneaux par date (disponibles ET fermés)
-  const allSlotsByDate = TEXTILES_SLOTS.reduce((acc, slot) => {
+  const allSlotsByDate = textileSlots.reduce((acc, slot) => {
     const date = slot.dateLabel;
     if (!acc[date]) acc[date] = [];
     acc[date].push(slot);
@@ -406,7 +413,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
                 </div>
                 <div>
                   <div className="font-medium text-[#1E2939]">Créneau programmé</div>
-                  <div className="text-sm text-[#475569]">Samedi selon planning</div>
+                  <div className="text-sm text-[#475569]">Soirs en semaine • mercredi et samedi dès 16h</div>
                 </div>
               </div>
             </label>
@@ -510,6 +517,9 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-[#1E2939]">Créneaux disponibles</h4>
             
+            {textileSlots.length === 0 ? (
+              <p className="text-sm text-[#64748B]">Chargement des créneaux...</p>
+            ) : (
             <div className="space-y-6">
               {Object.entries(allSlotsByDate).map(([date, slots]) => (
                 <div key={date} className="space-y-3">
@@ -549,6 +559,7 @@ const BookingTextiles: React.FC<BookingTextilesProps> = ({ cityName }) => {
                 </div>
               ))}
             </div>
+            )}
           </div>
         )}
 
